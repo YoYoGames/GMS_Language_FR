@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>Mouvement et contrôles</title>
+  <meta name="generator" content="Adobe RoboHelp 2020" />
+  <link rel="stylesheet" href="../assets/css/default.css" type="text/css" />
+  <meta name="rh-authors" content="Mark Alexander" />
+  <meta name="topic-comment" content="Some basic code and DnD to show people how to move things around within a game." />
+  <meta name="rh-index-keywords" content="Quick Start - Movement And Controls" />
+  <meta name="search-keywords" content="movement,controls" />
+  <meta name="robots" content="NOODP" />
+</head>
+<body>
+  <!--<div class="body-scroll" style="top: 150px;">-->
+  <h1>Mouvement et contrôles</h1>
+  <p>La <a href="Drawing.htm">section précédente</a> de ce Guide de démarrage rapide a donné quelques exemples pour dessiner des objets à l'écran, mais dessiner des objets ne sert pas à grand chose si vous ne pouvez pas les déplacer... donc dans cette section nous allons vous donner
+    Dans cette section, nous vous donnerons donc quelques exemples de mouvements pour vos objets, ainsi que des schémas de contrôle de base pour différents types de jeux. Tous les exemples sont donnés en utilisant le <span class="notranslate">Drag and Drop™</span><span class="notranslate">(DnD™</span>) ainsi que le <span class="notranslate">langage GameMaker</span><span class="notranslate">(GML</span>), vous pouvez donc utiliser celui avec lequel vous vous sentez le plus à l'aise.
+    plus à l'aise. Notez que nous n'expliquerons pas les choses en profondeur ici, car nous voulons que vous commenciez à créer des choses aussi vite que possible, nous vous encourageons donc à explorer tous les liens au fur et à mesure et à utiliser la fonction &quot;recherche&quot; du manuel pour rechercher des informations supplémentaires.
+    du manuel pour rechercher des informations supplémentaires sur tout ce dont vous n'êtes pas sûr.</p>
+  <p>Avant d'aller plus loin, vous pouvez créer un nouveau projet ( <span class="notranslate">GML</span> ou <span class="notranslate">DnD™</span>) à partir de la <a href="../Introduction/The_Start_Page.htm">page de démarrage</a>, et ajouter (ou créer) quelques sprites ainsi qu'un ou deux objets - car nous vous donnerons du code que vous pourrez tester en les utilisant.
+    code que vous pourrez tester en les utilisant - et assurez-vous que le projet dispose d'une salle pour y placer des instances. Ne vous préoccupez pas trop de l'apparence des sprites que vous créez, car même un simple carré blanc fera l'affaire.
+    vous pouvez commencer à travailler sur les exemples listés ci-dessous.</p>
+  <p> </p>
+  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop_down" href="#">Se déplacer vers la souris</a></p>
+  <div class="droptext" data-targetname="drop_down">
+    <p class="dropspot">L'une des façons les plus simples de faire bouger un objet et d'interagir avec le joueur est d'utiliser la souris. Dans cet exemple, nous allons vous montrer comment utiliser un code de base pour qu'un objet se déplace vers l'endroit où l'utilisateur a cliqué sur le bouton gauche de la souris.
+      <img alt="LMB Icon" class="icon" src="../assets/Images/Icons/Icon_LMB.png"> .</p>
+    <p class="dropspot">Pour commencer, ouvrez un objet, attribuez-lui un sprite, puis donnez-lui un <strong>événement Global Left Mouse Down</strong>:</p>
+    <p class="dropspot"><img alt="Adding The Mouse Left Button Down Event" class="center" src="../assets/Images/QS_Guide/QS_Add_GlobalLMBDownEvent.png" /></p>
+    <p class="dropspot">Nous utilisons les événements de souris <strong>globaux </strong>parce qu'ils détectent un clic n'importe où dans la pièce, alors que les événements de souris ordinaires ne détecteront un clic que si la souris clique effectivement dans la <a class="glossterm" data-glossterm="bounding box" href="#">boîte de délimitation de</a> l'instance. Dans cet événement, nous voulons ajouter ce <span class="notranslate">DnD™</span>ou <span class="notranslate">GML</span>:</p>
+    <p class="dropspot"><img alt="DnD To Move Instance Towards Mouse" class="center" src="../assets/Images/QS_Guide/QS_MovementExample_DnD_1_1.png" /></p>
+    <p class="code">move_towards_point(mouse_x, mouse_y, 2) ;</p>
+    <p class="dropspot">Ici, nous demandons à l'instance de se déplacer vers une position sur l'écran, dans ce cas la position &quot;<span class="inline">mouse_x</span>&quot; et &quot;<span class="inline">mouse_y</span>&quot; (&quot;<span class="inline">mouse_x</span>&quot;
+      et &quot;<span class="inline">mouse_y</span>&quot; sont des <strong>variables </strong> intégrées <a class="glossterm" data-glossterm="variable" href="#">qui</a>contiennent toujours la position actuelle du curseur de la souris). Le <span class="notranslate">DnD™</span>
+      fait cela en réglant les variables &quot;<span class="inline">direction</span>&quot; et &quot; <span class="inline">speed</span>&quot; <a href="../GameMaker_Language/GML_Reference/Asset_Management/Instances/Instance_Variables/Instance_Variables.htm"><strong>Variables de l'instance</strong></a>,
+      tandis que le <span class="notranslate">GML</span> le fait en utilisant la fonction <a href="../GameMaker_Language/GML_Reference/Movement_And_Collisions/Movement/move_towards_point.htm"><span class="inline">move_towards_point()</span></a> (qui définit également les variables <span class="inline">speed </span>et
+      <span class="inline">direction </span> , mais dans une seule fonction facile à utiliser).</p>
+    <p class="dropspot">Placez une instance de cet objet dans une pièce et appuyez sur le bouton Play <img alt="Play Icon" class="icon" src="../assets/Images/Icons/Icon_PlayGame.png">, puis cliquez sur <img alt="LMB Icon" class="icon" src="../assets/Images/Icons/Icon_LMB.png"> autour de la pièce pour que l'instance se déplace vers la souris.
+      la pièce pour que l'instance se déplace vers la souris :</p>
+    <p class="dropspot"><img alt="Animation Of Instance Moving Towards Mouse" class="center" src="../assets/Images/QS_Guide/QS_MovementExample_1_1.gif">Super ! L'instance de l'objet se déplace maintenant vers l'endroit où vous avez cliqué, et si vous maintenez le bouton enfoncé, l'instance continuera à suivre le curseur de la souris.
+      continuera à suivre le curseur de la souris. Cependant, il y a un problème... Après avoir cliqué une fois et relâché, l'instance continuera à se déplacer et finira par quitter la pièce ! Il y a plusieurs façons de résoudre ce problème, et celle que vous choisirez dépendra de ce que vous voulez faire.
+      dépendra de ce que vous voulez faire, mais la solution la plus simple pour l'instant est d'ajouter simplement un événement <strong>Global Mouse Button Released</strong>, donc ajoutez-le maintenant à l'objet et donnez-lui ce code :</p>
+    <p class="dropspot"><img alt="DnD To Set The Instance Speed" class="center" src="../assets/Images/QS_Guide/QS_MovementExample_DnD_1_2.png" /></p>
+    <p class="code">vitesse = 0 ;</p>
+    <p class="dropspot">Avec ceci, l'instance ne suivra le curseur de la souris que tant que le bouton de la souris sera maintenu enfoncé, et lorsque vous relâcherez le bouton, elle cessera de se déplacer. Appuyez sur Play <img alt="Play Icon" class="icon" src="../assets/Images/Icons/Icon_PlayGame.png"> et testez-le maintenant.</p>
+    <p class="dropspot">Avant de quitter cet exemple, il y a un dernier problème que nous devons résoudre... Si vous cliquez et <em>maintenez le </em>bouton de la souris, mais ne déplacez pas le curseur, alors l'instance se déplacera vers le curseur puis &quot;vibrera&quot; autour de lui.
+      Ceci est dû au fait que l'instance se déplace plus vite qu'un pixel à la fois et &quot;dépasse&quot; la position, puis essaie de revenir en arrière, puis dépasse à nouveau, etc... (augmentez la vitesse de mouvement à 5 ou quelque chose comme ça pour voir le problème si ce n'est pas immédiatement évident).
+      problème si celui-ci n'est pas immédiatement évident).</p>
+    <p class="dropspot"><img alt="Animation Showing Instance Vibrating" class="center" src="../assets/Images/QS_Guide/QS_MovementExample_1_2.gif">Pour résoudre ce problème, nous devons ajouter un <strong>Step Event</strong> à l'objet avec ce code :</p>
+    <p class="dropspot"><img alt="DnD Actions For The Step Event" class="center" src="../assets/Images/QS_Guide/QS_MovementExample_DnD_1_3.png" /></p>
+    <p class="code">var _dist = point_distance(x, y, mouse_x, mouse_y) ;<br> if _dist &lt;= speed<br> {<br> speed = 0 ;<br> }</p>
+    <p class="dropspot">Ici, nous vérifions simplement la distance entre l'instance et la position de la souris, et si cette distance est égale ou inférieure à la vitesse actuelle, nous mettons la vitesse à 0.
+      la souris, et nous n'avons pas ce problème de &quot;vibration&quot;.</p>
+    <p class="dropspot"> </p>
+  </div>
+  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop_down1" href="#">Mouvement à 4 et 8 voies avec le clavier</a></p>
+  <div class="droptext" data-targetname="drop_down1">
+    <p class="dropspot"><a href="What_Is_Programming_.htm">Dès le début de ce guide</a>, nous vous avons montré le code <span class="notranslate">DnD™</span>et <span class="notranslate">GML</span> suivant pour déplacer une instance vers la droite de deux pixels à chaque pas de jeu :</p>
+    <p class="dropspot"><img alt="DnD Example" class="center" src="../assets/Images/QS_Guide/QS_DnD_Example.png" /></p>
+    <p class="code">x = x + 2 ;</p>
+    <p class="dropspot">Ce type de mouvement est appelé mouvement <strong>positionnel </strong>, car nous prenons essentiellement l'instance et la replaçons à une nouvelle position à chaque fois que le code est exécuté. Ce que nous allons faire dans cet exemple est de vous montrer comment
+      d'utiliser ce type de mouvement pour déplacer une instance dans 4 directions : haut, bas, gauche et droite.</p>
+    <p class="dropspot">Pour commencer, ouvrez un objet et attribuez-lui un sprite. Maintenant, nous pourrions ajouter divers <strong>événements clavier</strong> à ce stade, et pour chacun d'entre eux, faire en sorte que l'instance se déplace dans la direction souhaitée, cependant, nous voulons que le joueur soit capable de se déplacer dans une seule direction à la fois.
+      dans une seule direction à la fois et faire cela avec seulement les événements clavier est un peu plus compliqué que de le faire en utilisant du code. Au lieu de cela, nous allons utiliser l'<strong>événement</strong> Step <strong>-</strong> que vous devez ajouter maintenant à l'objet - avec ce qui suit.
+     <span class="notranslate">DnD™</span>ou <span class="notranslate">GML</span> pour utiliser les touches fléchées pour se déplacer :</p>
+    <p class="dropspot"><img alt="DnD Step Event Movement Actions" class="center" src="../assets/Images/QS_Guide/QS_MovementExample_DnD_2_1.png" /></p>
+    <p class="code">if keyboard_check(vk_left)<br> {<br> x = x - 2 ;<br> } <br> else if keyboard_check(vk_right)<br> {<br> x = x + 2 ;<br> } <br> else if keyboard_check(vk_up)<br> {<br> y = y - 2 ;<br> } <br> else if keyboard_check(vk_down)<br> {<br> y = y - 2 ;<br> }</p>
+    <p class="dropspot">Nous utilisons une structure &quot; <span class="inline">if... else if... else if...</span>&quot; pour nous assurer que l'instance ne se déplacera que dans une seule direction à la fois, et donc que l'instance ne pourra se déplacer que vers le haut, le bas, la gauche ou la droite, mais pas en diagonale.
+      en diagonale. Placez une instance de l'objet dans une pièce et appuyez sur le bouton <strong>Play </strong> <img alt="Play Icon" class="icon" src="../assets/Images/Icons/Icon_PlayGame.png"> pour le tester maintenant ! Si tout s'est déroulé correctement, vous devriez avoir quelque chose
+      comme ceci :</p>
+    <p class="dropspot"><img alt="Animation Showing 4-Way Keyboard Movement" class="center" src="../assets/Images/QS_Guide/QS_MovementExample_2_1.gif" /></p>
+    <p class="dropspot">Nous pouvons aussi modifier ce code pour convertir le mouvement à 4 en mouvement à 8 facilement... il suffit de retirer les commandes &quot; <span class="inline">else</span>&quot; des blocs de code pour que tout ressemble à ceci :</p>
+    <p class="dropspot"><img alt="DnD Step Event Movement Actions" class="center" src="../assets/Images/QS_Guide/QS_MovementExample_DnD_2_2.png" /></p>
+    <p class="code">if keyboard_check(vk_left)<br> {<br> x = x - 2 ;<br> } <br> if keyboard_check(vk_right)<br> {<br> x = x + 2 ;<br> } <br> if keyboard_check(vk_up)<br> {<br> y = y - 2 ;<br> } <br> if keyboard_check(vk_down)<br> {<br> y = y - 2 ;<br> }</p>
+    <p class="dropspot">Maintenant, lorsque vous appuyez sur le bouton <strong>Play </strong> <img alt="Play Icon" class="icon" src="../assets/Images/Icons/Icon_PlayGame.png">, cela ressemblera à quelque chose comme ça :</p>
+    <p class="dropspot"><img alt="Animation Showing 8-Way Keyboard Movement" class="center" src="../assets/Images/QS_Guide/QS_MovementExample_2_2.gif" /></p>
+    <p class="dropspot">Une dernière chose qui mérite d'être notée pour les utilisateurs codant avec GML <span class="notranslate">.</span>... Lorsque vous utilisez le <span class="notranslate">DnD™</span>, vous pouvez sélectionner la touche du clavier que vous souhaitez utiliser dans une liste déroulante, mais avec <span class="notranslate">GML</span>, ce n'est pas aussi simple. Il y a un certain nombre de <a href="../GameMaker_Language/GML_Reference/Game_Input/Keyboard_Input/Keyboard_Input.htm">constantes de clavier</a> que
+      vous pouvez utiliser - comme les constantes des touches fléchées présentées dans le code ci-dessus - mais il <em>n'y a pas de </em>constantes pour les touches alphanumériques. Celles-ci sont gérées de manière légèrement différente, et vous devez utiliser la fonction <a href="../GameMaker_Language/GML_Reference/Strings/ord.htm"><span class="inline">ord()</span></a>.
+      Le code ci-dessous vous montre comment cela fonctionnerait en utilisant WASD au lieu des touches fléchées :</p>
+    <p class="code">if keyboard_check(ord(&quot;A&quot;))<br> {<br> x = x - 2 ;<br> } <br> if keyboard_check(ord(&quot;D&quot;))<br> {<br> x = x + 2 ;<br> } <br> if keyboard_check(ord(&quot;W&quot;))<br> {<br> y = y - 2 ;<br> } <br> if keyboard_check(ord(&quot;S&quot;))<br> {<br> y = y - 2 ;<br> }</p>
+    <p class="dropspot"> </p>
+  </div>
+  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop_down2" href="#">Mouvement de la manette de jeu</a></p>
+  <div class="droptext" data-targetname="drop_down2">
+    <p class="dropspot">Nous avons abordé les mouvements de la souris et du clavier, il est donc temps d'aborder les <strong>mouvements du </strong>gamepad. Nous n'aborderons pas le d-pad, car il fonctionne exactement comme le clavier (il suffit de modifier les fonctions du clavier
+      dans l'exemple ci-dessus pour <a href="../GameMaker_Language/GML_Reference/Game_Input/GamePad_Input/gamepad_button_check.htm"><span class="inline">gamepad_button_check()</span></a> ou <a href="../Drag_And_Drop/Drag_And_Drop_Reference/Gamepad/If_Gamepad_Button_Down.htm">If Gamepad button Down</a>),
+      Dans cet exemple, nous allons donc étudier l'utilisation du stick analogique pour les mouvements.</p>
+    <p class="dropspot">Pour commencer, nous devons détecter le gamepad utilisé. Les manettes de jeu ont une valeur d'identification de 0 à 11, nous allons donc utiliser une boucle &quot; <span class="inline">for</span>&quot; pour détecter l'ID de toute manette de jeu connectée et stocker cette valeur d'identification dans une variable
+      pour une utilisation ultérieure. Puisque nous ne voulons détecter que le premier gamepad connecté et non tous les autres, nous utiliserons la commande &quot; <span class="inline">break</span>&quot; après avoir détecté un gamepad afin qu'il &quot; casse &quot; la boucle (par exemple, si le premier gamepad connecté n'a pas été détecté, la commande &quot; &quot; ne sera pas utilisée).
+      exemple, si le premier gamepad connecté est l'ID 4, alors la boucle ne s'exécutera que 5 fois, vérifiant les valeurs ID 0 - 4 et sortant de la boucle lorsque le gamepad est rencontré). Donc, créez (ou ouvrez) un objet, attribuez-lui un sprite, et ajoutez ensuite
+      un <strong>Create Event</strong> avec ce qui suit :</p>
+    <p class="dropspot"><img alt="Getting Gamepad ID Using DnD" class="center" src="../assets/Images/QS_Guide/QS_MovementExample_DnD_3_1.png" /></p>
+    <p class="code">gamepad_id = -1 ;<br> for (var i = 0 ; i &lt; 12 ; i += 1 ;)<br> {<br> if gamepad_is_connected(i)<br> {<br> gamepad_id = i ;<br> gamepad_set_axis_deadzone(gamepad_id, 0.2) ;<br> break ;<br> } <br> }
+    </p>
+    <p class="dropspot">Remarquez que dans le code ci-dessus, nous avons défini le paramètre <strong> <a class="glossterm" data-glossterm="deadzone" href="#">zone morte</a> </strong>pour le gamepad. Cela s'explique par le fait que les sticks analogiques des différentes marques de manettes de jeu ont une sensibilité différente.
+      ils peuvent être si sensibles que si vous ne définissez pas de zone morte, ils peuvent provoquer des mouvements indésirables dans vos jeux. Nous définissons donc la zone morte à une valeur telle que 0,2 pour indiquer à <span class="notranslate">GameMaker Studio 2</span> d'ignorer toute valeur de manette de jeu inférieure à cette valeur <a class="glossterm" data-glossterm="absolute" href="#">absolue</a>.</p>
+    <p class="dropspot">Pour ajouter le mouvement réel, nous aurons besoin d'un Step <strong>Event, donc</strong> ajoutez-le maintenant et donnez-lui le DnD™ ou GML suivant :</p>
+    <p class="dropspot"><img alt="Get Gamepad Input Using DnD" class="center" src="../assets/Images/QS_Guide/QS_MovementExample_DnD_3_2.png" /></p>
+    <p class="code">if gamepad_id &gt; -1<br> {<br> var _h = gamepad_axis_value(gamepad_id, gp_axislh) ;<br> var _v = gamepad_axis_value(gamepad_id, gp_axislv) ;<br> x += _h * 4 ;<br> y += _v * 4 ;<br> }</p>
+    <p class="dropspot">Ici, nous vérifions le mouvement horizontal ou vertical du stick <em>gauche </em>. Les fonctions d'axe renvoient une valeur entre -1 et 1, donc pour l'axe horizontal, -1 correspond à la gauche, 0 à l'immobilité et 1 à la droite, et pour l'axe vertical, c'est -1 pour le haut, 0 pour l'immobilité et 1 pour le bas.
+      pour le haut, 0 pour ne pas bouger et 1 pour le bas. Notez également que les valeurs sont <em>comprises entre </em>-1 et 1. Ainsi, par exemple, l'axe horizontal peut renvoyer une valeur de 0,5, ce qui signifie que le manche est à mi-chemin entre la position &quot;repos&quot; et la position complètement poussée
+      vers la droite. Pour cette raison, nous multiplions ensuite la valeur par 4 (vous pouvez multiplier par n'importe quelle valeur, en fonction de la vitesse à laquelle vous souhaitez que l'instance se déplace) - cela signifie que la vitesse de l'instance variera en fonction de l'ampleur du mouvement effectué sur l'axe du stick.
+      mouvement effectué sur l'axe du stick.</p>
+    <p class="dropspot">Placez une instance de cet objet dans une pièce et appuyez sur le bouton <strong>Play </strong>. <strong> <img alt="Play Icon" class="icon" src="../assets/Images/Icons/Icon_PlayGame.png"></strong>puis déplacez-vous en utilisant le stick gauche de votre manette de jeu connectée.
+      manette de jeu connectée. Vous devriez voir quelque chose comme ceci :</p>
+    <p class="dropspot"><img alt="Animation Showing Gamepad Movement" class="center" src="../assets/Images/QS_Guide/QS_MovementExample_3_1.gif" /></p>
+    <p class="dropspot"> </p>
+  </div>
+  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop_down3" href="#">Mouvement avancé à 8 voies</a></p>
+  <div class="droptext" data-targetname="drop_down3">
+    <p class="dropspot">Dans ce dernier exemple, nous allons revoir notre code de mouvement à 8 voies et résoudre un problème qu'il présente, à savoir que le mouvement diagonal est en fait plus rapide que le mouvement haut/bas/gauche/droite. C'est simplement parce que lorsque vous vous déplacez en diagonale, vous vous déplacez
+      le long de l'hypoténuse d'un triangle rectangle créé par les valeurs de mouvement x/y :</p>
+    <p class="dropspot"><img alt="Image Showing Why Diagonal Movement Is Faster" class="center" src="../assets/Images/QS_Guide/QS_MovementExample_4_1.png" /></p>
+    <p class="dropspot">Pour mieux comprendre ce qui se passe, supprimons tout le texte et les sprites et montrons simplement la même ligne de mouvement tournée de 45° pour qu'elle soit horizontale :</p>
+    <p class="dropspot"><img alt="Simplified Image SHowing Diaginal Movement Is Faster" class="center" src="../assets/Images/QS_Guide/QS_MovementExample_4_2.png" /></p>
+    <p class="dropspot">Comme vous pouvez le voir, la différence est assez évidente, et si l'instance se déplace de plus de 1 ou 2 pixels par pas, alors il devient très perceptible que le mouvement diagonal est <em>beaucoup </em>plus rapide ! Alors comment limiter cela ? Il y a un certain nombre de façons de procéder
+      mais nous allons nous concentrer sur une seule d'entre elles, car elle introduit quelques fonctions et concepts qui vous seront utiles plus tard dans vos jeux.</p>
+    <p class="dropspot">Pour gérer cela, nous allons devoir stocker les valeurs d'entrée des touches pressées indépendamment dans des<span class="glossextra">variables</span>, puis les vérifier et les déplacer en fonction de la combinaison de touches qui a été pressée.
+      en fonction de la combinaison de touches qui ont été pressées. Donc, pour cela, vous aurez besoin d'un objet avec un sprite assigné, et vous devrez lui donner un Step <strong>Event avec</strong> le DnD™ <span class="notranslate">ou GML</span>suivant :</p>
+    <p class="dropspot"><img alt="DnD Step Event Actions To Define Movement Variables" class="center" src="../assets/Images/QS_Guide/QS_MovementExample_DnD_4_1.png" /></p>
+    <p class="note"><strong>NOTE</strong>: Nous avons réparti le DnD™ ci-dessus sur deux colonnes pour faciliter la visualisation, mais dans l'éditeur DnD™, il sera placé consécutivement.</p>
+    <p class="code">var _left = keyboard_check(vk_left) ;<br> var _right = keyboard_check(vk_right) ;<br> var _up = keyboard_check(vk_up) ;<br> var _down = keyboard_check(vk_down) ;<br> var _hspd = _right - _left ;<br> var _vspd = _down - _up ;</p>
+    <p class="dropspot">Nous devrons ajouter un peu plus de code pour bouger réellement, mais avant cela, expliquons un peu tout cela. Nous voulons convertir les mouvements gauche/droite/haut/bas en valeurs de vitesse horizontale et verticale équivalentes, donc pour ce faire, nous récupérons la valeur de chaque touche
+      puis nous faisons quelques calculs de base pour obtenir les valeurs de vitesse. Cela fonctionne parce que si une touche est enfoncée, l'action ou la fonction de contrôle renvoie &quot;1&quot;, et si elle ne l'est pas <em>, </em>la fonction renvoie &quot;0&quot;.
+      0. Donc, si - par exemple - la touche droite est enfoncée, vous avez &quot;1 - 0 = 1&quot; pour le &quot; <span class="inline">_hspd</span>&quot;, et si la touche gauche est enfoncée, vous avez &quot;0 - 1 = -1&quot; pour le &quot; <span class="inline">_hspd</span>&quot;.
+      (et si les deux sont pressés, alors c'est &quot;1 - 1 = 0&quot;, donc l'instance ne bougera pas). Rappelez-vous que dans une pièce de <span class="notranslate">GameMaker Studio 2</span>, pour se déplacer vers la droite, nous ajoutons à la position <span class="inline">x </span>et pour se déplacer vers la gauche, nous soustrayons.
+      Ce code nous donnera une valeur positive ou négative que nous pourrons ajouter ou soustraire pour nous déplacer horizontalement ou verticalement en fonction de la saisie au clavier.</p>
+    <p class="dropspot">Maintenant nous pouvons ajouter le code qui déplace réellement l'instance, donc - toujours dans l'<strong>événement Step</strong>, et après le code ci-dessus - ajoutez ceci :</p>
+    <p class="dropspot"><img alt="DnD Step Event Actions To Move The Instance" class="center" src="../assets/Images/QS_Guide/QS_MovementExample_DnD_4_2.png" /></p>
+    <p class="code">if (_hspd != 0 || _vspd != 0)<br> {<br> var _spd = 4 ;<br> var _dir = point_direction(0, 0, _hspd, _yspd) ;<br> var _xadd = lengthdir_x(_spd, _dir) ;<br> var _yadd = lengthdir_y(_spd, _dir) ;<br> x = x + _xadd ;<br> y
+      = y + _yadd ;<br> }</p>
+    <p class="dropspot">Le code ci-dessus vérifie d'abord si l'une des deux<span class="glossextra">expressions</span> est vraie, c'est-à-dire si les variables de vitesse horizontale ou verticale sont différentes de 0. Notez comment la vérification GML &quot;
+      <span class="inline">if</span> &quot; en GML utilise le symbole &quot; <span class="inline">||</span>&quot;. Cela signifie &quot; <span class="inline">or</span>&quot; en programmation, donc - en langage clair - vous vérifiez que</p>
+    <p class="code">si la variable _hspd n'est pas égale à zéro <strong>ou </strong>si la variable _vspd n'est pas égale à zéro.</p>
+    <p class="dropspot">Vous pouvez enchaîner plusieurs expressions dans des contrôles &quot; <span class="inline">if</span>&quot; de cette façon, et il existe plusieurs façons différentes d'évaluer ces expressions (pour plus d'informations, veuillez consulter la section sur les expressions <strong>ici</strong> ).</p>
+    <p class="dropspot">La section suivante du code stocke une valeur pour la vitesse de mouvement réelle dans une variable et obtient ensuite une direction en utilisant les valeurs <span class="inline">_hspd </span>et <span class="inline">_vspd </span>, qui peuvent être -1, 0 ou 1. La fonction de direction
+      vérifie à partir de (0, 0) car nous n'utilisons pas les coordonnées de la pièce, et nous voulons plutôt qu'elle soit évaluée comme une direction de 0° à 360° basée sur les valeurs de la variable. Le diagramme suivant illustre ce qui se passe mieux que d'essayer de l'expliquer en
+      mots :</p>
+    <p class="dropspot"><img alt="Example Image Showing Direction Around (0,0) Origin" class="center" src="../assets/Images/QS_Guide/QS_MovementExample_4_3.png" /></p>
+    <p class="note"><strong>REMARQUE</strong>: Dans <span class="notranslate">GameMaker Studio 2</span>, la direction est calculée <strong>dans le sens inverse des aiguilles d'une montre</strong>. Ainsi, 0° et 360° sont à droite, 90° est en haut, 180° est à droite et 270° est en bas.</p>
+    <p class="dropspot">Enfin, nous utilisons les <a href="../GameMaker_Language/GML_Reference/Maths_And_Numbers/Angles_And_Distance/lengthdir_x.htm"><span class="inline">lengthdir_x()</span></a> et <a href="../GameMaker_Language/GML_Reference/Maths_And_Numbers/Angles_And_Distance/lengthdir_y.htm"><span class="inline">lengthdir_y()</span></a> 
+      pour déplacer réellement la variable. Il s'agit de fonctions <strong> <a class="glossterm" data-glossterm="vector" href="#">vecteur</a>  </strong>qui prennent une longueur (distance) et une direction, puis calculent la nouvelle position sur l'axe donné en fonction de ces valeurs (voir les descriptions des fonctions pour une explication approfondie).
+      valeurs (voir les descriptions des fonctions pour une explication plus approfondie).</p>
+    <p class="dropspot">Cela fait beaucoup de choses à assimiler d'un coup, et ne vous inquiétez pas si vous ne comprenez pas tout ! Cela viendra avec le temps ! Il ne vous reste plus qu'à ajouter une instance de cet objet dans une pièce, puis à appuyer sur le bouton "Play". <strong> <img alt="Play Icon" class="icon" src="../assets/Images/Icons/Icon_PlayGame.png"></strong>,
+      et vous devriez obtenir un mouvement fluide à 8 voies sans aucun des problèmes liés au déplacement en diagonale :</p>
+    <p class="dropspot"><img alt="Animation Showing Improved 8-Way Keyboard Movement" class="center" src="../assets/Images/QS_Guide/QS_MovementExample_4_4.gif" /></p>
+  </div>
+  <p> </p>
+  <p>Avec ces exemples - et les précédents pour le dessin - nous espérons que vous avez acquis suffisamment de connaissances pour commencer à réaliser vos propres projets ! La dernière page de ce guide de démarrage rapide contient un résumé de certaines des choses que vous avez apprises, ainsi que des liens vers d'autres supports pédagogiques.
+    ainsi que des liens vers d'autres supports pédagogiques.</p>
+  <p> </p>
+  <p> </p>
+  <div class="footer">
+    <div class="buttons">
+      <div class="clear">
+        <div style="float:left">Retour : <a href="../Content.htm">Index</a></div>
+        <div style="float:right">Suivant : <a href="Summary.htm">Résumé</a></div>
+      </div>
+    </div>
+    <h5><span data-keyref="Copyright Notice">Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
+  </div>
+  <!-- KEYWORDS
+Movement
+Controls
+Movement and Controls
+Movement Examples
+Controls Examples
+-->
+  <!-- TAGS
+qs_movement_controls
+-->
+
+</body></html>

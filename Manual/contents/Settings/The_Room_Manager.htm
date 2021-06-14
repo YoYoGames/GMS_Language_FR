@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>Le responsable de la salle</title>
+  <meta name="generator" content="Adobe RoboHelp 2020" />
+  <link rel="stylesheet" href="../assets/css/default.css" type="text/css" />
+  <meta name="rh-authors" content="Mark Alexander" />
+  <meta name="topic-comment" content="Page that explains how to use the Room Manager" />
+  <meta name="rh-index-keywords" content="Room Manager" />
+  <meta name="search-keywords" content="rooms,room order,room manager,child rooms,room inheritance" />
+</head>
+<body>
+  <!--<div class="body-scroll" style="top: 150px;">-->
+  <h1>Le responsable de la salle</h1>
+  <p><img alt="The Room Manager" class="center" src="../assets/Images/Settings/Room_Manager.png" style="cursor: nesw-resize;">Lorsque vous utilisez le <a href="../Introduction/The_Asset_Browser.htm">navigateur de ressources</a>, vous pouvez créer vos pièces et les déplacer entre les différents groupes de dossiers pour organiser le projet de la manière qui vous convient le mieux.
+    les différents groupes de dossiers pour organiser le projet de la manière qui vous convient le mieux. Cependant, les jeux de <span class="notranslate">GameMaker Studio 2</span> comportent généralement des pièces qui suivent un certain ordre, et doivent au moins avoir une <strong>pièce de départ</strong> spécifique (après le démarrage du jeu dans cette pièce, vous pouvez utiliser du code ou des actions pour vous rendre dans n'importe quelle pièce).
+    le jeu démarre dans cette pièce, vous pouvez utiliser du code ou des actions pour vous rendre dans n'importe quelle pièce du jeu si vous le souhaitez), c'est là que le <strong>gestionnaire de pièces</strong> entre en jeu.</p>
+  <p>Vous pouvez ouvrir le room manager en cliquant sur le bouton &quot;Extras&quot; <img alt="Extras Menu Icon" class="icon" src="../assets/Images/Icons/Icon_AssetMenu.png"> en haut du navigateur d'actifs et en le sélectionnant dans le menu qui s'ouvre, ou vous pouvez
+    simplement cliquer sur <img alt="LMB Icon" class="icon" height="24" src="../assets/Images/Icons/Icon_LMB.png" width="21"> l'icône à gauche d'une pièce dans le navigateur d'actifs :</p>
+  <p><img alt="Opening The Room Manager" class="center" src="../assets/Images/Settings/Room_Manager_Open.gif">Une fois ouvert, le gestionnaire de salles vous présente deux onglets différents, l'un pour l'<strong>ordre des salles</strong> et l'autre pour l'<strong>héritage des salles</strong>.
+    L'ordre des salles définit l'ordre dans lequel les salles seront accessibles si vous vous déplacez littéralement dans le jeu, en utilisant la fonction <a href="../GameMaker_Language/GML_Reference/Asset_Management/Rooms/room_goto_next.htm"><span class="inline">room_goto_next()</span></a> à
+    la fin de chaque pièce, et la toute première pièce listée sera toujours signalée par l'icône &quot;maison&quot; <img alt="Room Manager Home Room Icon" src="../assets/Images/Icons/icon_RoomManager_Home.png">, qui vous indique que cette pièce est la pièce de départ désignée pour le jeu.
+    pièce de <em>départ </em>du jeu. Cette icône sera également affichée dans le navigateur de ressources afin que vous puissiez voir clairement de quelle pièce il s'agit, quelle que soit la façon dont vous avez filtré ou configuré vos ressources.</p>
+  <p class="note"><strong>Remarque</strong>: les ID de vos ressources de salle ne seront pas dans le même ordre que celui défini dans cette liste, et vous ne devez donc pas fournir directement une valeur numérique pour changer la salle au <span class="notranslate">moment de l'exécution</span>. Utilisez toujours la <a class="glossterm" data-glossterm="constant" href="../GameMaker_Language/GML_Reference/Asset_Management/Rooms/room_goto.htm#">constante de</a> salle pour l'actif que vous souhaitez référencer (qui est simplement son nom) ou récupérez-la par le biais d'une fonction.</p>
+  <p>Vous pouvez modifier l'ordre des pièces en cliquant simplement sur <img alt="LMB Icon" class="icon" height="24" src="../assets/Images/Icons/Icon_LMB.png" width="21"> et en faisant glisser la pièce que vous souhaitez déplacer vers le haut ou vers le bas de la liste. Vous pouvez utiliser <img alt="Shift Icon" class="icon" height="20" src="../assets/Images/Icons/Icon_Shift.png" width="55"> et/ou <img alt="Control Icon" class="icon" height="20" src="../assets/Images/Icons/Icon_Ctrl.png" width="55"> / <img alt="CMD Icon" class="icon" height="20" src="../assets/Images/Icons/Icon_Cmd.png" width="55"> pour sélectionner plusieurs pièces, puis cliquer et faire glisser les pièces pour les déplacer toutes ensemble :</p>
+  <p><img alt="Moving Rooms Within The Room Manager" class="center" src="../assets/Images/Settings/Room_Manager_Move.gif">L'onglet <strong>Héritage des pièces</strong> permet de configurer des pièces &quot;enfants&quot;. Une pièce enfant est une pièce qui a été copiée à partir d'une pièce "parent".
+    d'une pièce &quot;parent&quot; et configurée pour hériter de toutes ses propriétés. Si vous ne faites rien à cette pièce, elle sera effectivement une copie de la pièce originale, mais vous pouvez ensuite aller dans l'<a href="../The_Asset_Editors/Rooms.htm">éditeur de pièce</a> et
+    activer ou désactiver l'héritage pour des éléments spécifiques tels que les calques ou les instances, ainsi qu'ajouter de nouveaux calques, instances et propriétés à la room.</p>
+  <p><img alt="The Room Inheritance Tab" class="center" src="../assets/Images/Settings/Room_Manager_Inheritance.png">Comme pour l'onglet Ordre des pièces, vous pouvez cliquer sur <img alt="LMB Icon" class="icon" height="24" src="../assets/Images/Icons/Icon_LMB.png" width="21"> et faire glisser pour réorganiser les pièces, mais notez que la sélection d'une pièce enfant et son déplacement vers un parent différent rompra l'héritage de la pièce avec le parent original et elle héritera à la place des propriétés de la nouvelle pièce. Notez également que vous pouvez convertir
+    un enfant en une pièce &quot;complète&quot; sans héritage en le faisant glisser vers la gauche de la liste (le bord de la liste sera mis en évidence), auquel cas il deviendra simplement une pièce à part entière.</p>
+  <p>Les pièces peuvent avoir plusieurs enfants, et chaque enfant peut également être un parent et avoir ses propres enfants, par exemple :</p>
+  <p><img alt="Example Of Room Inheritance With Multiple Children" class="center" src="../assets/Images/Settings/Room_Manager_Inheritance_Example.png">Ici, nous avons une chambre parentale, &quot;<span class="inline">rm_Level_1_Day</span>&quot;, qui a deux enfants
+    &quot;<span class="inline">rm_Level_1_Day_AfterBattle</span>&quot; et &quot;<span class="inline">rm_Level_1_Night</span>&quot;. Nous avons également attribué une autre pièce enfant à &quot;<span class="inline">rm_Level_1_Night</span>&quot; appelée &quot;
+    <span class="inline">rm_Level_1_Night_AfterBattle</span> &quot;. De cette façon, vous pouvez réutiliser les ressources et la conception du niveau d'une pièce mère, et ne modifier que ce qui est nécessaire pour la rendre légèrement différente dans la ou les pièces enfants.</p>
+  <p class="note"><strong>NOTE</strong>: Pour plus d'informations sur l'héritage des chambres, veuillez voir <a href="../The_Asset_Editors/Room_Properties/Room_Inheritance.htm">ici</a>.</p>
+  <p>Enfin, le gestionnaire de salles dispose de quelques outils supplémentaires pour vous aider à naviguer et à organiser vos salles. En haut, vous avez une <strong>barre de recherche</strong> qui vous permet d'ajouter un terme de recherche et d'accéder rapidement aux salles dont le nom contient ce terme.
+    noms. Les chambres qui contiennent le terme recherché sont mises en évidence et vous pouvez y accéder instantanément à l'aide des boutons haut/bas situés sur le côté :</p>
+  <p><img alt="Searching rooms in the Room Manager" class="center" src="../assets/Images/Settings/Room_Manager_Search.gif">Il y a également quelques boutons utiles en bas du gestionnaire de salles qui vous permettent de déplacer les salles vers le haut ou vers le bas de la liste d'ordre des salles :</p>
+  <p><img alt="Moving rooms up or down in the Room Manager" class="center" src="../assets/Images/Settings/Room_Manager_MoveButtons.gif">À côté de ces boutons, vous disposez également d'un bouton <strong>Créer un groupe</strong> qui peut être utilisé pour créer un dossier de groupe.
+    Ces dossiers peuvent être utilisés pour mieux organiser les pièces de votre jeu (l'ordre des pièces sera toujours respecté), et vous pouvez cliquer et faire glisser les pièces sur le dossier pour les ajouter. Vous pouvez également sélectionner plusieurs pièces en cliquant tout en maintenant la touche <img alt="Shift Icon" class="icon" height="20" src="../assets/Images/Icons/Icon_Shift.png" width="55"> et/ou <img alt="Control Icon" class="icon" height="20" src="../assets/Images/Icons/Icon_Ctrl.png" width="55"> / <img alt="CMD Icon" class="icon" height="20" src="../assets/Images/Icons/Icon_Cmd.png" width="55"> enfoncée, puis cliquez sur le bouton Créer un groupe et toutes les pièces sélectionnées seront ajoutées au groupe. Notez que <em>cela</em> modifiera l'ordre des pièces dans votre jeu et que si vous choisissez de supprimer le dossier du groupe plus tard, <strong>toutes les pièces du dossier seront également supprimées</strong> (par défaut, GameMaker vous avertira de cette suppression).
+   <span class="notranslate">GameMaker</span> vous en avertira par défaut).</p>
+  <p>Vous devez également noter que vous pouvez faire un clic droit sur n'importe quelle pièce dans le Room Manager pour faire apparaître le menu suivant :</p>
+  <p><img alt="Room Manager RMB menu" class="center" src="../assets/Images/Settings/Room_Manager_Room_RMB_Menu.png">Ce menu vous offre les options suivantes :</p>
+  <ul class="colour">
+    <li><strong>Créer une pièce enfant</strong>: Ceci créera une nouvelle pièce en tant qu'enfant de la pièce sur laquelle on a cliqué, la nouvelle pièce héritant des propriétés de la pièce parent.</li>
+    <li><strong>Editer</strong>: Ceci ouvrira l'<a href="../The_Asset_Editors/Rooms.htm">éditeur de pièce</a> pour la pièce.</li>
+    <li><strong>Modifier les étiquettes</strong>: Cela ouvrira l'<a href="../Introduction/The_Asset_Browser.htm">éditeur d'étiquettes</a> pour que vous puissiez ajouter des étiquettes à la pièce.</li>
+    <li><strong>Renommer</strong>: Ceci vous permet de renommer l'actif de la pièce (vous pouvez aussi faire un double clic lent <img alt="LMB Icon" class="icon" height="24" src="../assets/Images/Icons/Icon_LMB.png" width="21"> sur la pièce pour la renommer).</li>
+    <li><strong>Dupliquer</strong>: Cette option permet de dupliquer la pièce sélectionnée, en plaçant la nouvelle pièce sous la pièce sélectionnée.</li>
+    <li><strong>Favori</strong>:  Ceci ajoutera la pièce sélectionnée à la section des favoris du <a href="../Introduction/The_Asset_Browser.htm">navigateur d'actifs</a>.</li>
+    <li><strong>Supprimer</strong>: En cliquant sur ce bouton, la ou les pièces sélectionnées sont supprimées. S'il est utilisé sur un dossier de groupe, toutes les pièces du dossier seront supprimées avec le dossier. S'il est utilisé sur une salle parent, seul le parent sera supprimé,
+      et toutes les pièces enfants seront conservées, bien qu'elles soient désormais indépendantes et non plus des pièces enfants.</li>
+    <li><strong>Développer les enfants</strong>: Si un dossier de groupe est sélectionné, cette option permet de développer le contenu du dossier.</li>
+    <li><strong>Tout développer</strong>: Cette option permet de développer tous les groupes de dossiers.</li>
+    <li><strong>Réduire tout</strong>: Cette option permet de réduire tous les groupes de dossiers.</li>
+    <li><strong>Arrangement</strong>:  Le sous-menu arranger peut être utilisé pour déplacer les pièces vers le haut ou vers le bas dans le gestionnaire de pièces, de la même manière que les boutons en bas de la fenêtre du gestionnaire.</li>
+    <li><strong>Ouvrir dans l'explorateur</strong>: Ceci ouvrira un explorateur de fichiers OS sur l'actif dans le projet de jeu.</li>
+    <li><strong>Asset Colour</strong>: Vous pouvez sélectionner ici une couleur pour la pièce (ou les pièces) afin de les identifier dans le Room Manager. Notez que cette couleur sera également utilisée dans le navigateur d'actifs et remplacera toute couleur définie précédemment.</li>
+  </ul>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <div class="footer">
+    <div class="buttons">
+      <div class="clear">
+        <div style="float:left">Retour : <a href="Game_Settings.htm">Paramètres de jeu</a></div>
+        <div style="float:right">Suivant : <a href="Included_Files.htm">Fichiers inclus</a></div>
+      </div>
+    </div>
+    <h5><span data-keyref="Copyright Notice">Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
+  </div>
+  <!-- KEYWORDS
+Room Manager
+Room Inheritance
+Child Rooms
+-->
+  <!-- TAGS
+room_manager
+-->
+
+</body></html>

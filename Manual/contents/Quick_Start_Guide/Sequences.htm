@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>Séquences</title>
+  <meta name="generator" content="Adobe RoboHelp 2020" />
+  <link rel="stylesheet" href="../assets/css/default.css" type="text/css" />
+  <meta name="rh-authors" content="Mark Alexander" />
+  <meta name="topic-comment" content="Overview of Sequences in games." />
+  <meta name="rh-index-keywords" content="Quick Start - Sequences" />
+  <meta name="search-keywords" content="sequences,dope sheet,track panel,tracks,parameters" />
+  <meta name="robots" content="NOODP" />
+</head>
+<body>
+  <!--<div class="body-scroll" style="top: 150px;">-->
+  <h1>Séquences</h1>
+  <p>Le dernier actif dont nous allons parler dans ce guide, avant d'aborder la manière dont tout s'assemble dans l'<strong>éditeur de</strong> salle <strong>, est</strong> l'actif Séquences. Une séquence est essentiellement une collection d'autres actifs qui sont rassemblés
+    en un seul endroit, puis animées ensemble. L'animation finale (séquence) peut ensuite être ajoutée aux pièces de votre jeu, tout comme les instances.</p>
+  <p>Les séquences sont créées via l'éditeur de séquence <a href="../The_Asset_Editors/Sequences.htm"><strong>Éditeur de séquences</strong></a> qui s'ouvre lorsque vous créez un nouvel actif de séquence dans le <a href="../Introduction/The_Asset_Browser.htm">navigateur d'actifs</a>:</p>
+  <p><img alt="The Sequences Editor" class="center" src="../assets/Images/QS_Guide/QS_Sequences_Editor.png">Pour créer une séquence de base, vous ajoutez un son, un sprite ou une instance dans le <em>canevas de</em> la séquence, puis vous le positionnez à l'endroit où vous voulez qu'il soit au début de la séquence.
+    qu'il soit au début de la séquence. Cela crée un <strong><a class="glossterm" data-glossterm="Asset Track" href="#">Suivi des actifs</a></strong> dans le <a class="glossterm" data-glossterm="Track Panel" href="#">Track Panel</a> <em></em> et aussi
+    ajoute <strong></strong>une <strong><a class="glossterm" data-glossterm="keyframe" href="#"><span class="notranslate">image clé</span></a></strong> dans la fenêtre <a class="glossterm" data-glossterm="Dope Sheet" href="#"><span class="notranslate">Dope Sheet</span></a> pour indiquer la durée pendant laquelle l'actif sera visible.</p>
+  <p>Le temps de la séquence est exprimé en images (ce qui correspond à des pas pour les instances, c'est-à-dire qu'une image correspond à un pas de jeu), et vous pouvez voir ce qui va se passer à chaque image en déplaçant la séquence <strong><a class="glossterm" data-glossterm="playhead" href="#">tête de lecture</a></strong> dans
+    la <span class="notranslate">feuille de dope</span>. La position de la tête de lecture est également utilisée pour l'ajout de <strong><span class="notranslate">images clés</span> </strong>qui sont les images où vous voulez qu'un état change pour commencer ou finir. Les clés de paramètres sont stockées sur <strong><a class="glossterm" data-glossterm="parameter tracks" href="#">pistes de paramètres</a></strong> pour
+    l'actif donné.</p>
+  <p>Ainsi, vous positionnez le poste et définissez son échelle, sa couleur et d'autres propriétés à l'image 0 de la séquence. Vous enregistrez ensuite les touches de paramètres pour le poste et déplacez la tête de lecture jusqu'à l'image où vous souhaitez définir l'état suivant du poste (position,
+    couleur, etc....). Sur cette image, vous modifiez à nouveau les différents paramètres et enregistrez les clés correspondantes, puis vous répétez ce processus autant de fois que nécessaire pour la longueur de la séquence. Lorsque vous appuyez sur le bouton de lecture de la séquence, le poste est animé, la séquence interpolant entre les différents paramètres.
+   <a class="glossterm" data-glossterm="linear interpolation" href="#">interpolant</a> entre les différents états des paramètres, ce qui donne un résultat final ressemblant à ceci : </p>
+  <p><img alt="Sequence Example Image" class="center" src="../assets/Images/QS_Guide/QS_Sequence_Example.gif">Nous n'entrerons pas dans les détails du fonctionnement des séquences ici, mais il suffit de dire qu'elles sont un outil incroyablement puissant pour faire n'importe quoi, des cut-scenes aux menus en passant par les états des personnages et bien plus encore.
+    des cut-scenes, des menus, des états des personnages et bien plus encore.</p>
+  <p>La page liée ci-dessous vous donne tous les détails sur la façon d'utiliser les séquences dans vos jeux :</p>
+  <ul class="colour">
+    <li><a href="../The_Asset_Editors/Sequences.htm">L'éditeur de séquences</a></li>
+  </ul>
+  <p>Nous pouvons maintenant passer à l'<strong>éditeur de salle</strong>, qui est l'endroit où toutes ces parties de votre jeu se rejoignent...</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <div class="footer">
+    <div class="buttons">
+      <div class="clear">
+        <div style="float:left">Retour : <a href="../Content.htm">Index</a></div>
+        <div style="float:right">Suivant : <a href="Rooms.htm">Chambres</a></div>
+      </div>
+    </div>
+    <h5><span data-keyref="Copyright Notice">Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
+  </div>
+  <!-- KEYWORDS
+Quick Start: Sequences
+Sequences
+-->
+  <!-- TAGS
+qs_sequences
+-->
+
+</body></html>

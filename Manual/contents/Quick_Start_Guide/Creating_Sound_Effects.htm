@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>Créer des effets sonores</title>
+  <meta name="generator" content="Adobe RoboHelp 2020" />
+  <link rel="stylesheet" href="../assets/css/default.css" type="text/css" />
+  <meta name="rh-authors" content="Mark Alexander" />
+  <meta name="topic-comment" content="Overview what sounds and music can be added to a game and how." />
+  <meta name="rh-index-keywords" content="Quick Start - Sounds" />
+  <meta name="search-keywords" content="sound,sounds,sound effects,effects,game music,music" />
+  <meta name="robots" content="NOODP" />
+</head>
+<body>
+  <!--<div class="body-scroll" style="top: 150px;">-->
+  <h1>Créer des effets sonores</h1>
+  <p>Tous les jeux doivent avoir des effets sonores - et la plupart ont également de la musique - ce qui signifie que vous devez pouvoir les ajouter à votre jeu dans <span class="notranslate">GameMaker Studio 2</span>. Cela se fait par le biais de la fonction <a href="../The_Asset_Editors/Sounds.htm"><strong>Éditeur de sons</strong></a>,
+    qui s'ouvre lorsque vous créez un nouvel élément sonore dans le navigateur d'éléments :</p>
+  <p><img alt="The Sound Editor" class="center" src="../assets/Images/QS_Guide/QS_SoundEditor.png" /></p>
+  <p>Dans <span class="notranslate">GameMaker Studio 2</span>, les sons peuvent être <strong>décompressés </strong>ou <strong>compressés</strong>, les sons compressés disposant d'options supplémentaires sur la manière de les traiter au moment de l'exécution. Les sons non compressés sont ceux qui ont été enregistrés au format <span class="inline">WAV</span>, tandis que les sons compressés peuvent être au format <span class="inline">MP3</span> ou <span class="inline">OGG</span>. En général, vous voudrez que les petits effets sonores soient au format <span class="inline">WAV</span> - comme les sons de tir, ou les sons de boutons,
+    etc... - et les effets plus importants ou la musique au format <span class="inline">MP3</span> ou <span class="inline">OGG</span>. Comme pour les autres ressources, il est recommandé de nommer vos sons en utilisant un préfixe approprié comme &quot; <span class="inline">snd_</span>&quot;.
+    afin de pouvoir l'identifier facilement par la suite.</p>
+  <p class="note"><strong>REMARQUE</strong>: un son non compressé signifie simplement qu'aucun type de compression ne lui a été appliqué. <strong> <a class="glossterm" data-glossterm="algorithm" href="#">algorithme</a></strong> appliquée. Appliquer une <a class="glossterm" data-glossterm="compression" href="#">compression</a> à un son signifie qu'il nécessitera moins d'espace de stockage, mais aussi qu'il devra être décompressé avant d'être joué, et comme les petits effets sonores sont généralement utilisés beaucoup et très rapidement - et ne prennent pas beaucoup d'espace de stockage - vous ne voulez pas avoir à supporter le coût CPU supplémentaire de la décompression lorsqu'ils sont joués.
+    beaucoup d'espace de stockage - vous ne voulez pas avoir à supporter le coût CPU supplémentaire de la décompression au moment de la lecture. Cependant, comme les fichiers musicaux sont généralement très volumineux, il est préférable de les compresser, car ils occupent moins d'espace de stockage.
+    Ils occuperont moins d'espace de stockage et le coût CPU supplémentaire de la décompression est négligeable, car ils ne sont généralement lus qu'un par un.</p>
+  <p>L'ajout d'un son est aussi simple que de cliquer sur le bouton d'ajout de son <img alt="Add Sound Icon" class="icon" src="../assets/Images/Icons/Icon_AddSound.png">, puis de naviguer dans l'explorateur de fichiers qui s'ouvre jusqu'au fichier que vous souhaitez utiliser (vous pouvez également faire glisser et
+    libérer des fichiers sonores sur l'IDE de <span class="notranslate">GameMaker Studio 2</span> et ils seront ajoutés en tant que nouvelle ressource sonore). Une fois que vous en avez sélectionné un et que vous l'avez chargé, vous pouvez le prévisualiser à l'aide des commandes de lecture affichées et modifier certains attributs pour l'exportation du fichier.
+    pour l'exportation du fichier. Si vous n'êtes pas sûr de vous, laissez tout en l'état, mais si vous ajoutez de la musique ou des sons au format <span class="inline">MP3</span> / <span class="inline">OGG</span>, vous devriez probablement changer l'option
+    au format <em>Compressed - Not Streamed</em>.</p>
+  <p>Vous trouverez de plus amples informations sur l'éditeur de sons sur la page liée ci-dessous :</p>
+  <ul class="colour">
+    <li><a href="../The_Asset_Editors/Sounds.htm">Éditeurs : L'éditeur de son</a></li>
+  </ul>
+  <p>Notez que les sons prennent beaucoup d'espace sur le disque, il faut donc être prudent lorsque vous les créez pour vos projets de jeu. Avez-vous vraiment besoin d'un effet sonore à 48KHz qui ne joue que pendant une fraction de seconde ? Probablement pas ! Pensez donc à réduire la <a class="glossterm" data-glossterm="sample rate" href="#">fréquence d'échantillonnage</a> à 11025 ou 22050 pour les effets, et pour les choses plus longues comme la musique ou les effets en boucle, pensez également à utiliser un format compressé. Notez également que si vous prévoyez d'utiliser des effets audio positionnels en 3D,
+    alors le fichier son initial doit être <em>mono</em>.</p>
+  <p>Vous pouvez fermer l'éditeur de sons maintenant et nous pouvons passer à l'examen des <strong>objets et des instances</strong>...</p>
+  <p> </p>
+  <p> </p>
+  <div class="footer">
+    <div class="buttons">
+      <div class="clear">
+        <div style="float:left">Retour : <a href="../Content.htm">Index</a></div>
+        <div style="float:right">Suivant : <a href="Objects_And_Instances.htm">Objets et Instances</a></div>
+      </div>
+    </div>
+    <h5><span data-keyref="Copyright Notice">Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
+  </div>
+  <!-- KEYWORDS
+Sound Effects
+Creating Sound Effects
+Quick Start: Sound Effects
+-->
+  <!-- TAGS
+qs_sound_effects
+-->
+
+</body></html>

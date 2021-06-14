@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>Création de jeux de carreaux</title>
+  <meta name="generator" content="Adobe RoboHelp 2020" />
+  <link rel="stylesheet" href="../assets/css/default.css" type="text/css" />
+  <meta name="rh-authors" content="Mark Alexander" />
+  <meta name="topic-comment" content="Overview of what a tile set is and how to make one." />
+  <meta name="rh-index-keywords" content="Quick Start - Tile Sets" />
+  <meta name="search-keywords" content="tiles,tilesets,tileset,tile set,tile sets" />
+  <meta name="robots" content="NOODP" />
+</head>
+<body>
+  <!--<div class="body-scroll" style="top: 150px;">-->
+  <h1>Création de jeux de carreaux</h1>
+  <p>Les<strong>jeux de tuiles</strong> sont créés à partir de sprites, mais ils sont également classés comme un type de ressource distinct, car la façon dont <span class="notranslate">GameMaker Studio 2</span> les traite est un peu différente de celle des sprites et des objets. Ainsi, un jeu de tuiles est une collection de tuiles créée
+    dans un même sprite, et une tuile est simplement une ressource graphique qui est ajoutée à une pièce de <span class="notranslate">GameMaker Studio 2</span> dans le cadre d'un processus de création de tuiles. <strong> <a class="glossterm" data-glossterm="tile map" href="#">carte de tuiles</a></strong>. Ces cartes de tuiles sont ensuite dessinées à l'écran
+    Ces cartes de tuiles sont ensuite dessinées à l'écran avec très peu de traitement CPU/GPU, ce qui les rend idéales pour la conception d'éléments statiques dans les niveaux.</p>
+  <p>Pour que le traitement des tuiles soit aussi rapide, elles ont certaines restrictions, la plus basique étant qu'elles <strong>ne peuvent être que rectangulaires ou carrées</strong> (si vous voulez autre chose que cela, vous devrez créer un sprite ordinaire
+    et utiliser la <em>couche d'actifs</em> dans l'éditeur de salle, mais nous en parlerons plus tard dans la section sur les <a href="Rooms.htm">salles).</a> Parmi les autres restrictions, citons le fait qu'ils ne peuvent être tournés que de 90°, ou reflétés ou retournés, et qu'ils ne peuvent être animés qu'avec des images dont le nombre est égal ou supérieur à 1.
+    être animées uniquement avec des images dont le nombre est une <strong>puissance de 2</strong> (c'est-à-dire 2, 4, 8, 16, etc.).</p>
+  <p>Prenons un exemple simple de jeu de tuiles : des tuiles murales carrées pour un jeu de haut en bas :</p>
+  <p><img alt="Example Tile Set Sprite" class="center" src="../assets/Images/QS_Guide/QS_ExampleTileset.png" /></p>
+  <p>Pour commencer, nous devons en faire un <strong>sprite de</strong> jeu de tuiles, ce qui peut être fait dans l'<a href="../The_Asset_Editors/Sprites.htm">éditeur de</a><a href="../The_Asset_Editors/Image_Editor.htm">sprites/éditeur d'</a> <a href="../The_Asset_Editors/Sprites.htm">images</a>(ou un éditeur d'images externe, puis importé comme sprite).
+    externe, puis importé en tant que sprite). Le sprite final devrait ressembler à quelque chose comme ceci :</p>
+  <p><img alt="Tile Set Sprite" class="center" src="../assets/Images/QS_Guide/QS_Tileset_Sprite.png"> <strong>Remarquez que la toute première tuile est vide dans cette image</strong>. La façon dont la carte des tuiles de la pièce est stockée dans <span class="notranslate">GameMaker Studio 2</span> signifie que
+    que la première tuile devra toujours être vide, car il s'agit essentiellement de la tuile &quot;supprimer&quot; ou de la tuile &quot;espace vide&quot; (cette tuile &quot;vide&quot; aura un index de 0 - les tuiles sont indexées avec une valeur qui commence à 0 et va de gauche à droite, de haut en bas).
+    Les tuiles sont indexées avec une valeur qui commence à 0 et qui compte de gauche à droite, de haut en bas). Ainsi, lorsque vous créez vos ensembles de tuiles, la tuile du coin supérieur gauche devra toujours être vide de cette manière. Notez également que, bien que l'image ci-dessus montre un jeu de carreaux de mur complet avec 47 carreaux, vous n'avez peut-être pas besoin d'autant de carreaux car vous pouvez faire pivoter le mur.
+    vous n'aurez peut-être pas besoin d'autant de tuiles, car vous pourrez les faire pivoter et les retourner en les plaçant plus tard dans l'éditeur de pièce.</p>
+  <p>Une fois le sprite créé, nous pouvons aller de l'avant et définir le jeu de tuiles lui-même, ce qui signifie que vous devez d'abord créer une nouvelle ressource de jeu de tuiles en faisant un clic droit sur <img alt="Icon RMB" class="icon" src="../assets/Images/Icons/Icon_RMB.png"> le dossier Tile Set asset
+    et en sélectionnant <em>Créer</em>. Cela ouvrira l'<a href="../The_Asset_Editors/Tile_Sets.htm">éditeur de jeu de tuiles</a> où vous pourrez ajouter le sprite et définir ses propriétés :</p>
+  <p><img alt="Tile set Editor" class="center" src="../assets/Images/QS_Guide/QS_Tileset_Editor.png" /></p>
+  <p>Nous avons défini la taille de l'ensemble de tuiles à 64px, et nous avons laissé le reste des options à leurs valeurs par défaut, puisque nous n'avons pas besoin de décalages ou de quoi que ce soit de ce genre (les valeurs de décalage sont utiles pour tout sprite d'ensemble de tuiles qui a des espaces autour de chacune des tuiles
+    tuiles). Vous voudrez nommer le jeu de tuiles en utilisant un préfixe approprié comme &quot; <span class="inline">ts_</span>&quot; afin de pouvoir l'identifier facilement plus tard, et notez que les mêmes restrictions s'appliquent que pour les sprites, c'est-à-dire que le nom ne peut pas commencer par un chiffre, et ne peut utiliser qu'un mot.
+    par un nombre, et ne peut utiliser que le symbole de soulignement &quot;_&quot; et des caractères alphanumériques.</p>
+  <p>Vous pouvez maintenant fermer l'éditeur de jeu de tuiles, car vous pouvez utiliser le jeu de tuiles &quot;tel quel&quot; pour créer des couches de carte de tuiles dans l'éditeur de pièce, cependant si vous voulez en savoir plus sur les fonctions avancées de l'éditeur de jeu de tuiles, alors consultez la section suivante du
+    le manuel :</p>
+  <ul class="colour">
+    <li><a href="../The_Asset_Editors/Tile_Sets.htm">Éditeurs : L'éditeur de jeu de tuiles</a></li>
+  </ul>
+  <p>Passons maintenant à l'ajout d'<strong>effets sonores</strong> à votre projet...</p>
+  <p> </p>
+  <p> </p>
+  <div class="footer">
+    <div class="buttons">
+      <div class="clear">
+        <div style="float:left">Retour : <a href="../Content.htm">Index</a></div>
+        <div style="float:right">Suivant : <a href="Creating_Sound_Effects.htm">Création d'effets sonores</a></div>
+      </div>
+    </div>
+    <h5><span data-keyref="Copyright Notice">Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
+  </div>
+  <!-- KEYWORDS
+Creating Tilesets
+Quick Start: Creating Tilesets
+-->
+  <!-- TAGS
+qs_tilesets
+-->
+
+</body></html>
