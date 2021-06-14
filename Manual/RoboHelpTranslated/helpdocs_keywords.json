@@ -1,0 +1,14 @@
+{
+	"Drawing" : "Quick_Start_Guide/Drawing",
+	"Movement" : "Quick_Start_Guide/Movement_And_Controls",
+	"Controls" : "Quick_Start_Guide/Movement_And_Controls",
+	"Rooms" : "Quick_Start_Guide/Rooms",
+	"Sequences" : "Quick_Start_Guide/Sequences",
+	"Summary" : "Quick_Start_Guide/Summary",
+	"Conifgurations" : "Settings/Configurations",
+	"Configs" : "Settings/Configurations",
+	"NSIS" : "Settings/Game_Options/Windows",
+	"Installer" : "Settings/Game_Options/Windows",
+	"Atlas" : "Settings/Texture_Information/Texture_Pages",
+	"Textures" : "Settings/Texture_Information/Texture_Pages"
+}
