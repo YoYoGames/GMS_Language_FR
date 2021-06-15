@@ -93,7 +93,7 @@
     <p class="dropspot"><img alt="Getting Gamepad ID Using DnD" class="center" src="../assets/Images/QS_Guide/QS_MovementExample_DnD_3_1.png" /></p>
     <p class="code">gamepad_id = -1 ;<br> for (var i = 0 ; i &lt; 12 ; i += 1 ;)<br> {<br> if gamepad_is_connected(i)<br> {<br> gamepad_id = i ;<br> gamepad_set_axis_deadzone(gamepad_id, 0.2) ;<br> break ;<br> } <br> }
     </p>
-    <p class="dropspot">Remarquez que dans le code ci-dessus, nous avons défini le paramètre <strong> <a class="glossterm" data-glossterm="zone morte" href="#">deadzone</a> </strong>pour le gamepad. En effet, les sticks analogiques des différentes marques de manettes de jeu ont une sensibilité différente.
+    <p class="dropspot">Remarquez que dans le code ci-dessus, nous avons défini le paramètre <strong> <a class="glossterm" data-glossterm="zone morte" href="#">zone morte</a> </strong>pour le gamepad. Cela s'explique par le fait que les sticks analogiques des différentes marques de manettes de jeu ont une sensibilité différente.
       ils peuvent être si sensibles que si vous ne définissez pas de zone morte, ils peuvent provoquer des mouvements indésirables dans vos jeux. Nous définissons donc la zone morte à une valeur telle que 0,2 pour indiquer à <span class="notranslate">GameMaker Studio 2</span> d'ignorer toute valeur de manette de jeu inférieure à cette valeur <a class="glossterm" data-glossterm="absolu" href="#">absolue</a>.</p>
     <p class="dropspot">Pour ajouter le mouvement réel, nous aurons besoin d'un Step <strong>Event, donc</strong> ajoutez-le maintenant et donnez-lui le DnD™ ou GML suivant :</p>
     <p class="dropspot"><img alt="Get Gamepad Input Using DnD" class="center" src="../assets/Images/QS_Guide/QS_MovementExample_DnD_3_2.png" /></p>

@@ -2,14 +2,14 @@
   
   Chambres
   Tous les jeux que vous créez dans GameMaker Studio 2 ont besoin d'au moins une salle pour fonctionner (mais ils peuvent en avoir beaucoup, beaucoup plus). Une salle est simplement un espace où vous placez des instances des objets qui composent votre jeu, ainsi que des tuiles et d'autres ressources graphiques.
-    Lorsque vous créez une room pour la première fois dans l'Asset Browser, un nouvel espace de travail vous est présenté. Éditeur de salles qui vous permettra de modifier ses propriétés,
+    Lorsque vous créez une room pour la première fois dans l'Asset Browser, un nouvel espace de travail vous est présenté. Éditeur de salles avec lequel vous pourrez modifier ses propriétés,
     quelque chose comme ceci :
   
   Par défaut, les outils de la pièce seront placés à gauche, avec trois sections principales :
   
     Éditeur de calques: Tout ce qui se trouve dans une pièce est placé sur des calques, et il existe différents types de calques parmi lesquels vous pouvez choisir (nous y reviendrons plus tard). Les couches sont classées par profondeur et cette profondeur définit l'ordre dans lequel le contenu de la couche sera rendu à l'écran lors de l'exécution du jeu.
       le contenu des couches sera rendu à l'écran lors de l'exécution du jeu. L'ordre des profondeurs va du plus élevé au plus bas, de sorte que plus la profondeur est faible, plus la "caméra" est proche, et plus la profondeur est élevée, plus elle est éloignée. Par exemple, une couche avec une profondeur de
-      de -300 sera rendu par-dessus un calque avec une profondeur de -100, et un calque avec une profondeur de 1000 sera rendu sous tout ce qui a une profondeur inférieure à celle-ci. Notez que par défaut, GameMaker Studio 2 ordonne les profondeurs de calque en fonction de la position
+      par exemple, un calque avec une profondeur de -300 sera rendu par-dessus un calque avec une profondeur de -100, et un calque avec une profondeur de 1000 sera rendu sous tout ce qui a une profondeur inférieure à celle-ci. Notez que par défaut, GameMaker Studio 2 ordonne les profondeurs de calque en fonction de la position
       dans l'éditeur de calque. Vous pouvez faire glisser les calques à l'aide de la souris pour les réorganiser et GameMaker Studio 2 réorganisera les profondeurs en conséquence.
     Propriétés des couches: Chaque couche que vous ajoutez à la pièce aura ses propres propriétés, et ces propriétés changeront en fonction du type de couche. Cette fenêtre vous permet de changer ces propriétés et de modifier la façon dont la couche sera rendue.
      rendu.
@@ -58,14 +58,14 @@
     car vous devrez le savoir pour la prochaine section du Guide de démarrage rapide.
   Pour ajouter une instance à l'éditeur de salle, vous devez d'abord sélectionner un calque d'instance dans l'éditeur de calques sur la gauche (ou en créer un s'il n'en existe pas). Vous pouvez ensuite vous rendre dans le navigateur d'actifs, cliquer sur , faire glisser l'objet de votre choix et le déposer dans la pièce à l'endroit souhaité, ce qui ajoutera une instance unique de cet objet à votre jeu :
   
-  Si vous souhaitez placer plusieurs instances dans la pièce, vous pouvez sélectionner un objet dans l'arborescence des ressources, puis appuyer et maintenir la touche  pour prévisualiser la ressource,
+  Si vous souhaitez placer plusieurs instances dans la pièce, vous pouvez sélectionner un objet dans l'arborescence des ressources, puis maintenir la touche  enfoncée pour obtenir un aperçu de la ressource,
     et si vous cliquez en plus sur le bouton gauche de la souris , vous pouvez alors le "peindre" dans la couche de la pièce.
   
   Notez que les ressources reçoivent une position lorsqu'elles sont ajoutées dans l'éditeur de pièce, en fonction de leurs positions sur les axes X et Y par rapport à l'origine de la pièce. L'origine de la pièce est la position (0, 0), qui dans GameMaker Studio 2 est le coin supérieur gauche,
     et vers la droite est +X et vers le bas est +Y, par exemple :
   Dans l'exemple ci-dessus, l'instance est placée au milieu de la pièce à la position (X:512, Y:384). Il est également possible de sortir des limites de la room
     et avoir des positions supérieures aux longueurs des axes de la pièce, ou même inférieures à l'origine de la pièce - dans ce cas, les coordonnées X/Y seront des valeurs négatives.
-  Pour des informations plus détaillées sur l'éditeur de pièce, vous pouvez consulter la section suivante du manuel :
+  Pour des informations plus détaillées sur l'éditeur de pièces, vous pouvez consulter la section suivante du manuel :
   
     Rédacteurs : Le rédacteur en chef de la salle
   

@@ -9,7 +9,7 @@
     de développement Mac. Lorsque vous créez votre .app.zip, ce fichier peut aller n'importe où (l'emplacement que vous spécifiez lors du dialogue de sauvegarde n'est pas la seule copie faite de ce .app.zip), mais le .pkg et les autres fichiers sont laissés dans ce dossier, ce qui vous permet de tester les installations locales via le Terminal de manière à simuler l'achat dans le Mac Store, etc...
   Vous devez également indiquer ici l'identifiant d'équipe que vous souhaitez utiliser pour signer l'application finale que GameMaker Studio 2 crée pour vous. Ce paramètre remplacera l'identifiant d'équipe que vous avez fourni dans les préférences demacOS.
     Après l'identifiant d'équipe, vous avez également la possibilité de fournir l'identifiant de signature, qui est requis par Apple pour toutes les applications ne provenant pas de la boutique (comme les jeux Steam, par exemple).
-  L'option suivante consiste à activer Vapeur dans votre jeu. Si vous activez cette option, assurez-vous que le SDK Steamworksest installé (voir ici), et que
+  L'option suivante consiste à activer Steam dans votre jeu. Si vous activez cette option, assurez-vous que le SDK Steamworksest installé (voir ici), et que
     vous avez ajouté l'ID de l'applicationSteam dans les options générales du jeu.
   Enfin, vous avez la possibilité de désactiver le sandbox du système de fichiers. Si vous cochez cette option, le bac à sable de GameMaker Studio 2 sera désactivé pour l'enregistrement et le chargement des fichiers, ce qui permettra à vos jeux d'accéder aux fichiers à partir de n'importe quel système exécutant le jeu.
     Cette option n'est pas cochée par défaut, car nous vous recommandons de maintenir le sandbox de GameMaker Studio 2 pour les fichiers sur tous les systèmes et, lorsque cette option est cochée, certaines zones d'enregistrement/de chargement peuvent ne pas être disponibles en fonction des autorisations du système d'exploitation. Pour plus d'informations
@@ -29,18 +29,18 @@
       de 60, l'activation de cette option bloquera la vitesse du jeu à 60 également. Cette option est désactivée par défaut.
     Autoriser le redimensionnement de la fenêtre: En cochant cette case, l'utilisateur peut modifier la taille de la fenêtre du jeu (l'option Fenêtre sans bordure doit être désactivée pour que cela fonctionne). Cette option est désactivée par défaut.
     Activer la rétine: si vous cochez cette case, le tampon arrière sera à la résolution la plus élevée (réelle) lorsque le jeu est exécuté sur un moniteur compatible avec la rétine, tandis que si vous la décochez, le tampon arrière sera à la résolution apparente (inférieure).
-      Cela signifie que la fenêtre de jeu initiale aura deux fois la largeur et la hauteur de la pièce/du port de vue de la première pièce. Cependant, la surface de l'application n'est PAS mise à l'échelle en conséquence.
+      Cela signifie que la fenêtre de jeu initiale aura une largeur et une hauteur deux fois supérieures à celles de la pièce/du port de vue de la première pièce. Cependant, la surface de l'application n'est PAS mise à l'échelle en conséquence.
       Si vous voulez que votre jeu tire le meilleur parti de l'écran rétina, vous devez également définir la surface de l'application de manière à ce qu'elle corresponde à la taille de la fenêtre (notez que cela doublera les pixels sur la largeur et la hauteur, donc n'activez cette option et ne mettez la surface de l'application à l'échelle que si votre jeu bénéficiera de la résolution accrue).
       de l'augmentation de la résolution).
        Cette option est désactivée par défaut, et l'activer ne fera aucune différence lorsque vous exécuterez ou déboguerez le jeu à l'aide de VM, car le runner est préconstruit dans ce cas. Elle ne fonctionnera que si vous construisez un exécutable avec VM, ou si vous utilisez YYC pour tester ou construire le jeu.
       construire le jeu, car cela reconstruira le runner avec vos options de jeu personnalisées.
-    Mise à l'échelle: Vous pouvez choisir de conserver le rapport hauteur/largeur (une pièce 4:3 sera donc "letter boxée" sur un écran 16:9) ou de mettre l'image à l'échelle (en l'étirant pour qu'elle s'adapte au plein écran).
+    Mise à l'échelle: Ici, vous pouvez choisir de conserver le rapport hauteur/largeur (une pièce 4:3 sera donc "letter boxée" sur un 16:9) ou d'effectuer une mise à l'échelle complète (en étirant l'image pour qu'elle s'adapte au plein écran).
       
-      ATTENTION ! La désactivationdela surface d'application désactive toutes les options de mise à l'échelle définies dans les options de jeu de Windows jusqu'à ce qu'elle soit réactivée. Voir La surface d'application pour plus de détails.
+      ATTENTION ! Sivousdésactivez la surface d'application, toutes les options de mise à l'échelle définies dans les options de jeu de Windows seront désactivées jusqu'à ce que vous la réactiviez. Voir La surface d'application pour plus de détails.
   
   Enfin, il est possible de définir la taille de la page de texture. La taille par défaut (et la plus compatible) est de 2048x2048, mais vous pouvez choisir entre 256x256 et 8192x8192. Le site
     est également un bouton marqué Prévisualisation qui génère les pages de texture pour cette plate-forme et ouvre une fenêtre pour que vous puissiez voir à quoi elles ressemblent. Cela peut être très utile si vous souhaitez voir comment les pages de texture sont structurées et éviter d'avoir des pages de texture plus grandes.
-    structurées et éviter d'avoir des pages de texture plus grandes (ou plus petites) que nécessaire. Pour plus d'informations sur les pages de texture, veuillez cliquer ici.
+    structurées et éviter d'avoir des pages de texture plus grandes (ou plus petites) que nécessaire. Pour plus d'informations sur les pages de texture, voir ici.
   REMARQUE: plus la taille de la page de texture est grande, moins votre jeu sera compatible avec les PC ayant des spécifications inférieures.
    
   Images

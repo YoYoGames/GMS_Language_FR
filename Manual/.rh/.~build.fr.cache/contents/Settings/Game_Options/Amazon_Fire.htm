@@ -9,7 +9,7 @@
    Paramètres de construction. Vous devez remplir les informations sur le produit, qui comprennent le nom d'affichage du projet, les informations sur le paquet, qui consistent en un domaine, une société et un produit.
     Les informations sur le paquet ne peuvent être constituées que de lettres de A à Z et de chiffres de 0 à 9, sans symboles ni autres caractères spéciaux, et ne doivent pas comporter de majuscules. Ces informations seront ensuite utilisées pour générer un ID de paquet au format
     "com.company.myappname".
-  REMARQUE: Si vous avez déjà configuré les Android options de jeu de la cible, vous pouvez cliquer sur le bouton " Syncfrom Android " en haut pour transférer les informations pertinentes de la cible Android vers l'Amazon Fire.
+  REMARQUE: Si vous avez déjà configuré les Android options de jeu de la cible, vous pouvez cliquer sur le bouton " Syncfrom Android " en haut pour transférer les informations pertinentes de la cible Android
     vers l'Amazon Fire.
   Vous devez ensuite définir les outils de construction ainsi que les versions Target, Minimum et Compile SDK.
   REMARQUE: il existe également une option pour la version "Support Library " à utiliser. À partir de GameMaker Studio v2.2.4 et plus, cette option n'est plus nécessaire et toute valeur utilisée ici sera ignorée. Ce paramètre est conservé
@@ -54,7 +54,7 @@
   
     Interpoler les couleurs entre les pixels: Active l'interpolation linéaire, qui a pour effet de "lisser" les pixels. Pour des graphiques de pixels nets, cette option doit être désactivée.
       désactivé, mais si vous avez de beaux mélanges alpha et des graphiques aux bords lissés, il est préférable de l'activer. Cette option est activée par défaut.
-    Profondeur de couleur de l'écran: Ceci peut être utilisé pour définir la profondeur de couleur pour le rendu à 16 ou 24 bits. Cela affectera la compatibilité avec certains appareils plus anciens s'il est réglé sur 24 bits, et augmentera également l'ashmem qui est nécessaire (c'est la mémoire partagée sur les appareils AmazonFire).
+    Profondeur de couleur de l'écran: Ce paramètre peut être utilisé pour définir la profondeur de couleur pour le rendu, soit 16 bits, soit 24 bits. Cela affectera la compatibilité avec certains appareils plus anciens s'il est réglé sur 24 bits, et augmentera également l'ashmem qui est nécessaire (c'est la mémoire partagée sur les appareils AmazonFire).
       est nécessaire (il s'agit de la mémoire partagée sur les appareils AmazonFire).
     Mise à l'échelle: Vous pouvez choisir ici de mettre à l'échelle le canevas de dessin en conservant le rapport hauteur/largeur de l'écran de l'appareil - en ajoutant un "rembourrage" autour des bords pour s'adapter à l'écran - ou vous pouvez choisir d'étirer le canevas de dessin pour l'adapter à l'écran de l'appareil.
       l'écran de l'appareil.
@@ -96,7 +96,7 @@
     RECORD_AUDIO: Permet à votre jeu d'enregistrer l'entrée audio du microphone.
   
   REMARQUE: si vous n'êtes pas sûr d'avoir besoin de ces éléments, vous devriez probablement les laisser décochés par défaut et laisser GameMaker Studio 2 s'occuper des autorisations pour votre jeu.
-  La section Amazon Fire Permissions comporte également une zone où vous pouvez injecter des permissions dans les balises de l'applicationAndroid dans le manifest.xml de Android. Vous pouvez trouver une liste complète des balises disponibles dans la documentation d'Android
+  La section Amazon Fire Permissions comporte également une zone où vous pouvez injecter des permissions dans les balises de l'applicationAndroid dans le manifest.xml de Android. Vous pouvez trouver une liste complète des balises disponibles dans la documentation Android
     ici :
   
     DéveloppeurAndroid: Tags d'application
