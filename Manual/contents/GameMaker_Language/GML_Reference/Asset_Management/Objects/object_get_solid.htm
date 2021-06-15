@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>object_get_solid</title>
+  <meta name="generator" content="Adobe RoboHelp 2019" />
+  <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
+  <meta name="rh-authors" content="Mark Alexander" />
+  <meta name="topic-comment" content="Page décrivant la fonction object_get_solid" />
+  <meta name="rh-index-keywords" content="object_get_solid" />
+  <meta name="search-keywords" content="object_get_solid" />
+</head>
+<body><!--<div class="body-scroll" style="top: 150px;">--><h1>object_get_solid</h1><p> Cette fonction vous dira si l&#39;objet que vous vérifiez a été marqué comme &quot;solide&quot; ou non. Un objet solide génère un événement de collision spécial lors de l&#39;utilisation du système de collision traditionnel (c&#39;est-à-dire: le monde de la physique est désactivé). Veuillez noter qu&#39;il ne s&#39;agit pas d&#39;une fonction d&#39;instance! Ainsi, vous pouvez avoir un objet solide et une instance normale du même objet et vice-versa. Vous pouvez définir un indicateur solide d&#39;instances individuelles à l&#39;aide de la <a href="../Instances/Instance_Variables/solid.htm"><tt>solid</tt></a> variable d&#39;instance.</p><p></p><h4> Syntaxe:</h4><p class="code">object_get_solid(obj);</p><table><tbody><tr><th> Argument</th><th> Description</th></tr><tr><td> <span class="notranslate">obj</span></td><td> L&#39;index de l&#39;objet à vérifier.</td></tr></tbody></table><p></p><h4> Retour:</h4><p class="code">Boolean</p><p></p><h4> Exemple:</h4><p class="code">if (!solid) &amp;&amp; (object_get_solid(object_index))<br/>     {<br/>     solid = true;<br/>     }</p><p> Le code ci-dessus vérifiera l&#39;instance qui l&#39;exécute pour voir si elle est solide ou non et vérifiera l&#39;index d&#39;objet de l&#39;instance pour voir si elle est marquée comme solide ou non. Si l&#39;instance n&#39;est <i>pas</i> encore solide, l&#39;index d&#39;objet est marqué comme solide, il définira &quot;solide&quot; sur true pour cette instance. </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> Retour: <a href="Objects.htm">Objets</a></div><div style="float:right"> Suivant:<a href="object_get_sprite.htm">object_get_sprite</a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
+  </div>
+  <!-- KEYWORDS
+object_get_solid
+-->
+  <!-- TAGS
+object_get_solid
+-->
+</body>
+</html>

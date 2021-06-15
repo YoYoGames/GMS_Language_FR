@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>instance_nearest</title>
+  <meta name="generator" content="Adobe RoboHelp 2019" />
+  <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
+  <meta name="rh-authors" content="Mark Alexander" />
+  <meta name="topic-comment" content="Page décrivant la fonction instance_nearest" />
+  <meta name="rh-index-keywords" content="instance_nearest" />
+  <meta name="search-keywords" content="instance_nearest" />
+</head>
+<body><!--<div class="body-scroll" style="top: 150px;">--><h1>instance_nearest</h1><p> Cette fonction vérifie toutes les instances de l&#39;objet donné pour voir laquelle est la plus proche du point x / y donné. Toutes les vérifications se feront de la position x / y donnée à l&#39; <i>origine</i> (la position x / y) des instances de l&#39;objet spécifié. Si aucune instance de l&#39;objet n&#39;existe, la fonction renverra le mot-clé<a href="../../../GML_Overview/Instance_Keywords.htm"><span class="inline">noone</span></a>, mais s&#39;il y a des instances, il renverra le <a href="Instance_Variables/id.htm"><tt>id</tt></a> de l&#39;instance trouvée. Veuillez noter que si l&#39;instance exécutant le code a le même index d&#39;objet que l&#39;objet en cours de vérification, elle sera incluse dans la vérification (cela inclut la vérification des objets parents si l&#39;instance appelante est également un enfant du parent).</p><p></p><h4> Syntaxe:</h4><p class="code">instance_nearest(x, y, obj);</p><table><tbody><tr><th> Argument</th><th> Description</th></tr><tr><td> <span class="notranslate">x</span></td><td> La position x à partir de laquelle effectuer la vérification.</td></tr><tr><td> <span class="notranslate">y</span></td><td> La position y à partir de laquelle effectuer la vérification.</td></tr><tr><td> <span class="notranslate">obj</span></td><td> Objet pour lequel rechercher des instances.</td></tr></tbody></table><p></p><h4> Retour:</h4><p class="code">Real (either an instance ID value or the keyword <tt>noone</tt>)</p><p></p><h4> Exemple:</h4><p class="code">var inst, xx;<br/> xx = x;<br/> x -= 10000;<br/> inst = instance_nearest(xx, y, object_index);<br/> if inst != id<br/>     {
+    <br/>     draw_line(x, y, inst.x, inst.y);<br/>     }
+    <br/> x += 10000;</p><p> Le code ci-dessus déplace l&#39;instance actuelle de 10000 pixels, puis vérifie sa position précédente pour trouver l&#39;instance la plus proche du même type d&#39;objet. Si cette instance est elle-même, elle ne fera rien de plus que de revenir à sa position d&#39;origine, mais si l&#39;instance trouvée est différente, elle tracera une ligne entre les deux. </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> Retour: <a href="Instances.htm">Instances</a></div><div style="float:right"> Suivant:<a href="instance_number.htm">instance_number</a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
+  </div>
+  <!-- KEYWORDS
+instance_nearest
+-->
+  <!-- TAGS
+instance_nearest
+-->
+</body>
+</html>

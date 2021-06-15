@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>Structure de code de base</title>
+  <meta name="generator" content="Adobe RoboHelp 2019" />
+  <link rel="stylesheet" href="../../assets/css/default.css" type="text/css" />
+  <meta name="rh-authors" content="Mark Alexander" />
+  <meta name="topic-comment" content="Page décrivant la structure de base du code lors de l&#39;utilisation de GML" />
+  <meta name="rh-index-keywords" content="Structure du code" />
+  <meta name="search-keywords" content="Structure du code,begin,end,déclaration" />
+</head>
+<body><!--<div class="body-scroll" style="top: 150px;">--><h1> Structure de code de base</h1><p> Le code est écrit en <em>blocs</em> et un bloc de code typique consiste en un ensemble d&#39;instructions, appelées <a class="glossterm" data-glossterm="déclaration" href="#">instructions</a> <span class="glossextra">s</span>, qui sont ensuite interprétées par <span class="notranslate">GameMaker Studio</span> 2 et utilisées pour que quelque chose se produise dans votre jeu. Ce &quot;quelque chose&quot; peut être aussi simple que d&#39;ajouter 2 et 2 pour obtenir 4, ou aussi complexe que de faire fuir un ennemi lorsque sa santé descend en dessous d&#39;une certaine valeur. La structure réelle du programme peut varier considérablement, en fonction des fonctions qu&#39;il utilise, mais décomposée en bases, elle ressemble à ceci:</p><p class="code">&lt;statement&gt;;<br/> &lt;statement&gt;;
+    <br/> ...
+  </p><p> Les instructions doivent être séparées par un &quot;;&quot; symbole pour éviter les erreurs avec <a class="glossterm" data-glossterm="variable" href="#">variables</a> déclarations et de garder votre code propre et bien rangé, et ils peuvent consister en des déclarations variables, l&#39; <a
+      class="glossterm" data-glossterm="expression" href="#">expression</a> <span class="glossextra">s</span> et les appels à des <strong>fonctions</strong> spécifiques. Vous pouvez également &quot;regrouper&quot; les instructions sous forme de bloc en utilisant les accolades <tt>{}</tt> afin qu&#39;ils fonctionnent ensemble, comme dans l&#39;exemple <a
+        class="glossterm" data-glossterm="conditionnel" href="#">conditionnel suivant:</a></p><p class="code">if (&lt;conditional&gt;)<br/> {
+    <br/> &lt;statement&gt;;
+    <br/> &lt;statement&gt;;
+    <br/> ...
+    <br/> }
+  </p><p class="note"> <b>REMARQUE</b>: le <span class="notranslate">GameMaker Language</span> accepte également <tt>begin</tt><span>  </span>et <tt>end</tt><span>  </span>au lieu des accolades <tt>{}</tt>, bien que ce ne soit généralement pas la manière la plus courante de le faire:</p><p class="code">if (&lt;conditional&gt;)<br/> begin
+    <br/> &lt;statement&gt;;
+    <br/> &lt;statement&gt;;
+    <br/> ...
+    <br/> end
+  </p><p><br/> Voici une représentation plus visuelle de la façon dont un bloc de code peut regarder, cette fois créé comme un <b>script</b> dans le <span class="notranslate">GameMaker Studio 2</span> <a href="../../The_Asset_Editors/Scripts.htm">Script Editor</a>:</p><p><img alt="Program Example" class="center" src="../../assets/Images/Scripting_Reference/GML/Overview/ProgramExample.png" style="cursor: nwse-resize;" /></p><p> Il existe un certain nombre de types différents d&#39;instructions, d&#39;expressions, de conditions et de fonctions, qui sont tous décrits en détail dans les sections suivantes du manuel.</p><p class="note"> <strong>REMARQUE</strong>: Si vous êtes nouveau dans la programmation, vous pouvez consulter le <a href="../../Quick_Start_Guide/Quick_Start_Guide.htm">Guide de démarrage rapide</a> avant de continuer. </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> Retour: <a href="GML_Overview.htm">Présentation de <span class="notranslate">GML</span></a></div><div style="float:right"> Suivant: <a href="Runtime_Functions.htm">Fonctions d&#39; <span class="notranslate">Runtime</span></a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
+  </div>
+  <!-- KEYWORDS
+Basic Code Structure
+code structure
+code block
+statements
+statement separator
+begin
+end
+-->
+  <!-- TAGS
+structure
+-->
+</body>
+</html>

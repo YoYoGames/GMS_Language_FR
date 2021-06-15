@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>Si le bouton de la manette de jeu est enfoncé</title>
+  <meta name="generator" content="Adobe RoboHelp 2019" />
+  <link rel="stylesheet" href="../../../assets/css/default.css" type="text/css" />
+  <meta name="rh-authors" content="Mark Alexander" />
+  <meta name="topic-comment" content="Page expliquant l&#39;action Si le bouton de la manette de jeu est enfoncé" />
+  <meta name="rh-index-keywords" content="DnD ™ - Si le bouton de la manette de jeu est enfoncé" />
+  <meta name="search-keywords" content="Si le bouton de la manette de jeu est enfoncé" />
+</head>
+<body><!--<div class="body-scroll" style="top: 150px;">--><h1><img alt="If Gamepad Button Pressed Icon" class="icon" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Gamepad/i_GamePad_If_Button_Pressed.png" /> Si le bouton de la manette de jeu est enfoncé</h1><p> Avec cette action, vous pouvez interroger la manette de jeu pour voir si un bouton est actuellement enfoncé. L&#39;action reviendra <tt>true</tt> chaque étape pendant laquelle le bouton de la manette de jeu est enfoncé (et maintenu) enfoncé, ou <tt>false</tt> sinon, bien que si vous cliquez sur le <tt>not</tt> modificateur vous pouvez alors vérifier si le bouton n&#39;est <i>pas</i> enfoncé, c&#39;est-à-dire: l&#39;action reviendra <tt>true</tt> lorsqu&#39;aucune touche n&#39;est enfoncée et <tt>false</tt> s&#39;il y a. Si vous n&#39;avez besoin de vérifier qu&#39;un seul bouton, utilisez l&#39;action <a href="If_Gamepad_Button_Down.htm">si le bouton de la manette de jeu est enfoncé</a>.</p><p> Si le bouton à cocher est un bouton analogique, la pression ne sera pas détectée tant que la valeur du bouton n&#39;aura pas dépassé le seuil défini à l&#39;aide de l&#39;action <a href="Set_Gamepad_Button_Threshold.htm">Définir le seuil du bouton de la manette de jeu</a>.</p><p> Notez que pour ajouter des actions dans le bloc &quot;if&quot;, elles doivent être déposées sur le côté de l&#39;action, comme indiqué dans l&#39;image ci-dessous:</p><p><img alt="If Gamepad Button Pressed drop actions" class="center" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Gamepad/a_If_Gamepad_Button_PressedDrop.png" style="cursor: nwse-resize;" /> Ces actions seront désormais exécutées si le &quot;si&quot; est évalué à <tt>true</tt>, tandis que toutes les actions déposées ailleurs seront exécutées après le bloc &quot;if&quot;.</p><p></p><h4> Syntaxe de l&#39;action:</h4><p><img alt="If Gamepad Button Pressed Action" class="center" height="161" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Gamepad/a_GamePad_If_Button_Pressed.png" width="371" /></p><h4> Arguments:</h4><table><tbody><tr><th> Argument</th><th> Description</th></tr><tr><td> <span class="notranslate">Gamepad</span></td><td> L&#39;index de la manette de jeu.</td></tr><tr><td> <span class="notranslate">Button</span></td><td> Le nom du bouton à vérifier.</td></tr><tr><td> <span class="notranslate">Not</span></td><td> Annuler le chèque (vrai devient faux et vice versa)</td></tr></tbody></table><p></p><h4> Exemple:</h4><p><img alt="If Gamepad Button Pressed Example" class="center" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Gamepad/e_GamePad_If_Button_Down.png" /> Le code de bloc d&#39;action ci-dessus interroge l&#39;état du bouton de la manette de jeu 0 à chaque étape et si un bouton est maintenu enfoncé, il vérifie le bouton initial enfoncé. Si le chèque est <tt>true</tt> lors de la pression initiale vers le bas, un son est joué, puis, pendant que le bouton est maintenu enfoncé, la vitesse d&#39;instance est réglée sur 10. Si le bouton n&#39;est pas maintenu enfoncé, une vérification est effectuée sur le relâchement du bouton pour réinitialiser la vitesse 0 à nouveau. </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> Retour: <a href="Gamepad_Actions.htm">Actions de la manette de jeu</a></div><div style="float:right"> Suivant: <a href="If_Gamepad_Button_Down.htm">Si le bouton de la manette de jeu est enfoncé</a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
+  </div>
+  <!-- KEYWORDS
+Action - If Gamepad Button Pressed
+-->
+  <!-- TAGS
+action_if_gamepad_button_pressed
+-->
+</body>
+</html>

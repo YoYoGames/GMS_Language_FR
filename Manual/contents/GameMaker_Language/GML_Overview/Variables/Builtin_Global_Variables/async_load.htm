@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>async_load</title>
+  <meta name="generator" content="Adobe RoboHelp 2019" />
+  <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
+  <meta name="rh-authors" content="Mark Alexander" />
+  <meta name="topic-comment" content="Page expliquant la variable async_load" />
+  <meta name="rh-index-keywords" content="async_load" />
+  <meta name="search-keywords" content="async_load" />
+</head>
+<body><!--<div class="body-scroll" style="top: 150px;">--><h1>async_load</h1><p> Cette variable a <b>une</b> portée globale et est utilisée pour contenir une <a href="../../../GML_Reference/Data_Structures/DS_Maps/DS_Maps.htm">carte DS</a> lorsqu&#39;elle est utilisée dans les <a href="../../../../The_Asset_Editors/Object_Properties/Async_Events.htm">événements asynchrones</a> et -1 à tous les autres moments. Le contenu réel de la carte DS dépendra du type de <a class="glossterm" data-glossterm="rappeler" href="#">rappel d&#39;</a> événement asynchrone, ainsi que de la fonction qui a été utilisée pour déclencher l&#39;événement. Reportez-vous donc aux pages individuelles de ces événements pour obtenir des détails complets sur tous les contenus possibles de la carte DS.</p><p></p><h4> Syntaxe:</h4><p class="code">async_load;</p><p></p><h4> Retour:</h4><p class="code">Real (integer value)</p><p></p><h4> Exemple étendu:</h4><p class="code">sprite =  sprite_add(&quot;player_5.png&quot;, 16, true, true, 0, 0);</p><p> Le code ci-dessus serait appelé dans un événement du jeu pour ajouter un sprite à partir d&#39;un fichier inclus. Cela déclencherait alors l&#39; <strong>événement asynchrone chargé d&#39;image</strong>, où vous analyseriez le <span class="inline">async_load</span> carte:</p><p class="code">if ds_map_find_value(async_load, &quot;id&quot;) == sprite<br/>     {
+    <br/>     if (ds_map_find_value(async_load, &quot;status&quot;) &gt;= 0)<br/>         {
+    <br/>         sprite_index = sprite;<br/>         }
+    <br/>     }
+  </p><p> Le code ci-dessus vérifie d&#39;abord l&#39;ID du <tt>async_load</tt> map, puis vérifiez l&#39;état du rappel. Si la valeur est supérieure ou égale à 0 (signal de réussite), le résultat du rappel sera alors utilisé pour définir l&#39;index de sprite de l&#39;instance sur l&#39;image nouvellement chargée. </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> Retour: <a href="../Global_Variables.htm">Variables globales</a></div><div style="float:right"> Suivant:<a href="score.htm">score</a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
+  </div>
+  <!-- KEYWORDS
+async_load
+-->
+  <!-- TAGS
+async_load
+-->
+</body>
+</html>

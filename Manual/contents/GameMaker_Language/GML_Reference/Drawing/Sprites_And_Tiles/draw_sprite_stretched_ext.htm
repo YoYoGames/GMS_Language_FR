@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>draw_sprite_stretched_ext</title>
+  <meta name="generator" content="Adobe RoboHelp 2019" />
+  <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
+  <meta name="rh-authors" content="Mark Alexander" />
+  <meta name="topic-comment" content="Page de référence pour draw_sprite_stretched_ext" />
+  <meta name="rh-index-keywords" content="draw_sprite_stretched_ext" />
+  <meta name="search-keywords" content="draw_sprite_stretched_ext" />
+</head>
+<body><!--<div class="body-scroll" style="top: 150px;">--><h1>draw_sprite_stretched_ext</h1><p> Cette fonction fait exactement la même chose que le <a href="draw_sprite_stretched.htm"><tt>draw_sprite_stretched()</tt></a> fonction avec la possibilité supplémentaire de définir la fusion des couleurs et la valeur alpha du sprite lorsqu&#39;il est dessiné (similaire à la fonction <a
+      href="draw_sprite_ext.htm"><tt>draw_sprite_ext()</tt></a> ).</p><p class="note"> <b>REMARQUE</b>: La fusion des couleurs n&#39;est recommandée pour la cible HTML5 que lorsque WebGL est activé, bien que vous puissiez toujours définir la couleur de fusion si elle n&#39;est pas activée et elle mélangera l&#39;image-objet comme d&#39;habitude. Cependant, tout mélange de cette manière crée un sprite en double qui est ensuite stocké dans le cache et utilisé lorsque cela est nécessaire. Ceci est loin d&#39;être optimal et si vous utilisez plusieurs changements de couleur, cela ralentira les performances de vos jeux à moins que vous n&#39;activiez WebGL. si vous ne souhaitez pas utiliser WebGL, vous pouvez définir la taille du cache de polices pour essayer de limiter cela si nécessaire en utilisant la fonction <span style="font-size:1px;"><a href="../../Asset_Management/Sprites/Sprite_Manipulation/sprite_set_cache_size_ext.htm"><tt style="font-size: 14px">sprite_set_cache_sizee ()</tt></a></span>.</p><p></p><h4> Syntaxe:</h4><p class="code">draw_sprite_stretched_ext(sprite, subimg, x, y, w, h, colour, alpha);</p><table><tbody><tr><th> Argument</th><th> Description</th></tr><tr><td> <span class="notranslate">sprite</span></td><td> L&#39;index du sprite à dessiner.</td></tr><tr><td> <span class="notranslate">subimg</span></td><td> Le subimg (frame) du sprite à dessiner (image_index ou -1 en corrélation avec l&#39;image courante de l&#39;animation dans l&#39;objet).</td></tr><tr><td> <span class="notranslate">x</span></td><td> La coordonnée x de l&#39;endroit où dessiner le sprite.</td></tr><tr><td> <span class="notranslate">y</span></td><td> La coordonnée y de l&#39;endroit où dessiner le sprite.</td></tr><tr><td> <span class="notranslate">w</span></td><td> La largeur de la zone occupée par le sprite étiré.</td></tr><tr><td> <span class="notranslate">h</span></td><td> La hauteur de la zone occupée par le sprite étiré.</td></tr><tr><td> <span class="notranslate">colour</span></td><td> La couleur avec laquelle mélanger le sprite. c_white est de l&#39;afficher normalement.</td></tr><tr><td> <span class="notranslate">alpha</span></td><td> L&#39;alpha du sprite (de 0 à 1 où 0 est transparent et 1 opaque).</td></tr></tbody></table><p></p><h4> Retour:</h4><p class="code">N/A</p><p></p><h4> Exemple:</h4><p class="code">draw_sprite_stretched_ext(sprite_index, image_index, x, y, sprite_width / 2, sprite_height / 2, c_white, 0.5);</p><p> Cela dessinera les instances assignées au sprite et sa sous-image avec le coin gauche à la position x / y de l&#39;instance. Sa largeur est la même que celle du sprite et la hauteur correspond à la hauteur du sprite divisée par deux. Il sera également fusionné normalement mais aura une valeur alpha partiellement transparente. </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> Face arrière: <a href="Sprites_And_Tiles.htm">Sprites et tuiles</a></div><div style="float:right"> Suivant:<a href="draw_sprite_pos.htm">draw_sprite_pos</a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
+  </div>
+  <!-- KEYWORDS
+draw_sprite_stretched_ext
+-->
+  <!-- TAGS
+draw_sprite_stretched_ext
+-->
+</body>
+</html>

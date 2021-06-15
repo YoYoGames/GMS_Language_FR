@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <title>sprite_get_uvs</title>
+  <meta name="generator" content="Adobe RoboHelp 2019"/>
+  <link rel="stylesheet" href="../../../../../assets/css/default.css" type="text/css"/>
+  <meta name="rh-authors" content="Mark Alexander"/>
+  <meta name="topic-comment" content="Page expliquant la fonction sprite_get_uvs"/>
+  <meta name="rh-index-keywords" content="sprite_get_uvs"/>
+  <meta name="search-keywords" content="sprite_get_uvs"/>
+</head>
+<body><!--<div class="body-scroll" style="top: 150px;">--><h1>sprite_get_uvs</h1><p> Cette fonction renvoie un <a href="../../../../GML_Overview/Arrays.htm">tableau</a> avec les coordonnées UV et d&#39;autres données pour la texture de la sous-image de sprite sur la page de texture. La fonction renvoie un tableau avec les 8 éléments suivants:</p><ul class="colour"><li> [0] = gauche</li><li> [1] = haut</li><li> [2] = droite</li><li> [3] = bas</li><li> [4] = quantité de pixels que le compilateur d&#39;éléments a supprimés du côté gauche des images-objets</li><li> [5] = quantité de pixels que le compilateur d&#39;éléments a supprimés de la partie supérieure des images-objets</li><li> [6] = pourcentage normalisé de données de pixels par rapport à la largeur des sprites d&#39;origine qui a été enregistrée sur la page de texture</li><li> [7] = pourcentage normalisé de données de pixels par rapport à la hauteur des sprites d&#39;origine qui a été enregistrée sur la page de texture</li></ul><p> Ce tableau peut ensuite être utilisé dans d&#39;autres fonctions de dessin, en particulier lorsque vous travaillez en 3D ou que vous utilisez les <a href="../../../Drawing/Primitives/Primitives_And_Vertex_Formats.htm">fonctions primitives 2D</a>, ainsi que lorsque vous travaillez avec les fonctions <a href="../../Shaders/Shaders.htm"><span class="notranslate">Shader</span></a></p><p class="note"> <b>REMARQUE</b>: cette fonction ne fonctionnera <b>pas</b> avec les sprites vectoriels ou les sprites d&#39;animation squelette.</p><p></p><h4> Syntaxe:</h4><p class="code">sprite_get_uvs(sprite, subimage);</p><table><tbody><tr><th> Argument</th><th> Description</th></tr><tr><td> <span class="notranslate">sprite</span></td><td> L&#39;index du sprite à utiliser.</td></tr><tr><td> <span class="notranslate">subimage</span></td><td> La sous-image du sprite à utiliser.</td></tr></tbody></table><p></p><h4> Retour</h4><p class="code">Array (1D, 8 elements)</p><p></p><h4> Exemple:</h4><p class="code">var tex = sprite_get_uvs(sprite, 0);<br/> tex_left = tex[0];<br/> tex_top = tex[1];<br/> tex_right = tex[2];<br/> tex_bottom = tex[3];</p><p> Le code ci-dessus stockera les coordonnées UV du sprite donné dans un tableau local, puis affectera les valeurs aux variables d&#39;instance. </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> Retour: <a href="Sprite_Information.htm">Informations sur les sprites</a></div><div style="float:right"> Suivant:<a href="../Sprite_Manipulation/sprite_exists.htm">sprite_exists</a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
+  </div>
+  <!-- KEYWORDS
+sprite_get_uvs
+-->
+  <!-- TAGS
+sprite_get_uvs
+-->
+
+</body></html>

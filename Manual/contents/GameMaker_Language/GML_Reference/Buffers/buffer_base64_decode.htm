@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>buffer_base64_decode</title>
+  <meta name="generator" content="Adobe RoboHelp 2019" />
+  <link rel="stylesheet" href="../../../assets/css/default.css" type="text/css" />
+  <meta name="rh-authors" content="Mark Alexander" />
+  <meta name="topic-comment" content="Page de référence pour buffer_base64_decode" />
+  <meta name="rh-index-keywords" content="buffer_base64_decode" />
+  <meta name="search-keywords" content="buffer_base64_decode" />
+</head>
+<body><!--<div class="body-scroll" style="top: 150px;">--><h1>buffer_base64_decode</h1><p> Avec cette fonction, vous pouvez décoder une chaîne encodée en base64 (créée à l&#39;aide du <a href="buffer_base64_encode.htm"><tt>buffer_base64_encode()</tt></a> fonction) dans un tampon. Cette fonction créera le tampon (comme un tampon de &quot;croissance&quot; aligné sur 1 octet) et retournera l&#39;index unique du tampon qui devrait être utilisé dans tous les autres appels de fonction.</p><p class="note"> <b>REMARQUE</b>: il est important que vous supprimiez de la mémoire toutes les ressources créées dynamiquement comme celle-ci lorsque vous n&#39;en avez plus besoin pour éviter les fuites de mémoire.Par conséquent, lorsque vous avez terminé avec le tampon que vous avez créé, vous devez le libérer à nouveau en utilisant <span style="font-size:1px;"><a href="buffer_delete.htm"><tt style="font-size: 14px">buffer_delete ()</tt></a></span>.</p><p></p><h4> Syntaxe:</h4><p class="code">buffer_base64_decode(string);</p><table><tbody><tr><th> Argument</th><th> Description</th></tr><tr><td> <span class="notranslate">string</span></td><td> La chaîne encodée en base64 à décoder</td></tr></tbody></table><p></p><h4> Retour:</h4><p class="code">Real</p><p></p><h4> Exemple:</h4><p class="code">ini_open(&quot;Save.ini&quot;);<br/> buff = buffer_base64_decode(ini_read_string(&quot;Save&quot;, &quot;Slot1&quot;, &quot;&quot;));<br/> ini_close();
+  </p><p> Le code ci-dessus ouvrira un fichier ini, puis en lira une chaîne dans la fonction de décodage. Cette fonction renverra un index de tampon, qui est stocké dans la variable &quot;buff&quot;, contenant les données précédemment encodées et enregistrées. Le fichier ini est ensuite fermé. </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> Retour: <a href="Buffers.htm">Tampons</a></div><div style="float:right"> Suivant:<a href="buffer_base64_decode_ext.htm">buffer_base64_decode_ext</a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
+  </div>
+  <!-- KEYWORDS
+buffer_base64_decode
+-->
+  <!-- TAGS
+buffer_base64_decode
+-->
+</body>
+</html>

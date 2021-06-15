@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>uwp_show_help</title>
+  <meta name="generator" content="Adobe RoboHelp 2019" />
+  <link rel="stylesheet" href="../../../assets/css/default.css" type="text/css" />
+  <meta name="rh-authors" content="Mark Alexander" />
+  <meta name="topic-comment" content="Page de référence pour uwp_show_help" />
+  <meta name="rh-index-keywords" content="uwp_show_help" />
+  <meta name="search-keywords" content="uwp_show_help" />
+</head>
+<body><!--<div class="body-scroll" style="top: 150px;">--><h1>uwp_show_help</h1><p> Cette fonction lance l&#39;application d&#39;aide Xbox One qui affichera à son tour le fichier d&#39;aide de votre jeu (qui est un fichier au format HTML que vous avez précédemment téléchargé sur le portail des développeurs XBox). Notez qu&#39;un ID utilisateur est spécifié lors de l&#39;appel de cette fonction afin que les informations locales de l&#39;utilisateur puissent être utilisées lors de son affichage. Vous pouvez récupérer l&#39;ID utilisateur avec les fonctions <a href="Users_And_Accounts/xboxlive_get_user.htm"><tt>xboxlive_get_user()</tt></a>, <a href="Users_And_Accounts/xboxlive_get_activating_user.htm"><tt>xboxlive_get_activating_user()</tt></a>, ou <a href="uwp_license_trial_user.htm"><tt>uwp_license_trial_user()</tt></a>.</p><p></p><h4> Syntaxe:</h4><p class="code">uwp_show_help(user_id);</p><table><tbody><tr><th> Argument</th><th> Description</th></tr><tr><td> <span class="notranslate">user_id</span></td><td> Le pointeur de l&#39;ID utilisateur pour lequel ouvrir le fichier d&#39;aide.</td></tr></tbody></table><p></p><h4> Retour:</h4><p class="code">Boolean</p><p></p><h4> Exemple:</h4><p class="code">if gamepad_button_check_pressed(0, gp_start)<br/>     {
+    <br/>     if uwp_license_trial_version()<br/>         {
+    <br/>         var _uid = uwp_license_trial_user;<br/>         uwp_show_help(_uid);
+    <br/>         }
+    <br/>     }
+  </p><p> Le code ci-dessus vérifie si un bouton est enfoncé, puis vérifie l&#39;application pour voir si elle fonctionne avec une licence d&#39;essai. Si tel est le cas, il obtient l&#39;ID utilisateur de la licence et ouvre le fichier d&#39;aide de cet utilisateur. </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> Retour: <a href="UWP_And_XBox_Live.htm">UWP et XBox Live</a></div><div style="float:right"> Suivant:<a href="uwp_license_trial_version.htm">uwp_license_trial_version</a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
+  </div>
+  <!-- KEYWORDS
+uwp_show_help
+-->
+  <!-- TAGS
+uwp_show_help
+-->
+</body>
+</html>

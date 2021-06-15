@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>mp_grid_draw</title>
+  <meta name="generator" content="Adobe RoboHelp 2019" />
+  <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
+  <meta name="rh-authors" content="Mark Alexander" />
+  <meta name="topic-comment" content="Cette page décrit la fonction mp_grid_draw" />
+  <meta name="rh-index-keywords" content="mp_grid_draw" />
+  <meta name="search-keywords" content="mp_grid_draw" />
+</head>
+<body><!--<div class="body-scroll" style="top: 150px;">--><h1>mp_grid_draw</h1><p> Cette fonction dessine la grille MP spécifiée (telle que définie par<a href="mp_grid_create.htm"><span class="inline">mp_grid_create()</span></a> ), marquant les cellules libres comme vertes et les cellules interdites comme rouges. Cette fonction est essentielle en tant qu&#39;outil de débogage mais il convient de noter qu&#39;elle est <i>très</i> lente et ne fonctionne que lorsqu&#39;elle est utilisée dans l&#39; <b>événement de dessin</b> de l&#39;instance, et que vous pouvez définir l&#39;alpha de dessin pour changer l&#39;opacité de la grille, vous permettant dessinez-le comme une superposition et voyez ce qui se trouve réellement dans la pièce en même temps.</p><p></p><h4> Syntaxe:</h4><p class="code">mp_grid_draw(id);</p><table><tbody><tr><th> Argument</th><th> Description</th></tr><tr><td> <span class="notranslate">id</span></td><td> Index de la mp_grid à dessiner</td></tr></tbody></table><p></p><h4> Retour:</h4><p class="code">Boolean</p><p></p><h4> Exemple:</h4><p class="code">draw_set_alpha(0.3);<br/> mp_grid_draw(grid);
+    <br/> draw_set_alpha(1);
+  </p><p> Le code ci-dessus dessinera le mp_grid indexé dans la variable &quot;grid&quot; comme une superposition semi-transparente (mais seulement si l&#39;instance exécutant le code a une profondeur inférieure à tout le reste). </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> Retour: <a href="Motion_Planning.htm">Planification de mouvement</a></div><div style="float:right"> Suivant:<a href="mp_linear_step.htm">mp_linear_step</a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
+  </div>
+  <!-- KEYWORDS
+mp_grid_draw
+-->
+  <!-- TAGS
+mp_grid_draw
+-->
+</body>
+</html>

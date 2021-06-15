@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>layer_vspeed</title>
+  <meta name="generator" content="Adobe RoboHelp 2019" />
+  <link rel="stylesheet" href="../../../../../assets/css/default.css" type="text/css" />
+  <meta name="rh-authors" content="Mark Alexander" />
+  <meta name="topic-comment" content="Page décrivant la fonction layer_vspeed" />
+  <meta name="rh-index-keywords" content="layer_vspeed" />
+  <meta name="search-keywords" content="layer_vspeed" />
+</head>
+<body><!--<div class="body-scroll" style="top: 150px;">--><h1>layer_vspeed</h1><p> Vous pouvez utiliser cette fonction pour définir la vitesse verticale (en pixels par image de jeu) du calque dans la pièce actuellement délimitée. Vous fournissez l&#39;ID de couche (que vous obtenez lorsque vous créez la couche en utilisant <a href="layer_create.htm"><tt>layer_create()</tt></a> ) ou le nom de la couche (sous forme de chaîne - cela aura un impact sur les performances) et la valeur de vitesse à définir, où une valeur positive est vers le bas et une valeur négative vers le haut.</p><p></p><h4> Syntaxe:</h4><p class="code">layer_vspeed(layer_id, vspd)</p><table><tbody><tr><th> Argument</th><th> Description</th></tr><tr><td> <span class="notranslate">layer_id</span></td><td> La valeur d&#39;identifiant unique du calque pour définir la vitesse verticale de</td></tr><tr><td> <span class="notranslate">vspd</span></td><td> La vitesse verticale (en pixels par image de jeu) à définir</td></tr></tbody></table><p></p><h4> Retour:</h4><p class="code">N/A</p><p></p><h4> Exemple:</h4><p class="code">var lay_id = layer_get_id(&quot;Sprites&quot;);<br/> if layer_get_hspeed(lay_id) != 0 || layer_get_vspeed(lay_id) != 0<br/>     {
+    <br/>     layer_hspeed(lay_id, 0);<br/>     layer_vspeed(lay_id, 0);<br/>     }
+  </p><p> Le code ci-dessus vérifie les vitesses horizontale et verticale de la couche donnée et si elles ne sont pas toutes les deux définies sur 0, il les définit sur 0. </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> Retour: <a href="General_Layer_Functions.htm">Fonctions générales des calques</a></div><div style="float:right"> Suivant:<a href="layer_add_instance.htm">layer_add_instance</a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
+  </div>
+  <!-- KEYWORDS
+layer_vspeed
+-->
+  <!-- TAGS
+layer_vspeed
+-->
+</body>
+</html>

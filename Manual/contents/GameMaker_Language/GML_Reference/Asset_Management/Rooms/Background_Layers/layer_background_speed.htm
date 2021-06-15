@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>layer_background_speed</title>
+  <meta name="generator" content="Adobe RoboHelp 2019" />
+  <link rel="stylesheet" href="../../../../../assets/css/default.css" type="text/css" />
+  <meta name="rh-authors" content="Mark Alexander" />
+  <meta name="topic-comment" content="Page décrivant la fonction layer_background_speed" />
+  <meta name="rh-index-keywords" content="layer_background_speed" />
+  <meta name="search-keywords" content="layer_background_speed" />
+</head>
+<body><!--<div class="body-scroll" style="top: 150px;">--><h1>layer_background_speed</h1><p> Cette fonction peut être utilisée pour définir la vitesse d&#39;un sprite animé qui a été affecté à un élément d&#39;arrière-plan. Vous donnez l&#39;ID d&#39;élément d&#39;arrière-plan (que vous obtenez lorsque vous créez un élément d&#39;arrière-plan en utilisant <a href="layer_background_create.htm"><tt>layer_background_create()</tt></a> ou lorsque vous utilisez la fonction <a href="layer_background_get_id.htm"><tt>layer_background_get_id()</tt></a> ), puis définissez la vitesse de l&#39;animation. Si l&#39;EDI a défini la vitesse d&#39;animation pour le sprite utilisée pour être calculée comme des images par image de jeu, alors la valeur de vitesse donnée est un <i>multiplicateur</i>, 1 étant la valeur par défaut, et le définir sur 0,5 entraînera la moitié de la vitesse d&#39;animation, lors du réglage il à 2 le doublera. Cependant, si l&#39;EDI a défini la vitesse d&#39;animation pour le sprite utilisée pour être calculée en images par seconde, alors la valeur de vitesse donnée est une valeur littérale d&#39;images par seconde, donc le définir sur 5, par exemple, mettra l&#39;animation en boucle 5 images par seconde que le jeu s&#39;exécute. Si l&#39;élément d&#39;arrière-plan n&#39;a pas de sprite attaché ou si le sprite utilisé n&#39;a pas de sous-images, cette fonction n&#39;aura aucun effet.</p><p></p><h4> Syntaxe:</h4><p class="code">layer_background_speed(background_element_id, speed);</p><table><tbody><tr><th> Argument</th><th> Description</th></tr><tr><td> <span class="notranslate">background_element_id</span></td><td> La valeur d&#39;identifiant unique de l&#39;élément d&#39;arrière-plan à modifier</td></tr><tr><td> <span class="notranslate">speed</span></td><td> Le multiplicateur de vitesse / valeur à utiliser pour l&#39;élément</td></tr></tbody></table><p></p><h4> Retour:</h4><p class="code">N/A</p><p></p><h4> Exemple:</h4><p class="code">var lay_id = layer_get_id(&quot;Background_water&quot;);<br/> var back_id = layer_background_get_id(lay_id);<br/> layer_background_speed(back_id, 0.5);</p><p> Le code ci-dessus obtiendra l&#39;ID de la couche nommée &quot;Background_water&quot;, puis l&#39;utilisera pour obtenir l&#39;ID de l&#39;élément d&#39;arrière-plan sur cette couche. Cet identifiant est ensuite utilisé pour modifier la vitesse d&#39;image de l&#39;élément. </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> Retour: <a href="Background_Layers.htm">Calques d&#39;arrière-plan</a></div><div style="float:right"> Suivant:<a href="layer_background_get_xscale.htm">layer_background_xscale</a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
+  </div>
+  <!-- KEYWORDS
+layer_background_speed
+-->
+  <!-- TAGS
+layer_background_speed
+-->
+</body>
+</html>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>Obtenir les données de mosaïque dans la cellule</title>
+  <meta name="generator" content="Adobe RoboHelp 2019" />
+  <link rel="stylesheet" href="../../../assets/css/default.css" type="text/css" />
+  <meta name="rh-authors" content="Mark Alexander" />
+  <meta name="topic-comment" content="Page qui explique l&#39;action Obtenir les données de mosaïque dans la cellule" />
+  <meta name="rh-index-keywords" content="DnD ™ - Obtenir des données de mosaïque dans la cellule" />
+  <meta name="search-keywords" content="Obtenir les données de mosaïque dans la cellule" />
+</head>
+<body><!--<div class="body-scroll" style="top: 150px;">--><h1><img alt="Get Tile Data In Cell Icon" class="icon" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Tiles/i_Tiles_Get_Tile_Data_In_Cell.png" /> Obtenir les données de mosaïque dans la cellule</h1><p> Avec cette action, vous pouvez obtenir les données de tuile pour une cellule de tuile sur une couche de <a class="glossterm" data-glossterm="carte de tuiles" href="#">carte de tuile.</a> Les données de mosaïque sont simplement une valeur qui reflète l&#39;index de la mosaïque avec les valeurs de retournement, de miroir et de rotation, ainsi que tous les masques de mosaïque personnalisés que vous avez utilisés. Avec cette action, vous fournissez d&#39;abord la couche à cibler en utilisant le nom de la couche (une chaîne) tel que défini dans l&#39;éditeur de salle, puis la colonne et la ligne de la couche de carte de tuiles pour lesquelles obtenir les données de tuile. La &quot;cellule&quot; est la zone sur la grille de la carte de tuiles qui contient la tuile dont tu veux obtenir les données, donc si vos tuiles sont 16x16, par exemple, et la pièce est de 1024x768, la tuile-map aura 64 colonnes et 48 lignes.</p><p class="note"> <b>REMARQUE</b>: le calque sélectionné <i>doit</i> avoir été défini comme un calque de mosaïque dans l&#39;éditeur de salle, sinon vous risquez d&#39;obtenir des erreurs.</p><p> La valeur retournée sera alors stockée dans la variable cible qui peut avoir été créée précédemment ou peut être une nouvelle temporaire (si vous cochez la case &quot;Temp&quot;). Pour plus d&#39;informations sur les données de mosaïque, veuillez consulter la <span class="notranslate">GML</span> sur les <a href="../../../GameMaker_Language/GML_Reference/Asset_Management/Rooms/Tile_Map_Layers/Tile_Map_Layers.htm">fonctions de</a> mappage de mosaïques.</p><p></p><h4> Syntaxe de l&#39;action:</h4><p><img alt="Get Tile Data In Cell  Action" class="center" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Tiles/a_Tiles_Get_Tile_Data_In_Cell.png" /></p><h4> Arguments:</h4><table><tbody><tr><th> Argument</th><th> Description</th></tr><tr><td> <span class="notranslate">Layer</span></td><td> La couche à partir de laquelle obtenir la tuile</td></tr><tr><td> <span class="notranslate">Column</span></td><td> La colonne (de gauche à droite) de la cellule</td></tr></tbody></table><p></p><h4> Exemple:</h4><p><img alt="Get Tile Data In Cell Example" class="center" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Tiles/e_Tiles_Set_Tile_Data_In_Cell.png" /> Le code de bloc d&#39;action ci-dessus parcourt chaque cellule de tuile de la pièce, récupère les données de tuile pour la cellule, les met en miroir, puis définit à nouveau la cellule. </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> Retour: <a href="Tile_Actions.htm">Actions de tuile</a></div><div style="float:right"> Suivant: <a href="Set_Tile_Data_Transform.htm">Définir la transformation des données de tuile</a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
+  </div>
+  <!-- KEYWORDS
+Action - Get Tile Data In Cell
+-->
+  <!-- TAGS
+action_tile_get_data_in_cell
+-->
+</body>
+</html>

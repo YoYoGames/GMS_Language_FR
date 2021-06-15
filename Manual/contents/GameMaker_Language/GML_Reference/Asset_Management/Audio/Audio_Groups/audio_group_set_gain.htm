@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>audio_group_set_gain</title>
+  <meta name="generator" content="Adobe RoboHelp 2019" />
+  <link rel="stylesheet" href="../../../../../assets/css/default.css" type="text/css" />
+  <meta name="rh-authors" content="Mark Alexander" />
+  <meta name="topic-comment" content="Page expliquant la fonction audio_group_set_gain" />
+  <meta name="rh-index-keywords" content="audio_group_set_gain" />
+  <meta name="search-keywords" content="audio_group_set_gain" />
+</head>
+<body><!--<div class="body-scroll" style="top: 150px;">--><h1>audio_group_set_gain</h1><p> Avec cette fonction, vous pouvez faire fondre un groupe de sons en entrée ou en sortie sur une durée donnée, ou elle peut être utilisée pour régler instantanément le gain du groupe. Le temps est mesuré en millisecondes et la fonction nécessite que vous saisissiez un niveau final de gain que le groupe doit avoir atteint à la fin de ce temps. Ce gain peut être compris entre 0 (silencieux) et 1 (plein volume) et l&#39;échelle est linéaire, de sorte qu&#39;une valeur de 0,5 serait la moitié du volume. Pour changer instantanément le gain, réglez simplement l&#39;argument time sur 0. Notez que sur certaines plates-formes, vous pouvez avoir un gain supérieur à 1, bien qu&#39;une valeur de 1 soit considérée comme «plein volume» et que tout ce qui est supérieur peut introduire un écrêtage audio.</p><p></p><h4> Syntaxe:</h4><p class="code">audio_group_set_gain(groupID, volume, time);</p><table><tbody><tr><th> Argument</th><th> Description</th></tr><tr><td> <span class="notranslate">groupID</span></td><td> L&#39;index du groupe audio à arrêter (tel que défini dans la <a href="../../../../../Settings/Audio_Groups.htm">fenêtre Groupes audio</a> )</td></tr><tr><td> <span class="notranslate">volume</span></td><td> La valeur finale du volume du groupe.</td></tr><tr><td> <span class="notranslate">time</span></td><td> La durée du changement de gain en millisecondes.</td></tr></tbody></table><p></p><h4> Retour:</h4><p class="code">N/A</p><p></p><h4> Exemple:</h4><p class="code">if keyboard_check_pressed(vk_space)<br/>    {
+    <br/>    audio_group_set_gain(audiogroup1, 0, 5000);<br/>    }
+  </p><p> Le code ci-dessus vérifie la touche «espace», puis fait fondre tout l&#39;audio pour «audiogroup1» jusqu&#39;à 0 sur 5 secondes. </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> Retour: <a href="Audio_Groups.htm">Groupes audio</a></div><div style="float:right"> Suivant:<a href="audio_group_load.htm">audio_group_load</a></div><div style="float:right"></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
+  </div>
+  <!-- KEYWORDS
+audio_group_set_gain
+-->
+  <!-- TAGS
+audio_group_set_gain
+-->
+</body>
+</html>

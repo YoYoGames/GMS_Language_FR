@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <title>window_get_visible_rects</title>
+  <meta name="generator" content="Adobe RoboHelp 2019"/>
+  <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css"/>
+  <meta name="rh-authors" content="Mark Alexander"/>
+  <meta name="topic-comment" content="Page de référence pour window_get_visible_rects"/>
+  <meta name="rh-index-keywords" content="window_get_visible_rects"/>
+  <meta name="search-keywords" content="window_get_visible_rects"/>
+</head>
+<body><!--<div class="body-scroll" style="top: 150px;">--><h1>window_get_visible_rects</h1><p> Avec cette fonction, vous pouvez trouver la région de chevauchement du rectangle défini par (x1, y1) à (x2, y2) sur chacun des affichages attachés. La fonction renverra un tableau avec 8 valeurs par affichage (c&#39;est-à-dire: si vous avez deux affichages, le tableau aura une longueur de 16 indices), où les valeurs [0... 3] correspondent à la superpositionx1, la super-thérapie1, la superpositionx2, overlapy2 - définissant la région de chevauchement sur cet affichage et sera mis à 0,0,0,0 s&#39;il n&#39;y a pas de chevauchement - et les valeurs [4... 7] correspondent à monitorx1, monitory1, monitorx2, monitory2 - les coordonnées de l&#39;affichage dans l&#39;espace d&#39;affichage virtuel. Cela peut être utilisé pour tester si une position de fenêtre enregistrée va être visible ou non (l&#39;utilisateur peut avoir déconnecté un moniteur externe ou déplacé la fenêtre hors de l&#39;écran, ce qui a laissé la position de fenêtre enregistrée comme n&#39;étant pas valide), par exemple.</p><p></p><h4> Syntaxe:</h4><p class="code">window_get_visible_rects(x1, y1, x2, y2);</p><table><tbody><tr><th> Argument</th><th> Description</th></tr><tr><td> <span class="notranslate">x1</span></td><td> Le bord gauche du rectangle à vérifier</td></tr><tr><td> <span class="notranslate">y1</span></td><td> Le bord supérieur du rectangle à vérifier.</td></tr><tr><td> <span class="notranslate">x2</span></td><td> Le bord droit du rectangle à vérifier</td></tr><tr><td> <span class="notranslate">y2</span></td><td> Le bord inférieur du rectangle à vérifier.</td></tr></tbody></table><p></p><h4> Retour:</h4><p class="code">Array</p><p></p><h4> Exemple:</h4><p class="code">var wx = window_get_x();<br/> var wy = window_get_y();<br/> var ww = window_get_width();<br/> var wh = window_get_height();<br/> display_data = window_get_visible_rects(wx, wy, wx + ww, wy + wh);<br/> display_num = array_length(display_data) / 8;</p><p> Le code ci-dessus générera un tableau 1D contenu dans la variable <tt>display_data</tt> contenant les informations sur les affichages, ainsi que créer la variable <tt>display_num</tt> pour contenir le nombre d&#39;écrans actifs trouvés. </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> Retour: <a href="../The_Game_Window/The_Game_Window.htm">La fenêtre de jeu</a></div><div style="float:right"> Suivant:<a href="../The_Game_Window/window_mouse_get_x.htm">window_mouse_get_x</a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
+  </div>
+  <!-- KEYWORDS
+window_get_visible_rects
+-->
+  <!-- TAGS
+window_get_visible_rects
+-->
+
+</body></html>

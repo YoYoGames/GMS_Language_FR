@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>Insérer dans la liste</title>
+  <meta name="generator" content="Adobe RoboHelp 2019" />
+  <link rel="stylesheet" href="../../../assets/css/default.css" type="text/css" />
+  <meta name="rh-authors" content="Mark Alexander" />
+  <meta name="topic-comment" content="Page qui explique l&#39;action Insérer dans l&#39;élément de liste" />
+  <meta name="rh-index-keywords" content="DnD ™ - Insérer dans la liste" />
+  <meta name="search-keywords" content="Insérer dans la liste" />
+</head>
+<body><!--<div class="body-scroll" style="top: 150px;">--><h1><img alt="Insert Into List Icon" class="icon" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Data_Structures/i_DS_Insert_Into_List.png" /> Insérer dans la liste</h1><p> Avec cette action, vous pouvez récupérer la position d&#39;index d&#39;un élément dans la liste donnée. Vous fournissez la variable qui stocke l&#39;index de la liste (tel que renvoyé par l&#39;action <a href="Create_List.htm">Créer une liste</a> ) et la valeur dont vous souhaitez trouver la position d&#39;index dans la liste, ainsi qu&#39;une variable cible pour stocker la position d&#39;index renvoyée pour l&#39;élément (qui peut être marqué comme une variable locale temporaire à utiliser jusqu&#39;à la fin du script ou de l&#39;événement). Lorsque vous insérez une valeur dans une liste, tous les index au-dessus de l&#39;index donné pour l&#39;insertion seront déplacés vers le haut, donc si vous avez une liste avec 4 éléments (position d&#39;index 0 à 3) et placez un nouvel élément à la position d&#39;index 2, l&#39;élément précédent 2 deviendra l&#39;élément 3 et l&#39;élément précédent 3 deviendra l&#39;élément 4. Notez que si la valeur que vous recherchez n&#39;existe pas dans la liste, il n&#39;y aura pas de position d&#39;index de liste à renvoyer, et donc le retour la valeur sera -1.</p><p></p><h4> Syntaxe de l&#39;action:</h4><p><img alt="Insert Into List Action" class="center" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Data_Structures/a_DS_Insert_Into_List.png" /></p><h4> Arguments:</h4><table><tbody><tr><th> Argument</th><th> Description</th></tr><tr><td> <span class="notranslate">List</span></td><td> L&#39;index (stocké dans une variable) de la liste à insérer dans</td></tr><tr><td> <span class="notranslate">Index</span></td><td> La position d&#39;index dans la liste pour insérer une valeur</td></tr><tr><td> <span class="notranslate">Value</span></td><td> La valeur à stocker à la position</td></tr></tbody></table><p></p><h4> Exemple:</h4><p><img alt="Inset Into List Example" class="center" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Data_Structures/e_DS_Insert_Into_List.png" /> Le code de bloc d&#39;action ci-dessus utilise une boucle de répétition pour obtenir la taille de la liste, puis générer une position aléatoire dans la liste. Il génère ensuite une valeur aléatoire et insère cette valeur dans la liste à la position aléatoire définie précédemment. </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> Retour: <a href="Data_Structure_Actions.htm">Actions de structure de données</a></div><div style="float:right"> Suivant: <a href="Get_List_Item_Count.htm">Obtenir le nombre d&#39;éléments de liste</a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
+  </div>
+  <!-- KEYWORDS
+Action - Insert Into List
+-->
+  <!-- TAGS
+action_list_insert
+-->
+</body>
+</html>

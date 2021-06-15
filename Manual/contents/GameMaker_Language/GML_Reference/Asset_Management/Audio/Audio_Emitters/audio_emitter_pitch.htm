@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>audio_emitter_pitch</title>
+  <meta name="generator" content="Adobe RoboHelp 2019" />
+  <link rel="stylesheet" href="../../../../../assets/css/default.css" type="text/css" />
+  <meta name="rh-authors" content="Mark Alexander" />
+  <meta name="topic-comment" content="Page expliquant la fonction audio_emitter_pitch" />
+  <meta name="rh-index-keywords" content="audio_emitter_pitch" />
+  <meta name="search-keywords" content="audio_emitter_pitch" />
+</head>
+<body><!--<div class="body-scroll" style="top: 150px;">--><h1>audio_emitter_pitch</h1><p> Cette fonction peut être utilisée pour changer la hauteur de tous les sons émis par l&#39;émetteur donné. Il s&#39;agit d&#39;un <i>multiplicateur de hauteur</i>, en ce que la valeur d&#39;entrée multiplie la hauteur actuelle par cette quantité, de sorte que la valeur par défaut de 1 n&#39;est pas de changement de hauteur, tandis qu&#39;une valeur inférieure à 1 abaissera la hauteur et supérieure à 1 augmentera la hauteur. Il est préférable d&#39;utiliser de petits incréments pour cette fonction car toute valeur inférieure à 0 ou supérieure à 5 peut ne pas être audible de toute façon.</p><p class="note"> <b>REMARQUE:</b> Si un son est mis en boucle par l&#39;émetteur, le changement de hauteur ne sera pas détecté à moins que le son ne soit arrêté et répété en boucle!</p><p></p><h4> Syntaxe:</h4><p class="code">audio_emitter_pitch(emitter, pitch);</p><table><tbody><tr><th> Argument</th><th> Description</th></tr><tr><td> <span class="notranslate">emitter</span></td><td> L&#39;indice de l&#39;émetteur à changer.</td></tr><tr><td> <span class="notranslate">pitch</span></td><td> Le multiplicateur de hauteur (par défaut 1).</td></tr></tbody></table><p></p><h4> Retour:</h4><p class="code">N/A</p><p></p><h4> Exemple:</h4><p class="code">switch (gear)<br/>    {
+    <br/>    case 1: audio_emitter_pitch(s_emit, 0.8); break;<br/>    case 2: audio_emitter_pitch(s_emit, 0.9); break;<br/>    case 3: audio_emitter_pitch(s_emit, 0.95); break;<br/>    case 4: audio_emitter_pitch(s_emit, 1); break;<br/>    case 5: audio_emitter_pitch(s_emit,
+    1.2); break;<br/>    }
+  </p><p> Le code ci-dessus changera la hauteur de l&#39;audio joué par l&#39;émetteur indexé dans la variable &quot;s_emit&quot; en fonction de la valeur de la variable &quot;gear&quot;. </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> Retour: <a href="Audio_Emitters.htm">Émetteurs audio</a></div><div style="float:right"> Suivant:<a href="audio_emitter_set_listener_mask.htm">audio_emitter_set_listener_mask</a></div><div style="float:right"></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
+  </div>
+  <!-- KEYWORDS
+audio_emitter_pitch
+-->
+  <!-- TAGS
+audio_emitter_pitch
+-->
+</body>
+</html>

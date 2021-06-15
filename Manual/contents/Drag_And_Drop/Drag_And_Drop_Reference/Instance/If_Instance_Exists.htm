@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>Si l&#39;instance existe</title>
+  <meta name="generator" content="Adobe RoboHelp 2019" />
+  <link rel="stylesheet" href="../../../assets/css/default.css" type="text/css" />
+  <meta name="rh-authors" content="Mark Alexander" />
+  <meta name="topic-comment" content="Page qui explique l&#39;action Si l&#39;instance existe" />
+  <meta name="rh-index-keywords" content="DnD ™ - Si l&#39;instance existe" />
+  <meta name="search-keywords" content="Si l&#39;instance existe" />
+</head>
+<body><!--<div class="body-scroll" style="top: 150px;">--><h1><img alt="If Instance Exists Icon" class="icon" height="31" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Instance/i_Instance_Exists.png" width="31" /> Si l&#39;instance existe</h1><p> Cette action peut être utilisée pour vérifier si une instance d&#39;un objet spécifique existe dans la salle de jeu, ou si une instance spécifique elle-même existe. Vous donnez l&#39;objet à partir de l&#39;explorateur d&#39;actifs, et si une instance existe dans la salle, l&#39;action reviendra <tt>true</tt> sinon il reviendra <tt>false</tt>. Notez que vous pouvez utiliser ici une variable avec l&#39;ID unique d&#39;une instance spécifique (par exemple, tel que renvoyé par l&#39;action <a href="Create_Object_Instance.htm">Créer une instance d&#39;objet</a> ) ou même la valeur d&#39;ID d&#39;instance telle que renvoyée par l&#39;éditeur de salle lorsque vous avez ajouté l&#39;instance.</p><p> Si vous marquez l&#39;argument &quot;Non&quot;, l&#39;action vérifiera si <i>aucune</i> instance n&#39;existe et si aucune n&#39;est trouvée, elle retournera <tt>true</tt> et si même un existe il reviendra <tt>false</tt>.</p><p> Notez que pour ajouter des actions dans le bloc &quot;if&quot;, elles doivent être déposées sur le côté de l&#39;action, comme indiqué dans l&#39;image ci-dessous:</p><p><img alt="Instance Exists drop example" class="center" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Instance/a_Instance_Exists_Drop.png" /></p><p> Ces actions seront désormais exécutées si le &quot;si&quot; est évalué à <tt>true</tt>, tandis que toutes les actions déposées ailleurs seront exécutées après le bloc &quot;if&quot;.</p><p></p><h4> Syntaxe de l&#39;action:</h4><p><img alt="Instance Exists Action" class="center" height="124" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Instance/a_Instance_Exists.png" width="260" /></p><h4> Arguments:</h4><table><tbody><tr><th> Argument</th><th> Description</th></tr><tr><td> <span class="notranslate">Object</span></td><td> Le nom de l&#39;objet pour lequel rechercher une instance (ou un ID d&#39;instance).</td></tr></tbody></table><p></p><h4> Exemple:</h4><p><img alt="Instance Exists Example" class="center" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Instance/e_Instance_Exists.png" /> Le code de bloc d&#39;action ci-dessus vérifie la présence d&#39;une collision et renvoie la valeur d&#39;ID unique de l&#39;instance avec laquelle il entre en collision. Cette valeur est stockée dans une variable temporaire, puis vérifiée pour voir si la valeur correspond à une instance qui se trouve actuellement dans la pièce (si aucune collision n&#39;est trouvée, la variable contiendra le mot-clé &quot;<tt>noone</tt> &quot;), et si c&#39;est le cas, alors une variable est définie dans l&#39;instance avec laquelle il est entré en collision. </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> Retour: <a href="Instance_Actions_Library.htm">Actions d&#39;instance</a></div><div style="float:right"> Suivant: <a href="Call_Parent_Event.htm">Événement d&#39;appel du parent</a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
+  </div>
+  <!-- KEYWORDS
+Action - If Instance Exists
+-->
+  <!-- TAGS
+action_if_instance_exists
+-->
+</body>
+</html>

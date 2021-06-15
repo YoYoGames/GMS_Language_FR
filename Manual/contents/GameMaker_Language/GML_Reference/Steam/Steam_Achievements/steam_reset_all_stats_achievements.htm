@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>steam_reset_all_stats_achievements</title>
+  <meta name="generator" content="Adobe RoboHelp 2019" />
+  <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
+  <meta name="rh-authors" content="Mark Alexander" />
+  <meta name="topic-comment" content="Page de référence pour steam _reset_all_stats_achievements" />
+  <meta name="rh-index-keywords" content="steam_reset_all_stats_achievements" />
+  <meta name="search-keywords" content="steam_reset_all_stats_achievements" />
+</head>
+<body><!--<div class="body-scroll" style="top: 150px;">--><h1> <span class="notranslate">steam</span> _reset_all_stats_achievements</h1><p> Avec cette fonction, vous pouvez réinitialiser toutes les statistiques <em>et</em> réalisations de l&#39; <strong>utilisateur actuel</strong> à leurs valeurs par défaut (telles que définies dans le <span class="notranslate">Steam</span> Works pour votre jeu). Il est recommandé de n&#39;utiliser cette fonction que comme outil de débogage lors du développement de votre jeu.</p><p></p><h4> Syntaxe:</h4><p class="code">steam_reset_all_stats_achievements();</p><p></p><h4> Retour:</h4><p class="code">N/A</p><p></p><h4> Exemple:</h4><p class="code">ini_open(&quot;Save.ini&quot;);<br/> if global.Version != ini_read_real(&quot;Data&quot;, &quot;Version&quot;, 0)<br/>     {
+    <br/>     ini_write_real(&quot;Data&quot;, &quot;Version&quot;, global.Version);<br/>     steam_reset_all_stats_achievements();
+    <br/>     }
+    <br/> ini_close();
+  </p><p> Le code ci-dessus vérifie une valeur stockée dans un fichier ini par rapport à celle d&#39;une variable globale et si elles sont différentes, il réinitialise les statistiques et les réalisations du jeu. </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> Retour: <a href="Steam_Achievements.htm">Réalisations et statistiques</a></div><div style="float:right"> Suivant: <a href="steam_set_achievement.htm"><span class="notranslate">steam</span> _set_achievement</a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
+  </div>
+  <!-- KEYWORDS
+steam_reset_all_stats_achievements
+-->
+  <!-- TAGS
+steam_reset_all_stats_achievements
+-->
+</body>
+</html>

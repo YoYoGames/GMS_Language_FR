@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <title>string_format</title>
+  <meta name="generator" content="Adobe RoboHelp 2019"/>
+  <link rel="stylesheet" href="../../../assets/css/default.css" type="text/css"/>
+  <meta name="rh-authors" content="Mark Alexander"/>
+  <meta name="topic-comment" content="Page de référence pour string_format"/>
+  <meta name="rh-index-keywords" content="string_format"/>
+  <meta name="search-keywords" content="string_format"/>
+</head>
+
+<body><!--<div class="body-scroll" style="top: 150px;">--><h1>string_format</h1><p> Transforme un nombre réel en une chaîne en utilisant votre propre formatage, où vous pouvez choisir combien de «places» sont enregistrées dans la chaîne et combien de décimales sont enregistrées également. Les deux peuvent être très pratiques, certains jeux préfèrent afficher un score sous la forme d&#39;un nombre défini de chiffres, tandis que le contrôle des décimales peut être bon pour une grande précision des deux décimales de <a href="string.htm"><tt>string()</tt></a> ne peut pas fournir. Si le nombre de places spécifié est supérieur à la valeur à afficher et / ou le nombre plus les décimales qui ont été spécifiées est inférieur au nombre total de places, alors des espaces seront ajoutés avant la valeur pour compenser la différence (voir le exemple ci-dessous). Des zéros seront ajoutés à droite de la virgule décimale si la valeur donnée est inférieure au total et au nombre de décimales à inclure. Le format par défaut est pas d&#39;espaces supplémentaires à gauche, et seulement deux décimales à droite, par exemple &quot;265.73&quot;.</p><p></p><h4> Syntaxe:</h4><p class="code">string_format(val, tot, dec);</p><table><tbody><tr><th> Argument</th><th> Description</th></tr><tr><td> <span class="notranslate">val</span></td><td> Le nombre réel à transformer en chaîne.</td></tr><tr><td> <span class="notranslate">tot</span></td><td> Le nombre total de places du numéro principal à afficher. Des zéros ou des espaces seront insérés pour correspondre à cela.</td></tr><tr><td> <span class="notranslate">dec</span></td><td> Le nombre de décimales à inclure.</td></tr></tbody></table><p></p><h4> Retour:</h4><p class="code">String</p><p></p><h4> Exemple:</h4><p class="code">str1 = string_format(1234, 8, 0);<br/> str2 = string_format(pi, 1, 10);<br/> str3 = string_format(pi, 5, 5);</p><p> Cela définira <tt>str1</tt> à &quot;1234&quot;, <tt>str2</tt> à &quot;3.1415926535&quot; et <tt>str3</tt> à &quot;3,14159&quot;. </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> Retour: <a href="Strings.htm">Cordes</a></div><div style="float:right"> Suivant:<a href="string_insert.htm">string_insert</a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
+  </div>
+  <!-- KEYWORDS
+string_format
+-->
+  <!-- TAGS
+string_format
+-->
+
+</body></html>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>view_current</title>
+  <meta name="generator" content="Adobe RoboHelp 2019" />
+  <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
+  <meta name="rh-authors" content="Mark Alexander" />
+  <meta name="topic-comment" content="Page de référence pour view_current" />
+  <meta name="rh-index-keywords" content="view_current" />
+  <meta name="search-keywords" content="view_current" />
+</head>
+<body><!--<div class="body-scroll" style="top: 150px;">--><h1>view_current</h1><p> Cette <b>variable en lecture seule</b> n&#39;est valide que dans l&#39; <a href="../../../../The_Asset_Editors/Object_Properties/Draw_Events.htm"><b>événement Draw</b></a> et renvoie le port d&#39;affichage actuel en cours de rendu. La valeur de retour changera pendant l&#39;événement de dessin lorsque vous avez différentes vues car l&#39;événement de dessin est appelé <i>une fois pour chaque port de vue successivement</i>. Ainsi, lorsque (par exemple) vous utilisez le port de vue [0] et le port de vue [1] dans votre salle de jeu, l&#39;événement de tirage pour <i>TOUTES les</i> instances sera exécuté deux fois, une fois pour chaque port, et avec cette variable, vous pouvez vérifier pour voir quelle vue est actuellement dessinée. En général, cela est utilisé pour restituer des détails spécifiques sur un seul port lorsque plusieurs ports de vue sont visibles dans la salle en même temps. Consultez l&#39;exemple de code ci-dessous.</p><p></p><h4> Syntaxe:</h4><p class="code">view_current;</p><p></p><h4> Retour:</h4><p class="code">Integer (view port index from 0 to 7)</p><p></p><h4> Exemple:</h4><p class="code">if view_current == 0<br/>     {
+    <br/>     var xx = camera_get_view_x(view_camera[0]);<br/>     var yy = camera_get_view_y(view_camera[0]);<br/>     draw_text(xx + 32, yy + 32, &quot;Player 1&quot;);<br/>     }
+    <br/> else
+    <br/>     {
+    <br/>     var xx = camera_get_view_x(view_camera[1]);<br/>     var yy = camera_get_view_y(view_camera[1]);<br/>     draw_text(xx + 32, yy + 32, &quot;Player 2&quot;);<br/>     }
+  </p><p> Le code ci-dessus vérifie quelle vue est actuellement dessinée, puis dessine un texte différent pour chaque vue en fonction de la valeur de retour. </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> Arrière: <a href="Cameras_And_View_Ports.htm">caméras et ports d&#39;affichage</a></div><div style="float:right"> Suivant:<a href="view_enabled.htm">view_enabled</a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
+  </div>
+  <!-- KEYWORDS
+view_current
+-->
+  <!-- TAGS
+view_current
+-->
+</body>
+</html>

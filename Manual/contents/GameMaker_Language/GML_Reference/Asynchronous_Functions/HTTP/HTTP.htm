@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>HTTP</title>
+  <meta name="generator" content="Adobe RoboHelp 2019" />
+  <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
+  <meta name="rh-authors" content="Mark Alexander" />
+  <meta name="topic-comment" content="Section de référence pour toutes les fonctions HTTP" />
+  <meta name="rh-index-keywords" content="" />
+  <meta name="search-keywords" content="HTTP" />
+</head>
+<body><!--<div class="body-scroll" style="top: 150px;">--><h1> HTTP</h1><p> Cette section répertorie toutes les différentes fonctions HTTP asynchrones disponibles dans <span class="notranslate">GameMaker Studio 2</span>. Ces fonctions généreront un <a href="../../../../The_Asset_Editors/Object_Properties/Async_Events/HTTP.htm">événement HTTP asynchrone</a> dans toutes les instances qui en ont: </p><p></p><ul class="colour"><li><a href="http_request.htm">http_request</a></li><li><a href="http_get.htm">http_get</a></li><li><a href="http_get_file.htm">http_get_file</a></li><li><a href="http_post_string.htm">http_post_string</a></li></ul><p></p><p> Veuillez noter que ce qui précède <span class="inline">http_*</span> les fonctions peuvent ne pas fonctionner comme prévu en raison de problèmes de <strong>sécurité entre domaines.</strong> Cela signifie que les demandes adressées à votre serveur ou les tentatives de chargement de ressources à partir de différents domaines sont bloquées et peuvent sembler renvoyer des résultats vides ou des erreurs 404. L&#39;un des moyens de contourner ce problème est d&#39;avoir du PHP côté serveur qui permet à certains domaines d&#39;accéder à votre serveur (c&#39;est aussi un moyen de protéger vos ressources et de bloquer les serveurs qui ne sont pas inclus dans la liste d&#39;autorisation PHP).</p><p> Voici un exemple du code que vous pouvez utiliser pour cela:</p><p class="code">$http_origin = $_SERVER[&#39;HTTP_ORIGIN&#39;];<br/> if ($http_origin == &quot;http://127.0.0.1:51268&quot;)<br/>    {
+    <br/>    header(&quot;Access-Control-Allow-Origin: *&quot;);<br/>    }
+  </p><p> Pour les demandes de chargement d&#39;image où la détermination ou la définition de leur type d&#39;origine croisée est importante, les fonctions suivantes existent:</p><p></p><ul class="colour"><li><a href="http_get_request_crossorigin.htm">http_get_request_crossorigin</a></li><li><a href="http_set_request_crossorigin.htm">http_set_request_crossorigin</a></li></ul><p></p><p> Dans la plupart des cas, ces fonctions ne devraient pas avoir besoin d&#39;être utilisées, mais si le jeu est stocké sur un serveur sécurisé - où certains actifs peuvent nécessiter une authentification de base pour être accédés et génèrent des erreurs de sécurité lors du chargement - définir le type d&#39;origine croisée pour les demandes d&#39;image à &quot;use-credentials&quot; peut être nécessaire (par opposition au paramètre &quot;anonyme&quot; par défaut). </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> Retour: <a href="../Asynchronous_Functions.htm">Fonctions asynchrones</a></div><div style="float:right"> Suivant: <a href="../Dialog/Dialog.htm">Dialogue</a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
+  </div>
+  <!-- KEYWORDS
+HTTP Functions
+-->
+  <!-- TAGS
+http_functions
+-->
+</body>
+</html>

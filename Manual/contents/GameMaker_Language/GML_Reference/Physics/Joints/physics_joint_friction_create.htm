@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>physics_joint_friction_create</title>
+  <meta name="generator" content="Adobe RoboHelp 2019" />
+  <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
+  <meta name="rh-authors" content="Mark Alexander" />
+  <meta name="topic-comment" content="Page de référence pour physics_joint_friction_create" />
+  <meta name="rh-index-keywords" content="physics_joint_friction_create" />
+  <meta name="search-keywords" content="physics_joint_friction_create" />
+</head>
+<body><!--<div class="body-scroll" style="top: 150px;">--><h1>physics_joint_friction_create</h1><p> L&#39;articulation de friction est un peu différente de toutes les autres articulations de la simulation physique en ce que la connexion créée ne contraindra pas la position ou le mouvement des instances, mais plutôt sa vitesse et sa rotation. Cela fonctionne en prenant les valeurs d&#39;entrée maximales pour la force et le couple et en les appliquant au deuxième appareil pour ramener la vitesse et le moment angulaire aux mêmes valeurs que celles de la première instance. Ainsi, si vous avez une instance stationnaire et une instance en mouvement, connectez-les avec un joint de friction, l&#39;instance en mouvement ralentira progressivement jusqu&#39;à ce qu&#39;elle soit elle aussi stationnaire. Si les deux instances se déplaçaient, la seconde instance verra sa vitesse de déplacement modifiée pour correspondre à celle de la première instance.</p><p><img alt="Friction joint illustration" class="center" src="../../../../assets/Images/Scripting_Reference/GML/Reference/Physics/friction_joint_image.png" /> Comme pour la plupart des autres liaisons, vous indiquez les instances à assembler, ainsi que la position de la liaison à créer dans la pièce. Vous fournissez alors la force maximale et le couple maximal (friction directionnelle et rotationnelle), et si vous définissez la valeur &quot;col&quot; sur <tt>true</tt> alors les deux instances peuvent interagir et entrer en collision l&#39;une avec l&#39;autre, mais <i>uniquement</i> si elles ont des événements de collision, mais si elle est définie sur <tt>false</tt>, ils n&#39;entreront pas en collision quoi qu&#39;il arrive.</p><p></p><h4> Syntaxe:</h4><p class="code">physics_joint_friction_create(inst1, inst2, anchor_x, anchor_y, max_force, max_torque, col)</p><table><tbody><tr><th> Argument</th><th> Description</th></tr><tr><td> <span class="notranslate">inst1</span></td><td> La première instance à se connecter avec l&#39;articulation</td></tr><tr><td> <span class="notranslate">inst2</span></td><td> La deuxième instance pour se connecter avec l&#39;articulation</td></tr><tr><td> <span class="notranslate">anchor_x</span></td><td> La coordonnée x pour l&#39;articulation, dans le monde du jeu</td></tr><tr><td> <span class="notranslate">anchor_y</span></td><td> La coordonnée y pour l&#39;articulation, dans le monde du jeu</td></tr><tr><td> <span class="notranslate">max_force</span></td><td> La force de frottement maximale qui sera appliquée</td></tr><tr><td> <span class="notranslate">max_torque</span></td><td> La force de rotation maximale qui sera appliquée</td></tr><tr><td> <span class="notranslate">col</span></td><td> Si les deux instances peuvent entrer en collision (vrai) ou non (faux)</td></tr></tbody></table><p></p><h4> Retour:</h4><p class="code">Integer (index of the joint)</p><p></p><h4> Exemple:</h4><p class="code">var mainFixture, o_id;<br/> mainFixture = physics_fixture_create();<br/> physics_fixture_set_circle_shape(mainFixture, sprite_get_width(sprite_index) / 2);<br/> o_id = instance_create_layer(x+300, y, &quot;Instances&quot;, obj_Rudder);<br/> physics_fixture_bind(mainFixture,
+    id);<br/> physics_fixture_bind(mainFixture, o_id);<br/> physics_joint_friction_create(id, o_id, x, y, 10, 0.3, true);<br/> physics_fixture_delete(mainFixture);
+  </p><p> Le code ci-dessus créera un appareil puis le liera à deux instances, avant de les connecter toutes les deux à l&#39;aide d&#39;un joint de friction. </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> Arrière: <a href="Joints.htm">Joints</a></div><div style="float:right"> Suivant:<a href="physics_joint_delete.htm">physics_joint_delete</a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
+  </div>
+  <!-- KEYWORDS
+physics_joint_friction_create
+-->
+  <!-- TAGS
+physics_joint_friction_create
+-->
+</body>
+</html>

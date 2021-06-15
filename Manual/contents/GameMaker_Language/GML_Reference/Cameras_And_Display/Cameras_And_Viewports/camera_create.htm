@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>camera_create</title>
+  <meta name="generator" content="Adobe RoboHelp 2019" />
+  <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
+  <meta name="rh-authors" content="Mark Alexander" />
+  <meta name="topic-comment" content="Page de référence pour camera_create" />
+  <meta name="rh-index-keywords" content="camera_create" />
+  <meta name="search-keywords" content="camera_create" />
+</head>
+<body><!--<div class="body-scroll" style="top: 150px;">--><h1>camera_create</h1><p> Cette fonction créera une caméra &quot;vide&quot;, c&#39;est-à-dire: une caméra sans paramètres de vue ou de projection définis. Une fois que vous avez créé la caméra, vous pouvez utiliser les différentes <a href="../../Maths_And_Numbers/Matrix_Functions/Matrix_Functions.htm">fonctions de matrice</a> pour définir les matrices de vue et de projection. Vous pouvez également utiliser cette fonction pour créer la caméra, puis utiliser les différents <tt>camera_set_*</tt> fonctions pour configurer la vue, cependant notez que vous <i>devez</i> fournir au moins une position et une taille de vue, sinon la caméra résultante ne sera pas valide et donnera des résultats étranges si elle est appliquée à un port de vue (si vous ne définissez pas l&#39;objet suivant, les bordures ou vitesse de déplacement, ceux-ci seront réglés sur les valeurs par défaut pour une caméra de vue dans l&#39;éditeur de pièce).</p><p> Notez que les caméras sont comme toutes les ressources dynamiques et occuperont de la mémoire lors de leur création. Cela signifie que vous devez faire attention à ne pas créer de caméras inutilement et à détruire celles dont vous n&#39;avez pas besoin en appelant la fonction <a href="camera_destroy.htm"><tt>camera_destroy()</tt></a>. Cela signifie également que les caméras persisteront d&#39;une pièce à l&#39;autre si elles sont affectées à un <tt>global</tt> variable (elles persisteront lorsqu&#39;elles seront également affectées à des variables d&#39;instance ou locales, mais vous ne pourrez pas y accéder après le changement de pièce, d&#39;où la fuite de mémoire), afin que vous puissiez - par exemple - créer une nouvelle caméra, l&#39;assigner à une variable globale, puis au début de chaque pièce, définissez les matrices de vue et de projection requises et le port de vue que vous devez utiliser.</p><p></p><h4> Syntaxe:</h4><p class="code">camera_create();</p><p></p><h4> Retour:</h4><p class="code">Real (unique camera ID value)</p><p></p><h4> Exemple:</h4><p class="code">view_camera[0] = camera_create();<br/> var viewmat = matrix_build_lookat(640, 240, -10, 640, 240, 0, 0, 1, 0);<br/> var projmat = matrix_build_projection_ortho(640, 480, 1.0, 32000.0);<br/> camera_set_view_mat(view_camera[0], viewmat);<br/> camera_set_proj_mat(view_camera[0],
+    projmat);</p><p> Le code ci-dessus crée une nouvelle caméra et attribue son ID à la vue [0]. Les matrices de vue et de projection sont ensuite créées et stockées dans des variables locales avant d&#39;être utilisées pour régler la caméra. </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> Arrière: <a href="Cameras_And_View_Ports.htm">caméras et ports d&#39;affichage</a></div><div style="float:right"> Suivant:<a href="camera_create_view.htm">camera_create_view</a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
+  </div>
+  <!-- KEYWORDS
+camera_create
+-->
+  <!-- TAGS
+camera_create
+-->
+</body>
+</html>

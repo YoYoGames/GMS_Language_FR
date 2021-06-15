@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>sprite_assign</title>
+  <meta name="generator" content="Adobe RoboHelp 2019" />
+  <link rel="stylesheet" href="../../../../../assets/css/default.css" type="text/css" />
+  <meta name="rh-authors" content="Mark Alexander" />
+  <meta name="topic-comment" content="Page expliquant la fonction sprite_assign" />
+  <meta name="rh-index-keywords" content="sprite_assign" />
+  <meta name="search-keywords" content="sprite_assign" />
+</head>
+<body><!--<div class="body-scroll" style="top: 150px;">--><h1>sprite_assign</h1><p> Cette fonction prend deux index de sprite créés précédemment (ou inclus) et copie l&#39;image de l&#39;un à l&#39;autre. De cette façon, vous pouvez copier (ou &quot;cloner&quot;) un sprite dans un autre index. Notez que <i>vous ne pouvez pas copier dans une ressource de jeu</i>. Vous devez avoir créé le sprite sur lequel copier préalablement à l&#39;aide du <a href="sprite_add.htm"><tt>sprite_add()</tt></a> ou <a href="sprite_duplicate.htm"><tt>sprite_duplicate()</tt></a> les fonctions.</p><p></p><h4> Syntaxe:</h4><p class="code">sprite_assign(index, sprite);</p><table><tbody><tr><th> Argument</th><th> Description</th></tr><tr><td> <span class="notranslate">index</span></td><td> L&#39;index du sprite à copier (c&#39;est-à-dire: écrasé).</td></tr><tr><td> <span class="notranslate">sprite</span></td><td> Le sprite à copier.</td></tr></tbody></table><p></p><h4> Retour</h4><p class="code">N/A</p><p></p><h4> Exemple:</h4><p class="code">if sprite_exists(global.Player_Sprite)<br/>     {
+    <br/>     var t_spr = sprite_add(&quot;player.png&quot;, 16, true, true, 0, 0);<br/>     sprite_assign(global.Player_Sprite, t_spr);<br/>     sprite_delete(t_spr);
+    <br/>     }
+    <br/> else
+    <br/>     {
+    <br/>     global.Player_Sprite = sprite_add(&quot;player.png&quot;, 16, true, true, 0, 0);<br/>     }
+  </p><p> Le code ci-dessus vérifie si la variable globale &quot;Player_Sprite&quot; contient un sprite et si c&#39;est le cas, il utilise sprite_assign pour le remplacer par celui qui a été chargé à partir d&#39;un fichier externe. S&#39;il ne contient pas de sprite, un est chargé et son index est stocké dans cette variable. </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> Retour: <a href="Sprite_Manipulation.htm">Manipulation des sprites</a></div><div style="float:right"> Suivant:<a href="sprite_merge.htm">sprite_merge</a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
+  </div>
+  <!-- KEYWORDS
+sprite_assign
+-->
+  <!-- TAGS
+sprite_assign
+-->
+</body>
+</html>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>asset_clear_tags</title>
+  <meta name="generator" content="Adobe RoboHelp 2019" />
+  <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
+  <meta name="rh-authors" content="Mark Alexander" />
+  <meta name="topic-comment" content="Page expliquant la fonction asset_clear_tags" />
+  <meta name="rh-index-keywords" content="asset_clear_tags,asset_object,asset_sprite,asset_sound,asset_room,asset_tiles,asset_path,asset_script,asset_font,asset_timeline,asset_shader,asset_animationcurve,asset_sequence" />
+  <meta name="search-keywords" content="asset_clear_tags,asset_object,asset_sprite,asset_sound,asset_room,asset_tiles,asset_path,asset_script,asset_font,asset_timeline,asset_shader,asset_animationcurve,asset_sequence" />
+</head>
+<body><!--<div class="body-scroll" style="top: 150px;">--><h1>asset_clear_tags</h1><p> Avec cette fonction, vous pouvez effacer toutes les balises présentes sur n&#39;importe quel actif à partir du navigateur d&#39;actifs. Vous fournissez soit le nom de l&#39;actif (sous forme de chaîne), soit son index d&#39;actif, et si vous fournissez une valeur d&#39;index d&#39;actif, vous devrez alors fournir l&#39;argument de type d&#39;actif facultatif (une constante), car les actifs de types différents peuvent avoir le même index, même s&#39;ils ne peuvent pas porter le même nom. Les types d&#39;actifs disponibles sont répertoriés dans le tableau ci-dessous:</p><p></p><table><tbody><tr><th> Constant</th><th> Description</th></tr><tr><td> <span class="notranslate">asset_object</span></td><td> Le nom donné fait référence à un <a href="../../../../The_Asset_Editors/Objects.htm">objet</a>.</td></tr><tr><td> <span class="notranslate">asset_sprite</span></td><td> Le nom donné fait référence à un <a href="../../../../The_Asset_Editors/Sprites.htm">sprite</a>.</td></tr><tr><td> <span class="notranslate">asset_sound</span></td><td> Le prénom fait référence à un <a href="../../../../The_Asset_Editors/Sounds.htm">son</a>.</td></tr><tr><td> <span class="notranslate">asset_room</span></td><td> Le prénom fait référence à un<a href="../../../../The_Asset_Editors/Rooms.htm">room</a>.</td></tr><tr><td> <span class="notranslate">asset_tiles</span></td><td> Le nom donné fait référence à un <a href="../../../../The_Asset_Editors/Tile_Sets.htm">jeu de tuiles</a>.</td></tr><tr><td> <span class="notranslate">asset_path</span></td><td> Le nom donné fait référence à un <a href="../../../../The_Asset_Editors/Paths.htm">chemin</a>.</td></tr><tr><td> <span class="notranslate">asset_script</span></td><td> Le prénom fait référence à un<a href="../../../../The_Asset_Editors/Scripts.htm">script</a>.</td></tr><tr><td> <span class="notranslate">asset_font</span></td><td> Le prénom fait référence à une <a href="../../../../The_Asset_Editors/Fonts.htm">police</a>.</td></tr><tr><td> <span class="notranslate">asset_timeline</span></td><td> Le prénom fait référence à une <a href="../../../../The_Asset_Editors/Timelines.htm">chronologie</a>.</td></tr><tr><td> <span class="notranslate">asset_ <span class="notranslate">shader</span></span></td><td> Le prénom fait référence à un <a href="../../../../The_Asset_Editors/Shaders.htm"><span class="notranslate">shader</span></a>.</td></tr><tr><td> <span class="notranslate">asset_animationcurve</span></td><td> Le nom donné fait référence à une <a href="../../../../The_Asset_Editors/Animation_Curves.htm">courbe d&#39;animation</a>.</td></tr><tr><td> <span class="notranslate">asset_sequence</span></td><td> Le prénom fait référence à une <a href="../../../../The_Asset_Editors/Sequences.htm">séquence</a>.</td></tr></tbody></table><p></p><p> Si la fonction réussit à effacer les balises, elle retournera <tt>true</tt> sinon il reviendra <tt>false</tt>.</p><p></p><p></p><h4> Syntaxe:</h4><p class="code">asset_clear_tags(name,[asset_type]);</p><table><tbody><tr><th> Argument</th><th> Description</th></tr><tr><td> <span class="notranslate">name_or_index</span></td><td> Le nom de l&#39;actif (une chaîne) ou sa valeur d&#39;index (un entier).</td></tr><tr><td> <span class="notranslate">[asset_type]</span></td><td> OPTIONNEL! Type d&#39;actif à partir duquel effacer les balises, utilisé uniquement lors de la fourniture d&#39;un index pour le premier argument.</td></tr></tbody></table><p></p><h4> Retour:</h4><p class="code">Boolean</p><p></p><h4> Exemple:</h4><p class="code">asset_clear_tags(obj_Enemy_Parent, asset_object);</p><p> Le code ci-dessus effacera toutes les balises de l&#39;actif objet donné. </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> Retour: <a href="Assets_And_Tags.htm">Actifs et balises</a></div><div style="float:right"> Suivant:<a href="asset_get_index.htm">asset_get_index</a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
+  </div>
+  <!-- KEYWORDS
+asset_clear_tags
+asset_object
+asset_sprite
+asset_sound
+asset_room
+asset_tiles
+asset_path
+asset_script
+asset_font
+asset_timeline
+asset_shader
+asset_animationcurve
+asset_sequence
+-->
+  <!-- TAGS
+asset_clear_tags
+-->
+</body>
+</html>

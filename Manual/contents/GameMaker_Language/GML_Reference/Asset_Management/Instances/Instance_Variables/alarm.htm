@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>alarm</title>
+  <meta name="generator" content="Adobe RoboHelp 2019" />
+  <link rel="stylesheet" href="../../../../../assets/css/default.css" type="text/css" />
+  <meta name="rh-authors" content="Mark Alexander" />
+  <meta name="topic-comment" content="Page décrivant l&#39;alarme variable" />
+  <meta name="rh-index-keywords" content="alarm" />
+  <meta name="search-keywords" content="alarm" />
+</head>
+<body><!--<div class="body-scroll" style="top: 150px;">--><h1>alarm</h1><p> <a href="../../../../GML_Overview/Arrays.htm">Ce tableau à</a> 1 dimension est utilisé pour obtenir la valeur actuelle de toutes les alarmes que l&#39;instance peut avoir, ou il peut être utilisé pour définir ces alarmes. Il y a douze alarmes intégrées dans chaque instance d&#39;un objet, et chacune a sa propre<a href="../../../../../The_Asset_Editors/Object_Properties/Object_Events.htm">event</a> qui s&#39;exécutera lorsque cette variable atteindra 0.</p><p> Les alarmes sont décomptées au début de chaque étape, <i>après</i> l&#39;événement Begin Step mais <i>avant</i> l&#39;événement Step principal et avant que quoi que ce soit ne soit rendu pour l&#39;étape. Il convient de noter que l&#39;alarme n&#39;est pas terminée lorsqu&#39;elle atteint 0 (bien que l&#39;événement ait été déclenché) à l&#39;étape suivante, elle descendra à -1, donc si vous devez arrêter une alarme pour une raison quelconque, vous devez définir son tableau. valeur -1 et <i>non</i> 0. Les temps d&#39;alarme sont calculés par <i>pas de jeu</i>, avec une valeur de 30 correspondant à 30 pas, 60 à 60 pas, etc...</p><p class="note"> <b>REMARQUE:</b> une alarme sans actions ni code ne sera pas exécutée. Cependant, même avec juste un commentaire et aucun code, l&#39;alarme compte à rebours.</p><p> Vous pouvez définir le tableau d&#39;alarme directement (et récupérer la valeur d&#39;alarme actuelle directement en utilisant le tableau également), mais dans certaines circonstances, ce n&#39;est pas la méthode la plus appropriée, vous pouvez donc également utiliser la fonction <tt><a href="../alarm_set.htm">alarm_set()</a></tt> pour régler une alarme et la fonction <a href="../alarm_get.htm"><tt>alarm_get()</tt></a> pour obtenir la valeur d&#39;une alarme.</p><p></p><h4> Syntaxe:</h4><p class="code">alarm[val];</p><p></p><h4> Retour:</h4><p class="code">Integer (-1 if the alarm isn&#39;t running)</p><p></p><h4> Exemple:</h4><p class="code">if canshoot<br/>     {
+    <br/>     if keyboard_check_pressed(vk_space)<br/>         {
+    <br/>         canshoot = false;<br/>         alarm[0] = room_speed;<br/>         instance_create_layer(x, y, &quot;Bullets&quot;, obj_Bullet);<br/>         }
+    <br/>     }
+  </p><p> Le code ci-dessus vérifie une variable, puis si elle est vraie, vérifie si une touche est enfoncée et si cela est vrai, elle définit finalement la variable sur false, définit une alarme (où elle sera à nouveau définie sur true) et crée une instance. </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> Retour: <a href="Instance_Variables.htm">Variables d&#39;instance</a></div><div style="float:right"> Suivant:<a href="direction.htm">direction</a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
+  </div>
+  <!-- KEYWORDS
+alarm
+-->
+  <!-- TAGS
+alarm
+-->
+</body>
+</html>

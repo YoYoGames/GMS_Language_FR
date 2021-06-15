@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>steam_download_scores_around_user</title>
+  <meta name="generator" content="Adobe RoboHelp 2019" />
+  <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
+  <meta name="rh-authors" content="Mark Alexander" />
+  <meta name="topic-comment" content="Page de référence pour steam _download_scores_around_user" />
+  <meta name="rh-index-keywords" content="steam_download_scores_around_user" />
+  <meta name="search-keywords" content="steam_download_scores_around_user" />
+</head>
+<body><!--<div class="body-scroll" style="top: 150px;">--><h1> <span class="notranslate">steam</span> _download_scores_around_user</h1><p> Cette fonction est utilisée pour récupérer les entrées du classement par rapport à l&#39;entrée actuelle des utilisateurs. Le <tt>range_start</tt> est le nombre d&#39;entrées à récupérer <i>avant</i> l&#39;entrée de l&#39;utilisateur actuel, et le paramètre <tt>range_end</tt> Le paramètre est le nombre d&#39;entrées après l&#39;entrée de l&#39;utilisateur actuel, et l&#39;entrée de l&#39;utilisateur actuel est <i>toujours</i> incluse dans les résultats. Par exemple, si l&#39;utilisateur actuel est le numéro 5 dans un classement donné, définir la plage de départ sur -2 et la plage de fin sur 2 renverra 5 entrées: 3 à 7. S&#39;il n&#39;y a pas assez d&#39;entrées dans le classement avant ou après l&#39;entrée de l&#39;utilisateur, <span class="notranslate">Steam</span> ajustera la plage pour essayer de renvoyer le nombre d&#39;entrées demandées. Par exemple, si l&#39;utilisateur est n ° 1 dans le classement, le début est défini sur -2 et la fin est défini sur 2, <span class="notranslate">Steam</span> renverra les 5 premières entrées du classement.</p><p></p><h4> Syntaxe:</h4><p class="code">steam_download_scores_around_user(lb_name, range_start, range_end);</p><table><tbody><tr><th> Argument</th><th> Description</th></tr><tr><td> <span class="notranslate">lb_name</span></td><td> Le nom du classement à partir duquel vous téléchargez les scores (une chaîne).</td></tr><tr><td> <span class="notranslate">range_start</span></td><td> La position de départ dans le classement.</td></tr><tr><td> <span class="notranslate">range_end</span></td><td> La position finale dans le classement.</td></tr></tbody></table><p></p><h4> Retour:</h4><p class="code">Real</p><p></p><h4> Exemple:</h4><p class="code">score_get = steam_download_scores_around_user(&quot;Game Scores&quot;, -4, 5);</p><p> Cela enverra une requête au <span class="notranslate">Steam</span> pour une plage de 10 scores du classement &quot;Game Scores&quot;, centrée sur le joueur et stockera l&#39; <b>identifiant asynchrone</b> de la requête dans la variable &quot;score_get&quot;. Cela sera ensuite géré dans l&#39; <a href="../../../../The_Asset_Editors/Object_Properties/Async_Events/Steam.htm"><b>événement <span class="notranslate">Steam</span></b></a> Async, comme indiqué dans l&#39;exemple étendu pour <a href="steam_download_scores.htm"><tt>steam_download_scores()</tt></a>. </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> Retour: <a href="Steam_Leaderboards.htm">Classements</a></div><div style="float:right"> Suivant: <a href="steam_download_friends_scores.htm"><span class="notranslate">steam</span> _download_friends_scores</a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
+  </div>
+  <!-- KEYWORDS
+steam_download_scores_around_user
+-->
+  <!-- TAGS
+steam_download_scores_around_user
+-->
+</body>
+</html>

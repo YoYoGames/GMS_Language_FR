@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>event_perform_object</title>
+  <meta name="generator" content="Adobe RoboHelp 2019" />
+  <link rel="stylesheet" href="../../../../../assets/css/default.css" type="text/css" />
+  <meta name="rh-authors" content="Mark Alexander" />
+  <meta name="topic-comment" content="Page décrivant la fonction event_perform_object" />
+  <meta name="rh-index-keywords" content="event_perform_object" />
+  <meta name="search-keywords" content="event_perform_object" />
+</head>
+<body><!--<div class="body-scroll" style="top: 150px;">--><h1>event_perform_object</h1><p> Cette fonction fonctionne de la même manière que <a href="event_perform.htm"><tt>event_perform()</tt></a> sauf que cette fois, vous pouvez spécifier des événements à partir d&#39;un autre objet. Il existe de nombreuses options ici qui permettent une simulation complète de tous les événements possibles, mais notez que cela exécute littéralement tout le code de l&#39;événement et le jeu ne modifiera rien pour le faire se déclencher manuellement, par exemple si vous choisissez d&#39;effectuer un clavier appuyez sur l&#39;événement, l&#39;événement sera déclenché mais la touche correspondante ne sera pas reconnue comme ayant été enfoncée. Ou si vous effectuez un événement d&#39;alarme, le compteur d&#39;alarme ne sera pas réglé sur -1 mais continuera plutôt à décompter. Vous pouvez trouver une liste complète des constantes disponibles que cette fonction requiert sur la page de la fonction <a href="event_perform.htm"><tt>event_perform()</tt></a>.</p><p class="note"> <b>REMARQUE</b>: les actions de l&#39;événement appelé avec cette fonction sont appliquées à l&#39; <b>instance actuelle</b> et non aux instances de l&#39;objet donné.</p><p></p><h4> Syntaxe:</h4><p class="code">event_perform_object(obj, type, numb);</p><table><tbody><tr><th> Argument</th><th> Description</th></tr><tr><td> <span class="notranslate">obj</span></td><td> L&#39;objet qui doit avoir son événement déclenché.</td></tr><tr><td> <span class="notranslate">type</span></td><td> Le type d&#39;événement à réaliser. Voir ci-dessous.</td></tr><tr><td> <span class="notranslate">numb</span></td><td> L&#39;événement spécifique, si nécessaire (sinon, utilisez simplement 0).</td></tr></tbody></table><p></p><h4> Retour:</h4><p class="code">N/A</p><p></p><h4> Exemple:</h4><p class="code">event_perform_object(obj_Player, ev_keypress, ord(&quot;W&quot;));</p><p> Cela effectuerait l&#39;événement associé à la touche Keyboard Check Pressed&gt; W de l&#39;objet &quot;obj_Player&quot; dans l&#39;instance actuelle. </p><p></p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> Retour: <a href="Generating_Object_Events.htm">Génération d&#39;événements d&#39;objets</a></div><div style="float:right"> Suivant:<a href="event_user.htm">event_user</a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
+  </div>
+  <!-- KEYWORDS
+event_perform_object
+-->
+  <!-- TAGS
+event_perform_object
+-->
+</body>
+</html>

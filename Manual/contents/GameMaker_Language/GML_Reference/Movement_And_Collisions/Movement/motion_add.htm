@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>motion_add</title>
+  <meta name="generator" content="Adobe RoboHelp 2019" />
+  <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
+  <meta name="rh-authors" content="Mark Alexander" />
+  <meta name="topic-comment" content="Cette page décrit la fonction motion_add" />
+  <meta name="rh-index-keywords" content="motion_add" />
+  <meta name="search-keywords" content="motion_add" />
+</head>
+<body><!--<div class="body-scroll" style="top: 150px;">--><h1>motion_add</h1><p> Cette fonction modifiera le courant <span class="inline"><a href="../../Asset_Management/Instances/Instance_Variables/direction.htm">direction</a></span> et <span class="inline"><a href="../../Asset_Management/Instances/Instance_Variables/speed.htm">speed</a></span> de l&#39;instance exécutant le code, en combinant les valeurs données avec les valeurs actuelles. Si vous souhaitez simplement modifier ces valeurs, vous devez utiliser la fonction <span class="inline"><a href="motion_set.htm">motion_set()</a></span>.</p><p></p><h4> Syntaxe:</h4><p class="code">motion_add(dir, speed);</p><table><tbody><tr><th> Argument</th><th> Description</th></tr><tr><td> <span class="notranslate">dir</span></td><td> La direction ajoutée.</td></tr><tr><td> <span class="notranslate">speed</span></td><td> La vitesse supplémentaire.</td></tr></tbody></table><p></p><h4> Retour:</h4><p class="code">N/A</p><p></p><h4> Exemple:</h4><p class="code">var pdir;<br/> pdir = point_direction(other.x, other.y, x, y);<br/> motion_add(pdir, other.speed);<br/> if speed &gt; 8 speed = 8;</p><p> le code ci-dessus serait appelé dans l&#39;événement de collision avec un autre objet. Il ajoute à la direction du mouvement et à la vitesse de l&#39;instance un vecteur basé sur la position et la vitesse de l&#39;autre instance impliquée dans la collision. Il limite alors la vitesse si elle dépasse 8 (pixels par pas). </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> Retour: <a href="Movement.htm">Mouvement</a></div><div style="float:right"> Suivant:<a href="motion_set.htm">motion_set</a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
+  </div>
+  <!-- KEYWORDS
+motion_add
+-->
+  <!-- TAGS
+motion_add
+-->
+</body>
+</html>

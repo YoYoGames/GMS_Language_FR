@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>physics_particle_group_add_point</title>
+  <meta name="generator" content="Adobe RoboHelp 2019" />
+  <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
+  <meta name="rh-authors" content="Mark Alexander" />
+  <meta name="topic-comment" content="Page de référence pour physics_particle_group_add_point" />
+  <meta name="rh-index-keywords" content="physics_particle_group_add_point" />
+  <meta name="search-keywords" content="physics_particle_group_add_point" />
+</head>
+<body><!--<div class="body-scroll" style="top: 150px;">--><h1>physics_particle_group_add_point</h1><p> Cette fonction définit un point dans la pièce pour définir la forme d&#39;un polygone qui sera utilisé pour créer un groupe de particules de corps mou. Vous devez avoir préalablement signalé à <span class="notranslate">GameMaker Studio 2</span> que vous allez définir une forme de polygone à l&#39;aide de la fonction <a href="physics_particle_group_polygon.htm">physics_particle_group_polygon ()</a>, puis utiliser cette fonction pour définir les points individuels du polygone. Vous devez donner au moins trois points lors de la définition de la forme du polygone, mais vous pouvez en donner jusqu&#39;à huit, et la fonction permettra la définition de polygones concaves. Cependant, si vous générez un polygone avec des cavités, les points à l&#39;intérieur seront ignorés et une forme convexe sera créée pour le groupe de particules.</p><p></p><h4> Syntaxe:</h4><p class="code">physics_particle_group_add_point(x, y)</p><table><tbody><tr><th> Argument</th><th> Description</th></tr><tr><td> <span class="notranslate">x</span></td><td> La position x dans la pièce pour le point.</td></tr><tr><td> <span class="notranslate">y</span></td><td> La position y dans la pièce pour le point.</td></tr></tbody></table><p></p><h4> Retour:</h4><p class="code">N/A</p><p></p><h4> Exemple:</h4><p class="code">var flags = phy_particle_flag_water | phy_particle_flag_viscous | phy_particle_flag_tensile;<br/> var groupflags = phy_particle_group_flag_solid;<br/> physics_particle_group_begin(flags, groupflags, mouse_x, mouse_y, 0, 0, 0, 0, c_white, 1, 1, 2);<br/>    physics_particle_group_polygon();
+    <br/> physics_particle_group_add_point(200, 200);<br/> physics_particle_group_add_point(300, 300);<br/> physics_particle_group_add_point(100, 300);<br/> mLastGroup = physics_particle_group_end();</p><p> Le code ci-dessus stocke les indicateurs pour le type de particule et les propriétés du groupe de particules dans des variables, puis les utilise pour créer un groupe de particules de polygone de trois côtés à la position de la souris. </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> Retour: <a href="Soft_Body_Particles.htm">Particules corporelles molles</a></div><div style="float:right"> Suivant:<a href="physics_particle_group_end.htm">physics_particle_group_end</a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
+  </div>
+  <!-- KEYWORDS
+physics_particle_group_add_point
+-->
+  <!-- TAGS
+physics_particle_group_add_point
+-->
+</body>
+</html>

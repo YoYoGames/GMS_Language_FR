@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <title>ds_map_read</title>
+  <meta name="generator" content="Adobe RoboHelp 2019"/>
+  <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css"/>
+  <meta name="rh-authors" content="Mark Alexander"/>
+  <meta name="topic-comment" content="Page de référence pour ds_map_read"/>
+  <meta name="rh-index-keywords" content="ds_map_read"/>
+  <meta name="search-keywords" content="ds_map_read"/>
+</head>
+
+<body><!--<div class="body-scroll" style="top: 150px;">--><h1>ds_map_read</h1><p> Cette fonction prendra une chaîne qui a été précédemment créée par la fonction <a href="ds_map_write.htm"><tt>ds_map_write()</tt></a> puis lisez-le dans une <span class="misspell-word">carte DS</span> créée précédemment. Si la carte dans laquelle la chaîne est lue contient des paires clé / valeur, celles-ci seront d&#39;abord effacées avant que la carte enregistrée ne soit reconstruite. Notez que si la structure de données a été créée avec des versions précédentes de <span class="notranslate">GameMaker Studio 2</span> vous devez ajouter l&#39;argument facultatif «hérité», en le définissant sur <tt>true</tt> car le format de la chaîne a changé avec cette version.</p><p></p><h4> Syntaxe:</h4><p class="code">ds_map_read(id, str [, legacy]);</p><table><tbody><tr><th> Argument</th><th> Description</th></tr><tr><td> <span class="notranslate">id</span></td><td> L&#39;identifiant de la structure de données dans laquelle lire la chaîne</td></tr><tr><td> <span class="notranslate">str</span></td><td> La chaîne à lire</td></tr><tr><td> <span class="notranslate">legacy ( <i>optional</i> )</span></td><td> Peut être soit <tt>true</tt> ou <tt>false</tt> ou omis complètement.</td></tr></tbody></table><p></p><h4> Retour:</h4><p class="code">N/A</p><p></p><h4> Exemple:</h4><p class="code">inventory = ds_map_create();<br/> ini_open(&quot;map.ini&quot;);
+    <br/> var t_string = ini_read_string(&quot;Saved&quot;, &quot;0&quot;, &quot;&quot;);<br/> if (t_string != &quot;&quot;)<br/>    {
+    <br/>    ds_map_read(inventory, t_string);<br/>    }
+    <br/> ini_close();
+  </p><p> Le code ci-dessus crée une nouvelle carte DS et stocke son index d&#39;identifiant dans la variable &quot;inventaire&quot;. Il ouvre ensuite un fichier ini et lit une chaîne de ce fichier dans la variable temporaire &quot;t_string&quot;. Enfin, il vérifie que la chaîne est valide (et non la valeur ini par défaut de &quot;&quot;) et si c&#39;est le cas, elle lit la chaîne dans le mappage DS nouvellement créé avant de refermer l&#39;ini. </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> Retour: <a href="DS_Maps.htm">DS Maps</a></div><div style="float:right"> Suivant:<a href="ds_map_write.htm">ds_map_write</a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
+  </div>
+  <!-- KEYWORDS
+ds_map_read
+-->
+  <!-- TAGS
+ds_map_read
+-->
+
+</body></html>

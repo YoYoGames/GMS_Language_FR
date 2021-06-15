@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>texture_get_uvs</title>
+  <meta name="generator" content="Adobe RoboHelp 2019" />
+  <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
+  <meta name="rh-authors" content="Mark Alexander" />
+  <meta name="topic-comment" content="Page de référence pour texture_get_uvs" />
+  <meta name="rh-index-keywords" content="texture_get_uvs" />
+  <meta name="search-keywords" content="texture_get_uvs" />
+</head>
+<body><!--<div class="body-scroll" style="top: 150px;">--><h1>texture_get_uvs</h1><p> Cette fonction renvoie un <a href="../../../GML_Overview/Arrays.htm">tableau</a> 1D avec 4 éléments représentant les coordonnées UV de l&#39;image sur la page de texture, en remplissant le tableau avec les valeurs suivantes:</p><ul class="colour"><li> [0] = gauche</li><li> [1] = haut</li><li> [2] = droite</li><li> [3] = bas</li><li> [4] = quantité de pixels que le compilateur d&#39;éléments a supprimés du côté gauche des images-objets (éléments d&#39;image-objet uniquement)</li><li> [5] = quantité de pixels que le compilateur d&#39;éléments a supprimés du côté supérieur des sprites (éléments de sprite uniquement)</li><li> [6] = pourcentage normalisé de données de pixels par rapport à la largeur des sprites d&#39;origine qui a été enregistrée sur la page de texture (éléments de sprite uniquement)</li><li> [7] = pourcentage normalisé de données de pixels par rapport à la hauteur des sprites d&#39;origine qui a été enregistrée sur la page de texture (éléments de sprite uniquement)</li></ul><p> Cette valeur peut ensuite être utilisée dans d&#39;autres fonctions de dessin, en particulier en 3D générale et certaines des fonctions primitives 2D, ainsi que les fonctions <span class="notranslate">Shader</span> Si vous avez besoin de l&#39;UVS pour un sprite, vous pouvez utiliser le <tt><a href="../../Asset_Management/Sprites/Sprite_Information/sprite_get_uvs.htm">sprite_get_uvs()</a></tt> et pour une police, <a href="../../Asset_Management/Fonts/font_get_uvs.htm"><tt>font_get_uvs()</tt></a>.</p><p></p><h4> Syntaxe:</h4><p class="code">texture_get_uvs(texid)</p><table><tbody><tr><th> Argument</th><th> Description</th></tr><tr><td> <span class="notranslate">texid</span></td><td> L&#39;élément d&#39;image à partir duquel obtenir la texture</td></tr></tbody></table><p></p><h4> Retour:</h4><p class="code">1D Array (4 - 8 elements)</p><p></p><h4> Exemple:</h4><p class="code">var tex = texture_get_uvs(surf_back);<br/> tex_left = tex[0];<br/> tex_top = tex[1];<br/> tex_right = tex[2];<br/> tex_left = tex[3];</p><p> Le code ci-dessus stockera les coordonnées UV pour la texture de surface donnée dans un tableau local, puis affectera les valeurs aux variables d&#39;instance. </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> Retour: <a href="Textures.htm">Textures</a></div><div style="float:right"> Suivant:<a href="texture_set_stage.htm">texture_set_stage</a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
+  </div>
+  <!-- KEYWORDS
+texture_get_uvs
+-->
+  <!-- TAGS
+texture_get_uvs
+-->
+</body>
+</html>

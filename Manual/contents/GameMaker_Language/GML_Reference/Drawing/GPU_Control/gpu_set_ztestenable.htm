@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>gpu_set_ztestenable</title>
+  <meta name="generator" content="Adobe RoboHelp 2019" />
+  <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
+  <meta name="rh-authors" content="Mark Alexander" />
+  <meta name="topic-comment" content="Référence de la fonction gpu_set_ztestenable" />
+  <meta name="rh-index-keywords" content="gpu_set_ztestenable" />
+  <meta name="search-keywords" content="gpu_set_ztestenable" />
+</head>
+<body><!--<div class="body-scroll" style="top: 150px;">--><h1>gpu_set_ztestenable</h1><p> Cette fonction peut être utilisée pour activer ou désactiver le test de z-buffer, affectant la façon dont les choses seront dessinées (en général, uniquement utile lorsque vous travaillez avec des projets 3D). Par défaut, lorsque le test z est désactivé et que deux objets sont dessinés dans le même espace, les <i>deux</i> objets seront rendus indépendamment du fait que l&#39;un sur-dessine l&#39;autre, ce qui entraîne des appels de dessin inutiles. Si vous activez cette option, le z-buffer est testé pour voir si un objet sera &quot;visible&quot; et non dessiné si ce n&#39;est pas le cas. Notez qu&#39;il s&#39;agit du <i>comportement par défaut</i>, mais vous pouvez le modifier en modifiant le type de comparaison utilisé pour les tests de z-buffer (voir la fonction <a href="gpu_get_zfunc.htm"><tt>gpu_set_zfunc()</tt></a>.</p><p> Par défaut, le test z-buffer est désactivé (<tt>false</tt> ).</p><p></p><h4> Syntaxe:</h4><p class="code">gpu_set_ztestenable(enable);</p><table><tbody><tr><th> Argument</th><th> Description</th></tr><tr><td> <span class="notranslate">enable</span></td><td> Activer ou désactiver le test du z-buffer (<tt>true</tt> ou <tt>false</tt> ).</td></tr></tbody></table><p></p><h4> Retour:</h4><p class="code">N/A</p><p></p><h4> Exemple:</h4><p class="code">gpu_set_ztestenable(true);<br/> draw_sprite(spr_Background, 0, 0, 0);<br/> gpu_set_ztestenable(false);
+  </p><p> Le code ci-dessus active le test z-buffer pour dessiner un sprite d&#39;arrière-plan, puis le désactive à nouveau pour continuer à dessiner. </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> Retour: <a href="GPU_Control.htm">Contrôle GPU</a></div><div style="float:right"> Suivant:<a href="gpu_set_zfunc.htm">gpu_set_zfunc</a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
+  </div>
+  <!-- KEYWORDS
+gpu_set_ztestenable
+-->
+  <!-- TAGS
+gpu_set_ztestenable
+-->
+</body>
+</html>

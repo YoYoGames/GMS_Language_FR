@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>font_get_first</title>
+  <meta name="generator" content="Adobe RoboHelp 2019" />
+  <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
+  <meta name="rh-authors" content="Mark Alexander" />
+  <meta name="topic-comment" content="Page décrivant la fonction font_get_first" />
+  <meta name="rh-index-keywords" content="font_get_first" />
+  <meta name="search-keywords" content="font_get_first" />
+</head>
+<body><!--<div class="body-scroll" style="top: 150px;">--><h1> font_get_first (obsolète)</h1><p> Lors de la définition d&#39;une police dans <span class="notranslate">GameMaker Studio 2</span>, vous pouvez définir une plage de caractères à inclure. En effet, la police elle-même n&#39;est pas réellement incluse avec votre jeu (pour des raisons juridiques) mais une <i>image</i> de la police est incluse sur une page de texture et c&#39;est ce que votre jeu utilisera (comme tout autre élément graphique). Cela signifie que vous souhaiterez réduire au minimum le nombre de caractères que vous utilisez et ne spécifier que la plage de caractères dont votre jeu aura besoin afin de garder la mémoire de texture aussi optimisée que possible. Cette fonction peut être utilisée pour trouver le caractère de départ (en tant que valeur ASCII) qui a été utilisé lorsque votre ressource de police a été ajoutée à votre jeu.</p><p class="note"> <b>REMARQUE: en</b> raison des changements dans la façon dont les polices sont gérées, cette fonction <b>renverra toujours</b> 32, car <span class="notranslate">GameMaker Studio 2</span> applique le caractère espace (32) dans la police et n&#39;autorise pas non plus les caractères avec des codes inférieurs à 32. De nouvelles fonctions pour effectuer des tâches similaires seront ajoutées dans une future mise à jour.</p><p></p><h4> Syntaxe:</h4><p class="code">font_get_first(ind);</p><p></p><table><tbody><tr><th> Argument</th><th> Description</th></tr><tr><td> <span class="notranslate">ind</span></td><td> Index de la police à vérifier.</td></tr></tbody></table><p></p><h4> Retour:</h4><p class="code">Real</p><p></p><h4> Exemple:</h4><p class="code">num = font_get_first(fnt_Main);</p><p> Le code ci-dessus stockera la valeur ASCII de la première lettre de la plage de polices pour la police indexée dans &quot;fnt_Main&quot;. </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> Retour: <a href="Fonts.htm">Polices</a></div><div style="float:right"> Suivant:<a href="font_get_last.htm">font_get_last</a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
+  </div>
+  <!-- KEYWORDS
+font_get_first
+-->
+  <!-- TAGS
+font_get_first
+-->
+</body>
+</html>

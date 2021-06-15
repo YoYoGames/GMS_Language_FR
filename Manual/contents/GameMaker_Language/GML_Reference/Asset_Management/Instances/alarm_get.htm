@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>alarm_get</title>
+  <meta name="generator" content="Adobe RoboHelp 2019" />
+  <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
+  <meta name="rh-authors" content="Mark Alexander" />
+  <meta name="topic-comment" content="Page décrivant la fonction alarm_get" />
+  <meta name="rh-index-keywords" content="alarm_get" />
+  <meta name="search-keywords" content="alarm_get" />
+</head>
+<body><!--<div class="body-scroll" style="top: 150px;">--><h1>alarm_get</h1><p> Cette fonction peut être utilisée pour obtenir la valeur actuelle de l&#39;alarme donnée. Vous fournissez le numéro d&#39;alarme de 0 à 11 et cette fonction renverra la valeur à laquelle l&#39;alarme est actuellement activée. Il s&#39;agit d&#39;une méthode alternative pour obtenir directement la valeur du <a href="Instance_Variables/alarm.htm">tableau d&#39;alarme.</a></p><p></p><h4> Syntaxe:</h4><p class="code">alarm_get(index);</p><table><tbody><tr><th> Argument</th><th> Description</th></tr><tr><td> <span class="notranslate">index</span></td><td> L&#39;index d&#39;alarme à obtenir, de 0 à 11.</td></tr></tbody></table><p></p><h4> Retour:</h4><p class="code">Real (integer)</p><p></p><h4> Exemple:</h4><p class="code">for (var i = 0; i &lt; 12; i++)<br/>    {
+    <br/>    if alarm_get(i) &gt; 0 alarm_set(i, -1);<br/>    }
+  </p><p> Le code ci-dessus vérifie toutes les alarmes de l&#39;instance appelante et si elles sont supérieures à 0, il les met à -1, les empêchant de décompter davantage. </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> Retour: <a href="Instances.htm">Instances</a></div><div style="float:right"> Suivant:<a href="alarm_set.htm">alarm_set</a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
+  </div>
+  <!-- KEYWORDS
+alarm_get
+-->
+  <!-- TAGS
+alarm_get
+-->
+</body>
+</html>

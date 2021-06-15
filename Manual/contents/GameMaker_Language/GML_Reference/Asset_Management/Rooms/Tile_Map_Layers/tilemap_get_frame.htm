@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>tilemap_get_frame</title>
+  <meta name="generator" content="Adobe RoboHelp 2019" />
+  <link rel="stylesheet" href="../../../../../assets/css/default.css" type="text/css" />
+  <meta name="rh-authors" content="Mark Alexander" />
+  <meta name="topic-comment" content="Page décrivant la fonction tilemap_get_frame" />
+  <meta name="rh-index-keywords" content="tilemap_get_frame" />
+  <meta name="search-keywords" content="tilemap_get_frame" />
+</head>
+<body><!--<div class="body-scroll" style="top: 150px;">--><h1>tilemap_get_frame</h1><p> Étant donné que les tuiles peuvent être animées, il peut parfois être utile de savoir quelle image est actuellement dessinée et de réagir en conséquence, donc avec cette fonction, vous pouvez récupérer l&#39;index de l&#39;image actuelle pour une carte de tuiles donnée. Vous donnez l&#39;ID d&#39;élément de carte de tuiles (que vous obtenez lorsque vous créez un élément de carte de tuiles à l&#39;aide de <a href="layer_tilemap_create.htm"><tt>layer_tilemap_create()</tt></a> ou lorsque vous utilisez la fonction <a href="layer_tilemap_get_id.htm"><tt>layer_tilemap_get_id()</tt></a> ), et la fonction renverra l&#39;index de l&#39;image.</p><p></p><h4> Syntaxe:</h4><p class="code">tilemap_get_frame(tilemap_element_id)</p><table><tbody><tr><th> Argument</th><th> Description</th></tr><tr><td> <span class="notranslate">tilemap_element_id</span></td><td> La valeur d&#39;ID unique de l&#39;élément de mappage de tuiles pour obtenir l&#39;index d&#39;image de</td></tr></tbody></table><p></p><h4> Retour:</h4><p class="code">Real (between 0 (inclusive) and the maximum number of frames of animation (exclusive))</p><p></p><h4> Exemple:</h4><p class="code">var lay_id = layer_get_id(&quot;Tiles_Traps&quot;);<br/> var map_id = layer_tilemap_get_id(lay_id);<br/> if tilemap_get_frame(map_id) &gt;= 2 &amp;&amp; tilemap_get_frame(map_id) &lt; 4<br/>     {
+    <br/>     global.activate = true;<br/>     }
+    <br/> else
+    <br/>     {
+    <br/>     global.activate = false;<br/>     }
+  </p><p> Le code ci-dessus vérifie l&#39;image d&#39;animation actuelle pour la carte de tuiles donnée sur la couche donnée et définit une variable globale basée sur la valeur de retour. </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> Retour: <a href="Tile_Map_Layers.htm">Couches de carte de mosaïque</a></div><div style="float:right"> Suivant:<a href="tilemap_get_tile_width.htm">tilemap_get_tile_width</a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
+  </div>
+  <!-- KEYWORDS
+tilemap_get_frame
+-->
+  <!-- TAGS
+tilemap_get_frame
+-->
+</body>
+</html>

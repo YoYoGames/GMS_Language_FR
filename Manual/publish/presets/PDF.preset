@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<preset>
+  <content>
+    <index type="boolean">true</index>
+    <toc>
+      <path>../../toc/Default.toc</path>
+      <name>Default</name>
+    </toc>
+    <glossary>
+      <path>../../glossary/Default.glo</path>
+      <name>Default</name>
+    </glossary>
+    <masterpage>
+      <path>../../contents/assets/masterpages/pdf.htt</path>
+    </masterpage>
+    <brs type="array"></brs>
+    <mapFiles type="array"></mapFiles>
+    <generatetoc type="boolean">true</generatetoc>
+    <includereftopics type="boolean">true</includereftopics>
+  </content>
+  <starterPage>Default.pdf</starterPage>
+  <search>
+    <context type="boolean">false</context>
+    <contextLimit></contextLimit>
+  </search>
+  <sitemap>
+    <use type="boolean">false</use>
+    <changeFrequency></changeFrequency>
+    <helpBaseURL></helpBaseURL>
+  </sitemap>
+  <name>PDF</name>
+  <type>pdf</type>
+  <title>Blank Project</title>
+  <defaultTopic></defaultTopic>
+  <pdf>
+    <multiHeaders type="boolean">false</multiHeaders>
+    <margin type="array">
+      <marginitem type="number">15</marginitem>
+      <marginitem type="number">15</marginitem>
+      <marginitem type="number">15</marginitem>
+      <marginitem type="number">15</marginitem>
+    </margin>
+    <multiheaders type="boolean">false</multiheaders>
+    <downloadTimeout type="number">200</downloadTimeout>
+  </pdf>
+  <outputPath>C:/Users/Kai/Documents/My RoboHelp Projects/outputs/GMS2 Manual/PDF</outputPath>
+  <patchHomepage type="boolean">true</patchHomepage>
+</preset>

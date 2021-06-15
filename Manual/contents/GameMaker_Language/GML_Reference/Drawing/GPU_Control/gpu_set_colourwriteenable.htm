@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>gpu_set_colorwriteenable</title>
+  <meta name="generator" content="Adobe RoboHelp 2019" />
+  <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
+  <meta name="rh-authors" content="Mark Alexander" />
+  <meta name="topic-comment" content="Référence de la fonction gpu_set_colourwriteenable" />
+  <meta name="rh-index-keywords" content="gpu_set_colorwriteenable,gpu_set_colourwriteenable" />
+  <meta name="search-keywords" content="gpu_set_colorwriteenable,gpu_set_colourwriteenable" />
+</head>
+<body><!--<div class="body-scroll" style="top: 150px;">--><h1>gpu_set_colourwriteenable</h1><p> Avec cette fonction, vous pouvez activer ou désactiver les canaux de couleur et le canal alpha pour tous les autres dessins. Par exemple, vous pouvez utiliser cette fonction pour créer des surfaces de canal alpha uniquement (désactivez l&#39;écriture RVB avant d&#39;utiliser la surface) ou pour créer des effets spéciaux tout en dessinant à l&#39;écran. La valeur par défaut pour chacun des composants est <tt>true</tt>, et peut être fourni soit sous forme de quatre arguments uniques, soit sous forme de tableau 1D à 4 éléments avec les éléments suivants qui seront soit <tt>true</tt> (activé) ou <tt>false</tt> (désactivée):</p><ul class="colour"><li> [0] = canal rouge activé / désactivé</li><li> [1] = canal vert activé / désactivé</li><li> [2] = Canal bleu activé / désactivé</li><li> [3] = canal alpha activé / désactivé</li></ul><p></p><h4> Syntaxe:</h4><p class="code">gpu_set_colorwriteenable(red, green, blue, alpha);</p><table><tbody><tr><th> Argument</th><th> Description</th></tr><tr><td> <span class="notranslate">red</span></td><td> Activer / désactiver le canal rouge</td></tr><tr><td> <span class="notranslate">green</span></td><td> Activer / désactiver le canal vert</td></tr><tr><td> <span class="notranslate">blue</span></td><td> Activer / désactiver le canal bleu</td></tr><tr><td> <span class="notranslate">alpha</span></td><td> Activer / désactiver le canal alpha</td></tr></tbody></table><p></p><h4> Retour:</h4><p class="code">N/A</p><p></p><h4> Exemple:</h4><p class="code">var cw = gpu_get_colorwriteenable();<br/> cw[3] = false;<br/> gpu_set_colorwriteenable(cw);
+  </p><p> Le code ci-dessus obtient les valeurs d&#39;écriture de couleur actuelles, puis définit le composant alpha sur <tt>false</tt>. </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> Retour: <a href="GPU_Control.htm">Contrôle GPU</a></div><div style="float:right"> Suivant:<a href="gpu_set_alphatestenable.htm">gpu_set_alphatestenable</a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
+  </div>
+  <!-- KEYWORDS
+gpu_set_colourwriteenable
+gpu_set_colorwriteenable
+-->
+  <!-- TAGS
+gpu_set_colourwriteenable
+-->
+</body>
+</html>

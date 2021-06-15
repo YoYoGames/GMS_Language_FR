@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>path_add_point</title>
+  <meta name="generator" content="Adobe RoboHelp 2019" />
+  <link rel="stylesheet" href="../../../../../assets/css/default.css" type="text/css" />
+  <meta name="rh-authors" content="Mark Alexander" />
+  <meta name="topic-comment" content="Page expliquant la fonction path_add_point" />
+  <meta name="rh-index-keywords" content="path_add_point" />
+  <meta name="search-keywords" content="path_add_point" />
+</head>
+<body><!--<div class="body-scroll" style="top: 150px;">--><h1>path_add_point</h1><p> Avec cette fonction, vous pouvez ajouter un point au chemin spécifié et définir son facteur de vitesse. Ce point est ajouté à la fin du chemin, quelle que soit la position du point, et le facteur est égal au pourcentage de <a href="../Path_Variables/path_speed.htm"><tt>path_speed</tt></a> à laquelle l&#39;instance suivante se rend réellement lorsqu&#39;elle atteint ce point du chemin. Si vous souhaitez placer un point de chemin à une autre position qui n&#39;est pas la fin, vous devez utiliser <a href="path_insert_point.htm"><tt>path_insert_point()</tt></a>.</p><p> Si elle est utilisée sur un chemin du navigateur d&#39;actifs, notez que <strong>la fonction changera l&#39;actif réel</strong>, et affectera donc de manière permanente la façon dont le chemin est utilisé par toutes les instances du jeu à partir du moment où la fonction est utilisée jusqu&#39;à la fin du jeu. Si ce n&#39;est pas ce dont vous avez besoin, vous devez utiliser une fonction telle que <span class="inline"><a href="path_duplicate.htm">path_duplicate()</a></span> pour créer d&#39;abord une copie du chemin, puis appelez cette fonction sur l&#39;actif dupliqué (n&#39;oubliez pas d&#39;appeler <span class="inline"><a href="path_delete.htm">path_delete()</a></span> sur l&#39;actif lorsqu&#39;il n&#39;est plus nécessaire).</p><p></p><h4> Syntaxe:</h4><p class="code">path_add_point(index, x, y, speed);</p><table><tbody><tr><th> Argument</th><th> Description</th></tr><tr><td> <span class="notranslate">index</span></td><td> L&#39;index du chemin auquel ajouter le point.</td></tr><tr><td> <span class="notranslate">x</span></td><td> La coordonnée x du nouveau point.</td></tr><tr><td> <span class="notranslate">y</span></td><td> La coordonnée y du nouveau point.</td></tr><tr><td> <span class="notranslate">speed</span></td><td> Le facteur de vitesse du point (la valeur par défaut est 100).</td></tr></tbody></table><p></p><h4> Retour:</h4><p class="code">N/A</p><p></p><h4> Exemple:</h4><p></p><p class="code">my_path = path_add();<br/> for (var i = 0; i &lt;= 360; i += 36;)<br/>     {
+    <br/>     path_add_point(my_path, x + lengthdir_x(50, i), y + lengthdir_y(50, i), 100);<br/>     }
+  </p><p> Le code ci-dessus créera un chemin circulaire autour de la position x / y de l&#39;instance exécutant le code. </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> Retour: <a href="Path_Manipulation.htm">Manipulation de chemin</a></div><div style="float:right"> Suivant:<a href="path_change_point.htm">path_change_point</a></div><div style="float:right"></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
+  </div>
+  <!-- KEYWORDS
+path_add_point
+-->
+  <!-- TAGS
+path_add_point
+-->
+</body>
+</html>

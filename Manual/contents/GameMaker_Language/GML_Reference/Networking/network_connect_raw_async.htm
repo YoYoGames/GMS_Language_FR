@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>network_connect_raw_async</title>
+  <meta name="generator" content="Adobe RoboHelp 2019" />
+  <link rel="stylesheet" href="../../../assets/css/default.css" type="text/css" />
+  <meta name="rh-authors" content="Mark Alexander" />
+  <meta name="topic-comment" content="Page de référence pour network_connect_raw_async" />
+  <meta name="rh-index-keywords" content="network_connect_raw_async" />
+  <meta name="search-keywords" content="network_connect_raw_async" />
+</head>
+<body><!--<div class="body-scroll" style="top: 150px;">--><h1>network_connect_raw_async</h1><p> Avec cette fonction, vous pouvez envoyer une demande de connexion à un serveur. La fonction prend l&#39; <i>identifiant de socket</i> pour se connecter (voir <a href="network_create_socket.htm"><tt>network_create_socket()</tt></a> ) et vous oblige à donner l&#39;adresse IP à laquelle vous connecter (une chaîne) ainsi que le port de connexion, et si la connexion échoue, une valeur inférieure à 0 sera renvoyée. La différence entre cette fonction et <a href="network_connect_async.htm"><tt>network_connect_async()</tt></a> est que cette fonction peut se connecter à n&#39;importe quel serveur et ne fait rien sur les données brutes, ce qui signifie que vous devez implémenter les protocoles vous-même du côté serveur. Notez que cette fonction est asynchrone, générant un événement de mise en <a href="../../../The_Asset_Editors/Object_Properties/Async_Events/Networking.htm">réseau asynchrone du type</a><span class="inline">network_type_non_blocking_connect</span>.</p><p></p><h4> Syntaxe:</h4><p class="code">network_connect_raw_async(socket, url, port);</p><table><tbody><tr><th> Argument</th><th> Description</th></tr><tr><td> <span class="notranslate">socket</span></td><td> L&#39;identifiant du socket à utiliser.</td></tr><tr><td> <span class="notranslate">url</span></td><td> L&#39;URL ou l&#39;adresse IP à laquelle se connecter (une chaîne).</td></tr><tr><td> <span class="notranslate">port</span></td><td> Le port auquel se connecter.</td></tr></tbody></table><p></p><h4> Retour:</h4><p class="code">Real</p><p></p><h4> Exemple:</h4><p class="code">client = network_create_socket(network_socket_tcp);<br/> network_connect_raw_async(client, &quot;www.macsweeneygames.com&quot;, 6510);</p><p> Le code ci-dessus créera un nouveau socket TCP puis tentera de créer une connexion asynchrone &quot;brute&quot; via celle-ci vers l&#39;URL donnée sur le port 6510. </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> Retour: <a href="Networking.htm">Réseautage</a></div><div style="float:right"> Suivant:<a href="network_resolve.htm">network_resolve</a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
+  </div>
+  <!-- KEYWORDS
+network_connect_raw_async
+-->
+  <!-- TAGS
+network_connect_raw_async
+-->
+</body>
+</html>

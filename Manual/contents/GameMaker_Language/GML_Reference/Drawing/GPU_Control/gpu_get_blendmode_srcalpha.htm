@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>gpu_get_blendmode_srcalpha</title>
+  <meta name="generator" content="Adobe RoboHelp 2019" />
+  <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
+  <meta name="rh-authors" content="Mark Alexander" />
+  <meta name="topic-comment" content="Référence pour la fonction gpu_get_blendmode_srcalpha" />
+  <meta name="rh-index-keywords" content="gpu_get_blendmode_srcalpha,bm_zero,bm_one,bm_src_colour,bm_inv_src_colour,bm_src_alpha,bm_inv_src_alpha,bm_dest_alpha,bm_inv_dest_alpha,bm_dest_colour,bm_inv_dest_colour,bm_src_alpha_sat,bm_src_color,bm_inv_src_color,bm_dest_color,bm_inv_dest_colour" />
+  <meta name="search-keywords" content="gpu_get_blendmode_srcalpha,bm_zero,bm_one,bm_src_colour,bm_inv_src_colour,bm_src_alpha,bm_inv_src_alpha,bm_dest_alpha,bm_inv_dest_alpha,bm_dest_colour,bm_inv_dest_colour,bm_src_alpha_sat,bm_src_color,bm_inv_src_color,bm_dest_color,bm_inv_dest_colour" />
+</head>
+<body><!--<div class="body-scroll" style="top: 150px;">--><h1>gpu_get_blendmode_srcalpha</h1><p> Cette fonction peut être utilisée pour récupérer le facteur alpha du mode de fusion étendu de la <i>source actuelle.</i> La valeur renvoyée sera l&#39;une des constantes suivantes (&quot;s&quot; désigne une valeur prise de la source tandis qu&#39;un &quot;d&quot; désigne une valeur de la destination) avec uniquement le composant &quot;A&quot; utilisé lors du dessin:</p><table><tbody><tr><th> Constant</th><th> Facteur de fusion (rouge, vert, bleu, alpha)</th></tr><tr><td><span class="notranslate"><tt>bm_zero</tt></span></td><td> (0, 0, 0, 0)</td></tr><tr><td><span class="notranslate"><tt>bm_one</tt></span></td><td> (1, 1, 1, 1)</td></tr><tr><td><span class="notranslate"><tt>bm_src_colour</tt></span></td><td> (Rs, Gs, Bs, As)</td></tr><tr><td><span class="notranslate"><tt>bm_inv_src_colour</tt></span></td><td> (1-Rs, 1-Gs, 1-Bs, 1-As)</td></tr><tr><td><span class="notranslate"><tt>bm_src_alpha</tt></span></td><td> (As, As, As, As)</td></tr><tr><td><span class="notranslate"><tt>bm_inv_src_alpha</tt></span></td><td> (1-As, 1-As, 1-As, 1-As)</td></tr><tr><td><span class="notranslate"><tt>bm_dest_alpha</tt></span></td><td> (Annonce, annonce, annonce, annonce)</td></tr><tr><td><span class="notranslate"><tt>bm_inv_dest_alpha</tt></span></td><td> (1 annonce, 1 annonce, 1 annonce, 1 annonce)</td></tr><tr><td><span class="notranslate"><tt>bm_dest_colour</tt></span></td><td> (Rd, Gd, Bd, Ad)</td></tr><tr><td><span class="notranslate"><tt>bm_inv_dest_colour</tt></span></td><td> (1-Rd, 1-Gd, 1-Bd, 1-Ad)</td></tr><tr><td><span class="notranslate"><tt>bm_src_alpha_sat</tt></span></td><td> (f, f, f, 1) où f = min (As, 1-Ad)</td></tr></tbody></table><p></p><h4> Syntaxe:</h4><p class="code">gpu_get_blendmode_srcalpha();</p><p></p><h4> Retour:</h4><p class="code">Constant (see above table)</p><p></p><h4> Exemple:</h4><p class="code">var bm;<br/> bm[0] = gpu_get_blendmode_srcalpha();<br/> bm[1] = gpu_get_blendmode_destalpha();<br/> gpu_set_blendmode_ext_sepalpha(bm_inv_src_alpha, bm_inv_dest_colour, bm[0], bm[1]);</p><p> Le code ci-dessus crée un tableau local et obtient les facteurs de fusion source et de destination actuels pour le composant alpha. Ce tableau est ensuite utilisé pour manipuler la composante RVB des facteurs de fusion. </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> Retour: <a href="GPU_Control.htm">Contrôle GPU</a></div><div style="float:right"> Suivant: <a href="gpu_get_blendmode_destalpha.htm">gpu_get_blendmode_destalpha</a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
+  </div>
+  <!-- KEYWORDS
+gpu_get_blendmode_srcalpha
+bm_zero
+bm_one
+bm_src_colour
+bm_inv_src_colour
+bm_src_alpha
+bm_inv_src_alpha
+bm_dest_alpha
+bm_inv_dest_alpha
+bm_dest_colour
+bm_inv_dest_colour
+bm_src_alpha_sat
+-->
+  <!-- TAGS
+gpu_get_blendmode_srcalpha
+-->
+</body>
+</html>

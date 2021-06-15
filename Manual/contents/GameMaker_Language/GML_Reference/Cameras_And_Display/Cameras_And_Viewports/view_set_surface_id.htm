@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>view_set_surface_id</title>
+  <meta name="generator" content="Adobe RoboHelp 2019" />
+  <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
+  <meta name="rh-authors" content="Mark Alexander" />
+  <meta name="topic-comment" content="Page de référence pour view_set_surface_id" />
+  <meta name="rh-index-keywords" content="view_set_surface_id" />
+  <meta name="search-keywords" content="view_set_surface_id" />
+</head>
+<body><!--<div class="body-scroll" style="top: 150px;">--><h1>view_set_surface_id</h1><p> Avec cette variable, vous pouvez définir le contenu d&#39;un port de vue pour dessiner sur une surface. Lorsque vous travaillez avec des surfaces, il est souvent nécessaire de capturer <i>toute</i> la zone visible de l&#39;écran sur la surface, et vous devez donc l&#39;attribuer à un port de vue à l&#39;aide de cette fonction. Cela signifie que tout ce qui est affiché dans la vue de port choisie sera maintenant dessiné sur la surface affectée et le contenu de ce port de vue ne sera plus affiché, ce qui signifie que vous devrez soit:</p><ul class="colour"><li> Activez une nouvelle vue et dessinez la surface uniquement dans cette vue (en utilisant <a href="view_current.htm"><tt>view_current</tt></a> pour vérifier quelle vue est dessinée)</li><li> Dessinez la surface dans l&#39;événement Draw GUI d&#39;une instance, car la couche GUI est indépendante des vues.</li></ul><p> Lorsque vous utilisez cette fonction, vous donnez l&#39;index du port de vue (de 0 à 7) et un index de surface (soit le <a href="../../Drawing/Surfaces/application_surface.htm"><tt>application_surface</tt></a> ou la valeur d&#39;index unique renvoyée par la fonction <a href="../../Drawing/Surfaces/surface_create.htm"><tt>surface_create()</tt></a> ) ou, si une surface a déjà été affectée et que vous souhaitez la supprimer, une valeur de -1. Pour plus d&#39;informations sur la définition du port de vue sur une surface, voir également la variable <a href="view_surface_id.htm"><tt>view_surface_id</tt></a>.</p><p></p><h4> Syntaxe:</h4><p class="code">view_set_surface_id(view_port, surf)</p><table><tbody><tr><th> Argument</th><th> Description</th></tr><tr><td> <span class="notranslate">view_port</span></td><td> Le port de vue à cibler (0 - 7)</td></tr></tbody></table><p></p><h4> Retour:</h4><p class="code">Real</p><p></p><h4> Exemple:</h4><p class="code">if view_get_surface_id(0) == -1<br/>     {
+    <br/>     view_set_surface_id(0, global.vSurf);<br/>     }
+  </p><p> Le code ci-dessus vérifiera si une surface a été assignée au port de vue [0] et si ce n&#39;est pas le cas, une est assignée. </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> Arrière: <a href="Cameras_And_View_Ports.htm">caméras et ports d&#39;affichage</a></div><div style="float:right"> Suivant:<a href="camera_create.htm">camera_create</a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
+  </div>
+  <!-- KEYWORDS
+view_set_surface_id
+-->
+  <!-- TAGS
+view_set_surface_id
+-->
+</body>
+</html>

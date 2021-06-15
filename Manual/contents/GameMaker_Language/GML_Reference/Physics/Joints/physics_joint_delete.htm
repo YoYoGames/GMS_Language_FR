@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>physics_joint_delete</title>
+  <meta name="generator" content="Adobe RoboHelp 2019" />
+  <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
+  <meta name="rh-authors" content="Mark Alexander" />
+  <meta name="topic-comment" content="Page de référence pour physics_joint_delete" />
+  <meta name="rh-index-keywords" content="physics_joint_delete" />
+  <meta name="search-keywords" content="physics_joint_delete" />
+</head>
+<body><!--<div class="body-scroll" style="top: 150px;">--><h1>physics_joint_delete</h1><p> Une fois que deux instances avec des représentations physiques ont été liées par une liaison, celle-ci peut être supprimée à nouveau à tout moment. Normalement, cela se produit automatiquement lorsque l&#39;une des deux instances est détruite, ou lorsque la salle se termine, mais il y a des moments où vous voudrez peut-être le faire manuellement. Dans ces cas, vous utiliseriez cette fonction.</p><p> Il convient également de noter que chaque fois qu&#39;une instance qui fait partie d&#39;une <a href="physics_joint_gear_create.htm">articulation d&#39;engrenage</a> est détruite, l&#39;articulation d&#39;engrenage doit être supprimée à l&#39;aide de cette fonction <i>avant l&#39;</i> une des instances impliquées dans la formation de l&#39;engrenage (mais les articulations restantes seront supprimées automatiquement), pour exemple dans l&#39;événement destroy de l&#39;instance.</p><p></p><h4> Syntaxe:</h4><p class="code">physics_joint_delete(joint)</p><table><tbody><tr><th> Argument</th><th> Description</th></tr><tr><td> <span class="notranslate">joint</span></td><td> L&#39;index de l&#39;articulation que vous souhaitez supprimer</td></tr></tbody></table><p></p><h4> Retour:</h4><p class="code">N/A</p><p></p><h4> Exemple:</h4><p class="code">var reactionForceX, reactionForceY, reactionForce;<br/> if shipJoint<br/>     {
+    <br/>     reactionForceX = physics_joint_get_value(shipJoint, phy_joint_reaction_force_x);<br/>     reactionForceY = physics_joint_get_value(shipJoint, phy_joint_reaction_force_x);<br/>     reactionForce = sqrt((reactionForceX + reactionForceX) +
+    (reactionForceY + reactionForceY));<br/>     if reactionForce &gt; 2<br/>         {
+    <br/>         physics_joint_delete(shipJoint);
+    <br/>         shipJoint = -1;<br/>         }
+    <br/>     }
+  </p><p> Le code ci-dessus vérifie si la variable &quot;shipJoint&quot; contient un index d&#39;articulation et si c&#39;est le cas, il calcule alors la force appliquée à cette articulation en utilisant les deux constantes. Enfin, si la force totale est supérieure à 2, l&#39;articulation est supprimée. </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> Arrière: <a href="Joints.htm">Joints</a></div><div style="float:right"> Suivant:<a href="physics_joint_enable_motor.htm">physics_joint_enable_motor</a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
+  </div>
+  <!-- KEYWORDS
+physics_joint_delete
+-->
+  <!-- TAGS
+physics_joint_delete
+-->
+</body>
+</html>

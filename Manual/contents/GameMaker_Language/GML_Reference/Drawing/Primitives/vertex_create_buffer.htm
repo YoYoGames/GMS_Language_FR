@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <title>vertex_create_buffer</title>
+  <meta name="generator" content="Adobe RoboHelp 2019"/>
+  <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css"/>
+  <meta name="rh-authors" content="Mark Alexander"/>
+  <meta name="topic-comment" content="Référence pour vertex_create_buffer"/>
+  <meta name="rh-index-keywords" content="vertex_create_buffer"/>
+  <meta name="search-keywords" content="vertex_create_buffer"/>
+</head>
+<body><!--<div class="body-scroll" style="top: 150px;">--><h1>vertex_create_buffer</h1><p> Avec cette fonction, vous pouvez créer un nouveau tampon de sommets. Il s&#39;agit d&#39;un tampon de <i>croissance</i> <span class="notranslate">GameMaker Studio 2</span> qui est pré-formaté pour être utilisé lors de la création de primitives (à utiliser avec des <span class="notranslate">shaders</span>, par exemple). La fonction renverra un &quot;Pointer&quot; (index) pour le tampon qui devrait ensuite être utilisé dans tous les appels ultérieurs.</p><p> Lorsque vous utilisez un tampon de sommets créé avec cette fonction, il vous suffit d&#39;appeler <a href="vertex_begin.htm"><tt>vertex_begin()</tt></a> pour commencer à lui affecter des données de sommet pour commencer à définir votre primitive personnalisée, qui sera ensuite conservée dans le tampon, prête à être soumise au <span class="notranslate">shader</span>. Le tampon peut être réutilisé si nécessaire (sauf si vous avez utilisé le <a href="vertex_freeze.htm"><tt>vertex_freeze()</tt></a> fonction), à chaque appel de <a href="vertex_begin.htm"><tt>vertex_begin()</tt></a> effacer les données de tampon précédentes pour accepter les nouvelles données.</p><p></p><h4> Syntaxe:</h4><p class="code">vertex_create_buffer();</p><p></p><h4> Retour:</h4><p class="code">Pointer</p><p></p><h4> Exemple:</h4><p class="code">v_buff = vertex_create_buffer();</p><p> Le code ci-dessus créera un nouveau tampon de vertex et stockera son handle dans la variable &quot;v_buff&quot;. </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> Retour: <a href="Primitives_And_Vertex_Formats.htm">Primitives et formats de sommets</a></div><div style="float:right"> Suivant:<a href="vertex_create_buffer_ext.htm">vertex_create_buffer_ext</a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
+  </div>
+  <!-- KEYWORDS
+vertex_create_buffer
+-->
+  <!-- TAGS
+vertex_create_buffer
+-->
+
+</body></html>

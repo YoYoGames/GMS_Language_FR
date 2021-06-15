@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>buffer_read</title>
+  <meta name="generator" content="Adobe RoboHelp 2019" />
+  <link rel="stylesheet" href="../../../assets/css/default.css" type="text/css" />
+  <meta name="rh-authors" content="Mark Alexander" />
+  <meta name="topic-comment" content="Page de référence pour buffer_read" />
+  <meta name="rh-index-keywords" content="buffer_read,buffer_u8,buffer_s8,buffer_u16,buffer_s16,buffer_u32,buffer_s32,buffer_u64,buffer_f16,buffer_f32,buffer_f64,buffer_bool,buffer_string,buffer_text" />
+  <meta name="search-keywords" content="buffer_read,buffer_u8,buffer_s8,buffer_u16,buffer_s16,buffer_u32,buffer_s32,buffer_u64,buffer_f16,buffer_f32,buffer_f64,buffer_bool,buffer_string,buffer_text" />
+</head>
+<body><!--<div class="body-scroll" style="top: 150px;">--><h1>buffer_read</h1><p> Cette fonction peut être utilisée pour lire des données à partir d&#39;un tampon créé précédemment. La valeur de retour dépendra du type de données que vous lisez, qui en lui-même est défini par les constantes suivantes:</p><p></p><table><tbody><tr><th> Constant</th><th> Description</th></tr><tr><td> <span class="notranslate">buffer_u8</span></td><td> Un entier 8 bits non signé. Il s&#39;agit d&#39;une valeur positive comprise entre 0 et 255.</td></tr><tr><td> <span class="notranslate">buffer_s8</span></td><td> Un entier signé de 8 bits. Cela peut être une valeur positive ou négative de -128 à 127 (0 est classé comme positif).</td></tr><tr><td> <span class="notranslate">buffer_u16</span></td><td> Un entier 16 bits non signé. Il s&#39;agit d&#39;une valeur positive comprise entre 0 et 65 535.</td></tr><tr><td> <span class="notranslate">buffer_s16</span></td><td> Un entier 16 bits signé. Cela peut être une valeur positive ou négative de -32 768 à 32 767 (0 est considéré comme positif).</td></tr><tr><td> <span class="notranslate">buffer_u32</span></td><td> Un entier 32 bits non signé. Il s&#39;agit d&#39;une valeur positive comprise entre 0 et 4 294 967 295.</td></tr><tr><td> <span class="notranslate">buffer_s32</span></td><td> Un entier 32 bits signé. Cela peut être une valeur positive ou négative de -2 147 483 648 à 2 147 483 647 (0 est considéré comme positif).</td></tr><tr><td> <span class="notranslate">buffer_u64</span></td><td> Un entier 64 bits non signé.</td></tr><tr><td> <span class="notranslate">buffer_f16</span></td><td> Un flotteur 16 bits. Cela peut être une valeur positive ou négative dans la plage de +/- 65504. <i>(Pas actuellement pris en charge!)</i></td></tr><tr><td> <span class="notranslate">buffer_f32</span></td><td> Un flotteur 32 bits. Cela peut être une valeur positive ou négative dans la plage de +/- 16777216.</td></tr><tr><td> <span class="notranslate">buffer_f64</span></td><td> Un flotteur 64 bits.</td></tr><tr><td> <span class="notranslate">buffer_bool</span></td><td> Une valeur booléenne. Ne peut être que 1 ou 0 (<tt>true</tt> ou <tt>false</tt> )</td></tr><tr><td> <span class="notranslate">buffer_string</span></td><td> Une chaîne de n&#39;importe quelle taille.</td></tr><tr><td> <span class="notranslate">buffer_text</span></td><td> Une chaîne de n&#39;importe quelle taille, sans le dernier caractère de fin nul.</td></tr></tbody></table><p></p><p> Si la fonction réussit, elle renverra une valeur du type donné, mais si elle échoue, cela provoquera une erreur du runner.</p><p class="note"> <b>REMARQUE</b>: l&#39;utilisation d&#39;un type de données incorrect pour les données en cours de lecture entraînera le renvoi de valeurs erronées.</p><p></p><h4> Syntaxe:</h4><p class="code">buffer_read(buffer, type)</p><table><tbody><tr><th> Argument</th><th> Description</th></tr><tr><td> <span class="notranslate">buffer</span></td><td> L&#39;index de la mémoire tampon à partir de laquelle lire.</td></tr><tr><td> <span class="notranslate">type</span></td><td> Le type de données à lire dans le tampon (voir la liste des constantes ci-dessus).</td></tr></tbody></table><p></p><h4> Retour:</h4><p class="code">Real/String</p><p></p><h4> Exemple:</h4><p class="code">var cmd = buffer_read(buff, buffer_s16);</p><p> Le code ci-dessus lit à partir du tampon avec l&#39;ID stocké dans la variable &quot;buff&quot; une valeur 16 bits signée dans la variable locale &quot;cmd&quot;. </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> Retour: <a href="Buffers.htm">Tampons</a></div><div style="float:right"> Suivant:<a href="buffer_write.htm">buffer_write</a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
+  </div>
+  <!-- KEYWORDS
+buffer_read
+buffer_u8
+buffer_s8
+buffer_u16
+buffer_s16
+buffer_u32
+buffer_s32
+buffer_u64
+buffer_f16
+buffer_f32
+buffer_f64
+buffer_bool
+buffer_string
+buffer_text
+-->
+  <!-- TAGS
+buffer_read
+-->
+</body>
+</html>

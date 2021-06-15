@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>game_restart</title>
+  <meta name="generator" content="Adobe RoboHelp 2019" />
+  <link rel="stylesheet" href="../../../assets/css/default.css" type="text/css" />
+  <meta name="rh-authors" content="Mark Alexander" />
+  <meta name="topic-comment" content="Cette page décrit la fonction game_restart" />
+  <meta name="rh-index-keywords" content="game_restart" />
+  <meta name="search-keywords" content="game_restart" />
+</head>
+<body><!--<div class="body-scroll" style="top: 150px;">--><h1>game_restart</h1><p> Avec cette fonction, vous pouvez redémarrer le jeu. C&#39;est essentiellement la même chose que d&#39;exécuter le jeu pour la première fois et donc l&#39; <a href="../../../The_Asset_Editors/Object_Properties/Other_Events.htm">événement de début de jeu</a> sera déclenché, <i>ainsi que</i> l&#39; <a href="../../../The_Asset_Editors/Object_Properties/Other_Events.htm">événement de fin de jeu</a>. Cependant, il convient de noter que certaines choses <b>ne</b> seront pas réinitialisées lorsque cette fonction sera appelée:</p><ul class="colour"><li> Les variables globales ne seront pas réinitialisées à moins qu&#39;elles ne soient explicitement codées comme telles - par exemple, la variable globale intégrée <tt>score</tt> ne démarrera pas à zéro après un redémarrage du jeu s&#39;il a déjà été modifié dans le jeu.</li><li> L&#39;état du GPU ne sera pas modifié (donc si vous avez défini la couleur de dessin ou l&#39;alpha, par exemple, il restera à la valeur modifiée).</li><li> La vitesse de jeu restera celle que vous avez définie dans votre code de jeu (si vous l&#39;avez modifiée, ce changement sera perpétué).</li><li> Tout élément du navigateur d&#39;actifs qui a été modifié au moment de l&#39;exécution dans le jeu - par exemple si vous modifiez l&#39;origine d&#39;une ressource de sprite ou changez la position d&#39;une ressource de chemin - <i>ne</i> sera pas réinitialisé.</li><li> Les ressources dynamiques telles que les tampons, les surfaces, les structures de données ou les sprites importés ne seront pas non plus nettoyées ou supprimées (bien que vous puissiez perdre des références à celles-ci, faites donc attention lorsque vous utilisez cette fonction pour utiliser des références globales pour la ressource dynamique, ou pour nettoyer avant que la fonction ne soit appelée).</li><br/></ul><h4> Syntaxe:</h4><p class="code">game_restart();</p><p></p><h4> Retour:</h4><p class="code">N/A</p><p></p><h4> Exemple:</h4><p class="code">if keyboard_check_pressed(ord(&quot;R&quot;)) game_restart();</p><p> Cela redémarrerait le jeu lorsque le joueur appuie sur la touche «R». </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> Retour: <a href="General_Game_Control.htm">Contrôle général du jeu</a></div><div style="float:right"> Suivant:<a href="game_load.htm">game_load</a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
+  </div>
+  <!-- KEYWORDS
+game_restart
+-->
+  <!-- TAGS
+game_restart
+-->
+</body>
+</html>

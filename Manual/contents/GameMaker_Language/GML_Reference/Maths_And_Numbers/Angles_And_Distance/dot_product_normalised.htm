@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <title>dot_product_normalised</title>
+  <meta name="generator" content="Adobe RoboHelp 2019"/>
+  <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css"/>
+  <meta name="rh-authors" content="Mark Alexander"/>
+  <meta name="topic-comment" content="Page de référence pour dot_product_normalised"/>
+  <meta name="rh-index-keywords" content="dot_product_normalised"/>
+  <meta name="search-keywords" content="dot_product_normalised"/>
+</head>
+
+<body><!--<div class="body-scroll" style="top: 150px;">--><h1>dot_product_normalised</h1><p> Le produit scalaire est une valeur exprimant la relation angulaire entre deux vecteurs et se trouve en prenant deux vecteurs, en les multipliant ensemble puis en ajoutant les résultats. Le nom «produit scalaire» est dérivé du point centré «·» qui est souvent utilisé pour désigner cette opération (le nom alternatif «produit scalaire» met l&#39;accent sur la nature scalaire plutôt que vectorielle du résultat).</p><p> La formule mathématique réelle peut être écrite comme ceci:</p><p><img alt="Dot Product formula" class="center" src="../../../../assets/Images/Scripting_Reference/GML/Reference/Maths/dot_product_image.png"/> Donc, en 2D le produit scalaire des vecteurs <span class="inline">a[x1,y1]</span> et <span class="inline">b[x2,2]</span> est <span class="inline">x1x2 + y1y2</span>, ce qui signifie que le dot_product dans <span class="notranslate">GameMaker Studio 2</span> est calculé comme suit:</p><p class="code">a · b = (x1*x2)+(y1*y2);</p><p> Qu&#39;en est-il du produit scalaire <i>normalisé?</i> Le produit scalaire normalisé a été corrigé de manière à ramener la valeur de retour dans la plage de -1 et 1 (voir la section sur les <a href="../../../../Additional_Information/Vectors.htm">vecteurs</a> pour des informations plus détaillées), ce qui est exceptionnellement utile dans de nombreuses circonstances, en particulier lorsqu&#39;il s&#39;agit d&#39;éclairage et d&#39;autres fonctions 3D.</p><p></p><h4> <b>Syntaxe:</b></h4><p class="code">dot_product_normalised(x1, y1, x2, y2)</p><table><tbody><tr><th> Argument</th><th> Description</th></tr><tr><td> <span class="notranslate">x1</span></td><td> La coordonnée x du premier vecteur.</td></tr><tr><td> <span class="notranslate">y1</span></td><td> La coordonnée y du premier vecteur.</td></tr><tr><td> <span class="notranslate">x2</span></td><td> La coordonnée x du deuxième vecteur.</td></tr><tr><td> <span class="notranslate">y2</span></td><td> La coordonnée y du deuxième vecteur.</td></tr></tbody></table><p></p><h4> Retour:</h4><p class="code">Real</p><p></p><h4> Exemple:</h4><p class="code">var x1, y1, x2, y2;<br/> x1 = lengthdir_x(1, image_angle);<br/> y1 = lengthdir_y(1, image_angle);<br/> x2 = o_Player.x - x;<br/> y2 = o_Player.y - y;<br/> if dot_product_normalised(x1, y1, x2, y2) &gt; 0 seen=true else seen=false;</p><p> Le code ci-dessus crée un vecteur en utilisant l&#39;angle d&#39;image des instances, puis obtient le vecteur de l&#39;objet joueur &quot;o_Player&quot; pour lui-même. Enfin, il calcule le produit scalaire de ces deux vecteurs et s&#39;il est supérieur à 0, il définit la variable &quot;vu&quot; à vrai, et s&#39;il est égal ou inférieur à 0, il le met à &quot;faux&quot;. </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> Retour: <a href="Angles_And_Distance.htm">Angles et distance</a></div><div style="float:right"> Suivant:<a href="dot_product_3d_normalised.htm">dot_product_3d_normalised</a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
+  </div>
+  <!-- KEYWORDS
+dot_product_normalised
+-->
+  <!-- TAGS
+dot_product_normalised
+-->
+
+</body></html>

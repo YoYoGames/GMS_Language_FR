@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>break</title>
+  <meta name="generator" content="Adobe RoboHelp 2019" />
+  <link rel="stylesheet" href="../../../assets/css/default.css" type="text/css" />
+  <meta name="rh-authors" content="Mark Alexander" />
+  <meta name="topic-comment" content="Page décrivant la fonction de pause" />
+  <meta name="rh-index-keywords" content="break" />
+  <meta name="search-keywords" content="break" />
+</head>
+<body><!--<div class="body-scroll" style="top: 150px;">--><h1>break</h1><p> Le <span class="inline"><tt>break</tt></span> instruction est utilisée pour terminer prématurément une <a href="for.htm"><tt>for</tt></a>, <a href="repeat.htm"><tt>repeat</tt></a>, <a href="while.htm"><tt>while</tt></a> ou <a href="do___until.htm"><tt>do / until</tt></a> boucle de quelque sorte, ou pour dire un <a href="switch.htm"><tt>switch</tt></a> pour terminer à ce moment-là, ou pour terminer prématurément un <a href="with.htm"><tt>with</tt></a> appeler. Veuillez consulter les pages individuelles pour ces différentes fonctions pour obtenir une explication plus détaillée de la façon dont elles peuvent être utilisées dans chaque circonstance. Notez que si <tt>break</tt> est utilisé en dehors de l&#39;un de ces contextes, il donnera une erreur.</p><p> Ci-dessous, vous pouvez voir quelques exemples de base de <span class="inline">break</span> peut être utilisé, et sa syntaxe est simplement:</p><p class="code">break;</p><p><tt>break</tt> dans un <tt>for</tt> boucle:</p><p class="code">for (var i = 0; i &lt; 10; i += 1)<br/>     {
+    <br/>     if (array[i] == 234)<br/>         {
+    <br/>         break;
+    <br/>         }
+    <br/>     }
+    <br/> num = i;</p><p><tt>break</tt> dans un <tt>repeat</tt> boucle:</p><p class="code">var i = 0;<br/> var temp = 0;<br/> repeat (10)<br/>     {
+    <br/>     temp += array[i];<br/>     if (temp &gt; max_total)<br/>         {
+    <br/>         break;
+    <br/>         }
+    <br/>     else
+    <br/>         {
+    <br/>         i += 1;<br/>         }
+    <br/>     }
+  </p><p><tt>break</tt> dans un <tt>while</tt> boucle:</p><p class="code">var i = 0;<br/> while (!place_free(x, y))<br/>     {
+    <br/>     x = random(room_width);<br/>     y = random(room_height);<br/>     if (i &gt; 50)<br/>         {
+    <br/>         break;
+    <br/>         }
+    <br/>     else
+    <br/>         {
+    <br/>         i+=1;
+    <br/>         }
+    <br/>     }
+  </p><p><span class="inline">break</span> dans un <span class="inline">do / until</span> boucle:</p><p class="code">var _id = noone;<br/> do
+    <br/>     {<br/>     _id = list[| 0];<br/>     if instance_exists(_id)<br/>         {<br/>         _break;<br/>         }<br/>     ds_list_delete(list, 0);<br/>     }<br/> until (ds_list_empty(list));<br/> target = _id;</p><p><tt>break</tt> lors de l&#39;utilisation <tt>with</tt>:</p><p class="code">var count = 0;<br/> with (obj_Enemy)<br/>     {
+    <br/>     count++;
+    <br/>     if (count &gt; 10)<br/>         {
+    <br/>         break;
+    <br/>         }
+    <br/>     hp = 100;<br/>     }
+  </p><p><span class="inline">break</span> dans un <span class="inline">switch</span>: </p><p class="code">switch (keyboard_key)<br/>     {
+    <br/>     case vk_left:<br/>     case ord(&quot;A&quot;):<br/>         x -= 4;<br/>         break;
+    <br/>     case vk_right:<br/>     case ord(&quot;D&quot;):<br/>         x += 4;<br/>         break;
+    <br/>     case vk_up:<br/>     case ord(&quot;W&quot;):<br/>         y -= 4;<br/>         break;
+    <br/>     case vk_down:<br/>     case ord(&quot;S&quot;):<br/>         y += 4;<br/>         break;
+    <br/>     }
+  </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> Retour: <a href="../Language_Features.htm">Caractéristiques linguistiques</a></div><div style="float:right"> Suivant:<a href="continue.htm">continue</a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
+  </div>
+  <!-- KEYWORDS
+break
+-->
+  <!-- TAGS
+break
+-->
+</body>
+</html>

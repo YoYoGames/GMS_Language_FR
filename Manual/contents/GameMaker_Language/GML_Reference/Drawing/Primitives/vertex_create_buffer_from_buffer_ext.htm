@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <title>vertex_create_buffer_from_buffer_ext</title>
+  <meta name="generator" content="Adobe RoboHelp 2019"/>
+  <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css"/>
+  <meta name="rh-authors" content="Mark Alexander"/>
+  <meta name="topic-comment" content="Référence pour vertex_create_buffer_from_buffer_ext"/>
+  <meta name="rh-index-keywords" content="vertex_create_buffer_from_buffer_ext"/>
+  <meta name="search-keywords" content="vertex_create_buffer_from_buffer_ext"/>
+</head>
+<body><!--<div class="body-scroll" style="top: 150px;">--><h1>vertex_create_buffer_from_buffer_ext</h1><p> Comme pour la fonction <a href="vertex_create_buffer.htm"><tt>vertex_create_buffer()</tt></a>, cette fonction créera un nouveau tampon de sommets, ce n&#39;est que maintenant que les données de sommets qu&#39;elle stocke sont copiées à partir du tampon normal spécifié comme source. Le tampon est pré-formaté avec le format de sommet pour la construction de primitives à utiliser avec (par exemple) des <span class="notranslate">shaders</span>, et vous pouvez également fournir un décalage dans le tampon source à partir duquel copier et le nombre de sommets que le tampon final devrait avoir. Notez que si le nombre de sommets ne correspond pas à ceux copiés, vous risquez d&#39;obtenir des données de sommets corrompues.</p><p></p><h4> Syntaxe:</h4><p class="code">vertex_create_buffer_from_buffer_ext(buffer, format, src_offset, vert_num);</p><table><tbody><tr><th> Argument</th><th> Description</th></tr><tr><td> <span class="notranslate">buffer</span></td><td> Le tampon à partir duquel créer le tampon de vertex.</td></tr><tr><td> <span class="notranslate">format</span></td><td> Le format de sommet primitif à utiliser.</td></tr><tr><td> <span class="notranslate">src_offset</span></td><td> Décalage dans le tampon source à partir duquel effectuer la copie.</td></tr><tr><td> <span class="notranslate">vert_num</span></td><td> Le nombre de sommets que le tampon doit avoir.</td></tr></tbody></table><p></p><h4> Retour:</h4><p class="code">Pointer</p><p></p><h4> Exemple:</h4><p class="code">vertex_format_begin();<br/> vertex_format_add_position_3d();
+    <br/> vertex_format_add_colour();
+    <br/> vertex_format_add_textcoord();
+    <br/> var my_format = vertex_format_end();<br/> v_buff = vertex_create_buffer_from_buffer(global.modelBuff, myFormat, 0, 512);</p><p> Le code ci-dessus créera un nouveau format de sommet, puis créera un nouveau tampon de sommet à partir d&#39;un tampon régulier précédemment créé, en lui appliquant le format de sommet personnalisé avec un décalage de 0. La fonction indique au nouveau tampon de sommets qu&#39;il doit s&#39;attendre à 512 sommets. </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> Retour: <a href="Primitives_And_Vertex_Formats.htm">Primitives et formats de sommets</a></div><div style="float:right"> Suivant:<a href="vertex_get_buffer_size.htm">vertex_get_buffer_size</a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
+  </div>
+  <!-- KEYWORDS
+vertex_create_buffer_from_buffer_ext
+-->
+  <!-- TAGS
+vertex_create_buffer_from_buffer_ext
+-->
+
+</body></html>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>file_text_close</title>
+  <meta name="generator" content="Adobe RoboHelp 2019" />
+  <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
+  <meta name="rh-authors" content="Mark Alexander" />
+  <meta name="topic-comment" content="Page de référence pour file_text_close" />
+  <meta name="rh-index-keywords" content="file_text_close" />
+  <meta name="search-keywords" content="file_text_close" />
+</head>
+<body><!--<div class="body-scroll" style="top: 150px;">--><h1>file_text_close</h1><p> Une fois que vous avez fini de travailler avec un fichier donné (que ce soit en lecture ou en écriture), vous devez refermer le fichier, sinon vous risquez de perdre les informations qu&#39;il contient. Cela empêche également les fuites de mémoire et garantit que vous ne dépassez jamais la limite de fichiers en ayant plus de 32 fichiers ouverts.</p><p></p><h4> Syntaxe:</h4><p class="code">file_text_close(fileid);</p><table><tbody><tr><th> Argument</th><th> Description</th></tr><tr><td> <span class="notranslate">fileid</span></td><td> L&#39;identifiant du fichier à fermer.</td></tr></tbody></table><p></p><h4> Retour:</h4><p class="code">N/A</p><p></p><h4> Exemple:</h4><p class="code">var file = file_text_open_write(working_directory + &quot;Game_Data.txt&quot;);<br/> while (!file_text_eof(file))<br/>     {
+    <br/>     file_text_readln(file);
+    <br/>     }
+    <br/> file_text_write_string(file, level_data);<br/> file_text_close(file);
+  </p><p> Le code ci-dessus ouvre un fichier à écrire puis parcourt les lignes de texte déjà écrites dans le fichier jusqu&#39;à ce qu&#39;il atteigne la fin. À ce stade, il écrit une chaîne, puis ferme à nouveau le fichier. </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> Retour: <a href="Text_Files.htm">Fichiers texte</a></div><div style="float:right"> Suivant:<a href="file_text_open_read.htm">file_text_open_read</a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
+  </div>
+  <!-- KEYWORDS
+file_text_close
+-->
+  <!-- TAGS
+file_text_close
+-->
+</body>
+</html>

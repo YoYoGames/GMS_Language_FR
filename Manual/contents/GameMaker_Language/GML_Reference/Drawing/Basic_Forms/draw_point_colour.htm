@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>draw_point_colour</title>
+  <meta name="generator" content="Adobe RoboHelp 2019" />
+  <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
+  <meta name="rh-authors" content="Mark Alexander" />
+  <meta name="topic-comment" content="Référence pour la fonction draw_point_colour" />
+  <meta name="rh-index-keywords" content="draw_point_colour,draw_point_color" />
+  <meta name="search-keywords" content="draw_point_colour,draw_point_color" />
+</head>
+<body><!--<div class="body-scroll" style="top: 150px;">--><h1>draw_point_colour</h1><p> Avec cette fonction, vous pouvez dessiner un seul pixel n&#39;importe où sur l&#39;écran avec une couleur que vous définissez. Les paramètres de couleur remplaceront la couleur de base définie avec la fonction <a href="../Colour_And_Alpha/draw_set_colour.htm"><tt>draw_set_colour()</tt></a>.</p><p class="note"> <b>REMARQUE</b>: Si vous souhaitez dessiner une forme à l&#39;aide d&#39;un <span class="notranslate">shader</span>, sachez que la plupart des <span class="notranslate">shaders</span> attendent les entrées suivantes: sommet, texture, couleur. Cependant, lors de l&#39;utilisation de cette fonction, seules les données de sommet et de couleur sont transmises, et le <span class="notranslate">shader</span> peut ne rien dessiner (ou dessiner quelque chose mais pas correctement). Si vous devez dessiner des formes de cette manière, le <span class="notranslate">shader</span> doit être personnalisé dans cet esprit.</p><p></p><h4> Syntaxe:</h4><p class="code">draw_point_colour(x, y, col1);</p><table><tbody><tr><th> Argument</th><th> Description</th></tr><tr><td> <span class="notranslate">x</span></td><td> La coordonnée x du point.</td></tr><tr><td> <span class="notranslate">y</span></td><td> La coordonnée y du point.</td></tr><tr><td> <span class="notranslate">col1</span></td><td> La couleur du point.</td></tr></tbody></table><p></p><h4> Retour:</h4><p class="code">N/A</p><p></p><h4> Exemple:</h4><p class="code">draw_point_colour(50, 50, c_red);</p><p> Cela dessinerait un pixel rouge à (50,50). </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> Retour: <a href="Basic_Forms.htm">Formulaires de base</a></div><div style="float:right"> Suivant:<a href="draw_rectangle.htm">draw_rectangle</a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
+  </div>
+  <!-- KEYWORDS
+draw_point_colour
+draw_point_color
+-->
+  <!-- TAGS
+draw_point_colour
+-->
+</body>
+</html>

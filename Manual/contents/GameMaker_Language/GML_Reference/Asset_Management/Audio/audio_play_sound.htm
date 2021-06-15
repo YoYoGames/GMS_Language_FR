@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>audio_play_sound</title>
+  <meta name="generator" content="Adobe RoboHelp 2019" />
+  <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
+  <meta name="rh-authors" content="Mark Alexander" />
+  <meta name="topic-comment" content="Page expliquant la fonction audio_play_sound" />
+  <meta name="rh-index-keywords" content="audio_play_sound" />
+  <meta name="search-keywords" content="audio_play_sound" />
+</head>
+<body><!--<div class="body-scroll" style="top: 150px;">--><h1>audio_play_sound</h1><p> Avec cette fonction, vous pouvez jouer à n&#39;importe quelle ressource sonore de votre jeu. Vous fournissez l&#39;index sonore et lui attribuez une priorité, qui est ensuite utilisée pour déterminer comment les sons sont traités lorsque le nombre de sons joués dépasse la limite définie par la fonction <a
+      href="audio_channel_num.htm"><tt>audio_channel_num()</tt></a>. Les sons de priorité inférieure seront arrêtés au profit des sons de priorité plus élevée, et la valeur de priorité peut être n&#39;importe quel nombre réel (la valeur réelle est arbitraire, et peut être de 0 à 1 ou de 0 à 100, car <span class="notranslate">GameMaker Studio 2</span> donnera la même priorité. ). Notez que lorsqu&#39;il s&#39;agit de priorité, <i>plus</i> le nombre est <i>élevé, plus</i> la priorité est élevée, de sorte qu&#39;un son de priorité 100 sera préféré à un son de priorité 1. Le dernier argument est de faire la boucle sonore et de la régler sur <tt>true</tt> fera la boucle sonore jusqu&#39;à ce qu&#39;elle soit arrêtée et en la réglant sur <tt>false</tt> jouera le son une seule fois.</p><p> Cette fonction renverra également un numéro d&#39;index unique pour le son en cours de lecture qui peut ensuite être stocké dans une variable afin que vous puissiez ensuite le mettre en pause ou l&#39;arrêter avec les fonctions appropriées. Cela signifie que si plusieurs instances du même son sont lues à un moment donné, vous pouvez cibler une seule instance de ce son à utiliser avec les fonctions audio.</p><p></p><h4> Syntaxe:</h4><p class="code">audio_play_sound(index, priority, loop);</p><table><tbody><tr><th> Argument</th><th> Description</th></tr><tr><td> <span class="notranslate">index</span></td><td> L&#39;index du son à jouer.</td></tr><tr><td> <span class="notranslate">priority</span></td><td> Définissez la priorité du canal pour le son.</td></tr><tr><td> <span class="notranslate">loop</span></td><td> Règle le son en boucle ou non.</td></tr></tbody></table><p></p><h4> Retour:</h4><p class="code">Index (sound ID)</p><p></p><h4> Exemple:</h4><p class="code">if health &lt;= 0<br/>     {
+    <br/>     lives -= 1;<br/>     audio_play_sound(snd_PlayerDead, 10, false);<br/>     }
+  </p><p> Le code ci-dessus vérifie la variable globale «santé» et si elle est inférieure ou égale à 0, il supprimera 1 de la variable globale «lives» et jouera un son. </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> Retour: <a href="Audio.htm">Audio</a></div><div style="float:right"> Suivant:<a href="audio_play_sound_at.htm">audio_play_sound_at</a></div><div style="float:right"></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
+  </div>
+  <!-- KEYWORDS
+audio_play_sound
+-->
+  <!-- TAGS
+audio_play_sound
+-->
+</body>
+</html>

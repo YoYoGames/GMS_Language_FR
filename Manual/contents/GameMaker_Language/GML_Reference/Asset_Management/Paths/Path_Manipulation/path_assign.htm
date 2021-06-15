@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>path_assign</title>
+  <meta name="generator" content="Adobe RoboHelp 2019" />
+  <link rel="stylesheet" href="../../../../../assets/css/default.css" type="text/css" />
+  <meta name="rh-authors" content="Mark Alexander" />
+  <meta name="topic-comment" content="Page expliquant la fonction path_assign" />
+  <meta name="rh-index-keywords" content="path_assign" />
+  <meta name="search-keywords" content="path_assign" />
+</head>
+<body><!--<div class="body-scroll" style="top: 150px;">--><h1>path_assign</h1><p> Avec cette fonction, vous pouvez copier les données de chemin d&#39;un chemin à un autre. Le chemin étant copié sera effacé d&#39; abord (il devrait avoir des points de chemin) et être <strong>complètement écrasée</strong> par le chemin en cours de copie à partir. Aucun des deux chemins n&#39;est supprimé dans le processus et le résultat est deux chemins, avec deux index différents, mais exactement la même forme et les mêmes points. En général, vous souhaitez utiliser cette fonction sur un chemin créé à l&#39;aide de <span class="inline"><a href="path_add.htm">path_add()</a></span>, car si vous l&#39;utilisez sur un actif de chemin, <strong>cela affectera de manière permanente le chemin de toutes les instances du jeu à</strong> partir du moment où la fonction est utilisée jusqu&#39;à la fin de la partie.</p><p></p><h4> Syntaxe:</h4><p class="code">path_assign(index, path);</p><table><tbody><tr><th> Argument</th><th> Description</th></tr><tr><td> <span class="notranslate">index</span></td><td> L&#39;index du chemin à écraser.</td></tr><tr><td> <span class="notranslate">path</span></td><td> L&#39;index du chemin qui écrasera «index».</td></tr></tbody></table><p></p><h4> Retour:</h4><p class="code">N/A</p><p></p><h4> Exemple:</h4><p class="code">mypath = path_add();<br/> path_assign(mypath, choose(path_1, path_2, path_3));</p><p> Le code ci-dessus créera un nouveau chemin vide indexé dans la variable &quot;mypath&quot;, puis copiera les données du chemin à partir de l&#39;une des trois ressources de chemin disponibles. </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> Retour: <a href="Path_Manipulation.htm">Manipulation de chemin</a></div><div style="float:right"> Suivant:<a href="path_delete.htm">path_delete</a></div><div style="float:right"></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
+  </div>
+  <!-- KEYWORDS
+path_assign
+-->
+  <!-- TAGS
+path_assign
+-->
+</body>
+</html>

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>gpu_set_cullmode</title>
+  <meta name="generator" content="Adobe RoboHelp 2019" />
+  <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
+  <meta name="rh-authors" content="Mark Alexander" />
+  <meta name="topic-comment" content="Référence de la fonction gpu_set_cullmode" />
+  <meta name="rh-index-keywords" content="gpu_set_cullmode,cull_noculling,cull_clockwise,cull_counterclockwise" />
+  <meta name="search-keywords" content="gpu_set_cullmode,cull_noculling,cull_clockwise,cull_counterclockwise" />
+</head>
+<body><!--<div class="body-scroll" style="top: 150px;">--><h1>gpu_set_cullmode</h1><p> Cette fonction peut être utilisée pour définir le mode de sélection de la face arrière. Un polygone (primitif) a un <i>recto</i> et un <i>verso</i>. On dit que le côté avant est le côté où les sommets sont définis dans le sens <b>anti-horaire</b>. Normalement, les deux côtés sont dessinés, mais si vous créez une forme fermée (comme une pyramide), c&#39;est un gaspillage de puissance de traitement car l&#39;arrière du triangle ne peut jamais être vu. C&#39;est dans ces cas que vous pouvez activer l&#39;élimination de la face arrière, car cela économise environ la moitié du temps de dessin, bien que cela signifie que vous avez la tâche de définir vos polygones de la manière correcte pour éviter les problèmes.</p><p> La valeur du mode de sélection utilisée doit être l&#39;une des constantes suivantes (la valeur par défaut est <tt>cull_noculling</tt> ):</p><p></p><table><tbody><tr><th> Constant</th><th> Description </th></tr><tr><td><span class="notranslate"><tt>cull_noculling</tt></span></td><td> Aucun abattage ne sera effectué </td></tr><tr><td><span class="notranslate"><tt>cull_clockwise</tt></span></td><td> Tous les triangles dans le sens des aiguilles d&#39;une montre seront éliminés </td></tr><tr><td><span class="notranslate"><tt>cull_counterclockwise</tt></span></td><td> Tous les triangles dans le sens anti-horaire seront éliminés</td></tr></tbody></table><p></p><h4> Syntaxe:</h4><p class="code">gpu_set_cullmode(cullmode);</p><table><tbody><tr><th> Argument</th><th> Description</th></tr><tr><td> <span class="notranslate">cullmode</span></td><td> Le mode de sélection à utiliser (voir liste ci-dessus)</td></tr></tbody></table><p></p><h4> Retour:</h4><p class="code">N/A</p><p></p><h4> Exemple:</h4><p class="code">if gpu_get_cullmode() != cull_clockwise<br/>     {
+    <br/>     gpu_set_cullmode(cull_clockwise);
+    <br/>     }
+  </p><p> Le code ci-dessus obtient le mode de sélection actuel et si ce n&#39;est pas le cas <tt>cull_clockwise</tt> il est réglé sur cette constante. </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> Retour: <a href="GPU_Control.htm">Contrôle GPU</a></div><div style="float:right"> Suivant:<a href="gpu_set_blendmode.htm">gpu_set_blendmode</a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
+  </div>
+  <!-- KEYWORDS
+gpu_set_cullmode
+cull_noculling
+cull_clockwise
+cull_counterclockwise
+-->
+  <!-- TAGS
+gpu_set_cullmode
+-->
+</body>
+</html>

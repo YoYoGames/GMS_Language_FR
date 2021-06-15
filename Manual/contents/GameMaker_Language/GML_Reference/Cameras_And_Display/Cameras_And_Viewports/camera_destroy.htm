@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>camera_destroy</title>
+  <meta name="generator" content="Adobe RoboHelp 2019" />
+  <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
+  <meta name="rh-authors" content="Mark Alexander" />
+  <meta name="topic-comment" content="Page de référence pour camera_destroy" />
+  <meta name="rh-index-keywords" content="camera_destroy" />
+  <meta name="search-keywords" content="camera_destroy" />
+</head>
+<body><!--<div class="body-scroll" style="top: 150px;">--><h1>camera_destroy</h1><p> Avec cette fonction, vous pouvez détruire n&#39;importe quel appareil photo. Lorsque vous appelez la fonction, vous indiquez la valeur d&#39;ID de caméra unique, que vous obtenez <tt>camera_create_*</tt> fonctions ou depuis le <a href="view_camera.htm"><tt>view_camera</tt></a> tableau si vous utilisez l&#39;éditeur de pièce pour configurer le port de vue et la vue. Vous ne devez <i>jamais</i> détruire une caméra actuellement affectée à une vue visible, à moins que vous n&#39;assigniez une nouvelle caméra à cette vue au cours de la même étape, et vous devez <i>toujours</i> détruire toutes les caméras que vous avez créées via le code lorsqu&#39;elles ne sont plus requises par votre jeu. pour éviter les fuites de mémoire, et vous pouvez également détruire les caméras par défaut si vous en avez assignées dans l&#39;éditeur de pièce, mais vous devez attribuer une nouvelle caméra au port de vue (ou la désactiver) sinon vous obtiendrez des résultats étranges.</p><p></p><h4> Syntaxe:</h4><p class="code">camera_destroy(camera_id)</p><table><tbody><tr><th> Argument</th><th> Description</th></tr><tr><td> <span class="notranslate">camera_id</span></td><td> La valeur d&#39;ID de caméra unique renvoyée lors de la création de la caméra.</td></tr></tbody></table><p></p><h4> Retour:</h4><p class="code">Real (unique camera ID value)</p><p></p><h4> Exemple:</h4><p class="code">camera_destroy(view_camera[0]);<br/> view_camera[0] = camera_create_view(0, 0, 640, 480, 0, obj_Player, 5, 5, -1, -1);</p><p> Le code ci-dessus détruit la caméra actuellement affectée au port d&#39;affichage [0], puis crée une nouvelle caméra et attribue son ID à ce port. </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> Arrière: <a href="Cameras_And_View_Ports.htm">caméras et ports d&#39;affichage</a></div><div style="float:right"> Suivant:<a href="camera_apply.htm">camera_apply</a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
+  </div>
+  <!-- KEYWORDS
+camera_destroy
+-->
+  <!-- TAGS
+camera_destroy
+-->
+</body>
+</html>

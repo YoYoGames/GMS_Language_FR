@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>get_string_async</title>
+  <meta name="generator" content="Adobe RoboHelp 2019" />
+  <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
+  <meta name="rh-authors" content="Mark Alexander" />
+  <meta name="topic-comment" content="Page de référence pour get_string_async" />
+  <meta name="rh-index-keywords" content="get_string_async" />
+  <meta name="search-keywords" content="get_string_async" />
+</head>
+<body><!--<div class="body-scroll" style="top: 150px;">--><h1>get_string_async</h1><p> Cette fonction ouvre une fenêtre et affiche un message ainsi qu&#39;un espace pour que l&#39;utilisateur saisisse une chaîne (qui contiendra la chaîne par défaut fournie pour commencer). Il s&#39;agit d&#39;une fonction asynchrone et, en tant que telle, <span class="notranslate">GameMaker Studio 2</span> ne <i>bloque pas</i> le périphérique sur lequel il est exécuté en attendant une réponse, mais continue plutôt à exécuter les événements normalement. Une fois que l&#39;utilisateur a tapé sa chaîne et appuyé sur le bouton &quot;OK&quot;, un <a href="../../../../The_Asset_Editors/Object_Properties/Async_Events/Dialog.htm">événement de dialogue asynchrone</a> est déclenché qui, pour la durée de cet événement <i>uniquement</i>, aura une carte DS stockée dans la variable <a href="../../../GML_Overview/Variables/Builtin_Global_Variables/async_load.htm"><tt>async_load</tt></a>.</p><p> Cette carte contiendra les trois clés, &quot; <strong>id</strong> &quot;, &quot; <strong>status</strong> &quot; et &quot; <strong>result</strong> &quot;. &quot;id&quot; est la valeur qui a été retournée par la fonction lorsqu&#39;elle est appelée, le &quot;statut&quot; sera soit <tt>true</tt> pour le bouton &quot;OK&quot; enfoncé, ou <tt>false</tt> si le message a été annulé (le cas échéant, car toutes les plates-formes cibles ne permettent pas l&#39;annulation du message). Enfin, &quot;result&quot; renverra la chaîne saisie par l&#39;utilisateur (ou une chaîne vide &quot;&quot; si aucune n&#39;a été fournie).</p><p></p><h4> Syntaxe:</h4><p class="code">get_string_async(string, default);</p><table><tbody><tr><th> Argument</th><th> Description</th></tr><tr><td> <span class="notranslate">String</span></td><td> Le message à afficher dans la boîte de dialogue.</td></tr><tr><td> <span class="notranslate">default</span></td><td> La chaîne par défaut.</td></tr></tbody></table><p></p><h4> Retour:</h4><p class="code">Real</p><p></p><h4> Exemple étendu:</h4><p></p><p> L&#39; <b>événement de pression gauche de la souris</b> (par exemple) de l&#39;objet qui affiche le message aurait le code suivant:</p><p class="code">msg = get_string_async(&quot;What&#39;s your name?&quot;,&quot;Anon&quot;);</p><p> Ce qui précède affichera un message demandant à l&#39;utilisateur de saisir une chaîne et d&#39;appuyer sur &quot;OK&quot;. L&#39;identifiant de la fonction est stocké dans la variable &quot;msg&quot; et sera utilisé dans l&#39;événement Dialogues asynchrones comme indiqué ci-dessous:</p><p class="code">var i_d = ds_map_find_value(async_load, &quot;id&quot;);<br/> if i_d == msg<br/>     {
+    <br/>     if ds_map_find_value(async_load, &quot;status&quot;)<br/>         {
+    <br/>         if ds_map_find_value(async_load, &quot;result&quot;) != &quot;&quot;<br/>             {
+    <br/>             global.Name = ds_map_find_value(async_load, &quot;result&quot;);<br/>             }
+    <br/>         }
+    <br/>     }
+  </p><p> Le code ci-dessus vérifie la clé &quot;id&quot; du retour <tt>DS Map</tt> par rapport à la valeur stockée dans la variable &quot;msg&quot;. S&#39;ils sont identiques, il vérifie alors si &quot;OK&quot; a été appuyé (plutôt que la fenêtre étant fermée / annulée) et si elle revient <tt>true</tt> il vérifie ensuite le &quot;résultat&quot; d&#39;une chaîne pour s&#39;assurer qu&#39;aucune chaîne vide n&#39;a été renvoyée avant de définir une variable globale. </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> Retour: <a href="Dialog.htm">Dialogue</a></div><div style="float:right"> Suivant:<a href="get_integer_async.htm">get_integer_async</a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
+  </div>
+  <!-- KEYWORDS
+get_string_async
+-->
+  <!-- TAGS
+get_string_async
+-->
+</body>
+</html>

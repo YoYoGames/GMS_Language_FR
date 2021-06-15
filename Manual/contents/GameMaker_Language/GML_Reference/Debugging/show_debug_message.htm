@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>show_debug_message</title>
+  <meta name="generator" content="Adobe RoboHelp 2019" />
+  <link rel="stylesheet" href="../../../assets/css/default.css" type="text/css" />
+  <meta name="rh-authors" content="Mark Alexander" />
+  <meta name="topic-comment" content="Page de référence pour show_debug_message" />
+  <meta name="rh-index-keywords" content="show_debug_message" />
+  <meta name="search-keywords" content="show_debug_message" />
+</head>
+<body><!--<div class="body-scroll" style="top: 150px;">--><h1>show_debug_message</h1><p> Cette fonction crée un message de débogage personnalisé qui s&#39;affiche dans la fenêtre du compilateur au <span class="notranslate">runtime</span> de l&#39;exécution. Notez que le message peut être une chaîne ou un nombre réel, mais si vous avez besoin à la fois alors le nombre devra être converti en chaîne en utilisant d&#39; abord la <a href="../Strings/Strings.htm"><tt>string()</tt></a> fonction (voir l&#39;exemple ci-dessous) et que si le nombre a plus de deux décimales, vous devez utiliser <a href="../Strings/string_format.htm"><tt>string_format()</tt></a> pour les montrer comme par défaut, les décimales sont arrondies aux deux décimales les plus proches (ainsi &quot;1.2468&quot; apparaîtrait comme &quot;1.25&quot; dans la fenêtre de sortie).</p><p> Les messages de débogage affichés avec cette fonction seront affichés dans la <a href="../../../Introduction/The_Output_Window.htm">fenêtre de sortie</a> du compilateur en bas de l&#39;EDI ainsi que dans la <a href="../../../IDE_Tools/The_Debugger.htm">vue graphique</a> du débogueur lors de l&#39;exécution du jeu en mode débogage. Si vous souhaitez uniquement voir les messages en mode débogage, vous devriez probablement utiliser <a href="debug_event.htm"><tt>debug_event()</tt></a> au lieu.</p><p></p><h4> Syntaxe:</h4><p class="code">show_debug_message(string);</p><table><tbody><tr><th> Argument</th><th> Description</th></tr><tr><td> <span class="notranslate">string</span></td><td> Le message de débogage personnalisé à afficher.</td></tr></tbody></table><p></p><h4> Retour:</h4><p class="code">N/A</p><p></p><h4> <b>Exemple:</b></h4><p class="code">if !instance_exists(obj_Exit)<br/>    {
+    <br/>    show_debug_message(&quot;Exit not created!&quot;);<br/>    show_debug_message(&quot;Error Num: &quot; + string(global.error));<br/>    game_end();
+    <br/>    }
+  </p><p> Le code ci-dessus vérifie si une instance existe et si ce n&#39;est pas le cas, un message de débogage s&#39;affiche dans la fenêtre de compilation et le jeu est terminé. </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> Retour: <a href="Debugging.htm">Débogage</a></div><div style="float:right"> Suivant:<a href="show_debug_overlay.htm">show_debug_overlay</a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
+  </div>
+  <!-- KEYWORDS
+show_debug_message
+-->
+  <!-- TAGS
+show_debug_message
+-->
+</body>
+</html>

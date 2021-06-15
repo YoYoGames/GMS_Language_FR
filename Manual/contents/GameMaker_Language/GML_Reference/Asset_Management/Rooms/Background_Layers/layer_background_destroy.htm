@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>layer_background_destroy</title>
+  <meta name="generator" content="Adobe RoboHelp 2019" />
+  <link rel="stylesheet" href="../../../../../assets/css/default.css" type="text/css" />
+  <meta name="rh-authors" content="Mark Alexander" />
+  <meta name="topic-comment" content="Page décrivant la fonction layer_background_destroy" />
+  <meta name="rh-index-keywords" content="layer_background_destroy" />
+  <meta name="search-keywords" content="layer_background_destroy" />
+</head>
+<body><!--<div class="body-scroll" style="top: 150px;">--><h1>layer_background_destroy</h1><p> Cette fonction détruira l&#39;élément d&#39;arrière-plan donné. Vous fournissez l&#39;ID d&#39;arrière-plan (que vous obtenez lorsque vous créez l&#39;arrière-plan à l&#39;aide de <a href="layer_background_create.htm"><tt>layer_background_create()</tt></a> ou lorsque vous utilisez l&#39;ID de couche avec <a href="layer_background_get_id.htm"><tt>layer_get_background_id()</tt></a> ) et cela le supprimera. Notez que cela ne <i>supprime pas</i> le calque, mais uniquement l&#39;arrière-plan, et si l&#39;arrière-plan est celui qui a été ajouté dans l&#39;éditeur de salle, la prochaine fois que vous quittez la pièce, puis que vous revenez, l&#39;arrière-plan sera recréé à nouveau. Cependant, si la pièce est persistante, l&#39;arrière-plan sera supprimé à moins que la persistance de la pièce ne soit à nouveau désactivée.</p><p></p><h4> Syntaxe:</h4><p class="code">layer_background_destroy(background_element_id)</p><table><tbody><tr><th> Argument</th><th> Description</th></tr><tr><td> <span class="notranslate">background_element_id</span></td><td> La valeur d&#39;identifiant unique de l&#39;arrière-plan à détruire</td></tr></tbody></table><p></p><h4> Retour:</h4><p class="code">N/A</p><p></p><h4> Exemple:</h4><p class="code">var lay_id = layer_get_id(&quot;Background_trees&quot;);<br/> var bck_id = layer_background_get_id(&quot;Forrest&quot;);<br/> if layer_background_exists(lay_id, bck_id)<br/>     {
+    <br/>     layer_background_destroy(bck_id);
+    <br/>     }
+  </p><p> Le code ci-dessus vérifie le calque &quot;Background_trees&quot; pour voir si l&#39;élément d&#39;arrière-plan donné existe et si c&#39;est le cas, il est détruit (mais pas le calque). </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> Retour: <a href="Background_Layers.htm">Calques d&#39;arrière-plan</a></div><div style="float:right"> Suivant:<a href="layer_background_visible.htm">layer_background_visible</a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
+  </div>
+  <!-- KEYWORDS
+layer_background_destroy
+-->
+  <!-- TAGS
+layer_background_destroy
+-->
+</body>
+</html>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>phy_bullet</title>
+  <meta name="generator" content="Adobe RoboHelp 2019" />
+  <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
+  <meta name="rh-authors" content="Mark Alexander" />
+  <meta name="topic-comment" content="Page de référence pour phy_bullet" />
+  <meta name="rh-index-keywords" content="phy_bullet" />
+  <meta name="search-keywords" content="phy_bullet" />
+</head>
+<body><!--<div class="body-scroll" style="top: 150px;">--><h1>phy_bullet</h1><p> Cette variable définit si l&#39;instance se déplace extrêmement rapidement (par exemple une puce). La valeur par défaut est <tt>false</tt> mais s&#39;il est réglé sur <tt>true</tt> cela indique à <span class="notranslate">GameMaker Studio 2</span> que l&#39;instance se déplacera à des vitesses si élevées qu&#39;elle nécessitera une détection de collision plus coûteuse pour s&#39;assurer qu&#39;elle ne passe pas par d&#39;autres instances sans être détectée.</p><p></p><h4> Syntaxe:</h4><p class="code">phy_bullet;</p><p></p><h4> Retour:</h4><p class="code">Boolean (or <tt>undefined</tt> if the instance is not physics enabled)</p><p></p><h4> Exemple:</h4><p class="code">with (instance_create_layer(x, y, &quot;Bullets&quot;, obj_Shoot))<br/>     {
+    <br/>     phy_bullet = true;<br/>     physics_apply_local_impulse(0, 10, 0, 200);<br/>     }
+  </p><p> Le code ci-dessus crée une nouvelle instance et la définit ensuite comme étant une «balle» dans le monde de la physique avant de lui donner une impulsion massive le long de l&#39;axe y. </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> Retour: <a href="Physics_Variables.htm">Variables de physique</a></div><div style="float:right"> Suivant:<a href="phy_speed.htm">phy_speed</a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
+  </div>
+  <!-- KEYWORDS
+phy_bullet
+-->
+  <!-- TAGS
+phy_bullet
+-->
+</body>
+</html>

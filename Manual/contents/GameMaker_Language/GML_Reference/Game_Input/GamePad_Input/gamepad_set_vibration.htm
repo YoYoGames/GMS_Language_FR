@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <title>gamepad_set_vibration</title>
+  <meta name="generator" content="Adobe RoboHelp 2019"/>
+  <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css"/>
+  <meta name="rh-authors" content="Mark Alexander"/>
+  <meta name="topic-comment" content="Page de référence pour gamepad_set_vibration"/>
+  <meta name="rh-index-keywords" content="gamepad_set_vibration"/>
+  <meta name="search-keywords" content="gamepad_set_vibration"/>
+</head>
+
+<body><!--<div class="body-scroll" style="top: 150px;">--><h1>gamepad_set_vibration</h1><p> Avec cette fonction, vous pouvez régler la vibration des moteurs de la manette de jeu, l&#39;un ou l&#39;autre moteur utilisant une valeur comprise entre 0 (pas de vibration) et 1 (vibration complète). Notez qu&#39;il n&#39;y a pas de limite de temps pour cette fonction, vous devrez donc utiliser une variable ou une alarme pour désactiver la vibration (régler les moteurs sur 0) après un temps donné, sinon la manette continuera à vibrer indéfiniment.</p><p class="note"> <b>REMARQUE</b>: cette fonction n&#39;est actuellement disponible que pour les modules cibles <b><span class="notranslate">Windows</span></b>, <b>PS4</b> et <b>Xbox One.</b></p><p></p><h4> Syntaxe:</h4><p class="code">gamepad_set_vibration(device, left_motor, right_motor);</p><table><tbody><tr><th> Argument</th><th> Description</th></tr><tr><td> <span class="notranslate">device</span></td><td> Quel «slot» de périphérique de manette de jeu vérifier.</td></tr><tr><td> <span class="notranslate">left_motor</span></td><td> La quantité de vibration du moteur gauche de 0 à 1.</td></tr><tr><td> <span class="notranslate">right_motor</span></td><td> La quantité de vibration du moteur droit de 0 à 1.</td></tr></tbody></table><p></p><h4> Retour:</h4><p class="code">N/A</p><p></p><h4> Exemple:</h4><p class="code">if lives = 0<br/>    {
+    <br/>    gamepad_set_vibration(0, 1, 1);<br/>    alarm[0] = room_speed / 2;<br/>    }
+  </p><p> Le code ci-dessus serait utilisé (par exemple) dans un événement de collision pour faire vibrer la manette de jeu branchée dans le &quot;slot&quot; 0 pendant une demi-seconde, l&#39;alarme réglée étant utilisée pour l&#39;éteindre à nouveau une fois ce temps écoulé. </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> Retour: <a href="Gamepad_Input.htm">Entrée de la manette de jeu</a></div><div style="float:right"> Suivant: <a href="gamepad_set_colour.htm">gamepad_set_colour</a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
+  </div>
+  <!-- KEYWORDS
+gamepad_set_vibration
+-->
+  <!-- TAGS
+gamepad_set_vibration
+-->
+
+</body></html>

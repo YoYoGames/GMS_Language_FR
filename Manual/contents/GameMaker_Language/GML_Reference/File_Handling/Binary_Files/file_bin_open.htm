@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>file_bin_open</title>
+  <meta name="generator" content="Adobe RoboHelp 2019" />
+  <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
+  <meta name="rh-authors" content="Mark Alexander" />
+  <meta name="topic-comment" content="Page de référence pour file_bin_open" />
+  <meta name="rh-index-keywords" content="file_bin_open" />
+  <meta name="search-keywords" content="file_bin_open" />
+</head>
+<body><!--<div class="body-scroll" style="top: 150px;">--><h1>file_bin_open</h1><p> Cette fonction ouvrira le fichier binaire avec le nom indiqué. Le mode indique ce qui peut être fait avec le fichier:</p><ul class="colour"><li> 0 = lecture</li><li> 1 = écriture</li><li> 2 = lecture et écriture</li></ul><p> Lorsque le fichier n&#39;existe pas, il est créé et la fonction renvoie l&#39;identifiant du fichier qui doit être utilisé dans les autres fonctions. Vous pouvez ouvrir plusieurs fichiers en même temps (32 max), mais n&#39;oubliez pas de les fermer une fois que vous en avez terminé avec eux.</p><p class="note"> <b>ATTENTION!</b> Cette fonction peut ne pas fonctionner comme prévu en raison du <span class="notranslate">GameMaker Studio 2</span>! Veuillez consulter la section sur le <a href="../../../../Additional_Information/The_File_System.htm">système de fichiers</a> pour plus d&#39;informations.</p><p class="note"> <b>REMARQUE</b>: ces fonctions <b>ne</b> fonctionnent pas lorsque le module cible est HTML5.</p><p></p><h4> Syntaxe:</h4><p class="code">file_bin_open(fname, mode);</p><table><tbody><tr><th> Argument</th><th> Description</th></tr><tr><td> <span class="notranslate">fname</span></td><td> Le nom du fichier à lire.</td></tr><tr><td> <span class="notranslate">mode</span></td><td> l&#39;indicateur de ce qui peut être fait avec le fichier.</td></tr></tbody></table><p></p><h4> Retour:</h4><p class="code">Real</p><p></p><h4> Exemple:</h4><p class="code">file = file_bin_open(&quot;myfile.bin&quot;, 2);</p><p> Cela ouvrirait un fichier du même répertoire que le jeu et attribuerait son index à la variable &quot;fichier&quot;. </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> Retour: <a href="Binary_Files.htm">Fichiers binaires</a></div><div style="float:right"> Suivant:<a href="file_bin_rewrite.htm">file_bin_rewrite</a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
+  </div>
+  <!-- KEYWORDS
+file_bin_open
+-->
+  <!-- TAGS
+file_bin_open
+-->
+</body>
+</html>

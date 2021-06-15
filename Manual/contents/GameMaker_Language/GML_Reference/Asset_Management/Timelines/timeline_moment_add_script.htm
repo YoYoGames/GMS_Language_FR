@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>timeline_moment_add_script</title>
+  <meta name="generator" content="Adobe RoboHelp 2019" />
+  <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
+  <meta name="rh-authors" content="Mark Alexander" />
+  <meta name="topic-comment" content="Page décrivant la fonction timeline_moment_add_script" />
+  <meta name="rh-index-keywords" content="timeline_moment_add_script" />
+  <meta name="search-keywords" content="timeline_moment_add_script" />
+</head>
+<body><!--<div class="body-scroll" style="top: 150px;">--><h1>timeline_moment_add_script</h1><p> Avec cette fonction, vous pouvez ajouter dynamiquement une <a href="../../../GML_Overview/Script_Functions.htm">fonction de script</a> aux Timelines à n&#39;importe quel «moment» donné dans cette ligne de temps, où un «moment» est l&#39;équivalent d&#39;un tick (ou pas) de jeu. De cette façon, vous pouvez créer une nouvelle chronologie en utilisant le <a href="timeline_add.htm"><tt>timeline_add()</tt></a> fonction et ajoutez différents comportements à tout moment, ou modifiez simplement une ressource chronologique créée précédemment avec de nouveaux comportements. Notez que la fonction ne peut pas nécessiter d&#39;arguments supplémentaires lors de l&#39;utilisation de cette fonction, et si vous l&#39;utilisez pour modifier un élément de la chronologie présent dans le navigateur de ressources, toutes les instances qui utilisent cette chronologie seront affectées et la modification durera jusqu&#39;à la fin de le jeu (appeler <span class="inline">game_restart()</span> ne réinitialisera pas non plus la modification).</p><p></p><h4> Syntaxe:</h4><p class="code">timeline_moment_add_script(ind, step, script);</p><table><tbody><tr><th> Argument</th><th> Description</th></tr><tr><td> <span class="notranslate">ind</span></td><td> L&#39;index de la chronologie à laquelle ajouter un moment.</td></tr><tr><td> <span class="notranslate">step</span></td><td> Le moment (étape) auquel ajouter.</td></tr><tr><td> <span class="notranslate">script</span></td><td> L&#39;index de la fonction de script à ajouter dans l&#39;instant.</td></tr></tbody></table><p></p><h4> Retour:</h4><p class="code">N/A</p><p></p><h4> Exemple:</h4><p class="code">global.tl = timeline_add();<br/> var i = room_speed * 60;<br/> repeat(3)
+    <br/>     {
+    <br/>     timeline_moment_add_script(global.tl, i, choose(Attack_1, Attack_2, Attack_3);<br/>     i += room_speed * 60;<br/>     }
+  </p><p> Le code ci-dessus créera une nouvelle ligne de temps et stockera son index dans la variable &quot;global.tl&quot;. Il ajoutera ensuite trois scripts à la chronologie, choisis au hasard, à une minute d&#39;intervalle. </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> Retour: <a href="Timelines.htm">Chronologies</a></div><div style="float:right"> Suivant:<a href="timeline_moment_clear.htm">timeline_moment_clear</a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
+  </div>
+  <!-- KEYWORDS
+timeline_moment_add_script
+-->
+  <!-- TAGS
+timeline_moment_add_script
+-->
+</body>
+</html>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>surface_getpixel_ext</title>
+  <meta name="generator" content="Adobe RoboHelp 2019" />
+  <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
+  <meta name="rh-authors" content="Mark Alexander" />
+  <meta name="topic-comment" content="Référence pour surface_getpixel_ext" />
+  <meta name="rh-index-keywords" content="surface_getpixel_ext" />
+  <meta name="search-keywords" content="surface_getpixel_ext" />
+</head>
+<body><!--<div class="body-scroll" style="top: 150px;">--><h1>surface_getpixel_ext</h1><p> Avec cette fonction, vous pouvez obtenir la <b>valeur abgr 32 bits</b> complète de n&#39;importe quel pixel d&#39;une surface (créée précédemment).</p><p class="note"> <b>REMARQUE</b>: Cette fonction aura un énorme impact sur les performances et ne doit donc être utilisée que lorsque cela est absolument nécessaire.</p><p></p><h4> Syntaxe:</h4><p class="code">surface_getpixel_ext(surface_id, x, y);</p><table><tbody><tr><th> Argument</th><th> Description</th></tr><tr><td> <span class="notranslate">surface_id</span></td><td> L&#39;ID de la surface à utiliser.</td></tr><tr><td> <span class="notranslate">x</span></td><td> La coordonnée x du pixel à vérifier</td></tr><tr><td> <span class="notranslate">y</span></td><td> La coordonnée y du pixel à vérifier</td></tr></tbody></table><p></p><h4> Retour:</h4><p class="code">Real</p><p></p><h4> Exemple:</h4><p class="code">col = surface_getpixel_ext(mouse_x, mouse_y);<br/> alpha = (col &gt;&gt; 24) &amp; 255;<br/> blue = (col &gt;&gt; 16) &amp; 255;<br/> green = (col &gt;&gt; 8) &amp; 255;<br/> red = col &amp; 255;</p><p> Le code ci-dessus obtiendra la valeur de couleur 32 bits à la position de la souris, puis la divisera en ses valeurs de composants, en les stockant dans des variables. </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> Retour: <a href="Surfaces.htm">Surfaces</a></div><div style="float:right"> Suivant:<a href="surface_free.htm">surface_free</a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
+  </div>
+  <!-- KEYWORDS
+surface_getpixel_ext
+-->
+  <!-- TAGS
+surface_getpixel_ext
+-->
+</body>
+</html>

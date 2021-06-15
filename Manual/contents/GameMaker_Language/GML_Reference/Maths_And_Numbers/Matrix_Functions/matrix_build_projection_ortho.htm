@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <title>matrix_build_projection_ortho</title>
+  <meta name="generator" content="Adobe RoboHelp 2019"/>
+  <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css"/>
+  <meta name="rh-authors" content="Mark Alexander"/>
+  <meta name="topic-comment" content="Page de référence pour matrix_build_projection_ortho"/>
+  <meta name="rh-index-keywords" content="matrix_build_projection_ortho"/>
+  <meta name="search-keywords" content="matrix_build_projection_ortho"/>
+</head>
+
+<body><!--<div class="body-scroll" style="top: 150px;">--><h1>matrix_build_projection_ortho</h1><p> Cette fonction crée une matrice de projection orthographique basée sur les paramètres spécifiés ci-dessous (il s&#39;agit de la méthode de projection par défaut utilisée lorsque vous créez une pièce dans <span class="notranslate">GameMaker Studio 2</span> sans rien changer). Parfois, vous devez passer d&#39;une projection en perspective à une projection orthographique, c&#39;est à cela que sert cette fonction. Il est généralement utilisé pour dessiner une superposition, par exemple, pour montrer la partition ou d&#39;autres aspects car cela donne une vue &quot;plate&quot; des éléments dessinés (c&#39;est-à-dire: pas de perspective) dans un jeu 3D. Voir l&#39;image ci-dessous pour avoir une idée de la différence entre les vues orthogonales et en perspective.</p><p class="note"> <b>REMARQUE</b>: vous devrez peut-être également désactiver temporairement la suppression des surfaces masquées si vous souhaitez que les informations soient dessinées quelle que soit la valeur de profondeur actuelle.</p><p><img alt="Ortho prjection matrix  example" class="center" src="../../../../assets/Images/Scripting_Reference/GML/Reference/Maths/ortho_persp_image.png"/></p><h4> Syntaxe:</h4><p class="code">matrix_build_projection_ortho(width, height, znear, zfar);</p><table><tbody><tr><th> Argument</th><th> Description</th></tr><tr><td> <span class="notranslate">w</span></td><td> La largeur de la projection.</td></tr><tr><td> <span class="notranslate">h</span></td><td> La hauteur de la projection.</td></tr><tr><td> <span class="notranslate">znear</span></td><td> Le plan de détourage proche.</td></tr><tr><td> <span class="notranslate">zfar</span></td><td> Le plan de détourage le plus éloigné.</td></tr></tbody></table><p></p><h4> Retour:</h4><p class="code">Matrix index</p><p></p><h4> Exemple:</h4><p class="code">viewmat = matrix_build_lookat(640, 240, -10, 640, 240, 0, 0, 1, 0);<br/> projmat = matrix_build_projection_ortho(640, 480, 1.0, 32000.0);<br/> camera_set_view_mat(view_camera[0], viewmat);<br/> camera_set_proj_mat(view_camera[0], projmat);</p><p> Le code ci-dessus crée une nouvelle matrice de visualisation et une matrice orthographique, stocke leurs identifiants dans des variables locales, puis les utilise pour définir les matrices de vue et de projection de la caméra affectée au port de visualisation [0]. </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> Retour: <a href="Matrix_Functions.htm">Fonctions de la matrice</a></div><div style="float:right"> Suivant:<a href="matrix_build_projection_perspective.htm">matrix_build_projection_perspective</a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
+  </div>
+  <!-- KEYWORDS
+matrix_build_projection_ortho
+-->
+  <!-- TAGS
+matrix_build_projection_ortho
+-->
+
+</body></html>

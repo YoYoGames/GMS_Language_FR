@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <title>mouse_check_button_released</title>
+  <meta name="generator" content="Adobe RoboHelp 2019"/>
+  <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css"/>
+  <meta name="rh-authors" content="Mark Alexander"/>
+  <meta name="topic-comment" content="Page de référence pour mouse_check_button_released"/>
+  <meta name="rh-index-keywords" content="mouse_check_button_released"/>
+  <meta name="search-keywords" content="mouse_check_button_released"/>
+</head>
+
+<body><!--<div class="body-scroll" style="top: 150px;">--><h1>mouse_check_button_released</h1><p> Cette fonction retournera <tt>true</tt> si le bouton de la souris en cours de vérification a été relâché ou <tt>false</tt> si ce n&#39;est pas le cas. Cette fonction ne sera déclenchée <i>qu&#39;une</i> seule fois pour un bouton de la souris lorsqu&#39;il est relâché et pour la déclencher à nouveau, le bouton devra avoir été enfoncé et relâché à nouveau. Vous fournissez le bouton de la souris pour vérifier à partir de l&#39;une des constantes suivantes:</p><p></p><table><tbody><tr><th> Constant</th><th> Description</th></tr><tr><td> <span class="notranslate">mb_left</span></td><td> Le bouton gauche de la souris</td></tr><tr><td> <span class="notranslate">mb_middle</span></td><td> Le bouton central de la souris (cela peut ne pas être valable pour toutes les plates-formes cibles)</td></tr><tr><td> <span class="notranslate">mb_right</span></td><td> Le bouton droit de la souris</td></tr><tr><td> <span class="notranslate">mb_none</span></td><td> Pas de bouton de la souris</td></tr><tr><td> <span class="notranslate">mb_any</span></td><td> N&#39;importe lequel des boutons de la souris</td></tr></tbody></table><p></p><h4> Syntaxe:</h4><p class="code">mouse_check_button_released(numb);</p><p></p><table><tbody><tr><th> Argument</th><th> Description</th></tr><tr><td> <span class="notranslate">numb</span></td><td> Quelle constante de bouton de la souris vérifier.</td></tr></tbody></table><p></p><h4> Retour:</h4><p class="code">Boolean</p><p></p><h4> Exemple:</h4><p class="code">if mouse_check_button_released(mb_right)<br/>    {
+    <br/>    speed = point_distance(x, y, mouse_x, mouse_y) / 10;<br/>    }
+  </p><p> Le code ci-dessus vérifiera si le bouton droit de la souris a été relâché et s&#39;il l&#39;a fait, la vitesse de l&#39;instance sera fixée à un dixième de la distance entre la position x / y actuelle et la position x / y de la souris. </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> Retour: <a href="Mouse_Input.htm">Entrée souris</a></div><div style="float:right"> Suivant:<a href="mouse_clear.htm">mouse_clear</a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
+  </div>
+  <!-- KEYWORDS
+mouse_check_button_released
+-->
+  <!-- TAGS
+mouse_check_button_released
+-->
+
+</body></html>

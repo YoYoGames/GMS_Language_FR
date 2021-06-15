@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <title>keyboard_check_direct</title>
+  <meta name="generator" content="Adobe RoboHelp 2019"/>
+  <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css"/>
+  <meta name="rh-authors" content="Mark Alexander"/>
+  <meta name="topic-comment" content="Page de référence pour keyboard_check_direct"/>
+  <meta name="rh-index-keywords" content="keyboard_check_direct"/>
+  <meta name="search-keywords" content="keyboard_check_direct"/>
+</head>
+
+<body><!--<div class="body-scroll" style="top: 150px;">--><h1>keyboard_check_direct</h1><p> Cette fonction retournera <tt>true</tt> si la touche avec le code de touche particulier est enfoncée, ou <tt>false</tt> si ce n&#39;est pas le cas, en vérifiant directement le matériel. Il permet quelques vérifications supplémentaires, en particulier vous pouvez utiliser les keycodes <b>vk_lshift</b>, <b>vk_lcontrol</b>, <b>vk_lalt</b>, <b>vk_rshift</b>, <b>vk_rcontrol</b> et <b>vk_ralt</b> pour vérifier si la touche shift gauche ou droite, control ou alt est enfoncée. La fonction prendra une valeur de code clé telle que renvoyée par la fonction <a href="../../Strings/ord.htm"><tt>ord()</tt></a> (uniquement <i>les</i> lettres majuscules de A à Z ou les chiffres de 0 à 9), ou l&#39;un des <tt>vk_*</tt> constantes répertoriées sur la page <a href="Keyboard_Input.htm">principale de saisie au clavier.</a></p><p class="note"> <b>REMARQUE:</b> cette fonction n&#39;est disponible que pour la <span class="notranslate">Windows</span> standard et le résultat est indépendant de l&#39;application qui a le focus.</p><p></p><h4> <b>Syntaxe:</b></h4><p class="code">keyboard_check_direct(key);</p><table><tbody><tr><th> Argument</th><th> Description</th></tr><tr><td> <span class="notranslate">key</span></td><td> La clé pour vérifier l&#39;état de.</td></tr></tbody></table><p></p><h4> <b>Retour:</b></h4><p class="code">Boolean</p><p></p><h4> <b>Exemple:</b></h4><p class="code">if keyboard_check_direct(vk_ralt) || keyboard_check_direct(vk_lalt)<br/>    {
+    <br/>    crouch = true;<br/>    }
+  </p><p> Le code ci-dessus vérifiera si les touches alt gauche ou droite ont été enfoncées, et si elles l&#39;ont, il définit la variable «accroupi» sur true. </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> Retour: <a href="Keyboard_Input.htm">Entrée clavier</a></div><div style="float:right"> Suivant:<a href="keyboard_clear.htm">keyboard_clear</a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
+  </div>
+  <!-- KEYWORDS
+keyboard_check_direct
+-->
+  <!-- TAGS
+keyboard_check_direct
+-->
+
+</body></html>

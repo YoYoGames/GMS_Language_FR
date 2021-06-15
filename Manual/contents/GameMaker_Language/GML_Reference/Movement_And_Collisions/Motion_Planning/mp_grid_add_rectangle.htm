@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>mp_grid_add_rectangle</title>
+  <meta name="generator" content="Adobe RoboHelp 2019" />
+  <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
+  <meta name="rh-authors" content="Mark Alexander" />
+  <meta name="topic-comment" content="Cette page décrit la fonction mp_grid_add_rectangle" />
+  <meta name="rh-index-keywords" content="mp_grid_add_rectangle" />
+  <meta name="search-keywords" content="mp_grid_add_rectangle" />
+</head>
+<body><!--<div class="body-scroll" style="top: 150px;">--><h1>mp_grid_add_rectangle</h1><p> Cette fonction vous demande de définir un rectangle dans la pièce, puis elle marque toutes les cellules de la grille MP &quot;touchent&quot; ce rectangle comme étant interdite, ce qui signifie que les fonctions de recherche de chemin ne peuvent pas les traverser. L&#39;image ci-dessous illustre comment cela fonctionne:</p><p><img alt="Add rectangle example" class="center" src="../../../../assets/Images/Scripting_Reference/GML/Reference/Movement_Collisions/mp_grid_add_rectangle_image.png" /> Comme vous pouvez le voir, le rectangle défini par (50, 90) à (200, 180) marque toutes les cellules de grille MP équivalentes qu&#39;il touche comme étant interdites.</p><p></p><h4> Syntaxe:</h4><p class="code">mp_grid_add_rectangle(id, x1, y1, x2, y2);</p><table><tbody><tr><th> Argument</th><th> Description</th></tr><tr><td> <span class="notranslate">id</span></td><td> Index du mp_grid à utiliser</td></tr><tr><td> <span class="notranslate">x1</span></td><td> La coordonnée x du côté gauche du rectangle à vérifier.</td></tr><tr><td> <span class="notranslate">y1</span></td><td> Coordonnée y du côté supérieur du rectangle à vérifier.</td></tr><tr><td> <span class="notranslate">x2</span></td><td> La coordonnée x du côté droit du rectangle à vérifier.</td></tr><tr><td> <span class="notranslate">y2</span></td><td> La coordonnée x du côté inférieur du rectangle à vérifier.</td></tr></tbody></table><p></p><h4> Retour:</h4><p class="code">N/A</p><p></p><h4> Exemple:</h4><p class="code">mp_grid_add_rectangle(grid, 0, 0, 100, 200);</p><p> Le code ci-dessus marquera comme interdite toutes les cellules de mp_grid indexées dans la variable &quot;grid&quot; qui se situent dans la zone 0,0 à 100,200. </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> Retour: <a href="Motion_Planning.htm">Planification de mouvement</a></div><div style="float:right"> Suivant:<a href="mp_grid_get_cell.htm">mp_grid_get_cell</a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
+  </div>
+  <!-- KEYWORDS
+mp_grid_add_rectangle
+-->
+  <!-- TAGS
+mp_grid_add_rectangle
+-->
+</body>
+</html>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>instance_deactivate_layer</title>
+  <meta name="generator" content="Adobe RoboHelp 2019" />
+  <link rel="stylesheet" href="../../../../../assets/css/default.css" type="text/css" />
+  <meta name="rh-authors" content="Mark Alexander" />
+  <meta name="topic-comment" content="Page décrivant la fonction instance_deactivate_layer" />
+  <meta name="rh-index-keywords" content="instance_deactivate_layer" />
+  <meta name="search-keywords" content="instance_deactivate_layer" />
+</head>
+<body><!--<div class="body-scroll" style="top: 150px;">--><h1>instance_deactivate_layer</h1><p> Avec cette fonction, vous pouvez désactiver toutes les instances affectées à une couche spécifique. Vous devez fournir l&#39; <b>ID de couche</b>, qui peut être soit le nom de la couche tel qu&#39;écrit dans l&#39;éditeur de code (sous forme de chaîne), soit la valeur réelle de l&#39;ID de couche renvoyée par le <a href="../../Rooms/General_Layer_Functions/layer_create.htm"><tt>layer_create()</tt></a>, et notez que vous ne pouvez désactiver les <i>couches d&#39;instances</i> qu&#39;avec cette fonction. Notez que si vous avez désactivé un calque qui a des instances d&#39;objets marqués comme <b>persistants</b>, vous devrez réactiver le calque avec la fonction <a href="instance_activate_layer.htm"><tt>instance_activate_layer()</tt></a> avant de changer de salle, sinon les instances persistantes sur le calque <i>ne</i> seront pas reportées et seront supprimées. Notez également que la désactivation n&#39;est pas instantanée et qu&#39;une instance ainsi désactivée ne sera considérée comme inactive qu&#39;à la fin de l&#39;événement au cours duquel la fonction a été appelée.</p><p class="note"> <b>REMARQUE</b>: Si vous désactivez une instance au démarrage de la salle (c&#39;est-à-dire à partir du code de création de salle, ou à partir d&#39;un événement de création d&#39;instance d&#39;une instance dans la salle), toutes les instances placées dans la salle à partir de l&#39;éditeur de salle <b>continueront d&#39;exécuter leur événement de création.</b> avant d&#39;être désactivé.</p><p class="note"><b></b> <b>AVERTISSEMENT</b>: la désactivation des instances sur lesquelles la physique est activée n&#39;empêchera <b>PAS</b> leurs appareils d&#39;interagir dans la simulation physique. Pour cela, vous devez définir leur variable <span style="font-size:1px;"><a href="../../../Physics/Physics_Variables/phy_active.htm"><tt style="font-size: 14px">phy_active sur </tt></a></span><tt>true</tt> ou <tt>false</tt> lorsque vous activez / désactivez les instances.</p><p></p><h4> Syntaxe:</h4><p class="code">instance_deactivate_layer(obj);</p><table><tbody><tr><th> Argument</th><th> Description</th></tr><tr><td> <span class="notranslate">layer</span></td><td> La chaîne d&#39;ID de couche (ou la valeur) à utiliser</td></tr></tbody></table><p></p><h4> Retour:</h4><p class="code">N/A</p><p></p><h4> Exemple:</h4><p class="code">instance_deactivate_layer(&quot;Enemy Layer&quot;);<br/> var _vx = camera_get_view_x(view_camera[0]);<br/> var _vy = camera_get_view_y(view_camera[0]);<br/> var _vw = camera_get_view_width(view_camera[0]);<br/> var _vh = camera_get_view_height(view_camera[0]);<br/>    instance_activate_region(_vx - 64, _vy - 64, _vw + 128, _vh + 128, false);</p><p> Le code ci-dessus désactive toutes les instances affectées à la couche &quot;Enemy_Layer&quot; puis active une région dans la salle. </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> Retour: <a href="Deactivating_Instances.htm">Désactivation d&#39;instances</a></div><div style="float:right"> Suivant:<a href="instance_activate_all.htm">instance_activate_all</a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
+  </div>
+  <!-- KEYWORDS
+instance_deactivate_layer
+-->
+  <!-- TAGS
+instance_deactivate_layer
+-->
+</body>
+</html>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>buffer_load_ext</title>
+  <meta name="generator" content="Adobe RoboHelp 2019" />
+  <link rel="stylesheet" href="../../../assets/css/default.css" type="text/css" />
+  <meta name="rh-authors" content="Mark Alexander" />
+  <meta name="topic-comment" content="Page de référence pour buffer_load_ext" />
+  <meta name="rh-index-keywords" content="buffer_load_ext" />
+  <meta name="search-keywords" content="buffer_load_ext" />
+</head>
+<body><!--<div class="body-scroll" style="top: 150px;">--><h1>buffer_load_ext</h1><p> Cette fonction chargera les données de tampon précédemment sauvegardées à l&#39;aide du <a href="buffer_save.htm"><tt>buffer_save()</tt></a> fonctionne dans un tampon déjà créé. Vous donnez l&#39;id du tampon précédemment créé à charger, puis le fichier de tampon enregistré à charger, et enfin le décalage depuis le début du tampon (en octets) dans lequel vous souhaitez charger les données.</p><p></p><h4> Syntaxe:</h4><p class="code">buffer_load_ext(buffer, filename, offset);</p><table><tbody><tr><th> Argument</th><th> Description</th></tr><tr><td> <span class="notranslate">buffer</span></td><td> L&#39;index du tampon dans lequel charger.</td></tr><tr><td> <span class="notranslate">filename</span></td><td> Le nom du fichier à partir duquel charger.</td></tr><tr><td> <span class="notranslate">offset</span></td><td> Décalage dans la mémoire tampon vers lequel charger (en octets).</td></tr></tbody></table><p></p><h4> Retour:</h4><p class="code">N/A</p><p></p><h4> Exemple:</h4><p class="code">var pos = buffer_seek(player_buffer, buffer_seek_end, 0);<br/> buffer_load(player_buffer, &quot;Data_Save.sav&quot;, pos);</p><p> Le code ci-dessus obtiendra d&#39;abord la position de la fin du tampon indexé dans la variable &quot;player_buffer&quot; puis charge les données de la donnée dans cette position (notez que cet exemple ne fonctionnera qu&#39;avec les types de tampons &quot;grow&quot; ou &quot;wrap&quot; ). </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> Retour: <a href="Buffers.htm">Tampons</a></div><div style="float:right"> Suivant:<a href="buffer_load_async.htm">buffer_load_async</a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
+  </div>
+  <!-- KEYWORDS
+buffer_load_ext
+-->
+  <!-- TAGS
+buffer_load_ext
+-->
+</body>
+</html>

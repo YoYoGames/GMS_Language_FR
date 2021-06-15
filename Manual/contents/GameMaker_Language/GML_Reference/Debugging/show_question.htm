@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>show_question</title>
+  <meta name="generator" content="Adobe RoboHelp 2019" />
+  <link rel="stylesheet" href="../../../assets/css/default.css" type="text/css" />
+  <meta name="rh-authors" content="Mark Alexander" />
+  <meta name="topic-comment" content="Page de référence pour show_question" />
+  <meta name="rh-index-keywords" content="show_question" />
+  <meta name="search-keywords" content="show_question" />
+</head>
+<body><!--<div class="body-scroll" style="top: 150px;">--><h1>show_question</h1><p> Cette fonction crée une boîte de message contextuelle avec deux boutons pour &quot;Oui&quot; et &quot;Non&quot;. Il retourne <tt>true</tt> ou <tt>false</tt> selon l&#39;un des deux boutons sur lequel l&#39;utilisateur appuie.</p><p class="note"> <b>REMARQUE:</b> cette fonction est destinée au <b>débogage uniquement</b> sur les cibles Desktop, mais est <b>déconseillée</b> sur toutes les autres cibles.</p><p></p><h4> Syntaxe:</h4><p class="code">show_question(str);</p><table><tbody><tr><th> Argument</th><th> Description</th></tr><tr><td> <span class="notranslate">str</span></td><td> La chaîne à afficher dans la question contextuelle.</td></tr></tbody></table><p></p><h4> Retour:</h4><p class="code">Boolean</p><p></p><h4> Exemple:</h4><p class="code">if (score &gt; 500) &amp;&amp; debug_mode<br/>    {
+    <br/>    if show_question(&quot;Continue to next room?&quot;)<br/>       {
+    <br/>       room_goto(rm_Level2);
+    <br/>       }
+    <br/>    else game_end();<br/>    }
+  </p><p> Le code ci-dessus vérifiera le score et s&#39;il est supérieur à 500, il demandera à l&#39;utilisateur s&#39;il souhaite continuer ou non et si le bouton &quot;oui&quot; est cliqué il ira dans une autre salle, mais si le bouton &quot;non&quot; est sélectionné, cela mettra fin au jeu. </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> Retour: <a href="Debugging.htm">Débogage</a></div><div style="float:right"> Suivant:<a href="show_debug_message.htm">show_debug_message</a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
+  </div>
+  <!-- KEYWORDS
+show_question
+-->
+  <!-- TAGS
+show_question
+-->
+</body>
+</html>

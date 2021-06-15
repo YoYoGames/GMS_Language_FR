@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <title>gamepad_hat_value</title>
+  <meta name="generator" content="Adobe RoboHelp 2019"/>
+  <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css"/>
+  <meta name="rh-authors" content="Mark Alexander"/>
+  <meta name="topic-comment" content="Page de référence pour gamepad_hat_value"/>
+  <meta name="rh-index-keywords" content="gamepad_hat_value"/>
+  <meta name="search-keywords" content="gamepad_hat_value"/>
+</head>
+
+<body><!--<div class="body-scroll" style="top: 150px;">--><h1>gamepad_hat_value</h1><p> Avec cette fonction, vous pouvez obtenir la valeur actuelle d&#39;un &quot;chapeau&quot; de manette de jeu. Chaque valeur de chapeau est un masque de bits pour les différentes directions où:</p><ul class="colour"><li> Vers le haut = 1</li><li> Droite = 2</li><li> Bas = 4</li><li> Gauche = 8</li></ul><p> Notez que ceux-ci peuvent être combinés (par exemple, fournir un indice de chapeau de 3 serait une vérification vers le haut et vers la droite) mais seulement au plus 2 bits peuvent être pressés à la fois. La fonction renverra une valeur réelle entre 0 et 1, où 0 n&#39;est pas enfoncé et 1 est complètement enfoncé (et il peut y avoir des valeurs intermédiaires selon que la manette de jeu prend en charge l&#39;entrée analogique pour les chapeaux).</p><p></p><h4> Syntaxe:</h4><p class="code">gamepad_hat_value(device, hatindex);</p><table><tbody><tr><th> Argument</th><th> Description</th></tr><tr><td> <span class="notranslate">device</span></td><td> Quel «slot» de périphérique de manette de jeu vérifier.</td></tr><tr><td> <span class="notranslate">hatindex</span></td><td> Quel chapeau (ou chapeaux) de manette de jeu vérifier.</td></tr></tbody></table><p></p><h4> Retour:</h4><p class="code">Real</p><p></p><h4> Exemple:</h4><p class="code">var _dir = gamepad_hat_value(global.PadIndex, 0);<br/> switch (_dir)<br/>     {
+    <br/>     case 1: y -= 3; break;<br/>     case 2: x += 3; break;<br/>     case 3: y -= 3; x += 3; break;<br/>     case 4: x -= 3; break;<br/>     case 6: y += 3; x += 3; break;<br/>     case 8: y += 3; break;<br/>     case 9: y -= 3; x -= 3; break;<br/>        case 12: y += 3; x -= 3; break;<br/>     }
+  </p><p> Le code ci-dessus stocke l&#39;état du chapeau &quot;0&quot; dans une variable locale, puis vérifie quelle est la valeur de retour et agit en conséquence. </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> Retour: <a href="Gamepad_Input.htm">Entrée de la manette de jeu</a></div><div style="float:right"> Suivant:<a href="gamepad_get_mapping.htm">gamepad_get_mapping</a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
+  </div>
+  <!-- KEYWORDS
+gamepad_hat_value
+-->
+  <!-- TAGS
+gamepad_hat_value
+-->
+
+</body></html>

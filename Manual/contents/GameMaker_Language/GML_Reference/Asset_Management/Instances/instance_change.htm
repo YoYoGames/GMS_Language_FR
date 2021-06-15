@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>instance_change</title>
+  <meta name="generator" content="Adobe RoboHelp 2019" />
+  <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
+  <meta name="rh-authors" content="Mark Alexander" />
+  <meta name="topic-comment" content="Page décrivant la fonction instance_change" />
+  <meta name="rh-index-keywords" content="instance_change" />
+  <meta name="search-keywords" content="instance_change" />
+</head>
+<body><!--<div class="body-scroll" style="top: 150px;">--><h1>instance_change</h1><p> Vous pouvez utiliser cette fonction pour changer une instance d&#39;un objet en une autre instance d&#39;un objet différent et, ce faisant, décider s&#39;il faut exécuter les instances initiales Destroy and Clean Up Events et les nouvelles instances Create Event. De cette façon, vous pouvez faire (par exemple) changer une bombe en explosion - auquel cas l&#39;argument &quot;perf&quot; serait probablement vrai car vous voudriez que la bombe effectue son événement de destruction et son événement de nettoyage, ainsi que le explosion pour effectuer son événement de création - ou vous pourriez faire changer le personnage de votre joueur en un autre - auquel cas l&#39;argument «perf» serait probablement faux car vous ne voulez pas que les instances exécutent leurs événements de création et de destruction / nettoyage.</p><p> Il est à noter que changer l&#39;instance signifie que vous ne devez effectuer aucune autre action avec cette instance jusqu&#39;à l&#39;étape suivante, en particulier en essayant d&#39;accéder à des variables, etc... car cela provoquera une erreur. En gros, vous modifiez l&#39;instance mais elle n&#39;est réellement disponible qu&#39;à la fin de l&#39;étape en cours, donc pour accéder directement à l&#39;une des variables qu&#39;elle contient (par exemple, appeler <tt>obj_Changed.x</tt> ) ne fonctionnera pas.</p><p class="note"> <b>ATTENTION!</b> Lors de la modification d&#39;une instance activée pour la physique, les propriétés physiques <b>ne seront pas transférées</b> à la nouvelle instance en cours de modification. Par conséquent, vous devez avoir un code en place pour &quot;transférer&quot; l&#39;état physique de l&#39;instance actuelle vers la nouvelle instance, ou avoir défini les propriétés physiques des nouvelles instances dans son événement de création ou dans l&#39;éditeur d&#39;objets. Pour cette raison, il est recommandé de ne pas utiliser cette fonction avec des instances activées pour la physique, mais plutôt d&#39;utiliser une combinaison de <span style="font-size:1px;"><tt style="font-size: 14px">instance_destroy ()</tt></span> et <span><span style="font-size:1px;"><tt style="font-size: 14px">instance_create_layer ()</tt></span>.</span></p><p></p><h4> Syntaxe:</h4><p class="code">instance_change(obj, perf);</p><table><tbody><tr><th> Argument</th><th> Description</th></tr><tr><td> <span class="notranslate">obj</span></td><td> Le nouvel objet dans lequel l&#39;objet appelant se transforme.</td></tr><tr><td> <span class="notranslate">perf</span></td><td> Indique s&#39;il faut exécuter les événements de création et de destruction de ce nouvel objet (vrai) ou non (faux).</td></tr></tbody></table><p></p><h4> Retour:</h4><p class="code">N/A</p><p></p><h4> Exemple:</h4><p class="code">if keyboard_check(vk_enter)<br/>     {
+    <br/>     instance_change(obj_Player_Swimming, false);<br/>     exit;
+    <br/>     }
+  </p><p> Le code ci-dessus changera l&#39;instance appelante en une instance de &quot;obj_Player_Swimming&quot; sans exécuter l&#39;événement de destruction des instances d&#39;origine ni l&#39;événement de création de nouvelles instances lorsque l&#39;utilisateur appuie sur la touche &quot;Entrée&quot;, sortant du bloc de code une fois terminé. </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> Retour: <a href="Instances.htm">Instances</a></div><div style="float:right"> Suivant:<a href="instance_copy.htm">instance_copy</a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
+  </div>
+  <!-- KEYWORDS
+instance_change
+-->
+  <!-- TAGS
+instance_change
+-->
+</body>
+</html>

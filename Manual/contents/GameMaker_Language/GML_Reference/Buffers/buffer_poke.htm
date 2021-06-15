@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>buffer_poke</title>
+  <meta name="generator" content="Adobe RoboHelp 2019" />
+  <link rel="stylesheet" href="../../../assets/css/default.css" type="text/css" />
+  <meta name="rh-authors" content="Mark Alexander" />
+  <meta name="topic-comment" content="Page de référence pour buffer_poke" />
+  <meta name="rh-index-keywords" content="buffer_poke,buffer_u8,buffer_s8,buffer_u16,buffer_s16,buffer_u32,buffer_s32,buffer_u64,buffer_f16,buffer_f32,buffer_f64,buffer_bool,buffer_string,buffer_text" />
+  <meta name="search-keywords" content="buffer_poke" />
+</head>
+<body><!--<div class="body-scroll" style="top: 150px;">--><h1>buffer_poke</h1><p> Avec le <a href="buffer_write.htm"><tt>buffer_write()</tt></a>, vous pouvez écrire des données dans le tampon donné à la position actuelle de «recherche», chaque élément de données avançant cette position par les octets en cours d&#39;écriture ou de lecture. Cependant, il peut être nécessaire pour vous de modifier une donnée donnée sans vouloir changer la position de recherche actuelle, et c&#39;est à ce moment-là que vous utiliserez cette fonction. Il vous suffit de fournir à la fonction un index de tampon, puis la position de décalage à partir du début du tampon (en octets) dans ce tampon dans lequel écrire, ainsi que le type de données et la valeur à écrire.</p><p></p><h4> Syntaxe:</h4><p class="code">buffer_poke(buffer, offset, type, value);</p><table><tbody><tr><th> Argument</th><th> Description</th></tr><tr><td> <span class="notranslate">buffer</span></td><td> L&#39;index du tampon à utiliser.</td></tr><tr><td> <span class="notranslate">offset</span></td><td> La position de décalage (en octets) dans la mémoire tampon dans laquelle écrire les données données.</td></tr><tr><td> <span class="notranslate">type</span></td><td> Le type de données à écrire dans le tampon (voir la liste des constantes <a href="buffer_write.htm">ici</a> ).</td></tr><tr><td> <span class="notranslate">value</span></td><td> Les données à ajouter au tampon, conformément au type spécifié.</td></tr></tbody></table><p></p><h4> Retour:</h4><p class="code">N/A</p><p></p><h4> Exemple:</h4><p class="code">buffer_poke(buff, 3, buffer_u8, colour_get_blue(image_blend));</p><p> Le code ci-dessus ajoutera la valeur de la composante bleue de la couleur utilisée pour le mélange d&#39;image dans le tampon indexé dans la variable &quot;buff&quot;, à la troisième position dans le tampon et en tant que valeur 8 bits non signée. </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> Retour: <a href="Buffers.htm">Tampons</a></div><div style="float:right"> Suivant:<a href="buffer_save.htm">buffer_save</a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
+  </div>
+  <!-- KEYWORDS
+buffer_poke
+-->
+  <!-- TAGS
+buffer_poke
+-->
+</body>
+</html>

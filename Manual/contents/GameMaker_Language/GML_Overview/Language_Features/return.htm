@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>return</title>
+  <meta name="generator" content="Adobe RoboHelp 2019" />
+  <link rel="stylesheet" href="../../../assets/css/default.css" type="text/css" />
+  <meta name="rh-authors" content="Mark Alexander" />
+  <meta name="topic-comment" content="Page décrivant la fonction de retour" />
+  <meta name="rh-index-keywords" content="return" />
+  <meta name="search-keywords" content="return" />
+</head>
+<body><!--<div class="body-scroll" style="top: 150px;">--><h1>return</h1><p> Le <tt>return</tt> l&#39;instruction a la syntaxe suivante:</p><p class="code">return (&lt;expression&gt;)</p><p> Vous utilisez uniquement le <tt>return</tt> dans les <span><a href="../Script_Functions.htm">fonctions de script</a> et les <a href="../Method_Variables.htm">méthodes</a></span>, et il est utilisé pour renvoyer une valeur de la fonction à utiliser dans d&#39;autres appels de code ou de fonction. Il est à noter que l&#39; <i>exécution de la fonction se termine au <span class="inline">return</span> déclaration</i>, ce qui signifie que tout code qui vient après <span class="inline">return</span> a été appelé ne sera pas exécuté. Voici un court exemple de script appelé <tt>sqr_calc</tt> qui calcule le carré de la valeur qui lui est transmise, et inclut la détection d&#39;erreur au cas où le paramètre qu&#39;il est passé n&#39;est pas un nombre réel:</p><p class="code">/// @function            sqr_calc(val);<br/> /// @param {real}  val   The value to calculate the square of<br/> /// @description         Calculate the square of the given value<br/>
+    <br/> function sqr_calc(value)<br/>     {
+    <br/>     if !is_real(value)<br/>         {
+    <br/>         return 0;<br/>         }
+    <br/>     else
+    <br/>         {
+    <br/>         return (value * value);<br/>         }
+    <br/>     }
+  </p><p> Pour appeler une fonction à partir d&#39;un morceau de code, utilisez-la simplement de la même manière que lorsque vous appelez <span class="notranslate">runtime</span> fonctions d&#39;exécution, c&#39;est-à-dire écrivez le nom de la fonction avec les valeurs de paramètre entre parenthèses. Ainsi, la fonction ci-dessus serait appelée comme ceci:</p><p class="code">if keyboard_check_pressed(vk_enter)<br/>     {
+    <br/>     val = scr_sqr(amount);<br/>     }
+  </p><p> Ici la variable <span class="inline">val</span> sera soit 0 (car la variable <span class="inline">amount</span> n&#39;est pas un nombre réel) ou le total pour <span class="inline">value * value</span>. </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> Retour: <a href="../Language_Features.htm">Caractéristiques linguistiques</a></div><div style="float:right"> Suivant:<a href="begin_end.htm">begin / end</a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
+  </div>
+  <!-- KEYWORDS
+return
+-->
+  <!-- TAGS
+return
+-->
+</body>
+</html>

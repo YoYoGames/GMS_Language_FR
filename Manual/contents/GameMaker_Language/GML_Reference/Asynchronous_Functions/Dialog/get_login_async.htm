@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>get_login_async</title>
+  <meta name="generator" content="Adobe RoboHelp 2019" />
+  <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
+  <meta name="rh-authors" content="Mark Alexander" />
+  <meta name="topic-comment" content="Page de référence pour get_login_async" />
+  <meta name="rh-index-keywords" content="get_login_async" />
+  <meta name="search-keywords" content="get_login_async" />
+</head>
+<body><!--<div class="body-scroll" style="top: 150px;">--><h1>get_login_async</h1><p> Cette fonction ouvre une fenêtre qui demande à l&#39;utilisateur de saisir un nom d&#39;utilisateur et un mot de passe. Ces arguments peuvent être définis comme une chaîne vide ou vous pouvez stocker les valeurs précédemment entrées à utiliser si vous le souhaitez. Il s&#39;agit d&#39;une fonction asynchrone et, en tant que telle, <span class="notranslate">GameMaker Studio 2</span> ne <i>bloque pas</i> le périphérique sur lequel il est exécuté en attendant une réponse, mais continue plutôt à exécuter les événements normalement. Une fois que l&#39;utilisateur a saisi les détails et appuyé sur le bouton &quot;OK&quot;, un <b>événement d&#39;interaction utilisateur</b> asynchrone est déclenché qui, pour la durée de cet événement <i>uniquement</i>, aura une carte DS stockée dans la variable <a href="../../../GML_Overview/Variables/Builtin_Global_Variables/async_load.htm"><tt>async_load</tt></a>.</p><p> Cette carte contiendra les deux clés, &quot; <strong>nom d&#39;utilisateur</strong> &quot; et &quot; <strong>mot de passe</strong> &quot;, avec l&#39;entrée utilisateur correspondante stockée dans chacune. Comme il s&#39;agit d&#39;une carte DS qui a été créée, celle-ci peut ensuite être utilisée, par exemple, par le <a href="../../File_Handling/Encoding_And_Hashing/json_encode.htm"><tt>json_encode()</tt></a> fonction prête à être envoyée vers un serveur ou écrite dans un fichier sur l&#39;appareil choisi.</p><p> Il est à noter que cette fonction renverra un numéro d&#39;index pour la carte DS créée qui peut ensuite être vérifiée dans l&#39;événement correspondant afin que vous puissiez &quot;cibler&quot; une carte DS spécifique si vous vous attendez à ce que plus d&#39;un événement asynchrone soit déclenché ( peut-être d&#39;une autre fonction).</p><p></p><h4> Syntaxe:</h4><p class="code">get_login_async(name, password);</p><table><tbody><tr><th> Argument</th><th> Description</th></tr><tr><td> <span class="notranslate">username</span></td><td> Le nom d&#39;utilisateur par défaut</td></tr><tr><td> <span class="notranslate">password</span></td><td> Le mot de passe par défaut</td></tr></tbody></table><p></p><h4> Retour:</h4><p class="code">Real</p><p></p><h4> Exemple étendu:</h4><p> L&#39; <b>événement de création</b> (par exemple) de l&#39;objet qui contrôle la connexion de notre utilisateur aurait le code suivant:</p><p class="code">ini_open(&quot;Profile.ini&quot;);<br/> u = ini_read_string(&quot;User&quot;,&quot;0&quot;,&quot;&quot;);<br/> p = ini_read_string(&quot;User&quot;,&quot;1&quot;,&quot;&quot;);<br/> ini_close();
+    <br/> login = get_login_async(u,p);</p><p> Le code ci-dessus ouvre un fichier ini (ou en crée un s&#39;il n&#39;existe pas) et obtient le nom et le mot de passe stockés dans ce fichier. S&#39;ils n&#39;existent pas, la valeur par défaut d&#39;une chaîne vide (&quot;&quot;) est renvoyée. Ces valeurs sont ensuite utilisées dans <tt>get_login_async()</tt> pour demander à l&#39;utilisateur son nom d&#39;utilisateur et son mot de passe, l&#39;index de la requête étant stocké dans la variable &quot;login&quot;. Notez qu&#39;en attendant que l&#39;utilisateur donne les informations nécessaires, le jeu et ses événements continueront de fonctionner normalement.</p><p> Maintenant que le code asynchrone a été déclenché, nous devons vérifier la valeur de retour dans l&#39; <a href="../../../../The_Asset_Editors/Object_Properties/Async_Events/Dialog.htm">événement asynchrone pour les dialogues</a> de la manière suivante:</p><p class="code">if ds_map_find_value(async_load, &quot;id&quot;) == login<br/>     {
+    <br/>     u = ds_map_find_value(async_load, &quot;username&quot;);<br/>     p = ds_map_find_value(async_load, &quot;password&quot;);<br/>     }
+  </p><p> Le code ci-dessus vérifie la clé &quot;id&quot; du <span class="inline">async_load</span> Carte DS et si elle contient la même valeur que celle stockée dans la variable &quot;login&quot;, les détails de la carte sont alors lus dans les variables correspondantes que vous pouvez ensuite stocker ou utiliser pour vérifier les valeurs de la base de données, etc. </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> Retour: <a href="Dialog.htm">Dialogue</a></div><div style="float:right"> Suivant:<a href="get_string_async.htm">get_string_async</a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
+  </div>
+  <!-- KEYWORDS
+get_login_async
+-->
+  <!-- TAGS
+get_login_async
+-->
+</body>
+</html>

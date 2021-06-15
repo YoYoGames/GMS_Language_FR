@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <title>gamepad_get_mapping</title>
+  <meta name="generator" content="Adobe RoboHelp 2019"/>
+  <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css"/>
+  <meta name="rh-authors" content="Mark Alexander"/>
+  <meta name="topic-comment" content="Page de référence pour gamepad_get_mapping"/>
+  <meta name="rh-index-keywords" content="gamepad_get_mapping"/>
+  <meta name="search-keywords" content="gamepad_get_mapping"/>
+</head>
+
+<body><!--<div class="body-scroll" style="top: 150px;">--><h1>gamepad_get_mapping</h1><p> Cette fonction peut être utilisée pour récupérer la chaîne de mappage pour la manette de jeu. Cette chaîne sera soit:</p><ul class="colour"><li> La chaîne actuelle de la carte pour la manette de jeu, par exemple:<p class="code">&quot;050000005e040000fd020000ffff3f00,Xbox Wireless Controller,a:b0,b:b1,start:b4,dpdown:h0.4,dpleft:h0.8,dpright:h0.2,dpup:h0.1,guide:b6,leftshoulder:b9,leftstick:b7,lefttrigger:a4,leftx:a0,lefty:a1,rightshoulder:b10,rightstick:b8,righttrigger:a5,rightx:a2,righty:a3,x:b2,y:b3,platform:android&quot;</p></li><li> Une chaîne avec &quot;pas de mappage&quot; s&#39;il n&#39;y a pas de jeu de mappage (ce n&#39;est <i>pas</i> la même chose que lorsqu&#39;aucun mappage n&#39;est disponible)</li><li> Une chaîne avec &quot;index de périphérique hors de portée&quot; si l&#39;index de l&#39;emplacement n&#39;est pas un index de manette de jeu valide</li><li> Une chaîne vide &quot;&quot; si aucun mappage n&#39;est disponible pour la manette de jeu connectée</li></ul><p> Pour plus d&#39;informations sur le formatage de la chaîne de carte retournée, veuillez consulter la fonction <a href="gamepad_test_mapping.htm"><tt>gamepad_test_mapping()</tt></a>.</p><p></p><h4> Syntaxe:</h4><p class="code">gamepad_get_mapping(index);</p><table><tbody><tr><th> Argument</th><th> Description</th></tr><tr><td> <span class="notranslate">index</span></td><td> De quel «emplacement» d&#39;index de manette de jeu obtenir le mappage.</td></tr></tbody></table><p></p><h4> Retour:</h4><p class="code">String</p><p></p><h4> Exemple:</h4><p class="code">var _gpMap = gamepad_get_mapping(global.PadIndex);<br/> show_debug_message(&quot;Gamepad Mapping = &quot; + _gpMap);</p><p> Le code ci-dessus récupère la chaîne de carte pour l&#39;emplacement de manette de jeu donné, puis la renvoie vers la console pour le débogage. </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> Retour: <a href="Gamepad_Input.htm">Entrée de la manette de jeu</a></div><div style="float:right"> Suivant:<a href="gamepad_test_mapping.htm">gamepad_test_mapping</a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
+  </div>
+  <!-- KEYWORDS
+gamepad_get_mapping
+-->
+  <!-- TAGS
+gamepad_get_mapping
+-->
+
+</body></html>

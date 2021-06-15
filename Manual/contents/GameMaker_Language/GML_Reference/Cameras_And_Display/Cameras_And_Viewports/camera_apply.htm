@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>camera_apply</title>
+  <meta name="generator" content="Adobe RoboHelp 2019" />
+  <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
+  <meta name="rh-authors" content="Mark Alexander" />
+  <meta name="topic-comment" content="Page de référence pour camera_apply" />
+  <meta name="rh-index-keywords" content="camera_apply" />
+  <meta name="search-keywords" content="camera_apply" />
+</head>
+<body><!--<div class="body-scroll" style="top: 150px;">--><h1>camera_apply</h1><p> Cette fonction appliquera les paramètres de caméra donnés à la vue actuelle de la caméra rendue immédiatement. Bien que vous puissiez définir n&#39;importe quelle caméra de vue en utilisant le <tt>camera_set_*</tt> fonctions, les nouveaux paramètres ne seront pas utilisés pour le rendu jusqu&#39;à la <i>prochaine</i> image de jeu, mais avec cette fonction, vous pouvez effectuer ces modifications immédiatement. Si vous utilisez plusieurs vues, la fonction doit être utilisée dans l&#39; <b>événement Draw</b> et vous pouvez utiliser la variable <a href="view_current.htm"><tt>view_current</tt></a> pour appliquer sélectivement la caméra donnée uniquement à la vue de la caméra en cours de rendu. Notez que cela ne modifie PAS la valeur de l&#39;ID de caméra, uniquement les paramètres de cette caméra, et que si vous utilisez cette fonction sur la caméra par défaut (c&#39;est-à-dire: la caméra interne que <span class="notranslate">GameMaker Studio 2</span> utilise lorsqu&#39;aucune caméra de vue n&#39;est active), les changements seront écrasé la toute prochaine image de jeu par les paramètres internes pour dessiner la pièce.</p><p></p><h4> Syntaxe:</h4><p class="code">camera_apply(camera_id)</p><table><tbody><tr><th> Argument</th><th> Description</th></tr><tr><td> <span class="notranslate">camera_id</span></td><td> La valeur d&#39;ID de caméra unique renvoyée lors de la création de la caméra.</td></tr></tbody></table><p></p><h4> Retour:</h4><p class="code">N/A</p><p></p><h4> Exemple:</h4><p class="code">if view_current == 0<br/>     {
+    <br/>     camera_apply(cutscene_cam);
+    <br/>     }
+  </p><p> Le code ci-dessus (dans un événement de dessin) vérifie quelle vue de caméra est en cours de rendu et si c&#39;est une vue de caméra [0], alors les paramètres de la caméra référencée par la variable &quot;cutscene_cam&quot; lui sont appliqués. </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> Arrière: <a href="Cameras_And_View_Ports.htm">caméras et ports d&#39;affichage</a></div><div style="float:right"> Suivant:<a href="camera_set_view_mat.htm">camera_set_view_mat</a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
+  </div>
+  <!-- KEYWORDS
+camera_apply
+-->
+  <!-- TAGS
+camera_apply
+-->
+</body>
+</html>

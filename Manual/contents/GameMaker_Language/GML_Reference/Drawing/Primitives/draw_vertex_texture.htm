@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <title>draw_vertex_texture</title>
+  <meta name="generator" content="Adobe RoboHelp 2019"/>
+  <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css"/>
+  <meta name="rh-authors" content="Mark Alexander"/>
+  <meta name="topic-comment" content="Référence de draw_vertex_texture"/>
+  <meta name="rh-index-keywords" content="draw_vertex_texture"/>
+  <meta name="search-keywords" content="draw_vertex_texture"/>
+</head>
+<body><!--<div class="body-scroll" style="top: 150px;">--><h1>draw_vertex_texture</h1><p> Cette fonction définit la position d&#39;un sommet texturé pour une primitive. L&#39;aspect final de la primitive dépendra du type primitif choisi pour dessiner (voir <a href="draw_primitive_begin.htm"><tt>draw_primitive_begin()</tt></a> pour plus d&#39;informations), l&#39;ordre dans lequel vous ajoutez les sommets et la position du point de départ que vous avez défini pour la texture. Pour terminer et dessiner la primitive, vous devez appeler <a href="draw_primitive_end.htm"><tt>draw_primitive_end()</tt></a>.</p><p> Vous pouvez également choisir de ne dessiner qu&#39;une <i>partie</i> de la texture sur la surface de la primitive en définissant la position xtex / ytex appropriée à échantillonner (ces coordonnées sont également appelées <b>points UV</b> ). Ce point est défini par une valeur comprise entre 0 et 1, le coin supérieur gauche de l&#39;image à utiliser étant le point (0,0) et le coin inférieur droit étant le point (1,1). De cette manière, vous pouvez texturer une primitive avec seulement une partie de l&#39;image source.</p><p> Lorsque vous dessinez une primitive texturée, la texture sera mélangée avec la couleur définie par <a html="../colour And Blending/draw_set_colour.html"><tt>draw_set_colour</tt>. Cela signifie que pour dessiner la texture sans mélange, cela doit être réglé sur <tt>c_white</tt>, comme illustré dans l&#39;exemple ci-dessous.</a></p><p class="note"> <a html="../colour And Blending/draw_set_colour.html"><b>NOTE:</b> Pour qu&#39;une texture se répète, elle doit avoir une puissance de deux, c&#39;est-à-dire: 32x32, 128x128, etc...</a></p><p></p><h4> <a html="../colour And Blending/draw_set_colour.html">Syntaxe:</a></h4><p class="code"><a html="../colour And Blending/draw_set_colour.html">draw_vertex_texture(x, y, xtex, ytex)</a></p><table><tbody><tr><th> <a html="../colour And Blending/draw_set_colour.html">Argument</a></th><th> <a html="../colour And Blending/draw_set_colour.html">Description</a></th></tr><tr><td> <a html="../colour And Blending/draw_set_colour.html">X</a></td><td> <a html="../colour And Blending/draw_set_colour.html">La coordonnée x du sommet.</a></td></tr><tr><td> <a html="../colour And Blending/draw_set_colour.html">y</a></td><td> <a html="../colour And Blending/draw_set_colour.html">La coordonnée y du sommet.</a></td></tr><tr><td> <a html="../colour And Blending/draw_set_colour.html">xtex</a></td><td> <a html="../colour And Blending/draw_set_colour.html">La largeur de l&#39;échantillon de texture à utiliser.</a></td></tr><tr><td> <a html="../colour And Blending/draw_set_colour.html">ytex</a></td><td> <a html="../colour And Blending/draw_set_colour.html">La hauteur de l&#39;échantillon de texture à utiliser.</a></td></tr></tbody></table><p></p><h4> <a html="../colour And Blending/draw_set_colour.html">Retour:</a></h4><p class="code"><a html="../colour And Blending/draw_set_colour.html">N/A</a></p><p></p><h4> <a html="../colour And Blending/draw_set_colour.html">Exemple:</a></h4><p class="code"><a html="../colour And Blending/draw_set_colour.html">draw_set_colour(c_white);<br/>
+var tex = sprite_get_texture(spr_Background, 0);<br/>
+draw_primitive_begin_texture(pr_trianglestrip, tex);<br/>
+draw_vertex_texture(0, 0, 0, 0);<br/>
+draw_vertex_texture(640, 0, 1, 0);<br/>
+draw_vertex_texture(0, 480, 0, 1);<br/>
+draw_vertex_texture(640, 480, 1, 1);<br/>
+draw_primitive_end();</a></p><p> <a html="../colour And Blending/draw_set_colour.html">Le code ci-dessus dessinera une bande de triangle de 4 sommets (faisant un rectangle) texturée avec la texture contenue dans la variable &quot;tex&quot;, et la texture entière sera utilisée pour couvrir la primitive terminée.</a> </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> Retour: <a href="Primitives_And_Vertex_Formats.htm">Primitives et formats de sommets</a></div><div style="float:right"> Suivant:<a href="draw_vertex_texture_colour.htm">draw_vertex_texture_colour</a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
+  </div>
+  <!-- KEYWORDS
+draw_vertex_texture
+-->
+  <!-- TAGS
+draw_vertex_texture
+-->
+
+</body></html>

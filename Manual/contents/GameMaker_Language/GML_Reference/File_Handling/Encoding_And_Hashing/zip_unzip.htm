@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <title>zip_unzip</title>
+  <meta name="generator" content="Adobe RoboHelp 2019"/>
+  <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css"/>
+  <meta name="rh-authors" content="Mark Alexander"/>
+  <meta name="topic-comment" content="Page de référence pour zip_unzip"/>
+  <meta name="rh-index-keywords" content="zip_unzip"/>
+  <meta name="search-keywords" content="zip_unzip"/>
+</head>
+<body><!--<div class="body-scroll" style="top: 150px;">--><h1>zip_unzip</h1><p> Cette fonction ouvrira un fichier zip stocké et extraira son contenu dans le répertoire donné. Notez que si vous ne fournissez pas de chemin complet vers le répertoire ZIP, la <i>racine du</i> lecteur actuel sera utilisée, et si vous souhaitez la placer dans un chemin relatif vers le répertoire de travail du bundle de jeu, vous devez utiliser le <a href="../File_Directories/working_directory.htm"><tt>working_directory</tt></a> variable dans le cadre du chemin (les chemins relatifs utilisant &quot;.&quot; ou &quot;..&quot; ne fonctionneront pas comme prévu et doivent donc être évités). Notez aussi que le zip doit faire partie du bundle du jeu (c&#39;est-à-dire: un <a href="../../../../Settings/Included_Files.htm">fichier inclus</a> ) ou avoir été téléchargé dans la zone de stockage en utilisant <a href="../../Asynchronous_Functions/HTTP/http_get_file.htm">http_get_file ()</a>.</p><p> La fonction retournera une valeur indiquant le nombre de fichiers extraits, ou elle retournera 0 ou moins si l&#39;extraction a échoué.</p><p></p><h4> Syntaxe:</h4><p class="code">zip_unzip(zip_file, target_directory)</p><table><tbody><tr><th> Argument</th><th> Description</th></tr><tr><td> <span class="notranslate">zip_file</span></td><td> Le fichier zip à ouvrir</td></tr><tr><td> <span class="notranslate">target_directory</span></td><td> Le répertoire cible dans lequel extraire les fichiers</td></tr></tbody></table><p></p><h4> Retour:</h4><p class="code">Real</p><p></p><h4> Exemple:</h4><p class="code">var num = zip_unzip(&quot;/downloads/level_data.zip&quot;, working_directory + &quot;extracted/&quot;);<br/> if num &lt;= 0<br/>    {
+    <br/>    show_debug_message(&quot;Extraction Failed!&quot;);<br/>    }
+  </p><p> Le code ci-dessus ouvrira le fichier zip stocké dans le répertoire &quot;téléchargements&quot; et extraira son contenu dans le répertoire &quot;extrait&quot; (en créant ce répertoire s&#39;il n&#39;existe pas déjà), puis vérifiera que l&#39;extraction a été correcte, montrant un message de débogage en cas d&#39;échec. </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> Retour: <a href="Encoding_And_Hashing.htm">Encodage de fichiers</a></div><div style="float:right"> Suivant:<a href="load_csv.htm">load_csv</a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
+  </div>
+  <!-- KEYWORDS
+zip_unzip
+-->
+  <!-- TAGS
+zip_unzip
+-->
+
+</body></html>

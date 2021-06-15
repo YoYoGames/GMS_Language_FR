@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>move_contact_all</title>
+  <meta name="generator" content="Adobe RoboHelp 2019" />
+  <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
+  <meta name="rh-authors" content="Mark Alexander" />
+  <meta name="topic-comment" content="Cette page décrit la fonction move_contact_all" />
+  <meta name="rh-index-keywords" content="move_contact_all" />
+  <meta name="search-keywords" content="move_contact_all" />
+</head>
+<body><!--<div class="body-scroll" style="top: 150px;">--><h1>move_contact_all</h1><p> Cette fonction déplacera l&#39;instance exécutant le code d&#39;un nombre défini de pixels dans la direction spécifiée jusqu&#39;à ce qu&#39;elle rencontre <i>toute</i> autre instance avec un masque valide. Vous pouvez utiliser -1 ou 0 pour que la maxdist soit une valeur par défaut de 1000 pixels, c&#39;est-à-dire: <span class="notranslate">GameMaker Studio 2</span> déplacera l&#39;instance continuellement vers le haut de 1000 pixels jusqu&#39;à ce qu&#39;elle soit hors de collision.</p><p></p><h4> Syntaxe:</h4><p class="code">move_contact_all(dir, maxdist);</p><table><tbody><tr><th> Argument</th><th> Description</th></tr><tr><td> <span class="notranslate">dir</span></td><td> La direction à prendre.</td></tr><tr><td> <span class="notranslate">maxdist</span></td><td> La distance maximale que l&#39;objet peut parcourir (-1 ou 0 une valeur par défaut de 1000 pixels).</td></tr></tbody></table><p></p><h4> Retour:</h4><p class="code">N/A</p><p></p><h4> Exemple:</h4><p class="code">if !place_meeting(x, y + 1, all)<br/>     {
+    <br/>     move_contact_all(270, -1);<br/>     }
+  </p><p> Le code ci-dessus vérifiera sous l&#39;instance pour une collision, et s&#39;il n&#39;y en a pas, il le déplacera vers le bas jusqu&#39;à ce qu&#39;il y ait ou jusqu&#39;à ce que 1000 pixels aient été couverts. </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> Retour: <a href="Movement.htm">Mouvement</a></div><div style="float:right"> Suivant:<a href="move_contact_solid.htm">move_contact_solid</a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
+  </div>
+  <!-- KEYWORDS
+move_contact_all
+-->
+  <!-- TAGS
+move_contact_all
+-->
+</body>
+</html>

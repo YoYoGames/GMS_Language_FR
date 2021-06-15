@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>file_text_write_string</title>
+  <meta name="generator" content="Adobe RoboHelp 2019" />
+  <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
+  <meta name="rh-authors" content="Mark Alexander" />
+  <meta name="topic-comment" content="Page de référence pour file_text_write_string" />
+  <meta name="rh-index-keywords" content="file_text_write_string" />
+  <meta name="search-keywords" content="file_text_write_string" />
+</head>
+<body><!--<div class="body-scroll" style="top: 150px;">--><h1>file_text_write_string</h1><p> Avec cette fonction, vous pouvez écrire une chaîne dans un fichier texte précédemment ouvert. Si le fichier contient déjà des informations, ces informations seront effacées et la chaîne sera écrite au début du fichier, sauf si vous avez ouvert le fichier avec le <a href="file_text_open_append.htm"><tt>file_text_open_append()</tt></a>. Vous pouvez également éviter cela en utilisant le <a href="file_text_readln.htm"><tt>file_text_readln()</tt></a> fonction avec le <a href="file_text_eof.htm"><tt>file_text_eof()</tt></a> pour parcourir le contenu du fichier jusqu&#39;à la fin, puis commencer à écrire.</p><p></p><h4> Syntaxe:</h4><p class="code">file_text_write_string(fileid, str);</p><table><tbody><tr><th> Argument</th><th> Description</th></tr><tr><td> <span class="notranslate">fileid</span></td><td> L&#39;identifiant du fichier à modifier.</td></tr><tr><td> <span class="notranslate">str</span></td><td> La chaîne à écrire dans le fichier.</td></tr></tbody></table><p></p><h4> Retour:</h4><p class="code">Real</p><p></p><h4> Exemple:</h4><p class="code">var file = file_text_open_write(working_directory + &quot;hiscore.txt&quot;);<br/> for (var i = 0; i &lt; 10; ++i;)<br/>     {
+    <br/>     file_text_write_real(file, scr[i]);<br/>     file_text_writeln(file);
+    <br/>     file_text_write_string(file, scr_name[i]);<br/>     file_text_writeln(file);
+    <br/>     }
+    <br/> file_text_close(file);
+  </p><p> Le code ci-dessus ouvre un fichier pour l&#39;écriture, puis effectue une boucle sur deux tableaux, écrivant chaque valeur de tableau sur une nouvelle ligne du fichier. Le fichier est ensuite fermé lorsque la boucle est terminée. </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> Retour: <a href="Text_Files.htm">Fichiers texte</a></div><div style="float:right"> Suivant:<a href="file_text_writeln.htm">file_text_writeln</a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
+  </div>
+  <!-- KEYWORDS
+file_text_write_string
+-->
+  <!-- TAGS
+file_text_write_string
+-->
+</body>
+</html>

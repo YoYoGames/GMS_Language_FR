@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <title>window_set_fullscreen</title>
+  <meta name="generator" content="Adobe RoboHelp 2019"/>
+  <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css"/>
+  <meta name="rh-authors" content="Mark Alexander"/>
+  <meta name="topic-comment" content="Page de référence pour window_set_fullscreen"/>
+  <meta name="rh-index-keywords" content="window_set_fullscreen"/>
+  <meta name="search-keywords" content="window_set_fullscreen"/>
+</head>
+<body><!--<div class="body-scroll" style="top: 150px;">--><h1>window_set_fullscreen</h1><p> Avec cette fonction, vous pouvez définir la fenêtre de jeu en plein écran (<tt>true</tt> ) ou non (<tt>false</tt> ). Veuillez noter que pour la <b><span class="notranslate">macOS</span></b>, vous <i>devez</i> avoir décoché l&#39;option &quot;Démarrer en plein écran&quot; et coché l&#39;option &quot;Autoriser le joueur à redimensionner la fenêtre de jeu&quot; dans les <a href="../../../../Settings/Game_Options.htm">Options de jeu</a>, sinon cette fonction échouera. Notez également que cette fonction ne fonctionnera <i>pas</i> sur HTML5 à moins d&#39;être ajoutée en tant que rappel &quot;cliquable&quot; (voir <a href="../../Web_And_HTML5/clickable_add.htm">ici</a> pour plus de détails).</p><p></p><h4> Syntaxe:</h4><p class="code">window_set_fullscreen(full);</p><table><tbody><tr><th> Argument</th><th> Description</th></tr><tr><td> <span class="notranslate">full</span></td><td> Indique s&#39;il faut définir l&#39;écran en plein écran (vrai) ou non (faux).</td></tr></tbody></table><p></p><h4> Retour:</h4><p class="code">N/A</p><p></p><h4> Exemple:</h4><p class="code">if mouse_check_button_pressed(mb_left)<br/>     {
+    <br/>     if window_get_fullscreen()<br/>         {
+    <br/>         window_set_fullscreen(false);
+    <br/>         }
+    <br/>     else
+    <br/>         {
+    <br/>         window_set_fullscreen(true);
+    <br/>         }
+    <br/>     }
+  </p><p> Le code ci-dessus vérifie que vous appuyez sur le bouton de la souris, puis définit la fenêtre en plein écran si ce n&#39;est pas déjà fait, ou la définit sur fenêtré si elle l&#39;est déjà. </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> Retour: <a href="../The_Game_Window/The_Game_Window.htm">La fenêtre de jeu</a></div><div style="float:right"> Suivant:<a href="../The_Game_Window/window_set_position.htm">window_set_position</a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
+  </div>
+  <!-- KEYWORDS
+window_set_fullscreen
+-->
+  <!-- TAGS
+window_set_fullscreen
+-->
+
+</body></html>

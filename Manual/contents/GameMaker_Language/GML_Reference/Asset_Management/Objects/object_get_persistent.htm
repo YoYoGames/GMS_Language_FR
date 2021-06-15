@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>object_get_persistent</title>
+  <meta name="generator" content="Adobe RoboHelp 2019" />
+  <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
+  <meta name="rh-authors" content="Mark Alexander" />
+  <meta name="topic-comment" content="Page décrivant la fonction object_get_persistent" />
+  <meta name="rh-index-keywords" content="object_get_persistent" />
+  <meta name="search-keywords" content="object_get_persistent" />
+</head>
+<body><!--<div class="body-scroll" style="top: 150px;">--><h1>object_get_persistent</h1><p> Cette fonction vous dira si l&#39;objet que vous vérifiez a été marqué comme &quot;persistant&quot; ou non. Un objet persistant est un objet qui fera en sorte que toutes les instances de celui-ci soient transmises d&#39;une pièce à l&#39;autre à moins qu&#39;elles ne soient explicitement détruites. Veuillez noter qu&#39;il ne s&#39;agit pas d&#39;une fonction d&#39;instance! Ainsi, vous pouvez avoir un objet persistant et une instance non persistante du même objet et vice-versa. Vous pouvez définir un indicateur persistant d&#39;instances individuelles à l&#39;aide de la <a href="../Instances/Instance_Variables/persistent.htm"><tt>persistent</tt></a> variable d&#39;instance.</p><p></p><h4> Syntaxe:</h4><p class="code">object_get_persistent(obj);</p><table><tbody><tr><th> Argument</th><th> Description</th></tr><tr><td> <span class="notranslate">obj</span></td><td> L&#39;index de l&#39;objet à vérifier.</td></tr></tbody></table><p></p><h4> Retour:</h4><p class="code">Boolean</p><p></p><h4> Exemple:</h4><p class="code">if (!persistent) &amp;&amp; (object_get_persistent(object_index))<br/>     {<br/>     persistent = true;<br/>     }</p><p> Le code ci-dessus vérifiera l&#39;instance qui l&#39;exécute pour voir si elle est persistante ou non et vérifiera l&#39;index d&#39;objet de l&#39;instance pour voir si elle est marquée comme persistante ou non. Si l&#39;instance n&#39;est <i>pas</i> encore persistante, l&#39;index d&#39;objet est marqué comme persistant, il définira &quot;persistent&quot; sur true pour cette instance. </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> Retour: <a href="Objects.htm">Objets</a></div><div style="float:right"> Suivant:<a href="object_get_solid.htm">object_get_solid</a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
+  </div>
+  <!-- KEYWORDS
+object_get_persistent
+-->
+  <!-- TAGS
+object_get_persistent
+-->
+</body>
+</html>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+
+
+
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <title>point_distance_3d</title>
+  <meta name="generator" content="Adobe RoboHelp 2019"/>
+  <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css"/>
+  <meta name="rh-authors" content="Mark Alexander"/>
+  <meta name="topic-comment" content="Page de référence pour point_distance_3d"/>
+  <meta name="rh-index-keywords" content="point_distance_3d"/>
+  <meta name="search-keywords" content="point_distance_3d"/>
+</head>
+
+<body><!--<div class="body-scroll" style="top: 150px;">--><h1>point_distance_3d</h1><p> Cette fonction prend les composants fournis du vecteur et renvoie la longueur (distance) du vecteur. Cela fonctionne exactement de la même manière que <a href="point_distance.htm"><tt>point_distance()</tt></a> mais avec l&#39;ajout de la prise en compte de la valeur z (profondeur) pour une utilisation dans l&#39;espace 3D.</p><p></p><h4> <b>Syntaxe:</b></h4><p class="code">point_distance_3d(x1, y1, z1, x2, y2, z2);</p><table><tbody><tr><th> Argument</th><th> Description</th></tr><tr><td> <span class="notranslate">x1</span></td><td> La coordonnée x du premier composant du vecteur</td></tr><tr><td> <span class="notranslate">y1</span></td><td> La coordonnée y du premier composant du vecteur</td></tr><tr><td> <span class="notranslate">z1</span></td><td> La coordonnée z du premier composant du vecteur</td></tr><tr><td> <span class="notranslate">x2</span></td><td> La coordonnée x du deuxième composant du vecteur</td></tr><tr><td> <span class="notranslate">y2</span></td><td> La coordonnée y de la deuxième composante du vecteur</td></tr><tr><td> <span class="notranslate">z2</span></td><td> La coordonnée z de la deuxième composante du vecteur</td></tr></tbody></table><p></p><h4> Retour:</h4><p class="code">Real</p><p></p><h4> Exemple:</h4><p class="code">var inst, ex, ey, ez;<br/> inst = instance_nearest(x, y, enemy);<br/> if inst<br/>     {
+    <br/>     ex = inst.x;<br/>     ey = inst.y;<br/>     ez = inst.z;<br/>     if point_distance_3d(x, y, z, ex, ey, ez) &lt; 200<br/>         {
+    <br/>         instance_create_layer(x, y, &quot;Bullets&quot;, obj_Missile)<br/>         }
+    <br/>     }
+  </p><p> Le code ci-dessus obtiendra les coordonnées x, y et z de l&#39;ennemi le plus proche, puis les utilisera pour vérifier la distance (longueur) du vecteur formé par eux et les coordonnées du joueur. Si la valeur est inférieure à 200, l&#39;objet joueur créera une instance de &quot;obj_Missile&quot;. </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> Retour: <a href="Angles_And_Distance.htm">Angles et distance</a></div><div style="float:right"> Suivant:<a href="distance_to_object.htm">distance_to_object</a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
+  </div>
+  <!-- KEYWORDS
+point_distance_3d
+-->
+  <!-- TAGS
+point_distance_3d
+-->
+
+</body></html>

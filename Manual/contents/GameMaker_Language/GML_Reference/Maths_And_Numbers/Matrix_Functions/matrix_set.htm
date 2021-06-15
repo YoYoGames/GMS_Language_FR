@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <title>matrix_set</title>
+  <meta name="generator" content="Adobe RoboHelp 2019"/>
+  <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css"/>
+  <meta name="rh-authors" content="Mark Alexander"/>
+  <meta name="topic-comment" content="Page de référence pour matrix_set"/>
+  <meta name="rh-index-keywords" content="matrix_set,matrix_view,matrix_projection,matrix_world"/>
+  <meta name="search-keywords" content="matrix_set,matrix_view,matrix_projection,matrix_world"/>
+</head>
+
+<body><!--<div class="body-scroll" style="top: 150px;">--><h1>matrix_set</h1><p> Cette fonction prend un <a href="../../../GML_Overview/Arrays.htm">tableau</a> de 16 valeurs, correspondant à un type de matrice 4x4 donné, où les éléments [0 - 3] seraient la ligne 1, les éléments [4-7] la ligne 2, etc... (voir l&#39;image sur le <a href="Matrix_Functions.htm">page principale</a> ). Vous pouvez créer une telle matrice en utilisant le <a href="matrix_build.htm"><tt>matrix_build()</tt></a> ou <a href="matrix_get.htm"><tt>matrix_get()</tt></a> fonctions ou simplement construire le tableau vous-même et le transmettre à la fonction. Les types de matrices disponibles sont <i>vue</i>, <i>projection</i> et <i>monde</i>, pour lesquels vous utiliseriez l&#39;une des constantes suivantes:</p><table><tbody><tr><th> Constant</th><th> Description</th></tr><tr><td> <span class="notranslate">matrix_view</span></td><td> La matrice de vue actuelle</td></tr><tr><td> <span class="notranslate">matrix_projection</span></td><td> La matrice de projection actuelle</td></tr><tr><td> <span class="notranslate">matrix_world</span></td><td> La matrice mondiale actuelle</td></tr></tbody></table><p></p><h4> Syntaxe:</h4><p class="code">matrix_set(type, matrix);</p><table><tbody><tr><th> Argument</th><th> Description</th></tr><tr><td> <span class="notranslate">type</span></td><td> Le type de matrice pour obtenir les valeurs de (voir les <i>constantes</i> listées ci-dessus)</td></tr><tr><td> <span class="notranslate">matrix</span></td><td> Les données de la matrice sous forme de tableau</td></tr></tbody></table><p></p><h4> Retour:</h4><p class="code">NA</p><p></p><h4> Exemple:</h4><p class="code">matrix_set(matrix_world, m_array);</p><p> Le code ci-dessus définira les valeurs de la matrice mondiale actuelle sur celles stockées dans la matrice de tableau &quot;m_array&quot;. </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> Retour: <a href="Matrix_Functions.htm">Fonctions de la matrice</a></div><div style="float:right"> Suivant:<a href="matrix_build.htm">matrix_build</a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
+  </div>
+  <!-- KEYWORDS
+matrix_set
+matrix_view
+matrix_projection
+matrix_world
+-->
+  <!-- TAGS
+matrix_set
+-->
+
+</body></html>

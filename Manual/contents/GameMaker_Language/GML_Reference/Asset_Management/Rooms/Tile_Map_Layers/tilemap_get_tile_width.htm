@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>tilemap_get_tile_width</title>
+  <meta name="generator" content="Adobe RoboHelp 2019" />
+  <link rel="stylesheet" href="../../../../../assets/css/default.css" type="text/css" />
+  <meta name="rh-authors" content="Mark Alexander" />
+  <meta name="topic-comment" content="Page décrivant la fonction tilemap_get_tile_width" />
+  <meta name="rh-index-keywords" content="tilemap_get_tile_width" />
+  <meta name="search-keywords" content="tilemap_get_tile_width" />
+</head>
+<body><!--<div class="body-scroll" style="top: 150px;">--><h1>tilemap_get_tile_width</h1><p> En utilisant cette fonction, vous pouvez récupérer la largeur (en pixels) de chaque cellule de tuile de l&#39;élément de carte de tuile. Vous donnez l&#39;ID d&#39;élément de carte de tuiles (que vous obtenez lorsque vous créez un élément de carte de tuiles à l&#39;aide de <a href="layer_tilemap_create.htm"><tt>layer_tilemap_create()</tt></a> ou lorsque vous utilisez la fonction <a href="layer_tilemap_get_id.htm"><tt>layer_tilemap_get_id()</tt></a> ), et la fonction renverra la largeur de cellule du jeu de tuiles.</p><p></p><h4> Syntaxe:</h4><p class="code">tilemap_get_tile_width(tilemap_element_id);</p><table><tbody><tr><th> Argument</th><th> Description</th></tr><tr><td> <span class="notranslate">tilemap_element_id</span></td><td> La valeur d&#39;ID unique de l&#39;élément de mappage de tuiles pour obtenir la largeur de cellule de tuile de</td></tr></tbody></table><p></p><h4> Retour:</h4><p class="code">Real</p><p></p><h4> Exemple:</h4><p class="code">var lay_id = layer_get_id(&quot;Tiles_Walls&quot;);<br/> var map_id = layer_tilemap_get_id(lay_id);<br/> global.snap_x = tilemap_get_tile_width(map_id);<br/> global.snap_y = tilemap_get_tile_height(map_id);</p><p> Le code ci-dessus utilise l&#39;ID de mappage de tuiles récupéré pour obtenir la largeur et la hauteur de la cellule de tuiles et les utiliser pour définir deux variables globales. </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> Retour: <a href="Tile_Map_Layers.htm">Couches de carte de mosaïque</a></div><div style="float:right"> Suivant:<a href="tilemap_get_tile_height.htm">tilemap_get_tile_height</a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
+  </div>
+  <!-- KEYWORDS
+tilemap_get_tile_width
+-->
+  <!-- TAGS
+tilemap_get_tile_width
+-->
+</body>
+</html>

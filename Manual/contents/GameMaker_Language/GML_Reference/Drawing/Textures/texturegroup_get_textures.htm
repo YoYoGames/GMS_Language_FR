@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>texturegroup_get_textures</title>
+  <meta name="generator" content="Adobe RoboHelp 2019" />
+  <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
+  <meta name="rh-authors" content="Mark Alexander" />
+  <meta name="topic-comment" content="Page de référence pour texturegroup_get_textures" />
+  <meta name="rh-index-keywords" content="texturegroup_get_textures" />
+  <meta name="search-keywords" content="texturegroup_get_textures" />
+</head>
+<body><!--<div class="body-scroll" style="top: 150px;">--><h1>texturegroup_get_textures</h1><p> Cette fonction peut être utilisée pour récupérer les <b>ID de page de texture</b> des pages individuelles qui composent un groupe de texture. Vous fournissez la chaîne d&#39;ID de groupe de texture (telle que définie dans l&#39;éditeur de groupe de texture), et la fonction renverra un tableau 1D, où chaque entrée du tableau est un ID de page de texture unique. Si la fonction échoue - c&#39;est-à-dire: un groupe invalide est donné, ou le groupe n&#39;a pas de texture qui lui est assignée - alors le tableau sera vide (longueur 0).</p><p></p><h4> Syntaxe:</h4><p class="code">texturegroup_get_textures(tex_id);</p><table><tbody><tr><th> Argument</th><th> Description</th></tr><tr><td> <span class="notranslate">tex_id</span></td><td> Le nom du groupe de textures à vérifier (une chaîne)</td></tr></tbody></table><p></p><h4> Retour:</h4><p class="code">1D array</p><p></p><h4> Exemple:</h4><p class="code">var _tex_array = texturegroup_get_textures( &quot;MainMenu&quot;);<br/> for (var i = 0; i &lt; array_length(_tex_array); ++i;)<br/>     {
+    <br/>     if texture_is_ready(_tex_array[i])<br/>         {
+    <br/>         texture_prefetch(_tex_array[i]);
+    <br/>         }
+    <br/>     }
+  </p><p> Le code ci-dessus récupérera les identifiants de page de texture pour le groupe de texture &quot;MainMenu&quot;, puis vérifiera s&#39;ils sont décompressés, et s&#39;ils sont eux, ils sont placés dans la VRAM. </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> Retour: <a href="Textures.htm">Textures</a></div><div style="float:right"> Suivant:<a href="texturegroup_get_sprites.htm">texturegroup_get_sprites</a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
+  </div>
+  <!-- KEYWORDS
+texturegroup_get_textures
+-->
+  <!-- TAGS
+texturegroup_get_textures
+-->
+</body>
+</html>

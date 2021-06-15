@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>sprite_save</title>
+  <meta name="generator" content="Adobe RoboHelp 2019" />
+  <link rel="stylesheet" href="../../../../../assets/css/default.css" type="text/css" />
+  <meta name="rh-authors" content="Mark Alexander" />
+  <meta name="topic-comment" content="Page expliquant la fonction sprite_save" />
+  <meta name="rh-index-keywords" content="sprite_save" />
+  <meta name="search-keywords" content="sprite_save" />
+</head>
+<body><!--<div class="body-scroll" style="top: 150px;">--><h1>sprite_save</h1><p> Cette fonction peut être utilisée pour enregistrer n&#39;importe quelle sous-image de n&#39;importe quel sprite sur le disque, en lui donnant le nom de fichier spécifié. Cette image <i>doit</i> être un <tt>*.png</tt> déposer.</p><p class="note"> <b>REMARQUE</b>: selon la plate-forme cible choisie, vous êtes limité quant à l&#39;endroit où vous pouvez enregistrer et charger des fichiers. Voir <a href="../../../../../Additional_Information/The_File_System.htm">Gestion des fichiers</a> pour plus d&#39;informations.</p><p></p><h4> Syntaxe:</h4><p class="code">sprite_save(ind, subimg, fname);</p><table><tbody><tr><th> Argument</th><th> Description</th></tr><tr><td> <span class="notranslate">ind</span></td><td> L&#39;index du sprite à enregistrer.</td></tr><tr><td> <span class="notranslate">subimg</span></td><td> La sous-image du sprite à enregistrer.</td></tr><tr><td> <span class="notranslate">fname</span></td><td> Le nom de fichier du sprite enregistré.</td></tr></tbody></table><p></p><h4> Retour</h4><p class="code">N/A</p><p></p><h4> Exemple:</h4><p class="code">var surf, spr_custom;<br/> surf = surface_create(32, 32);<br/> surface_set_target(surf);
+    <br/> draw_clear_alpha(c_black, 0);<br/> draw_sprite(spr_Body, 0, 0, 0);<br/> draw_sprite(spr_Clothes, 0, 0, 0);<br/> draw_sprite(spr_Hair, 0, 0, 0);<br/> spr_custom = sprite_create_from_surface(surf, 0, 0, 32, 32, true, true, 16, 16);<br/> surface_reset_target();
+    <br/> surface_free(surf);
+    <br/> sprite_save(spr_custom, 0, &quot;Player_Custom_Sprite.png&quot;);<br/> sprite_delete(spr_Custom);
+  </p><p> Le code ci-dessus crée une surface et stocke son index dans la variable locale &quot;surf&quot;. Il cible ensuite cette surface, l&#39;efface et dessine plusieurs sprites les uns sur les autres. Il crée un nouveau sprite à partir de l&#39;image composite dessinée sur la surface et affecte son index à la variable locale &quot;spr_Custom&quot; avant de libérer la mémoire utilisée par la surface. Enfin, le sprite résultant est enregistré dans un fichier puis supprimé de la mémoire. </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> Retour: <a href="Sprite_Manipulation.htm">Manipulation des sprites</a></div><div style="float:right"> Suivant:<a href="sprite_save_strip.htm">sprite_save_strip</a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
+  </div>
+  <!-- KEYWORDS
+sprite_save
+-->
+  <!-- TAGS
+sprite_save
+-->
+</body>
+</html>

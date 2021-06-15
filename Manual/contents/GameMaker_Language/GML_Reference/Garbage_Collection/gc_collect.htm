@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>gc_collect</title>
+  <meta name="generator" content="Adobe RoboHelp 2019" />
+  <link rel="stylesheet" href="../../../assets/css/default.css" type="text/css" />
+  <meta name="rh-authors" content="Mark Alexander" />
+  <meta name="topic-comment" content="Page de référence pour gc_collect" />
+  <meta name="rh-index-keywords" content="gc_collect" />
+  <meta name="search-keywords" content="gc_collect" />
+</head>
+<body><!--<div class="body-scroll" style="top: 150px;">--><h1>gc_collect</h1><p> Avec cette fonction, vous pouvez déclencher le ramasse-miettes, le forçant à s&#39;exécuter à la fin de l&#39;image actuelle (étape). Il est à noter que le ramasse-miettes n&#39;a <em>pas</em> besoin d&#39;être actif pour que cela fonctionne. Appel de cette fonction après avoir désactivé le ramasse-miettes (en utilisant la fonction <span class="inline"><a href="gc_enable.htm">gc_enable()</a></span> ) activera le ramasse-miettes pour une image dans laquelle tous les objets qui ont été marqués pour la collecte seront supprimés de la mémoire avant que le ramasse-miettes ne soit à nouveau désactivé.</p><p></p><h4> Syntaxe:</h4><p class="code">gc_collect();</p><p></p><h4> Retour:</h4><p class="code">N/A</p><p></p><h4> Exemple:</h4><p class="code">if (global.debug == true &amp;&amp; keyboard_check_pressed(vk_f1))<br/>     {
+    <br/>     gc_collect();
+    <br/>     }
+  </p><p> Le code ci-dessus vérifie une variable globale et une touche enfoncée et si ceux-ci sont <tt>true</tt> puis le garbage collection est déclenché pour la fin de la trame (étape). </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> Retour: <a href="Garbage_Collection.htm">Ramassage des ordures</a></div><div style="float:right"> Suivant: <a href="gc_target_frame_time.htm">gc_target_frame_time</a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
+  </div>
+  <!-- KEYWORDS
+gc_collect
+-->
+  <!-- TAGS
+gc_collect
+-->
+</body>
+</html>

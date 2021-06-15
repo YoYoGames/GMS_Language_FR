@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>draw_triangle</title>
+  <meta name="generator" content="Adobe RoboHelp 2019" />
+  <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
+  <meta name="rh-authors" content="Mark Alexander" />
+  <meta name="topic-comment" content="Référence pour la fonction draw_triangle" />
+  <meta name="rh-index-keywords" content="draw_triangle" />
+  <meta name="search-keywords" content="draw_triangle" />
+</head>
+<body><!--<div class="body-scroll" style="top: 150px;">--><h1>draw_triangle</h1><p> Avec cette fonction, vous pouvez dessiner le contour d&#39;un triangle ou un triangle plein.</p><p class="note"> <b>REMARQUE</b>: Si vous souhaitez dessiner une forme à l&#39;aide d&#39;un <span class="notranslate">shader</span>, sachez que la plupart des <span class="notranslate">shaders</span> attendent les entrées suivantes: sommet, texture, couleur. Cependant, lors de l&#39;utilisation de cette fonction, seules les données de sommet et de couleur sont transmises, et le <span class="notranslate">shader</span> peut ne rien dessiner (ou dessiner quelque chose mais pas correctement). Si vous devez dessiner des formes de cette manière, le <span class="notranslate">shader</span> doit être personnalisé dans cet esprit.</p><p></p><h4> Syntaxe:</h4><p class="code">draw_triangle(x1, y1, x2, y2, x3, y3, outline);</p><table><tbody><tr><th> Argument</th><th> Description</th></tr><tr><td> <span class="notranslate">x1</span></td><td> Coordonnée x du premier coin du triangle.</td></tr><tr><td> <span class="notranslate">y1</span></td><td> Coordonnée y du premier coin du triangle.</td></tr><tr><td> <span class="notranslate">x2</span></td><td> Coordonnée x du deuxième coin du triangle.</td></tr><tr><td> <span class="notranslate">y2</span></td><td> Coordonnée y du deuxième coin du triangle.</td></tr><tr><td> <span class="notranslate">x3</span></td><td> Coordonnée x du troisième coin du triangle.</td></tr><tr><td> <span class="notranslate">y3</span></td><td> Coordonnée y du troisième coin du triangle.</td></tr><tr><td> <span class="notranslate">outline</span></td><td> Si le triangle est dessiné rempli (faux) ou sous la forme d&#39;un contour large d&#39;un pixel (vrai).</td></tr></tbody></table><p></p><h4> Retour:</h4><p class="code">N/A</p><p></p><h4> Exemple:</h4><p class="code">draw_set_colour(c_aqua);<br/> draw_triangle(50, 50, 200, 50, 50, 200, 0);</p><p> Cela dessinera un triangle rectangle isocèle de couleur aigue-marine rempli, avec son premier coin à (50,50), son deuxième à (200,50) et son troisième à (50,200). </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> Retour: <a href="Basic_Forms.htm">Formulaires de base</a></div><div style="float:right"> Suivant:<a href="draw_triangle_colour.htm">draw_triangle_colour</a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
+  </div>
+  <!-- KEYWORDS
+draw_triangle
+-->
+  <!-- TAGS
+draw_triangle
+-->
+</body>
+</html>

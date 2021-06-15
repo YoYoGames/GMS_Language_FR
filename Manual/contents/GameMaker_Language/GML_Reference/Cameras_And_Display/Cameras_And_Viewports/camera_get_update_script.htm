@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>camera_get_update_script</title>
+  <meta name="generator" content="Adobe RoboHelp 2019" />
+  <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
+  <meta name="rh-authors" content="Mark Alexander" />
+  <meta name="topic-comment" content="Page de référence pour camera_get_update_script" />
+  <meta name="rh-index-keywords" content="camera_get_update_script" />
+  <meta name="search-keywords" content="camera_get_update_script" />
+</head>
+<body><!--<div class="body-scroll" style="top: 150px;">--><h1>camera_get_update_script</h1><p> Cette fonction peut être utilisée pour récupérer l&#39;ID de la <a href="../../../GML_Overview/Script_Functions.htm">fonction de script</a> affectée comme script de mise à jour pour la caméra donnée. Si aucun script n&#39;est affecté, la fonction renverra -1.</p><p></p><h4> Syntaxe:</h4><p class="code">camera_get_update_script(camera_id)</p><table><tbody><tr><th> Argument</th><th> Description</th></tr><tr><td> <span class="notranslate">camera_id</span></td><td> La valeur d&#39;ID de caméra unique renvoyée lors de la création de la caméra</td></tr></tbody></table><p></p><h4> Retour:</h4><p class="code">Script function ID or -1 if no function is assigned</p><p></p><h4> Exemple:</h4><p class="code">var scr = camera_get_update_script(camera_view[0]);<br/> if scr != scr_cutscene<br/>     {
+    <br/>     camera_set_update_script(camera_view[0], scr_cutscene);<br/>     }
+  </p><p> Le code ci-dessus vérifie la fonction de script affectée comme fonction de mise à jour pour la caméra affectée au port d&#39;affichage [0] et si ce n&#39;est pas &quot;cutScene&quot;, il est défini sur ce script. </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> Arrière: <a href="Cameras_And_View_Ports.htm">caméras et ports d&#39;affichage</a></div><div style="float:right"> Suivant:<a href="camera_get_begin_script.htm">camera_get_begin_script</a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
+  </div>
+  <!-- KEYWORDS
+camera_get_update_script
+-->
+  <!-- TAGS
+camera_get_update_script
+-->
+</body>
+</html>

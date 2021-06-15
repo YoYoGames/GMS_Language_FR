@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>texture_is_ready</title>
+  <meta name="generator" content="Adobe RoboHelp 2019" />
+  <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
+  <meta name="rh-authors" content="Mark Alexander" />
+  <meta name="topic-comment" content="Page de référence pour texture_is_ready" />
+  <meta name="rh-index-keywords" content="texture_is_ready" />
+  <meta name="search-keywords" content="texture_is_ready" />
+</head>
+<body><!--<div class="body-scroll" style="top: 150px;">--><h1>texture_is_ready</h1><p> Cette fonction peut être utilisée pour vérifier si une page de texture spécifique a été décompressée et est prête à être utilisée, ou si un groupe de pages de texture a été décompressé et est prêt à être utilisé. Vous fournissez l&#39; <b>ID de page de texture</b> unique (tel que renvoyé par le <tt>texturegroup_*</tt> fonctions) ou la chaîne d&#39;ID du groupe de textures (tel que défini dans l&#39;éditeur de groupe de textures), et la fonction retournera <tt>true</tt> s&#39;ils ont été déballés, ou <tt>false</tt> autrement.</p><p></p><h4> Syntaxe:</h4><p class="code">texture_is_ready(tex_id);</p><table><tbody><tr><th> Argument</th><th> Description</th></tr><tr><td> <span class="notranslate">tex_id</span></td><td> L&#39;ID de page de texture (un entier) <i>ou</i> un ID de groupe de texture (une chaîne)</td></tr></tbody></table><p></p><h4> Retour:</h4><p class="code">Boolean</p><p></p><h4> Exemple:</h4><p class="code">var _tex_array = texturegroup_get_textures( &quot;MainMenu&quot;);<br/> for (var i = 0; i &lt; array_length(_tex_array); ++i;)<br/>     {
+    <br/>     if !texture_is_ready(_tex_array[i])<br/>         {
+    <br/>         texture_prefetch(_tex_array[i]);
+    <br/>         }
+    <br/>     }
+  </p><p> Le code ci-dessus récupérera les identifiants de page de texture pour le groupe de texture &quot;MainMenu&quot;, puis vérifiera s&#39;ils sont décompressés, et s&#39;ils ne le sont pas, ils sont pré-lus dans la VRAM. </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> Retour: <a href="Textures.htm">Textures</a></div><div style="float:right"> Suivant:<a href="texturegroup_get_textures.htm">texturegroup_get_textures</a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
+  </div>
+  <!-- KEYWORDS
+texture_is_ready
+-->
+  <!-- TAGS
+texture_is_ready
+-->
+</body>
+</html>

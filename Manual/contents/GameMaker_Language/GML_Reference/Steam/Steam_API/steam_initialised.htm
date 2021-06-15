@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>steam_initialised</title>
+  <meta name="generator" content="Adobe RoboHelp 2019" />
+  <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
+  <meta name="rh-authors" content="Mark Alexander" />
+  <meta name="topic-comment" content="Page de référence pour la steam _initialisée" />
+  <meta name="rh-index-keywords" content="steam_initialised" />
+  <meta name="search-keywords" content="steam_initialised" />
+</head>
+<body><!--<div class="body-scroll" style="top: 150px;">--><h1> <span class="notranslate">steam</span> _initialisé</h1><p> Lors de l&#39;utilisation de l&#39; <span class="notranslate">Steam</span>, cette fonction peut être appelée pour vérifier que l&#39; <span class="notranslate">Steam</span> a été correctement initialisée avant de faire tout autre appel aux <span class="notranslate">Steam</span> dans votre jeu.</p><p></p><h4> Syntaxe:</h4><p class="code">steam_initialised();</p><p></p><h4> Retour:</h4><p class="code">Boolean</p><p></p><h4> Exemple:</h4><p class="code">global.steam_api = false;<br/> if steam_initialised()<br/>     {
+    <br/>     if steam_stats_ready() &amp;&amp; steam_is_overlay_enabled()<br/>         {
+    <br/>         global.steam_api = true;<br/>         }
+    <br/>     }
+  </p><p> Le code ci-dessus définira une variable globale sur <tt>true</tt> si l&#39; <span class="notranslate">Steam</span> est correctement initialisée, avec les <span class="notranslate">Steam</span> et la fonctionnalité de superposition, ou elle définira la variable sur <tt>false</tt> autrement. </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> Retour: <a href="Steam_API.htm">API <span class="notranslate">Steam</span> générale</a></div><div style="float:right"> Suivant: <a href="steam_stats_ready.htm"><span class="notranslate">steam</span> _stats_ready</a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
+  </div>
+  <!-- KEYWORDS
+steam_initialised
+-->
+  <!-- TAGS
+steam_initialised
+-->
+</body>
+</html>

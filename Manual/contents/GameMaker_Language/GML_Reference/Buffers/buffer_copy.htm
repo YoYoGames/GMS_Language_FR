@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>buffer_copy</title>
+  <meta name="generator" content="Adobe RoboHelp 2019" />
+  <link rel="stylesheet" href="../../../assets/css/default.css" type="text/css" />
+  <meta name="rh-authors" content="Mark Alexander" />
+  <meta name="topic-comment" content="Page de référence pour buffer_copy" />
+  <meta name="rh-index-keywords" content="buffer_copy" />
+  <meta name="search-keywords" content="buffer_copy" />
+</head>
+<body><!--<div class="body-scroll" style="top: 150px;">--><h1>buffer_copy</h1><p> Cette fonction peut être utilisée pour copier un segment (ou la totalité) des données stockées dans un tampon vers un autre. Lors de l&#39;utilisation de deux tampons et de la copie de l&#39;un à l&#39;autre, les deux tampons doivent avoir été créés au préalable à l&#39;aide du <a href="buffer_create.htm"><tt>buffer_create()</tt></a> (par exemple), et vous pouvez spécifier un décalage de données (en octets) pour le point de départ des données à copier à partir du tampon source par rapport au début du tampon, ainsi qu&#39;un autre décalage de données pour définir la position à copiez les données dans la mémoire tampon de destination.</p><p class="note"> <b>REMARQUE</b>: vous ne pouvez pas copier dans le même tampon.</p><p></p><h4> Syntaxe:</h4><p class="code">buffer_copy(src_buffer, src_offset, size, dest_buffer, dest_offset);</p><table><tbody><tr><th> Argument</th><th> Description</th></tr><tr><td> <span class="notranslate">src_buffer</span></td><td> L&#39;index du tampon à <i>partir</i> duquel copier.</td></tr><tr><td> <span class="notranslate">src_offset</span></td><td> Décalage des données à partir duquel commencer la copie (en octets).</td></tr><tr><td> <span class="notranslate">size</span></td><td> La taille des données à copier (en octets).</td></tr><tr><td> <span class="notranslate">dest_buffer</span></td><td> L&#39;index de la mémoire tampon pour copier <i>à.</i></td></tr><tr><td> <span class="notranslate">dest_offset</span></td><td> Position de décalage vers laquelle copier les données (en octets).</td></tr></tbody></table><p></p><h4> Retour:</h4><p class="code">N/A</p><p></p><h4> Exemple:</h4><p class="code">buffer_copy(buff1, 0, 2048, buff2, 2048);</p><p> Le code ci-dessus copiera les données stockées dans le tampon indexé dans la variable &quot;buff1&quot;, puis les collera dans le tampon indexé dans la variable &quot;buff2&quot;, mais décalé de 2048 octets. </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> Retour: <a href="Buffers.htm">Tampons</a></div><div style="float:right"> Suivant:<a href="buffer_copy_from_vertex_buffer.htm">buffer_copy_from_vertex_buffer</a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
+  </div>
+  <!-- KEYWORDS
+buffer_copy
+-->
+  <!-- TAGS
+buffer_copy
+-->
+</body>
+</html>

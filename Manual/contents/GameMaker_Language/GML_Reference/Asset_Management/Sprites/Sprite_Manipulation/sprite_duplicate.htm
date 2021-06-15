@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>sprite_duplicate</title>
+  <meta name="generator" content="Adobe RoboHelp 2019" />
+  <link rel="stylesheet" href="../../../../../assets/css/default.css" type="text/css" />
+  <meta name="rh-authors" content="Mark Alexander" />
+  <meta name="topic-comment" content="Page expliquant la fonction sprite_duplicate" />
+  <meta name="rh-index-keywords" content="sprite_duplicate" />
+  <meta name="search-keywords" content="sprite_duplicate" />
+</head>
+<body><!--<div class="body-scroll" style="top: 150px;">--><h1>sprite_duplicate</h1><p> Cette fonction renverra l&#39;index d&#39;un sprite nouvellement créé qui est une copie (copie) de la première entrée en tant qu&#39;argument &quot;index&quot;. Si la fonction échoue, -1 est renvoyé. Cette fonction <i>doit</i> être utilisée pour copier les sprites des ressources d&#39;origine avant que des transformations puissent être effectuées sur eux. Par exemple, si vous souhaitez modifier le cadre de sélection d&#39;un sprite ou définir son alpha à partir d&#39;un autre sprite, vous devez d&#39;abord le dupliquer, puis effectuer l&#39;opération sur le sprite dupliqué et l&#39;utiliser. Un sprite dupliqué sera placé sur sa propre page de texture unique lors de sa création, ce qui signifie que la duplication de plusieurs sprites créera plusieurs pages de texture et aura un impact sur les performances, utilisez donc cette fonction uniquement lorsque cela est nécessaire.</p><p class="note"> <b>REMARQUE</b>: lorsque vous dupliquez un sprite dans <span class="notranslate">GameMaker Studio 2</span> vous devez vous rappeler de le supprimer à nouveau (avec <span style="font-size:1px;"><a href="sprite_delete.htm"><tt style="font-size: 14px">sprite_delete ()</tt></a></span> ) lorsqu&#39;il n&#39;est plus nécessaire, sinon il y a un risque de fuite de mémoire qui ralentira et finira par planter votre jeu.</p><p></p><h4> Syntaxe:</h4><p class="code">sprite_duplicate(index);</p><table><tbody><tr><th> Argument</th><th> Description</th></tr><tr><td> <span class="notranslate">index</span></td><td> L&#39;index du sprite à dupliquer.</td></tr></tbody></table><p></p><h4> Retour</h4><p class="code">Real (unique sprite ID value)</p><p></p><h4> Exemple:</h4><p class="code">new_spr = sprite_duplicate(sprite_index)</p><p> Le code ci-dessus duplique le sprite actuellement utilisé comme index de sprite de l&#39;instance et stocke l&#39;index de ce nouveau sprite dans la variable &quot;new_spr&quot;. </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> Retour: <a href="Sprite_Manipulation.htm">Manipulation des sprites</a></div><div style="float:right"> Suivant:<a href="sprite_assign.htm">sprite_assign</a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
+  </div>
+  <!-- KEYWORDS
+sprite_duplicate
+-->
+  <!-- TAGS
+sprite_duplicate
+-->
+</body>
+</html>

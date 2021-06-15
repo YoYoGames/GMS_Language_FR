@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>layer_force_draw_depth</title>
+  <meta name="generator" content="Adobe RoboHelp 2019" />
+  <link rel="stylesheet" href="../../../../../assets/css/default.css" type="text/css" />
+  <meta name="rh-authors" content="Mark Alexander" />
+  <meta name="topic-comment" content="Page décrivant la fonction layer_force_draw_depth" />
+  <meta name="rh-index-keywords" content="layer_force_draw_depth" />
+  <meta name="search-keywords" content="layer_force_draw_depth" />
+</head>
+<body><!--<div class="body-scroll" style="top: 150px;">--><h1>layer_force_draw_depth</h1><p> Cette fonction force <i>tous les</i> calques à être dessinés à la profondeur z spécifiée. Cela <b>ne change pas l&#39;ordre dans</b> lequel les calques sont rendus et ils seront toujours dessinés dans l&#39;ordre de profondeur, cela change simplement la valeur z utilisée. En général, vous n&#39;avez pas à vous en soucier, mais si vous avez des couches dont la profondeur est en dehors de la plage légale (-16000 à 16000), elles ne seront pas rendues, vous pouvez donc forcer la profondeur Z à une valeur raisonnable. - 0 par exemple - et ils seront tous rendus correctement. Notez que ceci n&#39;est généralement utilisé qu&#39;avec les projets hérités de la version précédente de <i><span class="notranslate">GameMaker</span></i> où vous pourriez avoir des profondeurs de dessin supérieures ou inférieures à la plage de couches autorisée.</p><p></p><h4> Syntaxe:</h4><p class="code">layer_force_draw_depth(force, depth)</p><table><tbody><tr><th> Argument</th><th> Description</th></tr><tr><td> <span class="notranslate">force</span></td><td> Activer ou non (défini sur <tt>true</tt> ou désactiver (régler sur <tt>false</tt> ) Forçage en profondeur Z</td></tr><tr><td> <span class="notranslate">depth</span></td><td> La nouvelle profondeur Z</td></tr></tbody></table><p></p><h4> Retour:</h4><p class="code">N/A</p><p></p><h4> Exemple:</h4><p class="code">if !layer_is_draw_depth_forced()<br/>    {
+    <br/>    layer_force_draw_depth(true, 0);<br/>    }
+  </p><p> Le code ci-dessus vérifie si la profondeur Z de la couche est forcée ou non et si ce n&#39;est pas le cas, il définit la profondeur Z sur 0 et l&#39;active. </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> Retour: <a href="General_Layer_Functions.htm">Fonctions générales des calques</a></div><div style="float:right"> Suivant:<a href="layer_is_draw_depth_forced.htm">layer_is_draw_depth_forced</a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
+  </div>
+  <!-- KEYWORDS
+layer_force_draw_depth
+-->
+  <!-- TAGS
+layer_force_draw_depth
+-->
+</body>
+</html>

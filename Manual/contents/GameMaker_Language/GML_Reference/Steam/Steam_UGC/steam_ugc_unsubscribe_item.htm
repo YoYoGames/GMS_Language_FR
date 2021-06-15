@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>steam_ugc_unsubscribe_item</title>
+  <meta name="generator" content="Adobe RoboHelp 2019" />
+  <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
+  <meta name="rh-authors" content="Mark Alexander" />
+  <meta name="topic-comment" content="Page de référence pour steam _ugc_unsubscribe_item" />
+  <meta name="rh-index-keywords" content="steam_ugc_unsubscribe_item" />
+  <meta name="search-keywords" content="steam_ugc_unsubscribe_item" />
+</head>
+<body><!--<div class="body-scroll" style="top: 150px;">--><h1> <span class="notranslate">steam</span> _ugc_unsubscribe_item</h1><p> Cette fonction peut être utilisée pour se désinscrire d&#39;un article UGC. Vous fournissez l&#39;ID de fichier publié, puis la fonction renvoie une valeur d&#39;ID asynchrone unique qui peut être utilisée pour vérifier que l&#39;élément a été correctement désabonné dans l&#39; <a href="../../../../The_Asset_Editors/Object_Properties/Async_Events/Steam.htm">événement <span class="notranslate">Steam</span></a> Async. Cet événement aura le <a href="../../../GML_Overview/Variables/Builtin_Global_Variables/async_load.htm"><tt>async_load</tt></a> Carte DS qui sera remplie avec les paires clé / valeur suivantes:</p><ul class="colour"><li> &quot; <b>id</b> &quot; - L&#39;ID asynchrone renvoyé par la fonction qui a déclenché l&#39;événement</li><li> &quot; <b>result</b> &quot; - Le résultat de l&#39;opération (une valeur réelle). Ce sera soit la constante <span class="notranslate">GML </span><tt>ugc_result_success</tt> ou un autre nombre réel. Vous devez donc vérifier cette constante pour vous assurer que l&#39;appel a réussi et, dans le cas contraire, quelque chose n&#39;a pas fonctionné correctement. Le reste des valeurs possibles renvoyées est affiché comme le résultat de la valeur <span class="notranslate">Steam</span> &quot;EResult&quot; et vous devriez voir <tt>steamclientpublic.h</tt> dans les en-têtes du SDK pour les 89 valeurs possibles.</li><li> &quot; <b>event_type</b> &quot; - La chaîne &quot; <b>ugc_unsubscribe_item</b> &quot;.</li><li> &quot; <b>published_file_id</b> &quot; - L&#39;ID unique de l&#39;élément publié.</li></ul><p></p><h4> Syntaxe:</h4><p class="code">steam_ugc_unsubscribe_item(published_file_id);</p><table><tbody><tr><th> Argument</th><th> Description</th></tr><tr><td> <span class="notranslate">published_file_id</span></td><td> ID de fichier unique pour lequel l&#39;UGC doit se désabonner.</td></tr></tbody></table><p></p><h4> Retour:</h4><p class="code">Async ID</p><p></p><h4> Exemple:</h4><p class="code">steam_sub = steam_ugc_subscribe_item(global.pubFileID);</p><p> Le code ci-dessus abonnera (et téléchargera) l&#39;élément avec l&#39;ID de fichier stocké dans la variable globale &quot;pubFileID&quot;. </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> Retour: <a href="Steam_UGC.htm">UGC</a></div><div style="float:right"> Suivant: <a href="steam_ugc_num_subscribed_items.htm"><span class="notranslate">steam</span> _ugc_num_subscribed_items</a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
+  </div>
+  <!-- KEYWORDS
+steam_ugc_unsubscribe_item
+-->
+  <!-- TAGS
+steam_ugc_unsubscribe_item
+-->
+</body>
+</html>

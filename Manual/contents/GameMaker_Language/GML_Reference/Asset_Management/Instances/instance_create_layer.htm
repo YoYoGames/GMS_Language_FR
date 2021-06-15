@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>instance_create_layer</title>
+  <meta name="generator" content="Adobe RoboHelp 2019" />
+  <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
+  <meta name="rh-authors" content="Mark Alexander" />
+  <meta name="topic-comment" content="Page décrivant la fonction instance_create_layer" />
+  <meta name="rh-index-keywords" content="instance_create_layer" />
+  <meta name="search-keywords" content="instance_create_layer" />
+</head>
+<body><!--<div class="body-scroll" style="top: 150px;">--><h1>instance_create_layer</h1><p> Avec cette fonction, vous pouvez créer une nouvelle instance de l&#39;objet spécifié à n&#39;importe quel point donné dans la pièce et sur le calque spécifié. La couche peut être identifiée à l&#39;aide de la valeur de l&#39;ID de couche (telle que renvoyée par la fonction <a href="../Rooms/General_Layer_Functions/layer_create.htm"><tt>layer_create()</tt></a> ) ou par le nom du calque (sous forme de chaîne, par exemple &quot;instance_layer&quot;) tel que défini dans l&#39; <a href="../../../../The_Asset_Editors/Rooms.htm">éditeur de salle</a>.</p><p> Cette fonction renvoie le <a href="Instance_Variables/id.htm"><tt>id</tt></a> de la nouvelle instance qui peut ensuite être stockée dans une variable ou utilisée pour accéder à cette instance. Notez que cette fonction appellera également l&#39; <a href="../../../../The_Asset_Editors/Object_Properties/Object_Events.htm">événement Create</a> de l&#39;instance en cours de création <i>avant de</i> continuer avec le code ou les actions pour l&#39;événement qui a appelé la fonction.</p><p class="note"> <b>IMPORTANT!</b> Il y a une profondeur de couche minimale et maximale de -16 000 à 16 000. Tout ce qui est placé sur un calque en dehors de cette plage <b>ne sera pas dessiné</b> bien que tous les événements continuent de fonctionner normalement.</p><p></p><h4> Syntaxe:</h4><p class="code">instance_create_layer(x, y, layer_id, obj);</p><table><tbody><tr><th> Argument</th><th> Description</th></tr><tr><td> <span class="notranslate">x</span></td><td> La position x à laquelle l&#39;objet sera créé</td></tr><tr><td> <span class="notranslate">y</span></td><td> La position y à laquelle l&#39;objet sera créé</td></tr><tr><td> <span class="notranslate">layer_id</span></td><td> L&#39;ID de la couche (ou le nom) auquel attribuer l&#39;instance créée</td></tr><tr><td> <span class="notranslate">obj</span></td><td> L&#39;index d&#39;objet de l&#39;objet pour créer une instance de</td></tr></tbody></table><p></p><h4> Retour:</h4><p class="code">Real (instance ID value)</p><p></p><h4> Exemple:</h4><p class="code">var inst = instance_create_layer(x, y, &quot;instance_layer&quot;, obj_Bullet);<br/> with (inst)<br/>     {
+    <br/>     speed = other.shoot_speed;<br/>     direction = other.image_angle;<br/>     }
+  </p><p> Le code ci-dessus crée une nouvelle instance de l&#39;objet &quot;obj_Bullet&quot; et stocke l&#39;ID d&#39;instance dans une variable. Cette variable est ensuite utilisée pour attribuer <tt>speed</tt> et <tt>direction</tt> à la nouvelle instance. </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> Retour: <a href="Instances.htm">Instances</a></div><div style="float:right"> Suivant:<a href="instance_create_depth.htm">instance_create_depth</a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
+  </div>
+  <!-- KEYWORDS
+instance_create_layer
+-->
+  <!-- TAGS
+instance_create_layer
+-->
+</body>
+</html>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>buffer_base64_encode</title>
+  <meta name="generator" content="Adobe RoboHelp 2019" />
+  <link rel="stylesheet" href="../../../assets/css/default.css" type="text/css" />
+  <meta name="rh-authors" content="Mark Alexander" />
+  <meta name="topic-comment" content="Page de référence pour buffer_base64_encode" />
+  <meta name="rh-index-keywords" content="buffer_base64_encode" />
+  <meta name="search-keywords" content="buffer_base64_encode" />
+</head>
+<body><!--<div class="body-scroll" style="top: 150px;">--><h1>buffer_base64_encode</h1><p> Cette fonction convertira les données du tampon donné en une chaîne codée au format base64. Il s&#39;agit d&#39;un schéma de codage couramment utilisé qui est souvent utilisé pour tout média devant être stocké ou transféré sur Internet sous forme de texte, et rend la sortie illisible à l&#39;œil humain. Pour l&#39;utiliser, vous devez spécifier un tampon déjà créé, la valeur de décalage (qui est le point dans le tampon auquel vous souhaitez commencer l&#39;encodage) ainsi que la taille, en octets, de la mémoire tampon à encoder.</p><p></p><h4> Syntaxe:</h4><p class="code">buffer_base64_encode(buffer, offset, size);</p><table><tbody><tr><th> Argument</th><th> Description</th></tr><tr><td> <span class="notranslate">buffer</span></td><td> L&#39;index du tampon à utiliser.</td></tr><tr><td> <span class="notranslate">offset</span></td><td> La valeur de décalage des données.</td></tr><tr><td> <span class="notranslate">size</span></td><td> La taille du tampon.</td></tr></tbody></table><p></p><h4> Retour:</h4><p class="code">String</p><p></p><h4> Exemple:</h4><p class="code">var b_str = buffer_base64_encode(buff, 0, buffer_get_size(buff))</p><p> Le code ci-dessus créera un encodage des données complètes stockées dans le tampon indexé par la variable &quot;buff&quot;, et stockera la chaîne retournée dans la variable locale &quot;b_str&quot;. </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> Retour: <a href="Buffers.htm">Tampons</a></div><div style="float:right"> Suivant:<a href="buffer_base64_decode.htm">buffer_base64_decode</a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
+  </div>
+  <!-- KEYWORDS
+buffer_base64_encode
+-->
+  <!-- TAGS
+buffer_base64_encode
+-->
+</body>
+</html>

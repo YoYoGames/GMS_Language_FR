@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>layer_tilemap_get_id</title>
+  <meta name="generator" content="Adobe RoboHelp 2019" />
+  <link rel="stylesheet" href="../../../../../assets/css/default.css" type="text/css" />
+  <meta name="rh-authors" content="Mark Alexander" />
+  <meta name="topic-comment" content="Page décrivant la fonction layer_tilemap_get_id" />
+  <meta name="rh-index-keywords" content="layer_tilemap_get_id" />
+  <meta name="search-keywords" content="layer_tilemap_get_id" />
+</head>
+<body><!--<div class="body-scroll" style="top: 150px;">--><h1>layer_tilemap_get_id</h1><p> Cette fonction peut être utilisée pour récupérer la valeur d&#39;ID unique de l&#39;élément de carte de tuiles sur une couche. Vous fournissez l&#39;ID de couche (que vous obtenez lorsque vous créez la couche en utilisant <a href="../General_Layer_Functions/layer_create.htm"><tt>layer_create()</tt></a> ) ou le nom de la couche (sous forme de chaîne - cela aura un impact sur les performances) et la fonction renverra la valeur d&#39;ID associée à l&#39;élément de carte de tuiles sur la couche. Notez que cette fonction est spécialement conçue pour être utilisée avec les cartes de tuiles qui ont été ajoutées dans l&#39;EDI, comme si vous ajoutiez une carte de tuiles à une couche via du code à l&#39;aide de la fonction <a href="layer_tilemap_create.htm"><tt>layer_tilemap_create()</tt></a>, puis il renverra l&#39;ID unique de l&#39;élément de mosaïque ajouté. Si l&#39;ID de tilemap donné est incorrect ou si le tilemap n&#39;existe pas, la fonction renverra -1.</p><p></p><h4> Syntaxe:</h4><p class="code">layer_tilemap_get_id(layer_id)</p><table><tbody><tr><th> Argument</th><th> Description</th></tr><tr><td> <span class="notranslate">layer_id</span></td><td> La valeur d&#39;ID unique du calque à cibler (ou le nom du calque sous forme de chaîne)</td></tr></tbody></table><p></p><h4> Retour:</h4><p class="code">tile map element ID value (Real) or -1</p><p></p><h4> Exemple:</h4><p class="code">var lay_id = layer_get_id(&quot;tilemap_trees&quot;);<br/> var tile_id = layer_tilemap_get_id(lay_id);<br/> layer_tilemap_destroy(tile_id);
+  </p><p> Le code ci-dessus obtiendra l&#39;ID de couche pour la couche nommée &quot;tilemap_trees&quot; et l&#39;utilisera ensuite pour obtenir l&#39;ID de l&#39;élément de carte de tuiles sur cette couche. Cet ID est ensuite utilisé pour supprimer la carte de tuiles de la couche. </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> Retour: <a href="Tile_Map_Layers.htm">Couches de carte de mosaïque</a></div><div style="float:right"> Suivant:<a href="layer_tilemap_exists.htm">layer_tilemap_exists</a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
+  </div>
+  <!-- KEYWORDS
+layer_tilemap_get_id
+-->
+  <!-- TAGS
+layer_tilemap_get_id
+-->
+</body>
+</html>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>object_set_sprite</title>
+  <meta name="generator" content="Adobe RoboHelp 2019" />
+  <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
+  <meta name="rh-authors" content="Mark Alexander" />
+  <meta name="topic-comment" content="Page décrivant la fonction object_set_sprite" />
+  <meta name="rh-index-keywords" content="object_set_sprite" />
+  <meta name="search-keywords" content="object_set_sprite" />
+</head>
+<body><!--<div class="body-scroll" style="top: 150px;">--><h1>object_set_sprite</h1><p> Avec cette fonction, vous pouvez définir l&#39;index du sprite d&#39;un objet spécifique. Cela signifie que toutes les instances de cet objet créées <i>après la modification du sprite_index</i> seront créées avec ce nouveau sprite_index, tandis que les instances qui se trouvent déjà dans la salle peuvent ne pas être affectées.</p><p> Veuillez noter qu&#39;il ne s&#39;agit pas d&#39;une fonction d&#39;instance! Vous pouvez définir l&#39;index de sprite d&#39;instances individuelles à l&#39;aide de la <a href="../Sprites/Sprite_Instance_Variables/sprite_index.htm"><tt>sprite_index</tt></a> variable et ont donc dix instances, toutes avec un sprite différent de l&#39;objet à partir duquel elles ont été créées, et même si vous modifiez l&#39;index de sprite de l&#39;objet à l&#39;aide de cette fonction, toutes les instances qui sont actuellement dans la salle resteront telles qu&#39;elles étaient, et seulement les instances créées après l&#39;appel de la fonction démarreront avec le nouveau sprite.</p><p></p><h4> Syntaxe:</h4><p class="code">object_set_sprite( index, spr );</p><table><tbody><tr><th> Argument</th><th> Description</th></tr><tr><td> <span class="notranslate">index</span></td><td> L&#39;index de l&#39;objet à modifier.</td></tr><tr><td> <span class="notranslate">spr</span></td><td> Le sprite à attribuer à l&#39;objet.</td></tr></tbody></table><p></p><h4> Retour:</h4><p class="code">N/A</p><p></p><h4> Exemple:</h4><p class="code">switch (room)<br/>     {
+    <br/>     case rm_start: object_set_sprite(obj_Player, spr_uniform); break;<br/>     case rm_middle: object_set_sprite(obj_Player, spr_swimsuit); break;<br/>     case rm_end: object_set_sprite(obj_Player, spr_casual); break;<br/>     }
+    <br/> instance_create_layer(32, 32, &quot;Instances&quot;, obj_Player);</p><p> Le code ci-dessus définira l&#39;index du sprite de l&#39;objet &quot;obj_Player&quot; à des valeurs différentes en fonction de la pièce dans laquelle se trouve actuellement l&#39;instance exécutant le code. Il crée alors une instance de &quot;obj_Player&quot;. </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> Retour: <a href="Objects.htm">Objets</a></div><div style="float:right"> Suivant:<a href="object_set_visible.htm">object_set_visible</a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
+  </div>
+  <!-- KEYWORDS
+object_set_sprite
+-->
+  <!-- TAGS
+object_set_sprite
+-->
+</body>
+</html>

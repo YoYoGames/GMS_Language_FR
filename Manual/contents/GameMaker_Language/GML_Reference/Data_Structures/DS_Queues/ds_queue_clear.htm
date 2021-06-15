@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <title>ds_queue_clear</title>
+  <meta name="generator" content="Adobe RoboHelp 2019"/>
+  <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css"/>
+  <meta name="rh-authors" content="Mark Alexander"/>
+  <meta name="topic-comment" content="Page de référence pour ds_queue_clear"/>
+  <meta name="rh-index-keywords" content="ds_queue_clear"/>
+  <meta name="search-keywords" content="ds_queue_clear"/>
+</head>
+
+<body><!--<div class="body-scroll" style="top: 150px;">--><h1>ds_queue_clear</h1><p> Avec cette fonction, vous pouvez effacer toutes les données de la structure de données de file d&#39;attente donnée. Cela ne <i>détruit PAS</i> la structure de données (pour cela, vous devez utiliser <a href="ds_queue_destroy.htm"><tt>ds_queue_destroy()</tt></a> ), il efface uniquement toutes les données de celui-ci et renvoie une file d&#39;attente vide.</p><p></p><h4> Syntaxe:</h4><p class="code">ds_queue_clear(id);</p><table><tbody><tr><th> Argument</th><th> Description</th></tr><tr><td> <span class="notranslate">id</span></td><td> L&#39;identifiant de la structure de données à effacer.</td></tr></tbody></table><p></p><h4> Retour:</h4><p class="code">N/A</p><p></p><h4> Exemple:</h4><p class="code">if (count = 15) &amp;&amp; (!ds_queue_empty(command_queue))<br/>     {
+    <br/>     ds_queue_clear(command_queue);
+    <br/>     alarm[0] = room_speed;<br/>     ai_count = 0;<br/>     }
+  </p><p> Le code ci-dessus vérifie une variable pour voir si elle a atteint une valeur spécifique et si elle l&#39;a efface la file d&#39;attente DS indexée dans la variable &quot;command_queue&quot;, définit une alarme et réinitialise la variable à 0. </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> Retour: <a href="DS_Queues.htm">Files d&#39;attente DS</a></div><div style="float:right"> Suivant:<a href="ds_queue_empty.htm">ds_queue_empty</a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
+  </div>
+  <!-- KEYWORDS
+ds_queue_clear
+-->
+  <!-- TAGS
+ds_queue_clear
+-->
+
+</body></html>

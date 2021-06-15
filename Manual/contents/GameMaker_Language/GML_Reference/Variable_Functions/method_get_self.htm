@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>method_get_self</title>
+  <meta name="generator" content="Adobe RoboHelp 2019" />
+  <link rel="stylesheet" href="../../../assets/css/default.css" type="text/css" />
+  <meta name="rh-authors" content="Mark Alexander" />
+  <meta name="topic-comment" content="Page expliquant la fonction method_get_self" />
+  <meta name="rh-index-keywords" content="method_get_self" />
+  <meta name="search-keywords" content="method_get_self" />
+</head>
+<body><!--<div class="body-scroll" style="top: 150px;">--><h1>method_get_self</h1><p> Avec cette fonction, vous pouvez récupérer l&#39;ID d&#39;instance ou la référence de structure qui est le <a href="../../GML_Overview/Instance_Keywords.htm"><tt>self</tt></a> contexte utilisé lorsque la méthode est appelée. Si la variable n&#39;est <i>pas</i> une méthode, la fonction retournera <tt>undefined</tt>. Veuillez noter que la fonction peut également renvoyer la constante <span class="inline">pointer_null</span>, auquel cas le self actuel est utilisé au moment de l&#39;appel.</p><p></p><h4> Syntaxe:</h4><p class="code">method_get_self(method);</p><table><tbody><tr><th> Argument</th><th> Description</th></tr><tr><td> <span class="notranslate">method</span></td><td> La variable de méthode à vérifier.</td></tr></tbody></table><p></p><h4> Retour:</h4><p class="code">Integer, undefined, pointer_null</p><p></p><h4> Exemple:</h4><p class="code">var _self = method_get_self(light_properties);<br/> show_debug_message(string(_self));
+  </p><p> Le code ci-dessus obtient le contexte self pour la variable de méthode donnée et le renvoie à la console. </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> Retour: <a href="Variable_Functions.htm">Fonctions variables</a></div><div style="float:right"> Suivant:<a href="method_get_index.htm">method_get_index</a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
+  </div>
+  <!-- KEYWORDS
+method_get_self
+-->
+  <!-- TAGS
+method_get_self
+-->
+</body>
+</html>

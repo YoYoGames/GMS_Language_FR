@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>animcurve_create</title>
+  <meta name="generator" content="Adobe RoboHelp 2019" />
+  <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
+  <meta name="rh-authors" content="Mark Alexander" />
+  <meta name="topic-comment" content="Page expliquant la fonction animcurve_create" />
+  <meta name="rh-index-keywords" content="animcurve_create" />
+  <meta name="search-keywords" content="animcurve_create" />
+</head>
+<body><!--<div class="body-scroll" style="top: 150px;">--><h1>animcurve_create</h1><p> Cette fonction créera une <a href="../../../GML_Overview/Structs.htm">structure de</a> courbe d&#39;animation vide, prête à être remplie avec des données de canal. La fonction renverra un pointeur vers la structure et cela est ensuite utilisé pour ajouter des canaux et d&#39;autres données à la courbe d&#39;animation. Vous pouvez également fournir ceci à des fonctions telles que <a href="animcurve_get.htm"><tt>animcurve_get()</tt></a> pour obtenir plus tard les données de la courbe.</p><p> Lorsque vous utilisez cette fonction, la structure créée ne contiendra aucune donnée, et pour l&#39;utiliser, vous devez ajouter au moins un canal et le canal doit avoir des points ajoutés. Pour ajouter une chaîne, voir la fonction <a href="animcurve_channel_new.htm"><tt>animcurve_channel_new()</tt></a>, et pour ajouter des points au canal, voir la fonction <a href="animcurve_point_new.htm"><tt>animcurve_point_new()</tt></a>. De plus, vous pouvez donner un nom à la structure de la courbe d&#39;animation en définissant la variable &quot;nom&quot; (comme indiqué dans l&#39;exemple de code ci-dessous). Les canaux ajoutés à une nouvelle courbe d&#39;animation doivent être ajoutés sous forme de <a href="../../../GML_Overview/Arrays.htm">tableau</a>, où chaque élément du tableau fait référence à une structure de canal, et les points d&#39;un canal doivent également être ajoutés sous forme de tableau, où chaque élément de tableau fait référence à une structure de points.</p><p> Notez que les courbes d&#39;animation créées de cette manière <b>doivent être supprimées lorsqu&#39;elles ne sont plus nécessaires</b> car elles prendront de l&#39;espace en mémoire sinon, ce qui peut entraîner une fuite de mémoire, ralentir et éventuellement planter votre jeu. Vous pouvez supprimer une courbe d&#39;animation lorsqu&#39;elle n&#39;est plus nécessaire à l&#39;aide de la fonction <a href="animcurve_destroy.htm"><tt>animcurve_destroy()</tt></a>. Vous n&#39;avez pas besoin de nettoyer les données de canal ou de point dans la courbe, car cela sera fait automatiquement par le ramasse-miettes lorsque la courbe elle-même est détruite.</p><p></p><p></p><h4> Syntaxe:</h4><p class="code">animcurve_create();</p><p></p><h4> Retour:</h4><p class="code">Struct Reference</p><p></p><h4> Exemple:</h4><p class="code">my_curve = animcurve_create();<br/> my_curve.name = &quot;My_Curve&quot;;<br/> var _channels = array_create(1);<br/> _channels[0] = animcurve_channel_new();<br/> _channels[0].name = &quot;alpha&quot;;<br/> _channels[0].type = animcurvetype_catmullrom;<br/>    _channels[0].iterations = 8;<br/> var _points = array_create(3);<br/> _points[0] = animcurve_point_new();<br/> _points[0].posx = 0;<br/> _points[0].value = 0;<br/> _points[1] = animcurve_point_new();<br/> _points[1].posx = 0.5;<br/> _points[1].value
+    = 1;<br/> _points[2] = animcurve_point_new();<br/> _points[2].posx = 1;<br/> _points[2].value = 0;<br/> _channels[0].points = _points;<br/> my_curve.channels = _channels;</p><p> Le code ci-dessus crée une nouvelle structure de courbe d&#39;animation et la stocke dans la variable &quot;my_curve&quot;. Cette structure est ensuite remplie avec un nom et un tableau de canaux. Le tableau de canaux contient un seul canal avec trois points. </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> Retour: <a href="Animation_Curves.htm">Courbes d&#39;animation</a></div><div style="float:right"> Suivant:<a href="animcurve_channel_new.htm">animcurve_channel_new</a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
+  </div>
+  <!-- KEYWORDS
+animcurve_create
+-->
+  <!-- TAGS
+animcurve_create
+-->
+</body>
+</html>

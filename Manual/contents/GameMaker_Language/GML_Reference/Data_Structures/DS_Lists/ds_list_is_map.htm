@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <title>ds_list_is_map</title>
+  <meta name="generator" content="Adobe RoboHelp 2019"/>
+  <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css"/>
+  <meta name="rh-authors" content="Mark Alexander"/>
+  <meta name="topic-comment" content="Page de référence pour ds_list_is_map"/>
+  <meta name="rh-index-keywords" content="ds_list_is_map"/>
+  <meta name="search-keywords" content="ds_list_is_map"/>
+</head>
+
+<body><!--<div class="body-scroll" style="top: 150px;">--><h1>ds_list_is_map</h1><p> Avec cette fonction, vous pouvez vérifier si une <a href="../DS_Maps/DS_Maps.htm">carte DS</a> est stockée à la position donnée dans une liste DS. Si la position donnée contient un identifiant de carte DS, la fonction retournera <tt>true</tt> sinon il reviendra <tt>false</tt>.</p><p></p><h4> Syntaxe:</h4><p class="code">ds_list_is_map(id, pos);</p><table><tbody><tr><th> Argument</th><th> Description</th></tr><tr><td> <span class="notranslate">id</span></td><td> L&#39;identifiant de la liste à vérifier.</td></tr><tr><td> <span class="notranslate">pos</span></td><td> La position dans la liste à vérifier.</td></tr></tbody></table><p></p><h4> Retour:</h4><p class="code">Boolean</p><p></p><h4> Exemple:</h4><p class="code">var size = ds_list_size(ships) ;<br/> for (var i = 0; i &lt; size; i++;)<br/>     {
+    <br/>     if ds_list_is_map(ships, i)<br/>         {
+    <br/>         ds_map_destroy(i);
+    <br/>         }
+    <br/>     }
+    <br/> ds_list_destroy(ships);
+  </p><p> Le code ci-dessus parcourt une liste DS et vérifie si l&#39;une des entrées contient des ID de mappage. Si c&#39;est le cas, ces cartes sont détruites, puis la liste principale est détruite une fois la boucle terminée. </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> Retour: <a href="DS_Lists.htm">Listes DS</a></div><div style="float:right"> Suivant:<a href="ds_list_create.htm">ds_list_create</a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
+  </div>
+  <!-- KEYWORDS
+ds_list_is_map
+-->
+  <!-- TAGS
+ds_list_is_map
+-->
+
+</body></html>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>layer_background_visible</title>
+  <meta name="generator" content="Adobe RoboHelp 2019" />
+  <link rel="stylesheet" href="../../../../../assets/css/default.css" type="text/css" />
+  <meta name="rh-authors" content="Mark Alexander" />
+  <meta name="topic-comment" content="Page décrivant la fonction layer_background_visible" />
+  <meta name="rh-index-keywords" content="layer_background_visible" />
+  <meta name="search-keywords" content="layer_background_visible" />
+</head>
+<body><!--<div class="body-scroll" style="top: 150px;">--><h1>layer_background_visible</h1><p> En utilisant cette fonction, vous pouvez basculer la visibilité des éléments d&#39;arrière-plan. Vous fournissez l&#39;ID d&#39;élément d&#39;arrière-plan (que vous obtenez lorsque vous créez un élément d&#39;arrière-plan à l&#39;aide de <a href="layer_background_create.htm"><tt>layer_background_create()</tt></a> ou lorsque vous utilisez la fonction <a href="layer_background_get_id.htm"><tt>layer_background_get_id()</tt></a> ), puis définissez l&#39;argument visible sur <tt>true</tt> ou <tt>false</tt>. Lorsqu&#39;il est réglé sur <tt>true</tt> l&#39;élément sera affiché, et lorsqu&#39;il est réglé sur <tt>false</tt>, l&#39;élément ne sera pas affiché. Notez que cela dépend de la visibilité du calque, et même si l&#39;élément d&#39;arrière-plan est marqué comme visible, il ne sera pas dessiné si le calque sur lequel il se trouve est marqué comme non visible.</p><p></p><h4> Syntaxe:</h4><p class="code">layer_background_visible(background_element_id, visible)</p><table><tbody><tr><th> Argument</th><th> Description</th></tr><tr><td> <span class="notranslate">background_element_id</span></td><td> La valeur d&#39;identifiant unique de l&#39;élément d&#39;arrière-plan à modifier</td></tr><tr><td> <span class="notranslate">visible</span></td><td> La bascule de visibilité, qui peut être <tt>true</tt> ou <tt>false</tt></td></tr></tbody></table><p></p><h4> Retour:</h4><p class="code">N/A</p><p></p><h4> Exemple:</h4><p class="code">if mouse_check_button_pressed(mb_left)<br/>     {
+    <br/>     var back = layer_background_get_id(layer);<br/>     if layer_background_get_visible(back)<br/>         {
+    <br/>         layer_background_visible(back, false);<br/>         }
+    <br/>     else
+    <br/>         {
+    <br/>         layer_background_visible(back, true);<br/>         }
+    <br/>     }
+  </p><p> Le code ci-dessus vérifie si un bouton de la souris est enfoncé et si un bouton est détecté, il basculera la visibilité d&#39;arrière-plan de l&#39;élément d&#39;arrière-plan affecté à la couche sur laquelle se trouve l&#39;instance exécutant le code. </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> Retour: <a href="Background_Layers.htm">Calques d&#39;arrière-plan</a></div><div style="float:right"> Suivant:<a href="layer_background_sprite.htm">layer_background_sprite</a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
+  </div>
+  <!-- KEYWORDS
+layer_background_visible
+-->
+  <!-- TAGS
+layer_background_visible
+-->
+</body>
+</html>

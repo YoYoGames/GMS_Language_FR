@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <title>ds_set_precision</title>
+  <meta name="generator" content="Adobe RoboHelp 2019"/>
+  <link rel="stylesheet" href="../../../assets/css/default.css" type="text/css"/>
+  <meta name="rh-authors" content="Mark Alexander"/>
+  <meta name="topic-comment" content="Page de référence pour ds_set_precision"/>
+  <meta name="rh-index-keywords" content="ds_set_precision"/>
+  <meta name="search-keywords" content="ds_set_precision"/>
+</head>
+
+<body><!--<div class="body-scroll" style="top: 150px;">--><h1>ds_set_precision</h1><p> Lors de la comparaison de valeurs, par exemple lors de la recherche dans une carte ou du tri d&#39;une liste, <span class="notranslate">GameMaker Studio 2</span> doit décider quand deux valeurs sont égales. Pour les chaînes et les valeurs entières, c&#39;est clair, mais pour les nombres réels, en raison d&#39;erreurs d&#39;arrondi en virgule flottante, des nombres apparemment égaux peuvent facilement devenir inégaux. Par exemple, il est possible que <b>(5/3) * 3</b> <i>ne</i> soit pas égal à 5! Pour éviter cela, une valeur de précision est utilisée sur toutes les fonctions de nombres réels, et lorsque la <i>différence entre deux nombres est inférieure</i> à cette précision, ils sont considérés comme égaux. La valeur par défaut, une précision de 0,0000001, est utilisée pour toutes les fonctions de structure de données sauf si cette fonction est modifiée.</p><p class="note"> <b>REMARQUE</b>: cette précision est utilisée dans toutes les structures de données mais pas dans d&#39;autres comparaisons en <span class="notranslate">GML</span>!</p><p></p><h4> Syntaxe:</h4><p class="code">ds_set_precision(prec);</p><table><tbody><tr><th> Argument</th><th> Description</th></tr><tr><td> <span class="notranslate">prec</span></td><td> La valeur de précision (par défaut 0.0000001)</td></tr></tbody></table><p></p><h4> Retour:</h4><p class="code">Returns:N/A</p><p></p><h4> Exemple:</h4><p class="code">ds_set_precision(0.0001);</p><p> Le code ci-dessus modifiera le paramètre de précision par défaut pour toutes les fonctions de structure de données. </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> Retour: <a href="Data_Structures.htm">Structures de données</a></div><div style="float:right"> Suivant: ds_exists</div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
+  </div>
+  <!-- KEYWORDS
+ds_set_precision
+-->
+  <!-- TAGS
+ds_set_precision
+-->
+
+</body></html>

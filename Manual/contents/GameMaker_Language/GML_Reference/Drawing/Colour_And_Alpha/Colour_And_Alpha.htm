@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>Couleur et alpha</title>
+  <meta name="generator" content="Adobe RoboHelp 2019" />
+  <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
+  <meta name="rh-authors" content="Mark Alexander" />
+  <meta name="topic-comment" content="Section de référence pour les fonctions et variables Color And Alpha" />
+  <meta name="rh-index-keywords" content="c_aqua,c_black,c_blue,c_dkgray,c_fuchsia,c_gray,c_green,c_lime,c_ltgray,c_maroon,c_navy,c_orange,c_olive,c_red,c_purple,c_silver,c_white,c_teal,c_yellow" />
+  <meta name="search-keywords" content="Couleur et alpha,Couleur,Alpha,c_aqua,c_black,c_blue,c_dkgray,c_fuchsia,c_gray,c_green,c_lime,c_ltgray,c_maroon,c_navy,c_orange,c_olive,c_red,c_purple,c_silver,c_white,c_teal,c_yellow" />
+</head>
+<body><!--<div class="body-scroll" style="top: 150px;">--><h1> Couleur et alpha</h1><p> <span class="notranslate">GameMaker Studio 2</span> propose une sélection complète de fonctions permettant de manipuler la couleur et l&#39;alpha de ce qui est dessiné à l&#39;écran (pour mélanger des images à l&#39;aide de <b>modes de fusion</b> spéciaux et d&#39;autres fonctions spécifiques à PGU, consultez la section sur le <a href="../GPU_Control/GPU_Control.htm">contrôle GPU</a>. En utilisant ces fonctions, vous pouvez séparer les couleurs. dans leurs composants, créez de nouvelles couleurs et manipulez l&#39;alpha de dessin pour changer la façon dont les différents éléments de votre jeu sont dessinés ensemble. Outre ces fonctions, il existe également un certain nombre de constantes qui peuvent être utilisées comme couleurs de base dans ces (et d&#39;autres) les fonctions:</p><p></p><table style="max-width: 400px"><tbody><tr><th> Constant</th><th> Couleur</th><th> Évaluer</th></tr><tr><td> <span class="notranslate">c_aqua</span></td><td style="text-align: center;background-color: #00fffe"></td><td style="text-align: right"> 16776960</td></tr><tr><td> <span class="notranslate">c_black</span></td><td style="text-align: center;background-color: #000000"></td><td style="text-align: right"> 0</td></tr><tr><td> <span class="notranslate">c_blue</span></td><td style="text-align: center;background-color: #0000FF"></td><td style="text-align: right"> 16711680</td></tr><tr><td> <span class="notranslate">c_dkgray</span></td><td style="text-align: center;background-color: #424242"></td><td style="text-align: right"> 4210752</td></tr><tr><td> <span class="notranslate">c_fuchsia</span></td><td style="text-align: center;background-color: #ff00f9"></td><td style="text-align: right"> 16711935</td></tr><tr><td> <span class="notranslate">c_gray</span></td><td style="text-align: center;background-color: #7f7f7f"></td><td style="text-align: right"> 8421504</td></tr><tr><td> <span class="notranslate">c_green</span></td><td style="text-align: center;background-color: #00820f"></td><td style="text-align: right"> 32768</td></tr><tr><td> <span class="notranslate">c_lime</span></td><td style="text-align: center;background-color: #00ff00"></td><td style="text-align: right"> 65280</td></tr><tr><td> <span class="notranslate">c_ltgray</span></td><td style="text-align: center;background-color: #bfbfbf"></td><td style="text-align: right"> 12632256</td></tr><tr><td> <span class="notranslate">c_maroon</span></td><td style="text-align: center;background-color: #800000"></td><td style="text-align: right"> 128</td></tr><tr><td> <span class="notranslate">c_navy</span></td><td style="text-align: center;background-color: #000080"></td><td style="text-align: right"> 8388608</td></tr><tr><td> <span class="notranslate">c_olive</span></td><td style="text-align: center;background-color: #808000"></td><td style="text-align: right"> 32896</td></tr><tr><td> <span class="notranslate">c_orange</span></td><td style="text-align: center;background-color: #FFA040"></td><td style="text-align: right"> 4235519</td></tr><tr><td> <span class="notranslate">c_purple</span></td><td style="text-align: center;background-color: #800080"></td><td style="text-align: right"> 8388736</td></tr><tr><td> <span class="notranslate">c_red</span></td><td style="text-align: center;background-color: #FF0000"></td><td style="text-align: right"> 255</td></tr><tr><td> <span class="notranslate">c_silver</span></td><td style="text-align: center;background-color: #C0C0C0"></td><td style="text-align: right"> 12632256</td></tr><tr><td> <span class="notranslate">c_teal</span></td><td style="text-align: center;background-color: #008080"></td><td style="text-align: right"> 8421376</td></tr><tr><td> <span class="notranslate">c_white</span></td><td style="text-align: center;background-color: #ffffff"></td><td style="text-align: right"> 16777215</td></tr><tr><td> <span class="notranslate">c_yellow</span></td><td style="text-align: center;background-color: #ffff00"></td><td style="text-align: right"> 65535</td></tr></tbody></table><p></p><p> Notez que vous pouvez également créer des couleurs à partir de leur valeur hexadécimale en utilisant au préalable le symbole &quot;$&quot;, et ces valeurs peuvent également être utilisées dans les fonctions de couleur pour obtenir les teintes des composants ou pour mélanger, etc... La valeur hexadécimale de ces couleurs est fractionnée en trois parties au format Bleu / Vert / Rouge donc, par exemple, pour définir une couleur violette vous pouvez utiliser:</p><p class="code">col = $983c95</p><p> Où 98 est le composant bleu, 3c est le composant vert et 95 est le composant rouge.</p><p> Les fonctions suivantes peuvent être utilisées pour obtenir les teintes des composants, la teinte composée, la saturation et la luminosité d&#39;une couleur sélectionnée ainsi que l&#39;alpha et d&#39;autres propriétés: </p><p></p><ul class="colour"><li><a href="colour_get_blue.htm">colour_get_blue</a></li><li><a href="colour_get_green.htm">colour_get_green</a></li><li><a href="colour_get_red.htm">colour_get_red</a></li><li><a href="colour_get_hue.htm">colour_get_hue</a></li><li><a href="colour_get_saturation.htm">colour_get_saturation</a></li><li><a href="colour_get_value.htm">colour_get_value</a></li><li><a href="draw_getpixel.htm">draw_getpixel</a></li><li><a href="draw_getpixel_ext.htm">draw_getpixel_ext</a></li><li><a href="draw_get_colour.htm">draw_get_colour</a></li><li><a href="draw_get_alpha.htm">draw_get_alpha</a></li></ul><p></p><p> Ces fonctions peuvent être utilisées pour créer des couleurs à partir de valeurs d&#39;entrée brutes pour les composants de couleur: </p><p></p><ul class="colour"><li><a href="make_colour_hsv.htm">make_colour_hsv</a></li><li><a href="make_colour_rgb.htm">make_colour_rgb</a></li><li><a href="merge_colour.htm">merge_colour</a></li></ul><p></p><p> Les fonctions suivantes peuvent être utilisées pour définir les différentes options de dessin à l&#39;écran, y compris l&#39;alpha, la couleur et la fusion: </p><p></p><ul class="colour"><li><a href="draw_clear.htm">draw_clear</a></li><li><a href="draw_clear_alpha.htm">draw_clear_alpha</a></li><li><a href="draw_set_alpha.htm">draw_set_alpha</a></li><li><a href="draw_set_colour.htm">draw_set_colour</a></li></ul><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> Retour: <a href="../Drawing.htm">Dessin</a></div><div style="float:right"> Suivant: <a href="../GPU_Control/GPU_Control.htm">Contrôle GPU</a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
+  </div>
+  <!-- KEYWORDS
+Colour And Alpha
+Colour Functions
+Alpha Functions
+c_aqua
+c_black
+c_blue
+c_dkgray
+c_fuchsia
+c_gray
+c_green
+c_lime
+c_ltgray
+c_maroon
+c_navy
+c_orange
+c_olive
+c_red
+c_purple
+c_silver
+c_white
+c_teal
+c_yellow
+-->
+  <!-- TAGS
+colour_alpha_functions
+-->
+</body>
+</html>

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>La structure de l&#39;objet de séquence</title>
+  <meta name="generator" content="Adobe RoboHelp 2019" />
+  <link rel="stylesheet" href="../../../../../assets/css/default.css" type="text/css" />
+  <meta name="rh-authors" content="Mark Alexander" />
+  <meta name="topic-comment" content="Page décrivant la structure de l&#39;objet de séquence" />
+  <meta name="rh-index-keywords" content="Structure d&#39;objet de séquence" />
+  <meta name="search-keywords" content="La structure de l&#39;objet de séquence,seqplay_oneshot,seqplay_loop,seqplay_pingpong,spritespeed_framespersecond,spritespeed_framespergameframe,name,loopmode,playbackSpeed,playbackSpeedType,length,volume,xorigin,yorigin,messageEventKeyframes,momentKeyframes,tracks"
+  />
+</head>
+<body><!--<div class="body-scroll" style="top: 150px;">--><h1> La structure de l&#39;objet de séquence</h1><p> Un objet de séquence est le nom donné à la structure extraite de l&#39;actif de séquence tel que défini dans le navigateur d&#39;actifs de votre jeu. Cette <a href="../../../../GML_Overview/Structs.htm">structure</a> aura les propriétés suivantes qui peuvent être modifiées:</p><ul class="colour"><li><tt>name</tt>: Il s&#39;agit du nom de la séquence sous forme de chaîne et vous pouvez obtenir ou définir cette valeur selon vos besoins. Notez que les séquences créées à l&#39;aide de la fonction <a href="../sequence_create.htm"><tt>sequence_create()</tt></a> n&#39;aura pas de nom et ce sera simplement une chaîne vide &quot;&quot;.<tt></tt></li><li><tt>loopmode</tt>: Il s&#39;agit du mode de lecture de l&#39;objet séquence et peut être obtenu ou défini. Il renverra (ou peut être défini sur) les constantes suivantes:</li></ul><table><tbody><tr><th> Constant</th><th> Description</th><th> Évaluer </th></tr><tr><td><span class="notranslate"><tt>seqplay_oneshot</tt></span></td><td> La séquence sera lue une fois puis s&#39;arrêtera une fois terminée.</td><td> <span class="notranslate">0 </span></td></tr><tr><td><span class="notranslate"><tt>seqplay_loop</tt></span></td><td> La séquence se déroulera en boucle, la tête de lecture retournant au début lorsqu&#39;elle atteindra la fin de la région de lecture.</td><td> <span class="notranslate">1 </span></td></tr><tr><td><span class="notranslate"><tt>seqplay_pingpong</tt></span></td><td> La séquence sera bouclée, la tête de lecture inversant le sens lorsqu&#39;elle atteint la fin de la zone de lecture.</td><td> <span class="notranslate">2 </span></td></tr></tbody></table><p></p><ul class="colour"><li><tt>playbackSpeed</tt>: Ceci spécifie la vitesse de lecture de la séquence, qui est interprétée soit comme des images par seconde, soit comme des images par image de jeu en fonction de la <tt>playbackSpeedType</tt> (voir ci-dessous). Vous pouvez obtenir ou définir cette valeur.</li><li><tt>playbackSpeedType</tt>: Ceci spécifie comment le <tt>playbackSpeed</tt> doit être interprété et vous pouvez obtenir ou définir cette valeur. Vous pouvez utiliser l&#39;une des constantes suivantes pour définir la valeur (ou l&#39;une de ces constantes sera renvoyée si vous vérifiez la propriété):</li></ul><table><tbody><tr><th> Constant</th><th> Description</th><th> Évaluer </th></tr><tr><td><span class="notranslate"><tt>spritespeed_framespersecond</tt></span></td><td> Spécifie que <tt>playbackSpeed</tt> doit être interprété comme des images par seconde</td><td> <span class="notranslate">0 </span></td></tr><tr><td><span class="notranslate"><tt>spritespeed_framespergameframe</tt></span></td><td> Spécifie que <tt>playbackSpeed</tt> doit être interprété comme des images par image de jeu.</td><td> <span class="notranslate">1 </span></td></tr></tbody></table><p></p><ul class="colour"><li><tt>length</tt>: La longueur de la séquence en images. Vous pouvez obtenir ou définir cette valeur, mais notez que raccourcir une séquence peut entraîner des problèmes si une instance de séquence référençant cette séquence a sa tête de lecture définie au-delà de la nouvelle longueur.</li><li><tt>volume</tt>: Il s&#39;agit d&#39;une valeur scalaire de 0 à 1 qui est utilisée pour mettre à l&#39;échelle le volume de toutes les pistes audio de la séquence. Vous pouvez obtenir ou définir cette valeur et cela modifiera la sortie audio globale pour toutes les pistes - par exemple, si vous avez une piste audio avec un volume de 0,8, puis définissez la séquence <tt>volume</tt> propriété à 0,5, la piste audio aura un volume final de 0,4.</li><li><tt>xorigin</tt>: C&#39;est l&#39;origine de la séquence le long de l&#39;axe X. Vous pouvez obtenir ou définir cette valeur.</li><li><tt>yorigin</tt>: C&#39;est l&#39;origine de la séquence le long de l&#39;axe Y. Vous pouvez obtenir ou définir cette valeur.</li><li><tt>messageEventKeyframes</tt>: Cela permet d&#39;accéder aux <span class="notranslate">keyframes</span> événement de message pour la séquence. Vous pouvez obtenir ou définir ces événements de message, et lors de l&#39;obtention de cette propriété, un tableau de <span class="notranslate">keyframe</span> est renvoyé, et pour définir la propriété, vous devez fournir un tableau de structures d&#39; <span class="notranslate">keyframe</span> Pour plus d&#39;informations, veuillez consulter la page sur les <a href="../Sequence_Events_Moments_Broadcast.htm">événements et les moments de séquence</a>.</li><li><tt>momentKeyframes</tt>: Cela permet d&#39;accéder aux <span class="notranslate">keyframes</span> de l&#39;événement de moment pour la séquence. Vous pouvez obtenir ou définir ces événements de moment, et lors de l&#39;obtention de cette propriété, un tableau de <span class="notranslate">keyframe</span> est renvoyé, et pour définir la propriété, vous devez fournir un tableau de structures d&#39; <span class="notranslate">keyframe</span> Pour plus d&#39;informations, veuillez consulter la page sur les <a href="../Sequence_Events_Moments_Broadcast.htm">événements et les moments de séquence</a>.</li><li><tt>tracks</tt>: Cela permet d&#39;accéder à la liste des <b>pistes d&#39;actifs</b> au niveau supérieur de la séquence. Vous pouvez obtenir ou définir cette propriété, et lors de l&#39;obtention de cette propriété, un tableau de structures de suivi est renvoyé, et pour définir la propriété, vous devez fournir un tableau de structures de suivi. Pour plus d&#39;informations, veuillez consulter la section sur les <a href="The_Track_Struct.htm"><b>structures de suivi</b></a>.</li></ul><p> Notez que si vous souhaitez accéder aux propriétés d&#39;une séquence qui a été créée dans le navigateur d&#39;actifs, vous devez d&#39;abord appeler la fonction <a href="../sequence_get.htm"><tt>sequence_get()</tt></a> sur l&#39;index d&#39;actif pour récupérer la structure de l&#39;objet séquence. Notez également que toute modification apportée à cette structure de séquence signifiera que toutes les autres instances de cet actif de séquence auront également ces modifications, et elles seront conservées tant que le jeu est en cours d&#39;exécution, même si vous appelez le <span class="inline">game_restart()</span> fonction. </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> Retour: <a href="../Sequences.htm">Séquences</a></div><div style="float:right"> Suivant: <a href="The_Sequence_Instance_Struct.htm">La structure d&#39;instance de séquence</a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
+  </div>
+  <!-- KEYWORDS
+The Sequence Object Struct
+seqplay_oneshot
+seqplay_loop
+seqplay_pingpong
+spritespeed_framespersecond
+spritespeed_framespergameframe
+name
+loopmode
+playbackSpeed
+playbackSpeedType
+length
+volume
+xorigin
+yorigin
+messageEventKeyframes
+momentKeyframes
+tracks
+-->
+  <!-- TAGS
+sequence_object
+-->
+</body>
+</html>

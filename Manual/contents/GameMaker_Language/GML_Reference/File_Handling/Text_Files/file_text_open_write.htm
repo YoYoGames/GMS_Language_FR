@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>file_text_open_write</title>
+  <meta name="generator" content="Adobe RoboHelp 2019" />
+  <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
+  <meta name="rh-authors" content="Mark Alexander" />
+  <meta name="topic-comment" content="Page de référence pour file_text_open_write" />
+  <meta name="rh-index-keywords" content="file_text_open_write" />
+  <meta name="search-keywords" content="file_text_open_write" />
+</head>
+<body><!--<div class="body-scroll" style="top: 150px;">--><h1>file_text_open_write</h1><p> Cette fonction ouvre le fichier texte avec le nom de fichier indiqué pour l&#39; <i>écriture uniquement</i> (si le fichier n&#39;existe pas, il est créé), retournant l&#39; <i>identifiant</i> unique du fichier qui doit être stocké dans une variable car il sera utilisé pour toutes les actions ultérieures à voir avec ce fichier. Notez que si le fichier <i>ne peut pas</i> être créé (à cause d&#39;un nom de fichier illégal, par exemple), la fonction renverra -1.</p><p class="note"> <b>REMARQUE</b>: vous ne pouvez ouvrir qu&#39;un maximum de 32 fichiers à la fois. Vous devez également <b>toujours</b> fermer les fichiers lorsque vous avez terminé, car cela écrit les informations et libère la mémoire associée au fichier.</p><p class="note"><b></b> <b>ATTENTION!</b> Cette fonction peut ne pas fonctionner comme prévu en raison du <span class="notranslate">GameMaker Studio 2</span>! Veuillez consulter la section sur le <a href="../../../../Additional_Information/The_File_System.htm">système de fichiers</a> pour plus d&#39;informations.</p><p></p><h4> Syntaxe:</h4><p class="code">file_text_open_write(fname);</p><table><tbody><tr><th> Argument</th><th> Description</th></tr><tr><td> <span class="notranslate">fname</span></td><td> Le nom du fichier dans lequel écrire.</td></tr></tbody></table><p></p><h4> Retour:</h4><p class="code">Real</p><p></p><h4> Exemple:</h4><p class="code">var file;<br/> file = file_text_open_write(working_directory + &quot;level.txt&quot;);<br/> file_text_write_string(file, level_data);<br/> file_text_close(file);
+  </p><p> Le code ci-dessus ouvrira le fichier &quot;level.txt&quot; pour l&#39;écriture, puis écrira la chaîne stockée dans la variable &quot;level_data&quot; avant de finalement refermer le fichier. </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> Retour: <a href="Text_Files.htm">Fichiers texte</a></div><div style="float:right"> Suivant:<a href="file_text_open_append.htm">file_text_open_append</a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
+  </div>
+  <!-- KEYWORDS
+file_text_open_write
+-->
+  <!-- TAGS
+file_text_open_write
+-->
+</body>
+</html>

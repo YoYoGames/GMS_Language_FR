@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>game_id</title>
+  <meta name="generator" content="Adobe RoboHelp 2019" />
+  <link rel="stylesheet" href="../../../assets/css/default.css" type="text/css" />
+  <meta name="rh-authors" content="Mark Alexander" />
+  <meta name="topic-comment" content="Cette page décrit la variable game_id" />
+  <meta name="rh-index-keywords" content="game_id" />
+  <meta name="search-keywords" content="game_id" />
+</head>
+<body><!--<div class="body-scroll" style="top: 150px;">--><h1>game_id</h1><p> Cette <b>variable en lecture seule</b> renvoie l&#39;identifiant unique du jeu que vous avez créé. Vous pouvez l&#39;utiliser si vous avez besoin d&#39;un nom de fichier unique ou de tout autre élément nécessitant quelque chose pour identifier uniquement votre jeu. Cela peut être défini dans les <a href="../../../Settings/Game_Options.htm">options de jeu</a>.</p><p></p><h4> Syntaxe:</h4><p class="code">game_id</p><p></p><h4> Retour:</h4><p class="code">Real</p><p></p><h4> Exemple:</h4><p class="code">ini_open(&quot;Score.ini&quot;);<br/> ini_write_real(&quot;Scores&quot;,&quot;0&quot;,score + game_id);<br/> ini_close();
+  </p><p> Le code ci-dessus effectue un cryptage très basique sur le score en y ajoutant le game_id avant de l&#39;enregistrer. En le relisant dans le jeu, vous déduiriez le game_id pour obtenir à nouveau la valeur correcte. </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> Retour: <a href="General_Game_Control.htm">Contrôle général du jeu</a></div><div style="float:right"> Suivant:<a href="game_save_id.htm">game_save_id</a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
+  </div>
+  <!-- KEYWORDS
+game_id
+-->
+  <!-- TAGS
+game_id
+-->
+</body>
+</html>

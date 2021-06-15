@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>mp_grid_clear_cell</title>
+  <meta name="generator" content="Adobe RoboHelp 2019" />
+  <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
+  <meta name="rh-authors" content="Mark Alexander" />
+  <meta name="topic-comment" content="Cette page décrit la fonction mp_grid_clear_cell" />
+  <meta name="rh-index-keywords" content="mp_grid_clear_cell" />
+  <meta name="search-keywords" content="mp_grid_clear_cell" />
+</head>
+<body><!--<div class="body-scroll" style="top: 150px;">--><h1>mp_grid_clear_cell</h1><p> Cette fonction peut être utilisée pour effacer une &quot;cellule&quot; spécifique d&#39;une grille MP. Les cellules <i>ne</i> sont pas calculées en tant que coordonnées de pièce, mais plutôt en tant que coordonnées de grille, où (0,0) est le coin supérieur gauche de la grille. cela signifie que pour effacer une cellule à une position spécifique dans la pièce, nous devons changer les coordonnées x et y en coordonnées de cellule en les divisant par la résolution de la grille MP. L&#39;exemple de code ci-dessous montre comment cela fonctionne.</p><p></p><h4> Syntaxe:</h4><p class="code">mp_grid_clear_cell(id, h, v);</p><table><tbody><tr><th> Argument</th><th> Description</th></tr><tr><td> <span class="notranslate">id</span></td><td> Index du mp_grid à utiliser</td></tr><tr><td> <span class="notranslate">h</span></td><td> Position horizontale de la cellule à effacer</td></tr><tr><td> <span class="notranslate">v</span></td><td> position verticale de la cellule à effacer</td></tr></tbody></table><p></p><h4> Retour:</h4><p class="code">Boolean</p><p></p><h4> Exemple:</h4><p class="code">with (obj_Box)<br/>     {
+    <br/>     mp_grid_clear_cell(grid, floor(x / 32), floor(y /32));<br/>     instance_destroy();
+    <br/>     }
+  </p><p> Le code ci-dessus obligera tous les &quot;obj_Box&quot; à se détruire eux-mêmes et leur demandera de marquer les cellules qu&#39;ils occupaient dans mp_grid indexées dans la variable &quot;grid&quot; comme libres. Dans cet exemple, nous trouvons la cellule appropriée en prenant la coordonnée x / y de l&#39;objet et en la divisant par la résolution de la grille (en utilisant <tt>floor</tt> pour conserver les valeurs sous forme d&#39;entiers). </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> Retour: <a href="Motion_Planning.htm">Planification de mouvement</a></div><div style="float:right"> Suivant:<a href="mp_grid_clear_rectangle.htm">mp_grid_clear_rectangle</a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
+  </div>
+  <!-- KEYWORDS
+mp_grid_clear_cell
+-->
+  <!-- TAGS
+mp_grid_clear_cell
+-->
+</body>
+</html>

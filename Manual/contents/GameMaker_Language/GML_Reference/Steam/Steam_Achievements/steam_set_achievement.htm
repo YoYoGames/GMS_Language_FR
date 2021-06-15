@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title> steam_set_achievement</title>
+  <meta name="generator" content="Adobe RoboHelp 2019" />
+  <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
+  <meta name="rh-authors" content="Mark Alexander" />
+  <meta name="topic-comment" content="Page de référence pour steam _set_achievement" />
+  <meta name="rh-index-keywords" content="steam_set_achievement" />
+  <meta name="search-keywords" content="steam_set_achievement" />
+</head>
+<body><!--<div class="body-scroll" style="top: 150px;">--><h1> <span class="notranslate">steam</span> _set_achievement</h1><p> Avec cette fonction, vous pouvez dire à l&#39; <span class="notranslate">Steam</span> d&#39;attribuer (&quot;définir&quot;) un exploit pour le joueur. Ces réalisations doivent avoir été définies sur la <span class="notranslate">Steam</span> Works pour votre jeu et la chaîne transmise à la fonction doit correspondre à celle utilisée comme <b>nom d&#39;API</b> sur le panneau de configuration. La <span class="notranslate">Steam</span> affichera un panneau de notification à l&#39;utilisateur pour l&#39;informer du succès qu&#39;il a reçu, à moins que le succès n&#39;ait déjà été attribué, auquel cas rien ne se passera.</p><p></p><h4> Syntaxe:</h4><p class="code">steam_set_achievement(ach_name);</p><table><tbody><tr><th> Argument</th><th> Description</th></tr><tr><td> <span class="notranslate">ach_name</span></td><td> Le nom de la réalisation à définir (chaîne).</td></tr></tbody></table><p></p><h4> Retour:</h4><p class="code">N/A</p><p></p><h4> Exemple:</h4><p class="code">if hp &lt;= 0<br/>     {
+    <br/>     global.Deaths += 1;<br/>     if global.Deaths == 10<br/>         {
+    <br/>         if !steam_get_achievement(&quot;ach_Player_Dies_Ten_Times&quot;) steam_set_achievement(&quot;ach_Player_Dies_Ten_Times&quot;);<br/>         }
+    <br/>     }
+  </p><p> Le code ci-dessus récompensera le joueur un exploit si la variable globale &quot;Décès&quot; est égal à 10 et si le succès n&#39;a pas déjà été décerné. </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> Retour: <a href="Steam_Achievements.htm">Réalisations et statistiques</a></div><div style="float:right"> Suivant: <a href="steam_get_achievement.htm"><span class="notranslate">steam</span> _get_achievement</a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
+  </div>
+  <!-- KEYWORDS
+steam_set_achievement
+-->
+  <!-- TAGS
+steam_set_achievement
+-->
+</body>
+</html>

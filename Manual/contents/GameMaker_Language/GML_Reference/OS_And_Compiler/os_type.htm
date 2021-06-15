@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>os_type</title>
+  <meta name="generator" content="Adobe RoboHelp 2019" />
+  <link rel="stylesheet" href="../../../assets/css/default.css" type="text/css" />
+  <meta name="rh-authors" content="Mark Alexander" />
+  <meta name="topic-comment" content="Page de référence pour os_type" />
+  <meta name="rh-index-keywords" content="os_type,os_windows,os_uwp,os_linux,os_macosx,os_ios,os_tvos,os_android,os_ps4,os_xboxone,os_switch,os_unknown" />
+  <meta name="search-keywords" content="os_type,os_windows,os_uwp,os_linux,os_macosx,os_ios,os_tvos,os_android,os_ps4,os_xboxone,os_switch,os_unknown" />
+</head>
+<body><!--<div class="body-scroll" style="top: 150px;">--><h1>os_type</h1><p> Cette <strong>variable en lecture seule</strong> contient l&#39;une des différentes constantes que <span class="notranslate">GameMaker Studio 2</span> doit vous indiquer pour quel système d&#39;exploitation le jeu a été créé. Notez que ce n&#39;est <i>pas</i> nécessairement le même que le système d&#39;exploitation de l&#39;appareil qui l&#39;exécute, car, par exemple, votre jeu pourrait fonctionner sur un <span class="notranslate">Amazon Fire</span>, mais aura été conçu pour la <span class="notranslate">Android</span> forme Android (auquel cas <tt>os_type</tt> sera <tt>os_android</tt> ).</p><p> Les constantes suivantes peuvent être renvoyées:</p><p></p><table><tbody><tr><th> Constant</th><th> Description</th></tr><tr><td> <span class="notranslate">os_windows</span></td><td> <span class="notranslate">Windows</span> exploitation Windows</td></tr><tr><td> <span class="notranslate">os_uwp</span></td><td> Plateforme <span class="notranslate">Windows</span> universelle <span class="notranslate">Windows 10</span></td></tr><tr><td> <span class="notranslate">os_linux</span></td><td> <span class="notranslate">Linux</span></td></tr><tr><td> <span class="notranslate">os_macosx</span></td><td> <span class="notranslate">macOS</span> X</td></tr><tr><td> <span class="notranslate">os_ios</span></td><td> <span class="notranslate">iOS</span> (iPhone, iPad, iPod Touch)</td></tr><tr><td> <span class="notranslate">os_tvos</span></td><td> Apple <span class="notranslate">tvOS</span></td></tr><tr><td> <span class="notranslate">os_android</span></td><td> <span class="notranslate">Android</span></td></tr><tr><td> <span class="notranslate">os_ps4</span></td><td> Sony PlayStation 4</td></tr><tr><td> <span class="notranslate">os_xboxone</span></td><td> Microsoft <span class="notranslate">XBox One</span></td></tr><tr><td> <span class="notranslate">os_switch</span></td><td> <span class="notranslate">Switch</span> <span class="notranslate">Nintendo</span></td></tr><tr><td> <span class="notranslate">os_unknown</span></td><td> OS inconnu</td></tr></tbody></table><p></p><h4> Syntaxe:</h4><p class="code">os_type;</p><p></p><h4> Retour:</h4><p class="code">Constant</p><p></p><h4> Exemple:</h4><p class="code">switch (os_type)<br/>    {
+    <br/>    case os_windows: global.Config = 0; break;<br/>    case os_android: global.Config = 1; break;<br/>    case os_linux: global.Config = 2; break;<br/>    case os_macosx: global.Config = 3; break;<br/>    case os_ios: global.Config = 4; break;<br/>       case os_winphone: global.Config = 5; break;<br/>    }
+  </p><p> Le code ci-dessus vérifie le système d&#39;exploitation exécutant le jeu et définit une variable globale en conséquence. </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> Retour: <a href="OS_And_Compiler.htm">OS et compilateur</a></div><div style="float:right"> Suivant:<a href="os_version.htm">os_version</a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
+  </div>
+  <!-- KEYWORDS
+os_type
+os_windows
+os_uwp
+os_linux
+os_macosx
+os_ios
+os_tvos
+os_android
+os_ps4
+os_xboxone
+os_switch
+os_unknown
+-->
+  <!-- TAGS
+os_type
+-->
+</body>
+</html>

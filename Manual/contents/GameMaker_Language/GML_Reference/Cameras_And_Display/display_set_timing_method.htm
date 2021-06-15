@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>display_set_timing_method</title>
+  <meta name="generator" content="Adobe RoboHelp 2019" />
+  <link rel="stylesheet" href="../../../assets/css/default.css" type="text/css" />
+  <meta name="rh-authors" content="Mark Alexander" />
+  <meta name="topic-comment" content="Section de référence pour display_set_timing_method" />
+  <meta name="rh-index-keywords" content="display_set_timing_method,tm_sleep,tm_countvsyncs" />
+  <meta name="search-keywords" content="display_set_timing_method,tm_sleep,tm_countvsyncs" />
+</head>
+<body><!--<div class="body-scroll" style="top: 150px;">--><h1>display_set_timing_method</h1><p> Cette fonction peut être utilisée pour définir la méthode de chronométrage à utiliser pour le rendu de votre jeu. La méthode peut être l&#39;une des constantes suivantes:</p><p></p><table><tbody><tr><th> Constant</th><th> Description</th></tr><tr><td> <span class="notranslate">tm_sleep</span></td><td> Utilisez la valeur de la marge de sommeil comme méthode de synchronisation principale</td></tr><tr><td> <span class="notranslate">tm_countvsyncs</span></td><td> Utilisez la synchronisation vsync comme méthode de synchronisation principale (par défaut pour toutes les plates-formes prises en charge)</td></tr></tbody></table><p></p><p> La méthode de synchronisation vsync utilise la prise en charge des plates-formes cibles pour la synchronisation verticale pour fournir une ancre pour les calculs de synchronisation du rendu des jeux, tandis que la définition du mode sur la marge de veille essaiera simplement de s&#39;assurer que chaque image dure pendant la durée correcte (disons 1 / 30e ou 1 / 60e de seconde) en attendant ou en dormant. En général, le timing vsync par défaut donnera les résultats les plus fluides, mais notez que lors de l&#39;utilisation de la méthode vsync, les valeurs de marge de sommeil sont toujours pertinentes, bien qu&#39;elles aient un impact réduit et nous vous recommandons de la conserver à sa valeur par défaut lors de l&#39;utilisation de cette méthode.</p><p> Par défaut sur toutes les plates-formes <i>sauf</i> PS4, <span class="notranslate">Ubuntu</span> et HTML5, <span class="notranslate">GameMaker Studio 2</span> utilisera la méthode de synchronisation vsync, tandis que sur les plates-formes non prises en charge, <i>seule</i> la synchronisation de la marge de sommeil peut être utilisée.</p><p> Si vous souhaitez définir la marge de sommeil, vous pouvez le faire à l&#39;aide de la fonction <a href="display_set_sleep_margin.htm"><tt>display_set_sleep_margin()</tt></a> et vous pouvez trouver quelle méthode de chronométrage est actuellement utilisée avec la fonction <a href="display_get_timing_method.htm"><tt>display_get_timing_method()</tt></a>.</p><p></p><h4> Syntaxe:</h4><p class="code">display_set_timing_method(method);</p><table><tbody><tr><th> Argument</th><th> Description</th></tr><tr><td> <span class="notranslate">method</span></td><td> La méthode de chronométrage à utiliser (voir la liste des constantes ci-dessus)</td></tr></tbody></table><p></p><h4> Retour:</h4><p class="code">N/A</p><p></p><h4> Exemple:</h4><p class="code">if display_get_timing_method() != tm_sleep<br/> {
+    <br/> display_set_timing_method(tm_sleep);
+    <br/> if display_get_sleep_margin() != 20<br/>     {
+    <br/>     display_set_sleep_margin(20);
+    <br/>     }
+    <br/> }
+  </p><p> Le code ci-dessus vérifiera la méthode de chronométrage, puis s&#39;il n&#39;est pas défini sur <tt>tm_sleep</tt> il sera réglé sur cela et la marge de sommeil réglée sur 20.</p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"> <a href="Cameras_And_Display.htm">Caméras et affichage</a><div style="float:left"> Retour:</div><div style="float:right"> Suivant:<a href="display_set_sleep_margin.htm">display_set_sleep_margin</a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
+  </div>
+  <!-- KEYWORDS
+display_set_timing_method
+tm_sleep
+tm_countvsyncs
+-->
+  <!-- TAGS
+display_set_timing_method
+-->
+</body>
+</html>

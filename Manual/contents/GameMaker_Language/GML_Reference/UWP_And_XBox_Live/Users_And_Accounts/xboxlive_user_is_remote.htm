@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>xboxlive_user_is_remote</title>
+  <meta name="generator" content="Adobe RoboHelp 2019" />
+  <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
+  <meta name="rh-authors" content="Mark Alexander" />
+  <meta name="topic-comment" content="Page de référence pour xboxlive_user_is_remote" />
+  <meta name="rh-index-keywords" content="xboxlive_user_is_remote" />
+  <meta name="search-keywords" content="xboxlive_user_is_remote" />
+</head>
+<body><!--<div class="body-scroll" style="top: 150px;">--><h1>xboxlive_user_is_remote</h1><p> Cette fonction vérifiera l&#39;ID utilisateur donné et retournera <tt>true</tt> si le lecteur est un lecteur distant, ou <tt>false</tt> autrement.</p><p></p><h4> Syntaxe:</h4><p class="code">xboxlive_user_is_remote(user_id);</p><table><tbody><tr><th> Argument</th><th> Description</th></tr><tr><td> <span class="notranslate">user_id</span></td><td> Le pointeur d&#39;ID de l&#39;utilisateur à vérifier.</td></tr></tbody></table><p></p><h4> Retour:</h4><p class="code">Boolean</p><p></p><h4> Exemple:</h4><p class="code">global.PlayerNum = 0;<br/> global.Player_ID = array_create();<br/> for(var i = 0; i &lt; xboxlive_get_user_count(); ++i;)<br/>     {
+    <br/>     var _uid = xboxlive_get_user(i);<br/>     if xboxlive_user_is_active(_uid)<br/>         {
+    <br/>         if !xboxlive_user_is_remote(_uid)<br/>             {
+    <br/>             global.Remote_Player_ID[global.PlayerNum++] = _uid;<br/>             }
+    <br/>         }
+    <br/>     }
+  </p><p> Le code ci-dessus parcourt les comptes d&#39;utilisateurs, puis vérifie si l&#39;un d&#39;entre eux est actif. S&#39;ils le sont, leur ID utilisateur est ajouté dans un tableau global, uniquement s&#39;ils ne sont pas des utilisateurs distants. </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> Retour: <a href="Users_And_Accounts.htm">Utilisateurs et comptes</a></div><div style="float:right"> Suivant:<a href="xboxlive_user_id_for_user.htm">xboxlive_user_id_for_user</a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
+  </div>
+  <!-- KEYWORDS
+xboxlive_user_is_remote
+-->
+  <!-- TAGS
+xboxlive_user_is_remote
+-->
+</body>
+</html>

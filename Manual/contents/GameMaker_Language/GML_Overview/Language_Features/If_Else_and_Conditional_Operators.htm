@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>if / else and Conditional Operators</title>
+  <meta name="generator" content="Adobe RoboHelp 2019" />
+  <link rel="stylesheet" href="../../../assets/css/default.css" type="text/css" />
+  <meta name="rh-authors" content="Mark Alexander" />
+  <meta name="topic-comment" content="Page décrivant les opérateurs If / Else et conditionnels" />
+  <meta name="rh-index-keywords" content="?,if,else,opérateur ternaire,then" />
+  <meta name="search-keywords" content="if,else,then,?,ternaire,conditionnel" />
+</head>
+<body><!--<div class="body-scroll" style="top: 150px;">--><h1> if / else et opérateurs conditionnels</h1><p> Une caractéristique fondamentale de la plupart des langages de programmation est la possibilité de poser une question simple qui donne un booléen <tt>true</tt> ou <tt>false</tt> réponse, et en <span class="notranslate">GML</span> cela est réalisé en utilisant le <tt>if</tt> mot-clé. Un simple <tt>if</tt> condition prend une <a class="glossterm" data-glossterm="expression" href="#">expression</a> et exécutera une ou plusieurs <a class="glossterm" data-glossterm="déclaration" href="#">instructions</a> <span class="glossextra">s</span> si l&#39;expression se résout comme <span class="inline">true</span>, avec la forme de base suivante:</p><p class="code">if (&lt;expression&gt;)<br/>     {<br/>     &lt;statement&gt;;<br/>     &lt;statement&gt;;<br/>     ...<br/>     }</p><p><br/> Ici, vous dites que si une expression se résout comme <tt>true</tt> alors, fais quelque chose. Notez que la partie &quot;alors&quot; de la condition est <em>implicite</em>, mais il y a un <span class="inline">then</span> mot-clé qui peut être utilisé (bien qu&#39;il soit presque toujours omis), vous pouvez donc également créer des conditions comme celle-ci:</p><p class="code">if (&lt;expression&gt;) then<br/>     {<br/>     &lt;statement&gt;;<br/>     &lt;statement&gt;;<br/>     ...<br/>     }</p><p> En dehors de <span class="inline">if</span> et <span class="inline">then</span>, vous pouvez également utiliser le <tt>else</tt> mot-clé pour faire autre chose si l&#39;expression en cours de vérification s&#39;évalue comme <tt>false</tt>. Ce &quot;<tt>if... then... else...</tt> &quot;formulaire ressemble à ceci:</p><p class="code">if (&lt;expression&gt;)<br/>     {<br/>     &lt;statement&gt;;<br/>     }<br/> else
+    <br/>     {<br/>     &lt;statement&gt;;<br/>     }</p><p> Dans ce cas, l&#39;expression sera évaluée, et si elle est évaluée comme <span class="inline">false</span>, la déclaration après <span class="inline">else</span> est exécutée, sinon l&#39;instruction initiale est exécutée (c&#39;est <tt>true</tt> ).</p><p class="note"> REMARQUE: dans le <span class="notranslate">GameMaker</span>, toute valeur inférieure ou égale à 0 sera évaluée comme <span class="inline">false</span>, tandis que toute valeur supérieure à 0 sera évaluée comme <span class="inline">true</span>.</p><p> C&#39;est une bonne habitude de toujours mettre des crochets autour des expressions et des accolades {} autour des instructions dans le <tt>if</tt> (sinon seule la première instruction sera exécutée), et prenez une nouvelle ligne dans le bloc pour chaque instruction, par exemple:</p><p class="code">// This will work<br/> if &lt;expression&gt; &lt;statement&gt;;<br/>
+    <br/> // Example:<br/> if test == true variable = false else variable = true;</p><p class="code">// This is better<br/> if (&lt;expression&gt;)<br/>     {
+    <br/>     &lt;statement&gt;
+    <br/>     }<br/> else
+    <br/>     {
+    <br/>     &lt;statement&gt;
+    <br/>     }
+    <br/>
+    <br/> // Example<br/> if (test == true)<br/>     {<br/>     variable = false;<br/>     }<br/> else
+    <br/>     {<br/>     variable = true;<br/>     }</p><p> Notez que bien que cela soit légèrement plus détaillé, cela signifie qu&#39;il n&#39;y a pas d&#39;ambiguïté dans le code et qu&#39;il se compilera correctement sur toutes les plates-formes à tout moment. Cependant, l&#39;exemple initial peut ne pas l&#39;être, comme expliqué dans la section de la page <a href="../Expressions_And_Operators.htm">Expressions et opérateurs.</a></p><p class="note"> <strong>REMARQUE</strong>: lorsque vous comparez deux valeurs pour voir si elles sont égales, vous devez utiliser le &quot;<span class="inline">==</span> &quot;, et n&#39;utilisez que le&quot;<span class="inline">=</span> &quot;un pour l&#39;affectation. Actuellement, <span class="notranslate">GameMaker</span> les traitera comme interchangeables, mais cela peut changer à l&#39;avenir et votre code est plus propre et plus évident lorsque vous utilisez les bons opérateurs pour les comparaisons et les affectations.</p><p> Pour donner un bon exemple d&#39;utilisation <span class="inline">if</span>, considérez le code suivant qui déplacera une instance vers la position <tt>x=200</tt> dans la salle une fois placé dans l&#39;événement Step:</p><p class="code">if (x &lt; 200)<br/>     {
+    <br/>     x += 4;<br/>     }
+    <br/> else
+    <br/>     {
+    <br/>     x = 200;<br/>     }
+  </p><p> Notez que vous pouvez également effectuer <i>des</i> vérifications composées dans un <span class="inline">if</span>, c&#39;est-à-dire: vérifier diverses valeurs ou expressions dans la même instruction. Ces contrôles peuvent utiliser les différents <a href="../Expressions_And_Operators.htm">Opérateurs Combinants</a> (<tt>&amp;&amp;</tt> et, <tt>||</tt> ou et <tt>^^</tt> xor). Lorsque vous faites cela, <span class="notranslate">GameMaker Studio 2</span> évaluera chacun d&#39;eux un par un, et en fonction de la façon dont ils évaluent, le reste peut être ignoré. Par exemple:</p><p class="code">if (keyboard_check_pressed(vk_enter)) &amp;&amp; (instance_exists(obj_Player))<br/>     {
+    <br/>     go = false;<br/>     alarm[0] = room_speed;<br/>     }
+  </p><p> Ici, nous vérifions en utilisant le <tt>&amp;&amp;</tt> &quot;et&quot;, il vérifie si les <em>deux</em> conditions dans le <tt>if</tt> évaluer à <tt>true</tt>, et si le premier est <tt>false</tt> alors le second ne sera même pas vérifié. Cela s&#39;appelle &quot;court-circuiter&quot; le code, donc lorsque vous combinez des expressions à vérifier, vous devez vous assurer que la plus &quot;moins chère&quot; pour les performances est toujours la première pour éviter d&#39;évaluer les plus chères si la première évalue à <span class="inline">false</span>. Dans la même veine, si une condition peut être évaluée comme<span class="inline">true</span> ou <span class="inline">false</span> au moment de la compilation, la condition entière sera supprimée du code, par exemple, disons que vous avez une <a href="../Variables/Constants.htm">macro</a> <span class="inline">DEBUG_ON </span> pour le débogage et cela peut être soit <span class="inline">true</span> ou <span class="inline">false</span> - lorsqu&#39;il est réglé sur <span class="inline">false</span> puis le bloc de code suivant sera supprimé du jeu lors de sa compilation:</p><p class="code">if DEBUG_ON == true<br/>     {<br/>     show_debug_message(&quot;Instances = &quot; + string(instance_count));<br/>     }</p><p> Vous pouvez également effectuer des <b>opérations conditionnelles</b> (également <b>appelées</b> opérations ternaires), qui sont essentiellement un moyen «raccourci» d’effectuer une opération de base <tt>if</tt>. Il a la syntaxe suivante:</p><p class="code">variable = &lt;condition&gt; ? &lt;statement1 (if <i>true</i>)&gt; : &lt;statement2 (if <i>false</i>)&gt;</p><p> L&#39;opérateur conditionnel &quot;<span class="inline">?</span> &quot;renverra l&#39;une des deux valeurs données selon que l&#39;expression de la condition est évaluée à <tt>true</tt> ou <tt>false</tt>, par exemple:</p><p class="code">var temp_x = (x &lt; (room_width / 2)) ? 32: (room_width - 32);</p><p> Le code ci-dessus vérifiera la valeur de &quot;x&quot; par rapport à la valeur de la moitié de la largeur de la pièce, puis si elle est inférieure, elle sera définie &quot;<span class="inline">temp_x</span> &quot;à 32 sinon&quot;<span class="inline">temp_x</span> &quot;sera la largeur de la pièce - 32. Voici quelques autres exemples d&#39;utilisation:</p><p class="code">draw_text(x, y, &quot;The fee is &quot; + (global.Member ? &quot;$2.00&quot; : &quot;$10.00&quot;));<br/> path_start(((global.level &gt; 10) ? path_hard : path_easy;), 2, path_action_reverse, true);<br/> (--hp &lt;= 0) ? instance_destroy() : score +=
+    10;</p><p> Il convient également de noter que vous pouvez imbriquer des opérations conditionnelles, mais que si vous le faites, chaque opération devra être placée entre crochets, par exemple: </p><p class="code">var c = a ? &quot;foo&quot; : (b ? &quot;bar&quot; : &quot;whee&quot;); // Correct<br/> var c = a ? &quot;foo&quot; : b ? &quot;bar&quot; : &quot;whee&quot;;   // Will cause an error</p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> Retour: <a href="../Language_Features.htm">Caractéristiques linguistiques</a></div><div style="float:right"> Suivant:<a href="repeat.htm">repeat</a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
+  </div>
+  <!-- KEYWORDS
+if
+else
+then
+ternary operators
+conditional operators
+-->
+  <!-- TAGS
+if
+else
+then
+-->
+</body>
+</html>

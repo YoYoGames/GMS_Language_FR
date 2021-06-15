@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>show_debug_overlay</title>
+  <meta name="generator" content="Adobe RoboHelp 2019" />
+  <link rel="stylesheet" href="../../../assets/css/default.css" type="text/css" />
+  <meta name="rh-authors" content="Mark Alexander" />
+  <meta name="topic-comment" content="Page de référence pour show_debug_overlay" />
+  <meta name="rh-index-keywords" content="show_debug_overlay" />
+  <meta name="search-keywords" content="show_debug_overlay" />
+</head>
+<body><!--<div class="body-scroll" style="top: 150px;">--><h1>show_debug_overlay</h1><p> Cette fonction peut être utilisée pour activer et désactiver la superposition de débogage standard lors du test de votre jeu et est désactivée par défaut. La superposition de débogage montre une barre graphique d&#39;utilisation CPU / GPU dans la fenêtre de jeu réelle elle-même avec la valeur fps réelle actuelle, le nombre de permutations de texture et le nombre de lots de sommets (notez que les échanges de texture et les lots de sommets ne seront jamais zéro et seront normalement afficher des valeurs de 2 ou 3, car même avec une salle vide et sans objet, <span class="notranslate">GameMaker Studio 2</span> doit toujours dessiner et regrouper des objets).</p><p><img alt="Debug overlay graphic" class="center" src="../../../assets/Images/QS_Guide/QS_Debug_Bar.png" /> Cette barre est divisée en sections, chaque section étant au 1 / 60e de seconde. Comme vous pouvez le voir sur l&#39;image ci-dessus, la barre est composée de différentes couleurs:</p><ul class="colour"><li> <b>Vert</b> - Traitement d&#39;entrée / sortie (c&#39;est-à-dire: clavier, souris, manette de jeu, réseau, etc.)</li><li> <b>Rouge</b> - La vitesse de mise à jour de l&#39;événement d&#39;étape</li><li> <b>Jaune</b> - Le temps requis pour l&#39;événement de tirage au sort</li><li> <b>Orange -</b> Heure de mise à jour du débogage, qui n&#39;est normalement visible que lorsque vous utilisez le module de débogage</li><li> <b>Blanc</b> - GPU restant dans le temps, c&#39;est-à-dire le temps passé à attendre que le GPU termine le rendu de l&#39;image avant que la suivante ne puisse commencer</li><li> <b>Cyan</b> - Le temps de rendu du texte</li><li> <b>Gris</b> - Le temps nécessaire pour effacer l&#39;écran à chaque étape de tirage</li><li> <strong>Bleu</strong> - Le temps requis pour que le <a href="../Garbage_Collection/Garbage_Collection.htm">Garbage Collector</a> s&#39;exécute</li><li> <b>Rouge foncé</b> - Le rinçage du GPU, qui correspond au temps nécessaire au GPU pour effacer les images de la mémoire</li></ul><p> En utilisant cette fonction, vous pouvez ajouter la superposition que ce soit en mode débogage ou non, et de cette façon, vous pouvez voir avec quelle efficacité votre jeu fonctionne et obtenir un repère visuel sur la façon dont il utilise les ressources disponibles, sans le surcroît d&#39;avoir le débogueur en cours d&#39;exécution à côté.</p><p class="note"> <b>REMARQUE</b>: cette fonction ne fonctionnera pas sur la cible HTML5 en raison de la différence de son fonctionnement par rapport à toutes les autres cibles.</p><p></p><h4> Syntaxe:</h4><p class="code">show_debug_overlay(enable);</p><table><tbody><tr><th> Argument</th><th> Description</th></tr><tr><td> <span class="notranslate">enable</span></td><td> allumer (<tt>true</tt> ) ou désactivé (<tt>false <tt>) the debug overlay.</tt></tt></td></tr></tbody></table><p></p><h4> Retour:</h4><p class="code">N/A</p><p></p><h4> <b>Exemple:</b></h4><p class="code">if global.debug<br/>    {
+    <br/>    show_debug_overlay(true);
+    <br/>    }
+    <br/> else
+    <br/>    {
+    <br/>    show_debug_overlay(false);
+    <br/>    }
+  </p><p> Le code ci-dessus activera ou désactivera le débogage en fonction de la valeur d&#39;une variable globale. </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> Retour: <a href="Debugging.htm">Débogage</a></div><div style="float:right"> Suivant:<a href="code_is_compiled.htm">code_is_compiled</a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
+  </div>
+  <!-- KEYWORDS
+show_debug_overlay
+-->
+  <!-- TAGS
+show_debug_overlay
+-->
+</body>
+</html>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>draw_circle_colour</title>
+  <meta name="generator" content="Adobe RoboHelp 2019" />
+  <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
+  <meta name="rh-authors" content="Mark Alexander" />
+  <meta name="topic-comment" content="Référence pour la fonction draw_circle_colour" />
+  <meta name="rh-index-keywords" content="draw_circle_colour,draw_circle_color" />
+  <meta name="search-keywords" content="draw_circle_colour,draw_circle_color" />
+</head>
+<body><!--<div class="body-scroll" style="top: 150px;">--><h1>draw_circle_colour</h1><p> Avec cette fonction, vous pouvez dessiner le contour d&#39;un cercle ou un cercle rempli, et s&#39;il est rempli, vous pouvez définir les couleurs de remplissage intérieur et extérieur. Si ces couleurs ne sont pas les mêmes, vous obtiendrez un effet de dégradé de l&#39;une à l&#39;autre et les paramètres de couleur remplaceront la couleur de base définie avec la fonction <a href="../Colour_And_Alpha/draw_set_colour.htm"><tt>draw_set_colour()</tt></a>. Vous pouvez définir la précision du dessin avec la fonction <a href="draw_set_circle_precision.htm"><tt>draw_set_circle_precision()</tt></a>.</p><p class="note"> <b>REMARQUE</b>: Si vous souhaitez dessiner une forme à l&#39;aide d&#39;un <span class="notranslate">shader</span>, sachez que la plupart des <span class="notranslate">shaders</span> attendent les entrées suivantes: sommet, texture, couleur. Cependant, lors de l&#39;utilisation de cette fonction, seules les données de sommet et de couleur sont transmises, et le <span class="notranslate">shader</span> peut ne rien dessiner (ou dessiner quelque chose mais pas correctement). Si vous devez dessiner des formes de cette manière, le <span class="notranslate">shader</span> doit être personnalisé dans cet esprit.</p><p></p><h4> Syntaxe:</h4><p class="code">draw_circle_colour(x, y, r, col1, col2, outline);</p><table><tbody><tr><th> Argument</th><th> Description</th></tr><tr><td> <span class="notranslate">x</span></td><td> La coordonnée x du centre du cercle.</td></tr><tr><td> <span class="notranslate">y</span></td><td> La coordonnée y du centre du cercle.</td></tr><tr><td> <span class="notranslate">r</span></td><td> Le rayon (distance du centre au bord) du cercle en pixels.</td></tr><tr><td> <span class="notranslate">col1</span></td><td> La couleur au centre du cercle.</td></tr><tr><td> <span class="notranslate">col2</span></td><td> La couleur au bord du cercle.</td></tr><tr><td> <span class="notranslate">outline</span></td><td> Si le cercle est un contour (<tt>true</tt> ) ou non (<tt>false</tt> ). Si vrai, col1 n&#39;est pas pertinent.</td></tr></tbody></table><p></p><h4> Retour:</h4><p class="code">N/A</p><p></p><h4> Exemple:</h4><p class="code">draw_circle_colour(x, y, 100, c_white, c_black, false);</p><p> Cela dessinerait un cercle plein avec son centre à la position x et y de l&#39;instance exécutante, avec un rayon de 100 pixels, du blanc au centre au noir à l&#39;extérieur. </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> Retour: <a href="Basic_Forms.htm">Formulaires de base</a></div><div style="float:right"> Suivant:<a href="draw_ellipse.htm">draw_ellipse</a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
+  </div>
+  <!-- KEYWORDS
+draw_circle_colour
+draw_circle_color
+-->
+  <!-- TAGS
+draw_circle_colour
+-->
+</body>
+</html>

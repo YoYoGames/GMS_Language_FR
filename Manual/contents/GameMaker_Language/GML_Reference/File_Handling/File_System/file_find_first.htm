@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>file_find_first</title>
+  <meta name="generator" content="Adobe RoboHelp 2019" />
+  <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
+  <meta name="rh-authors" content="Mark Alexander" />
+  <meta name="topic-comment" content="Page de référence pour file_find_first" />
+  <meta name="rh-index-keywords" content="file_find_first,fa_readonly,fa_hidden,fa_sysfile,fa_volumeid,fa_directory,fa_archive" />
+  <meta name="search-keywords" content="file_find_first,fa_readonly,fa_hidden,fa_sysfile,fa_volumeid,fa_directory,fa_archive" />
+</head>
+<body><!--<div class="body-scroll" style="top: 150px;">--><h1>file_find_first</h1><p> Cette fonction retournera le nom du premier fichier qui satisfait le masque et les attributs. Si aucun fichier de ce type n&#39;existe, une chaîne vide est renvoyée. Le masque peut contenir un chemin et peut contenir des caractères génériques, par exemple &#39;C: \ temp \ *. Doc&#39;. Les attributs donnent les fichiers supplémentaires que vous souhaitez voir, de sorte que les fichiers normaux sont toujours renvoyés lorsqu&#39;ils satisfont au masque. Vous pouvez ajouter les constantes suivantes pour voir le type de fichiers souhaité (si vous ne souhaitez ajouter aucun attribut, utilisez 0):</p><p></p><table><tbody><tr><th> Constant</th><th> Description </th></tr><tr><td><span class="notranslate"><tt>fa_readonly</tt></span></td><td> Fichiers en lecture seule </td></tr><tr><td><span class="notranslate"><tt>fa_hidden</tt></span></td><td> Fichiers cachés </td></tr><tr><td><span class="notranslate"><tt>fa_sysfile</tt></span></td><td> Fichiers système </td></tr><tr><td><span class="notranslate"><tt>fa_volumeid</tt></span></td><td> Fichiers d&#39;ID de volume </td></tr><tr><td><span class="notranslate"><tt>fa_directory</tt></span></td><td> Répertoires </td></tr><tr><td><span class="notranslate"><tt>fa_archive</tt></span></td><td> Fichiers archivés</td></tr></tbody></table><p></p><p class="note"><b></b> <b>ATTENTION!</b> Cette fonction peut ne pas fonctionner comme prévu en raison du <span class="notranslate">GameMaker Studio 2</span>! Veuillez consulter la section sur le <a href="../../../../Additional_Information/The_File_System.htm">système de fichiers</a> pour plus d&#39;informations.</p><p class="note"> <b>REMARQUE</b>: cette fonction ne fonctionnera pas du tout sur la cible HTML5 et les indicateurs de filtre ne fonctionneront que sous <span class="notranslate">Windows</span> (utilisez 0 pour toutes les autres plates-formes).</p><p></p><h4> Syntaxe:</h4><p class="code">file_find_first(mask, attr);</p><table><tbody><tr><th> Argument</th><th> Description</th></tr><tr><td> <span class="notranslate">mask</span></td><td> Le masque à utiliser pour la recherche.</td></tr><tr><td> <span class="notranslate">attr</span></td><td> L&#39;attribut de fichier spécifique à rechercher.</td></tr></tbody></table><p></p><h4> Retour:</h4><p class="code">String</p><p></p><h4> Exemple:</h4><p class="code">if directory_exists(&quot;\User Content&quot;)<br/>     {
+    <br/>     file = file_find_first(&quot;/User Content/*.doc&quot;, fa_readonly);<br/>     }
+  </p><p> Cela vérifiera si le répertoire spécifié existe, puis, si c&#39;est le cas, allez-y et retournez le premier &quot;lecture seule &quot;<tt>doc</tt> fichier trouvé. </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> Retour: <a href="File_System.htm">Système de fichiers</a></div><div style="float:right"> Suivant:<a href="file_find_next.htm">file_find_next</a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
+  </div>
+  <!-- KEYWORDS
+file_find_first
+fa_readonly
+fa_hidden
+fa_sysfile
+fa_volumeid
+fa_directory
+fa_archive
+-->
+  <!-- TAGS
+file_find_first
+-->
+</body>
+</html>

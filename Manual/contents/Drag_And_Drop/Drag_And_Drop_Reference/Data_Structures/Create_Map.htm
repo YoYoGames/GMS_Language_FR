@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>Créer une carte</title>
+  <meta name="generator" content="Adobe RoboHelp 2019" />
+  <link rel="stylesheet" href="../../../assets/css/default.css" type="text/css" />
+  <meta name="rh-authors" content="Mark Alexander" />
+  <meta name="topic-comment" content="Page qui explique l&#39;action Créer une carte" />
+  <meta name="rh-index-keywords" content="DnD ™ - Créer une carte" />
+  <meta name="search-keywords" content="Créer une carte" />
+</head>
+<body><!--<div class="body-scroll" style="top: 150px;">--><h1><img alt="Create Map Icon" class="icon" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Data_Structures/i_DS_Create_Map.png" /> Créer une carte</h1><p> Cette action créera une nouvelle <b>structure de données de carte</b> et retournera la valeur d&#39;index afin que vous puissiez accéder ultérieurement à la carte via les autres actions de structure de données. L&#39;index de la carte sera renvoyé à la variable cible que vous fournissez, qui peut avoir été créée plus tôt à l&#39;aide de <a href="../Common/Assign_Variable.htm">Assign Variable</a> ou <a href="../Common/Declare_Temporary_Variable.htm">Declare Temp</a>, ou vous pouvez cocher la case &quot;Temp&quot; pour nommer et créer une variable locale temporaire pour stocker la valeur jusqu&#39;à la fin du script ou de l&#39;événement. Une structure de données de carte nouvellement créée est considérée comme &quot;vide&quot;, c&#39;est-à-dire qu&#39;elle ne contient aucune entrée de clé / valeur de carte. Notez que vous pouvez créer des cartes DS supplémentaires en cliquant sur l&#39;icône plus<span><span><img alt="Expand Icon" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Icon_Expand_Arguments.png"/></span></span> à côté de l&#39;action et en sélectionnant une autre variable pour contenir l&#39;ID de carte.</p><p class="note"> <b>IMPORTANT!</b> La création de toute structure de données utilise de la mémoire sur la plate-forme cible, et en tant que telle, toutes les structures de données doivent être libres lorsqu&#39;elles ne sont plus nécessaires en utilisant l&#39;action <a href="Free_Data_Structure.htm">Structure de données libre,</a> sinon vous obtenez une fuite de mémoire qui peut altérer les performances de vos jeux ou même provoquer un crash. Ceci est particulièrement pertinent lorsque vous utilisez des variables locales temporaires pour stocker des indices de structure de données, car ces variables sont supprimées à la fin du code ou de l&#39;événement, mais cela ne signifie pas que la structure de données est également supprimée! La structure de données existera toujours, mais vous n&#39;aurez aucun moyen de la référencer, alors utilisez une variable d&#39;instance et libérez la structure ultérieurement, ou libérez la structure avant la fin de l&#39;événement ou de la fonction si son index est stocké dans une variable temporaire.</p><p></p><h4> Syntaxe de l&#39;action:</h4><p><img alt="Create Map Action" class="center" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Data_Structures/a_DS_Create_Map.png" /></p><h4> Arguments:</h4><table><tbody><tr><th> Argument</th><th> Description</th></tr><tr><td> <span class="notranslate">Target</span></td><td> La variable cible dans laquelle stocker l&#39;index de la carte</td></tr></tbody></table><p></p><h4> Exemple:</h4><p><img alt="Create Map Example" class="center" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Data_Structures/e_DS_Create_Map.png" /> Le code de bloc d&#39;action ci-dessus crée une nouvelle variable d&#39;instance et une nouvelle structure de données de carte. La valeur d&#39;index de la carte est stockée dans la variable, puis utilisée pour ajouter deux éléments à la carte. </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> Retour: <a href="Data_Structure_Actions.htm">Actions de structure de données</a></div><div style="float:right"> Suivant: <a href="Create_Grid.htm">Créer une grille</a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
+  </div>
+  <!-- KEYWORDS
+Action - Create Map
+-->
+  <!-- TAGS
+action_create_map
+-->
+</body>
+</html>

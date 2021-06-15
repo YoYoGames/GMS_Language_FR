@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>variable_instance_get_names</title>
+  <meta name="generator" content="Adobe RoboHelp 2019" />
+  <link rel="stylesheet" href="../../../assets/css/default.css" type="text/css" />
+  <meta name="rh-authors" content="Mark Alexander" />
+  <meta name="topic-comment" content="Page expliquant la fonction variable_instance_get_names" />
+  <meta name="rh-index-keywords" content="variable_instance_get_names" />
+  <meta name="search-keywords" content="variable_instance_get_names" />
+</head>
+<body><!--<div class="body-scroll" style="top: 150px;">--><h1>variable_instance_get_names</h1><p> Avec cette fonction, vous pouvez récupérer un tableau rempli avec les <b>noms de variables d&#39;instance</b> pour une instance ou les <b>variables globales</b> pour un jeu. Lorsque vous transmettez une valeur d&#39;ID d&#39;instance, chaque entrée du tableau sera une chaîne du nom de variable qui correspond à une <a href="../../GML_Overview/Variables_And_Variable_Scope.htm">variable d&#39;étendue d&#39;instance</a> qui a été créée dans l&#39;instance. Cependant si vous passez le mot-clé <tt>global</tt>, chaque entrée du tableau sera une chaîne du nom de variable qui correspond à une variable de <a href="../../GML_Overview/Variables_And_Variable_Scope.htm">portée globale.</a></p><p></p><h4> Syntaxe:</h4><p class="code">variable_instance_get_names(instance_id/global);</p><table><tbody><tr><th> Argument</th><th> Description</th></tr><tr><td> <span class="notranslate">instance_id/global</span></td><td> La valeur d&#39;ID unique de l&#39;instance à vérifier ou du mot clé <tt>global</tt></td></tr></tbody></table><p></p><h4> Retour:</h4><p class="code">Array (each entry is a string)</p><p></p><h4> Exemple:</h4><p class="code">var str = &quot;&quot;;<br/> var array = variable_instance_get_names(id);<br/> show_debug_message(&quot;Variables for &quot; + object_get_name(object_index) + string(id));<br/> for (var i = 0; i &lt; array_length(array); i++;)<br/>     {
+    <br/>     str = array[i] + &quot;:&quot; + string(variable_instance_get(id, array[i]));<br/>     show_debug_message(str);
+    <br/>     }
+  </p><p> Le code ci-dessus récupérera un tableau de toutes les variables de portée d&#39;instance pour l&#39;instance exécutant le bloc de code, puis les affichera avec leurs valeurs dans la sortie de débogage. </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> Retour: <a href="Variable_Functions.htm">Fonctions variables</a></div><div style="float:right"> Suivant:<a href="variable_instance_names_count.htm">variable_instance_names_count</a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
+  </div>
+  <!-- KEYWORDS
+variable_instance_get_names
+-->
+  <!-- TAGS
+variable_instance_get_names
+-->
+</body>
+</html>

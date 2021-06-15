@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>mp_grid_create</title>
+  <meta name="generator" content="Adobe RoboHelp 2019" />
+  <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
+  <meta name="rh-authors" content="Mark Alexander" />
+  <meta name="topic-comment" content="Cette page décrit la fonction mp_grid_create" />
+  <meta name="rh-index-keywords" content="mp_grid_create" />
+  <meta name="search-keywords" content="mp_grid_create" />
+</head>
+<body><!--<div class="body-scroll" style="top: 150px;">--><h1>mp_grid_create</h1><p> Avec cette fonction, vous pouvez créer un mp_grid pour les fonctions de planification de mouvement. Il renvoie un index qui doit être stocké dans une variable pour être utilisé dans tous les autres appels de fonction de grille MP. Les coordonnées x et y indiquent la position du coin supérieur gauche de la grille, hcells et vcells indiquent le nombre de cellules horizontales et verticales à créer dans la grille, et la largeur et la hauteur de cellule indiquent la taille des cellules en pixels. Vous pouvez créer et maintenir plusieurs structures de grille au même moment si vous en avez besoin pour différentes choses, mais sachez que chaque grille nécessitera une mémoire, et plus elles auront de cellules, plus elles auront besoin de mémoire. Notez également que les fonctions MP sont assez lourdes à utiliser par le processeur, donc plus vous les appelez souvent et plus la résolution de la cellule est élevée, plus vous risquez d&#39;avoir une baisse des performances.</p><p></p><h4> Syntaxe:</h4><p class="code">mp_grid_create(left, top, hcells, vcells, cellwidth, cellheight):</p><table><tbody><tr><th> Argument</th><th> Description</th></tr><tr><td> <span class="notranslate">left</span></td><td> Coordonnée x de départ du mp_grid dans la pièce</td></tr><tr><td> <span class="notranslate">top</span></td><td> Coordonnée y de départ de mp_grid dans la pièce</td></tr><tr><td> <span class="notranslate">hcells</span></td><td> Nombre de cellules horizontales que contiendra mp_grid</td></tr><tr><td> <span class="notranslate">vcells</span></td><td> Nombre de cellules verticales que le mp_grid contiendra</td></tr><tr><td> <span class="notranslate">cellwidth</span></td><td> La largeur (en pixels) de chaque cellule individuelle de mp_grid</td></tr><tr><td> <span class="notranslate">cellheight</span></td><td> La hauteur (en pixels) de chaque cellule individuelle de mp_grid</td></tr></tbody></table><p></p><h4> Retour:</h4><p class="code">Real</p><p></p><h4> Exemple:</h4><p class="code">global.grid = mp_grid_create(0, 0, room_width / 32, room_height /32, 32, 32);</p><p> Le code ci-dessus crée une variable globale &quot;grid&quot;, puis génère un mp_grid et assigne son index (id) à cette variable pour une utilisation dans tous les autres appels de fonction mp_grid. La grille couvre la pièce, avec une résolution de cellule de 32x32 pixels. Cela signifie que, par exemple, dans une pièce de 640x480, la grille contiendrait 300 cellules: 20 cellules horizontales (640/32) multipliées par 15 cellules verticales (480/32) donnent 300 cellules </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> Retour: <a href="Motion_Planning.htm">Planification de mouvement</a></div><div style="float:right"> Suivant:<a href="mp_grid_destroy.htm">mp_grid_destroy</a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
+  </div>
+  <!-- KEYWORDS
+mp_grid_create
+-->
+  <!-- TAGS
+mp_grid_create
+-->
+</body>
+</html>

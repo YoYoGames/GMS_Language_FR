@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>xboxlive_stats_set_stat_real</title>
+  <meta name="generator" content="Adobe RoboHelp 2019" />
+  <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
+  <meta name="rh-authors" content="Mark Alexander" />
+  <meta name="topic-comment" content="Page de référence pour xboxlive_stats_set_stat_real" />
+  <meta name="rh-index-keywords" content="xboxlive_stats_set_stat_real" />
+  <meta name="search-keywords" content="xboxlive_stats_set_stat_real" />
+</head>
+<body><!--<div class="body-scroll" style="top: 150px;">--><h1>xboxlive_stats_set_stat_real</h1><p> Cette fonction peut être utilisée pour définir la valeur d&#39;une statistique pour l&#39;ID utilisateur donné. Vous fournissez l&#39;ID utilisateur tel que renvoyé par (par exemple) la fonction <a href="../Users_And_Accounts/xboxlive_get_user.htm"><tt>xboxlive_get_user()</tt></a>, puis la chaîne de statistiques à définir ( <b>si la chaîne de statistiques n&#39;existe pas déjà, une nouvelle statistique sera créée et définie sur la valeur donnée</b> ) et une valeur (un réel) pour définir la statistique. Notez que le nom de la statistique doit être alphanumérique uniquement, sans symboles ni espaces.</p><p> Lors de la définition de la valeur de la statistique, toute valeur précédente sera remplacée, il vous appartient donc de déterminer si la valeur de la statistique doit être mise à jour ou non (c&#39;est-à-dire vérifier que le score le plus élevé est réellement le plus élevé) en comparant à la valeur de la statistique actuelle avec le nouveau avant de le régler.</p><p> La fonction renverra -1 s&#39;il y a eu une erreur ou si l&#39;ID utilisateur n&#39;est pas valide, ou toute autre valeur si la fonction a été appelée avec succès.</p><p></p><h4> Syntaxe:</h4><p class="code">xboxlive_stats_set_stat_real(user_id, stat, value);</p><table><tbody><tr><th> Argument</th><th> Description</th></tr><tr><td> <span class="notranslate">user_id</span></td><td> Le pointeur d&#39;ID utilisateur pour définir la statistique pour</td></tr><tr><td> <span class="notranslate">stat</span></td><td> La statistique à définir (une chaîne)</td></tr><tr><td> <span class="notranslate">value</span></td><td> La valeur à laquelle définir la statistique (un réel)</td></tr></tbody></table><p></p><h4> Retour:</h4><p class="code">Real</p><p></p><h4> Exemple:</h4><p class="code">if (game_over == true)<br/>     {
+    <br/>     if (xboxlive_stats_get_stat(p_user_id, &quot;PercentDone&quot;) &lt; 100)<br/>         {
+    <br/>         var _val = (global.LevelsFinished / global.LevelsTotal) * 100;<br/>         xboxlive_stats_set_stat_real(p_user_id, &quot;PercentDone&quot;, _val);<br/>         }
+    <br/>     }
+  </p><p> Le code ci-dessus vérifie une variable et si c&#39;est <tt>true</tt>, puis il vérifiera la valeur de la statistique &quot;PercentDone&quot;. Si cette valeur est inférieure à 100, une valeur est alors générée et la statistique définie sur cette valeur. </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> Retour: <a href="Stats_And_Leaderboards.htm">Statistiques et classements</a></div><div style="float:right"> Suivant:<a href="xboxlive_stats_set_stat_int.htm">xboxlive_stats_set_stat_int</a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
+  </div>
+  <!-- KEYWORDS
+xboxlive_stats_set_stat_real
+-->
+  <!-- TAGS
+xboxlive_stats_set_stat_real
+-->
+</body>
+</html>

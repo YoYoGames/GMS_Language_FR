@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>achievement_show_achievements</title>
+  <meta name="generator" content="Adobe RoboHelp 2019" />
+  <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
+  <meta name="rh-authors" content="Mark Alexander" />
+  <meta name="topic-comment" content="Page de référence pour achievement_show_achievements" />
+  <meta name="rh-index-keywords" content="achievement_show_achievements" />
+  <meta name="search-keywords" content="achievement_show_achievements" />
+</head>
+<body><!--<div class="body-scroll" style="top: 150px;">--><h1>achievement_show_achievements</h1><p> Cette fonction ouvrira la page des réalisations de la plateforme choisie. Veuillez noter qu&#39;il s&#39;agit d&#39;une <i>fonction asynchrone</i>, c&#39;est-à-dire que votre jeu continuera à fonctionner en arrière-plan pendant que la page des succès est affichée. En tant que tel, vous devez faire attention à l&#39;endroit où vous l&#39;utilisez et assurez-vous de mettre le jeu en pause ou de ne permettre son affichage que dans les zones de votre jeu où il n&#39;interférera pas avec le jeu.</p><p></p><h4> <b>Syntaxe:</b></h4><p class="code">achievement_show_achievements()</p><p></p><h4> Retour:</h4><p class="code">N/A</p><p></p><h4> Exemple:</h4><p class="code">if achievement_available()<br/>     {
+    <br/>     global.Pause = true;<br/>     instance_create_layer(0, 0, &quot;Controllers&quot;, obj_Pause);<br/>     achievement_show_achievements();
+    <br/>     }
+  </p><p> Le code ci-dessus vérifie si le classement et le service de réussite choisis sont disponibles et si c&#39;est le cas, il définit une variable globale et crée une instance de &quot;pause&quot; du contrôleur avant d&#39;appeler la fonction pour afficher les réalisations à l&#39;écran. </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> Retour: <a href="Achievements_And_Leaderboards.htm">Réalisations et classements</a></div><div style="float:right"> Suivant:<a href="achievement_show_leaderboards.htm">achievement_show_leaderboards</a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
+  </div>
+  <!-- KEYWORDS
+achievement_show_achievements
+-->
+  <!-- TAGS
+achievement_show_achievements
+-->
+</body>
+</html>

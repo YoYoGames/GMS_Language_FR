@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <title>vertex_submit</title>
+  <meta name="generator" content="Adobe RoboHelp 2019"/>
+  <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css"/>
+  <meta name="rh-authors" content="Mark Alexander"/>
+  <meta name="topic-comment" content="Référence pour vertex_submit"/>
+  <meta name="rh-index-keywords" content="vertex_submit,pr_pointlist,pr_linelist,pr_linestrip,pr_trianglelist,pr_trianglestrip"/>
+  <meta name="search-keywords" content="vertex_submit,pr_pointlist,pr_linelist,pr_linestrip,pr_trianglelist,pr_trianglestrip"/>
+</head>
+<body><!--<div class="body-scroll" style="top: 150px;">--><h1>vertex_submit</h1><p> Vous pouvez utiliser cette fonction pour soumettre le contenu d&#39;un tampon de sommets au pipeline graphique pour une utilisation avec un <span class="notranslate">shader</span>. Vous fournissez l&#39;index de tampon à utiliser, le type primitif de base à utiliser (voir les constantes ci-dessous) et la texture à utiliser. Le type primitif de base n&#39;est utilisé que pour affecter l&#39;ordre dans lequel les sommets que vous avez stockés dans le tampon sont dessinés et connectés, mais les données réelles utilisées pour chacun des sommets seront celles que vous avez définies lors de la création du tampon de sommets.</p><p class="note"> <b>REMARQUE</b>: cette fonction ne peut être utilisée que dans l&#39; <b>événement Draw</b>.</p><p> Pour un exemple visuel des différentes primitives de base disponibles, voir l&#39;image ci-dessous:</p><p><img alt="The different primitive types" class="center" src="../../../../assets/Images/Scripting_Reference/GML/Reference/Drawing/primitive_types.png"/></p><table><tbody><tr><th> Constant</th><th> Description</th></tr><tr><td> <span class="notranslate">pr_pointlist</span></td><td> Une primitive constituée d&#39;une liste de points.</td></tr><tr><td> <span class="notranslate">pr_linelist</span></td><td> Une primitive composée de lignes individuelles dans une liste.</td></tr><tr><td> <span class="notranslate">pr_linestrip</span></td><td> Une primitive composée d&#39;une bande consécutive de lignes.</td></tr><tr><td> <span class="notranslate">pr_trianglelist</span></td><td> Une primitive composée de triangles individuels dans une liste.</td></tr><tr><td> <span class="notranslate">pr_trianglestrip</span></td><td> Une primitive composée d&#39;une bande consécutive de triangles.</td></tr></tbody></table><p></p><h4> Syntaxe:</h4><p class="code">vertex_submit(buffer, primitive, texture);</p><table><tbody><tr><th> Argument</th><th> Description</th></tr><tr><td> <span class="notranslate">buffer</span></td><td> Le tampon à utiliser.</td></tr><tr><td> <span class="notranslate">primitive</span></td><td> Le type de base primitif.</td></tr><tr><td> <span class="notranslate">texture</span></td><td> La texture à utiliser (ou -1 pour aucune texture).</td></tr></tbody></table><p></p><h4> Retour:</h4><p class="code">N/A</p><p></p><h4> Exemple:</h4><p class="code">shader_set(shader_prim);<br/> vertex_submit(buff, pr_trianglelist, sprite_get_texture(sprite_index));<br/> shader_reset();
+  </p><p> Le code ci-dessus soumettra le tampon de vertex indexé dans la variable &quot;buff&quot; pour le dessin avec le <span class="notranslate">shader</span> &quot; <span class="notranslate">shader</span> _prim&quot;, en utilisant une liste de triangles comme primitive de base et la texture du sprite pour l&#39;instance exécutant le code. </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> Retour: <a href="Primitives_And_Vertex_Formats.htm">Primitives et formats de sommets</a></div><div style="float:right"> Suivant:<a href="draw_primitive_begin.htm">draw_primitive_begin</a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
+  </div>
+  <!-- KEYWORDS
+vertex_submit
+pr_pointlist
+pr_linelist
+pr_linestrip
+pr_trianglelist
+pr_trianglestrip
+-->
+  <!-- TAGS
+vertex_submit
+-->
+
+</body></html>

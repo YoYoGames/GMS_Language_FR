@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>audio_create_buffer_sound</title>
+  <meta name="generator" content="Adobe RoboHelp 2019" />
+  <link rel="stylesheet" href="../../../../../assets/css/default.css" type="text/css" />
+  <meta name="rh-authors" content="Mark Alexander" />
+  <meta name="topic-comment" content="Page expliquant la fonction audio_create_buffer_sound" />
+  <meta name="rh-index-keywords" content="audio_create_buffer_sound" />
+  <meta name="search-keywords" content="audio_create_buffer_sound,audio_mono,audio_stereo,audio_3D" />
+</head>
+<body><!--<div class="body-scroll" style="top: 150px;">--><h1>audio_create_buffer_sound</h1><p> Avec cette fonction, vous pouvez créer un nouveau son à partir du contenu d&#39;un tampon. Le tampon aura été créé précédemment (voir les <a href="../../../Buffers/Buffers.htm">fonctions de tampon</a> pour plus de détails sur la façon de procéder), et des données y auront été ajoutées ou chargées. Vous le passez ensuite à cette fonction avec le format de données (uniquement <tt>buffer_u8</tt> ou <tt>buffer_s16</tt> sont actuellement pris en charge), la fréquence d&#39;échantillonnage (qui peut être comprise entre 1000 Hz et 48 000 Hz), et un décalage dans la mémoire tampon pour obtenir les données. Vous devez également fournir le nombre d&#39;échantillons dans le tampon et les canaux requis par le son. Ces canaux sont définis par l&#39;une des constantes suivantes:</p><p></p><table><tbody><tr><th> Constant</th><th> Description</th></tr><tr><td><span class="notranslate"><span class="inline">audio_mono</span></span></td><td> Audio mono (canal unique).</td></tr><tr><td><span class="notranslate"><span class="inline">audio_stereo</span></span></td><td> Audio stéréo (double canal).</td></tr><tr><td><span class="notranslate"><span class="inline">audio_3D</span></span></td><td> Audio 3D (5.1).</td></tr></tbody></table><p></p><p> Notez qu&#39;après avoir créé un son, vous devez libérer l&#39;index du pointeur qui lui est associé lorsqu&#39;il n&#39;est plus nécessaire à l&#39;aide de la fonction <a href="audio_free_buffer_sound.htm"><tt>audio_free_buffer_sound()</tt></a>. Si vous ne parvenez pas à le faire et que vous réassignez la variable ou les vestiaires, etc., l&#39;identifiant sonore sera perdu et vous aurez une fuite de mémoire. Notez également que vous ne pouvez pas supprimer le tampon si un son a été créé à partir de celui-ci et que le son n&#39;a pas été libéré en premier. Vous libérez donc d&#39;abord le son (ou les sons), <i>puis</i> supprimez le tampon. Il est également intéressant de noter que l&#39;ajout de quoi que ce soit au tampon, ou la modification de la taille du tampon, après avoir créé un son à partir de celui-ci donnera des résultats inattendus et ce n&#39;est pas recommandé - une fois que vous avez commencé à créer des sons à partir de n&#39;importe quel tampon, vous ne devez pas manipuler de toute autre manière par la suite.</p><p></p><h4> Syntaxe:</h4><p class="code">audio_create_buffer_sound(bufferId, bufferFormat, bufferRate, bufferOffset, bufferLength, bufferChannels);</p><table><tbody><tr><th> Argument</th><th> Description</th></tr><tr><td> <span class="notranslate">bufferId</span></td><td> L&#39;ID du tampon à utiliser.</td></tr><tr><td> <span class="notranslate">bufferFormat</span></td><td> Le format des données dans le tampon (<tt>buffer_u8</tt> ou <tt>buffer_s16</tt> ).</td></tr><tr><td> <span class="notranslate">bufferRate</span></td><td> La fréquence d&#39;échantillonnage des données dans le tampon.</td></tr><tr><td> <span class="notranslate">bufferOffset</span></td><td> Décalage dans la mémoire tampon à partir de laquelle lire les données d&#39;exemple (en octets).</td></tr><tr><td> <span class="notranslate">bufferLength</span></td><td> La longueur du tampon (le nombre d&#39;octets de données audio, à l&#39;exclusion de l&#39;en-tête).</td></tr><tr><td> <span class="notranslate">bufferChannels</span></td><td> Les canaux à utiliser à partir de l&#39;une des constantes répertoriées ci-dessous.</td></tr></tbody></table><p></p><h4> Retour:</h4><p class="code">Integer (Sound ID)</p><p></p><h4> Exemple:</h4><p class="code">var rate = 44100;<br/> var hertz = irandom_range(220, 880);<br/> var samples = 44100;<br/> var bufferId = buffer_create(rate, buffer_fast, 1);<br/> var buffer_seek(bufferId, buffer_seek_start, 0);<br/> var num_to_write = rate / hertz;<br/> var length
+    = buffer_get_size(bufferId) ;<br/> var val_to_write = 1;<br/> for (var i = 0; i &lt; (samples / num_to_write) + 1; i++;)<br/>    {
+    <br/>    for (var j = 0; j &lt; num_to_write; j++;)<br/>       {
+    <br/>       buffer_write(bufferId, buffer_u8, val_to_write * 255);<br/>       }
+    <br/>    val_to_write = (1 - val_to_write);<br/>    }
+    <br/> soundId = audio_create_buffer_sound(bufferId, buffer_u8, rate, 0, length, audio_stereo);</p><p> Ce qui précède crée un tampon, puis le remplit de manière procédurale avec des données. Ces données sont ensuite utilisées pour créer un nouveau son, qui est stocké dans la variable &quot;soundId&quot;. </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> Arrière: <a href="../Audio.htm">Tampons audio</a></div><div style="float:right"> Suivant:<a href="audio_free_buffer_sound.htm">audio_free_buffer_sound</a></div><div style="float:right"></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
+  </div>
+  <!-- KEYWORDS
+audio_create_buffer_sound
+audio_mono
+audio_stereo
+audio_3D
+-->
+  <!-- TAGS
+audio_create_buffer_sound
+-->
+</body>
+</html>

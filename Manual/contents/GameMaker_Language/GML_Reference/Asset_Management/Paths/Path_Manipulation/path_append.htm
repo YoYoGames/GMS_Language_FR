@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>path_append</title>
+  <meta name="generator" content="Adobe RoboHelp 2019" />
+  <link rel="stylesheet" href="../../../../../assets/css/default.css" type="text/css" />
+  <meta name="rh-authors" content="Mark Alexander" />
+  <meta name="topic-comment" content="Page expliquant la fonction path_append" />
+  <meta name="rh-index-keywords" content="path_append" />
+  <meta name="search-keywords" content="path_append" />
+</head>
+<body><!--<div class="body-scroll" style="top: 150px;">--><h1>path_append</h1><p> Avec ce code, vous pouvez ajouter un chemin à un autre, en les reliant efficacement, et pour que cela fonctionne, les deux chemins doivent exister auparavant. En général, vous souhaitez utiliser cette fonction sur les chemins créés à l&#39;aide de <span class="inline"><a href="path_add.htm">path_add()</a></span>, car si vous l&#39;utilisez sur un actif de chemin, <strong>cela affectera de manière permanente le chemin des instances du jeu à</strong> partir du moment où la fonction est utilisée jusqu&#39;à la fin de la partie.</p><p class="note"> <b>REMARQUE</b>: cela ne supprimera pas le chemin ajouté du jeu. Il est toujours là, mais il ne contient plus de points et si vous ne souhaitez plus l&#39;utiliser, vous devez le supprimer avec la fonction <span style="font-size:1px;"><a href="path_delete.htm"><tt style="font-size: 14px">path_delete ()</tt></a></span>.</p><p></p><h4> Syntaxe:</h4><p class="code">path_append(index, path);</p><table><tbody><tr><th> Argument</th><th> Description</th></tr><tr><td> <span class="notranslate">index</span></td><td> Le nouvel index du chemin.</td></tr><tr><td> <span class="notranslate">path</span></td><td> L&#39;index du chemin qui sera ajouté à «index».</td></tr></tbody></table><p></p><h4> Retour:</h4><p class="code">N/A</p><p></p><h4> Exemple:</h4><p class="code">path_append(mypath, mppath);<br/> path_delete(mppath);
+  </p><p> Le code ci-dessus ajoute les données de chemin indexées dans la variable &quot;mppath&quot; au chemin indexé dans la variable &quot;mypath&quot; puis supprime le &quot;mppath&quot; de la mémoire. </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> Retour: <a href="Path_Manipulation.htm">Manipulation de chemin</a></div><div style="float:right"> Suivant:<a href="path_assign.htm">path_assign</a></div><div style="float:right"></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
+  </div>
+  <!-- KEYWORDS
+path_append
+-->
+  <!-- TAGS
+path_append
+-->
+</body>
+</html>

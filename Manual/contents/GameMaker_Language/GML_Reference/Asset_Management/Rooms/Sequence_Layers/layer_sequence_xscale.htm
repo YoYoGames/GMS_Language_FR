@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>layer_sequence_xscale</title>
+  <meta name="generator" content="Adobe RoboHelp 2019" />
+  <link rel="stylesheet" href="../../../../../assets/css/default.css" type="text/css" />
+  <meta name="rh-authors" content="Mark Alexander" />
+  <meta name="topic-comment" content="Page décrivant la fonction layer_sequence_xscale" />
+  <meta name="rh-index-keywords" content="layer_sequence_xscale" />
+  <meta name="search-keywords" content="layer_sequence_xscale" />
+</head>
+<body><!--<div class="body-scroll" style="top: 150px;">--><h1>layer_sequence_xscale</h1><p> Avec cette fonction, vous pouvez définir l&#39;échelle X pour l&#39;élément de séquence donné. Vous fournissez l&#39;ID d&#39;élément de séquence renvoyé par <a href="layer_sequence_create.htm"><tt>layer_sequence_create()</tt></a> ou par l&#39;une des <a href="../General_Layer_Functions/General_Layer_Functions.htm">fonctions d&#39;élément de calque</a> avec la nouvelle échelle à définir sur l&#39;axe X et la séquence sera mise à l&#39;échelle de cette quantité. Une échelle de 1 indique aucune mise à l&#39;échelle (1: 1), des valeurs plus petites seront réduites (0,5, par exemple, la moitié de la largeur de la séquence), des valeurs plus grandes seront mises à l&#39;échelle et des valeurs négatives refléteront la séquence sur son origine <i>et son</i> échelle à moins que la valeur utilisée soit exactement -1 (auquel cas la séquence est simplement reflétée sur son origine sans mise à l&#39;échelle).</p><p> Il est très important de noter que l&#39;application d&#39; <em>une</em> mise à l&#39;échelle inégale (par exemple: mise à l&#39;échelle de l&#39;axe X de 3 et de l&#39;axe Y de 2) à des éléments de séquence contenant une instance qui utilise la <em>rotation</em>, <strong>peut entraîner des problèmes avec le dessin de l&#39;instance, des collisions, un tri et beaucoup d&#39;autres choses</strong>. Fondamentalement, si votre séquence repose sur <em>des</em> propriétés d&#39;occurrence, nous vous déconseillons de combiner une mise à l&#39;échelle inégale avec la rotation d&#39;instance.</p><p> Notez également que vous ne devez pas modifier le <span class="inline">image_xscale</span> \ <span class="inline">image_yscale</span> \ <span class="inline">image_angle</span> \ <span class="inline">x</span> \ <span class="inline">y</span> variables pour toutes les instances d&#39;une séquence qui utilise cette fonction car elles seront écrasées dès que la séquence sera mise à jour après l&#39;appel de la fonction.</p><p></p><h4> Syntaxe:</h4><p class="code">layer_sequence_xscale(sequence_element_id, xscale)</p><table><tbody><tr><th> Argument</th><th> Description</th></tr><tr><td> <span class="notranslate">sequence_element_id</span></td><td> La valeur d&#39;ID unique de l&#39;élément de séquence à cibler</td></tr><tr><td> <span class="notranslate">xscale</span></td><td> La nouvelle valeur d&#39;échelle de l&#39;axe X à appliquer à l&#39;élément de séquence</td></tr></tbody></table><p></p><h4> Retour:</h4><p class="code">N/A</p><p></p><h4> Exemple:</h4><p class="code">if seq_scale &lt; 2<br/>     {
+    <br/>     seq_scale += 0.01;<br/>     layer_sequence_xscale(my_seq, seq_scale);<br/>     layer_sequence_yscale(my_seq, seq_scale);<br/>     }
+  </p><p> Le code ci-dessus vérifie la valeur contenue dans le <span class="inline">seq_scale</span> variable, et s&#39;il est inférieur à 2, il y ajoute puis utilise la valeur pour définir les échelles X et Y de l&#39;élément de séquence référencé dans la variable <span class="inline">my_seq</span>. </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> Retour: <a href="Sequence_Layers.htm">Couches de séquence</a></div><div style="float:right"> Suivant:<a href="layer_sequence_yscale.htm">layer_sequence_yscale</a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
+  </div>
+  <!-- KEYWORDS
+layer_sequence_xscale
+-->
+  <!-- TAGS
+layer_sequence_xscale
+-->
+</body>
+</html>

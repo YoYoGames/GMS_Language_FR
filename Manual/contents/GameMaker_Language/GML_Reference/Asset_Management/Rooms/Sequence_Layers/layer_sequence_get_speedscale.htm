@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>layer_sequence_get_speedscale</title>
+  <meta name="generator" content="Adobe RoboHelp 2019" />
+  <link rel="stylesheet" href="../../../../../assets/css/default.css" type="text/css" />
+  <meta name="rh-authors" content="Mark Alexander" />
+  <meta name="topic-comment" content="Page décrivant la fonction layer_sequence_get_speedscale" />
+  <meta name="rh-index-keywords" content="layer_sequence_get_speedscale" />
+  <meta name="search-keywords" content="layer_sequence_get_speedscale" />
+</head>
+<body><!--<div class="body-scroll" style="top: 150px;">--><h1>layer_sequence_get_speedscale</h1><p> Avec cette fonction, vous fournissez l&#39;ID d&#39;élément de séquence - tel que renvoyé par <a href="layer_sequence_create.htm"><tt>layer_sequence_create()</tt></a> ou par l&#39;une des <a href="../General_Layer_Functions/General_Layer_Functions.htm">fonctions d&#39;élément de calque</a> - et il renverra l&#39;échelle de vitesse de lecture actuelle. Il s&#39;agit de la <i>valeur multiplicatrice</i> utilisée pour ralentir ou accélérer la vitesse de lecture. Une valeur de 1 est la valeur par défaut, et des valeurs inférieures à 1 signifient que la lecture est ralentie et des valeurs supérieures à 1 signifient que la lecture est accélérée.</p><p></p><h4> Syntaxe:</h4><p class="code">layer_sequence_get_speedscale(sequence_element_id)</p><table><tbody><tr><th> Argument</th><th> Description</th></tr><tr><td> <span class="notranslate">sequence_element_id</span></td><td> La valeur d&#39;ID unique de l&#39;élément de séquence à cibler</td></tr></tbody></table><p></p><h4> Retour:</h4><p class="code">Real</p><p></p><h4> Exemple:</h4><p class="code">if layer_sequence_get_speedscale(title_sequence) != 1<br/>     {
+    <br/>     layer_sequence_speedscale(title_sequence, 1);<br/>     }
+  </p><p> Le code ci-dessus vérifie l&#39;échelle de vitesse actuelle de la tête de lecture de l&#39;ID d&#39;élément de séquence stocké dans la variable &quot;title_sequence&quot;, et s&#39;il n&#39;est pas défini sur 1, il est défini sur cette valeur. </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> Retour: <a href="Sequence_Layers.htm">Couches de séquence</a></div><div style="float:right"> Suivant:<a href="layer_sequence_get_length.htm">layer_sequence_get_length</a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
+  </div>
+  <!-- KEYWORDS
+layer_sequence_get_speedscale
+-->
+  <!-- TAGS
+layer_sequence_get_speedscale
+-->
+</body>
+</html>

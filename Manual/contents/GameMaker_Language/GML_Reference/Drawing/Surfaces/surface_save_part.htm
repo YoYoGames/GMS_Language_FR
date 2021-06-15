@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>surface_save_part</title>
+  <meta name="generator" content="Adobe RoboHelp 2019" />
+  <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
+  <meta name="rh-authors" content="Mark Alexander" />
+  <meta name="topic-comment" content="Référence pour surface_save_part" />
+  <meta name="rh-index-keywords" content="surface_save_part" />
+  <meta name="search-keywords" content="surface_save_part" />
+</head>
+<body><!--<div class="body-scroll" style="top: 150px;">--><h1>surface_save_part</h1><p> Cette fonction enregistre une partie d&#39;une surface sur le disque en utilisant le nom de fichier donné. La surface <i>doit</i> être enregistrée en tant que <tt>*.png</tt> format, et la position (x, y) doit être donnée comme coordonnées locales à la surface, en gardant à l&#39;esprit que le coin supérieur gauche de la surface est toujours (0,0).</p><p></p><h4> Syntaxe:</h4><p class="code">surface_save_part(surface_id, fname, x, y, width, height);</p><table><tbody><tr><th> Argument</th><th> Description</th></tr><tr><td> <span class="notranslate">surface_id</span></td><td> ID de la surface à définir comme cible de dessin.</td></tr><tr><td> <span class="notranslate">fname</span></td><td> Le nom du fichier image enregistré.</td></tr><tr><td> <span class="notranslate">x</span></td><td> La position x de départ dans la surface.</td></tr><tr><td> <span class="notranslate">y</span></td><td> La position y de départ dans la surface.</td></tr><tr><td> <span class="notranslate">width</span></td><td> La largeur de la pièce à enregistrer.</td></tr><tr><td> <span class="notranslate">height</span></td><td> La hauteur de la pièce à enregistrer.</td></tr></tbody></table><p></p><h4> Retour:</h4><p class="code">N/A</p><p></p><h4> Exemple:</h4><p class="code">if keyboard_check_pressed(ord(&quot;S&quot;)<br/>     {
+    <br/>     surface_save_part(surf, &quot;test.png&quot;, 0, 0, 100, 100);<br/>     }
+  </p><p> Le code ci-dessus vérifiera si l&#39;utilisateur appuie sur la touche &quot;S&quot; du clavier et s&#39;il le fait, il sauvegardera une partie de la surface indexée dans la variable &quot;surf&quot; sur le disque. </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> Retour: <a href="Surfaces.htm">Surfaces</a></div><div style="float:right"> Suivant:<a href="draw_surface.htm">draw_surface</a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
+  </div>
+  <!-- KEYWORDS
+surface_save_part
+-->
+  <!-- TAGS
+surface_save_part
+-->
+</body>
+</html>

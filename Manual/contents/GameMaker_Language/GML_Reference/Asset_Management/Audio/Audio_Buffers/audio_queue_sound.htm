@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>audio_queue_sound</title>
+  <meta name="generator" content="Adobe RoboHelp 2019" />
+  <link rel="stylesheet" href="../../../../../assets/css/default.css" type="text/css" />
+  <meta name="rh-authors" content="Mark Alexander" />
+  <meta name="topic-comment" content="Page expliquant la fonction audio_queue_sound" />
+  <meta name="rh-index-keywords" content="audio_queue_sound" />
+  <meta name="search-keywords" content="audio_queue_sound" />
+</head>
+<body><!--<div class="body-scroll" style="top: 150px;">--><h1>audio_queue_sound</h1><p> Cette fonction ajoutera les données d&#39;un tampon dans la file d&#39;attente audio que vous avez précédemment créée à l&#39;aide de la fonction <a href="audio_create_play_queue.htm"><tt>audio_create_play_queue()</tt></a>. Vous spécifiez l&#39;index de file d&#39;attente à ajouter et l&#39;ID de tampon à partir duquel obtenir les données, ainsi que la position (décalage) dans le tampon et le nombre d&#39;octets à ajouter. Une fois que vous avez ajouté l&#39;audio d&#39;un tampon à une file d&#39;attente, le tampon ne peut pas être supprimé tant que vous n&#39;avez pas d&#39;abord libéré la file d&#39;attente à l&#39;aide de la fonction <a
+      href="audio_free_play_queue.htm"><tt>audio_free_play_queue()</tt></a> et les propriétés de la mémoire tampon doivent correspondre à celles de la file d&#39;attente à laquelle vous ajoutez le son.</p><p></p><h4> Syntaxe:</h4><p class="code">audio_queue_sound(queueIndex, bufferId, bufferOffset, bufferLength);</p><table><tbody><tr><th> Argument</th><th> Description</th></tr><tr><td> <span class="notranslate">queueIndex</span></td><td> L&#39;index de la file d&#39;attente à ajouter.</td></tr><tr><td> <span class="notranslate">bufferId</span></td><td> Le tampon à ajouter à la file d&#39;attente.</td></tr><tr><td> <span class="notranslate">bufferOffset</span></td><td> Décalage dans le tampon source à partir duquel commencer.</td></tr><tr><td> <span class="notranslate">bufferLength</span></td><td> La longueur du tampon (le nombre d&#39;octets dans le tampon).</td></tr></tbody></table><p></p><h4> Retour:</h4><p class="code">N/A</p><p></p><h4> Exemple:</h4><p class="code">len = async_load[? &quot;data_len&quot;];<br/> audio_buff = buffer_create(len, buffer_fast, 1);<br/> buffer_copy(async_load[? &quot;buffer_id&quot;], 0, len, buff, 0);<br/> audio_queue_sound(audio_queue, audio_buff, 0, len);<br/> audio_play_sound(audio_queue,
+    10, 0);</p><p> Le code ci-dessus serait appelé dans l&#39; <a href="../../../../../The_Asset_Editors/Object_Properties/Async_Events/Audio_Recording.htm">événement d&#39;enregistrement audio</a> asynchrone et attribue certaines données enregistrées à un tampon, qui est ensuite ajouté à une file d&#39;attente audio. Ceci est alors joué. </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> Arrière: <a href="../Audio.htm">Tampons audio</a></div><div style="float:right"> Suivant:<a href="audio_start_recording.htm">audio_start_recording</a></div><div style="float:right"></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
+  </div>
+  <!-- KEYWORDS
+audio_queue_sound
+-->
+  <!-- TAGS
+audio_queue_sound
+-->
+</body>
+</html>

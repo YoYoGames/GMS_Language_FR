@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>tag_get_asset_ids</title>
+  <meta name="generator" content="Adobe RoboHelp 2019" />
+  <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
+  <meta name="rh-authors" content="Mark Alexander" />
+  <meta name="topic-comment" content="Page expliquant la fonction tag_get_asset_ids" />
+  <meta name="rh-index-keywords" content="tag_get_asset_ids,asset_object,asset_sprite,asset_sound,asset_room,asset_tiles,asset_path,asset_script,asset_font,asset_timeline,asset_shader,asset_animationcurve,asset_sequence" />
+  <meta name="search-keywords" content="tag_get_asset_ids,asset_object,asset_sprite,asset_sound,asset_room,asset_tiles,asset_path,asset_script,asset_font,asset_timeline,asset_shader,asset_animationcurve,asset_sequence,asset_unknown" />
+</head>
+<body><!--<div class="body-scroll" style="top: 150px;">--><h1>tag_get_asset_ids</h1><p> Avec cette fonction, vous pouvez obtenir tous les actifs d&#39;un type donné auxquels les balises données leur sont attribuées. Vous fournissez soit une seule balise (sous forme de chaîne), soit un tableau, où chaque élément du tableau est une balise (sous forme de chaîne), ainsi que le type d&#39;actif à vérifier. le type d&#39;actif doit être l&#39;une des constantes suivantes:</p><p></p><table><tbody><tr><th> Constant</th><th> Description</th></tr><tr><td> <span class="notranslate">asset_object</span></td><td> Le nom donné fait référence à un <a href="../../../../The_Asset_Editors/Objects.htm">objet</a>.</td></tr><tr><td> <span class="notranslate">asset_sprite</span></td><td> Le nom donné fait référence à un <a href="../../../../The_Asset_Editors/Sprites.htm">sprite</a>.</td></tr><tr><td> <span class="notranslate">asset_sound</span></td><td> Le prénom fait référence à un <a href="../../../../The_Asset_Editors/Sounds.htm">son</a>.</td></tr><tr><td> <span class="notranslate">asset_room</span></td><td> Le prénom fait référence à un<a href="../../../../The_Asset_Editors/Rooms.htm">room</a>.</td></tr><tr><td> <span class="notranslate">asset_tiles</span></td><td> Le nom donné fait référence à un <a href="../../../../The_Asset_Editors/Tile_Sets.htm">jeu de tuiles</a>.</td></tr><tr><td> <span class="notranslate">asset_path</span></td><td> Le nom donné fait référence à un <a href="../../../../The_Asset_Editors/Paths.htm">chemin</a>.</td></tr><tr><td> <span class="notranslate">asset_script</span></td><td> Le prénom fait référence à un<a href="../../../../The_Asset_Editors/Scripts.htm">script</a>.</td></tr><tr><td> <span class="notranslate">asset_font</span></td><td> Le prénom fait référence à une <a href="../../../../The_Asset_Editors/Fonts.htm">police</a>.</td></tr><tr><td> <span class="notranslate">asset_timeline</span></td><td> Le prénom fait référence à une <a href="../../../../The_Asset_Editors/Timelines.htm">chronologie</a>.</td></tr><tr><td> <span class="notranslate">asset_ <span class="notranslate">shader</span></span></td><td> Le prénom fait référence à un <a href="../../../../The_Asset_Editors/Shaders.htm"><span class="notranslate">shader</span></a>.</td></tr><tr><td> <span class="notranslate">asset_animationcurve</span></td><td> Le nom donné fait référence à une <a href="../../../../The_Asset_Editors/Animation_Curves.htm">courbe d&#39;animation</a>.</td></tr><tr><td> <span class="notranslate">asset_sequence</span></td><td> Le prénom fait référence à une <a href="../../../../The_Asset_Editors/Sequences.htm">séquence</a>.</td></tr></tbody></table><p></p><p> La fonction renverra un tableau, où chaque élément du tableau sera une valeur d&#39;index d&#39;actif unique. S&#39;il n&#39;y a pas d&#39;actifs du type qui ont la ou les balises données, un tableau vide sera renvoyé.</p><p></p><h4> Syntaxe:</h4><p class="code">tag_get_asset_ids(tags, asset_type);</p><table><tbody><tr><th> Argument</th><th> Description</th></tr><tr><td> <span class="notranslate">tags</span></td><td> Une seule chaîne d&#39;étiquettes d&#39;inventaire ou un tableau avec diverses étiquettes d&#39;inventaire.</td></tr><tr><td> <span class="notranslate">asset_type</span></td><td> Une constante de type d&#39;actif (répertoriée ci-dessus)</td></tr></tbody></table><p></p><h4> Retour:</h4><p class="code">Array</p><p></p><h4> Exemple:</h4><p class="code">var _paths = tag_get_asset_ids(&quot;enemy&quot;, asset_path);<br/> var _num = irandom(array_length(_paths) - 1);<br/> path_start(_paths[_num], 1, path_action_reverse, false);</p><p> Le code ci-dessus utilise la balise «ennemi» pour trouver tous les éléments de chemin avec cette balise, avant d&#39;en choisir un au hasard et de l&#39;attribuer à l&#39;instance exécutant le code. </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> Retour: <a href="Assets_And_Tags.htm">Actifs et balises</a></div><div style="float:right"> Suivant:<a href="tag_get_assets.htm">tag_get_assets</a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
+  </div>
+  <!-- KEYWORDS
+tag_get_asset_ids
+asset_object
+asset_sprite
+asset_sound
+asset_room
+asset_tiles
+asset_path
+asset_script
+asset_font
+asset_timeline
+asset_shader
+asset_animationcurve
+asset_sequence
+-->
+  <!-- TAGS
+tag_get_asset_ids
+-->
+</body>
+</html>

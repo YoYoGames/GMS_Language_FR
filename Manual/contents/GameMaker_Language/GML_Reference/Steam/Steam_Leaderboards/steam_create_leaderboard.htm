@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>steam_create_leaderboard</title>
+  <meta name="generator" content="Adobe RoboHelp 2019" />
+  <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
+  <meta name="rh-authors" content="Mark Alexander" />
+  <meta name="topic-comment" content="Page de référence pour steam _create_leaderboard" />
+  <meta name="rh-index-keywords" content="steam_create_leaderboard,lb_sort_none,lb_sort_ascending,lb_sort_descending,lb_disp_none,lb_disp_numeric,lb_disp_time_sec,lb_disp_time_ms" />
+  <meta name="search-keywords" content="steam_create_leaderboard,lb_sort_none,lb_sort_ascending,lb_sort_descending,lb_disp_none,lb_disp_numeric,lb_disp_time_sec,lb_disp_time_ms" />
+</head>
+<body><!--<div class="body-scroll" style="top: 150px;">--><h1> <span class="notranslate">steam</span> _create_leaderboard</h1><p> Avec cette fonction, vous pouvez créer un nouveau classement pour votre jeu. Le premier argument est une chaîne qui définit le nom de votre classement, et ce nom doit être utilisé dans tout autre appel de fonction lié au classement en cours de création. Vous pouvez ensuite définir la méthode de tri (voir les constantes répertoriées ci-dessous) ainsi que la manière dont les informations sont affichées (encore une fois, l&#39;une des constantes répertoriées ci-dessous). La fonction renverra une valeur de -1 si elle ne parvient pas à créer le classement ou une valeur supérieure à -1 si elle a réussi.</p><p class="note"> <b>REMARQUE</b>: Si vous avez déjà créé un classement avec le même nom (soit par code, soit via votre <span class="notranslate">Steam</span> pour le jeu), cette fonction sera ignorée!</p><p></p><table><tbody><tr><th> Constante de tri</th><th> Description</th></tr><tr><td> lb_sort_none</td><td> Pas de tri. Les informations seront affichées «telles quelles».</td></tr><tr><td> lb_sort_ascending</td><td> Triez le classement par ordre croissant.</td></tr><tr><td> lb_sort_descending</td><td> Triez le classement par ordre décroissant.</td></tr></tbody></table><p></p><table><tbody><tr><th> Afficher la constante</th><th> Description</th></tr><tr><td> lb_disp_none</td><td> Afficher le classement &quot;tel quel&quot;.</td></tr><tr><td> lb_disp_numeric</td><td> Afficher le classement sous forme d&#39;affichage numérique.</td></tr><tr><td> lb_disp_time_sec</td><td> Afficher les valeurs du classement sous forme d&#39;heures, la valeur de base étant en secondes.</td></tr><tr><td> lb_disp_time_ms</td><td> Afficher les valeurs du classement sous forme de fois, la valeur de base étant en milli-secondes.</td></tr></tbody></table><p></p><h4> Syntaxe:</h4><p class="code">steam_create_leaderboard(lb_name, sort_method, display_type);</p><table><tbody><tr><th> Argument</th><th> Description</th></tr><tr><td> <span class="notranslate">lb_name</span></td><td> Le nom du classement que vous créez (une chaîne).</td></tr><tr><td> <span class="notranslate">sort_method</span></td><td> La méthode de tri des entrées du classement (voir les constantes ci-dessous).</td></tr><tr><td> <span class="notranslate">display_type</span></td><td> La façon d&#39;afficher le classement à l&#39;utilisateur (voir les constantes ci-dessous).</td></tr></tbody></table><p></p><h4> Retour:</h4><p class="code">Real</p><p></p><h4> Exemple:</h4><p class="code">steam_create_leaderboard(&quot;Game Times&quot;, lb_sort_ascending, lb_disp_time_sec);</p><p> Le code ci-dessus créera un classement appelé &quot;Game Times&quot;, et le définira pour afficher les résultats par ordre croissant et avec un affichage en secondes. </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> Retour: <a href="Steam_Leaderboards.htm">Classements</a></div><div style="float:right"> Suivant: <a href="steam_upload_score.htm"><span class="notranslate">steam</span> _upload_score</a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
+  </div>
+  <!-- KEYWORDS
+steam_create_leaderboard
+lb_sort_none
+lb_sort_ascending
+lb_sort_descending
+lb_disp_none
+lb_disp_numeric
+lb_disp_time_sec
+lb_disp_time_ms
+-->
+  <!-- TAGS
+steam_create_leaderboard
+-->
+</body>
+</html>

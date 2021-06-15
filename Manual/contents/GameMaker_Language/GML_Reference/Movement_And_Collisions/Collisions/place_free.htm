@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>place_free</title>
+  <meta name="generator" content="Adobe RoboHelp 2019" />
+  <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
+  <meta name="rh-authors" content="Mark Alexander" />
+  <meta name="topic-comment" content="Page qui donne un aperçu de la fonction place_free" />
+  <meta name="rh-index-keywords" content="place_free" />
+  <meta name="search-keywords" content="place_free" />
+</head>
+<body><!--<div class="body-scroll" style="top: 150px;">--><h1>place_free</h1><p> Vous pouvez utiliser cette fonction pour vérifier et voir si l&#39;instance appelante entrerait en collision avec une instance <i>marquée comme <b>solide</b></i> dans votre jeu. Maintenant, il convient de noter que pour que cela fonctionne, l&#39;instance exécutant le code doit avoir un masque de collision valide (soit pour le sprite lui-même, soit via le <a href="../../Asset_Management/Sprites/Sprite_Instance_Variables/mask_index.htm"><tt>mask_index</tt></a> ) et il n&#39;enregistrera que les collisions avec les instances marquées solides qui ont également un masque valide.</p><p> La fonction elle-même fonctionne essentiellement en prenant l&#39;instance et en testant les collisions avec uniquement des instances marquées solides lorsqu&#39;elles sont placées à la position spécifiée par les arguments x / y. La vérification de collision peut être précise ou basée sur la boîte englobante de l&#39;instance, selon le type de masque de collision sélectionné.</p><p> Notez que les coordonnées x / y données seront étalées à l&#39;entier le plus proche avant que la vérification ne soit effectuée.</p><p></p><h4> Syntaxe:</h4><p class="code">place_free(x, y);</p><table><tbody><tr><th> Argument</th><th> Description</th></tr><tr><td> <span class="notranslate">x</span></td><td> La position x à vérifier.</td></tr><tr><td> <span class="notranslate">y</span></td><td> La position y à vérifier.</td></tr></tbody></table><p></p><h4> Retour:</h4><p class="code">Boolean</p><p></p><h4> Exemple:</h4><p class="code">if place_free(mouse_x, mouse_y)<br/>    {
+    <br/>    x = mouse_x;<br/>    y = mouse_y;<br/>    }
+  </p><p> Le code ci-dessus vérifiera une collision avec toute instance marquée d&#39;un solide si l&#39;instance appelante devait être placée à la même position que la souris. S&#39;il n&#39;y a pas de collision détectée, alors l&#39;instance a ses coordonnées x / y définies sur celles de la souris. </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> Retour: <a href="Collisions.htm">Collisions</a></div><div style="float:right"> Suivant:<a href="place_meeting.htm">place_meeting</a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
+  </div>
+  <!-- KEYWORDS
+place_free
+-->
+  <!-- TAGS
+place_free
+-->
+</body>
+</html>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>physics_apply_local_force</title>
+  <meta name="generator" content="Adobe RoboHelp 2019" />
+  <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
+  <meta name="rh-authors" content="Mark Alexander" />
+  <meta name="topic-comment" content="Page de référence pour physics_apply_local_force" />
+  <meta name="rh-index-keywords" content="physics_apply_local_force" />
+  <meta name="search-keywords" content="physics_apply_local_force" />
+</head>
+<body><!--<div class="body-scroll" style="top: 150px;">--><h1>physics_apply_local_force</h1><p> Une autre façon d&#39;utiliser la force dans le monde de la physique est de l&#39;appliquer <i>localement</i> à une instance. Cela signifie que la force et la direction de la force sont calculées en fonction de l&#39;origine (ou de la position si elle n&#39;a pas de sprite) de l&#39;instance, sans prendre en compte la direction ou la rotation qu&#39;elle peut avoir dans la salle de jeu ou dans le monde de la physique.. Il convient de noter qu&#39;avec cette fonction, les forces ne sont pas appliquées au centre de masse de l&#39;objet, mais plutôt en un point relatif à l&#39;instance et qu&#39;elles ne seront pas appliquées instantanément car elles dépendent de toute autre force qui travaille sur l&#39;objet (comme la gravité). Cette illustration montre comment fonctionne une force locale:</p><p><img alt="Apply local physics force illustration" class="center" src="../../../../assets/Images/Scripting_Reference/GML/Reference/Physics/physics_apply_local_force_image.png" /> Comme vous pouvez le voir, les coordonnées xlocal et ylocal sont calculées en fonction de la position de l&#39;axe <i>toujours</i> considérée comme l&#39;origine de l&#39;instance (0,0), donc peu importe où dans la pièce se trouve l&#39;objet, xlocal et ylocal vont toujours être le même. Vous devez ensuite décider où les composantes vectorielles de la force (xforce et yforce) doivent être positionnées par rapport à la position xlocal / ylocal. La force exacte est définie par le vecteur que nous obtenons à partir des composants xforce / yforce par rapport à ces coordonnées - ce qui signifie simplement que la force est calculée comme la distance de xlocal / ylocal à xforce / yforce en Newtons, et la direction est l&#39;angle que nous obtenons de xlocal / ylocal à xforce / yforce. Cela peut sembler un peu déroutant, mais il vous suffit de regarder l&#39;illustration pour voir comment cela fonctionne, et cela vous évite des calculs compliqués!</p><p class="note"> <b>REMARQUE</b>: Le monde de la physique utilise des compteurs pour tous ses calculs, et le rapport de pixels par mètre est défini dans l&#39;éditeur de salle ou à l&#39;aide de <span style="font-size:1px;"><a href="../The_Physics_World/physics_world_create.htm"><tt style="font-size: 14px">physics_world_create ()</tt></a></span>.</p><p></p><h4> Syntaxe:</h4><p class="code">physics_apply_local_force(xlocal, ylocal, xforce, yforce)</p><table><tbody><tr><th> Argument</th><th> Description</th></tr><tr><td> <span class="notranslate">xlocal</span></td><td> La coordonnée x par <i>rapport à l&#39;origine</i> où la force sera appliquée</td></tr><tr><td> <span class="notranslate">ylocal</span></td><td> La coordonnée y <i>relative à l&#39;origine</i> où la force sera appliquée</td></tr><tr><td> <span class="notranslate">xforce</span></td><td> la composante x du vecteur de force</td></tr><tr><td> <span class="notranslate">yforce</span></td><td> la composante y du vecteur de force</td></tr></tbody></table><p></p><h4> Retour:</h4><p class="code">N/A</p><p></p><h4> Exemple:</h4><p class="code">if keyboard_check(vk_right)<br/>     {
+    <br/>     physics_apply_local_force(-25, 0, -50, 0);<br/>     }
+  </p><p> Le code ci-dessus appliquera une force à l&#39;instance de 50 Newtons de gauche à droite par <i>rapport</i> à l&#39;origine lorsque la touche fléchée droite est enfoncée. </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> Retour: <a href="Forces.htm">Forces</a></div><div style="float:right"> Suivant:<a href="physics_apply_local_impulse.htm">physics_apply_local_impulse</a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
+  </div>
+  <!-- KEYWORDS
+physics_apply_local_force
+-->
+  <!-- TAGS
+physics_apply_local_force
+-->
+</body>
+</html>

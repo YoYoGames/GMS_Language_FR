@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>os_is_paused</title>
+  <meta name="generator" content="Adobe RoboHelp 2019" />
+  <link rel="stylesheet" href="../../../assets/css/default.css" type="text/css" />
+  <meta name="rh-authors" content="Mark Alexander" />
+  <meta name="topic-comment" content="Page de référence pour os_is_paused" />
+  <meta name="rh-index-keywords" content="os_is_paused" />
+  <meta name="search-keywords" content="os_is_paused" />
+</head>
+<body><!--<div class="body-scroll" style="top: 150px;">--><h1>os_is_paused</h1><p> Lors du développement pour des appareils mobiles, vous devez avoir un moyen de vérifier que l&#39;appareil est toujours concentré sur votre jeu ou non, d&#39;autant plus que si votre jeu est sur un appareil <span class="notranslate">iOS</span>, <span class="notranslate">Android</span> ou <span class="notranslate">Windows Phone</span>, il peut être interrompu par des appels téléphoniques et autres applications. Vous pouvez utiliser cette fonction pour vérifier si l&#39;appareil est en pause ou non.</p><p> Il est à noter que cette fonction exécutera tout code contenu dans le bloc de code sur les appareils, mais que <span class="notranslate">GameMaker Studio 2</span> sera mis en pause immédiatement après que l&#39;appareil mettra le jeu en cache en arrière-plan. Donc, si vous avez quelque chose comme l&#39;exemple de code fourni ci-dessous, l&#39;instance à créer n&#39;apparaîtra pas ou n&#39;exécutera aucun de ses événements <i>tant que le jeu n&#39;aura pas été redémarré à partir de l&#39;état mis en cache</i>. Cela signifie que vous préférerez peut-être avoir le <tt>os_is_paused</tt> fonction appeler une alarme, puis dans l&#39;événement d&#39;alarme (qui sera défini lorsque l&#39;appareil est mis en pause mais ne fonctionnera pas tant qu&#39;il ne sera pas mis en pause), créez un menu de pause, redémarrez la musique, etc.</p><p> Si vous utilisez cette fonction sur <span class="notranslate">Windows</span>, <span class="notranslate">Ubuntu</span> ( <span class="notranslate">Linux</span> ), MacOS ou HTML5, la fonction n&#39;est activée que pendant <b>une étape</b> pour <tt>true</tt> lorsque le jeu perd le focus, puis il reviendra <tt>false</tt> à nouveau jusqu&#39;à ce que le jeu soit remis au point (et le perde à nouveau). En effet, ces plates-formes ne mettent pas en cache les applications et les jeux et continueront donc à fonctionner en arrière-plan.</p><p class="note"> <b>REMARQUE</b>: sur les appareils mobiles, les sons et la musique seront arrêtés lorsque le système d&#39;exploitation est mis en pause. Ils <b>ne</b> redémarreront pas à moins que vous ne les lanciez spécifiquement avec la fonction appropriée.</p><p></p><h4> Syntaxe:</h4><p class="code">os_is_paused()</p><p></p><h4> Retour:</h4><p class="code">Boolean</p><p></p><h4> Exemple:</h4><p class="code">if os_is_paused()<br/>     {
+    <br/>     if !instance_exists(obj_PauseMenu)<br/>         {
+    <br/>         instance_create_layer(0, 0, &quot;Controllers&quot;, obj_PauseMenu);<br/>         }
+    <br/>     }
+  </p><p> Le code ci-dessus vérifie si le jeu a été mis en pause, et si c&#39;est le cas, il crée une instance de l&#39;objet &quot;obj_PauseMenu&quot; s&#39;il n&#39;en existe pas déjà. </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> Retour: <a href="OS_And_Compiler.htm">OS et compilateur</a></div><div style="float:right"> Suivant:<a href="os_is_network_connected.htm">os_is_network_connected</a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
+  </div>
+  <!-- KEYWORDS
+os_is_paused
+-->
+  <!-- TAGS
+os_is_paused
+-->
+</body>
+</html>

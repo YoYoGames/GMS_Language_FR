@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>xboxlive_achievements_set_progress</title>
+  <meta name="generator" content="Adobe RoboHelp 2019" />
+  <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
+  <meta name="rh-authors" content="Mark Alexander" />
+  <meta name="topic-comment" content="Page de référence pour xboxlive_achievements_set_progress" />
+  <meta name="rh-index-keywords" content="xboxlive_achievements_set_progress" />
+  <meta name="search-keywords" content="xboxlive_achievements_set_progress" />
+</head>
+<body><!--<div class="body-scroll" style="top: 150px;">--><h1>xboxlive_achievements_set_progress</h1><p> Cette fonction peut être utilisée pour mettre à jour la progression d&#39;une réalisation. Vous fournissez l&#39;ID utilisateur tel que renvoyé, par exemple, par la fonction <a href="../Users_And_Accounts/xboxlive_get_user.htm"><tt>xboxlive_get_user()</tt></a>, puis la chaîne de réussite (il s&#39;agit de l&#39;ID de réussite tel qu&#39;attribué dans le <span class="notranslate">Windows</span> lors de sa création). Enfin, vous définissez la valeur de progression sur une valeur comprise entre 0 et 100. Notez que le système de réussite refusera les mises à jour inférieures à la valeur de progression actuelle.</p><p></p><h4> Syntaxe:</h4><p class="code">xboxlive_achievements_set_progress(user_id, achievement, progress);</p><table><tbody><tr><th> Argument</th><th> Description</th></tr><tr><td> <span class="notranslate">user_id</span></td><td> L&#39;ID utilisateur de l&#39;utilisateur pour lequel définir la réussite</td></tr><tr><td> <span class="notranslate">achievement</span></td><td> La réalisation à définir (une chaîne)</td></tr><tr><td> <span class="notranslate">progress</span></td><td> La valeur de progression à définir (de 0 à 100)</td></tr></tbody></table><p></p><h4> Retour:</h4><p class="code">N/A</p><p></p><h4> Exemple étendu:</h4><p> Voici un exemple détaillé de la façon dont cette fonction peut être utilisée. Pour commencer, vous l&#39;appelez dans un événement comme <b>Room Start</b> ou <b>Create</b>:</p><p class="code">xboxlive_stats_get_social_leaderboard(user_id, &quot;GlobalTime&quot;, 20, 1, false, false);</p><p> Le code ci-dessus serait appelé pour obtenir une liste de toutes les positions de classement mondial pour le jeu, et générera un rappel d&#39;événement social asynchrone que nous traiterions de la manière suivante:</p><p class="code">var _progress = (global.Level / global.LevelMax) * 100;<br/> xboxlive_achievements_set_progress(user_id, &quot;Game_Completed&quot;, _progress);</p><p> Le code ci-dessus crée une valeur de pourcentage basée sur certaines variables globales, puis l&#39;utilise pour définir la progression de la réussite pour la réalisation &quot;Game_Completed&quot;. </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> Retour: <a href="Stats_And_Leaderboards.htm">Statistiques et classements</a></div><div style="float:right"> Suivant:<a href="xboxlive_get_stats_for_user.htm">xboxlive_get_stats_for_user</a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
+  </div>
+  <!-- KEYWORDS
+xboxlive_achievements_set_progress
+-->
+  <!-- TAGS
+xboxlive_achievements_set_progress
+-->
+</body>
+</html>

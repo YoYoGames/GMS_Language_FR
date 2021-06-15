@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>audio_start_sync_group</title>
+  <meta name="generator" content="Adobe RoboHelp 2019" />
+  <link rel="stylesheet" href="../../../../../assets/css/default.css" type="text/css" />
+  <meta name="rh-authors" content="Mark Alexander" />
+  <meta name="topic-comment" content="Page expliquant la fonction audio_start_sync_group" />
+  <meta name="rh-index-keywords" content="audio_start_sync_group" />
+  <meta name="search-keywords" content="audio_start_sync_group" />
+</head>
+<body><!--<div class="body-scroll" style="top: 150px;">--><h1>audio_start_sync_group</h1><p> Avec cette fonction, vous pouvez commencer à lire un groupe de synchronisation créé précédemment. Vous devez fournir l&#39; <i>index de groupe</i> qui est la valeur renvoyée lorsque vous avez créé le groupe à l&#39;aide de la fonction <a href="audio_create_sync_group.htm"><tt>audio_create_sync_group()</tt></a>.</p><p class="note"> <b>REMARQUE</b>: cette fonctionnalité n&#39;est pas disponible pour la plate-forme cible HTML5.</p><p></p><h4> Syntaxe:</h4><p class="code">audio_start_sync_group(group_index);</p><table><tbody><tr><th> Argument</th><th> Description</th></tr><tr><td> <span class="notranslate">group_index</span></td><td> L&#39;index de groupe à jouer.</td></tr></tbody></table><p></p><h4> Retour:</h4><p class="code">N/A</p><p></p><h4> Exemple:</h4><p class="code">sg = audio_create_sync_group(true);<br/> audio_play_in_sync_group(sg, sound1);<br/> audio_play_in_sync_group(sg, sound2);<br/> audio_sound_gain(sound2, 0, 0);<br/> audio_play_in_sync_group(sg, sound3);<br/> audio_sound_gain(sound3, 0, 0);<br/> audio_play_in_sync_group(sg,
+    sound4);<br/> audio_sound_gain(sound4, 0, 0);<br/> audio_start_sync_group(sg);
+  </p><p> Ce qui précède crée un nouveau groupe de synchronisation et affecte l&#39;index du groupe à la variable &quot;sg&quot;. Quatre sons sont ensuite ajoutés au groupe, le gain de trois d&#39;entre eux étant réglé sur 0. Enfin, le groupe de synchronisation est joué. </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> Retour: <a href="Audio_Synchronisation.htm">Synchronisation audio</a></div><div style="float:right"> Suivant:<a href="audio_stop_sync_group.htm">audio_stop_sync_group</a></div><div style="float:right"></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
+  </div>
+  <!-- KEYWORDS
+audio_start_sync_group
+-->
+  <!-- TAGS
+audio_start_sync_group
+-->
+</body>
+</html>

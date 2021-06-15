@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>buffer_set_surface</title>
+  <meta name="generator" content="Adobe RoboHelp 2019" />
+  <link rel="stylesheet" href="../../../assets/css/default.css" type="text/css" />
+  <meta name="rh-authors" content="Mark Alexander" />
+  <meta name="topic-comment" content="Page de référence pour buffer_set_surface" />
+  <meta name="rh-index-keywords" content="buffer_set_surface,buffer_surface_copy (obsolète)" />
+  <meta name="search-keywords" content="buffer_set_surface,buffer_surface_copy" />
+</head>
+<body><!--<div class="body-scroll" style="top: 150px;">--><h1>buffer_set_surface</h1><p> Avec cette fonction, vous pouvez écrire les informations d&#39;un tampon sur une surface donnée. Le tampon en cours de lecture et la surface en cours d&#39;écriture doivent avoir été créés précédemment, et vous pouvez fournir un décalage dans le tampon pour commencer la lecture. Notez que la lecture commencera toujours au début du tampon plus la valeur de décalage et <em>non</em> à la position de recherche actuelle plus la valeur de décalage.</p><p class="note"> <strong>REMARQUE</strong>: cette fonction a changé depuis la mise à jour 2.3.1 de <span class="notranslate">GameMaker Studio</span> Les versions précédentes utilisaient la constante <span class="inline">buffer_surface_copy</span>, qui est désormais obsolète.</p><p></p><h4> Syntaxe:</h4><p class="code">buffer_set_surface(buffer, surface, offset);</p><table><tbody><tr><th> Argument</th><th> Description</th></tr><tr><td> <span class="notranslate">buffer</span></td><td> L&#39;index du tampon à utiliser.</td></tr><tr><td> <span class="notranslate">surface</span></td><td> L&#39;indice de la surface à utiliser.</td></tr><tr><td> <span class="notranslate">offset</span></td><td> La valeur de décalage des données.</td></tr></tbody></table><p></p><h4> Retour:</h4><p class="code">N/A</p><p></p><h4> Exemple:</h4><p class="code">buffer_set_surface(buff, application_surface, 0);</p><p> Le code ci-dessus copiera toutes les données stockées dans le tampon indexé dans la variable &quot;buff&quot; vers la surface d&#39;application sans décalage. </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> Retour: <a href="Buffers.htm">Tampons</a></div><div style="float:right"> Suivant:<a href="buffer_resize.htm">buffer_resize</a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
+  </div>
+  <!-- KEYWORDS
+buffer_set_surface
+buffer_surface_copy
+-->
+  <!-- TAGS
+buffer_set_surface
+-->
+</body>
+</html>

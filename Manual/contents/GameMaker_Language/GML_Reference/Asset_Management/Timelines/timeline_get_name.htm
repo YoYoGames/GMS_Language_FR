@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>timeline_get_name</title>
+  <meta name="generator" content="Adobe RoboHelp 2019" />
+  <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
+  <meta name="rh-authors" content="Mark Alexander" />
+  <meta name="topic-comment" content="Page décrivant la fonction timeline_get_name" />
+  <meta name="rh-index-keywords" content="timeline_get_name" />
+  <meta name="search-keywords" content="timeline_get_name" />
+</head>
+<body><!--<div class="body-scroll" style="top: 150px;">--><h1>timeline_get_name</h1><p> Cette fonction peut être utilisée pour obtenir le nom d&#39;une ligne de temps sous forme de chaîne. si la chronologie a été créée dynamiquement à l&#39;aide du <a href="timeline_add.htm"><tt>timeline_add()</tt></a> fonction, le nom retourné aura le format &quot;__newtimeline <i>N</i> &quot; où &quot; <i>N</i> &quot; est le numéro de la ligne de temps (à partir de 0). Veuillez noter qu&#39;il <i>ne s&#39;agit que d&#39;</i> une chaîne et ne peut pas être utilisée pour référencer directement la chronologie - pour cela, vous auriez besoin de l&#39; <i>index de</i> la chronologie. Vous pouvez cependant utiliser cette chaîne pour obtenir l&#39; <i>index de</i> la chronologie à l&#39;aide de la chaîne renvoyée avec la fonction <a href="../Assets_And_Tags/asset_get_index.htm"><tt>asset_get_index()</tt></a>.</p><p></p><h4> Syntaxe:</h4><p class="code">timeline_get_name(ind);</p><table><tbody><tr><th> Argument</th><th> Description</th></tr><tr><td> <span class="notranslate">ind</span></td><td> L&#39;index de la chronologie dont le nom doit être vérifié.</td></tr></tbody></table><p></p><h4> Retour:</h4><p class="code">String</p><p></p><h4> Exemple:</h4><p class="code">var _str = timeline_get_name(timeline_index);<br/> show_debug_message(&quot;Current timeline = &quot; + _str);</p><p> Le code ci-dessus récupère le nom de la chronologie actuellement attribuée et le transmet à la console. </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> Retour: <a href="Timelines.htm">Chronologies</a></div><div style="float:right"> Suivant:<a href="timeline_add.htm">timeline_add</a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
+  </div>
+  <!-- KEYWORDS
+timeline_get_name
+-->
+  <!-- TAGS
+timeline_get_name
+-->
+</body>
+</html>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>xboxlive_matchmaking_set_joinable_session</title>
+  <meta name="generator" content="Adobe RoboHelp 2019" />
+  <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
+  <meta name="rh-authors" content="Mark Alexander" />
+  <meta name="topic-comment" content="Page de référence pour xboxlive_matchmaking_set_joinable_session" />
+  <meta name="rh-index-keywords" content="xboxlive_matchmaking_set_joinable_session" />
+  <meta name="search-keywords" content="xboxlive_matchmaking_set_joinable_session" />
+</head>
+<body><!--<div class="body-scroll" style="top: 150px;">--><h1>xboxlive_matchmaking_set_joinable_session</h1><p> Cette fonction définit une session (créée précédemment) pour que d&#39;autres utilisateurs puissent la rejoindre via l&#39;interface utilisateur du système. Un utilisateur n&#39;a qu&#39;une seule session joignable à la fois, et quand il quitte la session (ou que la session se termine), cela sera effacé, mais vous pouvez l&#39;effacer manuellement en passant -1 pour l&#39;argument de session.</p><p></p><h4> Syntaxe:</h4><p class="code">xboxlive_matchmaking_set_joinable_session(local_user, session_that_is_joinable);</p><table><tbody><tr><th> Argument</th><th> Description</th></tr><tr><td> <span class="notranslate">local_user</span></td><td> Le pointeur d&#39;ID utilisateur local.</td></tr><tr><td> <span class="notranslate">session_that_is_joinable</span></td><td> L&#39;ID de session à rendre joignable, ou -1.</td></tr></tbody></table><p></p><h4> Retour:</h4><p class="code">N/A</p><p></p><h4> Exemple:</h4><p class="code">if (global.session_ID != -1)<br/>     {<br/>     xboxlive_matchmaking_set_joinable_session(xboxlive_user_for_pad(0), global.session_ID);<br/>     }</p><p> Le code ci-dessus vérifie une valeur d&#39;ID de session valide, et si une est détectée, il définit la session pour qu&#39;elle soit joignable. </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> Retour: <a href="Match_Making.htm">Match Making</a></div><div style="float:right"> Suivant:<a href="xboxlive_matchmaking_join_invite.htm">xboxlive_matchmaking_join_invite</a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
+  </div>
+  <!-- KEYWORDS
+xboxlive_matchmaking_set_joinable_session
+-->
+  <!-- TAGS
+xboxlive_matchmaking_set_joinable_session
+-->
+</body>
+</html>

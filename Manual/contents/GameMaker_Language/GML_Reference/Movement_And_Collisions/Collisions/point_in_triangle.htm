@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>point_in_triangle</title>
+  <meta name="generator" content="Adobe RoboHelp 2019" />
+  <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
+  <meta name="rh-authors" content="Mark Alexander" />
+  <meta name="topic-comment" content="Page qui donne un aperçu de la fonction point_in_triangle" />
+  <meta name="rh-index-keywords" content="point_in_triangle" />
+  <meta name="search-keywords" content="point_in_triangle" />
+</head>
+<body><!--<div class="body-scroll" style="top: 150px;">--><h1>point_in_triangle</h1><p> Lorsque vous utilisez cette fonction, vous définissez une zone triangulaire et <span class="notranslate">GameMaker Studio 2</span> déterminera si le point donné se situe dans ses limites ou non. Si le point tombe dans le triangle défini, la fonction retournera <tt>true</tt> sinon la fonction retournera <tt>false</tt>.</p><p></p><h4> Syntaxe:</h4><p class="code">point_in_triangle(px, py, x1, y1, x2, y2, x3, y3);</p><table><tbody><tr><th> Argument</th><th> Description</th></tr><tr><td> <span class="notranslate">px</span></td><td> La coordonnée x du point à vérifier.</td></tr><tr><td> <span class="notranslate">py</span></td><td> La coordonnée y du point à vérifier.</td></tr><tr><td> <span class="notranslate">x1</span></td><td> La coordonnée x du premier coin du triangle à vérifier.</td></tr><tr><td> <span class="notranslate">y1</span></td><td> Coordonnée y du premier coin du triangle à vérifier.</td></tr><tr><td> <span class="notranslate">x2</span></td><td> La coordonnée x du deuxième coin du triangle à vérifier.</td></tr><tr><td> <span class="notranslate">y2</span></td><td> La coordonnée y du deuxième coin du triangle à vérifier.</td></tr><tr><td> <span class="notranslate">x3</span></td><td> La coordonnée x du troisième coin du triangle à vérifier.</td></tr><tr><td> <span class="notranslate">y3</span></td><td> Coordonnée y du troisième coin du triangle à vérifier.</td></tr></tbody></table><p></p><h4> Retour:</h4><p class="code">Boolean</p><p></p><h4> Exemple:</h4><p class="code">var inst = instance_nearest(x, y, obj_Player);<br/> if instance_exists(inst)<br/>    {
+    <br/>    var x1 = x + lengthdir_x(100, image_angle - 45);<br/>    var y1 = y + lengthdir_y(100, image_angle - 45);<br/>    var x2 = x + lengthdir_x(100, image_angle + 45);<br/>    var y2 = y + lengthdir_y(100, image_angle + 45);<br/>    if point_in_triangle(inst.x,
+    inst.y, x, y, x1, y1, x2, y2)<br/>       {
+    <br/>       can_see = true;<br/>       }
+    <br/>    }
+  </p><p> Le code ci-dessus utilise le <tt>point_in_triangle</tt> fonctionne comme un &quot;cône de vision&quot; pour rechercher une instance de &quot;obj_player&quot;, en définissant une variable sur <tt>true</tt> si la position x / y des objets se situe dans le triangle défini. </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> Retour: <a href="Collisions.htm">Collisions</a></div><div style="float:right"> Suivant:<a href="point_in_circle.htm">point_in_circle</a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
+  </div>
+  <!-- KEYWORDS
+point_in_triangle
+-->
+  <!-- TAGS
+point_in_triangle
+-->
+</body>
+</html>

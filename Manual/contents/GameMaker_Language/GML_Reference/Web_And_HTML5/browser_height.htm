@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <title>browser_height</title>
+  <meta name="generator" content="Adobe RoboHelp 2019"/>
+  <link rel="stylesheet" href="../../../assets/css/default.css" type="text/css"/>
+  <meta name="rh-authors" content="Mark Alexander"/>
+  <meta name="topic-comment" content="Page de référence pour browser_height"/>
+  <meta name="rh-index-keywords" content="browser_height"/>
+  <meta name="search-keywords" content="browser_height"/>
+</head>
+<body><!--<div class="body-scroll" style="top: 150px;">--><h1>browser_height</h1><p> Cette variable contient la hauteur (en pixels) du navigateur dans lequel le jeu est exécuté. Si aucun navigateur n&#39;est présent, la taille de la fenêtre est renvoyée. l&#39;image suivante illustre la relation entre cette variable et le reste des fonctions de positionnement disponibles via les <a href="../Cameras_And_Display/The_Game_Window/The_Game_Window.htm">fonctions de fenêtre</a>.</p><p><img alt="HTML5 canvas position examaple" class="center" src="../../../assets/Images/Scripting_Reference/GML/Reference/Web/window_position.png"/></p><h4> Syntaxe:</h4><p class="code">browser_height</p><p></p><h4> Retour:</h4><p class="code">Real</p><p></p><h4> Exemple:</h4><p class="code">if (browser_height &gt; window_get_height()) || (browser_width &gt; window_get_width())<br/>     {
+    <br/>     var xx, yy;<br/>     if (browser_width &gt; window_get_width())<br/>         {
+    <br/>         xx = (browser_width - window_get_width()) / 2;<br/>         }
+    <br/>     else
+    <br/>         {
+    <br/>         xx = 0;<br/>         }
+    <br/>     if (browser_height &gt; window_get_height())<br/>         {
+    <br/>         yy = (browser_height - window_get_height()) / 2;<br/>         }
+    <br/>     else
+    <br/>         {
+    <br/>         yy = 0;<br/>         }
+    <br/>     window_set_position(xx, yy);<br/>     }
+  </p><p> Le code ci-dessus vérifie la largeur et la hauteur du navigateur pour voir si l&#39;une ou l&#39;autre est plus grande que la largeur et la hauteur actuelles de la fenêtre. Si l&#39;un d&#39;entre eux le sont, il calcule alors une nouvelle position pour la fenêtre de jeu dans le navigateur. </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> Retour: <a href="Web_And_HTML5.htm">Web et HTML5</a></div><div style="float:right"> Suivant:<a href="browser_width.htm">browser_width</a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
+  </div>
+  <!-- KEYWORDS
+browser_height
+-->
+  <!-- TAGS
+browser_height
+-->
+
+</body></html>

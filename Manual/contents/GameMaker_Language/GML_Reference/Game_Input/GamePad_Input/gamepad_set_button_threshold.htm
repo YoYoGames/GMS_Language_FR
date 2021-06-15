@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>gamepad_set_button_threshold</title>
+  <meta name="generator" content="Adobe RoboHelp 2019" />
+  <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
+  <meta name="rh-authors" content="Mark Alexander" />
+  <meta name="topic-comment" content="Page de référence pour gamepad_set_button_threshold" />
+  <meta name="rh-index-keywords" content="gamepad_set_button_threshold" />
+  <meta name="search-keywords" content="gamepad_set_button_threshold" />
+</head>
+<body><!--<div class="body-scroll" style="top: 150px;">--><h1>gamepad_set_button_threshold</h1><p> Cette fonction peut être utilisée pour définir le paramètre de seuil actuel des touches analogiques pour un appareil donné. Le seuil par défaut pour tous les boutons analogiques est de 0,5, la plage allant de 0 à 1. Le seuil définit à quel point le bouton est considéré comme étant &quot;enfoncé&quot; pour les jeux qui nécessitent qu&#39;ils agissent comme un bouton numérique. Notez que cette fonction affectera les <a href="gamepad_button_check.htm">états de vérification</a>, <a href="gamepad_button_check_pressed.htm">enfoncé</a> et <a href="gamepad_button_check_released.htm">relâché</a> pour les boutons analogiques, mais <em>n&#39;affectera pas</em> la valeur renvoyée par la fonction<a href="gamepad_button_check.htm"><span class="inline">gamepad_button_check()</span></a>, qui renverra toujours la valeur brute du bouton.</p><p></p><h4> Syntaxe:</h4><p class="code">gamepad_set_button_threshold(device, threshold);</p><table><tbody><tr><th> Argument</th><th> Description</th></tr><tr><td> <span class="notranslate">device</span></td><td> Quel «slot» de périphérique de manette de jeu vérifier.</td></tr><tr><td> <span class="notranslate">threshold</span></td><td> La nouvelle valeur de seuil (de 0 à 1, 0,5 par défaut).</td></tr></tbody></table><p></p><h4> Retour:</h4><p class="code">N/A</p><p></p><h4> Exemple:</h4><p class="code">if gamepad_get_button_threshold(0) != 0.5<br/>    {
+    <br/>    gamepad_set_button_threshold(0, 0.5);<br/>    }
+  </p><p> Le code ci-dessus vérifie le seuil du bouton analogique de la manette de jeu connectée à l&#39;appareil &quot;slot&quot; 0 et si ce n&#39;est pas la valeur par défaut de 0,5, il est réglé sur cette valeur. </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> Retour: <a href="Gamepad_Input.htm">Entrée de la manette de jeu</a></div><div style="float:right"> Suivant: <a href="gamepad_set_axis_deadzone.htm">gamepad_set_axis_deadzone</a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
+  </div>
+  <!-- KEYWORDS
+gamepad_set_button_threshold
+-->
+  <!-- TAGS
+gamepad_set_button_threshold
+-->
+</body>
+</html>

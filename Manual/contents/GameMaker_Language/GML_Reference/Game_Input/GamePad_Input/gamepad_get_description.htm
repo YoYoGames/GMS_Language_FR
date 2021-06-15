@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <title>gamepad_get_description</title>
+  <meta name="generator" content="Adobe RoboHelp 2019"/>
+  <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css"/>
+  <meta name="rh-authors" content="Mark Alexander"/>
+  <meta name="topic-comment" content="Page de référence pour gamepad_get_description"/>
+  <meta name="rh-index-keywords" content="gamepad_get_description"/>
+  <meta name="search-keywords" content="gamepad_get_description"/>
+</head>
+
+<body><!--<div class="body-scroll" style="top: 150px;">--><h1>gamepad_get_description</h1><p> Cette fonction renverra une chaîne avec la description de la manette de jeu donnée, par exemple, un contrôleur PS3 peut renvoyer une chaîne similaire à &quot;PLAYSTATION (R) 3 Controller&quot;, ou un contrôleur XBox360 peut renvoyer &quot;Xbox 360 Controller (XInput STANDARD GAMEPAD) &quot;. Cette chaîne dépend du matériel et la valeur renvoyée dépendra de la manette de jeu branchée dans le &quot;slot&quot; du périphérique qui est en cours de vérification.</p><p></p><h4> Syntaxe:</h4><p class="code">gamepad_get_description(device);</p><table><tbody><tr><th> Argument</th><th> Description</th></tr><tr><td> <span class="notranslate">device</span></td><td> De quel &quot;slot&quot; de manette de jeu obtenir le nom.</td></tr></tbody></table><p></p><h4> Retour:</h4><p class="code">String</p><p></p><h4> Exemple:</h4><p class="code">var gp_num = gamepad_get_device_count();<br/> for (var i = 0; i &lt; gp_num; i++;)<br/>    {
+    <br/>    if gamepad_is_connected(i)<br/>       {
+    <br/>       draw_text(32, 32 + (i * 32), gamepad_get_description(i));<br/>       }
+    <br/>    else
+    <br/>       {
+    <br/>       draw_text(32, 32 + (i * 32), &quot;No Gamepad Connected&quot;);<br/>       }
+    <br/>    }
+  </p><p> Le code ci-dessus passera en boucle dans tous les emplacements de la manette de jeu pour vérifier les appareils connectés, puis dessinera du texte à l&#39;écran en fonction du fait qu&#39;une manette de jeu est connectée à la fente ou non. </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> Retour: <a href="Gamepad_Input.htm">Entrée de la manette de jeu</a></div><div style="float:right"> Suivant: <a href="gamepad_get_button_threshold.htm">gamepad_get_button_threshold</a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
+  </div>
+  <!-- KEYWORDS
+gamepad_get_description
+-->
+  <!-- TAGS
+gamepad_get_description
+-->
+
+</body></html>

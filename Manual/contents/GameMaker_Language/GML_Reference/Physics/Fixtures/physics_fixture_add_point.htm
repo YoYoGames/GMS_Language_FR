@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>physics_fixture_add_point</title>
+  <meta name="generator" content="Adobe RoboHelp 2019" />
+  <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
+  <meta name="rh-authors" content="Mark Alexander" />
+  <meta name="topic-comment" content="Page de référence pour physics_fixture_add_point" />
+  <meta name="rh-index-keywords" content="physics_fixture_add_point" />
+  <meta name="search-keywords" content="physics_fixture_add_point" />
+</head>
+<body><!--<div class="body-scroll" style="top: 150px;">--><h1>physics_fixture_add_point</h1><p> Cette fonction définit les points d&#39;un polygone qui a été précédemment défini sur l&#39;appareil en utilisant soit <a href="physics_fixture_set_polygon_shape.htm"><tt>physics_fixture_set_polygon_shape()</tt></a> ou il peut être utilisé pour ajouter des points à une chaîne de fixations de bord en utilisant la fonction <a href="physics_fixture_set_chain_shape.htm"><tt>physics_fixture_set_chain_shape()</tt></a>. Pour une forme polygonale, les points sont relatifs à l&#39;origine de la fixation, avec la position 0,0 de l&#39;axe x / y étant le centre, et les coordonnées suivantes étant calculées comme d&#39;habitude dans <span class="notranslate">GameMaker Studio 2</span> avec bas / droite étant + x, + y et haut / gauche étant -x, -y. Voici une illustration pour vous aider à visualiser ce processus:</p><p><img alt="Physics polyfon points example" class="center" src="../../../../assets/Images/Scripting_Reference/GML/Reference/Physics/physics_fixture_add_point_image.png" /> Comme vous pouvez le voir, tout <b>polygone convexe</b> simple peut être modélisé de cette manière, mais les polygones <b>concaves</b> <i>ne</i> sont pas pris en charge pour le moment. Enfin, pour fermer le polygone, vous devez lier l&#39;appareil à une instance. Vous devez également noter que vous devez également avoir au moins <b>trois</b> points définis pour votre polygone avant de le lier à une instance ou vous obtiendrez une erreur et que l&#39;ajout d&#39;un point à un appareil qui n&#39;a pas de forme de polygone définie précédemment provoquera également un Erreur. Notez également que le nombre maximum de points autorisés pour un match est de <b>huit</b>.</p><p> Pour les formes en chaîne (qui sont simplement des formes d&#39;arêtes connectées en série), cette fonction définira un point comme &quot;connexion&quot; pour enchaîner les arêtes ensemble. Par conséquent, vous devez avoir défini au moins deux points avant de lier le projecteur à l&#39;instance, sinon vous obtiendrez une erreur. Cependant, contrairement aux polygones, vous n&#39;êtes pas limité à un maximum de huit points et pouvez en ajouter autant que nécessaire pour créer la chaîne et les points sont définis en coordonnées réelles de la pièce, plutôt que par rapport à l&#39;instance.</p><p></p><h4> Syntaxe:</h4><p class="code">physics_fixture_add_point(fixture, xpos, ypos)</p><table><tbody><tr><th> Argument</th><th> Description</th></tr><tr><td> <span class="notranslate">fixture</span></td><td> l&#39;index du luminaire</td></tr><tr><td> <span class="notranslate">xpos</span></td><td> la position x du point (par <i>rapport à l&#39;origine de l&#39;appareil</i> pour les formes polygonales)</td></tr><tr><td> <span class="notranslate">ypos</span></td><td> la position y du point (par <i>rapport à l&#39;origine de l&#39;appareil</i> pour les formes polygonales)</td></tr></tbody></table><p></p><h4> Retour:</h4><p class="code">N/A</p><p></p><h4> Exemple:</h4><p class="code">physics_fixture_set_polygon_shape(fix_Ship);<br/> physics_fixture_add_point(fix_Ship, 0,0);<br/> physics_fixture_add_point(fix_Ship, -40, 100);<br/> physics_fixture_add_point(fix_Ship, 40, 100);</p><p> Le code ci-dessus appliquera une forme polygonale à l&#39;appareil indexé dans la variable &quot;fix_Ship&quot; et définira ensuite trois points pour créer une forme triangulaire. </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> Retour: <a href="Fixtures.htm">Fixtures</a></div><div style="float:right"> Suivant:<a href="physics_fixture_set_density.htm">physics_fixture_set_density</a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
+  </div>
+  <!-- KEYWORDS
+physics_fixture_add_point
+-->
+  <!-- TAGS
+physics_fixture_add_point
+-->
+</body>
+</html>

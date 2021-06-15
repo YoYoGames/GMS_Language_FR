@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>path_positionprevious</title>
+  <meta name="generator" content="Adobe RoboHelp 2019" />
+  <link rel="stylesheet" href="../../../../../assets/css/default.css" type="text/css" />
+  <meta name="rh-authors" content="Mark Alexander" />
+  <meta name="topic-comment" content="Page expliquant la fonction path_positionprevious" />
+  <meta name="rh-index-keywords" content="path_positionprevious" />
+  <meta name="search-keywords" content="path_positionprevious" />
+</head>
+<body><!--<div class="body-scroll" style="top: 150px;">--><h1>path_positionprevious</h1><p> Cette variable peut être utilisée pour obtenir ou pour définir la position d&#39;une instance le long de son chemin actuel à l&#39;étape précédente, et est une valeur normalisée entre 0 et 1, c&#39;est-à-dire: 0 est la position de départ du chemin et 1 serait la position de fin. Il est similaire au <a href="../../Instances/Instance_Variables/xprevious.htm"><tt>xprevious</tt></a> et <a href="../../Instances/Instance_Variables/yprevious.htm"><tt>yprevious</tt></a> variables dans son fonctionnement, seulement il est spécifique pour les chemins. Cela peut être utile pour des choses comme l&#39;arrêt temporaire d&#39;un suiveur de chemin si quelque chose se trouve dans le chemin (voir l&#39;exemple de code ci-dessous).</p><p></p><h4> Syntaxe:</h4><p class="code">path_positionprevious;</p><p></p><h4> Retour:</h4><p class="code">Real</p><p></p><h4> Exemple:</h4><p class="code">var _x = x + lengthdir_x(16, direction);<br/> var _y = y + lengthdir_y(16, direction);<br/> if collision_circle(xx, yy, 16, obj_Player, false,true)<br/>     {<br/>     path_position = path_positionprevious;<br/>     }
+  </p><p> Le code ci-dessus vérifie une zone devant l&#39;instance pour une collision avec l&#39;objet &quot;obj_Player&quot; et s&#39;il y en a un, il remet l&#39;instance à la position précédente qu&#39;elle occupait sur le chemin courant, comme assigné par la fonction <span
+      class="inline"><a href="../path_start.htm">path_start ()</a></span>. </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> Retour: <a href="Path_Variables.htm">Variables de chemin</a></div><div style="float:right"> Suivant:<a href="path_speed.htm">path_speed</a></div><div style="float:right"></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
+  </div>
+  <!-- KEYWORDS
+path_positionprevious
+-->
+  <!-- TAGS
+path_positionprevious
+-->
+</body>
+</html>

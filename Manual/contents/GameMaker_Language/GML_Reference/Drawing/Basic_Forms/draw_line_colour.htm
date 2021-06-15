@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>draw_line_colour</title>
+  <meta name="generator" content="Adobe RoboHelp 2019" />
+  <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
+  <meta name="rh-authors" content="Mark Alexander" />
+  <meta name="topic-comment" content="Référence pour la fonction draw_line_colour" />
+  <meta name="rh-index-keywords" content="draw_line_colour,draw_line_color" />
+  <meta name="search-keywords" content="draw_line_colour,draw_line_color" />
+</head>
+<body><!--<div class="body-scroll" style="top: 150px;">--><h1>draw_line_colour</h1><p> Avec cette fonction, vous pouvez dessiner une ligne de 1 pixel de large avec la couleur mélangée entre la couleur 1 au premier point et la couleur 2 au deuxième point. Les paramètres de couleur remplaceront la couleur de base définie avec la fonction <a href="../Colour_And_Alpha/draw_set_colour.htm"><tt>draw_set_colour()</tt></a>. Veuillez noter que la ligne en cours de tracé peut nécessiter des valeurs différentes (+/- 1 sur x, y) pour être tracées avec les dimensions souhaitées en raison des différences entre les différentes plates-formes prises en charge.</p><p class="note"> <b>REMARQUE</b>: Si vous souhaitez dessiner une forme à l&#39;aide d&#39;un <span class="notranslate">shader</span>, sachez que la plupart des <span class="notranslate">shaders</span> attendent les entrées suivantes: sommet, texture, couleur. Cependant, lors de l&#39;utilisation de cette fonction, seules les données de sommet et de couleur sont transmises, et le <span class="notranslate">shader</span> peut ne rien dessiner (ou dessiner quelque chose mais pas correctement). Si vous devez dessiner des formes de cette manière, le <span class="notranslate">shader</span> doit être personnalisé dans cet esprit.</p><p></p><h4> Syntaxe:</h4><p class="code">draw_line_colour(x1, y1, x2, y2, col1, col2);</p><table><tbody><tr><th> Argument</th><th> Description</th></tr><tr><td> <span class="notranslate">x1</span></td><td> La coordonnée x du début de la ligne.</td></tr><tr><td> <span class="notranslate">y1</span></td><td> La coordonnée y du début de la ligne.</td></tr><tr><td> <span class="notranslate">x2</span></td><td> La coordonnée x de la fin de la ligne.</td></tr><tr><td> <span class="notranslate">y2</span></td><td> La coordonnée y de la fin de la ligne.</td></tr><tr><td> <span class="notranslate">col1</span></td><td> La couleur du début de la ligne.</td></tr><tr><td> <span class="notranslate">col2</span></td><td> La couleur de la fin de la ligne.</td></tr></tbody></table><p></p><h4> Retour:</h4><p class="code">N/A</p><p></p><h4> Exemple:</h4><p class="code">draw_line_colour(50, 50, 300, 50, c_red, c_blue);</p><p> Cela dessinerait une ligne horizontale de (50,50) à (300,50) avec un dégradé lisse du rouge au bleu. </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> Retour: <a href="Basic_Forms.htm">Formulaires de base</a></div><div style="float:right"> Suivant:<a href="draw_line_width.htm">draw_line_width</a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
+  </div>
+  <!-- KEYWORDS
+draw_line_colour
+draw_line_color
+-->
+  <!-- TAGS
+draw_line_colour
+-->
+</body>
+</html>

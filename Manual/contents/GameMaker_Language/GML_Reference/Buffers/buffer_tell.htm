@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>buffer_tell</title>
+  <meta name="generator" content="Adobe RoboHelp 2019" />
+  <link rel="stylesheet" href="../../../assets/css/default.css" type="text/css" />
+  <meta name="rh-authors" content="Mark Alexander" />
+  <meta name="topic-comment" content="Page de référence pour buffer_tell" />
+  <meta name="rh-index-keywords" content="buffer_tell" />
+  <meta name="search-keywords" content="buffer_tell" />
+</head>
+<body><!--<div class="body-scroll" style="top: 150px;">--><h1>buffer_tell</h1><p> Lorsque vous lisez ou écrivez des données dans une mémoire tampon à l&#39;aide du <a href="buffer_read.htm"><tt>buffer_read()</tt></a> ou <a href="buffer_write.htm"><tt>buffer_write()</tt></a> la position actuelle de «recherche» est avancée par les octets écrits ou lus, et avec cette fonction, vous pouvez obtenir la position actuelle de «recherche» pour une utilisation dans d&#39;autres fonctions de tampon. Par exemple, si votre alignement de tampon est défini sur 4 octets et que vous écrivez une seule donnée d&#39;une taille de 1 octet, effectuez un <tt>buffer_tell()</tt>, vous obtiendrez une valeur de retour de 1. Cependant, si vous écrivez un autre élément de données, également d&#39;une taille de 1 octet, effectuez un <tt>buffer_tell()</tt>, vous obtiendrez une valeur de retour de 5 car l&#39;alignement a &quot;rempli&quot; les données à cette position.</p><p></p><h4> Syntaxe:</h4><p class="code">buffer_tell(buffer);</p><table><tbody><tr><th> Argument</th><th> Description</th></tr><tr><td> <span class="notranslate">buffer</span></td><td> L&#39;index du tampon à utiliser.</td></tr></tbody></table><p></p><h4> Retour:</h4><p class="code">Real</p><p></p><h4> Exemple:</h4><p class="code">var pos = buffer_tell(buff); buffer_seek(buff, buffer_seek_start, 0);<br/> val[0] = buffer_read(buff, buffer_S16);<br/> val[1] = buffer_read(buff, buffer_S16);<br/> val[2] = buffer_read(buff, buffer_S16);<br/> buffer_seek(buff, buffer_seek_start, pos);</p><p> Le code ci-dessus stockera la position de recherche actuelle dans le tampon indexé dans la variable &quot;buff&quot; vers la variable locale &quot;pos&quot;. La position de recherche de tampon sera alors définie au début du tampon, et trois éléments de données sont lus dans un tableau, avant de finalement réinitialiser la position de recherche de tampon à l&#39;endroit où elle se trouvait auparavant. </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> Retour: <a href="Buffers.htm">Tampons</a></div><div style="float:right"> Suivant:<a href="buffer_peek.htm">buffer_peek</a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
+  </div>
+  <!-- KEYWORDS
+buffer_tell
+-->
+  <!-- TAGS
+buffer_tell
+-->
+</body>
+</html>

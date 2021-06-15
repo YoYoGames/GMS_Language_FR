@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <title>ds_map_secure_save</title>
+  <meta name="generator" content="Adobe RoboHelp 2019"/>
+  <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css"/>
+  <meta name="rh-authors" content="Mark Alexander"/>
+  <meta name="topic-comment" content="Page de référence pour ds_map_secure_save"/>
+  <meta name="rh-index-keywords" content="ds_map_secure_save"/>
+  <meta name="search-keywords" content="ds_map_secure_save"/>
+</head>
+
+<body><!--<div class="body-scroll" style="top: 150px;">--><h1>ds_map_secure_save</h1><p> Cette fonction enregistre le contenu de la carte DS donnée dans un fichier lié à l&#39;appareil sur lequel elle a été créée (ce qui signifie qu&#39;il ne peut pas être lu s&#39;il est transféré vers un autre appareil). Le fichier lui-même peut avoir presque n&#39;importe quelle extension (par exemple, <tt>*.dat</tt>, <tt>*.json</tt>, <tt>*.bin</tt>, etc...) et sera masquée et stockée dans le stockage local sur la plate-forme cible. Vous pouvez ensuite recharger le ds_map en utilisant la fonction <a href="ds_map_secure_load.htm"><tt>ds_map_secure_load()</tt></a>. Notez que si la carte DS en cours d&#39;enregistrement contient un tableau, ce tableau sera converti en liste DS à la place lors de l&#39;enregistrement.</p><p class="note"> <b>IMPORTANT!</b> L&#39;une des caractéristiques d&#39;un fichier enregistré sécurisé est qu&#39;il est verrouillé sur l&#39;appareil sur lequel il a été créé, de sorte que vous ne pouvez pas charger un fichier enregistré sur un appareil dans un projet exécuté sur un autre appareil.</p><p></p><h4> Syntaxe:</h4><p class="code">ds_map_secure_save(map, filename);</p><table><tbody><tr><th> Argument</th><th> Description</th></tr><tr><td> <span class="notranslate">map</span></td><td> L&#39;identifiant de la structure de données à utiliser</td></tr><tr><td> <span class="notranslate">filename</span></td><td> Le nom du fichier dans lequel enregistrer la carte</td></tr></tbody></table><p></p><h4> Retour:</h4><p class="code">Boolean</p><p></p><h4> Exemple:</h4><p class="code">ds_map_secure_save(purchase_map, &quot;p_data.dat&quot;);</p><p> Le code ci-dessus enregistrera la carte DS indexée dans la variable &quot;p_data&quot; dans le fichier donné pour une récupération ultérieure. </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> Retour: <a href="DS_Maps.htm">DS Maps</a></div><div style="float:right"> Suivant:<a href="ds_map_secure_save_buffer.htm">ds_map_secure_save_buffer</a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
+  </div>
+  <!-- KEYWORDS
+ds_map_secure_save
+-->
+  <!-- TAGS
+ds_map_secure_save
+-->
+
+</body></html>

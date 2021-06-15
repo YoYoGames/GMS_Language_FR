@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>buffer_get_address</title>
+  <meta name="generator" content="Adobe RoboHelp 2019" />
+  <link rel="stylesheet" href="../../../assets/css/default.css" type="text/css" />
+  <meta name="rh-authors" content="Mark Alexander" />
+  <meta name="topic-comment" content="Page de référence pour buffer_get_address" />
+  <meta name="rh-index-keywords" content="buffer_get_address" />
+  <meta name="search-keywords" content="buffer_get_address" />
+</head>
+<body><!--<div class="body-scroll" style="top: 150px;">--><h1>buffer_get_address</h1><p> Avec cette fonction, vous pouvez obtenir le <i>pointeur a</i> vers l&#39;adresse de tampon <i>brute et alignée.</i> Ceci est principalement destiné à être utilisé avec les extensions car vous pouvez leur transmettre cette valeur, ce qui leur permet d&#39;accéder aux données de la mémoire tampon. Notez qu&#39;il y a certaines choses que vous ne pouvez pas faire avec le tampon lors de l&#39;accès à partir d&#39;une extension:</p><ul class="colour"><li> Vous ne pouvez pas libérer la mémoire.</li><li> Vous ne pouvez pas redimensionner la mémoire.</li><li> Vous ne pouvez pas ne pas écrire au-delà de l&#39;adresse du tampon plus la taille du tampon (vous pouvez utiliser le <a href="buffer_get_size.htm"><tt>buffer_get_size()</tt></a> fonction pour cela) ou vous obtiendrez une erreur hors limites.</li></ul><p></p><h4> Syntaxe:</h4><p class="code">buffer_get_address(buffer);</p><table><tbody><tr><th> Argument</th><th> Description</th></tr><tr><td> <span class="notranslate">buffer</span></td><td> L&#39;index du tampon à utiliser.</td></tr></tbody></table><p></p><h4> Retour:</h4><p class="code">pointer</p><p></p><h4> Exemple:</h4><p class="code">var b_address = buffer_get_address(buff_model);<br/> var b_end_address = b_address + buffer_get_size(buff_model);</p><p> Le code ci-dessus obtiendra l&#39;adresse mémoire du tampon indexé dans la variable &quot;buff_model&quot; puis obtiendra l&#39;adresse mémoire pour la fin du tampon en utilisant le <tt>buffer_get_size()</tt> fonction, en stockant les deux valeurs dans des variables locales pour une utilisation ultérieure. </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> Retour: <a href="Buffers.htm">Tampons</a></div><div style="float:right"> Suivant:<a href="buffer_get_size.htm">buffer_get_size</a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
+  </div>
+  <!-- KEYWORDS
+buffer_get_address
+-->
+  <!-- TAGS
+buffer_get_address
+-->
+</body>
+</html>

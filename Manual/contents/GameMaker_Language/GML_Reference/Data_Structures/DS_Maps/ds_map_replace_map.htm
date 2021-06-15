@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>ds_map_replace_map</title>
+  <meta name="generator" content="Adobe RoboHelp 2019" />
+  <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
+  <meta name="rh-authors" content="Mark Alexander" />
+  <meta name="topic-comment" content="Page de référence pour ds_map_replace_map" />
+  <meta name="rh-index-keywords" content="ds_map_replace_map" />
+  <meta name="search-keywords" content="ds_map_replace_map" />
+</head>
+<body><!--<div class="body-scroll" style="top: 150px;">--><h1>ds_map_replace_map</h1><p> Avec cette fonction, vous pouvez remplacer un <tt>DS Map</tt> qui a été stocké dans la &quot;clé&quot; donnée avec une autre carte qui a été créée précédemment. Cette fonction est conçue pour créer des cartes compatibles JSON que vous encoderiez ensuite en utilisant <a
+      href="../../File_Handling/Encoding_And_Hashing/json_encode.htm"><tt>json_encode()</tt></a> et ne doit être utilisé qu&#39;en conjonction avec cette fonctionnalité.</p><p></p><h4> Syntaxe:</h4><p class="code">ds_map_replace_map(id, key, value)</p><table><tbody><tr><th> Argument</th><th> Description</th></tr><tr><td> <span class="notranslate">id</span></td><td> L&#39;identifiant du ds_map à utiliser.</td></tr><tr><td> <span class="notranslate">key</span></td><td> La clé à remplacer.</td></tr><tr><td> <span class="notranslate">value</span></td><td> L&#39;id du ds_map à utiliser pour remplacer celui précédemment stocké dans la clé donnée.</td></tr></tbody></table><p></p><h4> Retour:</h4><p class="code">N/A</p><p></p><h4> Exemple:</h4><p class="code">var temp_map = ds_map_create();<br/> ds_map_add_list(temp_map, &quot;list&quot;, j_list);<br/> ds_map_add(temp_map, &quot;array&quot;, j_array);<br/> ds_map_replace_map(j_map, &quot;maps&quot;, temp_map);<br/> var j = json_encode(j_map);<br/> ds_map_destroy(temp_map);
+  </p><p> Le code ci-dessus créera un <tt>DS Map</tt> et remplissez-le avec un tableau et un <tt>DS List</tt> avant de remplacer une carte précédemment stockée dans <tt>DS Map</tt> &quot;j_map&quot;. </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> Retour: <a href="DS_Maps.htm">DS Maps</a></div><div style="float:right"> Suivant: <a href="ds_map_is_list.htm"><span class="footer"><span class="buttons"><span class="clear"><span style="float:right;">ds_map_is_list</span></span></span></span></a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
+  </div>
+  <!-- KEYWORDS
+ds_map_replace_map
+-->
+  <!-- TAGS
+ds_map_replace_map
+-->
+</body>
+</html>

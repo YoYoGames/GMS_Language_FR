@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>timeline_size</title>
+  <meta name="generator" content="Adobe RoboHelp 2019" />
+  <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
+  <meta name="rh-authors" content="Mark Alexander" />
+  <meta name="topic-comment" content="Page décrivant la fonction timeline_size" />
+  <meta name="rh-index-keywords" content="timeline_size" />
+  <meta name="search-keywords" content="timeline_size" />
+</head>
+<body><!--<div class="body-scroll" style="top: 150px;">--><h1>timeline_size</h1><p> Avec cette fonction, vous pouvez obtenir le nombre total de moments actifs pour une chronologie (un moment «actif» est un moment auquel un code ou un <span class="notranslate">DnD</span>™ est ajouté). Cela peut être pratique lors de la création de chronologies dynamiques à l&#39;aide de <a href="timeline_moment_add_script.htm"><tt>timeline_moment_add_script()</tt></a> et <a href="timeline_moment_clear.htm"><tt>timeline_moment_clear()</tt></a> fonctions, car vous pouvez vérifier si une chronologie donnée a le nombre correct de moments actifs ou pas du tout.</p><p></p><h4> Syntaxe:</h4><p class="code">timeline_size(ind);</p><table><tbody><tr><th> Argument</th><th> Description</th></tr><tr><td> <span class="notranslate">ind</span></td><td> L&#39;index de la chronologie récupère les informations.</td></tr></tbody></table><p></p><h4> Retour:</h4><p class="code">N/A</p><p></p><h4> Exemple:</h4><p class="code">if timeline_size(global.tl) == 0<br/>     {
+    <br/>     timeline_moment_add_script(global.tl, room_speed + irandom(room_speed), spawn_enemy);<br/>     }
+  </p><p> Le code ci-dessus vérifie la taille de la chronologie donnée, et s&#39;il renvoie 0 (c&#39;est-à-dire: la chronologie n&#39;a pas de moments actifs), il ajoutera une fonction de script à utiliser à un moment aléatoire dans la chronologie indexée dans la variable globale &quot;tl&quot;. </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> Retour: <a href="Timelines.htm">Chronologies</a></div><div style="float:right"> Suivant:<a href="timeline_max_moment.htm">timeline_max_moment</a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
+  </div>
+  <!-- KEYWORDS
+timeline_size
+-->
+  <!-- TAGS
+timeline_size
+-->
+</body>
+</html>

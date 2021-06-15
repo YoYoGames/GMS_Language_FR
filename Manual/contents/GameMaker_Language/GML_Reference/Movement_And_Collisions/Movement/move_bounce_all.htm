@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>move_bounce_all</title>
+  <meta name="generator" content="Adobe RoboHelp 2019" />
+  <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
+  <meta name="rh-authors" content="Mark Alexander" />
+  <meta name="topic-comment" content="Cette page décrit la fonction move_bounce_all" />
+  <meta name="rh-index-keywords" content="move_bounce_all" />
+  <meta name="search-keywords" content="move_bounce_all" />
+</head>
+<body><!--<div class="body-scroll" style="top: 150px;">--><h1>move_bounce_all</h1><p> Avec cette fonction, vous pouvez commander à une instance de rebondir sur <b>toutes les</b> instances de la salle, à la seule exception de celles auxquelles aucun sprite ou index de masque ne leur est attribué. Vous pouvez également lui dire d&#39;utiliser la vérification de collision précise lorsqu&#39;elle est activée, mais sachez que cela nécessite que toutes les instances aient des masques précis activés et ralentira considérablement votre jeu lorsque de nombreuses instances sont impliquées en raison de la quantité de traitement à effectuer. Cela devrait normalement aller dans l&#39;événement step d&#39;une instance, mais peut également être utilisé de manière sélective dans un événement de collision, comme illustré par l&#39;exemple de code ci-dessous.</p><p></p><h4> Syntaxe:</h4><p class="code">move_bounce_all( adv );</p><table><tbody><tr><th> Argument</th><th> Description</th></tr><tr><td> <span class="notranslate">adv</span></td><td> Activer le rebond avancé (vrai) ou non (faux).</td></tr></tbody></table><p></p><h4> Retour:</h4><p class="code">N/A</p><p></p><h4> Exemple:</h4><p class="code">if other.visible<br/>     {
+    <br/>     move_bounce_all(false);
+    <br/>     }
+  </p><p> Le code ci-dessus serait placé dans un événement de collision avec un autre objet. Il vérifie d&#39;abord si l&#39;objet est visible et si c&#39;est le cas, il effectue ensuite le <tt>move_bounce_all()</tt> action. Notez que dans ce cas, le rebond est sélectif et ne sera calculé que pour cette collision, plutôt que pour chaque instance, chaque étape. </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> Retour: <a href="Movement.htm">Mouvement</a></div><div style="float:right"> Suivant:<a href="move_bounce_solid.htm">move_bounce_solid</a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
+  </div>
+  <!-- KEYWORDS
+move_bounce_all
+-->
+  <!-- TAGS
+move_bounce_all
+-->
+</body>
+</html>

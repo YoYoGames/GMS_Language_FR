@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>layer_background_get_visible</title>
+  <meta name="generator" content="Adobe RoboHelp 2019" />
+  <link rel="stylesheet" href="../../../../../assets/css/default.css" type="text/css" />
+  <meta name="rh-authors" content="Mark Alexander" />
+  <meta name="topic-comment" content="Page décrivant la fonction layer_background_get_visible" />
+  <meta name="rh-index-keywords" content="layer_background_get_visible" />
+  <meta name="search-keywords" content="layer_background_get_visible" />
+</head>
+<body><!--<div class="body-scroll" style="top: 150px;">--><h1>layer_background_get_visible</h1><p> Cette fonction peut être utilisée pour obtenir l&#39;état visible de l&#39;élément d&#39;arrière-plan. Vous donnez l&#39;ID d&#39;élément d&#39;arrière-plan (que vous obtenez lorsque vous créez un élément d&#39;arrière-plan en utilisant <a href="layer_background_create.htm"><tt>layer_background_create()</tt></a> ou lorsque vous utilisez la fonction <a href="layer_background_get_id.htm"><tt>layer_background_get_id()</tt></a> ), et la fonction retournera soit <tt>true</tt> si l&#39;élément est actuellement visible, ou <tt>false</tt> si ce n&#39;est pas le cas. Notez que cette valeur de retour n&#39;est <i>pas</i> affectée par le fait que le calque sur lequel se trouve l&#39;élément est visible ou non.</p><p></p><h4> Syntaxe:</h4><p class="code">layer_background_get_visible(background_element_id);</p><table><tbody><tr><th> Argument</th><th> Description</th></tr><tr><td> <span class="notranslate">background_element_id</span></td><td> La valeur d&#39;identifiant unique de l&#39;élément d&#39;arrière-plan à partir duquel obtenir les informations</td></tr></tbody></table><p></p><h4> Retour:</h4><p class="code">Boolean</p><p></p><h4> Exemple:</h4><p class="code">var lay_id = layer_get_id(&quot;Background_sky&quot;);<br/> var back_id = layer_background_get_id(lay_id);<br/> if layer_background_get_visible(back_id)<br/>     {
+    <br/>     layer_background_visible(back_id, false);<br/>     }
+  </p><p> Le code ci-dessus obtiendra l&#39;ID de la couche nommée &quot;Background_sky&quot;, puis l&#39;utilisera pour obtenir l&#39;ID de l&#39;élément d&#39;arrière-plan sur cette couche. Cet ID est ensuite utilisé pour vérifier la visibilité de l&#39;élément et s&#39;il est visible, alors cette propriété est définie sur <tt>false</tt>. </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> Retour: <a href="Background_Layers.htm">Calques d&#39;arrière-plan</a></div><div style="float:right"> Suivant:<a href="layer_background_get_sprite.htm">layer_background_get_sprite</a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
+  </div>
+  <!-- KEYWORDS
+layer_background_get_visible
+-->
+  <!-- TAGS
+layer_background_get_visible
+-->
+</body>
+</html>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>physics_joint_set_value</title>
+  <meta name="generator" content="Adobe RoboHelp 2019" />
+  <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
+  <meta name="rh-authors" content="Mark Alexander" />
+  <meta name="topic-comment" content="Page de référence pour physics_joint_set_value" />
+  <meta name="rh-index-keywords" content="physics_joint_set_value" />
+  <meta name="search-keywords" content="physics_joint_set_value" />
+</head>
+<body><!--<div class="body-scroll" style="top: 150px;">--><h1>physics_joint_set_value</h1><p> Certaines propriétés du joint peuvent être modifiées et définies même après la création du joint. Il existe un certain nombre de constantes qui peuvent être utilisées dans cette fonction et vous pouvez les trouver ici: <a href="Physics_Joint_Constants.htm">Physics Joint Constants</a>.</p><p></p><h4> Syntaxe:</h4><p class="code">physics_joint_set_value(joint, field, value)</p><table><tbody><tr><th> Argument</th><th> Description</th></tr><tr><td> <span class="notranslate">joint</span></td><td> L&#39;index de l&#39;articulation que vous souhaitez modifier</td></tr><tr><td> <span class="notranslate">field</span></td><td> La constante de la copropriété que vous souhaitez modifier</td></tr><tr><td> <span class="notranslate">value</span></td><td> La nouvelle valeur de la copropriété</td></tr></tbody></table><p></p><h4> Retour:</h4><p class="code">N/A</p><p></p><h4> Exemple:</h4><p class="code">if physics_joint_get_value(revJoint, phy_joint_max_motor_torque) &lt; 2<br/>     {
+    <br/>     physics_joint_set_value(revJoint, phy_joint_max_motor_torque, 2);<br/>     }
+  </p><p> Le code ci-dessus vérifie si le couple moteur maximal des articulations est réglé sur moins de 2 et s&#39;il l&#39;est, il le règle alors sur 2. </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> Arrière: <a href="Joints.htm">Joints</a></div><div style="float:right"> Suivant:<a href="physics_joint_distance_create.htm">physics_joint_distance_create</a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
+  </div>
+  <!-- KEYWORDS
+physics_joint_set_value
+-->
+  <!-- TAGS
+physics_joint_set_value
+-->
+</body>
+</html>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>buffer_base64_decode_ext</title>
+  <meta name="generator" content="Adobe RoboHelp 2019" />
+  <link rel="stylesheet" href="../../../assets/css/default.css" type="text/css" />
+  <meta name="rh-authors" content="Mark Alexander" />
+  <meta name="topic-comment" content="Page de référence pour buffer_base64_decode_ext" />
+  <meta name="rh-index-keywords" content="buffer_base64_decode_ext" />
+  <meta name="search-keywords" content="buffer_base64_decode_ext" />
+</head>
+<body><!--<div class="body-scroll" style="top: 150px;">--><h1>buffer_base64_decode_ext</h1><p> Avec cette fonction, vous pouvez décoder une chaîne encodée en base64 (créée à l&#39;aide du <a href="buffer_base64_encode.htm"><tt>buffer_base64_encode()</tt></a> fonction) dans un tampon. Contrairement à la fonction <a href="buffer_base64_decode.htm"><tt>buffer_base64_decode()</tt></a>, cela <i>ne créera pas de</i> tampon pour vous, mais plutôt vous devriez déjà avoir créé le tampon (voir <a href="buffer_create.htm"><tt>buffer_create()</tt></a> ), l&#39;id dont vous utiliseriez ensuite avec cette fonction. Le &quot;décalage&quot; est la position dans le tampon pour décoder la chaîne donnée (en octets).</p><p></p><h4> Syntaxe:</h4><p class="code">buffer_base64_decode_ext(buffer, string, offset);</p><table><tbody><tr><th> Argument</th><th> Description</th></tr><tr><td> <span class="notranslate">buffer</span></td><td> L&#39;index du tampon dans lequel décoder la chaîne.</td></tr><tr><td> <span class="notranslate">string</span></td><td> La chaîne encodée en base64 à décoder.</td></tr><tr><td> <span class="notranslate">offset</span></td><td> La valeur de décalage des données.</td></tr></tbody></table><p></p><h4> Retour:</h4><p class="code">N/A</p><p></p><h4> Exemple:</h4><p class="code">buff = buffer_create(16384, buffer_grow, 2);<br/> ini_open(&quot;Save.ini&quot;);
+    <br/> var str = ini_read_string(&quot;Save&quot;, &quot;Slot1&quot;, &quot;&quot;);<br/> buffer_base64_decode_ext(buff, str, 0);<br/> ini_close();
+  </p><p> Le code ci-dessus créera un tampon et stockera son identifiant unique dans la variable &quot;buff&quot;, puis ouvrira un fichier ini et en lira une chaîne dans la variable locale &quot;str&quot;. Cette chaîne est ensuite décodée dans le tampon nouvellement créé avant de refermer le fichier ini. </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> Retour: <a href="Buffers.htm">Tampons</a></div><div style="float:right"> Suivant:<a href="buffer_create.htm">buffer_create</a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
+  </div>
+  <!-- KEYWORDS
+buffer_base64_decode_ext
+-->
+  <!-- TAGS
+buffer_base64_decode_ext
+-->
+</body>
+</html>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>while</title>
+  <meta name="generator" content="Adobe RoboHelp 2019" />
+  <link rel="stylesheet" href="../../../assets/css/default.css" type="text/css" />
+  <meta name="rh-authors" content="Mark Alexander" />
+  <meta name="topic-comment" content="Page décrivant la fonction while" />
+  <meta name="rh-index-keywords" content="while" />
+  <meta name="search-keywords" content="while" />
+</head>
+<body><!--<div class="body-scroll" style="top: 150px;">--><h1>while</h1><p> Le <span class="notranslate">GameMaker Language</span> vous permet d&#39;effectuer des <i>boucles</i> de plusieurs manières, l&#39;une des plus importantes étant la <tt>while</tt> boucle. Cette fonction de boucle a la forme:</p><p class="code">while (&lt;expression&gt;)<br/>     {<br/>     &lt;statement&gt;;<br/>     &lt;statement&gt;;<br/>     ...<br/>     }</p><p> Ici, vous avez une <a class="glossterm" data-glossterm="déclaration" href="#">instruction</a> qui est répétée encore et encore en fonction des résultats de l&#39;évaluation d&#39;une <a class="glossterm" data-glossterm="expression" href="#">expression</a>, c&#39;est-à-dire: avec un <span class="inline">while</span> boucle, tant que l&#39;expression évalue à <span class="inline">true</span>, l&#39;instruction (qui peut également être un bloc de code de plusieurs instructions avec des accolades <tt>{}</tt> ) est exécuté. Vous trouverez ci-dessous un exemple d&#39;une manière typique d&#39;utiliser &quot;while&quot;:</p><p class="code">while (place_meeting(x, y, obj_Wall))<br/>     {
+    <br/>     x -= 1;<br/>     }
+  </p><p> Le code ci - dessus vérifie pour une collision entre l&#39;instance d&#39;appel et une instance « mur », et il exécutera de multiples <a class="glossterm" data-glossterm="itération" href="#">itérations</a> <span class="glossextra">s</span> tandis que l&#39; un est en cours - déplacer l&#39;instance gauche par un pixel - jusqu&#39;à ce que l&#39;instance ne soit plus en cas de collision.</p><p> <strong>Quand devriez-vous utiliser un <span class="inline">while</span> boucle?</strong> Il doit être utilisé chaque fois que vous souhaitez répéter une ou plusieurs déclarations, mais que vous ne savez pas - ou ne vous souciez pas - du nombre de fois qu&#39;il doit répéter, en gardant à l&#39;esprit que si l&#39;évaluation initiale est <span class="inline">false</span>, les instructions peuvent même ne pas être exécutées.</p><p> Veuillez noter que vous devez <strong>être très prudent avec votre <tt>while</tt> boucles</strong>! Vous pouvez facilement faire <i>des</i> boucles infinies, auquel cas votre jeu se bloque et ne réagit plus à aucune entrée de l&#39;utilisateur et doit être fermé de force. Par exemple:</p><p class="code">while (!place_free(x, y))<br/>     {
+    <br/>     x = random(room_width);<br/>     y = random(room_height);<br/>     }
+  </p><p> Maintenant, le code ci-dessus peut fonctionner correctement, mais il peut également provoquer une boucle infinie si l&#39;instance est incapable de trouver une position vide vers laquelle se déplacer, ce qui entraînera le blocage du jeu. Si vous vous trouvez dans une position où ce genre de chose est une possibilité, alors vous devez soit utiliser un autre type de boucle non bloquant, soit utiliser une variable supplémentaire check dans l&#39;expression (vous pouvez utiliser plusieurs expressions avec le <a href="../Expressions_And_Operators.htm"><span class="inline">and</span>(&amp;<span class="inline">&amp;</span> )</a>, <a href="../Expressions_And_Operators.htm"><span class="inline">or</span>(<span class="inline">||</span> )</a> et <a href="../Expressions_And_Operators.htm"><span class="inline">xor</span>(<span class="inline">^^</span> )</a> <a class="glossterm"
+      data-glossterm="opérateur" href="#">Opérateur</a> <span class="glossextra">s</span> pour le contrôle):</p><p class="code">var _check = 0;<br/> while ((!place_free(x, y)) &amp;&amp; (_check &lt; 100))<br/>     {
+    <br/>     x = random(room_width);<br/>     y = random(room_height);<br/>     _check += 1;<br/>     }
+    <br/> if _check &gt;= 100<br/>     {<br/>     // code failed, so deal with it<br/>     }</p><p> Vous pouvez également utiliser le <span class="inline"><a href="break.htm">break</a></span> pour sortir de la boucle, par exemple, le code suivant générera 100 nombres aléatoires puis continuera, même si le <span class="inline">while</span> l&#39;évaluation sera <em>toujours</em> <span class="inline">true</span>:</p><p class="code">var i = 0;<br/> while (true)<br/>     {
+    <br/>     x[i] = random(room_width);<br/>     y[i] = random(room_height);<br/>     if ((i++) &gt;= 100)<br/>         {<br/>         break;<br/>         }<br/>     }
+  </p><p> Vous pouvez également utiliser le<a href="continue.htm">continue</a> déclaration dans un <span class="inline">while</span> boucle. L&#39;utilisation de ceci mettra fin à l&#39;itération de la boucle actuelle et redémarrera la boucle sur une nouvelle itération, par exemple:</p><p class="code">var file = file_text_open_read(&quot;Game_Data.txt&quot;);<br/> var _num = 0;<br/> while (!file_text_eof(file))<br/>     {<br/>     var _s = file_text_readln(file);<br/>     if (_s == &quot;&quot;)<br/>         {<br/>         continue;<br/>       }<br/>        str[num++] = _s;<br/>     }<br/> file_text_close(file);
+  </p><p> Ce code ci-dessus ouvrira un fichier et en lira une ligne à chaque itération de boucle jusqu&#39;à ce que la fin du contenu du fichier soit atteinte. Si la ligne en cours de lecture est une chaîne vide, l&#39;itération de la boucle en cours se termine à l&#39;aide du <span class="inline">continue</span> et une nouvelle itération sera lancée, sinon la chaîne est ajoutée dans un <a href="../Arrays.htm">tableau</a> et la position du tableau est incrémentée.</p><p> Pour plus d&#39;exemples de fonctions de boucle, veuillez consulter les sections sur <a href="repeat.htm"><tt>repeat</tt></a>, <a href="do___until.htm"><tt>do... until</tt></a>, et <a href="for.htm"><tt>for</tt></a>. </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> Retour: <a href="../Language_Features.htm">Caractéristiques linguistiques</a></div><div style="float:right"> Suivant:<a href="do___until.htm">do / until</a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
+  </div>
+  <!-- KEYWORDS
+while
+-->
+  <!-- TAGS
+while
+-->
+</body>
+</html>

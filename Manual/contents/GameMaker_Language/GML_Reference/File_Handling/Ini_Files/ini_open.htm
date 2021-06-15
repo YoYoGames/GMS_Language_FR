@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>ini_open</title>
+  <meta name="generator" content="Adobe RoboHelp 2019" />
+  <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
+  <meta name="rh-authors" content="Mark Alexander" />
+  <meta name="topic-comment" content="Page de référence pour ini_open" />
+  <meta name="rh-index-keywords" content="ini_open" />
+  <meta name="search-keywords" content="ini_open" />
+</head>
+<body><!--<div class="body-scroll" style="top: 150px;">--><h1>ini_open</h1><p> Cela ouvre un ini_file pour la lecture et / l&#39;écriture. Si le ini_file n&#39;existe pas à l&#39;emplacement que vous vérifiez, <span class="notranslate">GameMaker Studio 2</span> peut en créer un, mais uniquement si vous y écrivez des données. Si vous n&#39;avez lu que les informations du fichier ini, les valeurs par défaut de la fonction de lecture seront renvoyées, mais le fichier ini ne sera <i>pas</i> réellement créé.</p><p> Veuillez noter que vous ne pouvez <b>ouvrir qu&#39;un seul</b> fichier ini à la fois et n&#39;oubliez pas d&#39;utiliser <a href="ini_close.htm"><tt>ini_close()</tt></a> une fois que vous avez fini de lire / écrire à partir du fichier.ini car les informations ne sont pas réellement stockées sur le disque jusque-là (elles sont également stockées en mémoire jusqu&#39;à ce que le fichier soit fermé).</p><p class="note"><b></b> <b>ATTENTION!</b> Cette fonction peut ne pas fonctionner comme prévu en raison du <span class="notranslate">GameMaker Studio 2</span>! Veuillez consulter la section sur le <a href="../../../../Additional_Information/The_File_System.htm">système de fichiers</a> pour plus d&#39;informations.</p><p></p><h4> Syntaxe:</h4><p class="code">ini_open(name);</p><table><tbody><tr><th> Argument</th><th> Description</th></tr><tr><td> <span class="notranslate">name</span></td><td> Le nom de fichier du fichier.ini.</td></tr></tbody></table><p></p><h4> Retour:</h4><p class="code">N/A</p><p></p><h4> Exemple:</h4><p class="code">ini_open(&quot;Settings/savedata.ini&quot;);<br/> score = ini_read_real(&quot;save1&quot;, &quot;score&quot;, 0);<br/> ini_close();
+  </p><p> Cela ouvrira &#39;savedata.ini&#39; et lira la valeur du score dans la section &quot;save1&quot; avec la clé &quot;score&quot; dedans, puis refermera le.ini. S&#39;il n&#39;y a aucune valeur sous &quot;save1&quot;, &quot;score&quot; ou s&#39;il n&#39;y a pas de fichier &quot;savedata.ini&quot; présent, le score sera mis à 0 (la valeur par défaut). Notez que le fichier ini a été placé dans le sous-répertoire &quot;Paramètres&quot;, qui est le dossier qui contient le fichier ini dans les fichiers inclus de Asset Browser. </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> Retour: <a href="Ini_Files.htm">Fichiers Ini</a></div><div style="float:right"> Suivant:<a href="ini_close.htm">ini_close</a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
+  </div>
+  <!-- KEYWORDS
+ini_open
+-->
+  <!-- TAGS
+ini_open
+-->
+</body>
+</html>

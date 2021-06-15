@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>os_is_network_connected</title>
+  <meta name="generator" content="Adobe RoboHelp 2019" />
+  <link rel="stylesheet" href="../../../assets/css/default.css" type="text/css" />
+  <meta name="rh-authors" content="Mark Alexander" />
+  <meta name="topic-comment" content="Page de référence pour os_is_network_connected" />
+  <meta name="rh-index-keywords" content="os_is_network_connected" />
+  <meta name="search-keywords" content="os_is_network_connected" />
+</head>
+<body><!--<div class="body-scroll" style="top: 150px;">--><h1>os_is_network_connected</h1><p> Avec cette fonction, vous pouvez vérifier et voir si votre appareil dispose actuellement d&#39;une connexion Internet et il reviendra <tt>true</tt> si c&#39;est le cas, ou <tt>false</tt> si ce n&#39;est pas le cas, et selon le système d&#39;exploitation, il peut tenter d&#39;établir une connexion avant de renvoyer une valeur.</p><p> La fonction a un argument facultatif pour l&#39;activer / la désactiver en essayant d&#39;établir une connexion lorsqu&#39;elle est appelée, et cette option n&#39;est actuellement <strong>que</strong> pour la cible <span class="notranslate">Nintendo</span> <span class="notranslate">Switch</span> Lorsqu&#39;il est réglé sur <span class="inline">true</span> la fonction tentera d&#39;établir une connexion, et lorsqu&#39;elle est définie sur <span class="inline">false</span> il se limitera simplement à vérifier la connexion. Notez que toute tentative de connexion peut entraîner le blocage du système d&#39;exploitation <span class="notranslate">Switch</span></p><p class="note"> <b>REMARQUE:</b> Cette fonction vérifie l&#39;API interne du périphérique qui contrôle les connexions et peut donc renvoyer true s&#39;il existe une connexion Bluetooth, une connexion Wi-Fi ou même simplement une connexion réseau normale permettant l&#39;accès à Internet.</p><p></p><h4> Syntaxe:</h4><p class="code">os_is_network_connected(attempt_connection);</p><table><tbody><tr><th> Argument</th><th> Description</th></tr><tr><td> <span class="notranslate">attempt_connection</span></td><td> OPTIONNEL! Pour <span class="notranslate">Nintendo</span> <span class="notranslate">Switch</span> Target <strong>uniquement</strong>. Mis à <span class="inline">true</span> pour tenter une connexion au niveau du système d&#39;exploitation lors de l&#39;appel.</td></tr></tbody></table><p></p><h4> Retour:</h4><p class="code">Boolean</p><p></p><h4> Exemple:</h4><p class="code">if os_is_network_connected()<br/>    {
+    <br/>    global.connected = true;<br/>    }
+  </p><p> Le code ci-dessus vérifie si l&#39;appareil est connecté à Internet et si c&#39;est le cas, il définit une variable globale. </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> Retour: <a href="OS_And_Compiler.htm">OS et compilateur</a></div><div style="float:right"> Suivant:<a href="os_get_config.htm">os_get_config</a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
+  </div>
+  <!-- KEYWORDS
+os_is_network_connected
+-->
+  <!-- TAGS
+os_is_network_connected
+-->
+</body>
+</html>

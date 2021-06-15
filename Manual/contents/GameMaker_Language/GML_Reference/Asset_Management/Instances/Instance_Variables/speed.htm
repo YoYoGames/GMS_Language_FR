@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>speed</title>
+  <meta name="generator" content="Adobe RoboHelp 2019" />
+  <link rel="stylesheet" href="../../../../../assets/css/default.css" type="text/css" />
+  <meta name="rh-authors" content="Mark Alexander" />
+  <meta name="topic-comment" content="Page décrivant la vitesse variable" />
+  <meta name="rh-index-keywords" content="speed" />
+  <meta name="search-keywords" content="speed" />
+</head>
+<body><!--<div class="body-scroll" style="top: 150px;">--><h1>speed</h1><p> Toutes les instances de <span class="notranslate">GameMaker Studio 2</span> ont certaines propriétés «intégrées» que vous pouvez utiliser et définir pour régir leur apparence et leur comportement.<tt>speed</tt> est l&#39;une de ces propriétés et définit le nombre de pixels que l&#39;instance déplacera à chaque étape. contrairement à <a href="hspeed.htm"><tt>hspeed</tt></a> et <a href="vspeed.htm"><tt>vspeed</tt></a>, <tt>speed</tt> n&#39;a aucune direction qui lui est associée car elle est régie par le <a href="direction.htm"><tt>direction</tt></a> valeur de l&#39;instance, mais elle peut avoir une valeur négative, auquel cas l&#39;instance se déplacera dans la direction opposée à celle définie par le <tt>direction</tt> fonction (c&#39;est-à-dire:<tt>direction</tt> - 180 °). Notez que le réglage du <span class="inline">speed</span> et / ou le <span class="inline">direction</span>, modifiera également les valeurs de <span class="inline">hspeed</span> et <span class="inline">vspeed</span> variables, et que<a href="gravity.htm"><span class="inline">gravity</span></a>,<a href="gravity_direction.htm"><span class="inline">gravity_direction</span></a> et<a href="friction.htm"><span class="inline">friction</span></a> peuvent tous modifier la valeur de cette variable lorsqu&#39;ils sont utilisés dans vos jeux.</p><p></p><h4> Syntaxe:</h4><p class="code">speed;</p><p></p><h4> Retour:</h4><p class="code">Real (single precision floating point value)</p><p></p><h4> Exemple:</h4><p class="code">if keyboard_check(vk_up) speed = 2;<br/> if keyboard_check(vk_left) direction += 5;<br/> if keyboard_check(vk_right) direction -= 5;</p><p> Le code ci-dessus utilisera les touches fléchées pour définir la vitesse et la direction de l&#39;instance. </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> Retour: <a href="Instance_Variables.htm">Variables d&#39;instance</a></div><div style="float:right"> Suivant:<a href="xstart.htm">xstart</a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
+  </div>
+  <!-- KEYWORDS
+speed
+-->
+  <!-- TAGS
+speed
+-->
+</body>
+</html>

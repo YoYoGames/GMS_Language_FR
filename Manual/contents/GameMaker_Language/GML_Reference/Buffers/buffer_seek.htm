@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>buffer_seek</title>
+  <meta name="generator" content="Adobe RoboHelp 2019" />
+  <link rel="stylesheet" href="../../../assets/css/default.css" type="text/css" />
+  <meta name="rh-authors" content="Mark Alexander" />
+  <meta name="topic-comment" content="Page de référence pour buffer_seek" />
+  <meta name="rh-index-keywords" content="buffer_seek,buffer_seek_start,buffer_seek_relative,buffer_seek_end" />
+  <meta name="search-keywords" content="buffer_seek,buffer_seek_start,buffer_seek_relative,buffer_seek_end" />
+</head>
+<body><!--<div class="body-scroll" style="top: 150px;">--><h1>buffer_seek</h1><p> Cette fonction peut être utilisée pour se déplacer dans un tampon, trouver le début, la fin ou une position par rapport à celle qui a été utilisée en dernier lors de la lecture ou de l&#39;écriture de données. La valeur &quot;offset&quot; est le décalage (en octets) à ajouter à la position de recherche donnée, par exemple, si la base est relative et que le décalage est de 4, alors la position du tampon se déplacera le long de 4 octets à partir de sa position actuelle. Veuillez noter ce qui suit:</p><ul class="colour"><li> Vous pouvez utiliser des valeurs négatives pour le décalage pour rechercher dans le tampon ainsi que des valeurs positives.</li><li> Si le tampon est du type «wrap» et que vous dépassez la fin du tampon, la position de recherche sera également enveloppée.</li><li> Si le tampon n&#39;est pas du type &quot;wrap&quot;, la recherche se bloquera au début ou à la fin du tampon, même lorsque le décalage prendrait la recherche en dehors des limites du tampon.</li></ul><p> Les constantes suivantes sont acceptées comme argument &quot;de base&quot; pour chercher à:</p><p></p><table><tbody><tr><th> Constant</th><th> Description</th></tr><tr><td> <span class="notranslate">buffer_seek_start</span></td><td> Le début du tampon</td></tr><tr><td> <span class="notranslate">buffer_seek_relative</span></td><td> Une position par rapport à la position actuelle de lecture / écriture</td></tr><tr><td> <span class="notranslate">buffer_seek_end</span></td><td> La fin du tampon</td></tr></tbody></table><p></p><p></p><h4> Syntaxe:</h4><p class="code">buffer_seek(buffer, base, offset);</p><table><tbody><tr><th> Argument</th><th> Description</th></tr><tr><td> <span class="notranslate">buffer</span></td><td> L&#39;index du tampon à utiliser.</td></tr><tr><td> <span class="notranslate">base</span></td><td> La position de base à rechercher.</td></tr><tr><td> <span class="notranslate">offset</span></td><td> La valeur de décalage des données.</td></tr></tbody></table><p></p><h4> Retour:</h4><p class="code">N/A</p><p></p><h4> Exemple:</h4><p class="code">buffer_seek(buff, buffer_seek_start, 0);<br/> buffer_write(buff, buffer_s16, 0);<br/> buffer_write(buff, buffer_s16, x);<br/> buffer_write(buff, buffer_s16, y);</p><p> Le code ci-dessus trouve le début du tampon avec l&#39;ID stocké dans la variable &quot;buff&quot; et y écrit une série de valeurs entières 16 bits signées. </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> Retour: <a href="Buffers.htm">Tampons</a></div><div style="float:right"> Suivant:<a href="buffer_tell.htm">buffer_tell</a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
+  </div>
+  <!-- KEYWORDS
+buffer_seek
+buffer_seek_start
+buffer_seek_relative
+buffer_seek_end
+-->
+  <!-- TAGS
+buffer_seek
+-->
+</body>
+</html>

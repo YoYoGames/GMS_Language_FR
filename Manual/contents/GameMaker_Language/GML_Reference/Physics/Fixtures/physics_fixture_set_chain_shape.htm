@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>physics_fixture_set_chain_shape</title>
+  <meta name="generator" content="Adobe RoboHelp 2019" />
+  <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
+  <meta name="rh-authors" content="Mark Alexander" />
+  <meta name="topic-comment" content="Page de référence pour physics_fixture_set_chain_shape" />
+  <meta name="rh-index-keywords" content="physics_fixture_set_chain_shape" />
+  <meta name="search-keywords" content="physics_fixture_set_chain_shape" />
+</head>
+<body><!--<div class="body-scroll" style="top: 150px;">--><h1>physics_fixture_set_chain_shape</h1><p> Cette fonction définit une forme de fixation &quot;en chaîne&quot;. Un dispositif de fixation à chaîne est composé d&#39;un certain nombre de points, qui sont ensuite reliés entre eux en utilisant des formes de bord pour les joindre. La fonction elle-même prend l&#39;index (ID) de l&#39;appareil et peut dire à l&#39;appareil de boucler ou non. Définir ceci sur <tt>true</tt> connectera le dernier point au premier point avec une arête, tout en le définissant sur <tt>false</tt> Ne fera pas. Notez que cette fonction sur prépare l&#39;appareil à accepter les points nécessaires pour faire la chaîne, et ceux-ci doivent être ajoutés après avoir appelé cette fonction en utilisant <a href="physics_fixture_add_point.htm"><tt>physics_fixture_add_point()</tt></a>, comme vous le feriez lors de la construction d&#39;un appareil polygonal.</p><p> Lors de la création d&#39;un montage en chaîne, vous devez lui donner au moins deux points mais vous n&#39;êtes pas limité dans le nombre de points suivants que vous pouvez ajouter pour constituer le luminaire fini.</p><p></p><h4> Syntaxe:</h4><p class="code">physics_fixture_set_chain_shape(fixture, loop)</p><table><tbody><tr><th> Argument</th><th> Description</th></tr><tr><td> <span class="notranslate">fixture</span></td><td> L&#39;index du luminaire</td></tr><tr><td> <span class="notranslate">loop</span></td><td> S&#39;il faut fermer la chaîne (<tt>true</tt> ) ou non (<tt>false</tt> ).</td></tr></tbody></table><p></p><h4> Retour:</h4><p class="code">N/A</p><p></p><h4> Exemple:</h4><p class="code">var xx = -100;<br/> var yy = room_height / 2;<br/> var fix = physics_fixture_create(); physics_fixture_set_chain_shape(fix, false);<br/> for (var i = 0; i &lt; 10; i++;)<br/>     {
+    <br/>     physics_fixture_add_point(fix, xx, yy);<br/>     xx += 50 + random(150);<br/>     yy = (room_height / 2) - 250 + irandom(500);<br/>     }
+    <br/> physics_fixture_bind(fix, id);</p><p> Le code ci-dessus créera une ligne de luminaires «de bord» avec une variété de hauteurs sur toute la longueur de la pièce. </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> Retour: <a href="Fixtures.htm">Fixtures</a></div><div style="float:right"> Suivant:<a href="physics_fixture_set_polygon_shape.htm">physics_fixture_set_polygon_shape</a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
+  </div>
+  <!-- KEYWORDS
+physics_fixture_set_chain_shape
+-->
+  <!-- TAGS
+physics_fixture_set_chain_shape
+-->
+</body>
+</html>

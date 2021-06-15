@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <title>device_mouse_x_to_gui</title>
+  <meta name="generator" content="Adobe RoboHelp 2019"/>
+  <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css"/>
+  <meta name="rh-authors" content="Mark Alexander"/>
+  <meta name="topic-comment" content="Page de référence pour device_mouse_x_to_gui"/>
+  <meta name="rh-index-keywords" content="device_mouse_x_to_gui"/>
+  <meta name="search-keywords" content="device_mouse_x_to_gui"/>
+</head>
+
+<body><!--<div class="body-scroll" style="top: 150px;">--><h1>device_mouse_x_to_gui</h1><p> Cette fonction renvoie la position x du toucher sur l&#39;appareil par rapport à la couche GUI. Étant donné que la couche GUI peut être définie pour avoir une taille différente indépendamment de la résolution de l&#39;écran <i>et de</i> la taille de la pièce, il peut parfois être compliqué d&#39;obtenir le point exact sur la couche GUI qu&#39;un utilisateur a touché l&#39;écran. Avec cette fonction, vous pouvez obtenir cette position en fonction de la taille réelle de l&#39;interface graphique, ce qui facilite la création et l&#39;interaction des boutons de l&#39;interface graphique et des éléments HUD. Si vous l&#39;exécutez sur un module HTML5 ou PC et Mac, cette valeur est constamment mise à jour, tant que l&#39;appareil (généralement une souris) est branché, mais pour les appareils mobiles, cela ne sera mis à jour que pendant que l&#39;écran est en cours touché, et notez que le nombre maximum de touches pouvant être détectées dépendra beaucoup de l&#39;appareil utilisé et du système d&#39;exploitation qu&#39;il exécute. Notez également que sur HTML5, seul &quot;périphérique 0&quot; fonctionnera correctement et que d&#39;autres périphériques peuvent donner des valeurs erronées.</p><p></p><h4> Syntaxe:</h4><p class="code">device_mouse_x_to_gui(device);</p><table><tbody><tr><th> Argument</th><th> Description</th></tr><tr><td> <span class="notranslate">device</span></td><td> Le périphérique (de 0 à <i>n</i> ) qui est vérifié.</td></tr></tbody></table><p></p><h4> Retour:</h4><p class="code">Real</p><p></p><h4> Exemple:</h4><p class="code">if device_mouse_check_button(0, mb_left)<br/>    {
+    <br/>    if device_mouse_x_to_gui(0) &gt; 0 &amp;&amp; device_mouse_x_to_gui(0) &lt; 32<br/>       {
+    <br/>       pressed = true;<br/>       }
+    <br/>    else
+    <br/>       {
+    <br/>       pressed = false;<br/>       }
+    <br/>    }
+  </p><p> Le code ci-dessus vérifie si la souris du périphérique est enfoncée et si c&#39;est le cas, il interroge la position x du périphérique sur la couche GUI pour voir si elle est dans les paramètres. Si tel est le cas, il définit la variable &quot;pressé&quot; sur <tt>true</tt>, sinon, il le règle sur <tt>false</tt>. </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> Retour: <a href="Device_Input.htm">Entrée de périphérique</a></div><div style="float:right"> Suivant:<a href="device_mouse_y_to_gui.htm">device_mouse_y_to_gui</a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
+  </div>
+  <!-- KEYWORDS
+device_mouse_x_to_gui
+-->
+  <!-- TAGS
+device_mouse_x_to_gui
+-->
+
+</body></html>

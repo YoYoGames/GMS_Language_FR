@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>physics_pause_enable</title>
+  <meta name="generator" content="Adobe RoboHelp 2019" />
+  <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
+  <meta name="rh-authors" content="Mark Alexander" />
+  <meta name="topic-comment" content="Page de référence pour physics_pause_enable" />
+  <meta name="rh-index-keywords" content="physics_pause_enable" />
+  <meta name="search-keywords" content="physics_pause_enable" />
+</head>
+<body><!--<div class="body-scroll" style="top: 150px;">--><h1>physics_pause_enable</h1><p> Normalement, pour qu&#39;une simulation physique fonctionne, elle doit être continue et ne peut pas être arrêtée et démarrée, ou avoir des instances soudainement déplacées d&#39;un endroit à un autre dans la pièce. Cependant, il y a des moments où vous <i>devez</i> suspendre la simulation car (par exemple) le système d&#39;exploitation de l&#39;appareil s&#39;est arrêté, et vous utiliseriez donc cette fonction. Il met la simulation en pause si l&#39;indicateur est défini sur <tt>true</tt> et aucun autre calcul physique ne sera effectué jusqu&#39;à ce que l&#39;indicateur soit réglé sur <tt>false</tt> de nouveau.</p><p class="note"> <b>REMARQUE</b>: Ceci est particulièrement utile si vous souhaitez désactiver toutes les instances d&#39;une pièce car même lorsqu&#39;il est désactivé, un corps physique continuera d&#39;être calculé et simulé dans le monde de la physique.</p><p></p><h4> Syntaxe:</h4><p class="code">physics_pause_enable(flag)</p><table><tbody><tr><th> Argument</th><th> Description</th></tr><tr><td> <span class="notranslate">flag</span></td><td> Cela peut être réglé sur <tt>true</tt> pour mettre la simulation en pause, ou <tt>false</tt> pour le redémarrer.</td></tr></tbody></table><p></p><h4> Retour:</h4><p class="code">N/A</p><p></p><h4> Exemple:</h4><p class="code">if os_is_paused()<br/>    {
+    <br/>    physics_pause_enable(true);
+    <br/>    instance_deactivate_all(true);
+    <br/>    instance_create_layer(x, y, &quot;Controllers&quot;, obj_PauseMenu);<br/>    }
+  </p><p> Le code ci-dessus vérifie si le système d&#39;exploitation a été mis en pause et si c&#39;est le cas, il met en pause le monde de la physique, désactive tout sauf lui-même, puis crée une instance de menu de pause. </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> Retour: <a href="The_Physics_World.htm">Le monde de la physique</a></div><div style="float:right"> Suivant:<a href="physics_world_create.htm">physics_world_create</a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
+  </div>
+  <!-- KEYWORDS
+physics_pause_enable
+-->
+  <!-- TAGS
+physics_pause_enable
+-->
+</body>
+</html>

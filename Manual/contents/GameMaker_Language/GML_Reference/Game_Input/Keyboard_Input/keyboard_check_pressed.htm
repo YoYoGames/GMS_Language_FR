@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <title>keyboard_check_pressed</title>
+  <meta name="generator" content="Adobe RoboHelp 2019"/>
+  <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css"/>
+  <meta name="rh-authors" content="Mark Alexander"/>
+  <meta name="topic-comment" content="Page de référence pour keyboard_check_pressed"/>
+  <meta name="rh-index-keywords" content="keyboard_check_pressed"/>
+  <meta name="search-keywords" content="keyboard_check_pressed"/>
+</head>
+
+<body><!--<div class="body-scroll" style="top: 150px;">--><h1>keyboard_check_pressed</h1><p> Avec cette fonction, vous pouvez vérifier si une touche a été enfoncée ou non. Contrairement au <a href="keyboard_check.htm"><tt>keyboard_check()</tt></a>, cette fonction ne fonctionnera qu&#39;une seule fois pour chaque fois que la touche est enfoncée, donc pour qu&#39;elle se déclenche à nouveau, la touche doit d&#39;abord être relâchée puis pressée à nouveau. La fonction prendra une valeur de code clé telle que renvoyée par la fonction <a href="../../Strings/ord.htm"><tt>ord()</tt></a> (uniquement <i>les</i> lettres majuscules de A à Z ou les chiffres de 0 à 9), ou l&#39;un des <tt>vk_*</tt> constantes répertoriées sur la page <a href="Keyboard_Input.htm">principale de saisie au clavier.</a></p><p></p><h4> <b>Syntaxe:</b></h4><p class="code">keyboard_check_pressed(key);</p><table><tbody><tr><th> Argument</th><th> Description</th></tr><tr><td> <span class="notranslate">key</span></td><td> La touche pour vérifier l&#39;état enfoncé.</td></tr></tbody></table><p></p><h4> <b>Retour:</b></h4><p class="code">Boolean</p><p></p><h4> <b>Exemple:</b></h4><p class="code">if keyboard_check_pressed(vk_anykey)<br/>    {
+    <br/>    room_goto_next();
+    <br/>    }
+  </p><p> Le code ci-dessus passera à la pièce suivante si le joueur appuie sur l&#39;une des touches du clavier (fonctionnant comme une invite «Appuyez sur n&#39;importe quelle touche pour continuer»). </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> Retour: <a href="Keyboard_Input.htm">Entrée clavier</a></div><div style="float:right"> Suivant:<a href="keyboard_check_released.htm">keyboard_check_released</a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
+  </div>
+  <!-- KEYWORDS
+keyboard_check_pressed
+-->
+  <!-- TAGS
+keyboard_check_pressed
+-->
+
+</body></html>

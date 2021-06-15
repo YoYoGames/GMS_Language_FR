@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>skeleton_bone_data_set</title>
+  <meta name="generator" content="Adobe RoboHelp 2019" />
+  <link rel="stylesheet" href="../../../../../../assets/css/default.css" type="text/css" />
+  <meta name="rh-authors" content="Mark Alexander" />
+  <meta name="topic-comment" content="Page expliquant la fonction skeleton_bone_data_set" />
+  <meta name="rh-index-keywords" content="skeleton_bone_data_set" />
+  <meta name="search-keywords" content="skeleton_bone_data_set" />
+</head>
+<body><!--<div class="body-scroll" style="top: 150px;">--><h1>skeleton_bone_data_set</h1><p> Votre animation squelettique est composée d&#39;un certain nombre de &quot;structures&quot;, que vous aurez défini et donné des noms dans votre programme d&#39;animation, et cette fonction peut être utilisée pour définir certaines données pour l&#39;os nommé à tout moment. Notez que ces données se réfèrent à la <b>pose par défaut</b> du squelette, et <i>non à</i> la pose actuelle qui est dessinée (pour cela, utilisez la fonction <a href="skeleton_bone_state_set.htm"><tt>skeleton_bone_state_set()</tt></a> ), et doit être définie à partir d&#39;une <a
+      href="../../../../Data_Structures/DS_Maps/DS_Maps.htm">carte DS</a> créée précédemment, qui doit avoir les clés suivantes et leurs valeurs équivalentes:</p><ul class="colour"><li> <b>&quot;x&quot;:</b> la position x locale de l&#39;os par rapport à l&#39;os parent.</li><li> <b>&quot;y&quot;:</b> la position y locale de l&#39;os par rapport à l&#39;os parent.</li><li> <b>&quot;angle&quot;:</b> La rotation locale de l&#39;os par rapport à l&#39;os parent.</li><li> <b>&quot;xscale&quot;:</b> l&#39;échelle horizontale locale de l&#39;os.</li><li> <b>&quot;yscale&quot;:</b> l&#39;échelle verticale locale de l&#39;os.</li><li> <b>&quot;parent&quot;:</b> le nom (une chaîne) de l&#39;os parent.</li></ul><p></p><h4> Syntaxe:</h4><p class="code">skeleton_bone_data_set(bone, map);</p><table><tbody><tr><th> Argument</th><th> Description</th></tr><tr><td> <span class="notranslate">bone</span></td><td> Le nom (sous forme de chaîne) de l&#39;os.</td></tr><tr><td> <span class="notranslate">map</span></td><td> La carte DS (créée précédemment) qui stocke les données d&#39;os.</td></tr></tbody></table><p></p><h4> Retour:</h4><p class="code">N/A</p><p></p><h4> Exemple:</h4><p class="code">var bone_map = ds_map_create();<br/> skeleton_bone_data_get(&quot;head&quot;, bone_map);<br/> ds_map_replace(bone_map, &quot;parent&quot;, &quot;body&quot;);<br/> skeleton_bone_data_set(&quot;head&quot;, bone_map);<br/> ds_map_destroy(bone_map);
+  </p><p> Le code ci-dessus crée une carte DS, puis la remplit avec les données de l&#39;os nommé &quot;tête&quot;. Il remplace ensuite la clé d&#39;os «parent» dans la carte par une nouvelle valeur et définit à nouveau l&#39;os «de tête» avec le nouvel ensemble de données. </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> Retour: <a href="Bones.htm">Os</a></div><div style="float:right"> Suivant:<a href="skeleton_bone_state_get.htm">skeleton_bone_state_get</a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
+  </div>
+  <!-- KEYWORDS
+skeleton_bone_data_set
+-->
+  <!-- TAGS
+skeleton_bone_data_set
+-->
+</body>
+</html>

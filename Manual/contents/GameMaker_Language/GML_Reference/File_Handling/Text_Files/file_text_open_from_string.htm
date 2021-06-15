@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>file_text_open_from_string</title>
+  <meta name="generator" content="Adobe RoboHelp 2019" />
+  <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
+  <meta name="rh-authors" content="Mark Alexander" />
+  <meta name="topic-comment" content="Page de référence pour file_text_open_from_string" />
+  <meta name="rh-index-keywords" content="file_text_open_from_string" />
+  <meta name="search-keywords" content="file_text_open_from_string" />
+</head>
+<body><!--<div class="body-scroll" style="top: 150px;">--><h1>file_text_open_from_string</h1><p> Cette fonction créera un fichier texte à partir d&#39;une chaîne et l&#39;ouvrira pour la lecture, renvoyant le fichier &quot;handle&quot; qui devrait être utilisé dans tous les autres appels de fonction de fichier à lire à partir de ce fichier. Notez que ce fichier est temporaire et en <i>lecture seule</i>, et en tant que tel, il sera supprimé de la mémoire au moment de sa fermeture.</p><p class="note"> <b>REMARQUE</b>: vous ne pouvez ouvrir qu&#39;un maximum de 32 fichiers à la fois. Vous devez également <b>toujours</b> fermer les fichiers lorsque vous avez terminé, car cela écrit les informations et libère la mémoire associée au fichier.</p><p class="note"><b></b> <b>ATTENTION!</b> Cette fonction peut ne pas fonctionner comme prévu en raison du <span class="notranslate">GameMaker Studio 2</span>! Veuillez consulter la section sur le <a href="../../../../Additional_Information/The_File_System.htm">système de fichiers</a> pour plus d&#39;informations.</p><p></p><h4> Syntaxe:</h4><p class="code">file_text_open_from_string(string);</p><table><tbody><tr><th> Argument</th><th> Description</th></tr><tr><td> <span class="notranslate">string</span></td><td> Chaîne à partir de laquelle créer le fichier.</td></tr></tbody></table><p></p><h4> Retour:</h4><p class="code">Real</p><p></p><h4> Exemple:</h4><p class="code">file = file_text_open_from_string(reset_str);</p><p> Le code ci-dessus prend la chaîne stockée dans la variable &quot;reset_str&quot; et l&#39;utilise pour créer un fichier texte en lecture seule. Le «descripteur» de ce fichier est ensuite stocké dans la variable «fichier» pour toutes les autres fonctions de fichier à utiliser. </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> Retour: <a href="Text_Files.htm">Fichiers texte</a></div><div style="float:right"> Suivant:<a href="file_text_read_real.htm">file_text_read_real</a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
+  </div>
+  <!-- KEYWORDS
+file_text_open_from_string
+-->
+  <!-- TAGS
+file_text_open_from_string
+-->
+</body>
+</html>

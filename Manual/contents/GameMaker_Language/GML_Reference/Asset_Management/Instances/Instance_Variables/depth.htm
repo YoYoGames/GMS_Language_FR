@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>depth</title>
+  <meta name="generator" content="Adobe RoboHelp 2019" />
+  <link rel="stylesheet" href="../../../../../assets/css/default.css" type="text/css" />
+  <meta name="rh-authors" content="Mark Alexander" />
+  <meta name="topic-comment" content="Page décrivant la profondeur variable" />
+  <meta name="rh-index-keywords" content="depth" />
+  <meta name="search-keywords" content="depth" />
+</head>
+<body><!--<div class="body-scroll" style="top: 150px;">--><h1>depth</h1><p> Lorsque vous créez un objet, vous pouvez lui attribuer une <i>profondeur</i> initiale qui définit comment les instances de cet objet seront dessinées dans la pièce lorsque le jeu est joué et cette variable peut être utilisée pour obtenir et modifier cette valeur de profondeur pendant le jeu. fonctionnement. Vous n&#39;aurez normalement pas besoin d&#39;utiliser cette variable car vous devriez définir des instances à ajouter à des <a href="layer.htm">couches</a> discrètes, qui à leur tour sont définies sur une profondeur spécifique, mais il se peut que vous souhaitiez modifier la profondeur d&#39;une instance à l&#39;aide de cette valeur, auquel cas un &quot;calque temporaire&quot; sera créé spécifiquement pour l&#39;instance à la profondeur donnée. Notez que lorsqu&#39;aucune instance n&#39;est sur la même profondeur, cette couche temporaire sera supprimée de la mémoire (contrairement aux couches régulières qui resteront même si elles n&#39;ont rien sur elles).</p><p class="note"> <b>IMPORTANT!</b> Lorsque vous modifiez le <tt>depth</tt> et <span class="notranslate">GameMaker Studio 2</span> gère les couches, la <span style="font-size:1px;"><a href="layer.htm"><tt style="font-size: 14px">variable de couche</tt></a></span> intégrée renverra -1 et non l&#39;ID de couche, car les couches gérées ne peuvent pas être manipulées via le code.</p><p> Dans <span class="notranslate">GameMaker Studio 2</span> plus la valeur de profondeur d&#39;une instance est basse, plus cette instance sera &quot;plus proche de la caméra&quot;, tandis qu&#39;une valeur de profondeur plus élevée signifie que l&#39;instance sera dessinée &quot;plus loin de la caméra&quot;, c&#39;est-à-dire: -1000 est dessiné au-dessus de -100, qui est dessiné au-dessus de 0, qui est dessiné au-dessus de 100, qui est dessiné au-dessus de 1000.</p><p><img alt="Depth sorting example image" class="center" src="../../../../../assets/Images/Scripting_Reference/GML/Reference/Instances/depth_image.png" /> Notez que les instances d&#39;un objet qui ont la <b>même</b> profondeur peuvent être dessinées <b>au <i>-dessus ou en</i> dessous les unes des autres</b> même lorsqu&#39;elles semblent être placées les unes sur les autres dans l&#39;éditeur de pièce. Si vous voulez garantir que quelque chose est dessiné sur ou sous tout le reste, vous devez toujours définir la profondeur (ou le calque) explicitement. Notez également qu&#39;il existe une valeur de profondeur minimale (-16000) et maximale (+16000) en dehors de laquelle les instances ne seront pas dessinées, bien qu&#39;elles existent toujours et traitent les événements.</p><p class="note"> <b>REMARQUE:</b> vous <b>ne pouvez pas</b> définir la profondeur d&#39;une instance dans son événement de dessin (tous les autres événements conviennent).</p><p></p><h4> Syntaxe:</h4><p class="code">depth;</p><p></p><h4> Retour:</h4><p class="code">Real (single precision floating point value)</p><p></p><h4> Exemple:</h4><p class="code">if y != yprevious<br/>     {
+    <br/>     depth = -y;<br/>     }
+  </p><p> Le code ci-dessus vérifiera si la position y a changé et si c&#39;est le cas, la profondeur sera également définie pour y correspondre. </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> Retour: <a href="Instance_Variables.htm">Variables d&#39;instance</a></div><div style="float:right"> Suivant:<a href="layer.htm">layer</a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
+  </div>
+  <!-- KEYWORDS
+depth
+-->
+  <!-- TAGS
+depth
+-->
+</body>
+</html>

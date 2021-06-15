@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>instance_copy</title>
+  <meta name="generator" content="Adobe RoboHelp 2019" />
+  <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
+  <meta name="rh-authors" content="Mark Alexander" />
+  <meta name="topic-comment" content="Page décrivant la fonction instance_copy" />
+  <meta name="rh-index-keywords" content="instance_copy" />
+  <meta name="search-keywords" content="instance_copy" />
+</head>
+<body><!--<div class="body-scroll" style="top: 150px;">--><h1>instance_copy</h1><p> Avec cette fonction, vous pouvez &quot;cloner&quot; une instance car cela créera une nouvelle version de l&#39;instance exécutant le code à sa même position. L&#39;argument &quot;perf&quot; est utilisé pour indiquer à cette nouvelle instance d&#39;exécuter l&#39;événement de création ou non. Cette fonction renvoie le <a href="Instance_Variables/id.htm"><tt>id</tt></a> de la nouvelle instance qui peut ensuite être stockée dans une variable ou utilisée pour accéder à cette instance.</p><p class="note"> <b>REMARQUE</b>: Si vous choisissez de ne pas exécuter l&#39;événement de création, vous pouvez rencontrer des erreurs si l&#39;instance dépend de toutes les variables initialisées dans cet événement.</p><p></p><h4> Syntaxe:</h4><p class="code">instance_copy(perf);</p><table><tbody><tr><th> Argument</th><th> Description</th></tr><tr><td> <span class="notranslate">perf</span></td><td> Indique s&#39;il faut exécuter l&#39;événement Create de la nouvelle instance (true) ou non (false).</td></tr></tbody></table><p></p><h4> Retour:</h4><p class="code">Real (instance ID value)</p><p></p><h4> Exemple:</h4><p class="code">var inst = instance_number(object_index);<br/> if inst &lt; 10<br/>     {
+    <br/>     instance_copy(true);
+    <br/>     }
+  </p><p> Le code ci-dessus crée une variable locale et l&#39;utilise pour stocker le nombre d&#39;instances de l&#39;objet exécutant le code dans la salle. Si le nombre est inférieur à 10, l&#39;instance fait alors une copie d&#39;elle-même. </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> Retour: <a href="Instances.htm">Instances</a></div><div style="float:right"> Suivant:<a href="instance_find.htm">instance_find</a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
+  </div>
+  <!-- KEYWORDS
+instance_copy
+-->
+  <!-- TAGS
+instance_copy
+-->
+</body>
+</html>

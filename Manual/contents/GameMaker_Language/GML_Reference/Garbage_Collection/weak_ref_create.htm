@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>weak_ref_create</title>
+  <meta name="generator" content="Adobe RoboHelp 2019" />
+  <link rel="stylesheet" href="../../../assets/css/default.css" type="text/css" />
+  <meta name="rh-authors" content="Mark Alexander" />
+  <meta name="topic-comment" content="Page de référence pour low_ref_create" />
+  <meta name="rh-index-keywords" content="weak_ref_create" />
+  <meta name="search-keywords" content="weak_ref_create,références faibles" />
+</head>
+<body><!--<div class="body-scroll" style="top: 150px;">--><h1>weak_ref_create</h1><p> Avec cette fonction, vous pouvez créer une <a class="glossterm" data-glossterm="référence faible" href="#">référence faible</a> à une structure qui peut ensuite être utilisée pour vérifier si la structure est toujours &quot;vivante&quot; (référencée) ou non dans le jeu. Vous fournissez la référence à la structure que vous souhaitez suivre, et la fonction renverra une autre structure qui est une référence faible à cette structure. Notez que vous pouvez vérifier si une référence est &quot;forte&quot; ou &quot;faible&quot; en utilisant la fonction <span class="inline"><a href="../Variable_Functions/instanceof.htm">instanceof()</a></span>, car une référence forte renverra non plus &quot;<span class="inline">struct</span> &quot;ou le nom de la fonction constructeur qui a créé la structure, ou&quot;<span class="inline">weakref</span> &quot;si c&#39;est une référence faible. Notez également que la structure de référence faible aura une variable&quot;<span class="inline">ref</span> &quot;auquel on peut accéder pour obtenir la référence de chaîne à la structure en question, sauf si elle a été collectée par garabage, auquel cas elle retournera <span class="inline">undefined</span>.</p><p></p><h4> Syntaxe:</h4><p class="code">weak_ref_create(struct_to_track);</p><table><tbody><tr><th> Argument</th><th> Description</th></tr><tr><td> <span class="notranslate">struct_to_track</span></td><td> La structure pour laquelle vous souhaitez créer une référence faible</td></tr></tbody></table><p></p><h4> Retour:</h4><p class="code">Struct</p><p></p><h4> Exemple:</h4><p class="code">inventory_ref = weak_ref_create(inventory);</p><p> Le code ci-dessus crée une référence faible à une structure et la stocke dans une variable d&#39;instance pour une utilisation ultérieure. </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> Retour: <a href="Garbage_Collection.htm">Ramassage des ordures</a></div><div style="float:right"> Suivant:<a href="weak_ref_alive.htm">weak_ref_alive</a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
+  </div>
+  <!-- KEYWORDS
+weak_ref_create
+-->
+  <!-- TAGS
+weak_ref_create
+-->
+</body>
+</html>

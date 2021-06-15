@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <title>keyboard_get_map</title>
+  <meta name="generator" content="Adobe RoboHelp 2019"/>
+  <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css"/>
+  <meta name="rh-authors" content="Mark Alexander"/>
+  <meta name="topic-comment" content="Page de référence pour keyboard_get_map"/>
+  <meta name="rh-index-keywords" content="keyboard_get_map"/>
+  <meta name="search-keywords" content="keyboard_get_map"/>
+</head>
+
+<body><!--<div class="body-scroll" style="top: 150px;">--><h1>keyboard_get_map</h1><p> Parfois, vous souhaiterez peut-être obtenir le code ascii pour une clé mappée (pour voir si elle est déjà mappée, par exemple), ce que cette fonction renvoie. La fonction prendra une valeur de code clé telle que renvoyée par la fonction <a href="../../Strings/ord.htm"><tt>ord()</tt></a> (uniquement <i>les</i> lettres majuscules de A à Z ou les chiffres de 0 à 9), ou l&#39;un des <tt>vk_*</tt> constantes répertoriées sur la page <a href="Keyboard_Input.htm">principale de saisie au clavier.</a></p><p></p><h4> <b>Syntaxe:</b></h4><p class="code">keyboard_get_map(key);</p><table><tbody><tr><th> Argument</th><th> Description</th></tr><tr><td> <span class="notranslate">key</span></td><td> Il s&#39;agit de la clé à partir de laquelle vous souhaitez obtenir la valeur mappée</td></tr></tbody></table><p></p><h4> <b>Retour:</b></h4><p class="code">Real</p><p></p><h4> <b>Exemple:</b></h4><p class="code">if keyboard_get_map(ord(&quot;A&quot;)) = ord(&quot;A&quot;)<br/>    {
+    <br/>    keyboard_set_map(ord(&quot;A&quot;), keyboard_lastkey);<br/>    }
+  </p><p> L&#39;exemple de code ci-dessus vérifiera d&#39;abord et verra si &quot;A&quot; a été mappé à une autre touche, et s&#39;il ne l&#39;a pas fait, il le mappera à la dernière touche sur laquelle l&#39;utilisateur a appuyé. </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> Retour: <a href="Keyboard_Input.htm">Entrée clavier</a></div><div style="float:right"> Suivant:<a href="keyboard_unset_map.htm">keyboard_unset_map</a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
+  </div>
+  <!-- KEYWORDS
+keyboard_get_map
+-->
+  <!-- TAGS
+keyboard_get_map
+-->
+
+</body></html>

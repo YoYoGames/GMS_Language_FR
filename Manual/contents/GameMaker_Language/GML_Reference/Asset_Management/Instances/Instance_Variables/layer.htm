@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>layer</title>
+  <meta name="generator" content="Adobe RoboHelp 2019" />
+  <link rel="stylesheet" href="../../../../../assets/css/default.css" type="text/css" />
+  <meta name="rh-authors" content="Mark Alexander" />
+  <meta name="topic-comment" content="Page décrivant le calque variable" />
+  <meta name="rh-index-keywords" content="layer" />
+  <meta name="search-keywords" content="layer" />
+</head>
+<body><!--<div class="body-scroll" style="top: 150px;">--><h1>layer</h1><p> Cette <b>variable intégrée</b> est créée pour chaque instance dans une pièce et contient la valeur d&#39;ID de couche de la couche à laquelle l&#39;instance est affectée. Cette valeur peut ensuite être utilisée dans d&#39;autres fonctions comme <a href="../../Rooms/General_Layer_Functions/layer_get_depth.htm"><tt>layer_get_depth()</tt></a> ou il peut être modifié pour déplacer l&#39;instance vers un autre calque, mais notez que si le calque attribué n&#39;existe pas dans la salle actuelle, vous obtiendrez une erreur qui forcera votre jeu à se fermer. Lors de l&#39;affectation d&#39;une couche, vous devez fournir l&#39; <b>ID de couche</b> unique renvoyé par la fonction <a href="../../Rooms/General_Layer_Functions/layer_get_id.htm"><tt>layer_get_id()</tt></a> (lors de l&#39;utilisation de couches de pièces nommées), ou comme renvoyé par la fonction <a href="../../Rooms/General_Layer_Functions/layer_create.htm"><tt>layer_create()</tt></a> (lorsque vous créez vos propres calques au moment de l&#39;exécution).</p><p class="note"> <b>IMPORTANT!</b> si vous avez créé l&#39;instance à l&#39;aide de la fonction <span style="font-size:1px;"><a href="../instance_create_depth.htm"><tt style="font-size: 14px">instance_create_depth ()</tt></a></span>, ou si vous avez modifié manuellement la <span style="font-size:1px;"><a href="depth.htm"><tt style="font-size: 14px">variable de profondeur</tt></a></span>, la couche affectée à l&#39;instance devient une couche «gérée», qui est une <span class="notranslate">GameMaker Studio 2</span> contrôle et gère automatiquement. Dans ces cas, le <tt>layer</tt> variable renverra -1.</p><p></p><h4> Syntaxe:</h4><p class="code">layer;</p><p></p><h4> Retour:</h4><p class="code">Real (integer - resource index value)</p><p></p><h4> Exemple:</h4><p class="code">layer = layer_create(-1000);</p><p> Le code ci-dessus créera un nouveau calque avec une profondeur de -1000, puis définira l&#39;instance <tt>layer</tt> à l&#39;ID de couche renvoyé, en déplaçant l&#39;instance du calque sur lequel elle se trouve actuellement vers le nouveau calque en cours de création. </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> Retour: <a href="Instance_Variables.htm">Variables d&#39;instance</a></div><div style="float:right"> Suivant:<a href="alarm.htm">alarm</a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
+  </div>
+  <!-- KEYWORDS
+layer
+-->
+  <!-- TAGS
+layer
+-->
+</body>
+</html>

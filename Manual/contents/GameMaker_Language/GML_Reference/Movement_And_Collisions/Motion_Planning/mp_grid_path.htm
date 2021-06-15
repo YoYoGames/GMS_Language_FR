@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>mp_grid_path</title>
+  <meta name="generator" content="Adobe RoboHelp 2019" />
+  <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
+  <meta name="rh-authors" content="Mark Alexander" />
+  <meta name="topic-comment" content="Cette page décrit la fonction mp_grid_path" />
+  <meta name="rh-index-keywords" content="mp_grid_path" />
+  <meta name="search-keywords" content="mp_grid_path" />
+</head>
+<body><!--<div class="body-scroll" style="top: 150px;">--><h1>mp_grid_path</h1><p> Avec cette fonction, vous pouvez créer un chemin qui naviguera d&#39;un point de départ à un point d&#39;arrivée à l&#39;aide d&#39;un <tt>mp_grid</tt> que vous avez préalablement défini, en évitant les obstacles qui ont déjà été ajoutés dans la grille. Les arguments xstart et ystart indiquent le début du chemin en coordonnées de la pièce, tandis que les arguments xgoal, ygoal indiquent la destination. Vous pouvez également sélectionner le mouvement horizontal / vertical uniquement ou autoriser les mouvements diagonaux complets en spécifiant true dans l&#39;argument allowdiag. La fonction renvoie soit vrai (elle a réussi à trouver un chemin), soit faux (elle a échoué) ainsi que la définition du chemin choisi. Dans l&#39;image suivante, vous pouvez voir comment tout cela fonctionne ensemble:</p><p><img alt="MP Grid path example" class="center" src="../../../../assets/Images/Scripting_Reference/GML/Reference/Movement_Collisions/mp_grid_path_image.png" /> Comme vous pouvez le voir, les objets &quot;pipe&quot; ont été ajoutés dans la grille, ce qui signifie que tout chemin créé doit les contourner. Il y a deux chemins créés dans l&#39;image, l&#39;un (vert) a été fait avec les diagonales autorisées et l&#39;autre (rouge) sans. La différence entre les deux est assez évidente avec le chemin vert paraissant beaucoup plus &quot;élégant&quot; et direct, mais tout dépend de l&#39;usage que vous allez leur faire de celui que vous préférez. Notez que le chemin est indépendant de l&#39;instance actuelle - c&#39;est un chemin à travers la grille, pas un chemin pour une instance spécifique, même si une instance spécifique peut avoir la variable qui stocke l&#39;index du chemin. Vous devrez peut-être également déboguer ces chemins pour voir comment ils sont créés et interagissent dans l&#39;environnement de jeu, auquel cas vous devriez utiliser le <tt><a href="../../Drawing/Basic_Forms/draw_path.htm">draw_path()</a></tt> fonction.</p><p class="note"> <b>REMARQUE</b>: le chemin doit avoir été créé au préalable (soit dans le code avec <span style="font-size:1px;"><a href="../../Asset_Management/Paths/Path_Manipulation/path_add.htm"><tt style="font-size: 14px">path_add ()</tt></a></span> soit en tant que ressource) et sera remplacé par le chemin généré par cette fonction.</p><p></p><h4> Syntaxe:</h4><p class="code">mp_grid_path(id, path, xstart, ystart, xgoal, ygoal, allowdiag);</p><table><tbody><tr><th> Argument</th><th> Description</th></tr><tr><td> <span class="notranslate">id</span></td><td> Index du mp_grid à utiliser</td></tr><tr><td> <span class="notranslate">path</span></td><td> index du chemin à utiliser par la fonction</td></tr><tr><td> <span class="notranslate">x start</span></td><td> Coordonnée x de départ du nouveau chemin</td></tr><tr><td> <span class="notranslate">y start</span></td><td> Coordonnée y de départ du nouveau chemin</td></tr><tr><td> <span class="notranslate">xgoal</span></td><td> Finition de la coordonnée x du nouveau chemin</td></tr><tr><td> <span class="notranslate">ygoal</span></td><td> Finition de la coordonnée y du nouveau chemin</td></tr><tr><td> <span class="notranslate">allowdiag</span></td><td> Indique si les déplacements en diagonale sont autorisés au lieu de simplement horizontaux ou verticaux</td></tr></tbody></table><p></p><h4> Retour:</h4><p class="code">Boolean</p><p></p><h4> Exemple:</h4><p class="code">global.grid = mp_grid_create(0, 0, room_width div 32, room_height div 32, 32, 32);<br/> mp_grid_add_instances(global.grid, obj_wall, false);<br/> with (obj_Enemy)<br/>     {
+    <br/>     path = path_add();<br/>     if mp_grid_path(global.grid, path, x, y, obj_Player.x, obj_Player.y, 1)<br/>         {
+    <br/>         path_start(path, 0, 3, 0);<br/>         }
+    <br/>     }
+  </p><p> Le code ci-dessus crée une variable globale &quot;global.grid&quot;, puis génère un mp_grid et assigne son index (id) à cette variable pour une utilisation dans tous les autres appels de fonction mp_grid. Il ajoute ensuite toutes les instances de &quot;obj_Wall&quot; dans la grille avant d&#39;obtenir toutes les instances de &quot;obj_Enemy&quot; pour créer un chemin puis utiliser <tt>mp_grid_path</tt> pour calculer une déroute de leur position à la position de &quot;obj_Player&quot;. Si une route existe, l&#39;objet commence lui-même le long du chemin. </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> Retour: <a href="Motion_Planning.htm">Planification de mouvement</a></div><div style="float:right"> Suivant:<a href="mp_grid_add_cell.htm">mp_grid_add_cell</a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
+  </div>
+  <!-- KEYWORDS
+mp_grid_path
+-->
+  <!-- TAGS
+mp_grid_path
+-->
+</body>
+</html>

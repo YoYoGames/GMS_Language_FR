@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>layer_tilemap_destroy</title>
+  <meta name="generator" content="Adobe RoboHelp 2019" />
+  <link rel="stylesheet" href="../../../../../assets/css/default.css" type="text/css" />
+  <meta name="rh-authors" content="Mark Alexander" />
+  <meta name="topic-comment" content="Page décrivant la fonction layer_tilemap_destroy" />
+  <meta name="rh-index-keywords" content="layer_tilemap_destroy" />
+  <meta name="search-keywords" content="layer_tilemap_destroy" />
+</head>
+<body><!--<div class="body-scroll" style="top: 150px;">--><h1>layer_tilemap_destroy</h1><p> Cette fonction détruira l&#39;élément de carte de tuiles donné. Vous fournissez l&#39;ID de la carte de tuiles (que vous obtenez lorsque vous créez la carte de tuiles en utilisant <a href="layer_tilemap_create.htm"><tt>layer_tilemap_create()</tt></a> ou lorsque vous utilisez l&#39;ID de couche avec <a href="layer_tilemap_get_id.htm"><tt>layer_get_tilemap_id()</tt></a> ) et cela le supprimera. Notez que cela ne <i>supprime pas</i> le calque, mais uniquement la carte de tuiles de celle-ci, et si la carte de tuiles est celle qui a été ajoutée dans l&#39;éditeur de salle, la prochaine fois que vous quittez la pièce puis revenez, la carte de tuiles sera recréée. de nouveau. Cependant, si la pièce est persistante, la carte des tuiles sera supprimée à moins que la persistance de la pièce ne soit à nouveau désactivée.</p><p></p><h4> Syntaxe:</h4><p class="code">layer_tilemap_destroy(tilemap_element_id)</p><table><tbody><tr><th> Argument</th><th> Description</th></tr><tr><td> <span class="notranslate">tilemap_element_id</span></td><td> La valeur d&#39;identifiant unique de la carte de tuiles à détruire</td></tr></tbody></table><p></p><h4> Retour:</h4><p class="code">N/A</p><p></p><h4> Exemple:</h4><p class="code">var lay_id = layer_get_id(&quot;Tiles_trees&quot;);<br/> var tile_id = layer_tilemap_get_id(lay_id);<br/> if layer_tilemap_exists(lay_id, tile_id)<br/>     {
+    <br/>     layer_tilemap_destroy(tile_id);
+    <br/>     }
+  </p><p> Le code ci-dessus vérifie la couche &quot;Tiles_trees&quot; pour voir si l&#39;élément de carte de tuile donné existe et si c&#39;est le cas, alors il est détruit (mais pas la couche). </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> Retour: <a href="Tile_Map_Layers.htm">Couches de carte de mosaïque</a></div><div style="float:right"> Suivant:<a href="tilemap_tileset.htm">tilemap_tileset</a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
+  </div>
+  <!-- KEYWORDS
+layer_tilemap_destroy
+-->
+  <!-- TAGS
+layer_tilemap_destroy
+-->
+</body>
+</html>

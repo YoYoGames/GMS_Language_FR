@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>gpu_get_blendmode_ext_sepalpha</title>
+  <meta name="generator" content="Adobe RoboHelp 2019" />
+  <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
+  <meta name="rh-authors" content="Mark Alexander" />
+  <meta name="topic-comment" content="Référence pour la fonction gpu_get_blendmode_ext_sepalpha" />
+  <meta name="rh-index-keywords" content="gpu_get_blendmode_ext_sepalpha,bm_zero,bm_one,bm_src_colour,bm_inv_src_colour,bm_src_alpha,bm_inv_src_alpha,bm_dest_alpha,bm_inv_dest_alpha,bm_dest_colour,bm_inv_dest_colour,bm_src_alpha_sat,bm_src_color,bm_inv_src_color,bm_dest_color,bm_inv_dest_colour"
+  />
+  <meta name="search-keywords" content="gpu_get_blendmode_ext_sepalpha,bm_zero,bm_one,bm_src_colour,bm_inv_src_colour,bm_src_alpha,bm_inv_src_alpha,bm_dest_alpha,bm_inv_dest_alpha,bm_dest_colour,bm_inv_dest_colour,bm_src_alpha_sat,bm_src_color,bm_inv_src_color,bm_dest_color,bm_inv_dest_colour"
+  />
+</head>
+<body><!--<div class="body-scroll" style="top: 150px;">--><h1>gpu_get_blendmode_ext_sepalpha</h1><p> Cette fonction peut être utilisée pour récupérer le mode de fusion étendu actuel utilisé pour le dessin, en séparant les modes de fusion en deux parties: le composant RVB et le composant Alpha. La fonction renvoie un tableau 1D à 4 éléments avec les éléments suivants:</p><ul class="colour"><li> [0] = Mode de fusion source moins le composant alpha (la valeur par défaut est <tt>bm_src_alpha</tt> (As, As, As))</li><li> [1] = Mode de fusion de destination moins le composant alpha (la valeur par défaut est <tt>bm_inv_src_alpha</tt> (1-As, 1-As, 1-As))</li><li> [2] = Composant alpha source (la valeur par défaut est <tt>bm_src_alpha</tt> (Comme))</li><li> [3] = Composant alpha de destination (la valeur par défaut est <tt>bm_inv_src_alpha</tt> (1-As))</li></ul><p> Les valeurs du tableau seront l&#39;une des constantes suivantes (&quot;s&quot; désigne une valeur extraite de la source tandis qu&#39;un &quot;d&quot; désigne une valeur de la destination):</p><p></p><table><tbody><tr><th> Constant</th><th> Facteur de fusion (rouge, vert, bleu, alpha)</th></tr><tr><td><span class="notranslate"><tt>bm_zero</tt></span></td><td> (0, 0, 0, 0)</td></tr><tr><td><span class="notranslate"><tt>bm_one</tt></span></td><td> (1, 1, 1, 1)</td></tr><tr><td><span class="notranslate"><tt>bm_src_colour</tt></span></td><td> (Rs, Gs, Bs, As)</td></tr><tr><td><span class="notranslate"><tt>bm_inv_src_colour</tt></span></td><td> (1-Rs, 1-Gs, 1-Bs, 1-As)</td></tr><tr><td><span class="notranslate"><tt>bm_src_alpha</tt></span></td><td> (As, As, As, As)</td></tr><tr><td><span class="notranslate"><tt>bm_inv_src_alpha</tt></span></td><td> (1-As, 1-As, 1-As, 1-As)</td></tr><tr><td><span class="notranslate"><tt>bm_dest_alpha</tt></span></td><td> (Annonce, annonce, annonce, annonce)</td></tr><tr><td><span class="notranslate"><tt>bm_inv_dest_alpha</tt></span></td><td> (1 annonce, 1 annonce, 1 annonce, 1 annonce)</td></tr><tr><td><span class="notranslate"><tt>bm_dest_colour</tt></span></td><td> (Rd, Gd, Bd, Ad)</td></tr><tr><td><span class="notranslate"><tt>bm_inv_dest_colour</tt></span></td><td> (1-Rd, 1-Gd, 1-Bd, 1-Ad)</td></tr><tr><td><span class="notranslate"><tt>bm_src_alpha_sat</tt></span></td><td> (f, f, f, 1) où f = min (As, 1-Ad)</td></tr></tbody></table><p></p><p> Lors de la création des modes de fusion étendus de cette manière, les composants RVB seront pris d&#39;un mode de fusion et le composant Alpha sera pris d&#39;un autre, de sorte que - par exemple - si vous utilisez <tt>bm_zero</tt> (0, 0, 0, 0) comme mode de fusion RVB et <tt>bm_one</tt> en tant que mode de fusion alpha, vous obtiendrez un mélange composite de (0,0,0,1).</p><p> Notez que vous pouvez modifier ces valeurs directement dans le tableau et transmettre le tableau complet à la fonction en tant qu&#39;argument unique (comme indiqué dans l&#39;exemple ci-dessous).</p><p></p><h4> Syntaxe:</h4><p class="code">gpu_get_blendmode_ext_sepalpha();</p><p></p><h4> Retour:</h4><p class="code">4 element 1D Array (see above for constants)</p><p></p><h4> Exemple:</h4><p class="code">var bm = gpu_get_blendmode_ext_sepalpha();<br/> bm[0] = bm_src_alpha;<br/> bm[1] = bm_inv_src_alpha;<br/> gpu_set_blendmode_ext_sepalpha(bm);
+  </p><p> Le code ci-dessus crée un tableau local et obtient le mode de fusion étendu actuel avec des valeurs alpha séparées. Ce tableau est ensuite manipulé et renvoyé pour définir le mode de fusion. </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> Retour: <a href="GPU_Control.htm">Contrôle GPU</a></div><div style="float:right"> Suivant:<a href="gpu_get_blendmode_src.htm">gpu_get_blendmode_src</a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
+  </div>
+  <!-- KEYWORDS
+gpu_get_blendmode_ext_sepalpha
+bm_zero
+bm_one
+bm_src_colour
+bm_inv_src_colour
+bm_src_alpha
+bm_inv_src_alpha
+bm_dest_alpha
+bm_inv_dest_alpha
+bm_dest_colour
+bm_inv_dest_colour
+bm_src_alpha_sat
+-->
+  <!-- TAGS
+gpu_get_blendmode_ext_sepalpha
+-->
+</body>
+</html>

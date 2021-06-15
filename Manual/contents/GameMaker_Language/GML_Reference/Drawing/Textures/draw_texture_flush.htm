@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>draw_texture_flush</title>
+  <meta name="generator" content="Adobe RoboHelp 2019" />
+  <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
+  <meta name="rh-authors" content="Mark Alexander" />
+  <meta name="topic-comment" content="Page de référence pour draw_texture_flush" />
+  <meta name="rh-index-keywords" content="draw_texture_flush" />
+  <meta name="search-keywords" content="draw_texture_flush" />
+</head>
+<body><!--<div class="body-scroll" style="top: 150px;">--><h1>draw_texture_flush</h1><p> Avec cette fonction, vous pouvez supprimer toutes les textures de la mémoire vidéo, et elles seront ensuite rechargées lors de la première utilisation. C&#39;est le seul moyen efficace de gérer la mémoire vidéo lorsque vous avez plusieurs pages de texture pour un jeu, et vous devez vider la mémoire de texture entre les niveaux de votre jeu et organiser les graphiques à l&#39;aide de la fonction de groupe de texture pour vous assurer que le nombre minimum de textures est utilisé.</p><p> Il est à noter que <i>par défaut</i> sur toutes les cibles, les pages de texture ne seront chargées que lorsqu&#39;elles sont nécessaires et vous pouvez utiliser les différentes fonctions de prélecture et de vidage pour les sprites (trouvées <a href="../../Asset_Management/Sprites/Sprite_Manipulation/Sprite_Manipulation.htm">ici</a> ) pour gérer les choses ainsi que cette fonction.</p><p></p><h4> Syntaxe:</h4><p class="code">draw_texture_flush();</p><p></p><h4> Retour:</h4><p class="code">N/A</p><p></p><h4> Exemple:</h4><p class="code">draw_texture_flush();</p><p> Le code ci-dessus vide la mémoire vidéo des données de texture et serait probablement placé dans l&#39;événement create de la première instance d&#39;un objet placé dans la pièce. </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> Retour: <a href="Textures.htm">Textures</a></div><div style="float:right"> Suivant:<a href="texture_prefetch.htm">texture_prefetch</a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
+  </div>
+  <!-- KEYWORDS
+draw_texture_flush
+-->
+  <!-- TAGS
+draw_texture_flush
+-->
+</body>
+</html>

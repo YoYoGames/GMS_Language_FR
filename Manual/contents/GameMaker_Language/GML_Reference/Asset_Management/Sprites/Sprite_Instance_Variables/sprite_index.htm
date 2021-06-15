@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>sprite_index</title>
+  <meta name="generator" content="Adobe RoboHelp 2019" />
+  <link rel="stylesheet" href="../../../../../assets/css/default.css" type="text/css" />
+  <meta name="rh-authors" content="Mark Alexander" />
+  <meta name="topic-comment" content="Page expliquant la fonction sprite_index" />
+  <meta name="rh-index-keywords" content="sprite_index" />
+  <meta name="search-keywords" content="sprite_index" />
+</head>
+<body><!--<div class="body-scroll" style="top: 150px;">--><h1>sprite_index</h1><p> Cette variable renvoie l&#39;index du sprite actuel pour l&#39;instance, ou -1 si l&#39;instance n&#39;a aucun sprite associé. Vous pouvez le modifier pour donner à l&#39;instance un sprite différent en lui donnant le nom d&#39;un sprite de l&#39;arborescence des ressources ou en utilisant une variable dans laquelle un sprite chargé en externe est indexé. Changer le sprite ne change pas l&#39;index du cadre actuellement visible, donc si vous changez le sprite sur l&#39;image numéro 3, le nouveau sprite sera dessiné avec ce cadre visible (en supposant qu&#39;il a le même nombre d&#39;images).</p><p></p><h4> Syntaxe:</h4><p class="code">sprite_index;</p><p></p><h4> Retour:</h4><p class="code">Real (integer - resource index value)</p><p></p><h4> Exemple:</h4><p class="code">with (obj_Check)<br/>     {
+    <br/>     if !collision_line(x, y, other.x, other.y, obj_Wall, false, true)<br/>         {
+    <br/>         sprite_index = spr_spotted;<br/>         }
+    <br/>     else
+    <br/>         {
+    <br/>         sprite_index = spr_clear;<br/>         }
+    <br/>     }
+  </p><p> Le code ci-dessus boucle à travers toutes les instances de &quot;obj_Check&quot; vérifiant une ligne de collision entre elles et l&#39;instance exécutant le code. Le sprite de ces instances sera modifié en fonction de la valeur de retour (vrai ou faux) pour la ligne de collision. </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> Retour: <a href="Sprite_Instance_Variables.htm">Variables d&#39;instance de sprite</a></div><div style="float:right"> Suivant:<a href="sprite_width.htm">sprite_width</a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
+  </div>
+  <!-- KEYWORDS
+sprite_index
+-->
+  <!-- TAGS
+sprite_index
+-->
+</body>
+</html>

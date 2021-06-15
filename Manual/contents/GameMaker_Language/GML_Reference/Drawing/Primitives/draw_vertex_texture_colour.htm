@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <title>draw_vertex_texture_colour</title>
+  <meta name="generator" content="Adobe RoboHelp 2019"/>
+  <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css"/>
+  <meta name="rh-authors" content="Mark Alexander"/>
+  <meta name="topic-comment" content="Référence pour draw_vertex_texture_colour"/>
+  <meta name="rh-index-keywords" content="draw_vertex_texture_colour,draw_vertex_texture_color"/>
+  <meta name="search-keywords" content="draw_vertex_texture_colour,draw_vertex_texture_color"/>
+</head>
+<body><!--<div class="body-scroll" style="top: 150px;">--><h1>draw_vertex_texture_colour</h1><p> Cette fonction définit la position d&#39;un sommet texturé pour une primitive. L&#39;aspect final de la primitive dépendra du type primitif choisi pour dessiner (voir <a href="draw_primitive_begin.htm"><tt>draw_primitive_begin()</tt></a> pour plus d&#39;informations), l&#39;ordre dans lequel vous ajoutez les sommets, la position des points de début et de fin que vous donnez pour l&#39;échantillon de texture et les valeurs de couleur et alpha que vous avez définies. Pour conserver l&#39;apparence de la texture tout en ne modifiant que l&#39;alpha, une valeur de -1 (ou <tt>c_white</tt> ) peut être utilisé pour l&#39;argument couleur. Pour terminer et dessiner la primitive, vous devez appeler <a href="draw_primitive_end.htm"><tt>draw_primitive_end()</tt></a>.</p><p class="note"> <b>NOTE:</b> Pour qu&#39;une texture se répète, elle doit avoir une puissance de deux, c&#39;est-à-dire: 32x32, 128x128, etc...</p><p></p><h4> Syntaxe:</h4><p class="code">draw_vertex_texture_colour(x, y, xtex, ytex, col, alpha)</p><table><tbody><tr><th> Argument</th><th> Description</th></tr><tr><td> <span class="notranslate">x</span></td><td> La coordonnée x du sommet.</td></tr><tr><td> <span class="notranslate">y</span></td><td> La coordonnée y du sommet.</td></tr><tr><td> <span class="notranslate">xtex</span></td><td> La coordonnée x dans la texture.</td></tr><tr><td> <span class="notranslate">ytex</span></td><td> La coordonnée y dans la texture.</td></tr><tr><td> <span class="notranslate">col</span></td><td> La couleur à mélanger avec la texture à ce sommet (-1 ou <tt>c_white</tt> pour aucun mélange).</td></tr><tr><td> <span class="notranslate">alpha</span></td><td> L&#39;alpha pour dessiner ce sommet avec (0-1).</td></tr></tbody></table><p></p><h4> Retour:</h4><p class="code">N/A</p><p></p><h4> Exemple:</h4><p class="code">draw_set_colour(c_white);<br/> var tex = sprite_get_texture(spr_Background, 0);<br/> draw_primitive_begin_texture(pr_trianglestrip, tex);<br/> draw_vertex_texture_colour(0, 0, 0, 0, c_fuchsia, 1);<br/> draw_vertex_texture_colour(640, 0, 1, 0, c_yellow,
+    1);<br/> draw_vertex_texture_colour(0, 480, 0, 1, c_aqua, 1);<br/> draw_vertex_texture_colour(640, 480, 1, 1, c_lime, 1);<br/> draw_primitive_end();
+  </p><p> Le code ci-dessus dessinera une bande de triangle à 4 sommets (faisant un rectangle) texturée avec la texture contenue dans la variable &quot;tex&quot;, et la texture entière sera utilisée pour couvrir la primitive terminée, et elle sera mélangée avec quatre couleurs différentes. </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> Retour: <a href="Primitives_And_Vertex_Formats.htm">Primitives et formats de sommets</a></div><div style="float:right"> Suivant:<a href="vertex_format_begin.htm">vertex_format_begin</a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
+  </div>
+  <!-- KEYWORDS
+draw_vertex_texture_colour
+draw_vertex_texture_color
+-->
+  <!-- TAGS
+draw_vertex_texture_colour
+-->
+
+</body></html>

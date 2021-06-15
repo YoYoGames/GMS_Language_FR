@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>gamepad_set_axis_deadzone</title>
+  <meta name="generator" content="Adobe RoboHelp 2019" />
+  <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
+  <meta name="rh-authors" content="Mark Alexander" />
+  <meta name="topic-comment" content="Page de référence pour gamepad_set_axis_deadzone" />
+  <meta name="rh-index-keywords" content="gamepad_set_axis_deadzone" />
+  <meta name="search-keywords" content="gamepad_set_axis_deadzone" />
+</head>
+<body><!--<div class="body-scroll" style="top: 150px;">--><h1>gamepad_set_axis_deadzone</h1><p> Cette fonction peut être utilisée pour régler la &quot;zone morte&quot; de l&#39;axe du joystick. Vous spécifiez l&#39;emplacement de périphérique à définir, puis définissez une valeur de 0 à 1 et si la quantité d&#39;entrée est inférieure à la valeur donnée, l&#39;axe du joystick est considéré comme à 0. Notez qu&#39;il s&#39;agit d&#39;un paramètre global qui affectera <i>tous</i> axe de tous les joysticks connectés à l&#39;emplacement de périphérique spécifié.</p><p> L&#39;utilisation de cette fonction ne signifie pas que la valeur de l&#39;axe commencera à partir de la valeur de la zone morte, car la fonction<a href="gamepad_axis_value.htm"><span class="inline">gamepad_axis_value()</span></a> <em>renverra toujours</em> une valeur normalisée entre -1 et 0 ou 0 et 1. Par exemple, régler la zone morte à 0,2 signifie que pousser le manche vers la droite ne commencera à renvoyer une valeur de 0 à 1 que lorsque la <em>valeur brute de l&#39;</em> axe est supérieure à 0,2 - Ainsi, lorsque la valeur brute est 0,2, la valeur de retour sera 0, lorsque la valeur brute est à 0,5, la valeur de retour sera 0,375, ou si la valeur brute est 0,9, alors la valeur de retour sera 0,875.</p><p></p><h4> Syntaxe:</h4><p class="code">gamepad_set_axis_deadzone(device, deadzone);</p><table><tbody><tr><th> Argument</th><th> Description</th></tr><tr><td> <span class="notranslate">device</span></td><td> Quel «slot» de périphérique de manette de jeu vérifier.</td></tr><tr><td> <span class="notranslate">deadzone</span></td><td> La valeur de la zone morte de 0 à 1.</td></tr></tbody></table><p></p><h4> Retour:</h4><p class="code">N/A</p><p></p><h4> Exemple:</h4><p class="code">if gamepad_is_connected(0) gamepad_set_axis_deadzone(0, 0.05);<br/> if gamepad_is_connected(1) gamepad_set_axis_deadzone(1, 0.05);<br/> if gamepad_is_connected(2) gamepad_set_axis_deadzone(2, 0.05);<br/> if gamepad_is_connected(3) gamepad_set_axis_deadzone(3,
+    0.05);</p><p> Le code ci-dessus définira la zone morte de l&#39;axe du joystick sur l&#39;un des 4 appareils connectés à 0,05. </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> Retour: <a href="Gamepad_Input.htm">Entrée de la manette de jeu</a></div><div style="float:right"> Suivant: <a href="gamepad_set_vibration.htm">gamepad_set_vibration</a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
+  </div>
+  <!-- KEYWORDS
+gamepad_set_axis_deadzone
+-->
+  <!-- TAGS
+gamepad_set_axis_deadzone
+-->
+</body>
+</html>

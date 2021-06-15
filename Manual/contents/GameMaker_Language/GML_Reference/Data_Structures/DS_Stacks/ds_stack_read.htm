@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <title>ds_stack_read</title>
+  <meta name="generator" content="Adobe RoboHelp 2019"/>
+  <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css"/>
+  <meta name="rh-authors" content="Mark Alexander"/>
+  <meta name="topic-comment" content="Page de référence pour ds_stack_read"/>
+  <meta name="rh-index-keywords" content="ds_stack_read"/>
+  <meta name="search-keywords" content="ds_stack_read"/>
+</head>
+
+<body><!--<div class="body-scroll" style="top: 150px;">--><h1>ds_stack_read</h1><p> Avec cette fonction, vous pouvez recréer une pile DS enregistrée (une qui a été précédemment écrite sous forme de chaîne en utilisant <a href="ds_stack_write.htm"><tt>ds_stack_write()</tt></a> ). Vous devez d&#39;abord créer une nouvelle pile DS dans laquelle lire la chaîne, et si la pile DS existe déjà et contient des informations stockées, cela sera effacé avant la lecture. Cette fonction est d&#39;une importance vitale lors de la création de mécanismes de sauvegarde / chargement pour votre jeu. Notez que si la structure de données a été créée avec les versions précédentes de <i><span class="notranslate">GameMaker</span></i> vous devez ajouter l&#39;argument facultatif «hérité», en le définissant sur <tt>true</tt> car le format de la chaîne a changé avec cette version.</p><p></p><h4> Syntaxe:</h4><p class="code">ds_stack_read(id, str [, legacy] );</p><table><tbody><tr><th> Argument</th><th> Description</th></tr><tr><td> <span class="notranslate">id</span></td><td> L&#39;identifiant de la structure de données à lire.</td></tr><tr><td> <span class="notranslate">str</span></td><td> La chaîne à partir de laquelle lire.</td></tr><tr><td> <span class="notranslate">legacy ( <i>optional</i> )</span></td><td> Peut être soit <tt>true</tt> ou <tt>false</tt> ou omis complètement.</td></tr></tbody></table><p></p><h4> Retour:</h4><p class="code">N/A</p><p></p><h4> Exemple:</h4><p class="code">stack = ds_stack_create();<br/> ini_open(&quot;save.ini&quot;);
+    <br/> var str = ini_read_string(&quot;Stacks&quot;, &quot;0&quot;, &quot;&quot;);<br/> if (str != &quot;&quot;)<br/>     {
+    <br/>     ds_stack_read(stack, str);<br/>     }
+    <br/> ini_close();
+  </p><p> Le code ci-dessus crée une pile et stocke l&#39;index dans la variable &quot;pile&quot;. Il ouvre alors un <tt>ini</tt> file et lit une chaîne à partir de celui-ci, en vérifiant que la chaîne n&#39;est pas renvoyée comme vide en premier. Cette chaîne est ensuite lue dans la pile DS nouvellement créée. </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> Retour:<a href="ds_stack_create.htm">ds_stack_create</a></div><div style="float:right"> Suivant:<a href="ds_stack_write.htm">ds_stack_write</a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
+  </div>
+  <!-- KEYWORDS
+ds_stack_read
+-->
+  <!-- TAGS
+ds_stack_read
+-->
+
+</body></html>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>Si la touche est enfoncée</title>
+  <meta name="generator" content="Adobe RoboHelp 2019" />
+  <link rel="stylesheet" href="../../../assets/css/default.css" type="text/css" />
+  <meta name="rh-authors" content="Mark Alexander" />
+  <meta name="topic-comment" content="Page qui explique l&#39;action Si la touche est enfoncée" />
+  <meta name="rh-index-keywords" content="DnD ™ - Si la touche est enfoncée" />
+  <meta name="search-keywords" content="Si la touche est enfoncée Action" />
+</head>
+<body><!--<div class="body-scroll" style="top: 150px;">--><h1><img alt="If Keyboard Pressed Icon" class="icon" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Mouse_And_Keyboard/i_KeyboardMouse_KeyPressed.png" /> Si la touche est enfoncée</h1><p> Cette action vérifie la pression initiale sur une touche du clavier. Il reviendra <tt>true</tt> à l&#39;étape de jeu unique (cadre) où la touche est initialement enfoncée et <tt>false</tt> à tous les autres moments. Si vous activez le <tt>not</tt> modificateur, cette action sera inversée, et vérifier si la touche n&#39;a <i>pas</i> été enfoncée, renvoyant <tt>false</tt> sur le pas de jeu (cadre) sur lequel il a été enfoncé et <tt>true</tt> à tous les autres moments. Si vous devez vérifier qu&#39;une touche est maintenue enfoncée et pas seulement l&#39;événement de pression initial, utilisez l&#39;action <a href="If_Key_Down.htm">Si touche enfoncée</a>.</p><p> Notez que pour ajouter des actions dans le bloc &quot;if&quot;, elles doivent être déposées sur le côté de l&#39;action, comme indiqué dans l&#39;image ci-dessous:</p><p><img alt="If Key Pressed drop action" class="center" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Mouse_And_Keyboard/a_If_Key_PressedDrop.png" /> Toutes les actions déposées ailleurs seront exécutées après le bloc «si».</p><p></p><h4> Syntaxe de l&#39;action:</h4><p><img alt="If Key Pressed Action" class="center" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Mouse_And_Keyboard/a_KeyboardMouse_KeyPressed.png" /></p><h4> Arguments:</h4><p></p><table><tbody><tr><th> Argument</th><th> Description</th></tr><tr><td> <span class="notranslate">Key</span></td><td> Le nom de la clé à vérifier.</td></tr><tr><td> <span class="notranslate">Not</span></td><td> Annuler le chèque (vrai devient faux et vice versa)</td></tr></tbody></table><p></p><h4> Exemple:</h4><p><img alt="If Key Pressed Example" class="center" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Mouse_And_Keyboard/e_KeyboardMouse_KeyDown.png" /> Le code de bloc d&#39;action ci-dessus interroge l&#39;état du clavier à chaque étape et si une touche est maintenue enfoncée, il vérifie la touche initiale enfoncée. Si le chèque est <tt>true</tt> lors de la pression initiale vers le bas, un son est joué, puis, tandis que la touche est maintenue enfoncée, le mélange de sprite passe au rouge. Si la touche n&#39;est pas maintenue enfoncée, une vérification est effectuée sur le relâchement de la touche pour réinitialiser la couleur de fusion au blanc. </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> Retour: <a href="Mouse_And_Keyboard_Actions.htm">Actions de la souris et du clavier</a></div><div style="float:right"> Suivant: <a href="If_Key_Down.htm">Si le clavier est enfoncé</a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
+  </div>
+  <!-- KEYWORDS
+Action - If Key Pressed
+-->
+  <!-- TAGS
+action_if_key_pressed
+-->
+</body>
+</html>

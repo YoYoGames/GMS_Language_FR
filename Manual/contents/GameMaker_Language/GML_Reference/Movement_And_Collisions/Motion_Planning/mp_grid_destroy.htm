@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>mp_grid_destroy</title>
+  <meta name="generator" content="Adobe RoboHelp 2019" />
+  <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
+  <meta name="rh-authors" content="Mark Alexander" />
+  <meta name="topic-comment" content="Cette page décrit la fonction mp_grid_destroy" />
+  <meta name="rh-index-keywords" content="mp_grid_destroy" />
+  <meta name="search-keywords" content="mp_grid_destroy" />
+</head>
+<body><!--<div class="body-scroll" style="top: 150px;">--><h1>mp_grid_destroy</h1><p> Vous pouvez utiliser cette fonction pour détruire le mp_grid indiqué (tel que défini par la fonction<a href="mp_grid_create.htm"><span class="inline">mp_grid_create()</span></a> ) et libérez la mémoire qui lui est allouée. Il est <i>essentiel</i> que vous appeliez cela chaque fois que la grille MP est terminée ou vous pourriez potentiellement avoir une fuite de mémoire, ce qui signifie que votre jeu ralentira avec le temps et finira par planter.</p><p class="note"> <b>REMARQUE</b>: en utilisant <tt>mp_grid_*</tt> les fonctions sur une grille après sa destruction entraîneront une erreur.</p><p></p><h4> Syntaxe:</h4><p class="code">mp_grid_destroy(id);</p><table><tbody><tr><th> Argument</th><th> Description</th></tr><tr><td> <span class="notranslate">id</span></td><td> Index du mp_grid à détruire</td></tr></tbody></table><p></p><h4> Retour:</h4><p class="code">N/A</p><p></p><h4> Exemple:</h4><p class="code">if timer = 0<br/>     {
+    <br/>     mp_grid_destroy(grid);
+    <br/>     room_goto(rm_Menu);
+    <br/>     }
+  </p><p> Le code ci-dessus détruira le mp_grid indexé dans la variable &quot;grid&quot; si la variable &quot;timer&quot; est égale à 0, puis va dans une autre pièce. </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> Retour: <a href="Motion_Planning.htm">Planification de mouvement</a></div><div style="float:right"> Suivant:<a href="mp_grid_path.htm">mp_grid_path</a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
+  </div>
+  <!-- KEYWORDS
+mp_grid_destroy
+-->
+  <!-- TAGS
+mp_grid_destroy
+-->
+</body>
+</html>

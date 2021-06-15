@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>Définir l&#39;alpha des particules</title>
+  <meta name="generator" content="Adobe RoboHelp 2019" />
+  <link rel="stylesheet" href="../../../assets/css/default.css" type="text/css" />
+  <meta name="rh-authors" content="Mark Alexander" />
+  <meta name="topic-comment" content="Page qui explique l&#39;action Set Particle Alpha" />
+  <meta name="rh-index-keywords" content="DnD ™ - Définir l&#39;alpha des particules" />
+  <meta name="search-keywords" content="Définir l&#39;alpha des particules" />
+</head>
+<body><!--<div class="body-scroll" style="top: 150px;">--><h1><img alt="Set Particle Alpha Icon" class="icon" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Particles/i_Particles_Set_Particle_Alpha.png" /> Définir l&#39;alpha des particules</h1><p> Cette action définira l&#39;alpha lorsque vous créez la particule ainsi que l&#39;alpha pendant sa durée de vie. Vous spécifiez d&#39;abord la valeur de l&#39;ID du type de particule (qui doit être identique à la valeur renvoyée lorsque vous avez créé la particule à l&#39;aide de l&#39; <a href="Create_Particle_Type.htm">action Créer un type de particule</a> ), puis vous pouvez définir les valeurs alpha à utiliser.</p><p> Vous pouvez choisir trois alphas à utiliser, et la particule se fondra entre eux pendant toute la durée de vie de la particule. Par exemple, si une particule a 0,5, 1 et 0 comme valeurs alpha, et une durée de vie de 60 images de jeu, alors quand elle est créée (image 0) elle sera à 0,5 alpha, alors elle disparaîtra vers un alpha complet de 1 (image 30), avant de passer pour être invisible avec un alpha de 0 (image 60).</p><p></p><h4> Syntaxe de l&#39;action:</h4><p><img alt="Set Particle Alpha Action" class="center" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Particles/a_Particles_Set_Particle_Alpha.png" /></p><h4> Arguments:</h4><table><tbody><tr><th> Argument</th><th> Description</th></tr><tr><td> <span class="notranslate">Type ID</span></td><td> La valeur d&#39;ID unique du type de particule pour définir la couleur de</td></tr><tr><td> <span class="notranslate">Start</span></td><td> L&#39;alpha initial à utiliser</td></tr><tr><td> <span class="notranslate">Middle</span></td><td> L&#39;alpha intermédiaire à utiliser</td></tr><tr><td> <span class="notranslate">End</span></td><td> L&#39;alpha final à utiliser</td></tr></tbody></table><p></p><h4> Exemple:</h4><p><img alt="Define Particle Example" class="center" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Particles/e_Particles_Create_Particle_Type.png" /> Le code de bloc d&#39;action ci-dessus créera un nouveau type de particule et attribuera sa valeur d&#39;identifiant unique à une variable globale. Il procède ensuite à la définition de toutes les propriétés du type de particule. </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> Retour: <a href="Particle_Actions.htm">Actions de particules</a></div><div style="float:right"> Suivant: <a href="Set_Particle_Life.htm">Définir la vie des particules</a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
+  </div>
+  <!-- KEYWORDS
+Action - Set Particle Alpha
+-->
+  <!-- TAGS
+action_part_type_alpha
+-->
+</body>
+</html>

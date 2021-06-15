@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>layer_sprite_yscale</title>
+  <meta name="generator" content="Adobe RoboHelp 2019" />
+  <link rel="stylesheet" href="../../../../../assets/css/default.css" type="text/css" />
+  <meta name="rh-authors" content="Mark Alexander" />
+  <meta name="topic-comment" content="Page décrivant la fonction layer_sprite_yscale" />
+  <meta name="rh-index-keywords" content="layer_sprite_yscale" />
+  <meta name="search-keywords" content="layer_sprite_yscale" />
+</head>
+<body><!--<div class="body-scroll" style="top: 150px;">--><h1>layer_sprite_yscale</h1><p> En utilisant cette fonction, vous pouvez changer si l&#39;élément de sprite donné sur un calque doit être mis à l&#39;échelle le long de l&#39;axe y ou non. Vous donnez l&#39;ID d&#39;élément de sprite (que vous obtenez lorsque vous créez un élément de sprite en utilisant <a href="layer_sprite_create.htm"><tt>layer_sprite_create()</tt></a> ou lorsque vous utilisez la fonction <a href="layer_sprite_get_id.htm"><tt>layer_sprite_get_id()</tt></a> ), puis définissez la valeur d&#39;échelle. Une échelle de 1 indique aucune mise à l&#39;échelle (1: 1), des valeurs plus petites seront réduites (0,5, par exemple, la moitié de la hauteur de l&#39;image-objet utilisée), des valeurs plus grandes seront mises à l&#39;échelle et des valeurs négatives refléteront l&#39;image-objet et la mettront à l&#39;échelle sauf si la valeur utilisée est exactement -1 (auquel cas le sprite utilisé est juste reflété de haut en bas autour de sa position (0, 0) sans mise à l&#39;échelle).</p><p></p><h4> Syntaxe:</h4><p class="code">layer_sprite_yscale(sprite_element_id, yscale);</p><table><tbody><tr><th> Argument</th><th> Description</th></tr><tr><td> <span class="notranslate">sprite_element_id</span></td><td> La valeur d&#39;ID unique de l&#39;élément de sprite à modifier</td></tr><tr><td> <span class="notranslate">yscale</span></td><td> La valeur yscale (la valeur par défaut est 1)</td></tr></tbody></table><p></p><h4> Retour:</h4><p class="code">N/A</p><p></p><h4> Exemple:</h4><p class="code">var asset_sprite = layer_sprite_get_id(layer, &quot;gfc_Trees&quot;);<br/> if layer_sprite_get_xscale(asset_sprite) != 1 || layer_sprite_get_yscale(asset_sprite) != 1<br/>     {
+    <br/>     layer_sprite_xscale(asset_sprite, 1);<br/>     layer_sprite_yscale(asset_sprite, 1);<br/>     }
+  </p><p> Le code ci-dessus vérifiera l&#39;élément de sprite affecté à la couche sur laquelle se trouve l&#39;instance exécutant le code et s&#39;il est mis à l&#39;échelle dans les deux sens, il définira à la fois l&#39;échelle de l&#39;axe x et l&#39;échelle de l&#39;axe y sur 1. </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> Retour: <a href="Sprite_Layers.htm">Couches de sprite</a></div><div style="float:right"> Suivant:<a href="layer_sprite_angle.htm">layer_sprite_angle</a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
+  </div>
+  <!-- KEYWORDS
+layer_sprite_yscale
+-->
+  <!-- TAGS
+layer_sprite_yscale
+-->
+</body>
+</html>

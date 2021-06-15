@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>audio_get_listener_info</title>
+  <meta name="generator" content="Adobe RoboHelp 2019" />
+  <link rel="stylesheet" href="../../../../../assets/css/default.css" type="text/css" />
+  <meta name="rh-authors" content="Mark Alexander" />
+  <meta name="topic-comment" content="Page expliquant la fonction audio_get_listener_info" />
+  <meta name="rh-index-keywords" content="audio_get_listener_info" />
+  <meta name="search-keywords" content="audio_get_listener_info" />
+</head>
+<body><!--<div class="body-scroll" style="top: 150px;">--><h1>audio_get_listener_info</h1><p> Cette fonction créera une <a href="../../../Data_Structures/DS_Maps/DS_Maps.htm">carte DS</a> et la remplira avec des informations pour l&#39;auditeur donné.</p><p class="note"> <b>REMARQUE:</b> vous êtes responsable de la destruction du <tt>DS Map</tt> en utilisant la fonction appropriée.</p><p> La carte DS contiendra les clés suivantes:</p><ul class="colour"><li> &quot; <strong>name</strong> &quot; - Le nom de l&#39;écouteur, sous forme de chaîne, &quot;default&quot; étant le nom d&#39;écouteur standard sur la plupart des plates-formes cibles</li><li> &quot; <strong>mask</strong> &quot; - Le masque de bits pour l&#39;auditeur</li><li> &quot; <strong>index</strong> &quot; - La valeur d&#39;index unique de l&#39;écouteur</li></ul><p> La valeur de masque peut être utilisée pour définir un son ou un émetteur à jouer à partir de plusieurs auditeurs à la fois, en utilisant simplement le bitwise <tt>or</tt> &quot;|&quot; pour générer un masque pour le son (voir l&#39;exemple de code ci-dessous), tandis que l&#39;index est utilisé pour définir les propriétés telles que la position ou la vitesse pour un auditeur donné à l&#39;aide de fonctions telles que <a href="audio_listener_set_position.htm"><tt>audio_listener_set_position()</tt></a>.</p><p></p><h4> Syntaxe:</h4><p class="code">audio_get_listener_info(num);</p><table><tbody><tr><th> Argument</th><th> Description</th></tr><tr><td> <span class="notranslate">num</span></td><td> Le numéro d&#39;auditeur pour lequel obtenir les données.</td></tr></tbody></table><p></p><h4> Retour:</h4><p class="code">ds_map</p><p></p><h4> Exemple:</h4><p class="code">var num = audio_get_listener_count();<br/> var mask = 0; for(var i = 0; i &lt; num; ++i;)<br/>    {
+    <br/>    var info = audio_get_listener_info(i);<br/>    var m = audio_listener_get_data(info[? &quot;mask&quot;]);<br/>    mask = mask | m;<br/>    ds_map_destroy(info);
+    <br/>    }
+    <br/> audio_set_listener_mask(mask);
+  </p><p> Le code ci-dessus vérifie le nombre d&#39;écouteurs disponibles puis les parcourt en boucle obtient leurs bits de masque, qui sont ensuite combinés pour créer un masque de bit unique qui est appliqué à l&#39;écouteur global. </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> Retour: <a href="Audio_Listeners.htm">Auditeurs audio</a></div><div style="float:right"> Suivant:<a href="audio_get_listener_mask.htm">audio_get_listener_mask</a></div><div style="float:right"></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
+  </div>
+  <!-- KEYWORDS
+audio_get_listener_info
+-->
+  <!-- TAGS
+audio_get_listener_info
+-->
+</body>
+</html>

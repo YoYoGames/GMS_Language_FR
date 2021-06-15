@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>ds_map_replace</title>
+  <meta name="generator" content="Adobe RoboHelp 2019" />
+  <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
+  <meta name="rh-authors" content="Mark Alexander" />
+  <meta name="topic-comment" content="Page de référence pour ds_map_replace" />
+  <meta name="rh-index-keywords" content="ds_map_replace" />
+  <meta name="search-keywords" content="ds_map_replace" />
+</head>
+<body><!--<div class="body-scroll" style="top: 150px;">--><h1>ds_map_replace</h1><p> Avec cette fonction, vous pouvez modifier la valeur de la clé donnée dans une carte <span class="misspell-word">DS.</span> Vous fournissez l&#39;index à la carte (tel que renvoyé par la fonction<a href="ds_map_create.htm"><span class="inline">ds_map_create()</span></a> ), puis la clé à remplacer - une chaîne ou un entier - et la valeur par laquelle remplacer la valeur de la clé. Si la clé donnée n&#39;existe <em>pas</em>, elle sera créée pour vous, et si c&#39;est le cas, la valeur actuelle sera remplacée par la nouvelle valeur. La fonction retournera <span class="inline">true</span> si la clé existe et que la valeur est remplacée, et <span class="inline">false</span> si la clé n&#39;existe pas et qu&#39;une nouvelle clé a été créée avec la valeur.</p><p></p><h4> Syntaxe:</h4><p class="code">ds_map_replace( id, key, val );</p><table><tbody><tr><th> Argument</th><th> Description</th></tr><tr><td> <span class="notranslate">id</span></td><td> L&#39;identifiant de la carte à modifier.</td></tr><tr><td> <span class="notranslate">key</span></td><td> La clé avec la valeur qui doit être remplacée par la nouvelle</td></tr><tr><td> <span class="notranslate">val</span></td><td> La nouvelle valeur pour remplacer la valeur donnée par</td></tr></tbody></table><p></p><h4> Retour:</h4><p class="code">Boolean</p><p></p><h4> <b>Exemple:</b></h4><p class="code">ds_map_replace(inventory, &quot;torso&quot;, 55);</p><p> Le code ci-dessus recherche la carte DS pour la clé &quot;torse&quot; et quand il la trouve (ou elle est créée si elle n&#39;existe pas), la valeur actuelle est remplacée par celle spécifiée. </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> Retour: <a href="DS_Maps.htm">DS Maps</a></div><div style="float:right"> Suivant:<a href="ds_map_delete.htm">ds_map_delete</a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
+  </div>
+  <!-- KEYWORDS
+ds_map_replace
+-->
+  <!-- TAGS
+ds_map_replace
+-->
+</body>
+</html>

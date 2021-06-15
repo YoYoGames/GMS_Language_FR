@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>xboxlive_read_player_leaderboard</title>
+  <meta name="generator" content="Adobe RoboHelp 2019" />
+  <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
+  <meta name="rh-authors" content="Mark Alexander" />
+  <meta name="topic-comment" content="Page de référence pour xboxlive_read_player_leaderboard" />
+  <meta name="rh-index-keywords" content="xboxlive_read_player_leaderboard,achievement_filter_all_players,achievement_filter_friends_only,achievement_filter_favorites_only,achievement_filter_friends_alt,achievement_filter_favorites_alt,achievement_leaderboard_info" />
+  <meta name="search-keywords" content="xboxlive_read_player_leaderboard,achievement_filter_all_players,achievement_filter_friends_only,achievement_filter_favorites_only,achievement_filter_friends_alt,achievement_filter_favorites_alt,achievement_leaderboard_info"
+  />
+</head>
+<body><!--<div class="body-scroll" style="top: 150px;">--><h1>xboxlive_read_player_leaderboard</h1><p> La fonction renverra des informations de classement pour le nom d&#39;utilisateur donné. Le classement doit avoir été créé au préalable sur le tableau de bord XDP de votre jeu, et l&#39;appel de la fonction déclenchera un <a href="../../../../The_Asset_Editors/Object_Properties/Async_Events/Social.htm">événement social asynchrone de</a> rappel qui contient le <a href="../../../GML_Overview/Variables/Builtin_Global_Variables/async_load.htm"><tt>async_load</tt></a> carte remplie avec les paires clé / valeur pertinentes. La touche &quot;id&quot; de cette carte DS est utilisée pour identifier le rappel correct (il peut y avoir plus d&#39;une fonction de déclenchement pour un événement asynchrone donné), et le service informatique sera associé à la constante <tt>achievement_leaderboard_info</tt> ainsi qu&#39;un certain nombre d&#39;autres paires clé / valeur. Le contenu exact de la carte est indiqué ci-dessous:</p><ul class="colour"><li> &quot; <b>id</b> &quot; - Pour cette fonction, il devrait être <tt>achievement_leaderboard_info</tt><b></b></li><li> &quot; <b><b>leaderboardid</b></b> &quot; - ID unique du classement tel que défini sur le tableau de bord du fournisseur.</li><li> &quot; <b><b>numentries</b></b> &quot; - Le nombre d&#39;entrées dans le classement que vous avez reçues.</li><li> &quot; <b><b>PlayerN</b></b> &quot; - Le nom du joueur, où &quot;N&quot; est une valeur entière correspondant à sa position dans la liste des entrées du classement.</li><li> &quot; <b><b>PlayeridN</b></b> &quot; - L&#39;identifiant unique du joueur, &quot;N&quot;.</li><li> &quot; <b><b>RankN</b></b> &quot; - Le rang du joueur &quot;N&quot; dans le classement.</li><li> &quot; <b><b>ScoreN</b></b> &quot; - Le score du joueur &quot;N&quot;.</li></ul><p><b></b><br/> La fonction nécessite que vous fournissiez l&#39;une des constantes suivantes pour définir les propriétés du filtre:</p><p></p><table><tbody><tr><th> Constant</th><th> Description</th></tr><tr><td> <span class="notranslate">achievement_filter_all_players</span></td><td> Obtenez tous les scores.</td></tr><tr><td> <span class="notranslate">achievement_filter_friends_only</span></td><td> Obtenez uniquement les scores de vos amis, par ordre croissant.</td></tr><tr><td> <span class="notranslate">achievement_filter_favorites_only</span></td><td> Obtenez uniquement les scores favoris, par ordre croissant</td></tr><tr><td> <span class="notranslate">achievement_filter_friends_alt</span></td><td> Obtenez uniquement les scores de vos amis dans l&#39;ordre décroissant.</td></tr><tr><td> <span class="notranslate">achievement_filter_favorites_alt</span></td><td> Obtenez uniquement les scores des favoris par ordre décroissant.</td></tr></tbody></table><p></p><p></p><h4> Syntaxe:</h4><p class="code">xboxlive_read_player_leaderboard(leaderboard_name, user_name, num_items, friend_filter);</p><table><tbody><tr><th> Argument</th><th> Description</th></tr><tr><td> <span class="notranslate">leaderboard_name</span></td><td> Le nom du classement à lire, tel que configuré sur XDP.</td></tr><tr><td> <span class="notranslate">user_name</span></td><td> Le nom de l&#39;utilisateur à partir duquel lire.</td></tr><tr><td> <span class="notranslate">num_items</span></td><td> Le nombre d&#39;éléments à récupérer.</td></tr><tr><td> <span class="notranslate">friend_filter</span></td><td> L&#39;une des constantes de filtre (voir la description ci-dessus).</td></tr></tbody></table><p></p><h4> Retour:</h4><p class="code">Real</p><p></p><h4> Exemple:</h4><p class="code">var _user = xboxlive_user_for_pad(0);<br/> var _uid = xboxlive_user_id_for_user(_user);<br/> xboxlive_read_player_leaderboard(&quot;MyLeaderboard&quot;, _uid, 10, achievement_filter_all_players);</p><p> Le code ci-dessus obtient l&#39;ID utilisateur, puis l&#39;utilise pour demander toutes les données du joueur pour les 10 premières places du classement donné. </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> Retour: <a href="Stats_And_Leaderboards.htm">Statistiques et classements</a></div><div style="float:right"> Suivant:<a href="xboxlive_fire_event.htm">xboxlive_fire_event</a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
+  </div>
+  <!-- KEYWORDS
+xboxlive_read_player_leaderboard
+achievement_leaderboard_info
+achievement_filter_all_players
+achievement_filter_friends_only
+achievement_filter_favorites_only
+achievement_filter_friends_alt
+achievement_filter_favorites_alt
+-->
+  <!-- TAGS
+xboxlive_read_player_leaderboard
+-->
+</body>
+</html>

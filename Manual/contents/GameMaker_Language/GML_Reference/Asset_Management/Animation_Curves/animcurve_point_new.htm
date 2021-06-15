@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>animcurve_point_new</title>
+  <meta name="generator" content="Adobe RoboHelp 2019" />
+  <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
+  <meta name="rh-authors" content="Mark Alexander" />
+  <meta name="topic-comment" content="Page expliquant la fonction animcurve_point_new" />
+  <meta name="rh-index-keywords" content="animcurve_point_new" />
+  <meta name="search-keywords" content="animcurve_point_new" />
+</head>
+<body><!--<div class="body-scroll" style="top: 150px;">--><h1>animcurve_point_new</h1><p> Cette fonction peut être utilisée pour créer une nouvelle <a href="../../../GML_Overview/Structs.htm">structure de</a> points à ajouter à un canal de courbe d&#39;animation. Une fois créée, une structure de points est vide et vous devez définir les variables suivantes pour générer les données de point:</p><p></p><table><tbody><tr><th> Nom de variable</th><th> Type de données</th><th> Description</th></tr><tr><td> posx</td><td> réel</td><td> La position dans le temps (normalisée de 0 à 1) du point.</td></tr><tr><td> évaluer</td><td> réel</td><td> La valeur du point.</td></tr></tbody></table><p></p><p> Chaque structure de points que vous créez doit être ajoutée à un <a href="../../../GML_Overview/Arrays.htm">tableau</a> et c&#39;est le tableau qui est ajouté à la variable struct &quot;channels&quot; de la structure de canal de courbe d&#39;animation (comme indiqué dans l&#39;exemple ci-dessous).</p><p></p><h4> Syntaxe:</h4><p class="code">animcurve_point_new();</p><p></p><h4> Retour:</h4><p class="code">Struct Reference</p><p></p><h4> Exemple:</h4><p class="code">my_curve = animcurve_create();<br/> my_curve.name = &quot;My_Curve&quot;;<br/> var _channels = array_create(1);<br/> _channels[0] = animcurve_channel_new();<br/> _channels[0].name = &quot;alpha&quot;;<br/> _channels[0].type = animcurvetype_catmullrom;<br/>    _channels[0].iterations = 8;<br/> var _points = array_create(3);<br/> _points[0] = animcurve_point_new();<br/> _points[0].posx = 0;<br/> _points[0].value = 0;<br/> _points[1] = animcurve_point_new();<br/> _points[1].posx = 0.5;<br/> _points[1].value
+    = 1;<br/> _points[2] = animcurve_point_new();<br/> _points[2].posx = 1;<br/> _points[2].value = 0;<br/> _channels[0].points = _points;<br/> my_curve.channels = _channels;</p><p> Le code ci-dessus crée une nouvelle structure de courbe d&#39;animation et la stocke dans la variable &quot;my_curve&quot;. Cette structure est ensuite remplie avec un nom et un tableau de canaux. Le tableau de canaux contient un seul canal avec trois points. </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> Retour: <a href="Animation_Curves.htm">Courbes d&#39;animation</a></div><div style="float:right"> Suivant:<a href="animcurve_destroy.htm">animcurve_destroy</a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
+  </div>
+  <!-- KEYWORDS
+animcurve_point_new
+-->
+  <!-- TAGS
+animcurve_point_new
+-->
+</body>
+</html>

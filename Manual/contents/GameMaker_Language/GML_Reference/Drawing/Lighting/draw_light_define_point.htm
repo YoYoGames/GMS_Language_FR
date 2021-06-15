@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>draw_light_define_point</title>
+  <meta name="generator" content="Adobe RoboHelp 2019" />
+  <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
+  <meta name="rh-authors" content="Mark Alexander" />
+  <meta name="topic-comment" content="Page de référence pour draw_light_define_point" />
+  <meta name="rh-index-keywords" content="draw_light_define_point" />
+  <meta name="search-keywords" content="draw_light_define_point" />
+</head>
+<body><!--<div class="body-scroll" style="top: 150px;">--><h1>draw_light_define_point</h1><p> Cette fonction permet de définir une lumière de position, où vous pouvez définir la position x, y et z de la lumière, la plage de lumière et sa couleur (ce qui affectera également l&#39;intensité perçue de la lumière car certaines couleurs semblent plus &quot;foncées&quot; que d&#39;autres ). Vous devez également donner à la lumière un numéro d&#39;index qui sera utilisé dans d&#39;autres fonctions pour la référencer.<b></b></p><p class="note"> <b>REMARQUE</b>: Il n&#39;y a que 8 voyants matériels disponibles, donc seuls 8 voyants définis peuvent être activés à la fois (bien que d&#39;autres puissent être définis).</p><p></p><h4> Syntaxe:</h4><p class="code">draw_light_define_point(ind, x, y, z, range, col);</p><table><tbody><tr><th> Argument</th><th> Description</th></tr><tr><td> <span class="notranslate">ind</span></td><td> Le numéro d&#39;index de la lumière (arbitraire)</td></tr><tr><td> <span class="notranslate">x</span></td><td> La position x de la lumière</td></tr><tr><td> <span class="notranslate">y</span></td><td> La position y de la lumière</td></tr><tr><td> <span class="notranslate">z</span></td><td> La position z de la lumière</td></tr><tr><td> <span class="notranslate">range</span></td><td> La plage de lumière (en pixels)</td></tr><tr><td> <span class="notranslate">col</span></td><td> La couleur à utiliser pour la lumière (une valeur constante, réelle ou hexadécimale).</td></tr></tbody></table><p></p><h4> Retour:</h4><p class="code">N/A</p><p></p><h4> Exemple:</h4><p class="code">draw_set_lighting(true);<br/> draw_light_define_point(1, 200, 123, 50, 2000, c_white);<br/> draw_light_enable(1, true);</p><p> Le code ci-dessus activera l&#39;éclairage pour toute la scène, définira ensuite une lumière blanche à un point spécifique de l&#39;espace de la pièce, puis allumera finalement cette lumière. </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> Retour: <a href="Lighting.htm">Éclairage</a></div><div style="float:right"> Suivant:<a href="draw_light_define_direction.htm">draw_light_define_direction</a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
+  </div>
+  <!-- KEYWORDS
+draw_light_define_point
+-->
+  <!-- TAGS
+draw_light_define_point
+-->
+</body>
+</html>
