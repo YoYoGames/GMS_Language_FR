@@ -21,7 +21,7 @@
    <strong>Paramètres de construction</strong>. Vous devez remplir les informations sur le produit, qui comprennent le <strong>nom d'affichage</strong> du projet, les informations sur le paquet, qui consistent en un <strong>domaine</strong>, une <strong>société </strong>et un <strong>produit</strong>.
     Les informations sur le paquet ne peuvent être constituées que de lettres de A à Z et de chiffres de 0 à 9, sans symboles ni autres caractères spéciaux, et ne doivent pas comporter de majuscules. Ces informations seront ensuite utilisées pour générer un ID de paquet au format
     &quot;<span class="inline">com.company.myappname</span>&quot;.</p>
-  <p class="note"><strong>REMARQUE</strong>: Si vous avez déjà configuré les <a href="Android.htm"><span class="notranslate">Android</span></a> options de jeu de la cible, vous pouvez cliquer sur le bouton &quot; Sync<strong>from <span class="notranslate">Android &quot;</span></strong> en haut pour transférer les informations pertinentes de la <span class="notranslate">cible</span> Android
+  <p class="note"><strong>REMARQUE</strong>: Si vous avez déjà configuré les <a href="Android.htm"><span class="notranslate">Android</span></a> options de jeu de la cible, vous pouvez cliquer sur le bouton &quot; Sync<strong>from <span class="notranslate">Android &quot;</span></strong> en haut pour transférer les informations pertinentes de la <span class="notranslate">cible</span> Android vers l'Amazon Fire.
     vers l'<span class="notranslate">Amazon Fire</span>.</p>
   <p>Vous devez ensuite définir les <strong>outils de construction</strong> ainsi que les versions <strong>Target</strong>, <strong>Minimum </strong>et <strong>Compile SDK</strong>.</p>
   <p class="note"><strong>REMARQUE</strong>: il existe également une option pour la version &quot;<strong>Support Library &quot;</strong> à utiliser. À partir de <span class="notranslate">GameMaker Studio</span> v2.2.4 et plus, cette option n'est plus nécessaire et toute valeur utilisée ici sera ignorée. Ce paramètre est conservé
@@ -66,14 +66,14 @@
   <ul class="colour">
     <li><strong>Interpoler les couleurs entre les pixels</strong>: Active l'<a class="glossterm" data-glossterm="interpolation linéaire" href="Ubuntu.htm#">interpolation linéaire</a>, qui a pour effet de &quot;lisser&quot; les pixels. Pour des graphiques de pixels nets, cette option doit être désactivée.
       désactivé, mais si vous avez de beaux mélanges alpha et des graphiques aux bords lissés, il est préférable de l'activer. Cette option est activée par défaut.</li>
-    <li><strong>Profondeur de couleur de l'écran</strong>: Cette option peut être utilisée pour définir la profondeur de couleur pour le rendu à 16 ou 24 bits. Cela affectera la compatibilité avec certains appareils plus anciens s'il est réglé sur 24 bits, et augmentera également l'<em>ashmem </em>qui est nécessaire (c'est la mémoire partagée sur les appareils AmazonFire).
+    <li><strong>Profondeur de couleur de l'écran</strong>: Ceci peut être utilisé pour définir la profondeur de couleur pour le rendu à 16 ou 24 bits. Cela affectera la compatibilité avec certains appareils plus anciens s'il est réglé sur 24 bits, et augmentera également l'<em>ashmem </em>qui est nécessaire (c'est la mémoire partagée sur les appareils AmazonFire).
       est nécessaire (il s'agit de la mémoire partagée sur les appareils <span class="notranslate">AmazonFire</span>).</li>
     <li><strong>Mise à l'échelle</strong>: Vous pouvez choisir ici de mettre à l'échelle le canevas de dessin en conservant le rapport hauteur/largeur de l'écran de l'appareil - en ajoutant un &quot;rembourrage&quot; autour des bords pour s'adapter à l'écran - ou vous pouvez choisir d'étirer le canevas de dessin pour l'adapter à l'écran de l'appareil.
       l'écran de l'appareil.</li>
   </ul>
   <p>Enfin, il est possible de définir la taille de la <a class="glossterm" data-glossterm="page de texture" href="macOS.htm#">page de texture</a>. La taille par défaut (et la plus compatible) est de 2048x2048, mais vous pouvez choisir entre 256x256 et 8192x8192. Le site
     est également un bouton marqué <strong><strong>Prévisualisation </strong></strong>qui génère les pages de texture pour cette plate-forme et ouvre une fenêtre pour que vous puissiez voir à quoi elles ressemblent. Cela peut être très utile si vous souhaitez voir comment les pages de texture sont structurées et éviter d'avoir des pages de texture plus grandes.
-    structurées et éviter d'avoir des pages de texture plus grandes (ou plus petites) que nécessaire. Pour plus d'informations sur les pages de texture, voir <a href="../Texture_Information/Texture_Pages.htm">ici</a>.</p>
+    structurées et éviter d'avoir des pages de texture plus grandes (ou plus petites) que nécessaire. Pour plus d'informations sur les pages de texture, veuillez <a href="../Texture_Information/Texture_Pages.htm">cliquer ici</a>.</p>
   <p class="note"><strong>NOTE</strong>: Sachez que plus la taille de la page de texture est grande, moins votre jeu sera compatible avec les différents navigateurs et appareils.</p>
   <p> </p>
   <h2>Icônes</h2>
@@ -104,7 +104,7 @@
     <li><span class="inline">READ_PHONE_STATE</span>: Autorise l'accès en lecture seule à l'état du téléphone.</li>
     <li><span class="inline">ACCESS_NETWORK_STATE</span>: Permet à votre jeu d'accéder à des informations sur les réseaux.</li>
     <li><span class="inline">INTERNET</span>: Permet à votre jeu d'ouvrir des sockets réseau.</li>
-    <li><span class="inline">BLUETOOTH</span>: Permet à votre jeu de se connecter à des appareils Bluetooth jumelés.</li>
+    <li><span class="inline">BLUETOOTH</span>: Permet à votre jeu de se connecter à des appareils Bluetooth appariés.</li>
     <li><span class="inline">RECORD_AUDIO</span>: Permet à votre jeu d'enregistrer l'entrée audio du microphone.</li>
   </ul>
   <p class="note"><strong>REMARQUE</strong>: si vous n'êtes pas sûr d'avoir besoin de ces éléments, vous devriez probablement les laisser décochés par défaut et laisser <span class="notranslate">GameMaker Studio 2</span> s'occuper des autorisations pour votre jeu.</p>
