@@ -4,7 +4,7 @@
   Lorsque vous créez des jeux, il est important que vous testiez le fichier exécutable pour vous assurer que la compilation finale est correcte et ne présente pas d'erreurs ou de différences imprévues. Cependant, la création d'un exécutable signifie que, puisque vous n'avez pas accès à la console de débogage ni à la fenêtre du compilateur, il peut être difficile d'identifier et de déboguer les problèmes.
     à la fenêtre du compilateur, il peut être difficile d'identifier et de déboguer tout problème que vous pourriez trouver. Il existe cependant une solution à ce problème, qui consiste à utiliser des paramètres de ligne de commande pour définir certaines propriétés lorsque la version exécutable du jeu est exécutée.
     le jeu est exécuté, ce qui vous permet de créer des fichiers journaux de sortie et de tester d'autres situations spéciales.
-  NOTE: Ceci est disponible sur le module Windows module cible uniquement.
+  REMARQUE: Cette fonction n'est disponible que sur le module Windows module cible standard .
   Pour que cela fonctionne, vous devez d'abord créer un exécutable Windows de votre jeu et l'installer sur votre machine de test. Une fois cela fait, vous devez créer un raccourci vers le jeu sur le bureau. C'est là que nous ajouterons les paramètres
     à transmettre à *.exe (pour créer un raccourci, faites un clic droit sur  l'exécutable du jeu, puis sélectionnez Send to >
    Bureau (créer un raccourci)).
@@ -33,7 +33,7 @@
     -game <filename>: charge le fichier de jeu donné
     Pourquoi l'utiliser ? Normalement, vous ne l'utiliseriez pas, mais si vous souhaitez avoir plus d'une version de votre jeu en même temps, vous pouvez le faire en utilisant cette méthode, ce qui rend les tests comparatifs A/B beaucoup plus faciles. Avec cette méthode, vous pouvez faire un test ciblé avec quelqu'un
       ou, en tant que concepteur, avoir une meilleure idée des choses en faisant des tests côte à côte.
-    Pour le mettre en place, vous devrez connaître quelques éléments au préalable. Pour commencer, vous aurez besoin du chemin d'accès au Runner lui-même. Il se trouve dans le dossier Program Data de votre système d'exploitation Windows (il peut être caché par défaut.
+    Pour le mettre en place, vous devez connaître quelques éléments au préalable. Pour commencer, vous aurez besoin du chemin d'accès au Runner lui-même. Il se trouve dans le dossier Program Data de votre système d'exploitation Windows (il peut être caché par défaut.
       vous devrez donc modifier les propriétés d'affichage pour le voir), avec un format typique comme celui-ci :
     C:\ProgramData\GameMakerStudio2\Cache\runtimes\< runtime_version>\windows\Runner.exe
     Notez que le dossier runtime_version dépendra des runtimes que vous avez actuellement installés. Vous aurez également besoin du chemin d'accès au fichier <yourgame>.win, car c'est vers lui que nous allons diriger le runner.

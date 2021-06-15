@@ -80,7 +80,7 @@
     
     gamepad_id = -1 ; for (var i = 0 ; i < 12 ; i += 1 ;) { if gamepad_is_connected(i) { gamepad_id = i ; gamepad_set_axis_deadzone(gamepad_id, 0.2) ; break ; }  }
     
-    Remarquez que dans le code ci-dessus, nous avons défini le paramètre  deadzone pour le gamepad. En effet, les sticks analogiques des différentes marques de manettes de jeu ont une sensibilité différente.
+    Remarquez que dans le code ci-dessus, nous avons défini le paramètre  zone morte pour le gamepad. Cela s'explique par le fait que les sticks analogiques des différentes marques de manettes de jeu ont une sensibilité différente.
       ils peuvent être si sensibles que si vous ne définissez pas de zone morte, ils peuvent provoquer des mouvements indésirables dans vos jeux. Nous définissons donc la zone morte à une valeur telle que 0,2 pour indiquer à GameMaker Studio 2 d'ignorer toute valeur de manette de jeu inférieure à cette valeur absolue.
     Pour ajouter le mouvement réel, nous aurons besoin d'un Step Event, donc ajoutez-le maintenant et donnez-lui le DnD™ ou GML suivant :
     

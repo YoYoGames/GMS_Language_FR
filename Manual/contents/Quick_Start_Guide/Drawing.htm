@@ -116,7 +116,7 @@
       sur la variable &quot;nombre&quot; que nous voulons dessiner. Cela s'explique par le fait que tout texte doit être composé de <em>caractères</em>, et non de valeurs, et que nous devons donc utiliser cette fonction/action pour convertir la valeur du nombre en caractères que nous souhaitons
       dessiner. Dans ce cas, nous prenons le nombre aléatoire que nous avons généré et le transformons en une &quot;chaîne&quot; de caractères qui peut être dessinée. Notez également que nous avons défini l'<strong>alignement</strong> du texte. Cela indique tout simplement à <span class="notranslate">GameMaker Studio 2</span> où commencer à
       Dans le cas présent, nous souhaitons que le texte soit centré sur l'axe des x.</p>
-    <p class="dropspot">Ajoutez un certain nombre d'instances de l'objet dans l'éditeur de pièce, puis appuyez sur le bouton Play <img alt="Play Icon" class="icon" src="../assets/Images/Icons/Icon_PlayGame.png"> en haut de l'IDE. Vous devriez voir quelque chose comme ceci :</p>
+    <p class="dropspot">Ajoutez un certain nombre d'instances de l'objet dans l'éditeur de pièce et appuyez ensuite sur le bouton Play <img alt="Play Icon" class="icon" src="../assets/Images/Icons/Icon_PlayGame.png"> en haut de l'IDE. Vous devriez voir quelque chose comme ceci :</p>
     <p class="dropspot"><img alt="Sprites Being Drawn Along With Text" class="center" src="../assets/Images/QS_Guide/QS_DrawExample_5_1.png" /></p>
     <p class="dropspot">Dans tous les exemples jusqu'à présent, nous avons dessiné le sprite assigné à l'instance, mais cela ne doit pas toujours être le cas. <strong>Vous pouvez dessiner ce que vous voulez</strong> dans l'événement draw, quel que soit le sprite assigné. Pour illustrer ce point
       Pour illustrer ce point, nous allons modifier le code que nous avons actuellement en supprimant l'appel à <span class="inline">draw_self()</span> et en le remplaçant par une fonction permettant de dessiner une ellipse colorée, comme ceci :</p>
@@ -150,11 +150,11 @@
     <p class="code">player_score = 0 ;</p>
     <p class="dropspot">Nous voulons également ajouter un <strong>événement Keyboard Down &lt;Space&gt; à</strong> l'objet, car nous l'utiliserons pour incrémenter le score chaque fois que vous appuyez sur la touche Espace.</p>
     <p class="dropspot"><img alt="Adding A Space Key Pressed Event" class="center" src="../assets/Images/QS_Guide/QS_Add_SpaceKeyPressEvent.png" /></p>
-    <p class="dropspot">Dans ce cas, ajoutez les éléments suivants :</p>
+    <p class="dropspot">Dans ce cas, ajoutez ce qui suit :</p>
     <p class="dropspot"><img alt="DnD Actions In The Space Key Event" class="center" src="../assets/Images/QS_Guide/QS_DrawExample_DnD_6_2.png" /></p>
     <p class="code">var _val = irandom(100) ;<br> player_score = player_score + _val ;</p>
     <p class="dropspot">Enfin, dessinons la valeur du score dans l'événement Draw GUI, comme ceci :</p>
-    <p class="dropspot">Dans ce cas, ajoutez les éléments suivants :</p>
+    <p class="dropspot">Dans ce cas, ajoutez ce qui suit :</p>
     <p class="dropspot"><img alt="Drawing Text To The GUI Layer Using DnD" class="center" src="../assets/Images/QS_Guide/QS_DrawExample_DnD_6_3.png" /></p>
     <p class="code">draw_set_halign(fa_left) ;<br> draw_set_colour(c_yellow) ;
       <br> draw_text(32, 32, &quot;SCORE :&quot;) ;<br> draw_set_colour(c_white) ;
@@ -178,7 +178,7 @@
       à la place, nous n'avons pas à nous soucier de tels changements à l'avenir, car le code s'adaptera automatiquement à la taille finale de la couche GUI, quelle qu'elle soit.</p>
     <p class="dropspot">Ensuite, nous voulons ajouter un <strong>événement Keyboard Pressed &lt;Enter&gt; à</strong> l'objet, car nous l'utiliserons pour changer le nombre de vies chaque fois que la touche Entrée sera pressée :</p>
     <p class="dropspot"><img alt="Adding An Enter Key Pressed Event" class="center" src="../assets/Images/QS_Guide/QS_Add_EnterKeyPressEvent.png" /></p>
-    <p class="dropspot">Dans ce cas, ajoutez ce qui suit :</p>
+    <p class="dropspot">Dans ce cas, ajoutez les éléments suivants :</p>
     <p class="dropspot"><img alt="DnD In The Enter Key Down Event" class="center" src="../assets/Images/QS_Guide/QS_DrawExample_DnD_7_2.png" /></p>
     <p class="code">player_lives = player_lives -1 ;<br> if player_lives &lt; 0<br> {<br> player_lives = 3 ;<br> }</p>
     <p class="dropspot">Enfin, nous devons dessiner les sprites sur l'écran. Pour cela, nous allons utiliser une boucle &quot; <span class="inline">for</span>&quot; (informations sur l'utilisation de GML ici et <span class="notranslate">pour</span> DnD™
