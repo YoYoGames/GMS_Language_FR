@@ -1,21 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <preset>
   <content>
-    <index type="boolean">true</index>
     <toc>
       <path>../../toc/Default.toc</path>
       <name>Default</name>
     </toc>
-    <glossary>
-      <path>../../glossary/Default.glo</path>
-      <name>Default</name>
-    </glossary>
     <masterpage>
       <path>../../contents/assets/masterpages/pdf.htt</path>
     </masterpage>
     <brs type="array"></brs>
     <mapFiles type="array"></mapFiles>
-    <generatetoc type="boolean">true</generatetoc>
     <includereftopics type="boolean">true</includereftopics>
   </content>
   <starterPage>Default.pdf</starterPage>
@@ -31,17 +25,21 @@
   <name>PDF</name>
   <type>pdf</type>
   <title>Blank Project</title>
-  <defaultTopic></defaultTopic>
   <pdf>
     <multiHeaders type="boolean">false</multiHeaders>
     <margin type="array">
-      <marginitem type="number">15</marginitem>
-      <marginitem type="number">15</marginitem>
-      <marginitem type="number">15</marginitem>
-      <marginitem type="number">15</marginitem>
+      <marginitem>15mm</marginitem>
+      <marginitem>15mm</marginitem>
+      <marginitem>15mm</marginitem>
+      <marginitem>15mm</marginitem>
     </margin>
     <multiheaders type="boolean">false</multiheaders>
-    <downloadTimeout type="number">200</downloadTimeout>
+    <useTopicsAndChaptersForToc type="boolean">true</useTopicsAndChaptersForToc>
+    <portraitLayout type="boolean">true</portraitLayout>
+    <startTopicsFromNewPage type="boolean">true</startTopicsFromNewPage>
+    <startChapterFromNewPage type="boolean">true</startChapterFromNewPage>
+    <mergePdfs type="boolean">true</mergePdfs>
+    <embeddFonts type="boolean">true</embeddFonts>
   </pdf>
   <outputPath>C:/Users/Kai/Documents/My RoboHelp Projects/outputs/GMS2 Manual/PDF</outputPath>
   <patchHomepage type="boolean">true</patchHomepage>

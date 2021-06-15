@@ -84,9 +84,9 @@
       un événement de <strong>création</strong>. Dans l'événement de création, ajoutez les éléments <span class="notranslate">DnD™</span>ou <span class="notranslate">GML</span> suivants :</p>
     <p class="dropspot"><img alt="Set Draw Angle Variable In DnD" class="center" src="../assets/Images/QS_Guide/QS_DrawExample_DnD_4_1.png" /></p>
     <p class="code">draw_angle = 0 ;</p>
-    <p class="dropspot">Nous allons utiliser cette variable pour faire tourner &quot; <span class="inline">spr_Two</span>&quot; dans le temps et le dessiner en superposition sur le sprite attribué à l'objet (&quot; <span class="inline">spr_One</span>&quot;). Pour ce faire, nous devons ajouter un <strong>Draw Event </strong>à l'objet.
+    <p class="dropspot">Nous allons utiliser cette variable pour faire pivoter &quot; <span class="inline">spr_Two</span>&quot; dans le temps, et le dessiner en superposition sur le sprite attribué à l'objet (&quot; <span class="inline">spr_One</span>&quot;). Pour ce faire, nous devons ajouter un <strong>Draw Event </strong>à l'objet.
       l'objet. En faisant cela, nous indiquons à <span class="notranslate">GameMaker Studio 2</span> que nous voulons prendre en charge ce que l'instance dessine, ce qui signifie que notre code inclura un appel à la fonction <a href="../GameMaker_Language/GML_Reference/Drawing/Sprites_And_Tiles/draw_self.htm"><span class="inline">draw_self()</span></a> fonction
-      ou <a href="../Drag_And_Drop/Drag_And_Drop_Reference/Drawing/Draw_Self.htm"><strong>Draw Self</strong></a> action. Cette action reproduit simplement ce que l'objet fait lorsqu'aucun Draw Event n'est présent et qu'il dessine par défaut le sprite assigné. Nous allons
+      ou <a href="../Drag_And_Drop/Drag_And_Drop_Reference/Drawing/Draw_Self.htm"><strong>Draw Self</strong></a> action. Cette action reproduit simplement ce que fait l'objet lorsqu'aucun Draw Event n'est présent et qu'il dessine par défaut le sprite attribué. Nous allons
       ensuite dessiner le deuxième sprite que nous voulons utiliser comme sprite de superposition qui tourne. Le <span class="notranslate">DnD™</span>et le <span class="notranslate">GML</span> ressemblent à ceci :</p>
     <p class="dropspot"><img alt="Draw Two Sprites With DnD" class="center" src="../assets/Images/QS_Guide/QS_DrawExample_DnD_4_2.png" /></p>
     <p class="code">draw_self() ;<br> draw_angle = draw_angle + 0.5 ;<br> draw_sprite_ext(spr_Two, 0, x, y, 1, 1, draw_angle, c_red, 1) ;</p>
@@ -159,7 +159,7 @@
     <p class="code">draw_set_halign(fa_left) ;<br> draw_set_colour(c_yellow) ;
       <br> draw_text(32, 32, &quot;SCORE :&quot;) ;<br> draw_set_colour(c_white) ;
       <br> var _str = string(player_score) ;<br> draw_text_transformed(32, 48, _str, 2, 2, 0) ;</p>
-    <p class="dropspot">Vous remarquerez que nous avons utilisé des valeurs codées en dur <a class="glossterm" data-glossterm="hard-coded" href="#">(ou</a> fixes) pour la position x/y du texte à dessiner, puisque nous n'avons pas besoin qu'il soit relatif à une instance quelconque, puisque nous dessinons
+    <p class="dropspot">Vous remarquerez que nous avons utilisé des valeurs codées en dur <a class="glossterm" data-glossterm="codé en dur" href="#">(ou</a> fixes) pour la position x/y du texte à dessiner, puisque nous n'avons pas besoin qu'il soit relatif à une instance quelconque, puisque nous dessinons
       sur la couche GUI. Nous avons également utilisé la fonction &quot;set colour&quot; pour changer la couleur du texte, ainsi que la fonction &quot;transformed&quot; pour agrandir la valeur du score, ce qui illustre comment vous pouvez personnaliser les éléments de texte dans vos propres jeux.
       éléments de texte dans vos propres jeux.</p>
     <p class="dropspot">Ajoutez maintenant une seule instance de cet objet dans votre pièce et appuyez sur le bouton <strong>Play </strong> <img alt="Play Icon" class="icon" src="../assets/Images/Icons/Icon_PlayGame.png">. Lorsque le jeu se déroule, appuyez et relâchez la touche <span class="inline">&lt;Space&gt;</span> et vous devriez voir la valeur du score augmenter.</p>
@@ -178,7 +178,7 @@
       à la place, nous n'avons pas à nous soucier de tels changements à l'avenir, car le code s'adaptera automatiquement à la taille finale de la couche GUI, quelle qu'elle soit.</p>
     <p class="dropspot">Ensuite, nous voulons ajouter un <strong>événement Keyboard Pressed &lt;Enter&gt; à</strong> l'objet, car nous l'utiliserons pour changer le nombre de vies chaque fois que la touche Entrée sera pressée :</p>
     <p class="dropspot"><img alt="Adding An Enter Key Pressed Event" class="center" src="../assets/Images/QS_Guide/QS_Add_EnterKeyPressEvent.png" /></p>
-    <p class="dropspot">Dans ce cas, ajoutez les éléments suivants :</p>
+    <p class="dropspot">Dans ce cas, ajoutez ce qui suit :</p>
     <p class="dropspot"><img alt="DnD In The Enter Key Down Event" class="center" src="../assets/Images/QS_Guide/QS_DrawExample_DnD_7_2.png" /></p>
     <p class="code">player_lives = player_lives -1 ;<br> if player_lives &lt; 0<br> {<br> player_lives = 3 ;<br> }</p>
     <p class="dropspot">Enfin, nous devons dessiner les sprites sur l'écran. Pour cela, nous allons utiliser une boucle &quot; <span class="inline">for</span>&quot; (informations sur l'utilisation de GML ici et <span class="notranslate">pour</span> DnD™

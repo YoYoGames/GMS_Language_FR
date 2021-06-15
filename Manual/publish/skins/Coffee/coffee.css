@@ -1,4 +1,4 @@
-﻿@import url("https://use.typekit.net/alq1bmp.css");
+@import url("https://use.typekit.net/alq1bmp.css");
 body {
 	font-family: 'Open Sans', Arial, Helvetica, sans-serif;
 	background: #FFFFFF;
@@ -1573,4 +1573,8 @@ body[dir=rtl] div.overlay.search a.nolink[href*='.htm'] div.wSearchResultTitle {
 	background-position: right top;
 	padding-left: 0;
 	padding-right: 1.5rem;
+}
+div.overlay.search .wSearchResultPaginatorLabel{
+	font-size: 0.9rem;
+	color: #404040;
 }

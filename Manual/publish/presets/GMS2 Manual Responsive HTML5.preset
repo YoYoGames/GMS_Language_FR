@@ -16,7 +16,7 @@
   </content>
   <type>html5</type>
   <glosstermEffect type="number">2</glosstermEffect>
-  <outputPath>I:/yyoutput/</outputPath>
+  <outputPath>I:/yyoutput2020/</outputPath>
   <name>GMS2 Manual Responsive HTML5</name>
   <starterPage>index.htm</starterPage>
   <defaultTopic>
@@ -25,7 +25,7 @@
   </defaultTopic>
   <search>
     <suggestion type="boolean">true</suggestion>
-    <context type="boolean">true</context>
+    <context>description</context>
     <contextLimit type="number">100</contextLimit>
     <glossary type="boolean">true</glossary>
     <searchsubstrings type="boolean">true</searchsubstrings>

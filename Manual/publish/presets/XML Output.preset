@@ -24,7 +24,7 @@
     <glossary type="boolean">true</glossary>
   </search>
   <name>XML Output</name>
-  <type>xml</type>
+  <type>kb</type>
   <title>Blank Project</title>
   <outputPath>C:/Users/Kai/Documents/My RoboHelp Projects/outputs/GMS2 Manual/XML Output</outputPath>
   <generateMapFiles type="boolean">true</generateMapFiles>

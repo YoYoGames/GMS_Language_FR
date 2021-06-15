@@ -118,5 +118,9 @@
   "contents\\Settings\\Texture_Information\\Texture_Pages.htm": {
     "fileHash": "7C58BEF47D615CEC54EEFC54A931657A",
     "fileSize": 7642
+  },
+  "toc\\Default.toc": {
+    "fileHash": "7D4C476877208E9E5DF559875137B3B9",
+    "fileSize": 432220
   }
 }

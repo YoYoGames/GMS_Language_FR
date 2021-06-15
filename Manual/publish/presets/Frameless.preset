@@ -16,7 +16,7 @@
   </content>
   <starterPage>index.htm</starterPage>
   <search>
-    <context type="boolean">false</context>
+    <context>keyword</context>
     <contextLimit>100</contextLimit>
     <suggestion type="boolean">true</suggestion>
     <fuzzy type="boolean">true</fuzzy>

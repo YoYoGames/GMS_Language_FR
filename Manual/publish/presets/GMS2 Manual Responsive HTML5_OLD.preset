@@ -25,7 +25,7 @@
   </defaultTopic>
   <search>
     <suggestion type="boolean">true</suggestion>
-    <context type="boolean">true</context>
+    <context>description</context>
     <contextLimit type="number">100</contextLimit>
     <glossary type="boolean">false</glossary>
     <fuzzy type="boolean">true</fuzzy>

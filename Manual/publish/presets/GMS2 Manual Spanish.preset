@@ -36,7 +36,7 @@
   </mobileapp>
   <search>
     <suggestion type="boolean">true</suggestion>
-    <context type="boolean">true</context>
+    <context>description</context>
     <contextLimit type="number">100</contextLimit>
     <maxSearchresults type="number">20</maxSearchresults>
     <glossary type="boolean">false</glossary>
