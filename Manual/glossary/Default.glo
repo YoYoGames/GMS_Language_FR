@@ -174,7 +174,7 @@
 <glossterm>opérateur</glossterm>
 <glossdef>Un opérateur est un terme utilisé pour désigner quelque chose qui peut manipuler différents opérandes. Dans l'expression A B - C, et - sont les opérateurs. Des exemples de différents opérateurs sont (addition), - (sous-trtaction), = (égal), != (non égal) et >= (supérieur ou égal à), mais il en existe bien d'autres.</glossdef></glossentry>
 <glossentry id="Default_parameter_key">
-<glossterm>touche de paramètre</glossterm>
+<glossterm>clé de paramétrage</glossterm>
 <glossdef>Une clé de paramètre (également appelée image-clé) est un point sur la ligne de temps dans la feuille de calcul où un changement de la valeur d'un paramètre est défini.</glossdef></glossentry>
 <glossentry id="Default_parameter_tracks">
 <glossterm>pistes de paramètres</glossterm>
@@ -268,7 +268,7 @@
 <glossdef>Abréviation de "Universal Resource Locator", il s'agit en fait de l'adresse d'un élément sur l'internet.</glossdef></glossentry>
 <glossentry id="Default_v-sync">
 <glossterm>v-sync</glossterm>
-<glossdef>La V-sync ou synchronisation verticale est utilisée pour synchroniser la vitesse de mise à jour de votre jeu avec la fréquence de rafraîchissement du moniteur. Cela permet de réduire le déchirement de l'écran - qui se produit lorsque votre écran affiche des parties de plusieurs images en une seule fois - mais peut également entraîner des problèmes de performances ou des problèmes sur les moniteurs à taux de rafraîchissement élevé.</glossdef></glossentry>
+<glossdef>La V-sync ou synchronisation verticale est utilisée pour synchroniser la vitesse de mise à jour de votre jeu avec la fréquence de rafraîchissement du moniteur. Cela permet de réduire le déchirement de l'écran - qui se produit lorsque votre écran affiche des portions de plusieurs images en une seule fois - mais peut également entraîner des problèmes de performances ou des problèmes sur les moniteurs à taux de rafraîchissement élevé.</glossdef></glossentry>
 <glossentry id="Default_variable">
 <glossterm>variable</glossterm>
 <glossdef>Une variable est une valeur nommée dans un programme qui peut être modifiée, stockée et affichée à tout moment. Par exemple, si nous avons une variable entière nommée XYZ et qu'elle stocke une valeur 10, nous pouvons alors faire des choses comme A = XYZ 10, ce qui donnera à la variable A une valeur de 20, puisque XYZ vaut 10 et que nous lui ajoutons 10. Vous pouvez également modifier les valeurs des variables à l'aide d'opérateurs. Ainsi, en faisant XYZ = XYZ 100, la valeur de notre variable XYZ sera égale à 110. Les variables peuvent également être utilisées pour stocker des identifiants et des références à différents actifs.</glossdef></glossentry>

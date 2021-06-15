@@ -21,7 +21,7 @@
    <strong>Paramètres de construction</strong>. Vous devez remplir les informations sur le produit, qui comprennent le <strong>nom d'affichage</strong> du projet, les informations sur le paquet, qui consistent en un <strong>domaine</strong>, une <strong>société </strong>et un <strong>produit</strong>.
     Les informations sur le paquet ne peuvent être constituées que de lettres de A à Z et de chiffres de 0 à 9, sans symboles ni autres caractères spéciaux, et ne doivent pas comporter de majuscules. Ces informations seront ensuite utilisées pour générer un ID de paquet au format
     &quot;<span class="inline">com.company.myappname</span>&quot;.</p>
-  <p class="note"><strong>REMARQUE</strong>: Si vous avez déjà configuré les <a href="Android.htm"><span class="notranslate">Android</span></a> options de jeu de la cible, vous pouvez cliquer sur le bouton &quot; Sync<strong>from <span class="notranslate">Android &quot;</span></strong> en haut pour transférer les informations pertinentes de la <span class="notranslate">cible</span> Android vers l'Amazon Fire.
+  <p class="note"><strong>REMARQUE</strong>: Si vous avez déjà configuré les <a href="Android.htm"><span class="notranslate">Android</span></a> options de jeu de la cible, vous pouvez cliquer sur le bouton &quot; Sync<strong>from <span class="notranslate">Android &quot;</span></strong> en haut pour transférer les informations pertinentes de la <span class="notranslate">cible</span> Android
     vers l'<span class="notranslate">Amazon Fire</span>.</p>
   <p>Vous devez ensuite définir les <strong>outils de construction</strong> ainsi que les versions <strong>Target</strong>, <strong>Minimum </strong>et <strong>Compile SDK</strong>.</p>
   <p class="note"><strong>REMARQUE</strong>: il existe également une option pour la version &quot;<strong>Support Library &quot;</strong> à utiliser. À partir de <span class="notranslate">GameMaker Studio</span> v2.2.4 et plus, cette option n'est plus nécessaire et toute valeur utilisée ici sera ignorée. Ce paramètre est conservé
@@ -66,7 +66,7 @@
   <ul class="colour">
     <li><strong>Interpoler les couleurs entre les pixels</strong>: Active l'<a class="glossterm" data-glossterm="interpolation linéaire" href="Ubuntu.htm#">interpolation linéaire</a>, qui a pour effet de &quot;lisser&quot; les pixels. Pour des graphiques de pixels nets, cette option doit être désactivée.
       désactivé, mais si vous avez de beaux mélanges alpha et des graphiques aux bords lissés, il est préférable de l'activer. Cette option est activée par défaut.</li>
-    <li><strong>Profondeur de couleur de l'écran</strong>: Ceci peut être utilisé pour définir la profondeur de couleur pour le rendu à 16 ou 24 bits. Cela affectera la compatibilité avec certains appareils plus anciens s'il est réglé sur 24 bits, et augmentera également l'<em>ashmem </em>qui est nécessaire (c'est la mémoire partagée sur les appareils AmazonFire).
+    <li><strong>Profondeur de couleur de l'écran</strong>: Ce paramètre peut être utilisé pour définir la profondeur de couleur pour le rendu, soit 16 bits, soit 24 bits. Cela affectera la compatibilité avec certains appareils plus anciens s'il est réglé sur 24 bits, et augmentera également l'<em>ashmem </em>qui est nécessaire (c'est la mémoire partagée sur les appareils AmazonFire).
       est nécessaire (il s'agit de la mémoire partagée sur les appareils <span class="notranslate">AmazonFire</span>).</li>
     <li><strong>Mise à l'échelle</strong>: Vous pouvez choisir ici de mettre à l'échelle le canevas de dessin en conservant le rapport hauteur/largeur de l'écran de l'appareil - en ajoutant un &quot;rembourrage&quot; autour des bords pour s'adapter à l'écran - ou vous pouvez choisir d'étirer le canevas de dessin pour l'adapter à l'écran de l'appareil.
       l'écran de l'appareil.</li>
@@ -108,7 +108,7 @@
     <li><span class="inline">RECORD_AUDIO</span>: Permet à votre jeu d'enregistrer l'entrée audio du microphone.</li>
   </ul>
   <p class="note"><strong>REMARQUE</strong>: si vous n'êtes pas sûr d'avoir besoin de ces éléments, vous devriez probablement les laisser décochés par défaut et laisser <span class="notranslate">GameMaker Studio 2</span> s'occuper des autorisations pour votre jeu.</p>
-  <p>La section <span class="notranslate">Amazon Fire</span> Permissions comporte également une zone où vous pouvez injecter des permissions dans les <strong>balises de l'application<span class="notranslate">Android</span></strong> dans le manifest.xml de <span class="inline"><span class="notranslate">Android</span>. Vous pouvez trouver une liste complète des balises disponibles dans la documentation d'<span class="notranslate">Android</span>
+  <p>La section <span class="notranslate">Amazon Fire</span> Permissions comporte également une zone où vous pouvez injecter des permissions dans les <strong>balises de l'application<span class="notranslate">Android</span></strong> dans le manifest.xml de <span class="inline"><span class="notranslate">Android</span>. Vous pouvez trouver une liste complète des balises disponibles dans la documentation <span class="notranslate">Android</span>
     ici :</p>
   <ul class="colour">
     <li><a href="https://developer.android.com/guide/topics/manifest/application-element">Développeur<span class="notranslate">Android</span>: Tags d'application</a></li>

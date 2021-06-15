@@ -85,7 +85,7 @@
     clé de développement). Vous devez ensuite lier ce fichier *.pfx ici.
   Après avoir établi un lien avec le fichier, vous devez cliquer sur le bouton d'installation associé et suivre les instructions de l'invite de commande qui s'ouvre. Si vous ne le faites pas, l'utilisation des boutons Run/Debug (ou la touche F5) échouera et votre jeu ne pourra pas être testé sur la plate-forme UWP.
     votre jeu ne pourra pas être testé sur la plate-forme UWP (toutefois, si vous utilisez Créer un exécutable, le processus d'installation de la certification sera automatiquement lancé si le site *.pfx n'a pas encore été enregistré).
-  REMARQUE: au moment de télécharger votre application dans le magasin, vous devrez obtenir le bon fichier *.pfx pour votre titre. Cela se fait en associant votre application au Windows Store dans Visual Studio.
+  REMARQUE: au moment de télécharger votre application dans le magasin, vous devrez obtenir le bon  fichier *.pfx pour votre titre. Cela se fait en associant votre application au Windows Store dans Visual Studio.
     Studio, ce qui amène Visual Studio à générer un nouveau fichier *.pfx spécifiquement pour l'application. Il est également intéressant de noter que vous pouvez associer n'importe quelle application au Windows Store dans Visual Studio,
     Cela signifie que vous pouvez associer un projet vierge à l'application Windows Store et simplement copier le *.pfx généré dans un emplacement sûr qui peut ensuite être utilisé dans UWP Game Options. Vous trouverez des instructions
     sur la façon de procéder dans la base de connaissances deYoYo Games.
@@ -98,7 +98,7 @@
     Connexion à Xbox Live depuis l'application
     Utiliser l'identité de l'utilisateur Xbox Live d'une manière ou d'une autre dans le projet (par exemple, en montrant le gamertag ou la photo du joueur).
   
-  Cependant, avant de pouvoir faire ces choses, vous devez vous assurer que vous avez cliqué sur la case Activer Xbox Live, et si vous faites partie du programme Microsoft Creators Program, vous devez également cocher l'option Creators Program App. Si vous faites partie du Creators Program, vous devrez ensuite ajouter l'ID du titre et l'ID de la configuration du service (vous trouverez plus d'informations à ce sujet auprès de Microsoft).
+  Avant de faire ces choses, vous devez vous assurer que vous avez coché la case Activer Xbox Live, et si vous faites partie du programme Microsoft Creators Program, vous devez également cocher l'option Creators Program App. Si vous faites partie du Creators Program, vous devrez ensuite ajouter l'ID du titre et l'ID de la configuration du service (vous trouverez plus d'informations à ce sujet auprès de Microsoft).
     auprès de Microsoft).
   Notez qu'actuellement, pour tester la fonctionnalité Xbox Live dans votre projet, vous devrez utiliser Create Executable plutôt que Run, car la sortie UWP Xbox doit utiliser le certificat de signature Windows Store que vous fournissez dans le cadre de l'information Packaging
     (voir ci-dessus) plutôt que le certificat temporaire fourni avec GameMaker Studio 2, qui sera utilisé lorsque vous cliquez sur Run.

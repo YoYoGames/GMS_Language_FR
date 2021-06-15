@@ -15,7 +15,7 @@
        .
     Pour commencer, ouvrez un objet, attribuez-lui un sprite, puis donnez-lui un événement Global Left Mouse Down:
     
-    Nous utilisons les événements de souris globaux parce qu'ils détectent un clic n'importe où dans la salle, alors que les événements de souris ordinaires ne détecteront un clic que si la souris clique effectivement dans la boîte de délimitation de l'instance. Dans cet événement, nous voulons ajouter ce DnD™ou GML:
+    Nous utilisons les événements de souris globaux parce qu'ils détectent un clic n'importe où dans la pièce, alors que les événements de souris ordinaires ne détecteront un clic que si la souris clique effectivement dans la boîte de délimitation de l'instance. Dans cet événement, nous voulons ajouter ce DnD™ou GML:
     
     move_towards_point(mouse_x, mouse_y, 2) ;
     Ici, nous demandons à l'instance de se déplacer vers une position sur l'écran, dans ce cas la position "mouse_x" et "mouse_y" ("mouse_x"
@@ -80,13 +80,13 @@
     
     gamepad_id = -1 ; for (var i = 0 ; i < 12 ; i += 1 ;) { if gamepad_is_connected(i) { gamepad_id = i ; gamepad_set_axis_deadzone(gamepad_id, 0.2) ; break ; }  }
     
-    Remarquez que dans le code ci-dessus, nous avons défini le paramètre  zone morte pour le gamepad. Cela s'explique par le fait que les sticks analogiques des différentes marques de manettes de jeu ont une sensibilité différente.
+    Remarquez que dans le code ci-dessus, nous avons défini le paramètre  deadzone pour le gamepad. En effet, les sticks analogiques des différentes marques de manettes de jeu ont une sensibilité différente.
       ils peuvent être si sensibles que si vous ne définissez pas de zone morte, ils peuvent provoquer des mouvements indésirables dans vos jeux. Nous définissons donc la zone morte à une valeur telle que 0,2 pour indiquer à GameMaker Studio 2 d'ignorer toute valeur de manette de jeu inférieure à cette valeur absolue.
     Pour ajouter le mouvement réel, nous aurons besoin d'un Step Event, donc ajoutez-le maintenant et donnez-lui le DnD™ ou GML suivant :
     
     if gamepad_id > -1 { var _h = gamepad_axis_value(gamepad_id, gp_axislh) ; var _v = gamepad_axis_value(gamepad_id, gp_axislv) ; x += _h * 4 ; y += _v * 4 ; }
     Ici, nous vérifions le mouvement horizontal ou vertical du stick gauche . Les fonctions d'axe renvoient une valeur entre -1 et 1, donc pour l'axe horizontal, -1 correspond à la gauche, 0 à l'immobilité et 1 à la droite, et pour l'axe vertical, c'est -1 pour le haut, 0 pour l'immobilité et 1 pour le bas.
-      pour le haut, 0 pour ne pas bouger et 1 pour le bas. Notez également que les valeurs sont comprises entre -1 et 1. Ainsi, par exemple, l'axe horizontal peut renvoyer une valeur de 0,5, ce qui signifie que le manche est à mi-chemin entre la position "repos" et la position complètement poussée
+      pour le haut, 0 pour ne pas bouger et 1 pour le bas. Notez également que les valeurs sont comprises entre -1 et 1. Ainsi, par exemple, l'axe horizontal peut renvoyer une valeur de 0,5, ce qui signifie que le manche est à mi-chemin entre la position de repos et la position complètement poussée vers la droite.
       vers la droite. Pour cette raison, nous multiplions ensuite la valeur par 4 (vous pouvez multiplier par n'importe quelle valeur, en fonction de la vitesse à laquelle vous souhaitez que l'instance se déplace) - cela signifie que la vitesse de l'instance variera en fonction de l'ampleur du mouvement effectué sur l'axe du stick.
       mouvement effectué sur l'axe du stick.
     Placez une instance de cet objet dans une pièce et appuyez sur le bouton Play .  puis déplacez-vous en utilisant le stick gauche de votre manette de jeu connectée.
@@ -120,7 +120,7 @@
     Le code ci-dessus vérifie d'abord si l'une des deuxexpressions est vraie, c'est-à-dire si les variables de vitesse horizontale ou verticale sont différentes de 0. Notez comment la vérification GML "
       if " en GML utilise le symbole " ||". Cela signifie " or" en programmation, donc - en langage clair - vous vérifiez que
     si la variable _hspd n'est pas égale à zéro ou si la variable _vspd n'est pas égale à zéro.
-    Vous pouvez enchaîner plusieurs expressions dans des contrôles " if" de cette manière, et il existe plusieurs façons différentes d'évaluer ces expressions (pour plus d'informations, veuillez consulter la section sur les expressions ici ).
+    Vous pouvez enchaîner plusieurs expressions dans des contrôles " if" de cette façon, et il existe plusieurs façons différentes d'évaluer ces expressions (pour plus d'informations, veuillez consulter la section sur les expressions ici ).
     La section suivante du code stocke une valeur pour la vitesse de mouvement réelle dans une variable et obtient ensuite une direction en utilisant les valeurs _hspd et _vspd , qui peuvent être -1, 0 ou 1. La fonction de direction
       vérifie à partir de (0, 0) car nous n'utilisons pas les coordonnées de la pièce, et nous voulons plutôt qu'elle soit évaluée comme une direction de 0° à 360° basée sur les valeurs de la variable. Le diagramme suivant illustre ce qui se passe mieux que d'essayer de l'expliquer en
       mots :

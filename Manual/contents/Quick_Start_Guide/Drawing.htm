@@ -178,7 +178,7 @@
       à la place, nous n'avons pas à nous soucier de tels changements à l'avenir, car le code s'adaptera automatiquement à la taille finale de la couche GUI, quelle qu'elle soit.</p>
     <p class="dropspot">Ensuite, nous voulons ajouter un <strong>événement Keyboard Pressed &lt;Enter&gt; à</strong> l'objet, car nous l'utiliserons pour changer le nombre de vies chaque fois que la touche Entrée sera pressée :</p>
     <p class="dropspot"><img alt="Adding An Enter Key Pressed Event" class="center" src="../assets/Images/QS_Guide/QS_Add_EnterKeyPressEvent.png" /></p>
-    <p class="dropspot">Dans ce cas, ajoutez ce qui suit :</p>
+    <p class="dropspot">Dans ce cas, ajoutez les éléments suivants :</p>
     <p class="dropspot"><img alt="DnD In The Enter Key Down Event" class="center" src="../assets/Images/QS_Guide/QS_DrawExample_DnD_7_2.png" /></p>
     <p class="code">player_lives = player_lives -1 ;<br> if player_lives &lt; 0<br> {<br> player_lives = 3 ;<br> }</p>
     <p class="dropspot">Enfin, nous devons dessiner les sprites sur l'écran. Pour cela, nous allons utiliser une boucle &quot; <span class="inline">for</span>&quot; (informations sur l'utilisation de GML ici et <span class="notranslate">pour</span> DnD™

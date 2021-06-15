@@ -71,7 +71,7 @@
       un événement de création. Dans l'événement de création, ajoutez les éléments DnD™ou GML suivants :
     
     draw_angle = 0 ;
-    Nous allons utiliser cette variable pour faire pivoter " spr_Two" dans le temps, et le dessiner en superposition sur le sprite attribué à l'objet (" spr_One"). Pour ce faire, nous devons ajouter un Draw Event à l'objet.
+    Nous allons utiliser cette variable pour faire tourner " spr_Two" dans le temps et le dessiner en superposition sur le sprite attribué à l'objet (" spr_One"). Pour ce faire, nous devons ajouter un Draw Event à l'objet.
       l'objet. En faisant cela, nous indiquons à GameMaker Studio 2 que nous voulons prendre en charge ce que l'instance dessine, ce qui signifie que notre code inclura un appel à la fonction draw_self() fonction
       ou Draw Self action. Cette action reproduit simplement ce que fait l'objet lorsqu'aucun Draw Event n'est présent et qu'il dessine par défaut le sprite attribué. Nous allons
       ensuite dessiner le deuxième sprite que nous voulons utiliser comme sprite de superposition qui tourne. Le DnD™et le GML ressemblent à ceci :
@@ -99,7 +99,7 @@
     
     draw_self() ; draw_set_halign(fa_center) ;
        draw_text(x, y + 32, "Mon nom est " + nom) ; draw_text(x, y + 48, "Mon numéro est " + chaîne(numéro)) ;
-    Vous remarquerez dans le code ci-dessus que nous utilisons la fonction string() ou la fonction Number To String action
+    Vous remarquerez dans le code ci-dessus que nous utilisons la fonction string() ou la fonction Nombre en chaîne action
       sur la variable "nombre" que nous voulons dessiner. Cela s'explique par le fait que tout texte doit être composé de caractères, et non de valeurs, et que nous devons donc utiliser cette fonction/action pour convertir la valeur du nombre en caractères que nous souhaitons
       dessiner. Dans ce cas, nous prenons le nombre aléatoire que nous avons généré et le transformons en une "chaîne" de caractères qui peut être dessinée. Notez également que nous avons défini l'alignement du texte. Cela indique tout simplement à GameMaker Studio 2 où commencer à
       Dans le cas présent, nous souhaitons que le texte soit centré sur l'axe des x.
