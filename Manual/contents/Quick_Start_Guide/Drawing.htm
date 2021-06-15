@@ -15,7 +15,7 @@
   <!--<div class="body-scroll" style="top: 150px;">-->
   <h1>Dessin</h1>
   <p>Cette section (et la section suivante sur les <a href="Movement_And_Controls.htm">mouvements et les contrôles</a>) a pour but de vous donner des exemples pratiques de <span class="notranslate">GML</span> ou de <span class="notranslate">DnD™</span>pour vous permettre de vous lancer le plus rapidement possible dans la réalisation de vos premiers projets de jeu. Nous
-    n'expliquerons pas les choses trop en profondeur car nous voulons que vous commenciez à faire des choses aussi vite que possible, nous vous encourageons donc à explorer tous les liens au fur et à mesure et à utiliser la fonction &quot;recherche&quot; du manuel pour chercher des informations supplémentaires sur tout ce que vous ne connaissez pas.
+    n'expliquerons pas les choses trop en profondeur car nous voulons que vous commenciez à faire des choses aussi vite que possible, nous vous encourageons donc à explorer tous les liens au fur et à mesure et à utiliser la fonction &quot;recherche&quot; du manuel pour chercher des informations supplémentaires sur tout ce dont vous n'êtes pas sûr.
     pour rechercher des informations supplémentaires sur les sujets dont vous n'êtes pas sûr.</p>
   <p>Dans cette section, nous allons nous concentrer sur le simple fait de dessiner des informations à l'écran, à la fois sous forme de texte et d'images, et nous allons également expliquer un peu plus les différents <strong>événements</strong> Draw <strong>,</strong> en particulier, l'événement Draw principal
     et l'événement <strong>Draw GUI </strong>(notez que dans certains exemples, vous serez amené à ajouter d'autres événements, mais nous les expliquerons au fur et à mesure que nous les verrons).</p>
@@ -84,7 +84,7 @@
       un événement de <strong>création</strong>. Dans l'événement de création, ajoutez les éléments <span class="notranslate">DnD™</span>ou <span class="notranslate">GML</span> suivants :</p>
     <p class="dropspot"><img alt="Set Draw Angle Variable In DnD" class="center" src="../assets/Images/QS_Guide/QS_DrawExample_DnD_4_1.png" /></p>
     <p class="code">draw_angle = 0 ;</p>
-    <p class="dropspot">Nous allons utiliser cette variable pour faire pivoter &quot; <span class="inline">spr_Two</span>&quot; dans le temps, et le dessiner en superposition sur le sprite attribué à l'objet (&quot; <span class="inline">spr_One</span>&quot;). Pour ce faire, nous devons ajouter un <strong>Draw Event </strong>à l'objet.
+    <p class="dropspot">Nous allons utiliser cette variable pour faire tourner &quot; <span class="inline">spr_Two</span>&quot; dans le temps et le dessiner en superposition sur le sprite attribué à l'objet (&quot; <span class="inline">spr_One</span>&quot;). Pour ce faire, nous devons ajouter un <strong>Draw Event </strong>à l'objet.
       l'objet. En faisant cela, nous indiquons à <span class="notranslate">GameMaker Studio 2</span> que nous voulons prendre en charge ce que l'instance dessine, ce qui signifie que notre code inclura un appel à la fonction <a href="../GameMaker_Language/GML_Reference/Drawing/Sprites_And_Tiles/draw_self.htm"><span class="inline">draw_self()</span></a> fonction
       ou <a href="../Drag_And_Drop/Drag_And_Drop_Reference/Drawing/Draw_Self.htm"><strong>Draw Self</strong></a> action. Cette action reproduit simplement ce que fait l'objet lorsqu'aucun Draw Event n'est présent et qu'il dessine par défaut le sprite attribué. Nous allons
       ensuite dessiner le deuxième sprite que nous voulons utiliser comme sprite de superposition qui tourne. Le <span class="notranslate">DnD™</span>et le <span class="notranslate">GML</span> ressemblent à ceci :</p>
@@ -137,7 +137,7 @@
     statiques, comme les scores, les barres de santé et autres informations que votre jeu doit communiquer à l'utilisateur. Vous trouverez de plus amples informations sur la couche GUI dans la section <a href="../The_Asset_Editors/Object_Properties/Draw_Events.htm">Draw Events</a> 
     du manuel.</p>
   <p class="note"><strong>REMARQUE</strong>: Les pièces peuvent être plus grandes que la taille de l'écran, de sorte que vous pouvez avoir de grands niveaux dans lesquels le joueur peut se déplacer. Cela signifie que dans l'éditeur de salle (ou dans le code), vous devez définir une <strong>caméra </strong>qui suit l'action de votre jeu.
-    jeu. Il s'agit essentiellement d'un moyen de configurer une zone fixe de l'écran afin d'afficher différentes parties de la grande salle en fonction, par exemple, de la position du joueur dans la salle, et il est utilisé dans de nombreux jeux. Pensez à la façon dont la vue suit toujours
+    jeu. Il s'agit essentiellement d'un moyen de configurer une zone fixe de l'écran pour afficher différentes parties de la grande pièce en fonction, par exemple, de la position du joueur dans la pièce, et il est utilisé dans de nombreux jeux. Pensez à la façon dont la vue suit toujours
     le personnage principal dans les jeux classiques comme Mario ou Zelda. Cela se fait à l'aide de caméras. Pour plus d'informations, consultez la section <a href="../The_Asset_Editors/Room_Properties/Room_Properties.htm">Propriétés de la pièce</a> dans la section Éditeur de pièce du manuel.</p>
   <p>Les exemples suivants vont tous utiliser l'événement <strong>Draw GUI</strong>, vous devrez donc créer un objet et lui ajouter cet événement. Notez que l'objet n'a pas besoin d'être associé à un sprite, car nous ne voulons pas dessiner quoi que ce soit par défaut,
     et nous n'avons pas besoin qu'il détecte les collisions. Les objets comme celui-ci, qui ne sont conçus que pour dessiner des choses ou contrôler certains aspects du jeu, sont souvent appelés <strong>objets contrôleurs</strong>. Notez également que nous utiliserons le même objet pour tous les exemples.
@@ -150,7 +150,7 @@
     <p class="code">player_score = 0 ;</p>
     <p class="dropspot">Nous voulons également ajouter un <strong>événement Keyboard Down &lt;Space&gt; à</strong> l'objet, car nous l'utiliserons pour incrémenter le score chaque fois que vous appuyez sur la touche Espace.</p>
     <p class="dropspot"><img alt="Adding A Space Key Pressed Event" class="center" src="../assets/Images/QS_Guide/QS_Add_SpaceKeyPressEvent.png" /></p>
-    <p class="dropspot">Dans ce cas, ajoutez ce qui suit :</p>
+    <p class="dropspot">Dans ce cas, ajoutez les éléments suivants :</p>
     <p class="dropspot"><img alt="DnD Actions In The Space Key Event" class="center" src="../assets/Images/QS_Guide/QS_DrawExample_DnD_6_2.png" /></p>
     <p class="code">var _val = irandom(100) ;<br> player_score = player_score + _val ;</p>
     <p class="dropspot">Enfin, dessinons la valeur du score dans l'événement Draw GUI, comme ceci :</p>

@@ -22,7 +22,7 @@
   <p>Vous devez ensuite définir les <strong>outils de construction</strong> ainsi que les versions <strong>Target</strong>, <strong>Minimum </strong>et <strong>Compile SDK</strong>.</p>
   <p class="note"><strong>REMARQUE</strong>: il existe également une option pour la version &quot;<strong>Support Library &quot;</strong> à utiliser. À partir de <span class="notranslate">GameMaker Studio</span> v2.2.4 et plus, cette option n'est plus nécessaire et toute valeur utilisée ici sera ignorée. Ce paramètre est conservé
     pour les projets existants qui nécessitent une version <span class="notranslate">d'exécution</span> antérieure à la 2.2.4.</p>
-  <p>Les outils de construction (et la bibliothèque de support, le cas échéant) sont utilisés lorsque <span class="notranslate">GameMaker Studio 2</span> construit votre jeu pour la cible <span class="notranslate">Android</span> et doivent être réglés sur les valeurs appropriées en fonction des outils que vous avez installés avec <span class="notranslate">Android</span> Studio.</p>
+  <p>Les outils de construction (et la bibliothèque de support, le cas échéant) sont utilisés lorsque <span class="notranslate">GameMaker Studio 2</span> construit votre jeu pour la cible <span class="notranslate">Android</span> et doivent être définis sur des valeurs appropriées en fonction des outils que vous avez installés avec <span class="notranslate">Android</span> Studio.</p>
   <ul class="colour">
     <li>Le <strong>SDK cible</strong> indique que vous avez testé votre application sur (jusqu'à et y compris) la version que vous spécifiez ici. Il s'agit simplement de donner au système d'exploitation <span class="notranslate">Android</span> une idée de la manière dont il doit traiter votre application en termes de fonctionnalités du système d'exploitation. À toutes fins utiles
       pratiques, la plupart des applications voudront définir le SDK cible sur la dernière version publiée de l'API (telle qu'utilisée par le paramètre Compile SDK). Cela permettra à votre application d'être aussi bonne que possible sur les appareils <span class="notranslate">Android</span> les plus récents. Notez qu'à partir de novembre
@@ -98,7 +98,7 @@
   </ul>
   <p>Enfin, il est possible de définir la taille de la <a class="glossterm" data-glossterm="texture page" href="macOS.htm#">page de texture</a>. La taille par défaut (et la plus compatible) est de 2048x2048, mais vous pouvez choisir entre 256x256 et 8192x8192. Le site
     est également un bouton marqué <strong>Preview </strong>qui génère les pages de texture pour cette plate-forme et ouvre ensuite une fenêtre pour que vous puissiez voir à quoi elles ressemblent. Cela peut s'avérer très utile si vous souhaitez voir comment les pages de texture sont structurées et
-    éviter d'avoir des pages de texture plus grandes (ou plus petites) que nécessaire. Pour plus d'informations sur les pages de texture, voir <a href="../Texture_Information/Texture_Pages.htm">ici</a>.</p>
+    éviter d'avoir des pages de texture plus grandes (ou plus petites) que nécessaire. Pour plus d'informations sur les pages de texture, veuillez <a href="../Texture_Information/Texture_Pages.htm">cliquer ici</a>.</p>
   <p class="note"><strong>NOTE</strong>: Sachez que plus la taille de la page de texture est grande, moins votre jeu sera compatible avec les différents navigateurs et appareils.</p>
   <p> </p>
   <h2>Icônes</h2>
@@ -124,7 +124,7 @@
   <p>L'une des caractéristiques de l'utilisation de Google Play pour vos jeux <span class="notranslate">Android</span> est la possibilité d'<strong>accorder une licence à </strong>vos jeux. Cela signifie que vos jeux seront contrôlés par Google de sorte que seules les personnes qui les ont téléchargés sur leur marché pourront y jouer.
     jouer au jeu, évitant ainsi que des copies illégales de votre produit ne soient distribuées.</p>
   <p>Pour activer cette fonction dans votre jeu, vous devez copier votre <strong>clé publique</strong> dans la case intitulée <strong>Clé publique de licence Google</strong>. Vous pouvez trouver cette licence en vous rendant sur votre <a href="https://play.google.com/apps/publish">page de développeurs Google Play</a>, puis en sélectionnant le jeu que vous souhaitez modifier. Une fois sur la page du profil du jeu, faites défiler la page jusqu'à la section intitulée &quot;<em>Services et API&quot;.</em> Vous y trouverez la clé publique nécessaire à l'activation de cette fonctionnalité.</p>
-  <p>Une fois activé, si une personne qui n'est pas autorisée à posséder votre jeu tente d'y jouer, elle verra apparaître une boîte de message contextuel qui l'informera que la licence est introuvable sur son appareil, puis lui donnera la possibilité de réessayer et de refaire un test,
+  <p>Une fois activé, si quelqu'un qui n'est pas autorisé à posséder votre jeu tente d'y jouer, il verra s'afficher une boîte de message contextuel qui l'informera que la licence est introuvable sur son appareil, puis lui donnera la possibilité de réessayer et de tester à nouveau,
     ou de quitter le jeu.</p>
   <p>Une autre caractéristique de la licence est que votre jeu peut utiliser des <strong>extensions APK</strong>. Il s'agit d'un moyen de contourner la taille maximale des applications de 50 Mo imposée par Google Play (et uniquement Google Play). Il créera votre jeu en deux parties : un petit fichier <span class="inline">*.apk</span> et un plus grand fichier <span class="inline">*.zip</span> qui contiendra tous les actifs de votre jeu, tous deux étant téléchargés sur le magasin. Lorsque l'utilisateur lance votre jeu pour la première fois, le fichier zip est téléchargé et décompressé. Vous pouvez trouver plus de détails sur cette
     option <a href="https://help.yoyogames.com/hc/en-us/articles/115002418632-Android-Using-APK-Expansions-With-Google-Play">ici</a>.</p>
@@ -142,7 +142,7 @@
     <li><span class="inline">READ_PHONE_STATE</span>: Autorise l'accès en lecture seule à l'état du téléphone.</li>
     <li><span class="inline">ACCESS_NETWORK_STATE</span>: Permet à votre jeu d'accéder à des informations sur les réseaux.</li>
     <li><span class="inline">INTERNET</span>: Permet à votre jeu d'ouvrir des sockets réseau.</li>
-    <li><span class="inline">BLUETOOTH</span>: Permet à votre jeu de se connecter à des appareils Bluetooth jumelés.</li>
+    <li><span class="inline">BLUETOOTH</span>: Permet à votre jeu de se connecter à des appareils Bluetooth appariés.</li>
     <li><span class="inline">RECORD_AUDIO</span>: Permet à votre jeu d'enregistrer l'entrée audio du microphone.</li>
   </ul>
   <p class="note"><strong>REMARQUE</strong>: si vous n'êtes pas sûr d'avoir besoin de ces éléments, vous devriez probablement les laisser décochés par défaut et laisser <span class="notranslate">GameMaker Studio 2</span> s'occuper des autorisations pour votre jeu.</p>
@@ -158,9 +158,9 @@
   <h2>Social</h2>
   <p><img class="center" src="../../assets/Images/Settings/Android_Social_Options.png">Cette section permet d'activer différentes fonctions <strong>sociales </strong>dans votre jeu <span class="notranslate">Android</span>. Les options suivantes peuvent être choisies :</p>
   <ul class="colour">
-    <li><strong>Facebook</strong>: Si vous avez besoin des fonctions de Facebook, vous devez cocher cette case, puis fournir l'<strong>ID</strong> et le <strong>nom de l'</strong> <strong>application Facebook</strong>. Notez que toutes les fonctionnalités de Facebook sont accessibles via une
-      et lorsque vous cochez la case Utiliser Facebook pour la première fois, vous serez invité à télécharger et à installer l'extension Facebook à partir du site Web de l'entreprise. <a href="../../Introduction/The_Marketplace.htm"><span class="notranslate">Marketplace</span></a>.</li>
-    <li><strong>Google </strong>- <strong>Activer Cloud Saving</strong>: Si vous cochez cette case, Google Cloud Saving sera activé et vous serez invité à télécharger et à installer l'extension correspondante à partir du site Web de Google. <a href="../../Introduction/The_Marketplace.htm"><span class="notranslate">Marketplace</span></a>.
+    <li><strong>Facebook</strong>: Si vous avez besoin des fonctions de Facebook, vous devez cocher cette case, puis fournir l'<strong>ID</strong> et le <strong>nom de l'</strong> <strong>application Facebook</strong>. Notez que toutes les fonctionnalités de Facebook sont accessibles via une extension
+      et lorsque vous cochez la case Utiliser Facebook pour la première fois, vous serez invité à télécharger et à installer l'extension Facebook à partir du site Web de l'entreprise. <a href="../../Introduction/The_Marketplace.htm"><span class="notranslate">Place de marché</span></a>.</li>
+    <li><strong>Google </strong>- <strong>Activer la sauvegarde dans le nuage</strong>: Si vous cochez cette case, Google Cloud Saving sera activé et vous serez invité à télécharger et à installer l'extension correspondante à partir du site Web de Google. <a href="../../Introduction/The_Marketplace.htm"><span class="notranslate">Marketplace</span></a>.
       Voir la section sur le Cloud Saving de la page <a href="../../GameMaker_Language/GML_Reference/Asynchronous_Functions/Asynchronous_Functions.htm">Fonctions asynchrones</a>.</li>
   </ul>
   <p> </p>

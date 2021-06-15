@@ -15,14 +15,14 @@
   <!--<div class="body-scroll" style="top: 150px;">-->
   <h1>Chambres</h1>
   <p>Tous les jeux que vous créez dans <span class="notranslate">GameMaker Studio 2</span> ont besoin d'au moins une salle pour fonctionner (mais ils peuvent en avoir beaucoup, beaucoup plus). Une salle est simplement un espace où vous placez des instances des objets qui composent votre jeu, ainsi que des tuiles et d'autres ressources graphiques.
-    Lorsque vous créez une room pour la première fois dans l'<a href="../Introduction/The_Asset_Browser.htm">Asset Browser</a>, un nouvel espace de travail vous est présenté. <a href="../The_Asset_Editors/Rooms.htm"><strong>Éditeur de salles</strong></a> qui vous permettra de modifier ses propriétés,
+    Lorsque vous créez une room pour la première fois dans l'<a href="../Introduction/The_Asset_Browser.htm">Asset Browser</a>, un nouvel espace de travail vous est présenté. <a href="../The_Asset_Editors/Rooms.htm"><strong>Éditeur de salle</strong></a> qui vous permettra de modifier ses propriétés,
     quelque chose comme ceci :</p>
   <p><img alt="The Room Editor" class="center" src="../assets/Images/QS_Guide/QS_RoomEditor.png" /></p>
   <p>Par défaut, les outils de la pièce seront placés à gauche, avec trois sections principales :</p>
   <ul class="colour">
     <li><strong>Éditeur de calques</strong>: Tout ce qui se trouve dans une pièce est placé sur des <em>calques</em>, et il existe différents types de calques parmi lesquels vous pouvez choisir (nous y reviendrons plus tard). Les couches sont classées par <em>profondeur </em>et cette profondeur définit l'ordre dans lequel le contenu de la couche sera rendu à l'écran lors de l'exécution du jeu.
-      le contenu des couches sera rendu à l'écran lors de l'exécution du jeu. L'ordre des profondeurs va du plus élevé au plus bas, de sorte que plus la profondeur est faible, plus la &quot;caméra&quot; est proche, et plus la profondeur est élevée, plus elle est éloignée. Par exemple, une couche avec une profondeur de
-      par exemple, un calque avec une profondeur de -300 sera rendu par-dessus un calque avec une profondeur de -100, et un calque avec une profondeur de 1000 sera rendu sous tout ce qui a une profondeur inférieure à celle-ci. Notez que par défaut, <span class="notranslate">GameMaker Studio 2</span> ordonne les profondeurs de calque en fonction de la position
+      le contenu des couches sera rendu à l'écran lors de l'exécution du jeu. L'ordre de profondeur va du plus élevé au plus bas, de sorte que plus la profondeur est faible, plus la &quot;caméra&quot; est proche et plus la profondeur est élevée, plus elle est éloignée. Par exemple, une couche avec une profondeur de
+      de -300 sera rendu par-dessus un calque avec une profondeur de -100, et un calque avec une profondeur de 1000 sera rendu sous tout ce qui a une profondeur inférieure à celle-ci. Notez que par défaut, <span class="notranslate">GameMaker Studio 2</span> ordonne les profondeurs de calque en fonction de la position
       dans l'éditeur de calque. Vous pouvez faire glisser les calques à l'aide de la souris pour les réorganiser et <span class="notranslate">GameMaker Studio 2</span> réorganisera les profondeurs en conséquence.</li>
     <li><strong>Propriétés des couches</strong>: Chaque couche que vous ajoutez à la pièce aura ses propres propriétés, et ces propriétés changeront en fonction du type de couche. Cette fenêtre vous permet de changer ces propriétés et de modifier la façon dont la couche sera rendue.
      <a class="glossterm" data-glossterm="rendered" href="#">rendu</a>.</li>
@@ -71,14 +71,14 @@
     car vous devrez le savoir pour la prochaine section du Guide de démarrage rapide.</p>
   <p>Pour ajouter une instance à l'éditeur de salle, vous devez d'abord sélectionner un calque d'instance dans l'éditeur de calques sur la gauche (ou en créer un s'il n'en existe pas). Vous pouvez ensuite vous rendre dans le navigateur d'actifs, cliquer sur <img alt="LMB Icon" class="icon" src="../assets/Images/Icons/Icon_LMB.png">, faire glisser l'objet de votre choix et le déposer dans la pièce à l'endroit souhaité, ce qui ajoutera une instance unique de cet objet à votre jeu :</p>
   <p><img alt="Adding Instances To A room Animation" class="center" src="../assets/Images/QS_Guide/QS_AddingInstances.gif" /></p>
-  <p>Si vous souhaitez placer plusieurs instances dans la pièce, vous pouvez sélectionner un objet dans l'arborescence des ressources, puis appuyer et maintenir la touche <img alt="ALT Icon" class="icon" height="20" src="../assets/Images/Icons/Icon_Alt.png" width="55"> pour prévisualiser la ressource,
+  <p>Si vous souhaitez placer plusieurs instances dans la pièce, vous pouvez sélectionner un objet dans l'arborescence des ressources, puis maintenir la touche <img alt="ALT Icon" class="icon" height="20" src="../assets/Images/Icons/Icon_Alt.png" width="55"> enfoncée pour obtenir un aperçu de la ressource,
     et si vous cliquez en plus sur le bouton gauche de la souris <img alt="LMB Icon" class="icon" height="24" src="../assets/Images/Icons/Icon_LMB.png" width="21">, vous pouvez alors le &quot;peindre&quot; dans la couche de la pièce.</p>
   <p><img alt="Painting Instances In A Room Animation" class="center" src="../assets/Images/QS_Guide/QS_PaintingInstances.gif" /></p>
   <p>Notez que les ressources reçoivent une position lorsqu'elles sont ajoutées dans l'éditeur de pièce, en fonction de leurs positions sur les axes X et Y par rapport à l'<strong>origine de</strong> la pièce. L'origine de la pièce est la position (0, 0), qui dans <span class="notranslate">GameMaker Studio 2</span> est le coin supérieur gauche,
     et vers la droite est +X et vers le bas est +Y, par exemple :</p>
   <p><img alt="Room Editor Axis Alignment" class="center" src="../assets/Images/QS_Guide/QS_RoomEditorAxis.png">Dans l'exemple ci-dessus, l'instance est placée au milieu de la pièce à la position (X:512, Y:384). Il est également possible de sortir des limites de la room
     et avoir des positions supérieures aux longueurs des axes de la pièce, ou même inférieures à l'origine de la pièce - dans ce cas, les coordonnées X/Y seront des valeurs négatives.</p>
-  <p>Pour des informations plus détaillées sur l'éditeur de pièces, vous pouvez consulter la section suivante du manuel :</p>
+  <p>Pour des informations plus détaillées sur l'éditeur de pièce, vous pouvez consulter la section suivante du manuel :</p>
   <ul class="colour">
     <li><a href="../The_Asset_Editors/Rooms.htm">Rédacteurs : Le rédacteur en chef de la salle</a></li>
   </ul>
