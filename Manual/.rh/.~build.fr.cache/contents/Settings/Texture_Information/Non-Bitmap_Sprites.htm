@@ -25,7 +25,7 @@
    
   Sprites vectoriels (SWF)
   En général, tous les sprites de GameMaker utilisent des bitmaps qui, bien que flexibles en termes de contenu, limitent à la fois la taille et le nombre d'images possibles dans un sprite avant que l'utilisation de la mémoire ne devienne prohibitive. Les sprites vectoriels contournent ces limites
-    en stockant et en dessinant leur contenu différemment : au lieu d'une grille de pixels, qui peuvent devenir des blocs ou des flous lorsqu'ils sont mis à l'échelle, ils sont dessinés sous forme de triangles utilisant les mathématiques vectorielles et ceux-ci peuvent être mis à l'échelle (ou réduits) sans perte de définition, comme illustré
+    en stockant et en dessinant leur contenu différemment : au lieu d'une grille de pixels, qui peuvent devenir des blocs ou flous à l'échelle, ils sont dessinés sous forme de triangles utilisant les mathématiques vectorielles et ceux-ci peuvent être agrandis (ou réduits) sans perdre leur définition, comme illustré
     dans l'image ci-dessous :
   Pour vous aider à visualiser comment cela se passe, l'image ci-dessous représente le même sprite vectoriel Fireman, mais nous pouvons maintenant voir les polygones qui sont utilisés pour créer l'image dans GameMaker Studio 2.
     sont utilisés pour créer l'image dans GameMaker Studio 2:
@@ -48,9 +48,9 @@
     options disponibles ne sont applicables à ce type de sprite.
   REMARQUE: l'aspect de l'image dans l'éditeur de prévisualisation que vous avez choisi ne sera pas le même que celui qu'elle aura dans votre jeu, ni dans la fenêtre de prévisualisation de l'éditeur de sprites. L'image vectorielle sera importée à la taille à laquelle elle a été créée,
     qui n'est pas nécessairement la taille à laquelle l'aperçu est affiché (les navigateurs mettent normalement l'image à l'échelle pour l'adapter, par exemple).
-  Un ajout à l'éditeur de sprites est que vous pouvez définir la qualité du sprite vectoriel lorsqu'il est dessiné en utilisant le curseur SWF Precision en haut. Cela va simplement réduire ou augmenter le nombre de triangles utilisés pour générer le sprite.
+  Un ajout à l'éditeur de sprites est que vous pouvez définir la qualité du sprite vectoriel lorsqu'il est dessiné en utilisant le curseur SWF Precision en haut. Cela réduira ou augmentera simplement le nombre de triangles utilisés pour générer le sprite.
     - une valeur d'environ 50 % étant normalement suffisante pour la plupart des jeux - cependant, vous devriez expérimenter avec cette valeur si vous utilisez une mise à l'échelle extrême, ou si vous avez des problèmes de performance.
-  Il y a un certain nombre de choses dont vous devez être conscient lorsque vous importez des sprites vectoriels, la plus importante étant que certaines des fonctions de dessin et de gestion des sprites ne sont pas supportées pour des raisons techniques, en particulier les fonctions de dessin
+  Il y a un certain nombre de choses dont vous devez être conscient lorsque vous importez des sprites vectoriels, la plus importante étant que certaines fonctions de dessin et de gestion de sprites ne sont pas supportées pour des raisons techniques, en particulier les fonctions de dessin
     qui ne dessinent qu'une partie d'un sprite, ou qui "biaisent" la position d'une manière ou d'une autre (voir les différentes draw_sprite_*() fonctions
     pour plus de détails). Cependant, les fonctions de base de dessin de sprites sont entièrement supportées, tout comme les variables de sprites intégrées. Vous pouvez également définir différentes valeurs d'anti-aliasing(AA)
     pour les sprites SWF dessinés en utilisant les fonctions draw_enable_swf_aa(), draw_get_swf_aa_level() ou draw_set_swf_aa_level().

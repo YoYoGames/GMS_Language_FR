@@ -21,23 +21,23 @@
   <p>La création de jeux avec <span class="notranslate">GameMaker Studio 2</span> est, d'un point de vue conceptuel, une affaire assez simple et directe, qui suit les étapes générales suivantes :</p>
   <ul class="colour">
     <li>Créez des <strong>images </strong>( <a class="glossterm" data-glossterm="sprites" href="#">sprites</a>, <a class="glossterm" data-glossterm="jeux de carreaux" href="#">jeux de tuiles</a>, <a class="glossterm" data-glossterm="police" href="#">polices</a>)
-      et ajoutez-les au navigateur de ressources.</li>
+      et ajoutez-les au navigateur d'images.</li>
     <li>Créez des <strong>objets </strong>pour représenter les éléments que vous souhaitez utiliser dans votre jeu et attribuez-leur les images nécessaires.</li>
     <li>Programmer ces objets pour qu'ils agissent en réponse à des <strong>événements</strong> spécifiques.</li>
     <li>Ajoutez des <strong>instances </strong>de ces objets dans une <strong>pièce </strong>où ils exécuteront leurs programmes.</li>
   </ul>
   <p>Nous entrerons dans les détails de chacun des éléments énumérés ci-dessus dans les pages suivantes, mais il s'agit du flux général des actions requises pour créer un jeu. La chose importante à noter ici est que vos principaux &quot;blocs de construction&quot; pour le jeu
-    seront toujours les sprites, les objets et les salles, bien qu'il existe un certain nombre d'actifs subsidiaires qui peuvent également être utilisés pour ajouter des fonctionnalités ou des comportements supplémentaires à ces éléments (par exemple <strong> <a class="glossterm" data-glossterm="shaders" href="#"><span class="notranslate">nuanceurs</span></a></strong>,
-    ou <strong> <a class="glossterm" data-glossterm="chronologie" href="#">calendriers</a></strong>).</p>
+    seront toujours les sprites, les objets et les salles, bien qu'il existe un certain nombre d'actifs subsidiaires qui peuvent également être utilisés pour ajouter des fonctionnalités ou des comportements supplémentaires à ces éléments (par exemple <strong> <a class="glossterm" data-glossterm="shaders" href="#"><span class="notranslate">shaders</span></a></strong>,
+    ou <strong> <a class="glossterm" data-glossterm="chronologie" href="#">lignes de temps</a></strong>).</p>
   <p>Avant d'expliquer chacun de ces éléments plus en détail, nous allons rapidement expliquer comment GameMaker <span class="notranslate">Studio 2</span> va transformer les éléments ci-dessus en jeu. En gros, tout se passe dans ce qu'on appelle la <strong>boucle de jeu</strong>,
     dont la vitesse est mesurée en <strong> images par seconde</strong>, et une &quot;image&quot; est appelée un pas dans <strong>GameMaker </strong>. Le nombre d'images par seconde (ou <strong>FPS</strong>) par défaut est de 60, ce qui signifie que pour chaque seconde qui passe, <span class="notranslate">GameMaker</span>
     Studio 2 exécute la boucle de jeu 60 fois, et à chaque étape (boucle, image), un certain nombre d'événements se produisent et le jeu progresse.</p>
   <p>Pour mieux comprendre, imaginons que vous avez un personnage que vous voulez déplacer dans la salle de jeu. Vous créerez un <em>sprite </em>pour ce personnage, puis vous créerez un <em>objet </em>et lui assignerez le sprite, et dans l'objet vous ajouterez
     un <em>événement </em>appelé <strong>Step Event</strong>. Dans cet événement, vous lui demanderez de se déplacer vers la droite de 2 pixels. Vous placerez ensuite une <strong>instance </strong>de cet objet dans la salle de jeu, et lorsque vous lancerez le jeu, l'instance se mettra à
     commencera à se déplacer vers la gauche de 2 pixels à chaque pas (l'événement Step s'exécute une fois par pas de jeu), de sorte qu'en 1 seconde l'instance se sera déplacée de 120 pixels vers la droite.</p>
-  <p>Dans l'exemple ci-dessus, nous parlons de dire à l'objet de se déplacer vers la gauche, mais comment le faire ? Eh bien, cela se fait à l'aide d'un <strong>programme </strong>que nous écrivons en utilisant soit <a href="../Drag_And_Drop/Drag_And_Drop_Index.htm"><strong><span class="notranslate">Drag and Drop™</span></strong></a>    (le langage de script visuel) ou <strong><a href="../GameMaker_Language/GameMaker_Language_Index.htm"><span class="notranslate">GML</span></a> </strong>(le langage Game <strong>Maker</strong>). Le choix de l'un ou l'autre dépend de vous et de la façon dont vous voulez travailler.
+  <p>Dans l'exemple ci-dessus, nous parlons de dire à l'objet de se déplacer vers la gauche, mais comment le faire ? Eh bien, cela se fait à l'aide d'un <strong>programme </strong>que nous écrivons en utilisant soit <a href="../Drag_And_Drop/Drag_And_Drop_Index.htm"><strong><span class="notranslate">Glisser et déposer™</span></strong></a>    (le langage de script visuel) ou <strong><a href="../GameMaker_Language/GameMaker_Language_Index.htm"><span class="notranslate">GML</span></a> </strong>(le langage Game <strong>Maker</strong>). Le choix de l'un ou l'autre dépend de vous et de la façon dont vous voulez travailler.
     de travailler, mais en les utilisant, vous <em>programmez </em>votre jeu. La section suivante traite de ce sujet de manière plus détaillée, mais avant de continuer, vous pouvez jeter un coup d'œil au tutoriel vidéo suivant qui illustre certaines des choses que nous avons abordées ci-dessus et vous prépare à l'étape suivante.
-    et vous prépare aux sections suivantes :</p>
+    abordées ci-dessus et vous prépare aux sections suivantes :</p>
   <p><iframe src="https://www.youtube.com/embed/ubvrKQlI_1A" allowfullscreen="" class="center"></iframe></p>
   <p> </p>
   <p> </p>

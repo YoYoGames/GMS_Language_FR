@@ -52,9 +52,9 @@
       du projet de jeu (cette option est activée par défaut).
     Démarrer en plein écran: Si cette option est cochée, le jeu démarrera en mode plein écran, sinon il démarrera en mode fenêtré. Cette option est désactivée par défaut.
     Autoriser le passage en plein écran: si cette option est cochée, l'utilisateur peut passer du plein écran au fenêtré et inversement en utilisant les raccourcis standard du système d'exploitation Ubuntu. Cette option est désactivée par défaut.
-    Mise à l'échelle: Vous pouvez choisir de conserver le rapport hauteur/largeur (une pièce 4:3 sera donc "letter boxée" sur un écran 16:9) ou de mettre l'image à l'échelle (en l'étirant pour qu'elle s'adapte au plein écran).
+    Mise à l'échelle: Ici, vous pouvez choisir de conserver le rapport hauteur/largeur (une pièce 4:3 sera donc "letter boxée" sur un 16:9) ou d'effectuer une mise à l'échelle complète (en étirant l'image pour qu'elle s'adapte au plein écran).
       
-      ATTENTION ! La désactivationdela surface d'application désactive toutes les options de mise à l'échelle définies dans les options de jeu de Windows jusqu'à ce qu'elle soit réactivée. Voir La surface d'application pour plus de détails.
+      ATTENTION ! Sivousdésactivez la surface d'application, toutes les options de mise à l'échelle définies dans les options de jeu de Windows seront désactivées jusqu'à ce que vous la réactiviez. Voir La surface d'application pour plus de détails.
   
   Enfin, il est possible de définir la taille de la page de texture. La taille par défaut (et la plus compatible) est de 2048x2048, mais vous pouvez choisir entre 256x256 et 8192x8192. Le site
     est également un bouton marqué Prévisualisation qui génère les pages de texture pour cette plate-forme et ouvre une fenêtre pour que vous puissiez voir à quoi elles ressemblent. Cela peut être très utile si vous souhaitez voir comment les pages de texture sont structurées et éviter d'avoir des pages de texture plus grandes.
@@ -85,7 +85,7 @@
     clé de développement). Vous devez ensuite lier ce fichier *.pfx ici.
   Après avoir établi un lien avec le fichier, vous devez cliquer sur le bouton d'installation associé et suivre les instructions de l'invite de commande qui s'ouvre. Si vous ne le faites pas, l'utilisation des boutons Run/Debug (ou la touche F5) échouera et votre jeu ne pourra pas être testé sur la plate-forme UWP.
     votre jeu ne pourra pas être testé sur la plate-forme UWP (toutefois, si vous utilisez Créer un exécutable, le processus d'installation de la certification sera automatiquement lancé si le site *.pfx n'a pas encore été enregistré).
-  REMARQUE: au moment de télécharger votre application dans le magasin, vous devrez obtenir le bon  fichier *.pfx pour votre titre. Cela se fait en associant votre application au Windows Store dans Visual Studio.
+  REMARQUE: au moment de télécharger votre application dans le magasin, vous devrez obtenir le bon fichier *.pfx pour votre titre. Cela se fait en associant votre application au Windows Store dans Visual Studio.
     Studio, ce qui amène Visual Studio à générer un nouveau fichier *.pfx spécifiquement pour l'application. Il est également intéressant de noter que vous pouvez associer n'importe quelle application au Windows Store dans Visual Studio,
     Cela signifie que vous pouvez associer un projet vierge à l'application Windows Store et simplement copier le *.pfx généré dans un emplacement sûr qui peut ensuite être utilisé dans UWP Game Options. Vous trouverez des instructions
     sur la façon de procéder dans la base de connaissances deYoYo Games.
@@ -101,7 +101,7 @@
   Avant de faire ces choses, vous devez vous assurer que vous avez coché la case Activer Xbox Live, et si vous faites partie du programme Microsoft Creators Program, vous devez également cocher l'option Creators Program App. Si vous faites partie du Creators Program, vous devrez ensuite ajouter l'ID du titre et l'ID de la configuration du service (vous trouverez plus d'informations à ce sujet auprès de Microsoft).
     auprès de Microsoft).
   Notez qu'actuellement, pour tester la fonctionnalité Xbox Live dans votre projet, vous devrez utiliser Create Executable plutôt que Run, car la sortie UWP Xbox doit utiliser le certificat de signature Windows Store que vous fournissez dans le cadre de l'information Packaging
-    (voir ci-dessus) plutôt que le certificat temporaire fourni avec GameMaker Studio 2, qui sera utilisé lorsque vous cliquez sur Run.
+    (voir ci-dessus) plutôt que le certificat temporaire fourni avec GameMaker Studio 2, qui sera utilisé lorsque vous cliquez sur Exécuter.
   Une fois que vous avez activé XBox Live, vous pouvez utiliser les fonctions XBox Live dans votre projet, mais notez que pour la fonctionnalité la plus basique, vous devrez faire partie du programme Creator et pour la fonctionnalité avancée, vous aurez besoin d'un compte ID@XBox.
    
    

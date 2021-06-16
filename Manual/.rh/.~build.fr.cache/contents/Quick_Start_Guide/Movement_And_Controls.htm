@@ -15,7 +15,7 @@
        .
     Pour commencer, ouvrez un objet, attribuez-lui un sprite, puis donnez-lui un événement Global Left Mouse Down:
     
-    Nous utilisons les événements de souris globaux parce qu'ils détectent un clic n'importe où dans la pièce, alors que les événements de souris ordinaires ne détecteront un clic que si la souris clique effectivement dans la boîte de délimitation de l'instance. Dans cet événement, nous voulons ajouter ce DnD™ou GML:
+    Nous utilisons les événements de souris globaux parce qu'ils détectent un clic n'importe où dans la salle, alors que les événements de souris ordinaires ne détecteront un clic que si la souris clique effectivement dans la boîte de délimitation de l'instance. Dans cet événement, nous voulons ajouter ce DnD™ou GML:
     
     move_towards_point(mouse_x, mouse_y, 2) ;
     Ici, nous demandons à l'instance de se déplacer vers une position sur l'écran, dans ce cas la position "mouse_x" et "mouse_y" ("mouse_x"
@@ -70,7 +70,7 @@
   
   Mouvement de la manette de jeu
   
-    Nous avons abordé les mouvements de la souris et du clavier, il est donc temps d'aborder les mouvements du gamepad. Nous n'aborderons pas le d-pad, car il fonctionne exactement comme le clavier (il suffit de modifier les fonctions du clavier
+    Nous avons abordé les mouvements de la souris et du clavier, il est donc temps d'aborder les mouvements du gamepad. Nous n'aborderons pas le d-pad, car il fonctionne de la même manière que le clavier (il suffit de modifier les fonctions du clavier
       dans l'exemple ci-dessus pour gamepad_button_check() ou If Gamepad button Down),
       Dans cet exemple, nous allons donc étudier l'utilisation du stick analogique pour les mouvements.
     Pour commencer, nous devons détecter le gamepad utilisé. Les manettes de jeu ont une valeur d'identification de 0 à 11, nous allons donc utiliser une boucle " for" pour détecter l'ID de toute manette de jeu connectée et stocker cette valeur d'identification dans une variable

@@ -77,7 +77,7 @@
       de la scène si vous ne voulez pas qu'il soit affiché, soit utiliser une couche de masque pour limiter le dessin à cette zone.</li>
     <li>La taille de la scène affecte également la taille des masques de collision générés. Par conséquent, si la taille de la scène est importante et que votre animation comporte de nombreuses images, vous risquez de consommer beaucoup de mémoire. N'utilisez donc des masques de collision précis que si vous en avez
       si vous en avez vraiment besoin.</li>
-    <li>Comme un fichier SWF est créé à partir de plusieurs couches, dont certaines peuvent se chevaucher, l'alpha ne fonctionne pas tout à fait de la même manière que pour les sprites bitmap.
+    <li>Comme un fichier SWF est créé à partir de plusieurs couches, dont certaines peuvent se chevaucher, l'alpha ne fonctionne pas tout à fait de la même manière qu'avec les sprites bitmap - les zones qui se chevauchent ne seront pas aussi transparentes que les autres parties du sprite, car les pixels qui s'y trouvent sont dessinés plusieurs fois.
       les pixels sont dessinés plusieurs fois.</li>
     <li> <em>Les </em>remplissages bitmap <em>sont </em>pris en charge, mais si vous utilisez des remplissages bitmap en mosaïque dans votre fichier SWF, vous devez vous assurer que la taille du bitmap est une puissance de deux, sinon la mosaïque ne fonctionnera pas correctement. Le rendu de texte est également pris en charge, mais vous devez
       intégrer la police dans votre fichier SWF pour qu'elle apparaisse dans le sprite résultant. De plus, actuellement, seul le texte aligné à gauche sur une seule ligne est pris en charge.</li>
