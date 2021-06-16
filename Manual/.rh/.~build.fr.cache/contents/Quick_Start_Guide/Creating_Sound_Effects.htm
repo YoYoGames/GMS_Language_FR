@@ -2,12 +2,12 @@
   
   Créer des effets sonores
   Tous les jeux doivent avoir des effets sonores - et la plupart ont également de la musique - ce qui signifie que vous devez pouvoir les ajouter à votre jeu dans GameMaker Studio 2. Cela se fait par le biais de la fonction Éditeur de sons,
-    qui s'ouvre chaque fois que vous créez un nouvel élément sonore dans le navigateur d'éléments :
+    qui s'ouvre lorsque vous créez un nouvel élément sonore dans le navigateur d'éléments :
   
   Dans GameMaker Studio 2, les sons peuvent être décompressés ou compressés, les sons compressés disposant d'options supplémentaires sur la manière de les traiter au moment de l'exécution. Les sons non compressés sont ceux qui ont été enregistrés au format WAV, tandis que les sons compressés peuvent être au format MP3 ou OGG. En général, vous voudrez que les petits effets sonores soient au format WAV - comme les sons de tir, ou les sons de boutons,
     etc... - et les effets plus importants ou la musique au format MP3 ou OGG. Comme pour les autres ressources, il est recommandé de nommer vos sons en utilisant un préfixe approprié comme " snd_".
     afin de pouvoir l'identifier facilement par la suite.
-  REMARQUE: un son non compressé signifie simplement qu'aucun type de compression ne lui a été appliqué.  algorithme appliquée. Appliquer une compression à un son signifie qu'il nécessitera moins d'espace de stockage, mais aussi qu'il devra être décompressé avant d'être joué, et comme les petits effets sonores sont généralement utilisés beaucoup et très rapidement - et ne prennent pas beaucoup d'espace de stockage - vous ne voulez pas avoir à supporter le coût CPU supplémentaire de la décompression lorsqu'ils sont joués.
+  NOTE: Un son non compressé signifie simplement qu'aucun type de compression ne lui a été appliqué.  algorithme appliquée. Appliquer une compression à un son signifie qu'il nécessitera moins d'espace de stockage, mais aussi qu'il devra être décompressé avant d'être joué, et comme les petits effets sonores sont généralement utilisés beaucoup et très rapidement - et ne prennent pas beaucoup d'espace de stockage - vous ne voulez pas avoir à supporter le coût CPU supplémentaire de la décompression lors de la lecture.
     beaucoup d'espace de stockage - vous ne voulez pas avoir à supporter le coût CPU supplémentaire de la décompression au moment de la lecture. Cependant, comme les fichiers musicaux sont généralement très volumineux, il est préférable de les compresser, car ils occupent moins d'espace de stockage.
     Ils occuperont moins d'espace de stockage et le coût CPU supplémentaire de la décompression est négligeable, car ils ne sont généralement lus qu'un par un.
   L'ajout d'un son est aussi simple que de cliquer sur le bouton d'ajout de son , puis de naviguer dans l'explorateur de fichiers qui s'ouvre jusqu'au fichier que vous souhaitez utiliser (vous pouvez également faire glisser et

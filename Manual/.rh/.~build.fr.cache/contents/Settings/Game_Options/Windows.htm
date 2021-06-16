@@ -5,7 +5,7 @@
    
   Général
   La page Général pour les jeux Windows est l'endroit où vous devez fournir les informations nécessaires pour que Windows puisse afficher
-    lorsque votre jeu a été installé et est en cours d'exécution. Ces informations se trouvent dans la section Informations sur le produit et doivent être remplies complètement.
+    lorsque votre jeu a été installé et est en cours d'exécution. Ces informations sont placées dans la section Informations sur le produit et doivent être remplies complètement.
   La section Options de cette fenêtre vous permet de choisir où le paquetage du jeu doit être installé, soit dans les dossiers "%localappdata%" ou "%appdata%", ainsi que de choisir l'option Copy exe to output folder.
     ainsi que l'option Copy exe to output folder. En général, vous ne devriez jamais avoir besoin de cette option, mais elle est fournie pour les utilisateurs qui ont plusieurs DLL qui communiquent entre elles et avec votre jeu.
     Lorsqu'elle est activée, elle maintient l'EXE du jeu dans le dossier de sortie lors des tests, plutôt que de le placer dans le dossier Temp .
@@ -23,7 +23,7 @@
     qui exécute le jeu. Cette option n'est pas cochée par défaut, car nous vous recommandons de maintenir le bac à sable de GameMaker Studio 2 pour les fichiers sur tous les systèmes et, lorsque cette option est cochée, certaines zones d'enregistrement/chargement peuvent ne pas être disponibles en fonction des autorisations du système d'exploitation.
     Pour plus d'informations sur le bac à sable, consultez les pages consacrées au système de fichiers de GameMaker Studio 2.
   Enfin, vous avez la possibilité de demander à GameMaker Studio 2 de créer un exécutable x64 pour vos projets Windows. Lorsqu'elle est activée, cette option crée un exécutable 64 bits pour votre jeu lorsqu'il est compilé, et nous recommandons fortement que tous les nouveaux projets utilisent cette option.
-    Nous recommandons fortement à tous les nouveaux projets d'utiliser cette option. Ce format deviendra le format par défaut (et le seul) pour les exécutables Windows à long terme, car l'exécuteur 32 bits sera progressivement abandonné. Notez que lorsque cette option est activée, toute dll d'extension utilisée par le projet devra également être 64 bits (voir ici pour plus d'informations).
+    Nous recommandons vivement à tous les nouveaux projets d'utiliser cette option. Ce format deviendra le format par défaut (et le seul) pour les exécutables Windows à long terme, car le exécuteur 32 bits sera progressivement abandonné. Notez que lorsque cette option est activée, toute dll d'extension utilisée par le projet devra également être 64 bits (voir ici pour plus d'informations).
    
   Graphiques
   Les options graphiques sont celles que vous devez configurer pour déterminer comment votre jeu va utiliser la carte graphique de votre
@@ -38,13 +38,13 @@
       de 60, l'activation de cette option bloquera la vitesse du jeu à 60 également. Cette option est désactivée par défaut.
     Autoriser le redimensionnement de la fenêtre: En cochant cette case, l'utilisateur peut modifier la taille de la fenêtre du jeu (l'option Fenêtre sans bordure doit être désactivée pour que cela fonctionne). Cette option est désactivée par défaut.
     Fenêtre sans bordure: Si vous cochez cette case, votre jeu fonctionnera avec une fenêtre sans bordure, ce qui supprimera les boutons normaux de réduction, d'agrandissement et de fermeture, ainsi que le titre du jeu. Cette option est désactivée par défaut.
-    Mise à l'échelle: Ici, vous pouvez choisir de conserver le rapport hauteur/largeur (une pièce 4:3 sera donc "letter boxée" sur un 16:9) ou d'effectuer une mise à l'échelle complète (en étirant l'image pour qu'elle s'adapte au plein écran).
+    Mise à l'échelle: Vous pouvez choisir de conserver le rapport hauteur/largeur (une pièce 4:3 sera donc "letter boxée" sur un écran 16:9) ou de mettre l'image à l'échelle (en l'étirant pour qu'elle s'adapte au plein écran).
       
-      ATTENTION ! Sivousdésactivez la surface d'application, toutes les options de mise à l'échelle définies dans les options de jeu de Windows seront désactivées jusqu'à ce que vous la réactiviez. Voir La surface d'application pour plus de détails.
+      ATTENTION ! La désactivationdela surface d'application désactive toutes les options de mise à l'échelle définies dans les options de jeu de Windows jusqu'à ce qu'elle soit réactivée. Voir La surface d'application pour plus de détails.
   
   Enfin, il est possible de définir la taille de la page de texture. La taille par défaut (et la plus compatible) est de 2048x2048, mais vous pouvez choisir entre 256x256 et 8192x8192. Le site
     est également un bouton marqué Prévisualisation qui génère les pages de texture pour cette plate-forme et ouvre une fenêtre pour que vous puissiez voir à quoi elles ressemblent. Cela peut être très utile si vous souhaitez voir comment les pages de texture sont structurées et éviter d'avoir des pages de texture plus grandes.
-    structurées et éviter d'avoir des pages de texture plus grandes (ou plus petites) que nécessaire. Pour plus d'informations sur les pages de texture, veuillez cliquer ici.
+    structurées et éviter d'avoir des pages de texture plus grandes (ou plus petites) que nécessaire. Pour plus d'informations sur les pages de texture, voir ici.
   REMARQUE: plus la taille de la page de texture est grande, moins votre jeu sera compatible avec les PC ayant des spécifications inférieures.
    
   Images

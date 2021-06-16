@@ -73,7 +73,7 @@
     draw_angle = 0 ;
     Nous allons utiliser cette variable pour faire tourner " spr_Two" dans le temps et le dessiner en superposition sur le sprite attribué à l'objet (" spr_One"). Pour ce faire, nous devons ajouter un Draw Event à l'objet.
       l'objet. En faisant cela, nous indiquons à GameMaker Studio 2 que nous voulons prendre en charge ce que l'instance dessine, ce qui signifie que notre code inclura un appel à la fonction draw_self() fonction
-      ou Draw Self action. Cette action reproduit simplement ce que fait l'objet lorsqu'aucun Draw Event n'est présent et qu'il dessine par défaut le sprite attribué. Nous allons
+      ou Draw Self action. Cette action reproduit simplement ce que l'objet fait lorsqu'aucun Draw Event n'est présent et qu'il dessine par défaut le sprite assigné. Nous allons
       ensuite dessiner le deuxième sprite que nous voulons utiliser comme sprite de superposition qui tourne. Le DnD™et le GML ressemblent à ceci :
     
     draw_self() ; draw_angle = draw_angle + 0.5 ; draw_sprite_ext(spr_Two, 0, x, y, 1, 1, draw_angle, c_red, 1) ;
@@ -99,10 +99,10 @@
     
     draw_self() ; draw_set_halign(fa_center) ;
        draw_text(x, y + 32, "Mon nom est " + nom) ; draw_text(x, y + 48, "Mon numéro est " + chaîne(numéro)) ;
-    Vous remarquerez dans le code ci-dessus que nous utilisons la fonction string() ou la fonction Nombre en chaîne action
+    Vous remarquerez dans le code ci-dessus que nous utilisons la fonction string() ou la fonction Number To String action
       sur la variable "nombre" que nous voulons dessiner. Cela s'explique par le fait que tout texte doit être composé de caractères, et non de valeurs, et que nous devons donc utiliser cette fonction/action pour convertir la valeur du nombre en caractères que nous souhaitons
       dessiner. Dans ce cas, nous prenons le nombre aléatoire que nous avons généré et le transformons en une "chaîne" de caractères qui peut être dessinée. Notez également que nous avons défini l'alignement du texte. Cela indique tout simplement à GameMaker Studio 2 où commencer à
-      Dans le cas présent, nous souhaitons que le texte soit centré sur l'axe des x.
+      Dans ce cas, nous souhaitons que le texte soit centré sur l'axe des x.
     Ajoutez un certain nombre d'instances de l'objet dans l'éditeur de pièce et appuyez ensuite sur le bouton Play  en haut de l'IDE. Vous devriez voir quelque chose comme ceci :
     
     Dans tous les exemples jusqu'à présent, nous avons dessiné le sprite assigné à l'instance, mais cela ne doit pas toujours être le cas. Vous pouvez dessiner ce que vous voulez dans l'événement draw, quel que soit le sprite assigné. Pour illustrer ce point
@@ -165,7 +165,7 @@
       à la place, nous n'avons pas à nous soucier de tels changements à l'avenir, car le code s'adaptera automatiquement à la taille finale de la couche GUI, quelle qu'elle soit.
     Ensuite, nous voulons ajouter un événement Keyboard Pressed <Enter> à l'objet, car nous l'utiliserons pour changer le nombre de vies chaque fois que la touche Entrée sera pressée :
     
-    Dans ce cas, ajoutez les éléments suivants :
+    Dans ce cas, ajoutez ce qui suit :
     
     player_lives = player_lives -1 ; if player_lives < 0 { player_lives = 3 ; }
     Enfin, nous devons dessiner les sprites sur l'écran. Pour cela, nous allons utiliser une boucle " for" (informations sur l'utilisation de GML ici et pour DnD™
