@@ -3,7 +3,7 @@
 <glossgroup id="Default">          
 <title>Glossary Definitions</title>        
 <glossentry id="Default_absolute">
-<glossterm>absolu</glossterm>
+<glossterm></glossterm>
 <glossdef>Une valeur absolue est une valeur pour laquelle le signe de la valeur est ignoré, ce qui revient à convertir toutes les valeurs en valeurs positives ou en zéro. Ainsi, par exemple, une valeur absolue pour -10 serait 10.</glossdef></glossentry>
 <glossentry id="Default_algorithm">
 <glossterm>algorithme</glossterm>
@@ -136,7 +136,7 @@
 <glossdef>Abréviation de "Graphical User Interface", il s'agit d'une interface utilisateur qui comprend des éléments graphiques, tels que des fenêtres, des icônes et des boutons. Dans GameMaker, vous disposez d'un ensemble spécifique d'événements d'objets (Draw GUI Events) qui peuvent dessiner sur cette couche spécialement conçue pour des choses comme le score, les vies, les inventaires, etc...</glossdef></glossentry>
 <glossentry id="Default_hard-code">
 <glossterm>codé en dur</glossterm>
-<glossdef>En programmation informatique, le terme "codé en dur" est utilisé pour décrire un code considéré comme fixe et non susceptible d'être modifié. Les caractéristiques codées en dur sont intégrées au matériel ou au logiciel de telle sorte qu'elles ne peuvent être modifiées ultérieurement. Par exemple, si vous créez un jeu et que vous codez en dur la santé du joueur sur 10, vous utiliserez la valeur 10 dans tout le code du jeu plutôt qu'une variable.</glossdef></glossentry>
+<glossdef>En programmation informatique, le terme "codé en dur" est utilisé pour décrire un code considéré comme fixe et non susceptible d'être modifié. Les caractéristiques codées en dur sont intégrées au matériel ou au logiciel de telle sorte qu'elles ne peuvent être modifiées ultérieurement. Par exemple, si vous créez un jeu et que la santé du joueur est codée en dur sur 10, vous utiliserez la valeur 10 dans tout le code du jeu plutôt qu'une variable.</glossdef></glossentry>
 <glossentry id="Default_hashing">
 <glossterm>hachage</glossterm>
 <glossdef>Le hachage est la méthode qui consiste à créer une chaîne ou une valeur qui se rapporte à une source unique - généralement un fichier - et UNIQUEMENT à cette source. Par exemple, dans GameMaker, vous pouvez générer un hachage pour un fichier de sauvegarde, puis, avant d'y accéder plus tard, générer un autre hachage pour ce fichier et vérifier le hachage original et le nouveau hachage pour déterminer si le fichier a été altéré.</glossdef></glossentry>
@@ -145,7 +145,7 @@
 <glossdef>Il s'agit de la teinte, de la saturation et de la valeur. C'est une façon d'exprimer une couleur en utilisant généralement des valeurs comprises entre 0 et 255. La teinte est la valeur de la couleur, la saturation est la quantité de la couleur à utiliser et la valeur est la luminosité de la couleur.</glossdef></glossentry>
 <glossentry id="Default_HUD">
 <glossterm>HUD</glossterm>
-<glossdef>Dans les jeux, le HUD est l'acronyme de Heads-Up Display (affichage tête haute). Il s'agit de la méthode par laquelle les informations sont visuellement relayées au joueur dans le cadre de l'interface utilisateur d'un jeu. Ainsi, des éléments comme la barre de santé, les icônes d'état, le score, etc. font tous partie du HUD et, normalement, les éléments du HUD ne nécessitent pas d'interaction avec l'utilisateur.</glossdef></glossentry>
+<glossdef>Dans les jeux, le HUD est l'acronyme de Heads-Up Display (affichage tête haute). Il s'agit de la méthode par laquelle les informations sont visuellement relayées au joueur dans le cadre de l'interface utilisateur d'un jeu. Ainsi, des éléments tels que la barre de santé, les icônes d'état, le score, etc. font tous partie du HUD et, normalement, les éléments du HUD ne nécessitent pas d'interaction avec l'utilisateur.</glossdef></glossentry>
 <glossentry id="Default_IDE">
 <glossterm>IDE</glossterm>
 <glossdef>L'IDE, ou environnement de développement intégré, est une application logicielle qui fournit aux programmeurs informatiques des outils complets pour le développement de logiciels. Dans le cas présent, l'ensemble de l'interface de GameMaker Studio 2 est considéré comme l'IDE et comprend des sections permettant de créer des graphiques, d'ajouter des sons et d'ajouter du code pour créer vos jeux.</glossdef></glossentry>

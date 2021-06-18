@@ -56,7 +56,7 @@
 }
 @font-face {
   font-family: 'open_sanssemibold_italic';
-  src: url('opensans-semibolditalic-webfont.woff2') format('woff2'), url('opensans-semibolditalic-webfont.woff') format('woff');
+  src: url('../fonts/opensans-semibolditalic-webfont.woff2') format('woff2'), url('../fonts/opensans-semibolditalic-webfont.woff') format('woff');
   font-weight: normal;
   font-style: normal;
 }
@@ -188,12 +188,12 @@ p.note {
 span.inline {
   font-family: menlo, consolas, monospace;
   font-weight: bold;
-  font-size: 16px;
+  font-size: 17px;
 }
 tt {
   font-family: menlo, consolas, monospace;
   font-weight: bold;
-  font-size: 16px;
+  font-size: 17px;
 }
 /* -------------------------------------------------------- LINKS */
 a {
@@ -409,6 +409,8 @@ table {
   border-spacing: px;
   background: #333333;
   width: 80%;
+  margin-top: 1em;
+  margin-bottom: 1em;
   margin-left: auto;
   margin-right: auto;
   border-top-left-radius: 5px;
@@ -435,8 +437,6 @@ tr {
 table.icons {
   padding-left: 25px;
   border: 0px;
-  cellspacing: 10px;
-  cellmargin: 10px;
   border-collapse: separate;
   border-spacing: 10px;
   width: 100%;
@@ -448,8 +448,6 @@ table.icons {
 table.dnd {
   padding-left: 25px;
   border: 0px;
-  cellspacing: 0px;
-  cellmargin: 0px;
   border-collapse: separate;
   border-spacing: 20px;
   width: 50%;

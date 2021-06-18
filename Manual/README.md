@@ -1,2 +1,2 @@
-# manual-test-source
+# GMS2_Manual
 
