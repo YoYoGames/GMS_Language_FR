@@ -3,25 +3,50 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>shaders_are_supported</title>
+  <title>shaders_sont_supportés</title>
   <meta name="generator" content="Adobe RoboHelp 2019" />
   <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
   <meta name="rh-authors" content="Mark Alexander" />
-  <meta name="topic-comment" content="Page décrivant les shaders fonction _are_supported" />
+  <meta name="topic-comment" content="Page outlining the function shaders_are_supported" />
   <meta name="rh-index-keywords" content="shaders_are_supported" />
   <meta name="search-keywords" content="shaders_are_supported" />
 </head>
-<body><!--<div class="body-scroll" style="top: 150px;">--><h1> <span class="notranslate">shaders</span> _sont_supportés</h1><p> Cette fonction vérifie si la plate-forme cible choisie prend en charge les <span class="notranslate">shaders</span>, retournant <tt>true</tt> s&#39;ils le font, et <tt>false</tt> s&#39;ils ne le font pas. Il est important de noter que sur <b><span class="notranslate">Android</span></b>, si le projet n&#39;a pas de <span class="notranslate">shader</span> définies, la fonction <i>retournera toujours <tt>false</tt></i>, que l&#39;appareil <span class="notranslate">shaders</span> charge les shaders ou non.</p><p></p><h4> Syntaxe:</h4><p class="code">shaders_are_supported();</p><p></p><h4> Retour:</h4><p class="code">Boolean</p><p></p><h4> Exemple:</h4><p class="code">global.GFX = false;<br/> if shaders_are_supported()<br/>     {
-    <br/>     if shader_is_compiled(sh_glass) &amp;&amp; shader_is_compiled(sh_warp)<br/>         {
-    <br/>         global.GFX = true;<br/>         }
-    <br/>     }
-  </p><p> Le code ci-dessus définira une variable globale sur <tt>false</tt>, puis si la plate-forme prend en charge les <span class="notranslate">shaders</span> et que les deux <span class="notranslate">shaders</span> cours de vérification ont été compilés correctement, il sera défini sur <tt>true</tt>. </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> Retour: <a href="Shaders.htm"><span class="notranslate">Shaders</span></a></div><div style="float:right"> Suivant: <a href="shader_current.htm"><span class="notranslate">shader</span> _current</a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
+<body>
+  <!--<div class="body-scroll" style="top: 150px;">-->
+  <h1><span class="notranslate">shaders_sont_supportés</span></h1>
+  <p>Cette fonction vérifie si la plate-forme cible choisie prend en charge les <span class="notranslate">shaders</span>. Elle renvoie un message <tt>vrai</tt> si c'est le cas, et <tt>faux</tt> si ce n'est pas le cas. Il est important de noter que sur <b><span class="notranslate">Android</span></b>,
+    si le projet n'a pas de ressources de <span class="notranslate">shaders</span> définies, la fonction <i>retournera toujours <tt>false</tt></i>, que le périphérique supporte ou non les <span class="notranslate">shaders</span>.</p>
+  <p> </p>
+  <h4>Syntaxe :</h4>
+  <p class="code"><span class="notranslate">shaders_are_supported</span>() ;</p>
+  <p> </p>
+  <h4>Les retours :</h4>
+  <p class="code">Booléen</p>
+  <p> </p>
+  <h4>Exemple :</h4>
+  <p class="code">global.GFX = false ;<br> if <span class="notranslate">shaders_are_supported</span>()<br> {
+    <br> if <span class="notranslate">shader_is_compiled</span>(sh_glass) &amp;&amp; shader_is_compiled(sh_warp)<br> {
+    <br> global.GFX = true ;<br> }
+    <br> }
+  </p>
+  <p>Le code ci-dessus définira une variable globale à <tt>false</tt>, puis, si la plate-forme prend en charge les <span class="notranslate">shaders</span> et que les deux <span class="notranslate">shaders</span> vérifiés ont été compilés correctement, elle sera définie à <tt>true</tt>.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <div class="footer">
+    <div class="buttons">
+      <div class="clear">
+        <div style="float:left">Retour : <a href="Shaders.htm"><span class="notranslate">Shaders</span></a></div>
+        <div style="float:right">Suivant : <a href="shader_current.htm"><span class="notranslate">shader_current</span></a></div>
+      </div>
+    </div>
+    <h5><span data-keyref="Copyright Notice">Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
   </div>
   <!-- KEYWORDS
-shaders_are_supported
+<span class="notranslate">shaders</span>_are_supported
 -->
   <!-- TAGS
-shaders_are_supported
+<span class="notranslate">shaders</span>_are_supported
 -->
 </body>
 </html>

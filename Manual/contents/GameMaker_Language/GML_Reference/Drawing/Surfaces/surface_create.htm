@@ -7,15 +7,59 @@
   <meta name="generator" content="Adobe RoboHelp 2019" />
   <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
   <meta name="rh-authors" content="Mark Alexander" />
-  <meta name="topic-comment" content="Référence pour surface_create" />
+  <meta name="topic-comment" content="Reference for surface_create" />
   <meta name="rh-index-keywords" content="surface_create" />
   <meta name="search-keywords" content="surface_create" />
 </head>
-<body><!--<div class="body-scroll" style="top: 150px;">--><h1>surface_create</h1><p> Cette fonction est utilisée pour créer une surface et retournera l&#39;index de la surface qui devrait être stockée dans une variable pour les futurs appels de fonction. Lorsque la surface est créée pour la première fois, elle peut contenir du «bruit» car il s’agit essentiellement d’une zone de mémoire réservée à cet effet (et cette mémoire peut encore contenir des informations), vous pouvez donc effacer la surface avant de l’utiliser avec une fonction comme <a href="../Colour_And_Alpha/draw_clear_alpha.htm"><tt>draw_clear_alpha()</tt></a>.</p><p> Il est fortement recommandé que toutes les surfaces soient créées avec une taille qui est une puissance de 2, c&#39;est-à-dire: 16, 128, 512 ou 1024 pixels par exemple. Ce n&#39;est pas exactement nécessaire sur certaines plates-formes (comme <span class="notranslate">Windows</span> et MacOS), mais cela augmentera certainement la compatibilité sur ces cibles, tandis que pour HTML5 et les appareils, il est essentiel et très important que vous vous en souveniez sinon vous pourriez rencontrer des problèmes plus tard.</p><p></p><h4> Syntaxe:</h4><p class="code">surface_create(w, h);</p><table><tbody><tr><th> Argument</th><th> Description</th></tr><tr><td> <span class="notranslate">w</span></td><td> La largeur de la surface à créer.</td></tr><tr><td> <span class="notranslate">h</span></td><td> La hauteur de la surface à créer.</td></tr></tbody></table><p></p><h4> Retour:</h4><p class="code">Real</p><p></p><h4> Exemple:</h4><p class="code">if !surface_exists(surf)<br/>     {
-    <br/>     surf = surface_create(1024, 1024);<br/>     surface_set_target(surf);
-    <br/>     draw_clear_alpha(c_black, 0);<br/>     surface_reset_target();
-    <br/>     view_surface_id[0] = surf;<br/>     }
-  </p><p> Le code ci-dessus vérifie si une surface existe et si ce n&#39;est pas le cas, il créera une surface de 1024 pixels de large et 1024 pixels de haut, en attribuant l&#39;index à la variable &quot;surf&quot;. La cible de dessin est ensuite définie sur la nouvelle surface, qui est effacée et rendue transparente avant que la cible de dessin ne soit réinitialisée à l&#39;affichage. Enfin, la surface est affectée à une vue. </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> Retour: <a href="Surfaces.htm">Surfaces</a></div><div style="float:right"> Suivant:<a href="surface_create_ext.htm">surface_create_ext</a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
+<body>
+  <!--<div class="body-scroll" style="top: 150px;">-->
+  <h1>surface_create</h1>
+  <p>Cette fonction est utilisée pour créer une surface et renvoie l'index de la surface qui doit être stocké dans une variable pour les appels de fonction futurs. Lorsque la surface est créée pour la première fois, elle peut contenir du &quot;bruit&quot;, car il s'agit simplement d'une zone de mémoire mise de côté à cet effet.
+    qui est mise de côté dans ce but (et cette mémoire peut encore contenir des informations), vous pouvez donc vouloir effacer la surface avant de l'utiliser avec une fonction comme <a href="../Colour_And_Alpha/draw_clear_alpha.htm"><tt>draw_clear_alpha()</tt></a>.</p>
+  <p>Il est fortement recommandé de créer toutes les surfaces avec une taille correspondant à une puissance de 2, c'est-à-dire une taille de 16, 128, 512 ou 1024 pixels, par exemple. Ce n'est pas vraiment nécessaire sur certaines plateformes (comme <span class="notranslate">Windows</span> et MacOS), mais cela augmentera certainement la compatibilité sur ces cibles.
+    compatibilité sur ces cibles, tandis que pour HTML5 et les appareils, c'est essentiel et il est très important que vous vous en souveniez, sinon vous risquez de rencontrer des problèmes par la suite.</p>
+  <p> </p>
+  <h4>Syntaxe :</h4>
+  <p class="code">surface_create(w, h) ;</p>
+  <table>
+    <tbody>
+      <tr>
+        <th>Arguments</th>
+        <th>Description</th>
+      </tr>
+      <tr>
+        <td>w</td>
+        <td>La largeur de la surface à créer.</td>
+      </tr>
+      <tr>
+        <td>h</td>
+        <td>La hauteur de la surface à créer.</td>
+      </tr>
+    </tbody>
+  </table>
+  <p> </p>
+  <h4>Les retours :</h4>
+  <p class="code">Real</p>
+  <p> </p>
+  <h4>Exemple :</h4>
+  <p class="code">if !surface_exists(surf)<br> {
+    <br> surf = surface_create(1024, 1024) ;<br> surface_set_target(surf) ;
+    <br> draw_clear_alpha(c_black, 0) ;<br> surface_reset_target() ;
+    <br> view_surface_id[0] = surf ;<br> }
+  </p>
+  <p>Le code ci-dessus vérifie si une surface existe et si ce n'est pas le cas, il crée une surface de 1024 pixels de large et 1024 pixels de haut, en affectant l'index à la variable &quot;surf&quot;. La cible du dessin est ensuite définie sur la nouvelle surface, qui est effacée et rendue transparente avant d'être utilisée.
+    est effacée et rendue transparente avant que la cible de dessin ne soit réinitialisée à l'affichage. Enfin, la surface est affectée à une vue.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <div class="footer">
+    <div class="buttons">
+      <div class="clear">
+        <div style="float:left">Retour : <a href="Surfaces.htm">Surfaces</a></div>
+        <div style="float:right">Suivant : <a href="surface_create_ext.htm">surface_create_ext</a></div>
+      </div>
+    </div>
+    <h5><span data-keyref="Copyright Notice">Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
   </div>
   <!-- KEYWORDS
 surface_create

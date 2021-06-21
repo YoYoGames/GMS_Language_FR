@@ -2,17 +2,62 @@
 
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml"><head>
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-  <title>matrix_multiply</title>
-  <meta name="generator" content="Adobe RoboHelp 2019"/>
-  <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css"/>
-  <meta name="rh-authors" content="Mark Alexander"/>
-  <meta name="topic-comment" content="Page de référence pour matrix_multiply"/>
-  <meta name="rh-index-keywords" content="matrix_multiply"/>
-  <meta name="search-keywords" content="matrix_multiply"/>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>matrice_multiplier</title>
+  <meta name="generator" content="Adobe RoboHelp 2019" />
+  <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
+  <meta name="rh-authors" content="Mark Alexander" />
+  <meta name="topic-comment" content="Reference page for matrix_multiply" />
+  <meta name="rh-index-keywords" content="matrix_multiply" />
+  <meta name="search-keywords" content="matrix_multiply" />
 </head>
 
-<body><!--<div class="body-scroll" style="top: 150px;">--><h1>matrix_multiply</h1><p> Avec cette fonction, vous pouvez multiplier deux tableaux matriciels ensemble pour créer une nouvelle matrice de transformation. La fonction renverra le nouvel index de matrice qui devrait être stocké dans une variable pour une utilisation future.</p><p class="note"> <b>REMARQUE</b>: vous ne pouvez pas utiliser une constante de matrice comme argument avec cette fonction, donc si vous souhaitez multiplier la matrice de vue (par exemple) avec une matrice personnalisée que vous avez construite, vous devez d&#39;abord appeler <span style="font-size:1px;"><a href="matrix_get.htm"><tt style="font-size: 14px">matrix_get ()</tt></a></span> et affecter la vue les valeurs de matrice en une variable de tableau, puis multipliez-la par votre matrice personnalisée, puis définissez la matrice choisie (vue, projection ou monde).</p><p></p><h4> Syntaxe:</h4><p class="code">matrix_multiply(matrix1, matrix2);</p><table><tbody><tr><th> Argument</th><th> Description</th></tr><tr><td> <span class="notranslate">matrix1</span></td><td> Le premier index matriciel à utiliser.</td></tr><tr><td> <span class="notranslate">matrix2</span></td><td> Le deuxième index matriciel à utiliser.</td></tr></tbody></table><p></p><h4> Retour:</h4><p class="code">Matrix Index (4x4 Matrix)</p><p></p><h4> Exemple:</h4><p class="code">var v_matrix = matrix_get(matrix_view);<br/> var new_matrix = matrix_multiply(v_matrix, my_matrix);<br/> matrix_set(matrix_view, new_matrix);</p><p> Le code ci-dessus obtiendra la matrice de vue actuelle, puis la multipliera avec une matrice personnalisée, puis utilisera l&#39;index de matrice résultant pour définir à nouveau la matrice de vue. </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> Retour: <a href="Matrix_Functions.htm">Fonctions de la matrice</a></div><div style="float:right"> Suivant:<a href="matrix_build_identity.htm">matrix_build_identity</a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
+<body>
+
+
+
+
+  <!--<div class="body-scroll" style="top: 150px;">-->
+  <h1>matrice_multiplier</h1>
+  <p>Avec cette fonction, vous pouvez multiplier deux matrices ensemble pour créer une nouvelle matrice de transformation. La fonction renvoie l'indice de la nouvelle matrice, qui doit être stocké dans une variable pour une utilisation ultérieure.</p>
+  <p class="note"><b>NOTE</b>: Vous ne pouvez pas utiliser une constante de matrice comme argument avec cette fonction, donc si vous souhaitez multiplier (par exemple) la matrice de vue avec une matrice personnalisée que vous avez construite, vous devez d'abord appeler <span style="font-size:1px;"><a href="matrix_get.htm"><tt style="font-size: 14px">matrix_get()</tt></a></span>    et affecter les valeurs de la matrice de vue à une variable de tableau, puis la multiplier par votre matrice personnalisée, et enfin définir la matrice choisie (vue, projection ou monde).</p>
+  <p> </p>
+  <h4>Syntaxe :</h4>
+  <p class="code">matrix_multiply(matrix1, matrix2) ;</p>
+  <table>
+    <tbody>
+      <tr>
+        <th>Arguments</th>
+        <th>Description</th>
+      </tr>
+      <tr>
+        <td>Matrice 1</td>
+        <td>Le premier indice matriciel à utiliser.</td>
+      </tr>
+      <tr>
+        <td>matrice2</td>
+        <td>Le deuxième indice matriciel à utiliser.</td>
+      </tr>
+    </tbody>
+  </table>
+  <p> </p>
+  <h4>Les retours :</h4>
+  <p class="code">Index matriciel (matrice 4x4)</p>
+  <p> </p>
+  <h4>Exemple :</h4>
+  <p class="code">var_matrix = matrix_get(matrix_view) ;<br> var new_matrix = matrix_multiply(v_matrix, my_matrix) ;<br> matrix_set(matrix_view, new_matrix) ;</p>
+  <p>Le code ci-dessus récupère la matrice de vue actuelle, la multiplie par une matrice personnalisée, puis utilise l'indice de matrice résultant pour définir à nouveau la matrice de vue.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <div class="footer">
+    <div class="buttons">
+      <div class="clear">
+        <div style="float:left">Retour : <a href="Matrix_Functions.htm">Fonctions de la matrice</a></div>
+        <div style="float:right">Suivant : <a href="matrix_build_identity.htm">matrix_build_identity</a></div>
+      </div>
+    </div>
+    <h5><span data-keyref="Copyright Notice">Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
   </div>
   <!-- KEYWORDS
 matrix_multiply

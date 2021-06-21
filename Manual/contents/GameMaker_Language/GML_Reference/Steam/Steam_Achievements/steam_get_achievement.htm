@@ -7,21 +7,58 @@
   <meta name="generator" content="Adobe RoboHelp 2019" />
   <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
   <meta name="rh-authors" content="Mark Alexander" />
-  <meta name="topic-comment" content="Page de référence pour steam _get_achievement" />
+  <meta name="topic-comment" content="Reference page for steam_get_achievement" />
   <meta name="rh-index-keywords" content="steam_get_achievement" />
   <meta name="search-keywords" content="steam_get_achievement" />
 </head>
-<body><!--<div class="body-scroll" style="top: 150px;">--><h1> <span class="notranslate">steam</span> _get_achievement</h1><p> Avec cette fonction, vous pouvez vérifier l&#39; <span class="notranslate">Steam</span> pour voir si un exploit spécifique a été attribué. Le succès doit avoir été défini au préalable sur la <span class="notranslate">Steam</span> Works pour votre jeu et la chaîne transmise à la fonction doit correspondre à celle utilisée comme <b>nom d&#39;API</b> sur le panneau de contrôle.</p><p></p><h4> Syntaxe:</h4><p class="code">steam_get_achievement(ach_name);</p><table><tbody><tr><th> Argument</th><th> Description</th></tr><tr><td> <span class="notranslate">ach_name</span></td><td> Le nom de la réalisation à obtenir (chaîne).</td></tr></tbody></table><p></p><h4> Retour:</h4><p class="code">Boolean</p><p></p><h4> Exemple:</h4><p class="code">if hp &lt;= 0<br/>     {
-    <br/>     global.Deaths += 1;<br/>     if global.Deaths == 10<br/>         {
-    <br/>         if !steam_get_achievement(&quot;ach_Player_Dies_Ten_Times&quot;) steam_set_achievement(&quot;ach_Player_Dies_Ten_Times&quot;);<br/>         }
-    <br/>     }
-  </p><p> Le code ci-dessus récompensera le joueur un exploit si la variable globale &quot;Décès&quot; est égal à 10 et si le succès n&#39;a pas déjà été décerné. </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> Retour: <a href="Steam_Achievements.htm">Réalisations et statistiques</a></div><div style="float:right"> Suivant: <a href="steam_clear_achievement.htm"><span class="notranslate">steam</span> _clear_achievement</a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
+<body>
+  <!--<div class="body-scroll" style="top: 150px;">-->
+  <h1><span class="notranslate">steam_get_achievement</span></h1>
+  <p>Avec cette fonction, vous pouvez vérifier l'API <span class="notranslate">Steam</span> pour voir si un succès spécifique a été attribué. La réalisation doit avoir été préalablement définie sur la page des comptes du panneau de configuration <span class="notranslate">Steamworks</span>pour votre jeu et la chaîne transmise à la fonction
+    doit correspondre à celle utilisée comme <b>nom d'API</b> sur le panneau de configuration.</p>
+  <p> </p>
+  <h4>Syntaxe :</h4>
+  <p class="code"><span class="notranslate">steam_get_achievement</span>(ach_name) ;</p>
+  <table>
+    <tbody>
+      <tr>
+        <th>Arguments</th>
+        <th>Description</th>
+      </tr>
+      <tr>
+        <td>ach_name</td>
+        <td>Le nom de la réalisation à obtenir (chaîne de caractères).</td>
+      </tr>
+    </tbody>
+  </table>
+  <p> </p>
+  <h4>Les retours :</h4>
+  <p class="code">Booléen</p>
+  <p> </p>
+  <h4>Exemple :</h4>
+  <p class="code">si hp &lt;= 0<br> {
+    <br> global.Deaths += 1 ;<br> if global.Deaths == 10<br> {
+    <br> if !<span class="notranslate">steam_get_achievement</span>(&quot;ach_Player_Dies_Ten_Times&quot;) steam_set_achievement(&quot;ach_Player_Dies_Ten_Times&quot;) ;<br> }
+    <br> }
+  </p>
+  <p>Le code ci-dessus récompensera le joueur d'un succès si la variable globale &quot;Deaths&quot; est égale à 10 et si le succès n'a pas déjà été attribué.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <div class="footer">
+    <div class="buttons">
+      <div class="clear">
+        <div style="float:left">Dos : <a href="Steam_Achievements.htm">Réalisations et statistiques</a></div>
+        <div style="float:right">Suivant : <a href="steam_clear_achievement.htm"><span class="notranslate">steam_clear_achievement</span></a></div>
+      </div>
+    </div>
+    <h5><span data-keyref="Copyright Notice">Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
   </div>
   <!-- KEYWORDS
-steam_get_achievement
+<span class="notranslate">steam</span>_get_achievement
 -->
   <!-- TAGS
-steam_get_achievement
+<span class="notranslate">steam</span>_get_achievement
 -->
 </body>
 </html>

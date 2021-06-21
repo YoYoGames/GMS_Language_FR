@@ -2,20 +2,62 @@
 
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml"><head>
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-  <title>gesture_tap_count</title>
-  <meta name="generator" content="Adobe RoboHelp 2019"/>
-  <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css"/>
-  <meta name="rh-authors" content="Mark Alexander"/>
-  <meta name="topic-comment" content="Page de référence pour gesture_tap_count"/>
-  <meta name="rh-index-keywords" content="gesture_tap_count"/>
-  <meta name="search-keywords" content="gesture_tap_count"/>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>nombre de gestes</title>
+  <meta name="generator" content="Adobe RoboHelp 2019" />
+  <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
+  <meta name="rh-authors" content="Mark Alexander" />
+  <meta name="topic-comment" content="Reference page for gesture_tap_count" />
+  <meta name="rh-index-keywords" content="gesture_tap_count" />
+  <meta name="search-keywords" content="gesture_tap_count" />
 </head>
 
-<body><!--<div class="body-scroll" style="top: 150px;">--><h1>gesture_tap_count</h1><p> Cette fonction est utilisée pour définir si le comptage des prises est activé ou désactivé. Lorsqu&#39;il est réglé sur <tt>true</tt> le comptage des touches est activé et lorsqu&#39;il est réglé sur <tt>false</tt> il est désactivé, bien que vous puissiez vérifier dans quel état il se trouve en utilisant la fonction <a href="gesture_get_tap_count.htm"><tt>gesture_get_tap_count()</tt></a>. Lorsqu&#39;il est activé, chaque événement de tap aura une entrée supplémentaire de carte DS &quot;tapcount&quot; qui aura enregistré le nombre de taps, et lorsqu&#39;il sera activé, cela signifie que <i>tous les</i> événements taps seront déclenchés, c&#39;est-à-dire: deux taps déclencheront à la fois l&#39;événement tap unique et l&#39;événement de double tap, avec le compte de tap d&#39;événement de tap unique étant 1 et le nombre de tap d&#39;événement de double tap étant 2. La valeur de comptage de tap sera remise à 0 après le temps défini pour une détection de double tap (voir la fonction <a href="gesture_double_tap_time.htm"><tt>gesture_double_tap_time()</tt></a> ). Si le comptage des taps est désactivé, alors le tap initial ne sera pas enregistré tant que le temps du double tap n&#39;est pas écoulé et qu&#39;aucun deuxième tap n&#39;a été détecté. Notez que cela est <b>activé</b> par défaut.</p><p></p><h4> Syntaxe:</h4><p class="code">gesture_tap_count(enable);</p><table><tbody><tr><th> Argument</th><th> Description</th></tr><tr><td> <span class="notranslate">enable</span></td><td> Activer (défini sur <tt>true</tt> ) ou désactiver (régler sur <tt>false</tt> ) appuyez sur le comptage.</td></tr></tbody></table><p></p><h4> Retour:</h4><p class="code">N/A</p><p></p><h4> Exemple:</h4><p class="code">if !gesture_get_tap_count()<br/>     {
-    <br/>     getsure_tap_count(true);
-    <br/>     }
-  </p><p> Le code ci-dessus vérifie si le comptage des prises est activé et si ce n&#39;est pas le cas, il est activé. </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> Retour: <a href="Gesture_Input.htm">Entrée gestuelle</a></div><div style="float:right"> Suivant:<a href="gesture_pinch_distance.htm">gesture_pinch_distance</a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
+<body>
+
+
+
+  <!--<div class="body-scroll" style="top: 150px;">-->
+  <h1>nombre de gestes</h1>
+  <p>Cette fonction est utilisée pour définir l'activation ou la désactivation du comptage des robinets. Lorsqu'elle est définie sur <tt>true (vrai)</tt>, le comptage des coups est activé, et lorsqu'elle est définie sur <tt>false (faux)</tt>, il est désactivé, bien que vous puissiez vérifier dans quel état il se trouve à l'aide de la fonction <a href="gesture_get_tap_count.htm"><tt>gesture_get_tap_count()</tt></a>.
+    Lorsqu'il est activé, chaque événement de tapotement aura une entrée supplémentaire &quot;tapcount&quot; dans la carte DS qui aura enregistré le nombre de tapotements, et lorsqu'il est activé, cela signifie que tous les événements de tapotement seront déclenchés, c'est-à-dire que deux tapotements déclencheront à la fois l'événement de tapotement simple et l'événement de tapotement double.
+    Deux tapotements déclenchent à la fois l'événement de tapotement simple et l'événement de tapotement double, le nombre de tapotements de l'événement de tapotement simple étant de 1 et celui de l'événement de tapotement double de 2. La valeur du compteur de coups de robinet sera remise à 0 après que le temps défini pour la détection d'un double coup de robinet se soit écoulé (voir la fonction <a href="gesture_double_tap_time.htm"><tt>gesture_double_tap_time()</tt></a>).
+    Si le comptage des tapotements est désactivé, le premier tapotement ne sera pas enregistré tant que le temps de double tapotement ne sera pas écoulé et qu'aucun deuxième tapotement n'aura été détecté. Notez que cette fonction est <b>activée</b> par défaut.</p>
+  <p> </p>
+  <h4>Syntaxe :</h4>
+  <p class="code">gesture_tap_count(enable) ;</p>
+  <table>
+    <tbody>
+      <tr>
+        <th>Arguments</th>
+        <th>Description</th>
+      </tr>
+      <tr>
+        <td>activer</td>
+        <td>Active (à <tt>true</tt>) ou désactive (à <tt>false)</tt> le comptage des robinets.</td>
+      </tr>
+    </tbody>
+  </table>
+  <p> </p>
+  <h4>Les retours :</h4>
+  <p class="code">N/A</p>
+  <p> </p>
+  <h4>Exemple :</h4>
+  <p class="code">if !gesture_get_tap_count()<br> {
+    <br> getsure_tap_count(true) ;
+    <br> }
+  </p>
+  <p>Le code ci-dessus vérifie si le comptage par tapotement est activé et s'il ne l'est pas, il est activé.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <div class="footer">
+    <div class="buttons">
+      <div class="clear">
+        <div style="float:left">Retour : <a href="Gesture_Input.htm">Saisie gestuelle</a></div>
+        <div style="float:right">Suivant : <a href="gesture_pinch_distance.htm">geste_pincement_distance</a></div>
+      </div>
+    </div>
+    <h5><span data-keyref="Copyright Notice">Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
   </div>
   <!-- KEYWORDS
 gesture_tap_count

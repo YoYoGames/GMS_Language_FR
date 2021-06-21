@@ -7,13 +7,55 @@
   <meta name="generator" content="Adobe RoboHelp 2019" />
   <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
   <meta name="rh-authors" content="Mark Alexander" />
-  <meta name="topic-comment" content="Page de référence pour xboxlive_stats_delete_stat" />
+  <meta name="topic-comment" content="Reference page for xboxlive_stats_delete_stat" />
   <meta name="rh-index-keywords" content="xboxlive_stats_delete_stat" />
   <meta name="search-keywords" content="xboxlive_stats_delete_stat" />
 </head>
-<body><!--<div class="body-scroll" style="top: 150px;">--><h1>xboxlive_stats_delete_stat</h1><p> Cette fonction peut être utilisée pour supprimer une statistique du gestionnaire de statistiques pour l&#39;ID utilisateur donné. Vous fournissez l&#39;ID utilisateur tel que renvoyé par (par exemple) la fonction <a href="../Users_And_Accounts/xboxlive_get_user.htm"><tt>xboxlive_get_user()</tt></a>, puis la chaîne de statistiques à supprimer. Cela efface la valeur de la statistique et la supprime du gestionnaire de statistiques, ce qui signifie qu&#39;elle ne sera plus renvoyée par les fonctions <a href="xboxlive_stats_get_stat_names.htm"><tt>xboxlive_stats_get_stat_names()</tt></a> ou <a href="xboxlive_stats_get_stat.htm"><tt>xboxlive_stats_get_stat()</tt></a>.</p><p> La fonction renverra -1 s&#39;il y a eu une erreur ou si l&#39;ID utilisateur n&#39;est pas valide, ou toute autre valeur si la fonction a été appelée avec succès</p><p></p><h4> Syntaxe:</h4><p class="code">xboxlive_stats_delete_stat(user_id, stat);</p><table><tbody><tr><th> Argument</th><th> Description</th></tr><tr><td> <span class="notranslate">user_id</span></td><td> Le pointeur de l&#39;ID utilisateur pour supprimer la statistique de</td></tr><tr><td> <span class="notranslate">stat</span></td><td> La statistique à supprimer (une chaîne)</td></tr></tbody></table><p></p><h4> Retour:</h4><p class="code">Real</p><p></p><h4> Exemple:</h4><p class="code">for(var i = 0; i &lt; xboxlive_get_user_count(); i++;)<br/>     {
-    <br/>     user_id[i] = xboxlive_get_user(i);<br/>     xboxlive_stats_delete_stat(user_id[i], &quot;HighScore&quot;);<br/>     }
-  </p><p> Le code ci-dessus parcourt les utilisateurs connectés et supprime la statistique spécifiée du gestionnaire de statistiques pour chacun d&#39;eux. </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> Retour: <a href="Stats_And_Leaderboards.htm">Statistiques et classements</a></div><div style="float:right"> Suivant:<a href="xboxlive_stats_get_stat_names.htm">xboxlive_stats_get_stat_names</a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
+<body>
+  <!--<div class="body-scroll" style="top: 150px;">-->
+  <h1>xboxlive_stats_delete_stat</h1>
+  <p>Cette fonction peut être utilisée pour supprimer une stat du gestionnaire de stat pour l'ID utilisateur donné. Vous fournissez l'ID utilisateur tel que retourné par (par exemple) la fonction <a href="../Users_And_Accounts/xboxlive_get_user.htm"><tt>xboxlive_get_user()</tt></a>puis la chaîne de caractères
+    à supprimer. Cela efface la valeur de la stat et la supprime du gestionnaire de stat, ce qui signifie qu'elle ne sera plus renvoyée par les fonctions <a href="xboxlive_stats_get_stat_names.htm"><tt>xboxlive_stats_get_stat_names()</tt></a> ou <a href="xboxlive_stats_get_stat.htm"><tt>xboxlive_stats_get_stat()</tt></a>.</p>
+  <p>La fonction retournera -1 s'il y a eu une erreur ou si l'ID utilisateur est invalide, ou toute autre valeur si la fonction a été appelée avec succès</p>
+  <p> </p>
+  <h4>Syntaxe :</h4>
+  <p class="code">xboxlive_stats_delete_stat(user_id, stat) ;</p>
+  <table>
+    <tbody>
+      <tr>
+        <th>Arguments</th>
+        <th>Description</th>
+      </tr>
+      <tr>
+        <td>nom d'utilisateur</td>
+        <td>Le pointeur de l'ID de l'utilisateur pour supprimer le stat de</td>
+      </tr>
+      <tr>
+        <td>stat</td>
+        <td>La statistique à supprimer (une chaîne de caractères)</td>
+      </tr>
+    </tbody>
+  </table>
+  <p> </p>
+  <h4>Les retours :</h4>
+  <p class="code">Real</p>
+  <p> </p>
+  <h4>Exemple :</h4>
+  <p class="code">for(var i = 0 ; i &lt; xboxlive_get_user_count() ; i++ ;) <br> {
+    <br> user_id[i] = xboxlive_get_user(i) ;<br> xboxlive_stats_delete_stat(user_id[i], &quot;HighScore&quot;) ;<br> }
+  </p>
+  <p>Le code ci-dessus boucle à travers les utilisateurs connectés et supprime la stat spécifiée du gestionnaire de stat pour chacun d'entre eux.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <div class="footer">
+    <div class="buttons">
+      <div class="clear">
+        <div style="float:left">Retour : <a href="Stats_And_Leaderboards.htm">Stats et classements</a></div>
+        <div style="float:right">Suivant : <a href="xboxlive_stats_get_stat_names.htm">xboxlive_stats_get_stat_names</a></div>
+      </div>
+    </div>
+    <h5><span data-keyref="Copyright Notice">Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
   </div>
   <!-- KEYWORDS
 xboxlive_stats_delete_stat

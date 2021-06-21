@@ -3,17 +3,62 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>variable_struct_set</title>
+  <title>ensemble_de_structures_variables</title>
   <meta name="generator" content="Adobe RoboHelp 2019" />
   <link rel="stylesheet" href="../../../assets/css/default.css" type="text/css" />
   <meta name="rh-authors" content="Mark Alexander" />
-  <meta name="topic-comment" content="Page expliquant la fonction variable_struct_set" />
+  <meta name="topic-comment" content="Page explaining the function variable_struct_set" />
   <meta name="rh-index-keywords" content="variable_struct_set" />
   <meta name="search-keywords" content="variable_struct_set" />
 </head>
-<body><!--<div class="body-scroll" style="top: 150px;">--><h1>variable_struct_set</h1><p> Avec cette fonction, vous pouvez définir la valeur d&#39;une variable donnée dans une structure. Vous fournissez la référence de structure ainsi que le nom de la variable pour définir la valeur de <i>sous forme de chaîne</i> (voir l&#39;exemple de code ci-dessous), puis enfin la valeur à définir (peut être n&#39;importe quel <a href="../../GML_Overview/Data_Types.htm">type de données</a> valide). Si la variable n&#39;existe pas déjà dans la structure, elle sera créée puis affectée à la valeur.</p><p></p><h4> Syntaxe:</h4><p class="code">variable_struct_set(struct, name, val);</p><table><tbody><tr><th> Argument</th><th> Description</th></tr><tr><td> <span class="notranslate">struct</span></td><td> La référence struct à définir</td></tr><tr><td> <span class="notranslate">name</span></td><td> Le nom de la variable à définir (sous forme de chaîne)</td></tr><tr><td> <span class="notranslate">val</span></td><td> La valeur à laquelle définir la variable</td></tr></tbody></table><p></p><h4> Retour:</h4><p class="code">N/A</p><p></p><h4> Exemple:</h4><p class="code">if !variable_struct_exists(mystruct, &quot;shields&quot;)<br/>    {
-    <br/>    variable_struct_set(mystruct, &quot;shields&quot;, 0);<br/>    }
-  </p><p> Le code ci-dessus vérifiera si la variable donnée existe dans la structure donnée et si ce n&#39;est pas le cas, elle est créée et définie sur 0. </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> Retour: <a href="Variable_Functions.htm">Fonctions variables</a></div><div style="float:right"> Suivant: <a href="variable_struct_remove.htm"><span>variable_struct_remove</span></a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
+<body>
+  <!--<div class="body-scroll" style="top: 150px;">-->
+  <h1>ensemble_de_structures_variables</h1>
+  <p>Avec cette fonction, vous pouvez définir la valeur d'une variable donnée dans une structure. Vous fournissez la référence de la structure ainsi que le nom de la variable dont vous voulez définir la valeur <i>sous la forme d'une chaîne de caractères</i> (voir l'exemple de code ci-dessous), et enfin la valeur à définir (peut être n'importe quel type de données valide).
+    tout <a href="../../GML_Overview/Data_Types.htm">type de données</a> valide). Si la variable n'existe pas déjà dans la structure, elle sera créée et la valeur lui sera attribuée.</p>
+  <p> </p>
+  <h4>Syntaxe :</h4>
+  <p class="code">variable_struct_set(struct, name, val) ;</p>
+  <table>
+    <tbody>
+      <tr>
+        <th>Arguments</th>
+        <th>Description</th>
+      </tr>
+      <tr>
+        <td>struct</td>
+        <td>La référence de la structure à définir</td>
+      </tr>
+      <tr>
+        <td>nom</td>
+        <td>Le nom de la variable à définir (sous forme de chaîne)</td>
+      </tr>
+      <tr>
+        <td>val</td>
+        <td>La valeur à donner à la variable</td>
+      </tr>
+    </tbody>
+  </table>
+  <p> </p>
+  <h4>Les retours :</h4>
+  <p class="code">N/A</p>
+  <p> </p>
+  <h4>Exemple :</h4>
+  <p class="code">if !variable_struct_exists(mystruct, &quot;shields&quot;)<br> {
+    <br> variable_struct_set(mystruct, &quot;shields&quot;, 0) ;<br> }
+  </p>
+  <p>Le code ci-dessus va vérifier si la variable donnée existe dans la structure donnée et si ce n'est pas le cas, elle est créée et mise à 0.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <div class="footer">
+    <div class="buttons">
+      <div class="clear">
+        <div style="float:left">Retour : <a href="Variable_Functions.htm">Fonctions variables</a></div>
+        <div style="float:right">Suivant : <a href="variable_struct_remove.htm"><span>suppression_de_structure_variable</span></a></div>
+      </div>
+    </div>
+    <h5><span data-keyref="Copyright Notice">Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
   </div>
   <!-- KEYWORDS
 variable_struct_set

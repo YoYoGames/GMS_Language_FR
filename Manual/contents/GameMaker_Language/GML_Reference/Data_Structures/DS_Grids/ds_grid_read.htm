@@ -7,13 +7,58 @@
   <meta name="generator" content="Adobe RoboHelp 2019" />
   <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
   <meta name="rh-authors" content="Mark Alexander" />
-  <meta name="topic-comment" content="Page de référence pour ds_grid_read" />
+  <meta name="topic-comment" content="Reference page for ds_grid_read" />
   <meta name="rh-index-keywords" content="ds_grid_read" />
   <meta name="search-keywords" content="ds_grid_read" />
 </head>
-<body><!--<div class="body-scroll" style="top: 150px;">--><h1>ds_grid_read</h1><p> Cette fonction peut être utilisée pour convertir une chaîne qui a été créée précédemment par la fonction <a href="ds_grid_write.htm"><tt>ds_grid_write()</tt></a> retour dans une grille DS. La grille DS doit avoir été créée au préalable (voir l&#39;exemple ci-dessous). Notez que si la structure de données a été créée avec les versions précédentes de <i><span class="notranslate">GameMaker</span></i> vous devez ajouter l&#39;argument facultatif «hérité», en le définissant sur <tt>true</tt> car le format de la chaîne a changé avec cette version.</p><p></p><h4> Syntaxe:</h4><p class="code">ds_grid_read(index, string [, legacy]);</p><table><tbody><tr><th> Argument</th><th> Description</th></tr><tr><td> <span class="notranslate">index</span></td><td> L&#39;index de la grille à lire.</td></tr><tr><td> <span class="notranslate">string</span></td><td> La chaîne à lire dans la grille DS.</td></tr><tr><td> <span class="notranslate">legacy ( <i>optional</i> )</span></td><td> Peut être soit <tt>true</tt> ou <tt>false</tt> ou omis complètement.</td></tr></tbody></table><p></p><h4> Retour:</h4><p class="code">N/A</p><p></p><h4> Exemple:</h4><p class="code">grid = ds_grid_create(room_width div 32, room_height div 32);<br/> ini_open(&quot;Save.ini&quot;);
-    <br/> ds_grid_read(grid, ini_read_string(&quot;Save&quot;, &quot;0&quot;, &quot;&quot;));<br/> ini_close()
-  </p><p> Le code ci-dessus crée une grille DS basée sur la taille de la pièce (chaque carré de 32 x 32 pixels représente une cellule de la grille), puis lit un ensemble de données de grille précédemment enregistré à partir d&#39;un fichier ini dans la nouvelle grille DS. </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> Retour: <a href="DS_Grids.htm">DS Grids</a></div><div style="float:right"> Suivant:<a href="ds_grid_write.htm">ds_grid_write</a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
+<body>
+  <!--<div class="body-scroll" style="top: 150px;">-->
+  <h1>ds_grid_read</h1>
+  <p>Cette fonction peut être utilisée pour reconvertir une chaîne de caractères créée précédemment par la fonction <a href="ds_grid_write.htm"><tt>ds_grid_write()</tt></a> en une grille DS. La grille DS doit avoir été créée précédemment (voir l'exemple ci-dessous). Notez
+    que si la structure de données a été créée avec des versions antérieures de <i><span class="notranslate">GameMaker</span></i> vous devez ajouter l'argument optionnel &quot;legacy&quot;, en le mettant à true car le format de <tt>la</tt> chaîne a changé avec cette version.</p>
+  <p> </p>
+  <h4>Syntaxe :</h4>
+  <p class="code">ds_grid_read(index, string [, legacy]) ;</p>
+  <table>
+    <tbody>
+      <tr>
+        <th>Arguments</th>
+        <th>Description</th>
+      </tr>
+      <tr>
+        <td>indice</td>
+        <td>L'index de la grille à lire.</td>
+      </tr>
+      <tr>
+        <td>chaîne de caractères</td>
+        <td>La chaîne à lire dans la grille DS.</td>
+      </tr>
+      <tr>
+        <td>héritage<i>(facultatif</i>)</td>
+        <td>Peut être soit <tt>vrai</tt>, soit <tt>faux</tt>, soit complètement omis.</td>
+      </tr>
+    </tbody>
+  </table>
+  <p> </p>
+  <h4>Les retours :</h4>
+  <p class="code">N/A</p>
+  <p> </p>
+  <h4>Exemple :</h4>
+  <p class="code">grid = ds_grid_create(room_width div 32, room_height div 32) ;<br> ini_open(&quot;Save.ini&quot;) ;
+    <br> ds_grid_read(grid, ini_read_string(&quot;Save&quot;, &quot;0&quot;, &quot;&quot;)) ;<br> ini_close()
+  </p>
+  <p>Le code ci-dessus crée une grille DS basée sur la taille de la pièce (chaque carré de pixels 32x32 représente une cellule de la grille) et lit ensuite un ensemble de données de grille précédemment sauvegardées dans un fichier ini dans la nouvelle grille DS.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <div class="footer">
+    <div class="buttons">
+      <div class="clear">
+        <div style="float:left">Retour : <a href="DS_Grids.htm">Grilles DS</a></div>
+        <div style="float:right">Suivant : <a href="ds_grid_write.htm">ds_grid_write</a></div>
+      </div>
+    </div>
+    <h5><span data-keyref="Copyright Notice">Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
   </div>
   <!-- KEYWORDS
 ds_grid_read

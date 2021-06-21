@@ -7,12 +7,89 @@
   <meta name="generator" content="Adobe RoboHelp 2019" />
   <link rel="stylesheet" href="../../../../../assets/css/default.css" type="text/css" />
   <meta name="rh-authors" content="Mark Alexander" />
-  <meta name="topic-comment" content="Page expliquant la fonction sprite_add" />
+  <meta name="topic-comment" content="Page explaining the function sprite_add" />
   <meta name="rh-index-keywords" content="sprite_add" />
   <meta name="search-keywords" content="sprite_add" />
 </head>
-<body><!--<div class="body-scroll" style="top: 150px;">--><h1>sprite_add</h1><p> Avec cette fonction, vous pouvez ajouter une image en tant que sprite, en la chargeant à partir d&#39;une source externe où le fichier image à charger doit <b>toujours</b> être soit <tt>*.png</tt>, <tt>*.gif</tt>, <tt>*.jpg/jpeg</tt> ou <tt>*.json</tt> format (<tt>*json</tt> les fichiers sont utilisés pour charger <a href="../Skeletal_Animation/Skeletal_Animation.htm">des sprites d&#39;animation squelette</a> créés avec Spine). La fonction renvoie le nouvel index de sprite qui doit ensuite être utilisé dans tous les autres codes liés au sprite. Si vous utilisez cette fonction avec HTML5 ou obtenez une image à partir d&#39;une URL, cette fonction générera également un événement asynchrone <b>Image Loaded.</b> Consultez <a href="../../../../../The_Asset_Editors/Object_Properties/Async_Events/Image_Loaded.htm">la page Événement asynchrone</a> pour plus d&#39;informations.</p><p> Toutes les images qui doivent être transformées en sprites animés - à l&#39;exception de <tt>*.gif</tt> (voir ci-dessous) - devrait avoir un format &quot;bande&quot; (voir l&#39;image ci-dessous) et il sera divisé en le nombre de sous-images spécifié en suivant la règle <b>sprite width = strip width / sub images</b>.</p><p><img alt="Example Sprite Strip" class="center" src="../../../../../assets/Images/Scripting_Reference/GML/Reference/Sprites/spr_strip.png" /></p><p> Comme vous pouvez le voir dans l&#39;image ci-dessus, le sprite a été placé sur un fond violet foncé, et cela peut être supprimé en définissant l&#39;argument &quot;removeback&quot; sur <tt>true</tt>. Cela fonctionne en vérifiant le <i>pixel en bas à gauche</i> de l&#39;image-objet pour la couleur à cet endroit, puis en l&#39;utilisant comme couleur à supprimer. Par exemple, dans l&#39;image ci-dessus, si la couleur du pixel en bas à gauche était verte, toutes les parties vertes du sprite auraient été supprimées et le reste de l&#39;arrière-plan violet ignoré.</p><p> Si vous choisissez l&#39;option &quot;removeback&quot;, vous pouvez également souhaiter que <span class="notranslate">GameMaker Studio 2</span> les bords de l&#39;image-objet en définissant l&#39;argument &quot;smooth&quot; sur <tt>true</tt>. Tout cela ne fait que créer une bordure semi-transparente autour des bords du sprite après que son arrière-plan ait été supprimé.</p><p> Enfin, vous pouvez également spécifier le x et l&#39; <i>origine</i> y pour l&#39;image - objet. C&#39;est le point où le sprite est &quot;fixé&quot; sur l&#39;instance qui l&#39;utilise, et est toujours calculé par rapport au coin supérieur gauche 0,0 d&#39;une sous-image de sprite. Ainsi, par exemple, un sprite de 32 x 32 pixels avec ces valeurs définies sur (16,16) aura son origine au centre.</p><p> Si vous ajoutez un <tt>*.gif</tt> format image, il vous suffit de spécifier le nom de fichier et le numéro d&#39;image (qui devrait être 1 pour la première image) et vous pouvez laisser tous les autres arguments à 0, en notant que <b>seule la première image du GIF sera chargée</b>. Pour <tt>*.json</tt> sprites, le numéro d&#39;image doit être 1, et les paramètres «removeback» et «smooth» seront ignorés.</p><p> Par défaut, tous les nouveaux sprites ont leurs cadres de délimitation calculés automatiquement (le cadre de délimitation exact dépendra de la taille et de la transparence du sprite), mais vous souhaiterez peut-être le personnaliser, auquel cas vous devez également utiliser la fonction <a
-      href="sprite_collision_mask.htm"><tt>sprite_collision_mask()</tt></a>.</p><p> Il convient de noter que la mémoire utilisée lors de l&#39;ajout d&#39;un sprite de cette manière sera plus grande que prévu. En effet, <span class="notranslate">GameMaker Studio 2</span> stockera le sprite en tant que page de texture <i>et</i> il sera également stocké dans la mémoire du GPU, de sorte que la mémoire totale sera plus grande que ce à quoi on pourrait s&#39;attendre pour un fichier image du même sprite.</p><p class="note"> <b>REMARQUE</b>: lorsque vous chargez un sprite dans <span class="notranslate">GameMaker Studio 2</span> vous devez vous rappeler de le supprimer à nouveau (avec <a href="sprite_delete.htm"><tt>sprite_delete()</tt></a> ) lorsqu&#39;il n&#39;est plus nécessaire, sinon il y a un risque de fuite de mémoire qui ralentira et finira par planter votre jeu.</p><p class="note"> <b>REMARQUE</b>: sur <b><span class="notranslate">iOS</span></b>, si vous chargez un fichier inclus à partir d&#39;un dossier, c&#39;est-à-dire avec un chemin quelque chose comme &quot;<span style="font-size:1px;"><tt>Backgrounds/background1.png</tt></span> &quot;, vous n&#39;avez PAS besoin d&#39;inclure le dossier dans le chemin et il suffit de fournir le nom du fichier. Sur toutes les autres plates-formes, vous devez fournir le (s) dossier (s) dans le cadre du chemin d&#39;accès au fichier.</p><p class="note"> <b>REMARQUE</b>: sur <b>HTML5</b>, si vous chargez une image-objet à partir d&#39;un serveur sécurisé, vous devrez peut-être définir le type d&#39;origine croisée et utiliser un chemin relatif au lieu d&#39;un chemin absolu. Voir <span style="font-size:1px;"><a href="../../../Asynchronous_Functions/HTTP/http_set_request_crossorigin.htm"><tt style="font-size: 14px">http_set_request_crossorigin ()</tt></a></span> pour plus de détails.</p><p></p><h4> Syntaxe:</h4><p class="code">sprite_add(fname, imgnumb, removeback, smooth, xorig, yorig);</p><table><tbody><tr><th> Argument</th><th> Description</th></tr><tr><td> <span class="notranslate">fname</span></td><td> Le nom (un chemin de fichier de chaîne) du fichier à ajouter.</td></tr><tr><td> <span class="notranslate">imgnum</span></td><td> Utilisez pour indiquer le nombre de sous-images (1 pour une seule image ou pour <tt>*.gif</tt> ).</td></tr><tr><td> <span class="notranslate">removeback</span></td><td> Indique s&#39;il faut rendre transparents tous les pixels avec la couleur d&#39;arrière-plan (pixel en bas à gauche).</td></tr><tr><td> <span class="notranslate">smooth</span></td><td> Indique s&#39;il faut lisser les bords s&#39;ils sont transparents.</td></tr><tr><td> <span class="notranslate">xorig</span></td><td> Indiquez la position x de l&#39;origine dans le sprite.</td></tr><tr><td> <span class="notranslate">yorig</span></td><td> Indiquez la position y de l&#39;origine dans le sprite.</td></tr></tbody></table><p></p><h4> Retour:</h4><p class="code">Real (sprite ID value)</p><p></p><h4> Exemple:</h4><p class="code">spr = sprite_add(&quot;player_5.png&quot;, 16, true, true, 0, 0);</p><p> Le code ci-dessus charge un sprite dans le jeu et stocke son index dans la variable &quot;spr&quot;. </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> Retour: <a href="Sprite_Manipulation.htm">Manipulation des sprites</a></div><div style="float:right"> Suivant:<a href="sprite_replace.htm">sprite_replace</a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
+<body>
+  <!--<div class="body-scroll" style="top: 150px;">-->
+  <h1>sprite_add</h1>
+  <p>Avec cette fonction, vous pouvez ajouter une image en tant que sprite, en la chargeant depuis une source externe. Le fichier image à charger doit <b>toujours</b> être au format <tt>*.png</tt>, <tt>*.gif</tt>, <tt>*.jpg/jpeg</tt> ou <tt>*.json</tt><tt>(</tt> les fichiers<tt>*json</tt> sont utilisés pour charger les <a href="../Skeletal_Animation/Skeletal_Animation.htm">sprites d'animation de squelette</a> réalisés avec Spine). La fonction renvoie le nouvel index du sprite qui doit ensuite être utilisé dans tout autre code relatif au sprite. Si
+    vous utilisez cette fonction avec HTML5 ou que vous obtenez une image à partir d'une URL, cette fonction générera également un événement asynchrone <b>Image Loaded</b>. Voir <a href="../../../../../The_Asset_Editors/Object_Properties/Async_Events/Image_Loaded.htm">cette page</a> pour
+    plus d'informations.</p>
+  <p>Toutes les images qui doivent être transformées en sprites animés - à l'exception des <tt>*.gif</tt> (voir ci-dessous) - doivent avoir un format &quot;bande&quot; (voir l'image ci-dessous) et elles seront divisées en un nombre de sous-images spécifié selon la règle suivante : <b>largeur du</b> sprite <b>= largeur de la bande / sous-images.</b></p>
+  <p><img alt="Example Sprite Strip" class="center" src="../../../../../assets/Images/Scripting_Reference/GML/Reference/Sprites/spr_strip.png" /></p>
+  <p>Comme vous pouvez le voir dans l'image ci-dessus, le sprite a été placé sur un fond violet foncé, et cela peut être supprimé en définissant l'argument &quot;removeback&quot; à true. Cela fonctionne en vérifiant la couleur du pixel <i>inférieur gauche</i> du sprite.
+    la couleur qui s'y trouve, puis l'utilise comme couleur à supprimer. Par exemple, dans l'image ci-dessus, si la couleur du pixel inférieur gauche était le vert, toutes les parties vertes du sprite auraient été supprimées et le reste du fond violet ignoré.</p>
+  <p>Si vous choisissez l'option &quot;removeback&quot;, vous pouvez également souhaiter que GameMaker <span class="notranslate">Studio 2 lisse</span> les bords du sprite en définissant l'argument &quot;smooth&quot; sur true. Tout ce que cela fait, c'est de créer une bordure semi-transparente autour des bords du sprite après la suppression de son arrière-plan.
+    le sprite après la suppression de son arrière-plan.</p>
+  <p>Enfin, vous pouvez également spécifier l'<i>origine</i> x et y du sprite. Il s'agit du point où le sprite est &quot;fixé&quot; sur l'instance qui l'utilise, et il est toujours calculé par rapport au coin supérieur gauche 0,0 d'une sous-image du sprite. Ainsi,
+    par exemple, un sprite de 32 x 32 pixels dont les valeurs sont définies sur (16,16) aura son origine au centre.</p>
+  <p>Si vous ajoutez une image au format <tt>*.gif</tt>, il vous suffit de spécifier le nom du fichier et le numéro de l'image (qui doit être 1 pour la première image) et vous pouvez laisser tous les autres arguments à 0, en notant que <b>seule la première image du GIF sera chargée</b>.
+    Pour les sprites <tt>*.json</tt>, le numéro de l'image doit être 1, et les paramètres &quot;removeback&quot; et &quot;smooth&quot; seront ignorés.</p>
+  <p>Par défaut, les boîtes de délimitation de tous les nouveaux sprites sont calculées automatiquement (la boîte de délimitation exacte dépend de la taille et de la transparence du sprite), mais vous pouvez personnaliser cette fonction, auquel cas vous devez également utiliser la fonction
+    <a href="sprite_collision_mask.htm"><tt>sprite_collision_mask()</tt></a>.</p>
+  <p>Il convient de noter que la mémoire utilisée lors de l'ajout d'un sprite de cette manière sera plus importante que vous ne le pensez. En effet, <span class="notranslate">GameMaker Studio 2</span> stockera le sprite sous forme de page de texture <i>et</i> il sera également stocké dans la mémoire du GPU.
+    sera donc plus importante que celle d'un fichier image du même sprite.</p>
+  <p class="note"><b>REMARQUE</b>: Lorsque vous chargez un sprite dans <span class="notranslate">GameMaker Studio 2</span>, vous devez vous souvenir de le supprimer à nouveau (avec <a href="sprite_delete.htm"><tt>sprite_delete()</tt></a>) lorsqu'il n'est plus nécessaire, sinon il y a un risque de fuite de mémoire qui ralentira et fera planter votre jeu.
+    et éventuellement faire planter votre jeu.</p>
+  <p class="note"><b>NOTE</b>: Sur <b><span class="notranslate">iOS</span></b>si vous chargez un fichier inclus à partir d'un dossier, c'est-à-dire avec un chemin d'accès du type &quot;<span style="font-size:1px;"><tt>Arrière-plans/arrière-plan1.png</tt></span>&quot;, il n'est pas nécessaire d'inclure le dossier dans le chemin d'accès.
+    et le simple fait de fournir le nom du fichier est suffisant. Sur toutes les autres plateformes, vous devez fournir le(s) dossier(s) dans le chemin d'accès au fichier.</p>
+  <p class="note"><b>REMARQUE</b>: en <b>HTML5</b>, si vous chargez un sprite à partir d'un serveur sécurisé, vous devrez peut-être définir le type cross-origin et utiliser un chemin relatif au lieu d'un chemin absolu. Voir <span style="font-size:1px;"><a href="../../../Asynchronous_Functions/HTTP/http_set_request_crossorigin.htm"><tt style="font-size: 14px">http_set_request_crossorigin()</tt></a></span> pour
+    plus de détails.</p>
+  <p> </p>
+  <h4>Syntaxe :</h4>
+  <p class="code">sprite_add(fname, imgnumb, removeback, smooth, xorig, yorig) ;</p>
+  <table>
+    <tbody>
+      <tr>
+        <th>Arguments</th>
+        <th>Description</th>
+      </tr>
+      <tr>
+        <td>nom de famille</td>
+        <td>Le nom (un chemin de fichier de type chaîne) du fichier à ajouter.</td>
+      </tr>
+      <tr>
+        <td>imgnum</td>
+        <td>Permet d'indiquer le nombre de sous-images (1 pour une seule image ou pour un <tt>*.gif</tt>).</td>
+      </tr>
+      <tr>
+        <td>retirer</td>
+        <td>Indique s'il faut rendre transparents tous les pixels ayant la couleur de fond (pixel inférieur gauche).</td>
+      </tr>
+      <tr>
+        <td>lisse</td>
+        <td>Indique s'il faut lisser les bords s'ils sont transparents.</td>
+      </tr>
+      <tr>
+        <td>xorig</td>
+        <td>Indique la position x de l'origine dans le sprite.</td>
+      </tr>
+      <tr>
+        <td>yorig</td>
+        <td>Indique la position y de l'origine dans le sprite.</td>
+      </tr>
+    </tbody>
+  </table>
+  <p> </p>
+  <h4>Les retours :</h4>
+  <p class="code">Réel (valeur de l'ID du sprite)</p>
+  <p> </p>
+  <h4>Exemple :</h4>
+  <p class="code">spr = sprite_add(&quot;player_5.png&quot;, 16, true, true, 0, 0) ;</p>
+  <p>Le code ci-dessus charge un sprite dans le jeu et stocke son index dans la variable &quot;spr&quot;.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <div class="footer">
+    <div class="buttons">
+      <div class="clear">
+        <div style="float:left">Retour : <a href="Sprite_Manipulation.htm">Manipulation des sprites</a></div>
+        <div style="float:right">Suivant : <a href="sprite_replace.htm">sprite_replace</a></div>
+      </div>
+    </div>
+    <h5><span data-keyref="Copyright Notice">Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
   </div>
   <!-- KEYWORDS
 sprite_add

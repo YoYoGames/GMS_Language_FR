@@ -7,11 +7,55 @@
   <meta name="generator" content="Adobe RoboHelp 2019" />
   <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
   <meta name="rh-authors" content="Mark Alexander" />
-  <meta name="topic-comment" content="Page de référence pour gamepad_axis_value" />
+  <meta name="topic-comment" content="Reference page for gamepad_axis_value" />
   <meta name="rh-index-keywords" content="gamepad_axis_value" />
   <meta name="search-keywords" content="gamepad_axis_value" />
 </head>
-<body><!--<div class="body-scroll" style="top: 150px;">--><h1>gamepad_axis_value</h1><p> Vous pouvez utiliser cette fonction pour obtenir la valeur des différents axes d&#39;un emplacement de manette de jeu donné. Vous fournissez l&#39;index de l&#39;emplacement de la manette de jeu à vérifier, avec soit une constante d&#39;index d&#39;axe (comme indiqué <a href="Gamepad_Input.htm">ici</a> ), soit une valeur entière comprise entre 0 et <a href="gamepad_axis_count.htm"><tt>gamepad_axis_count()</tt></a> -1. La valeur de retour sera comprise entre -1 et 1 pour chacun des axes horizontaux et verticaux disponibles.</p><p> Notez que la valeur renvoyée est normalisée pour prendre en compte la valeur définie pour la zone morte de l&#39;axe (en utilisant la fonction <span class="inline"><a href="gamepad_set_axis_deadzone.htm">gamepad_set_axis_deadzone()</a></span> ), et sera donc toujours entre -1 et 0, et 0 et 1. Par exemple, régler la zone morte sur 0,2 signifiera que pousser la manette vers la droite ne commencera à renvoyer une valeur de 0 à 1 que lorsque la <em>valeur brute de l&#39;</em> axe est terminée 0,2 - donc, lorsque la valeur brute est 0,2, la valeur de retour sera 0, lorsque la valeur brute est à 0,5, la valeur de retour sera de 0,375, ou si la valeur brute est de 0,9, la valeur de retour sera de 0,875.</p><p></p><h4> Syntaxe:</h4><p class="code">gamepad_axis_value(device, axisIndex);</p><table><tbody><tr><th> Argument</th><th> Description</th></tr><tr><td> <span class="notranslate">device</span></td><td> Quel «slot» de périphérique de manette de jeu vérifier.</td></tr><tr><td> <span class="notranslate">axisIndex</span></td><td> L&#39;index de l&#39;axe à vérifier (voir la <a href="Gamepad_Input.htm">liste des constantes</a> ).</td></tr></tbody></table><p></p><h4> Retour:</h4><p class="code">real</p><p></p><h4> Exemple:</h4><p class="code">var haxis = gamepad_axis_value(0, gp_axislh);<br/> var vaxis = gamepad_axis_value(0, gp_axislv);<br/> direction = point_direction(0, 0, haxis, vaxis);<br/> speed = point_distance(0 ,0, haxis, vaxis) * 5;</p><p> Le code ci-dessus définit la vitesse et la direction de l&#39;instance en fonction des valeurs renvoyées du contrôleur analogique gauche de la manette de jeu branchée sur le «slot» 0 du périphérique. </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> Retour: <a href="Gamepad_Input.htm">Entrée de la manette de jeu</a></div><div style="float:right"> Suivant: <a href="gamepad_button_check.htm">gamepad_button_check</a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
+<body>
+  <!--<div class="body-scroll" style="top: 150px;">-->
+  <h1>gamepad_axis_value</h1>
+  <p>Vous pouvez utiliser cette fonction pour obtenir la valeur des différents axes d'un slot de gamepad donné. Vous fournissez l'index du slot de la manette à vérifier, ainsi qu'une constante d'index d'axe (comme indiqué <a href="Gamepad_Input.htm">ici</a>), ou une valeur entière entre
+   <tt>0</tt> et <tt><a href="gamepad_axis_count.htm">gamepad_axis_count()</a></tt><tt>-1</tt>. La valeur renvoyée sera comprise entre <tt>-1</tt> et <tt>1</tt> pour chacun des axes horizontaux et verticaux disponibles.</p>
+  <p>Notez que la valeur renvoyée est normalisée pour prendre en compte la valeur définie pour la zone morte de l'axe (à l'aide de la fonction <span class="inline"><a href="gamepad_set_axis_deadzone.htm">gamepad_set_axis_deadzone()</a></span>), et sera donc toujours comprise entre -1 et 0 et 0 et 1.
+    Par exemple, si vous définissez la zone morte à 0,2, cela signifie que le fait de pousser le manche vers la droite ne commencera à renvoyer une valeur comprise entre 0 et 1 que lorsque la valeur <em>brute</em> de l'axe sera supérieure à 0,2.
+    Ainsi, lorsque la valeur brute est de 0,2, la valeur de retour sera de 0, lorsque la valeur brute est de 0,5, la valeur de retour sera de 0,375, ou si la valeur brute est de 0,9, la valeur de retour sera de 0,875.</p>
+  <p> </p>
+  <h4>Syntaxe :</h4>
+  <p class="code">gamepad_axis_value(device, axisIndex) ;</p>
+  <table>
+    <tbody>
+      <tr>
+        <th>Arguments</th>
+        <th>Description</th>
+      </tr>
+      <tr>
+        <td>dispositif</td>
+        <td>Quel &quot;slot&quot; de périphérique gamepad vérifier.</td>
+      </tr>
+      <tr>
+        <td>axisIndex</td>
+        <td>L'index de l'axe à vérifier (voir la <a href="Gamepad_Input.htm">liste des constantes</a>).</td>
+      </tr>
+    </tbody>
+  </table>
+  <p> </p>
+  <h4>Les retours :</h4>
+  <p class="code">réel</p>
+  <p> </p>
+  <h4>Exemple :</h4>
+  <p class="code">var haxis = gamepad_axis_value(0, gp_axislh) ;<br> varaxis = gamepad_axis_value(0, gp_axislv) ;<br> direction = point_direction(0, 0, haxis, vaxis) ;<br> speed = point_distance(0 ,0, haxis, vaxis) * 5 ;</p>
+  <p>Le code ci-dessus définit la vitesse et la direction de l'instance en fonction des valeurs renvoyées par le contrôleur analogique gauche de la manette de jeu branchée sur le périphérique &quot;slot&quot; 0.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <div class="footer">
+    <div class="buttons">
+      <div class="clear">
+        <div style="float:left">Retour : <a href="Gamepad_Input.htm">Entrée de la manette de jeu</a></div>
+        <div style="float:right">Suivant : <a href="gamepad_button_check.htm"> gamepad_button_check </a></div>
+      </div>
+    </div>
+    <h5><span data-keyref="Copyright Notice">Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
   </div>
   <!-- KEYWORDS
 gamepad_axis_value

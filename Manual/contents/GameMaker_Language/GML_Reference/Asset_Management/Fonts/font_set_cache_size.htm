@@ -7,11 +7,54 @@
   <meta name="generator" content="Adobe RoboHelp 2019" />
   <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
   <meta name="rh-authors" content="Mark Alexander" />
-  <meta name="topic-comment" content="Page décrivant la fonction font_set_cache_size" />
+  <meta name="topic-comment" content="Page outlining the function font_set_cache_size" />
   <meta name="rh-index-keywords" content="font_set_cache_size" />
   <meta name="search-keywords" content="font_set_cache_size" />
 </head>
-<body><!--<div class="body-scroll" style="top: 150px;">--><h1>font_set_cache_size</h1><p> Lors de la fusion et de la coloration d&#39;images, HTML5 ne peut pas le faire de manière dynamique de la même manière qu&#39;un exécutable pourrait être exécuté. Par conséquent, <span class="notranslate">GameMaker Studio 2</span> doit temporairement enregistrer une copie mélangée des images et les charger si nécessaire. Cette fonction définit le nombre de copies mélangées de la police donnée pouvant être mises en cache avant que les anciennes ne soient écrasées. La valeur par défaut est 4.</p><p class="note"> <b>REMARQUE:</b> pour les polices de sprite, vous devez utiliser la fonction équivalente pour les sprites, <a href="../Sprites/Sprite_Manipulation/sprite_set_cache_size.htm"><tt>sprite_set_cache_size()</tt></a>.</p><p></p><h4> Syntaxe:</h4><p class="code">font_set_cache_size(ind, max);</p><p></p><table><tbody><tr><th> Argument</th><th> Description</th></tr><tr><td> <span class="notranslate">ind</span></td><td> L&#39;index de la police pour modifier la taille du cache.</td></tr><tr><td> <span class="notranslate">max</span></td><td> Le nombre maximal de copies mises en cache de la police qui peuvent être stockées.</td></tr></tbody></table><p></p><h4> Retour:</h4><p class="code">N/A</p><p></p><h4> Exemple:</h4><p class="code">font_set_cache_size(fnt_MainMenu, 2);</p><p> Cela définira le cache de police de la police indexée dans la variable &quot;fnt_MainMenu&quot; à 2 copies. </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> Retour: <a href="Fonts.htm">Polices</a></div><div style="float:right"> Suivant:<a href="font_add_enable_aa.htm">font_add_enable_aa</a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
+<body>
+  <!--<div class="body-scroll" style="top: 150px;">-->
+  <h1>font_set_cache_size</h1>
+  <p>Lorsqu'il s'agit de mélanger et de colorer des images, HTML5 ne peut pas le faire dynamiquement de la même manière qu'un exécutable. C'est pourquoi <span class="notranslate">GameMaker Studio 2</span> doit enregistrer temporairement une copie mélangée des images et la charger en cas de besoin.
+    et les charger en cas de besoin. Cette fonction définit le nombre de copies mélangées de la police donnée qui peuvent être mises en cache avant que les anciennes ne soient écrasées. La valeur par défaut est 4.</p>
+  <p class="note"><b>NOTE : </b>pour les polices sprites, vous devez utiliser la fonction équivalente pour les sprites, <a href="../Sprites/Sprite_Manipulation/sprite_set_cache_size.htm"><tt>sprite_set_cache_size()</tt></a>.</p>
+  <p> </p>
+  <h4>Syntaxe :</h4>
+  <p class="code">font_set_cache_size(ind, max) ;</p>
+  <p> </p>
+  <table>
+    <tbody>
+      <tr>
+        <th>Arguments</th>
+        <th>Description</th>
+      </tr>
+      <tr>
+        <td>ind</td>
+        <td>L'index de la police dont la taille du cache doit être modifiée.</td>
+      </tr>
+      <tr>
+        <td>max</td>
+        <td>Le nombre maximum de copies en cache de la police qui peuvent être stockées.</td>
+      </tr>
+    </tbody>
+  </table>
+  <p> </p>
+  <h4>Les retours :</h4>
+  <p class="code">N/A</p>
+  <p> </p>
+  <h4>Exemple :</h4>
+  <p class="code">font_set_cache_size(fnt_MainMenu, 2) ;</p>
+  <p>Cela va définir le cache de la police indexée dans la variable &quot;fnt_MainMenu&quot; à 2 copies.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <div class="footer">
+    <div class="buttons">
+      <div class="clear">
+        <div style="float:left">Retour : <a href="Fonts.htm">Polices de caractères</a></div>
+        <div style="float:right">Suivant : <a href="font_add_enable_aa.htm">font_add_enable_aa</a></div>
+      </div>
+    </div>
+    <h5><span data-keyref="Copyright Notice">Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
   </div>
   <!-- KEYWORDS
 font_set_cache_size

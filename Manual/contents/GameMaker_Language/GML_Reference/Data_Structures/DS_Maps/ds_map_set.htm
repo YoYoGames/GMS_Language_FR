@@ -7,13 +7,59 @@
   <meta name="generator" content="Adobe RoboHelp 2019" />
   <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
   <meta name="rh-authors" content="Mark Alexander" />
-  <meta name="topic-comment" content="Page de référence pour ds_map_set" />
+  <meta name="topic-comment" content="Reference page for ds_map_set" />
   <meta name="rh-index-keywords" content="ds_map_set" />
   <meta name="search-keywords" content="ds_map_set" />
 </head>
-<body><!--<div class="body-scroll" style="top: 150px;">--><h1>ds_map_set</h1><p> Avec cette fonction, vous pouvez définir la valeur d&#39;une clé dans une carte DS donnée. Vous fournissez la valeur d&#39;ID de mappage DS (telle que renvoyée par la fonction <a href="ds_map_create.htm"><tt>ds_map_create()</tt></a> ), puis indiquez la clé que vous souhaitez définir et la valeur sur laquelle la définir. Les clés peuvent être des entiers ou des chaînes, et si la clé donnée n&#39;existe pas, elle sera créée pour vous et définie sur la valeur. Cette fonction est identique à l&#39;utilisation de l&#39; <a href="../../../GML_Overview/Accessors.htm">accesseur de carte DS</a> pour définir / créer une paire clé / valeur de carte. La fonction ne renvoie rien, donc si vous devez vérifier si la valeur de clé a été remplacée ou si une nouvelle clé a été créée, vous devez utiliser la fonction <span class="inline"><a href="ds_map_replace.htm">ds_map_replace()</a></span>.</p><p></p><h4> Syntaxe:</h4><p class="code">ds_map_set(id, key, value)</p><table><tbody><tr><th> Argument</th><th> Description</th></tr><tr><td> <span class="notranslate">id</span></td><td> L&#39;identifiant de la carte à utiliser.</td></tr><tr><td> <span class="notranslate">key</span></td><td> La clé à régler.</td></tr><tr><td> <span class="notranslate">value</span></td><td> La valeur à laquelle définir la clé.</td></tr></tbody></table><p></p><h4> Retour:</h4><p class="code">N/A</p><p></p><h4> Exemple:</h4><p class="code">if is_undefined(ds_map_find_value(map, &quot;score&quot;))<br/>     {
-    <br/>     ds_map_set(map, &quot;score&quot;, 0);<br/>     }
-  </p><p> Le code ci-dessus vérifiera si la clé donnée existe et si ce n&#39;est pas le cas, elle est créée et définie. </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> Retour: <a href="DS_Maps.htm">DS Maps</a></div><div style="float:right"> Suivant:<a href="ds_map_read.htm">ds_map_read</a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
+<body>
+  <!--<div class="body-scroll" style="top: 150px;">-->
+  <h1>ds_map_set</h1>
+  <p>Cette fonction permet de définir la valeur d'une clé dans une carte DS donnée. Vous fournissez la valeur de l'ID de la carte DS (telle que retournée par la fonction <a href="ds_map_create.htm"><tt>ds_map_create()</tt></a>), puis vous donnez la clé que vous voulez définir et la valeur à laquelle la définir
+    valeur à définir. Les clés peuvent être des entiers ou des chaînes de caractères, et si la clé donnée n'existe pas, elle sera créée pour vous et définie par la valeur. Cette fonction est identique à l'utilisation de l'<a href="../../../GML_Overview/Accessors.htm">accesseur DS map</a> pour définir/créer une paire clé/valeur de
+    map couple clé/valeur. La fonction ne renvoie rien, donc si vous devez vérifier si la valeur de la clé a été remplacée ou si une nouvelle clé a été créée, vous devez utiliser la fonction <span class="inline"><a href="ds_map_replace.htm">ds_map_replace()</a></span>.</p>
+  <p> </p>
+  <h4>Syntaxe :</h4>
+  <p class="code">ds_map_set(id, key, value)</p>
+  <table>
+    <tbody>
+      <tr>
+        <th>Arguments</th>
+        <th>Description</th>
+      </tr>
+      <tr>
+        <td>id</td>
+        <td>L'identifiant de la carte à utiliser.</td>
+      </tr>
+      <tr>
+        <td>clé</td>
+        <td>La clé du jeu.</td>
+      </tr>
+      <tr>
+        <td>valeur</td>
+        <td>La valeur à donner à la clé.</td>
+      </tr>
+    </tbody>
+  </table>
+  <p> </p>
+  <h4>Les retours :</h4>
+  <p class="code">N/A</p>
+  <p> </p>
+  <h4>Exemple :</h4>
+  <p class="code">if is_undefined(ds_map_find_value(map, &quot;score&quot;))<br> {
+    <br> ds_map_set(map, &quot;score&quot;, 0) ;<br> }
+  </p>
+  <p>Le code ci-dessus vérifiera si la clé donnée existe et si elle n'existe pas, elle sera créée et définie.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <div class="footer">
+    <div class="buttons">
+      <div class="clear">
+        <div style="float:left">Retour : <a href="DS_Maps.htm">Cartes DS</a></div>
+        <div style="float:right">Suivant : <a href="ds_map_read.htm">ds_map_read</a></div>
+      </div>
+    </div>
+    <h5><span data-keyref="Copyright Notice">Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
   </div>
   <!-- KEYWORDS
 ds_map_set

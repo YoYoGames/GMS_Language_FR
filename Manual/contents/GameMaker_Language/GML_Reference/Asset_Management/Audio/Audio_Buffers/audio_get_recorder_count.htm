@@ -7,13 +7,41 @@
   <meta name="generator" content="Adobe RoboHelp 2019" />
   <link rel="stylesheet" href="../../../../../assets/css/default.css" type="text/css" />
   <meta name="rh-authors" content="Mark Alexander" />
-  <meta name="topic-comment" content="Page expliquant la fonction audio_get_recorder_count" />
+  <meta name="topic-comment" content="Page explaining the function audio_get_recorder_count" />
   <meta name="rh-index-keywords" content="audio_get_recorder_count" />
   <meta name="search-keywords" content="audio_get_recorder_count" />
 </head>
-<body><!--<div class="body-scroll" style="top: 150px;">--><h1>audio_get_recorder_count</h1><p> Cette fonction renverra le nombre de sources d&#39;enregistrement audio (comme les microphones, etc.) actuellement disponibles pour votre jeu. Donc, si vous avez une valeur de retour de, par exemple, quatre, alors vous aurez une entrée audio sur les sources 0, 1, 2 et 3, l&#39;une de ces valeurs étant celle que vous utilisez pour démarrer l&#39;enregistrement à partir de l&#39;utilisation de la fonction <a href="audio_start_recording.htm"><tt>audio_start_recording()</tt></a>. Cette valeur peut changer à tout moment lorsque des personnes branchent / débranchent des microphones ou d&#39;autres sources d&#39;entrée sur l&#39;appareil. Notez que vous pouvez utiliser la fonction <a href="audio_get_recorder_info.htm"><tt>audio_get_recorder_info()</tt></a> pour obtenir des informations sur chaque appareil connecté.</p><p class="note"> <b>IMPORTANT!</b> Cette fonction renverra toujours 0 lorsqu&#39;elle est utilisée sur la cible HTML5.</p><p></p><h4> Syntaxe:</h4><p class="code">audio_get_recorder_count();</p><p></p><h4> Retour:</h4><p class="code">Integer</p><p></p><h4> Exemple:</h4><p class="code">if audio_get_recorder_count() &gt; 0<br/>    {
-    <br/>    channel_index = audio_start_recording(0);<br/>    }
-  </p><p> Le code ci-dessus vérifie les enregistreurs audio disponibles et s&#39;il y en a 1 ou plus, il commence l&#39;enregistrement à partir du premier indexé (source 0). </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> Arrière: <a href="../Audio.htm">Tampons audio</a></div><div style="float:right"> Suivant:<a href="audio_get_recorder_info.htm">audio_get_recorder_info</a></div><div style="float:right"></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
+<body>
+  <!--<div class="body-scroll" style="top: 150px;">-->
+  <h1>audio_get_recorder_count</h1>
+  <p>Cette fonction renvoie le nombre de sources d'enregistrement audio (comme les microphones, etc...) actuellement disponibles pour votre jeu. Ainsi, si vous avez une valeur de retour de, par exemple, quatre, alors vous aurez une entrée audio sur les sources 0, 1, 2 et 3, avec l'une de ces valeurs étant celle que vous utilisez.
+    de ces valeurs étant celle que vous utilisez pour commencer l'enregistrement en utilisant la fonction <a href="audio_start_recording.htm"><tt>audio_start_recording()</tt></a>. Cette valeur peut changer à tout moment lorsque des personnes branchent ou débranchent des microphones ou d'autres sources d'entrée sur l'appareil.
+    sources d'entrée de l'appareil. Notez que vous pouvez utiliser la fonction <a href="audio_get_recorder_info.htm"><tt>audio_get_recorder_info()</tt></a> pour obtenir des informations sur chaque appareil connecté.</p>
+  <p class="note"><b>IMPORTANT !</b> Cette fonction renvoie toujours 0 lorsqu'elle est utilisée sur la cible HTML5.</p>
+  <p> </p>
+  <h4>Syntaxe :</h4>
+  <p class="code">audio_get_recorder_count() ;</p>
+  <p> </p>
+  <h4>Les retours :</h4>
+  <p class="code">Entier</p>
+  <p> </p>
+  <h4>Exemple :</h4>
+  <p class="code">si audio_get_recorder_count() &gt; 0<br> {
+    <br> channel_index = audio_start_recording(0) ;<br> }
+  </p>
+  <p>Le code ci-dessus vérifie les enregistreurs audio disponibles et s'il y en a 1 ou plus, il commence à enregistrer à partir du premier indexé (source 0).</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <div class="footer">
+    <div class="buttons">
+      <div class="clear">
+        <div style="float:left">Retour : <a href="../Audio.htm">Tampons audio</a></div>
+        <div style="float:right">Suivant : <a href="audio_get_recorder_info.htm">audio_get_recorder_info</a></div>
+        <div style="float:right"> </div>
+      </div>
+    </div>
+    <h5><span data-keyref="Copyright Notice">Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
   </div>
   <!-- KEYWORDS
 audio_get_recorder_count

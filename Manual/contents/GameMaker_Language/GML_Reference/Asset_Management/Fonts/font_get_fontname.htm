@@ -7,11 +7,49 @@
   <meta name="generator" content="Adobe RoboHelp 2019" />
   <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
   <meta name="rh-authors" content="Mark Alexander" />
-  <meta name="topic-comment" content="Page décrivant la fonction font_get_fontname" />
+  <meta name="topic-comment" content="Page outlining the function font_get_fontname" />
   <meta name="rh-index-keywords" content="font_get_fontname" />
   <meta name="search-keywords" content="font_get_fontname" />
 </head>
-<body><!--<div class="body-scroll" style="top: 150px;">--><h1>font_get_fontname</h1><p> Avec cette fonction, vous pouvez obtenir le nom système réel de la ressource de police sélectionnée. Cette fonction renvoie une <i>chaîne</i> et non un <i>index</i>, et le nom retourné dépendra de la police utilisée. Par exemple, vous pouvez avoir une ressource de police appelée &quot;fnt_Main&quot; dans le <span class="notranslate">GameMaker Studio 2</span>, et la police elle-même peut être la police système <span class="notranslate">Windows</span> <b>Arial</b>. Dans ce cas, la fonction retournera &quot;Arial&quot; car c&#39;est le nom système de la police. Si vous avez besoin du nom tel qu&#39;il apparaît dans le navigateur de ressources, vous devez utiliser <a href="font_get_name.htm"><tt>font_get_name()</tt></a>.</p><p></p><h4> Syntaxe:</h4><p class="code">font_get_fontname(ind);</p><table><tbody><tr><th> Argument</th><th> Description</th></tr><tr><td> <span class="notranslate">ind</span></td><td> Index de la police à vérifier.</td></tr></tbody></table><p></p><h4> Retour:</h4><p class="code">String</p><p></p><h4> Exemple:</h4><p class="code">fnt_Name = font_get_fontname(font0);</p><p> Le code ci-dessus obtiendra le nom système d&#39;une ressource de police et le stockera sous forme de chaîne dans la variable &quot;fnt_Name&quot;. </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> Retour: <a href="Fonts.htm">Polices</a></div><div style="float:right"> Suivant:<a href="font_get_first.htm">font_get_first</a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
+<body>
+  <!--<div class="body-scroll" style="top: 150px;">-->
+  <h1>font_get_fontname</h1>
+  <p>Cette fonction permet d'obtenir le nom système réel de la ressource de police sélectionnée. Cette fonction renvoie une <i>chaîne</i> et non un <i>index</i>, et le nom renvoyé dépend de la police utilisée. Par exemple,
+    vous pouvez avoir un actif de police appelé &quot;fnt_Main&quot; dans le navigateur d'<span class="notranslate">actifs</span> de GameMaker <span class="notranslate">Studio 2</span>, et la police elle-même peut être la police <span class="notranslate">système</span> Windows Arial. Dans ce cas, la fonction renvoie &quot; Arial &quot;.
+    car c'est le nom système de la police. Si vous avez besoin du nom tel qu'il apparaît dans l'Asset Browser, vous devez utiliser la fonction suivante <a href="font_get_name.htm"><tt>font_get_name()</tt></a>.</p>
+  <p> </p>
+  <h4>Syntaxe :</h4>
+  <p class="code">font_get_fontname(ind) ;</p>
+  <table>
+    <tbody>
+      <tr>
+        <th>Arguments</th>
+        <th>Description</th>
+      </tr>
+      <tr>
+        <td>ind</td>
+        <td>Index de la police à vérifier.</td>
+      </tr>
+    </tbody>
+  </table>
+  <p> </p>
+  <h4>Les retours :</h4>
+  <p class="code">Chaîne de caractères</p>
+  <p> </p>
+  <h4>Exemple :</h4>
+  <p class="code">fnt_Name = font_get_fontname(font0) ;</p>
+  <p>Le code ci-dessus récupère le nom système d'une ressource de police et le stocke sous forme de chaîne dans la variable &quot;fnt_Name&quot;.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <div class="footer">
+    <div class="buttons">
+      <div class="clear">
+        <div style="float:left">Retour : <a href="Fonts.htm">Polices de caractères</a></div>
+        <div style="float:right">Suivant : <a href="font_get_first.htm">font_get_first</a></div>
+      </div>
+    </div>
+    <h5><span data-keyref="Copyright Notice">Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
   </div>
   <!-- KEYWORDS
 font_get_fontname

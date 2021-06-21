@@ -7,13 +7,55 @@
   <meta name="generator" content="Adobe RoboHelp 2019" />
   <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
   <meta name="rh-authors" content="Mark Alexander" />
-  <meta name="topic-comment" content="Page de référence pour gamepad_button_check_released" />
+  <meta name="topic-comment" content="Reference page for gamepad_button_check_released" />
   <meta name="rh-index-keywords" content="gamepad_button_check_released" />
   <meta name="search-keywords" content="gamepad_button_check_released" />
 </head>
-<body><!--<div class="body-scroll" style="top: 150px;">--><h1>gamepad_button_check_released</h1><p> Cette fonction retournera <tt>true</tt> ou <tt>false</tt> selon que le bouton de la manette de jeu donné est détecté comme ayant été relâché ou non. Notez que cette fonction ne se déclenchera <i>qu&#39;une</i> seule fois pour le bouton au moment où il a été relâché. Pour qu&#39;il se déclenche à nouveau, le bouton doit d&#39;abord être enfoncé puis relâché une fois de plus. Si vous cochez un bouton analogique, la vérification prendra en compte le <a href="gamepad_set_button_threshold.htm">réglage</a> du seuil et ne retournera que <span class="inline">true</span> lorsque la valeur d&#39;entrée brute passe sous le seuil donné (vous pouvez obtenir cette valeur brute en utilisant la fonction <span class="inline"><a href="gamepad_button_value.htm">gamepad_button_value()</a></span> ).</p><p></p><h4> Syntaxe:</h4><p class="code">gamepad_button_check_released(device, button);</p><table><tbody><tr><th> Argument</th><th> Description</th></tr><tr><td> <span class="notranslate">device</span></td><td> Quel «slot» de périphérique de manette de jeu vérifier.</td></tr><tr><td> <span class="notranslate">button</span></td><td> <a href="Gamepad_Input.htm">Quelle constante de</a> bouton de manette de jeu vérifier.</td></tr></tbody></table><p></p><h4> Retour:</h4><p class="code">Boolean</p><p></p><h4> Exemple:</h4><p class="code">if gamepad_button_check_released(0, gp_select)<br/>    {
-    <br/>    audio_play_sound(snd_Button, 0, false);<br/>    global.Pause = !global.Pause;<br/>    }
-  </p><p> Le code ci-dessus détectera si le bouton &quot;sélectionner&quot; de la manette de jeu connectée au périphérique &quot;slot&quot; 0 a été enfoncé ou non et basculera la variable globale &quot;Pause&quot;. </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> Retour: <a href="Gamepad_Input.htm">Entrée de la manette de jeu</a></div><div style="float:right"> Suivant:<a href="gamepad_button_count.htm">gamepad_button_count</a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
+<body>
+  <!--<div class="body-scroll" style="top: 150px;">-->
+  <h1>gamepad_button_check_released</h1>
+  <p>Cette fonction renvoie <tt>vrai</tt> ou <tt>faux</tt> selon que le bouton de la manette de jeu est détecté comme ayant été relâché ou non. Notez que cette fonction ne se déclenchera qu'<i>une seule fois</i> pour le bouton au moment où il a été relâché.
+    Pour qu'elle se déclenche à nouveau, le bouton doit d'abord être enfoncé, puis relâché une nouvelle fois. Si vous vérifiez un bouton analogique, la vérification prendra en compte le <a href="gamepad_set_button_threshold.htm">réglage du seuil</a> et ne renverra que
+    ne renvoie <span class="inline">true</span> que lorsque la valeur d'entrée brute passe sous le seuil donné (vous pouvez obtenir cette valeur brute à l'aide de la fonction <span class="inline"><a href="gamepad_button_value.htm">gamepad_button_value()</a></span>).</p>
+  <p> </p>
+  <h4>Syntaxe :</h4>
+  <p class="code">gamepad_button_check_released(device, button) ;</p>
+  <table>
+    <tbody>
+      <tr>
+        <th>Arguments</th>
+        <th>Description</th>
+      </tr>
+      <tr>
+        <td>dispositif</td>
+        <td>Quel &quot;slot&quot; de périphérique gamepad vérifier.</td>
+      </tr>
+      <tr>
+        <td>bouton</td>
+        <td>Quelle <a href="Gamepad_Input.htm">constante de</a> bouton de manette à vérifier.</td>
+      </tr>
+    </tbody>
+  </table>
+  <p> </p>
+  <h4>Les retours :</h4>
+  <p class="code">Booléen</p>
+  <p> </p>
+  <h4>Exemple :</h4>
+  <p class="code">if gamepad_button_check_released(0, gp_select)<br> {
+    <br> audio_play_sound(snd_Button, 0, false) ;<br> global.Pause = !global.Pause ;<br> }
+  </p>
+  <p>Le code ci-dessus détectera si le bouton &quot;select&quot; de la manette de jeu connectée au périphérique &quot;slot&quot; 0 a été pressé ou non et basculera la variable globale &quot;Pause&quot;.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <div class="footer">
+    <div class="buttons">
+      <div class="clear">
+        <div style="float:left">Retour : <a href="Gamepad_Input.htm">Entrée de la manette de jeu</a></div>
+        <div style="float:right">Suivant : <a href="gamepad_button_count.htm">gamepad_button_count</a></div>
+      </div>
+    </div>
+    <h5><span data-keyref="Copyright Notice">Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
   </div>
   <!-- KEYWORDS
 gamepad_button_check_released

@@ -7,11 +7,74 @@
   <meta name="generator" content="Adobe RoboHelp 2019" />
   <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
   <meta name="rh-authors" content="Mark Alexander" />
-  <meta name="topic-comment" content="Page décrivant la fonction font_add_sprite" />
+  <meta name="topic-comment" content="Page outlining the function font_add_sprite" />
   <meta name="rh-index-keywords" content="font_add_sprite" />
   <meta name="search-keywords" content="font_add_sprite" />
 </head>
-<body><!--<div class="body-scroll" style="top: 150px;">--><h1>font_add_sprite</h1><p> Avec cette fonction, vous pouvez utiliser une &quot;bande de sprite&quot; pour créer une nouvelle ressource de police, où chaque sous-image serait un symbole ou une lettre individuelle. L&#39;index est le numéro de carte UTF8 pour le premier caractère à utiliser et les plages à utiliser sont les mêmes que vous le feriez pour une police normale, commençant par &quot;!&quot; mais rappelez-vous que vous ne devez inclure que ce dont vous avez besoin et que vous devez utiliser le <a href="../../Strings/ord.htm"><tt>ord()</tt></a> pour obtenir la valeur UTF8 correcte de la lettre de départ. La police de sprite créée aura alors les sous-images définies sur un glyphe individuel de la police, où le &quot;premier&quot; glyphe aura l&#39;image_index de 0. Vous pouvez définir &quot;espace&quot; comme étant n&#39;importe quel caractère que vous voulez, par exemple un seul line la taille que vous voulez que l&#39;espace soit, et tous les espaces dans le texte seront rendus à cette largeur (mais l&#39;image choisie <i>ne</i> sera jamais rendue), ou si vous ne fournissez pas de sprite pour l&#39;espace, alors la largeur du plus large le caractère de la police sprite sera utilisé à la place.</p><p> Vous pouvez également définir l&#39;espacement de la police pour qu&#39;il soit proportionnel (<tt>true</tt> ) ou non (<tt>false</tt> ), où une police proportionnelle est espacée en fonction de la largeur réelle des lettres (la lettre «i» prend donc moins de place que la lettre «w», par exemple) tandis qu&#39;une police non proportionnelle sera espacée en fonction du sous- largeur de l&#39;image, comme une police à espacement fixe. Enfin, vous pouvez définir l&#39;espace à laisser entre chaque lettre lors de l&#39;écriture, et cela peut être n&#39;importe quelle valeur entière, 0 étant sans espace (les lettres &quot;toucheront&quot; si elles sont proportionnelles). La fonction renvoie une <i>valeur d&#39;index</i> qui doit être stockée dans une variable car elle sera nécessaire dans tous les autres codes faisant référence à cette police, ou elle retournera -1 si la fonction échoue pour une raison quelconque.</p><p> Il convient également de noter qu&#39;il ne peut y avoir d&#39; <i>espaces</i> dans la table de caractères, de sorte que si vous, par exemple, utilisez &#39;. et &#39;0&#39; mais pas &#39;/&#39;, vous devez quand même inclure &#39;/&#39; ou laisser une sous-image vide entre les deux caractères utilisés.</p><p> Le sprite lui-même peut être un élément de sprite à partir du navigateur de ressources ou chargé à partir d&#39;un fichier à l&#39;aide de <tt>sprite_add</tt> d&#39;abord pour obtenir l&#39;index du sprite chargé (qui est ensuite utilisé dans la fonction). Il est important de noter que pour les fonctions d&#39;alignement des polices (comme <a href="../../Drawing/Text/draw_set_halign.htm"><tt>draw_set_halign()</tt></a> ) pour fonctionner comme prévu lors de l&#39;utilisation d&#39;une police de sprite, le sprite doit avoir son origine définie dans le <i>coin supérieur gauche</i>. Si vous utilisez d&#39;autres valeurs, vous devrez prendre en compte le décalage d&#39;origine lors du dessin du texte à l&#39;aide de la police.</p><p class="note"> <b>REMARQUE:</b> lorsque vous chargez une police dans <span class="notranslate">GameMaker Studio 2</span> vous devez vous rappeler de la supprimer à nouveau (avec <span style="font-size:1px;"><a href="font_delete.htm"><tt style="font-size: 14px">font_delete ()</tt></a></span> ) lorsqu&#39;elle n&#39;est plus nécessaire, sinon il y a un risque de fuite de mémoire qui ralentira et finira par planter votre jeu.</p><p></p><h4> Syntaxe:</h4><p class="code">font_add_sprite(spr, first, prop, sep);</p><table><tbody><tr><th> Argument</th><th> Description</th></tr><tr><td> <span class="notranslate">spr</span></td><td> Le sprite sur lequel ajouter une police.</td></tr><tr><td> <span class="notranslate">first</span></td><td> L&#39;index du premier caractère disponible.</td></tr><tr><td> <span class="notranslate">prop</span></td><td> Définir comme police proportionnelle ou non.</td></tr><tr><td> <span class="notranslate">sep</span></td><td> L&#39;espace à laisser entre chaque lettre.</td></tr></tbody></table><p></p><h4> Retour:</h4><p class="code">Real</p><p></p><h4> Exemple:</h4><p class="code">global.Font = font_add_sprite(spr_HUD_Font, ord(&quot;!&quot;), true, 2);</p><p> Le code ci-dessus créera un nouvel actif de police à partir d&#39;un actif de sprite et stockera l&#39;index de la nouvelle police dans la variable &quot;global.Font&quot; pour une utilisation ultérieure. </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> Retour: <a href="Fonts.htm">Polices</a></div><div style="float:right"> Suivant:<a href="font_add_sprite_ext.htm">font_add_sprite_ext</a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
+<body>
+  <!--<div class="body-scroll" style="top: 150px;">-->
+  <h1>font_add_sprite</h1>
+  <p>Avec cette fonction, vous pouvez utiliser une &quot;bande de sprites&quot; pour créer une nouvelle ressource de police, où chaque sous-image serait un symbole ou une lettre individuelle. L'index est le numéro de carte UTF8 du premier caractère à utiliser et les plages à utiliser sont les mêmes que pour une police normale.
+    que pour une police normale, en commençant par &quot; !&quot;, mais rappelez-vous que vous ne devez inclure que ce dont vous avez besoin et que vous devez utiliser la fonction <a href="../../Strings/ord.htm"><tt>ord()</tt></a> pour obtenir la valeur UTF8 correcte pour la lettre de départ.
+    de départ. La police sprite créée aura alors les sous-images définies sur un glyphe individuel de la police, où le &quot;premier&quot; glyphe aura l'image_index de 0. Vous pouvez définir &quot;espace&quot; comme étant n'importe quel caractère que vous voulez, par exemple
+    une ligne unique de la taille que vous souhaitez pour l'espace, et tous les espaces dans le texte seront rendus à cette largeur (mais l'image choisie <i>ne sera jamais</i> rendue), ou si vous ne fournissez pas de sprite pour l'espace, alors la largeur du caractère le plus large
+    dans la police du sprite sera utilisée à la place.</p>
+  <p>Vous pouvez également définir l'espacement de la police pour qu'elle soit proportionnelle<tt>(true</tt>) ou non<tt>(false</tt>), où une police proportionnelle est espacée sur la base de la largeur réelle des lettres (ainsi, la lettre &quot;i&quot; prend moins de place que la lettre &quot;w&quot;,
+    par exemple), tandis qu'une police non proportionnelle sera espacée en fonction de la largeur de la sous-image, comme une police monospace. Enfin, vous pouvez définir l'espace à laisser entre chaque lettre lors de l'écriture, et il peut s'agir de n'importe quelle valeur entière, 0 correspondant à l'absence d'espace (les lettres se "toucheront" si elles sont proportionnelles).
+    lettres se &quot;toucheront&quot; si elles sont proportionnelles). La fonction renvoie une valeur d'<i>index</i> qui doit être stockée dans une variable car elle sera nécessaire dans tous les codes ultérieurs qui se réfèrent à cette police, ou elle renvoie -1 si la fonction échoue pour une raison quelconque.
+    raison.</p>
+  <p>Il convient également de noter qu'il ne peut y avoir d'<i>espace</i> dans la carte de caractères, de sorte que si vous utilisez, par exemple, '.' et '0' mais pas '/', vous devez soit inclure '/' de toute façon, soit laisser un sous-image vide entre les deux caractères utilisés.
+    deux caractères utilisés.</p>
+  <p>Le sprite lui-même peut être un sprite du navigateur d'actifs ou un sprite chargé à partir d'un fichier en utilisant d'abord <tt>sprite_add</tt> pour obtenir l'index du sprite chargé (qui est ensuite utilisé dans la fonction). Il est important de noter que pour l'alignement des polices, les fonctions
+    (comme <a href="../../Drawing/Text/draw_set_halign.htm"><tt>draw_set_halign()</tt></a>) fonctionnent comme prévu lors de l'utilisation d'une police sprite, l'origine du sprite doit être fixée au <i>coin supérieur gauche</i>. Si vous utilisez d'autres valeurs, vous devrez
+    devrez prendre en compte le décalage de l'origine lorsque vous dessinerez du texte à l'aide de la police.</p>
+  <p class="note"><b>REMARQUE : </b>Lorsque vous chargez une police dans <span class="notranslate">GameMaker Studio 2</span>, vous devez vous souvenir de la supprimer (avec la commande <span style="font-size:1px;"><a href="font_delete.htm"><tt style="font-size: 14px">font_delete()</tt></a></span>) lorsqu'elle n'est plus nécessaire, sinon il y a
+    risque d'une fuite de mémoire qui ralentira et finira par faire planter votre jeu.</p>
+  <p> </p>
+  <h4>Syntaxe :</h4>
+  <p class="code">font_add_sprite(spr, first, prop, sep) ;</p>
+  <table>
+    <tbody>
+      <tr>
+        <th>Arguments</th>
+        <th>Description</th>
+      </tr>
+      <tr>
+        <td>spr</td>
+        <td>Le sprite sur lequel ajouter une police.</td>
+      </tr>
+      <tr>
+        <td>premièrement</td>
+        <td>L'index du premier caractère disponible.</td>
+      </tr>
+      <tr>
+        <td>accessoire</td>
+        <td>Définir comme police proportionnelle ou non.</td>
+      </tr>
+      <tr>
+        <td>sep</td>
+        <td>L'espace à laisser entre chaque lettre.</td>
+      </tr>
+    </tbody>
+  </table>
+  <p> </p>
+  <h4>Les retours :</h4>
+  <p class="code">Real</p>
+  <p> </p>
+  <h4>Exemple :</h4>
+  <p class="code">global.Font = font_add_sprite(spr_HUD_Font, ord(&quot; !&quot;), true, 2) ;</p>
+  <p>Le code ci-dessus crée une nouvelle police à partir d'un sprite et stocke l'index de la nouvelle police dans la variable &quot;global.Font&quot; pour une utilisation ultérieure.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <div class="footer">
+    <div class="buttons">
+      <div class="clear">
+        <div style="float:left">Retour : <a href="Fonts.htm">Polices de caractères</a></div>
+        <div style="float:right">Suivant : <a href="font_add_sprite_ext.htm">font_add_sprite_ext</a></div>
+      </div>
+    </div>
+    <h5><span data-keyref="Copyright Notice">Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
   </div>
   <!-- KEYWORDS
 font_add_sprite

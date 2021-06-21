@@ -7,13 +7,51 @@
   <meta name="generator" content="Adobe RoboHelp 2019" />
   <link rel="stylesheet" href="../../../../../assets/css/default.css" type="text/css" />
   <meta name="rh-authors" content="Mark Alexander" />
-  <meta name="topic-comment" content="Page décrivant la fonction layer_sprite_get_sprite" />
+  <meta name="topic-comment" content="Page outlining the function layer_sprite_get_sprite" />
   <meta name="rh-index-keywords" content="layer_sprite_get_sprite" />
   <meta name="search-keywords" content="layer_sprite_get_sprite" />
 </head>
-<body><!--<div class="body-scroll" style="top: 150px;">--><h1>layer_sprite_get_sprite</h1><p> Cette fonction peut être utilisée pour obtenir l&#39;index de sprite actuel de l&#39;élément sprite. Vous donnez l&#39;ID d&#39;élément de sprite (que vous obtenez lorsque vous créez un élément de sprite en utilisant <a href="layer_sprite_create.htm"><tt>layer_sprite_create()</tt></a> ou lorsque vous utilisez la fonction <a href="layer_sprite_get_id.htm"><tt>layer_sprite_get_id()</tt></a> ), et la fonction renverra une valeur réelle qui représente l&#39;index du sprite affiché. Si l&#39;élément n&#39;a pas de sprite assigné, la fonction retournera -1.</p><p></p><h4> Syntaxe:</h4><p class="code">layer_sprite_get_sprite(sprite_element_id);</p><table><tbody><tr><th> Argument</th><th> Description</th></tr><tr><td> <span class="notranslate">sprite_element_id</span></td><td> La valeur d&#39;ID unique de l&#39;élément de sprite à partir duquel obtenir les informations</td></tr></tbody></table><p></p><h4> Retour:</h4><p class="code">Sprite Index (Real) or -1</p><p></p><h4> Exemple:</h4><p class="code">var lay_id = layer_get_id(&quot;sprite_sky&quot;);<br/> var spr_id = layer_sprite_get_id(lay_id, &quot;Clouds&quot;);<br/> if layer_sprite_get_sprite(spr_id) != spr_Clouds<br/>     {
-    <br/>     layer_sprite_change(spr_id, spr_Clouds);<br/>     }
-  </p><p> Le code ci-dessus obtiendra l&#39;ID de la couche nommée &quot;sprite_sky&quot; et l&#39;utilisera ensuite pour obtenir l&#39;ID de l&#39;élément sprite sur cette couche. Cet identifiant est ensuite utilisé pour vérifier le sprite affecté à l&#39;élément, en le définissant sur le sprite &quot;spr_Clouds&quot; si ce n&#39;est déjà fait. </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> Retour: <a href="Sprite_Layers.htm">Couches de sprite</a></div><div style="float:right"> Suivant:<a href="layer_sprite_get_index.htm">layer_sprite_get_index</a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
+<body>
+  <!--<div class="body-scroll" style="top: 150px;">-->
+  <h1>layer_sprite_get_sprite</h1>
+  <p>Cette fonction peut être utilisée pour obtenir l'index actuel de l'élément sprite. Vous donnez l'ID de l'élément sprite (que vous obtenez lorsque vous créez un élément sprite à l'aide de la fonction <a href="layer_sprite_create.htm"><tt>layer_sprite_create()</tt></a> ou lorsque vous utilisez
+    la fonction <a href="layer_sprite_get_id.htm"><tt>layer_sprite_get_id()</tt></a>), et la fonction renverra une valeur réelle qui représente l'indice du sprite affiché. Si l'élément n'a pas de sprite assigné, la fonction renverra -1.</p>
+  <p> </p>
+  <h4>Syntaxe :</h4>
+  <p class="code">layer_sprite_get_sprite(sprite_element_id) ;</p>
+  <table>
+    <tbody>
+      <tr>
+        <th>Arguments</th>
+        <th>Description</th>
+      </tr>
+      <tr>
+        <td>sprite_element_id</td>
+        <td>La valeur d'identification unique de l'élément de sprite à partir duquel les informations doivent être obtenues.</td>
+      </tr>
+    </tbody>
+  </table>
+  <p> </p>
+  <h4>Les retours :</h4>
+  <p class="code">Index du sprite (réel) ou -1</p>
+  <p> </p>
+  <h4>Exemple :</h4>
+  <p class="code">var lay_id = layer_get_id(&quot;sprite_sky&quot;) ;<br> var spr_id = layer_sprite_get_id(lay_id, &quot;Clouds&quot;) ;<br> if layer_sprite_get_sprite(spr_id) != spr_Clouds<br> {
+    <br> layer_sprite_change(spr_id, spr_Clouds) ;<br> }
+  </p>
+  <p>Le code ci-dessus récupère l'ID du calque nommé &quot;sprite_sky&quot; et l'utilise pour obtenir l'ID de l'élément sprite sur ce calque. Cet ID est ensuite utilisé pour vérifier le sprite assigné à l'élément, en le réglant sur le sprite &quot;spr_Clouds&quot;, s'il ne l'est pas déjà.
+    s'il ne l'est pas déjà.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <div class="footer">
+    <div class="buttons">
+      <div class="clear">
+        <div style="float:left">Retour : <a href="Sprite_Layers.htm">Couches de sprites</a></div>
+        <div style="float:right">Suivant : <a href="layer_sprite_get_index.htm">layer_sprite_get_index</a></div>
+      </div>
+    </div>
+    <h5><span data-keyref="Copyright Notice">Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
   </div>
   <!-- KEYWORDS
 layer_sprite_get_sprite

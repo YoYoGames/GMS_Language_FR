@@ -7,16 +7,59 @@
   <meta name="generator" content="Adobe RoboHelp 2019" />
   <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
   <meta name="rh-authors" content="Mark Alexander" />
-  <meta name="topic-comment" content="Référence de la fonction gpu_set_texfilter_ext" />
+  <meta name="topic-comment" content="Reference for the function gpu_set_texfilter_ext" />
   <meta name="rh-index-keywords" content="gpu_set_texfilter_ext" />
   <meta name="search-keywords" content="gpu_set_texfilter_ext" />
 </head>
-<body><!--<div class="body-scroll" style="top: 150px;">--><h1>gpu_set_texfilter_ext</h1><p> Cette fonction peut être utilisée pour définir l&#39;interpolation linéaire pour un seul «emplacement» d&#39;échantillonneur lors de l&#39;utilisation de <a href="../../Asset_Management/Shaders/Shaders.htm"><span class="notranslate">Shaders</span></a> dans <span class="notranslate">GameMaker Studio 2</span>. Lorsque cela est activé (<tt>true</tt> ) la texture de l&#39;échantillonneur sera lissée et si elle est désactivée (<tt>false</tt> ), les images seront alors dessinées en fonction du pixel le plus proche. La valeur par défaut est celle définie par les <b>options de jeu globales</b> pour votre jeu, ou celle définie à l&#39;aide de la fonction <a href="gpu_set_texfilter.htm"><tt>gpu_set_texfilter()</tt></a>.</p><p class="note"> <b>REMARQUE</b>: ce paramètre sera remplacé par la valeur définie lors de l&#39;appel de la fonction <a href="gpu_set_texfilter.htm"><tt>gpu_set_texfilter()</tt></a>.</p><p class="note"> <b>REMARQUE</b>: sur la cible HTML5, cette fonction ne fonctionnera qu&#39;avec WebGL activé.</p><p></p><h4> Syntaxe:</h4><p class="code">gpu_set_texfilter_ext(sampler_id, enable);</p><table><tbody><tr><th> Argument</th><th> Description</th></tr><tr><td> <span class="notranslate">sampler_id</span></td><td> L&#39;identifiant de l&#39;échantillonneur du <span class="notranslate">shader</span>.</td></tr><tr><td> <span class="notranslate">enable</span></td><td> Activer ou désactiver le filtrage des textures (<tt>true</tt> /<tt>false</tt> )</td></tr></tbody></table><p></p><h4> Retour:</h4><p class="code">N/A</p><p></p><h4> Exemple:</h4><p class="code">var s_tex = shader_get_sampler_index(shader_glass, &quot;s_NoiseSampler&quot;);<br/> if gpu_get_texfilter_ext(s_tex)<br/>     {
-    <br/>     gpu_set_texfilter_ext(s_tex, false);<br/>     }
-    <br/> else
-    <br/>     {
-    <br/>     gpu_set_texfilter_ext(s_tex, true);<br/>     }
-  </p><p> Le code ci-dessus vérifie si le filtrage de texture est activé ou désactivé pour un ID d&#39;échantillonneur spécifique (stocké dans une variable locale) et le change en conséquence. </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> Retour: <a href="GPU_Control.htm">Contrôle GPU</a></div><div style="float:right"> Suivant:<a href="gpu_set_texrepeat.htm">gpu_set_texrepeat</a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
+<body>
+  <!--<div class="body-scroll" style="top: 150px;">-->
+  <h1>gpu_set_texfilter_ext</h1>
+  <p>Cette fonction peut être utilisée pour définir l'interpolation linéaire pour un seul &quot;slot&quot; d'échantillonneur lors de l'utilisation de <a href="../../Asset_Management/Shaders/Shaders.htm"><span class="notranslate">Shaders</span></a> dans <span class="notranslate">GameMaker Studio 2</span>. Lorsque cette fonction est activée<tt>(true</tt>), la texture de l'échantillonneur sera lissée.
+    sera lissée et si elle est désactivée<tt>(false</tt>), les images seront dessinées sur la base du pixel le plus proche. La valeur par défaut est celle définie par les <b>options globales de</b> votre jeu, ou celle définie à l'aide de la fonction <a href="gpu_set_texfilter.htm"><tt>gpu_set_texfilter()</tt></a>.</p>
+  <p class="note"><b>NOTE</b>: Ce paramètre sera remplacé par la valeur définie lors de l'appel de la fonction <a href="gpu_set_texfilter.htm"><tt>gpu_set_texfilter()</tt></a>.</p>
+  <p class="note"><b>REMARQUE</b>: sur la cible HTML5, cette fonction ne fonctionnera que si WebGL est activé.</p>
+  <p> </p>
+  <h4>Syntaxe :</h4>
+  <p class="code">gpu_set_texfilter_ext(sampler_id, enable) ;</p>
+  <table>
+    <tbody>
+      <tr>
+        <th>Arguments</th>
+        <th>Description</th>
+      </tr>
+      <tr>
+        <td>sampler_id</td>
+        <td>L'identifiant de l'échantillonneur du <span class="notranslate">shader</span>.</td>
+      </tr>
+      <tr>
+        <td>activer</td>
+        <td>Activer ou désactiver le filtrage des textures<tt>(true</tt> / <tt>false</tt>)</td>
+      </tr>
+    </tbody>
+  </table>
+  <p> </p>
+  <h4>Les retours :</h4>
+  <p class="code">N/A</p>
+  <p> </p>
+  <h4>Exemple :</h4>
+  <p class="code">var s_tex = <span class="notranslate">shader_get_sampler_index</span><span class="notranslate">(shader_glass</span>, &quot;s_NoiseSampler&quot;) ;<br> if gpu_get_texfilter_ext(s_tex)<br> {
+    <br> gpu_set_texfilter_ext(s_tex, false) ;<br> }
+    <br> else
+    <br> {
+    <br> gpu_set_texfilter_ext(s_tex, true) ;<br> }
+  </p>
+  <p>Le code ci-dessus vérifie si le filtrage de texture est activé ou non pour un ID d'échantillonneur spécifique (stocké dans une variable locale) et l'active en conséquence.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <div class="footer">
+    <div class="buttons">
+      <div class="clear">
+        <div style="float:left">Retour : <a href="GPU_Control.htm">Contrôle du GPU</a></div>
+        <div style="float:right">Suivant : <a href="gpu_set_texrepeat.htm">gpu_set_texrepeat</a></div>
+      </div>
+    </div>
+    <h5><span data-keyref="Copyright Notice">Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
   </div>
   <!-- KEYWORDS
 gpu_set_texfilter_ext

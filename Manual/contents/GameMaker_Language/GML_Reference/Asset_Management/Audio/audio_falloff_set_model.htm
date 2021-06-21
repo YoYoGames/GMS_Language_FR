@@ -7,13 +7,98 @@
   <meta name="generator" content="Adobe RoboHelp 2019" />
   <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
   <meta name="rh-authors" content="Mark Alexander" />
-  <meta name="topic-comment" content="Page expliquant la fonction audio_falloff_set_model" />
-  <meta name="rh-index-keywords" content="audio_falloff_set_model,audio_falloff_exponent_distance,audio_falloff_exponent_distance_clamped,audio_falloff_inverse_distance,audio_falloff_inverse_distance_clamped,audio_falloff_linear_distance,audio_falloff_linear_distance_clamped,audio_falloff_none"
-  />
-  <meta name="search-keywords" content="audio_falloff_set_model,audio_falloff_exponent_distance,audio_falloff_exponent_distance_clamped,audio_falloff_inverse_distance,audio_falloff_inverse_distance_clamped,audio_falloff_linear_distance,audio_falloff_linear_distance_clamped,audio_falloff_none"
-  />
+  <meta name="topic-comment" content="Page explaining the function audio_falloff_set_model" />
+  <meta name="rh-index-keywords" content="audio_falloff_set_model,audio_falloff_exponent_distance,audio_falloff_exponent_distance_clamped,audio_falloff_inverse_distance,audio_falloff_inverse_distance_clamped,audio_falloff_linear_distance,audio_falloff_linear_distance_clamped,audio_falloff_none" />
+  <meta name="search-keywords" content="audio_falloff_set_model,audio_falloff_exponent_distance,audio_falloff_exponent_distance_clamped,audio_falloff_inverse_distance,audio_falloff_inverse_distance_clamped,audio_falloff_linear_distance,audio_falloff_linear_distance_clamped,audio_falloff_none" />
 </head>
-<body><!--<div class="body-scroll" style="top: 150px;">--><h1>audio_falloff_set_model</h1><p> Pour ajouter plus de polyvalence au moteur audio, <span class="notranslate">GameMaker Studio 2</span> vous permet de sélectionner le modèle d&#39;atténuation qui convient à votre jeu. Ce modèle sera utilisé pour <b>toutes</b> les fonctions audio du jeu ou de l&#39;application, et vous devez donc vous assurer que le modèle que vous choisissez est le bon, car chacun affectera la façon dont l&#39;auditeur perçoit les sons que vous jouez à travers les émetteurs ou avec le fonction <a><tt>audio_play_sound_at</tt></a>.</p><p> Lorsque vous définissez l&#39;atténuation dans votre jeu avec les fonctions appropriées, vous devrez définir trois arguments, chacun étant approprié à un modèle spécifique et affectera la façon dont le son final est &quot;entendu&quot; par le joueur en fonction de la distance. que l&#39;auditeur est de la source. Les trois arguments sont:</p><ul class="colour"><li> <b>distance de référence</b> - il s&#39;agit de la distance par rapport à l&#39;auditeur, la distance sous laquelle le volume pour la lecture du son chuterait normalement de moitié avant d&#39;être influencé par le facteur de réduction ou la distance maximale spécifiée.<b></b></li><li> <b>distance maximale</b> - ceci définit la distance à laquelle il n&#39;y aura plus d&#39;atténuation du son source. Cela peut être le point auquel le son n&#39;est plus entendu <i>ou</i> le point auquel le volume sonore ne diminue plus en dessous du seuil minimum défini par le modèle choisi.<b></b></li><li> <b>facteur d&#39;atténuation</b> - Le facteur d&#39;atténuation est utilisé dans l&#39;atténuation de distance basée sur le modèle de distance inverse et définit le seuil minimum final pour un son avec atténuation.</li></ul><p> Les modèles d&#39;atténuation affectés par ces arguments sont représentés dans <span class="notranslate">GameMaker Studio 2</span> par les constantes suivantes (le tableau montre également les calculs exacts utilisés):</p><p></p><table><tbody><tr><th> Constant</th><th> Fonction</th></tr><tr><td> <span class="notranslate">audio_falloff_exponent_distance</span></td><td><br/> gain = (distance_auditeur / distance_référence) ^ (-facteur_falloff)</td></tr><tr><td> <span class="notranslate">audio_falloff_exponent_distance_clamped</span></td><td><br/> distance = pince (distance_auditeur, distance_référence, distance_maximum)<br/> gain = (distance / distance_de référence) ^ (-facteur_facture)</td></tr><tr><td> <span class="notranslate">audio_falloff_inverse_distance</span></td><td><br/> gain = reference_distance / (reference_distance + falloff_factor * (listener_distance - reference_distance))</td></tr><tr><td> <span class="notranslate">audio_falloff_inverse_distance_clamped</span></td><td><br/> distance = pince (distance_auditeur, distance_référence, distance_maximum)<br/> gain = reference_distance / (reference_distance + falloff_factor * (distance - reference_distance))</td></tr><tr><td> <span class="notranslate">audio_falloff_linear_distance</span></td><td><br/> distance = min (distance, distance_maximale)<br/> gain = (1 - falloff_factor * (distance - reference_distance) / (maximum_distance - reference_distance))</td></tr><tr><td> <span class="notranslate">audio_falloff_linear_distance_clamped</span></td><td><br/> distance = pince (distance_auditeur, distance_référence, distance_maximum)<br/> gain = (1 - falloff_factor * (distance - reference_distance) / (maximum_distance - reference_distance))</td></tr><tr><td> <span class="notranslate">audio_falloff_none</span></td><td><br/> gain = 1</td></tr></tbody></table><p><br/> Les graphiques suivants sont des représentations visuelles de la façon dont les constantes ci-dessus fonctionnent et affectent le son joué:</p><p><img alt="Distance Model Examples" class="center" src="../../../../assets/Images/Scripting_Reference/GML/Reference/Audio/Distance_Models.png" /></p><p></p><h4> Syntaxe:</h4><p class="code">audio_falloff_set_model(model);</p><table><tbody><tr><th> Argument</th><th> Description</th></tr><tr><td> <span class="notranslate">model</span></td><td> <b>Constante</b> utilisée pour définir le modèle d&#39;atténuation.</td></tr></tbody></table><p></p><h4> Retour:</h4><p class="code">N/A</p><p></p><h4> Exemple:</h4><p class="code">audio_falloff_set_model(audio_falloff_exponent_distance_clamped);<br/> audio_play_sound_at(snd_Waterfall, x, y, 0, 100, 300, 1, true, 1);</p><p> Le code ci-dessus définit le modèle d&#39;atténuation, puis lit le son indexé dans la variable &quot;snd_Waterfall&quot;, qui sera bouclé à sa position de la pièce, avec une référence d&#39;atténuation de 100, une distance d&#39;atténuation de 300, un facteur d&#39;atténuation de 1 et une faible priorité. </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> Retour: <a href="Audio.htm">Audio</a></div><div style="float:right"> Suivant:<a href="audio_sound_gain.htm">audio_sound_gain</a></div><div style="float:right"></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
+<body>
+  <!--<div class="body-scroll" style="top: 150px;">-->
+  <h1>audio_falloff_set_model</h1>
+  <p>Pour ajouter plus de polyvalence au moteur audio, <span class="notranslate">GameMaker Studio 2</span> vous permet de sélectionner le modèle de falloff qui convient à votre jeu. Ce modèle sera utilisé pour <b>toutes les</b> fonctions audio du jeu ou de l'application, et vous devez donc vous assurer que le modèle que vous choisissez est correct.
+    choisissez est le bon, car chacun d'entre eux affectera la façon dont l'auditeur perçoit les sons que vous jouez par le biais d'émetteurs ou avec la fonction <a><tt>audio_play_sound_at</tt></a>.</p>
+  <p>Lorsque vous définissez le falloff dans votre jeu à l'aide des fonctions appropriées, il y a trois arguments que vous devrez définir, et chacun d'entre eux est approprié à un modèle spécifique et affectera la façon dont le son final est &quot;entendu&quot; par le joueur selon
+    de la distance qui sépare l'auditeur de la source. Les trois arguments sont les suivants :</p>
+  <ul class="colour">
+    <li><b>distance de référence</b> - il s'agit de la distance par rapport à l'auditeur à laquelle le volume du son diffusé devrait normalement diminuer de moitié avant d'être influencé par le facteur d'atténuation ou la distance maximale spécifiée.<b></b></li>
+    <li><b>distance maximale</b> - ceci définit la distance à laquelle il n'y aura plus d'atténuation du son source. Il peut s'agir du point où le son n'est plus entendu <i>ou</i> du point où le volume sonore ne descend plus en dessous du seuil minimum défini par le modèle choisi.
+      le seuil minimum défini par le modèle choisi.<b></b></li>
+    <li><b>facteur de falloff</b> - Le facteur de falloff est utilisé dans l'atténuation de la distance basée sur le modèle de distance inverse et définit le seuil minimum final pour un son avec falloff.</li>
+  </ul>
+  <p>Les modèles de falloff qui sont affectés par ces arguments sont représentés dans <span class="notranslate">GameMaker Studio 2</span> par les constantes suivantes (le tableau indique également les calculs exacts utilisés) :</p>
+  <p> </p>
+  <table>
+    <tbody>
+      <tr>
+        <th>Constant</th>
+        <th>Fonction</th>
+      </tr>
+      <tr>
+        <td>audio_falloff_exponent_distance</td>
+        <td><br> gain = (distance de l'auditeur / distance de référence) ^ (-falloff_factor)</td>
+      </tr>
+      <tr>
+        <td>audio_falloff_exponent_distance_clamped</td>
+        <td><br> distance = clamp(listener_distance, reference_distance, maximum_distance)<br> gain = (distance / reference_distance) ^ (-falloff_factor)</td>
+      </tr>
+      <tr>
+        <td>audio_falloff_inverse_distance</td>
+        <td><br> gain = distance de référence / (distance de référence + facteur de falloff * (distance de l'auditeur - distance de référence))</td>
+      </tr>
+      <tr>
+        <td>audio_falloff_inverse_distance_clamped</td>
+        <td><br> distance = clamp(listener_distance, reference_distance, maximum_distance)<br> gain = reference_distance / (reference_distance + falloff_factor * (distance - reference_distance))</td>
+      </tr>
+      <tr>
+        <td>audio_falloff_linear_distance</td>
+        <td><br> distance = min(distance, distance maximale)<br> gain = (1 - falloff_factor * (distance - distance de référence) / (distance maximale - distance de référence))</td>
+      </tr>
+      <tr>
+        <td>audio_falloff_linear_distance_clamped</td>
+        <td><br> distance = clamp(listener_distance, reference_distance, maximum_distance)<br> gain = (1 - falloff_factor * (distance - reference_distance) / (maximum_distance - reference_distance))</td>
+      </tr>
+      <tr>
+        <td>audio_falloff_none</td>
+        <td><br> gain = 1</td>
+      </tr>
+    </tbody>
+  </table>
+  <p><br> Les graphiques suivants sont des représentations visuelles de la façon dont les constantes ci-dessus fonctionnent et affectent le son joué :</p>
+  <p><img alt="Distance Model Examples" class="center" src="../../../../assets/Images/Scripting_Reference/GML/Reference/Audio/Distance_Models.png" /></p>
+  <p> </p>
+  <h4>Syntaxe :</h4>
+  <p class="code">audio_falloff_set_model(modèle) ;</p>
+  <table>
+    <tbody>
+      <tr>
+        <th>Arguments</th>
+        <th>Description</th>
+      </tr>
+      <tr>
+        <td>modèle</td>
+        <td>La <b>constante</b> utilisée pour définir le modèle de falloff.</td>
+      </tr>
+    </tbody>
+  </table>
+  <p> </p>
+  <h4>Les retours :</h4>
+  <p class="code">N/A</p>
+  <p> </p>
+  <h4>Exemple :</h4>
+  <p class="code">audio_falloff_set_model(audio_falloff_exponent_distance_clamped) ;<br> audio_play_sound_at(snd_Waterfall, x, y, 0, 100, 300, 1, true, 1) ;</p>
+  <p>Le code ci-dessus définit le modèle de falloff et joue ensuite le son indexé dans la variable &quot;snd_Waterfall&quot;, qui sera mis en boucle à sa position dans la pièce, avec une référence de falloff de 100, une distance de falloff de 300, un facteur de falloff de 1 et une priorité faible.
+    priorité.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <div class="footer">
+    <div class="buttons">
+      <div class="clear">
+        <div style="float:left">Retour : <a href="Audio.htm">Audio</a></div>
+        <div style="float:right">Suivant : <a href="audio_sound_gain.htm">audio_sound_gain</a></div>
+        <div style="float:right"> </div>
+      </div>
+    </div>
+    <h5><span data-keyref="Copyright Notice">Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
   </div>
   <!-- KEYWORDS
 audio_falloff_set_model

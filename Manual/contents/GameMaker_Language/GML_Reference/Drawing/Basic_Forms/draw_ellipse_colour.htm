@@ -3,15 +3,79 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>draw_ellipse_colour</title>
+  <title>dessiner_ellipse_couleur</title>
   <meta name="generator" content="Adobe RoboHelp 2019" />
   <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
   <meta name="rh-authors" content="Mark Alexander" />
-  <meta name="topic-comment" content="Référence pour la fonction draw_ellipse_colour" />
+  <meta name="topic-comment" content="Reference for the function draw_ellipse_colour" />
   <meta name="rh-index-keywords" content="draw_ellipse_colour,draw_ellipse_color" />
   <meta name="search-keywords" content="draw_ellipse_colour,draw_ellipse_color" />
 </head>
-<body><!--<div class="body-scroll" style="top: 150px;">--><h1>draw_ellipse_colour</h1><p> Avec cette fonction, vous pouvez dessiner le contour d&#39;une ellipse ou une ellipse pleine en définissant une zone rectangulaire qui aura ensuite l&#39;ellipse créée pour s&#39;adapter. S&#39;il est rempli, vous pouvez définir les couleurs de remplissage intérieur et extérieur. Si ces couleurs ne sont pas les mêmes, vous obtiendrez un effet de dégradé de l&#39;une à l&#39;autre (les paramètres de couleur remplaceront la couleur de base définie avec la fonction <a href="../Colour_And_Alpha/draw_set_colour.htm"><tt>draw_set_colour()</tt></a> ). Vous pouvez définir la précision du dessin avec la fonction <a href="draw_set_circle_precision.htm"><tt>draw_set_circle_precision()</tt></a>.</p><p class="note"> <b>REMARQUE</b>: Si vous souhaitez dessiner une forme à l&#39;aide d&#39;un <span class="notranslate">shader</span>, sachez que la plupart des <span class="notranslate">shaders</span> attendent les entrées suivantes: sommet, texture, couleur. Cependant, lors de l&#39;utilisation de cette fonction, seules les données de sommet et de couleur sont transmises, et le <span class="notranslate">shader</span> peut ne rien dessiner (ou dessiner quelque chose mais pas correctement). Si vous devez dessiner des formes de cette manière, le <span class="notranslate">shader</span> doit être personnalisé dans cet esprit.</p><p></p><h4> Syntaxe:</h4><p class="code">draw_ellipse_colour(x1, y1, x2, y2, col1, col2, outline);</p><table><tbody><tr><th> Argument</th><th> Description</th></tr><tr><td> <span class="notranslate">x1</span></td><td> La coordonnée x de la gauche de l&#39;ellipse.</td></tr><tr><td> <span class="notranslate">y1</span></td><td> La coordonnée y du haut de l&#39;ellipse.</td></tr><tr><td> <span class="notranslate">x2</span></td><td> La coordonnée x de la droite de l&#39;ellipse.</td></tr><tr><td> <span class="notranslate">y2</span></td><td> La coordonnée y du bas de l&#39;ellipse.</td></tr><tr><td> <span class="notranslate">col1</span></td><td> La couleur du centre.</td></tr><tr><td> <span class="notranslate">col2</span></td><td> La couleur du bord.</td></tr><tr><td> <span class="notranslate">outline</span></td><td> Indique si l&#39;ellipse est un contour (vrai) ou remplie (faux).</td></tr></tbody></table><p></p><h4> Retour:</h4><p class="code">N/A</p><p></p><h4> Exemple:</h4><p class="code">draw_ellipse_colour(50, 50, 200, 100, c_black, c_white, false);</p><p> Cela dessinerait une ellipse remplie et étirée horizontalement avec un centre noir et un bord blanc. </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> Retour: <a href="Basic_Forms.htm">Formulaires de base</a></div><div style="float:right"> Suivant:<a href="draw_line.htm">draw_line</a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
+<body>
+  <!--<div class="body-scroll" style="top: 150px;">-->
+  <h1>dessiner_ellipse_couleur</h1>
+  <p>Avec cette fonction, vous pouvez dessiner le contour d'une ellipse ou une ellipse remplie en définissant une zone rectangulaire dans laquelle l'ellipse sera créée. Si elle est remplie, vous pouvez définir les couleurs de remplissage intérieure et extérieure. Si ces couleurs
+    ne sont pas les mêmes, vous obtiendrez un effet de gradient de l'une à l'autre (les paramètres de couleur remplaceront la couleur de base définie avec la fonction <a href="../Colour_And_Alpha/draw_set_colour.htm"><tt>draw_set_colour()</tt></a>). Vous pouvez définir le degré de
+    la précision du dessin à l'aide de la fonction <a href="draw_set_circle_precision.htm"><tt>draw_set_circle_precision()</tt></a>.</p>
+  <p class="note"><b>NOTE</b>: Si vous souhaitez dessiner une forme à l'aide d'un <span class="notranslate">shader</span>, sachez que la plupart des <span class="notranslate">shaders</span> attendent les entrées suivantes : vertex, texture, couleur. Cependant, en utilisant cette fonction, seules les données de vertex et de couleur sont transmises, et donc le shader peut ne rien dessiner (ou dessiner quelque chose mais pas correctement).
+   <span class="notranslate">shader</span> peut ne rien dessiner (ou dessiner quelque chose mais pas correctement). Si vous avez besoin de dessiner des formes de cette manière, le <span class="notranslate">shader</span> doit être personnalisé en conséquence.</p>
+  <p> </p>
+  <h4>Syntaxe :</h4>
+  <p class="code">draw_ellipse_colour(x1, y1, x2, y2, col1, col2, outline) ;</p>
+  <table>
+    <tbody>
+      <tr>
+        <th>Arguments</th>
+        <th>Description</th>
+      </tr>
+      <tr>
+        <td>x1</td>
+        <td>La coordonnée x de la gauche de l'ellipse.</td>
+      </tr>
+      <tr>
+        <td>y1</td>
+        <td>La coordonnée y du sommet de l'ellipse.</td>
+      </tr>
+      <tr>
+        <td>x2</td>
+        <td>La coordonnée x de la droite de l'ellipse.</td>
+      </tr>
+      <tr>
+        <td>y2</td>
+        <td>La coordonnée y du bas de l'ellipse.</td>
+      </tr>
+      <tr>
+        <td>col1</td>
+        <td>La couleur du centre.</td>
+      </tr>
+      <tr>
+        <td>col2</td>
+        <td>La couleur du bord.</td>
+      </tr>
+      <tr>
+        <td>aperçu</td>
+        <td>Indique si l'ellipse est un contour (true) ou si elle est remplie (false).</td>
+      </tr>
+    </tbody>
+  </table>
+  <p> </p>
+  <h4>Les retours :</h4>
+  <p class="code">N/A</p>
+  <p> </p>
+  <h4>Exemple :</h4>
+  <p class="code">draw_ellipse_colour(50, 50, 200, 100, c_black, c_white, false) ;</p>
+  <p>Cela dessine une ellipse remplie, étirée horizontalement, avec un centre noir et un bord blanc.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <div class="footer">
+    <div class="buttons">
+      <div class="clear">
+        <div style="float:left">Retour : <a href="Basic_Forms.htm">Formes de base</a></div>
+        <div style="float:right">Suivant : <a href="draw_line.htm">draw_line</a></div>
+      </div>
+    </div>
+    <h5><span data-keyref="Copyright Notice">Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
   </div>
   <!-- KEYWORDS
 draw_ellipse_colour

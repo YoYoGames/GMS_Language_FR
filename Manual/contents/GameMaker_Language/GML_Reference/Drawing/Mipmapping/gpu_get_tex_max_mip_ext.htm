@@ -7,15 +7,53 @@
   <meta name="generator" content="Adobe RoboHelp 2019" />
   <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
   <meta name="rh-authors" content="Mark Alexander" />
-  <meta name="topic-comment" content="Référence de la fonction gpu_get_tex_max_mip_ext" />
+  <meta name="topic-comment" content="Reference for the function gpu_get_tex_max_mip_ext" />
   <meta name="rh-index-keywords" content="gpu_get_tex_max_mip_ext" />
   <meta name="search-keywords" content="gpu_get_tex_max_mip_ext" />
 </head>
-<body><!--<div class="body-scroll" style="top: 150px;">--><h1>gpu_get_tex_max_mip_ext</h1><p> Avec cette fonction, vous pouvez obtenir le niveau de mipmap maximum actuellement défini qui doit être utilisé pour un échantillonneur de <span class="notranslate">shader</span> Vous fournissez la valeur d&#39;index pour l&#39; <span class="notranslate">shader</span> (comme renvoyé par la fonction <a href="../../Asset_Management/Shaders/shader_get_sampler_index.htm"><tt>shader_get_sampler_index()</tt></a>, et la fonction retournera le niveau de mipmap maximum actuel, où une valeur de 0 est la résolution la plus élevée, 1 est d&#39;utiliser le premier mipmap, 2 est le second etc... Notez que cela peut être très utile pour éviter les artefacts de saignement lorsque le rendu des textures, par exemple, définir la bordure de la page de texture sur 8px, puis définir le niveau maximal de mipmap sur 3 vous garantira de ne pas avoir de problèmes de saignement à des distances de rendu plus importantes.</p><p></p><h4> Syntaxe:</h4><p class="code">gpu_get_tex_max_mip_ext(sampler_index);</p><table><tbody><tr><th> Argument</th><th> Description</th></tr><tr><td> <span class="notranslate">sampler_index</span></td><td> L&#39;indice de l&#39;échantillonneur de <span class="notranslate">shader</span></td></tr></tbody></table><p></p><h4> Retour:</h4><p class="code">Real (default: 16)</p><p></p><h4> Exemple:</h4><p class="code">var _sampleIndex = shader_get_sampler_index(shd_Glass, &quot;s_Background&quot;);<br/> var _spriteTex = sprite_get_texture(sprite_index, 0);<br/> shader_set(shd_Glass);
-    <br/> if gpu_get_tex_max_mip_ext(_sampleIndex) != 4<br/>     {
-    <br/>     gpu_set_tex_max_mip_ext(_sampleIndex, 4);<br/>     }
-    <br/> texture_set_stage(_sampleIndex , _spriteTex);<br/> shader_reset();
-  </p><p> Le code ci-dessus définit le niveau maximal de mipmap sur 4 pour l&#39; <span class="notranslate">shader</span> donné s&#39;il n&#39;a pas déjà été défini sur 4. </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> Retour: <a href="Mipmapping.htm">Mipmapping</a></div><div style="float:right"> Suivant:<a href="gpu_get_tex_max_aniso.htm">gpu_get_tex_max_aniso</a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
+<body>
+  <!--<div class="body-scroll" style="top: 150px;">-->
+  <h1>gpu_get_tex_max_mip_ext</h1>
+  <p>Avec cette fonction, vous pouvez obtenir le niveau maximum de mipmap actuellement défini qui doit être utilisé pour un échantillonneur de <span class="notranslate">shader</span> donné. Vous fournissez la valeur de l'index de l'échantillonneur d'<span class="notranslate">ombrage</span> (tel que retourné par la fonction <a href="../../Asset_Management/Shaders/shader_get_sampler_index.htm"><tt><span class="notranslate">shader_get_sampler_index</span>()</tt></a>,
+    et la fonction renverra le niveau maximum actuel de mipmap, où une valeur de 0 est la plus haute résolution, 1 est d'utiliser le premier mipmap, 2 est le second etc.... Notez que cela peut être très utile pour éviter les artefacts de saignement lors du rendu des textures,
+    Par exemple, en définissant la bordure de la page de texture à 8px et en définissant le niveau maximum de mipmap à 3, vous serez sûr de ne pas avoir de problèmes de saignement à des distances de rendu plus importantes.</p>
+  <p> </p>
+  <h4>Syntaxe :</h4>
+  <p class="code">gpu_get_tex_max_mip_ext(sampler_index) ;</p>
+  <table>
+    <tbody>
+      <tr>
+        <th>Arguments</th>
+        <th>Description</th>
+      </tr>
+      <tr>
+        <td>sampler_index</td>
+        <td>L'index de l'échantillonneur de <span class="notranslate">shader</span> à obtenir</td>
+      </tr>
+    </tbody>
+  </table>
+  <p> </p>
+  <h4>Les retours :</h4>
+  <p class="code">Real (par défaut : 16)</p>
+  <p> </p>
+  <h4>Exemple :</h4>
+  <p class="code">var _sampleIndex = <span class="notranslate">shader_get_sampler_index</span>(shd_Glass, &quot;s_Background&quot;) ;<br> var _spriteTex = sprite_get_texture(sprite_index, 0) ;<br> shader_set <span class="notranslate">(shd_Glass</span>) ;
+    <br> if gpu_get_tex_max_mip_ext(_sampleIndex) != 4<br> {
+    <br> gpu_set_tex_max_mip_ext(_sampleIndex, 4) ;<br> }
+    <br> texture_set_stage(_sampleIndex , _spriteTex) ;<br> <span class="notranslate">shader_reset</span>() ;
+  </p>
+  <p>Le code ci-dessus définit le niveau maximum de mipmap à 4 pour l'échantillonneur de texture de <span class="notranslate">shader</span> donné s'il n'a pas déjà été défini à 4.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <div class="footer">
+    <div class="buttons">
+      <div class="clear">
+        <div style="float:left">Retour : <a href="Mipmapping.htm">Mipmapping</a></div>
+        <div style="float:right">Suivant : <a href="gpu_get_tex_max_aniso.htm">gpu_get_tex_max_aniso</a></div>
+      </div>
+    </div>
+    <h5><span data-keyref="Copyright Notice">Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
   </div>
   <!-- KEYWORDS
 gpu_get_tex_max_mip_ext

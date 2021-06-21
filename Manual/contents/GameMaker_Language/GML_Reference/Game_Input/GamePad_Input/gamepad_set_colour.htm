@@ -2,19 +2,62 @@
 
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml"><head>
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <title>gamepad_set_colour</title>
-  <meta name="generator" content="Adobe RoboHelp 2019"/>
-  <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css"/>
-  <meta name="rh-authors" content="Mark Alexander"/>
-  <meta name="topic-comment" content="Page de référence pour gamepad_set_colour"/>
-  <meta name="rh-index-keywords" content="gamepad_set_colour"/>
-  <meta name="search-keywords" content="gamepad_set_colour,gamepad_set_color"/>
+  <meta name="generator" content="Adobe RoboHelp 2019" />
+  <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
+  <meta name="rh-authors" content="Mark Alexander" />
+  <meta name="topic-comment" content="Reference page for gamepad_set_colour" />
+  <meta name="rh-index-keywords" content="gamepad_set_colour" />
+  <meta name="search-keywords" content="gamepad_set_colour,gamepad_set_color" />
 </head>
 
-<body><!--<div class="body-scroll" style="top: 150px;">--><h1>gamepad_set_colour</h1><p> Cette fonction peut être utilisée pour définir la couleur des voyants dans un contrôleur PlayStation. Vous spécifiez l&#39;emplacement de périphérique à définir, puis donnez une couleur, qui peut être l&#39;une des <a href="../../Drawing/Colour_And_Alpha/Colour_And_Alpha.htm">constantes de couleur</a> ou une valeur de couleur créée à l&#39;aide des fonctions de couleur spécifiques ou d&#39;une valeur HEX (comme <span class="notranslate">$FFFFFFF</span> ).</p><p></p><h4> Syntaxe:</h4><p class="code">gamepad_set_colour(device, colour);</p><table><tbody><tr><th> Argument</th><th> Description</th></tr><tr><td> <span class="notranslate">device</span></td><td> Quel «slot» de périphérique de manette de jeu définir.</td></tr><tr><td> <span class="notranslate">colour</span></td><td> La couleur à utiliser.</td></tr></tbody></table><p></p><h4> Retour:</h4><p class="code">N/A</p><p></p><h4> Exemple:</h4><p class="code">if health &lt; 10<br/>    {
-    <br/>    gamepad_set_colour(0, c_red);<br/>    }
-  </p><p> Le code ci-dessus définira les voyants du contrôleur PlayStation sur rouge si le <tt>health</tt> variable tombe en dessous de 10. </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> Retour: <a href="Gamepad_Input.htm">Entrée de la manette de jeu</a></div><div style="float:right"> Suivant: <a href="gamepad_set_option.htm">gamepad_set_option</a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
+<body>
+
+
+
+  <!--<div class="body-scroll" style="top: 150px;">-->
+  <h1>gamepad_set_colour</h1>
+  <p>Cette fonction peut être utilisée pour définir la couleur des LEDs dans un contrôleur PlayStation. Vous spécifiez l'emplacement du périphérique à définir, puis vous donnez une couleur, qui peut être l'une des <a href="../../Drawing/Colour_And_Alpha/Colour_And_Alpha.htm">constantes de couleur</a> ou une valeur de couleur créée à l'aide des fonctions de couleur spécifiques ou une valeur HEX (comme $FFFFFFF).</p>
+  <p> </p>
+  <h4>Syntaxe :</h4>
+  <p class="code">gamepad_set_colour(device, colour) ;</p>
+  <table>
+    <tbody>
+      <tr>
+        <th>Arguments</th>
+        <th>Description</th>
+      </tr>
+      <tr>
+        <td>dispositif</td>
+        <td>Quel est le &quot;slot&quot; du périphérique gamepad à définir.</td>
+      </tr>
+      <tr>
+        <td>couleur</td>
+        <td>La couleur à utiliser.</td>
+      </tr>
+    </tbody>
+  </table>
+  <p> </p>
+  <h4>Les retours :</h4>
+  <p class="code">N/A</p>
+  <p> </p>
+  <h4>Exemple :</h4>
+  <p class="code">si santé &lt; 10<br> {
+    <br> gamepad_set_colour(0, c_red) ;<br> }
+  </p>
+  <p>Le code ci-dessus fera passer les voyants du contrôleur PlayStation au rouge si la variable de <tt>santé</tt> passe en dessous de 10.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <div class="footer">
+    <div class="buttons">
+      <div class="clear">
+        <div style="float:left">Retour : <a href="Gamepad_Input.htm">Entrée de la manette de jeu</a></div>
+        <div style="float:right">Suivant : <a href="gamepad_set_option.htm"> gamepad_set_option </a></div>
+      </div>
+    </div>
+    <h5><span data-keyref="Copyright Notice">Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
   </div>
   <!-- KEYWORDS
 gamepad_set_colour

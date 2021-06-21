@@ -2,16 +2,76 @@
 
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml"><head>
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <title>Lire le fichier Ini</title>
-  <meta name="generator" content="Adobe RoboHelp 2019"/>
-  <link rel="stylesheet" href="../../../assets/css/default.css" type="text/css"/>
-  <meta name="rh-authors" content="Mark Alexander"/>
-  <meta name="topic-comment" content="Page qui explique l&#39;action Lire le fichier Ini"/>
-  <meta name="rh-index-keywords" content="DnD ™ - Lire le fichier Ini"/>
-  <meta name="search-keywords" content="Lire le fichier Ini"/>
+  <meta name="generator" content="Adobe RoboHelp 2019" />
+  <link rel="stylesheet" href="../../../assets/css/default.css" type="text/css" />
+  <meta name="rh-authors" content="Mark Alexander" />
+  <meta name="topic-comment" content="Page that explains the Read Ini File action" />
+  <meta name="rh-index-keywords" content="DnD™ Action - Read Ini File" />
+  <meta name="search-keywords" content="Read Ini File" />
 </head>
-<body><!--<div class="body-scroll" style="top: 150px;">--><h1><img alt="Read Ini File Icon" class="icon" height="32" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Files/i_Files_Read_Ini_File.png" width="32"/> Lire le fichier Ini</h1><p> Avec cette action, vous pouvez lire une donnée à partir d&#39;un fichier Ini. Vous devez au préalable avoir ouvert le fichier Ini en lecture / écriture à l&#39;aide de l&#39;action <a href="Open_Ini_File.htm">Ouvrir un fichier Ini</a>, puis avec cette action, vous indiquez le type de données à lire (soit un nombre réel soit une chaîne entre &quot;&quot;), ainsi que le en-tête de section et la clé dans cette section pour obtenir les données. Vous pouvez également fournir une valeur par défaut qui peut être soit un nombre réel de chaîne, et le type doit coïncider avec le &quot;Type&quot; défini dans l&#39;action. Cette action par défaut sera renvoyée par l&#39;action si l&#39;une des situations suivantes se produit:</p><ul class="colour"><li> Le fichier Ini que vous avez ouvert n&#39;existe pas</li><li> L&#39;en-tête de section auquel vous faites référence n&#39;existe pas</li><li> La clé à partir de laquelle vous essayez d&#39;obtenir des données n&#39;existe pas</li></ul><p> Dans l&#39;une des circonstances ci-dessus, vous obtiendrez la valeur par défaut renvoyée plutôt qu&#39;une valeur du fichier Ini. Quelle que soit la valeur renvoyée, elle sera stockée dans la variable cible que vous spécifiez, qui peut également être créée à ce moment si elle est marquée comme variable locale temporaire.</p><p class="note"> <b>IMPORTANT!</b> essayer de lire des données à partir d&#39;un fichier Ini qui n&#39;a pas été ouvert auparavant à l&#39;aide de l&#39; <a href="Open_Ini_File.htm">action Ouvrir un fichier Ini</a> provoquera une erreur grave et plantera votre jeu.</p><p></p><h4> Syntaxe de l&#39;action:</h4><p><img alt="Read Ini File Action" class="center" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Files/a_Files_Read_Ini_File.png"/></p><h4> Arguments:</h4><table><tbody><tr><th> Argument</th><th> Description</th></tr><tr><td> <span class="notranslate">Type</span></td><td> Le type de données à lire, soit un <tt>string</tt> (entre guillemets &quot;&quot;), ou un <tt>real number</tt></td></tr><tr><td> <span class="notranslate">Section</span></td><td> La section du fichier Ini à lire (sous forme de chaîne)</td></tr><tr><td> <span class="notranslate">Key</span></td><td> La clé dans la section à partir de laquelle lire (sous forme de chaîne)</td></tr><tr><td> <span class="notranslate">Default</span></td><td> La valeur par défaut à renvoyer si le fichier, la section ou la clé n&#39;existent pas</td></tr><tr><td> <span class="notranslate">Target</span></td><td> La variable cible pour contenir la valeur de retour de l&#39;action</td></tr></tbody></table><p></p><h4> Exemple:</h4><p><img alt="Read Ini File Example" class="center" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Files/e_Files_Read_Ini_File.png"/> Le code de bloc d&#39;action ci-dessus ouvrira un fichier Ini pour la lecture, puis utilisera les données lues à partir de celui-ci pour définir 3 variables globales différentes avant de refermer le fichier. </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> Retour: <a href="File_Actions.htm">Actions sur les fichiers</a></div><div style="float:right"> Suivant: <a href="If_File_Exists.htm">si le fichier existe</a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
+<body>
+  <!--<div class="body-scroll" style="top: 150px;">-->
+  <h1><img alt="Read Ini File Icon" class="icon" height="32" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Files/i_Files_Read_Ini_File.png" width="32"> Lire le fichier Ini</h1>
+  <p>Cette action vous permet de lire une donnée à partir d'un fichier Ini. Vous devez préalablement avoir ouvert le fichier Ini pour la lecture/écriture en utilisant l'action <a href="Open_Ini_File.htm">Ouvrir un fichier Ini</a>, et ensuite avec cette action vous donnez le type de données à lire
+    (soit un nombre réel ou une chaîne de caractères entourée de &quot;&quot;), ainsi que l'en-tête de section et la clé dans cette section pour obtenir les données. Vous pouvez également fournir une valeur par défaut qui peut être un nombre réel ou une chaîne de caractères, et le type doit coïncider avec le paramètre "Type".
+    coïncider avec le &quot;Type&quot; défini dans l'action. Cette action par défaut sera retournée par l'action si l'une des situations suivantes se produit :</p>
+  <ul class="colour">
+    <li>Le fichier Ini que vous avez ouvert n'existe pas.</li>
+    <li>L'en-tête de section auquel vous faites référence n'existe pas</li>
+    <li>La clé dont vous essayez d'obtenir les données n'existe pas.</li>
+  </ul>
+  <p>Dans l'une des circonstances ci-dessus, vous obtiendrez la valeur par défaut renvoyée plutôt qu'une valeur provenant du fichier Ini. Quelle que soit la valeur renvoyée, elle sera stockée dans la variable cible que vous spécifiez, qui peut également être créée à ce moment-là si elle est marquée
+    comme une variable locale temporaire.</p>
+  <p class="note"><b>IMPORTANT !</b> Si vous essayez de lire les données d'un fichier Ini qui n'a pas été ouvert précédemment à l'aide de l'action <a href="Open_Ini_File.htm">Ouvrir un fichier Ini</a>, cela provoquera une erreur grave et fera planter votre jeu.</p>
+  <p> </p>
+  <h4>Syntaxe de l'action :</h4>
+  <p><img alt="Read Ini File Action" class="center" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Files/a_Files_Read_Ini_File.png" /></p>
+  <h4>Arguments :</h4>
+  <table>
+    <tbody>
+      <tr>
+        <th>Arguments</th>
+        <th>Description</th>
+      </tr>
+      <tr>
+        <td>Type</td>
+        <td>Le type de données à lire, soit une <tt>chaîne de caractères</tt> (entre guillemets &quot;&quot;), soit un <tt>nombre</tt>réel.</td>
+      </tr>
+      <tr>
+        <td>Section</td>
+        <td>La section du fichier Ini à lire (sous forme de chaîne)</td>
+      </tr>
+      <tr>
+        <td>Clé</td>
+        <td>La clé de la section à lire (sous forme de chaîne).</td>
+      </tr>
+      <tr>
+        <td>Défaut</td>
+        <td>La valeur par défaut à retourner si le fichier, la section ou la clé n'existe pas.</td>
+      </tr>
+      <tr>
+        <td>Cible</td>
+        <td>La variable cible pour contenir la valeur de retour de l'action.</td>
+      </tr>
+    </tbody>
+  </table>
+  <p> </p>
+  <h4>Exemple :</h4>
+  <p><img alt="Read Ini File Example" class="center" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Files/e_Files_Read_Ini_File.png">Le code du bloc d'action ci-dessus ouvrira un fichier Ini pour le lire, puis utilisera les données lues pour définir trois variables globales différentes avant de refermer le fichier.
+    3 variables globales différentes avant de refermer le fichier.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <div class="footer">
+    <div class="buttons">
+      <div class="clear">
+        <div style="float:left">Retour : <a href="File_Actions.htm">Actions sur les fichiers</a></div>
+        <div style="float:right">Suivant : <a href="If_File_Exists.htm">Si le fichier existe</a></div>
+      </div>
+    </div>
+    <h5><span data-keyref="Copyright Notice">Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
   </div>
   <!-- KEYWORDS
 Action - Read Ini File

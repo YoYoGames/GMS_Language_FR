@@ -2,17 +2,93 @@
 
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml"><head>
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <title>matrix_build_lookat</title>
-  <meta name="generator" content="Adobe RoboHelp 2019"/>
-  <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css"/>
-  <meta name="rh-authors" content="Mark Alexander"/>
-  <meta name="topic-comment" content="Page de référence pour matrix_build_lookat"/>
-  <meta name="rh-index-keywords" content="matrix_build_lookat"/>
-  <meta name="search-keywords" content="matrix_build_lookat"/>
+  <meta name="generator" content="Adobe RoboHelp 2019" />
+  <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
+  <meta name="rh-authors" content="Mark Alexander" />
+  <meta name="topic-comment" content="Reference page for matrix_build_lookat" />
+  <meta name="rh-index-keywords" content="matrix_build_lookat" />
+  <meta name="search-keywords" content="matrix_build_lookat" />
 </head>
 
-<body><!--<div class="body-scroll" style="top: 150px;">--><h1>matrix_build_lookat</h1><p> Cette fonction crée une matrice &quot;look-at&quot; (vue) basée sur les paramètres spécifiés listés ci-dessous. Étant donné que cette fonction modifie la matrice de vue et non la matrice de projection, vous devez d&#39;abord initialiser la matrice de projection à l&#39;aide de l&#39;autre fonction de matrice <a href="matrix_build_projection_perspective.htm"><tt>matrix_build_projection_perspective()</tt></a>, puis utilisez cette fonction pour déplacer la caméra de vue dans la projection.</p><p> Pour définir la vue, vous devez d&#39;abord définir la position à <i>partir de</i> laquelle vous regardez, qui est indiquée par les paramètres (xfrom, yfrom, zfrom). Ensuite, vous devez indiquer la direction que vous regardez ce qui se fait en donnant un second point de se tourner vers les arguments (XTO, YYZ, ZPour). Enfin, vous pouvez toujours faire pivoter la caméra autour de la ligne du point de vue au point de recherche, et pour spécifier cela, nous devons donner un vecteur &quot;haut&quot; - la direction qui est vers le haut dans la caméra. Ceci est donné par les trois derniers arguments (xup, yup, zup).</p><p></p><h4> Syntaxe:</h4><p class="code">matrix_build_lookat(xfrom, yfrom, zfrom, xto, yto, zto, xup, yup, zup);</p><table><tbody><tr><th> Argument</th><th> Description</th></tr><tr><td> <span class="notranslate">xfrom</span></td><td> Coordonnée x de la position à partir de laquelle regarder.</td></tr><tr><td> <span class="notranslate">yfrom</span></td><td> Coordonnée y de la position à partir de laquelle regarder.</td></tr><tr><td> <span class="notranslate">zfrom</span></td><td> Coordonnée z de la position à partir de laquelle regarder.</td></tr><tr><td> <span class="notranslate">xto</span></td><td> Coordonnée x de la position à rechercher.</td></tr><tr><td> <span class="notranslate">yto</span></td><td> Coordonnée y de la position à rechercher.</td></tr><tr><td> <span class="notranslate">zto</span></td><td> Coordonnée z de la position à rechercher.</td></tr><tr><td> <span class="notranslate">xup</span></td><td> La coordonnée x du vecteur &quot;up&quot;.</td></tr><tr><td> <span class="notranslate">yup</span></td><td> La coordonnée y du vecteur &quot;up&quot;.</td></tr><tr><td> <span class="notranslate">zup</span></td><td> La coordonnée z du vecteur &quot;up&quot;.</td></tr></tbody></table><p></p><h4> Retour:</h4><p class="code">Matrix index</p><p></p><h4> Exemple:</h4><p class="code">viewmat = matrix_build_lookat(640, 240, -10, 640, 240, 0, 0, 1, 0);<br/> projmat = matrix_build_projection_ortho(640, 480, 1.0, 32000.0);<br/> camera_set_view_mat(view_camera[0], viewmat);<br/> camera_set_proj_mat(view_camera[0], projmat);</p><p> Le code ci-dessus crée une nouvelle matrice de visualisation et une matrice orthographique, stocke leurs identifiants dans des variables locales, puis les utilise pour définir les matrices de vue et de projection de la caméra affectée au port de visualisation [0]. </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> Retour: <a href="Matrix_Functions.htm">Fonctions de la matrice</a></div><div style="float:right"> Suivant:<a href="matrix_build_projection_ortho.htm">matrix_build_projection_ortho</a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
+<body>
+
+
+
+
+  <!--<div class="body-scroll" style="top: 150px;">-->
+  <h1>matrix_build_lookat</h1>
+  <p>Cette fonction construit une matrice de &quot;regard&quot; (vue) basée sur les paramètres spécifiés ci-dessous. Puisque cette fonction modifie la matrice de vue et non la matrice de projection, vous devez d'abord initialiser la matrice de projection à l'aide de l'autre matrice
+    fonction <a href="matrix_build_projection_perspective.htm"><tt>matrix_build_projection_perspective()</tt></a>puis utiliser cette fonction pour déplacer la caméra de vue dans la projection.</p>
+  <p>Pour définir la vue, vous devez d'abord définir la position <i>depuis laquelle</i> vous regardez, ce qui est indiqué par les paramètres (xfrom, yfrom, zfrom). Ensuite, vous devez spécifier la direction <i>dans laquelle</i> vous regardez, ce qui est fait en donnant un deuxième point vers lequel regarder
+    avec les arguments (xto, yto, zto). Enfin, vous pouvez toujours faire tourner la caméra autour de la ligne allant du point de vue au point de regard, et pour spécifier cela, nous devons donner un vecteur &quot;up&quot; - la direction qui est vers le haut dans la caméra. Cette direction est
+    Cette direction est donnée par les trois derniers arguments (xup, yup, zup).</p>
+  <p> </p>
+  <h4>Syntaxe :</h4>
+  <p class="code">matrix_build_lookat(xfrom, yfrom, zfrom, xo, yto, zto, xup, yup, zup) ;</p>
+  <table>
+    <tbody>
+      <tr>
+        <th>Arguments</th>
+        <th>Description</th>
+      </tr>
+      <tr>
+        <td>xde</td>
+        <td>La coordonnée x de la position à regarder.</td>
+      </tr>
+      <tr>
+        <td>yde</td>
+        <td>La coordonnée y de la position à regarder.</td>
+      </tr>
+      <tr>
+        <td>zde</td>
+        <td>La coordonnée z de la position à partir de laquelle il faut regarder.</td>
+      </tr>
+      <tr>
+        <td>xto</td>
+        <td>La coordonnée x de la position à regarder.</td>
+      </tr>
+      <tr>
+        <td>yto</td>
+        <td>La coordonnée y de la position à regarder.</td>
+      </tr>
+      <tr>
+        <td>zto</td>
+        <td>La coordonnée z de la position à regarder.</td>
+      </tr>
+      <tr>
+        <td>xup</td>
+        <td>La coordonnée x du vecteur &quot;haut&quot;.</td>
+      </tr>
+      <tr>
+        <td>yup</td>
+        <td>La coordonnée y du vecteur &quot;up&quot;.</td>
+      </tr>
+      <tr>
+        <td>zup</td>
+        <td>La coordonnée z du vecteur &quot;haut&quot;.</td>
+      </tr>
+    </tbody>
+  </table>
+  <p> </p>
+  <h4>Les retours :</h4>
+  <p class="code">Indice matriciel</p>
+  <p> </p>
+  <h4>Exemple :</h4>
+  <p class="code">viewmat = matrix_build_lookat(640, 240, -10, 640, 240, 0, 0, 1, 0) ;<br> projmat = matrix_build_projection_ortho(640, 480, 1.0, 32000.0) ;<br> camera_set_view_mat(view_camera[0], viewmat) ;<br> camera_set_proj_mat(view_camera[0], projmat) ;</p>
+  <p>Le code ci-dessus crée une nouvelle matrice d'observation et une matrice orthographique, stocke leurs ID dans des variables locales, puis les utilise pour définir les matrices de vue et de projection pour la caméra affectée au port de vue [0].</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <div class="footer">
+    <div class="buttons">
+      <div class="clear">
+        <div style="float:left">Retour : <a href="Matrix_Functions.htm">Fonctions de la matrice</a></div>
+        <div style="float:right">Suivant : <a href="matrix_build_projection_ortho.htm">matrix_build_projection_ortho</a></div>
+      </div>
+    </div>
+    <h5><span data-keyref="Copyright Notice">Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
   </div>
   <!-- KEYWORDS
 matrix_build_lookat

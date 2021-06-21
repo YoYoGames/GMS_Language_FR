@@ -3,15 +3,57 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>Obtenir la transformation des données de tuile</title>
+  <title>Transformer les données des tuiles</title>
   <meta name="generator" content="Adobe RoboHelp 2019" />
   <link rel="stylesheet" href="../../../assets/css/default.css" type="text/css" />
   <meta name="rh-authors" content="Mark Alexander" />
-  <meta name="topic-comment" content="Page qui explique l&#39;action Obtenir la transformation des données de tuile" />
-  <meta name="rh-index-keywords" content="DnD ™ - Transformez les données de tuiles" />
-  <meta name="search-keywords" content="Obtenir la transformation des données de tuile" />
+  <meta name="topic-comment" content="Page that explains the Get Tile Data Transform action" />
+  <meta name="rh-index-keywords" content="DnD™ Action - Get Tile Data Transform" />
+  <meta name="search-keywords" content="Get Tile Data Transform" />
 </head>
-<body><!--<div class="body-scroll" style="top: 150px;">--><h1><img alt="Get Tile Data Transform" class="icon" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Tiles/i_Tiles_Get_Tile_Data_Transform.png" /> Obtenir la transformation des données de tuile</h1><p> Avec cette action, vous pouvez savoir si les données de mosaïque d&#39;une mosaïque ont été transformées de l&#39;une des trois manières suivantes: retournées, mises en miroir ou pivotées. Les données de tuile sont simplement une valeur qui reflète l&#39;index de la tuile avec les transformations appliquées, et vous voudrez normalement obtenir les données de tuile d&#39;abord en utilisant soit <a href="Get_Tile_Data_In_Cell.htm">Obtenir les données de tuile dans la cellule</a> ou <a href="Get_Tile_Data_At_Pixel.htm">Obtenir les données de tuile au pixel</a> avant d&#39;utiliser cette action. L&#39;action reviendra <tt>true</tt> si la transformation choisie a été appliquée aux données de tuile, ou <tt>false</tt> sinon, et la valeur retournée sera alors stockée dans la variable cible qui peut avoir été créée précédemment ou peut être une nouvelle variable temporaire (si vous cochez la case &quot;Temp&quot;). Pour plus d&#39;informations sur les données de mosaïque, veuillez consulter la <span class="notranslate">GML</span> sur les <a href="../../../GameMaker_Language/GML_Reference/Asset_Management/Rooms/Tile_Map_Layers/Tile_Map_Layers.htm">fonctions de</a> mappage de mosaïques.</p><p></p><h4> Syntaxe de l&#39;action:</h4><p><img alt="Get Tile Data Transform Action" class="center" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Tiles/a_Tiles_Get_Tile_Data_Transform.png" /></p><h4> Arguments:</h4><table><tbody><tr><th> Argument</th><th> Description</th></tr><tr><td> <span class="notranslate">Tile</span></td><td> Les données de tuile pour la tuile à partir de laquelle obtenir la transformation</td></tr><tr><td> <span class="notranslate">Transform</span></td><td> La transformation à vérifier</td></tr></tbody></table><p></p><h4> Exemple:</h4><p></p><p><img alt="Get Tile Data Transform Example" class="center" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Tiles/e_Tiles_Set_Tile_Data_Transform.png" /> Le code de bloc d&#39;action ci-dessus récupère les données de la vignette à la position de la souris, puis vérifie si la vignette a été soumise à une transformation de rotation. Si tel est le cas, la transformation est réinitialisée et les données de mosaïque réinitialisent la mosaïque à la position. </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> Retour: <a href="Tile_Actions.htm">Actions de tuile</a></div><div style="float:right"> Suivant: <a href="Set_Tile_Index_At_Pixel.htm">Définir l&#39;index de tuile au pixel</a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
+<body>
+  <!--<div class="body-scroll" style="top: 150px;">-->
+  <h1><img alt="Get Tile Data Transform" class="icon" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Tiles/i_Tiles_Get_Tile_Data_Transform.png"> Transformer les données des tuiles</h1>
+  <p>Avec cette action, vous pouvez savoir si les données d'une tuile ont été transformées de l'une des trois façons suivantes : retournement, miroir ou rotation. Les données de tuile sont simplement une valeur qui reflète l'index de la tuile avec les transformations appliquées, et vous voudrez normalement obtenir les données de tuile d'abord en utilisant l'une ou l'autre des méthodes suivantes
+    normalement obtenir les données de la tuile d'abord en utilisant soit <a href="Get_Tile_Data_In_Cell.htm">Get Tile Data In Cell</a> ou <a href="Get_Tile_Data_At_Pixel.htm">Get Tile Data At Pixel</a> avant d'utiliser cette action. L'action retournera <tt>vrai</tt> si
+    la transformation choisie a été appliquée aux données de la tuile, ou <tt>faux</tt> sinon, et la valeur retournée sera alors stockée dans la variable cible qui peut avoir été créée précédemment ou peut être une nouvelle variable temporaire (si vous cochez la case &quot;Temp&quot;).
+    ). Pour plus d'informations sur les données de tuiles, veuillez consulter la section <span class="notranslate">GML</span> sur les <a href="../../../GameMaker_Language/GML_Reference/Asset_Management/Rooms/Tile_Map_Layers/Tile_Map_Layers.htm">fonctions de carte de tuiles.</a></p>
+  <p> </p>
+  <h4>Syntaxe de l'action :</h4>
+  <p><img alt="Get Tile Data Transform Action" class="center" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Tiles/a_Tiles_Get_Tile_Data_Transform.png" /></p>
+  <h4>Arguments :</h4>
+  <table>
+    <tbody>
+      <tr>
+        <th>Arguments</th>
+        <th>Description</th>
+      </tr>
+      <tr>
+        <td>Carreaux</td>
+        <td>Les données de tuile pour la tuile pour obtenir la transformation de</td>
+      </tr>
+      <tr>
+        <td>Transformer</td>
+        <td>La transformation à vérifier</td>
+      </tr>
+    </tbody>
+  </table>
+  <p> </p>
+  <h4>Exemple :</h4>
+  <p> </p>
+  <p><img alt="Get Tile Data Transform Example" class="center" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Tiles/e_Tiles_Set_Tile_Data_Transform.png">Le code du bloc d'action ci-dessus récupère les données de la tuile à la position de la souris et vérifie ensuite si une transformation de rotation a été appliquée à la tuile.
+    vérifie si une transformation de rotation a été appliquée à la tuile. Si c'est le cas, la transformation est réinitialisée et les données de la tuile fixent à nouveau la tuile à cette position.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <div class="footer">
+    <div class="buttons">
+      <div class="clear">
+        <div style="float:left">Retour : <a href="Tile_Actions.htm">Actions sur les tuiles</a></div>
+        <div style="float:right">Suivant : <a href="Set_Tile_Index_At_Pixel.htm">Définir l'index de la tuile au pixel</a></div>
+      </div>
+    </div>
+    <h5><span data-keyref="Copyright Notice">Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
   </div>
   <!-- KEYWORDS
 Action - Get Tile Data Transform

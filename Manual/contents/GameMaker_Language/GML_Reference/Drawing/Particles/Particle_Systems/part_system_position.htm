@@ -3,17 +3,64 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>part_system_position</title>
+  <title>partie_system_position</title>
   <meta name="generator" content="Adobe RoboHelp 2019" />
   <link rel="stylesheet" href="../../../../../assets/css/default.css" type="text/css" />
   <meta name="rh-authors" content="Mark Alexander" />
-  <meta name="topic-comment" content="Page de référence pour part_system_position" />
+  <meta name="topic-comment" content="Reference page for part_system_position" />
   <meta name="rh-index-keywords" content="part_system_position" />
   <meta name="search-keywords" content="part_system_position" />
 </head>
-<body><!--<div class="body-scroll" style="top: 150px;">--><h1>part_system_position</h1><p> Avec cette fonction, vous pouvez définir la position de base du système de particules par rapport à la position (0,0) de la pièce, ce qui signifie que toutes les autres fonctions de particules relatives à ce système seront désormais dessinées par rapport à la nouvelle position. Par défaut, cette position est toujours (0,0), mais dans certaines circonstances très spéciales, vous souhaiterez peut-être changer cela pour quelque chose d&#39;autre.</p><p class="note"> <b>REMARQUE</b>: Cette fonction changera <b>tout</b> dans le système de particules, donc si vous avez un émetteur à la position (100,100) et que vous définissez ensuite la position du système de particules sur (0,100), l&#39;émetteur tirera maintenant sur (100,200). Il en va de même si vous décalez le système puis créez l&#39;émetteur, comme même si vous le créez à (100,100), il sera dessiné à (100,200).</p><p></p><h4> Syntaxe:</h4><p class="code">part_system_position(ind, x, y);</p><table><tbody><tr><th> Argument</th><th> Description</th></tr><tr><td> <span class="notranslate">ind</span></td><td> L&#39;indice du système de particules à changer.</td></tr><tr><td> <span class="notranslate">x</span></td><td> La nouvelle coordonnée x du système de particules.</td></tr><tr><td> <span class="notranslate">y</span></td><td> La nouvelle coordonnée y du système de particules.</td></tr></tbody></table><p></p><h4> Retour:</h4><p class="code">N/A</p><p></p><h4> Exemple:</h4><p class="code">if mouse_check_button_pressed(mb_left)<br/>     {
-    <br/>     part_system_position(global.Sname, mouse_x, mouse_y);<br/>     }
-  </p><p> Le code ci-dessus vérifiera la pression du bouton de la souris et s&#39;il en détecte un, le système de particules indexé dans la variable globale &quot;Sname&quot; est déplacé vers la position x / y de la souris </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> Retour: <a href="Particle_Systems.htm">Systèmes de particules</a></div><div style="float:right"> Suivant:<a href="part_system_clear.htm">part_system_clear</a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
+<body>
+  <!--<div class="body-scroll" style="top: 150px;">-->
+  <h1>partie_system_position</h1>
+  <p>Avec cette fonction, vous pouvez définir la position de base du système de particules par rapport à la position (0,0) de la pièce, ce qui signifie que toutes les autres fonctions de particules relatives à ce système seront désormais dessinées par rapport à la nouvelle position. Par défaut, cette
+    Par défaut, cette position est toujours (0,0), mais dans certaines circonstances très particulières, vous pouvez souhaiter la modifier.</p>
+  <p class="note"><b>REMARQUE</b>: Cette fonction modifie <b>tout</b> dans le système de particules, donc si vous avez un emitter à la position (100,100) et que vous réglez la position du système de particules à (0,100), l'emitter sera maintenant dessiné à (100,200). Il en va de même si vous décalez
+    le système, puis créez l'émetteur, car même si vous le créez à (100,100), il sera dessiné à (100,200).</p>
+  <p> </p>
+  <h4>Syntaxe :</h4>
+  <p class="code">part_system_position(ind, x, y) ;</p>
+  <table>
+    <tbody>
+      <tr>
+        <th>Arguments</th>
+        <th>Description</th>
+      </tr>
+      <tr>
+        <td>ind</td>
+        <td>L'indice du système de particules à modifier.</td>
+      </tr>
+      <tr>
+        <td>x</td>
+        <td>La nouvelle coordonnée x du système de particules.</td>
+      </tr>
+      <tr>
+        <td>y</td>
+        <td>La nouvelle coordonnée y du système de particules.</td>
+      </tr>
+    </tbody>
+  </table>
+  <p> </p>
+  <h4>Les retours :</h4>
+  <p class="code">N/A</p>
+  <p> </p>
+  <h4>Exemple :</h4>
+  <p class="code">if mouse_check_button_pressed(mb_left)<br> {
+    <br> part_system_position(global.Sname, mouse_x, mouse_y) ;<br> }
+  </p>
+  <p>Le code ci-dessus vérifie si le bouton de la souris est pressé et s'il le détecte, le système de particules indexé dans la variable globale &quot;Sname&quot; est déplacé à la position x/y de la souris.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <div class="footer">
+    <div class="buttons">
+      <div class="clear">
+        <div style="float:left">Retour : <a href="Particle_Systems.htm">Systèmes de particules</a></div>
+        <div style="float:right">Suivant : <a href="part_system_clear.htm">part_system_clear</a></div>
+      </div>
+    </div>
+    <h5><span data-keyref="Copyright Notice">Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
   </div>
   <!-- KEYWORDS
 part_system_position

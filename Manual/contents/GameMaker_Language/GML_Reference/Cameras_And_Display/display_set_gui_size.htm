@@ -7,11 +7,57 @@
   <meta name="generator" content="Adobe RoboHelp 2019" />
   <link rel="stylesheet" href="../../../assets/css/default.css" type="text/css" />
   <meta name="rh-authors" content="Mark Alexander" />
-  <meta name="topic-comment" content="Section de référence pour display_set_gui_size" />
+  <meta name="topic-comment" content="Reference section for display_set_gui_size" />
   <meta name="rh-index-keywords" content="display_set_gui_size" />
   <meta name="search-keywords" content="display_set_gui_size" />
 </head>
-<body><!--<div class="body-scroll" style="top: 150px;">--><h1>display_set_gui_size</h1><p> Cette fonction n&#39;affectera que les éléments dessinés dans l&#39; <a href="../../../The_Asset_Editors/Object_Properties/Draw_Events.htm">événement Draw GUI</a> et peut être utilisée pour définir une largeur et une hauteur spécifiques pour tous les composants GUI dans cet événement, et quelle que soit la taille d&#39;affichage ou de fenêtre utilisée pour afficher l&#39;interface graphique, ce sera mis à l&#39;échelle pour s&#39;adapter correctement. L&#39;emplacement de l&#39;interface graphique (c&#39;est-à-dire: la position (0,0)) dépendra si vous avez utilisé la fonction <a href="display_set_gui_maximise.htm"><tt>display_set_gui_maximise()</tt></a> ou non. Si vous n&#39;utilisez pas cette fonction (paramètre par défaut), la couche GUI sera positionnée avec son point (0,0) à la même position que celle de la surface d&#39;application (la zone où votre jeu est dessiné) et la largeur et la hauteur sera étirée pour s&#39;adapter à cette surface, de sorte que la définition d&#39;une largeur d&#39;interface graphique de 256px avec cette fonction lorsque la surface d&#39;application est de 512px étirerait ces 256 pixels pour s&#39;adapter, rendant effectivement les pixels deux fois plus grands. C&#39;est idéal pour les jeux pour lesquels la correction du rapport d&#39;aspect est définie dans les paramètres de jeu globaux.</p><p> Si vous avez utilisé le <tt>display_set_gui_maximise()</tt> Ensuite, la position (0,0) de la couche GUI sera par défaut dans le coin supérieur gauche de la fenêtre du jeu, ou s&#39;affichera (en plein écran ou sur les appareils), avec le facteur de mise à l&#39;échelle défini par cette fonction, ainsi que la largeur et la hauteur fixé par celui-ci. Vous pouvez réinitialiser la couche GUI à tout moment à la configuration par défaut en appelant cette fonction en utilisant -1 à la fois comme largeur et hauteur - cela définira la position (0, 0) sur la surface de l&#39;application et la largeur et la hauteur seront réinitialisées à 1: 1 avec la surface aussi.</p><p></p><h4> Syntaxe:</h4><p class="code">display_set_gui_size(width, height);</p><table><tbody><tr><th> Argument</th><th> Description</th></tr><tr><td> <span class="notranslate">width</span></td><td> La largeur de l&#39;interface graphique</td></tr><tr><td> <span class="notranslate">height</span></td><td> La hauteur de l&#39;interface graphique</td></tr></tbody></table><p></p><h4> Retour:</h4><p class="code">N/A</p><p></p><h4> Exemple:</h4><p class="code">display_set_gui_size(768, 1024);</p><p> Le code ci-dessus verrouille l&#39;événement de l&#39;interface graphique de dessin à la largeur et à la hauteur données, en mettant à l&#39;échelle tous les composants pour s&#39;adapter à la surface de l&#39;application ou à l&#39;affichage, en utilisant cette proportion.</p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"> <a href="Cameras_And_Display.htm">Caméras et affichage</a><div style="float:left"> Retour:</div><div style="float:right"> Suivant:<a href="display_set_gui_maximise.htm">display_set_gui_maximise</a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
+<body>
+  <!--<div class="body-scroll" style="top: 150px;">-->
+  <h1>display_set_gui_size</h1>
+  <p>Cette fonction n'affecte que les éléments dessinés dans l'<a href="../../../The_Asset_Editors/Object_Properties/Draw_Events.htm">événement Draw GUI</a> et peut être utilisée pour définir une largeur et une hauteur spécifiques pour tous les composants GUI dans cet événement.
+    d'affichage ou de fenêtre utilisée pour afficher l'interface graphique, celle-ci sera mise à l'échelle pour s'adapter correctement. La position de l'interface graphique (c'est-à-dire la position (0,0)) dépend de l'utilisation ou non de la fonction <a href="display_set_gui_maximise.htm"><tt>display_set_gui_maximise()</tt></a>    ou non. Si vous n'utilisez pas cette fonction (paramètre par défaut), la couche GUI sera positionnée avec son point (0,0) au même endroit que la surface de l'application (la zone où votre jeu est dessiné) et la largeur et la hauteur seront étirées pour s'adapter à cette surface.
+    Ainsi, si vous définissez une largeur d'interface graphique de 256 pixels avec cette fonction alors que la surface d'application est de 512 pixels, les 256 pixels seront étirés pour s'adapter, ce qui aura pour effet de doubler la taille des pixels. C'est idéal pour les jeux
+    dont la correction du rapport hauteur/largeur est définie dans les paramètres globaux du jeu.</p>
+  <p>Si vous avez utilisé la fonction <tt>display_set_gui_maximise()</tt>, la position (0,0) de la couche GUI sera par défaut le coin supérieur gauche de la fenêtre du jeu ou de l'affichage (en plein écran ou sur les périphériques), avec le facteur d'échelle défini par cette fonction,
+    et la largeur et la hauteur définies par celle-ci. Vous pouvez réinitialiser la couche GUI à tout moment à la configuration par défaut en appelant cette fonction en utilisant -1 comme largeur et hauteur - ceci définira la position (0, 0) à la surface de l'application et la largeur et la hauteur seront réinitialisées à 1.
+    et la hauteur seront également réinitialisées à 1:1 avec la surface.</p>
+  <p> </p>
+  <h4>Syntaxe :</h4>
+  <p class="code">display_set_gui_size(width, height) ;</p>
+  <table>
+    <tbody>
+      <tr>
+        <th>Arguments</th>
+        <th>Description</th>
+      </tr>
+      <tr>
+        <td>largeur</td>
+        <td>La largeur de l'interface graphique</td>
+      </tr>
+      <tr>
+        <td>hauteur</td>
+        <td>La hauteur de l'interface graphique</td>
+      </tr>
+    </tbody>
+  </table>
+  <p> </p>
+  <h4>Les retours :</h4>
+  <p class="code">N/A</p>
+  <p> </p>
+  <h4>Exemple :</h4>
+  <p class="code">display_set_gui_size(768, 1024) ;</p>
+  <p>Le code ci-dessus verrouille l'événement draw GUI sur la largeur et la hauteur données, mettant à l'échelle tous les composants pour qu'ils s'adaptent soit à la surface de l'application, soit à l'écran, en utilisant cette proportion.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <div class="footer">
+    <div class="buttons">
+      <div class="clear"><a href="Cameras_And_Display.htm">Caméras et écrans</a>
+        <div style="float:left">Retour : </div>
+        <div style="float:right">Suivant : <a href="display_set_gui_maximise.htm">display_set_gui_maximise</a></div>
+      </div>
+    </div>
+    <h5><span data-keyref="Copyright Notice">Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
   </div>
   <!-- KEYWORDS
 display_set_gui_size

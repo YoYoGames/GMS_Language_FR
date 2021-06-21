@@ -7,18 +7,67 @@
   <meta name="generator" content="Adobe RoboHelp 2019" />
   <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
   <meta name="rh-authors" content="Mark Alexander" />
-  <meta name="topic-comment" content="Page expliquant la fonction audio_debug" />
+  <meta name="topic-comment" content="Page explaining the function audio_debug" />
   <meta name="rh-index-keywords" content="audio_debug" />
   <meta name="search-keywords" content="audio_debug" />
 </head>
-<body><!--<div class="body-scroll" style="top: 150px;">--><h1>audio_debug</h1><p> Cette fonction peut être utilisée pour afficher des informations de débogage sur le système audio, avec <tt>true</tt> l&#39;allumer et <tt>false</tt> pour l&#39;éteindre. Lorsque vous déboguez l&#39;audio de cette manière, la superposition affichera les informations suivantes:</p><p><img alt="Audio Debug Overview" class="center" src="../../../../assets/Images/Scripting_Reference/GML/Reference/Audio/Audio_Debug.png" /></p><ul class="colour"><li> <strong>Poignée</strong> - La poignée de source OpenAL (unique pour chaque son joué)</li><li> <strong>Data Handle</strong> - Le handle de tampon OpenAL (affiche la même valeur pour plusieurs sons avec le même handle de source)</li><li> <strong>Tampons traités</strong> - combien de tampons ont été joués</li><li> <strong>Tampons en file d&#39;attente</strong> - combien de tampons ont été mis en file d&#39;attente (et sont toujours en attente de lecture)</li><li> <strong>Gain</strong> - La valeur de gain pour l&#39;audio (0 - 65536)</li><li> <strong>Décalage de lecture</strong> - la position de l&#39;échantillon (position de lecture actuelle) dans le tampon actuel</li><li> <strong>Barres de tampons en file d&#39;attente</strong> - un petit diagramme en forme de boîte des tampons traités / en file d&#39;attente avec le décalage de lecture (position actuelle) dessiné sous forme de ligne bleue</li></ul><p> Pour les groupes audio synchronisés, vous disposez également de la fonction <a href="Audio_Synchronisation/audio_sync_group_debug.htm"><tt>audio_sync_group_debug()</tt></a>.</p><p class="note"> <b>REMARQUE:</b> cette fonction ne fonctionne pas sur la plate-forme cible HTML5.</p><p></p><h4> Syntaxe:</h4><p class="code">audio_debug(enable);</p><table><tbody><tr><th> Argument</th><th> Description</th></tr><tr><td> <span class="notranslate">enable</span></td><td> Activer (défini sur <tt>true</tt> ) ou désactiver (<tt>false</tt> ) débogage audio.</td></tr></tbody></table><p></p><h4> Retour:</h4><p class="code">N/A</p><p></p><h4> Exemple:</h4><p class="code">if (debug_mode)<br/>    {
-    <br/>    audio_debug(true);
-    <br/>    }
-    <br/> else
-    <br/>    {
-    <br/>    audio_debug(false);
-    <br/>    }
-  </p><p> Le code ci-dessus activera ou désactivera la superposition de débogage audio selon que le jeu fonctionne en mode débogage ou non. </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> Retour: <a href="Audio.htm">Audio</a></div><div style="float:right"> Suivant:<a href="audio_system_is_available.htm">audio_system_is_available</a></div><div style="float:right"></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
+<body>
+  <!--<div class="body-scroll" style="top: 150px;">-->
+  <h1>audio_debug</h1>
+  <p>Cette fonction peut être utilisée pour afficher des informations de débogage sur le système audio, avec <tt>true</tt> pour l'activer et <tt>false</tt> pour le désactiver. Lorsque vous déboguez l'audio de cette manière, la superposition affichera les informations suivantes :</p>
+  <p><img alt="Audio Debug Overview" class="center" src="../../../../assets/Images/Scripting_Reference/GML/Reference/Audio/Audio_Debug.png" /></p>
+  <ul class="colour">
+    <li><strong>Handle </strong>- Le handle de la source OpenAL (unique pour chaque son joué)</li>
+    <li><strong>Data Handle</strong> - Le handle du buffer OpenAL (montre la même valeur pour plusieurs sons avec le même handle source)</li>
+    <li><strong>Processed Buffers</strong> - combien de buffers ont été lus ?</li>
+    <li><strong>Buffers en file d'attente</strong> - combien de buffers ont été mis en file d'attente (et sont toujours en attente de lecture)</li>
+    <li><strong>Gain </strong>- La valeur du gain pour l'audio (0 - 65536)</li>
+    <li><strong>Play Offset</strong> - la position de l'échantillon (position de lecture actuelle) dans le tampon actuel.</li>
+    <li><strong>Barres des tampons en file d'attente</strong> - un petit diagramme en forme de boîte des tampons traités/en file d'attente avec le décalage de lecture (position actuelle) dessiné comme une ligne bleue.</li>
+  </ul>
+  <p>Pour les groupes audio synchronisés, vous disposez également de la fonction <a href="Audio_Synchronisation/audio_sync_group_debug.htm"><tt>audio_sync_group_debug()</tt></a>.</p>
+  <p class="note"><b>REMARQUE : </b>cette fonction ne fonctionne pas sur la plateforme cible HTML5.</p>
+  <p> </p>
+  <h4>Syntaxe :</h4>
+  <p class="code">audio_debug(enable) ;</p>
+  <table>
+    <tbody>
+      <tr>
+        <th>Arguments</th>
+        <th>Description</th>
+      </tr>
+      <tr>
+        <td>activer</td>
+        <td>Active (à <tt>true</tt>) ou désactive<tt>(à false</tt>) le débogage audio.</td>
+      </tr>
+    </tbody>
+  </table>
+  <p> </p>
+  <h4>Les retours :</h4>
+  <p class="code">N/A</p>
+  <p> </p>
+  <h4>Exemple :</h4>
+  <p class="code">if (debug_mode)<br> {
+    <br> audio_debug(true) ;
+    <br> }
+    <br> else
+    <br> {
+    <br> audio_debug(false) ;
+    <br> }
+  </p>
+  <p>Le code ci-dessus permet d'activer ou de désactiver la superposition de débogage audio selon que le jeu fonctionne en mode de débogage ou non.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <div class="footer">
+    <div class="buttons">
+      <div class="clear">
+        <div style="float:left">Retour : <a href="Audio.htm">Audio</a></div>
+        <div style="float:right">Suivant : <a href="audio_system_is_available.htm">audio_system_is_available</a></div>
+        <div style="float:right"> </div>
+      </div>
+    </div>
+    <h5><span data-keyref="Copyright Notice">Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
   </div>
   <!-- KEYWORDS
 audio_debug

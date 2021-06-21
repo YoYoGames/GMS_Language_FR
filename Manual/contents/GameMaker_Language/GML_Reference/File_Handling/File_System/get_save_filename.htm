@@ -7,14 +7,58 @@
   <meta name="generator" content="Adobe RoboHelp 2019" />
   <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
   <meta name="rh-authors" content="Mark Alexander" />
-  <meta name="topic-comment" content="Page de référence pour get_save_filename" />
+  <meta name="topic-comment" content="Reference page for get_save_filename" />
   <meta name="rh-index-keywords" content="get_save_filename" />
   <meta name="search-keywords" content="get_save_filename" />
 </head>
-<body><!--<div class="body-scroll" style="top: 150px;">--><h1>get_save_filename</h1><p> Cette fonction ouvre une boîte de dialogue et demande au joueur un nom de fichier à enregistrer avec le filtre donné. Le filtre a la forme &quot; <i>nom1 | masque1 | nom2 | masque2 |...</i> &quot;, où le masque peut contenir les différentes options avec un point-virgule entre elles et vous pouvez également utiliser un &quot;*&quot; pour désigner n&#39;importe quelle chaîne. Par exemple: &quot; <i>bitmaps | *.bmp; *. Wmf</i> &quot;, demanderait à l&#39;utilisateur de sélectionner le nom d&#39;un fichier bitmap dans le système, mais uniquement ceux qui ont les deux extensions spécifiées (<tt>bmp</tt> et <tt>png</tt> ). cette fonction n&#39;enregistre <b>pas</b> le fichier lui-même! Il renvoie uniquement une chaîne avec le nom complet et le chemin du fichier. Si l&#39;utilisateur appuie sur &quot; <b>Annuler</b> &quot;, une chaîne vide &quot;&quot; est renvoyée.</p><p> Une chose importante à noter lors de l&#39;utilisation de cette fonction est qu&#39;elle vous accorde certaines autorisations pour ce fichier, pour la durée de votre partie. Ainsi, une fois que vous avez obtenu le chemin du fichier de l&#39;utilisateur, vous pouvez y accéder encore et encore sans avoir à demander, et l&#39;autorisation s&#39;applique également à la lecture <i>et à l&#39;</i> écriture.</p><p class="note"> <b>REMARQUE</b>: cette fonction n&#39;est valide que sur les cibles <span class="notranslate">Windows</span> et <span class="notranslate">macOS</span></p><p></p><h4> Syntaxe:</h4><p class="code">get_save_filename(filter, fname);</p><table><tbody><tr><th> Argument</th><th> Description</th></tr><tr><td> <span class="notranslate">filter</span></td><td> Le filtre et / ou le nom du type de fichier.</td></tr><tr><td> <span class="notranslate">fname</span></td><td> Le nom de fichier suggéré à utiliser.</td></tr></tbody></table><p></p><h4> Retour:</h4><p class="code">String</p><p></p><h4> Exemple:</h4><p class="code">var file;<br/> file = get_save_filename(&quot;screenshot|*.png&quot;, &quot;&quot;);<br/> if file != &quot;&quot;<br/>     {
-    <br/>     screen_save(file);
-    <br/>     }
-  </p><p> Le code ci-dessus demandera à l&#39;utilisateur de sélectionner un fichier de nom de fichier image à enregistrer, puis de vérifier le nom et le chemin du fichier retourné, et s&#39;il ne s&#39;agit pas d&#39;une chaîne vide, il prend une capture d&#39;écran et l&#39;enregistre en utilisant le nom donné. </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> Retour: <a href="File_System.htm">Système de fichiers</a></div><div style="float:right"> Suivant:<a href="get_save_filename_ext.htm">get_save_filename_ext</a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
+<body>
+  <!--<div class="body-scroll" style="top: 150px;">-->
+  <h1>get_save_filename</h1>
+  <p>Cette fonction ouvre un dialogue et demande au joueur un nom de fichier à sauvegarder avec le filtre donné. Le filtre a la forme &quot; name1|mask1|name2|mask2|...<i>&quot;,</i> où le masque peut contenir les différentes options avec un point-virgule entre elles.
+    et vous pouvez également utiliser un &quot;*&quot; pour signifier n'importe quelle chaîne. Par exemple : &quot; bitmaps|*<i>.bmp;*.wmf&quot;,</i> demanderait à l'utilisateur de sélectionner le nom d'un fichier bitmap du système, mais seulement ceux qui ont les deux extensions spécifiées (bmp et png). cette fonction ne sauvegarde pas <b>le</b> fichier lui-même ! Elle renvoie seulement une chaîne avec le nom complet et le chemin d'accès du fichier. Si l'utilisateur appuie sur &quot;<b>Annuler&quot;, une</b> chaîne vide &quot;&quot; est retournée.</p>
+  <p>Une chose importante à noter lorsque vous utilisez cette fonction est qu'elle vous accorde certaines permissions pour ce fichier, pour la durée de votre jeu. Ainsi, une fois que vous avez obtenu le chemin d'accès au fichier de la part de l'utilisateur, vous pouvez y accéder encore et encore sans avoir à le demander.
+    permission s'applique aussi bien à la lecture <i>qu'à l'</i> écriture.</p>
+  <p class="note"><b>REMARQUE</b>: Cette fonction n'est valable que sur les cibles <span class="notranslate">Windows</span> et <span class="notranslate">macOS</span>.</p>
+  <p> </p>
+  <h4>Syntaxe :</h4>
+  <p class="code">get_save_filename(filter, fname) ;</p>
+  <table>
+    <tbody>
+      <tr>
+        <th>Arguments</th>
+        <th>Description</th>
+      </tr>
+      <tr>
+        <td>filtre</td>
+        <td>Le filtre et/ou le nom du type de fichier.</td>
+      </tr>
+      <tr>
+        <td>fname</td>
+        <td>Le nom de fichier suggéré à utiliser.</td>
+      </tr>
+    </tbody>
+  </table>
+  <p> </p>
+  <h4>Les retours :</h4>
+  <p class="code">Chaîne de caractères</p>
+  <p> </p>
+  <h4>Exemple :</h4>
+  <p class="code">var file ;<br> file = get_save_filename(&quot;screenshot|*.png&quot;, &quot;&quot;) ;<br> if file != &quot;&quot;<br> {
+    <br> screen_save(file) ;
+    <br> }
+  </p>
+  <p>Le code ci-dessus demandera à l'utilisateur de sélectionner un nom de fichier d'image à sauvegarder, puis vérifiera le nom et le chemin du fichier renvoyé, et s'il ne s'agit pas d'une chaîne vide, il prendra une capture d'écran et la sauvegardera en utilisant le nom donné.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <div class="footer">
+    <div class="buttons">
+      <div class="clear">
+        <div style="float:left">Retour : <a href="File_System.htm">Système de fichiers</a></div>
+        <div style="float:right">Suivant : <a href="get_save_filename_ext.htm">get_save_filename_ext</a></div>
+      </div>
+    </div>
+    <h5><span data-keyref="Copyright Notice">Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
   </div>
   <!-- KEYWORDS
 get_save_filename

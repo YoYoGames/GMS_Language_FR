@@ -7,11 +7,57 @@
   <meta name="generator" content="Adobe RoboHelp 2019" />
   <link rel="stylesheet" href="../../../assets/css/default.css" type="text/css" />
   <meta name="rh-authors" content="Mark Alexander" />
-  <meta name="topic-comment" content="Section de référence pour display_reset" />
+  <meta name="topic-comment" content="Reference section for display_reset" />
   <meta name="rh-index-keywords" content="display_reset,display_aa" />
   <meta name="search-keywords" content="display_reset,display_aa" />
 </head>
-<body><!--<div class="body-scroll" style="top: 150px;">--><h1>display_reset</h1><p> Cette fonction réinitialise les paramètres d&#39;affichage à ceux qui ont été définis au démarrage du jeu, mais vous permet également de modifier le niveau actuel d&#39;anti-crénelage plein écran utilisé et d&#39;utiliser ou non la synchronisation verticale. Les niveaux d&#39;anti-aliasing disponibles sont 0,2,4 et 8, la valeur de démarrage par défaut étant définie sur 0 et le paramètre v-sync par défaut est false (désactivé). <span class="notranslate">Switch</span> activation de la v-sync peut donner une expérience de jeu plus fluide, mais elle aura également besoin de plus de puissance de traitement et son impact doit donc être considéré avec prudence avant utilisation, et il en va de même pour l&#39;anti-crénelage où plus le nombre est élevé, plus le traitement est obligatoire.</p><p> Comme tous les appareils cibles ne sont pas identiques, certains peuvent ne pas prendre en charge l&#39;anti-aliasing 8x ou 4x par exemple, et il existe donc une <b>variable en lecture seule</b> disponible pour obtenir les différents niveaux d&#39;AA que l&#39;appareil exécutant le jeu peut afficher:</p><p class="code">display_aa</p><p> Cette variable renverra une valeur entière basée sur le paramétrage des bits pour les différents niveaux. Donc, pour seulement 2xAA, cela indiquera 2, pour la disponibilité 2x et 4x, il indiquera 6. Pour 8 et 4, il indiquera 12. Pour les 3 niveaux (2,4 et 8), il indiquera 14.</p><p></p><h4> Syntaxe:</h4><p class="code">display_reset(aa, vsync);</p><table><tbody><tr><th> Argument</th><th> Description</th></tr><tr><td> <span class="notranslate">aa</span></td><td> Le niveau de filtrage anti-crénelage (0, 2, 4 ou 8).</td></tr><tr><td> <span class="notranslate">vsync</span></td><td> Activez (vrai) ou désactivez la synchronisation verticale (faux).</td></tr></tbody></table><p></p><h4> Retour:</h4><p class="code">Real</p><p></p><h4> Exemple:</h4><p class="code">if (display_aa &gt; 12)<br/>     {<br/>     display_reset(8, true);<br/>     }</p><p> Le code ci-dessus définira le niveau d&#39;anti-aliasing sur 8 s&#39;il est pris en charge et activera v-sync.</p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"> <a href="Cameras_And_Display.htm">Caméras et affichage</a><div style="float:left"> Retour:</div><div style="float:right"> Suivant:<a href="display_get_width.htm">display_get_width</a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
+<body>
+  <!--<div class="body-scroll" style="top: 150px;">-->
+  <h1>display_reset</h1>
+  <p>Cette fonction réinitialise les paramètres d'affichage à ceux qui ont été définis au début du jeu, mais vous permet également de modifier le niveau actuel d'anticrénelage plein écran utilisé et d'utiliser ou non la synchronisation verticale. Les niveaux d'anticrénelage disponibles
+    disponibles sont 0, 2, 4 et 8, la valeur par défaut au démarrage étant 0, et le paramètre par défaut de la synchronisation verticale est false (désactivé). L'activation <span class="notranslate">de</span>v-sync peut donner une expérience de jeu plus fluide, mais elle nécessitera également plus de puissance de traitement et son impact doit donc être considéré avec attention avant utilisation.
+    Il en va de même pour l'anticrénelage : plus le chiffre est élevé, plus le traitement nécessaire est important.</p>
+  <p>Comme tous les périphériques cibles ne sont pas les mêmes, certains peuvent ne pas supporter l'anticrénelage 8x ou 4x par exemple, et il y a donc une variable en <b>lecture seule</b> disponible pour obtenir les différents niveaux d'AA que le périphérique exécutant le jeu peut afficher :</p>
+  <p class="code">afficher_aa</p>
+  <p>Cette variable renverra une valeur entière basée sur le réglage des bits pour les différents niveaux. Ainsi, pour seulement 2xAA, cela donnera 2, pour 2x et 4x disponibilité, cela donnera 6. Pour 8 et 4, la valeur sera de 12. Pour les 3 niveaux (2,4 et 8), il indiquera 14.
+    rapportera 14.</p>
+  <p> </p>
+  <h4>Syntaxe :</h4>
+  <p class="code">display_reset(aa, vsync) ;</p>
+  <table>
+    <tbody>
+      <tr>
+        <th>Arguments</th>
+        <th>Description</th>
+      </tr>
+      <tr>
+        <td>aa</td>
+        <td>Le niveau de filtrage anti-aliasing (0, 2, 4 ou 8).</td>
+      </tr>
+      <tr>
+        <td>vsync</td>
+        <td>Active (true) ou désactive (false) la synchronisation verticale.</td>
+      </tr>
+    </tbody>
+  </table>
+  <p> </p>
+  <h4>Les retours :</h4>
+  <p class="code">Real</p>
+  <p> </p>
+  <h4>Exemple :</h4>
+  <p class="code">if (display_aa &gt; 12)<br> {<br> display_reset(8, true) ;<br> }</p>
+  <p>Le code ci-dessus définira le niveau d'anticrénelage à 8 s'il est pris en charge et activera la synchronisation verticale.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <div class="footer">
+    <div class="buttons">
+      <div class="clear"><a href="Cameras_And_Display.htm">Caméras et écrans</a>
+        <div style="float:left">Retour : </div>
+        <div style="float:right">Suivant : <a href="display_get_width.htm">display_get_width</a></div>
+      </div>
+    </div>
+    <h5><span data-keyref="Copyright Notice">Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
   </div>
   <!-- KEYWORDS
 display_reset

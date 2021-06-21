@@ -7,14 +7,55 @@
   <meta name="generator" content="Adobe RoboHelp 2019" />
   <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
   <meta name="rh-authors" content="Mark Alexander" />
-  <meta name="topic-comment" content="Page de référence pour ini_key_exists" />
+  <meta name="topic-comment" content="Reference page for ini_key_exists" />
   <meta name="rh-index-keywords" content="ini_key_exists" />
   <meta name="search-keywords" content="ini_key_exists" />
 </head>
-<body><!--<div class="body-scroll" style="top: 150px;">--><h1>ini_key_exists</h1><p> Cette fonction vérifie si une clé existe dans l&#39;ini actuellement ouvert et retournera <tt>true</tt> si c&#39;est le cas ou <tt>false</tt> autrement. Ce n&#39;est pas une vérification nécessaire pour éviter les erreurs car, lorsqu&#39;une clé n&#39;existe pas, la lecture à partir d&#39;une clé inexistante renverra simplement une valeur par défaut. Cependant, il peut être utile de voir si un fichier ini a enregistré des données spécifiques et quelques autres choses.</p><p></p><h4> Syntaxe:</h4><p class="code">ini_key_exists(section, key);</p><table><tbody><tr><th> Argument</th><th> Description</th></tr><tr><td> <span class="notranslate">section</span></td><td> La section du fichier.ini ouvert pour l&#39;archivage d&#39;une clé.</td></tr><tr><td> <span class="notranslate">key</span></td><td> La clé à vérifier.</td></tr></tbody></table><p></p><h4> Retour:</h4><p class="code">Boolean</p><p></p><h4> Exemple:</h4><p class="code">ini_open(&quot;savedata.ini&quot;);<br/> if !ini_key_exists(&quot;save1&quot;, &quot;name&quot;)<br/>     {
-    <br/>     global.name = &quot;Player1&quot;;<br/>     }
-    <br/> ini_close();
-  </p><p> Cela définira la variable global.name sur &quot;Player1&quot; si aucune clé telle que &quot;name&quot; n&#39;existe. </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> Retour: <a href="Ini_Files.htm">Fichiers Ini</a></div><div style="float:right"> Suivant:<a href="ini_section_exists.htm">ini_section_exists</a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
+<body>
+  <!--<div class="body-scroll" style="top: 150px;">-->
+  <h1>ini_key_exists</h1>
+  <p>Cette fonction vérifie si une clé existe dans l'ini actuellement ouvert et renvoie <tt>true</tt> si c'est le cas ou <tt>false</tt> sinon. Ce n'est pas une vérification nécessaire pour éviter les erreurs car, lorsqu'une clé n'existe pas, la lecture d'une clé inexistante
+    renverra simplement une valeur par défaut. Cependant, cela peut être utile pour voir si un fichier ini a sauvegardé des données spécifiques et quelques autres choses.</p>
+  <p> </p>
+  <h4>Syntaxe :</h4>
+  <p class="code">ini_key_exists(section, clé) ;</p>
+  <table>
+    <tbody>
+      <tr>
+        <th>Arguments</th>
+        <th>Description</th>
+      </tr>
+      <tr>
+        <td>section</td>
+        <td>La section du fichier .ini ouvert pour vérifier une clé.</td>
+      </tr>
+      <tr>
+        <td>clé</td>
+        <td>La clé à vérifier.</td>
+      </tr>
+    </tbody>
+  </table>
+  <p> </p>
+  <h4>Les retours :</h4>
+  <p class="code">Booléen</p>
+  <p> </p>
+  <h4>Exemple :</h4>
+  <p class="code">ini_open(&quot;savedata.ini&quot;) ;<br> if !ini_key_exists(&quot;save1&quot;, &quot;name&quot;)<br> {
+    <br> global.name = &quot;Player1&quot; ;<br> }
+    <br> ini_close() ;
+  </p>
+  <p>Cela donnera à la variable global.name la valeur &quot;Player1&quot; si une clé telle que &quot;name&quot; n'existe pas.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <div class="footer">
+    <div class="buttons">
+      <div class="clear">
+        <div style="float:left">Retour : <a href="Ini_Files.htm">Dossiers Ini</a></div>
+        <div style="float:right">Suivant : <a href="ini_section_exists.htm">ini_section_exists</a></div>
+      </div>
+    </div>
+    <h5><span data-keyref="Copyright Notice">Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
   </div>
   <!-- KEYWORDS
 ini_key_exists

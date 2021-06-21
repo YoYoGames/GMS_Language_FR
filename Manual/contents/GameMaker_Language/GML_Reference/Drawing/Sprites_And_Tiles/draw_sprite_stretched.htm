@@ -3,15 +3,74 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>draw_sprite_stretched</title>
+  <title>dessiner_sprite_étiré</title>
   <meta name="generator" content="Adobe RoboHelp 2019" />
   <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
   <meta name="rh-authors" content="Mark Alexander" />
-  <meta name="topic-comment" content="Page de référence pour draw_sprite_stretched" />
+  <meta name="topic-comment" content="Reference page for draw_sprite_stretched" />
   <meta name="rh-index-keywords" content="draw_sprite_stretched" />
   <meta name="search-keywords" content="draw_sprite_stretched" />
 </head>
-<body><!--<div class="body-scroll" style="top: 150px;">--><h1>draw_sprite_stretched</h1><p> Cette fonction prend simplement une ressource de sprite et l&#39;étire sur la largeur et la hauteur données afin qu&#39;elle occupe la zone. Comme avec <a href="draw_sprite.htm"><tt>draw_sprite()</tt></a> vous pouvez spécifier un sprite et une sous-image pour le dessin, puis la position x / y dans la pièce pour le sprite à dessiner et enfin une largeur et une hauteur (qui doivent être des valeurs en pixels). L&#39;image ci-dessous illustre le fonctionnement de cette fonction:</p><p><img alt="draw_sprite_stretched example" class="center" src="../../../../assets/Images/Scripting_Reference/GML/Reference/Drawing/spr_stretch.png" /></p><p class="note"> <b>REMARQUE</b>: lorsque vous dessinez avec cette fonction, le <a href="../../Asset_Management/Sprites/Sprite_Instance_Variables/sprite_xoffset.htm">décalage x</a> et le <a href="../../Asset_Management/Sprites/Sprite_Instance_Variables/sprite_yoffset.htm">décalage</a> y du sprite sont ignorés et le sprite sera dessiné avec le coin supérieur gauche à la position x / y spécifiée dans la pièce.</p><p></p><h4> Syntaxe:</h4><p class="code">draw_sprite_stretched(sprite, subimg, x, y, w, h);</p><table><tbody><tr><th> Argument</th><th> Description</th></tr><tr><td> <span class="notranslate">sprite</span></td><td> L&#39;index du sprite à dessiner.</td></tr><tr><td> <span class="notranslate">subimg</span></td><td> Le subimg (frame) du sprite à dessiner (image_index ou -1 en corrélation avec l&#39;image courante de l&#39;animation dans l&#39;objet).</td></tr><tr><td> <span class="notranslate">x</span></td><td> La coordonnée x de l&#39;endroit où dessiner le sprite.</td></tr><tr><td> <span class="notranslate">y</span></td><td> La coordonnée y de l&#39;endroit où dessiner le sprite.</td></tr><tr><td> <span class="notranslate">w</span></td><td> La largeur de la zone occupée par le sprite étiré.</td></tr><tr><td> <span class="notranslate">h</span></td><td> La hauteur de la zone occupée par le sprite étiré.</td></tr></tbody></table><p></p><h4> Retour:</h4><p class="code">N/A</p><p></p><h4> Exemple:</h4><p class="code">draw_sprite_stretched(sprite_index, image_index, x, y, sprite_width / 2, sprite_height / 2);</p><p> Cela dessinera les instances assignées au sprite et sa sous-image avec le coin gauche à la position x / y de l&#39;instance. Sa largeur est la même que celle du sprite et la hauteur correspond à la hauteur du sprite divisée par deux. </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> Face arrière: <a href="Sprites_And_Tiles.htm">Sprites et tuiles</a></div><div style="float:right"> Suivant:<a href="draw_sprite_stretched_ext.htm">draw_sprite_stretched_ext</a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
+<body>
+  <!--<div class="body-scroll" style="top: 150px;">-->
+  <h1>dessiner_sprite_étiré</h1>
+  <p>Cette fonction prend simplement une ressource sprite et l'étire sur la largeur et la hauteur données afin qu'elle occupe cette zone. Comme avec <a href="draw_sprite.htm"><tt>draw_sprite()</tt></a> vous pouvez spécifier un sprite et une sous-image à dessiner, puis la position x/y dans la pièce pour le sprite à dessiner.
+    x / y dans la pièce où le sprite doit être dessiné et enfin une largeur et une hauteur (qui doivent être des valeurs en pixels). L'image ci-dessous montre le résultat de cette fonction avec différents jeux d'arguments :</p>
+  <p><img alt="draw_sprite_stretched example" class="center" src="../../../../assets/Images/Scripting_Reference/GML/Reference/Drawing/spr_stretch.png" /></p>
+  <p class="note"><b>REMARQUE</b>: Lorsque vous dessinez avec cette fonction, les <a href="../../Asset_Management/Sprites/Sprite_Instance_Variables/sprite_xoffset.htm">décalages x</a> et <a href="../../Asset_Management/Sprites/Sprite_Instance_Variables/sprite_yoffset.htm">y</a> du sprite sont ignorés et le sprite sera dessiné avec le coin supérieur gauche à la position x/y spécifiée dans la pièce.</p>
+  <p> </p>
+  <h4>Syntaxe :</h4>
+  <p class="code">draw_sprite_stretched(sprite, subimg, x, y, w, h) ;</p>
+  <table>
+    <tbody>
+      <tr>
+        <th>Arguments</th>
+        <th>Description</th>
+      </tr>
+      <tr>
+        <td>sprite</td>
+        <td>L'index du sprite à dessiner.</td>
+      </tr>
+      <tr>
+        <td>sous-image</td>
+        <td>La sous-image (frame) du sprite à dessiner (image_index ou -1 correspondent à la frame d'animation actuelle de l'objet).</td>
+      </tr>
+      <tr>
+        <td>x</td>
+        <td>La coordonnée x de l'endroit où dessiner le sprite.</td>
+      </tr>
+      <tr>
+        <td>y</td>
+        <td>La coordonnée y de l'endroit où dessiner le sprite.</td>
+      </tr>
+      <tr>
+        <td>w</td>
+        <td>La largeur de la zone que le sprite étiré occupera.</td>
+      </tr>
+      <tr>
+        <td>h</td>
+        <td>La hauteur de la zone que le sprite étiré occupera.</td>
+      </tr>
+    </tbody>
+  </table>
+  <p> </p>
+  <h4>Les retours :</h4>
+  <p class="code">N/A</p>
+  <p> </p>
+  <h4>Exemple :</h4>
+  <p class="code">draw_sprite_stretched(sprite_index, image_index, x, y, sprite_width, sprite_height / 2) ;</p>
+  <p>Ceci dessinera le sprite assigné à l'instance et sa sous-image avec le coin gauche à la position x/y de l'instance. Sa largeur est la même que celle du sprite, et sa hauteur est celle du sprite divisée par deux.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <div class="footer">
+    <div class="buttons">
+      <div class="clear">
+        <div style="float:left">Retour : <a href="Sprites_And_Tiles.htm">Sprites et tuiles</a></div>
+        <div style="float:right">Suivant : <a href="draw_sprite_stretched_ext.htm">draw_sprite_stretched_ext</a></div>
+      </div>
+    </div>
+    <h5><span data-keyref="Copyright Notice">Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
   </div>
   <!-- KEYWORDS
 draw_sprite_stretched

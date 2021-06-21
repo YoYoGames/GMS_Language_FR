@@ -3,17 +3,73 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>path_change_point</title>
+  <title>point_de_changement_de_chemin</title>
   <meta name="generator" content="Adobe RoboHelp 2019" />
   <link rel="stylesheet" href="../../../../../assets/css/default.css" type="text/css" />
   <meta name="rh-authors" content="Mark Alexander" />
-  <meta name="topic-comment" content="Page expliquant la fonction path_change_point" />
+  <meta name="topic-comment" content="Page explaining the function path_change_point" />
   <meta name="rh-index-keywords" content="path_change_point" />
   <meta name="search-keywords" content="path_change_point" />
 </head>
-<body><!--<div class="body-scroll" style="top: 150px;">--><h1>path_change_point</h1><p> Avec cette fonction, vous pouvez modifier la position et / ou le facteur de vitesse de tout point précédemment défini pour un chemin (le chemin peut avoir été créé dans l&#39;éditeur de chemin ou via le code en utilisant <a href="path_add.htm"><tt>path_add()</tt></a> ). Si elle est utilisée sur un chemin du navigateur d&#39;actifs, notez que <strong>la fonction changera l&#39;actif réel</strong>, et affectera donc de manière permanente la façon dont le chemin est utilisé par toutes les instances du jeu à partir du moment où la fonction est utilisée jusqu&#39;à la fin du jeu. Si ce n&#39;est pas ce dont vous avez besoin, vous devez utiliser une fonction telle que <span class="inline"><a href="path_duplicate.htm">path_duplicate()</a></span> pour créer d&#39;abord une copie du chemin, puis appelez cette fonction sur l&#39;actif dupliqué (n&#39;oubliez pas d&#39;appeler <span class="inline"><a href="path_delete.htm">path_delete()</a></span> sur l&#39;actif lorsqu&#39;il n&#39;est plus nécessaire).</p><p></p><h4> Syntaxe:</h4><p class="code">path_change_point(index, n, x, y, speed);</p><table><tbody><tr><th> Argument</th><th> Description</th></tr><tr><td> <span class="notranslate">index</span></td><td> L&#39;index du chemin pour changer un point de.</td></tr><tr><td> <span class="notranslate">n</span></td><td> Le point déterminant pour modifier les attributs de.</td></tr><tr><td> <span class="notranslate">x</span></td><td> La nouvelle coordonnée x (relative au chemin) du point.</td></tr><tr><td> <span class="notranslate">y</span></td><td> La nouvelle coordonnée y (par rapport au chemin) du point.</td></tr><tr><td> <span class="notranslate">speed</span></td><td> Le nouveau facteur de vitesse du point.</td></tr></tbody></table><p></p><h4> Retour:</h4><p class="code">N/A</p><p></p><h4> Exemple:</h4><p class="code">for (var i = 0; i &lt; path_get_number(path0); ++i;)<br/>     {
-    <br/>     var px = path_get_point_x(pth_Patrol, i) + 64 - random(128);<br/>     var py = path_get_point_y(pth_Patrol, i) + 64 - random(128);<br/>     path_change_point(pth_Patrol, i, px, py, 100);<br/>     }
-  </p><p> Le code ci-dessus parcourt tous les points du chemin indexés comme &quot;path0&quot; et repositionne tous les points à une position aléatoire dans une zone de 128x128 pixels. </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> Retour: <a href="Path_Manipulation.htm">Manipulation de chemin</a></div><div style="float:right"> Suivant:<a href="path_insert_point.htm">path_insert_point</a></div><div style="float:right"></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
+<body>
+  <!--<div class="body-scroll" style="top: 150px;">-->
+  <h1>point_de_changement_de_chemin</h1>
+  <p>Avec cette fonction, vous pouvez modifier la position et/ou le facteur de vitesse de n'importe quel point précédemment défini pour un chemin (le chemin peut avoir été créé dans l'éditeur de chemin ou par le code en utilisant la fonction <a href="path_add.htm"><tt>path_add()</tt></a>). Si elle est utilisée sur un
+    dans le navigateur d'actifs, notez que la <strong>fonction modifiera l'actif réel</strong> et affectera de façon permanente la façon dont le chemin est utilisé par toutes les instances du jeu, depuis le moment où la fonction est utilisée jusqu'à la fin du jeu. Si
+    ce n'est pas ce dont vous avez besoin, alors vous devriez utiliser une fonction comme <span class="inline"><a href="path_duplicate.htm">path_duplicate()</a></span> pour créer d'abord une copie du chemin, puis appeler cette fonction sur l'actif dupliqué (n'oubliez pas d'appeler
+    d'appeler <span class="inline"><a href="path_delete.htm">path_delete()</a></span> sur le poste lorsqu'il n'est plus nécessaire).</p>
+  <p> </p>
+  <h4>Syntaxe :</h4>
+  <p class="code">path_change_point(index, n, x, y, vitesse) ;</p>
+  <table>
+    <tbody>
+      <tr>
+        <th>Arguments</th>
+        <th>Description</th>
+      </tr>
+      <tr>
+        <td>indice</td>
+        <td>L'index de la trajectoire pour changer un point.</td>
+      </tr>
+      <tr>
+        <td>n</td>
+        <td>Le point de définition pour changer les attributs de.</td>
+      </tr>
+      <tr>
+        <td>x</td>
+        <td>La nouvelle coordonnée x (par rapport à la trajectoire) du point.</td>
+      </tr>
+      <tr>
+        <td>y</td>
+        <td>La nouvelle coordonnée y (par rapport à la trajectoire) du point.</td>
+      </tr>
+      <tr>
+        <td>vitesse</td>
+        <td>Le nouveau facteur de vitesse du point.</td>
+      </tr>
+    </tbody>
+  </table>
+  <p> </p>
+  <h4>Les retours :</h4>
+  <p class="code">N/A</p>
+  <p> </p>
+  <h4>Exemple :</h4>
+  <p class="code">for (var i = 0 ; i &lt; path_get_number(path0) ; ++i ;) <br> {
+    <br> var px = path_get_point_x(pth_Patrol, i) + 64 - random(128) ;<br> var py = path_get_point_y(pth_Patrol, i) + 64 - random(128) ;<br> path_change_point(pth_Patrol, i, px, py, 100) ;<br> }
+  </p>
+  <p>Le code ci-dessus boucle sur tous les points du chemin indexé comme &quot;path0&quot; et repositionne tous les points à une position aléatoire dans une zone de 128x128 pixels.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <div class="footer">
+    <div class="buttons">
+      <div class="clear">
+        <div style="float:left">Retour : <a href="Path_Manipulation.htm">Manipulation des chemins</a></div>
+        <div style="float:right">Suivant : <a href="path_insert_point.htm">path_insert_point</a></div>
+        <div style="float:right"> </div>
+      </div>
+    </div>
+    <h5><span data-keyref="Copyright Notice">Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
   </div>
   <!-- KEYWORDS
 path_change_point

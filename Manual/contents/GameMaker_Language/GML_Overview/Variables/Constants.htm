@@ -1,24 +1,133 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <title>Constantes</title>
-  <meta name="generator" content="Adobe RoboHelp 2019" />
+  <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../assets/css/default.css" type="text/css" />
   <meta name="rh-authors" content="Mark Alexander" />
-  <meta name="topic-comment" content="Page expliquant les différentes constantes GML" />
-  <meta name="rh-index-keywords" content="Constantes,macro,enum,pointer_invalid,pointer_null,undefined,NaN,infinity,true,false,pi" />
-  <meta name="search-keywords" content="constantes,macros,énumérations,macro,enum" />
+  <meta name="topic-comment" content="Page explaining the different GML constants" />
+  <meta name="rh-index-keywords" content="Constants,macro,enum,pointer_invalid,pointer_null,undefined,NaN,infinity,true,false,pi" />
+  <meta name="search-keywords" content="constants,macros,enums,macro,enum" />
 </head>
-<body><!--<div class="body-scroll" style="top: 150px;">--><h1> Constantes</h1><p> Une constante est un type de variable qui est défini une fois au début du jeu et qui ne change jamais. En fait, les valeurs constantes ne <em>peuvent pas être modifiées après avoir été déclarées</em>. Cela les rend idéales pour conserver les valeurs utilisées tout au long du jeu pour identifier des données spéciales.</p><p> Dans le <span class="notranslate">GameMaker Language</span> il existe deux types de constantes définies par l&#39;utilisateur: les <strong>macros</strong> et les <strong>énumérations</strong>, qui sont toutes deux expliquées ci-dessous. Notez également que toute valeur qui est toujours la même est classée comme constante, quel que soit le <a href="../Data_Types.htm">type de données</a>, par exemple, une chaîne ou le nombre 3.</p><p class="note"> <strong>REMARQUE</strong>: Le <span class="notranslate">GameMaker Language</span> possède également un certain nombre de valeurs constantes intégrées qui sont utilisées pour identifier des éléments spécifiques. Celles-ci sont décrites sur les pages appropriées pour les <span class="notranslate">runtime</span> qui en ont besoin dans la section <a href="../../GML_Reference/GML_Reference.htm">Référence <span class="notranslate">GML</span></a></p><p></p><h2> Macros</h2><p> Bien qu&#39;elles ne soient pas exactement des variables, les macros leur sont similaires dans la façon dont elles sont utilisées, c&#39;est-à-dire: ce sont des valeurs nommées que vous pouvez utiliser tout au long de votre code pour remplacer les valeurs <a class="glossterm" data-glossterm="codé en dur" href="#">codées en dur.</a> Fondamentalement, une macro est une variable nommée qui contient une valeur unique constante de n&#39;importe quel <a href="../Data_Types.htm">type de données</a>. Vous pouvez définir vos propres macros à l&#39;aide de l&#39; <a href="../Script_Functions.htm">éditeur de script</a>, puis les utiliser dans votre code et <span class="notranslate">DnD</span>™ comme s&#39;il s&#39;agissait de variables régulières, la seule différence étant qu&#39;elles <i>ne peuvent pas être modifiées dans le jeu</i>.</p><p> La structure syntaxique d&#39;une macro est la suivante:</p><p class="code">#macro <i>&lt;variable&gt;</i> <i>&lt;value&gt;</i></p><p> Par exemple, disons que vous définissez la macro suivante &quot;<span class="inline">total_weapons</span> &quot;(notez ce qui précède&quot;<span class="inline">#</span> &quot;et l&#39;absence de deux points&quot;<span class="inline">;</span> &quot; à la fin):</p><p class="code">#macro total_weapons 10</p><p> Vous appelleriez alors ceci dans votre code comme ceci:</p><p class="code">if ++pos == total_weapons<br/>     {
-    <br/>     pos = 0;<br/>     }
-  </p><p> Notez que vous ne pourrez pas changer la valeur de la constante, donc un code comme celui-ci provoquera le plantage du jeu:</p><p class="code">total_weapons = 11;</p><p> Vous pouvez définir une macro n&#39;importe où dans votre code ou dans un script et elle sera <i>précompilée</i> et incluse dans votre jeu comme si elle était là depuis le début, mais nous vous recommandons de créer un actif de script dédié et de définir toutes vos macros dans là. Ce sera plus facile à organiser et à déboguer plus tard!</p><p> Si vous avez besoin que la valeur d&#39;une macro change au moment de l&#39;exécution, vous devriez probablement en faire une <a href="Global_Variables.htm">variable globale</a>, car celles-ci peuvent être modifiées à partir du code pendant un jeu, à moins que vous ne définissiez la macro comme un <span><a href="../Runtime_Functions.htm"><span class="notranslate">runtime</span></a></span><a href="../Runtime_Functions.htm">function</a>. En définissant la macro sur une fonction, cela signifie que cette fonction sera appelée à chaque fois que vous utiliserez la macro. Par exemple:</p><p class="code">#macro col make_colour_hsv(irandom(255), 255, 255)</p><p> Vous appelleriez alors cette macro quelque chose comme ceci:</p><p class="code">image_blend = col;</p><p> L&#39;utilisation de ce code donnera à l&#39;image une couleur différente à chaque fois que la macro est utilisée. Il est à noter que vous pouvez également fractionner des macros sur plusieurs lignes à l&#39;aide de la <span class="inline"><tt>\</tt></span> caractère pour montrer où la ligne saute. Un exemple serait quelque chose comme:</p><p class="code">#macro hello show_debug_message(&quot;Hello&quot; + \<br/> string(player_name) + \<br/> &quot;, how are you today?&quot;);</p><p> Ceci est purement cosmétique, dans la mesure où la division d&#39;une macro comme celle-ci n&#39;aura aucun effet sur le résultat de la macro finale lorsqu&#39;elle est utilisée, et consiste simplement à prendre en charge le texte multiligne sur les macros qui ont des lignes de code plus longues.</p><p> Une caractéristique très importante des macros est qu&#39;elles peuvent être définies pour une utilisation avec des <a href="../../../Settings/Configurations.htm">configurations</a> spécifiques (configs), ce qui signifie que vous pouvez avoir le même nom de macro mais lui donner des valeurs différentes en fonction de la configuration actuellement sélectionnée. Par exemple, supposons que vous ayez une configuration pour <span class="notranslate">Android</span> Ads et une autre pour <span class="notranslate">iOS</span> Ads, vous pouvez définir une seule macro pour contenir la valeur d&#39;ID d&#39;application requise:</p><p class="code">#macro ad_id &quot;&quot;;<br/> #macro Android:ad_id &quot;com.yoyogames.googlegame&quot;<br/> #macro iOS:ad_id &quot;com.yoyogames.appstoregame&quot;</p><p> Comme vous pouvez le voir, vous donnez d&#39;abord le nom de la configuration puis un deux-points <span class="inline">:</span> puis le nom et la valeur de la macro. Notez que vous ne pouvez pas avoir d&#39;espace blanc entre les deux points <span class="inline">:</span> et soit le nom de la configuration, ni le nom de la macro, sinon vous obtiendrez une erreur.</p><p></p><h2> Enums</h2><p> Une énumération est un «énumérateur», et il vous permet essentiellement de créer votre propre type de données limité avec une liste de valeurs constantes, et ils ont la structure suivante:</p><p class="code">enum <i>&lt;variable&gt; </i>{<br/>
-    <i>&lt;constant&gt;</i> [= <i>&lt;value&gt;</i>],<br/>
-    <i>&lt;constant&gt;</i> [= <i>&lt;value&gt;</i>],<br/> // etc...<br/> }
-  </p><p> Dans l&#39;exemple suivant, nous créons une énumération pour les couleurs de l&#39;arc-en-ciel et lui attribuons diverses constantes et valeurs par défaut:</p><p class="code">enum rainbowcolours {<br/>     red,<br/>     orange,<br/>     yellow,<br/>     green,<br/>     blue,<br/>     indigo,<br/>     violet<br/>     }</p><p> Les entrées ENUM ne peuvent être des <b>nombres entiers</b> ou <b><a class="glossterm" data-glossterm="expression" href="#">expression</a> <span class="glossextra">s</span> avec</b> les <b>énumérations précédentes qui évaluent à un nombre entier,</b> et par défaut sont numérotés de 0 vers le haut, de sorte que notre exemple ci - dessus serait par défaut <tt>red = 0</tt>, <tt>orange = 1</tt>, <tt>yellow = 2</tt>, etc...</p><p> Vous pouvez également affecter des valeurs aux variables d&#39;énumération au moment de la création:</p><p class="code">enum enum_test {<br/> val = 10;<br/> }
-    <br/>
-    <br/> enum rainbowcolours {<br/>     red = 5,<br/>     orange = 5 * 2,<br/>     yellow = 15,<br/>     green = 20,<br/>     blue = 25,<br/>     indigo = 30,<br/>     violet = 35 * enum_test.val<br/>     }</p><p> Remarquez que dans l&#39;exemple ci-dessus, nous utilisons une autre énumération pour créer une expression pour &quot;violet&quot;. Cela ne fonctionne que si l&#39;énumération référencée a été créée <i>avant</i> l&#39;énumération qui l&#39;utilise dans une expression, mais cela ne fonctionnera pas pour les variables ou les fonctions, car la valeur enum doit pouvoir être évaluée en tant que constante lorsque le projet est en cours de <a class="glossterm" data-glossterm="Compiler" href="#">compilation</a>. Notez également que toutes les valeurs d&#39;énumération sont évaluées en <b>valeurs entières</b>, et lorsque vous créez les vôtres, vous devez savoir que <i>seules les valeurs entières sont autorisées</i> pour que les énumérations fonctionnent. Cette valeur peut être n&#39;importe quel nombre entier qu&#39;un nombre à double précision à virgule flottante peut représenter, y compris les valeurs négatives.</p><p> Pour accéder ultérieurement à la valeur dans un type d&#39;énumération donné, vous pouvez utiliser le point <tt>&quot;.&quot;</tt> méthode, comme ceci:</p><p class="code">variable = &lt;enum_name&gt;.&lt;<em>enum_variable</em>&gt;;</p><p> À titre d&#39;exemple, utilisons le &quot;<span class="inline">rainbowcolours</span> &quot;énumération que nous avons créée dans le code ci-dessus:</p><p class="code">colour_value = rainbowcolours.green * rainbowcolours.red;</p><p> Le <span class="inline">colour_value</span> variable contiendrait maintenant la valeur 100 (20 * 5).</p><p> Notez que vous <em>ne pouvez pas</em> modifier les valeurs d&#39;une constante d&#39;énumération après sa création, tout comme vous ne pouvez pas modifier les macros après leur création.</p><p></p><h2> Constantes intégrées</h2><p> Le tableau suivant présente une liste des constantes intégrées qui peuvent être renvoyées par certaines fonctions et opérations de vos projets:</p><p></p><table><tbody><tr><th> Constant</th><th> Description</th></tr><tr><td><span class="notranslate"><span class="inline">pointer_null</span></span></td><td> Cette constante indique que le pointeur ne pointe vers rien de significatif (le même que<span> </span><tt>NULL</tt><span> </span>en C ++ ou null en C #)</td></tr><tr><td><span class="notranslate"><span class="inline">pointer_invalid</span></span></td><td> Cette constante signifie simplement que la valeur n&#39;est pas un pointeur valide</td></tr><tr><td><span class="notranslate"><span class="inline">undefined</span></span></td><td> Cette constante est renvoyée lorsqu&#39;une fonction doit renvoyer <em>quelque chose</em> mais n&#39;a pas de valeur appropriée ou &quot;correcte&quot; à renvoyer</td></tr><tr><td><span class="notranslate"><span class="inline">NaN</span></span></td><td> <span>Cette constante qui peut être retournée lorsque le compilateur ne peut pas évaluer les résultats d&#39;une opération comme un nombre - par exemple, 0/0 ne peut pas être défini comme un nombre réel, et est donc représentée par </span><tt>NaN</tt></td></tr><tr><td><span class="notranslate"><span class="inline">infinity </span></span></td><td><tt><span data-highlight-container="true"><span data-highlight="true"><font face="open_sansregular"><span style="font-size: 18px; font-weight: 400;">This constant </span></font></span></span></tt> <span>fait référence à un nombre considéré comme infini, tel que le résultat que vous obtiendriez en divisant une valeur à virgule flottante par zéro, par exemple: 1.0 / 0.</span></td></tr><tr><td><span class="notranslate"><span class="inline">true</span></span></td><td> Cette constante représente la valeur 1, ce que <span class="notranslate">GameMaker Studio</span> évaluera comme un booléen &quot;vrai&quot; (notez que toute valeur égale ou supérieure à 1 sera évaluée comme <span class="inline">true</span> ).</td></tr><tr><td><span class="notranslate"><span class="inline">false</span></span></td><td> Cette constante représente la valeur 0, ce que <span class="notranslate">GameMaker Studio</span> évaluera comme un booléen &quot;faux&quot; (notez que toute valeur inférieure ou égale à 0 sera évaluée comme <span class="inline">false</span> ).</td></tr><tr><td><span class="notranslate"><span class="inline">pi</span></span></td><td> Cette constante représente la valeur de pi: 3.141592653589793280 etc... bien que la valeur exacte dépendra de divers facteurs comme le système d&#39;exploitation ou la plate-forme ciblée. </td></tr></tbody></table><p></p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> Retour: <a href="../Variables_And_Variable_Scope.htm">Portée des variables et des variables</a></div><div style="float:right"> Suivant: <a href="Local_Variables.htm">Variables locales</a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
+<body>
+  <!--<div class="body-scroll" style="top: 150px;">-->
+  <h1>Constantes</h1>
+  <p>Une constante est un type de variable qui est définie une fois au début du jeu et qui ne change jamais. En fait, les valeurs constantes <em>ne peuvent pas être modifiées après avoir été déclarées</em>. Cela les rend idéales pour contenir des valeurs qui sont utilisées tout au long du jeu pour identifier des données spéciales.
+    jeu pour identifier des données spéciales.</p>
+  <p>Dans le <span class="notranslate">langage GameMaker</span>, il existe deux types de constantes définies par l'utilisateur : les <strong>macros</strong> et les <strong>enums</strong>, qui sont tous deux expliqués ci-dessous. Notez également que toute valeur qui est toujours la même est considérée comme une constante, quel que soit le type de données.
+   <a href="../Data_Types.htm">type de données</a>, par exemple, une chaîne de caractères ou le nombre 3.</p>
+  <p class="note"><strong>REMARQUE</strong>: le <span class="notranslate">langage GameMaker</span> possède également un certain nombre de valeurs constantes intégrées qui sont utilisées pour identifier des éléments spécifiques. Elles sont décrites dans les pages appropriées pour les fonctions d'<span class="notranslate">exécution</span> qui les requièrent dans la section <a href="../../GML_Reference/GML_Reference.htm">Référence<span class="notranslate">GML</span></a>.</p>
+  <p> </p>
+  <h2>Macros</h2>
+  <p>Bien qu'il ne s'agisse pas exactement de variables, les macros leur ressemblent dans leur utilisation, c'est-à-dire qu'il s'agit de valeurs nommées que vous pouvez utiliser dans votre code pour remplacer les valeurs <a class="glossterm" data-glossterm="codé en dur" href="#">codées en dur</a>. Fondamentalement, une macro
+    est une variable nommée qui contient une valeur unique constante de n'importe quel <a href="../Data_Types.htm">type de données</a>. Vous pouvez définir vos propres macros à l'aide de l'<a href="../Script_Functions.htm">éditeur de script</a>, puis les utiliser dans votre code et dans <span class="notranslate">DnD™</span>comme s'il s'agissait de variables ordinaires.
+    étaient des variables ordinaires, à la seule différence qu'elles ne peuvent <i>pas être modifiées dans le jeu.</i></p>
+  <p>La structure syntaxique d'une macro est la suivante :</p>
+  <p class="code">#macro <i>&lt;variable&gt; &lt;valeur&gt;</i> </p>
+  <p>Par exemple, disons que vous définissez la macro suivante &quot;<span class="inline">total_weapons</span>&quot; (notez le &quot;<span class="inline">#</span>&quot; qui précède et l'absence de deux points &quot;<span class="inline">;</span>&quot; à la fin) :</p>
+  <p class="code">#macro total_weapons 10</p>
+  <p>Vous l'appellerez alors dans votre code comme ceci :</p>
+  <p class="code">if ++pos == total_weapons<br> {
+    <br> pos = 0 ;<br> }
+  </p>
+  <p>Notez que vous ne pourrez pas modifier la valeur de la constante, donc un code comme celui-ci fera planter le jeu :</p>
+  <p class="code">total_armes = 11 ;</p>
+  <p>Vous pouvez définir une macro n'importe où dans votre code ou dans un script et elle sera <i>précompilée</i> et incluse dans votre jeu comme si elle était là depuis le début, mais nous vous recommandons de créer un actif script dédié et d'y définir toutes vos macros.
+    Ce sera plus facile à organiser et à déboguer par la suite !</p>
+  <p>Si vous avez besoin que la valeur d'une macro change au moment de l'exécution, vous devriez probablement en faire une <a href="Global_Variables.htm">variable globale</a>, puisque celles-ci peuvent être modifiées à partir du code pendant le jeu, à moins que vous ne définissiez la macro comme une<span> <a href="../Runtime_Functions.htm"><span class="notranslate">temps d'exécution</span> </a></span>   <a href="../Runtime_Functions.htm">fonction</a>. En définissant la macro comme une fonction, cela signifie que cette fonction sera appelée chaque fois que vous utiliserez la macro. Par exemple :</p>
+  <p class="code">#macro col make_colour_hsv(irandom(255), 255, 255)</p>
+  <p>Vous appelleriez alors cette macro de la manière suivante :</p>
+  <p class="code">image_blend = col ;</p>
+  <p>En utilisant ce code, l'image se fondra dans une couleur différente à chaque fois que la macro sera utilisée. Il convient de noter que vous pouvez également répartir les macros sur plusieurs lignes en utilisant le caractère <span class="inline"><tt>\</tt></span> pour indiquer où se trouve le saut de ligne.
+    Un exemple serait quelque chose comme :</p>
+  <p class="code">#macro hello show_debug_message(&quot;Hello&quot; + \<br> string(player_name) + \<br> &quot;, how are you today ?&quot;) ;</p>
+  <p>Il s'agit d'une mesure purement cosmétique, dans la mesure où la division d'une macro de cette manière n'aura aucun effet sur le résultat de la macro finale lorsqu'elle sera utilisée, et vise simplement à fournir un support pour le texte multi-lignes sur les macros qui ont des lignes de code plus longues.</p>
+  <p>Une caractéristique très importante des macros est qu'elles peuvent être définies pour être utilisées avec des <a href="../../../Settings/Configurations.htm">configurations</a> spécifiques (configs), ce qui signifie que vous pouvez avoir le même nom de macro mais lui donner des valeurs différentes en fonction de la configuration actuellement sélectionnée.
+    configuration sélectionnée. Par exemple, si vous disposez d'une configuration pour les publicités <span class="notranslate">Android</span> et d'une autre pour les publicités <span class="notranslate">iOS</span>, vous pouvez définir une seule macro pour contenir la valeur d'identification de l'application requise :</p>
+  <p class="code">#macro ad_id &quot;&quot; ;<br> #macro Android:ad_id <span class="notranslate">&quot;</span>com.yoyogames.googlegame&quot;<br> #macro iOS:ad_id &quot;com.yoyogames.appstoregame&quot;</p>
+  <p>Comme vous pouvez le voir, vous donnez d'abord le nom de la configuration, puis deux points <span class="inline">:</span> et enfin le nom et la valeur de la macro. Notez qu'il ne peut y avoir d'espace entre les deux points <span class="inline">:</span> et le nom de la configuration ou le nom de la macro.
+    sinon vous obtiendrez une erreur.</p>
+  <p> </p>
+  <h2 id="enumhead">Enums</h2>
+  <p>Un enum est un &quot;énumérateur&quot;, et il vous permet essentiellement de créer votre propre type de données limité avec une liste de valeurs constantes, et ils ont la structure suivante :</p>
+  <p class="code">enum <i>&lt;variable&gt;<br></i> 
+    {<br>
+       <i> &lt;constant&gt; [= &lt;valeur&gt;</i> <i>],</i><br>
+       <i> &lt;constante&gt; [= &lt;valeur&gt;</i> <i>],</i><br> // etc...<br> }</p>
+  <p>Dans l'exemple suivant, nous créons un enum pour les couleurs de l'arc-en-ciel et lui attribuons diverses constantes et valeurs par défaut :</p>
+  <p class="code">enum rainbowcolours<br> {<br> red,<br> orange,<br> yellow,<br> green,<br> blue,<br> indigo,<br> violet<br> }</p>
+  <p>Les entrées de l'enum ne peuvent être que des <b>nombres entiers</b> ou des <b><span class="glossextra">expressions</span></b> avec des enums précédents qui évaluent à un nombre entier, et par défaut sont numérotées de 0 vers le haut.
+    par défaut, à partir de 0. Ainsi, dans notre exemple, la valeur par défaut serait <tt>rouge = 0</tt>, <tt>orange = 1</tt>, <tt>jaune = 2</tt>, etc...</p>
+  <p>Vous pouvez également attribuer des valeurs aux variables de l'enum au moment de la création :</p>
+  <p class="code">enum enum_test<br> {<br> val = 10 ;<br> } <br>
+    <br> enum rainbowcolours<br> {<br> red = 5,<br> orange = 5 * 2,<br> yellow = 15,<br> green = 20,<br> blue = 25,<br> indigo = 30,<br> violet = 35 * enum_test.val<br> }</p>
+  <p>Remarquez que dans l'exemple ci-dessus, nous utilisons une autre énumération pour créer une expression pour &quot;violet&quot;. Cela ne fonctionne que si l'énumération référencée a été créée <i>avant l'</i> énumération qui l'utilise dans une expression, mais cela ne fonctionnera pas pour les variables ou les fonctions.
+    fonctions, puisque la valeur de l'enum doit pouvoir être évaluée comme une constante lors de la <a class="glossterm" data-glossterm="Compiler" href="#">compilation</a> du projet. Notez également que toutes les valeurs d'énumération sont évaluées comme des valeurs <b>entières</b>.
+    vous devez être conscient que <i>seules les valeurs entières sont autorisées</i> pour que les enums fonctionnent. Cette valeur peut être n'importe quel nombre entier qu'un nombre à virgule flottante en double précision peut représenter, y compris les valeurs négatives.</p>
+  <p>Pour accéder ultérieurement à la valeur d'un type d'énumération donné, vous pouvez utiliser la <tt> méthode du</tt> point <tt>&quot;.&quot;,</tt> comme ceci :</p>
+  <p class="code">variable = &lt;nom_de_l'enum&gt;.&lt; enum_variable&gt;<em>;</em></p>
+  <p>À titre d'exemple, utilisons l'enum &quot;<span class="inline">rainbowcolours</span>&quot; que nous avons créé dans le code ci-dessus :</p>
+  <p class="code">valeur_couleur = rainbowcolours.green * rainbowcolours.red ;</p>
+  <p>La variable <span class="inline">colour_value</span> contient maintenant la valeur 100 (20 * 5).</p>
+  <p>Notez que vous <em>ne pouvez pas </em>modifier les valeurs d'une constante enum après sa création, de la même manière que vous ne pouvez pas modifier les macros après leur création.</p>
+  <p class="note"><strong>NOTE</strong>: Les valeurs des Enum sont stockées sous forme d'int64, donc l'exécution <tt><a href="../../GML_Reference/Variable_Functions/is_real.htm">is_real()</a></tt> sur elles retournera <tt>false</tt>.</p>
+  <p> </p>
+  <h2>Constantes intégrées</h2>
+  <p>Le tableau suivant présente une liste des constantes intégrées qui peuvent être retournées par certaines fonctions et opérations dans vos projets :</p>
+  <p> </p>
+  <table>
+    <tbody>
+      <tr>
+        <th>Constant</th>
+        <th>Description</th>
+      </tr>
+      <tr>
+        <td><span class="inline">pointer_null</span></td>
+        <td>Cette constante indique que le pointeur ne pointe vers rien de significatif (de la même manière que<span> </span><tt>NULL</tt><span> </span>en C++ ou null en C#)</td>
+      </tr>
+      <tr>
+        <td><span class="inline">pointer_invalid</span></td>
+        <td>Cette constante signifie simplement que la valeur n'est pas un pointeur valide.</td>
+      </tr>
+      <tr>
+        <td><span class="inline">undefined</span></td>
+        <td>Cette constante est renvoyée lorsqu'une fonction doit renvoyer <em>quelque chose</em> mais n'a pas de valeur appropriée ou &quot;correcte&quot; à renvoyer.</td>
+      </tr>
+      <tr>
+        <td><span class="inline">NaN</span></td>
+        <td><span>Cette constante peut être renvoyée lorsque le compilateur ne peut pas évaluer les résultats d'une opération comme un nombre - par exemple, 0 / 0 ne peut pas être défini comme un nombre réel, et est donc représenté par </span><tt>NaN</tt></td>
+      </tr>
+      <tr>
+        <td><span class="inline">infinity</span></td>
+        <td><tt><span data-highlight-container="true"><span data-highlight="true"><font face="open_sansregular"><span style="font-size: 18px; font-weight: 400;">Cette constante </span></font></span></span></tt><span>fait référence à un nombre considéré comme infini, tel que le résultat que vous obtiendriez en divisant une valeur à virgule flottante par zéro, par exemple : 1,0/0.</span></td>
+      </tr>
+      <tr>
+        <td><span class="inline">true</span></td>
+        <td>Cette constante représente la valeur 1, ce que <span class="notranslate">GameMaker Studio</span> évaluera comme un booléen &quot;vrai&quot; (notez que toute valeur égale ou supérieure à 1 sera évaluée comme <span class="inline">true</span>).</td>
+      </tr>
+      <tr>
+        <td><span class="inline">false</span></td>
+        <td>Cette constante représente la valeur 0, qui sera évaluée par <span class="notranslate">GameMaker Studio</span> comme un booléen &quot;false&quot; (notez que toute valeur inférieure ou égale à 0 sera évaluée comme <span class="inline">false</span>).</td>
+      </tr>
+      <tr>
+        <td><span class="inline">pi</span></td>
+        <td>Cette constante représente la valeur de pi : 3,141592653589793280 etc... bien que la valeur exacte dépende de divers facteurs comme le système d'exploitation ou la plate-forme visée.</td>
+      </tr>
+    </tbody>
+  </table>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <div class="footer">
+    <div class="buttons">
+      <div class="clear">
+        <div style="float:left">Retour : <a href="../Variables_And_Variable_Scope.htm">Variables et champ d'application des variables</a></div>
+        <div style="float:right">Suivant : <a href="Local_Variables.htm">Variables locales</a></div>
+      </div>
+    </div>
+    <h5><span data-keyref="Copyright Notice">Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
   </div>
   <!-- KEYWORDS
 constants
@@ -32,5 +141,5 @@ constants
 macro
 enum
 -->
-</body>
-</html>
+
+</body></html>

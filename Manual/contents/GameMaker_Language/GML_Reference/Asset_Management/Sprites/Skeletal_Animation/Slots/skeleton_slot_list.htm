@@ -3,15 +3,56 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>skeleton_slot_list</title>
+  <title>liste_slot_squelette</title>
   <meta name="generator" content="Adobe RoboHelp 2019" />
   <link rel="stylesheet" href="../../../../../../assets/css/default.css" type="text/css" />
   <meta name="rh-authors" content="Mark Alexander" />
-  <meta name="topic-comment" content="Page expliquant la fonction skeleton_slot_list" />
+  <meta name="topic-comment" content="Page explaining the function skeleton_slot_list" />
   <meta name="rh-index-keywords" content="skeleton_slot_list" />
   <meta name="search-keywords" content="skeleton_slot_list" />
 </head>
-<body><!--<div class="body-scroll" style="top: 150px;">--><h1>skeleton_slot_list</h1><p> Avec cette fonction, vous pouvez remplir une liste DS (pré-créée) avec tous les noms des emplacements créés dans le cadre du sprite d&#39;animation squelette. Les noms seront des chaînes et pourront ensuite être utilisés dans les autres fonctions de slot d&#39;animation squelette pour ces types de sprite.</p><p></p><h4> Syntaxe:</h4><p class="code">skeleton_slot_list(sprite, list);</p><table><tbody><tr><th> Argument</th><th> Description</th></tr><tr><td> <span class="notranslate">sprite</span></td><td> Index de sprite de l&#39;animation squelettique Spine à partir de laquelle obtenir la liste.</td></tr><tr><td> <span class="notranslate">list</span></td><td> L&#39;ID de la liste DS à renseigner avec les noms d&#39;os.</td></tr></tbody></table><p></p><h4> Retour:</h4><p class="code">N/A</p><p></p><h4> Exemple:</h4><p class="code">bone_list = ds_list_create();<br/> skeleton_slot_list(sprite_index, bone_list);</p><p> Le code ci-dessus crée une liste DS puis la remplit avec les noms d&#39;emplacement pour une utilisation ultérieure. </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> Retour: <a href="Slots.htm">Slots</a></div><div style="float:right"> Suivant:<a href="skeleton_slot_data.htm">skeleton_slot_data</a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
+<body>
+  <!--<div class="body-scroll" style="top: 150px;">-->
+  <h1>liste_slot_squelette</h1>
+  <p>Avec cette fonction, vous pouvez remplir une liste DS (pré-créée) avec tous les noms des slots créés dans le cadre du sprite d'animation squelettique. Les noms seront des chaînes de caractères et pourront ensuite être utilisés dans les autres fonctions de slot d'animation squelettique
+    pour ces types de sprites.</p>
+  <p> </p>
+  <h4>Syntaxe :</h4>
+  <p class="code">skeleton_slot_list(sprite, liste) ;</p>
+  <table>
+    <tbody>
+      <tr>
+        <th>Arguments</th>
+        <th>Description</th>
+      </tr>
+      <tr>
+        <td>sprite</td>
+        <td>L'index du sprite de l'animation squelettique Spine pour obtenir la liste.</td>
+      </tr>
+      <tr>
+        <td>liste</td>
+        <td>L'ID de la liste DS à remplir avec les noms des os.</td>
+      </tr>
+    </tbody>
+  </table>
+  <p> </p>
+  <h4>Les retours :</h4>
+  <p class="code">N/A</p>
+  <p> </p>
+  <h4>Exemple :</h4>
+  <p class="code">bone_list = ds_list_create() ;<br> skeleton_slot_list(sprite_index, bone_list) ;</p>
+  <p>Le code ci-dessus crée une liste de DS puis la remplit avec les noms de slot pour une utilisation ultérieure.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <div class="footer">
+    <div class="buttons">
+      <div class="clear">
+        <div style="float:left">Retour : <a href="Slots.htm">Slots</a></div>
+        <div style="float:right">Suivant : <a href="skeleton_slot_data.htm">skeleton_slot_data</a></div>
+      </div>
+    </div>
+    <h5><span data-keyref="Copyright Notice">Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
   </div>
   <!-- KEYWORDS
 skeleton_slot_list

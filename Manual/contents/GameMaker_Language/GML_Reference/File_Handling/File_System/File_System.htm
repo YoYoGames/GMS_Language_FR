@@ -7,11 +7,61 @@
   <meta name="generator" content="Adobe RoboHelp 2019" />
   <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
   <meta name="rh-authors" content="Mark Alexander" />
-  <meta name="topic-comment" content="Section de référence pour les fonctions du système de fichiers" />
+  <meta name="topic-comment" content="Reference section for the File System functions" />
   <meta name="rh-index-keywords" content="" />
-  <meta name="search-keywords" content="Système de fichiers" />
+  <meta name="search-keywords" content="File System" />
 </head>
-<body><!--<div class="body-scroll" style="top: 150px;">--><h1> Système de fichiers</h1><p> Il existe dans <span class="notranslate">GameMaker Studio 2</span> un certain nombre de fonctions qui vous permettent de manipuler des fichiers de tous types de différentes manières: </p><p></p><ul class="colour"><li><a href="file_exists.htm">file_exists</a></li><li><a href="file_delete.htm">file_delete</a></li><li><a href="file_rename.htm">file_rename</a></li><li><a href="file_copy.htm">file_copy</a></li><li><a href="file_find_first.htm">file_find_first</a></li><li><a href="file_find_next.htm">file_find_next</a></li><li><a href="file_find_close.htm">file_find_close</a></li><li><a href="file_attributes.htm">file_attributes</a></li></ul><p></p><p> Les fonctions suivantes peuvent être utilisées pour modifier les noms de fichiers:</p><p class="note"> <b>REMARQUE</b>: ces fonctions ne fonctionnent pas sur les fichiers réels! Ils ne traitent que les chaînes liées aux différents éléments de chemin et doivent être utilisés en conjonction avec les autres fonctions de fichier. </p><p></p><ul class="colour"><li><a href="filename_name.htm">filename_name</a></li><li><a href="filename_path.htm">filename_path</a></li><li><a href="filename_dir.htm">filename_dir</a></li><li><a href="filename_drive.htm">filename_drive</a></li><li><a href="filename_ext.htm">filename_ext</a></li><li><a href="filename_change_ext.htm">filename_change_ext</a></li></ul><p></p><p> Enfin, il existe des fonctions spéciales pour obtenir des noms de fichiers qui peuvent être utilisées pour charger et enregistrer des fichiers avec des filtres de type de fichier. Ces fonctions ouvriront une fenêtre d&#39;explorateur et entraîneront une perte de concentration du jeu. Cela signifie que toute entrée dont le jeu dépend peut ne pas être correctement enregistrée, et en tant que tel, nous vous recommandons (si vous utilisez ces fonctions dans un événement de clavier) d&#39;utiliser l&#39; <i>événement touche haut</i> et non les événements enfoncés ou descendus.</p><p class="note"> <b>REMARQUE</b>: ces fonctions sont uniquement disponibles pour <b><span class="notranslate">Windows</span></b> et <b><span class="notranslate">macOS</span></b></p><p class="note"> <b>ATTENTION!</b> Ces fonctions peuvent ne pas fonctionner comme prévu en raison du <span class="notranslate">GameMaker Studio 2</span>! Veuillez consulter la section sur <a href="../../../../Additional_Information/The_File_System.htm">le système de fichiers</a> pour plus d&#39;informations. </p><p></p><ul class="colour"><li><a href="get_open_filename.htm">get_open_filename</a></li><li><a href="get_open_filename_ext.htm">get_open_filename_ext</a></li><li><a href="get_save_filename.htm">get_save_filename</a></li><li><a href="get_save_filename_ext.htm">get_save_filename_ext</a></li></ul><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> Retour: <a href="../File_Handling.htm">Gestion des fichiers</a></div><div style="float:right"> Suivant: <a href="../Ini_Files/Ini_Files.htm">Fichiers Ini</a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
+<body>
+  <!--<div class="body-scroll" style="top: 150px;">-->
+  <h1>Système de fichiers</h1>
+  <p>Il existe dans <span class="notranslate">GameMaker Studio 2</span> un certain nombre de fonctions qui vous permettent de manipuler des fichiers de tous types de différentes manières :</p>
+  <p> </p>
+  <ul class="colour">
+    <li><a href="file_exists.htm">fichier_existant</a></li>
+    <li><a href="file_delete.htm">fichier_supprimé</a></li>
+    <li><a href="file_rename.htm">renommer un fichier</a></li>
+    <li><a href="file_copy.htm">fichier_copie</a></li>
+    <li><a href="file_find_first.htm">fichier_trouvé_premier</a></li>
+    <li><a href="file_find_next.htm">fichier_trouver_suivant</a></li>
+    <li><a href="file_find_close.htm">fichier_trouvé_fermé</a></li>
+    <li><a href="file_attributes.htm">Attributs du fichier</a></li>
+  </ul>
+  <p> </p>
+  <p>Les fonctions suivantes peuvent être utilisées pour modifier les noms de fichiers :</p>
+  <p class="note"><b>NOTE</b>: Ces fonctions ne fonctionnent pas sur les fichiers réels ! Elles ne traitent que les chaînes liées aux différents éléments du chemin d'accès et doivent être utilisées conjointement avec les autres fonctions de fichier.</p>
+  <p> </p>
+  <ul class="colour">
+    <li><a href="filename_name.htm">nom_de_fichier</a></li>
+    <li><a href="filename_path.htm">chemin d'accès au nom de fichier</a></li>
+    <li><a href="filename_dir.htm">nom de fichier_répertoire</a></li>
+    <li><a href="filename_drive.htm">nom de fichier_drive</a></li>
+    <li><a href="filename_ext.htm">nom de fichier_ext</a></li>
+    <li><a href="filename_change_ext.htm">changement de nom de fichier_ext</a></li>
+  </ul>
+  <p> </p>
+  <p>Enfin, il existe quelques fonctions spéciales pour obtenir des noms de fichiers qui peuvent être utilisés pour charger et sauvegarder des fichiers avec des filtres de type fichier. Ces fonctions ouvrent une fenêtre de l'explorateur, ce qui fait que le jeu perd le focus. Cela signifie que toute entrée dont le
+    Cela signifie que toute entrée dont dépend le jeu peut ne pas être correctement enregistrée, et nous recommandons donc (si vous utilisez ces fonctions dans un événement clavier) d'utiliser l'événement de la touche <i>vers le haut</i> et non les événements enfoncé ou bas.</p>
+  <p class="note"><b>NOTE</b>: Ces fonctions sont <b><span class="notranslate">Windows</span></b> et <b><span class="notranslate">macOS</span></b> uniquement.</p>
+  <p class="note"><b>AVERTISSEMENT !</b> Il se peut que ces fonctions ne fonctionnent pas comme vous le souhaitez, car <span class="notranslate">GameMaker Studio 2</span> est en sandbox ! Veuillez consulter la section sur le <a href="../../../../Additional_Information/The_File_System.htm">système de fichiers</a> pour
+    plus d'informations.</p>
+  <p> </p>
+  <ul class="colour">
+    <li><a href="get_open_filename.htm">get_open_filename</a></li>
+    <li><a href="get_open_filename_ext.htm">get_open_filename_ext</a></li>
+    <li><a href="get_save_filename.htm">get_save_filename</a></li>
+    <li><a href="get_save_filename_ext.htm">get_save_filename_ext</a></li>
+  </ul>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <div class="footer">
+    <div class="buttons">
+      <div class="clear">
+        <div style="float:left">Retour : <a href="../File_Handling.htm">Traitement des fichiers</a></div>
+        <div style="float:right">Suivant : <a href="../Ini_Files/Ini_Files.htm">Fichiers Ini</a></div>
+      </div>
+    </div>
+    <h5><span data-keyref="Copyright Notice">Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
   </div>
   <!-- KEYWORDS
 File System

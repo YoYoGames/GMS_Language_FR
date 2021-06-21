@@ -3,15 +3,67 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>network_send_broadcast</title>
+  <title>réseau_send_broadcast</title>
   <meta name="generator" content="Adobe RoboHelp 2019" />
   <link rel="stylesheet" href="../../../assets/css/default.css" type="text/css" />
   <meta name="rh-authors" content="Mark Alexander" />
-  <meta name="topic-comment" content="Page de référence pour network_send_broadcast" />
+  <meta name="topic-comment" content="Reference page for network_send_broadcast" />
   <meta name="rh-index-keywords" content="network_send_broadcast" />
   <meta name="search-keywords" content="network_send_broadcast" />
 </head>
-<body><!--<div class="body-scroll" style="top: 150px;">--><h1>network_send_broadcast</h1><p> Avec cette fonction, vous pouvez diffuser les données d&#39;un tampon localement vers une plage d&#39;adresses IP (pour plus d&#39;informations sur les tampons, voir <a href="../Buffers/Buffers.htm">Référence - Tampons</a> ). La plage est limitée à celle du périphérique exécutant le serveur, de sorte que si le périphérique a une adresse IP de 92.168.11.130, les données seront diffusées sur la plage 92.168.11. *. La fonction renverra le nombre d&#39;octets de données envoyés, ou un nombre inférieur à 0 si l&#39;envoi a échoué.</p><p class="note"> <b>REMARQUE</b>: Cette fonction ne fonctionnera que lorsqu&#39;elle est utilisée avec UDP - votre serveur doit être TCP et votre client doit avoir un socket client UDP créé avec <span style="font-size:1px;"><a href="network_create_socket_ext.htm"><tt style="font-size: 14px">network_create_socket_ext ()</tt></a></span> afin de recevoir toutes les diffusions envoyées par le serveur.</p><p class="note"> <b>REMARQUE</b>: cette fonction ne fonctionnera pas lorsqu&#39;elle est utilisée dans un projet exécuté sur la cible HTML5.</p><p></p><h4> Syntaxe:</h4><p class="code">network_send_broadcast(socket, port, buffer, size);</p><table><tbody><tr><th> Argument</th><th> Description</th></tr><tr><td> <span class="notranslate">socket</span></td><td> L&#39;identifiant du socket à utiliser.</td></tr><tr><td> <span class="notranslate">port</span></td><td> Le port que le serveur utilisera.</td></tr><tr><td> <span class="notranslate">buffer</span></td><td> L&#39;identifiant du tampon à partir duquel obtenir les données.</td></tr><tr><td> <span class="notranslate">size</span></td><td> La taille (en octets) des données.</td></tr></tbody></table><p></p><h4> Retour:</h4><p class="code">Real</p><p></p><h4> Exemple:</h4><p class="code">buffer_seek(broadcast_buffer, buffer_seek_start, 0);<br/> buffer_write(broadcast_buffer, buffer_string, global.ServerName);<br/> network_send_broadcast(server, 6511, broadcast_buffer, buffer_tell(broadcast_buffer));</p><p> Le code ci-dessus écrit la chaîne de nom du serveur actuel (stocké dans &quot;global.ServerName&quot;), puis l&#39;écrit dans un tampon binaire avec l&#39;id &quot;broadcast_buffer&quot;. Ces données sont ensuite diffusées localement vers une plage d&#39;adresses IP (l&#39;IP de l&#39;appareil est actuellement implicite comme plage de base de diffusion) vers le port 6511. </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> Retour: <a href="Networking.htm">Réseautage</a></div><div style="float:right"> Suivant:<a href="network_send_packet.htm">network_send_packet</a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
+<body>
+  <!--<div class="body-scroll" style="top: 150px;">-->
+  <h1>réseau_send_broadcast</h1>
+  <p>Cette fonction permet de diffuser localement les données d'un tampon vers une série d'adresses IP (pour plus d'informations sur les tampons, voir <a href="../Buffers/Buffers.htm">Référence - Tampons</a>). La plage est limitée à celle de l'appareil qui exécute le serveur,
+    Ainsi, si l'adresse IP du périphérique est 92.168.11.130, les données seront diffusées sur la plage 92.168.11.*. La fonction renvoie le nombre d'octets de données envoyés, ou un nombre inférieur à 0 si l'envoi a échoué.</p>
+  <p class="note"><b>REMARQUE</b>: Cette fonction ne fonctionne que lorsqu'elle est utilisée avec UDP - votre serveur doit être TCP et votre client doit avoir une socket client UDP créée avec la fonction <span style="font-size:1px;"><a href="network_create_socket_ext.htm"><tt style="font-size: 14px">network_create_socket_ext()</tt></a></span>    afin de recevoir les diffusions envoyées par le serveur.</p>
+  <p class="note"><b>NOTE</b>: Cette fonction ne fonctionnera pas si elle est utilisée dans un projet fonctionnant sur la cible HTML5.</p>
+  <p> </p>
+  <h4>Syntaxe :</h4>
+  <p class="code">network_send_broadcast(socket, port, buffer, size) ;</p>
+  <table>
+    <tbody>
+      <tr>
+        <th>Arguments</th>
+        <th>Description</th>
+      </tr>
+      <tr>
+        <td>prise de courant</td>
+        <td>L'identifiant du socket à utiliser.</td>
+      </tr>
+      <tr>
+        <td>port</td>
+        <td>Le port que le serveur utilisera.</td>
+      </tr>
+      <tr>
+        <td>tampon</td>
+        <td>L'identifiant du tampon à partir duquel les données sont récupérées.</td>
+      </tr>
+      <tr>
+        <td>taille</td>
+        <td>La taille (en octets) des données.</td>
+      </tr>
+    </tbody>
+  </table>
+  <p> </p>
+  <h4>Les retours :</h4>
+  <p class="code">Real</p>
+  <p> </p>
+  <h4>Exemple :</h4>
+  <p class="code">buffer_seek(broadcast_buffer, buffer_seek_start, 0) ;<br> buffer_write(broadcast_buffer, buffer_string, global.ServerName) ;<br> network_send_broadcast(server, 6511, broadcast_buffer, buffer_tell(broadcast_buffer)) ;</p>
+  <p>Le code ci-dessus écrit la chaîne du nom du serveur actuel (stocké dans &quot;global.ServerName&quot;), puis l'écrit dans un tampon binaire avec l'id &quot;broadcast_buffer&quot;. Ces données sont ensuite diffusées localement vers une plage d'adresses IP (l'IP du périphérique est
+    actuellement implicite comme plage de base de diffusion) au port 6511.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <div class="footer">
+    <div class="buttons">
+      <div class="clear">
+        <div style="float:left">Retour : <a href="Networking.htm">Mise en réseau</a></div>
+        <div style="float:right">Suivant : <a href="network_send_packet.htm">network_send_packet</a></div>
+      </div>
+    </div>
+    <h5><span data-keyref="Copyright Notice">Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
   </div>
   <!-- KEYWORDS
 network_send_broadcast

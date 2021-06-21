@@ -3,15 +3,70 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>draw_text_ext</title>
+  <title>dessiner_texte</title>
   <meta name="generator" content="Adobe RoboHelp 2019" />
   <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
   <meta name="rh-authors" content="Mark Alexander" />
-  <meta name="topic-comment" content="Page de référence pour draw_text_ext" />
+  <meta name="topic-comment" content="Reference page for draw_text_ext" />
   <meta name="rh-index-keywords" content="draw_text_ext" />
   <meta name="search-keywords" content="draw_text_ext" />
 </head>
-<body><!--<div class="body-scroll" style="top: 150px;">--><h1>draw_text_ext</h1><p> Cette fonction dessine le texte de la même manière que <a href="draw_text.htm"><tt>draw_text </tt><tt>()</tt><tt></tt></a> ce n&#39;est que maintenant que vous pouvez définir l&#39;espace entre chaque ligne de texte - si le texte occupe plus d&#39;une ligne - et limiter la largeur (en pixels) de la chaîne par ligne afin que si une ligne dépasse cette valeur, <span class="notranslate">GameMaker Studio 2</span> se divise automatiquement le texte à la ligne suivante à l&#39;espace blanc disponible le plus proche (si le texte n&#39;a pas d&#39;espaces blancs, il dépassera cette valeur de largeur maximale). Notez que tout espace blanc placé au début de la chaîne sera supprimé avant d&#39;être analysé pour le dessin à cause de cela. Notez également qu&#39;une valeur de -1 pour l&#39;argument de séparation de ligne sera par défaut une séparation basée sur la hauteur du caractère &quot;M&quot; dans la police choisie.</p><p></p><h4> Syntaxe:</h4><p class="code">draw_text_ext(x, y, string, sep, w);</p><table><tbody><tr><th> Argument</th><th> Description</th></tr><tr><td> <span class="notranslate">x</span></td><td> La coordonnée x de la chaîne dessinée.</td></tr><tr><td> <span class="notranslate">y</span></td><td> La coordonnée y de la chaîne dessinée.</td></tr><tr><td> <span class="notranslate">string</span></td><td> La chaîne à dessiner.</td></tr><tr><td> <span class="notranslate">sep</span></td><td> La distance en pixels entre les lignes de texte.</td></tr><tr><td> <span class="notranslate">w</span></td><td> La largeur maximale en pixels de la chaîne avant un saut de ligne.</td></tr></tbody></table><p></p><h4> Retour:</h4><p class="code">N/A</p><p></p><h4> Exemple:</h4><p class="code">draw_text_ext(100, 50, keyboard_string, 3, 300);</p><p> Le code ci-dessus dessinera le texte que l&#39;utilisateur tape sur le clavier, le divisant en nouvelles lignes chaque fois que la longueur de la chaîne pour cette ligne dépasse 300 pixels. le code maintiendra également une séparation de 3 pixels entre les lignes si cela se produit. </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> Retour: <a href="Text.htm">Texte</a></div><div style="float:right"> Suivant:<a href="draw_text_colour.htm">draw_text_colour</a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
+<body>
+  <!--<div class="body-scroll" style="top: 150px;">-->
+  <h1>dessiner_texte</h1>
+  <p>Cette fonction dessine le texte de la même manière que la fonction <a href="draw_text.htm"><tt>dessiner_texte</tt><tt>()</tt><tt></tt></a> sauf que vous pouvez maintenant définir l'espace entre chaque ligne de texte - si le texte occupe plus d'une ligne - et limiter la largeur (en pixels)
+    de la chaîne de caractères par ligne, de sorte que si une ligne dépasse cette valeur, <span class="notranslate">GameMaker Studio 2</span> divisera automatiquement le texte vers la ligne suivante à l'espace blanc disponible le plus proche (si le texte n'a pas d'espace blanc, il dépassera cette valeur de largeur maximale).
+    maximale). Notez que tout espace blanc placé au début de la chaîne sera supprimé avant d'être analysé pour le dessin. Notez également qu'une valeur de -1 pour l'argument de séparation des lignes donnera par défaut une séparation basée sur la hauteur du caractère "M" dans le texte.
+    hauteur du caractère &quot;M&quot; dans la police choisie.</p>
+  <p> </p>
+  <h4>Syntaxe :</h4>
+  <p class="code">draw_text_ext(x, y, string, sep, w) ;</p>
+  <table>
+    <tbody>
+      <tr>
+        <th>Arguments</th>
+        <th>Description</th>
+      </tr>
+      <tr>
+        <td>x</td>
+        <td>La coordonnée x de la chaîne dessinée.</td>
+      </tr>
+      <tr>
+        <td>y</td>
+        <td>La coordonnée y de la chaîne dessinée.</td>
+      </tr>
+      <tr>
+        <td>chaîne de caractères</td>
+        <td>La ficelle à tirer.</td>
+      </tr>
+      <tr>
+        <td>sep</td>
+        <td>La distance en pixels entre les lignes de texte.</td>
+      </tr>
+      <tr>
+        <td>w</td>
+        <td>La largeur maximale en pixels de la chaîne avant un saut de ligne.</td>
+      </tr>
+    </tbody>
+  </table>
+  <p> </p>
+  <h4>Les retours :</h4>
+  <p class="code">N/A</p>
+  <p> </p>
+  <h4>Exemple :</h4>
+  <p class="code">draw_text_ext(100, 50, keyboard_string, 3, 300) ;</p>
+  <p>Le code ci-dessus dessine le texte que l'utilisateur tape au clavier, en le divisant sur de nouvelles lignes chaque fois que la longueur de la chaîne de cette ligne dépasse 300 pixels. Le code maintient également une séparation de 3 pixels entre les lignes si cela se produit.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <div class="footer">
+    <div class="buttons">
+      <div class="clear">
+        <div style="float:left">Retour : <a href="Text.htm">Texte</a></div>
+        <div style="float:right">Suivant : <a href="draw_text_colour.htm">draw_text_colour</a></div>
+      </div>
+    </div>
+    <h5><span data-keyref="Copyright Notice">Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
   </div>
   <!-- KEYWORDS
 draw_text_ext

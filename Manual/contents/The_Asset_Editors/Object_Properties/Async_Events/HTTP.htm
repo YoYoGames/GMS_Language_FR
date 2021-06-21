@@ -1,17 +1,51 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <title>HTTP</title>
-  <meta name="generator" content="Adobe RoboHelp 2019" />
+  <meta name="generator" content="Adobe RoboHelp 2020" />
   <meta name="rh-authors" content="Mark Alexander" />
-  <meta name="topic-comment" content="Page détaillant l&#39;événement asynchrone HTTP." />
-  <meta name="rh-index-keywords" content="Objets - Événement HTTP asynchrone" />
+  <meta name="topic-comment" content="Page detailing the HTTP async event." />
+  <meta name="rh-index-keywords" content="Objects - Async HTTP Event" />
   <meta name="search-keywords" content="HTTP,ev_web_async" />
   <link rel="stylesheet" type="text/css" href="../../../assets/css/default.css" />
 </head>
-<body><!--<div class="body-scroll" style="top: 150px;">--><h1> HTTP</h1><p><img alt="HTTP Event" class="center" src="../../../assets/Images/Asset_Editors/Async_HTTP.png" /> L&#39;événement HTTP est celui qui est déclenché par le <a class="glossterm" data-glossterm="rappeler" href="#">rappel</a> de l&#39;un des <a href="../../../GameMaker_Language/GML_Reference/Asynchronous_Functions/HTTP/HTTP.htm"><span class="inline">http_*()</span>fonctions</a>, comme <a href="../../../GameMaker_Language/GML_Reference/Asynchronous_Functions/HTTP/http_post_string.htm"><span class="inline">http_post_string()</span></a>. Il génère en fait une <a href="../../../GameMaker_Language/GML_Reference/Data_Structures/DS_Maps/DS_Maps.htm">carte DS</a> qui est exclusive à cet événement et est stockée dans la variable spéciale <span class="inline"><a href="../../../GameMaker_Language/GML_Overview/Variables/Builtin_Global_Variables/async_load.htm">async_load</a> </span> (veuillez consulter les fonctions individuelles pour des exemples de code qui expliquent l&#39;utilisation de cet événement plus en détail). Cette carte DS a la structure générale suivante:</p><ul class="dropspotlist"><li class="dropspot"> &quot;<span class="inline">id</span> &quot;: L&#39;identifiant renvoyé par la commande. Si vous déclenchez une série de <span class="inline">http_</span> demandes, vous devez savoir à laquelle vous obtenez la réponse, et vous utiliserez donc cette valeur pour la comparer à la valeur que vous avez stockée lorsque vous avez initialement envoyé la demande pour trouver la bonne.</li><li class="dropspot"> &quot;<span class="inline">status</span> &quot;: Renvoie une valeur inférieure à 0 en cas d&#39;erreur, 0 en cas de succès et 1 si le contenu est en cours de téléchargement.</li><li class="dropspot"> &quot;<span class="inline">result</span> &quot;: Les données reçues (chaîne uniquement) ou le chemin d&#39;accès au fichier téléchargé si vous avez utilisé <a href="../../../GameMaker_Language/GML_Reference/Asynchronous_Functions/HTTP/http_get_file.htm"><span class="inline">http_get_file()</span></a>.</li><li class="dropspot"> &quot;<span class="inline">url</span> &quot;: L&#39;URL complète que vous avez demandée.</li><li class="dropspot"> &quot;<span class="inline">http_status</span> &quot;: Le code d&#39;état http brut (si disponible). Cela renvoie le code d&#39;état Web standard pour la plupart des navigateurs, par exemple: 304 pour&quot; Non modifié &quot;ou 204 pour&quot; Aucun contenu &quot;, etc...</li></ul><p> Ce qui précède montre ce que vous obtenez lorsque vous utilisez le <a href="../../../GameMaker_Language/GML_Reference/Asynchronous_Functions/HTTP/http_post_string.htm"><span class="inline">http_post_string()</span></a> fonction, mais chacun des <span class="inline">http_</span> Les fonctions peuvent renvoyer une carte légèrement différente, veuillez donc vous référer à la saisie manuelle de chaque fonction pour connaître les données précises qui lui sont renvoyées.</p><p class="note"> <strong>REMARQUE</strong>: comme <span style="font-size:14px;"><span class="inline" style="font-size: 14px">async_load</span></span> crée une carte DS, ces fonctions sont particulièrement utiles lorsqu&#39;elles sont associées aux fonctions <a href="../../../GameMaker_Language/GML_Reference/File_Handling/Encoding_And_Hashing/json_encode.htm"><span class="inline" style="font-size: 14px">json_encode ()</span></a> et <a href="../../../GameMaker_Language/GML_Reference/File_Handling/Encoding_And_Hashing/json_decode.htm"><span class="inline" style="font-size: 14px">json_decode ()</span></a>.</p><p> Il peut également y avoir des données supplémentaires fournies par cette carte si vous avez demandé des fichiers à télécharger. Dans ce cas, le &quot;statut&quot; aura la valeur 1 et la carte DS contiendra ces clés supplémentaires:</p><ul class="dropspotlist"><li class="dropspot"> &quot;<span class="inline">contentLength</span> &quot;: Il s&#39;agit de la taille du fichier que le serveur Web a indiqué que vous devriez vous attendre à recevoir (peut être égale à -1 si le serveur ne renvoie pas ces données).</li><li class="dropspot"> &quot;<span class="inline">sizeDownloaded</span> &quot;: La taille des données déjà téléchargées.</li></ul><p> Notez que l&#39;événement ne sera pas déclenché pour chaque paquet de données reçu, mais sera plutôt mis à jour à tout moment pendant le téléchargement dans la boucle de jeu principale. Notez également qu&#39;actuellement, cette fonctionnalité n&#39;est disponible que pour les <span class="notranslate">Windows</span> formes cibles Windows standard. </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> Retour: <a href="../Async_Events.htm">Événements asynchrones</a></div><div style="float:right"> Suivant: <a href="IAP.htm">Achat via une application</a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
+<body>
+  <!--<div class="body-scroll" style="top: 150px;">-->
+  <h1>HTTP</h1>
+  <p><img alt="HTTP Event" class="center" src="../../../assets/Images/Asset_Editors/Async_HTTP.png">L'événement HTTP est celui qui est déclenché par le <a class="glossterm" data-glossterm="rappel" href="#">rappel de</a> l'une des <a href="../../../GameMaker_Language/GML_Reference/Asynchronous_Functions/HTTP/HTTP.htm">fonctions de<span class="inline">http_*()</span>,</a>
+    comme <a href="../../../GameMaker_Language/GML_Reference/Asynchronous_Functions/HTTP/http_post_string.htm"><span class="inline">http_post_string()</span></a>. Il génère en fait une <a href="../../../GameMaker_Language/GML_Reference/Data_Structures/DS_Maps/DS_Maps.htm">carte DS</a> qui
+    qui est exclusive à cet événement et qui est stockée dans la variable spéciale <span class="inline"><a href="../../../GameMaker_Language/GML_Overview/Variables/Builtin_Global_Variables/async_load.htm">async_load</a> </span>(veuillez vous reporter aux fonctions individuelles pour
+    exemples de code qui expliquent l'utilisation de cet événement de manière plus détaillée). Cette carte DS a la structure générale suivante :</p>
+  <ul class="dropspotlist">
+    <li class="dropspot">&quot;<span class="inline">id</span>&quot; : L'identifiant qui a été renvoyé par la commande. Si vous envoyez une série de demandes à <span class="inline">http_</span>, vous devez savoir à laquelle vous recevez une réponse.
+      pour la comparer à la valeur que vous avez stockée lors de l'envoi initial de la demande afin de trouver la bonne.</li>
+    <li class="dropspot">&quot;<span class="inline">status</span>&quot; : Renvoie une valeur inférieure à 0 en cas d'erreur, 0 en cas de succès et 1 si le contenu est en cours de téléchargement.</li>
+    <li class="dropspot">&quot;<span class="inline">result</span>&quot; : Les données reçues (chaîne uniquement), ou le chemin d'accès au fichier téléchargé si vous avez utilisé l'option <a href="../../../GameMaker_Language/GML_Reference/Asynchronous_Functions/HTTP/http_get_file.htm"><span class="inline">http_get_file()</span></a>.</li>
+    <li class="dropspot">&quot;<span class="inline">url</span>&quot; : L'URL complète que vous avez demandée.</li>
+    <li class="dropspot">&quot;<span class="inline">http_status</span>&quot; : Le code d'état http brut (si disponible). Cela renvoie le code d'état standard pour la plupart des navigateurs, par exemple : 304 pour &quot;Not Modified&quot; ou 204 pour &quot;No Content&quot;, etc...</li>
+  </ul>
+  <p>L'exemple ci-dessus montre ce que vous obtenez lorsque vous utilisez la fonction <a href="../../../GameMaker_Language/GML_Reference/Asynchronous_Functions/HTTP/http_post_string.htm"><span class="inline">http_post_string()</span></a> mais chacune des fonctions de <span class="inline">http_</span> peut renvoyer une carte légèrement différente. Veuillez donc vous reporter à l'entrée du manuel de chaque fonction pour connaître les données précises qui sont renvoyées.</p>
+  <p class="note"><strong>NOTE</strong>: Comme <span style="font-size:14px;"><span class="inline" style="font-size: 14px">async_load </span></span>crée une carte DS, ces fonctions sont particulièrement utiles lorsqu'elles sont couplées avec les fonctions <a href="../../../GameMaker_Language/GML_Reference/File_Handling/Encoding_And_Hashing/json_encode.htm"><span class="inline" style="font-size: 14px">json_encode()</span></a> et
+    <a href="../../../GameMaker_Language/GML_Reference/File_Handling/Encoding_And_Hashing/json_decode.htm"><span class="inline" style="font-size: 14px">json_decode()</span></a> et les fonctions</p>
+  <p>Des données supplémentaires peuvent également être fournies par cette carte si vous avez demandé des fichiers à télécharger. Dans ce cas, le &quot;statut&quot; aura la valeur 1 et la carte DS contiendra ces clés supplémentaires :</p>
+  <ul class="dropspotlist">
+    <li class="dropspot">&quot;<span class="inline">contentLength</span>&quot; : Il s'agit de la taille du fichier que vous devez vous attendre à recevoir selon le serveur web (peut être -1 si le serveur ne renvoie pas ces données).</li>
+    <li class="dropspot">&quot;<span class="inline">sizeDownloaded</span>&quot; : La taille des données qui ont déjà été téléchargées.</li>
+  </ul>
+  <p>Notez que l'événement ne sera pas déclenché pour chaque paquet de données reçu, mais sera plutôt mis à jour à tout moment pendant le téléchargement dans la boucle principale du jeu. Notez également que cette fonctionnalité n'est actuellement disponible que pour les plateformes cibles <span class="notranslate">Windows</span>
+    ordinaires.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <div class="footer">
+    <div class="buttons">
+      <div class="clear">
+        <div style="float:left">Retour : <a href="../Async_Events.htm">Événements asynchrones</a></div>
+        <div style="float:right">Suivant : <a href="IAP.htm">Achat In App</a></div>
+      </div>
+    </div>
+    <h5><span data-keyref="Copyright Notice">Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
   </div>
   <!-- KEYWORDS
 Asynchronous HTTP Event
@@ -20,5 +54,5 @@ ev_web_async
   <!-- TAGS
 ev_web_async
 -->
-</body>
-</html>
+
+</body></html>

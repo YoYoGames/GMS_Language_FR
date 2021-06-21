@@ -7,13 +7,50 @@
   <meta name="generator" content="Adobe RoboHelp 2019" />
   <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
   <meta name="rh-authors" content="Mark Alexander" />
-  <meta name="topic-comment" content="Référence pour surface_get_target_ext" />
+  <meta name="topic-comment" content="Reference for surface_get_target_ext" />
   <meta name="rh-index-keywords" content="surface_get_target_ext" />
   <meta name="search-keywords" content="surface_get_target_ext" />
 </head>
-<body><!--<div class="body-scroll" style="top: 150px;">--><h1>surface_get_target_ext</h1><p> Cette fonction récupérera l&#39;ID de surface attribué à l&#39;une des 4 cibles de rendu disponibles pour les surfaces. Vous fournissez l&#39;index de la cible de rendu à vérifier, et la fonction renverra -1 si aucune surface n&#39;est affectée, ou une valeur entière&gt; = 0, représentant l&#39;ID de la surface affectée (tel que renvoyé par la fonction <a href="surface_create.htm"><tt>surface_create()</tt></a> ).</p><p></p><h4> Syntaxe:</h4><p class="code">surface_get_target_ext(index);</p><table><tbody><tr><th> Argument</th><th> Description</th></tr><tr><td> <span class="notranslate">index</span></td><td> L&#39;index cible de rendu à vérifier (de 0 à 3).</td></tr></tbody></table><p></p><h4> Retour:</h4><p class="code">Integer (-1 for no surface target, or a surface ID value)</p><p></p><h4> Exemple:</h4><p class="code">if surface_get_target_ext(0) == -1<br/>     {
-    <br/>     surface_set_target_ext(0, global.Surf);<br/>     }
-  </p><p> Le code ci-dessus va d&#39;abord vérifier et voir si la <span class="notranslate">shader</span> 0 a été définie sur une surface, et sinon, une est attribuée. </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> Retour: <a href="Surfaces.htm">Surfaces</a></div><div style="float:right"> Suivant:<a href="surface_reset_target.htm">surface_reset_target</a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
+<body>
+  <!--<div class="body-scroll" style="top: 150px;">-->
+  <h1>surface_get_target_ext</h1>
+  <p>Cette fonction récupère l'ID de la surface assignée à l'une des 4 cibles de rendu disponibles pour les surfaces. Vous fournissez l'index de la cible de rendu à vérifier, et la fonction renverra -1 si aucune surface n'est assignée, ou une valeur entière &gt;= 0, représentant
+    l'ID de la surface assignée (tel que renvoyé par la fonction <a href="surface_create.htm"><tt>surface_create()</tt></a>).</p>
+  <p> </p>
+  <h4>Syntaxe :</h4>
+  <p class="code">surface_get_target_ext(index) ;</p>
+  <table>
+    <tbody>
+      <tr>
+        <th>Arguments</th>
+        <th>Description</th>
+      </tr>
+      <tr>
+        <td>indice</td>
+        <td>L'index de la cible de rendu à vérifier (de 0 à 3).</td>
+      </tr>
+    </tbody>
+  </table>
+  <p> </p>
+  <h4>Les retours :</h4>
+  <p class="code">Nombre entier (-1 pour aucune cible de surface, ou une valeur d'identification de surface)</p>
+  <p> </p>
+  <h4>Exemple :</h4>
+  <p class="code">si surface_get_target_ext(0) == -1<br> {
+    <br> surface_set_target_ext(0, global.Surf) ;<br> }
+  </p>
+  <p>Le code ci-dessus va d'abord vérifier si la cible de rendu 0 du <span class="notranslate">shader</span> a été définie sur une surface, et si ce n'est pas le cas, une surface est assignée.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <div class="footer">
+    <div class="buttons">
+      <div class="clear">
+        <div style="float:left">Retour : <a href="Surfaces.htm">Surfaces</a></div>
+        <div style="float:right">Suivant : <a href="surface_reset_target.htm">surface_reset_target</a></div>
+      </div>
+    </div>
+    <h5><span data-keyref="Copyright Notice">Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
   </div>
   <!-- KEYWORDS
 surface_get_target_ext

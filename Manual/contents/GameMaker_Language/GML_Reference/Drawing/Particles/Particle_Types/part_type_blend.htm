@@ -3,15 +3,57 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>part_type_blend</title>
+  <title>type_partie_mélange</title>
   <meta name="generator" content="Adobe RoboHelp 2019" />
   <link rel="stylesheet" href="../../../../../assets/css/default.css" type="text/css" />
   <meta name="rh-authors" content="Mark Alexander" />
-  <meta name="topic-comment" content="Page de référence pour part_type_blend" />
+  <meta name="topic-comment" content="Reference page for part_type_blend" />
   <meta name="rh-index-keywords" content="part_type_blend" />
   <meta name="search-keywords" content="part_type_blend" />
 </head>
-<body><!--<div class="body-scroll" style="top: 150px;">--><h1>part_type_blend</h1><p> Avec cette fonction, vous pouvez dessiner vos particules avec un mode de fusion additif (<tt>true</tt> ) ou non (<tt>false</tt> ). Le mélange additif est un mode de fusion spécial qui ajoute les valeurs de luminosité de chaque particule lorsqu&#39;elles se chevauchent, de sorte que les couleurs claires deviennent progressivement plus lumineuses (jusqu&#39;à ce qu&#39;elles apparaissent blanches) lorsqu&#39;elles se chevauchent, et les couleurs sombres deviennent de plus en plus transparentes, le noir étant presque invisible.. Cette fonction peut donner de beaux effets de particules mais n&#39;est pas toujours nécessaire. Par exemple, une traînée de fumée aurait un mélange additif pour garder l&#39;effet gris, mais un effet de flamme l&#39;aurait probablement activé pour rendre les particules plus translucides et plus lumineuses.</p><p></p><h4> Syntaxe:</h4><p class="code">part_type_blend(ind, additive);</p><table><tbody><tr><th> Argument</th><th> Description</th></tr><tr><td> <span class="notranslate">ind</span></td><td> L&#39;indice du type de particule à modifier.</td></tr><tr><td> <span class="notranslate">additive</span></td><td> Si les particules doivent être mélangées de manière additive (vrai) ou normalement (faux).</td></tr></tbody></table><p></p><h4> Retour:</h4><p class="code">N/A</p><p></p><h4> Exemple:</h4><p class="code">part_type_blend(part_Fire, true);</p><p> Le code ci-dessus définira toutes les particules créées du type de particule indexé dans la variable &quot;part_Fire&quot; pour avoir un mode de fusion additif. </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> Retour: <a href="Particle_Types.htm">Types de particules</a></div><div style="float:right"> Suivant:<a href="part_type_life.htm">part_type_life</a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
+<body>
+  <!--<div class="body-scroll" style="top: 150px;">-->
+  <h1>type_partie_mélange</h1>
+  <p>Avec cette fonction, vous pouvez faire en sorte que vos particules soient dessinées avec un mode de fusion additif<tt>(true</tt>) ou non<tt>(false</tt>). Le mélange additif est un mode de mélange spécial qui ajoute les valeurs de luminosité de chaque particule au fur et à mesure qu'elles se chevauchent.
+    deviennent progressivement plus claires (jusqu'à paraître blanches) au fur et à mesure qu'elles se chevauchent, et les couleurs sombres deviennent de plus en plus transparentes, le noir étant presque invisible. Cette fonction peut donner de magnifiques effets de particules, mais n'est pas toujours nécessaire. Par exemple,
+    Par exemple, pour une traînée de fumée, le mélange additif sera désactivé pour que l'effet reste gris, mais pour un effet de flamme, il sera probablement activé pour rendre les particules plus translucides et plus brillantes.</p>
+  <p> </p>
+  <h4>Syntaxe :</h4>
+  <p class="code">partie_type_mélange(ind, additif) ;</p>
+  <table>
+    <tbody>
+      <tr>
+        <th>Arguments</th>
+        <th>Description</th>
+      </tr>
+      <tr>
+        <td>ind</td>
+        <td>L'indice du type de particule à modifier.</td>
+      </tr>
+      <tr>
+        <td>additif</td>
+        <td>Si les particules doivent être mélangées de manière additive (vrai) ou normale (faux).</td>
+      </tr>
+    </tbody>
+  </table>
+  <p> </p>
+  <h4>Les retours :</h4>
+  <p class="code">N/A</p>
+  <p> </p>
+  <h4>Exemple :</h4>
+  <p class="code">part_type_blend(part_Fire, true) ;</p>
+  <p>Le code ci-dessus définira toutes les particules créées du type de particule indexé dans la variable &quot;part_Fire&quot; pour avoir un mode de fusion additif.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <div class="footer">
+    <div class="buttons">
+      <div class="clear">
+        <div style="float:left">Retour : <a href="Particle_Types.htm">Types de particules</a></div>
+        <div style="float:right">Suivant : <a href="part_type_life.htm">part_type_life</a></div>
+      </div>
+    </div>
+    <h5><span data-keyref="Copyright Notice">Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
   </div>
   <!-- KEYWORDS
 part_type_blend

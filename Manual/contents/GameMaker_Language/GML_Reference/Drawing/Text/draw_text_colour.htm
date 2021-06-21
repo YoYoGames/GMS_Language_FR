@@ -3,15 +3,83 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>draw_text_colour</title>
+  <title>dessiner_texte_couleur</title>
   <meta name="generator" content="Adobe RoboHelp 2019" />
   <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
   <meta name="rh-authors" content="Mark Alexander" />
-  <meta name="topic-comment" content="Page de référence pour draw_text_colour" />
+  <meta name="topic-comment" content="Reference page for draw_text_colour" />
   <meta name="rh-index-keywords" content="draw_text_colour,draw_text_color" />
   <meta name="search-keywords" content="draw_text_colour,draw_text_color" />
 </head>
-<body><!--<div class="body-scroll" style="top: 150px;">--><h1>draw_text_colour</h1><p> Cette fonction dessine le texte de la même manière que <a href="draw_text.htm"><tt>draw_text </tt><tt>()</tt><tt></tt></a> Seulement maintenant, vous pouvez choisir les couleurs à utiliser pour colorer le texte ainsi que la valeur alpha, et ces nouvelles valeurs seront utilisées à la place de la couleur de dessin de base et de l&#39;alpha.</p><p class="note"> <b>REMARQUE</b>: la fusion de dégradé n&#39;est pas disponible pour la cible HTML5 sauf si WebGL est activé, bien que vous puissiez toujours définir les couleurs de fusion et il fusionnera la police avec la première couleur donnée. Cependant, tout mélange de cette manière crée une police en double qui est ensuite stockée dans le cache et utilisée si nécessaire, ce qui est loin d&#39;être optimal et si vous utilisez plusieurs changements de couleur, cela ralentira les performances de vos jeux. Vous pouvez définir la taille du cache de polices pour essayer de limiter cela si nécessaire en utilisant la fonction <a href="../../Asset_Management/Fonts/font_set_cache_size.htm"><tt style="font-size: 14px">font_set_cache_size ()</tt></a>.</p><p></p><h4> Syntaxe:</h4><p class="code">draw_text_colour(x, y, string, c1, c2, c3, c4, alpha);</p><table><tbody><tr><th> Argument</th><th> Description</th></tr><tr><td> <span class="notranslate">x</span></td><td> La coordonnée x de la chaîne dessinée.</td></tr><tr><td> <span class="notranslate">y</span></td><td> La coordonnée y de la chaîne dessinée.</td></tr><tr><td> <span class="notranslate">string</span></td><td> La chaîne à dessiner.</td></tr><tr><td> <span class="notranslate">c1</span></td><td> La couleur du coin supérieur gauche du texte dessiné.</td></tr><tr><td> <span class="notranslate">c2</span></td><td> La couleur du coin supérieur droit du texte dessiné.</td></tr><tr><td> <span class="notranslate">c3</span></td><td> La couleur du coin inférieur droit du texte dessiné.</td></tr><tr><td> <span class="notranslate">c4</span></td><td> La couleur du coin inférieur gauche du texte dessiné.</td></tr><tr><td> <span class="notranslate">alpha</span></td><td> L&#39;alpha du texte.</td></tr></tbody></table><p></p><h4> Retour:</h4><p class="code">N/A</p><p></p><h4> Exemple:</h4><p class="code">draw_set_colour(c_white);<br/> draw_text(100, 100, &quot;Health&quot;);<br/> draw_text_colour(100, 200, string(health), c_lime, c_lime, c_green, c_green, 1);</p><p> Le code ci-dessus dessinera deux sections de texte sur la même ligne, le premier texte étant dessiné en blanc (car c&#39;est la couleur de dessin de base) et le second texte dessiné avec un dégradé vert lime à vert normal. </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> Retour: <a href="Text.htm">Texte</a></div><div style="float:right"> Suivant:<a href="draw_text_transformed.htm">draw_text_transformed</a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
+<body>
+  <!--<div class="body-scroll" style="top: 150px;">-->
+  <h1>dessiner_texte_couleur</h1>
+  <p>Cette fonction dessine du texte de manière similaire à la fonction <a href="draw_text.htm"><tt>dessiner_texte</tt><tt>()</tt><tt></tt></a> sauf que maintenant vous pouvez choisir les couleurs à utiliser pour colorer le texte ainsi que la valeur alpha, et ces nouvelles valeurs seront utilisées à la place de la couleur et de l'alpha du dessin de base.
+    Ces nouvelles valeurs seront utilisées à la place de la couleur et de l'alpha du dessin de base.</p>
+  <p class="note"><b>REMARQUE</b>: le mélange par gradient n'est pas disponible pour la cible HTML5, sauf si WebGL est activé, mais vous pouvez toujours définir les couleurs de mélange et la police sera mélangée avec la première couleur donnée. Cependant, tous les mélanges de cette manière créent une police dupliquée qui est ensuite stockée dans le cache.
+    qui est ensuite stockée dans le cache et utilisée au besoin, ce qui est loin d'être optimal et si vous utilisez plusieurs changements de couleur, cela ralentira les performances de votre jeu. Vous pouvez définir la taille du cache des polices pour essayer de limiter ce phénomène si nécessaire.
+    en utilisant la fonction <a href="../../Asset_Management/Fonts/font_set_cache_size.htm"><tt style="font-size: 14px">font_set_cache_size()</tt></a>.</p>
+  <p> </p>
+  <h4>Syntaxe :</h4>
+  <p class="code">draw_text_colour(x, y, string, c1, c2, c3, c4, alpha) ;</p>
+  <table>
+    <tbody>
+      <tr>
+        <th>Arguments</th>
+        <th>Description</th>
+      </tr>
+      <tr>
+        <td>x</td>
+        <td>La coordonnée x de la chaîne dessinée.</td>
+      </tr>
+      <tr>
+        <td>y</td>
+        <td>La coordonnée y de la chaîne dessinée.</td>
+      </tr>
+      <tr>
+        <td>chaîne de caractères</td>
+        <td>La ficelle à tirer.</td>
+      </tr>
+      <tr>
+        <td>c1</td>
+        <td>La couleur de la partie supérieure gauche du texte dessiné.</td>
+      </tr>
+      <tr>
+        <td>c2</td>
+        <td>La couleur de la partie supérieure droite du texte dessiné.</td>
+      </tr>
+      <tr>
+        <td>c3</td>
+        <td>La couleur de la partie inférieure droite du texte dessiné.</td>
+      </tr>
+      <tr>
+        <td>c4</td>
+        <td>La couleur de la partie inférieure gauche du texte dessiné.</td>
+      </tr>
+      <tr>
+        <td>alpha</td>
+        <td>L'alpha du texte.</td>
+      </tr>
+    </tbody>
+  </table>
+  <p> </p>
+  <h4>Les retours :</h4>
+  <p class="code">N/A</p>
+  <p> </p>
+  <h4>Exemple :</h4>
+  <p class="code">draw_set_colour(c_white) ;<br> draw_text(100, 100, &quot;Health&quot;) ;<br> draw_text_colour(100, 200, string(health), c_lime, c_lime, c_green, c_green, 1) ;</p>
+  <p>Le code ci-dessus permet de dessiner deux sections de texte sur la même ligne, le premier texte étant dessiné en blanc (puisqu'il s'agit de la couleur de base du dessin) et le second texte étant dessiné avec un dégradé de vert citron à vert normal.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <div class="footer">
+    <div class="buttons">
+      <div class="clear">
+        <div style="float:left">Retour : <a href="Text.htm">Texte</a></div>
+        <div style="float:right">Suivant : <a href="draw_text_transformed.htm">draw_text_transformed</a></div>
+      </div>
+    </div>
+    <h5><span data-keyref="Copyright Notice">Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
   </div>
   <!-- KEYWORDS
 draw_text_colour

@@ -3,15 +3,58 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>Définir l&#39;échelle d&#39;instance</title>
+  <title>Définir l'échelle de l'instance</title>
   <meta name="generator" content="Adobe RoboHelp 2019" />
   <link rel="stylesheet" href="../../../assets/css/default.css" type="text/css" />
   <meta name="rh-authors" content="Mark Alexander" />
-  <meta name="topic-comment" content="Page qui explique l&#39;action Définir l&#39;échelle d&#39;instance" />
-  <meta name="rh-index-keywords" content="DnD ™ - Définir l&#39;échelle de l&#39;instance" />
-  <meta name="search-keywords" content="Définir l&#39;échelle d&#39;instance" />
+  <meta name="topic-comment" content="Page that explains the Set Instance Scale action" />
+  <meta name="rh-index-keywords" content="DnD™ Action - Set Instance Scale" />
+  <meta name="search-keywords" content="Set Instance Scale" />
 </head>
-<body><!--<div class="body-scroll" style="top: 150px;">--><h1><img alt="Set Instance Scale Icon" class="icon" height="32" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Instance/i_Instance_Set_Scale.png" width="32" /> Définir l&#39;échelle d&#39;instance</h1><p> Ce bloc d&#39;action définit le <tt>image_xscale</tt> et <tt>image_yscale</tt> valeurs de l&#39;instance. Les valeurs d&#39;entrée ici sont des modificateurs qui seront appliqués au sprite affecté à l&#39;instance, où une échelle de 1 (la valeur par défaut) indique aucune mise à l&#39;échelle (1: 1), les valeurs plus petites seront réduites (0,5, par exemple, sera la moitié la largeur du sprite), et des valeurs plus élevées augmenteront. Vous pouvez utiliser des valeurs négatives pour retourner le sprite et le mettre à l&#39;échelle, sauf si la valeur utilisée est exactement -1 (auquel cas le sprite est simplement retourné ou mis en miroir sur son origine sans mise à l&#39;échelle). Vous pouvez choisir de définir l&#39;échelle horizontale ou verticale par rapport aux valeurs actuelles, auquel cas vous allez ajouter ou soustraire la nouvelle valeur des valeurs d&#39;échelle actuelles.</p><p> Notez que la modification de ces valeurs modifiera également la façon dont l&#39;instance détecte les collisions, sauf si vous avez fourni un <tt>mask_index</tt> (masque de collision) dans l&#39; <a href="../../../The_Asset_Editors/Objects.htm">éditeur d&#39;objets</a>. Veuillez noter que pour que les modifications de cette variable soient visibles, l&#39;instance doit avoir soit <i>aucun</i> événement de dessin (et donc <span class="notranslate">GameMaker Studio 2</span> dessine par défaut le sprite), soit être dessinée à l&#39;aide de l&#39;action <a href="../Drawing/Draw_Self.htm">Draw Self.</a></p><p><img alt="Examples of scaled sprites" class="center" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Instance/sprite_scale.png" /></p><p></p><h4> Syntaxe de l&#39;action:</h4><p><img alt="Set Instance Scale Action" class="center" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Instance/a_Instance_Set_Scale.png" /></p><h4> Arguments:</h4><table><tbody><tr><th> Argument</th><th> Description</th></tr><tr><td> <span class="notranslate">Horizontal</span></td><td> Le facteur de mise à l&#39;échelle verticale à utiliser (la valeur par défaut est 1).</td></tr><tr><td> <span class="notranslate">Vertical</span></td><td> Le facteur de mise à l&#39;échelle horizontale à utiliser (la valeur par défaut est 1).</td></tr></tbody></table><p></p><h4> Exemple:</h4><p><span><img alt="Set Instance Scale Example" class="center" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Instance/e_Instance_Set_Sprite.png"/></span> Le code de bloc d&#39;action ci-dessus définit un nouveau sprite ainsi qu&#39;un certain nombre d&#39;autres propriétés pour la façon dont ce sprite doit être affiché, y compris la mise à l&#39;échelle aux trois quarts de sa taille de base le long des deux axes. </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> Retour: <a href="Instance_Actions_Library.htm">Actions d&#39;instance</a></div><div style="float:right"> Suivant: <a href="Set_Instance_Alpha.htm">Définir l&#39;instance alpha</a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
+<body>
+  <!--<div class="body-scroll" style="top: 150px;">-->
+  <h1><img alt="Set Instance Scale Icon" class="icon" height="32" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Instance/i_Instance_Set_Scale.png" width="32"> Définir l'échelle de l'instance</h1>
+  <p>Ce bloc d'action définit les valeurs <tt>image_xscale</tt> et <tt>image_yscale</tt> pour l'instance. Les valeurs entrées ici sont des modificateurs qui seront appliqués au sprite assigné à l'instance, où une échelle de 1 (la valeur par défaut) n'indique aucune mise à l'échelle (1:1).
+    Une échelle de 1 (valeur par défaut) n'indique aucune mise à l'échelle (1:1), des valeurs plus petites réduiront l'échelle (0.5, par exemple, réduira de moitié la largeur du sprite), et des valeurs plus grandes l'augmenteront. Vous pouvez utiliser des valeurs négatives pour retourner le sprite et le mettre à l'échelle, sauf si la valeur utilisée est exactement -1 (dans ce cas, le sprite est simplement retourné ou mis à l'échelle).
+    sprite est simplement retourné ou reflété autour de son origine, sans mise à l'échelle). Vous pouvez choisir de définir l'échelle horizontale ou verticale par rapport aux valeurs actuelles, auquel cas vous ajouterez ou soustrairez la nouvelle valeur des valeurs d'échelle actuelles.</p>
+  <p>Notez que la modification de ces valeurs changera également la façon dont l'instance détecte les collisions, à moins que vous n'ayez fourni un <tt>mask_index</tt> (masque de collision) distinct dans l'<a href="../../../The_Asset_Editors/Objects.htm">éditeur d'objets</a>. Veuillez noter que
+    pour que les modifications de cette variable soient visibles, l'instance <i>ne</i> doit <i>pas</i> avoir d'événement de dessin ( <span class="notranslate">GameMaker Studio 2</span> dessinera donc le sprite par défaut) ou être dessinée à l'aide de l'action <a href="../Drawing/Draw_Self.htm">Draw Self</a>.</p>
+  <p><img alt="Examples of scaled sprites" class="center" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Instance/sprite_scale.png" /></p>
+  <p> </p>
+  <h4>Syntaxe de l'action :</h4>
+  <p><img alt="Set Instance Scale Action" class="center" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Instance/a_Instance_Set_Scale.png" /></p>
+  <h4>Arguments :</h4>
+  <table>
+    <tbody>
+      <tr>
+        <th>Arguments</th>
+        <th>Description</th>
+      </tr>
+      <tr>
+        <td>Horizontal</td>
+        <td>Le facteur d'échelle verticale à utiliser (1 par défaut).</td>
+      </tr>
+      <tr>
+        <td>Vertical</td>
+        <td>Le facteur d'échelle horizontale à utiliser (1 par défaut).</td>
+      </tr>
+    </tbody>
+  </table>
+  <p> </p>
+  <h4>Exemple :</h4>
+  <p><span><img alt="Set Instance Scale Example" class="center" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Instance/e_Instance_Set_Sprite.png"></span>Le code du bloc d'action ci-dessus définit un nouveau sprite ainsi qu'un certain nombre d'autres propriétés pour l'affichage de ce sprite.
+    pour l'affichage de ce sprite, y compris le réglage de l'échelle aux trois quarts de sa taille de base sur les deux axes.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <div class="footer">
+    <div class="buttons">
+      <div class="clear">
+        <div style="float:left">Retour : <a href="Instance_Actions_Library.htm">Actions de l'instance</a></div>
+        <div style="float:right">Suivant : <a href="Set_Instance_Alpha.htm">Définir l'alpha de l'instance</a></div>
+      </div>
+    </div>
+    <h5><span data-keyref="Copyright Notice">Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
   </div>
   <!-- KEYWORDS
 Action - Set Instance Scale

@@ -3,15 +3,40 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>room_restart</title>
+  <title>redémarrage de la chambre</title>
   <meta name="generator" content="Adobe RoboHelp 2019" />
   <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
   <meta name="rh-authors" content="Mark Alexander" />
-  <meta name="topic-comment" content="Page décrivant la fonction room_restart" />
+  <meta name="topic-comment" content="Page outlining the function room_restart" />
   <meta name="rh-index-keywords" content="room_restart" />
   <meta name="search-keywords" content="room_restart" />
 </head>
-<body><!--<div class="body-scroll" style="top: 150px;">--><h1>room_restart</h1><p> Cette fonction redémarrera la pièce actuelle, comme si elle venait d&#39;être entrée. Notez que la salle ne redémarrera pas avant la fin de l&#39;événement où la fonction a été appelée, donc tout code après l&#39;appel sera toujours exécuté s&#39;il se trouve dans le même événement. La mise en garde à ceci est que tout code qui crée des instances qui est appelé après cela, <i>ne</i> créera pas l&#39;instance et devrait donc être appelé avant de changer de salle. Cette fonction déclenchera également l&#39;événement de <b>fin de pièce.</b></p><p></p><h4> Syntaxe:</h4><p class="code">room_restart();</p><p></p><h4> Retour:</h4><p class="code">N/A</p><p></p><h4> Exemple:</h4><p class="code">if lives &lt; 1 room_restart();</p><p> Le code ci-dessus vérifie si la variable &quot;lives&quot; est inférieure à 1 et si c&#39;est le cas, il redémarrera la salle. </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> Retour: <a href="Rooms.htm">Chambres</a></div><div style="float:right"> Suivant:<a href="room_exists.htm">room_exists</a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
+<body>
+  <!--<div class="body-scroll" style="top: 150px;">-->
+  <h1>redémarrage de la chambre</h1>
+  <p>Cette fonction va redémarrer la pièce actuelle, comme si elle venait d'être entrée. Notez que la salle ne redémarrera pas avant la fin de l'événement où la fonction a été appelée, donc tout code après que celle-ci ait été appelée sera toujours exécuté s'il se trouve dans le même événement. L'avertissement de
+    est que tout code qui crée des instances et qui est appelé après cette fonction, <i>ne</i> créera <i>pas</i> l'instance et doit donc être appelé avant de changer de room. Cette fonction déclenchera également l'événement <b>Room End</b>.</p>
+  <p> </p>
+  <h4>Syntaxe :</h4>
+  <p class="code">room_restart() ;</p>
+  <p> </p>
+  <h4>Les retours :</h4>
+  <p class="code">N/A</p>
+  <p> </p>
+  <h4>Exemple :</h4>
+  <p class="code">si vies &lt; 1 room_restart() ;</p>
+  <p>Le code ci-dessus vérifie si la variable &quot;lives&quot; est inférieure à 1 et si c'est le cas, il redémarre la pièce.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <div class="footer">
+    <div class="buttons">
+      <div class="clear">
+        <div style="float:left">Retour : <a href="Rooms.htm">Pièces</a></div>
+        <div style="float:right">Suivant : <a href="room_exists.htm">room_exists</a></div>
+      </div>
+    </div>
+    <h5><span data-keyref="Copyright Notice">Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
   </div>
   <!-- KEYWORDS
 room_restart

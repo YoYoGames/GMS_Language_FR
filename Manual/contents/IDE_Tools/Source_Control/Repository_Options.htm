@@ -7,11 +7,38 @@
   <meta name="generator" content="Adobe RoboHelp 2019" />
   <link rel="stylesheet" href="../../assets/css/default.css" type="text/css" />
   <meta name="rh-authors" content="Mark Alexander" />
-  <meta name="topic-comment" content="Section qui couvre le contrôle de code source et les options du référentiel" />
-  <meta name="rh-index-keywords" content="Contrôle de code source - Options du référentiel" />
-  <meta name="search-keywords" content="Référentiel de contrôle de source,options de référentiel,dépôt" />
+  <meta name="topic-comment" content="Section that covers Source Control and the repository options" />
+  <meta name="rh-index-keywords" content="Source Control - Repository Options" />
+  <meta name="search-keywords" content="Source Control Repository,repository options,repository" />
 </head>
-<body><!--<div class="body-scroll" style="top: 150px;">--><h1> Options du référentiel</h1><p> Après avoir <a href="Setting_Up_Git_Plugin.htm">configuré les <span class="notranslate">GIT</span> et activé le contrôle de</a> code source pour votre projet, vous devez maintenant lier l&#39; <span class="notranslate">GameMaker Studio 2</span> à un référentiel, ce qui se fait de trois manières:</p><ul class="colour"><li> Créer un référentiel de projet</li><li> Pousser le projet actuel dans un référentiel externe</li><li> Cloner un référentiel existant</li></ul><p> Dans le premier cas, la <strong>création d&#39;un référentiel de projet</strong>, cela créera un <span class="notranslate">GIT</span> directement là où se trouve votre projet. Dans le <span class="notranslate">GIT</span> il s&#39;agit d&#39;un &quot; <em>référentiel non nu</em> &quot;, donc <strong>Push</strong> / <strong>Pull</strong> n&#39;a aucun sens dans ce cas, mais vous pouvez toujours valider et garder une trace des modifications du projet, ainsi qu&#39;annuler les modifications et les révisions si nécessaire. Pour configurer cela, il vous suffit de cliquer sur <strong>Contrôle de la source</strong> &gt; <strong>Créer un référentiel de projet</strong> dans le menu principal.</p><p><img alt="Source Control Create Repository" class="center" src="../../assets/Images/IDE Tools/SCM_CreateProjectRepository.png" /> Cependant, vous avez peut-être déjà un projet existant et souhaitez le placer dans un référentiel externe pour le suivi et le partage au sein de votre équipe. Cela nécessite qu&#39;un <strong>référentiel externe</strong> ait déjà été configuré, ainsi que le nom d&#39;utilisateur et le mot de passe corrects définis dans vos préférences d&#39;identité pour y accéder. Si vous l&#39;avez prêt, cliquez sur <strong>Contrôle de la source</strong> &gt; <strong>Importer le projet dans le référentiel</strong> et remplissez l&#39;URL:</p><p><img alt="Source Control Import Project To Repository" class="center" src="../../assets/Images/IDE Tools/SCM_ImportProject.png" /></p><p> Enfin, pour des raisons pratiques, vous pouvez <strong>cloner</strong> un référentiel externe via l&#39;EDI. Encore une fois, vous aurez besoin du nom d&#39;utilisateur et du mot de passe du référentiel auquel vous allez vous connecter dans vos préférences d&#39;identité, puis il vous suffit de cliquer sur <strong>Contrôle de la source</strong> &gt; <strong>Référentiel de clonage</strong>. Remplissez l&#39;URL (en utilisant la variante HTTPS plutôt que SSH) et dites où vous voulez qu&#39;elle aille:</p><p><img alt="Source Control Clone Repository" class="center" src="../../assets/Images/IDE Tools/SCM_CloneRepository.png" /> Une fois le clonage terminé, il ouvrira automatiquement un navigateur de fichiers pour que vous puissiez ouvrir le projet si vous le souhaitez. </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> Retour: <a href="../Source_Control.htm">Contrôle de la source</a></div><div style="float:right"> Suivant: <a href="Standard_Workflow.htm">Flux de travail standard</a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
+<body>
+  <!--<div class="body-scroll" style="top: 150px;">-->
+  <h1>Options du référentiel</h1>
+  <p>Après avoir configuré <a href="Setting_Up_Git_Plugin.htm">les informations d'identification <span class="notranslate">GIT</span></a> et activé le contrôle de la source pour votre projet, vous devez maintenant lier l'IDE <span class="notranslate">GameMaker Studio 2</span> à un référentiel, ce qui peut se faire de trois manières :</p>
+  <ul class="colour">
+    <li>Créer un référentiel de projet</li>
+    <li>Pousser le projet actuel dans un référentiel externe</li>
+    <li>Cloner un référentiel existant</li>
+  </ul>
+  <p>Dans le premier cas, la <strong>création d'un dépôt de projet</strong>, cela va créer un dépôt <span class="notranslate">GIT</span> directement à l'endroit où se trouve votre projet. Dans le jargon de <span class="notranslate">GIT</span>, il s'agit d'un &quot;<em>dépôt</em> non nu<em>&quot;, donc</em> Push/Pull n'<strong>a</strong> pas de sens dans ce cas.
+    n'ont pas de sens dans ce cas, mais vous pouvez toujours commiter et suivre les changements du projet, ainsi que revenir sur les changements et les révisions si nécessaire. Pour le mettre en place, il suffit de cliquer sur <strong>Source Control</strong> &gt; <strong>Create Project Repository</strong> dans le menu principal.</p>
+  <p><img alt="Source Control Create Repository" class="center" src="../../assets/Images/IDE Tools/SCM_CreateProjectRepository.png">Cependant, il se peut que vous ayez déjà un projet existant et que vous souhaitiez le placer dans un référentiel externe pour le suivre et le partager avec votre équipe.
+    au sein de votre équipe. Pour cela, il faut qu'un <strong>référentiel externe</strong> ait déjà été configuré, ainsi que le nom d'utilisateur et le mot de passe corrects définis dans vos préférences d'identité pour y accéder. Si tout cela est prêt, cliquez sur <strong>Source Control</strong> &gt; <strong>Import Project into Repository,</strong> et remplissez l'URL :</p>
+  <p><img alt="Source Control Import Project To Repository" class="center" src="../../assets/Images/IDE Tools/SCM_ImportProject.png" /></p>
+  <p>Enfin, en tant que fonction pratique, vous pouvez <strong>cloner </strong>un référentiel externe via l'IDE. Encore une fois, vous aurez besoin du nom d'utilisateur et du mot de passe pour le dépôt auquel vous allez vous connecter, configurés dans vos préférences d'identité.
+    Il suffit ensuite de cliquer sur <strong>Source Control</strong> &gt; Clone <strong>Repository.</strong> Remplissez l'URL (en utilisant la variante HTTPS plutôt que SSH) et dites où vous voulez qu'il aille :</p>
+  <p><img alt="Source Control Clone Repository" class="center" src="../../assets/Images/IDE Tools/SCM_CloneRepository.png">Une fois le clonage effectué, un navigateur de fichiers s'ouvrira automatiquement pour vous permettre d'ouvrir le projet si vous le souhaitez.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <div class="footer">
+    <div class="buttons">
+      <div class="clear">
+        <div style="float:left">Retour : <a href="../Source_Control.htm">Contrôle de la source</a></div>
+        <div style="float:right">Suivant : <a href="Standard_Workflow.htm">Flux de travail standard</a> </div>
+      </div>
+    </div>
+    <h5><span data-keyref="Copyright Notice">Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
   </div>
   <!-- KEYWORDS
 Source Control Repositories

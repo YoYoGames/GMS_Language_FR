@@ -3,15 +3,64 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>script_execute</title>
+  <title>script_exécution</title>
   <meta name="generator" content="Adobe RoboHelp 2019" />
   <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
   <meta name="rh-authors" content="Mark Alexander" />
-  <meta name="topic-comment" content="Page expliquant la fonction script_execute" />
+  <meta name="topic-comment" content="Page explaining the function script_execute" />
   <meta name="rh-index-keywords" content="script_execute" />
   <meta name="search-keywords" content="script_execute" />
 </head>
-<body><!--<div class="body-scroll" style="top: 150px;">--><h1>script_execute</h1><p> Cette fonction a été conçue à l&#39;origine pour appeler les <i>ressources de</i> script de manière dynamique, mais avec l&#39;introduction de fonctions définies par l&#39;utilisateur, elle peut maintenant être utilisée de deux manières:</p><ul class="colour"><li> La première consiste à prendre en charge les <b>scripts hérités</b>, où chaque script était une fonction unique et le titre du script était également le nom de la fonction. Utilisé de cette manière, il fonctionnera comme avant et exécutera un actif de script créé par l&#39;utilisateur et y passera les arguments donnés. Notez qu&#39;il n&#39;appelle pas réellement le <i>script</i> dans ce cas, mais la <i>fonction</i> de script du même nom dans le script.<span style="text-align: justify;"></span></li><li> <span style="text-align: justify;">La deuxième méthode consiste à appeler une fonction à partir d&#39;un actif de script qui contient plusieurs fonctions ou définitions de variables. Dans ce cas, vous devez fournir le nom de la fonction et les arguments requis plutôt que le nom de l&#39;actif de script. Notez que cela ne fonctionnera que pour les <a href="../../../GML_Overview/Script_Functions.htm">fonctions de script</a> et non pour les <a href="../../../GML_Overview/Method_Variables.htm">méthodes</a>, car seules les fonctions de script ont un ID de script qui leur est attribué.</span></li></ul><p><span style="text-align: justify;"></span> Bien que cette fonction soit conçue principalement pour le support hérité, elle n&#39;est pas obsolète car elle a toujours sa place dans les situations de mise en réseau et d&#39;appel de procédure à distance. Il convient également de noter que cette fonction est lente et que son utilisation fréquente peut nuire aux performances.</p><p class="note"> <b>REMARQUE</b>: Cette fonction ne peut pas être utilisée avec les fonctions intégrées.</p><p></p><h4> Syntaxe:</h4><p class="code">script_execute(scr, arg0, arg1, arg2..., etc...);</p><table><tbody><tr><th> Argument</th><th> Description</th></tr><tr><td> <span class="notranslate">scr</span></td><td> Le nom de la fonction / du script que vous souhaitez appeler</td></tr><tr><td> <span class="notranslate">arg0, arg1, arg2..., etc...</span></td><td> Les différents arguments que vous souhaitez passer à la fonction / script</td></tr></tbody></table><p></p><h4> Retour:</h4><p class="code">Will depend on the return value from the script/function being called</p><p></p><h4> Exemple:</h4><p class="code">script_execute(choose(move_up, move_down, move_left, move_right), irandom(5));</p><p> L&#39;exemple de code ci-dessus utilisera <tt>script_execute</tt> pour choisir l&#39;une des quatre fonctions définies par l&#39;utilisateur (dans ce cas lié au mouvement) et lui passer un entier aléatoire comme premier argument. </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> Retour: <a href="Scripts.htm">Scripts</a></div><div style="float:right"> Suivant:<a href="script_execute_ext.htm">script_execute_ext</a></div><div style="float:right"></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
+<body>
+  <!--<div class="body-scroll" style="top: 150px;">-->
+  <h1>script_exécution</h1>
+  <p>Cette fonction a été conçue à l'origine pour appeler des <i>actifs de</i> script de manière dynamique, mais avec l'introduction des fonctions définies par l'utilisateur, elle peut désormais être utilisée de deux manières :</p>
+  <ul class="colour">
+    <li>La première méthode consiste à prendre en charge les <b>anciens</b> scripts, où chaque script était une fonction unique et où le titre du script était également le nom de la fonction. Utilisé de cette façon, il fonctionnera comme avant et exécutera un actif de script créé par l'utilisateur et lui passera les arguments donnés.
+      les arguments donnés. Notez qu'il n'appelle pas réellement le <i>script dans</i> ce cas, mais la <i>fonction de script</i> du même nom dans le script. <span style="text-align: justify;"></span></li>
+    <li><span style="text-align: justify;">La deuxième méthode consiste à appeler une fonction à partir d'un actif de script qui contient plusieurs fonctions ou définitions de variables. Dans ce cas, vous devez fournir le nom de la fonction et les arguments qu'elle requiert plutôt que le nom de la ressource de script. Notez que cela ne fonctionne que pour les <a href="../../../GML_Overview/Script_Functions.htm">fonctions de script</a> et non pour les <a href="../../../GML_Overview/Method_Variables.htm">méthodes</a>, car seules les fonctions de script ont un ID de script qui leur est attribué.</span></li>
+  </ul>
+  <p><span style="text-align: justify;"></span>Bien que cette fonction soit principalement conçue pour la prise en charge de l'héritage, elle n'est pas dépréciée car elle a toujours sa place dans les situations de mise en réseau et d'appel de procédure à distance. Il convient également de noter que cette fonction
+    est lente, et son utilisation fréquente peut nuire aux performances.</p>
+  <p class="note"><b>REMARQUE</b>: Cette fonction ne peut pas être utilisée avec les fonctions intégrées.</p>
+  <p> </p>
+  <h4>Syntaxe :</h4>
+  <p class="code">script_execute(scr, arg0, arg1, arg2..., etc...) ;</p>
+  <table>
+    <tbody>
+      <tr>
+        <th>Arguments</th>
+        <th>Description</th>
+      </tr>
+      <tr>
+        <td>scr</td>
+        <td>Le nom de la fonction/script que vous voulez appeler</td>
+      </tr>
+      <tr>
+        <td>arg0, arg1, arg2..., etc...</td>
+        <td>Les différents arguments que vous souhaitez transmettre à la fonction/script.</td>
+      </tr>
+    </tbody>
+  </table>
+  <p> </p>
+  <h4>Les retours :</h4>
+  <p class="code">Cela dépendra de la valeur de retour du script/fonction appelé.</p>
+  <p> </p>
+  <h4>Exemple :</h4>
+  <p class="code">script_execute(choose(move_up, move_down, move_left, move_right), irandom(5)) ;</p>
+  <p>Le code de l'exemple ci-dessus utilisera <tt>script_execute</tt> pour choisir l'une des quatre fonctions définies par l'utilisateur (dans ce cas, liée au mouvement) et lui passera un entier aléatoire comme premier argument.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <div class="footer">
+    <div class="buttons">
+      <div class="clear">
+        <div style="float:left">Retour : <a href="Scripts.htm">Scripts</a></div>
+        <div style="float:right">Suivant : <a href="script_execute_ext.htm">script_execute_ext</a></div>
+        <div style="float:right"> </div>
+      </div>
+    </div>
+    <h5><span data-keyref="Copyright Notice">Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
   </div>
   <!-- KEYWORDS
 script_execute

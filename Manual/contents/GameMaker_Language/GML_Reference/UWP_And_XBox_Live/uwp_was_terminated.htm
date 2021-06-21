@@ -7,14 +7,40 @@
   <meta name="generator" content="Adobe RoboHelp 2019" />
   <link rel="stylesheet" href="../../../assets/css/default.css" type="text/css" />
   <meta name="rh-authors" content="Mark Alexander" />
-  <meta name="topic-comment" content="Page de référence pour uwp_was_terminated" />
+  <meta name="topic-comment" content="Reference page for uwp_was_terminated" />
   <meta name="rh-index-keywords" content="uwp_was_terminated" />
   <meta name="search-keywords" content="uwp_was_terminated" />
 </head>
-<body><!--<div class="body-scroll" style="top: 150px;">--><h1>uwp_was_terminated</h1><p> Avec cette fonction, vous pouvez savoir si le jeu a été précédemment arrêté par le système (c&#39;est-à-dire que ce n&#39;est pas la première exécution du jeu). Si tel est le cas, la fonction retournera <tt>true</tt>, sinon il reviendra <tt>false</tt>. Un exemple d&#39;utilisation serait de le vérifier et de voir si le jeu a été précédemment arrêté par le système, puis (s&#39;il retourne <tt>true</tt> ) pour charger l&#39;étape précédente à laquelle le joueur se trouvait dans le jeu. Si vous ciblez la <span class="notranslate">XBox One</span> le comportement requis des jeux si cela est détecté sera différent entre les différentes versions de la documentation de certification, il vaut donc la peine de vérifier la dernière version pour voir ce que le jeu <i>devrait</i> faire.</p><p></p><h4> Syntaxe:</h4><p class="code">uwp_was_terminated();</p><p></p><h4> Retour:</h4><p class="code">Boolean</p><p></p><h4> Exemple:</h4><p class="code">if xboxlivewas_terminated()<br/>     {
-    <br/>     buffer_load(&quot;Player_Save.sav&quot;);
-    <br/>     global.GameLoaded = true;<br/>     }
-  </p><p> Le code ci-dessus vérifie si l&#39;application a déjà été arrêtée par le système, et si tel est le cas, il charge un tampon et définit une variable globale. </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> Retour: <a href="UWP_And_XBox_Live.htm">UWP et XBox Live</a></div><div style="float:right"> Suivant:<a href="uwp_was_closed_by_user.htm">uwp_was_closed_by_user</a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
+<body>
+  <!--<div class="body-scroll" style="top: 150px;">-->
+  <h1>uwp_was_terminated</h1>
+  <p>Cette fonction permet de savoir si le jeu a été précédemment arrêté par le système (c'est-à-dire qu'il ne s'agit pas de la première exécution du jeu). Si c'est le cas, la fonction renvoie <tt>true</tt>, sinon elle renvoie <tt>false</tt>. Un exemple d'utilisation
+    serait de vérifier si le jeu a été précédemment arrêté par le système, puis (si elle renvoie <tt>vrai</tt>) de charger l'étape précédente à laquelle le joueur se trouvait dans le jeu. Si l'on cible la <span class="notranslate">XBox One</span>, le comportement requis des jeux
+    si cela est détecté sera différent entre les différentes versions des documents de certification, il est donc utile de vérifier la dernière version pour voir ce que le jeu <i>doit faire.</i> </p>
+  <p> </p>
+  <h4>Syntaxe :</h4>
+  <p class="code">uwp_was_terminated() ;</p>
+  <p> </p>
+  <h4>Les retours :</h4>
+  <p class="code">Booléen</p>
+  <p> </p>
+  <h4>Exemple :</h4>
+  <p class="code">if xboxlivewas_terminated()<br> {
+    <br> buffer_load(&quot;Player_Save.sav&quot;) ;
+    <br> global.GameLoaded = true ;<br> }
+  </p>
+  <p>Le code ci-dessus vérifie si l'application a déjà été arrêtée par le système, et si c'est le cas, il charge un tampon et définit une variable globale.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <div class="footer">
+    <div class="buttons">
+      <div class="clear">
+        <div style="float:left">Retour : <a href="UWP_And_XBox_Live.htm">UWP et XBox Live</a></div>
+        <div style="float:right">Suivant : <a href="uwp_was_closed_by_user.htm">uwp_was_closed_by_user</a></div>
+      </div>
+    </div>
+    <h5><span data-keyref="Copyright Notice">Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
   </div>
   <!-- KEYWORDS
 uwp_was_terminated

@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>Variables statiques</title>
+  <meta name="generator" content="Adobe RoboHelp 2019" />
+  <link rel="stylesheet" href="../../../assets/css/default.css" type="text/css" />
+  <meta name="rh-authors" content="Gurpreet S. Matharoo" />
+  <meta name="topic-comment" content="Page outlining the use of Static Variables" />
+  <meta name="rh-index-keywords" content="Static Variables" />
+  <meta name="search-keywords" content="Static Variables,static" />
+</head>
+<body>
+  <!--<div class="body-scroll" style="top: 150px;">-->
+  <h1>Variables statiques</h1>
+  <p>Une caractéristique intéressante des <a href="../Script_Functions.htm">fonctions de script</a> et des <a href="../Method_Variables.htm">variables de méthode</a> est qu'elles peuvent avoir des <strong>variables statiques</strong>. Une variable statique est une variable qui est définie la première fois
+    que la fonction est appelée et qui conservera sa valeur à partir de ce moment-là. Pour créer une variable statique, vous devez la définir à l'aide du mot-clé <span class="inline">static</span>, comme le montre cet exemple simple :</p>
+  <p class="code">counter = function()<br> {
+    <br> static num = 0 ;<br> return num++ ;<br> }
+  </p>
+  <p>Dans l'exemple ci-dessus, la variable <span class="inline">num</span> est une variable statique, et sera donc définie comme <tt>0</tt> la première fois que la fonction sera appelée, mais chaque fois que la fonction sera appelée par la suite, l'initialisation de la variable sera ignorée.
+    ignorée. Donc, si vous appelez ensuite cette fonction comme ceci :</p>
+  <p class="code">for (var i = 0 ; i &lt; 10 ; ++i ;)<br> {
+    <br> show_debug_message(counter()) ;<br> }
+  </p>
+  <p>La sortie sera :</p>
+  <p class="code">0<br> 1
+    <br> 2
+    <br> 3
+    <br> 4
+    <br> 5
+    <br> 6
+    <br> 7
+    <br> 8
+    <br> 9
+  </p>
+  <p>Si vous n'aviez pas utilisé le mot-clé <span class="inline">static</span> ici, la sortie serait simplement 0 <tt>à</tt> chaque itération de la boucle, puisque la variable <span class="inline">num</span> sera définie comme 0 à chaque fois que la fonction sera appelée avant de revenir.
+    la fonction est appelée avant d'être retournée. Notez qu'une variable statique ne peut être modifiée qu'à l'intérieur de la fonction d'origine, et que la retourner vous donnera simplement une copie de sa valeur - essentiellement la variable statique partagée ne peut être modifiée que par la fonction
+    qui la contient.</p>
+  <p>Une variable statique est toujours initialisée au début de la fonction, donc peu importe où vous définissez une variable statique dans la fonction, elle sera toujours disponible pour être lue et modifiée tout au long de la fonction (même si elle est utilisée avant d'être définie).
+    Voir l'exemple suivant :</p>
+  <p class="code">function add_health()<br> {
+    <br> ma_santé++ ;<br> show_debug_message(ma_santé) ;<br> static ma_santé = 1 ;<br> }
+  </p>
+  <p>Ici, la variable statique &quot; my_health<tt>&quot;</tt> est modifiée et imprimée dans la sortie du compilateur avant d'<em>être</em> initialisée. Bien que cela semble erroné, c'est tout à fait normal car les variables statiques sont initialisées <em>avant l'</em>exécution de tout code de fonction.
+    code de fonction est exécuté. Notez que s'il y a plusieurs variables statiques dans une fonction, l'ordre dans lequel elles ont été définies sera conservé lorsqu'elles seront initialisées au début.</p>
+  <p>Vous pouvez également utiliser le mot-clé <span class="inline">static</span> à l'intérieur d'une fonction pour créer une <strong>fonction statique</strong>, ce qui - comme pour les variables - signifie simplement que la fonction ne sera définie qu'une seule fois, c'est-à-dire la première fois que la fonction
+    est appelée, par exemple :</p>
+  <p class="code">function(_x, _y) Vector2 constructor<br> {
+    <br> x = _x ;<br> y = _y ;<br>
+    <br> static Add = function( _other )<br> {<br> x += _other.x ;<br> y += _other.y ;<br> } <br> }
+  </p>
+  <p>Dans l'exemple ci-dessus, la fonction constructeur <tt><span class="inline">Vector2</span></tt> peut être utilisée pour créer une structure, et la structure aura quelques variables, dont l'une est la variable de méthode <tt><span class="inline">Add</span></tt>. Puisque
+    cette variable a été définie comme statique, la fonction qu'elle contient ne sera initialisée qu'<em>une seule fois </em>, la première fois que la fonction <span class="inline">Vector2</span> sera appelée, et toutes les autres structures créées avec ce constructeur feront référence à la fonction créée initialement, au lieu de créer une nouvelle fonction pour chaque structure.
+    la fonction <span class="inline">Add</span> qui a été créée initialement, au lieu de créer une nouvelle fonction pour chaque structure (pour plus d'informations sur les structures et le mot-clé <span class="inline">constructor</span>, voir <a href="../Structs.htm">ici</a>).</p>
+  <p>Lorsque l'on utilise l'héritage avec des constructeurs, toutes les variables statiques du constructeur enfant ne seront initialisées qu'une fois que le constructeur parent aura été exécuté, de sorte que les variables statiques du constructeur enfant ne remplaceront pas les variables statiques du parent.
+    du parent. Voir l'exemple suivant :</p>
+  <p class="code">function Parent() constructor<br> {
+    <br> show_debug_message(value) ;<br> static value = 10 ;<br> }
+    <br>
+    <br> function Child() : Parent() constructor<br> {
+    <br> show_debug_message(value) ;<br> static value = 20 ;<br> }
+    <br>
+    <br> var _child = new Child() ;</p>
+  <p>L'appel du constructeur <tt>Child()</tt> imprime ceci dans le journal de sortie :</p>
+  <p class="code">10<br> 20
+  </p>
+  <p>La première valeur provient du constructeur parent, et la seconde du constructeur enfant. Cela montre que la <tt>valeur de</tt> la variable statique de l'enfant n'a pas <tt>été</tt> initialisée avant que le constructeur parent ne soit terminé, et que dans chaque constructeur
+    la variable statique a été initialisée avant l'appel <tt>show_debug_message()</tt>.</p>
+  <p> </p>
+  <p> </p>
+  <div class="footer">
+    <div class="buttons">
+      <div class="clear">
+        <div style="float:left">Retour : <a href="../GML_Overview.htm">Aperçu du<span class="notranslate">GML</span></a></div>
+        <div style="float:right">Suivant : <a href="../Structs.htm">Structs</a></div>
+      </div>
+    </div>
+    <h5><span data-keyref="Copyright Notice">Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
+  </div>
+  <!-- KEYWORDS
+Static Variables
+static
+-->
+  <!-- TAGS
+static
+-->
+</body>
+</html>

@@ -2,17 +2,53 @@
 
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml"><head>
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <title>ansi_char</title>
-  <meta name="generator" content="Adobe RoboHelp 2019"/>
-  <link rel="stylesheet" href="../../../assets/css/default.css" type="text/css"/>
-  <meta name="rh-authors" content="Mark Alexander"/>
-  <meta name="topic-comment" content="Page de référence pour ansi_char"/>
-  <meta name="rh-index-keywords" content="ansi_char"/>
-  <meta name="search-keywords" content="ansi_char"/>
+  <meta name="generator" content="Adobe RoboHelp 2019" />
+  <link rel="stylesheet" href="../../../assets/css/default.css" type="text/css" />
+  <meta name="rh-authors" content="Mark Alexander" />
+  <meta name="topic-comment" content="Reference page for ansi_char" />
+  <meta name="rh-index-keywords" content="ansi_char" />
+  <meta name="search-keywords" content="ansi_char" />
 </head>
 
-<body><!--<div class="body-scroll" style="top: 150px;">--><h1>ansi_char</h1><p> Cette fonction renvoie une chaîne contenant le caractère avec la valeur BYTE brute définie. Cela ne sera pas, <i>et ne devrait pas</i>, être affiché, mais il sera correctement enregistré sur le disque pour une utilisation dans le codage.</p><p></p><h4> Syntaxe:</h4><p class="code">ansi_char(val);</p><table><tbody><tr><th> Argument</th><th> Description</th></tr><tr><td> <span class="notranslate">val</span></td><td> La valeur d&#39;octet brut.</td></tr></tbody></table><p></p><h4> Retour:</h4><p class="code">String (Single character)</p><p></p><h4> Exemple:</h4><p class="code">var str1 = ansi_char($EF);<br/> var str2 = ansi_char($BB);<br/> var str3 = ansi_char($BF);<br/> file_text_write_string(global.saveFile, str1 + str2 + str3);</p><p> Le code ci-dessus crée une chaîne à partir de données d&#39;octets brutes et l&#39;écrit dans un fichier (précédemment ouvert). </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> Retour: <a href="Strings.htm">Cordes</a></div><div style="float:right"> Suivant:<a href="chr.htm">chr</a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
+<body>
+  <!--<div class="body-scroll" style="top: 150px;">-->
+  <h1>ansi_char</h1>
+  <p>Cette fonction renvoie une chaîne de caractères contenant le caractère avec la valeur BYTE brute définie. Cette chaîne ne sera pas, <i>et ne devrait pas</i>, être affichée, mais elle sera enregistrée correctement sur le disque pour être utilisée dans l'encodage.</p>
+  <p> </p>
+  <h4>Syntaxe :</h4>
+  <p class="code">ansi_char(val) ;</p>
+  <table>
+    <tbody>
+      <tr>
+        <th>Arguments</th>
+        <th>Description</th>
+      </tr>
+      <tr>
+        <td>val</td>
+        <td>La valeur brute de l'octet.</td>
+      </tr>
+    </tbody>
+  </table>
+  <p> </p>
+  <h4>Les retours :</h4>
+  <p class="code">Chaîne de caractères (caractère unique)</p>
+  <p> </p>
+  <h4>Exemple :</h4>
+  <p class="code">var str1 = ansi_char($EF) ;<br> var str2 = ansi_char($BB) ;<br> var str3 = ansi_char($BF) ;<br> file_text_write_string(global.saveFile, str1 + str2 + str3) ;</p>
+  <p>Le code ci-dessus crée une chaîne de caractères à partir de données brutes d'octets et l'écrit dans un fichier (préalablement ouvert).</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <div class="footer">
+    <div class="buttons">
+      <div class="clear">
+        <div style="float:left">Retour : <a href="Strings.htm">Cordes</a></div>
+        <div style="float:right">Suivant : <a href="chr.htm">chr</a></div>
+      </div>
+    </div>
+    <h5><span data-keyref="Copyright Notice">Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
   </div>
   <!-- KEYWORDS
 ansi_char

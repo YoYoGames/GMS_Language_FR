@@ -3,18 +3,54 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>layer_get_script_begin</title>
+  <title>couche_get_script_begin</title>
   <meta name="generator" content="Adobe RoboHelp 2019" />
   <link rel="stylesheet" href="../../../../../assets/css/default.css" type="text/css" />
   <meta name="rh-authors" content="Mark Alexander" />
-  <meta name="topic-comment" content="Page décrivant la fonction layer_get_script_begin" />
+  <meta name="topic-comment" content="Page outlining the function layer_get_script_begin" />
   <meta name="rh-index-keywords" content="layer_get_script_begin" />
   <meta name="search-keywords" content="layer_get_script_begin" />
 </head>
-<body><!--<div class="body-scroll" style="top: 150px;">--><h1>layer_get_script_begin</h1><p> Vous fournissez l&#39;ID de couche (que vous obtenez lorsque vous créez la couche en utilisant <a href="layer_create.htm"><tt>layer_create()</tt></a> ) ou le nom de la couche (sous forme de chaîne - cela aura un impact sur les performances) et cette fonction renverra l&#39; <a href="../../../../GML_Overview/Script_Functions.htm">index de la fonction de script</a> de la fonction assignée à exécuter au début du rendu pour cette couche, ou elle retournera -1 si aucune fonction est assigné. Vous pouvez attribuer des fonctions de script à un calque avec<span class="inline"><a href="layer_script_begin.htm">layer_script_begin()</a></span> et <span
-      class="inline"><a href="layer_script_end.htm">layer_script_end ()</a></span>.</p><p></p><h4> Syntaxe:</h4><p class="code">layer_get_script_begin(layer_id);</p><table><tbody><tr><th> Argument</th><th> Description</th></tr><tr><td> <span class="notranslate">layer_id</span></td><td> La valeur d&#39;ID unique du calque à cibler (ou le nom du calque sous forme de chaîne)</td></tr></tbody></table><p></p><h4> Retour:</h4><p class="code">Script Function Index (Real) or -1 if no script is assigned</p><p></p><h4> Exemple:</h4><p class="code">if layer_get_script_begin(layer) == -1<br/>    {
-    <br/>    layer_script_begin(layer, scr_SetShaderValues);<br/>    }
-  </p><p> Le code ci-dessus vérifiera si la couche sur laquelle l&#39;instance exécutant le code a une fonction de script qui lui est affectée et si ce n&#39;est pas le cas, une est affectée. </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> Retour: <a href="General_Layer_Functions.htm">Fonctions générales des calques</a></div><div style="float:right"> Suivant:<a href="layer_get_script_end.htm">layer_get_script_end</a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
+<body>
+  <!--<div class="body-scroll" style="top: 150px;">-->
+  <h1>couche_get_script_begin</h1>
+  <p>Vous fournissez l'ID de la couche (que vous obtenez lorsque vous créez la couche en utilisant <a href="layer_create.htm"><tt>layer_create()</tt></a>) ou le nom de la couche (sous forme de chaîne - cela aura un impact sur les performances) et cette fonction renverra l'index de la <a href="../../../../GML_Overview/Script_Functions.htm">fonction de script</a> de la fonction assignée pour être exécutée au début du rendu pour cette couche, ou elle renverra -1 si aucune fonction n'est assignée. Vous pouvez attribuer des fonctions de script à une couche avec <span class="inline"><a href="layer_script_begin.htm">layer_script_begin()</a></span> et
+    <span class="inline"><a href="layer_script_end.htm">layer_script_end()</a></span>.</p>
+  <p> </p>
+  <h4>Syntaxe :</h4>
+  <p class="code">layer_get_script_begin(layer_id) ;</p>
+  <table>
+    <tbody>
+      <tr>
+        <th>Arguments</th>
+        <th>Description</th>
+      </tr>
+      <tr>
+        <td>identifiant de la couche</td>
+        <td>La valeur d'identification unique de la couche à cibler (ou le nom de la couche sous forme de chaîne).</td>
+      </tr>
+    </tbody>
+  </table>
+  <p> </p>
+  <h4>Les retours :</h4>
+  <p class="code">Index de la fonction script (réel) ou -1 si aucun script n'est assigné.</p>
+  <p> </p>
+  <h4>Exemple :</h4>
+  <p class="code">si layer_get_script_begin(layer) == -1<br> {
+    <br> layer_script_begin(layer, scr_SetShaderValues) ;<br> }
+  </p>
+  <p>Le code ci-dessus vérifie si le calque de l'instance qui exécute le code a une fonction de script assignée et si ce n'est pas le cas, une fonction est assignée.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <div class="footer">
+    <div class="buttons">
+      <div class="clear">
+        <div style="float:left">Retour : <a href="General_Layer_Functions.htm">Fonctions générales des couches</a></div>
+        <div style="float:right">Suivant : <a href="layer_get_script_end.htm">layer_get_script_end</a></div>
+      </div>
+    </div>
+    <h5><span data-keyref="Copyright Notice">Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
   </div>
   <!-- KEYWORDS
 layer_get_script_begin

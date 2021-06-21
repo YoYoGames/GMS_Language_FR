@@ -3,15 +3,656 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>Tables de types</title>
+  <title>Tableaux de type</title>
   <meta name="generator" content="Adobe RoboHelp 2019" />
   <link rel="stylesheet" href="../assets/css/default.css" type="text/css" />
   <meta name="rh-authors" content="Mark Alexander" />
-  <meta name="topic-comment" content="Page qui montre les tables de types pour différentes opérations arithmétiques" />
-  <meta name="rh-index-keywords" content="Tables de types" />
-  <meta name="search-keywords" content="Tables de types,arithmétique typée,tables arithmétiques" />
+  <meta name="topic-comment" content="Page that shows the type tables for different arithmetic operations" />
+  <meta name="rh-index-keywords" content="Type Tables" />
+  <meta name="search-keywords" content="Type Tables,typecast arithmetic,arithmetic tables" />
 </head>
-<body><!--<div class="body-scroll" style="top: 150px;">--><h1> Tables de types</h1><p> Cette page affiche tous les différents résultats que vous pouvez obtenir en utilisant l&#39;arithmétique sur les différents <a href="../GameMaker_Language/GML_Overview/Data_Types.htm">types de données</a> disponibles. Les tableaux suivent tous le même format, avec les colonnes montrant le <em>côté</em> gauche d&#39;une opération arithmétique, et les lignes montrant le <em>côté droit</em>, par exemple: </p><p class="code">&lt;LHS&gt; + &lt;RHS&gt; = &lt;result&gt;</p><p></p><table><tbody><tr><td style="color: #FFFFFF"><span class="inline">Add (+)</span></td><td style="color: #FFFFFF;background-color: rgba(0, 159, 97, 0.50)"> <strong>Réel</strong></td><td style="color: #FFFFFF;background-color: rgba(0, 159, 97, 0.50)"> <strong>Booléen</strong></td><td style="color: #FFFFFF;background-color: rgba(0, 159, 97, 0.50)"> <strong>Chaîne de caractères</strong></td><td style="color: #FFFFFF;background-color: rgba(0, 159, 97, 0.50)"> <strong>Int32</strong></td><td style="color: #FFFFFF;background-color: rgba(0, 159, 97, 0.50)"> <strong>Int64</strong></td><td style="color: #FFFFFF;background-color: rgba(0, 159, 97, 0.50)"> <strong>Ptr</strong></td><td style="color: #FFFFFF;background-color: rgba(0, 159, 97, 0.50)"> <strong>indéfini</strong></td><td style="color: #FFFFFF;background-color: rgba(0, 159, 97, 0.50)"> <strong>Déployer</strong></td></tr><tr><td style="color: #FFFFFF;background-color: rgba(0, 159, 97, 0.50)"> <strong>Réel</strong></td><td> Réel</td><td> Réel</td><td> <span style="color:#202020;">Erreur</span></td><td> Réel</td><td> Réel</td><td> <span style="color:#202020">Erreur</span></td><td> <span style="color:#202020">Erreur</span></td><td> <span style="color:#202020">Erreur</span></td></tr><tr><td style="color: #FFFFFF;background-color: rgba(0, 159, 97, 0.50)"> <strong>Booléen</strong></td><td> Réel</td><td> Réel</td><td> <span style="color:#202020">Erreur</span></td><td> Réel</td><td> Réel</td><td> <span style="color:#202020">Erreur</span></td><td> <span style="color:#202020">Erreur</span></td><td> <span style="color:#202020">Erreur</span></td></tr><tr><td style="color: #FFFFFF;background-color: rgba(0, 159, 97, 0.50)"> <strong>Chaîne de caractères</strong></td><td> Chaîne de caractères</td><td> Chaîne de caractères</td><td> Chaîne de caractères</td><td> Chaîne de caractères</td><td> Chaîne de caractères</td><td> <span style="color:#202020">Erreur</span></td><td> <span style="color:#202020">Erreur</span></td><td> <span style="color:#202020">Erreur</span></td></tr><tr><td style="color: #FFFFFF;background-color: rgba(0, 159, 97, 0.50)"> <strong>Int32</strong></td><td> Réel</td><td> Réel</td><td> <span style="color:#202020">Erreur</span></td><td> Int32</td><td> Int64</td><td> <span style="color:#202020">Erreur</span></td><td> <span style="color:#202020">Erreur</span></td><td> <span style="color:#202020">Erreur</span></td></tr><tr><td style="color: #FFFFFF;background-color: rgba(0, 159, 97, 0.50)"> <strong>Int64</strong></td><td> Réel</td><td> Réel</td><td> <span style="color:#202020">Erreur</span></td><td> Int64</td><td> Int64</td><td> <span style="color:#202020">Erreur</span></td><td> <span style="color:#202020">Erreur</span></td><td> <span style="color:#202020">Erreur</span></td></tr><tr><td style="color: #FFFFFF;background-color: rgba(0, 159, 97, 0.50)"> <strong>Ptr</strong></td><td> <span style="color:#202020">Erreur</span></td><td> <span style="color:#202020">Erreur</span></td><td> <span style="color:#202020">Erreur</span></td><td> <span style="color:#202020">Erreur</span></td><td> <span style="color:#202020">Erreur</span></td><td> <span style="color:#202020">Erreur</span></td><td> <span style="color:#202020">Erreur</span></td><td> <span style="color:#202020">Erreur</span></td></tr><tr><td style="color: #FFFFFF;background-color: rgba(0, 159, 97, 0.50)"> <strong>indéfini</strong></td><td> <span style="color:#202020">Erreur</span></td><td> <span style="color:#202020">Erreur</span></td><td> <span style="color:#202020">Erreur</span></td><td> <span style="color:#202020">Erreur</span></td><td> <span style="color:#202020">Erreur</span></td><td> <span style="color:#202020">Erreur</span></td><td> <span style="color:#202020">Erreur</span></td><td> <span style="color:#202020">Erreur</span></td></tr><tr><td style="color: #FFFFFF;background-color: rgba(0, 159, 97, 0.50)"> <strong>Déployer</strong></td><td> <span style="color:#202020">Erreur</span></td><td> <span style="color:#202020">Erreur</span></td><td> <span style="color:#202020">Erreur</span></td><td> <span style="color:#202020">Erreur</span></td><td> <span style="color:#202020">Erreur</span></td><td> <span style="color:#202020">Erreur</span></td><td> <span style="color:#202020">Erreur</span></td><td> <span style="color:#202020">Erreur</span> </td></tr></tbody></table><p></p><table><tbody><tr><td style="color: #FFFFFF"><span class="inline">Subtract (-)</span></td><td style="color: #FFFFFF;background-color: rgba(0, 159, 97, 0.50)"> <strong>Réel</strong></td><td style="color: #FFFFFF;background-color: rgba(0, 159, 97, 0.50)"> <strong>Booléen</strong></td><td style="color: #FFFFFF;background-color: rgba(0, 159, 97, 0.50)"> <strong>Chaîne de caractères</strong></td><td style="color: #FFFFFF;background-color: rgba(0, 159, 97, 0.50)"> <strong>Int32</strong></td><td style="color: #FFFFFF;background-color: rgba(0, 159, 97, 0.50)"> <strong>Int64</strong></td><td style="color: #FFFFFF;background-color: rgba(0, 159, 97, 0.50)"> <strong>Ptr</strong></td><td style="color: #FFFFFF;background-color: rgba(0, 159, 97, 0.50)"> <strong>indéfini</strong></td><td style="color: #FFFFFF;background-color: rgba(0, 159, 97, 0.50)"> <strong>Déployer</strong></td></tr><tr><td style="color: #FFFFFF;background-color: rgba(0, 159, 97, 0.50)"> <strong>Réel</strong></td><td> Réel</td><td> Réel</td><td> <span style="color:#202020">Erreur</span></td><td> Réel</td><td> Réel</td><td> <span style="color:#202020">Erreur</span></td><td> <span style="color:#202020">Erreur</span></td><td> <span style="color:#202020">Erreur</span></td></tr><tr><td style="color: #FFFFFF;background-color: rgba(0, 159, 97, 0.50)"> <strong>Booléen</strong></td><td> Réel</td><td> Réel</td><td> <span style="color:#202020">Erreur</span></td><td> Réel</td><td> Réel</td><td> <span style="color:#202020">Erreur</span></td><td> <span style="color:#202020">Erreur</span></td><td> <span style="color:#202020">Erreur</span></td></tr><tr><td style="color: #FFFFFF;background-color: rgba(0, 159, 97, 0.50)"> <strong>Chaîne de caractères</strong></td><td> <span style="color:#202020">Erreur</span></td><td> <span style="color:#202020">Erreur</span></td><td> <span style="color:#202020">Erreur</span></td><td> <span style="color:#202020">Erreur</span></td><td> <span style="color:#202020">Erreur</span></td><td> <span style="color:#202020">Erreur</span></td><td> <span style="color:#202020">Erreur</span></td><td> <span style="color:#202020">Erreur</span></td></tr><tr><td style="color: #FFFFFF;background-color: rgba(0, 159, 97, 0.50)"> <strong>Int32</strong></td><td> Réel</td><td> Réel</td><td> <span style="color:#202020">Erreur</span></td><td> Int32</td><td> Int64</td><td> <span style="color:#202020">Erreur</span></td><td> <span style="color:#202020">Erreur</span></td><td> <span style="color:#202020">Erreur</span></td></tr><tr><td style="color: #FFFFFF;background-color: rgba(0, 159, 97, 0.50)"> <strong>Int64</strong></td><td> Réel</td><td> Réel</td><td> <span style="color:#202020">Erreur</span></td><td> Int64</td><td> Int64</td><td> <span style="color:#202020">Erreur</span></td><td> <span style="color:#202020">Erreur</span></td><td> <span style="color:#202020">Erreur</span></td></tr><tr><td style="color: #FFFFFF;background-color: rgba(0, 159, 97, 0.50)"> <strong>Ptr</strong></td><td> <span style="color:#202020">Erreur</span></td><td> <span style="color:#202020">Erreur</span></td><td> <span style="color:#202020">Erreur</span></td><td> <span style="color:#202020">Erreur</span></td><td> <span style="color:#202020">Erreur</span></td><td> <span style="color:#202020">Erreur</span></td><td> <span style="color:#202020">Erreur</span></td><td> <span style="color:#202020">Erreur</span></td></tr><tr><td style="color: #FFFFFF;background-color: rgba(0, 159, 97, 0.50)"> <strong>indéfini</strong></td><td> <span style="color:#202020">Erreur</span></td><td> <span style="color:#202020">Erreur</span></td><td> <span style="color:#202020">Erreur</span></td><td> <span style="color:#202020">Erreur</span></td><td> <span style="color:#202020">Erreur</span></td><td> <span style="color:#202020">Erreur</span></td><td> <span style="color:#202020">Erreur</span></td><td> <span style="color:#202020">Erreur</span></td></tr><tr><td style="color: #FFFFFF;background-color: rgba(0, 159, 97, 0.50)"> <strong>Déployer</strong></td><td> <span style="color:#202020">Erreur</span></td><td> <span style="color:#202020">Erreur</span></td><td> <span style="color:#202020">Erreur</span></td><td> <span style="color:#202020">Erreur</span></td><td> <span style="color:#202020">Erreur</span></td><td> <span style="color:#202020">Erreur</span></td><td> <span style="color:#202020">Erreur</span></td><td> <span style="color:#202020">Erreur</span> </td></tr></tbody></table><p></p><table><tbody><tr><td style="color: #FFFFFF"><span class="inline">Multiply (*)</span></td><td style="color: #FFFFFF;background-color: rgba(0, 159, 97, 0.50)"> <strong>Réel</strong></td><td style="color: #FFFFFF;background-color: rgba(0, 159, 97, 0.50)"> <strong>Booléen</strong></td><td style="color: #FFFFFF;background-color: rgba(0, 159, 97, 0.50)"> <strong>Chaîne de caractères</strong></td><td style="color: #FFFFFF;background-color: rgba(0, 159, 97, 0.50)"> <strong>Int32</strong></td><td style="color: #FFFFFF;background-color: rgba(0, 159, 97, 0.50)"> <strong>Int64</strong></td><td style="color: #FFFFFF;background-color: rgba(0, 159, 97, 0.50)"> <strong>Ptr</strong></td><td style="color: #FFFFFF;background-color: rgba(0, 159, 97, 0.50)"> <strong>indéfini</strong></td><td style="color: #FFFFFF;background-color: rgba(0, 159, 97, 0.50)"> <strong>Déployer</strong></td></tr><tr><td style="color: #FFFFFF;background-color: rgba(0, 159, 97, 0.50)"> <strong>Réel</strong></td><td> Réel</td><td> Réel</td><td> <span style="color:#202020">Erreur</span></td><td> Réel</td><td> Réel</td><td> <span style="color:#202020">Erreur</span></td><td> <span style="color:#202020">Erreur</span></td><td> <span style="color:#202020">Erreur</span></td></tr><tr><td style="color: #FFFFFF;background-color: rgba(0, 159, 97, 0.50)"> <strong>Booléen</strong></td><td> Réel</td><td> Réel</td><td> <span style="color:#202020">Erreur</span></td><td> Réel</td><td> Réel</td><td> <span style="color:#202020">Erreur</span></td><td> <span style="color:#202020">Erreur</span></td><td> <span style="color:#202020">Erreur</span></td></tr><tr><td style="color: #FFFFFF;background-color: rgba(0, 159, 97, 0.50)"> <strong>Chaîne de caractères</strong></td><td> Chaîne de caractères</td><td> <span style="color:#202020">Erreur</span></td><td> <span style="color:#202020">Erreur</span></td><td> Chaîne de caractères</td><td> <span style="color:#202020">Erreur</span></td><td> <span style="color:#202020">Erreur</span></td><td> <span style="color:#202020">Erreur</span></td><td> <span style="color:#202020">Erreur</span></td></tr><tr><td style="color: #FFFFFF;background-color: rgba(0, 159, 97, 0.50)"> <strong>Int32</strong></td><td> Réel</td><td> Réel</td><td> <span style="color:#202020">Erreur</span></td><td> Int32</td><td> Int64</td><td> <span style="color:#202020">Erreur</span></td><td> <span style="color:#202020">Erreur</span></td><td> <span style="color:#202020">Erreur</span></td></tr><tr><td style="color: #FFFFFF;background-color: rgba(0, 159, 97, 0.50)"> <strong>Int64</strong></td><td> Réel</td><td> Réel</td><td> <span style="color:#202020">Erreur</span></td><td> Int64</td><td> Int64</td><td> <span style="color:#202020">Erreur</span></td><td> <span style="color:#202020">Erreur</span></td><td> <span style="color:#202020">Erreur</span></td></tr><tr><td style="color: #FFFFFF;background-color: rgba(0, 159, 97, 0.50)"> <strong>Ptr</strong></td><td> <span style="color:#202020">Erreur</span></td><td> <span style="color:#202020">Erreur</span></td><td> <span style="color:#202020">Erreur</span></td><td> <span style="color:#202020">Erreur</span></td><td> <span style="color:#202020">Erreur</span></td><td> <span style="color:#202020">Erreur</span></td><td> <span style="color:#202020">Erreur</span></td><td> <span style="color:#202020">Erreur</span></td></tr><tr><td style="color: #FFFFFF;background-color: rgba(0, 159, 97, 0.50)"> <strong>indéfini</strong></td><td> <span style="color:#202020">Erreur</span></td><td> <span style="color:#202020">Erreur</span></td><td> <span style="color:#202020">Erreur</span></td><td> <span style="color:#202020">Erreur</span></td><td> <span style="color:#202020">Erreur</span></td><td> <span style="color:#202020">Erreur</span></td><td> <span style="color:#202020">Erreur</span></td><td> <span style="color:#202020">Erreur</span></td></tr><tr><td style="color: #FFFFFF;background-color: rgba(0, 159, 97, 0.50)"> <strong>Déployer</strong></td><td> <span style="color:#202020">Erreur</span></td><td> <span style="color:#202020">Erreur</span></td><td> <span style="color:#202020">Erreur</span></td><td> <span style="color:#202020">Erreur</span></td><td> <span style="color:#202020">Erreur</span></td><td> <span style="color:#202020">Erreur</span></td><td> <span style="color:#202020">Erreur</span></td><td> <span style="color:#202020">Erreur</span> </td></tr></tbody></table><p></p><table><tbody><tr><td style="color: #FFFFFF"><span class="inline">Divide (/)</span></td><td style="color: #FFFFFF;background-color: rgba(0, 159, 97, 0.50)"> <strong>Réel</strong></td><td style="color: #FFFFFF;background-color: rgba(0, 159, 97, 0.50)"> <strong>Booléen</strong></td><td style="color: #FFFFFF;background-color: rgba(0, 159, 97, 0.50)"> <strong>Chaîne de caractères</strong></td><td style="color: #FFFFFF;background-color: rgba(0, 159, 97, 0.50)"> <strong>Int32</strong></td><td style="color: #FFFFFF;background-color: rgba(0, 159, 97, 0.50)"> <strong>Int64</strong></td><td style="color: #FFFFFF;background-color: rgba(0, 159, 97, 0.50)"> <strong>Ptr</strong></td><td style="color: #FFFFFF;background-color: rgba(0, 159, 97, 0.50)"> <strong>indéfini</strong></td><td style="color: #FFFFFF;background-color: rgba(0, 159, 97, 0.50)"> <strong>Déployer</strong></td></tr><tr><td style="color: #FFFFFF;background-color: rgba(0, 159, 97, 0.50)"> <strong>Réel</strong></td><td> Réel</td><td> Réel</td><td> <span style="color:#202020">Erreur</span></td><td> Réel</td><td> Réel</td><td> <span style="color:#202020">Erreur</span></td><td> <span style="color:#202020">Erreur</span></td><td> <span style="color:#202020">Erreur</span></td></tr><tr><td style="color: #FFFFFF;background-color: rgba(0, 159, 97, 0.50)"> <strong>Booléen</strong></td><td> Réel</td><td> Réel</td><td> <span style="color:#202020">Erreur</span></td><td> Réel</td><td> Réel</td><td> <span style="color:#202020">Erreur</span></td><td> <span style="color:#202020">Erreur</span></td><td> <span style="color:#202020">Erreur</span></td></tr><tr><td style="color: #FFFFFF;background-color: rgba(0, 159, 97, 0.50)"> <strong>Chaîne de caractères</strong></td><td> <span style="color:#202020">Erreur</span></td><td> <span style="color:#202020">Erreur</span></td><td> <span style="color:#202020">Erreur</span></td><td> <span style="color:#202020">Erreur</span></td><td> <span style="color:#202020">Erreur</span></td><td> <span style="color:#202020">Erreur</span></td><td> <span style="color:#202020">Erreur</span></td><td> <span style="color:#202020">Erreur</span></td></tr><tr><td style="color: #FFFFFF;background-color: rgba(0, 159, 97, 0.50)"> <strong>Int32</strong></td><td> Réel</td><td> Réel</td><td> <span style="color:#202020">Erreur</span></td><td> Int32</td><td> Int64</td><td> <span style="color:#202020">Erreur</span></td><td> <span style="color:#202020">Erreur</span></td><td> <span style="color:#202020">Erreur</span></td></tr><tr><td style="color: #FFFFFF;background-color: rgba(0, 159, 97, 0.50)"> <strong>Int64</strong></td><td> Réel</td><td> Réel</td><td> <span style="color:#202020">Erreur</span></td><td> Int64</td><td> Int64</td><td> <span style="color:#202020">Erreur</span></td><td> <span style="color:#202020">Erreur</span></td><td> <span style="color:#202020">Erreur</span></td></tr><tr><td style="color: #FFFFFF;background-color: rgba(0, 159, 97, 0.50)"> <strong>Ptr</strong></td><td> <span style="color:#202020">Erreur</span></td><td> <span style="color:#202020">Erreur</span></td><td> <span style="color:#202020">Erreur</span></td><td> <span style="color:#202020">Erreur</span></td><td> <span style="color:#202020">Erreur</span></td><td> <span style="color:#202020">Erreur</span></td><td> <span style="color:#202020">Erreur</span></td><td> <span style="color:#202020">Erreur</span></td></tr><tr><td style="color: #FFFFFF;background-color: rgba(0, 159, 97, 0.50)"> <strong>indéfini</strong></td><td> <span style="color:#202020">Erreur</span></td><td> <span style="color:#202020">Erreur</span></td><td> <span style="color:#202020">Erreur</span></td><td> <span style="color:#202020">Erreur</span></td><td> <span style="color:#202020">Erreur</span></td><td> <span style="color:#202020">Erreur</span></td><td> <span style="color:#202020">Erreur</span></td><td> <span style="color:#202020">Erreur</span></td></tr><tr><td style="color: #FFFFFF;background-color: rgba(0, 159, 97, 0.50)"> <strong>Déployer</strong></td><td> <span style="color:#202020">Erreur</span></td><td> <span style="color:#202020">Erreur</span></td><td> <span style="color:#202020">Erreur</span></td><td> <span style="color:#202020">Erreur</span></td><td> <span style="color:#202020">Erreur</span></td><td> <span style="color:#202020">Erreur</span></td><td> <span style="color:#202020">Erreur</span></td><td> <span style="color:#202020">Erreur</span> </td></tr></tbody></table><p></p><table><tbody><tr><td style="color: #FFFFFF"><span class="inline">Divide (div)</span></td><td style="color: #FFFFFF;background-color: rgba(0, 159, 97, 0.50)"> <strong>Réel</strong></td><td style="color: #FFFFFF;background-color: rgba(0, 159, 97, 0.50)"> <strong>Booléen</strong></td><td style="color: #FFFFFF;background-color: rgba(0, 159, 97, 0.50)"> <strong>Chaîne de caractères</strong></td><td style="color: #FFFFFF;background-color: rgba(0, 159, 97, 0.50)"> <strong>Int32</strong></td><td style="color: #FFFFFF;background-color: rgba(0, 159, 97, 0.50)"> <strong>Int64</strong></td><td style="color: #FFFFFF;background-color: rgba(0, 159, 97, 0.50)"> <strong>Ptr</strong></td><td style="color: #FFFFFF;background-color: rgba(0, 159, 97, 0.50)"> <strong>indéfini</strong></td><td style="color: #FFFFFF;background-color: rgba(0, 159, 97, 0.50)"> <strong>Déployer</strong></td></tr><tr><td style="color: #FFFFFF;background-color: rgba(0, 159, 97, 0.50)"> <strong>Réel</strong></td><td style=""> Réel</td><td style=""> Réel</td><td> <span style="color:#202020">Erreur</span></td><td> Réel</td><td> Réel</td><td> <span style="color:#202020">Erreur</span></td><td> <span style="color:#202020">Erreur</span></td><td> <span style="color:#202020">Erreur</span></td></tr><tr><td style="color: #FFFFFF;background-color: rgba(0, 159, 97, 0.50)"> <strong>Booléen</strong></td><td style=""> Réel</td><td style=""> Réel</td><td> <span style="color:#202020">Erreur</span></td><td> Réel</td><td> Réel</td><td> <span style="color:#202020">Erreur</span></td><td> <span style="color:#202020">Erreur</span></td><td> <span style="color:#202020">Erreur</span></td></tr><tr><td style="color: #FFFFFF;background-color: rgba(0, 159, 97, 0.50)"> <strong>Chaîne de caractères</strong></td><td style=""> <span style="color:#202020">Erreur</span></td><td style=""> <span style="color:#202020">Erreur</span></td><td> <span style="color:#202020">Erreur</span></td><td> <span style="color:#202020">Erreur</span></td><td> <span style="color:#202020">Erreur</span></td><td> <span style="color:#202020">Erreur</span></td><td> <span style="color:#202020">Erreur</span></td><td> <span style="color:#202020">Erreur</span></td></tr><tr><td style="color: #FFFFFF;background-color: rgba(0, 159, 97, 0.50)"> <strong>Int32</strong></td><td style=""> Réel</td><td style=""> Réel</td><td> <span style="color:#202020">Erreur</span></td><td> Int32</td><td> Int64</td><td> <span style="color:#202020">Erreur</span></td><td> <span style="color:#202020">Erreur</span></td><td> <span style="color:#202020">Erreur</span></td></tr><tr><td style="color: #FFFFFF;background-color: rgba(0, 159, 97, 0.50)"> <strong>Int64</strong></td><td style=""> Réel</td><td style=""> Réel</td><td> <span style="color:#202020">Erreur</span></td><td> Int64</td><td> Int64</td><td> <span style="color:#202020">Erreur</span></td><td> <span style="color:#202020">Erreur</span></td><td> <span style="color:#202020">Erreur</span></td></tr><tr><td style="color: #FFFFFF;background-color: rgba(0, 159, 97, 0.50)"> <strong>Ptr</strong></td><td style=""> <span style="color:#202020">Erreur</span></td><td style=""> <span style="color:#202020">Erreur</span></td><td> <span style="color:#202020">Erreur</span></td><td> <span style="color:#202020">Erreur</span></td><td> <span style="color:#202020">Erreur</span></td><td> <span style="color:#202020">Erreur</span></td><td> <span style="color:#202020">Erreur</span></td><td> <span style="color:#202020">Erreur</span></td></tr><tr><td style="color: #FFFFFF;background-color: rgba(0, 159, 97, 0.50)"> <strong>indéfini</strong></td><td style=""> <span style="color:#202020">Erreur</span></td><td style=""> <span style="color:#202020">Erreur</span></td><td> <span style="color:#202020">Erreur</span></td><td> <span style="color:#202020">Erreur</span></td><td> <span style="color:#202020">Erreur</span></td><td> <span style="color:#202020">Erreur</span></td><td> <span style="color:#202020">Erreur</span></td><td> <span style="color:#202020">Erreur</span></td></tr><tr><td style="color: #FFFFFF;background-color: rgba(0, 159, 97, 0.50)"> <strong>Déployer</strong></td><td style=""> <span style="color:#202020">Erreur</span></td><td style=""> <span style="color:#202020">Erreur</span></td><td> <span style="color:#202020">Erreur</span></td><td> <span style="color:#202020">Erreur</span></td><td> <span style="color:#202020">Erreur</span></td><td> <span style="color:#202020">Erreur</span></td><td> <span style="color:#202020">Erreur</span></td><td> <span style="color:#202020">Erreur</span></td></tr></tbody></table><p></p><table><tbody><tr><td style="color: #FFFFFF"><span class="inline">Mod (%)</span></td><td style="color: #FFFFFF;background-color: rgba(0, 159, 97, 0.50)"> <strong>Réel</strong></td><td style="color: #FFFFFF;background-color: rgba(0, 159, 97, 0.50)"> <strong>Booléen</strong></td><td style="color: #FFFFFF;background-color: rgba(0, 159, 97, 0.50)"> <strong>Chaîne de caractères</strong></td><td style="color: #FFFFFF;background-color: rgba(0, 159, 97, 0.50)"> <strong>Int32</strong></td><td style="color: #FFFFFF;background-color: rgba(0, 159, 97, 0.50)"> <strong>Int64</strong></td><td style="color: #FFFFFF;background-color: rgba(0, 159, 97, 0.50)"> <strong>Ptr</strong></td><td style="color: #FFFFFF;background-color: rgba(0, 159, 97, 0.50)"> <strong>indéfini</strong></td><td style="background-color: rgba(0, 159, 97, 0.50)"> <strong>Déployer</strong></td></tr><tr><td style="color: #FFFFFF;background-color: rgba(0, 159, 97, 0.50)"> <strong>Réel</strong></td><td> Réel</td><td> Réel</td><td> <span style="color:#202020">Erreur</span></td><td> Réel</td><td> Réel</td><td> <span style="color:#202020">Erreur</span></td><td> <span style="color:#202020">Erreur</span></td><td> <span style="color:#202020">Erreur</span></td></tr><tr><td style="color: #FFFFFF;background-color: rgba(0, 159, 97, 0.50)"> <strong>Booléen</strong></td><td> Réel</td><td> Réel</td><td> <span style="color:#202020">Erreur</span></td><td> Réel</td><td> Réel</td><td> <span style="color:#202020">Erreur</span></td><td> <span style="color:#202020">Erreur</span></td><td> <span style="color:#202020">Erreur</span></td></tr><tr><td style="color: #FFFFFF;background-color: rgba(0, 159, 97, 0.50)"> <strong>Chaîne de caractères</strong></td><td> <span style="color:#202020">Erreur</span></td><td> <span style="color:#202020">Erreur</span></td><td> <span style="color:#202020">Erreur</span></td><td> <span style="color:#202020">Erreur</span></td><td> <span style="color:#202020">Erreur</span></td><td> <span style="color:#202020">Erreur</span></td><td> <span style="color:#202020">Erreur</span></td><td> <span style="color:#202020">Erreur</span></td></tr><tr><td style="color: #FFFFFF;background-color: rgba(0, 159, 97, 0.50)"> <strong>Int32</strong></td><td> Réel</td><td> Réel</td><td> <span style="color:#202020">Erreur</span></td><td> Int32</td><td> Int64</td><td> <span style="color:#202020">Erreur</span></td><td> <span style="color:#202020">Erreur</span></td><td> <span style="color:#202020">Erreur</span></td></tr><tr><td style="color: #FFFFFF;background-color: rgba(0, 159, 97, 0.50)"> <strong>Int64</strong></td><td> Réel</td><td> Réel</td><td> <span style="color:#202020">Erreur</span></td><td> Int64</td><td> Int64</td><td> <span style="color:#202020">Erreur</span></td><td> <span style="color:#202020">Erreur</span></td><td> <span style="color:#202020">Erreur</span></td></tr><tr><td style="color: #FFFFFF;background-color: rgba(0, 159, 97, 0.50)"> <strong>Ptr</strong></td><td> <span style="color:#202020">Erreur</span></td><td> <span style="color:#202020">Erreur</span></td><td> <span style="color:#202020">Erreur</span></td><td> <span style="color:#202020">Erreur</span></td><td> <span style="color:#202020">Erreur</span></td><td> <span style="color:#202020">Erreur</span></td><td> <span style="color:#202020">Erreur</span></td><td> <span style="color:#202020">Erreur</span></td></tr><tr><td style="color: #FFFFFF;background-color: rgba(0, 159, 97, 0.50)"> <strong>indéfini</strong></td><td> <span style="color:#202020">Erreur</span></td><td> <span style="color:#202020">Erreur</span></td><td> <span style="color:#202020">Erreur</span></td><td> <span style="color:#202020">Erreur</span></td><td> <span style="color:#202020">Erreur</span></td><td> <span style="color:#202020">Erreur</span></td><td> <span style="color:#202020">Erreur</span></td><td> <span style="color:#202020">Erreur</span></td></tr><tr><td style="color: #FFFFFF;background-color: rgba(0, 159, 97, 0.50)"> <strong>Déployer</strong></td><td> <span style="color:#202020">Erreur</span></td><td> <span style="color:#202020">Erreur</span></td><td> <span style="color:#202020">Erreur</span></td><td> <span style="color:#202020">Erreur</span></td><td> <span style="color:#202020">Erreur</span></td><td> <span style="color:#202020">Erreur</span></td><td> <span style="color:#202020">Erreur</span></td><td> <span style="color:#202020">Erreur</span> </td></tr></tbody></table><p></p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> Retour: <a href="Additional_Information.htm">Informations complémentaires</a></div><div style="float:right"> Suivant: <a href="Vectors.htm">Vecteurs</a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
+<body>
+  <!--<div class="body-scroll" style="top: 150px;">-->
+  <h1>Tableaux de type</h1>
+  <p>Cette page présente les différents résultats que vous pouvez obtenir en utilisant l'arithmétique sur les différents <a href="../GameMaker_Language/GML_Overview/Data_Types.htm">types de données</a> disponibles. Les tableaux suivent tous le même format, les colonnes représentant le côté gauche d'une opération arithmétique et les lignes le côté droit.
+    les colonnes représentant le côté <em>gauche</em> d'une opération arithmétique, et les lignes représentant le côté <em>droit</em>, par ex :</p>
+  <p class="code">&lt;LHS&gt; + &lt;RHS&gt; = &lt;résultat&gt;</p>
+  <p> </p>
+  <table>
+    <tbody>
+      <tr>
+        <td style="color: #FFFFFF"><span class="inline">Add (+)</span></td>
+        <td style="color: #FFFFFF;background-color: rgba(0, 159, 97, 0.50)"><strong>Real</strong></td>
+        <td style="color: #FFFFFF;background-color: rgba(0, 159, 97, 0.50)"><strong>Bool</strong></td>
+        <td style="color: #FFFFFF;background-color: rgba(0, 159, 97, 0.50)"><strong>Chaîne de caractères</strong></td>
+        <td style="color: #FFFFFF;background-color: rgba(0, 159, 97, 0.50)"><strong>Int32</strong></td>
+        <td style="color: #FFFFFF;background-color: rgba(0, 159, 97, 0.50)"><strong>Int64</strong></td>
+        <td style="color: #FFFFFF;background-color: rgba(0, 159, 97, 0.50)"><strong>Ptr</strong></td>
+        <td style="color: #FFFFFF;background-color: rgba(0, 159, 97, 0.50)"><strong>indéfini</strong></td>
+        <td style="color: #FFFFFF;background-color: rgba(0, 159, 97, 0.50)"><strong>Array</strong></td>
+      </tr>
+      <tr>
+        <td style="color: #FFFFFF;background-color: rgba(0, 159, 97, 0.50)"><strong>Real</strong></td>
+        <td>Real</td>
+        <td>Real</td>
+        <td><span style="color:#202020;">Erreur </span></td>
+        <td>Real</td>
+        <td>Real</td>
+        <td><span style="color:#202020">Erreur </span></td>
+        <td><span style="color:#202020">Erreur </span></td>
+        <td><span style="color:#202020">Erreur </span></td>
+      </tr>
+      <tr>
+        <td style="color: #FFFFFF;background-color: rgba(0, 159, 97, 0.50)"><strong>Bool</strong></td>
+        <td>Real</td>
+        <td>Real</td>
+        <td><span style="color:#202020">Erreur </span></td>
+        <td>Real</td>
+        <td>Real</td>
+        <td><span style="color:#202020">Erreur </span></td>
+        <td><span style="color:#202020">Erreur </span></td>
+        <td><span style="color:#202020">Erreur </span></td>
+      </tr>
+      <tr>
+        <td style="color: #FFFFFF;background-color: rgba(0, 159, 97, 0.50)"><strong>Chaîne de caractères</strong></td>
+        <td>Chaîne de caractères</td>
+        <td>Chaîne de caractères</td>
+        <td>Chaîne de caractères</td>
+        <td>Chaîne de caractères</td>
+        <td>Chaîne de caractères</td>
+        <td><span style="color:#202020">Erreur </span></td>
+        <td><span style="color:#202020">Erreur </span></td>
+        <td><span style="color:#202020">Erreur </span></td>
+      </tr>
+      <tr>
+        <td style="color: #FFFFFF;background-color: rgba(0, 159, 97, 0.50)"><strong>Int32</strong></td>
+        <td>Real</td>
+        <td>Real</td>
+        <td><span style="color:#202020">Erreur </span></td>
+        <td>Int32</td>
+        <td>Int64</td>
+        <td><span style="color:#202020">Erreur </span></td>
+        <td><span style="color:#202020">Erreur </span></td>
+        <td><span style="color:#202020">Erreur </span></td>
+      </tr>
+      <tr>
+        <td style="color: #FFFFFF;background-color: rgba(0, 159, 97, 0.50)"><strong>Int64</strong></td>
+        <td>Real</td>
+        <td>Real</td>
+        <td><span style="color:#202020">Erreur </span></td>
+        <td>Int64</td>
+        <td>Int64</td>
+        <td><span style="color:#202020">Erreur </span></td>
+        <td><span style="color:#202020">Erreur </span></td>
+        <td><span style="color:#202020">Erreur </span></td>
+      </tr>
+      <tr>
+        <td style="color: #FFFFFF;background-color: rgba(0, 159, 97, 0.50)"><strong>Ptr</strong></td>
+        <td><span style="color:#202020">Erreur </span></td>
+        <td><span style="color:#202020">Erreur </span></td>
+        <td><span style="color:#202020">Erreur </span></td>
+        <td><span style="color:#202020">Erreur </span></td>
+        <td><span style="color:#202020">Erreur </span></td>
+        <td><span style="color:#202020">Erreur </span></td>
+        <td><span style="color:#202020">Erreur </span></td>
+        <td><span style="color:#202020">Erreur </span></td>
+      </tr>
+      <tr>
+        <td style="color: #FFFFFF;background-color: rgba(0, 159, 97, 0.50)"><strong>indéfini</strong></td>
+        <td><span style="color:#202020">Erreur </span></td>
+        <td><span style="color:#202020">Erreur </span></td>
+        <td><span style="color:#202020">Erreur </span></td>
+        <td><span style="color:#202020">Erreur </span></td>
+        <td><span style="color:#202020">Erreur </span></td>
+        <td><span style="color:#202020">Erreur </span></td>
+        <td><span style="color:#202020">Erreur </span></td>
+        <td><span style="color:#202020">Erreur </span></td>
+      </tr>
+      <tr>
+        <td style="color: #FFFFFF;background-color: rgba(0, 159, 97, 0.50)"><strong>Array</strong></td>
+        <td><span style="color:#202020">Erreur </span></td>
+        <td><span style="color:#202020">Erreur </span></td>
+        <td><span style="color:#202020">Erreur </span></td>
+        <td><span style="color:#202020">Erreur </span></td>
+        <td><span style="color:#202020">Erreur </span></td>
+        <td><span style="color:#202020">Erreur </span></td>
+        <td><span style="color:#202020">Erreur </span></td>
+        <td><span style="color:#202020">Erreur </span></td>
+      </tr>
+    </tbody>
+  </table>
+  <p> </p>
+  <table>
+    <tbody>
+      <tr>
+        <td style="color: #FFFFFF"><span class="inline">Subtract (-)</span></td>
+        <td style="color: #FFFFFF;background-color: rgba(0, 159, 97, 0.50)"><strong>Real</strong></td>
+        <td style="color: #FFFFFF;background-color: rgba(0, 159, 97, 0.50)"><strong>Bool</strong></td>
+        <td style="color: #FFFFFF;background-color: rgba(0, 159, 97, 0.50)"><strong>Chaîne de caractères</strong></td>
+        <td style="color: #FFFFFF;background-color: rgba(0, 159, 97, 0.50)"><strong>Int32</strong></td>
+        <td style="color: #FFFFFF;background-color: rgba(0, 159, 97, 0.50)"><strong>Int64</strong></td>
+        <td style="color: #FFFFFF;background-color: rgba(0, 159, 97, 0.50)"><strong>Ptr</strong></td>
+        <td style="color: #FFFFFF;background-color: rgba(0, 159, 97, 0.50)"><strong>indéfini</strong></td>
+        <td style="color: #FFFFFF;background-color: rgba(0, 159, 97, 0.50)"><strong>Array</strong></td>
+      </tr>
+      <tr>
+        <td style="color: #FFFFFF;background-color: rgba(0, 159, 97, 0.50)"><strong>Real</strong></td>
+        <td>Real</td>
+        <td>Real</td>
+        <td><span style="color:#202020">Erreur </span></td>
+        <td>Real</td>
+        <td>Real</td>
+        <td><span style="color:#202020">Erreur </span></td>
+        <td><span style="color:#202020">Erreur </span></td>
+        <td><span style="color:#202020">Erreur </span></td>
+      </tr>
+      <tr>
+        <td style="color: #FFFFFF;background-color: rgba(0, 159, 97, 0.50)"><strong>Bool</strong></td>
+        <td>Real</td>
+        <td>Real</td>
+        <td><span style="color:#202020">Erreur </span></td>
+        <td>Real</td>
+        <td>Real</td>
+        <td><span style="color:#202020">Erreur </span></td>
+        <td><span style="color:#202020">Erreur </span></td>
+        <td><span style="color:#202020">Erreur </span></td>
+      </tr>
+      <tr>
+        <td style="color: #FFFFFF;background-color: rgba(0, 159, 97, 0.50)"><strong>Chaîne de caractères</strong></td>
+        <td><span style="color:#202020">Erreur </span></td>
+        <td><span style="color:#202020">Erreur </span></td>
+        <td><span style="color:#202020">Erreur </span></td>
+        <td><span style="color:#202020">Erreur </span></td>
+        <td><span style="color:#202020">Erreur </span></td>
+        <td><span style="color:#202020">Erreur </span></td>
+        <td><span style="color:#202020">Erreur </span></td>
+        <td><span style="color:#202020">Erreur </span></td>
+      </tr>
+      <tr>
+        <td style="color: #FFFFFF;background-color: rgba(0, 159, 97, 0.50)"><strong>Int32</strong></td>
+        <td>Real</td>
+        <td>Real</td>
+        <td><span style="color:#202020">Erreur </span></td>
+        <td>Int32</td>
+        <td>Int64</td>
+        <td><span style="color:#202020">Erreur </span></td>
+        <td><span style="color:#202020">Erreur </span></td>
+        <td><span style="color:#202020">Erreur </span></td>
+      </tr>
+      <tr>
+        <td style="color: #FFFFFF;background-color: rgba(0, 159, 97, 0.50)"><strong>Int64</strong></td>
+        <td>Real</td>
+        <td>Real</td>
+        <td><span style="color:#202020">Erreur </span></td>
+        <td>Int64</td>
+        <td>Int64</td>
+        <td><span style="color:#202020">Erreur </span></td>
+        <td><span style="color:#202020">Erreur </span></td>
+        <td><span style="color:#202020">Erreur </span></td>
+      </tr>
+      <tr>
+        <td style="color: #FFFFFF;background-color: rgba(0, 159, 97, 0.50)"><strong>Ptr</strong></td>
+        <td><span style="color:#202020">Erreur </span></td>
+        <td><span style="color:#202020">Erreur </span></td>
+        <td><span style="color:#202020">Erreur </span></td>
+        <td><span style="color:#202020">Erreur </span></td>
+        <td><span style="color:#202020">Erreur </span></td>
+        <td><span style="color:#202020">Erreur </span></td>
+        <td><span style="color:#202020">Erreur </span></td>
+        <td><span style="color:#202020">Erreur </span></td>
+      </tr>
+      <tr>
+        <td style="color: #FFFFFF;background-color: rgba(0, 159, 97, 0.50)"><strong>indéfini</strong></td>
+        <td><span style="color:#202020">Erreur </span></td>
+        <td><span style="color:#202020">Erreur </span></td>
+        <td><span style="color:#202020">Erreur </span></td>
+        <td><span style="color:#202020">Erreur </span></td>
+        <td><span style="color:#202020">Erreur </span></td>
+        <td><span style="color:#202020">Erreur </span></td>
+        <td><span style="color:#202020">Erreur </span></td>
+        <td><span style="color:#202020">Erreur </span></td>
+      </tr>
+      <tr>
+        <td style="color: #FFFFFF;background-color: rgba(0, 159, 97, 0.50)"><strong>Array</strong></td>
+        <td><span style="color:#202020">Erreur </span></td>
+        <td><span style="color:#202020">Erreur </span></td>
+        <td><span style="color:#202020">Erreur </span></td>
+        <td><span style="color:#202020">Erreur </span></td>
+        <td><span style="color:#202020">Erreur </span></td>
+        <td><span style="color:#202020">Erreur </span></td>
+        <td><span style="color:#202020">Erreur </span></td>
+        <td><span style="color:#202020">Erreur </span></td>
+      </tr>
+    </tbody>
+  </table>
+  <p> </p>
+  <table>
+    <tbody>
+      <tr>
+        <td style="color: #FFFFFF"><span class="inline">Multiply (*)</span></td>
+        <td style="color: #FFFFFF;background-color: rgba(0, 159, 97, 0.50)"><strong>Real</strong></td>
+        <td style="color: #FFFFFF;background-color: rgba(0, 159, 97, 0.50)"><strong>Bool</strong></td>
+        <td style="color: #FFFFFF;background-color: rgba(0, 159, 97, 0.50)"><strong>Chaîne de caractères</strong></td>
+        <td style="color: #FFFFFF;background-color: rgba(0, 159, 97, 0.50)"><strong>Int32</strong></td>
+        <td style="color: #FFFFFF;background-color: rgba(0, 159, 97, 0.50)"><strong>Int64</strong></td>
+        <td style="color: #FFFFFF;background-color: rgba(0, 159, 97, 0.50)"><strong>Ptr</strong></td>
+        <td style="color: #FFFFFF;background-color: rgba(0, 159, 97, 0.50)"><strong>indéfini</strong></td>
+        <td style="color: #FFFFFF;background-color: rgba(0, 159, 97, 0.50)"><strong>Array</strong></td>
+      </tr>
+      <tr>
+        <td style="color: #FFFFFF;background-color: rgba(0, 159, 97, 0.50)"><strong>Real</strong></td>
+        <td>Real</td>
+        <td>Real</td>
+        <td><span style="color:#202020">Erreur </span></td>
+        <td>Real</td>
+        <td>Real</td>
+        <td><span style="color:#202020">Erreur </span></td>
+        <td><span style="color:#202020">Erreur </span></td>
+        <td><span style="color:#202020">Erreur </span></td>
+      </tr>
+      <tr>
+        <td style="color: #FFFFFF;background-color: rgba(0, 159, 97, 0.50)"><strong>Bool</strong></td>
+        <td>Real</td>
+        <td>Real</td>
+        <td><span style="color:#202020">Erreur </span></td>
+        <td>Real</td>
+        <td>Real</td>
+        <td><span style="color:#202020">Erreur </span></td>
+        <td><span style="color:#202020">Erreur </span></td>
+        <td><span style="color:#202020">Erreur </span></td>
+      </tr>
+      <tr>
+        <td style="color: #FFFFFF;background-color: rgba(0, 159, 97, 0.50)"><strong>Chaîne de caractères</strong></td>
+        <td>Chaîne de caractères</td>
+        <td><span style="color:#202020">Erreur </span></td>
+        <td><span style="color:#202020">Erreur </span></td>
+        <td>Chaîne de caractères</td>
+        <td><span style="color:#202020">Erreur </span></td>
+        <td><span style="color:#202020">Erreur </span></td>
+        <td><span style="color:#202020">Erreur </span></td>
+        <td><span style="color:#202020">Erreur </span></td>
+      </tr>
+      <tr>
+        <td style="color: #FFFFFF;background-color: rgba(0, 159, 97, 0.50)"><strong>Int32</strong></td>
+        <td>Real</td>
+        <td>Real</td>
+        <td><span style="color:#202020">Erreur </span></td>
+        <td>Int32</td>
+        <td>Int64</td>
+        <td><span style="color:#202020">Erreur </span></td>
+        <td><span style="color:#202020">Erreur </span></td>
+        <td><span style="color:#202020">Erreur </span></td>
+      </tr>
+      <tr>
+        <td style="color: #FFFFFF;background-color: rgba(0, 159, 97, 0.50)"><strong>Int64</strong></td>
+        <td>Real</td>
+        <td>Real</td>
+        <td><span style="color:#202020">Erreur </span></td>
+        <td>Int64</td>
+        <td>Int64</td>
+        <td><span style="color:#202020">Erreur </span></td>
+        <td><span style="color:#202020">Erreur </span></td>
+        <td><span style="color:#202020">Erreur </span></td>
+      </tr>
+      <tr>
+        <td style="color: #FFFFFF;background-color: rgba(0, 159, 97, 0.50)"><strong>Ptr</strong></td>
+        <td><span style="color:#202020">Erreur </span></td>
+        <td><span style="color:#202020">Erreur </span></td>
+        <td><span style="color:#202020">Erreur </span></td>
+        <td><span style="color:#202020">Erreur </span></td>
+        <td><span style="color:#202020">Erreur </span></td>
+        <td><span style="color:#202020">Erreur </span></td>
+        <td><span style="color:#202020">Erreur </span></td>
+        <td><span style="color:#202020">Erreur </span></td>
+      </tr>
+      <tr>
+        <td style="color: #FFFFFF;background-color: rgba(0, 159, 97, 0.50)"><strong>indéfini</strong></td>
+        <td><span style="color:#202020">Erreur </span></td>
+        <td><span style="color:#202020">Erreur </span></td>
+        <td><span style="color:#202020">Erreur </span></td>
+        <td><span style="color:#202020">Erreur </span></td>
+        <td><span style="color:#202020">Erreur </span></td>
+        <td><span style="color:#202020">Erreur </span></td>
+        <td><span style="color:#202020">Erreur </span></td>
+        <td><span style="color:#202020">Erreur </span></td>
+      </tr>
+      <tr>
+        <td style="color: #FFFFFF;background-color: rgba(0, 159, 97, 0.50)"><strong>Array</strong></td>
+        <td><span style="color:#202020">Erreur </span></td>
+        <td><span style="color:#202020">Erreur </span></td>
+        <td><span style="color:#202020">Erreur </span></td>
+        <td><span style="color:#202020">Erreur </span></td>
+        <td><span style="color:#202020">Erreur </span></td>
+        <td><span style="color:#202020">Erreur </span></td>
+        <td><span style="color:#202020">Erreur </span></td>
+        <td><span style="color:#202020">Erreur </span></td>
+      </tr>
+    </tbody>
+  </table>
+  <p> </p>
+  <table>
+    <tbody>
+      <tr>
+        <td style="color: #FFFFFF"><span class="inline">Divide (/)</span></td>
+        <td style="color: #FFFFFF;background-color: rgba(0, 159, 97, 0.50)"><strong>Real</strong></td>
+        <td style="color: #FFFFFF;background-color: rgba(0, 159, 97, 0.50)"><strong>Bool</strong></td>
+        <td style="color: #FFFFFF;background-color: rgba(0, 159, 97, 0.50)"><strong>Chaîne de caractères</strong></td>
+        <td style="color: #FFFFFF;background-color: rgba(0, 159, 97, 0.50)"><strong>Int32</strong></td>
+        <td style="color: #FFFFFF;background-color: rgba(0, 159, 97, 0.50)"><strong>Int64</strong></td>
+        <td style="color: #FFFFFF;background-color: rgba(0, 159, 97, 0.50)"><strong>Ptr</strong></td>
+        <td style="color: #FFFFFF;background-color: rgba(0, 159, 97, 0.50)"><strong>indéfini</strong></td>
+        <td style="color: #FFFFFF;background-color: rgba(0, 159, 97, 0.50)"><strong>Array</strong></td>
+      </tr>
+      <tr>
+        <td style="color: #FFFFFF;background-color: rgba(0, 159, 97, 0.50)"><strong>Real</strong></td>
+        <td>Real</td>
+        <td>Real</td>
+        <td><span style="color:#202020">Erreur </span></td>
+        <td>Real</td>
+        <td>Real</td>
+        <td><span style="color:#202020">Erreur </span></td>
+        <td><span style="color:#202020">Erreur </span></td>
+        <td><span style="color:#202020">Erreur </span></td>
+      </tr>
+      <tr>
+        <td style="color: #FFFFFF;background-color: rgba(0, 159, 97, 0.50)"><strong>Bool</strong></td>
+        <td>Real</td>
+        <td>Real</td>
+        <td><span style="color:#202020">Erreur </span></td>
+        <td>Real</td>
+        <td>Real</td>
+        <td><span style="color:#202020">Erreur </span></td>
+        <td><span style="color:#202020">Erreur </span></td>
+        <td><span style="color:#202020">Erreur </span></td>
+      </tr>
+      <tr>
+        <td style="color: #FFFFFF;background-color: rgba(0, 159, 97, 0.50)"><strong>Chaîne de caractères</strong></td>
+        <td><span style="color:#202020">Erreur </span></td>
+        <td><span style="color:#202020">Erreur </span></td>
+        <td><span style="color:#202020">Erreur </span></td>
+        <td><span style="color:#202020">Erreur </span></td>
+        <td><span style="color:#202020">Erreur </span></td>
+        <td><span style="color:#202020">Erreur </span></td>
+        <td><span style="color:#202020">Erreur </span></td>
+        <td><span style="color:#202020">Erreur </span></td>
+      </tr>
+      <tr>
+        <td style="color: #FFFFFF;background-color: rgba(0, 159, 97, 0.50)"><strong>Int32</strong></td>
+        <td>Real</td>
+        <td>Real</td>
+        <td><span style="color:#202020">Erreur </span></td>
+        <td>Int32</td>
+        <td>Int64</td>
+        <td><span style="color:#202020">Erreur </span></td>
+        <td><span style="color:#202020">Erreur </span></td>
+        <td><span style="color:#202020">Erreur </span></td>
+      </tr>
+      <tr>
+        <td style="color: #FFFFFF;background-color: rgba(0, 159, 97, 0.50)"><strong>Int64</strong></td>
+        <td>Real</td>
+        <td>Real</td>
+        <td><span style="color:#202020">Erreur </span></td>
+        <td>Int64</td>
+        <td>Int64</td>
+        <td><span style="color:#202020">Erreur </span></td>
+        <td><span style="color:#202020">Erreur </span></td>
+        <td><span style="color:#202020">Erreur </span></td>
+      </tr>
+      <tr>
+        <td style="color: #FFFFFF;background-color: rgba(0, 159, 97, 0.50)"><strong>Ptr</strong></td>
+        <td><span style="color:#202020">Erreur </span></td>
+        <td><span style="color:#202020">Erreur </span></td>
+        <td><span style="color:#202020">Erreur </span></td>
+        <td><span style="color:#202020">Erreur </span></td>
+        <td><span style="color:#202020">Erreur </span></td>
+        <td><span style="color:#202020">Erreur </span></td>
+        <td><span style="color:#202020">Erreur </span></td>
+        <td><span style="color:#202020">Erreur </span></td>
+      </tr>
+      <tr>
+        <td style="color: #FFFFFF;background-color: rgba(0, 159, 97, 0.50)"><strong>indéfini</strong></td>
+        <td><span style="color:#202020">Erreur </span></td>
+        <td><span style="color:#202020">Erreur </span></td>
+        <td><span style="color:#202020">Erreur </span></td>
+        <td><span style="color:#202020">Erreur </span></td>
+        <td><span style="color:#202020">Erreur </span></td>
+        <td><span style="color:#202020">Erreur </span></td>
+        <td><span style="color:#202020">Erreur </span></td>
+        <td><span style="color:#202020">Erreur </span></td>
+      </tr>
+      <tr>
+        <td style="color: #FFFFFF;background-color: rgba(0, 159, 97, 0.50)"><strong>Array</strong></td>
+        <td><span style="color:#202020">Erreur </span></td>
+        <td><span style="color:#202020">Erreur </span></td>
+        <td><span style="color:#202020">Erreur </span></td>
+        <td><span style="color:#202020">Erreur </span></td>
+        <td><span style="color:#202020">Erreur </span></td>
+        <td><span style="color:#202020">Erreur </span></td>
+        <td><span style="color:#202020">Erreur </span></td>
+        <td><span style="color:#202020">Erreur </span></td>
+      </tr>
+    </tbody>
+  </table>
+  <p> </p>
+  <table>
+    <tbody>
+      <tr>
+        <td style="color: #FFFFFF"><span class="inline">Divide (div)</span></td>
+        <td style="color: #FFFFFF;background-color: rgba(0, 159, 97, 0.50)"><strong>Real</strong></td>
+        <td style="color: #FFFFFF;background-color: rgba(0, 159, 97, 0.50)"><strong>Bool</strong></td>
+        <td style="color: #FFFFFF;background-color: rgba(0, 159, 97, 0.50)"><strong>Chaîne de caractères</strong></td>
+        <td style="color: #FFFFFF;background-color: rgba(0, 159, 97, 0.50)"><strong>Int32</strong></td>
+        <td style="color: #FFFFFF;background-color: rgba(0, 159, 97, 0.50)"><strong>Int64</strong></td>
+        <td style="color: #FFFFFF;background-color: rgba(0, 159, 97, 0.50)"><strong>Ptr</strong></td>
+        <td style="color: #FFFFFF;background-color: rgba(0, 159, 97, 0.50)"><strong>indéfini</strong></td>
+        <td style="color: #FFFFFF;background-color: rgba(0, 159, 97, 0.50)"><strong>Array</strong></td>
+      </tr>
+      <tr>
+        <td style="color: #FFFFFF;background-color: rgba(0, 159, 97, 0.50)"><strong>Real</strong></td>
+        <td style="">Real</td>
+        <td style="">Real</td>
+        <td><span style="color:#202020">Erreur </span></td>
+        <td>Real</td>
+        <td>Real</td>
+        <td><span style="color:#202020">Erreur </span></td>
+        <td><span style="color:#202020">Erreur </span></td>
+        <td><span style="color:#202020">Erreur </span></td>
+      </tr>
+      <tr>
+        <td style="color: #FFFFFF;background-color: rgba(0, 159, 97, 0.50)"><strong>Bool</strong></td>
+        <td style="">Real</td>
+        <td style="">Real</td>
+        <td><span style="color:#202020">Erreur </span></td>
+        <td>Real</td>
+        <td>Real</td>
+        <td><span style="color:#202020">Erreur </span></td>
+        <td><span style="color:#202020">Erreur </span></td>
+        <td><span style="color:#202020">Erreur </span></td>
+      </tr>
+      <tr>
+        <td style="color: #FFFFFF;background-color: rgba(0, 159, 97, 0.50)"><strong>Chaîne de caractères</strong></td>
+        <td style=""><span style="color:#202020">Erreur </span></td>
+        <td style=""><span style="color:#202020">Erreur </span></td>
+        <td><span style="color:#202020">Erreur </span></td>
+        <td><span style="color:#202020">Erreur </span></td>
+        <td><span style="color:#202020">Erreur </span></td>
+        <td><span style="color:#202020">Erreur </span></td>
+        <td><span style="color:#202020">Erreur </span></td>
+        <td><span style="color:#202020">Erreur </span></td>
+      </tr>
+      <tr>
+        <td style="color: #FFFFFF;background-color: rgba(0, 159, 97, 0.50)"><strong>Int32</strong></td>
+        <td style="">Real</td>
+        <td style="">Real</td>
+        <td><span style="color:#202020">Erreur </span></td>
+        <td>Int32</td>
+        <td>Int64</td>
+        <td><span style="color:#202020">Erreur </span></td>
+        <td><span style="color:#202020">Erreur </span></td>
+        <td><span style="color:#202020">Erreur </span></td>
+      </tr>
+      <tr>
+        <td style="color: #FFFFFF;background-color: rgba(0, 159, 97, 0.50)"><strong>Int64</strong></td>
+        <td style="">Real</td>
+        <td style="">Real</td>
+        <td><span style="color:#202020">Erreur </span></td>
+        <td>Int64</td>
+        <td>Int64</td>
+        <td><span style="color:#202020">Erreur </span></td>
+        <td><span style="color:#202020">Erreur </span></td>
+        <td><span style="color:#202020">Erreur </span></td>
+      </tr>
+      <tr>
+        <td style="color: #FFFFFF;background-color: rgba(0, 159, 97, 0.50)"><strong>Ptr</strong></td>
+        <td style=""><span style="color:#202020">Erreur </span></td>
+        <td style=""><span style="color:#202020">Erreur </span></td>
+        <td><span style="color:#202020">Erreur </span></td>
+        <td><span style="color:#202020">Erreur </span></td>
+        <td><span style="color:#202020">Erreur </span></td>
+        <td><span style="color:#202020">Erreur </span></td>
+        <td><span style="color:#202020">Erreur </span></td>
+        <td><span style="color:#202020">Erreur </span></td>
+      </tr>
+      <tr>
+        <td style="color: #FFFFFF;background-color: rgba(0, 159, 97, 0.50)"><strong>indéfini</strong></td>
+        <td style=""><span style="color:#202020">Erreur </span></td>
+        <td style=""><span style="color:#202020">Erreur </span></td>
+        <td><span style="color:#202020">Erreur </span></td>
+        <td><span style="color:#202020">Erreur </span></td>
+        <td><span style="color:#202020">Erreur </span></td>
+        <td><span style="color:#202020">Erreur </span></td>
+        <td><span style="color:#202020">Erreur </span></td>
+        <td><span style="color:#202020">Erreur </span></td>
+      </tr>
+      <tr>
+        <td style="color: #FFFFFF;background-color: rgba(0, 159, 97, 0.50)"><strong>Array</strong></td>
+        <td style=""><span style="color:#202020">Erreur </span></td>
+        <td style=""><span style="color:#202020">Erreur </span></td>
+        <td><span style="color:#202020">Erreur </span></td>
+        <td><span style="color:#202020">Erreur </span></td>
+        <td><span style="color:#202020">Erreur </span></td>
+        <td><span style="color:#202020">Erreur </span></td>
+        <td><span style="color:#202020">Erreur </span></td>
+        <td><span style="color:#202020">Erreur </span></td>
+      </tr>
+    </tbody>
+  </table>
+  <p> </p>
+  <table>
+    <tbody>
+      <tr>
+        <td style="color: #FFFFFF"><span class="inline">Mod (%)</span></td>
+        <td style="color: #FFFFFF;background-color: rgba(0, 159, 97, 0.50)"><strong>Real</strong></td>
+        <td style="color: #FFFFFF;background-color: rgba(0, 159, 97, 0.50)"><strong>Bool</strong></td>
+        <td style="color: #FFFFFF;background-color: rgba(0, 159, 97, 0.50)"><strong>Chaîne de caractères</strong></td>
+        <td style="color: #FFFFFF;background-color: rgba(0, 159, 97, 0.50)"><strong>Int32</strong></td>
+        <td style="color: #FFFFFF;background-color: rgba(0, 159, 97, 0.50)"><strong>Int64</strong></td>
+        <td style="color: #FFFFFF;background-color: rgba(0, 159, 97, 0.50)"><strong>Ptr</strong></td>
+        <td style="color: #FFFFFF;background-color: rgba(0, 159, 97, 0.50)"><strong>indéfini</strong></td>
+        <td style="background-color: rgba(0, 159, 97, 0.50)"><strong>Array</strong></td>
+      </tr>
+      <tr>
+        <td style="color: #FFFFFF;background-color: rgba(0, 159, 97, 0.50)"><strong>Real</strong></td>
+        <td>Real</td>
+        <td>Real</td>
+        <td><span style="color:#202020">Erreur </span></td>
+        <td>Real</td>
+        <td>Real</td>
+        <td><span style="color:#202020">Erreur </span></td>
+        <td><span style="color:#202020">Erreur </span></td>
+        <td><span style="color:#202020">Erreur </span></td>
+      </tr>
+      <tr>
+        <td style="color: #FFFFFF;background-color: rgba(0, 159, 97, 0.50)"><strong>Bool</strong></td>
+        <td>Real</td>
+        <td>Real</td>
+        <td><span style="color:#202020">Erreur </span></td>
+        <td>Real</td>
+        <td>Real</td>
+        <td><span style="color:#202020">Erreur </span></td>
+        <td><span style="color:#202020">Erreur </span></td>
+        <td><span style="color:#202020">Erreur </span></td>
+      </tr>
+      <tr>
+        <td style="color: #FFFFFF;background-color: rgba(0, 159, 97, 0.50)"><strong>Chaîne de caractères</strong></td>
+        <td><span style="color:#202020">Erreur </span></td>
+        <td><span style="color:#202020">Erreur </span></td>
+        <td><span style="color:#202020">Erreur </span></td>
+        <td><span style="color:#202020">Erreur </span></td>
+        <td><span style="color:#202020">Erreur </span></td>
+        <td><span style="color:#202020">Erreur </span></td>
+        <td><span style="color:#202020">Erreur </span></td>
+        <td><span style="color:#202020">Erreur </span></td>
+      </tr>
+      <tr>
+        <td style="color: #FFFFFF;background-color: rgba(0, 159, 97, 0.50)"><strong>Int32</strong></td>
+        <td>Real</td>
+        <td>Real</td>
+        <td><span style="color:#202020">Erreur </span></td>
+        <td>Int32</td>
+        <td>Int64</td>
+        <td><span style="color:#202020">Erreur </span></td>
+        <td><span style="color:#202020">Erreur </span></td>
+        <td><span style="color:#202020">Erreur </span></td>
+      </tr>
+      <tr>
+        <td style="color: #FFFFFF;background-color: rgba(0, 159, 97, 0.50)"><strong>Int64</strong></td>
+        <td>Real</td>
+        <td>Real</td>
+        <td><span style="color:#202020">Erreur </span></td>
+        <td>Int64</td>
+        <td>Int64</td>
+        <td><span style="color:#202020">Erreur </span></td>
+        <td><span style="color:#202020">Erreur </span></td>
+        <td><span style="color:#202020">Erreur </span></td>
+      </tr>
+      <tr>
+        <td style="color: #FFFFFF;background-color: rgba(0, 159, 97, 0.50)"><strong>Ptr</strong></td>
+        <td><span style="color:#202020">Erreur </span></td>
+        <td><span style="color:#202020">Erreur </span></td>
+        <td><span style="color:#202020">Erreur </span></td>
+        <td><span style="color:#202020">Erreur </span></td>
+        <td><span style="color:#202020">Erreur </span></td>
+        <td><span style="color:#202020">Erreur </span></td>
+        <td><span style="color:#202020">Erreur </span></td>
+        <td><span style="color:#202020">Erreur </span></td>
+      </tr>
+      <tr>
+        <td style="color: #FFFFFF;background-color: rgba(0, 159, 97, 0.50)"><strong>indéfini</strong></td>
+        <td><span style="color:#202020">Erreur </span></td>
+        <td><span style="color:#202020">Erreur </span></td>
+        <td><span style="color:#202020">Erreur </span></td>
+        <td><span style="color:#202020">Erreur </span></td>
+        <td><span style="color:#202020">Erreur </span></td>
+        <td><span style="color:#202020">Erreur </span></td>
+        <td><span style="color:#202020">Erreur </span></td>
+        <td><span style="color:#202020">Erreur </span></td>
+      </tr>
+      <tr>
+        <td style="color: #FFFFFF;background-color: rgba(0, 159, 97, 0.50)"><strong>Array</strong></td>
+        <td><span style="color:#202020">Erreur </span></td>
+        <td><span style="color:#202020">Erreur </span></td>
+        <td><span style="color:#202020">Erreur </span></td>
+        <td><span style="color:#202020">Erreur </span></td>
+        <td><span style="color:#202020">Erreur </span></td>
+        <td><span style="color:#202020">Erreur </span></td>
+        <td><span style="color:#202020">Erreur </span></td>
+        <td><span style="color:#202020">Erreur </span></td>
+      </tr>
+    </tbody>
+  </table>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <div class="footer">
+    <div class="buttons">
+      <div class="clear">
+        <div style="float:left">Retour : <a href="Additional_Information.htm">Informations complémentaires</a></div>
+        <div style="float:right">Suivant : <a href="Vectors.htm">Vecteurs</a></div>
+      </div>
+    </div>
+    <h5><span data-keyref="Copyright Notice">Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
   </div>
   <!-- KEYWORDS
 Type Tables

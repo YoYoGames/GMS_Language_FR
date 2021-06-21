@@ -2,19 +2,75 @@
 
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml"><head>
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <title>ds_grid_value_exists</title>
-  <meta name="generator" content="Adobe RoboHelp 2019"/>
-  <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css"/>
-  <meta name="rh-authors" content="Mark Alexander"/>
-  <meta name="topic-comment" content="Page de référence pour ds_grid_value_exists"/>
-  <meta name="rh-index-keywords" content="ds_grid_value_exists"/>
-  <meta name="search-keywords" content="ds_grid_value_exists"/>
+  <meta name="generator" content="Adobe RoboHelp 2019" />
+  <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
+  <meta name="rh-authors" content="Mark Alexander" />
+  <meta name="topic-comment" content="Reference page for ds_grid_value_exists" />
+  <meta name="rh-index-keywords" content="ds_grid_value_exists" />
+  <meta name="search-keywords" content="ds_grid_value_exists" />
 </head>
 
-<body><!--<div class="body-scroll" style="top: 150px;">--><h1>ds_grid_value_exists</h1><p> Avec cette fonction, vous pouvez vérifier si une valeur spécifique (réelle ou chaîne) est présente dans une zone rectangulaire d&#39;une grille DS donnée. S&#39;il est présent, la fonction retournera <tt>true</tt> sinon il reviendra <tt>false</tt>.</p><p></p><h4> Syntaxe:</h4><p class="code">ds_grid_value_exists(index, x1, y1, x2, y2, val);</p><table><tbody><tr><th> Argument</th><th> Description</th></tr><tr><td> <span class="notranslate">index</span></td><td> L&#39;index de la grille.</td></tr><tr><td> <span class="notranslate">x1</span></td><td> La position x de la gauche de la région dans la grille.</td></tr><tr><td> <span class="notranslate">y1</span></td><td> La position y du haut de la région dans la grille.</td></tr><tr><td> <span class="notranslate">x2</span></td><td> La position x de la droite de la région dans la grille.</td></tr><tr><td> <span class="notranslate">y2</span></td><td> La position y du bas de la région dans la grille.</td></tr><tr><td> <span class="notranslate">val</span></td><td> La valeur à trouver.</td></tr></tbody></table><p></p><h4> Retour:</h4><p class="code">Boolean</p><p></p><h4> Exemple:</h4><p class="code">if ds_grid_value_exists(grid, 0, 1, 5, 6, val)<br/>    {
-    <br/>    xpos = ds_grid_value_x(grid, 0, 1, 5, 6, val);<br/>    ypos = ds_grid_value_y(grid, 0, 1, 5, 6, val);<br/>    }
-  </p><p> Le code ci-dessus vérifie une grille DS pour une valeur spécifique dans une région rectangulaire. s&#39;il est trouvé, il stocke alors la position x et y de la valeur dans deux variables pour une utilisation ultérieure. </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> Retour: <a href="DS_Grids.htm">DS Grids</a></div><div style="float:right"> Suivant:<a href="ds_grid_value_disk_exists.htm">ds_grid_value_disk_exists</a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
+<body>
+  <!--<div class="body-scroll" style="top: 150px;">-->
+  <h1>ds_grid_value_exists</h1>
+  <p>Avec cette fonction, vous pouvez vérifier si une valeur spécifique (réel ou chaîne de caractères) est présente dans une zone rectangulaire d'une grille DS donnée. Si la valeur est présente, la fonction renverra <tt>true</tt>, sinon elle renverra <tt>false</tt>.</p>
+  <p> </p>
+  <h4>Syntaxe :</h4>
+  <p class="code">ds_grid_value_exists(index, x1, y1, x2, y2, val) ;</p>
+  <table>
+    <tbody>
+      <tr>
+        <th>Arguments</th>
+        <th>Description</th>
+      </tr>
+      <tr>
+        <td>indice</td>
+        <td>L'index de la grille.</td>
+      </tr>
+      <tr>
+        <td>x1</td>
+        <td>La position x de la partie gauche de la région dans la grille.</td>
+      </tr>
+      <tr>
+        <td>y1</td>
+        <td>La position y du haut de la région dans la grille.</td>
+      </tr>
+      <tr>
+        <td>x2</td>
+        <td>La position x de la droite de la région dans la grille.</td>
+      </tr>
+      <tr>
+        <td>y2</td>
+        <td>La position y du bas de la région dans la grille.</td>
+      </tr>
+      <tr>
+        <td>val</td>
+        <td>La valeur à trouver.</td>
+      </tr>
+    </tbody>
+  </table>
+  <p> </p>
+  <h4>Les retours :</h4>
+  <p class="code">Booléen</p>
+  <p> </p>
+  <h4>Exemple :</h4>
+  <p class="code">if ds_grid_value_exists(grid, 0, 1, 5, 6, val)<br> {
+    <br> xpos = ds_grid_value_x(grid, 0, 1, 5, 6, val) ;<br> ypos = ds_grid_value_y(grid, 0, 1, 5, 6, val) ;<br> }
+  </p>
+  <p>Le code ci-dessus vérifie une grille DS pour une valeur spécifique dans une région rectangulaire. Si elle est trouvée, il stocke alors la position x et y de la valeur dans deux variables pour une utilisation ultérieure.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <div class="footer">
+    <div class="buttons">
+      <div class="clear">
+        <div style="float:left">Retour : <a href="DS_Grids.htm">Grilles DS</a></div>
+        <div style="float:right">Suivant : <a href="ds_grid_value_disk_exists.htm">ds_grid_value_disk_exists</a></div>
+      </div>
+    </div>
+    <h5><span data-keyref="Copyright Notice">Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
   </div>
   <!-- KEYWORDS
 ds_grid_value_exists

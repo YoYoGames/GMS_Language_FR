@@ -7,11 +7,52 @@
   <meta name="generator" content="Adobe RoboHelp 2019" />
   <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
   <meta name="rh-authors" content="Mark Alexander" />
-  <meta name="topic-comment" content="Page de référence pour xboxlive_fire_event" />
+  <meta name="topic-comment" content="Reference page for xboxlive_fire_event" />
   <meta name="rh-index-keywords" content="xboxlive_fire_event" />
   <meta name="search-keywords" content="xboxlive_fire_event" />
 </head>
-<body><!--<div class="body-scroll" style="top: 150px;">--><h1>xboxlive_read_player_leaderboard</h1><p> Cette fonction peut être utilisée pour déclencher un événement statistique. L&#39;argument &quot;event_name&quot; est le nom de l&#39;événement à déclencher tel que défini dans la console XDP de votre jeu, et les paramètres supplémentaires suivants dépendront également de ce que vous avez configuré pour la statistique. La fonction renverra 0 si l&#39;événement a été envoyé (et devrait être reçu / traité par le serveur) ou -1 s&#39;il y a eu une erreur (c&#39;est-à-dire: votre événement n&#39;a pas été configuré car le fichier manifeste d&#39;événement inclus dans le projet dit un autre numéro).</p><p></p><h4> Syntaxe:</h4><p class="code">xboxlive_fire_event(event_name, [stat_parameters]);</p><table><tbody><tr><th> Argument</th><th> Description</th></tr><tr><td> <span class="notranslate">event_name</span></td><td> Le nom de l&#39;événement à déclencher.</td></tr><tr><td> <span class="notranslate">stat_parameters</span></td><td> [FACULTATIF] Paramètres supplémentaires à ajouter à l&#39;événement.</td></tr></tbody></table><p></p><h4> Retour:</h4><p class="code">String</p><p></p><h4> Exemple:</h4><p class="code">var _user = xboxlive_get_user(0);<br/> var _uid = xboxlive_user_id_for_user(_user);<br/> result = xboxlive_fire_event(&quot;PlayerSessionStart&quot;, _uid, global.guid_str, 0, 42, 42);</p><p> Le code ci-dessus obtient des informations sur l&#39;utilisateur, puis déclenche un événement statistique avec ces données (et d&#39;autres). </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> Retour: <a href="Stats_And_Leaderboards.htm">Statistiques et classements</a></div><div style="float:right"> Suivant: <a href="xboxlive_stats_setup.htm">xboxlive_stats_setup</a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
+<body>
+  <!--<div class="body-scroll" style="top: 150px;">-->
+  <h1>xboxlive_read_player_leaderboard</h1>
+  <p>Cette fonction peut être utilisée pour déclencher un événement de statistiques. L'argument &quot;event_name&quot; est le nom de l'événement à déclencher tel que défini dans la console XDP de votre jeu, et les paramètres supplémentaires suivants dépendront également de ce que vous avez mis en place
+    pour l'événement. La fonction retournera 0 si l'événement a été envoyé (et devrait être reçu/traité par le serveur) ou -1 s'il y a eu une erreur (ie : votre événement n'a pas été configuré comme le fichier manifeste de l'événement inclus dans le projet dit un autre nombre).</p>
+  <p> </p>
+  <h4>Syntaxe :</h4>
+  <p class="code">xboxlive_fire_event(nom_de_l'événement, [paramètres_de_stat]) ;</p>
+  <table>
+    <tbody>
+      <tr>
+        <th>Arguments</th>
+        <th>Description</th>
+      </tr>
+      <tr>
+        <td>nom de l'événement</td>
+        <td>Le nom de l'événement à déclencher.</td>
+      </tr>
+      <tr>
+        <td>stat_paramètres</td>
+        <td>OPTIONNEL] Paramètres supplémentaires à ajouter à l'événement.</td>
+      </tr>
+    </tbody>
+  </table>
+  <p> </p>
+  <h4>Les retours :</h4>
+  <p class="code">Chaîne de caractères</p>
+  <p> </p>
+  <h4>Exemple :</h4>
+  <p class="code">var _user = xboxlive_get_user(0) ;<br> var _uid = xboxlive_user_id_for_user(_user) ;<br> result = xboxlive_fire_event(&quot;PlayerSessionStart&quot;, _uid, global.guid_str, 0, 42, 42) ;</p>
+  <p>Le code ci-dessus obtient certaines informations sur l'utilisateur, puis déclenche un événement d'état avec ces données (et d'autres).</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <div class="footer">
+    <div class="buttons">
+      <div class="clear">
+        <div style="float:left">Retour : <a href="Stats_And_Leaderboards.htm">Stats et classements</a></div>
+        <div style="float:right">Suivant : <a href="xboxlive_stats_setup.htm"> xboxlive_stats_setup </a></div>
+      </div>
+    </div>
+    <h5><span data-keyref="Copyright Notice">Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
   </div>
   <!-- KEYWORDS
 xboxlive_fire_event

@@ -1,20 +1,71 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>La bibliothèque de courbes d&#39;animation</title>
-  <meta name="generator" content="Adobe RoboHelp 2019" />
+  <title>La bibliothèque des courbes d'animation</title>
+  <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../assets/css/default.css" type="text/css" />
   <meta name="rh-authors" content="Gurpreet Matharoo" />
-  <meta name="topic-comment" content="Page expliquant la bibliothèque de courbes d&#39;animation" />
-  <meta name="rh-index-keywords" content="Éditeur de courbes d&#39;animation" />
-  <meta name="search-keywords" content="Courbes d&#39;animation,Courbes animées,Courbes,Bibliothèque de courbes d&#39;animation,Bibliothèque de préréglages" />
+  <meta name="topic-comment" content="Page explaining the Animation Curve Library" />
+  <meta name="rh-index-keywords" content="Animation Curve Editor" />
+  <meta name="search-keywords" content="Aniimation Curves,Anim Curves,Curves,Animation Curve Library,Preset Library" />
 </head>
-<body><!--<div class="body-scroll" style="top: 150px;">--><h1> La bibliothèque de courbes d&#39;animation</h1><p><img class="center" src="../../assets/Images/Asset_Editors/Editor_Animation_Curves_Library.png" style="cursor: nesw-resize;" /> La <strong>fenêtre Bibliothèque de courbes d&#39;animation</strong> vous permet de modifier le type de courbe de la courbe d&#39;animation et d&#39;appliquer un préréglage au canal sélectionné. Il peut être ouvert par<img class="icon" height="24" src="../../assets/Images/Icons/Icon_LMB.png" width="21" /> clic gauche sur le<img class="icon" height="20" src="../../assets/Images/Icons/Animation_Curve_Library_Button.png"
-      width="13" /> dans l&#39; <a href="../Animation_Curves.htm">éditeur de courbes d&#39;animation</a> ou la <a href="../Sequence_Properties/Using_Animation_Curves.htm"><span class="notranslate">Dope Sheet</span> séquence</a>, ou en<img class="icon" src="../../assets/Images/Icons/Icon_RMB.png" /> cliquez avec le bouton droit n&#39;importe où dans l&#39;éditeur de chaînes.</p><p> <a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down" href="#">Type de courbe</a></p><div class="droptext" data-targetname="drop-down"><p class="dropspot"> Le <strong>type de courbe</strong> contrôle le flux d&#39;un canal d&#39;un point à un autre, qui peut être défini sur l&#39;une des options suivantes:</p><ul class="colour"><li class="dropspot"> <strong>Linéaire</strong>: Cela créera une progression linéaire entre les points sur le canal</li><li class="dropspot"> <strong>Lisse</strong>: Cela utilisera l&#39; <a class="glossterm" data-glossterm="interpolation catmull-rom" href="../Animation_Curves.htm#">interpolation catmull-rom</a> pour créer une progression fluide entre les points sur le canal</li><li class="dropspot"> <strong>Bézier</strong>: Cela utilisera les mathématiques de la courbe de Bézier pour créer une progression douce entre les points sur le canal, où vous pouvez contrôler l&#39;apparence de la courbe en manipulant des «poignées» sur les points</li></ul><p class="dropspot"><img class="center" src="../../assets/Images/Asset_Editors/Editor_Animation_Curves_Types.png" style="cursor: nwse-resize;" /> Notez que la modification du type de courbe appliquera ce type à <em>tous les</em> canaux de la courbe d&#39;animation.</p></div><p> <a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down1" href="#">Préréglages de courbes</a></p><div class="droptext" data-targetname="drop-down1"><p class="dropspot"> Un <strong>C</strong> <strong>Urve Preset</strong> change la forme de votre courbe.<img class="icon" height="24" src="../../assets/Images/Icons/Icon_LMB.png" width="21" /> Un clic gauche sur un préréglage dans le menu Préréglages appliquera ce préréglage à votre canal sélectionné, et un clic sur <strong>Réinitialiser</strong> ramènera le canal à ce qu&#39;il était avant l&#39;ouverture de la fenêtre Bibliothèque de courbes d&#39;animation.</p><p class="dropspot"> <span class="dropspotnote"><strong>REMARQUE</strong>: les préréglages ne peuvent être appliqués que si le type de courbe est défini sur <strong>Bézier</strong>.</span></p><p class="dropspot"><img class="center" src="../../assets/Images/Asset_Editors/Editor_Animation_Curves_Library_Preset0.gif" /> Par défaut, un préréglage est appliqué à l&#39;ensemble du canal. Vous pouvez sélectionner une section de votre chaîne en faisant glisser avec le<img class="icon" height="24"
-        src="../../assets/Images/Icons/Icon_LMB.png" width="21" /> bouton gauche de la souris dans l&#39; <strong>éditeur de canaux</strong>, puis ouvrez la fenêtre Bibliothèque de courbes d&#39;animation via le<img class="icon" height="20" src="../../assets/Images/Icons/Animation_Curve_Library_Button.png"
-        width="13" /> bouton ou par<img class="icon" height="24" src="../../assets/Images/Icons/Icon_RMB.png" width="21" /> un clic droit, qui appliquera les préréglages à la section sélectionnée uniquement.</p><p class="dropspot"><img class="center" src="../../assets/Images/Asset_Editors/Editor_Animation_Curves_Library_Preset1_Selection.gif" /> Notez que votre canal de courbe (ou sélection dans ce canal) doit avoir une pente pour qu&#39;un préréglage ait un effet, car toute interpolation appliquée est basée sur la différence verticale entre les points de départ et de fin. Une courbe plate n&#39;a pas une telle différence entre les deux points, vous ne verrez donc aucun résultat après avoir appliqué un préréglage à une telle courbe.</p><p class="dropspot"> Vous pouvez choisir parmi deux <strong>modes</strong> d&#39;application, qui affectent la manière dont un préréglage est appliqué à votre canal (ou à votre sélection dans ce canal):</p><p class="dropspot"><br/><img class="center" src="../../assets/Images/Asset_Editors/Editor_Animation_Curves_Library_Apply_Modes.png" style="cursor: nwse-resize;" /></p><ul class="colour"><li class="dropspot"> <strong>Écraser:</strong> il s&#39;agit de la valeur par défaut lorsque la fenêtre est ouverte via le<img class="icon" src="../../assets/Images/Icons/Animation_Curve_Library_Button.png" /> dans l&#39;éditeur de courbes d&#39;animation ou la <span class="notranslate">Dope Sheet</span> séquence. Il écrase tous les points entre les points de début et de fin de votre chaîne ou de votre sélection.</li><li class="dropspot"> <strong>Entre:</strong> Il s&#39;agit de la valeur par défaut lorsque la fenêtre est ouverte par<img class="icon" src="../../assets/Images/Icons/Icon_RMB.png" /> cliquez avec le bouton droit n&#39;importe où dans l&#39;éditeur de chaînes. Il applique le préréglage entre chaque paire de points sélectionnés et ajoute tous les nouveaux points nécessaires sans supprimer aucun point existant.</li></ul><p class="dropspot"> Le visuel suivant montre le<img class="icon" src="../../assets/Images/Icons/Curve_Expo.png" /> <strong>Préréglage de la courbe d&#39;expo</strong> appliqué à un canal à l&#39;aide des modes d&#39;application <strong>Entre</strong> et <strong>Écraser:</strong></p><p class="dropspot"><img class="center" src="../../assets/Images/Asset_Editors/Editor_Animation_Curves_Library_Apply_Modes_Difference.png" /></p><p class="dropspot"> Comme vous pouvez le voir dans le visuel ci-dessus, <strong>Between</strong> applique la courbe prédéfinie à chaque paire de points et insère tous les nouveaux points nécessaires. <strong>Ecraser</strong> supprime tous les points entre les points de départ et de fin, puis applique le préréglage.</p><p class="dropspot"> Vous <strong>avez également le choix entre trois modes d&#39;accélération</strong>, qui contrôlent la façon dont une courbe accélère ou décélère. Le mode d&#39;accélération par défaut est <strong>Ease Out</strong>.</p><p class="dropspot"><img class="center" src="../../assets/Images/Asset_Editors/Editor_Animation_Curves_Library_Easings.png" /></p><ul class="colour"><li class="dropspot"> <strong>Facilité d&#39;entrée:</strong> la courbe commence par une accélération plus rapide, puis décélère</li><li class="dropspot"> <strong>Ease Out</strong>: la courbe commence par une accélération plus lente, puis s&#39;accélère avec le temps</li><li class="dropspot"> <strong>Facilité d&#39;entrée-sortie:</strong> la courbe commence par une accélération plus lente, accélère avec le temps, puis décélère</li></ul><p class="dropspot"> Le visuel suivant montre le <b>préréglage de la courbe Quart</b> dans les trois modes d&#39;accélération: </p><p class="dropspot"><img class="center" src="../../assets/Images/Asset_Editors/Editor_Animation_Curves_Library_Easings_Quart.png" /></p></div><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> Retour: <a href="../Animation_Curves.htm">Courbes d&#39;animation</a></div><div style="float:right"> Suivant: <a href="../Extensions.htm">Extensions</a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
+<body>
+  <!--<div class="body-scroll" style="top: 150px;">-->
+  <h1>La bibliothèque des courbes d'animation</h1>
+  <p><img class="center" src="../../assets/Images/Asset_Editors/Editor_Animation_Curves_Library.png" style="cursor: nesw-resize;">La fenêtre de la <strong>bibliothèque de courbes d'animation</strong> vous permet de modifier le type de courbe pour la courbe d'animation et d'appliquer un préréglage au canal sélectionné.
+    un préréglage au canal sélectionné. Vous pouvez l'ouvrir en <img class="icon" height="24" src="../../assets/Images/Icons/Icon_LMB.png" width="21"> en cliquant avec le bouton gauche de la souris sur le bouton <img class="icon" height="20" src="../../assets/Images/Icons/Animation_Curve_Library_Button.png" width="13"> dans l'<a href="../Animation_Curves.htm">éditeur de courbes d'animation</a> ou la <a href="../Sequence_Properties/Using_Animation_Curves.htm"> <span class="notranslate">feuille de dope de</span></a> la <a href="../Sequence_Properties/Using_Animation_Curves.htm">séquence</a>, ou en <img class="icon" src="../../assets/Images/Icons/Icon_RMB.png"> en cliquant avec le bouton droit de la souris
+    n'importe où dans l'éditeur de canal.</p>
+  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down" href="#">Type de courbe</a></p>
+  <div class="droptext" data-targetname="drop-down">
+    <p class="dropspot">Le <strong>type de courbe</strong> contrôle la façon dont un canal s'écoule d'un point à l'autre, ce qui peut être réglé sur l'une des options suivantes :</p>
+    <ul class="colour">
+      <li class="dropspot"><strong>Linéaire</strong>: Cela créera une progression linéaire entre les points du canal.</li>
+      <li class="dropspot"><strong>Lisse</strong>: Ceci utilisera l'<a class="glossterm" data-glossterm="interpolation catmull-rom" href="../Animation_Curves.htm#">interpolation catmull-rom</a> pour créer une progression lisse entre les points du canal.</li>
+      <li class="dropspot"><strong>Bezier</strong>: Ceci utilisera les mathématiques de la courbe de Bezier pour créer une progression douce entre les points du canal, où vous pouvez contrôler l'apparence de la courbe en manipulant les &quot;poignées&quot; sur les points.</li>
+    </ul>
+    <p class="dropspot"><img class="center" src="../../assets/Images/Asset_Editors/Editor_Animation_Curves_Types.png" style="cursor: nwse-resize;">Notez que la modification du type de courbe appliquera ce type à <em>tous les</em> canaux de la courbe d'animation.</p>
+  </div>
+  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down1" href="#">Présélections de courbes</a></p>
+  <div class="droptext" data-targetname="drop-down1">
+    <p class="dropspot">Un<strong>préréglage de courbe</strong> modifie la forme de votre courbe. <img class="icon" height="24" src="../../assets/Images/Icons/Icon_LMB.png" width="21"> Cliquez avec le bouton gauche de la souris sur un préréglage dans le menu Préréglages pour appliquer ce préréglage au canal sélectionné.
+      canal sélectionné, et en cliquant sur <strong>Réinitialiser </strong>, le canal revient à la forme qu'il avait avant l'ouverture de la fenêtre Bibliothèque de courbes d'animation.</p>
+    <p class="dropspot"><span class="dropspotnote"><strong>REMARQUE</strong>: les préréglages ne peuvent être appliqués que si le type de courbe est défini sur <strong>Bézier</strong>.</span></p>
+    <p class="dropspot"><img class="center" src="../../assets/Images/Asset_Editors/Editor_Animation_Curves_Library_Preset0.gif">Par défaut, un preset est appliqué à l'ensemble du canal. Vous pouvez sélectionner une section de votre canal en la faisant glisser avec le bouton gauche de la souris <img class="icon" height="24" src="../../assets/Images/Icons/Icon_LMB.png" width="21"> dans l'<strong>éditeur de canal</strong>, puis ouvrir la fenêtre de la bibliothèque de courbes d'animation à l'aide du bouton <img class="icon" height="20" src="../../assets/Images/Icons/Animation_Curve_Library_Button.png" width="13"> ou en cliquant avec le bouton droit de la souris <img class="icon" height="24" src="../../assets/Images/Icons/Icon_RMB.png" width="21">, ce qui aura pour effet d'appliquer les éventuels préréglages à la section sélectionnée uniquement.</p>
+    <p class="dropspot"><img class="center" src="../../assets/Images/Asset_Editors/Editor_Animation_Curves_Library_Preset1_Selection.gif">Notez que votre canal de courbe (ou la sélection dans ce canal) doit avoir une pente pour qu'un préréglage ait un effet, car toute interpolation appliquée est basée sur la différence verticale des points de départ et d'arrivée.
+      appliquée est basée sur la différence verticale entre les points de départ et d'arrivée. Une courbe plate ne présente pas une telle différence entre les deux points, et vous ne verrez donc aucun résultat après avoir appliqué un préréglage à une telle courbe.</p>
+    <p class="dropspot">Vous pouvez choisir entre deux <strong>modes d'application</strong>, ce qui affecte la manière dont un preset est appliqué à votre canal (ou à votre sélection dans ce canal) :</p>
+    <p class="dropspot"><br />
+      <img class="center" src="../../assets/Images/Asset_Editors/Editor_Animation_Curves_Library_Apply_Modes.png" style="cursor: nwse-resize;" /></p>
+    <ul class="colour">
+      <li class="dropspot"><strong>Écraser :</strong> Il s'agit de la valeur par défaut lorsque la fenêtre est ouverte par le bouton <img class="icon" src="../../assets/Images/Icons/Animation_Curve_Library_Button.png"> dans l'éditeur de courbes d'animation ou dans la <span class="notranslate">fiche de</span> séquence. Il écrase
+        tous les points situés entre les points de début et de fin de votre canal ou de votre sélection.</li>
+      <li class="dropspot"><strong>Entre :</strong> Il s'agit de la valeur par défaut lorsque la fenêtre est ouverte par <img class="icon" src="../../assets/Images/Icons/Icon_RMB.png"> en cliquant avec le bouton droit de la souris n'importe où dans l'éditeur de canal. Il applique le préréglage entre chaque paire de points sélectionnés,
+        et ajoute tous les nouveaux points nécessaires sans supprimer les points existants.</li>
+    </ul>
+    <p class="dropspot">Le visuel suivant montre le préréglage de la courbe <strong>Expo </strong> <img class="icon" src="../../assets/Images/Icons/Curve_Expo.png"> appliqué à un canal en utilisant les modes d'application <strong>Between </strong>et <strong>Overwrite </strong>:</p>
+    <p class="dropspot"><img class="center" src="../../assets/Images/Asset_Editors/Editor_Animation_Curves_Library_Apply_Modes_Difference.png" /></p>
+    <p class="dropspot">Comme vous pouvez le voir sur le visuel ci-dessus, <strong>Between </strong>applique la courbe prédéfinie à chaque paire de points, et insère les nouveaux points nécessaires. <strong>Overwrite</strong> supprime tous les points entre les points de départ et d'arrivée, puis applique le préréglage.
+      applique le préréglage.</p>
+    <p class="dropspot">Vous pouvez également choisir parmi trois <strong>modes d'assouplissement </strong>, qui contrôlent la façon dont une courbe s'accélère ou se décélère. Le mode d'assouplissement par défaut est <strong>Ease Out</strong>.</p>
+    <p class="dropspot"><img class="center" src="../../assets/Images/Asset_Editors/Editor_Animation_Curves_Library_Easings.png" /></p>
+    <ul class="colour">
+      <li class="dropspot"><strong>Accélération :</strong> La courbe commence par une accélération plus rapide, puis décélère.</li>
+      <li class="dropspot"><strong>Accélération</strong>: La courbe commence par une accélération plus lente, puis s'accélère au fil du temps.</li>
+      <li class="dropspot"><strong>Accélération et décélération :</strong> La courbe commence par une accélération plus lente, s'accélère au fil du temps, puis décélère.</li>
+    </ul>
+    <p class="dropspot">Le visuel suivant montre le préréglage de la courbe <b>Quart </b>dans les trois modes d'assouplissement :</p>
+    <p class="dropspot"><img class="center" src="../../assets/Images/Asset_Editors/Editor_Animation_Curves_Library_Easings_Quart.png" /></p>
+  </div>
+  <p> </p>
+  <div class="footer">
+    <div class="buttons">
+      <div class="clear">
+        <div style="float:left">Retour : <a href="../Animation_Curves.htm">Courbes d'animation</a></div>
+        <div style="float:right">Suivant : <a href="../Extensions.htm">Extensions</a></div>
+      </div>
+    </div>
+    <h5><span data-keyref="Copyright Notice">Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
   </div>
   <!-- KEYWORDS
 Animation Curve Library
@@ -25,5 +76,5 @@ Curve Presets
   <!-- TAGS
 animation_curve_library
 -->
-</body>
-</html>
+
+</body></html>

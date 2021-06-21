@@ -3,15 +3,55 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>layer_sprite_x</title>
+  <title>couche_sprite_x</title>
   <meta name="generator" content="Adobe RoboHelp 2019" />
   <link rel="stylesheet" href="../../../../../assets/css/default.css" type="text/css" />
   <meta name="rh-authors" content="Mark Alexander" />
-  <meta name="topic-comment" content="Page décrivant la fonction layer_sprite_x" />
+  <meta name="topic-comment" content="Page outlining the function layer_sprite_x" />
   <meta name="rh-index-keywords" content="layer_sprite_x" />
   <meta name="search-keywords" content="layer_sprite_x" />
 </head>
-<body><!--<div class="body-scroll" style="top: 150px;">--><h1>layer_sprite_x</h1><p> Cette fonction contrôle la position le long de l&#39;axe des x de la pièce de l&#39;élément de sprite d&#39;actif sur le calque. Vous donnez l&#39;ID d&#39;élément de sprite (que vous obtenez lorsque vous créez un élément de sprite en utilisant <a href="layer_sprite_create.htm"><tt>layer_sprite_create()</tt></a> ou lorsque vous utilisez la fonction <a href="layer_sprite_get_id.htm"><tt>layer_sprite_get_id()</tt></a> ), puis définissez la valeur x à utiliser (en fonction des coordonnées de la pièce).</p><p></p><h4> Syntaxe:</h4><p class="code">layer_sprite_x(sprite_element_id, x);</p><table><tbody><tr><th> Argument</th><th> Description</th></tr><tr><td> <span class="notranslate">sprite_element_id</span></td><td> La valeur d&#39;ID unique de l&#39;élément de sprite à modifier</td></tr><tr><td> <span class="notranslate">x</span></td><td> La position x du sprite</td></tr></tbody></table><p></p><h4> Retour:</h4><p class="code">N/A</p><p></p><h4> Exemple:</h4><p class="code">var lay_id = layer_get_id(&quot;Asset_sky&quot;);<br/> var spr_id = layer_sprite_get_id(lay_id, &quot;Clouds&quot;);<br/> layer_sprite_x(spr_id, irandom(room_width));</p><p> Le code ci-dessus obtient la valeur d&#39;ID de l&#39;élément de sprite &quot;Clouds&quot; attribué à la couche &quot;Asset_sky&quot;, puis définit sa position x sur une valeur aléatoire comprise entre 0 et la largeur de la pièce. </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> Retour: <a href="Sprite_Layers.htm">Couches de sprite</a></div><div style="float:right"> Suivant:<a href="layer_sprite_y.htm">layer_sprite_y</a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
+<body>
+  <!--<div class="body-scroll" style="top: 150px;">-->
+  <h1>couche_sprite_x</h1>
+  <p>Cette fonction contrôle la position le long de l'axe x de la pièce de l'élément sprite de l'actif sur la couche. Vous donnez l'ID de l'élément sprite (que vous obtenez lorsque vous créez un élément sprite à l'aide de la fonction <a href="layer_sprite_create.htm"><tt>layer_sprite_create()</tt></a>    ou lorsque vous utilisez la fonction <a href="layer_sprite_get_id.htm"><tt>layer_sprite_get_id()</tt></a>), puis définissez la valeur x à utiliser (basée sur les coordonnées de la pièce).</p>
+  <p> </p>
+  <h4>Syntaxe :</h4>
+  <p class="code">layer_sprite_x(sprite_element_id, x) ;</p>
+  <table>
+    <tbody>
+      <tr>
+        <th>Arguments</th>
+        <th>Description</th>
+      </tr>
+      <tr>
+        <td>sprite_element_id</td>
+        <td>La valeur d'identification unique de l'élément du sprite à modifier.</td>
+      </tr>
+      <tr>
+        <td>x</td>
+        <td>La position x du sprite</td>
+      </tr>
+    </tbody>
+  </table>
+  <p> </p>
+  <h4>Les retours :</h4>
+  <p class="code">N/A</p>
+  <p> </p>
+  <h4>Exemple :</h4>
+  <p class="code">var lay_id = layer_get_id(&quot;Asset_sky&quot;) ;<br> var spr_id = layer_sprite_get_id(lay_id, &quot;Clouds&quot;) ;<br> layer_sprite_x(spr_id, irandom(room_width)) ;</p>
+  <p>Le code ci-dessus récupère la valeur ID du sprite &quot;Nuages&quot; affecté au calque &quot;Asset_sky&quot;, puis définit sa position x à une valeur aléatoire comprise entre 0 et la largeur de la pièce.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <div class="footer">
+    <div class="buttons">
+      <div class="clear">
+        <div style="float:left">Retour : <a href="Sprite_Layers.htm">Couches de sprites</a></div>
+        <div style="float:right">Suivant : <a href="layer_sprite_y.htm">layer_sprite_y</a></div>
+      </div>
+    </div>
+    <h5><span data-keyref="Copyright Notice">Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
   </div>
   <!-- KEYWORDS
 layer_sprite_x

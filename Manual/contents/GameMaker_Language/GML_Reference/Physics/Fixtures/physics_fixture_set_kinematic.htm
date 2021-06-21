@@ -7,11 +7,51 @@
   <meta name="generator" content="Adobe RoboHelp 2019" />
   <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
   <meta name="rh-authors" content="Mark Alexander" />
-  <meta name="topic-comment" content="Page de référence pour physics_fixture_set_kinematic" />
+  <meta name="topic-comment" content="Reference page for physics_fixture_set_kinematic" />
   <meta name="rh-index-keywords" content="physics_fixture_set_kinematic" />
   <meta name="search-keywords" content="physics_fixture_set_kinematic" />
 </head>
-<body><!--<div class="body-scroll" style="top: 150px;">--><h1>physics_fixture_set_kinematic</h1><p> Il y aura certains cas dans un jeu basé sur la physique que vous souhaitez déplacer mais que vous ne souhaitez pas être agi par des forces telles que la gravité, ni par des forces encourues par des collisions avec des objets dynamiques (pensez à déplacer des plates-formes dans un jeu de plateforme, par exemple. ). Pour de tels objets, régler simplement la densité d&#39;un appareil à 0 signifiera que la physique supposera que l&#39;objet est destiné à être statique. Cependant, si vous définissez le <a href="../Physics_Variables/phy_speed_x.htm"><tt>phy_speed_x</tt></a>, <a href="../Physics_Variables/phy_speed_y.htm"><tt>phy_speed_y</tt></a> ou <a href="../Physics_Variables/phy_angular_velocity.htm"><tt>phy_angular_velocity</tt></a> variables pour une instance à laquelle un tel appareil est lié, il sera converti en objet cinématique et commencera le mouvement. Changer l&#39;instance de statique à cinématique à mi-simulation peut être coûteux en termes de traitement (en fonction de l&#39;état des instances dans le monde de la physique) et il est donc recommandé de définir le projecteur pour qu&#39;il soit cinématique à l&#39;aide de cette fonction avant de le lier à une instance, de sorte qu&#39;elle ne soit pas affectée par les collisions et les forces (telles que la gravité) mais peut se déplacer avec une vitesse linéaire et / ou angulaire constante.</p><p></p><h4> Syntaxe:</h4><p class="code">physics_fixture_set_kinematic(fixture)</p><table><tbody><tr><th> Argument</th><th> Description</th></tr><tr><td> <span class="notranslate">fixture</span></td><td> l&#39;index du luminaire</td></tr></tbody></table><p></p><h4> Retour:</h4><p class="code">N/A</p><p></p><h4> Exemple:</h4><p class="code">physics_fixture_set_kinematic(fix_Cloud);</p><p> Le code ci-dessus indiquera que l&#39;appareil indexé dans &quot;fix_Cloud&quot; doit être marqué comme cinématique. </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> Retour: <a href="Fixtures.htm">Fixtures</a></div><div style="float:right"> Suivant:<a href="physics_fixture_set_awake.htm">physics_fixture_set_awake</a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
+<body>
+  <!--<div class="body-scroll" style="top: 150px;">-->
+  <h1>physics_fixture_set_kinematic</h1>
+  <p>Dans certains cas, dans un jeu basé sur la physique, vous voudrez vous déplacer, mais sans être soumis à des forces telles que la gravité, ou à des forces résultant de collisions avec des objets dynamiques (pensez aux plateformes mobiles dans un jeu de plateformes, par exemple).
+    par exemple). Pour ces objets, il suffit de régler la densité d'un accessoire sur 0 pour que la physique considère que l'objet est censé être statique. Cependant, si vous définissez le paramètre <a href="../Physics_Variables/phy_speed_x.htm"><tt>phy_speed_x</tt></a>,
+    <a href="../Physics_Variables/phy_speed_y.htm"><tt>phy_speed_y</tt></a> ou <a href="../Physics_Variables/phy_angular_velocity.htm"><tt>phy_angular_velocity</tt></a> pour une instance à laquelle un tel dispositif est lié, elle sera convertie en objet cinématique et commencera à bouger.
+    en objet cinématique et commencera à se déplacer. Changer l'instance de statique à cinématique au milieu de la simulation peut être coûteux en termes de traitement (en fonction de l'état des instances dans le monde physique).
+    pour qu'il soit cinématique en utilisant cette fonction avant de le lier à une instance, afin qu'il ne soit pas affecté par les collisions et les forces (comme la gravité) mais qu'il puisse se déplacer avec une vitesse linéaire et/ou angulaire constante.</p>
+  <p> </p>
+  <h4>Syntaxe :</h4>
+  <p class="code">physics_fixture_set_kinematic(fixture)</p>
+  <table>
+    <tbody>
+      <tr>
+        <th>Arguments</th>
+        <th>Description</th>
+      </tr>
+      <tr>
+        <td>L'appareil</td>
+        <td>l'indice du dispositif</td>
+      </tr>
+    </tbody>
+  </table>
+  <p> </p>
+  <h4>Les retours :</h4>
+  <p class="code">N/A</p>
+  <p> </p>
+  <h4>Exemple :</h4>
+  <p class="code">physics_fixture_set_kinematic(fix_Cloud) ;</p>
+  <p>Le code ci-dessus indique que le dispositif indexé dans &quot;fix_Cloud&quot; doit être marqué comme cinématique.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <div class="footer">
+    <div class="buttons">
+      <div class="clear">
+        <div style="float:left">Retour : <a href="Fixtures.htm">Fixtures</a></div>
+        <div style="float:right">Suivant : <a href="physics_fixture_set_awake.htm">physics_fixture_set_awake</a></div>
+      </div>
+    </div>
+    <h5><span data-keyref="Copyright Notice">Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
   </div>
   <!-- KEYWORDS
 physics_fixture_set_kinematic

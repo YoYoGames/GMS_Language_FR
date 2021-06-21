@@ -3,20 +3,56 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>file_text_read_real</title>
+  <title>fichier_texte_lire_réel</title>
   <meta name="generator" content="Adobe RoboHelp 2019" />
   <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
   <meta name="rh-authors" content="Mark Alexander" />
-  <meta name="topic-comment" content="Page de référence pour file_text_read_real" />
+  <meta name="topic-comment" content="Reference page for file_text_read_real" />
   <meta name="rh-index-keywords" content="file_text_read_real" />
   <meta name="search-keywords" content="file_text_read_real" />
 </head>
-<body><!--<div class="body-scroll" style="top: 150px;">--><h1>file_text_read_real</h1><p> Avec cette fonction, vous pouvez lire une valeur de nombre réel à partir d&#39;un fichier texte et la fonction renvoie cette valeur à utiliser ou à stocker dans une variable.</p><p></p><h4> Syntaxe:</h4><p class="code">file_text_read_real(fileid);</p><table><tbody><tr><th> Argument</th><th> Description</th></tr><tr><td> <span class="notranslate">fileid</span></td><td> L&#39;identifiant du fichier à lire.</td></tr></tbody></table><p></p><h4> Retour:</h4><p class="code">Real</p><p></p><h4> Exemple:</h4><p class="code">var file = file_text_open_read(working_directory + &quot;hiscore.txt&quot;);<br/> for (var i = 0; i &lt; 10; ++i;)<br/>    {
-    <br/>    scr[i] = file_text_read_real(file);<br/>    file_text_readln(file);
-    <br/>    scr_name[i] = file_text_read_string(file);<br/>    file_text_readln(file);
-    <br/>    }
-    <br/> file_text_close(file);
-  </p><p> Le code ci-dessus ouvre un fichier pour la lecture, puis parcourt les lignes du fichier en lisant alternativement une valeur de nombre réel et une chaîne dans deux tableaux différents pour une utilisation future. Le fichier est ensuite fermé lorsque la boucle est terminée. </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> Retour: <a href="Text_Files.htm">Fichiers texte</a></div><div style="float:right"> Suivant:<a href="file_text_read_string.htm">file_text_read_string</a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
+<body>
+  <!--<div class="body-scroll" style="top: 150px;">-->
+  <h1>fichier_texte_lire_réel</h1>
+  <p>Avec cette fonction, vous pouvez lire une valeur réelle à partir d'un fichier texte et la fonction renvoie cette valeur pour être utilisée ou stockée dans une variable.</p>
+  <p> </p>
+  <h4>Syntaxe :</h4>
+  <p class="code">file_text_read_real(fileid) ;</p>
+  <table>
+    <tbody>
+      <tr>
+        <th>Arguments</th>
+        <th>Description</th>
+      </tr>
+      <tr>
+        <td>fileid</td>
+        <td>L'identifiant du fichier à lire.</td>
+      </tr>
+    </tbody>
+  </table>
+  <p> </p>
+  <h4>Les retours :</h4>
+  <p class="code">Real</p>
+  <p> </p>
+  <h4>Exemple :</h4>
+  <p class="code">var file = file_text_open_read(working_directory + &quot;hiscore.txt&quot;) ;<br> for (var i = 0 ; i &lt; 10 ; ++i ;)<br> {
+    <br> scr[i] = file_text_read_real(file) ;<br> file_text_readln(file) ;
+    <br> scr_name[i] = file_text_read_string(file) ;<br> file_text_readln(file) ;
+    <br> }
+    <br> file_text_close(file) ;
+  </p>
+  <p>Le code ci-dessus ouvre un fichier pour le lire, puis boucle sur les lignes du fichier en lisant alternativement une valeur réelle et une chaîne de caractères dans deux tableaux différents pour une utilisation ultérieure. Le fichier est ensuite fermé lorsque la boucle est terminée.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <div class="footer">
+    <div class="buttons">
+      <div class="clear">
+        <div style="float:left">Retour : <a href="Text_Files.htm">Fichiers texte</a></div>
+        <div style="float:right">Suivant : <a href="file_text_read_string.htm">file_text_read_string</a></div>
+      </div>
+    </div>
+    <h5><span data-keyref="Copyright Notice">Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
   </div>
   <!-- KEYWORDS
 file_text_read_real

@@ -7,11 +7,86 @@
   <meta name="generator" content="Adobe RoboHelp 2019" />
   <link rel="stylesheet" href="../../../../../assets/css/default.css" type="text/css" />
   <meta name="rh-authors" content="Mark Alexander" />
-  <meta name="topic-comment" content="Page décrivant la fonction tilemap_set_mask" />
+  <meta name="topic-comment" content="Page outlining the function tilemap_set_mask" />
   <meta name="rh-index-keywords" content="tilemap_set_mask,tile_rotate,tile_mirror,tile_flip,tile_index_mask" />
   <meta name="search-keywords" content="tilemap_set_mask,tile_rotate,tile_mirror,tile_flip,tile_index_mask" />
 </head>
-<body><!--<div class="body-scroll" style="top: 150px;">--><h1>tilemap_set_mask</h1><p> Cette fonction peut être utilisée pour définir le <b>masque de bits de tuile</b> pour une seule carte de tuile. Vous donnez l&#39;ID d&#39;élément de carte de tuiles (que vous obtenez lorsque vous créez un élément de carte de tuiles à l&#39;aide de <a href="layer_tilemap_create.htm"><tt>layer_tilemap_create()</tt></a> ou lorsque vous utilisez la fonction <a href="layer_tilemap_get_id.htm"><tt>layer_tilemap_get_id()</tt></a> ), puis la valeur du masque. L&#39;idée est que si vous avez, par exemple, un joli petit ensemble de tuiles de 16 x 16 tuiles, alors vous avez un total de 256 tuiles différentes dans votre jeu de tuiles, qui n&#39;utilise que 8 bits de votre index dans le blob de données de tuiles. &quot;(à partir de 19 bits de données disponibles). Ces bits peuvent être &quot;masqués&quot; et ensuite le reste des données de tuile peut être utilisé pour stocker des valeurs supplémentaires.</p><p> Un moyen simple d&#39;obtenir la valeur initiale du masque d&#39;index est de prendre le nombre de tuiles dans le jeu de tuiles et de soustraire 1, donc un jeu de tuiles 16x16 a 256 tuiles et une valeur de masque de 255 (ou <span class="notranslate">$ff</span> en hexadécimal), et si le l&#39;ensemble de tuiles a un nombre de tuiles qui ne sont pas une puissance de deux, puis arrondis à la puissance de deux la plus proche pour obtenir le masque, par exemple un ensemble de tuiles de 20x20 a 400 tuiles, que vous arrondiriez à 512, et alors obtenez une valeur d&#39;index de masque de 511 ( <span class="notranslate">$1ff</span> en hexadécimal). En dehors du masque d&#39;index, vous voudrez normalement conserver les valeurs d&#39;inversion, de rotation et de miroir qui sont également affectées à une tuile, donc pour vous aider, quelques <b>constantes</b> peuvent être utilisées. Ceux-ci peuvent être &quot;ou&quot; associés à la valeur du masque d&#39;index pour conserver ces bits de données. Les constantes suivantes peuvent être utilisées (voir l&#39;exemple de code ci-dessous pour l&#39;utilisation):</p><p></p><table><tbody><tr><th> Constant</th><th> Description</th></tr><tr><td> <span class="notranslate">tile_rotate</span></td><td> Utilisé pour définir / obtenir le bit de rotation d&#39;un objet blob de données de mosaïque.</td></tr><tr><td> <span class="notranslate">tile_mirror</span></td><td> Utilisé pour définir / obtenir le bit miroir d&#39;un objet blob de données de tuile.</td></tr><tr><td> <span class="notranslate">tile_flip</span></td><td> Utilisé pour définir / obtenir le bit de retournement d&#39;un blob de données de tuile.</td></tr><tr><td> <span class="notranslate">tile_index_mask</span></td><td> Une constante spéciale qui est pour &quot;et&quot; -ing avec le blob de données de tuile pour extraire l&#39;index de tuile.</td></tr></tbody></table><p></p><p> Le masquage de bits de mosaïque est une fonctionnalité avancée et vous permet d&#39;utiliser des bits de la &quot;goutte&quot; de données de mosaïque pour votre propre usage. Par exemple, l&#39;utilisateur peut réserver un peu pour signifier &quot;solide&quot; dans la structure de données de tuiles et cela peut être vérifié pour des collisions rapides. Fondamentalement, le masque de bits est placé &quot;et&quot; par rapport aux données de tuile lorsque la carte de tuiles est <i>dessinée</i> (donc cela n&#39;affecte aucune des autres fonctionnalités), ce qui signifie que les bits qui ne sont pas dans le masque sont ignorés, mais peuvent être lu et écrit par l&#39;utilisateur à ses propres fins. Notez qu&#39;il existe deux masques différents - un global et un par mosaïque - et ceux-ci sont &quot;et&quot; - assemblés en interne par <span class="notranslate">GameMaker Studio 2</span> avant d&#39;être utilisés pour le dessin.</p><p></p><h4> Syntaxe:</h4><p class="code">tilemap_set_mask(tilemap_element_id, mask)</p><table><tbody><tr><th> Argument</th><th> Description</th></tr><tr><td> <span class="notranslate">tilemap_element_id</span></td><td> La valeur d&#39;ID unique de l&#39;élément de mappage de tuiles pour définir le masque de</td></tr><tr><td> <span class="notranslate">mask</span></td><td> La valeur du masque</td></tr></tbody></table><p></p><h4> Retour:</h4><p class="code">N/A</p><p></p><h4> Exemple:</h4><p class="code">var lay_id = layer_get_id(&quot;Tiles_sky&quot;);<br/> var map_id = layer_tilemap_get_id(lay_id);<br/> var mask = tile_mirror | tile_flip | tile_rotate | 255;<br/> tilemap_set_mask(map_id, mask);</p><p> Le code ci-dessus obtient l&#39;ID de mappage de tuiles de la couche donnée, puis définit le masque de bits de mappage de tuiles sur 8 bits, en préservant les valeurs de retournement, de miroir et de rotation pour chaque tuile de la carte. </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> Retour: <a href="Tile_Map_Layers.htm">Couches de carte de mosaïque</a></div><div style="float:right"> Suivant:<a href="tilemap_set_global_mask.htm">tilemap_set_global_mask</a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
+<body>
+  <!--<div class="body-scroll" style="top: 150px;">-->
+  <h1>tilemap_set_mask</h1>
+  <p>Cette fonction peut être utilisée pour définir le <b>masque binaire des tuiles</b> pour une seule carte de tuiles. Vous donnez l'ID de l'élément de la carte des tuiles (que vous obtenez lorsque vous créez un élément de carte des tuiles à l'aide de la fonction <a href="layer_tilemap_create.htm"><tt>layer_tilemap_create()</tt></a> ou lorsque
+    vous utilisez la fonction <a href="layer_tilemap_get_id.htm"><tt>layer_tilemap_get_id()</tt></a>), puis la valeur du masque. L'idée est que, si vous avez, par exemple, un jeu de tuiles assez petit de 16 x 16 tuiles, vous avez un total de 256 tuiles différentes
+    dans votre jeu de tuiles, ce qui n'utilise que 8 bits de votre index dans le &quot;blob&quot; de données de tuiles (sur les 19 bits de données disponibles). Ces bits peuvent être &quot;masqués&quot; et le reste des données de la tuile peut être utilisé pour stocker des valeurs supplémentaires.</p>
+  <p>Une façon simple d'obtenir la valeur de masque de l'index initial est de prendre le nombre de tuiles dans le jeu de tuiles et de soustraire 1, donc un jeu de tuiles 16x16 a 256 tuiles et une valeur de masque de 255 (ou $ff en hexadécimal), et si le jeu de tuiles a un nombre de tuiles qui n'est pas une puissance de deux, alors arrondissez à la puissance de deux la plus proche pour obtenir le masque.
+    Si le jeu de tuiles a un nombre de tuiles qui n'est pas une puissance de deux, alors arrondissez à la puissance de deux la plus proche pour obtenir le masque, par exemple un jeu de tuiles qui est 20x20 a 400 tuiles, que vous arrondissez à 512, et ainsi obtenir une valeur d'index de masque de 511 ($1ff en hexadécimal). En dehors du masque d'index,
+    vous voudriez normalement préserver les valeurs d'inversion, de rotation et de miroir qui sont assignées à une tuile aussi, donc pour vous aider il y a quelques <b>constantes</b> qui peuvent être utilisées. Celles-ci peuvent être &quot;or&quot;-ées avec la valeur du masque d'index pour préserver ces bits de données.
+    ces bits de données. Les constantes suivantes peuvent être utilisées (voir l'exemple de code ci-dessous pour l'utilisation) :</p>
+  <p> </p>
+  <table>
+    <tbody>
+      <tr>
+        <th>Constant</th>
+        <th>Description</th>
+      </tr>
+      <tr>
+        <td>rotation des tuiles</td>
+        <td>Utilisé pour définir/obtenir le bit de rotation d'un blob de données de tuiles.</td>
+      </tr>
+      <tr>
+        <td>tuile_mirror</td>
+        <td>Utilisé pour définir/obtenir le bit miroir d'un blob de données de tuile.</td>
+      </tr>
+      <tr>
+        <td>tuile_flip</td>
+        <td>Utilisé pour définir/obtenir le bit de retournement d'un blob de données de tuile.</td>
+      </tr>
+      <tr>
+        <td>masque d'indexation des tuiles</td>
+        <td>Une constante spéciale qui est utilisée pour &quot;et&quot; avec le blob de données de la tuile pour extraire l'index de la tuile.</td>
+      </tr>
+    </tbody>
+  </table>
+  <p> </p>
+  <p>Le masquage des bits de la carte des tuiles est une fonction avancée qui vous permet d'utiliser les bits du &quot;blob&quot; des données des tuiles pour votre propre usage. Par exemple, l'utilisateur peut réserver un bit pour signifier &quot;solide&quot; dans la structure des données de tuiles, ce qui permet de vérifier les collisions rapides.
+    collisions rapides. Fondamentalement, le masque de bits est &quot;and&quot; contre les données des tuiles lorsque la carte des tuiles est dessinée (de sorte qu'<i>il</i> n'affecte pas les autres fonctionnalités), ce qui signifie que les bits qui ne sont pas dans le masque sont ignorés, mais peuvent toujours être lus et écrits par l'utilisateur.
+    être lus et écrits par l'utilisateur pour ses propres besoins. Notez qu'il existe deux masques différents - un masque global et un masque par carte de tuiles - et qu'ils sont assemblés par &quot;et&quot; en interne par GameMaker <span class="notranslate">Studio 2 avant d'</span> être utilisés pour le dessin.</p>
+  <p> </p>
+  <h4>Syntaxe :</h4>
+  <p class="code">tilemap_set_mask(tilemap_element_id, mask)</p>
+  <table>
+    <tbody>
+      <tr>
+        <th>Arguments</th>
+        <th>Description</th>
+      </tr>
+      <tr>
+        <td>tilemap_element_id</td>
+        <td>La valeur d'identification unique de l'élément de la carte des tuiles dont le masque doit être défini.</td>
+      </tr>
+      <tr>
+        <td>masque</td>
+        <td>La valeur du masque</td>
+      </tr>
+    </tbody>
+  </table>
+  <p> </p>
+  <h4>Les retours :</h4>
+  <p class="code">N/A</p>
+  <p> </p>
+  <h4>Exemple :</h4>
+  <p class="code">var lay_id = layer_get_id(&quot;Tiles_sky&quot;) ;<br> var map_id = layer_tilemap_get_id(lay_id) ;<br> var mask = tile_mirror | tile_flip | tile_rotate | 255 ;<br> tilemap_set_mask(map_id, mask) ;</p>
+  <p>Le code ci-dessus récupère l'ID de la carte des tuiles de la couche donnée, puis définit le masque binaire de la carte des tuiles sur 8 bits, en préservant les valeurs d'inversion, de miroir et de rotation pour chaque tuile de la carte.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <div class="footer">
+    <div class="buttons">
+      <div class="clear">
+        <div style="float:left">Retour : <a href="Tile_Map_Layers.htm">Carrelage des couches de la carte</a></div>
+        <div style="float:right">Suivant : <a href="tilemap_set_global_mask.htm">tilemap_set_global_mask</a></div>
+      </div>
+    </div>
+    <h5><span data-keyref="Copyright Notice">Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
   </div>
   <!-- KEYWORDS
 tilemap_set_mask

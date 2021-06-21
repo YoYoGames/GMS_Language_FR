@@ -3,17 +3,55 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>layer_background_get_blend</title>
+  <title>couche_arrière-plan_get_blend</title>
   <meta name="generator" content="Adobe RoboHelp 2019" />
   <link rel="stylesheet" href="../../../../../assets/css/default.css" type="text/css" />
   <meta name="rh-authors" content="Mark Alexander" />
-  <meta name="topic-comment" content="Page décrivant la fonction layer_background_get_blend" />
+  <meta name="topic-comment" content="Page outlining the function layer_background_get_blend" />
   <meta name="rh-index-keywords" content="layer_background_get_blend" />
   <meta name="search-keywords" content="layer_background_get_blend" />
 </head>
-<body><!--<div class="body-scroll" style="top: 150px;">--><h1>layer_background_get_blend</h1><p> Cette fonction peut être utilisée pour obtenir la couleur de fusion de l&#39;élément d&#39;arrière-plan. Vous donnez l&#39;ID d&#39;élément d&#39;arrière-plan (que vous obtenez lorsque vous créez un élément d&#39;arrière-plan en utilisant <a href="layer_background_create.htm"><tt>layer_background_create()</tt></a> ou lorsque vous utilisez la fonction <a href="layer_background_get_id.htm"><tt>layer_background_get_id()</tt></a> ), et la fonction renverra une valeur réelle qui représente la couleur attribuée.</p><p></p><h4> Syntaxe:</h4><p class="code">layer_background_get_blend(background_element_id);</p><table><tbody><tr><th> Argument</th><th> Description</th></tr><tr><td> <span class="notranslate">background_element_id</span></td><td> La valeur d&#39;identifiant unique de l&#39;élément d&#39;arrière-plan à partir duquel obtenir les informations</td></tr></tbody></table><p></p><h4> Retour:</h4><p class="code">Colour Value (Real)</p><p></p><h4> Exemple:</h4><p class="code">var lay_id = layer_get_id(&quot;Background_sky&quot;);<br/> var back_id = layer_background_get_id(lay_id);<br/> if layer_background_get_blend(back_id) == c_white<br/>     {
-    <br/>     layer_background_blend(back_id, make_colour_rgb(random(255), random(255), 255));<br/>     }
-  </p><p> Le code ci-dessus obtiendra l&#39;ID de la couche nommée &quot;Background_sky&quot;, puis l&#39;utilisera pour obtenir l&#39;ID de l&#39;élément d&#39;arrière-plan sur cette couche. Cet identifiant est ensuite utilisé pour vérifier la couleur de fusion de l&#39;élément et si elle est équivalente à la constante <tt>c_white</tt>, puis le mélange de calques est défini sur une couleur aléatoire. </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> Retour: <a href="Background_Layers.htm">Calques d&#39;arrière-plan</a></div><div style="float:right"> Suivant:<a href="layer_background_get_alpha.htm">layer_background_get_alpha</a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
+<body>
+  <!--<div class="body-scroll" style="top: 150px;">-->
+  <h1>couche_arrière-plan_get_blend</h1>
+  <p>Cette fonction peut être utilisée pour obtenir la couleur de mélange de l'élément d'arrière-plan. Vous donnez l'ID de l'élément d'arrière-plan (que vous obtenez lorsque vous créez un élément d'arrière-plan en utilisant <a href="layer_background_create.htm"><tt>layer_background_create()</tt></a> ou
+    lorsque vous utilisez la fonction <a href="layer_background_get_id.htm"><tt>layer_background_get_id()</tt></a>), et la fonction renverra une valeur réelle qui représente la couleur attribuée.</p>
+  <p> </p>
+  <h4>Syntaxe :</h4>
+  <p class="code">layer_background_get_blend(background_element_id) ;</p>
+  <table>
+    <tbody>
+      <tr>
+        <th>Arguments</th>
+        <th>Description</th>
+      </tr>
+      <tr>
+        <td>id_élément_fond</td>
+        <td>La valeur d'identification unique de l'élément d'arrière-plan à partir duquel les informations doivent être obtenues.</td>
+      </tr>
+    </tbody>
+  </table>
+  <p> </p>
+  <h4>Les retours :</h4>
+  <p class="code">Valeur de la couleur (réel)</p>
+  <p> </p>
+  <h4>Exemple :</h4>
+  <p class="code">var lay_id = layer_get_id(&quot;Background_sky&quot;) ;<br> var back_id = layer_background_get_id(lay_id) ;<br> if layer_background_get_blend(back_id) == c_white<br> {
+    <br> layer_background_blend(back_id, make_colour_rgb(random(255), random(255), 255)) ;<br> }
+  </p>
+  <p>Le code ci-dessus obtiendra l'ID du calque nommé &quot;Background_sky&quot; et l'utilisera ensuite pour obtenir l'ID de l'élément d'arrière-plan sur ce calque. Cet ID est ensuite utilisé pour vérifier la couleur de mélange de l'élément et s'il est équivalent à la constante
+   <tt>c_white</tt>, alors la couleur de fusion du calque est fixée à une couleur aléatoire.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <div class="footer">
+    <div class="buttons">
+      <div class="clear">
+        <div style="float:left">Retour : <a href="Background_Layers.htm">Calques d'arrière-plan</a></div>
+        <div style="float:right">Suivant : <a href="layer_background_get_alpha.htm">layer_background_get_alpha</a></div>
+      </div>
+    </div>
+    <h5><span data-keyref="Copyright Notice">Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
   </div>
   <!-- KEYWORDS
 layer_background_get_blend

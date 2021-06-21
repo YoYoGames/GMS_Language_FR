@@ -7,13 +7,49 @@
   <meta name="generator" content="Adobe RoboHelp 2019" />
   <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
   <meta name="rh-authors" content="Mark Alexander" />
-  <meta name="topic-comment" content="Page de référence pour view_get_surface_id" />
+  <meta name="topic-comment" content="Reference page for view_get_surface_id" />
   <meta name="rh-index-keywords" content="view_get_surface_id" />
   <meta name="search-keywords" content="view_get_surface_id" />
 </head>
-<body><!--<div class="body-scroll" style="top: 150px;">--><h1>view_get_surface_id</h1><p> Cette fonction peut être utilisée pour récupérer la valeur d&#39;ID unique pour la surface affectée au port de vue donné (retournera -1 si aucune surface n&#39;a été affectée).</p><p></p><h4> Syntaxe:</h4><p class="code">view_get_surface_id(view_port)</p><table><tbody><tr><th> Argument</th><th> Description</th></tr><tr><td> <span class="notranslate">view_port</span></td><td> Le port de vue à cibler (0 - 7)</td></tr></tbody></table><p></p><h4> Retour:</h4><p class="code">Real</p><p></p><h4> Exemple:</h4><p class="code">if view_get_surface_id(0) == -1<br/>     {
-    <br/>     view_set_surface_id(0, global.vSurf);<br/>     }
-  </p><p> Le code ci-dessus vérifiera si une surface a été assignée au port de vue [0] et si ce n&#39;est pas le cas, une est assignée. </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> Arrière: <a href="Cameras_And_View_Ports.htm">caméras et ports d&#39;affichage</a></div><div style="float:right"> Suivant:<a href="view_set_camera.htm">view_set_camera</a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
+<body>
+  <!--<div class="body-scroll" style="top: 150px;">-->
+  <h1>view_get_surface_id</h1>
+  <p>Cette fonction peut être utilisée pour récupérer la valeur d'identification unique de la surface attribuée au port de vue donné (elle renvoie -1 si aucune surface n'a été attribuée).</p>
+  <p> </p>
+  <h4>Syntaxe :</h4>
+  <p class="code">view_get_surface_id(view_port)</p>
+  <table>
+    <tbody>
+      <tr>
+        <th>Arguments</th>
+        <th>Description</th>
+      </tr>
+      <tr>
+        <td>port_vue</td>
+        <td>Le port de vue à cibler (0 - 7)</td>
+      </tr>
+    </tbody>
+  </table>
+  <p> </p>
+  <h4>Les retours :</h4>
+  <p class="code">Real</p>
+  <p> </p>
+  <h4>Exemple :</h4>
+  <p class="code">si view_get_surface_id(0) == -1<br> {
+    <br> view_set_surface_id(0, global.vSurf) ;<br> }
+  </p>
+  <p>Le code ci-dessus vérifiera si une surface a été assignée au port de vue [0] et si ce n'est pas le cas, une surface sera assignée.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <div class="footer">
+    <div class="buttons">
+      <div class="clear">
+        <div style="float:left">Retour : <a href="Cameras_And_View_Ports.htm">Caméras et ports d'observation</a></div>
+        <div style="float:right">Suivant : <a href="view_set_camera.htm">view_set_camera</a></div>
+      </div>
+    </div>
+    <h5><span data-keyref="Copyright Notice">Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
   </div>
   <!-- KEYWORDS
 view_get_surface_id

@@ -3,15 +3,94 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>draw_surface_part_ext</title>
+  <title>dessiner_surface_part_ext.</title>
   <meta name="generator" content="Adobe RoboHelp 2019" />
   <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
   <meta name="rh-authors" content="Mark Alexander" />
-  <meta name="topic-comment" content="Référence pour draw_surface_part_ext" />
+  <meta name="topic-comment" content="Reference for draw_surface_part_ext" />
   <meta name="rh-index-keywords" content="draw_surface_part_ext" />
   <meta name="search-keywords" content="draw_surface_part_ext" />
 </head>
-<body><!--<div class="body-scroll" style="top: 150px;">--><h1>draw_surface_part_ext</h1><p> Cette fonction dessinera une partie de la surface choisie à la position donnée en suivant les mêmes règles que par <a href="draw_surface_part.htm"><tt>draw_surface_part()</tt></a>, ce n&#39;est que maintenant que vous pouvez mettre à l&#39;échelle la pièce, mélanger une couleur avec elle ou changer son alpha lorsque vous la dessinez à l&#39;écran (comme lorsque vous dessinez une surface avec <a href="draw_surface_ext.htm"><tt>draw_surface_ext()</tt></a> ).</p><p class="note"><b></b> <b>REMARQUE</b>: lorsque vous travaillez avec des surfaces, il est possible qu&#39;elles cessent d&#39;exister à tout moment car elles sont stockées dans la mémoire de texture. Vous devez <b>TOUJOURS</b> vérifier qu&#39;une surface existe en utilisant <span style="font-size:1px;"><a href="surface_exists.htm"><tt style="font-size: 14px">surface_exists ()</tt></a></span> avant de les référencer directement.</p><p></p><h4> Syntaxe:</h4><p class="code">draw_surface_part_ext(id, left, top, w, h, x, y, xscale, yscale, colour, alpha);</p><table><tbody><tr><th> Argument</th><th> Description</th></tr><tr><td> <span class="notranslate">id</span></td><td> La valeur d&#39;identifiant unique de la surface à dessiner.</td></tr><tr><td> <span class="notranslate">left</span></td><td> La position gauche dans la surface de la pièce à dessiner.</td></tr><tr><td> <span class="notranslate">top</span></td><td> La position supérieure dans la surface de la pièce à dessiner.</td></tr><tr><td> <span class="notranslate">w</span></td><td> La largeur de la pièce à dessiner, à partir de la gauche.</td></tr><tr><td> <span class="notranslate">h</span></td><td> La hauteur de la pièce à dessiner, à partir du haut.</td></tr><tr><td> <span class="notranslate">x</span></td><td> La position x de l&#39;endroit où dessiner la surface.</td></tr><tr><td> <span class="notranslate">y</span></td><td> La position y de l&#39;endroit où dessiner la surface.</td></tr><tr><td> <span class="notranslate">xscale</span></td><td> La mise à l&#39;échelle horizontale avec laquelle la pièce doit être dessinée.</td></tr><tr><td> <span class="notranslate">yscale</span></td><td> La mise à l&#39;échelle verticale avec laquelle la pièce doit être dessinée.</td></tr><tr><td> <span class="notranslate">colour</span></td><td> La couleur mélangeant la pièce doit être dessinée avec.</td></tr><tr><td> <span class="notranslate">alpha</span></td><td> Transparence alpha avec laquelle la pièce doit être dessinée.</td></tr></tbody></table><p></p><h4> Retour:</h4><p class="code">N/A</p><p></p><h4> Exemple:</h4><p class="code">draw_surface_part_ext(surf, 8, 8, 32, 32, x, y, 2, 0.5, c_black, 1);</p><p> Cela dessinera une zone de 32x32 pixels de 8x8 pixels dans la surface indexée dans la variable &quot;surf&quot;. Il sera étiré pour doubler sa largeur habituelle mais la moitié de sa hauteur habituelle. Il sera opaque et se fondra avec du noir (le transformant en silhouette). </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> Retour: <a href="Surfaces.htm">Surfaces</a></div><div style="float:right"> Suivant:<a href="draw_surface_stretched.htm">draw_surface_stretched</a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
+<body>
+  <!--<div class="body-scroll" style="top: 150px;">-->
+  <h1>dessiner_surface_part_ext.</h1>
+  <p>Cette fonction va dessiner une partie de la surface choisie à la position donnée en suivant les mêmes règles que par <a href="draw_surface_part.htm"><tt>draw_surface_part()</tt></a>sauf que maintenant vous pouvez mettre la partie à l'échelle, y mélanger une couleur, ou changer son alpha
+    lorsque vous la dessinez à l'écran (comme pour le dessin d'une surface avec la fonction <a href="draw_surface_ext.htm"><tt>draw_surface_ext()</tt></a>).</p>
+  <p class="note"><b></b><b>NOTE</b>: Lorsque vous travaillez avec des surfaces, il est possible qu'elles cessent d'exister à tout moment, car elles sont stockées dans la mémoire des textures. Vous devez <b>TOUJOURS</b> vérifier qu'une surface existe en utilisant <span style="font-size:1px;"><a href="surface_exists.htm"><tt style="font-size: 14px">surface_exists()</tt></a></span>    avant de les référencer directement.</p>
+  <p> </p>
+  <h4>Syntaxe :</h4>
+  <p class="code">draw_surface_part_ext(id, left, top, w, h, x, y, xscale, yscale, colour, alpha) ;</p>
+  <table>
+    <tbody>
+      <tr>
+        <th>Arguments</th>
+        <th>Description</th>
+      </tr>
+      <tr>
+        <td>id</td>
+        <td>La valeur d'identification unique de la surface à dessiner.</td>
+      </tr>
+      <tr>
+        <td>gauche</td>
+        <td>La position gauche dans la surface de la pièce à dessiner.</td>
+      </tr>
+      <tr>
+        <td>top</td>
+        <td>La position supérieure dans la surface de la pièce à dessiner.</td>
+      </tr>
+      <tr>
+        <td>w</td>
+        <td>La largeur de la partie à dessiner, de gauche à droite.</td>
+      </tr>
+      <tr>
+        <td>h</td>
+        <td>La hauteur de la partie à dessiner, à partir du haut.</td>
+      </tr>
+      <tr>
+        <td>x</td>
+        <td>La position x de l'endroit où dessiner la surface.</td>
+      </tr>
+      <tr>
+        <td>y</td>
+        <td>La position y de l'endroit où dessiner la surface.</td>
+      </tr>
+      <tr>
+        <td>xscale</td>
+        <td>La graduation horizontale avec laquelle la pièce doit être dessinée.</td>
+      </tr>
+      <tr>
+        <td>yscale</td>
+        <td>La graduation verticale avec laquelle la pièce doit être dessinée.</td>
+      </tr>
+      <tr>
+        <td>couleur</td>
+        <td>Le mélange de couleurs avec lequel la pièce doit être dessinée.</td>
+      </tr>
+      <tr>
+        <td>alpha</td>
+        <td>La transparence alpha avec laquelle la partie doit être dessinée.</td>
+      </tr>
+    </tbody>
+  </table>
+  <p> </p>
+  <h4>Les retours :</h4>
+  <p class="code">N/A</p>
+  <p> </p>
+  <h4>Exemple :</h4>
+  <p class="code">draw_surface_part_ext(surf, 8, 8, 32, 32, x, y, 2, 0.5, c_black, 1) ;</p>
+  <p>Cela va dessiner une zone de 32x32 pixels de 8x8 pixels dans la surface indexée dans la variable &quot;surf&quot;. Elle sera étirée au double de sa largeur habituelle mais à la moitié de sa hauteur habituelle. Elle sera opaque et sera mélangée avec du noir (la transformant en une
+    une silhouette).</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <div class="footer">
+    <div class="buttons">
+      <div class="clear">
+        <div style="float:left">Retour : <a href="Surfaces.htm">Surfaces</a></div>
+        <div style="float:right">Suivant : <a href="draw_surface_stretched.htm">draw_surface_stretched</a></div>
+      </div>
+    </div>
+    <h5><span data-keyref="Copyright Notice">Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
   </div>
   <!-- KEYWORDS
 draw_surface_part_ext

@@ -7,12 +7,42 @@
   <meta name="generator" content="Adobe RoboHelp 2019" />
   <link rel="stylesheet" href="../../assets/css/default.css" type="text/css" />
   <meta name="rh-authors" content="Mark Alexander" />
-  <meta name="topic-comment" content="Section qui couvre le clonage du contrôle de code source d&#39;un référentiel" />
-  <meta name="rh-index-keywords" content="Contrôle de code source - Clonage d&#39;un référentiel" />
-  <meta name="search-keywords" content="référentiel de clonage,dépôt,cloner,clonage" />
+  <meta name="topic-comment" content="Section that covers Source Control cloning a repository" />
+  <meta name="rh-index-keywords" content="Source Control - Cloning A Repository" />
+  <meta name="search-keywords" content="clone repository,repository,clone,cloning" />
 </head>
-<body><!--<div class="body-scroll" style="top: 150px;">--><h1> Cloner un référentiel</h1><p> Lorsque votre projet est stocké dans un référentiel externe, vous devez vous rappeler de pousser vos modifications et d&#39;en extraire de nouvelles. La raison en est que lorsque vous vous engagez, vous stockez vos modifications localement, ce qui vous permet de travailler loin d&#39;une connexion Internet et de vous synchroniser lorsque vous êtes prêt, et pour synchroniser, vous poussez vos modifications vers le référentiel distant. Extraire les modifications signifie que vous souhaitez extraire toutes les modifications que d&#39;autres ont apportées du référentiel distant vers votre référentiel local. Cependant, cela signifie qu&#39;il peut arriver que des utilisateurs modifient les mêmes fichiers, ce qui crée à son tour un <strong>conflit de fusion</strong>. Vous devez savoir comment gérer ces conflits, nous allons donc en créer un délibérément de temps en temps, puis vous montrer comment y faire face.</p><p class="note"> <strong>REMARQUE</strong>: le partage d&#39;un référentiel de projet local (même via un service de synchronisation de fichiers comme Dropbox) n&#39;est pas recommandé, car les validations sont généralement écrites directement dans celui-ci, et vous avez donc très peu de protection contre les conflits.</p><p> Pour générer notre conflit, nous devons d&#39;abord avoir deux référentiels locaux, un pour le référentiel maître et un pour notre copie. Pour créer cela, nous devons cloner le référentiel, ce qui se fait avec les étapes suivantes:</p><ul class="colour"><li> Accédez à <strong>Contrôle de la source</strong> &gt; <strong>Référentiel de clonage</strong>.</li><li> Dans le champ URL, saisissez le chemin d&#39;accès au projet que nous avons configuré dans le guide Reverting Files ci-dessus (par défaut, ce sera <span class="inline">&lt;DRIVE&gt;:\Users\&lt;Username&gt;\Documents\<span class="notranslate">GameMaker</span> Studio2 \ &lt;NomProjet&gt;).<img alt="Source Control Clone Repository From"
-        class="center" src="../../assets/Images/IDE Tools/SCM_RepositoryToClone.png" /></li><li> Nous devons ensuite définir un chemin vers lequel cloner:<br/><img alt="Source Control Clone Repository To" class="center" src="../../assets/Images/IDE Tools/SCM_CloneTo.png" /> Lorsque nous cliquons sur le bouton &quot;OK&quot;, nous recevrons l&#39;avertissement suivant concernant la tentative de clonage d&#39;un dépôt &quot;non nu&quot;:<br/><img alt="Source Control Clone Warning " class="center" src="../../assets/Images/IDE Tools/SCM_CloneWarning.png" /> Nous pouvons à nouveau cliquer sur &quot;OK&quot;.</li><li> Nous allons maintenant être présenté avec un explorateur de répertoires pour créer un référentiel proxy &quot;nu&quot; (il s&#39;agit d&#39;un référentiel que vous pouvez stocker en toute sécurité sur Dropbox, par exemple). Naviguez jusqu&#39;à l&#39;endroit où nous voulons créer ce référentiel proxy et sélectionnez (ou créez) le dossier à utiliser.</li></ul><p> Une fois que nous avons fait cela, <span class="notranslate">GameMaker Studio 2</span> poussera le projet d&#39;origine vers le proxy, et en tirera un nouveau vers le chemin que nous avons défini dans la <strong>fenêtre Clone Repository</strong>, puis ouvrira automatiquement un navigateur de fichiers afin que nous puissions ouvrir le projet stocké.. Si nous allons maintenant dans <strong>Contrôle de la source</strong> &gt; <strong>Afficher l&#39;historique,</strong> nous verrons nos commits d&#39;origine plus un nouveau &quot;Push For Clone&quot;</p><p><img alt="Source Control Push For Clone" class="center" src="../../assets/Images/IDE Tools/SCM_PushForClone.png" /> Vous avez maintenant cloné votre référentiel et pouvez continuer à travailler sur la version locale du projet. </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> Retour: <a href="../Source_Control.htm">Contrôle de la source</a></div><div style="float:right"> Suivant: <a href="Conflicts.htm">Conflits</a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
+<body>
+  <!--<div class="body-scroll" style="top: 150px;">-->
+  <h1>Cloner un référentiel</h1>
+  <p>Lorsque votre projet est stocké dans un dépôt externe, vous devez vous rappeler de pousser vos changements et de tirer les nouveaux. La raison en est que lorsque vous livrez, vous stockez vos modifications localement, ce qui vous permet de travailler loin d'une connexion Internet et de vous synchroniser lorsque vous êtes prêt.
+    et de vous synchroniser quand vous êtes prêt, et pour vous synchroniser, vous poussez vos changements vers le dépôt distant. L'extraction des modifications signifie que vous voulez extraire toutes les modifications que d'autres personnes ont apportées depuis le référentiel distant vers votre référentiel local. Cependant,
+    cela signifie qu'il peut y avoir des moments où des personnes peuvent éditer les mêmes fichiers, ce qui crée un <strong>conflit de fusion</strong>. Vous devez savoir comment gérer ces conflits. Nous allons donc en créer un délibérément et vous montrer comment le gérer.
+    comment le gérer.</p>
+  <p class="note"><strong>REMARQUE</strong>: Le partage d'un dépôt de projet local (même par le biais d'un service de synchronisation de fichiers comme Dropbox) n'est pas recommandé, car les commits y sont généralement écrits directement, et vous avez donc très peu de protection contre les conflits.</p>
+  <p>Pour générer notre conflit, nous devons d'abord avoir deux référentiels locaux, un pour le référentiel maître et un pour notre copie. Pour créer cela, nous devons cloner le référentiel, ce qui est fait avec les étapes suivantes :</p>
+  <ul class="colour">
+    <li>Allez dans <strong>Source Control</strong> &gt; Clone <strong>Repository.</strong></li>
+    <li>Dans le champ URL, saisissez le chemin d'accès au projet que nous avons configuré dans le guide sur l'inversion des fichiers ci-dessus (par défaut, ce sera <span class="inline">&lt;DRIVE&gt;:\Users\&lt;Username&gt;\Documents\<span class="notranslate">GameMaker</span>Studio2\&lt;ProjectName&gt;).<img alt="Source Control Clone Repository From" class="center" src="../../assets/Images/IDE Tools/SCM_RepositoryToClone.png"></li>
+    <li>Nous devons ensuite définir un chemin pour le clonage : <br>
+      <img alt="Source Control Clone Repository To" class="center" src="../../assets/Images/IDE Tools/SCM_CloneTo.png"> Lorsque nous cliquons sur le bouton &quot;Okay&quot;, nous obtenons l'avertissement suivant concernant la tentative de cloner un référentiel &quot;non nu&quot; :<br>
+      <img alt="Source Control Clone Warning " class="center" src="../../assets/Images/IDE Tools/SCM_CloneWarning.png">Nous pouvons cliquer sur &quot;Okay&quot; ici encore.</li>
+    <li>On va maintenant nous présenter un explorateur de répertoire pour créer un dépôt proxy &quot;nu&quot; (c'est un dépôt que vous pouvez stocker en toute sécurité sur Dropbox, par exemple). Naviguez jusqu'à l'endroit où nous voulons créer ce dépôt de proxy et sélectionnez (ou créez)
+      le dossier à utiliser.</li>
+  </ul>
+  <p>Une fois que nous avons fait cela, GameMaker <span class="notranslate">Studio 2</span> va pousser le projet d'origine vers le proxy, et en tirer un nouveau vers le chemin que nous avons défini dans la <strong>fenêtre</strong> Clone Repository, puis ouvrir automatiquement un navigateur de fichiers pour que nous puissions ouvrir le projet stocké.
+    stocké. Si nous allons maintenant dans <strong>Source Control</strong> &gt; <strong>View History</strong>, nous verrons nos commits originaux plus un nouveau &quot;Push For Clone&quot;.</p>
+  <p><img alt="Source Control Push For Clone" class="center" src="../../assets/Images/IDE Tools/SCM_PushForClone.png">Vous avez maintenant cloné votre référentiel et vous pouvez continuer à travailler sur la version locale du projet.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <div class="footer">
+    <div class="buttons">
+      <div class="clear">
+        <div style="float:left">Retour : <a href="../Source_Control.htm">Contrôle de la source</a></div>
+        <div style="float:right">Suivant : <a href="Conflicts.htm">Conflits</a></div>
+      </div>
+    </div>
+    <h5><span data-keyref="Copyright Notice">Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
   </div>
   <!-- KEYWORDS
 Source Control Clone Repository

@@ -1,0 +1,501 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>sprite_get_info</title>
+  <meta name="generator" content="Adobe RoboHelp 2019" />
+  <link rel="stylesheet" href="../../../../../assets/css/default.css" type="text/css" />
+  <meta name="rh-authors" content="Gurpreet S. Matharoo" />
+  <meta name="topic-comment" content="Page explaining the function sprite_get_info" />
+  <meta name="rh-index-keywords" content="sprite_get_info" />
+  <meta name="search-keywords" content="sprite_get_info" />
+</head>
+<body>
+  <!--<div class="body-scroll" style="top: 150px;">-->
+  <h1>sprite_get_info</h1>
+  <p>Cette fonction est utilisée pour récupérer des informations sur le sprite donné. Vous fournissez un index de sprite (qui peut être un actif ajouté via le <a href="../../../../../Introduction/The_Asset_Browser.htm">navigateur d'actifs</a> ou un sprite <a href="../Sprite_Manipulation/sprite_add.htm">ajouté</a> au <span class="notranslate">moment de l'exécution</span>) et la fonction renvoie une <a href="../../../../GML_Overview/Structs.htm">structure</a> avec les variables suivantes :</p>
+  <p> </p>
+  <table>
+    <tbody>
+      <tr>
+        <th style="">Nom de la variable</th>
+        <th>Type de données</th>
+        <th style="">Description</th>
+      </tr>
+      <tr>
+        <td style=""><strong>largeur</strong></td>
+        <td>réel</td>
+        <td style="">La largeur du sprite (en pixels)</td>
+      </tr>
+      <tr>
+        <td style=""><strong>hauteur</strong></td>
+        <td>réel</td>
+        <td style="">Hauteur du sprite (en pixels)</td>
+      </tr>
+      <tr>
+        <td style=""><strong>xoffset</strong></td>
+        <td>réel</td>
+        <td style="">Décalage ou origine en X du sprite (en pixels)</td>
+      </tr>
+      <tr>
+        <td style=""><strong>yoffset</strong></td>
+        <td>réel</td>
+        <td style="">Décalage ou origine en Y du sprite (en pixels)</td>
+      </tr>
+      <tr>
+        <td style=""><strong>transparent</strong></td>
+        <td>boolean</td>
+        <td style=""><tt>true</tt> si le sprite est marqué comme transparent, sinon <tt>false</tt><br>
+         <span>(Ceci ne peut être spécifié qu'à travers <tt><a href="../Sprite_Manipulation/sprite_add.htm">sprite_add()</a></tt> ou des fonctions similaires, et sera <tt>faux</tt></span>pour les sprites créés dans l'IDE).</td>
+      </tr>
+      <tr>
+        <td style=""><strong>lisse</strong></td>
+        <td>boolean</td>
+        <td style=""><tt>true</tt> si le sprite est marqué comme lisse, sinon <tt>false</tt><br>
+          <span><span>(Ceci ne peut être spécifié qu'à travers <tt><a href="../Sprite_Manipulation/sprite_add.htm">sprite_add()</a></tt> ou des fonctions similaires, et sera <tt>faux</tt> pour les sprites créés dans l'IDE)</span><span></span></span>
+        </td>
+      </tr>
+      <tr>
+        <td style=""><strong>type</strong></td>
+        <td>réel</td>
+        <td style="">Le type de sprite :<br>
+         <tt>0</tt> - Bitmap (sprites réguliers)<br>
+         <tt>1</tt> - SWF<br>
+         <tt>2</tt> - Épine</td>
+      </tr>
+      <tr>
+        <td style=""><strong>bbox_left</strong></td>
+        <td>réel</td>
+        <td style="">Position du bord gauche de la boîte englobante (en pixels)</td>
+      </tr>
+      <tr>
+        <td style=""><strong>bbox_top</strong></td>
+        <td>réel</td>
+        <td style="">Position du bord supérieur de la boîte englobante (en pixels)</td>
+      </tr>
+      <tr>
+        <td style=""><strong>bbox_right</strong></td>
+        <td>réel</td>
+        <td style="">Position du bord droit de la boîte englobante (en pixels)</td>
+      </tr>
+      <tr>
+        <td style=""><strong>bbox_bottom</strong></td>
+        <td>réel</td>
+        <td style="">Position du bord inférieur de la boîte englobante (en pixels)</td>
+      </tr>
+      <tr>
+        <td style=""><strong>nom</strong></td>
+        <td>chaîne de caractères</td>
+        <td style="">Le nom du sprite</td>
+      </tr>
+      <tr>
+        <td style=""><strong>num_sous-images</strong></td>
+        <td>réel</td>
+        <td style="">Le nombre de sous-images (ou de cadres) dans le sprite.</td>
+      </tr>
+      <tr>
+        <td style=""><strong>masque d'utilisation</strong></td>
+        <td>boolean</td>
+        <td style=""><tt>vrai</tt> si ce sprite utilise un masque de collision, sinon <tt>faux</tt></td>
+      </tr>
+      <tr>
+        <td style=""><strong>num_masks</strong></td>
+        <td>réel</td>
+        <td style="">Le nombre de masques dans ce sprite (sera supérieur à 1 si le sprite utilise des masques par image).</td>
+      </tr>
+      <tr>
+        <td style=""><strong>nineslice</strong><strong></strong></td>
+        <td>struct</td>
+        <td style="">La <a href="../Nine_Slice_Struct.htm">structure Nine Slice</a> de ce sprite, ou <tt>indéfinie</tt> s'il n'a pas de données Nine Slice.</td>
+      </tr>
+      <tr>
+        <td style=""><strong>messages</strong></td>
+        <td>tableau</td>
+        <td style="">Tableau des messages de diffusion pour ce sprite, où chaque message de diffusion est une structure contenant des informations sur le message (pour plus d'informations, voir &quot;Données générales du sprite&quot;).</td>
+      </tr>
+      <tr>
+        <td style=""><strong>info_cadre</strong></td>
+        <td>tableau</td>
+        <td style="">Tableau de trames pour ce sprite, où chaque trame est une structure contenant des informations sur son timing (plus d'informations sous &quot;Données générales du sprite&quot;).</td>
+      </tr>
+    </tbody>
+  </table>
+  <p class="note"><strong>Cette variable supplémentaire n'est disponible que pour les sprites Bitmap (ordinaires) :</strong></p>
+  <table>
+    <tbody>
+      <tr>
+        <th>Nom de la variable</th>
+        <th style="">Type de données</th>
+        <th style="">Description</th>
+      </tr>
+      <tr>
+        <td><strong>cadres</strong></td>
+        <td style="">tableau</td>
+        <td style="">Tableau de cadres pour ce sprite, où chaque cadre est une structure contenant des informations sur sa texture (pour plus d'informations, voir &quot;Données de sprite bitmap&quot;).</td>
+      </tr>
+    </tbody>
+  </table>
+  <p class="note"><strong>Ces variables supplémentaires ne sont disponibles que pour les sprites Spine :</strong></p>
+  <table>
+    <tbody>
+      <tr>
+        <th style="">Nom de la variable</th>
+        <th>Type de données</th>
+        <th style="">Description</th>
+      </tr>
+      <tr>
+        <td style=""><strong>num_atlas</strong></td>
+        <td>réel</td>
+        <td style="">Le nombre de textures atlas utilisées</td>
+      </tr>
+      <tr>
+        <td style=""><strong>texture_atlas</strong></td>
+        <td>tableau</td>
+        <td style="">Tableau des ID de texture utilisés pour l'atlas</td>
+      </tr>
+      <tr>
+        <td style=""><strong>prémultiplié</strong></td>
+        <td>boolean</td>
+        <td style=""><tt>vrai</tt> si ce sprite est marqué comme prémultiplié, sinon <tt>faux</tt></td>
+      </tr>
+      <tr>
+        <td style=""><strong>noms_d'animation</strong></td>
+        <td>tableau</td>
+        <td style="">Tableau contenant les noms de chaque animation dans ce sprite</td>
+      </tr>
+      <tr>
+        <td style=""><strong>noms de peau</strong></td>
+        <td>tableau</td>
+        <td style="">Tableau contenant les noms de chaque peau dans ce sprite</td>
+      </tr>
+      <tr>
+        <td style=""><strong>ossements</strong></td>
+        <td>tableau</td>
+        <td style="">Tableau contenant des structures pour chaque os de ce sprite (pour plus d'informations, voir &quot;Données du sprite de la colonne vertébrale&quot;)</td>
+      </tr>
+      <tr>
+        <td style=""><strong>Machines à sous</strong></td>
+        <td>tableau</td>
+        <td style="">Tableau contenant des structures pour chaque emplacement de ce sprite (pour plus d'informations, voir &quot;Données du sprite de la colonne vertébrale&quot;).</td>
+      </tr>
+    </tbody>
+  </table>
+  <p> </p>
+  <p>La fonction retournera <tt>undefined</tt> si le sprite donné n'existe pas. Notez également que les informations retournées dans cette structure doivent être considérées comme étant <strong>en lecture seule</strong>, car la modification de l'une de ces variables n'affectera pas le sprite.</p>
+  <p>Les sections ci-dessous contiennent des informations sur les tableaux et les structures inclus dans la structure retournée en fonction du type de sprite :</p>
+  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down2" href="#">Données générales sur les sprites</a></p>
+  <div class="droptext" data-targetname="drop-down2">
+    <p>Cette section contient des informations sur les variables incluses dans la structure pour tous les types de sprites.</p>
+    <p>La variable <tt>messages</tt> est un tableau qui contient des informations sur les messages de diffusion qui existent dans le sprite donné. Chaque message de diffusion dans ce tableau est une structure contenant les variables suivantes :</p>
+    <table>
+      <tbody>
+        <tr>
+          <th style="">Nom de la variable</th>
+          <th>Type de données</th>
+          <th style="">Description</th>
+        </tr>
+        <tr>
+          <td style=""><strong>cadre</strong></td>
+          <td>réel</td>
+          <td style="">Le timing de ce message de diffusion à partir du début de l'animation (en frames)</td>
+        </tr>
+        <tr>
+          <td style=""><strong>message</strong></td>
+          <td>chaîne de caractères</td>
+          <td style="">La chaîne du message de diffusion</td>
+        </tr>
+      </tbody>
+    </table>
+    <p> </p>
+    <p>La variable <tt>frame_info</tt> est un tableau qui contient des informations sur le timing des images du sprite. Chaque image de ce tableau est une structure contenant les variables suivantes :</p>
+    <table>
+      <tbody>
+        <tr>
+          <th style="">Nom de la variable</th>
+          <th>Type de données</th>
+          <th style="">Description</th>
+        </tr>
+        <tr>
+          <td style=""><strong>cadre</strong></td>
+          <td>réel</td>
+          <td style="">Le timing pour le début de cette trame (en trames)</td>
+        </tr>
+        <tr>
+          <td style=""><strong>image_index</strong></td>
+          <td>réel</td>
+          <td style="">L'index de l'image de ce cadre</td>
+        </tr>
+      </tbody>
+    </table>
+    <p> </p>
+  </div>
+  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down" href="#">Données Bitmap Sprite</a></p>
+  <div class="droptext" data-targetname="drop-down">
+    <p>Cette section contient des informations sur les variables incluses dans la structure pour les sprites Bitmap (sprites qui ne sont pas de type Spine ou SWF).</p>
+    <p>La variable <tt>frames</tt> est un tableau qui contient des informations sur les textures des frames du sprite. Chaque cadre de ce tableau est une structure contenant les variables suivantes :</p>
+    <table>
+      <tbody>
+        <tr>
+          <th style="">Nom de la variable</th>
+          <th>Type de données</th>
+          <th style="">Description</th>
+        </tr>
+        <tr>
+          <td style=""><strong>x</strong></td>
+          <td>réel</td>
+          <td style="">La position X de ce cadre sur sa page de texture (en pixels)</td>
+        </tr>
+        <tr>
+          <td style=""><strong>y</strong></td>
+          <td>réel</td>
+          <td style="">La position Y de ce cadre sur sa page de texture (en pixels)</td>
+        </tr>
+        <tr>
+          <td style=""><strong>w</strong></td>
+          <td>réel</td>
+          <td style="">La largeur logique de la trame (en pixels) utilisée en interne.</td>
+        </tr>
+        <tr>
+          <td style=""><strong>h</strong></td>
+          <td>réel</td>
+          <td style="">La hauteur logique du cadre (en pixels) utilisée en interne.</td>
+        </tr>
+        <tr>
+          <td style=""><strong>texture</strong></td>
+          <td>réel</td>
+          <td style="">L'ID de la page de texture pour ce cadre</td>
+        </tr>
+        <tr>
+          <td style=""><strong>largeur originale</strong></td>
+          <td>réel</td>
+          <td style="">La largeur originale du cadre (en pixels)</td>
+        </tr>
+        <tr>
+          <td style=""><strong>hauteur_originale</strong></td>
+          <td>réel</td>
+          <td style="">La hauteur originale du cadre (en pixels)</td>
+        </tr>
+        <tr>
+          <td style=""><strong>largeur de la récolte</strong></td>
+          <td>réel</td>
+          <td style="">La largeur réelle du cadre sur la page de texture après le recadrage et la mise à l'échelle (puisque GMS2 recadre automatiquement l'espace vide autour d'une image et la met à l'échelle si elle ne tient pas).</td>
+        </tr>
+        <tr>
+          <td style=""><strong>hauteur de la récolte</strong></td>
+          <td>réel</td>
+          <td style="">La hauteur réelle du cadre sur la page de la texture après recadrage et mise à l'échelle.</td>
+        </tr>
+        <tr>
+          <td style=""><strong>x_offset</strong></td>
+          <td>réel</td>
+          <td style="">Le décalage X entre le bord gauche de l'image originale et le bord gauche de la section recadrée.</td>
+        </tr>
+        <tr>
+          <td style=""><strong>y_offset</strong></td>
+          <td>réel</td>
+          <td style="">Le décalage Y entre le bord supérieur de l'image originale et le bord supérieur de la section recadrée.</td>
+        </tr>
+      </tbody>
+    </table>
+    <p> </p>
+  </div>
+  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down1" href="#">Données sur les sprites de la colonne vertébrale</a></p>
+  <div class="droptext" data-targetname="drop-down1">
+    <p>Cette section contient des informations sur les variables incluses dans la structure des sprites Spine.</p>
+    <p>La variable <tt>bones</tt> est un tableau qui contient des informations sur tous les os du sprite Spine donné. Chaque os de ce tableau est une structure contenant les variables suivantes :</p>
+    <table>
+      <tbody>
+        <tr>
+          <th style="">Nom de la variable</th>
+          <th>Type de données</th>
+          <th style="">Description</th>
+        </tr>
+        <tr>
+          <td style=""><strong>parent</strong></td>
+          <td>chaîne de caractères</td>
+          <td style="">Le nom de l'os parent, ou <tt>indéfini</tt> si l'os n'a pas de parent.</td>
+        </tr>
+        <tr>
+          <td style=""><strong>nom</strong></td>
+          <td>chaîne de caractères</td>
+          <td style="">Le nom de cet os</td>
+        </tr>
+        <tr>
+          <td style=""><strong>indice</strong></td>
+          <td>réel</td>
+          <td style="">L'indice de cet os</td>
+        </tr>
+        <tr>
+          <td style=""><strong>longueur</strong></td>
+          <td>réel</td>
+          <td style="">La longueur de cet os</td>
+        </tr>
+        <tr>
+          <td style=""><strong>x</strong></td>
+          <td>réel</td>
+          <td style="">La position X de cet os</td>
+        </tr>
+        <tr>
+          <td style=""><strong>y</strong></td>
+          <td>réel</td>
+          <td style="">La position Y de cet os</td>
+        </tr>
+        <tr>
+          <td style=""><strong>rotation</strong></td>
+          <td>réel</td>
+          <td style="">La rotation de cet os</td>
+        </tr>
+        <tr>
+          <td style=""><strong>scale_x</strong></td>
+          <td>réel</td>
+          <td style="">(interne à la colonne vertébrale) Valeur de l'échelle sur X</td>
+        </tr>
+        <tr>
+          <td style=""><strong>échelle_y</strong></td>
+          <td>réel</td>
+          <td style="">(interne à la colonne vertébrale) Valeur de l'échelle sur Y</td>
+        </tr>
+        <tr>
+          <td style=""><strong>cisaillement_x</strong></td>
+          <td>réel</td>
+          <td style="">(interne à la colonne vertébrale) Valeur de cisaillement sur X</td>
+        </tr>
+        <tr>
+          <td style=""><strong>cisaillement_y</strong></td>
+          <td>réel</td>
+          <td style="">(interne à la colonne vertébrale) Valeur de cisaillement sur Y</td>
+        </tr>
+        <tr>
+          <td style=""><strong>mode de transformation</strong></td>
+          <td>réel</td>
+          <td style="">(interne à la colonne vertébrale) Le mode de transformation</td>
+        </tr>
+      </tbody>
+    </table>
+    <p class="note"> <strong>NOTE</strong>: Veuillez consulter la <a href="http://en.esotericsoftware.com/spine-documentation" title="Spine Documentation">documentation de Spine</a> pour plus d'informations concernant les variables internes de Spine.</p>
+    <p>La variable <tt>slots</tt> est un tableau qui contient des informations sur tous les slots du sprite Spine donné. Chaque emplacement de ce tableau est une structure contenant les variables suivantes :</p>
+    <table>
+      <tbody>
+        <tr>
+          <th style="">Nom de la variable</th>
+          <th>Type de données</th>
+          <th style="">Description</th>
+        </tr>
+        <tr>
+          <td style=""><strong>nom</strong></td>
+          <td>chaîne de caractères</td>
+          <td style="">Le nom de l'emplacement</td>
+        </tr>
+        <tr>
+          <td style=""><strong>indice</strong></td>
+          <td>réel</td>
+          <td style="">L'indice de l'emplacement</td>
+        </tr>
+        <tr>
+          <td style=""><strong>os</strong></td>
+          <td>chaîne de caractères</td>
+          <td style="">Le nom de l'os de l'emplacement, ou &quot;( <tt>none)&quot; s'il</tt> n'y a pas d'os pour cet emplacement.</td>
+        </tr>
+        <tr>
+          <td style=""><strong>pièce jointe</strong></td>
+          <td>chaîne de caractères</td>
+          <td style="">Nom de la pièce jointe</td>
+        </tr>
+        <tr>
+          <td style=""><strong>rouge</strong></td>
+          <td>réel</td>
+          <td style="">Composante rouge de la couleur du slot (0-1)</td>
+        </tr>
+        <tr>
+          <td style=""><strong>vert</strong></td>
+          <td>réel</td>
+          <td style="">Composante verte de la couleur du slot (0-1)</td>
+        </tr>
+        <tr>
+          <td style=""><strong>bleu</strong></td>
+          <td>réel</td>
+          <td style="">Composante bleue de la couleur du slot (0-1)</td>
+        </tr>
+        <tr>
+          <td style=""><strong>alpha</strong></td>
+          <td>réel</td>
+          <td style="">Composante alpha de la couleur de l'emplacement (0-1)</td>
+        </tr>
+        <tr>
+          <td style=""><strong>blendMode</strong></td>
+          <td>réel</td>
+          <td style="">(Internal to Spine) Mode de mélange pour la fente</td>
+        </tr>
+        <tr>
+          <td style=""><strong>dark_red*</strong></td>
+          <td>réel</td>
+          <td style="">Composante rouge de la couleur foncée du slot (0-1)</td>
+        </tr>
+        <tr>
+          <td style=""><strong>dark_green*</strong></td>
+          <td>réel</td>
+          <td style="">Composante verte de la couleur foncée du slot (0-1)</td>
+        </tr>
+        <tr>
+          <td style=""><strong>dark_blue*</strong></td>
+          <td>réel</td>
+          <td style="">Composante bleue de la couleur foncée du slot (0-1)</td>
+        </tr>
+        <tr>
+          <td style=""><strong>dark_alpha*</strong></td>
+          <td>chaîne de caractères</td>
+          <td style="">Composante alpha de la couleur foncée du slot (0-1)</td>
+        </tr>
+      </tbody>
+    </table>
+    <p class="note"> <strong>NOTE</strong>: Les variables de couleur foncée ne sont disponibles que si le slot a la fonction <a href="http://en.esotericsoftware.com/spine-slots#Tint-black" title="Tint Black">Tint Black</a> activée.</p>
+    <p> </p>
+  </div>
+  <p> </p>
+  <p> </p>
+  <h4>Syntaxe :</h4>
+  <p class="code">sprite_get_info(index) ;</p>
+  <table>
+    <tbody>
+      <tr>
+        <th>Arguments</th>
+        <th>Description</th>
+      </tr>
+      <tr>
+        <td>indice</td>
+        <td>L'index du sprite pour lequel il faut obtenir les informations.</td>
+      </tr>
+    </tbody>
+  </table>
+  <p> </p>
+  <h4>Renvoie à</h4>
+  <p class="code">Structure (ou indéfinie)</p>
+  <p> </p>
+  <h4>Exemple :</h4>
+  <p class="code">var _info = sprite_get_info(sprite_index) ;<br>
+    <br> if (_info != undefined &amp;&amp; _info.type == 0)<br> {
+    <br> var _messages = _info.messages ;<br> var _messageCount = array_length(_messages) ;<br>     <br> for (var i = 0 ; i &lt; _messageCount ; i ++)<br> {<br> var _message = _messages[i] ;<br> show_debug_message(&quot;Message
+    at frame &quot; + string(_message.frame) + &quot; : &quot; + _message.message) ;<br> } <br> }
+  </p>
+  <p>Le code ci-dessus récupère la structure d'information du sprite de l'instance, puis vérifie qu'il n'est pas indéfini <tt>et</tt> que son type est 0 (ce qui signifie qu'il s'agit d'un sprite bitmap). Dans ce cas, elle récupère le tableau de messages de diffusion pour ce sprite et
+    puis exécute une boucle for pour imprimer chaque message de diffusion (avec son cadre) dans le journal de sortie.</p>
+  <p> </p>
+  <p> </p>
+  <div class="footer">
+    <div class="buttons">
+      <div class="clear">
+        <div style="float:left">Retour : <a href="Sprite_Information.htm">Informations sur le Sprite</a></div>
+        <div style="float:right">Suivant : <a href="../Sprite_Manipulation/sprite_exists.htm">sprite_exists</a></div>
+      </div>
+    </div>
+    <h5><span data-keyref="Copyright Notice">Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
+  </div>
+  <!-- KEYWORDS
+sprite_get_info
+-->
+  <!-- TAGS
+sprite_get_info
+-->
+</body>
+</html>

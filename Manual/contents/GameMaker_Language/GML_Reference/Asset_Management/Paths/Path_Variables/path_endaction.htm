@@ -7,13 +7,65 @@
   <meta name="generator" content="Adobe RoboHelp 2019" />
   <link rel="stylesheet" href="../../../../../assets/css/default.css" type="text/css" />
   <meta name="rh-authors" content="Mark Alexander" />
-  <meta name="topic-comment" content="Page expliquant la fonction path_endaction" />
+  <meta name="topic-comment" content="Page explaining the function path_endaction" />
   <meta name="rh-index-keywords" content="path_endaction" />
   <meta name="search-keywords" content="path_endaction,path_action_stop,path_action_restart,path_action_continue,path_action_reverse" />
 </head>
-<body><!--<div class="body-scroll" style="top: 150px;">--><h1>path_endaction</h1><p> Cette variable peut être utilisée pour obtenir ou modifier la réaction d&#39;une instance lorsqu&#39;elle atteint la fin du chemin courant. Normalement, vous le définissez lorsque vous démarrez le chemin en utilisant <a href="../path_start.htm"><tt>path_start()</tt></a> mais vous souhaiterez peut-être modifier ce comportement en fonction du nombre d&#39;événements de votre jeu. Les valeurs disponibles sont exprimées à l&#39;aide des constantes suivantes:</p><p></p><table><tbody><tr><th> Constant</th><th> Description</th></tr><tr><td> <span class="notranslate">path_action_stop</span></td><td> arrête le chemin</td></tr><tr><td> <span class="notranslate">path_action_restart</span></td><td> continuer à partir de la position de départ, sauter au début si le chemin n&#39;est pas fermé</td></tr><tr><td> <span class="notranslate">path_action_continue</span></td><td> recommencer le chemin à partir de la position actuelle</td></tr><tr><td> <span class="notranslate">path_action_reverse</span></td><td> inverser la vitesse du chemin (exécuter le chemin en sens inverse)</td></tr></tbody></table><p></p><h4> Syntaxe:</h4><p class="code">path_endaction;</p><p></p><h4> Retour:</h4><p class="code">Constant (see description)</p><p></p><h4> Exemple:</h4><p></p><p class="code">if (path_endaction == path_action_stop)<br/>     {
-    <br/>     path_endaction = path_action_reverse;<br/>     }
-  </p><p> Le code ci-dessus vérifiera l&#39;action de fin de chemin et si elle est définie pour s&#39;arrêter, l&#39;action de fin sera modifiée pour inverser. </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> Retour: <a href="Path_Variables.htm">Variables de chemin</a></div><div style="float:right"> Suivant:<a href="../path_start.htm">path_start</a></div><div style="float:right"></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
+<body>
+  <!--<div class="body-scroll" style="top: 150px;">-->
+  <h1>path_endaction</h1>
+  <p>Cette variable peut être utilisée pour obtenir ou modifier la réaction d'une instance lorsqu'elle atteint la fin du chemin actuel. Normalement, vous devriez la définir lorsque vous démarrez le chemin en utilisant <a href="../path_start.htm"><tt>path_start()</tt></a> mais
+    vous pouvez souhaiter modifier ce comportement en fonction d'un certain nombre d'événements dans votre jeu. Les valeurs disponibles sont exprimées à l'aide des constantes suivantes :</p>
+  <p> </p>
+  <table>
+    <tbody>
+      <tr>
+        <th>Constant</th>
+        <th>Description</th>
+      </tr>
+      <tr>
+        <td>path_action_stop</td>
+        <td>arrêter le chemin</td>
+      </tr>
+      <tr>
+        <td>path_action_restart</td>
+        <td>continuer à partir de la position de départ, en sautant au départ si le chemin n'est pas fermé</td>
+      </tr>
+      <tr>
+        <td>path_action_continue</td>
+        <td>recommencer le chemin à partir de la position actuelle</td>
+      </tr>
+      <tr>
+        <td>path_action_reverse</td>
+        <td>inverser la vitesse de la trajectoire (exécuter la trajectoire en sens inverse)</td>
+      </tr>
+    </tbody>
+  </table>
+  <p> </p>
+  <h4>Syntaxe :</h4>
+  <p class="code">path_endaction ;</p>
+  <p> </p>
+  <h4>Les retours :</h4>
+  <p class="code">Constante (voir description)</p>
+  <p> </p>
+  <h4>Exemple :</h4>
+  <p></p>
+  <p class="code">if (path_endaction == path_action_stop)<br> {
+    <br> path_endaction = path_action_reverse ;<br> }
+  </p>
+  <p>Le code ci-dessus vérifiera l'action de fin de chemin et s'il est réglé sur stop, alors l'action de fin sera changée en marche arrière.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <div class="footer">
+    <div class="buttons">
+      <div class="clear">
+        <div style="float:left">Retour : <a href="Path_Variables.htm">Variables de chemin</a></div>
+        <div style="float:right">Suivant : <a href="../path_start.htm">path_start</a></div>
+        <div style="float:right"> </div>
+      </div>
+    </div>
+    <h5><span data-keyref="Copyright Notice">Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
   </div>
   <!-- KEYWORDS
 path_endaction

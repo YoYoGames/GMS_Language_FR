@@ -3,15 +3,42 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>view_yport</title>
+  <title>vue_yport</title>
   <meta name="generator" content="Adobe RoboHelp 2019" />
   <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
   <meta name="rh-authors" content="Mark Alexander" />
-  <meta name="topic-comment" content="Page de référence pour view_yport" />
+  <meta name="topic-comment" content="Reference page for view_yport" />
   <meta name="rh-index-keywords" content="view_yport" />
   <meta name="search-keywords" content="view_yport" />
 </head>
-<body><!--<div class="body-scroll" style="top: 150px;">--><h1>view_yport</h1><p> Avec ce tableau intégré, vous pouvez obtenir ou définir la position y du port de vue donné. Le port de vue est la zone de l&#39;écran où la vue est dessinée, et vous pouvez en avoir jusqu&#39;à 8 actifs à tout moment (le tableau a des valeurs de 0 à 7 inclus pour donner 8 ports). Désormais, la valeur par défaut de <span class="notranslate">GameMaker Studio 2</span> est que la fenêtre de jeu (ou le canevas d&#39;arrière-plan) a la même taille que la pièce, mais lorsque vous activez les ports de vue et les caméras, ce comportement change et la <i>taille totale de la zone de délimitation pour tous les ports de vue.</i> est utilisé. Donc, si vous avez deux ports de vue différents à deux positions différentes, la zone totale qu&#39;ils couvrent définit la taille de la fenêtre de jeu. L&#39;image suivante illustre cela:</p><p><img alt="Canvas with multiple view ports example" class="center" src="../../../../assets/Images/Scripting_Reference/GML/Reference/Cameras_Display/viewport_canvas.png" /> Si vous n&#39;avez qu&#39;un <i>seul</i> port d&#39;affichage, la valeur x ou y du port peut avoir des effets intéressants mais n&#39;est normalement pas pratique (voir l&#39;image ci-dessous) et il est donc préférable de maintenir la position x et y comme (0,0).</p><p><img alt="view_yport example" class="center" src="../../../../assets/Images/Scripting_Reference/GML/Reference/Cameras_Display/view_xyport.png" /></p><h4> Syntaxe:</h4><p class="code">view_yport[0 .. 7];</p><p></p><h4> Retour:</h4><p class="code">Real</p><p></p><h4> Exemple:</h4><p class="code">view_xport[0] = 0;<br/> view_yport[0] = 0;</p><p> Le code ci-dessus réinitialise la position du port de vue [0] à la position (0,0) (coin supérieur gauche) de l&#39;affichage. </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> Arrière: <a href="Cameras_And_View_Ports.htm">caméras et ports d&#39;affichage</a></div><div style="float:right"> Suivant:<a href="view_set_wport.htm">view_wport</a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
+<body>
+  <!--<div class="body-scroll" style="top: 150px;">-->
+  <h1>vue_yport</h1>
+  <p>Avec ce tableau intégré, vous pouvez obtenir ou définir la position y du port de vue donné. Le port d'affichage est la zone de l'écran où la vue est dessinée, et vous pouvez en avoir jusqu'à 8 actifs à tout moment (le tableau a des valeurs de 0 à 7 inclus pour donner 8 ports).
+    ports). Par défaut, dans <span class="notranslate">GameMaker Studio 2</span>, la fenêtre de jeu (ou le canevas d'arrière-plan) a la même taille que la pièce. Cependant, lorsque vous activez des ports de vue et des caméras, ce comportement change et la <i>taille totale de la boîte englobante de tous les ports de vue</i> est utilisée. Ainsi, si vous avez deux ports de vue différents à deux positions différentes, la surface totale qu'ils couvrent définit la taille de la fenêtre de jeu. L'image suivante illustre cela :</p>
+  <p><img alt="Canvas with multiple view ports example" class="center" src="../../../../assets/Images/Scripting_Reference/GML/Reference/Cameras_Display/viewport_canvas.png">Si vous n'avez qu'<i>un</i> seul port de vue, le fait de définir la valeur x ou y du port peut avoir des effets intéressants mais n'est normalement pas pratique (voir l'image ci-dessous).
+    peut avoir des effets intéressants mais n'est normalement pas pratique (voir l'image ci-dessous) et il est donc préférable de maintenir la position x et y comme (0,0).</p>
+  <p><img alt="view_yport example" class="center" src="../../../../assets/Images/Scripting_Reference/GML/Reference/Cameras_Display/view_xyport.png" /></p>
+  <h4>Syntaxe :</h4>
+  <p class="code">vue_yport [0 .. 7] ;</p>
+  <p> </p>
+  <h4>Les retours :</h4>
+  <p class="code">Real</p>
+  <p> </p>
+  <h4>Exemple :</h4>
+  <p class="code">view_xport[0] = 0 ;<br> view_yport[0] = 0 ;</p>
+  <p>Le code ci-dessus réinitialise la position du port de vue [0] à la position (0,0) (coin supérieur gauche) de l'écran.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <div class="footer">
+    <div class="buttons">
+      <div class="clear">
+        <div style="float:left">Retour : <a href="Cameras_And_View_Ports.htm">Caméras et ports d'observation</a></div>
+        <div style="float:right">Suivant : <a href="view_set_wport.htm">view_wport</a></div>
+      </div>
+    </div>
+    <h5><span data-keyref="Copyright Notice">Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
   </div>
   <!-- KEYWORDS
 view_yport

@@ -7,19 +7,57 @@
   <meta name="generator" content="Adobe RoboHelp 2019" />
   <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
   <meta name="rh-authors" content="Mark Alexander" />
-  <meta name="topic-comment" content="Page de référence pour steam _get_stat_float" />
+  <meta name="topic-comment" content="Reference page for steam_get_stat_float" />
   <meta name="rh-index-keywords" content="steam_get_stat_float" />
   <meta name="search-keywords" content="steam_get_stat_float" />
 </head>
-<body><!--<div class="body-scroll" style="top: 150px;">--><h1> <span class="notranslate">steam</span> _get_stat_float</h1><p> Avec cette fonction, vous pouvez obtenir la valeur d&#39;une statistique en <b>virgule flottante spécifique.</b> La statistique doit avoir été préalablement définie sur la <span class="notranslate">Steam</span> Works pour votre jeu et la chaîne transmise à la fonction doit correspondre à celle utilisée comme <b>nom d&#39;API</b> sur le panneau de configuration.</p><p></p><h4> Syntaxe:</h4><p class="code">steam_get_stat_float(stat_name);</p><table><tbody><tr><th> Argument</th><th> Description</th></tr><tr><td> <span class="notranslate">stat_name</span></td><td> Le nom de la statistique à obtenir (une chaîne).</td></tr></tbody></table><p></p><h4> Retour:</h4><p class="code">Real</p><p></p><h4> Exemple:</h4><p class="code">var dist_pc = (dist / dist_max) * 100;<br/> if steam_get_stat_float(&quot;Travelled&quot;) &lt; dist_pc<br/>     {
-    <br/>     steam_set_stat_int(&quot;Travelled&quot;, dist_pc);<br/>     }
-  </p><p> Le code ci-dessus calcule un pourcentage basé sur la variable de distance parcourue &quot;dist&quot; et la distance maximale que vous pouvez parcourir &quot;dist_max&quot;. Il interroge ensuite la valeur actuelle de la statistique «Voyage» et si elle est inférieure à la valeur calculée, il définit à nouveau la statistique. </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> Retour: <a href="Steam_Achievements.htm">Réalisations et statistiques</a></div><div style="float:right"> Suivant: <a href="steam_get_stat_avg_rate.htm"><span class="notranslate">steam</span> _get_stat_avg_rate</a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
+<body>
+  <!--<div class="body-scroll" style="top: 150px;">-->
+  <h1><span class="notranslate">steam_get_stat_float</span></h1>
+  <p>Cette fonction vous permet d'obtenir la valeur d'une statistique <b>à virgule flottante</b> spécifique. La statistique doit avoir été préalablement définie sur la page des comptes du panneau de contrôle <span class="notranslate">Steamworks</span>pour votre jeu et la chaîne passée à la fonction doit correspondre à celle utilisée comme nom d'API sur le panneau de contrôle.
+    correspondre à celle utilisée comme <b>nom d'API</b> sur le panneau de contrôle.</p>
+  <p> </p>
+  <h4>Syntaxe :</h4>
+  <p class="code"><span class="notranslate">steam_get_stat_float</span>(nom_de_stat) ;</p>
+  <table>
+    <tbody>
+      <tr>
+        <th>Arguments</th>
+        <th>Description</th>
+      </tr>
+      <tr>
+        <td>nom_statut</td>
+        <td>Le nom de la statistique à obtenir (une chaîne de caractères).</td>
+      </tr>
+    </tbody>
+  </table>
+  <p> </p>
+  <h4>Les retours :</h4>
+  <p class="code">Real</p>
+  <p> </p>
+  <h4>Exemple :</h4>
+  <p class="code">var dist_pc = (dist / dist_max) * 100 ;<br> if <span class="notranslate">steam_get_stat_float</span>(&quot;Travelled&quot;) &lt; dist_pc<br> {
+    <br> <span class="notranslate">steam_set_stat_int</span>(&quot;Travelled&quot;, dist_pc) ;<br> }
+  </p>
+  <p>Le code ci-dessus calcule un pourcentage basé sur la variable de la distance parcourue &quot;dist&quot; et la distance maximale que vous pouvez parcourir &quot;dist_max&quot;. Il interroge ensuite la valeur actuelle de la statistique &quot;Travelled&quot; et si elle est inférieure à la valeur calculée, il réinitialise la statistique.
+    inférieure à la valeur calculée, il redéfinit la statistique.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <div class="footer">
+    <div class="buttons">
+      <div class="clear">
+        <div style="float:left">Dos : <a href="Steam_Achievements.htm">Réalisations et statistiques</a></div>
+        <div style="float:right">Suivant : <a href="steam_get_stat_avg_rate.htm"><span class="notranslate">steam_get_stat_avg_rate</span></a></div>
+      </div>
+    </div>
+    <h5><span data-keyref="Copyright Notice">Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
   </div>
   <!-- KEYWORDS
-steam_get_stat_float
+<span class="notranslate">steam</span>_get_stat_float
 -->
   <!-- TAGS
-steam_get_stat_float
+<span class="notranslate">steam</span>_get_stat_float
 -->
 </body>
 </html>

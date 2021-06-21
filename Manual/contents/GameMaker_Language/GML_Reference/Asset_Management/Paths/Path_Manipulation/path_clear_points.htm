@@ -3,18 +3,58 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>path_clear_points</title>
+  <title>chemin_points_clairs</title>
   <meta name="generator" content="Adobe RoboHelp 2019" />
   <link rel="stylesheet" href="../../../../../assets/css/default.css" type="text/css" />
   <meta name="rh-authors" content="Mark Alexander" />
-  <meta name="topic-comment" content="Page expliquant la fonction path_clear_points" />
+  <meta name="topic-comment" content="Page explaining the function path_clear_points" />
   <meta name="rh-index-keywords" content="path_clear_points" />
   <meta name="search-keywords" content="path_clear_points" />
 </head>
-<body><!--<div class="body-scroll" style="top: 150px;">--><h1>path_clear_points</h1><p> Avec cette fonction, vous pouvez supprimer toutes les définitions de points d&#39;un chemin, créant ainsi un chemin &quot;vide&quot;. Cela <i>ne</i> supprime pas le chemin, pour cela vous devez utiliser <a href="path_delete.htm"><tt>path_delete()</tt></a>, cependant, il convient de noter que <strong>cette fonction modifie l&#39;actif du chemin réel</strong>, et affectera donc de manière permanente la façon dont le chemin est utilisé par toutes les instances du jeu à partir du moment où la fonction est utilisée jusqu&#39;à la fin du jeu. Si ce n&#39;est pas ce dont vous avez besoin, vous devez utiliser une fonction telle que <span class="inline"><a href="path_duplicate.htm">path_duplicate()</a></span> pour créer d&#39;abord une copie du chemin, puis appelez cette fonction sur l&#39;actif dupliqué (n&#39;oubliez pas d&#39;appeler <span class="inline"><a href="path_delete.htm">path_delete()</a></span> sur l&#39;actif lorsqu&#39;il n&#39;est plus nécessaire).</p><p></p><h4> Syntaxe:</h4><p class="code">path_clear_points(index);</p><table><tbody><tr><th> Argument</th><th> Description</th></tr><tr><td> <span class="notranslate">index</span></td><td> L&#39;index du chemin à effacer.</td></tr></tbody></table><p></p><h4> Retour:</h4><p class="code">N/A</p><p></p><h4> Exemple:</h4><p class="code">if path_get_number(mypath) &gt; 0<br/>     {
-    <br/>     path_clear_points(mypath);
-    <br/>     }
-  </p><p> Le code ci-dessus vérifie s&#39;il y a des points sur le chemin indexés dans la variable &quot;mypath&quot; et s&#39;il y en a, il efface le chemin. </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> Retour: <a href="Path_Manipulation.htm">Manipulation de chemin</a></div><div style="float:right"> Suivant:<a href="path_append.htm">path_append</a></div><div style="float:right"></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
+<body>
+  <!--<div class="body-scroll" style="top: 150px;">-->
+  <h1>chemin_points_clairs</h1>
+  <p>Avec cette fonction, vous pouvez supprimer toutes les définitions de points d'un chemin, créant ainsi un chemin &quot;vide&quot;. Cela <i>ne</i> supprime <i>pas</i> le chemin, pour cela vous devez utiliser la fonction <a href="path_delete.htm"><tt>path_delete()</tt></a>,
+    Cependant, il convient de noter que <strong>cette fonction modifie l'actif du chemin</strong>, ce qui affecte de manière permanente la façon dont le chemin est utilisé par toutes les instances du jeu, depuis le moment où la fonction est utilisée jusqu'à la fin du jeu. Si cela
+    n'est pas ce dont vous avez besoin, vous devriez utiliser une fonction comme <span class="inline"><a href="path_duplicate.htm">path_duplicate()</a></span> pour créer d'abord une copie du chemin, puis appeler cette fonction sur l'actif dupliqué (n'oubliez pas d'appeler
+    <span class="inline"><a href="path_delete.htm">path_delete()</a></span> sur la ressource lorsqu'elle n'est plus nécessaire).</p>
+  <p> </p>
+  <h4>Syntaxe :</h4>
+  <p class="code">path_clear_points(index) ;</p>
+  <table>
+    <tbody>
+      <tr>
+        <th>Arguments</th>
+        <th>Description</th>
+      </tr>
+      <tr>
+        <td>indice</td>
+        <td>L'index du chemin à effacer.</td>
+      </tr>
+    </tbody>
+  </table>
+  <p> </p>
+  <h4>Les retours :</h4>
+  <p class="code">N/A</p>
+  <p> </p>
+  <h4>Exemple :</h4>
+  <p class="code">if path_get_number(mypath) &gt; 0<br> {
+    <br> path_clear_points(mypath) ;
+    <br> }
+  </p>
+  <p>Le code ci-dessus vérifie s'il y a des points sur le chemin indexé dans la variable &quot;mypath&quot; et s'il y en a, il efface le chemin.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <div class="footer">
+    <div class="buttons">
+      <div class="clear">
+        <div style="float:left">Retour : <a href="Path_Manipulation.htm">Manipulation des chemins</a></div>
+        <div style="float:right">Suivant : <a href="path_append.htm">path_append</a></div>
+        <div style="float:right"> </div>
+      </div>
+    </div>
+    <h5><span data-keyref="Copyright Notice">Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
   </div>
   <!-- KEYWORDS
 path_clear_points

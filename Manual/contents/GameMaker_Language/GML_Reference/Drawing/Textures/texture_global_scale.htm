@@ -3,17 +3,61 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>texture_global_scale</title>
+  <title>échelle_globale_de_la_texture</title>
   <meta name="generator" content="Adobe RoboHelp 2019" />
   <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
   <meta name="rh-authors" content="Mark Alexander" />
-  <meta name="topic-comment" content="Page de référence pour texture_global_scale" />
+  <meta name="topic-comment" content="Reference page for ​texture_global_scale" />
   <meta name="rh-index-keywords" content="texture_global_scale" />
   <meta name="search-keywords" content="texture_global_scale" />
 </head>
-<body><!--<div class="body-scroll" style="top: 150px;">--><h1>texture_global_scale</h1><p> Cette fonction vous permet de contrôler la mise à l&#39;échelle des pages de texture lors du chargement à partir du fichier WAD qui fait partie de votre exécutable de jeu final. La valeur d&#39;entrée doit être une valeur de puissance de deux et fonctionnera de telle sorte que:</p><ul class="colour"><li> Pour définir les pages de texture sur 1: 1, utilisez <tt>texture_global_scale(1)</tt></li><li> Utiliser la moitié des textures tout le temps <tt>texture_global_scale(2)</tt></li><li> Pour les diviser en quatre, utilisez <tt>texture_global_scale(4)</tt>, etc...</li></ul><p> De cette façon, vous pouvez mieux contrôler l&#39;utilisation de la mémoire de la page de texture sur les plates-formes avec des problèmes de mémoire faible. Notez que les pages de textures sont créées à la demande à partir du WAD, et vous pouvez donc appeler cela au début du jeu pour charger toutes les textures mises à l&#39;échelle, ou vous pouvez l&#39;appeler à des moments spécifiques pour charger des textures spécifiques, auquel cas vous veux probablement appeler <a href="draw_texture_flush.htm"><tt>draw_texture_flush()</tt></a> avant d&#39;appeler cette fonction, utilisez les fonctions de pré-extraction pour mettre en mémoire les pages de texture correctes.</p><p></p><h4> Syntaxe:</h4><p class="code">texture_global_scale(pow2integer);</p><table><tbody><tr><th> Argument</th><th> Description</th></tr><tr><td> <span class="notranslate">pow2integer</span></td><td> Le facteur d&#39;échelle à utiliser (1, pas d&#39;échelle, 2, demi-échelle, 4, quart d&#39;échelle, etc...)</td></tr></tbody></table><p></p><h4> Retour:</h4><p class="code">N/A</p><p></p><h4> Exemple:</h4><p class="code">draw_texture_flush();<br/> texture_global_scale(2);
-    <br/> sprite_prefetch(spr_Trees);
-  </p><p> Le code ci-dessus videra toutes les textures de la mémoire, puis définira la mise à l&#39;échelle de la texture sur 2 (les pages de texture ont donc la moitié de la taille) et enfin prélèvera la page de texture dans laquelle le sprite &quot;spr_Trees&quot; est contenu. </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> Retour: <a href="Textures.htm">Textures</a></div><div style="float:right"> Suivant:<a href="draw_texture_flush.htm">draw_texture_flush</a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
+<body>
+  <!--<div class="body-scroll" style="top: 150px;">-->
+  <h1>échelle_globale_de_la_texture</h1>
+  <p>Cette fonction vous permet de contrôler la mise à l'échelle des pages de texture lors du chargement à partir du fichier WAD qui fait partie de l'exécutable de votre jeu final. La valeur d'entrée doit être une puissance de deux et fonctionnera de la manière suivante :</p>
+  <ul class="colour">
+    <li>Pour que les pages de texture soient 1:1, utilisez <tt>texture_global_scale(1</tt>).</li>
+    <li>Pour avoir des textures à moitié tout le temps, utilisez <tt>texture_global_scale(2)</tt>.</li>
+    <li>Pour les écarter, utilisez <tt>texture_global_scale(4</tt>), etc...</li>
+  </ul>
+  <p>De cette façon, vous pouvez mieux contrôler l'utilisation de la mémoire des pages de textures sur les plateformes à faible mémoire. Notez que les pages de textures sont créées à la demande du WAD, et donc vous pouvez soit l'appeler au début du jeu pour charger toutes les textures à l'échelle, ou vous pouvez l'appeler à des moments spécifiques pour charger des textures spécifiques.
+    peut l'appeler à des moments précis pour charger des textures spécifiques, auquel cas vous voudrez probablement appeler la fonction <a href="draw_texture_flush.htm"><tt>draw_texture_flush()</tt></a> avant d'appeler cette fonction, puis d'utiliser les fonctions de pre-fetch pour obtenir les bonnes
+    les bonnes pages de texture en mémoire.</p>
+  <p> </p>
+  <h4>Syntaxe :</h4>
+  <p class="code">texture_global_scale(pow2integer) ;</p>
+  <table>
+    <tbody>
+      <tr>
+        <th>Arguments</th>
+        <th>Description</th>
+      </tr>
+      <tr>
+        <td>pow2integer</td>
+        <td>Le facteur d'échelle à utiliser (1, pas d'échelle, 2, demi échelle, 4, quart d'échelle, etc...)</td>
+      </tr>
+    </tbody>
+  </table>
+  <p> </p>
+  <h4>Les retours :</h4>
+  <p class="code">N/A</p>
+  <p> </p>
+  <h4>Exemple :</h4>
+  <p class="code">draw_texture_flush() ;<br> texture_global_scale(2) ;
+    <br> sprite_prefetch(spr_Trees) ;
+  </p>
+  <p>Le code ci-dessus va vider toutes les textures de la mémoire, puis définir la mise à l'échelle de la texture à 2 (de sorte que les pages de texture font la moitié de la taille) et enfin prélever la page de texture dans laquelle se trouve le sprite &quot;spr_Trees&quot;.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <div class="footer">
+    <div class="buttons">
+      <div class="clear">
+        <div style="float:left">Retour : <a href="Textures.htm">Textures</a></div>
+        <div style="float:right">Suivant : <a href="draw_texture_flush.htm">draw_texture_flush</a></div>
+      </div>
+    </div>
+    <h5><span data-keyref="Copyright Notice">Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
   </div>
   <!-- KEYWORDS
 texture_global_scale

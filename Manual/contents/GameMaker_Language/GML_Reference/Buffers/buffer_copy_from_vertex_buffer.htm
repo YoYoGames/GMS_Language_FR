@@ -7,11 +7,65 @@
   <meta name="generator" content="Adobe RoboHelp 2019" />
   <link rel="stylesheet" href="../../../assets/css/default.css" type="text/css" />
   <meta name="rh-authors" content="Mark Alexander" />
-  <meta name="topic-comment" content="Page de référence pour buffer_copy_from_vertex_buffer" />
+  <meta name="topic-comment" content="Reference page for buffer_copy_from_vertex_buffer" />
   <meta name="rh-index-keywords" content="buffer_copy_from_vertex_buffer" />
   <meta name="search-keywords" content="buffer_copy_from_vertex_buffer" />
 </head>
-<body><!--<div class="body-scroll" style="top: 150px;">--><h1>buffer_copy_from_vertex_buffer</h1><p> Cette fonction peut être utilisée pour copier une partie (ou la totalité) des données de sommets stockées dans un tampon de sommets dans un tampon régulier précédemment créé. Lors de la copie d&#39;un tampon de sommets dans un tampon normal avec cette fonction, les deux tampons doivent avoir été créés au préalable (en utilisant le <a href="../Drawing/Primitives/vertex_create_buffer.htm"><tt>vertex_create_buffer()</tt></a> et <a href="buffer_create.htm"><tt>buffer_create()</tt></a> fonctions, par exemple). Vous pouvez spécifier la plage de données de sommets que vous souhaitez copier dans le tampon, où le sommet de départ peut être n&#39;importe où entre 0 et le nombre de sommets -1, et vous pouvez donner le nombre de sommets à copier à partir de ce point. Vous pouvez utiliser la fonction <a href="../Drawing/Primitives/vertex_get_number.htm"><tt>vertex_get_number()</tt></a> sur le tampon de sommets pour obtenir le nombre total de sommets stockés. Enfin, vous donnez l&#39;index de tampon dans lequel copier les données de sommet, ainsi qu&#39;un décalage de données pour définir la position vers laquelle copier les données de sommet dans le tampon de destination.</p><p></p><h4> Syntaxe:</h4><p class="code">buffer_copy_from_vertex_buffer(vertex_buffer, start_vertex, num_vertices, dest_buffer, dest_offset);</p><table><tbody><tr><th> Argument</th><th> Description</th></tr><tr><td> <span class="notranslate">vertex_buffer</span></td><td> Index du tampon de sommets à <i>partir</i> duquel copier.</td></tr><tr><td> <span class="notranslate">start_vertex</span></td><td> Le sommet de départ.</td></tr><tr><td> <span class="notranslate">num_vertices</span></td><td> Le nombre total de sommets à utiliser.</td></tr><tr><td> <span class="notranslate">dest_buffer</span></td><td> L&#39;index de la mémoire tampon pour copier <i>à.</i></td></tr><tr><td> <span class="notranslate">dest_offset</span></td><td> Position de décalage vers laquelle copier les données (en octets).</td></tr></tbody></table><p></p><h4> Retour:</h4><p class="code">N/A</p><p></p><h4> Exemple:</h4><p class="code">var v_num = vertex_get_number(model_buff); buffer_copy_from_vertex_buffer(model_buffer, 0, v_num - 1, player_buffer, 0);</p><p> Le code ci-dessus copiera les données de vertex stockées dans le tampon de vertex indexé dans la variable &quot;model_buffer&quot;, puis les collera dans le tampon indexé dans la variable &quot;player_buffer&quot;. </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> Retour: <a href="Buffers.htm">Tampons</a></div><div style="float:right"> Suivant:<a href="buffer_get_type.htm">buffer_get_type</a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
+<body>
+  <!--<div class="body-scroll" style="top: 150px;">-->
+  <h1>buffer_copy_from_vertex_buffer</h1>
+  <p>Cette fonction peut être utilisée pour copier une partie (ou la totalité) des données de sommets stockées dans un tampon de sommets dans un tampon régulier précédemment créé. Lorsque vous copiez d'un tampon de sommets vers un tampon régulier avec cette fonction, les deux tampons doivent avoir été préalablement
+    créés (à l'aide des fonctions <a href="../Drawing/Primitives/vertex_create_buffer.htm"><tt>vertex_create_buffer()</tt></a> et <a href="buffer_create.htm"><tt>buffer_create()</tt></a> par exemple). Vous pouvez spécifier la plage de données de sommets que vous souhaitez
+    Vous pouvez spécifier la plage de données de sommet que vous souhaitez copier dans le tampon, où le sommet de départ peut être n'importe où entre 0 et le nombre de sommets -1, et vous pouvez donner le nombre de sommets à copier à partir de ce point. Vous pouvez utiliser la fonction <a href="../Drawing/Primitives/vertex_get_number.htm"><tt>vertex_get_number()</tt></a>    sur le tampon de sommets pour obtenir le nombre total de sommets stockés. Enfin, vous donnez l'index du tampon dans lequel copier les données de sommet, ainsi qu'un offset de données pour définir la position dans laquelle copier les données de sommet dans le tampon de destination.</p>
+  <p> </p>
+  <h4>Syntaxe :</h4>
+  <p class="code">buffer_copy_from_vertex_buffer(vertex_buffer, start_vertex, num_vertices, dest_buffer, dest_offset) ;</p>
+  <table>
+    <tbody>
+      <tr>
+        <th>Arguments</th>
+        <th>Description</th>
+      </tr>
+      <tr>
+        <td>tampon_de_vertex</td>
+        <td>L'index du tampon de sommets à <i>copier</i>.</td>
+      </tr>
+      <tr>
+        <td>start_vertex</td>
+        <td>Le sommet de départ.</td>
+      </tr>
+      <tr>
+        <td>num_vertices</td>
+        <td>Le nombre total de sommets à utiliser.</td>
+      </tr>
+      <tr>
+        <td>dest_buffer</td>
+        <td>L'index du tampon <i>à</i> copier.</td>
+      </tr>
+      <tr>
+        <td>dest_offset</td>
+        <td>La position de décalage pour copier les données (en octets).</td>
+      </tr>
+    </tbody>
+  </table>
+  <p> </p>
+  <h4>Les retours :</h4>
+  <p class="code">N/A</p>
+  <p> </p>
+  <h4>Exemple :</h4>
+  <p class="code">var v_num = vertex_get_number(model_buffer) ; buffer_copy_from_vertex_buffer(model_buffer, 0, v_num - 1, player_buffer, 0) ;</p>
+  <p>Le code ci-dessus copiera les données de vertex stockées dans le tampon de vertex indexé dans la variable &quot;model_buffer&quot;, puis les collera dans le tampon indexé dans la variable &quot;player_buffer&quot;.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <div class="footer">
+    <div class="buttons">
+      <div class="clear">
+        <div style="float:left">Retour : <a href="Buffers.htm">Tampons</a></div>
+        <div style="float:right">Suivant : <a href="buffer_get_type.htm">buffer_get_type</a></div>
+      </div>
+    </div>
+    <h5><span data-keyref="Copyright Notice">Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
   </div>
   <!-- KEYWORDS
 buffer_copy_from_vertex_buffer

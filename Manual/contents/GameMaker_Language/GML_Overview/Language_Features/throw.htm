@@ -3,15 +3,35 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>throw</title>
+  <title>lancez</title>
   <meta name="generator" content="Adobe RoboHelp 2019" />
   <link rel="stylesheet" href="../../../assets/css/default.css" type="text/css" />
   <meta name="rh-authors" content="Mark Alexander" />
-  <meta name="topic-comment" content="Page décrivant la fonction throw" />
+  <meta name="topic-comment" content="Page outlining the throw function" />
   <meta name="rh-index-keywords" content="throw" />
   <meta name="search-keywords" content="throw" />
 </head>
-<body><!--<div class="body-scroll" style="top: 150px;">--><h1>throw</h1><p> Le <tt>throw</tt> <span class="notranslate">runtime</span> instruction d&#39;exécution vous permet de générer vos propres <a href="../../../Additional_Information/Errors/Runner_Errors.htm">exceptions d&#39; <span class="notranslate">runtime</span></a>, de terminer le jeu et d&#39;afficher un message d&#39;erreur, en utilisant la syntaxe suivante:</p><p class="code">throw (&lt;expression&gt;);</p><p> L&#39;expression utilisée peut être une valeur ou une chaîne ou tout autre type de données, et cela générera alors une erreur d&#39;exception qui est - par défaut - affichée à l&#39;écran et à la fermeture du message d&#39;erreur, le jeu se terminera. Par exemple en appelant ceci:</p><p class="code">throw (&quot;Hello World!&quot;);</p><p> entraînera l&#39;affichage de l&#39;erreur d&#39;exception non gérée suivante:</p><p><img alt="Unhandled runtime exception error message example" class="center" src="../../../assets/Images/Scripting_Reference/GML/Overview/ThrowUnhandledMessage.png" /> Vous pouvez cependant reprendre ce message d&#39;erreur et utiliser votre propre code de gestionnaire en appelant la fonction <a href="../../GML_Reference/Debugging/exception_unhandled_handler.htm"><tt>exception_unhandled_handler()</tt></a>. Cette <a href="../Runtime_Functions.htm">fonction d&#39; <span class="notranslate">runtime</span></a> vous permet de fournir un<a href="../Method_Variables.htm">method</a> pour l&#39;utiliser, il sera appelé chaque fois que des exceptions non gérées se produiront dans votre jeu. </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> Retour: <a href="../Language_Features.htm">Caractéristiques linguistiques</a></div><div style="float:right"> Suivant:<a href="new.htm">new</a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
+<body>
+  <!--<div class="body-scroll" style="top: 150px;">-->
+  <h1>lancez</h1>
+  <p>L'instruction d'<span class="notranslate">exécution</span> <tt>throw</tt> vous permet de générer vos propres <a href="../../../Additional_Information/Errors/Runner_Errors.htm">exceptions d'<span class="notranslate">exécution</span></a>, en mettant fin au jeu et en affichant un message d'erreur, à l'aide de la syntaxe suivante :</p>
+  <p class="code">throw (&lt;expression&gt;) ;</p>
+  <p>L'expression utilisée peut être une valeur, une chaîne de caractères ou tout autre type de données. Elle génère alors une erreur d'exception qui est - par défaut - affichée à l'écran et le jeu se termine à la fermeture du message d'erreur. Par exemple, en appelant ceci :</p>
+  <p class="code">throw (&quot;Hello World !&quot;) ;</p>
+  <p>entraînera l'affichage de l'erreur d'exception non gérée suivante :</p>
+  <p><img alt="Unhandled runtime exception error message example" class="center" src="../../../assets/Images/Scripting_Reference/GML/Overview/ThrowUnhandledMessage.png">Vous pouvez toutefois reprendre ce message d'erreur et utiliser votre propre code de gestion en appelant la
+    la fonction <a href="../../GML_Reference/Debugging/exception_unhandled_handler.htm"><tt>exception_unhandled_handler()</tt></a>. Cette <a href="../Runtime_Functions.htm">fonction d</a> '<a href="../Runtime_Functions.htm"><span class="notranslate">exécution</span></a> vous permet de fournir une <a href="../Method_Variables.htm">méthode</a> personnalisée qui sera appelée à chaque fois qu'une exception non gérée se produit dans votre jeu.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <div class="footer">
+    <div class="buttons">
+      <div class="clear">
+        <div style="float:left">Retour : <a href="../Language_Features.htm">Caractéristiques de la langue</a></div>
+        <div style="float:right">Suivant : <a href="new.htm">nouveau</a></div>
+      </div>
+    </div>
+    <h5><span data-keyref="Copyright Notice">Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
   </div>
   <!-- KEYWORDS
 throw

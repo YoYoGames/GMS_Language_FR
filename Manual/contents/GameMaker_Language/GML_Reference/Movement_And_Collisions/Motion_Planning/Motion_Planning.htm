@@ -3,15 +3,92 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>Planification de mouvement</title>
+  <title>Planification des mouvements</title>
   <meta name="generator" content="Adobe RoboHelp 2019" />
   <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
   <meta name="rh-authors" content="Mark Alexander" />
-  <meta name="topic-comment" content="Section de référence pour les fonctions et variables de Motion Planning" />
+  <meta name="topic-comment" content="Reference section for Motion Planning functions and variables" />
   <meta name="rh-index-keywords" content="" />
-  <meta name="search-keywords" content="Planification de mouvement,mp,fonctions mp" />
+  <meta name="search-keywords" content="Motion Planning,mp,mp funtions" />
 </head>
-<body><!--<div class="body-scroll" style="top: 150px;">--><h1> Planification de mouvement</h1><p> Dans de nombreux jeux, vous voulez que les adversaires, les PNJ, les ennemis etc... interagissent avec le joueur et montrent une certaine intelligence en se déplaçant, c&#39;est-à-dire: vous voulez qu&#39;ils évitent les obstacles, planifient des itinéraires et généralement ne se heurtent pas à tout sur leur passage! Pour aider dans ce <span class="notranslate">GameMaker Studio 2</span> a une série de fonctions qui traitent de la planification de mouvement. Notez que bien que ceux-ci soient conçus pour des choses comme les ennemis du jeu, ils peuvent être utilisés pour toutes sortes de choses comme créer une manière fluide d&#39;introduire du texte, ou pour créer des transitions, etc. Cependant, tout ce que vous choisissez d&#39;utiliser dans la liste ci-dessous dans votre jeu, il faut noter que dans de nombreuses situations, un seul jeu de fonctions ne vous donnera pas une solution parfaite et que vous devrez &quot;mélanger et assortir&quot; les fonctions, en utilisant l&#39;une ou l&#39;autre selon la situation au sein de votre jeu.</p><p> La planification de mouvement dans <span class="notranslate">GameMaker Studio 2</span> <b>est gérée</b> par les fonctions mp_, elles-mêmes réparties dans les trois groupes suivants:</p><p></p><h2> <label for="one">Fonctions linéaires</label></h2><p> Ce type de fonction essaie de calculer un chemin sans collision pour l&#39;instance. Une fois ce chemin calculé, vous pouvez l&#39;affecter à l&#39;instance pour vous déplacer vers l&#39;objectif. Le calcul du chemin prendra un certain temps mais après cela l&#39;exécution du chemin sera rapide. Bien sûr, cela n&#39;est valable que si la situation n&#39;a pas changé entre-temps. Par exemple, si les obstacles changent, vous devrez peut-être recalculer le chemin. Notez à nouveau que ces fonctions peuvent échouer et qu&#39;aucun chemin ne peut être trouvé pour l&#39;instance. </p><p></p><ul class="colour"><li><a href="mp_linear_step.htm">mp_linear_step</a></li><li><a href="mp_linear_step_object.htm">mp_linear_step_object</a></li><li><a href="mp_linear_path.htm">mp_linear_path</a></li><li><a href="mp_linear_path_object.htm">mp_linear_path_object</a></li></ul><p></p><h2> <label for="three">Fonctions potentielles</label></h2><p></p><p> Ce sont les fonctions d&#39;évitement de base et bonnes pour une IA simple. Ils fonctionnent en faisant en sorte qu&#39;une instance fasse un pas vers une position d&#39;objectif particulière tout en essayant d&#39;aller tout droit si possible, mais en prenant une direction différente si nécessaire. Ces fonctions doivent être utilisées dans l&#39; <b>événement Step</b> d&#39;une instance. </p><p></p><ul class="colour"><li><a href="mp_potential_settings.htm">mp_potential_settings</a></li><li><a href="mp_potential_step.htm">mp_potential_step</a></li><li><a href="mp_potential_step_object.htm">mp_potential_step_object</a></li><li><a href="mp_potential_path.htm">mp_potential_path</a></li><li><a href="mp_potential_path_object.htm">mp_potential_path_object</a></li></ul><p></p><h2> <label for="two">Fonctions de grille</label></h2><p></p><p> Le dernier type de fonction utilise un mécanisme beaucoup plus complexe basé sur une approche basée sur une grille (parfois appelée algorithme A *). Il réussira beaucoup plus à trouver des chemins (bien que cela puisse toujours échouer) et trouvera les chemins les plus courts possibles, mais cela nécessite plus de travail de votre part pour le configurer.</p><p> L&#39;idée globale est la suivante - Tout d&#39;abord, nous créons une grille qui couvre la pièce (ou la partie pertinente de celle-ci). Vous pouvez choisir d&#39;utiliser une grille fine, qui sera plus lente, ou une grille grossière, mais les deux doivent être basées sur la résolution de la pièce afin que la recherche de chemin soit aussi précise que possible. Par exemple, si vous avez une pièce de 400x200 pixels, vous pouvez avoir une résolution de grille de 40, 20 ou 10... tout dépend de la précision dont vous avez besoin pour le chemin et du traitement que vous voulez que <span class="notranslate">GameMaker</span> faire pour le générer.</p><p> Ensuite, pour tous les objets pertinents que nous voulons éviter, nous devons déterminer les cellules de la grille qu&#39;elles chevauchent (en fonction de leurs cadres de délimitation ou de leur sprite précis) et marquer ces cellules comme interdites. Ainsi, une cellule sera marquée comme totalement interdite, même si un obstacle ne se chevauche que partiellement.</p><p> Enfin, nous spécifions une position de départ et une position de but, qui <i>doivent</i> toutes deux se trouver dans des cellules libres, et la fonction calcule ensuite le chemin le plus court possible entre ces deux positions. Le chemin passera entre les centres de toutes les cellules libres, donc si les cellules sont suffisamment grandes pour que l&#39;instance placée en son centre se trouve complètement à l&#39;intérieur, cela réussira. Ce chemin est ensuite attribué à l&#39;instance à suivre à l&#39;aide du <a href="../../Asset_Management/Paths/Paths.htm"><tt>path_*</tt></a> les fonctions. Vous devez réaliser à quel point la taille de cellule est importante pour cela, car les cellules doivent être suffisamment grandes pour que l&#39;objet en mouvement placé avec son origine au centre d&#39;une cellule se trouve <i>complètement</i> à l&#39;intérieur de la cellule. (Attention à la position de l&#39;origine de l&#39;objet. Sachez également que vous pouvez décaler le chemin si l&#39;origine de l&#39;objet n&#39;est pas en son centre!) Par contre, plus les cellules sont petites, plus il y a de chemins possibles. Si vous créez des cellules trop grandes, les ouvertures entre les obstacles peuvent se fermer car toutes les cellules croisent un obstacle. </p><p></p><ul class="colour"><li><a href="mp_grid_create.htm">mp_grid_create</a></li><li><a href="mp_grid_destroy.htm">mp_grid_destroy</a></li><li><a href="mp_grid_path.htm">mp_grid_path</a></li><li><a href="mp_grid_add_cell.htm">mp_grid_add_cell</a></li><li><a href="mp_grid_add_instances.htm">mp_grid_add_instances</a></li><li><a href="mp_grid_add_rectangle.htm">mp_grid_add_rectangle</a></li><li><a href="mp_grid_get_cell.htm">mp_grid_get_cell</a></li><li><a href="mp_grid_clear_all.htm">mp_grid_clear_all</a></li><li><a href="mp_grid_clear_cell.htm">mp_grid_clear_cell</a></li><li><a href="mp_grid_clear_rectangle.htm">mp_grid_clear_rectangle</a></li><li><a href="mp_grid_to_ds_grid.htm">mp_grid_to_ds_grid</a></li><li><a href="mp_grid_draw.htm">mp_grid_draw</a></li></ul><p></p><p> L&#39;approche basée sur la grille est très puissante (et est utilisée dans de nombreux jeux professionnels) mais elle nécessite une réflexion approfondie car vous devez déterminer quelle zone et quelle taille de cellule sont suffisantes pour résoudre le jeu. Vous devez également déterminer quels objets doivent être évités et si une vérification précise est importante. Tous ces paramètres influencent fortement l&#39;efficacité de l&#39;approche. Vous devez également décider si cela est réellement nécessaire car peut-être l&#39;un des moins coûteux <span class="inline">mp_*</span> les fonctions peuvent tout aussi bien faire le travail. </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> Retour: <a href="../Movement_And_Collisions.htm">Mouvement et collisions</a></div><div style="float:right"> Suivant: <a href="../Collisions/Collisions.htm">Collisions</a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
+<body>
+  <!--<div class="body-scroll" style="top: 150px;">-->
+  <h1>Planification des mouvements</h1>
+  <p>Dans de nombreux jeux, vous souhaitez que les adversaires, les PNJ, les ennemis, etc., interagissent avec le joueur et fassent preuve d'une certaine intelligence lorsqu'ils se déplacent : vous voulez qu'ils évitent les obstacles, qu'ils planifient des itinéraires et qu'ils ne se heurtent pas à tout sur leur passage ! Pour y parvenir
+   <span class="notranslate">GameMaker Studio 2</span> dispose d'une série de fonctions qui traitent de la planification des mouvements. Notez que, bien qu'elles soient conçues pour des choses comme les ennemis du jeu, elles peuvent être utilisées pour toutes sortes de choses, comme la création d'une manière fluide d'introduire du texte, ou la création de transitions.
+    pour introduire du texte, ou pour créer des transitions, etc... Cependant, quel que soit le type de fonction que vous choisissez d'utiliser dans votre jeu, il convient de noter que dans de nombreuses situations, un seul ensemble de fonctions ne vous donnera pas une solution parfaite et que vous devrez
+    &quot;mélanger les fonctions, en utilisant l'une ou l'autre en fonction de la situation dans votre jeu.</p>
+  <p>Dans <span class="notranslate">GameMaker Studio 2</span>, la planification des mouvements est gérée par les fonctions <b>mp_</b>, qui sont elles-mêmes divisées en trois groupes :</p>
+  <p> </p>
+  <h2><label for="one">Fonctions linéaires</label></h2>
+  <p>Ce type de fonction tente de calculer un chemin sans collision pour l'instance. Une fois que ce chemin a été calculé, vous pouvez l'assigner à l'instance pour qu'elle se déplace vers le but. Le calcul du chemin prendra un certain temps mais ensuite l'exécution du chemin sera rapide.
+    l'exécution du chemin sera rapide. Bien sûr, ceci n'est valable que si la situation n'a pas changé entre-temps. Par exemple, si les obstacles changent, vous devrez peut-être recalculer le chemin. Notez à nouveau que ces fonctions peuvent échouer et qu'aucun chemin ne peut être trouvé pour l'instance.
+    et qu'aucun chemin ne peut être trouvé pour l'instance.</p>
+  <p> </p>
+  <ul class="colour">
+    <li><a href="mp_linear_step.htm">mp_linear_step</a></li>
+    <li><a href="mp_linear_step_object.htm">mp_linear_step_object</a></li>
+    <li><a href="mp_linear_path.htm">mp_linear_path</a></li>
+    <li><a href="mp_linear_path_object.htm">mp_linear_path_object</a></li>
+  </ul>
+  <p> </p>
+  <h2><label for="three">Fonctions potentielles</label></h2>
+  <p> </p>
+  <p>Ce sont les fonctions d'évitement de base et elles sont bonnes pour une IA simple. Elles fonctionnent en faisant en sorte qu'une instance fasse un pas vers une position cible particulière en essayant d'aller tout droit si possible mais en prenant une direction différente si nécessaire. Ces fonctions doivent
+    être utilisées dans l'<b>événement Step</b> d'une instance.</p>
+  <p> </p>
+  <ul class="colour">
+    <li><a href="mp_potential_settings.htm">mp_potential_settings</a></li>
+    <li><a href="mp_potential_step.htm">mp_potential_step</a></li>
+    <li><a href="mp_potential_step_object.htm">mp_potential_step_object</a></li>
+    <li><a href="mp_potential_path.htm">mp_potential_path</a></li>
+    <li><a href="mp_potential_path_object.htm">mp_potential_path_object</a></li>
+  </ul>
+  <p> </p>
+  <h2><label for="two">Fonctions de la grille</label></h2>
+  <p> </p>
+  <p>Le dernier type de fonction utilise un mécanisme beaucoup plus complexe basé sur une approche par grille (parfois appelé algorithme A*). Il sera beaucoup plus efficace pour trouver des chemins (bien qu'il puisse encore échouer) et trouvera les chemins les plus courts possibles.
+    mais sa mise en place demande plus de travail de votre part.</p>
+  <p>L'idée générale est la suivante : tout d'abord, nous créons une grille qui couvre la pièce (ou la partie concernée de celle-ci). Vous pouvez choisir d'utiliser une grille fine, ce qui sera plus lent, ou une grille grossière, mais toutes deux doivent être basées sur la résolution de la pièce
+    afin que la recherche de chemin soit aussi précise que possible. Par exemple, si vous avez une pièce de 400x200 pixels, vous pouvez avoir une résolution de grille de 40, ou 20, ou 10... tout dépend de la précision dont vous avez besoin pour le chemin et de la quantité de traitement que vous voulez que GameMaker fasse pour le générer.
+   <span class="notranslate">GameMaker</span> pour le générer.</p>
+  <p>Ensuite, pour tous les objets pertinents que nous voulons éviter, nous devons déterminer les cellules de la grille qu'ils recouvrent (sur la base de leurs boîtes englobantes ou de leur sprite précis) et marquer ces cellules comme étant interdites. Ainsi, une cellule sera marquée comme totalement interdite
+    même si l'obstacle ne se chevauche que partiellement.</p>
+  <p>Enfin, nous spécifions une position de départ et une position d'arrivée, qui <i>doivent</i> toutes deux se trouver dans des cellules libres, et la fonction calcule alors le chemin le plus court possible entre ces deux positions. Le chemin passera entre les centres de toutes les cellules libres, donc
+    si les cellules sont suffisamment grandes pour que l'instance placée en son centre se trouve complètement à l'intérieur, le chemin sera réussi. Ce chemin est ensuite assigné à l'instance à suivre en utilisant les fonctions <a href="../../Asset_Management/Paths/Paths.htm"><tt>chemin_*</tt></a> pour le suivre.
+    Vous devriez vous rendre compte de l'importance de la taille des cellules pour cela, car les cellules doivent être suffisamment grandes pour que l'objet mobile placé avec son origine au centre d'une cellule se trouve <i>complètement</i> à l'intérieur de celle-ci. (Faites attention à la position de l'origine
+    de l'objet. Sachez également que vous pouvez déplacer la trajectoire si l'origine de l'objet n'est pas en son centre). D'autre part, plus les cellules sont petites, plus il y a de chemins possibles. Si vous faites des cellules trop grandes, les ouvertures entre les obstacles peuvent être fermées
+    car toutes les cellules intersectent un obstacle.</p>
+  <p> </p>
+  <ul class="colour">
+    <li><a href="mp_grid_create.htm">mp_grid_create</a></li>
+    <li><a href="mp_grid_destroy.htm">mp_grid_destroy</a></li>
+    <li><a href="mp_grid_path.htm">mp_grid_path</a></li>
+    <li><a href="mp_grid_add_cell.htm">mp_grid_add_cell</a></li>
+    <li><a href="mp_grid_add_instances.htm">mp_grid_add_instances</a></li>
+    <li><a href="mp_grid_add_rectangle.htm">mp_grid_add_rectangle</a></li>
+    <li><a href="mp_grid_get_cell.htm">mp_grid_get_cell</a></li>
+    <li><a href="mp_grid_clear_all.htm">mp_grid_clear_all</a></li>
+    <li><a href="mp_grid_clear_cell.htm">mp_grid_clear_cell</a></li>
+    <li><a href="mp_grid_clear_rectangle.htm">mp_grid_clear_rectangle</a></li>
+    <li><a href="mp_grid_to_ds_grid.htm">mp_grid_to_ds_grid</a></li>
+    <li><a href="mp_grid_draw.htm">mp_grid_draw</a></li>
+  </ul>
+  <p> </p>
+  <p>L'approche basée sur la grille est très puissante (et est utilisée dans de nombreux jeux professionnels) mais elle nécessite une réflexion approfondie car vous devez déterminer quelle surface et quelle taille de cellule sont suffisantes pour résoudre le jeu. De même, vous devez déterminer quels objets
+    doivent être évités et si un contrôle précis est important. Tous ces paramètres influencent fortement l'efficacité de l'approche. Vous devez également décider si elle est réellement nécessaire, car l'une des fonctions moins coûteuses de <span class="inline">mp_*</span> 
+    peut faire le travail tout aussi bien.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <div class="footer">
+    <div class="buttons">
+      <div class="clear">
+        <div style="float:left">Le dos : <a href="../Movement_And_Collisions.htm">Mouvement et collisions</a></div>
+        <div style="float:right">Suivant : <a href="../Collisions/Collisions.htm">Collisions</a></div>
+      </div>
+    </div>
+    <h5><span data-keyref="Copyright Notice">Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
   </div>
   <!-- KEYWORDS
 Motion Planning

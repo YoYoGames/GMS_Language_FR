@@ -7,12 +7,55 @@
   <meta name="generator" content="Adobe RoboHelp 2019" />
   <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
   <meta name="rh-authors" content="Mark Alexander" />
-  <meta name="topic-comment" content="Page expliquant la fonction audio_sound_set_track_position" />
+  <meta name="topic-comment" content="Page explaining the function audio_sound_set_track_position" />
   <meta name="rh-index-keywords" content="audio_sound_set_track_position" />
   <meta name="search-keywords" content="audio_sound_set_track_position" />
 </head>
-<body><!--<div class="body-scroll" style="top: 150px;">--><h1>audio_sound_set_track_position</h1><p> Cette fonction définit la position (en secondes) dans le fichier audio à partir de laquelle le son doit être lu. Le son peut être soit une seule instance d&#39;un son (l&#39;index des sons individuels en cours de lecture peut être stocké dans une variable lors de l&#39;utilisation du <a
-      href="audio_play_sound.htm"><tt>audio_play_sound()</tt></a> ou <a href="audio_play_sound_at.htm"><tt>audio_play_sound_at()</tt></a> fonctions) ou un atout solide. S&#39;il s&#39;agit d&#39;un identifiant de son unique que vous utilisez, la position passera immédiatement à la nouvelle heure donnée, et s&#39;il s&#39;agit d&#39;un actif du navigateur d&#39;actifs, toutes les autres lectures du son donné commenceront à la nouvelle heure. La fonction ignorera toute valeur donnée qui est plus longue que la longueur du son donnée pour la valeur «index».</p><p></p><h4> Syntaxe:</h4><p class="code">audio_sound_set_track_position(index, time);</p><table><tbody><tr><th> Argument</th><th> Description</th></tr><tr><td> <span class="notranslate">index</span></td><td> L&#39;indice du son à changer.</td></tr><tr><td> <span class="notranslate">time</span></td><td> Le temps (en secondes) pour définir le point de départ.</td></tr></tbody></table><p></p><h4> Retour:</h4><p class="code">N/A</p><p></p><h4> Exemple:</h4><p class="code">var snd = audio_play_sound(snd_MainTrack, 0, false);<br/> audio_sound_set_track_position(snd, 32);</p><p> Le code ci-dessus lit un son, puis utilise la valeur ID renvoyée pour définir la position de départ du son sur 32 secondes. </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> Retour: <a href="Audio.htm">Audio</a></div><div style="float:right"> Suivant:<a href="audio_sound_get_track_position.htm">audio_sound_get_track_position</a></div><div style="float:right"></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
+<body>
+  <!--<div class="body-scroll" style="top: 150px;">-->
+  <h1>audio_sound_set_track_position</h1>
+  <p>Cette fonction permet de définir la position (en secondes) du son dans le fichier audio. Le son peut être une instance unique d'un son (l'index des sons individuels joués peut être stocké dans une variable lors de l'utilisation de la fonction 
+    <a href="audio_play_sound.htm"><tt>audio_play_sound()</tt></a> ou <a href="audio_play_sound_at.htm"><tt>audio_play_sound_at()</tt></a> ) ou un actif sonore. S'il s'agit d'un ID de son unique que vous utilisez, la position changera immédiatement
+      S'il s'agit d'un actif du navigateur d'actifs, toutes les lectures ultérieures du son en question commenceront au nouveau moment. La fonction ignorera toute valeur donnée qui est plus longue que la longueur du son donné pour la valeur &quot;index&quot;.
+      valeur.</p>
+  <p> </p>
+  <h4>Syntaxe :</h4>
+  <p class="code">audio_sound_set_track_position(index, time) ;</p>
+  <table>
+    <tbody>
+      <tr>
+        <th>Arguments</th>
+        <th>Description</th>
+      </tr>
+      <tr>
+        <td>indice</td>
+        <td>L'indice du son à modifier.</td>
+      </tr>
+      <tr>
+        <td>temps</td>
+        <td>Le temps (en secondes) sur lequel il faut régler le point de départ.</td>
+      </tr>
+    </tbody>
+  </table>
+  <p> </p>
+  <h4>Les retours :</h4>
+  <p class="code">N/A</p>
+  <p> </p>
+  <h4>Exemple :</h4>
+  <p class="code">var snd = audio_play_sound(snd_MainTrack, 0, false) ;<br> audio_sound_set_track_position(snd, 32) ;</p>
+  <p>Le code ci-dessus joue un son et utilise ensuite la valeur ID retournée pour définir la position de départ du son à 32 secondes.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <div class="footer">
+    <div class="buttons">
+      <div class="clear">
+        <div style="float:left">Retour : <a href="Audio.htm">Audio</a></div>
+        <div style="float:right">Suivant : <a href="audio_sound_get_track_position.htm">audio_sound_get_track_position</a></div>
+        <div style="float:right"> </div>
+      </div>
+    </div>
+    <h5><span data-keyref="Copyright Notice">Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
   </div>
   <!-- KEYWORDS
 audio_sound_set_track_position

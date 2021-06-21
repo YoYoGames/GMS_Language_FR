@@ -3,15 +3,57 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>gamepad_button_value</title>
+  <title>valeur_du_bouton_de_jeu</title>
   <meta name="generator" content="Adobe RoboHelp 2019" />
   <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
   <meta name="rh-authors" content="Mark Alexander" />
-  <meta name="topic-comment" content="Page de référence pour gamepad_button_value" />
+  <meta name="topic-comment" content="Reference page for gamepad_button_value" />
   <meta name="rh-index-keywords" content="gamepad_button_value" />
   <meta name="search-keywords" content="gamepad_button_value" />
 </head>
-<body><!--<div class="body-scroll" style="top: 150px;">--><h1>gamepad_button_value</h1><p> Avec cette fonction, vous pouvez obtenir la valeur actuelle d&#39;un bouton analogique, de 0 à 1, où 0 signifie pas de pression et 1 est pleine pression. Vous fournissez l&#39;index de l&#39;emplacement de la manette de jeu à vérifier, ainsi qu&#39;une constante de bouton (comme indiqué <a href="Gamepad_Input.htm">ici</a> ), ou une valeur entière comprise entre 0 et <a href="gamepad_button_count.htm"><tt>gamepad_button_count()</tt></a> -1.</p><p> Notez que cela renverra la <em>valeur brute</em> du bouton, et ne <em>prendra pas</em> en compte le réglage du seuil (voir <a href="gamepad_set_button_threshold.htm">ici</a> pour plus d&#39;informations sur les seuils).</p><p></p><h4> Syntaxe:</h4><p class="code">gamepad_button_value(device, button);</p><table><tbody><tr><th> Argument</th><th> Description</th></tr><tr><td> <span class="notranslate">device</span></td><td> Quel «slot» de périphérique de manette de jeu vérifier.</td></tr><tr><td> <span class="notranslate">button</span></td><td> <a href="Gamepad_Input.htm">Quelle constante de</a> bouton de manette de jeu vérifier.</td></tr></tbody></table><p></p><h4> Retour:</h4><p class="code">Real</p><p></p><h4> Exemple:</h4><p class="code">speed = gamepad_button_value(0, gp_shoulderrb) * 4;</p><p> Le code ci-dessus utilise la valeur de déclenchement analogique de la manette de jeu branchée sur le &quot;slot&quot; 0 du périphérique pour définir la vitesse de l&#39;instance. </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> Retour: <a href="Gamepad_Input.htm">Entrée de la manette de jeu</a></div><div style="float:right"> Suivant:<a href="gamepad_hat_count.htm">gamepad_hat_count</a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
+<body>
+  <!--<div class="body-scroll" style="top: 150px;">-->
+  <h1>valeur_du_bouton_de_jeu</h1>
+  <p>Avec cette fonction, vous pouvez obtenir la valeur actuelle d'un bouton analogique, de 0 à 1, où 0 correspond à une pression nulle et 1 à une pression maximale. Vous fournissez l'index du slot du gamepad à vérifier, ainsi qu'une constante de bouton (comme indiqué <a href="Gamepad_Input.htm">ici</a>),
+    ou une valeur entière entre 0 et <a href="gamepad_button_count.htm"><tt>gamepad_button_count()</tt></a> -1.</p>
+  <p>Notez que cela renvoie la valeur <em>brute</em> du bouton, et <em>ne prend pas</em> en compte le réglage du seuil (voir <a href="gamepad_set_button_threshold.htm">ici</a> pour plus d'informations sur les seuils).</p>
+  <p> </p>
+  <h4>Syntaxe :</h4>
+  <p class="code">gamepad_button_value(device, button) ;</p>
+  <table>
+    <tbody>
+      <tr>
+        <th>Arguments</th>
+        <th>Description</th>
+      </tr>
+      <tr>
+        <td>dispositif</td>
+        <td>Quel &quot;slot&quot; de périphérique gamepad vérifier.</td>
+      </tr>
+      <tr>
+        <td>bouton</td>
+        <td>Quelle <a href="Gamepad_Input.htm">constante de</a> bouton de manette à vérifier.</td>
+      </tr>
+    </tbody>
+  </table>
+  <p> </p>
+  <h4>Les retours :</h4>
+  <p class="code">Real</p>
+  <p> </p>
+  <h4>Exemple :</h4>
+  <p class="code">vitesse = gamepad_button_value(0, gp_shoulderrb) * 4 ;</p>
+  <p>Le code ci-dessus utilise la valeur du trigger analogique de la manette de jeu branchée sur le périphérique &quot;slot&quot; 0 pour définir la vitesse de l'instance.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <div class="footer">
+    <div class="buttons">
+      <div class="clear">
+        <div style="float:left">Retour : <a href="Gamepad_Input.htm">Entrée de la manette de jeu</a></div>
+        <div style="float:right">Suivant : <a href="gamepad_hat_count.htm">gamepad_hat_count</a></div>
+      </div>
+    </div>
+    <h5><span data-keyref="Copyright Notice">Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
   </div>
   <!-- KEYWORDS
 gamepad_button_value

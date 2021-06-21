@@ -3,15 +3,86 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>draw_sprite_part</title>
+  <title>dessiner_sprite_part</title>
   <meta name="generator" content="Adobe RoboHelp 2019" />
   <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
   <meta name="rh-authors" content="Mark Alexander" />
-  <meta name="topic-comment" content="Page de référence pour draw_sprite_part" />
+  <meta name="topic-comment" content="Reference page for draw_sprite_part" />
   <meta name="rh-index-keywords" content="draw_sprite_part" />
   <meta name="search-keywords" content="draw_sprite_part" />
 </head>
-<body><!--<div class="body-scroll" style="top: 150px;">--><h1>draw_sprite_part</h1><p> Avec cette fonction, vous pouvez dessiner une partie de n&#39;importe quel sprite à une position donnée dans la pièce. Comme avec <a href="draw_sprite.htm"><tt>draw_sprite()</tt></a> vous pouvez spécifier un sprite et une sous-image pour le dessin, puis vous devez donner les <i>coordonnées relatives</i> dans le sprite de la zone à sélectionner pour le dessin. Cela signifie qu&#39;une position gauche de 0 et une position haute de 0 serait le coin supérieur gauche du sprite et toutes les autres coordonnées devraient être prises à partir de cette position. L&#39;image ci-dessous montre un exemple de la façon dont cela fonctionne:</p><p><img alt="draw_sprite_part example" class="center" src="../../../../assets/Images/Scripting_Reference/GML/Reference/Drawing/spr_part.png" /> Vous devez noter que si la page de texture autorise le recadrage automatique, cette fonction peut ne pas fonctionner comme prévu, car l&#39;espace &quot;vide&quot; supplémentaire autour du sprite aura été supprimé pour créer la page de texture. Pour résoudre ce problème, vous devrez définir les paramètres de la page de texture (dans l&#39; <a href="../../../../Settings/Texture_Groups.htm">éditeur de groupe de texture</a> ) pour désactiver l&#39;option <b>Recadrage automatique</b>.</p><p class="note"> <b>REMARQUE</b>: lorsque vous dessinez avec cette fonction, le <a href="../../Asset_Management/Sprites/Sprite_Instance_Variables/sprite_xoffset.htm">décalage x</a> et le <a href="../../Asset_Management/Sprites/Sprite_Instance_Variables/sprite_yoffset.htm">décalage</a> y du sprite sont ignorés et la partie du sprite sera dessinée avec le coin supérieur gauche à la position x / y spécifiée dans la pièce.</p><p class="note"> <b>REMARQUE</b>: Cette fonction n&#39;est utile que pour <b>les</b> sprites bitmap et ne fonctionnera pas avec les sprites SWF ou JSON (Spine).</p><p></p><h4> Syntaxe:</h4><p class="code">draw_sprite_part(sprite, subimg, left, top, width, height, x, y);</p><table><tbody><tr><th> Argument</th><th> Description</th></tr><tr><td> <span class="notranslate">sprite</span></td><td> L&#39;index du sprite à dessiner.</td></tr><tr><td> <span class="notranslate">subimg</span></td><td> Le subimg (frame) du sprite à dessiner (image_index ou -1 en corrélation avec l&#39;image courante de l&#39;animation dans l&#39;objet).</td></tr><tr><td> <span class="notranslate">left</span></td><td> La position x sur le sprite du coin supérieur gauche de la zone à dessiner.</td></tr><tr><td> <span class="notranslate">top</span></td><td> La position y sur le sprite du coin supérieur gauche de la zone à dessiner.</td></tr><tr><td> <span class="notranslate">width</span></td><td> La largeur de la zone à dessiner.</td></tr><tr><td> <span class="notranslate">height</span></td><td> La hauteur de la zone à dessiner.</td></tr><tr><td> <span class="notranslate">x</span></td><td> La coordonnée x de l&#39;endroit où dessiner le sprite.</td></tr><tr><td> <span class="notranslate">y</span></td><td> La coordonnée y de l&#39;endroit où dessiner le sprite.</td></tr></tbody></table><p></p><h4> Retour:</h4><p class="code">N/A</p><p></p><h4> Exemple:</h4><p class="code">draw_sprite_part(sprite_index, image_index, 4, 0, sprite_width-16, sprite_height-16, x, y );</p><p> Cela dessinera les instances assignées au sprite (sprite_index) et son image d&#39;animation actuelle (image_index), mais cela réduira une marge de 4px sur la largeur des deux côtés et une marge de 8 pixels sur la hauteur à partir du bas du pixel original de 24x24 lutin. </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> Face arrière: <a href="Sprites_And_Tiles.htm">Sprites et tuiles</a></div><div style="float:right"> Suivant:<a href="draw_sprite_part_ext.htm">draw_sprite_part_ext</a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
+<body>
+  <!--<div class="body-scroll" style="top: 150px;">-->
+  <h1>dessiner_sprite_part</h1>
+  <p>Avec cette fonction, vous pouvez dessiner une partie de n'importe quel sprite à une position donnée dans la pièce. Comme avec <a href="draw_sprite.htm"><tt>draw_sprite()</tt></a> vous pouvez spécifier un sprite et une sous-image à dessiner, puis vous devez donner les <i>coordonnées relatives</i> dans le sprite de la zone à sélectionner pour le dessin. Cela signifie qu'une position gauche de 0 et une position supérieure de 0 correspondent au coin supérieur gauche du sprite et que toutes les autres coordonnées doivent être prises à partir de cette position. L'image ci-dessous montre un exemple
+    de comment cela fonctionne :</p>
+  <p><img alt="draw_sprite_part example" class="center" src="../../../../assets/Images/Scripting_Reference/GML/Reference/Drawing/spr_part.png">Vous devez noter que si la page de texture permet un recadrage automatique, cette fonction peut ne pas fonctionner comme prévu,
+    car l'espace &quot;vide&quot; supplémentaire autour du sprite aura été supprimé pour créer la page de texture. Pour résoudre ce problème, vous devrez définir les paramètres de la page de texture (dans l'<a href="../../../../Settings/Texture_Groups.htm">éditeur de groupe de texture</a>)
+    pour désactiver l'option <b>Recadrage automatique</b>.</p>
+  <p class="note"><b>REMARQUE</b>: Lorsque vous dessinez avec cette fonction, les <a href="../../Asset_Management/Sprites/Sprite_Instance_Variables/sprite_xoffset.htm">décalages x</a> et <a href="../../Asset_Management/Sprites/Sprite_Instance_Variables/sprite_yoffset.htm">y</a> du sprite sont ignorés et la partie du sprite sera dessinée avec le coin supérieur gauche à la position x/y spécifiée dans la pièce.</p>
+  <p class="note"><b>REMARQUE</b>: Cette fonction n'est utile que pour les sprites <b>bitmap</b> et ne fonctionnera pas avec les sprites SWF ou JSON (Spine).</p>
+  <p> </p>
+  <h4>Syntaxe :</h4>
+  <p class="code">draw_sprite_part(sprite, subimg, left, top, width, height, x, y) ;</p>
+  <table>
+    <tbody>
+      <tr>
+        <th>Arguments</th>
+        <th>Description</th>
+      </tr>
+      <tr>
+        <td>sprite</td>
+        <td>L'index du sprite à dessiner.</td>
+      </tr>
+      <tr>
+        <td>sous-image</td>
+        <td>La sous-image (frame) du sprite à dessiner (image_index ou -1 correspondent à la frame d'animation actuelle de l'objet).</td>
+      </tr>
+      <tr>
+        <td>gauche</td>
+        <td>La position x sur le sprite du coin supérieur gauche de la zone à dessiner.</td>
+      </tr>
+      <tr>
+        <td>top</td>
+        <td>La position y sur le sprite du coin supérieur gauche de la zone à dessiner.</td>
+      </tr>
+      <tr>
+        <td>largeur</td>
+        <td>La largeur de la zone à dessiner.</td>
+      </tr>
+      <tr>
+        <td>hauteur</td>
+        <td>La hauteur de la zone à dessiner.</td>
+      </tr>
+      <tr>
+        <td>x</td>
+        <td>La coordonnée x de l'endroit où dessiner le sprite.</td>
+      </tr>
+      <tr>
+        <td>y</td>
+        <td>La coordonnée y de l'endroit où dessiner le sprite.</td>
+      </tr>
+    </tbody>
+  </table>
+  <p> </p>
+  <h4>Les retours :</h4>
+  <p class="code">N/A</p>
+  <p> </p>
+  <h4>Exemple :</h4>
+  <p class="code">draw_sprite_part(sprite_index, image_index, 4, 0, sprite_width-16, sprite_height-16, x, y ) ;</p>
+  <p>Ceci dessinera le sprite assigné par l'instance (sprite_index) et son image d'animation actuelle (image_index), mais en supprimant une marge de 4 px sur la largeur des deux côtés, et une marge de 8 px sur la hauteur du bas du sprite original de 24x24
+    pixel.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <div class="footer">
+    <div class="buttons">
+      <div class="clear">
+        <div style="float:left">Retour : <a href="Sprites_And_Tiles.htm">Sprites et tuiles</a></div>
+        <div style="float:right">Suivant : <a href="draw_sprite_part_ext.htm">draw_sprite_part_ext</a></div>
+      </div>
+    </div>
+    <h5><span data-keyref="Copyright Notice">Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
   </div>
   <!-- KEYWORDS
 draw_sprite_part

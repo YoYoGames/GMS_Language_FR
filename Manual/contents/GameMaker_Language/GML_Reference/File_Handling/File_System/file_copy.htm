@@ -3,17 +3,60 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>file_copy</title>
+  <title>fichier_copie</title>
   <meta name="generator" content="Adobe RoboHelp 2019" />
   <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
   <meta name="rh-authors" content="Mark Alexander" />
-  <meta name="topic-comment" content="Page de référence pour file_copy" />
+  <meta name="topic-comment" content="Reference page for file_copy" />
   <meta name="rh-index-keywords" content="file_copy" />
   <meta name="search-keywords" content="file_copy" />
 </head>
-<body><!--<div class="body-scroll" style="top: 150px;">--><h1>file_copy</h1><p> Cette fonction copiera le fichier spécifié, en lui donnant le nouveau nom que vous choisissez. Si vous copiez un fichier sur <i><span class="notranslate">Android</span></i> partir de votre <b>zone Fichiers inclus</b> (qui sera à l&#39;intérieur de votre APK), il sera d&#39;abord copié dans la mémoire, alors sachez que la copie de fichiers très volumineux à partir de l&#39;APK peut entraîner un manque de mémoire sur les appareils. Sur la cible HTML5, nous utilisons l&#39; <b>API de stockage local</b> HTML5 pour l&#39;enregistrement côté client, et les fonctions ne prennent pas en charge les opérations sur les fichiers binaires, donc supposons que vous copiez un fichier texte.</p><p class="note"> <b>ATTENTION!</b> Cette fonction peut ne pas fonctionner comme prévu en raison du <span class="notranslate">GameMaker Studio 2</span>! Veuillez consulter la section sur les <a href="../../../../Additional_Information/The_File_System.htm">limites du système de fichiers</a> pour plus d&#39;informations.</p><p></p><h4> Syntaxe:</h4><p class="code">file_copy(fname, newname);</p><table><tbody><tr><th> Argument</th><th> Description</th></tr><tr><td> <span class="notranslate">fname</span></td><td> Le nom du fichier à copier.</td></tr><tr><td> <span class="notranslate">newname</span></td><td> Le nom du nouveau fichier copié.</td></tr></tbody></table><p></p><h4> Retour:</h4><p class="code">N/A</p><p></p><h4> Exemple:</h4><p class="code">if file_exists(&quot;level1.txt&quot;)<br/>     {
-    <br/>     file_copy(&quot;level1.txt&quot;, &quot;level2.txt&quot;);<br/>     }
-  </p><p> Cela vérifierait un fichier et s&#39;il existe, il est copié. </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> Retour: <a href="File_System.htm">Système de fichiers</a></div><div style="float:right"> Suivant:<a href="file_find_first.htm">file_find_first</a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
+<body>
+  <!--<div class="body-scroll" style="top: 150px;">-->
+  <h1>fichier_copie</h1>
+  <p>Cette fonction permet de copier le fichier spécifié en lui donnant le nouveau nom que vous avez choisi. Si vous copiez un fichier sur <i><span class="notranslate">Android</span></i> depuis votre zone de <b>fichiers inclus</b> (qui se trouve dans votre APK), il sera d'abord copié dans la mémoire.
+    que la copie de très gros fichiers à partir de l'APK peut entraîner un manque de mémoire sur les appareils. Sur la cible HTML5, nous utilisons l'<b>API de stockage local</b> HTML5 pour la sauvegarde côté client, et les fonctions ne prennent pas en charge les opérations sur les fichiers binaires.
+    suppose que vous copiez un fichier texte.</p>
+  <p class="note"><b>AVERTISSEMENT !</b> Il se peut que cette fonction ne fonctionne pas comme vous l'attendez, car <span class="notranslate">GameMaker Studio 2</span> est en sandbox ! Veuillez consulter la section sur les <a href="../../../../Additional_Information/The_File_System.htm">limites du système de fichiers</a> pour plus d'informations.</p>
+  <p> </p>
+  <h4>Syntaxe :</h4>
+  <p class="code">file_copy(fname, newname) ;</p>
+  <table>
+    <tbody>
+      <tr>
+        <th>Arguments</th>
+        <th>Description</th>
+      </tr>
+      <tr>
+        <td>fname</td>
+        <td>Le nom du fichier à copier.</td>
+      </tr>
+      <tr>
+        <td>nouveau nom</td>
+        <td>Le nom du nouveau fichier, copié.</td>
+      </tr>
+    </tbody>
+  </table>
+  <p> </p>
+  <h4>Les retours :</h4>
+  <p class="code">N/A</p>
+  <p> </p>
+  <h4>Exemple :</h4>
+  <p class="code">if file_exists(&quot;level1.txt&quot;)<br> {
+    <br> file_copy(&quot;level1.txt&quot;, &quot;level2.txt&quot;) ;<br> }
+  </p>
+  <p>Cela permet de rechercher un fichier et s'il existe, il est copié.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <div class="footer">
+    <div class="buttons">
+      <div class="clear">
+        <div style="float:left">Retour : <a href="File_System.htm">Système de fichiers</a></div>
+        <div style="float:right">Suivant : <a href="file_find_first.htm">file_find_first</a></div>
+      </div>
+    </div>
+    <h5><span data-keyref="Copyright Notice">Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
   </div>
   <!-- KEYWORDS
 file_copy

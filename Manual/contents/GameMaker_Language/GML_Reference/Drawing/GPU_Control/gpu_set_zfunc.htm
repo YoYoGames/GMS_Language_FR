@@ -7,13 +7,60 @@
   <meta name="generator" content="Adobe RoboHelp 2019" />
   <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
   <meta name="rh-authors" content="Mark Alexander" />
-  <meta name="topic-comment" content="Référence de la fonction gpu_set_zfunc" />
+  <meta name="topic-comment" content="Reference for the function gpu_set_zfunc" />
   <meta name="rh-index-keywords" content="gpu_set_zfunc,cmpfunc_never,cmpfunc_less,cmpfunc_equal,cmpfunc_lessequal,cmpfunc_greater,cmpfunc_notequal,cmpfunc_greaterequal,cmpfunc_always" />
   <meta name="search-keywords" content="gpu_set_zfunc,cmpfunc_never,cmpfunc_less,cmpfunc_equal,cmpfunc_lessequal,cmpfunc_greater,cmpfunc_notequal,cmpfunc_greaterequal,cmpfunc_always" />
 </head>
-<body><!--<div class="body-scroll" style="top: 150px;">--><h1>gpu_set_zfunc</h1><p> Cette fonction peut être utilisée pour définir le mode de comparaison des tests z-buffer (voir <a href="gpu_set_ztestenable.htm"><tt>gpu_set_ztestenable()</tt></a> pour plus d&#39;informations). Les valeurs utilisables sont l&#39;une des constantes suivantes (la valeur par défaut est <tt>cmpfunc_lessequal</tt> ): </p><ul><li><tt>cmpfunc_never </tt></li><li><tt>cmpfunc_less </tt></li><li><tt>cmpfunc_equal </tt></li><li><tt>cmpfunc_lessequal </tt></li><li><tt>cmpfunc_greater </tt></li><li><tt>cmpfunc_notequal </tt></li><li><tt>cmpfunc_greaterequal </tt></li><li><tt>cmpfunc_always</tt></li></ul><p></p><h4> Syntaxe:</h4><p class="code">gpu_set_zfunc(cmp_func);</p><table><tbody><tr><th> Argument</th><th> Description</th></tr><tr><td> <span class="notranslate">cmp_func</span></td><td> Le mode de comparaison à utiliser (voir liste ci-dessus)</td></tr></tbody></table><p></p><h4> Retour:</h4><p class="code">N/A</p><p></p><h4> Exemple:</h4><p class="code">gpu_set_ztestenable(true);<br/> gpu_set_zfunc(cmpfunc_always);
-    <br/> draw_sprite(spr_Background, 0, 0, 0);<br/> gpu_set_ztestenable(false);
-  </p><p> Le code ci-dessus active le test z-buffer et définit son mode de comparaison avant de dessiner un sprite d&#39;arrière-plan, puis le désactive à nouveau pour continuer à dessiner. </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> Retour: <a href="GPU_Control.htm">Contrôle GPU</a></div><div style="float:right"> Suivant:<a href="gpu_set_zwriteenable.htm">gpu_set_zwriteenable</a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
+<body>
+  <!--<div class="body-scroll" style="top: 150px;">-->
+  <h1>gpu_set_zfunc</h1>
+  <p>Cette fonction peut être utilisée pour définir le mode de comparaison des tests du tampon zéro (voir <a href="gpu_set_ztestenable.htm"><tt>gpu_set_ztestenable()</tt></a> pour plus d'informations). Les valeurs disponibles sont n'importe laquelle des constantes suivantes (la valeur par défaut est
+    est <tt>cmpfunc_lessequal</tt>) :</p>
+  <ul>
+    <li><tt>cmpfunc_never</tt></li>
+    <li><tt>cmpfunc_less</tt></li>
+    <li><tt>cmpfunc_equal</tt></li>
+    <li><tt>cmpfunc_lessequal</tt></li>
+    <li><tt>cmpfunc_greater</tt></li>
+    <li><tt>cmpfunc_notequal</tt></li>
+    <li><tt>cmpfunc_greaterequal</tt></li>
+    <li><tt>cmpfunc_always</tt></li>
+  </ul>
+  <p> </p>
+  <h4>Syntaxe :</h4>
+  <p class="code">gpu_set_zfunc(cmp_func) ;</p>
+  <table>
+    <tbody>
+      <tr>
+        <th>Arguments</th>
+        <th>Description</th>
+      </tr>
+      <tr>
+        <td>cmp_func</td>
+        <td>Le mode de comparaison à utiliser (voir liste ci-dessus)</td>
+      </tr>
+    </tbody>
+  </table>
+  <p> </p>
+  <h4>Les retours :</h4>
+  <p class="code">N/A</p>
+  <p> </p>
+  <h4>Exemple :</h4>
+  <p class="code">gpu_set_ztestenable(true) ;<br> gpu_set_zfunc(cmpfunc_always) ;
+    <br> draw_sprite(spr_Background, 0, 0, 0) ;<br> gpu_set_ztestenable(false) ;
+  </p>
+  <p>Le code ci-dessus active le test du z-buffer et définit son mode de comparaison avant de dessiner un sprite d'arrière-plan, puis le désactive à nouveau pour poursuivre le dessin.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <div class="footer">
+    <div class="buttons">
+      <div class="clear">
+        <div style="float:left">Retour : <a href="GPU_Control.htm">Contrôle du GPU</a></div>
+        <div style="float:right">Suivant : <a href="gpu_set_zwriteenable.htm">gpu_set_zwriteenable</a></div>
+      </div>
+    </div>
+    <h5><span data-keyref="Copyright Notice">Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
   </div>
   <!-- KEYWORDS
 gpu_set_zfunc

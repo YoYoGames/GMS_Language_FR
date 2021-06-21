@@ -7,13 +7,52 @@
   <meta name="generator" content="Adobe RoboHelp 2019" />
   <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
   <meta name="rh-authors" content="Mark Alexander" />
-  <meta name="topic-comment" content="Page de référence pour gamepad_is_connected" />
+  <meta name="topic-comment" content="Reference page for gamepad_is_connected" />
   <meta name="rh-index-keywords" content="gamepad_is_connected" />
   <meta name="search-keywords" content="gamepad_is_connected" />
 </head>
-<body><!--<div class="body-scroll" style="top: 150px;">--><h1>gamepad_is_connected</h1><p> Cette fonction retournera si une manette de jeu est connectée au &quot;slot&quot; donné (retourne <tt>true</tt> ) ou non (retourne <tt>false</tt> ). Vous utiliseriez normalement cette fonction en conjonction avec le <a href="gamepad_get_device_count.htm"><tt>gamepad_get_device_count()</tt></a> fonction pour obtenir le nombre correct de manettes de jeu et / ou de &quot;slots&quot; de manettes de jeu disponibles. Notez qu&#39;il peut y avoir un léger délai entre l&#39;utilisateur connectant la manette de jeu et <span class="notranslate">GameMaker Studio 2</span> détectant comme étant connectée (c&#39;est particulièrement le cas lorsqu&#39;il s&#39;agit de manettes connectées Bluetooth).</p><p class="note"> <strong>REMARQUE</strong>: sur certaines plates-formes, en particulier les consoles, cette fonction peut retourner false immédiatement après la connexion / la sélection d&#39;une manette de jeu et peut nécessiter une vérification dans une alarme quelques images (étapes) plus tard pour qu&#39;elle détecte correctement la manette de jeu.</p><p></p><h4> Syntaxe:</h4><p class="code">gamepad_is_connected(numb);</p><table><tbody><tr><th> Argument</th><th> Description</th></tr><tr><td> <span class="notranslate">device</span></td><td> Quelle «fente» de manette de jeu vérifier.</td></tr></tbody></table><p></p><h4> Retour:</h4><p class="code">Boolean</p><p></p><h4> Exemple:</h4><p class="code">var gp_num = gamepad_get_device_count();<br/> for (var i = 0; i &lt; gp_num; i++;)<br/>    {
-    <br/>    if gamepad_is_connected(i) global.gp[i] = true else global.gp[i] = false;<br/>    }
-  </p><p> Le code ci-dessus parcourt les manettes de jeu disponibles (ou les emplacements pour manettes de jeu), puis vérifie chacune d&#39;elles pour une manette de jeu connectée. la valeur retournée est ensuite utilisée pour définir un tableau global sur <tt>true</tt> ou <tt>false</tt> pour une utilisation lors de contrôles ultérieurs. </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> Retour: <a href="Gamepad_Input.htm">Entrée de la manette de jeu</a></div><div style="float:right"> Suivant: <a href="gamepad_get_guid.htm">gamepad_get_guid</a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
+<body>
+  <!--<div class="body-scroll" style="top: 150px;">-->
+  <h1>gamepad_is_connected</h1>
+  <p>Cette fonction indique si une manette de jeu est connectée au &quot;slot&quot; donné (renvoie true) ou <tt>non (</tt>renvoie false). Vous utiliserez normalement cette fonction en conjonction avec la fonction <a href="gamepad_get_device_count.htm"><tt>gamepad_get_device_count()</tt></a>    pour obtenir le nombre correct de manettes de jeu et/ou de &quot;slots&quot; disponibles. Notez qu'il peut y avoir un léger délai entre le moment où l'utilisateur connecte la manette de jeu et celui où <span class="notranslate">GameMaker Studio 2</span> la détecte comme étant connectée (c'est notamment le cas lorsqu'il s'agit de manettes connectées par Bluetooth).
+    cas lorsqu'il s'agit de manettes connectées par Bluetooth).</p>
+  <p class="note"><strong>REMARQUE</strong>: Sur certaines plates-formes - en particulier les consoles - cette fonction peut renvoyer un faux immédiatement après qu'une manette de jeu ait été connectée/sélectionnée et peut devoir être vérifiée dans une alarme quelques images (étapes) plus tard pour qu'elle détecte correctement la manette de jeu.
+    gamepad.</p>
+  <p> </p>
+  <h4>Syntaxe :</h4>
+  <p class="code">gamepad_is_connected(numb) ;</p>
+  <table>
+    <tbody>
+      <tr>
+        <th>Arguments</th>
+        <th>Description</th>
+      </tr>
+      <tr>
+        <td>dispositif</td>
+        <td>Quel est le &quot;slot&quot; du gamepad à vérifier.</td>
+      </tr>
+    </tbody>
+  </table>
+  <p> </p>
+  <h4>Les retours :</h4>
+  <p class="code">Booléen</p>
+  <p> </p>
+  <h4>Exemple :</h4>
+  <p class="code">var gp_num = gamepad_get_device_count() ;<br> for (var i = 0 ; i &lt; gp_num ; i++ ;)<br> {
+    <br> if gamepad_is_connected(i) global.gp[i] = true else global.gp[i] = false ;<br> }
+  </p>
+  <p>Le code ci-dessus passe en boucle les game pads disponibles (ou les emplacements de gamepad) et vérifie pour chacun d'entre eux s'il existe un gamepad connecté. La valeur renvoyée est ensuite utilisée pour définir un tableau global sur <tt>true</tt> ou <tt>false</tt> à utiliser dans les vérifications futures.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <div class="footer">
+    <div class="buttons">
+      <div class="clear">
+        <div style="float:left">Retour : <a href="Gamepad_Input.htm">Entrée de la manette de jeu</a></div>
+        <div style="float:right">Suivant : <a href="gamepad_get_guid.htm"> gamepad_get_guid </a></div>
+      </div>
+    </div>
+    <h5><span data-keyref="Copyright Notice">Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
   </div>
   <!-- KEYWORDS
 gamepad_is_connected

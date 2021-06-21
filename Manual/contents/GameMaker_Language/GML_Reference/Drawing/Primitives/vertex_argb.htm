@@ -1,17 +1,70 @@
 <?xml version="1.0" encoding="utf-8" ?>
-
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml"><head>
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <title>vertex_argb</title>
-  <meta name="generator" content="Adobe RoboHelp 2019"/>
-  <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css"/>
-  <meta name="rh-authors" content="Mark Alexander"/>
-  <meta name="topic-comment" content="Référence pour vertex_argb"/>
-  <meta name="rh-index-keywords" content="vertex_argb"/>
-  <meta name="search-keywords" content="vertex_argb"/>
+  <meta name="generator" content="Adobe RoboHelp 2020" />
+  <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
+  <meta name="rh-authors" content="Mark Alexander" />
+  <meta name="topic-comment" content="Reference for vertex_argb" />
+  <meta name="rh-index-keywords" content="vertex_argb" />
+  <meta name="search-keywords" content="vertex_argb" />
 </head>
-<body><!--<div class="body-scroll" style="top: 150px;">--><h1>vertex_argb</h1><p> Cette fonction définira les <a class="glossterm" data-glossterm="ARGB" href="#">valeurs ARVB</a> pour le sommet en cours de définition pour la primitive personnalisée. Vous fournissez le tampon dans lequel écrire les données ainsi que les valeurs rouge, verte, bleue et alpha que vous souhaitez utiliser comme un seul entier non signé de 32 bits - échantillon alpha dans les 8 bits les plus élevés, suivi de l&#39;échantillon rouge, vert échantillon et enfin l&#39;échantillon bleu dans les 8 bits les plus bas. Vous pouvez utiliser la notation hexadécimale ( <span class="notranslate">$AA</span> RRGGBB) un nombre réel ou utiliser l&#39;un des <tt>make_colour_*()</tt> fonctions pour définir la valeur de la couleur.</p><p></p><h4> Syntaxe:</h4><p class="code">vertex_argb(buffer, argb);</p><table><tbody><tr><th> Argument</th><th> Description</th></tr><tr><td> <span class="notranslate">buffer</span></td><td> Le tampon dans lequel écrire les informations.</td></tr><tr><td> <span class="notranslate">a</span></td><td> La valeur alpha de la couleur (0 - 255).</td></tr><tr><td> <span class="notranslate">r</span></td><td> Le composant rouge d&#39;une couleur (0 - 255).</td></tr><tr><td> <span class="notranslate">g</span></td><td> Le composant vert d&#39;une couleur (0 - 255).</td></tr><tr><td> <span class="notranslate">b</span></td><td> Le composant bleu d&#39;une couleur (0 - 255).</td></tr></tbody></table><p></p><h4> Retour:</h4><p class="code">N/A</p><p></p><h4> Exemple:</h4><p class="code">vertex_argb(buff, $FFFFFFFF);</p><p> Le code ci-dessus définira les valeurs ARVB du sommet défini sur blanc. </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> Retour: <a href="Primitives_And_Vertex_Formats.htm">Primitives et formats de sommets</a></div><div style="float:right"> Suivant:<a href="vertex_texcoord.htm">vertex_texcoord</a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
+<body>
+  <!--<div class="body-scroll" style="top: 150px;">-->
+  <h1>vertex_argb</h1>
+  <p>Cette fonction définira les valeurs <a class="glossterm" data-glossterm="ARGB" href="#">ARGB</a> pour le sommet actuellement défini pour la primitive personnalisée. Vous fournissez le tampon dans lequel écrire les données ainsi que les valeurs rouge, verte, bleue et alpha que vous souhaitez utiliser sous la forme d'un entier non signé de 32 bits.
+    que vous souhaitez utiliser sous la forme d'un seul entier non signé de 32 bits - échantillon alpha dans les 8 bits les plus élevés, suivi de l'échantillon rouge, de l'échantillon vert et enfin de l'échantillon bleu dans les 8 bits les plus bas. Vous pouvez utiliser la notation hexadécimale ($AARRGGBB), un nombre réel ou utiliser l'une des fonctions make_colour_*.
+    l'une des fonctions <tt>make_colour_*()</tt> pour définir la valeur de la couleur.</p>
+  <p> </p>
+  <h4>Syntaxe :</h4>
+  <p class="code">vertex_argb(buffer, argb) ;</p>
+  <table>
+    <tbody>
+      <tr>
+        <th>Arguments</th>
+        <th>Description</th>
+      </tr>
+      <tr>
+        <td>tampon</td>
+        <td>Le tampon dans lequel écrire l'information.</td>
+      </tr>
+      <tr>
+        <td>a</td>
+        <td>La valeur alpha de la couleur (0 - 255).</td>
+      </tr>
+      <tr>
+        <td>r</td>
+        <td>La partie de la composante rouge d'une couleur (0 - 255).</td>
+      </tr>
+      <tr>
+        <td>g</td>
+        <td>La partie de la composante verte d'une couleur (0 - 255).</td>
+      </tr>
+      <tr>
+        <td>b</td>
+        <td>La partie de la composante bleue d'une couleur (0 - 255).</td>
+      </tr>
+    </tbody>
+  </table>
+  <p> </p>
+  <h4>Les retours :</h4>
+  <p class="code">N/A</p>
+  <p> </p>
+  <h4>Exemple :</h4>
+  <p class="code">vertex_argb(buff, $FFFFFFFF) ;</p>
+  <p>Le code ci-dessus définira les valeurs ARGB du sommet défini comme étant blanc.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <div class="footer">
+    <div class="buttons">
+      <div class="clear">
+        <div style="float:left">Retour : <a href="Primitives_And_Vertex_Formats.htm">Primitives et formats de sommets</a></div>
+        <div style="float:right">Suivant : <a href="vertex_texcoord.htm">vertex_texcoord</a></div>
+      </div>
+    </div>
+    <h5><span data-keyref="Copyright Notice">Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
   </div>
   <!-- KEYWORDS
 vertex_argb

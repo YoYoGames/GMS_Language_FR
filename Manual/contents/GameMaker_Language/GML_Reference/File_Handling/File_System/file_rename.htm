@@ -3,17 +3,58 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>file_rename</title>
+  <title>renommer un fichier</title>
   <meta name="generator" content="Adobe RoboHelp 2019" />
   <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
   <meta name="rh-authors" content="Mark Alexander" />
-  <meta name="topic-comment" content="Page de référence pour file_rename" />
+  <meta name="topic-comment" content="Reference page for file_rename" />
   <meta name="rh-index-keywords" content="file_rename" />
   <meta name="search-keywords" content="file_rename" />
 </head>
-<body><!--<div class="body-scroll" style="top: 150px;">--><h1>file_rename</h1><p> Cette fonction renomme le fichier spécifié avec le nom spécifié. La fonction retournera <tt>true</tt> si le fichier a été renommé avec succès, ou <tt>false</tt> dans toutes autres circonstances.</p><p class="note"><b></b> <b>ATTENTION!</b> Cette fonction peut ne pas fonctionner comme prévu en raison du <span class="notranslate">GameMaker Studio 2</span>! Veuillez consulter la section sur le <a href="../../../../Additional_Information/The_File_System.htm">système de fichiers</a> pour plus d&#39;informations.</p><p></p><h4> Syntaxe:</h4><p class="code">file_rename(oldname, newname);</p><table><tbody><tr><th> Argument</th><th> Description</th></tr><tr><td> <span class="notranslate">oldname</span></td><td> Le nom du fichier à modifier.</td></tr><tr><td> <span class="notranslate">newname</span></td><td> Le nouveau nom à donner au fichier.</td></tr></tbody></table><p></p><h4> Retour:</h4><p class="code">Boolean</p><p></p><h4> Exemple:</h4><p class="code">if file_exists(&quot;level1.txt&quot;)<br/>     {
-    <br/>     file_rename(&quot;level1.txt&quot;, &quot;level.txt&quot;);<br/>     }
-  </p><p> Cela vérifierait un fichier et s&#39;il existe, il est renommé. </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> Retour: <a href="File_System.htm">Système de fichiers</a></div><div style="float:right"> Suivant:<a href="file_copy.htm">file_copy</a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
+<body>
+  <!--<div class="body-scroll" style="top: 150px;">-->
+  <h1>renommer un fichier</h1>
+  <p>Cette fonction renomme le fichier spécifié avec le nom spécifié. La fonction renverra <tt>vrai</tt> si le fichier a été renommé avec succès, ou <tt>faux</tt> dans toutes les autres circonstances.</p>
+  <p class="note"><b></b><b>AVERTISSEMENT !</b> Il se peut que cette fonction ne fonctionne pas comme vous l'attendez, car <span class="notranslate">GameMaker Studio 2</span> est en sandbox ! Veuillez consulter la section sur le <a href="../../../../Additional_Information/The_File_System.htm">système de fichiers</a> pour plus d'informations.</p>
+  <p> </p>
+  <h4>Syntaxe :</h4>
+  <p class="code">file_rename(oldname, newname) ;</p>
+  <table>
+    <tbody>
+      <tr>
+        <th>Arguments</th>
+        <th>Description</th>
+      </tr>
+      <tr>
+        <td>ancien nom</td>
+        <td>Le nom du fichier à modifier.</td>
+      </tr>
+      <tr>
+        <td>nouveau nom</td>
+        <td>Le nouveau nom à donner au fichier.</td>
+      </tr>
+    </tbody>
+  </table>
+  <p> </p>
+  <h4>Les retours :</h4>
+  <p class="code">Booléen</p>
+  <p> </p>
+  <h4>Exemple :</h4>
+  <p class="code">if file_exists(&quot;level1.txt&quot;)<br> {
+    <br> file_rename(&quot;level1.txt&quot;, &quot;level.txt&quot;) ;<br> }
+  </p>
+  <p>Cela permet de vérifier l'existence d'un fichier et s'il existe, il est renommé.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <div class="footer">
+    <div class="buttons">
+      <div class="clear">
+        <div style="float:left">Retour : <a href="File_System.htm">Système de fichiers</a></div>
+        <div style="float:right">Suivant : <a href="file_copy.htm">file_copy</a></div>
+      </div>
+    </div>
+    <h5><span data-keyref="Copyright Notice">Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
   </div>
   <!-- KEYWORDS
 file_rename

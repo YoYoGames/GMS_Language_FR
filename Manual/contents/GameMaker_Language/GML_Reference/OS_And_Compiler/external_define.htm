@@ -7,11 +7,97 @@
   <meta name="generator" content="Adobe RoboHelp 2019" />
   <link rel="stylesheet" href="../../../assets/css/default.css" type="text/css" />
   <meta name="rh-authors" content="Mark Alexander" />
-  <meta name="topic-comment" content="Page de référence pour external_define" />
+  <meta name="topic-comment" content="Reference page for external_define" />
   <meta name="rh-index-keywords" content="external_define,dll_cdecl,dll_stdcall,ty_real,ty_string" />
   <meta name="search-keywords" content="external_define,dll_cdecl,dll_stdcall,ty_real,ty_string" />
 </head>
-<body><!--<div class="body-scroll" style="top: 150px;">--><h1>external_define</h1><p> Cette fonction peut être utilisée pour définir un appel de fonction externe vers une DLL spécifique (pour <span class="notranslate">Windows</span> ) ou dylib (pour Mac). Ce fichier peut être un fichier inclus ou une partie d&#39;une extension. Vous indiquez le nom (et le chemin) du fichier, puis le nom de la fonction que vous souhaitez définir. Ensuite, vous devez définir la convention d&#39;appel à utiliser (voir la liste des constantes ci-dessous) ainsi que le type de résultat à attendre (également une constante, comme indiqué ci-dessous). Enfin, vous devez donner le nombre d&#39;arguments que la fonction peut prendre (de 0 à 15) et pour chacun des arguments, vous devez également spécifier son type. Veuillez noter que pour les fonctions avec 4 arguments ou plus, ils <i>doivent tous</i> être de type <tt>ty_real</tt>.</p><p class="note"> <b>REMARQUE</b>: Ceci concerne uniquement les dll ou dylib qui ont été ajoutés en tant que «Fichiers inclus» à l&#39; <span class="notranslate">GameMaker Studio 2</span>. Cela ne fonctionnera pas avec ces fichiers ajoutés en tant qu&#39;extensions, car ceux-ci nécessitent que vous définissiez les fonctions dans le package d&#39;extension lui-même.</p><p></p><table><tbody><tr><th> Constant</th><th> Description</th></tr><tr><td> <span class="notranslate">dll_cdecl</span></td><td> Il s&#39;agit de l&#39;appel C, C ++ par défaut</td></tr><tr><td> <span class="notranslate">dll_stdcall</span></td><td> Il s&#39;agit de l&#39;appel WinAPI standard ( <span class="notranslate">Windows </span><tt>dll</tt> seul)</td></tr><tr><td> <span class="notranslate">ty_real</span></td><td> Un argument de nombre réel</td></tr><tr><td> <span class="notranslate">ty_string</span></td><td> un argument de chaîne terminé par null</td></tr></tbody></table><p></p><h4> Syntaxe:</h4><p class="code">external_define(dll, name, calltype, restype, argnumb, argtype[0], argtype[1], ...argtype[10]) ;</p><table><tbody><tr><th> Argument</th><th> Description</th></tr><tr><td> <span class="notranslate">dll</span></td><td> Le nom du fichier dll (chaîne)</td></tr><tr><td> <span class="notranslate">name</span></td><td> Le nom de la fonction (chaîne)</td></tr><tr><td> <span class="notranslate">calltype</span></td><td> La convention d&#39;appel utilisée</td></tr><tr><td> <span class="notranslate">restype</span></td><td> Le type de résultat à attendre</td></tr><tr><td> <span class="notranslate">argnumb</span></td><td> Le nombre d&#39;arguments (0-10)</td></tr><tr><td> <span class="notranslate">argtype[0... 10]</span></td><td> Les différents types d&#39;arguments utilisés</td></tr></tbody></table><p></p><p></p><h4> Retour:</h4><p class="code">Real (Unique function ID value)</p><p></p><h4> Exemple:</h4><p class="code">my_funcion = external_define(&quot;MyDLL.dll&quot;, &quot;MyMin&quot;, dll_cdecl, ty_real, 2, ty_real, ty_real);</p><p> L&#39;exemple de code ci-dessus définira une fonction externe appelée &quot;MyMin&quot; avec deux arguments. </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> Retour: <a href="OS_And_Compiler.htm">OS et compilateur</a></div><div style="float:right"> Suivant:<a href="external_call.htm">external_call</a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
+<body>
+  <!--<div class="body-scroll" style="top: 150px;">-->
+  <h1>external_define</h1>
+  <p>Cette fonction peut être utilisée pour définir un appel de fonction externe à une dll (pour <span class="notranslate">Windows</span>) ou une dylib (pour Mac) spécifique. Ce fichier peut être soit un fichier inclus, soit une partie d'une extension. Vous devez fournir le nom (et le chemin) du fichier, puis le nom de la fonction que vous souhaitez définir.
+    que vous souhaitez définir. Ensuite, vous devez définir la convention d'appel à utiliser (voir la liste des constantes ci-dessous) ainsi que le type de résultat à attendre (également une constante, comme indiqué ci-dessous). Enfin, vous devez donner le nombre d'arguments que la
+    peut prendre (de 0 à 15) et pour chacun des arguments, vous devez également spécifier son type. Veuillez noter que pour les fonctions ayant 4 arguments ou plus, tous les arguments <i>doivent</i> être de type <tt>ty_real</tt>.</p>
+  <p class="note"><b>REMARQUE</b>: ceci ne concerne que les dll ou dylib qui ont été ajoutées en tant que &quot;fichiers inclus&quot; dans l'<span class="notranslate">IDE</span> GameMaker <span class="notranslate">Studio 2.</span> Cela ne fonctionnera pas avec les fichiers ajoutés en tant qu'extensions, car ceux-ci nécessitent que vous définissiez les fonctions dans le paquet d'extension lui-même.
+    lui-même.</p>
+  <p> </p>
+  <table>
+    <tbody>
+      <tr>
+        <th>Constant</th>
+        <th>Description</th>
+      </tr>
+      <tr>
+        <td>dll_cdecl</td>
+        <td>C'est l'appel C, C++ par défaut</td>
+      </tr>
+      <tr>
+        <td>dll_stdcall</td>
+        <td>Il s'agit de l'appel standard WinAPI<span class="notranslate">(</span> <tt>dll</tt><span class="notranslate">Windows</span> seulement)</td>
+      </tr>
+      <tr>
+        <td>ty_real</td>
+        <td>Un argument de type nombre réel</td>
+      </tr>
+      <tr>
+        <td>ty_string</td>
+        <td>un argument de type chaîne de caractères à terminaison nulle</td>
+      </tr>
+    </tbody>
+  </table>
+  <p> </p>
+  <h4>Syntaxe :</h4>
+  <p class="code">external_define(dll, name, calltype, restype, argnumb, argtype[0], argtype[1], ...argtype[10]) ;</p>
+  <table>
+    <tbody>
+      <tr>
+        <th>Arguments</th>
+        <th>Description</th>
+      </tr>
+      <tr>
+        <td>dll</td>
+        <td>Le nom du fichier dll (chaîne de caractères)</td>
+      </tr>
+      <tr>
+        <td>nom</td>
+        <td>Le nom de la fonction (chaîne de caractères)</td>
+      </tr>
+      <tr>
+        <td>type d'appel</td>
+        <td>La convention d'appel utilisée</td>
+      </tr>
+      <tr>
+        <td>restype</td>
+        <td>Le type de résultat à attendre</td>
+      </tr>
+      <tr>
+        <td>argnumb</td>
+        <td>Le nombre d'arguments (0 - 10)</td>
+      </tr>
+      <tr>
+        <td>argtype[0 ... 10]</td>
+        <td>Les différents types d'arguments utilisés</td>
+      </tr>
+    </tbody>
+  </table>
+  <p> </p>
+  <p> </p>
+  <h4>Les retours :</h4>
+  <p class="code">Real (valeur d'identification unique de la fonction)</p>
+  <p> </p>
+  <h4>Exemple :</h4>
+  <p class="code">mon_funcion = external_define(&quot;MyDLL.dll&quot;, &quot;MyMin&quot;, dll_cdecl, ty_real, 2, ty_real, ty_real) ;</p>
+  <p>L'exemple de code ci-dessus définira une fonction externe appelée &quot;MyMin&quot; avec deux arguments.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <div class="footer">
+    <div class="buttons">
+      <div class="clear">
+        <div style="float:left">Retour : <a href="OS_And_Compiler.htm">Système d'exploitation et compilateur</a></div>
+        <div style="float:right">Suivant : <a href="external_call.htm">external_call</a></div>
+      </div>
+    </div>
+    <h5><span data-keyref="Copyright Notice">Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
   </div>
   <!-- KEYWORDS
 external_define

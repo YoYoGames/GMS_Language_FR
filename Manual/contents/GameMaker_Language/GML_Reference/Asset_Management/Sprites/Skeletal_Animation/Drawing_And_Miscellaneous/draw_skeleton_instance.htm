@@ -7,11 +7,93 @@
   <meta name="generator" content="Adobe RoboHelp 2019" />
   <link rel="stylesheet" href="../../../../../../assets/css/default.css" type="text/css" />
   <meta name="rh-authors" content="Mark Alexander" />
-  <meta name="topic-comment" content="Page expliquant la fonction draw_skeleton_instance" />
+  <meta name="topic-comment" content="Page explaining the function draw_skeleton_instance" />
   <meta name="rh-index-keywords" content="draw_skeleton_instance" />
   <meta name="search-keywords" content="draw_skeleton_instance" />
 </head>
-<body><!--<div class="body-scroll" style="top: 150px;">--><h1>draw_skeleton_instance</h1><p> Cette fonction est <i>uniquement</i> destinée à être utilisée avec des instances auxquelles des sprites ont été affectés créés à l&#39;aide du programme d&#39;animation squelettique Spine. Bien que vous puissiez dessiner ces sprites en utilisant les fonctions de dessin normales (comme <a href="../../../../Drawing/Sprites_And_Tiles/draw_self.htm"><tt>draw_self()</tt></a> ), il peut arriver que vous souhaitiez dessiner une seule image ou afficher un changement de texture de la peau sans modifier réellement les propriétés de sprite d&#39;une instance. Dans ces cas, vous pouvez dessiner le sprite qui a été affecté à l&#39;instance avec cette fonction, où vous donnez l&#39;ID d&#39;instance unique, puis le nom de l&#39;animation à partir de laquelle obtenir l&#39;image (une chaîne, telle que définie dans le programme utilisé pour créer le sprite). Ensuite, vous donnez le nom du skin à utiliser (encore une fois, tel que défini lors de la création du sprite), et une valeur de cadre. La valeur d&#39;image sert à indiquer à <span class="notranslate">GameMaker Studio 2</span> partie de l&#39;animation à afficher et est une valeur comprise entre 0 et le <a href="../../Sprite_Instance_Variables/image_number.htm"><tt>image_number</tt></a>. Les autres arguments sont les mêmes que ceux utilisés pour le dessin de sprite normal et changeront l&#39;échelle, l&#39;angle, la couleur de fusion et l&#39;alpha de l&#39;image d&#39;animation finale dessinée.</p><p class="note"> <b>ATTENTION!</b> En raison de la façon dont les animations squelettiques sont interpolées entre diverses images «clés», il y a une surcharge supplémentaire associée à cet appel et il est donc recommandé d&#39;éviter de dessiner des sprites basés sur des squelettes en utilisant cette méthode, sauf si c&#39;est absolument nécessaire.</p><p></p><h4> Syntaxe:</h4><p class="code">draw_skeleton_instance(instance, animname, skinname, frame, x, y, xscale, yscale, rot, colour, alpha);</p><table><tbody><tr><th> Argument</th><th> Description</th></tr><tr><td> <span class="notranslate">instance</span></td><td> L&#39;index de l&#39;instance à partir de laquelle dessiner le sprite.</td></tr><tr><td> <span class="notranslate">animname</span></td><td> Le nom de l&#39;animation à partir de laquelle obtenir l&#39;image (une chaîne).</td></tr><tr><td> <span class="notranslate">skinname</span></td><td> Le nom du skin à utiliser (une chaîne).</td></tr><tr><td> <span class="notranslate">frame</span></td><td> L&#39;image d&#39;animation à dessiner (de 0 à image_number - 1).</td></tr><tr><td> <span class="notranslate">x</span></td><td> La coordonnée x de l&#39;endroit où dessiner le sprite.</td></tr><tr><td> <span class="notranslate">y</span></td><td> La coordonnée y de l&#39;endroit où dessiner le sprite.</td></tr><tr><td> <span class="notranslate">xscale</span></td><td> La mise à l&#39;échelle horizontale du sprite, sous forme de multiplicateur: 1 = mise à l&#39;échelle normale, 0,5 est la moitié etc...</td></tr><tr><td> <span class="notranslate">yscale</span></td><td> La mise à l&#39;échelle verticale du sprite, en tant que multiplicateur: 1 = mise à l&#39;échelle normale, 0,5 est la moitié etc...</td></tr><tr><td> <span class="notranslate">rot</span></td><td> La rotation du sprite. 0 = normal, 90 = tourné de 90 degrés dans le sens inverse des aiguilles d&#39;une montre, etc.</td></tr><tr><td> <span class="notranslate">colour</span></td><td> La couleur avec laquelle mélanger le sprite.</td></tr><tr><td> <span class="notranslate">alpha</span></td><td> L&#39;alpha du sprite (de 0 à 1 où 0 est transparent et 1 opaque).</td></tr></tbody></table><p></p><h4> Retour:</h4><p class="code">N/A</p><p></p><h4> Exemple:</h4><p class="code">draw_skeleton_instance(obj_Player, &quot;jump&quot;, &quot;skin1&quot;, 0, x, y, 1, 1, 0, c_white, 1);</p><p> Le code ci-dessus dessinera la première image du sprite d&#39;animation squelettique assigné à l&#39;instance donnée, en utilisant le jeu d&#39;animation &quot;jump&quot; et le skin défini comme &quot;skin1&quot;. </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> Retour: <a href="Drawing_And_Miscellaneous.htm">Dessin et divers</a></div><div style="float:right"> Suivant:<a href="draw_skeleton_collision.htm">draw_skeleton_collision</a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
+<body>
+  <!--<div class="body-scroll" style="top: 150px;">-->
+  <h1>draw_skeleton_instance</h1>
+  <p>Cette fonction <i>ne</i> doit être utilisée <i>qu'</i> avec les instances auxquelles sont attribués des sprites créés à l'aide du programme d'animation squelettique Spine. Bien que vous puissiez dessiner ces sprites à l'aide des fonctions de dessin normales (comme la fonction <a href="../../../../Drawing/Sprites_And_Tiles/draw_self.htm"><tt>draw_self()</tt></a>),
+    il peut arriver que vous souhaitiez dessiner une seule image ou montrer un changement de texture de peau sans modifier les propriétés du sprite d'une instance. Dans ces cas, vous pouvez dessiner le sprite qui a été assigné à l'instance avec cette fonction,
+    où vous indiquez l'ID unique de l'instance, puis le nom de l'animation à partir duquel vous souhaitez obtenir l'image (une chaîne, telle que définie dans le programme utilisé pour créer le sprite). Ensuite, vous donnez le nom du skin à utiliser (encore une fois, tel que défini lors de la création du sprite), et une valeur de frame.
+    valeur d'image. La valeur de l'image permet d'indiquer à <span class="notranslate">GameMaker Studio 2</span> quelle partie de l'animation doit être affichée ; il s'agit d'une valeur comprise entre 0 et la valeur <a href="../../Sprite_Instance_Variables/image_number.htm"><tt>nombre_d'images</tt></a>. Les autres arguments sont
+    les mêmes que ceux utilisés pour le dessin normal du sprite et modifieront l'échelle, l'angle, la couleur de fusion et l'alpha de l'image d'animation finale dessinée.</p>
+  <p class="note"><b>ATTENTION !</b> En raison de la façon dont les animations squelettiques sont interpolées entre les différentes images &quot;clés&quot;, il y a une surcharge supplémentaire associée à cet appel et il est donc recommandé d'éviter de dessiner des sprites basés sur des squelettes en utilisant cette méthode, sauf en cas de nécessité absolue.
+    cette méthode, sauf en cas de nécessité absolue.</p>
+  <p> </p>
+  <h4>Syntaxe :</h4>
+  <p class="code">draw_skeleton_instance(instance, animname, skinname, frame, x, y, xscale, yscale, rot, colour, alpha) ;</p>
+  <table>
+    <tbody>
+      <tr>
+        <th>Arguments</th>
+        <th>Description</th>
+      </tr>
+      <tr>
+        <td>instance</td>
+        <td>L'index de l'instance à partir de laquelle le sprite doit être dessiné.</td>
+      </tr>
+      <tr>
+        <td>nom de l'animateur</td>
+        <td>Le nom de l'animation dont il faut récupérer l'image (une chaîne).</td>
+      </tr>
+      <tr>
+        <td>nom de peau</td>
+        <td>Le nom du skin à utiliser (une chaîne).</td>
+      </tr>
+      <tr>
+        <td>cadre</td>
+        <td>Le cadre d'animation à dessiner (de 0 à nombre_d'images - 1).</td>
+      </tr>
+      <tr>
+        <td>x</td>
+        <td>La coordonnée x de l'endroit où dessiner le sprite.</td>
+      </tr>
+      <tr>
+        <td>y</td>
+        <td>La coordonnée y de l'endroit où dessiner le sprite.</td>
+      </tr>
+      <tr>
+        <td>xscale</td>
+        <td>La mise à l'échelle horizontale du sprite, sous forme de multiplicateur : 1 = mise à l'échelle normale, 0.5 est la moitié etc...</td>
+      </tr>
+      <tr>
+        <td>yscale</td>
+        <td>La mise à l'échelle verticale du sprite, sous forme de multiplicateur : 1 = mise à l'échelle normale, 0.5 est la moitié etc...</td>
+      </tr>
+      <tr>
+        <td>pourriture</td>
+        <td>La rotation du sprite. 0=normal, 90=tourné de 90 degrés dans le sens inverse des aiguilles d'une montre, etc.</td>
+      </tr>
+      <tr>
+        <td>couleur</td>
+        <td>La couleur avec laquelle le sprite doit être mélangé.</td>
+      </tr>
+      <tr>
+        <td>alpha</td>
+        <td>L'alpha du sprite (de 0 à 1 où 0 est transparent et 1 opaque).</td>
+      </tr>
+    </tbody>
+  </table>
+  <p> </p>
+  <h4>Les retours :</h4>
+  <p class="code">N/A</p>
+  <p> </p>
+  <h4>Exemple :</h4>
+  <p class="code">draw_skeleton_instance(obj_Player, &quot;jump&quot;, &quot;skin1&quot;, 0, x, y, 1, 1, 0, c_white, 1) ;</p>
+  <p>Le code ci-dessus dessinera la première image du sprite d'animation squelettique attribué à l'instance donnée, en utilisant l'ensemble d'animation &quot;jump&quot; et le skin défini comme &quot;skin1&quot;.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <div class="footer">
+    <div class="buttons">
+      <div class="clear">
+        <div style="float:left">Retour : <a href="Drawing_And_Miscellaneous.htm">Dessin et divers</a></div>
+        <div style="float:right">Suivant : <a href="draw_skeleton_collision.htm">draw_skeleton_collision</a></div>
+      </div>
+    </div>
+    <h5><span data-keyref="Copyright Notice">Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
   </div>
   <!-- KEYWORDS
 draw_skeleton_instance

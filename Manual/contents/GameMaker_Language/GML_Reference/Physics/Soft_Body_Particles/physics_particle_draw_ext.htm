@@ -7,11 +7,83 @@
   <meta name="generator" content="Adobe RoboHelp 2019" />
   <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
   <meta name="rh-authors" content="Mark Alexander" />
-  <meta name="topic-comment" content="Page de référence pour physics_particle_draw_ext" />
+  <meta name="topic-comment" content="Reference page for physics_particle_draw_ext" />
   <meta name="rh-index-keywords" content="physics_particle_draw_ext" />
   <meta name="search-keywords" content="physics_particle_draw_ext" />
 </head>
-<body><!--<div class="body-scroll" style="top: 150px;">--><h1>physics_particle_draw_ext</h1><p> Cette fonction dessine un sprite à la position de toutes les particules qui partagent la même valeur de catégorie définie par l&#39;utilisateur et qui ont des indicateurs qui coïncident avec ceux définis pour le masque. La valeur du masque est définie de la même manière que vous définiriez les drapeaux lors de la création des particules (voir les fonctions <a href="physics_particle_create.htm"><tt>physics_particle_create()</tt></a> pour un exemple), c&#39;est-à-dire: en utilisant le <a href="../../../../Additional_Information/Bitwise_Operators.htm">bit <i>ou</i></a> &quot;|&quot; pour masquer les bits appropriés pour chaque drapeau.</p><p class="note"> <b>REMARQUE</b>: Cette fonction dessine <b>toutes les</b> particules de la simulation physique avec des indicateurs qui coïncident avec ceux du masque, qu&#39;il s&#39;agisse de particules individuelles ou de groupes, si la catégorie utilisateur est la même.</p><p> La particule dessinée ignorera la couleur et les valeurs alpha définies lors de sa création et sera à la place dessinée en utilisant les paramètres d&#39;échelle, d&#39;angle, de couleur et d&#39;alpha donnés dans cette fonction. Notez que ceci est purement pour dessiner un sprite à la position de la particule et n&#39;affecte en aucun cas le comportement de la particule.</p><p></p><h4> Syntaxe:</h4><p class="code">physics_particle_draw_ext(typemask, category, sprite, subimg, xscale, yscale, ang, col, alpha)</p><table><tbody><tr><th> Argument</th><th> Description</th></tr><tr><td> <span class="notranslate">typemask</span></td><td> Le masque avec lequel comparer les drapeaux de particules.</td></tr><tr><td> <span class="notranslate">category</span></td><td> La catégorie définie par l&#39;utilisateur à dessiner (utilisez 0 pour dessiner toutes les catégories).</td></tr><tr><td> <span class="notranslate">sprite</span></td><td> Le sprite à utiliser pour chaque particule.</td></tr><tr><td> <span class="notranslate">subimg</span></td><td> Le <tt>image_index</tt> du sprite à dessiner.</td></tr><tr><td> <span class="notranslate">xscale</span></td><td> Le facteur d&#39;échelle à appliquer à l&#39;image-objet le long de l&#39;axe x.</td></tr><tr><td> <span class="notranslate">yscale</span></td><td> Le facteur d&#39;échelle à appliquer à l&#39;image-objet le long de l&#39;axe y.</td></tr><tr><td> <span class="notranslate">ang</span></td><td> Angle (en degrés) auquel dessiner le sprite.</td></tr><tr><td> <span class="notranslate">col</span></td><td> La couleur à mélanger avec l&#39;image-objet (la valeur par défaut est <tt>c_white</tt> ).</td></tr><tr><td> <span class="notranslate">alpha</span></td><td> La valeur alpha à utiliser lors du dessin (0 - 1).</td></tr></tbody></table><p></p><h4> Retour:</h4><p class="code">N/A</p><p></p><h4> Exemple:</h4><p class="code">var flags = phy_particle_flag_water | phy_particle_flag_viscous | phy_particle_flag_tensile;<br/> physics_particle_draw_ext(flags, 2, sprBlob, 0, 2, 2, 0, c_white, 0.5);</p><p> Le code ci-dessus dessinera un sprite pour toutes les particules de la catégorie définie par l&#39;utilisateur &quot;2&quot; qui ont les mêmes drapeaux que le masque donné, mis à l&#39;échelle par 2 le long des deux axes et avec un alpha de 0,5. </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> Retour: <a href="Soft_Body_Particles.htm">Particules corporelles molles</a></div><div style="float:right"> Suivant:<a href="physics_particle_count.htm">physics_particle_count</a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
+<body>
+  <!--<div class="body-scroll" style="top: 150px;">-->
+  <h1>physics_particle_draw_ext</h1>
+  <p>Cette fonction va dessiner un sprite à la position de toutes les particules qui partagent la même valeur de catégorie définie par l'utilisateur, et qui ont des drapeaux qui coïncident avec ceux définis pour le masque. La valeur du masque est définie de la même manière que vous définissez les drapeaux
+    drapeaux lors de la création des particules (voir les fonctions <a href="physics_particle_create.htm"><tt>physics_particle_create()</tt></a> pour un exemple), c'est-à-dire en utilisant le <a href="../../../../Additional_Information/Bitwise_Operators.htm">bitwise <i>ou</i></a> &quot;|&quot; pour masquer les bits appropriés pour chaque drapeau.</p>
+  <p class="note"><b>REMARQUE</b>: Cette fonction dessine <b>toutes les</b> particules de la simulation physique avec des drapeaux qui coïncident avec ceux du masque, qu'il s'agisse de particules individuelles ou de groupes, si la catégorie de l'utilisateur est la même.</p>
+  <p>La particule dessinée ignorera les valeurs de couleur et d'alpha définies lors de sa création, et sera dessinée en utilisant les paramètres d'échelle, d'angle, de couleur et d'alpha donnés dans cette fonction. Notez que cette fonction sert uniquement à dessiner un sprite à la position de la particule.
+    et n'affecte en aucun cas le comportement de la particule.</p>
+  <p> </p>
+  <h4>Syntaxe :</h4>
+  <p class="code">physics_particle_draw_ext(typemask, category, sprite, subimg, xscale, yscale, ang, col, alpha)</p>
+  <table>
+    <tbody>
+      <tr>
+        <th>Arguments</th>
+        <th>Description</th>
+      </tr>
+      <tr>
+        <td>masque de caractères</td>
+        <td>Le masque avec lequel comparer les drapeaux des particules.</td>
+      </tr>
+      <tr>
+        <td>catégorie</td>
+        <td>La catégorie définie par l'utilisateur à dessiner (utilisez 0 pour dessiner toutes les catégories).</td>
+      </tr>
+      <tr>
+        <td>sprite</td>
+        <td>Le sprite à utiliser pour chaque particule.</td>
+      </tr>
+      <tr>
+        <td>sous-image</td>
+        <td>L'<tt>image_index</tt> du sprite à dessiner.</td>
+      </tr>
+      <tr>
+        <td>xscale</td>
+        <td>Le facteur d'échelle à appliquer au sprite le long de l'axe x.</td>
+      </tr>
+      <tr>
+        <td>yscale</td>
+        <td>Le facteur d'échelle à appliquer au sprite le long de l'axe y.</td>
+      </tr>
+      <tr>
+        <td>ang</td>
+        <td>L'angle (en degrés) pour dessiner le sprite.</td>
+      </tr>
+      <tr>
+        <td>col</td>
+        <td>La couleur à mélanger avec le sprite (par défaut, <tt>c_white</tt>).</td>
+      </tr>
+      <tr>
+        <td>alpha</td>
+        <td>La valeur alpha à utiliser lors du dessin (0 - 1).</td>
+      </tr>
+    </tbody>
+  </table>
+  <p> </p>
+  <h4>Les retours :</h4>
+  <p class="code">N/A</p>
+  <p> </p>
+  <h4>Exemple :</h4>
+  <p class="code">var flags = phy_particle_flag_water | phy_particle_flag_viscous | phy_particle_flag_tensile ;<br> physics_particle_draw_ext(flags, 2, sprBlob, 0, 2, 2, 0, c_white, 0.5) ;</p>
+  <p>Le code ci-dessus va dessiner un sprite pour toutes les particules de la catégorie &quot;2&quot; définie par l'utilisateur qui ont les mêmes drapeaux que le masque donné, mis à l'échelle par 2 le long des deux axes et avec un alpha de 0.5.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <div class="footer">
+    <div class="buttons">
+      <div class="clear">
+        <div style="float:left">Retour : <a href="Soft_Body_Particles.htm">Particules molles du corps</a></div>
+        <div style="float:right">Suivant : <a href="physics_particle_count.htm">physics_particle_count</a></div>
+      </div>
+    </div>
+    <h5><span data-keyref="Copyright Notice">Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
   </div>
   <!-- KEYWORDS
 physics_particle_draw_ext

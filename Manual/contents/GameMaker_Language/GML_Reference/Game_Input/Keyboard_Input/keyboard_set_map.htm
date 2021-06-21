@@ -3,15 +3,62 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>keyboard_set_map</title>
+  <title>clavier_set_map</title>
   <meta name="generator" content="Adobe RoboHelp 2019" />
   <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
   <meta name="rh-authors" content="Mark Alexander" />
-  <meta name="topic-comment" content="Page de référence pour keyboard_set_map" />
+  <meta name="topic-comment" content="Reference page for keyboard_set_map" />
   <meta name="rh-index-keywords" content="keyboard_set_map" />
   <meta name="search-keywords" content="keyboard_set_map" />
 </head>
-<body><!--<div class="body-scroll" style="top: 150px;">--><h1>keyboard_set_map</h1><p> Parfois, lors de la création d&#39;un jeu, vous souhaiterez peut-être qu&#39;une clé fasse la même chose qu&#39;une autre. Par exemple, de nombreuses personnes utilisent les touches WASD pour le mouvement, mais beaucoup de personnes <i>utilisent également</i> les touches fléchées! Alors que faire? Eh bien, vous <i>pouvez</i> coder le système de mouvement deux fois, mais c&#39;est un peu compliqué et heureusement redondant car cette fonction vous permet de &quot;mapper&quot; une touche à une autre et donc toute entrée de l&#39;une ou l&#39;autre des touches sera interprétée comme la même chose. Pour ce faire, vous choisissez une clé que vous souhaitez mapper (key2 - ce sera la clé que vous écrivez le code) et une clé que vous voulez qu&#39;il soit mis en correspondance (key1). Après cela, les pressions sur l&#39;une ou l&#39;autre des touches seront interprétées par <span class="notranslate">GameMaker Studio 2</span> comme provenant de key2. Vous pouvez également utiliser cette fonction pour concevoir un système dans lequel l&#39;utilisateur peut définir ses propres touches pour jouer en mappant simplement la touche d&#39;entrée utilisateur à la touche que vous avez codée dans le jeu.</p><p> La fonction prend une valeur de code clé retournée par la fonction <a href="../../Strings/ord.htm"><tt>ord()</tt></a> (uniquement <i>les</i> lettres majuscules de A à Z ou les chiffres de 0 à 9), ou l&#39;un des <tt>vk_*</tt> constantes répertoriées sur la page <a href="Keyboard_Input.htm">principale de saisie au clavier.</a></p><p class="note"> <strong>IMPORTANT!</strong> La clé à laquelle vous mappez (key1) ne sera plus utilisable car c&#39;est le symbole de clé réel une fois que vous utilisez cette fonction. Par exemple, si vous mappez la flèche vers le haut à &quot;W&quot;, vous ne pourrez plus détecter la pression de la touche &quot;W&quot; comme un &quot;W&quot;, elle sera toujours considérée comme la flèche vers le haut. Pour annuler cela, mappez la clé sur elle-même - de sorte que key1 et key2 seraient <span class="inline">ord(&quot;W&quot;)</span> - ou utilisez la fonction <span class="inline"><a href="keyboard_unset_map.htm">keyboard_unset_map()</a></span>.</p><p></p><h4> <b>Syntaxe:</b></h4><p class="code">keyboard_set_map(key1, key2);</p><table><tbody><tr><th> Argument</th><th> Description</th></tr><tr><td> <span class="notranslate">key1</span></td><td> C&#39;est la clé à laquelle key1 doit être mappée</td></tr><tr><td> <span class="notranslate">key2</span></td><td> C&#39;est la clé qui doit être mappée</td></tr></tbody></table><p></p><h4> <b>Retour:</b></h4><p class="code">Boolean</p><p></p><h4> <b>Exemple:</b></h4><p class="code">keyboard_set_map(ord(&quot;A&quot;), vk_left);</p><p> L&#39;exemple de code ci-dessus mappera la touche «A» à la touche fléchée gauche. Cela signifie que le joueur peut utiliser la <i>touche «A» ou</i> la touche fléchée gauche, et que tout le code écrit pour la flèche gauche répondra également à la touche «A» utilisée à la place. </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> Retour: <a href="Keyboard_Input.htm">Entrée clavier</a></div><div style="float:right"> Suivant:<a href="keyboard_get_map.htm">keyboard_get_map</a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
+<body>
+  <!--<div class="body-scroll" style="top: 150px;">-->
+  <h1>clavier_set_map</h1>
+  <p>Parfois, lorsque vous créez un jeu, vous souhaitez qu'une touche ait la même fonction qu'une autre. Par exemple, beaucoup de gens utilisent les touches WASD pour se déplacer, mais beaucoup de gens utilisent <i>aussi</i> les touches fléchées ! Alors, que faire ? Eh bien, vous <i>pourriez</i> coder le système de mouvement
+    deux fois, mais c'est un peu compliqué et heureusement redondant, car cette fonction vous permet de &quot;mapper&quot; une touche sur une autre, de sorte que toute entrée provenant de l'une ou l'autre touche sera interprétée de la même manière. Pour ce faire, vous choisissez une touche que vous voulez faire correspondre (key2
+    - ce sera la touche pour laquelle vous écrivez le code) et une touche à <i>laquelle</i> vous voulez qu'elle soit associée (key1). Ensuite, les pressions sur l'une ou l'autre touche seront interprétées par <span class="notranslate">GameMaker Studio 2</span> comme provenant de la touche 2. Vous pouvez également utiliser cette fonction pour concevoir
+    un système dans lequel l'utilisateur peut définir ses propres touches pour jouer en faisant simplement correspondre la touche d'entrée de l'utilisateur à la touche que vous avez codée dans le jeu.</p>
+  <p>La fonction prend une valeur de code de touche telle que retournée par la fonction <a href="../../Strings/ord.htm"><tt>ord()</tt></a> (uniquement les lettres <i>majuscules</i> de A à Z ou les chiffres de 0 à 9), ou l'une des constantes <tt>vk_*</tt> listées sur la page principale de <a href="Keyboard_Input.htm">saisie du clavier</a>.</p>
+  <p class="note"><strong>IMPORTANT !</strong> La touche que vous associez à (touche 1) ne sera plus utilisable comme symbole de touche réel une fois que vous aurez utilisé cette fonction. Par exemple, si vous associez la flèche vers le haut à &quot;W&quot;, vous ne pourrez plus détecter l'appui sur la touche &quot;W&quot; comme un &quot;W&quot;.
+    de la touche &quot;W&quot; comme un &quot;W&quot;, elle sera toujours considérée comme la flèche du haut. Pour annuler cela, il faut soit affecter la touche à elle-même - ainsi la touche 1 et la touche 2 seront toutes deux <span class="inline">ord(&quot;W&quot;)</span> - soit utiliser la fonction <span class="inline"><a href="keyboard_unset_map.htm">keyboard_unset_map()</a></span>.</p>
+  <p> </p>
+  <h4><b>Syntaxe :</b></h4>
+  <p class="code">clavier_set_map(key1, key2) ;</p>
+  <table>
+    <tbody>
+      <tr>
+        <th>Arguments</th>
+        <th>Description</th>
+      </tr>
+      <tr>
+        <td>Clé1</td>
+        <td>Il s'agit de la clé à laquelle la clé 1 doit être associée.</td>
+      </tr>
+      <tr>
+        <td>clé2</td>
+        <td>Voici la clé qui doit être cartographiée</td>
+      </tr>
+    </tbody>
+  </table>
+  <p> </p>
+  <h4><b>Les retours :</b></h4>
+  <p class="code">Booléen</p>
+  <p> </p>
+  <h4><b>Exemple :</b></h4>
+  <p class="code">keyboard_set_map(ord(&quot;A&quot;), vk_left) ;</p>
+  <p>L'exemple de code ci-dessus associe la touche &quot;A&quot; à la touche flèche gauche. Cela signifie que le joueur peut utiliser soit la touche &quot;A&quot;, soit la flèche <i>gauche</i>, et que tout code écrit pour la flèche gauche répondra également à l'utilisation de la touche &quot;A&quot;.
+    à la place.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <div class="footer">
+    <div class="buttons">
+      <div class="clear">
+        <div style="float:left">Retour : <a href="Keyboard_Input.htm">Entrée du clavier</a></div>
+        <div style="float:right">Suivant : <a href="keyboard_get_map.htm">keyboard_get_map</a></div>
+      </div>
+    </div>
+    <h5><span data-keyref="Copyright Notice">Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
   </div>
   <!-- KEYWORDS
 keyboard_set_map

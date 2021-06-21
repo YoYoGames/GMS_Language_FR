@@ -7,11 +7,65 @@
   <meta name="generator" content="Adobe RoboHelp 2019" />
   <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
   <meta name="rh-authors" content="Mark Alexander" />
-  <meta name="topic-comment" content="Section de référence pour la fenêtre de jeu" />
+  <meta name="topic-comment" content="Reference section for The Game Window" />
   <meta name="rh-index-keywords" content="" />
-  <meta name="search-keywords" content="La fenêtre de jeu,La fenêtre" />
+  <meta name="search-keywords" content="The Game Window,Window" />
 </head>
-<body><!--<div class="body-scroll" style="top: 150px;">--><h1> La fenêtre de jeu</h1><p> Le jeu que vous créez se déroule dans une fenêtre (même en plein écran), et cette fenêtre a un certain nombre de propriétés, comme la position, la taille, si elle est en plein écran, etc... Ces détails sont normalement définis automatiquement pour vous en fonction de la taille de la pièce et affichez les ports activés en combinaison avec les paramètres des <a href="../../../../Settings/Game_Options.htm">Options</a> <span>de jeu pour la plate-forme cible,</span> mais vous pouvez les modifier pendant le jeu en utilisant les fonctions répertoriées sur cette page.</p><p class="note"> <b>REMARQUE</b>: ces fonctions sont destinées aux <b><span class="notranslate">Windows</span></b>, <b><span class="notranslate">Ubuntu</span></b> ( <span class="notranslate">Linux</span> ), <strong><span class="notranslate">macOS</span></strong> et <b>HTML5</b> uniquement et peuvent ne pas fonctionner sur aucun autre appareil.</p><p> L&#39;image suivante illustre comment toutes les fonctions Windows les plus générales sont liées et interagissent les unes avec les autres:</p><p><img alt="Window Position example" class="center" src="../../../../assets/Images/Scripting_Reference/GML/Reference/Cameras_Display/window_position.png" /> Notez que l&#39;image ci-dessus montre la fenêtre de jeu dessinée dans un navigateur, mais que pour les autres cibles, vous pouvez remplacer le navigateur par l&#39;affichage, donc une fonction comme <span class="inline">window_get_y()</span> renverra la position du haut de la fenêtre de jeu par rapport à l&#39;affichage.</p><p> Les fonctions suivantes existent pour modifier et obtenir les propriétés de la fenêtre de jeu: </p><p></p><ul class="colour"><li><a href="../The_Game_Window/window_center.htm">window_center</a></li><li><a href="../The_Game_Window/window_handle.htm">window_handle</a></li><li><a href="../The_Game_Window/window_get_caption.htm">window_get_caption</a></li><li><a href="../The_Game_Window/window_get_colour.htm">window_get_colour</a></li><li><a href="../The_Game_Window/window_get_fullscreen.htm">window_get_fullscreen</a></li><li><a href="../The_Game_Window/window_get_width.htm">window_get_width</a></li><li><a href="../The_Game_Window/window_get_height.htm">window_get_height</a></li><li><a href="../The_Game_Window/window_get_x.htm">window_get_x</a></li><li><a href="../The_Game_Window/window_get_y.htm">window_get_y</a></li><li><a href="../The_Game_Window/window_get_cursor.htm">window_get_cursor</a></li><li><a href="../The_Game_Window/window_get_visible_rects.htm">window_get_visible_rects</a></li><li><a href="../The_Game_Window/window_mouse_get_x.htm">window_mouse_get_x</a></li><li><a href="../The_Game_Window/window_mouse_get_y.htm">window_mouse_get_y</a></li><li><a href="../The_Game_Window/window_mouse_set.htm">window_mouse_set</a></li><li><a href="../The_Game_Window/window_set_caption.htm">window_set_caption</a></li><li><a href="../The_Game_Window/window_set_colour.htm">window_set_colour</a></li><li><a href="../The_Game_Window/window_set_fullscreen.htm">window_set_fullscreen</a></li><li><a href="../The_Game_Window/window_set_position.htm">window_set_position</a></li><li><a href="../The_Game_Window/window_set_size.htm">window_set_size</a></li><li><a href="../The_Game_Window/window_set_rectangle.htm">window_set_rectangle</a></li><li><a href="../The_Game_Window/window_set_cursor.htm">window_set_cursor</a></li><li><a href="../The_Game_Window/window_set_min_width.htm">window_set_min_width</a></li><li><a href="../The_Game_Window/window_set_max_width.htm">window_set_max_width</a></li><li><a href="../The_Game_Window/window_set_min_height.htm">window_set_min_height</a></li><li><a href="../The_Game_Window/window_set_max_height.htm">window_set_max_height</a></li><li><a href="../The_Game_Window/window_has_focus.htm">window_has_focus</a></li><li><a href="../The_Game_Window/window_device.htm">window_device</a></li><li><a href="../The_Game_Window/window_view_mouse_get_x.htm">window_view_mouse_get_x</a></li><li><a href="../The_Game_Window/window_view_mouse_get_y.htm">window_view_mouse_get_y</a></li><li><a href="../The_Game_Window/window_views_mouse_get_x.htm">window_views_mouse_get_x</a></li><li><a href="../The_Game_Window/window_views_mouse_get_y.htm">window_views_mouse_get_y</a></li></ul><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> Arrière: <a href="../Cameras_And_Display.htm">caméras et affichage</a></div><div style="float:right"> Suivant: <a href="../Cameras_And_Viewports/Cameras_And_View_Ports.htm">Caméras et ports d&#39;affichage</a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
+<body>
+  <!--<div class="body-scroll" style="top: 150px;">-->
+  <h1>La fenêtre de jeu</h1>
+  <p>Le jeu que vous créez se déroule dans une fenêtre (même en plein écran), et cette fenêtre a un certain nombre de propriétés, comme la position, la taille, si elle est en plein écran, etc... Ces détails sont normalement définis automatiquement pour vous en fonction de la taille de la pièce et des ports de vue
+    activés en combinaison avec les paramètres des <a href="../../../../Settings/Game_Options.htm">Options de jeu</a><span> pour la plate-forme cible, </span>mais vous pouvez les modifier pendant le jeu en utilisant les fonctions listées sur cette page.</p>
+  <p class="note"><b>NOTE</b>: Ces fonctions sont pour <b><span class="notranslate">Windows</span></b>, <b><span class="notranslate">Ubuntu</span></b><span class="notranslate">(Linux</span>), <strong><span class="notranslate">macOS</span> </strong>et les modules cibles <b>HTML5</b> uniquement et peuvent ne pas fonctionner sur tout autre appareil.</p>
+  <p>L'image suivante illustre les relations et les interactions entre les fonctions les plus générales des fenêtres :</p>
+  <p><img alt="Window Position example" class="center" src="../../../../assets/Images/Scripting_Reference/GML/Reference/Cameras_Display/window_position.png">Notez que l'image ci-dessus montre la fenêtre de jeu dessinée dans un navigateur, mais la pour les autres cibles,
+    vous pouvez remplacer le navigateur par l'affichage, ainsi une fonction comme <span class="inline">window_get_y()</span> renverra la position du haut de la fenêtre de jeu par rapport à l'affichage.</p>
+  <p>Les fonctions suivantes permettent de modifier et d'obtenir les propriétés des fenêtres de jeu :</p>
+  <p> </p>
+  <ul class="colour">
+    <li><a href="../The_Game_Window/window_center.htm">fenêtre_centre</a></li>
+    <li><a href="../The_Game_Window/window_handle.htm">fenêtre_handle</a></li>
+    <li><a href="../The_Game_Window/window_get_caption.htm">fenêtre_get_caption</a></li>
+    <li><a href="../The_Game_Window/window_get_colour.htm">fenêtre_get_couleur</a></li>
+    <li><a href="../The_Game_Window/window_get_fullscreen.htm">fenêtre_get_fullscreen</a></li>
+    <li><a href="../The_Game_Window/window_get_width.htm">fenêtre_get_width</a></li>
+    <li><a href="../The_Game_Window/window_get_height.htm">fenêtre_get_height</a></li>
+    <li><a href="../The_Game_Window/window_get_x.htm">fenêtre_get_x</a></li>
+    <li><a href="../The_Game_Window/window_get_y.htm">fenêtre_get_y</a></li>
+    <li><a href="../The_Game_Window/window_get_cursor.htm">fenêtre_get_curseur</a></li>
+    <li><a href="../The_Game_Window/window_get_visible_rects.htm">fenêtre_get_visible_rect</a></li>
+    <li><a href="../The_Game_Window/window_mouse_get_x.htm">fenêtre_souris_get_x</a></li>
+    <li><a href="../The_Game_Window/window_mouse_get_y.htm">fenêtre_souris_get_y</a></li>
+    <li><a href="../The_Game_Window/window_mouse_set.htm">fenêtre_souris_set</a></li>
+    <li><a href="../The_Game_Window/window_set_caption.htm">fenêtre_set_caption</a></li>
+    <li><a href="../The_Game_Window/window_set_colour.htm">fenêtre_set_couleur</a></li>
+    <li><a href="../The_Game_Window/window_set_fullscreen.htm">window_set_fullscreen</a></li>
+    <li><a href="../The_Game_Window/window_set_position.htm">fenêtre_set_position</a></li>
+    <li><a href="../The_Game_Window/window_set_size.htm">fenêtre_set_size</a></li>
+    <li><a href="../The_Game_Window/window_set_rectangle.htm">fenêtre_set_rectangle</a></li>
+    <li><a href="../The_Game_Window/window_set_cursor.htm">window_set_cursor</a></li>
+    <li><a href="../The_Game_Window/window_set_min_width.htm">fenêtre_set_min_width</a></li>
+    <li><a href="../The_Game_Window/window_set_max_width.htm">largeur_maximum_de_la_fenêtre</a></li>
+    <li><a href="../The_Game_Window/window_set_min_height.htm">fenêtre_set_min_height</a></li>
+    <li><a href="../The_Game_Window/window_set_max_height.htm">fenêtre_set_max_height</a></li>
+    <li><a href="../The_Game_Window/window_has_focus.htm">fenêtre_a_focus</a></li>
+    <li><a href="../The_Game_Window/window_device.htm">périphérique de fenêtre</a></li>
+    <li><a href="../The_Game_Window/window_view_mouse_get_x.htm">window_view_mouse_get_x</a></li>
+    <li><a href="../The_Game_Window/window_view_mouse_get_y.htm">window_view_mouse_get_y</a></li>
+    <li><a href="../The_Game_Window/window_views_mouse_get_x.htm">fenêtre_vue_souris_get_x</a></li>
+    <li><a href="../The_Game_Window/window_views_mouse_get_y.htm">fenêtre_vue_souris_get_y</a></li>
+  </ul>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <div class="footer">
+    <div class="buttons">
+      <div class="clear">
+        <div style="float:left">Retour : <a href="../Cameras_And_Display.htm">Appareils photo et écran</a></div>
+        <div style="float:right">Suivant : <a href="../Cameras_And_Viewports/Cameras_And_View_Ports.htm">Caméras et ports de vue</a></div>
+      </div>
+    </div>
+    <h5><span data-keyref="Copyright Notice">Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
   </div>
   <!-- KEYWORDS
 The Game Window

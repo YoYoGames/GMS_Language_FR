@@ -7,12 +7,43 @@
   <meta name="generator" content="Adobe RoboHelp 2019" />
   <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
   <meta name="rh-authors" content="Mark Alexander" />
-  <meta name="topic-comment" content="Référence pour la fonction gpu_get_fog" />
+  <meta name="topic-comment" content="Reference for the function gpu_get_fog" />
   <meta name="rh-index-keywords" content="gpu_get_fog" />
   <meta name="search-keywords" content="gpu_get_fog" />
 </head>
-<body><!--<div class="body-scroll" style="top: 150px;">--><h1>gpu_get_fog</h1><p> Cette fonction peut être utilisée pour récupérer les paramètres de brouillard. La fonction renvoie un tableau 1D à 4 éléments avec les informations suivantes:</p><ul class="colour"><li> [0] = bascule activée (une valeur booléenne, soit <tt>true</tt> ou <tt>false</tt> ), défaut <tt>false</tt></li><li> [1] = couleur (réel), par défaut <tt>c_black</tt></li><li> [2] = distance de départ (réelle), par défaut 0</li><li> [3] = distance finale (réelle), par défaut 1</li></ul><p> Notez que vous pouvez modifier ces valeurs et transmettre le tableau complet au <a href="gpu_set_fog.htm"><tt>gpu_set_fog()</tt></a> fonctionne comme un seul argument.</p><p></p><h4> Syntaxe:</h4><p class="code">gpu_get_fog();</p><p></p><h4> Retour:</h4><p class="code">4 element 1D Array (see above for array elements)</p><p></p><h4> Exemple:</h4><p class="code">var fog_a = gpu_get_fog();<br/> fog_a[1] = c_red;<br/> gpu_set_fog(fog_a);
-  </p><p> Le code ci-dessus obtient les paramètres de brouillard actuels, puis définit l&#39;élément de couleur du tableau sur <tt>c_red</tt> avant de régler à nouveau le brouillard en utilisant la matrice modifiée. </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> Retour: <a href="GPU_Control.htm">Contrôle GPU</a></div><div style="float:right"> Suivant:<a href="gpu_get_cullmode.htm">gpu_get_cullmode</a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
+<body>
+  <!--<div class="body-scroll" style="top: 150px;">-->
+  <h1>gpu_get_fog</h1>
+  <p>Cette fonction peut être utilisée pour récupérer les paramètres du brouillard. La fonction renvoie un tableau 1D à 4 éléments avec les informations suivantes :</p>
+  <ul class="colour">
+    <li>0] = activation de l'interrupteur à bascule (un booléen, soit <tt>vrai</tt> ou <tt>faux</tt>), par défaut <tt>faux</tt>.</li>
+    <li>[1] = couleur (réelle), par défaut <tt>c_black</tt></li>
+    <li>[2] = distance de départ (réelle), par défaut 0</li>
+    <li>[3] = distance finale (réelle), par défaut 1</li>
+  </ul>
+  <p>Notez que vous pouvez changer ces valeurs et passer le tableau complet à la fonction <a href="gpu_set_fog.htm"><tt>gpu_set_fog()</tt></a> comme un seul argument.</p>
+  <p> </p>
+  <h4>Syntaxe :</h4>
+  <p class="code">gpu_get_fog() ;</p>
+  <p> </p>
+  <h4>Les retours :</h4>
+  <p class="code">Tableau 1D à 4 éléments (voir ci-dessus pour les éléments du tableau)</p>
+  <p> </p>
+  <h4>Exemple :</h4>
+  <p class="code">var fog_a = gpu_get_fog() ;<br> fog_a[1] = c_red ;<br> gpu_set_fog(fog_a) ;
+  </p>
+  <p>Le code ci-dessus récupère les paramètres actuels du brouillard et définit ensuite l'élément couleur du tableau à <tt>c_red</tt> avant de définir à nouveau le brouillard en utilisant le tableau modifié.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <div class="footer">
+    <div class="buttons">
+      <div class="clear">
+        <div style="float:left">Retour : <a href="GPU_Control.htm">Contrôle du GPU</a></div>
+        <div style="float:right">Suivant : <a href="gpu_get_cullmode.htm">gpu_get_cullmode</a></div>
+      </div>
+    </div>
+    <h5><span data-keyref="Copyright Notice">Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
   </div>
   <!-- KEYWORDS
 gpu_get_fog

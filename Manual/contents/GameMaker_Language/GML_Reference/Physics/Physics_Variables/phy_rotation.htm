@@ -7,13 +7,40 @@
   <meta name="generator" content="Adobe RoboHelp 2019" />
   <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
   <meta name="rh-authors" content="Mark Alexander" />
-  <meta name="topic-comment" content="Page de référence pour phy_rotation" />
+  <meta name="topic-comment" content="Reference page for phy_rotation" />
   <meta name="rh-index-keywords" content="phy_rotation" />
   <meta name="search-keywords" content="phy_rotation" />
 </head>
-<body><!--<div class="body-scroll" style="top: 150px;">--><h1>phy_rotation</h1><p> Cette variable peut être utilisée pour obtenir (ou pour définir) l&#39;angle de fixation des instances en degrés, similaire à la définition ou à l&#39;obtention du <a href="../../Asset_Management/Sprites/Sprite_Instance_Variables/image_angle.htm"><tt>image_angle</tt></a>. Cependant, notez que dans le monde de la physique, les rotations sont calculées de la manière <i>opposée</i> <span class="notranslate">GameMaker Studio 2</span> normal, ce qui signifie que le vecteur fonctionne comme <a href="../../Maths_And_Numbers/Angles_And_Distance/point_direction.htm"><tt>point_direction()</tt></a> devraient avoir leurs valeurs de retour modifiées (le simple fait de rendre positif à négatif devrait résoudre ce problème).</p><p></p><h4> Syntaxe:</h4><p class="code">phy_rotation;</p><p></p><h4> Retour:</h4><p class="code">Real (single precision floating point value, or <tt>undefined</tt> if the instance is not physics enabled)</p><p></p><h4> Exemple:</h4><p class="code">if (phy_speed_x &gt; 0) || (phy_speed_y &gt; 0)<br/>     {
-    <br/>     phy_rotation += sqrt(sqr(phy_speed_x) + sqr(phy_speed_y)) /10;<br/>     }
-  </p><p> Le code ci-dessus vérifie la vitesse linéaire et si l&#39;un des vecteurs n&#39;est pas 0, il calcule alors la vitesse réelle et l&#39;utilise pour définir la rotation. </p><p></p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> Retour: <a href="Physics_Variables.htm">Variables de physique</a></div><div style="float:right"> Suivant:<a href="phy_fixed_rotation.htm">phy_fixed_rotation</a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
+<body>
+  <!--<div class="body-scroll" style="top: 150px;">-->
+  <h1>phy_rotation</h1>
+  <p>Cette variable peut être utilisée pour obtenir (ou définir) l'angle du projecteur d'instances en degrés, de la même manière que pour définir ou obtenir la variable <a href="../../Asset_Management/Sprites/Sprite_Instance_Variables/image_angle.htm"><tt>angle_image</tt></a>. Notez toutefois que
+    dans le monde physique, les rotations sont calculées de manière <i>opposée</i> au monde normal du jeu <span class="notranslate">GameMaker Studio 2</span>, ce qui signifie que les fonctions vectorielles telles que <a href="../../Maths_And_Numbers/Angles_And_Distance/point_direction.htm"><tt>point_direction()</tt></a>doivent
+    voient leurs valeurs de retour modifiées (il suffit de transformer le positif en négatif pour résoudre ce problème).</p>
+  <p> </p>
+  <h4>Syntaxe :</h4>
+  <p class="code">phy_rotation ;</p>
+  <p> </p>
+  <h4>Les retours :</h4>
+  <p class="code">Réel (valeur à virgule flottante de simple précision, ou <tt>indéfini</tt> si l'instance n'est pas activée pour la physique)</p>
+  <p> </p>
+  <h4>Exemple :</h4>
+  <p class="code">if (phy_speed_x &gt; 0) || (phy_speed_y &gt; 0)<br> {
+    <br> phy_rotation += sqrt(sqr(phy_speed_x) + sqr(phy_speed_y)) /10 ;<br> }
+  </p>
+  <p>Le code ci-dessus vérifie la vitesse linéaire et si l'un ou l'autre vecteur est différent de 0, il calcule alors la vitesse réelle et l'utilise pour définir la rotation.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <div class="footer">
+    <div class="buttons">
+      <div class="clear">
+        <div style="float:left">Retour : <a href="Physics_Variables.htm">Variables de physique</a></div>
+        <div style="float:right">Suivant : <a href="phy_fixed_rotation.htm">phy_fixed_rotation</a></div>
+      </div>
+    </div>
+    <h5><span data-keyref="Copyright Notice">Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
   </div>
   <!-- KEYWORDS
 phy_rotation

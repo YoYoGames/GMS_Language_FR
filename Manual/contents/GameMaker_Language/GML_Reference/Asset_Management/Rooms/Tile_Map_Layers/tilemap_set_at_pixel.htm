@@ -7,11 +7,61 @@
   <meta name="generator" content="Adobe RoboHelp 2019" />
   <link rel="stylesheet" href="../../../../../assets/css/default.css" type="text/css" />
   <meta name="rh-authors" content="Mark Alexander" />
-  <meta name="topic-comment" content="Page décrivant la fonction tilemap_set_at_pixel" />
+  <meta name="topic-comment" content="Page outlining the function tilemap_set_at_pixel" />
   <meta name="rh-index-keywords" content="tilemap_set_at_pixel" />
   <meta name="search-keywords" content="tilemap_set_at_pixel" />
 </head>
-<body><!--<div class="body-scroll" style="top: 150px;">--><h1>tilemap_set_at_pixel</h1><p> Cette fonction peut être utilisée pour définir une cellule dans l&#39;élément de carte de tuiles sur le calque sur une nouvelle tuile en utilisant la position réelle de la tuile à changer dans la pièce. Vous donnez l&#39;ID d&#39;élément de carte de tuiles (que vous obtenez lorsque vous créez un élément de carte de tuiles à l&#39;aide de <a href="layer_tilemap_create.htm"><tt>layer_tilemap_create()</tt></a> ou lorsque vous utilisez la fonction <a href="layer_tilemap_get_id.htm"><tt>layer_tilemap_get_id()</tt></a> ), puis les données de mosaïque à définir ainsi que la position dans la pièce. Vous pouvez récupérer des données de mosaïque à l&#39;aide de la fonction <a href="tilemap_get_at_pixel.htm"><tt>tilemap_get_at_pixel()</tt></a> puis utilisez le <tt>tile_</tt> fonctions pour le changer avant de le régler à nouveau à l&#39;aide de cette fonction. La fonction retournera <tt>true</tt> si la tuile a été correctement installée et <tt>false</tt> s&#39;il y avait un problème et qu&#39;il n&#39;a pas été réglé.</p><p></p><h4> Syntaxe:</h4><p class="code">tilemap_set_at_pixel(tilemap_element_id, tiledata, x, y)</p><table><tbody><tr><th> Argument</th><th> Description</th></tr><tr><td> <span class="notranslate">tilemap_element_id</span></td><td> La valeur d&#39;identifiant unique de l&#39;élément de mosaïque à modifier</td></tr><tr><td> <span class="notranslate">tiledata</span></td><td> Les données du jeu de tuiles à définir</td></tr><tr><td> <span class="notranslate">xcell</span></td><td> La position x (dans la pièce)</td></tr><tr><td> <span class="notranslate">ycell</span></td><td> La position y (dans la pièce)</td></tr></tbody></table><p></p><h4> Retour:</h4><p class="code">Boolean</p><p></p><h4> Exemple:</h4><p class="code">var lay_id = layer_get_id(&quot;Tiles_sky&quot;);<br/> var map_id = layer_tilemap_get_id(lay_id);<br/> var data = tilemap_get_at_pixel(map_id, 4, 4);<br/> data = tile_set_flip(data, true);<br/> tilemap_set_at_pixel(map_id, data, 4, 4);</p><p> Le code ci-dessus obtient l&#39;ID de la carte de tuiles sur la couche &quot;Tiles_Sky&quot; et l&#39;utilise ensuite pour obtenir les données de la tuile à la position (4, 4). Ces données de tuile sont ensuite retournées avant d&#39;être utilisées pour redéfinir la tuile sur la carte de tuiles. </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> Retour: <a href="Tile_Map_Layers.htm">Couches de carte de mosaïque</a></div><div style="float:right"> Suivant:<a href="tilemap_set_mask.htm">tilemap_set_mask</a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
+<body>
+  <!--<div class="body-scroll" style="top: 150px;">-->
+  <h1>tilemap_set_at_pixel</h1>
+  <p>Cette fonction peut être utilisée pour définir une cellule dans l'élément de carte de carreaux sur la couche à un nouveau carreau en utilisant la position réelle du carreau à changer dans la pièce. Vous donnez l'ID de l'élément de carte de tuiles (que vous obtenez lorsque vous créez un élément de carte de tuiles à l'aide de la fonction
+    <a href="layer_tilemap_create.htm"><tt>layer_tilemap_create()</tt></a> ou lorsque vous utilisez la fonction <a href="layer_tilemap_get_id.htm"><tt>layer_tilemap_get_id()</tt></a>), puis les données de la tuile à définir ainsi que la position dans la pièce. Vous pouvez consulter le site
+    pouvez récupérer les données des tuiles à l'aide de la fonction <a href="tilemap_get_at_pixel.htm"><tt>tilemap_get_at_pixel()</tt></a> puis utiliser les fonctions <tt>tile_</tt> pour les modifier avant de les définir à nouveau à l'aide de cette fonction. La fonction renvoie <tt>vrai</tt> si la tuile a été définie avec succès et <tt>faux</tt> s'il y a eu un problème et qu'elle n'a pas été définie.</p>
+  <p> </p>
+  <h4>Syntaxe :</h4>
+  <p class="code">tilemap_set_at_pixel(tilemap_element_id, tiledata, x, y)</p>
+  <table>
+    <tbody>
+      <tr>
+        <th>Arguments</th>
+        <th>Description</th>
+      </tr>
+      <tr>
+        <td>tilemap_element_id</td>
+        <td>La valeur d'identification unique de l'élément de la carte des tuiles à modifier.</td>
+      </tr>
+      <tr>
+        <td>données en mosaïque</td>
+        <td>Les données du jeu de tuiles à définir</td>
+      </tr>
+      <tr>
+        <td>xcell</td>
+        <td>La position x (dans la pièce)</td>
+      </tr>
+      <tr>
+        <td>ycell</td>
+        <td>La position y (dans la pièce)</td>
+      </tr>
+    </tbody>
+  </table>
+  <p> </p>
+  <h4>Les retours :</h4>
+  <p class="code">Booléen</p>
+  <p> </p>
+  <h4>Exemple :</h4>
+  <p class="code">var lay_id = layer_get_id(&quot;Tiles_sky&quot;) ;<br> var map_id = layer_tilemap_get_id(lay_id) ;<br> var data = tilemap_get_at_pixel(map_id, 4, 4) ;<br> data = tile_set_flip(data, true) ;<br> tilemap_set_at_pixel(map_id, data, 4, 4) ;</p>
+  <p>Le code ci-dessus obtient l'ID de la carte des tuiles sur la couche &quot;Tiles_Sky&quot; et l'utilise ensuite pour obtenir les données de la tuile à la position (4, 4). Les données de cette tuile sont ensuite retournées avant d'être utilisées pour remettre la tuile sur la carte des tuiles.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <div class="footer">
+    <div class="buttons">
+      <div class="clear">
+        <div style="float:left">Retour : <a href="Tile_Map_Layers.htm">Carrelage des couches de la carte</a></div>
+        <div style="float:right">Suivant : <a href="tilemap_set_mask.htm">tilemap_set_mask</a></div>
+      </div>
+    </div>
+    <h5><span data-keyref="Copyright Notice">Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
   </div>
   <!-- KEYWORDS
 tilemap_set_at_pixel

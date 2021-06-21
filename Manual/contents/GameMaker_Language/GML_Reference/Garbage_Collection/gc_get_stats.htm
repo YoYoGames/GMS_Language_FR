@@ -7,13 +7,50 @@
   <meta name="generator" content="Adobe RoboHelp 2019" />
   <link rel="stylesheet" href="../../../assets/css/default.css" type="text/css" />
   <meta name="rh-authors" content="Mark Alexander" />
-  <meta name="topic-comment" content="Page de référence pour gc_get_stats" />
+  <meta name="topic-comment" content="Reference page for gc_get_stats" />
   <meta name="rh-index-keywords" content="gc_get_stats" />
   <meta name="search-keywords" content="gc_get_stats" />
 </head>
-<body><!--<div class="body-scroll" style="top: 150px;">--><h1>gc_get_stats</h1><p> Avec cette fonction, vous pouvez récupérer des informations sur l&#39;état actuel du garbage collector. La fonction renverra une <a href="../../GML_Overview/Structs.htm">structure</a> qui aura les variables de membre suivantes (notez que «objets» fait ici référence à tout ce qui peut être récupéré et <i>non à</i> des instances d&#39;objet générales telles que définies dans le navigateur d&#39;actifs):</p><ul class="colour"><li><tt>objects_touched</tt> - c&#39;est le nombre d&#39;objets actifs que le ramasse-miettes a trouvés dans l&#39;image précédente. Cela variera en fonction de la génération collectée.</li><li><tt>objects_collected</tt> - le nombre d&#39;objets dont le ramasse-miettes a déterminé qu&#39;ils n&#39;étaient pas actifs dans l&#39;image précédente, et qui pourraient donc être supprimés.</li><li><tt>traversal_time</tt> - c&#39;est le temps en microsecondes (sur le thread principal) que le garbage collector a pris pour déterminer quels objets étaient actifs.</li><li><tt>collection_time</tt> - c&#39;est le temps en microsecondes (sur un thread séparé) que le garbage collector a mis pour nettoyer les objets jugés inactifs.</li><li><tt>gc_frame</tt> - c&#39;est un compteur qui est incrémenté à chaque fois qu&#39;une passe de garbage collection se produit. Si le garbage collection est désactivé, cela n&#39;augmentera pas.</li><li><tt>generation_collected</tt> - il s&#39;agit de l&#39;indice de la dernière génération collectée. 0 est la plus jeune génération et 3 est actuellement la plus âgée.</li><li><tt>num_generations</tt> - c&#39;est le nombre total de générations de garbage collection.</li><li><tt>num_objects_in_generation</tt> - ceci est un tableau (de taille <tt>num_generations</tt> ) contenant le nombre d&#39;objets dans chaque génération.</li></ul><p class="note"> <b>REMARQUE</b>: sur la plate-forme cible HTML5, le garbage collection est géré par le moteur JavaScript et par conséquent, les variables membres de la structure ci-dessus renverront toutes 0 si cette fonction est utilisée sur cette plate-forme.</p><p> Lorsque vous utilisez cette fonction, veuillez noter que les informations affichées pour les objets <em>ne sont mises à jour que lorsqu&#39;une génération complète est terminée</em>, ce qui peut prendre plusieurs images en fonction du réglage de la durée d&#39;image (voir <a href="gc_target_frame_time.htm">ici</a> pour plus d&#39;informations sur la synchronisation des images).</p><p></p><h4> Syntaxe:</h4><p class="code">gc_get_stats();</p><p></p><h4> Retour:</h4><p class="code">Struct</p><p></p><h4> Exemple:</h4><p class="code">if (global.debug == true)<br/>     {
-    <br/>     var _s = gc_get_stats();<br/>     var _t = _s.traversal_time;<br/>     var _c = _s.collection_time;<br/>     show_debug_message(&quot;Traversal time = &quot; + string(_t))<br/>     show_debug_message(&quot;Collection time = &quot; + string(_c))<br/>        }
-  </p><p> Le code ci-dessus vérifie une variable globale et si elle est <tt>true</tt> il obtient des informations du collecteur garabge et les envoie à la console en tant que messages de débogage. </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> Retour: <a href="Garbage_Collection.htm">Ramassage des ordures</a></div><div style="float:right"> Suivant:<a href="gc_enable.htm">gc_enable</a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
+<body>
+  <!--<div class="body-scroll" style="top: 150px;">-->
+  <h1>gc_get_stats</h1>
+  <p>Avec cette fonction, vous pouvez récupérer des informations sur l'état actuel du ramasseur de déchets. La fonction renvoie une <a href="../../GML_Overview/Structs.htm">structure</a> contenant les variables suivantes (notez que le terme &quot;objets&quot; désigne ici tout ce qui peut être récupéré et non les instances d'objets générales définies dans le navigateur d'actifs)
+    fait référence ici à tout ce qui peut être récupéré par le ramasseur de déchets et <i>non</i> aux instances générales d'objets telles que définies dans le navigateur d'actifs) :</p>
+  <ul class="colour">
+    <li><tt>objects_touched</tt> - il s'agit du nombre d'objets actifs que le ramasseur d'ordures a trouvé dans la trame précédente. Ce nombre varie en fonction de la génération qui a été collectée.</li>
+    <li><tt>objects_collected</tt> - le nombre d'objets que le ramasseur de déchets a déterminé comme n'étant pas actifs dans la trame précédente, et qui peuvent donc être supprimés.</li>
+    <li><tt>traversal_time</tt> - il s'agit du temps en microsecondes (sur le thread principal) que le ramasseur de déchets a pris pour déterminer quels objets étaient actifs.</li>
+    <li><tt>collection_time</tt> - c'est le temps en microsecondes (sur un thread séparé) que le ramasseur d'ordures a pris pour nettoyer les objets jugés inactifs.</li>
+    <li><tt>gc_frame</tt> - c'est un compteur qui est incrémenté chaque fois qu'un passage de garbage collection se produit. Si le ramassage des déchets est désactivé, il ne sera pas incrémenté.</li>
+    <li><tt>generation_collected</tt> - il s'agit de l'indice de la génération qui a été collectée en dernier. 0 est la génération la plus jeune et 3 est actuellement la plus ancienne.</li>
+    <li><tt>num_generations</tt> - il s'agit du nombre total de générations de collecte de déchets.</li>
+    <li><tt>num_objects_in_generation</tt> - il s'agit d'un tableau (de taille <tt>num_generations</tt>) contenant le nombre d'objets dans chaque génération.</li>
+  </ul>
+  <p class="note"><b>REMARQUE</b>: sur la plate-forme cible HTML5, le ramassage des déchets est géré par le moteur JavaScript et, par conséquent, les variables membres de la structure ci-dessus renverront toutes 0 si cette fonction est utilisée sur cette plate-forme.</p>
+  <p>Lorsque vous utilisez cette fonction, veuillez noter que les informations affichées pour les objets <em>ne sont mises à jour que lorsque le traitement d'une génération complète est terminé</em>, ce qui peut prendre plusieurs images en fonction du réglage de la durée de l'image (voir <a href="gc_target_frame_time.htm">ici</a> pour plus d'informations sur la durée de l'image).</p>
+  <p> </p>
+  <h4>Syntaxe :</h4>
+  <p class="code">gc_get_stats() ;</p>
+  <p> </p>
+  <h4>Les retours :</h4>
+  <p class="code">Structure</p>
+  <p> </p>
+  <h4>Exemple :</h4>
+  <p class="code">if (global.debug == true)<br> {
+    <br> var _s = gc_get_stats() ;<br> var _t = _s.traversal_time ;<br> var _c = _s.collection_time ;<br> show_debug_message(&quot;Traversal time = &quot; + string(_t))<br> show_debug_message(&quot;Collection time = &quot; + string(_c))<br> }
+  </p>
+  <p>Le code ci-dessus vérifie une variable globale et, si elle est <tt>vraie</tt>, il récupère des informations du collecteur de garage et les envoie à la console sous forme de messages de débogage.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <div class="footer">
+    <div class="buttons">
+      <div class="clear">
+        <div style="float:left">Retour : <a href="Garbage_Collection.htm">Collecte des ordures</a></div>
+        <div style="float:right">Suivant : <a href="gc_enable.htm">gc_enable</a></div>
+      </div>
+    </div>
+    <h5><span data-keyref="Copyright Notice">Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
   </div>
   <!-- KEYWORDS
 gc_get_stats

@@ -7,11 +7,56 @@
   <meta name="generator" content="Adobe RoboHelp 2019" />
   <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
   <meta name="rh-authors" content="Mark Alexander" />
-  <meta name="topic-comment" content="Page de référence pour physics_fixture_set_collision_group" />
+  <meta name="topic-comment" content="Reference page for physics_fixture_set_collision_group" />
   <meta name="rh-index-keywords" content="physics_fixture_set_collision_group" />
   <meta name="search-keywords" content="physics_fixture_set_collision_group" />
 </head>
-<body><!--<div class="body-scroll" style="top: 150px;">--><h1>physics_fixture_set_collision_group</h1><p> Une fois que vous avez créé votre appareil, vous pouvez le définir comme faisant partie d&#39;un groupe de collision. Cela signifie que vous pouvez dire aux instances avec cet appareil de <i>toujours</i> entrer en collision ou de <i>ne jamais</i> entrer en collision avec d&#39;autres instances auxquelles des appareils sont liés avec le même groupe de collision. Les valeurs qui peuvent être attribuées sont basées sur des nombres positifs ou négatifs, 0 étant la valeur par défaut (ce qui signifie que l&#39;instance avec ce paramètre de fixation est ignorée sauf si un événement de collision est créé pour elle). Voici une image pour aider à expliquer:</p><p><img alt="Collision groups example" class="center" src="../../../../assets/Images/Scripting_Reference/GML/Reference/Physics/physics_fixture_set_collision_group_image.png" /> Comme vous pouvez le voir, la définition de groupes de collision peut être très utile pour créer des corps physiques complexes qui interagissent avec le monde physique qui les entoure, mais pas les uns avec les autres. Cependant, il convient de noter qu&#39;en raison de la complexité du calcul des collisions basées sur des groupes comme celui-ci, il est recommandé d&#39;essayer de limiter au minimum le nombre de groupes utilisés dans une même pièce.</p><p></p><h4> Syntaxe:</h4><p class="code">physics_fixture_set_collision_group(fixture, group)</p><table><tbody><tr><th> Argument</th><th> Description</th></tr><tr><td> <span class="notranslate">fixture</span></td><td> le luminaire qui doit être lié</td></tr><tr><td> <span class="notranslate">group</span></td><td> le groupe auquel cet appareil est assigné (soit une valeur positive, 0, soit une valeur négative)</td></tr></tbody></table><p></p><h4> Retour:</h4><p class="code">N/A</p><p></p><h4> Exemple:</h4><p class="code">physics_fixture_set_collision_group(fix_Wheel, -1);</p><p> Le code ci-dessus définira le projecteur indexé dans la variable &quot;fix_Wheel&quot; pour faire partie du groupe &quot;-1&quot;. </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> Retour: <a href="Fixtures.htm">Fixtures</a></div><div style="float:right"> Suivant:<a href="physics_fixture_delete.htm">physics_fixture_delete</a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
+<body>
+  <!--<div class="body-scroll" style="top: 150px;">-->
+  <h1>physics_fixture_set_collision_group</h1>
+  <p>Une fois que vous avez créé votre dispositif, vous pouvez le définir comme faisant partie d'un groupe de collision. Cela signifie que vous pouvez dire aux instances avec ce fixture de <i>toujours</i> entrer en collision ou de <i>ne jamais</i> entrer en collision avec d'autres instances qui ont des fixtures liées à elles avec le même groupe de collision.
+    le même groupe de collision. Les valeurs qui peuvent être attribuées sont basées sur des nombres positifs ou négatifs, 0 étant la valeur par défaut (ce qui signifie que l'instance avec ce paramètre de fixation est ignorée, sauf si un événement de collision est créé pour elle). Voici une
+    image pour vous aider à comprendre :</p>
+  <p><img alt="Collision groups example" class="center" src="../../../../assets/Images/Scripting_Reference/GML/Reference/Physics/physics_fixture_set_collision_group_image.png">Comme vous pouvez le constater, la définition de groupes de collision peut s'avérer très utile pour créer des corps physiques complexes qui interagissent avec le monde physique qui les entoure, mais pas entre eux.
+    corps physiques complexes qui interagissent avec le monde physique qui les entoure, mais pas entre eux. Cependant, il convient de noter qu'en raison de la complexité du calcul des collisions basé sur des groupes de ce type, il est recommandé de limiter au maximum le nombre de groupes utilisés dans une pièce.
+    de groupes utilisés dans une même pièce à un minimum absolu.</p>
+  <p> </p>
+  <h4>Syntaxe :</h4>
+  <p class="code">physics_fixture_set_collision_group(fixture, group)</p>
+  <table>
+    <tbody>
+      <tr>
+        <th>Arguments</th>
+        <th>Description</th>
+      </tr>
+      <tr>
+        <td>L'appareil</td>
+        <td>l'appareil qui doit être lié</td>
+      </tr>
+      <tr>
+        <td>groupe</td>
+        <td>le groupe auquel le projecteur est affecté (valeur positive, 0, ou négative).</td>
+      </tr>
+    </tbody>
+  </table>
+  <p> </p>
+  <h4>Les retours :</h4>
+  <p class="code">N/A</p>
+  <p> </p>
+  <h4>Exemple :</h4>
+  <p class="code">physics_fixture_set_collision_group(fix_Wheel, -1) ;</p>
+  <p>Le code ci-dessus fera en sorte que le dispositif indexé dans la variable &quot;fix_Wheel&quot; fasse partie du groupe &quot;-1&quot;.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <div class="footer">
+    <div class="buttons">
+      <div class="clear">
+        <div style="float:left">Retour : <a href="Fixtures.htm">Fixtures</a></div>
+        <div style="float:right">Suivant : <a href="physics_fixture_delete.htm">physics_fixture_delete</a></div>
+      </div>
+    </div>
+    <h5><span data-keyref="Copyright Notice">Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
   </div>
   <!-- KEYWORDS
 physics_fixture_set_collision_group

@@ -7,11 +7,69 @@
   <meta name="generator" content="Adobe RoboHelp 2019" />
   <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
   <meta name="rh-authors" content="Mark Alexander" />
-  <meta name="topic-comment" content="Section de référence pour les variables physiques" />
+  <meta name="topic-comment" content="Reference section for Physics Variables" />
   <meta name="rh-index-keywords" content="" />
-  <meta name="search-keywords" content="Variables de physique" />
+  <meta name="search-keywords" content="Physics Variables" />
 </head>
-<body><!--<div class="body-scroll" style="top: 150px;">--><h1> Variables de physique</h1><p> Comme avec le système de collisions et de mouvement «traditionnel», le système physique a également une série de <a href="../../Asset_Management/Instances/Instance_Variables/Instance_Variables.htm">variables d&#39;instance</a> affectées à chaque instance d&#39;un objet lors de sa création. Certaines de ces propriétés peuvent être définies par l&#39;utilisateur dans <span class="notranslate">GML</span>, mais beaucoup sont en lecture seule et d&#39;autres encore ne sont applicables qu&#39;en cas de <strong>collision</strong>.</p><p> Les variables suivantes existent dans <i>tous les</i> objets activés pour la physique et elles peuvent être lues et écrites (c&#39;est-à-dire modifiées) à l&#39;aide du code des instances et des fonctions de script: </p><p></p><ul class="colour"><li><a href="phy_active.htm">phy_active</a></li><li><a href="phy_angular_velocity.htm">phy_angular_velocity</a></li><li><a href="phy_angular_damping.htm">phy_angular_damping</a></li><li><a href="phy_linear_velocity_x.htm">phy_linear_velocity_x</a></li><li><a href="phy_linear_velocity_y.htm">phy_linear_velocity_y</a></li><li><a href="phy_linear_damping.htm">phy_linear_damping</a></li><li><a href="phy_speed_x.htm">phy_speed_x</a></li><li><a href="phy_speed_y.htm">phy_speed_y</a></li><li><a href="phy_position_x.htm">phy_position_x</a></li><li><a href="phy_position_y.htm">phy_position_y</a></li><li><a href="phy_position_xprevious.htm">phy_position_xprevious</a></li><li><a href="phy_position_yprevious.htm">phy_position_yprevious</a></li><li><a href="phy_rotation.htm">phy_rotation</a></li><li><a href="phy_fixed_rotation.htm">phy_fixed_rotation</a></li><li><a href="phy_bullet.htm">phy_bullet</a></li></ul><p></p><p> Certaines variables sont des variables en <b>lecture seule</b>, ce qui signifie que les informations qu&#39;elles contiennent ne peuvent pas être modifiées via le code d&#39;instance ou les fonctions de script (mais elles <i>peuvent</i> être modifiées en interne par <span class="notranslate">GameMaker Studio 2</span> c&#39;est pourquoi il s&#39;agit de variables et non de <b>constantes</b> ). La liste suivante répertorie les <b>variables en lecture seule</b> qui existent dans <i>tous les</i> objets activés pour la physique: </p><p></p><ul class="colour"><li><a href="phy_speed.htm">phy_speed</a></li><li><a href="phy_com_x.htm">phy_com_x</a></li><li><a href="phy_com_y.htm">phy_com_y</a></li><li><a href="phy_dynamic.htm">phy_dynamic</a></li><li><a href="phy_kinematic.htm">phy_kinematic</a></li><li><a href="phy_inertia.htm">phy_inertia</a></li><li><a href="phy_mass.htm">phy_mass</a></li><li><a href="phy_sleeping.htm">phy_sleeping</a></li></ul><p></p><p> Enfin, il existe un certain nombre de variables temporaires qui existent dans les objets activés pour la physique et qui ne sont créées <i>que lors de l&#39;événement de collision</i>. Ces variables sont comme celles répertoriées ci-dessus et sont en <b>lecture seule</b>: </p><p></p><ul class="colour"><li><a href="phy_collision_points.htm">phy_collision_points</a></li><li><a href="phy_collision_x.htm">phy_collision_x</a></li><li><a href="phy_collision_y.htm">phy_collision_y</a></li><li><a href="phy_col_normal_x.htm">phy_col_normal_x</a></li><li><a href="phy_col_normal_y.htm">phy_col_normal_y</a></li></ul><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> Retour: <a href="../Physics.htm">Physique</a></div><div style="float:right"> Suivant: <a href="../The_Physics_World/The_Physics_World.htm">Le monde de la physique</a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
+<body>
+  <!--<div class="body-scroll" style="top: 150px;">-->
+  <h1>Variables de physique</h1>
+  <p>Comme pour le système &quot;traditionnel&quot; de collisions et de mouvements, le système physique dispose également d'une série de <a href="../../Asset_Management/Instances/Instance_Variables/Instance_Variables.htm">variables d'</a> instance <a href="../../Asset_Management/Instances/Instance_Variables/Instance_Variables.htm">attribuées</a> à chaque instance d'un objet
+    lors de sa création. Certaines de ces propriétés peuvent être définies par l'utilisateur en <span class="notranslate">GML</span>, mais beaucoup sont en lecture seule et d'autres encore ne sont applicables que lors de l'événement de <strong>collision</strong>.</p>
+  <p>Les variables suivantes existent dans <i>tous les</i> objets de physique et peuvent être lues et écrites (c'est-à-dire modifiées) à l'aide du code des instances et des fonctions de script :</p>
+  <p> </p>
+  <ul class="colour">
+    <li><a href="phy_active.htm">phy_active</a></li>
+    <li><a href="phy_angular_velocity.htm">phy_angular_velocity</a></li>
+    <li><a href="phy_angular_damping.htm">phy_angular_damping</a></li>
+    <li><a href="phy_linear_velocity_x.htm">phy_linear_velocity_x</a></li>
+    <li><a href="phy_linear_velocity_y.htm">phy_linear_velocity_y</a></li>
+    <li><a href="phy_linear_damping.htm">phy_linear_damping</a></li>
+    <li><a href="phy_speed_x.htm">phy_speed_x</a></li>
+    <li><a href="phy_speed_y.htm">phy_speed_y</a></li>
+    <li><a href="phy_position_x.htm">phy_position_x</a></li>
+    <li><a href="phy_position_y.htm">phy_position_y</a></li>
+    <li><a href="phy_position_xprevious.htm">phy_position_xprevious</a></li>
+    <li><a href="phy_position_yprevious.htm">phy_position_yprevious</a></li>
+    <li><a href="phy_rotation.htm">phy_rotation</a></li>
+    <li><a href="phy_fixed_rotation.htm">phy_fixed_rotation</a></li>
+    <li><a href="phy_bullet.htm">phy_bullet</a></li>
+  </ul>
+  <p> </p>
+  <p>Certaines variables sont des variables <b>en lecture seule</b>, ce qui signifie que les informations qu'elles contiennent ne peuvent pas être modifiées par le code d'instance ou les fonctions de script (mais elles <i>peuvent</i> être modifiées en interne par <span class="notranslate">GameMaker Studio 2</span>.
+    c'est pourquoi il s'agit de variables et non de <b>constantes</b>). La liste suivante montre les variables <b>en lecture seule</b> qui existent dans <i>tous les</i> objets activés par la physique :</p>
+  <p> </p>
+  <ul class="colour">
+    <li><a href="phy_speed.htm">phy_speed</a></li>
+    <li><a href="phy_com_x.htm">phy_com_x</a></li>
+    <li><a href="phy_com_y.htm">phy_com_y</a></li>
+    <li><a href="phy_dynamic.htm">phy_dynamique</a></li>
+    <li><a href="phy_kinematic.htm">phy_kinematic</a></li>
+    <li><a href="phy_inertia.htm">phy_inertia</a></li>
+    <li><a href="phy_mass.htm">phy_mass</a></li>
+    <li><a href="phy_sleeping.htm">phy_sleeping</a></li>
+  </ul>
+  <p> </p>
+  <p>Enfin, il existe un certain nombre de variables temporaires qui existent dans les objets activés par la physique et qui sont créées <i>uniquement lors de l'événement de collision</i>. Ces variables sont semblables à celles énumérées ci-dessus et sont <b>en lecture seule</b>:</p>
+  <p> </p>
+  <ul class="colour">
+    <li><a href="phy_collision_points.htm">phy_collision_points</a></li>
+    <li><a href="phy_collision_x.htm">phy_collision_x</a></li>
+    <li><a href="phy_collision_y.htm">phy_collision_y</a></li>
+    <li><a href="phy_col_normal_x.htm">phy_col_normal_x</a></li>
+    <li><a href="phy_col_normal_y.htm">phy_col_normal_y</a></li>
+  </ul>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <div class="footer">
+    <div class="buttons">
+      <div class="clear">
+        <div style="float:left">Retour : <a href="../Physics.htm">Physique</a></div>
+        <div style="float:right">Suivant : <a href="../The_Physics_World/The_Physics_World.htm">Le monde de la physique</a></div>
+      </div>
+    </div>
+    <h5><span data-keyref="Copyright Notice">Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
   </div>
   <!-- KEYWORDS
 Physics Variables

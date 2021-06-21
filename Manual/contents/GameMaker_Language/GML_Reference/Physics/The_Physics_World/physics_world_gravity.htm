@@ -7,11 +7,57 @@
   <meta name="generator" content="Adobe RoboHelp 2019" />
   <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
   <meta name="rh-authors" content="Mark Alexander" />
-  <meta name="topic-comment" content="Page de référence pour physics_world_gravity" />
+  <meta name="topic-comment" content="Reference page for physics_world_gravity" />
   <meta name="rh-index-keywords" content="physics_world_gravity" />
   <meta name="search-keywords" content="physics_world_gravity" />
 </head>
-<body><!--<div class="body-scroll" style="top: 150px;">--><h1>physics_world_gravity</h1><p> Comme pour toutes les fonctions physiques, <tt>physics_world_gravity()</tt> ne fonctionnera sur une instance que si la salle a un monde physique défini pour elle dans l&#39;éditeur de salle ou en utilisant <a href="physics_world_create.htm"><tt>physics_world_create()</tt></a>. Il utilisera ensuite le point de définition 0,0 du monde physique pour calculer la direction et la force de la gravité en fonction du vecteur calculé à partir des entrées xg et yg. Voici quelques images pour illustrer...</p><p><img alt="Physics world gravity illustration" class="center" src="../../../../assets/Images/Scripting_Reference/GML/Reference/Physics/physics_gravity_image.png" /> Comme vous pouvez le voir, les coordonnées xg, yg sont relatives à la position de 0,0 telle que définie pour le monde de la physique, et la gravité elle-même est calculée comme un vecteur de ces deux composants. Ainsi, les valeurs par défaut de 0,10 vous donneront une direction de gravité descendante (270 degrés) avec une accélération de 10 mètres par seconde au carré. Notez les <i>mètres par seconde au carré</i>! Comme toutes les fonctions physiques, la gravité est calculée à l&#39;aide de mètres comme mesure de base, de sorte que l&#39;échelle pixel à mètre que vous définissez dans <tt>physics_world_create</tt> la fonction est importante ici. La gravité est également <i>cumulative</i> sur l&#39;objet (mais le montant exact dépend de ce que vous avez défini pour la fonction <a href="../Fixtures/physics_fixture_set_linear_damping.htm"><tt>physics_fixture_set_linear_damping()</tt></a> ), ce qui signifie que dans une pièce avec une room_speed de 60, sans amortissement, l&#39;instance accélérera de 10 mètres par seconde, toutes les secondes - ce qui, si vous avez une échelle de 0,1 pixel à mètre, revient à dire qu&#39;elle accélérera à une vitesse de 100 pixels par seconde en 60 étapes.</p><p></p><h4> Syntaxe:</h4><p class="code">physics_world_gravity(xg, yg)</p><table><tbody><tr><th> Argument</th><th> Description</th></tr><tr><td> <span class="notranslate">xg</span></td><td> La composante x du vecteur de gravité</td></tr><tr><td> <span class="notranslate">yg</span></td><td> La composante y du vecteur de gravité</td></tr></tbody></table><p></p><h4> Retour:</h4><p class="code">N/A</p><p></p><h4> Exemple:</h4><p class="code">physics_world_gravity(-5, 0);</p><p> Le code ci-dessus définira la gravité (en supposant que la physique de la pièce 0,0 est définie en haut à gauche) à droite - 0 degré - avec une accélération de 5 mètres par seconde au carré. </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> Retour: <a href="The_Physics_World.htm">Le monde de la physique</a></div><div style="float:right"> Suivant:<a href="physics_world_update_iterations.htm">physics_world_update_iterations</a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
+<body>
+  <!--<div class="body-scroll" style="top: 150px;">-->
+  <h1>physics_world_gravity</h1>
+  <p>Comme pour toutes les fonctions physiques, <tt>physics_world_gravity()</tt> ne fonctionnera sur une instance que si un monde physique est défini pour la room dans l'éditeur de room ou en utilisant la commande <a href="physics_world_create.htm"><tt>physics_world_create()</tt></a>. Elle
+    utilise alors le point de définition 0,0 du monde physique pour calculer la direction et la force de la gravité en se basant sur le vecteur calculé à partir des entrées xg et yg. Voici quelques images pour illustrer...</p>
+  <p><img alt="Physics world gravity illustration" class="center" src="../../../../assets/Images/Scripting_Reference/GML/Reference/Physics/physics_gravity_image.png">Comme vous pouvez le constater, les coordonnées xg,yg sont relatives à la position 0,0 définie pour le monde de la physique.
+    le monde physique, et la gravité elle-même est calculée comme un vecteur de ces deux composantes. Ainsi, les valeurs par défaut de 0,10 vous donneront une direction de gravité vers le bas (270 degrés) avec une accélération de 10 mètres par seconde au carré. Notez les <i>mètres par seconde au carré</i>!
+    Comme toutes les fonctions physiques, la gravité est calculée en utilisant le mètre comme mesure de base. L'échelle de pixel à mètre que vous définissez dans la fonction <tt>physics_world_create</tt> est donc importante ici. La gravité est également <i>cumulative</i> sur l'objet (mais la quantité exacte dépend de ce que vous avez défini).
+    quantité exacte dépend de ce que vous avez défini pour la fonction <a href="../Fixtures/physics_fixture_set_linear_damping.htm"><tt>physics_fixture_set_linear_damping()</tt></a>), ce qui signifie que dans une pièce avec une room_speed de 60, sans amortissement, l'instance
+    accélérera de 10 mètres par seconde, chaque seconde - ce qui, si vous avez une échelle de 0,1 pixel par mètre, revient à dire qu'elle accélérera à une vitesse de 100 pixels par seconde en 60 étapes.</p>
+  <p> </p>
+  <h4>Syntaxe :</h4>
+  <p class="code">physics_world_gravity(xg, yg)</p>
+  <table>
+    <tbody>
+      <tr>
+        <th>Arguments</th>
+        <th>Description</th>
+      </tr>
+      <tr>
+        <td>xg</td>
+        <td>La composante x du vecteur gravité</td>
+      </tr>
+      <tr>
+        <td>yg</td>
+        <td>La composante y du vecteur gravité</td>
+      </tr>
+    </tbody>
+  </table>
+  <p> </p>
+  <h4>Les retours :</h4>
+  <p class="code">N/A</p>
+  <p> </p>
+  <h4>Exemple :</h4>
+  <p class="code">physics_world_gravity(-5, 0) ;</p>
+  <p>Le code ci-dessus définit la gravité (en supposant que la physique de la pièce 0,0 est définie en haut à gauche) vers la droite - 0 degrés - avec une accélération de 5 mètres par seconde au carré.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <div class="footer">
+    <div class="buttons">
+      <div class="clear">
+        <div style="float:left">Retour : <a href="The_Physics_World.htm">Le monde de la physique</a></div>
+        <div style="float:right">Suivant : <a href="physics_world_update_iterations.htm">physics_world_update_iterations</a></div>
+      </div>
+    </div>
+    <h5><span data-keyref="Copyright Notice">Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
   </div>
   <!-- KEYWORDS
 physics_world_gravity

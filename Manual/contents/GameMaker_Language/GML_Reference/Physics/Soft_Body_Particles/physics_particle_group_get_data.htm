@@ -3,21 +3,102 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>physics_particle_group_get_data</title>
+  <title>groupe_de_particules_physique_get_data</title>
   <meta name="generator" content="Adobe RoboHelp 2019" />
   <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
   <meta name="rh-authors" content="Mark Alexander" />
-  <meta name="topic-comment" content="Page de référence pour physics_particle_group_get_data" />
+  <meta name="topic-comment" content="Reference page for physics_particle_group_get_data" />
   <meta name="rh-index-keywords" content="physics_particle_group_get_data,phy_particle_data_flag_typeflags,phy_particle_data_flag_position,phy_particle_data_flag_velocity,phy_particle_data_flag_colour,phy_particle_data_flag_category,phy_particle_data_flag_color" />
   <meta name="search-keywords" content="physics_particle_group_get_data,phy_particle_data_flag_typeflags,phy_particle_data_flag_position,phy_particle_data_flag_velocity,phy_particle_data_flag_colour,phy_particle_data_flag_category,phy_particle_data_flag_color" />
 </head>
-<body><!--<div class="body-scroll" style="top: 150px;">--><h1>physics_particle_group_get_data</h1><p> Cette fonction renvoie diverses informations sur un groupe de particules dans la simulation physique en utilisant les indicateurs donnés cochés. L&#39;index de groupe (son ID) est celui qui a été renvoyé par la fonction <a href="physics_particle_group_end.htm"><tt>physics_particle_group_end()</tt></a>, et le tampon utilisé doit avoir été créé au préalable à l&#39;aide de la fonction <a href="../../Buffers/buffer_create.htm"><tt>buffer_create()</tt></a>. Il doit être du type «grandir», la taille étant approximativement celle des données de retour attendues. Les indicateurs eux-mêmes sont définis en utilisant les constantes données ci-dessous, et vous utiliseriez le <a href="../../../../Additional_Information/Bitwise_Operators.htm">bit au niveau <i>du bit ou</i></a> &quot;|&quot; pour créer une valeur d&#39;indicateur unique pour obtenir les informations souhaitées.</p><p></p><table><tbody><tr><th> Constant</th><th> Description</th><th> Type de données</th></tr><tr><td> <span class="notranslate">phy_particle_data_flag_typeflags</span></td><td> La valeur des indicateurs pour la particule.</td><td> <span class="notranslate">buffer_u32</span></td></tr><tr><td> <span class="notranslate">phy_particle_data_flag_position</span></td><td> Les positions x et y de la particule.</td><td> <span class="notranslate">2 x buffer_f32</span></td></tr><tr><td> <span class="notranslate">phy_particle_data_flag_velocity</span></td><td> La vitesse horizontale et verticale.</td><td> <span class="notranslate">2 x buffer_f32</span></td></tr><tr><td> <span class="notranslate">phy_particle_data_flag_colour</span></td><td> La couleur et la valeur alpha (hexadécimale).</td><td> <span class="notranslate">buffer_f32</span></td></tr><tr><td> <span class="notranslate">phy_particle_data_flag_category</span></td><td> La catégorie de particules (telle que définie lors de la création du groupe auquel elle appartient).</td><td> <span class="notranslate">buffer_u32</span></td></tr></tbody></table><p></p><h4> Syntaxe:</h4><p class="code">physics_particle_group_get_data(group, buffer, flags)</p><table><tbody><tr><th> Argument</th><th> Description</th></tr><tr><td> <span class="notranslate">group</span></td><td> L&#39;index de groupe (ID) du groupe de particules à partir duquel obtenir les données.</td></tr><tr><td> <span class="notranslate">buffer</span></td><td> Le tampon (créé précédemment) à utiliser pour stocker les données.</td></tr><tr><td> <span class="notranslate">flags</span></td><td> Les indicateurs à utiliser pour extraire des données sur des types de particules spécifiques.</td></tr></tbody></table><p></p><h4> Retour:</h4><p class="code">Buffer data</p><p></p><h4> Exemple:</h4><p class="code">var count = physics_particle_group_count(gp);<br/> var flags = phy_particle_data_flag_position | phy_particle_data_flag_colour;<br/> if (count &gt; 0)<br/>     {
-    <br/>     var buffer = buffer_create(count * 12, buffer_grow, 4);<br/>     physics_particle_group_get_data(gp, buffer, flags);<br/>     for (var n = 0; n &lt; count; n++;)<br/>         {
-    <br/>         var xx = buffer_read(buffer, buffer_f32);<br/>         var yy = buffer_read(buffer, buffer_f32);<br/>         var argb = buffer_read(buffer, buffer_u32);<br/>         var alpha = (argb &gt;&gt; 24) &amp; 255;<br/>         draw_sprite_ext(sprBlob,
-    0, xx, yy, 1, 1, 0, c_green, alpha);<br/>         }
-    <br/>     buffer_delete(buffer);
-    <br/>     }
-  </p><p> Le code ci-dessus obtient la position et la vitesse de chaque particule du groupe indexée par la variable &quot;gp&quot;, stocke les données du tampon dans un certain nombre de variables, puis les utilise pour dessiner un sprite à la position de chaque particule dans le groupe. </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> Retour: <a href="Soft_Body_Particles.htm">Particules corporelles molles</a></div><div style="float:right"> Suivant:<a href="physics_particle_create.htm">physics_particle_create</a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
+<body>
+  <!--<div class="body-scroll" style="top: 150px;">-->
+  <h1>groupe_de_particules_physique_get_data</h1>
+  <p>Cette fonction renvoie diverses informations sur un groupe de particules dans la simulation physique en utilisant les drapeaux donnés vérifiés. L'indice du groupe (son ID) est celui qui a été retourné par la fonction <a href="physics_particle_group_end.htm"><tt>physics_particle_group_end()</tt></a>,
+    et le tampon utilisé doit avoir été créé précédemment à l'aide de la fonction <a href="../../Buffers/buffer_create.htm"><tt>buffer_create()</tt></a>. Il doit être de type &quot;grow&quot;, sa taille étant approximativement celle des données attendues en retour.
+    attendues. Les drapeaux eux-mêmes sont définis à l'aide des constantes données ci-dessous, et vous utiliserez le <a href="../../../../Additional_Information/Bitwise_Operators.htm">bitwise <i>ou</i></a> &quot;|&quot; pour créer une seule valeur de drapeau afin d'obtenir les informations souhaitées.</p>
+  <p> </p>
+  <table>
+    <tbody>
+      <tr>
+        <th>Constant</th>
+        <th>Description</th>
+        <th>Type de données</th>
+      </tr>
+      <tr>
+        <td>phy_particle_data_flag_typeflags</td>
+        <td>La valeur du drapeau pour la particule.</td>
+        <td>tampon_u32</td>
+      </tr>
+      <tr>
+        <td>phy_particle_data_flag_position</td>
+        <td>La position x et y de la particule.</td>
+        <td>2 x tampon_f32</td>
+      </tr>
+      <tr>
+        <td>phy_particle_data_flag_velocity (vitesse)</td>
+        <td>La vitesse horizontale et verticale.</td>
+        <td>2 x tampon_f32</td>
+      </tr>
+      <tr>
+        <td>phy_particle_data_flag_colour</td>
+        <td>La couleur et la valeur alpha (hexadécimale).</td>
+        <td>tampon_f32</td>
+      </tr>
+      <tr>
+        <td>phy_particle_data_flag_category</td>
+        <td>La catégorie de la particule (telle que définie lorsque vous avez créé le groupe auquel elle appartient).</td>
+        <td>tampon_u32</td>
+      </tr>
+    </tbody>
+  </table>
+  <p> </p>
+  <h4>Syntaxe :</h4>
+  <p class="code">physics_particle_group_get_data(group, buffer, flags)</p>
+  <table>
+    <tbody>
+      <tr>
+        <th>Arguments</th>
+        <th>Description</th>
+      </tr>
+      <tr>
+        <td>groupe</td>
+        <td>L'indice de groupe (ID) du groupe de particules dont on veut obtenir les données.</td>
+      </tr>
+      <tr>
+        <td>tampon</td>
+        <td>Le tampon (précédemment créé) à utiliser pour stocker les données.</td>
+      </tr>
+      <tr>
+        <td>drapeaux</td>
+        <td>Les drapeaux à utiliser pour extraire des données sur des types de particules spécifiques.</td>
+      </tr>
+    </tbody>
+  </table>
+  <p> </p>
+  <h4>Les retours :</h4>
+  <p class="code">Données de la mémoire tampon</p>
+  <p> </p>
+  <h4>Exemple :</h4>
+  <p class="code">var count = physics_particle_group_count(gp) ;<br> var flags = phy_particle_data_flag_position | phy_particle_data_flag_colour ;<br> if (count &gt; 0)<br> {
+    <br> var buffer = buffer_create(count * 12, buffer_grow, 4) ;<br> physics_particle_group_get_data(gp, buffer, flags) ;<br> for (var n = 0 ; n &lt; count ; n++ ;)<br> {
+    <br> var xx = buffer_read(buffer, buffer_f32) ;<br> var yy = buffer_read(buffer, buffer_f32) ;<br> var argb = buffer_read(buffer, buffer_u32) ;<br> var alpha = (argb &gt;&gt; 24) &amp; 255 ;<br> draw_sprite_ext(sprBlob,
+    0, xx, yy, 1, 1, 0, c_green, alpha) ;<br> }
+    <br> buffer_delete(buffer) ;
+    <br> }
+  </p>
+  <p>Le code ci-dessus récupère la position et la vitesse de chaque particule du groupe indexée par la variable &quot;gp&quot;, stocke les données de la mémoire tampon dans un certain nombre de variables, puis les utilise pour dessiner un sprite à la position de chaque particule du groupe.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <div class="footer">
+    <div class="buttons">
+      <div class="clear">
+        <div style="float:left">Retour : <a href="Soft_Body_Particles.htm">Particules molles du corps</a></div>
+        <div style="float:right">Suivant : <a href="physics_particle_create.htm">physics_particle_create</a></div>
+      </div>
+    </div>
+    <h5><span data-keyref="Copyright Notice">Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
   </div>
   <!-- KEYWORDS
 physics_particle_group_get_data

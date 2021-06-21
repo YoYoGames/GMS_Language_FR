@@ -7,15 +7,42 @@
   <meta name="generator" content="Adobe RoboHelp 2019" />
   <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
   <meta name="rh-authors" content="Mark Alexander" />
-  <meta name="topic-comment" content="Page de référence pour phy_active" />
+  <meta name="topic-comment" content="Reference page for phy_active" />
   <meta name="rh-index-keywords" content="phy_active" />
   <meta name="search-keywords" content="phy_active" />
 </head>
-<body><!--<div class="body-scroll" style="top: 150px;">--><h1>phy_active</h1><p> Cette variable contrôle si l&#39;instance est actuellement &quot;active&quot; ou non. Le régler sur <tt>false</tt> empêchera l&#39;instance de participer au monde de la physique et la définira sur <tt>true</tt> le fera participer à nouveau. Veuillez noter que ce n&#39;est pas la même chose que de <a href="../../Asset_Management/Instances/Deactivating_Instances/Deactivating_Instances.htm">désactiver l&#39;instance</a>, car l&#39;instance est toujours visible à l&#39;écran et peut toujours être modifiée via le code, mais cette fonction l&#39;empêche simplement de participer à la simulation physique</p><p></p><h4> Syntaxe:</h4><p class="code">phy_active;</p><p></p><h4> Retour:</h4><p class="code">Boolean (or <tt>undefined</tt> if the instance is not physics enabled)</p><p></p><h4> Exemple:</h4><p class="code">if keyboard_check_pressed(ord&quot;P&quot;)<br/>     {
-    <br/>     global.Pause = !global.Pause<br/>     with (obj_Parent)<br/>         {
-    <br/>         phy_active = !global.Pause;<br/>         }
-    <br/>     }
-  </p><p> Le code ci-dessus détectera une pression sur la touche de la lettre «P», puis basculera la variable globale «Pause» de <tt>true</tt> à <tt>false</tt> et retour encore. Cette variable est ensuite utilisée pour définir si la physique est active ou non dans les instances enfants de l&#39;objet indexé dans la variable &quot;obj_Parent&quot;. </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> Retour: <a href="Physics_Variables.htm">Variables de physique</a></div><div style="float:right"> Suivant:<a href="phy_angular_velocity.htm">phy_angular_velocity</a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
+<body>
+  <!--<div class="body-scroll" style="top: 150px;">-->
+  <h1>phy_active</h1>
+  <p>Cette variable contrôle si l'instance est actuellement &quot;active&quot; ou non. En lui attribuant la valeur <tt>false</tt>, l'instance ne pourra pas participer au monde de la physique, et en lui attribuant la valeur <tt>true</tt>, elle participera à nouveau. Veuillez consulter
+    noter que ce n'est pas la même chose que de <a href="../../Asset_Management/Instances/Deactivating_Instances/Deactivating_Instances.htm">désactiver l'instance</a>, car l'instance est toujours visible à l'écran et peut toujours être modifiée par le code.
+    cette fonction l'empêche simplement de participer à la simulation physique.</p>
+  <p> </p>
+  <h4>Syntaxe :</h4>
+  <p class="code">phy_active ;</p>
+  <p> </p>
+  <h4>Les retours :</h4>
+  <p class="code">Booléen (ou <tt>indéfini</tt> si l'instance n'est pas activée pour la physique)</p>
+  <p> </p>
+  <h4>Exemple :</h4>
+  <p class="code">if keyboard_check_pressed(ord &quot;P&quot;)<br> {
+    <br> global.Pause = !global.Pause<br> with (obj_Parent)<br> {
+    <br> phy_active = !global.Pause ;<br> }
+    <br> }
+  </p>
+  <p>Le code ci-dessus détectera une pression sur la lettre &quot;P&quot; et fera basculer la variable globale &quot;Pause&quot; de true à false et <tt>inversement</tt> <tt>.</tt> Cette variable est ensuite utilisée pour définir si la physique est active ou non dans les instances enfant
+    de l'objet indexé dans la variable &quot;obj_Parent&quot;.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <div class="footer">
+    <div class="buttons">
+      <div class="clear">
+        <div style="float:left">Retour : <a href="Physics_Variables.htm">Variables de physique</a></div>
+        <div style="float:right">Suivant : <a href="phy_angular_velocity.htm">phy_angular_velocity</a></div>
+      </div>
+    </div>
+    <h5><span data-keyref="Copyright Notice">Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
   </div>
   <!-- KEYWORDS
 phy_active

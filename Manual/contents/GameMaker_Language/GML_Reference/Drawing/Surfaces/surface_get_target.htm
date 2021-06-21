@@ -7,14 +7,42 @@
   <meta name="generator" content="Adobe RoboHelp 2019" />
   <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
   <meta name="rh-authors" content="Mark Alexander" />
-  <meta name="topic-comment" content="Référence pour surface_get_target" />
+  <meta name="topic-comment" content="Reference for surface_get_target" />
   <meta name="rh-index-keywords" content="surface_get_target" />
   <meta name="search-keywords" content="surface_get_target" />
 </head>
-<body><!--<div class="body-scroll" style="top: 150px;">--><h1>surface_get_target</h1><p> Avec cette fonction, vous pouvez obtenir l&#39;ID de la surface actuelle ciblée pour le dessin. Si vous avez créé cette surface en utilisant <a href="surface_create.htm"><tt>surface_create()</tt></a>, alors ce sera l&#39;entier positif qui est l&#39;identifiant unique de cette surface</p><p> Si aucune surface personnalisée n&#39;est définie, mais que la valeur par défaut application_surface est toujours activée, la fonction renvoie généralement 0. Cependant, si vous avez déjà manipulé l&#39;application_surface, vous souhaiterez peut-être vérifier que l&#39;ID que vous avez obtenu ne correspond pas à la valeur actuelle de la variable application_surface, au cas où ce n&#39;est plus 0.</p><p> Si aucune surface personnalisée n&#39;est définie et que la surface_application par défaut a également été désactivée, la fonction renverra -1.</p><p></p><h4> Syntaxe:</h4><p class="code">surface_get_target();</p><p></p><h4> Retour:</h4><p class="code">Integer (-1 if no surface target exists, otherwise the target surface&#39;s ID)</p><p></p><h4> Exemple:</h4><p class="code">surface_get_target() != -1<br/>     {
-    <br/>     surface_reset_target();
-    <br/>     }
-    <br/> draw_surface(surf, 0, 0);</p><p> Le code ci-dessus vérifiera si la cible de rendu actuelle est une surface ou non, et si c&#39;est le cas, il réinitialise la cible puis dessine une surface. </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> Retour: <a href="Surfaces.htm">Surfaces</a></div><div style="float:right"> Suivant:<a href="surface_get_target_ext.htm">surface_get_target_ext</a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
+<body>
+  <!--<div class="body-scroll" style="top: 150px;">-->
+  <h1>surface_get_target</h1>
+  <p>Cette fonction vous permet d'obtenir l'ID de la surface actuelle sur laquelle vous souhaitez dessiner. Si vous avez créé cette surface en utilisant <a href="surface_create.htm"><tt>surface_create()</tt></a>alors ce sera le nombre entier positif qui est l'ID unique pour cette surface.
+    cette surface</p>
+  <p>Si aucune surface personnalisée n'est définie, mais que la surface d'application par défaut est toujours activée, la fonction renvoie généralement 0. Toutefois, si vous avez déjà manipulé la surface d'application, vous pouvez vérifier que l'ID obtenu ne correspond pas à la valeur actuelle de la variable application_surface.
+    ne correspond pas à la valeur actuelle de la variable application_surface, au cas où celle-ci ne serait plus 0.</p>
+  <p>Si aucune surface personnalisée n'est définie et que la surface d'application par défaut a également été désactivée, la fonction renvoie -1.</p>
+  <p> </p>
+  <h4>Syntaxe :</h4>
+  <p class="code">surface_get_target() ;</p>
+  <p> </p>
+  <h4>Les retours :</h4>
+  <p class="code">Nombre entier (-1 si aucune surface cible n'existe, sinon l'ID de la surface cible)</p>
+  <p> </p>
+  <h4>Exemple :</h4>
+  <p class="code">surface_get_target() != -1<br> {
+    <br> surface_reset_target() ;
+    <br> }
+    <br> draw_surface(surf, 0, 0) ;</p>
+  <p>Le code ci-dessus va vérifier si la cible de rendu actuelle est une surface ou non, et si c'est le cas, il réinitialise la cible puis dessine une surface.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <div class="footer">
+    <div class="buttons">
+      <div class="clear">
+        <div style="float:left">Retour : <a href="Surfaces.htm">Surfaces</a></div>
+        <div style="float:right">Suivant : <a href="surface_get_target_ext.htm">surface_get_target_ext</a></div>
+      </div>
+    </div>
+    <h5><span data-keyref="Copyright Notice">Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
   </div>
   <!-- KEYWORDS
 surface_get_target

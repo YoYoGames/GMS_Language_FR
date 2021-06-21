@@ -3,15 +3,64 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>draw_highscore</title>
+  <title>dessiner_highscore</title>
   <meta name="generator" content="Adobe RoboHelp 2019" />
   <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
   <meta name="rh-authors" content="Mark Alexander" />
-  <meta name="topic-comment" content="Page de référence pour draw_highscore" />
+  <meta name="topic-comment" content="Reference page for draw_highscore" />
   <meta name="rh-index-keywords" content="draw_highscore" />
   <meta name="search-keywords" content="draw_highscore" />
 </head>
-<body><!--<div class="body-scroll" style="top: 150px;">--><h1>draw_highscore</h1><p> Cette fonction simple dessinera la liste actuelle des scores élevés stockés en interne en utilisant la police, la couleur et les valeurs alpha actuellement définies dans le rectangle spécifié. Vous fournissez les coordonnées du coin supérieur gauche et du coin inférieur droit de la zone rectangulaire pour dessiner le texte, et <span class="notranslate">GameMaker Studio 2</span> se chargera du reste, l&#39;espacement et la position se faisant automatiquement.</p><p></p><h4> Syntaxe:</h4><p class="code">draw_highscore( x1, y1, x2, y2 );</p><table><tbody><tr><th> Argument</th><th> Description</th></tr><tr><td> <span class="notranslate">x1</span></td><td> Coordonnée x de la gauche du rectangle du meilleur score.</td></tr><tr><td> <span class="notranslate">y1</span></td><td> Coordonnée y du haut du rectangle du meilleur score.</td></tr><tr><td> <span class="notranslate">x2</span></td><td> La coordonnée x de la droite du rectangle du meilleur score.</td></tr><tr><td> <span class="notranslate">y2</span></td><td> Coordonnée y du bas du rectangle du meilleur score.</td></tr></tbody></table><p></p><h4> Retour:</h4><p class="code">N/A</p><p></p><h4> Exemple:</h4><p class="code">draw_highscore(100, 100, room_width - 100, room_height - 100);</p><p> Cela dessinerait le tableau des meilleurs scores dans un rectangle au milieu de la pièce avec une bordure de 100 pixels. </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> Retour: <a href="Text.htm">Texte</a></div><div style="float:right"> Suivant:<a href="draw_set_font.htm">draw_set_font</a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
+<body>
+  <!--<div class="body-scroll" style="top: 150px;">-->
+  <h1>dessiner_highscore</h1>
+  <p>Cette fonction simple dessine la liste actuelle des meilleurs scores stockés en interne en utilisant la police, la couleur et les valeurs alpha actuellement définies dans le rectangle spécifié. Vous devez fournir les coordonnées du coin supérieur gauche et du coin inférieur droit de la zone rectangulaire où sera dessiné le texte.
+    pour dessiner le texte, et <span class="notranslate">GameMaker Studio 2</span> s'occupera du reste, l'espacement et la position étant effectués automatiquement.</p>
+  <p> </p>
+  <h4>Syntaxe :</h4>
+  <p class="code">draw_highscore( x1, y1, x2, y2 ) ;</p>
+  <table>
+    <tbody>
+      <tr>
+        <th>Arguments</th>
+        <th>Description</th>
+      </tr>
+      <tr>
+        <td>x1</td>
+        <td>La coordonnée x de la partie gauche du rectangle du score le plus élevé.</td>
+      </tr>
+      <tr>
+        <td>y1</td>
+        <td>La coordonnée y du haut du rectangle de la note la plus élevée.</td>
+      </tr>
+      <tr>
+        <td>x2</td>
+        <td>La coordonnée x de la droite du rectangle du score le plus élevé.</td>
+      </tr>
+      <tr>
+        <td>y2</td>
+        <td>La coordonnée y du bas du rectangle des meilleurs scores.</td>
+      </tr>
+    </tbody>
+  </table>
+  <p> </p>
+  <h4>Les retours :</h4>
+  <p class="code">N/A</p>
+  <p> </p>
+  <h4>Exemple :</h4>
+  <p class="code">draw_highscore(100, 100, room_width - 100, room_height - 100) ;</p>
+  <p>Cela dessinerait le tableau des meilleurs scores dans un rectangle au milieu de la pièce avec une bordure de 100px.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <div class="footer">
+    <div class="buttons">
+      <div class="clear">
+        <div style="float:left">Retour : <a href="Text.htm">Texte</a></div>
+        <div style="float:right">Suivant : <a href="draw_set_font.htm">draw_set_font</a></div>
+      </div>
+    </div>
+    <h5><span data-keyref="Copyright Notice">Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
   </div>
   <!-- KEYWORDS
 draw_highscore

@@ -7,64 +7,100 @@
   <meta name="generator" content="Adobe RoboHelp 2019" />
   <link rel="stylesheet" href="../../../assets/css/default.css" type="text/css" />
   <meta name="rh-authors" content="Mark Alexander" />
-  <meta name="topic-comment" content="Page décrivant les fonctions try / catch / finally" />
+  <meta name="topic-comment" content="Page outlining the try / catch / finally functions" />
   <meta name="rh-index-keywords" content="try,catch,finally" />
   <meta name="search-keywords" content="try,catch,finally" />
 </head>
-<body><!--<div class="body-scroll" style="top: 150px;">--><h1>try / catch / finally</h1><p> Le <tt>try</tt>, <tt>catch</tt> et <tt>finally</tt> Les instructions peuvent être utilisées dans votre jeu pour la vérification des erreurs et vous permettent de tester des blocs de code et de contrôler ce qui se passe si des <a href="../../../Additional_Information/Errors/Runner_Errors.htm">exceptions d&#39; <span class="notranslate">runtime</span></a> se produisent. Les utiliser empêchera l&#39;exception de mettre fin au jeu et d&#39;afficher le message d&#39;erreur standard à l&#39;utilisateur, mais cela signifie que vous devrez gérer ce qui se passe ensuite dans ce cas, comme la sauvegarde des fichiers journaux - par exemple - et la fin du jeu gracieusement ( notez que si vous choisissez de ne rien faire, votre jeu peut devenir instable et ne pas fonctionner correctement).</p><p> Au plus basique, le <tt>try</tt> la syntaxe est la suivante:</p><p class="code">try<br/>     {
-    <br/>     &lt;statement1&gt;;
-    <br/>     &lt;statement2&gt;;
-    <br/>     ...<br/>     }
-  </p><p> Cependant, avoir un <tt>try</tt> sans rien pour gérer les exceptions que le code peut produire ne sera pas très utile, nous l&#39;associons donc généralement à un <tt>catch</tt>, avec la syntaxe suivante:</p><p class="code">try<br/>     {
-    <br/>     &lt;statement1&gt;;
-    <br/>     &lt;statement2&gt;;
-    <br/>     ...
-    <br/>     }
-    <br/> catch(&lt;variable&gt;)
-    <br/>     {
-    <br/>     &lt;statement1&gt;;
-    <br/>     &lt;statement2&gt;;
-    <br/>     ...
-    <br/>     }
-  </p><p> Quoi <tt>catch</tt> vous permet d&#39;exécuter du code supplémentaire fourni dans le bloc suivant lorsqu&#39;une exception du précédent <tt>try</tt> a été attrapé. S&#39;il s&#39;agit d&#39;une <span class="notranslate">runtime</span>, la variable fournie peut être utilisée pour accéder à une <a href="../Structs.htm">structure</a> qui contiendra les informations suivantes:</p><p class="code">{<br/> message : &quot;&quot;,               // a string that is a short message for this exception<br/> longMessage : &quot;&quot;,           // a string that is a longer message for this exception<br/> script : &quot;&quot;,                // a string
-    that describes where the exception came from<br/> stacktrace : [ &quot;&quot;, &quot;&quot; ],    // an array of strings that is the stack frame the exception was generated<br/> }
-  </p><p> Un exemple simple d&#39;utilisation est présenté ci-dessous:</p><p class="code">var a = 0, b = 0, c = 0;<br/> try
-    <br/>     {
-    <br/>     c = a div b;<br/>     }
-    <br/> catch( _exception)<br/>     {
-    <br/>     show_debug_message(_exception.message);
-    <br/>     show_debug_message(_exception.longMessage);
-    <br/>     show_debug_message(_exception.script);
-    <br/>     show_debug_message(_exception.stacktrace);
-    <br/>     }
-  </p><p> Il se peut que vous souhaitiez exécuter du code indépendamment du fait qu&#39;une exception ait été levée ou non, et pour cela, vous pouvez ajouter un <tt>finally</tt> bloquer. Le <span class="inline">finally</span> la syntaxe est:</p><p class="code">finally<br/>     {
-    <br/>     &lt;statement1&gt;;
-    <br/>     &lt;statement2&gt;;
-    <br/>     etc...
-    <br/>     }
-  </p><p> Il est à noter que vous pouvez combiner n&#39;importe quelle combinaison de ces éléments, c&#39;est-à-dire:</p><ul class="colour"><li><tt>try</tt> /<tt>finally </tt></li><li><tt>try</tt> /<tt>catch </tt></li><li><tt>try</tt> /<tt>catch</tt> /<tt>finally</tt></li></ul><p> Notez que dans le <tt>finally</tt> bloquer que vous <em>ne pouvez pas</em> utiliser <a href="break.htm"><tt>break</tt></a>, <a href="continue.htm"><tt>continue</tt></a>, <a href="exit.htm"><tt>exit</tt></a> ou <a href="return.htm"><tt>return</tt></a> instructions car elles n&#39;ont aucune signification dans ce contexte et le compilateur générera une erreur si elles sont utilisées.</p><p> Enfin, vous pouvez également imbriquer divers <tt>try</tt> /<tt>catch</tt> /<tt>finally</tt> les uns dans les autres, par exemple:</p><p class="code">var a = 0, b = 0, c = 0;<br/> try
-    <br/>     {
-    <br/>     try
-    <br/>         {
-    <br/>         c = a div b;<br/>         }
-    <br/>     finally
-    <br/>         {
-    <br/>         ++a;
-    <br/>         }
-    <br/>     }
-    <br/> catch(_exception)
-    <br/>     {
-    <br/>     ++a;
-    <br/>     show_debug_message(_exception.message);
-    <br/>     show_debug_message(_exception.longMessage);
-    <br/>     show_debug_message(_exception.script);
-    <br/>     show_debug_message(_exception.stacktrace);
-    <br/>     }
-    <br/> finally
-    <br/>     {
-    <br/>     show_debug_message(&quot;a = &quot; + string(a));<br/>     }
-  </p><p> Il est à noter que vous pouvez reprendre le <span class="notranslate">GML</span> par défaut et utiliser votre propre code de gestionnaire en appelant la fonction <a href="../../GML_Reference/Debugging/exception_unhandled_handler.htm"><tt>exception_unhandled_handler()</tt></a>. Cette <a
-      href="../<span class="notranslate">exécution _Functions.htm &quot;&gt; <span class="notranslate">runtime</span> fonction</a> vous permet d&#39;fournissiez une coutume<a href="../Method_Variables.htm">method</a> pour l&#39;utiliser, il sera appelé chaque fois que des exceptions non gérées se produiront dans votre jeu. </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> Retour: <a href="../Language_Features.htm">Caractéristiques linguistiques</a></div><div style="float:right"> Suivant:<a href="throw.htm">throw</a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
+<body>
+  <!--<div class="body-scroll" style="top: 150px;">-->
+  <h1>try / catch / finally</h1>
+  <p>Les instructions <tt>try</tt>, <tt>catch</tt> et <tt>finally</tt> peuvent être utilisées dans votre jeu pour vérifier les erreurs et vous permettre de tester des blocs de code et de contrôler ce qui se passe si des <a href="../../../Additional_Information/Errors/Runner_Errors.htm">exceptions d'<span class="notranslate">exécution</span></a> se produisent. L'utilisation de ces instructions empêchera l'exception de mettre fin au jeu et d'afficher le message d'erreur standard à l'utilisateur, mais cela signifie que vous devrez gérer ce qui se passe ensuite dans ce cas, comme la sauvegarde des fichiers journaux, par exemple, et la fin du jeu de manière élégante (notez que si vous choisissez de ne rien faire, votre jeu se terminera de manière élégante).
+    (notez que si vous choisissez de ne rien faire, votre jeu peut devenir instable et ne pas fonctionner correctement).</p>
+  <p>Dans sa forme la plus simple, la <tt>syntaxe de</tt> try est la suivante :</p>
+  <p class="code">try<br> {
+    <br> &lt;statement1&gt; ;
+    <br> &lt;statement2&gt; ;
+    <br> ...<br> }
+  </p>
+  <p>Cependant, le fait d'avoir un <tt>try</tt> sans rien pour gérer les exceptions que le code peut produire ne sera pas très utile, c'est pourquoi nous le couplons généralement avec un <tt>catch</tt>, avec la syntaxe suivante :</p>
+  <p class="code">try<br> {
+    <br> &lt;statement1&gt; ;
+    <br> &lt;statement2&gt; ;
+    <br> ...
+    <br> }
+    <br> catch(&lt;variable&gt;)
+    <br> {
+    <br> &lt;statement1&gt; ;
+    <br> &lt;statement2&gt; ;
+    <br> ...
+    <br> }
+  </p>
+  <p>Ce que <tt>catch</tt> fait, c'est vous permettre d'exécuter le code supplémentaire fourni dans le bloc suivant lorsqu'une exception du <tt>try</tt> précédent a été attrapée. S'il s'agit d'une exception <span class="notranslate">d'exécution</span>, alors la variable fournie peut être utilisée pour accéder à une <a href="../Structs.htm">structure</a> qui contiendra les informations suivantes :</p>
+  <p class="code">{<br> message : &quot;&quot;, // une chaîne qui est un message court pour cette exception<br> longMessage : &quot;&quot;, // une chaîne qui est un message plus long pour cette exception<br> script : &quot;&quot;, // une chaîne qui décrit l'origine de l'exception
+    qui décrit l'origine de l'exception<br> stacktrace : [ &quot;&quot;, &quot;&quot; ], // un tableau de chaînes de caractères qui représente la trame de la pile où l'exception a été générée<br> }
+  </p>
+  <p>Un exemple simple d'utilisation est présenté ci-dessous :</p>
+  <p class="code">var a = 0, b = 0, c = 0 ;<br> try
+    <br> {
+    <br> c = a div b ;<br> }
+    <br> catch( _exception)<br> {
+    <br> show_debug_message(_exception.message) ;
+    <br> show_debug_message(_exception.longMessage) ;
+    <br> show_debug_message(_exception.script) ;
+    <br> show_debug_message(_exception.stacktrace) ;
+    <br> }
+  </p>
+  <p>Il se peut que vous souhaitiez exécuter du code, qu'une exception ait été levée ou non, et pour cela, vous pouvez ajouter un bloc <tt>final</tt>. La syntaxe de <span class="inline">finally</span> est la suivante :</p>
+  <p class="code">enfin<br> {
+    <br> &lt;déclaration1&gt; ;
+    <br> &lt;déclaration2&gt; ;
+    <br> etc...
+    <br> }
+  </p>
+  <p>Il convient de noter que vous pouvez avoir n'importe quelle combinaison de ces éléments ensemble, c'est-à-dire que vous pouvez avoir une combinaison des deux :</p>
+  <ul class="colour">
+    <li><tt>essayer</tt> / <tt>enfin</tt></li>
+    <li><tt>essayer</tt> / <tt>attraper</tt></li>
+    <li><tt>try</tt> / <tt>catch</tt> / <tt>finally</tt></li>
+  </ul>
+  <p>Notez qu'à l'intérieur du bloc <tt>finally</tt>, vous <em>ne pouvez pas </em>utiliser <a href="break.htm"><tt>pause</tt></a>, <a href="continue.htm"><tt>continuer</tt></a>, <a href="exit.htm"><tt>exit</tt></a> ou <a href="return.htm"><tt>return</tt></a> car
+    ils n'ont aucune signification dans ce contexte et le compilateur générera une erreur s'ils sont utilisés.</p>
+  <p>Enfin, vous pouvez également imbriquer divers <tt>try</tt> / <tt>catch</tt> / <tt>finally</tt> les uns dans les autres, par exemple :</p>
+  <p class="code">var a = 0, b = 0, c = 0 ;<br> try
+    <br> {
+    <br> essai
+    <br> {
+    <br> c = a div b ;<br> }
+    <br> enfin
+    <br> {
+    <br> ++a ;
+    <br> }
+    <br> }
+    <br> catch(_exception)
+    <br> {
+    <br> ++a ;
+    <br> show_debug_message(_exception.message) ;
+    <br> show_debug_message(_exception.longMessage) ;
+    <br> show_debug_message(_exception.script) ;
+    <br> show_debug_message(_exception.stacktrace) ;
+    <br> }
+    <br> enfin
+    <br> {
+    <br> show_debug_message(&quot;a = &quot; + string(a)) ;<br> }
+  </p>
+  <p>Il convient de noter que vous pouvez reprendre le message d'erreur <span class="notranslate">GML</span> par défaut et utiliser votre propre code de gestion en appelant la fonction <a href="../../GML_Reference/Debugging/exception_unhandled_handler.htm"><tt>exception_unhandled_handler()</tt></a>. Cette fonction d'exécution
+   <a href="../<span class=" notranslate"="">Runtime_Functions.htm">fonction d'<span class="notranslate">exécution</span></a> vous permet de fournir une <a href="../Method_Variables.htm">méthode</a> personnalisée qui sera appelée chaque fois que des exceptions non gérées se produisent dans votre jeu.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <div class="footer">
+    <div class="buttons">
+      <div class="clear">
+        <div style="float:left">Retour : <a href="../Language_Features.htm">Caractéristiques de la langue</a></div>
+        <div style="float:right">Suivant : <a href="throw.htm">lancer</a></div>
+      </div>
+    </div>
+    <h5><span data-keyref="Copyright Notice">Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
   </div>
   <!-- KEYWORDS
 try

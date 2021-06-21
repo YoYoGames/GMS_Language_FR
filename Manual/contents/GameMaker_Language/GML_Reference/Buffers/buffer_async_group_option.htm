@@ -3,17 +3,66 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>buffer_async_group_option</title>
+  <title>option_groupe_asynchrone_tampon</title>
   <meta name="generator" content="Adobe RoboHelp 2019" />
   <link rel="stylesheet" href="../../../assets/css/default.css" type="text/css" />
   <meta name="rh-authors" content="Mark Alexander" />
-  <meta name="topic-comment" content="Page de référence pour buffer_async_group_option" />
+  <meta name="topic-comment" content="Reference page for buffer_async_group_option" />
   <meta name="rh-index-keywords" content="buffer_async_group_option" />
   <meta name="search-keywords" content="buffer_async_group_option" />
 </head>
-<body><!--<div class="body-scroll" style="top: 150px;">--><h1>buffer_async_group_option</h1><p> Avec cette fonction, vous pouvez définir certaines options spécifiques à la plate-forme pour le groupe de tampons en cours d&#39;enregistrement. Les options disponibles sont les suivantes:</p><ul class="colour"><li> &quot; <b>sous-titre</b> &quot; ou &quot; <b>slottitle</b> &quot; - La valeur de cette option serait une chaîne, qui sera montrée à l&#39;utilisateur lors de la gestion de ses données de sauvegarde dans le système d&#39;exploitation. Ceci n&#39;est important que lors de la sauvegarde des données, pas lors du chargement à nouveau.</li><li> &quot; <b>showdialog</b> &quot; - La valeur de cette option est un booléen <tt>true</tt> ou <tt>false</tt>. Si défini sur <tt>true</tt>, lorsque vous enregistrez <i>ou</i> chargez <span class="notranslate">GameMaker Studio 2</span> affichera l&#39;interface utilisateur du système, sinon il effectuera une sauvegarde / téléchargement rapide sans interface utilisateur affichée. Vous n&#39;en avez normalement besoin que si vous prenez en charge plusieurs emplacements de sauvegarde pour permettre à l&#39;utilisateur de choisir un emplacement, mais si vous ne prenez en charge qu&#39;un seul emplacement par utilisateur, définissez-le sur <tt>false</tt>.</li><li> &quot; <b>savepadindex</b> &quot; - Pour cette option, vous devez spécifier l&#39; <i>index</i> de pad du lecteur qui enregistre <i>ou</i> charge et le système écrira et lira les données dans le dossier de sauvegarde de ce lecteur.</li><li> &quot; <b>saveslotsize</b> &quot; - Cette option nécessite que vous spécifiiez la taille réelle en octets que vous souhaitez <a href="buffer_seek.htm"><tt>buffer_seek()</tt></a> et <a href="buffer_tell.htm"><tt>buffer_tell()</tt></a> pour l&#39;obtenir, par exemple). Notez qu&#39;il n&#39;est pas obligatoire de fournir cette valeur car toutes les sauvegardes se voient attribuer au préalable un espace minimum, qui est normalement d&#39;environ 10 Mo environ.</li></ul><p class="note"> <b>IMPORTANT!</b> Cette fonction n&#39;est actuellement valable que pour les modules cibles <span class="notranslate">XBox One</span> Sur toutes les autres cibles, cela ne fera rien.</p><p></p><h4> Syntaxe:</h4><p class="code">buffer_async_group_option(option, value);</p><table><tbody><tr><th> Argument</th><th> Description</th></tr><tr><td> <span class="notranslate">option</span></td><td> L&#39;option à définir.</td></tr><tr><td> <span class="notranslate">value</span></td><td> La valeur à définir (peut être une chaîne ou une valeur réelle, selon l&#39;option).</td></tr></tbody></table><p></p><h4> Retour:</h4><p> N / A</p><p></p><h4> Exemple:</h4><p class="code">buffer_async_group_begin(&quot;save_folder_name&quot;);<br/> buffer_async_group_option(&quot;showdialog&quot;, false);<br/> buffer_async_group_option(&quot;slottitle&quot;, &quot;Catch The Haggis Save&quot;);<br/> buffer_async_group_option(&quot;subtitle&quot;,
-    &quot;All your haggis are saved here!&quot;);<br/> save = buffer_save_async(buff, &quot;Player_Save.sav&quot;, 0, 16384);<br/> buffer_async_group_end();
-  </p><p> Le code ci-dessus démarre un groupe de tampons puis définit les options de groupe avant de définir 4 fichiers à enregistrer de manière asynchrone. La définition du groupe est alors terminée (à quel point la sauvegarde commencera). </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> Retour: <a href="Buffers.htm">Tampons</a></div><div style="float:right"> Suivant:<a href="buffer_async_group_end.htm">buffer_async_group_end</a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
+<body>
+  <!--<div class="body-scroll" style="top: 150px;">-->
+  <h1>option_groupe_asynchrone_tampon</h1>
+  <p>Cette fonction permet de définir certaines options spécifiques à la plate-forme pour le groupe de tampons en cours de sauvegarde. Les options disponibles sont les suivantes :</p>
+  <ul class="colour">
+    <li>&quot;Subtitle<b>&quot; ou</b>&quot;slottitle&quot; -<b>La valeur</b> de cette option est une chaîne de caractères qui sera affichée à l'utilisateur lorsqu'il gérera ses données de sauvegarde dans l'OS. Ceci n'est important que lors de la sauvegarde des données, pas lors du rechargement.</li>
+    <li>&quot;showdialog<b>&quot; -</b> La valeur de cette option est un booléen true ou <tt>false.</tt> Si elle est définie sur <tt>true</tt>, <span class="notranslate">GameMaker Studio 2</span> affichera l'interface utilisateur du système lors de la sauvegarde <i>ou du</i> chargement, sinon il effectuera un quicksave/quickload
+      sans afficher d'interface utilisateur. Normalement, vous n'avez besoin de cette option que si vous prenez en charge plusieurs emplacements de sauvegarde pour permettre à l'utilisateur de choisir un emplacement, mais si vous ne prenez en charge qu'un seul emplacement par utilisateur, définissez cette option sur <tt>false.</tt></li>
+    <li>&quot;savepadindex<b>&quot; -</b> Pour cette option, vous devez spécifier l'index du pad <i>du</i> joueur qui sauvegarde ou charge et le système écrira et lira les données dans le dossier de sauvegarde de ce joueur.</li>
+    <li>&quot; saveslotsize<b>&quot; -</b> Cette option nécessite que vous spécifiiez la taille réelle en octets que vous souhaitez sauvegarder (afin que vous puissiez faire un <a href="buffer_seek.htm"><tt>buffer_seek()</tt></a> et <a href="buffer_tell.htm"><tt>buffer_tell()</tt></a> pour obtenir
+      cela, par exemple). Notez qu'il n'est pas obligatoire de fournir cette valeur car toutes les sauvegardes sont pré-assignées à un espace minimum, qui est normalement d'environ 10MB.</li>
+  </ul>
+  <p class="note"><b>IMPORTANT !</b> Cette fonction n'est actuellement valable que pour les modules cibles PSVita, PS4 et <span class="notranslate">XBox One</span>. Sur toutes les autres cibles, elle ne fera rien.</p>
+  <p> </p>
+  <h4>Syntaxe :</h4>
+  <p class="code">buffer_async_group_option(option, valeur) ;</p>
+  <table>
+    <tbody>
+      <tr>
+        <th>Arguments</th>
+        <th>Description</th>
+      </tr>
+      <tr>
+        <td>option</td>
+        <td>L'option à définir.</td>
+      </tr>
+      <tr>
+        <td>valeur</td>
+        <td>La valeur à définir (peut être une chaîne ou un réel, selon l'option).</td>
+      </tr>
+    </tbody>
+  </table>
+  <p> </p>
+  <h4>Les retours :</h4>
+  <p>N/A</p>
+  <p> </p>
+  <h4>Exemple :</h4>
+  <p class="code">buffer_async_group_begin(&quot;save_folder_name&quot;) ;<br> buffer_async_group_option(&quot;showdialog&quot;, false) ;<br> buffer_async_group_option(&quot;slottitle&quot;, &quot;Catch The Haggis Save&quot;) ;<br> buffer_async_group_option(&quot;subtitle&quot;,
+    &quot;Tous vos haggis sont sauvegardés ici !&quot;) ;<br> save = buffer_save_async(buff, &quot;Player_Save.sav&quot;, 0, 16384) ;<br> buffer_async_group_end() ;
+  </p>
+  <p>Le code ci-dessus démarre un groupe de tampons puis définit les options du groupe avant de définir 4 fichiers à sauvegarder de manière asynchrone. La définition du groupe est ensuite terminée (à ce moment-là, la sauvegarde commencera).</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <div class="footer">
+    <div class="buttons">
+      <div class="clear">
+        <div style="float:left">Retour : <a href="Buffers.htm">Tampons</a></div>
+        <div style="float:right">Suivant : <a href="buffer_async_group_end.htm">buffer_async_group_end</a></div>
+      </div>
+    </div>
+    <h5><span data-keyref="Copyright Notice">Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
   </div>
   <!-- KEYWORDS
 buffer_async_group_option

@@ -7,12 +7,77 @@
   <meta name="generator" content="Adobe RoboHelp 2019" />
   <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
   <meta name="rh-authors" content="Mark Alexander" />
-  <meta name="topic-comment" content="Page de référence pour draw_text_ext_transformed" />
+  <meta name="topic-comment" content="Reference page for draw_text_ext_transformed" />
   <meta name="rh-index-keywords" content="draw_text_ext_transformed" />
   <meta name="search-keywords" content="draw_text_ext_transformed" />
 </head>
-<body><!--<div class="body-scroll" style="top: 150px;">--><h1>draw_text_ext_transformed</h1><p> Cette fonction est une combinaison de la base <a href="draw_text.htm"><tt>draw_text </tt><tt>()</tt><tt></tt></a> fonction avec le <a href="draw_text_ext.htm"><tt>draw_text_ext </tt><tt>()</tt><tt></tt></a> et <a href="draw_text_transformed.htm"><tt>draw_text_transformed </tt><tt>()</tt><tt></tt></a> fonctions, vous permettant de mettre à l&#39;échelle et de faire pivoter le texte tout en conservant un espacement de ligne spécifique et une largeur maximale par ligne. Notez que l&#39;argument &quot;largeur&quot; est basé sur une échelle de 1, donc si l&#39;échelle est différente, cette valeur doit être modifiée proportionnellement. Par exemple, si la largeur de base d&#39;un saut de ligne est de 300 et que vous définissez l&#39;échelle sur 2, le texte apparaîtra incorrect, dépassant la largeur donnée. Au lieu de cela, vous devriez avoir défini la largeur sur 150 pour compenser la mise à l&#39;échelle.</p><p></p><h4> Syntaxe:</h4><p class="code">draw_text_ext_transformed(x, y, string, sep, w, xscale, yscale, angle);</p><table><tbody><tr><th> Argument</th><th> Description</th></tr><tr><td> <span class="notranslate">x</span></td><td> La coordonnée x de la chaîne dessinée.</td></tr><tr><td> <span class="notranslate">y</span></td><td> La coordonnée y de la chaîne dessinée.</td></tr><tr><td> <span class="notranslate">string</span></td><td> La chaîne à dessiner.</td></tr><tr><td> <span class="notranslate">sep</span></td><td> La distance en pixels entre les lignes de texte.</td></tr><tr><td> <span class="notranslate">w</span></td><td> La largeur maximale en pixels de la chaîne avant un saut de ligne.</td></tr><tr><td> <span class="notranslate">xscale</span></td><td> L&#39;échelle horizontale.</td></tr><tr><td> <span class="notranslate">yscale</span></td><td> L&#39;échelle verticale.</td></tr><tr><td> <span class="notranslate">angle</span></td><td> L&#39;angle du texte.</td></tr></tbody></table><p></p><h4> Retour:</h4><p class="code">N/A</p><p></p><h4> Exemple:</h4><p class="code">draw_set_halign(fa_center);<br/> draw_set_valign(fa_middle);
-    <br/> image_angle += 1;<br/> draw_text_ext_transformed(room_width / 2, room_height / 2, keyboard_string, 10, 300, 2, 2, image_angle);</p><p> Le code ci-dessus dessinera le texte donné au milieu de la pièce, avec une longueur de chaîne maximale de 300 pixels, un espacement entre chaque ligne de 10 pixels, tournant et redimensionné à deux fois sa taille d&#39;origine. </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> Retour: <a href="Text.htm">Texte</a></div><div style="float:right"> Suivant:<a href="draw_text_transformed_colour.htm">draw_text_transformed_colour</a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
+<body>
+  <!--<div class="body-scroll" style="top: 150px;">-->
+  <h1>draw_text_ext_transformed</h1>
+  <p>Cette fonction est une combinaison de la fonction de base <a href="draw_text.htm"><tt>dessiner_texte</tt><tt>()</tt><tt></tt></a> de base avec les fonctions <a href="draw_text_ext.htm"><tt>draw_text_ext</tt><tt>()</tt><tt></tt></a> et <a href="draw_text_transformed.htm"><tt>draw_text_transformed</tt><tt>()</tt><tt></tt></a>    vous permettant de mettre à l'échelle et de faire pivoter le texte tout en maintenant un espacement de ligne spécifique et une largeur maximale par ligne. Notez que l'argument &quot;width&quot; est basé sur une échelle de 1, donc si l'échelle est différente, cette valeur doit être modifiée proportionnellement.
+    proportionnellement. Par exemple, si la largeur de base d'un saut de ligne est de 300 et que vous définissez l'échelle à 2, le texte apparaîtra de manière erronée, dépassant la largeur donnée. Vous auriez dû fixer la largeur à 150 pour compenser la mise à l'échelle.</p>
+  <p> </p>
+  <h4>Syntaxe :</h4>
+  <p class="code">draw_text_ext_transformed(x, y, string, sep, w, xscale, yscale, angle) ;</p>
+  <table>
+    <tbody>
+      <tr>
+        <th>Arguments</th>
+        <th>Description</th>
+      </tr>
+      <tr>
+        <td>x</td>
+        <td>La coordonnée x de la chaîne dessinée.</td>
+      </tr>
+      <tr>
+        <td>y</td>
+        <td>La coordonnée y de la chaîne dessinée.</td>
+      </tr>
+      <tr>
+        <td>chaîne de caractères</td>
+        <td>La ficelle à tirer.</td>
+      </tr>
+      <tr>
+        <td>sep</td>
+        <td>La distance en pixels entre les lignes de texte.</td>
+      </tr>
+      <tr>
+        <td>w</td>
+        <td>La largeur maximale en pixels de la chaîne avant un saut de ligne.</td>
+      </tr>
+      <tr>
+        <td>xscale</td>
+        <td>L'échelle horizontale.</td>
+      </tr>
+      <tr>
+        <td>yscale</td>
+        <td>L'échelle verticale.</td>
+      </tr>
+      <tr>
+        <td>angle</td>
+        <td>L'angle du texte.</td>
+      </tr>
+    </tbody>
+  </table>
+  <p> </p>
+  <h4>Les retours :</h4>
+  <p class="code">N/A</p>
+  <p> </p>
+  <h4>Exemple :</h4>
+  <p class="code">draw_set_halign(fa_center) ;<br> draw_set_valign(fa_middle) ;
+    <br> image_angle += 1 ;<br> draw_text_ext_transformed(room_width / 2, room_height / 2, keyboard_string, 10, 300, 2, 2, image_angle) ;</p>
+  <p>Le code ci-dessus dessine le texte donné au milieu de la pièce, avec une longueur de chaîne maximale de 300 pixels, un espacement entre chaque ligne de 10 pixels, une rotation et une mise à l'échelle de deux fois sa taille d'origine.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <div class="footer">
+    <div class="buttons">
+      <div class="clear">
+        <div style="float:left">Retour : <a href="Text.htm">Texte</a></div>
+        <div style="float:right">Suivant : <a href="draw_text_transformed_colour.htm">draw_text_transformed_colour</a></div>
+      </div>
+    </div>
+    <h5><span data-keyref="Copyright Notice">Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
   </div>
   <!-- KEYWORDS
 draw_text_ext_transformed

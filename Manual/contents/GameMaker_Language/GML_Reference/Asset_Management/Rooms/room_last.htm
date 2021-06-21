@@ -3,18 +3,43 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>room_last</title>
+  <title>chambre_dernière</title>
   <meta name="generator" content="Adobe RoboHelp 2019" />
   <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
   <meta name="rh-authors" content="Mark Alexander" />
-  <meta name="topic-comment" content="Page décrivant la fonction room_last" />
+  <meta name="topic-comment" content="Page outlining the function room_last" />
   <meta name="rh-index-keywords" content="room_last" />
   <meta name="search-keywords" content="room_last" />
 </head>
-<body><!--<div class="body-scroll" style="top: 150px;">--><h1>room_last</h1><p> Cette <b>variable en lecture seule</b> renvoie l&#39;index de la toute dernière salle du jeu (celle-ci est définie par l&#39;ordre dans lequel les salles apparaissent dans le <a href="../../../../Settings/The_Room_Manager.htm">Room Manager</a> et <i>non</i> par l&#39;ordre dans lequel elles ont été créées). Notez que cette variable ne reconnaîtra ni ne prendra en compte les pièces qui ont été ajoutées dynamiquement à l&#39;aide de<span class="inline"><a href="room_add.htm">room_add()</a></span> ou<span class="inline"><a href="room_duplicate.htm">room_duplicate()</a></span>.</p><p></p><h4> Syntaxe:</h4><p class="code">room_last;</p><p></p><h4> Retour:</h4><p class="code">Index</p><p></p><h4> Exemple:</h4><p class="code">if keyboard_check_pressed(ord(&quot;Q&quot;))<br/>     {
-    <br/>     room_goto(room_last);
-    <br/>     }
-  </p><p> Le code ci-dessus vérifie si une touche a été enfoncée et si c&#39;est le cas, elle va dans la dernière pièce du jeu. </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> Retour: <a href="Rooms.htm">Chambres</a></div><div style="float:right"> Suivant:<a href="room_next.htm">room_next</a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
+<body>
+  <!--<div class="body-scroll" style="top: 150px;">-->
+  <h1>chambre_dernière</h1>
+  <p>Cette variable en <b>lecture seule</b> renvoie l'index de la toute dernière salle du jeu (ceci est défini par l'ordre dans lequel les salles apparaissent dans le <a href="../../../../Settings/The_Room_Manager.htm">Room Manager</a> et <i>non</i> par l'ordre dans lequel elles ont été créées).
+    elles ont été créées). Notez que cette variable ne reconnaîtra pas ou ne prendra pas en compte les salles qui ont été ajoutées dynamiquement à l'aide de <span class="inline"><a href="room_add.htm">room_add()</a></span> ou <span class="inline"><a href="room_duplicate.htm">room_duplicate()</a></span>.</p>
+  <p> </p>
+  <h4>Syntaxe :</h4>
+  <p class="code">chambre_dernière ;</p>
+  <p> </p>
+  <h4>Les retours :</h4>
+  <p class="code">Index</p>
+  <p> </p>
+  <h4>Exemple :</h4>
+  <p class="code">if keyboard_check_pressed(ord(&quot;Q&quot;))<br> {
+    <br> room_goto(room_last) ;
+    <br> }
+  </p>
+  <p>Le code ci-dessus vérifie si une touche a été pressée et si c'est le cas, il se rend dans la dernière pièce du jeu.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <div class="footer">
+    <div class="buttons">
+      <div class="clear">
+        <div style="float:left">Retour : <a href="Rooms.htm">Pièces</a></div>
+        <div style="float:right">Suivant : <a href="room_next.htm">room_next</a></div>
+      </div>
+    </div>
+    <h5><span data-keyref="Copyright Notice">Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
   </div>
   <!-- KEYWORDS
 room_last

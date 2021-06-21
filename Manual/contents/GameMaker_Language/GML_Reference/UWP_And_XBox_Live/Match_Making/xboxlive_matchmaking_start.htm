@@ -7,12 +7,48 @@
   <meta name="generator" content="Adobe RoboHelp 2019" />
   <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
   <meta name="rh-authors" content="Mark Alexander" />
-  <meta name="topic-comment" content="Page de référence pour xboxlive_matchmaking_start" />
+  <meta name="topic-comment" content="Reference page for xboxlive_matchmaking_start" />
   <meta name="rh-index-keywords" content="xboxlive_matchmaking_start" />
   <meta name="search-keywords" content="xboxlive_matchmaking_start" />
 </head>
-<body><!--<div class="body-scroll" style="top: 150px;">--><h1>xboxlive_matchmaking_start</h1><p> Cette fonction doit être appelée avant de pouvoir démarrer une session multi-joueurs pour l&#39;utilisateur. Il prend le pointeur de l&#39;ID utilisateur, que vous pouvez récupérer pour une manette de jeu particulière en appelant le <a href="../Users_And_Accounts/xboxlive_user_for_pad.htm"><tt>xboxlive_user_for_pad()</tt></a> et initialisera l&#39;API multi-joueurs.</p><p></p><h4> Syntaxe:</h4><p class="code">xboxlive_matchmaking_start(user_id);</p><table><tbody><tr><th> Argument</th><th> Description</th></tr><tr><td> <span class="notranslate">user_id</span></td><td> Le pointeur d&#39;ID utilisateur à utiliser</td></tr></tbody></table><p></p><h4> Retour:</h4><p class="code">N/A</p><p></p><h4> Exemple:</h4><p class="code">global.UserID = xboxlive_user_for_pad(global.PadIndex);<br/> xboxlive_matchmaking_start(global.UserID);
-  </p><p> Le code ci-dessus obtient l&#39;ID utilisateur pour l&#39;index de pad donné, puis initialise les capacités multijoueurs. </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> Retour: <a href="Match_Making.htm">Match Making</a></div><div style="float:right"> Suivant:<a href="xboxlive_matchmaking_stop.htm">xboxlive_matchmaking_stop</a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
+<body>
+  <!--<div class="body-scroll" style="top: 150px;">-->
+  <h1>xboxlive_matchmaking_start</h1>
+  <p>Cette fonction doit être appelée avant de pouvoir lancer une session multi-joueurs pour l'utilisateur. Elle prend le pointeur de l'ID utilisateur, que vous pouvez récupérer pour une manette de jeu particulière en appelant la fonction <a href="../Users_And_Accounts/xboxlive_user_for_pad.htm"><tt>xboxlive_user_for_pad()</tt></a>    et initialisera l'API multi-joueurs.</p>
+  <p> </p>
+  <h4>Syntaxe :</h4>
+  <p class="code">xboxlive_matchmaking_start(user_id) ;</p>
+  <table>
+    <tbody>
+      <tr>
+        <th>Arguments</th>
+        <th>Description</th>
+      </tr>
+      <tr>
+        <td>nom d'utilisateur</td>
+        <td>Le pointeur d'identification de l'utilisateur à utiliser</td>
+      </tr>
+    </tbody>
+  </table>
+  <p> </p>
+  <h4>Les retours :</h4>
+  <p class="code">N/A</p>
+  <p> </p>
+  <h4>Exemple :</h4>
+  <p class="code">global.UserID = xboxlive_user_for_pad(global.PadIndex) ;<br> xboxlive_matchmaking_start(global.UserID) ;
+  </p>
+  <p>Le code ci-dessus récupère l'ID de l'utilisateur pour l'index du pad donné et initialise ensuite les capacités multijoueurs.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <div class="footer">
+    <div class="buttons">
+      <div class="clear">
+        <div style="float:left">Retour : <a href="Match_Making.htm">Match Making</a></div>
+        <div style="float:right">Suivant : <a href="xboxlive_matchmaking_stop.htm">xboxlive_matchmaking_stop</a></div>
+      </div>
+    </div>
+    <h5><span data-keyref="Copyright Notice">Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
   </div>
   <!-- KEYWORDS
 xboxlive_matchmaking_start

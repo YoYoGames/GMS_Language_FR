@@ -3,20 +3,58 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>layer_get_id_at_depth</title>
+  <title>couche_get_id_at_depth</title>
   <meta name="generator" content="Adobe RoboHelp 2019" />
   <link rel="stylesheet" href="../../../../../assets/css/default.css" type="text/css" />
   <meta name="rh-authors" content="Mark Alexander" />
-  <meta name="topic-comment" content="Page décrivant la fonction layer_get_id_at_depth" />
+  <meta name="topic-comment" content="Page outlining the function layer_get_id_at_depth" />
   <meta name="rh-index-keywords" content="layer_get_id_at_depth" />
   <meta name="search-keywords" content="layer_get_id_at_depth" />
 </head>
-<body><!--<div class="body-scroll" style="top: 150px;">--><h1>layer_get_id_at_depth</h1><p> Vous pouvez utiliser cette fonction pour obtenir les ID de toutes les couches auxquelles une profondeur spécifique est attribuée. Vous donnez la profondeur à vérifier et la fonction renverra un <a href="../../../../GML_Overview/Arrays.htm">tableau</a> avec 1 ou plusieurs entrées selon qu&#39;il y a des couches à la profondeur donnée ou non. S&#39;il n&#39;y a pas de couches à la profondeur donnée, alors le tableau aura une seule entrée à la position [0] avec une valeur de -1, mais, s&#39;il y a des couches à la profondeur, alors une entrée sera faite dans le tableau pour chaque couche trouvée - la valeur d&#39;entrée sera la valeur d&#39;ID unique pour une couche.</p><p></p><h4> Syntaxe:</h4><p class="code">layer_get_id_at_depth(depth)</p><table><tbody><tr><th> Argument</th><th> Description</th></tr><tr><td> <span class="notranslate">depth</span></td><td> La profondeur à partir de laquelle vérifier et récupérer les ID de couche.</td></tr></tbody></table><p></p><h4> Retour:</h4><p class="code">Array</p><p></p><h4> Exemple:</h4><p class="code">var a = layer_get_id_at_depth(0);<br/> if a[0] != -1<br/>     {
-    <br/>     for (var i = 0; i &lt; array_length(a); i++;)<br/>         {
-    <br/>         layer_destroy(a[i]);
-    <br/>         }
-    <br/>     }
-  </p><p> Le code ci-dessus récupère les données sur les couches avec une profondeur de 0. Une vérification est effectuée pour voir si des couches existent à cette profondeur, et s&#39;il y en a, le tableau retourné est analysé et chacune des couches trouvées est détruite. </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> Retour: <a href="General_Layer_Functions.htm">Fonctions générales des calques</a></div><div style="float:right"> Suivant:<a href="layer_get_name.htm">layer_get_name</a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
+<body>
+  <!--<div class="body-scroll" style="top: 150px;">-->
+  <h1>couche_get_id_at_depth</h1>
+  <p>Vous pouvez utiliser cette fonction pour obtenir les ID de toutes les couches affectées à une profondeur spécifique. Vous donnez la profondeur à vérifier et la fonction retournera un <a href="../../../../GML_Overview/Arrays.htm">tableau</a> avec 1 ou plusieurs entrées selon qu'il y a ou non des couches à la profondeur donnée.
+    des couches à la profondeur donnée ou non. S'il n'y a pas de couches à la profondeur donnée, le tableau aura une seule entrée à la position [0] avec une valeur de -1, mais, s'il y a des couches à la profondeur, alors une entrée sera faite dans le tableau pour chaque couche trouvée.
+    couche trouvée - la valeur de l'entrée sera la valeur d'identification unique pour une couche.</p>
+  <p> </p>
+  <h4>Syntaxe :</h4>
+  <p class="code">layer_get_id_at_depth(depth)</p>
+  <table>
+    <tbody>
+      <tr>
+        <th>Arguments</th>
+        <th>Description</th>
+      </tr>
+      <tr>
+        <td>profondeur</td>
+        <td>La profondeur pour vérifier et récupérer les ID des couches.</td>
+      </tr>
+    </tbody>
+  </table>
+  <p> </p>
+  <h4>Les retours :</h4>
+  <p class="code">Array</p>
+  <p> </p>
+  <h4>Exemple :</h4>
+  <p class="code">var a = layer_get_id_at_depth(0) ;<br> if a[0] != -1<br> {
+    <br> for (var i = 0 ; i &lt; array_length(a) ; i++ ;) <br> {
+    <br> layer_destroy(a[i]) ;
+    <br> }
+    <br> }
+  </p>
+  <p>Le code ci-dessus récupère les données sur les couches avec une profondeur de 0. Une vérification est effectuée pour voir si des couches existent à cette profondeur, et si c'est le cas, le tableau retourné est analysé et chacune des couches trouvées est détruite.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <div class="footer">
+    <div class="buttons">
+      <div class="clear">
+        <div style="float:left">Retour : <a href="General_Layer_Functions.htm">Fonctions générales des couches</a></div>
+        <div style="float:right">Suivant : <a href="layer_get_name.htm">layer_get_name</a></div>
+      </div>
+    </div>
+    <h5><span data-keyref="Copyright Notice">Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
   </div>
   <!-- KEYWORDS
 layer_get_id_at_depth

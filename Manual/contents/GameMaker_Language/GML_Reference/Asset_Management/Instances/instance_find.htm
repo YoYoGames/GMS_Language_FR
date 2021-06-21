@@ -7,13 +7,62 @@
   <meta name="generator" content="Adobe RoboHelp 2019" />
   <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
   <meta name="rh-authors" content="Mark Alexander" />
-  <meta name="topic-comment" content="Page décrivant la fonction instance_find" />
+  <meta name="topic-comment" content="Page outlining the function instance_find" />
   <meta name="rh-index-keywords" content="instance_find" />
   <meta name="search-keywords" content="instance_find" />
 </head>
-<body><!--<div class="body-scroll" style="top: 150px;">--><h1>instance_find</h1><p> Toutes les instances ont un identifiant unique (<a href="Instance_Variables/id.htm"><tt>id</tt></a> ) qui peut être utilisé pour les modifier et les manipuler pendant qu&#39;un jeu est en cours d&#39;exécution, mais vous ne savez peut-être pas toujours quel est l&#39;identifiant d&#39;une instance spécifique et cette fonction peut donc vous aider car vous pouvez l&#39;utiliser pour les parcourir tous pour trouver ce que vous avez besoin. Vous spécifiez l&#39;objet dont vous souhaitez trouver l&#39;instance et un nombre, et s&#39;il y a une instance à cette position dans la liste d&#39;instances, la fonction renvoie l&#39;id de cette instance, et sinon, elle renvoie le <a href="../../../GML_Overview/Instance_Keywords.htm">mot-clé spécial</a> <span class="inline"><b>noone</b></span>. Vous pouvez également utiliser le mot-clé <span class="inline"><b>all</b></span> pour parcourir toutes les instances d&#39;une salle, ainsi qu&#39;un objet parent pour parcourir toutes les instances qui font partie de cette hiérarchie parent / enfant, et vous pouvez même spécifier une instance (si vous avez son <span class="inline">id</span> ) pour vérifier s&#39;il existe réellement dans la pièce actuelle. Veuillez noter que comme les instances sont triées de <i>manière arbitraire</i>, il n&#39;y a pas d&#39;ordre spécifique dans la manière dont les instances sont vérifiées par cette fonction, et toute instance peut être dans n&#39;importe quelle position.</p><p> La valeur maximale de &quot;n&quot; dans cette fonction serait</p><ul class="colour"><li> Pour le mot-clé <span class="inline"><b>all</b></span>:<a href="instance_count.htm"><tt>instance_count - 1</tt></a></li><li> Pour un index d&#39;objet:<a href="instance_number.htm"><tt>instance_number(OBJ) - 1</tt></a></li></ul><p></p><h4> <b>Syntaxe:</b></h4><p class="code">instance_find(obj, n);</p><table><tbody><tr><th> Argument</th><th> Description</th></tr><tr><td> <span class="notranslate">obj</span></td><td> L&#39;objet pour trouver la nième instance de</td></tr><tr><td> <span class="notranslate">n</span></td><td> Le numéro de l&#39;instance à rechercher.</td></tr></tbody></table><p></p><h4> Retour:</h4><p class="code">Real (either an instance ID value or the keyword <tt>noone</tt>)</p><p></p><h4> Exemple:</h4><p class="code">for (var i = 0; i &lt; instance_number(obj_Enemy); ++i;)<br/>     {
-    <br/>     enemy[i] = instance_find(obj_Enemy,i);<br/>     }
-  </p><p> Le code ci-dessus utilisera un <tt>for</tt> boucle pour parcourir toutes les instances de &quot;obj_Enemy&quot; et stocker leur <b>identifiant</b> dans le tableau &quot;ennemi []&quot;. </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> Retour: <a href="Instances.htm">Instances</a></div><div style="float:right"> Suivant:<a href="instance_furthest.htm">instance_furthest</a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
+<body>
+  <!--<div class="body-scroll" style="top: 150px;">-->
+  <h1>instance_find</h1>
+  <p>Toutes les instances ont un identifiant unique (<a href="Instance_Variables/id.htm"><tt>id</tt></a>) qui peut être utilisé pour les modifier et les manipuler pendant le déroulement d'un jeu, mais vous ne savez pas toujours quel est l'identifiant d'une instance spécifique et cette fonction
+    peut vous aider car vous pouvez l'utiliser pour parcourir toutes les instances afin de trouver ce dont vous avez besoin. Vous spécifiez l'objet dont vous voulez trouver l'instance et un nombre, et s'il y a une instance à cette position dans la liste d'instances, la fonction retourne
+    l'id de cette instance, sinon elle renvoie le <a href="../../../GML_Overview/Instance_Keywords.htm">mot-clé</a> spécial <span class="inline"><b>noone</b></span>. Vous pouvez également utiliser le mot-clé <span class="inline"><b>all</b></span> pour itérer à travers
+    toutes les instances d'un room, ainsi qu'un objet parent pour itérer parmi toutes les instances qui font partie de cette hiérarchie parent/enfant, et vous pouvez même spécifier une instance (si vous avez son <span class="inline">id</span>) pour vérifier si elle existe réellement dans le room actuel.
+    elle existe réellement dans la pièce actuelle. Veuillez noter qu'étant donné que les instances sont triées de manière <i>arbitraire</i>, il n'y a pas d'ordre spécifique à la manière dont les instances sont vérifiées par cette fonction, et toute instance peut se trouver dans n'importe quelle position.</p>
+  <p>La valeur maximale de &quot;n&quot; dans cette fonction serait de</p>
+  <ul class="colour">
+    <li>Pour le mot clé <span class="inline"><b>all</b></span>: <a href="instance_count.htm"><tt>nombre d'instances - 1</tt></a></li>
+    <li>Pour un indice d'objet : <a href="instance_number.htm"><tt>numéro_instance(OBJ) - 1</tt></a></li>
+  </ul>
+  <p> </p>
+  <h4><b>Syntaxe :</b></h4>
+  <p class="code">instance_find(obj, n) ;</p>
+  <table>
+    <tbody>
+      <tr>
+        <th>Arguments</th>
+        <th>Description</th>
+      </tr>
+      <tr>
+        <td>obj.</td>
+        <td>L'objet pour trouver la nième instance de</td>
+      </tr>
+      <tr>
+        <td>n</td>
+        <td>Le numéro de l'instance à trouver.</td>
+      </tr>
+    </tbody>
+  </table>
+  <p> </p>
+  <h4>Les retours :</h4>
+  <p class="code">Real (soit une valeur d'ID d'instance, soit le mot clé <tt>noone</tt>)</p>
+  <p> </p>
+  <h4>Exemple :</h4>
+  <p class="code">for (var i = 0 ; i &lt; instance_number(obj_Enemy) ; ++i ;) <br> {
+    <br> enemy[i] = instance_find(obj_Enemy,i) ;<br> }
+  </p>
+  <p>Le code ci-dessus utilisera une boucle <tt>for</tt> pour itérer à travers toutes les instances de &quot;obj_Enemy&quot; et stockera leur id dans le tableau &quot;enemy[]&quot;.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <div class="footer">
+    <div class="buttons">
+      <div class="clear">
+        <div style="float:left">Retour : <a href="Instances.htm">Instances</a></div>
+        <div style="float:right">Suivant : <a href="instance_furthest.htm">instance_furthest</a></div>
+      </div>
+    </div>
+    <h5><span data-keyref="Copyright Notice">Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
   </div>
   <!-- KEYWORDS
 instance_find

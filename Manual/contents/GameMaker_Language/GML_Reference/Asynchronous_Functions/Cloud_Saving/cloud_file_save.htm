@@ -3,18 +3,61 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>cloud_file_save</title>
+  <title>Sauvegarde du fichier dans le nuage</title>
   <meta name="generator" content="Adobe RoboHelp 2019" />
   <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
   <meta name="rh-authors" content="Mark Alexander" />
-  <meta name="topic-comment" content="Page de référence pour cloud_file_save" />
+  <meta name="topic-comment" content="Reference page for cloud_file_save" />
   <meta name="rh-index-keywords" content="cloud_file_save" />
   <meta name="search-keywords" content="cloud_file_save" />
 </head>
-<body><!--<div class="body-scroll" style="top: 150px;">--><h1>cloud_file_save</h1><p> Cette fonction engagera un fichier dans le service cloud choisi pour le stockage. La fonction renverra une <b>valeur d&#39;identifiant</b> unique qui doit ensuite être utilisée dans l&#39;événement asynchrone approprié pour identifier la mappe DS qui est renvoyée en tant que «rappel» du service cloud. Le fichier doit contenir <i>toutes</i> les informations dont vous avez besoin pour votre jeu, car vous ne pouvez stocker qu&#39;un seul &quot;objet blob de données&quot; dans le cloud, et la réexécution de cette fonction écrasera toutes les valeurs précédemment stockées (comme le fera l&#39;utilisation du <a href="cloud_string_save.htm"><tt>cloud_string_save()</tt></a> fonction). La description doit être une courte chaîne d&#39;informations décrivant la sauvegarde, par exemple: &quot;Niveau2, Étape2&quot;.</p><p> Pour plus d&#39;informations sur les données asynchrones renvoyées, veuillez consulter la fonction <a href="cloud_synchronise.htm"><tt>cloud_synchronise()</tt></a>.</p><p></p><h4> Syntaxe:</h4><p class="code">cloud_file_save(file, description);</p><table><tbody><tr><th> Argument</th><th> Description</th></tr><tr><td> <span class="notranslate">string</span></td><td> Le fichier à télécharger (sous forme de chaîne).</td></tr><tr><td> <span class="notranslate">description</span></td><td> Une brève description des données stockées.</td></tr></tbody></table><p></p><h4> Retour:</h4><p class="code">Real</p><p></p><h4> Exemple:</h4><p class="code">var t_str = &quot;&quot;;<br/> for (var i = 0; i &lt; 10; i++;)<br/>     {
-    <br/>     t_str += string(global.Highscore[i]) + &quot;|&quot;<br/>     }
-    <br/> var file = file_text_open_write(&quot;Highscores.txt&quot;);<br/> file_text_write_string(file, t_str);<br/> file_text_close(file);
-    <br/> save_check = cloud_file_save(&quot;Highscores.txt&quot;, &quot;Current Highscores&quot;);</p><p> Le code ci-dessus crée une chaîne à partir des valeurs stockées dans le tableau global «Highscores», puis écrit cette chaîne dans un fichier pour le stockage local. Le fichier est ensuite envoyé au service cloud pour stockage. </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> Retour: <a href="Cloud_Saving.htm">Cloud Saving</a></div><div style="float:right"> Suivant:<a href="cloud_synchronise.htm">cloud_synchronise</a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
+<body>
+  <!--<div class="body-scroll" style="top: 150px;">-->
+  <h1>Sauvegarde du fichier dans le nuage</h1>
+  <p>Cette fonction va livrer un fichier au service en nuage choisi pour le stockage. La fonction renvoie une valeur d'<b>identification</b> unique qui doit ensuite être utilisée dans l'événement asynchrone approprié pour identifier la carte DS qui est renvoyée en tant que &quot;call back&quot;.
+    du service en nuage. Le fichier doit contenir <i>toutes les</i> informations que vous devez sauvegarder pour votre jeu, car vous ne pouvez stocker qu'un seul &quot;blob de données&quot; dans le nuage.
+    (tout comme l'utilisation de la fonction <a href="cloud_string_save.htm"><tt>cloud_string_save()</tt></a> ). La description doit être une courte chaîne d'informations décrivant la sauvegarde, par exemple : &quot;Level2, Stage2&quot;.</p>
+  <p>Pour plus d'informations sur les données asynchrones renvoyées, veuillez consulter la fonction <a href="cloud_synchronise.htm"><tt>cloud_synchronise()</tt></a>.</p>
+  <p> </p>
+  <h4>Syntaxe :</h4>
+  <p class="code">cloud_file_save(fichier, description) ;</p>
+  <table>
+    <tbody>
+      <tr>
+        <th>Arguments</th>
+        <th>Description</th>
+      </tr>
+      <tr>
+        <td>chaîne de caractères</td>
+        <td>Le fichier à télécharger (sous forme de chaîne).</td>
+      </tr>
+      <tr>
+        <td>description</td>
+        <td>Une brève description des données stockées.</td>
+      </tr>
+    </tbody>
+  </table>
+  <p> </p>
+  <h4>Les retours :</h4>
+  <p class="code">Real</p>
+  <p> </p>
+  <h4>Exemple :</h4>
+  <p class="code">var t_str = &quot;&quot; ;<br> for (var i = 0 ; i &lt; 10 ; i++ ;)<br> {
+    <br> t_str += string(global.Highscore[i]) + &quot;|&quot;<br> } }
+    <br> var file = file_text_open_write(&quot;Highscores.txt&quot;) ;<br> file_text_write_string(file, t_str) ;<br> file_text_close(file) ;
+    <br> save_check = cloud_file_save(&quot;Highscores.txt&quot;, &quot;Current Highscores&quot;) ;</p>
+  <p>Le code ci-dessus crée une chaîne à partir des valeurs stockées dans le tableau global &quot;Highscores&quot;, puis écrit cette chaîne dans un fichier pour le stockage local. Le fichier est ensuite envoyé au service en nuage pour le stockage.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <div class="footer">
+    <div class="buttons">
+      <div class="clear">
+        <div style="float:left">Retour : <a href="Cloud_Saving.htm">Sauvegarde des nuages</a></div>
+        <div style="float:right">Suivant : <a href="cloud_synchronise.htm">cloud_synchronise</a></div>
+      </div>
+    </div>
+    <h5><span data-keyref="Copyright Notice">Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
   </div>
   <!-- KEYWORDS
 cloud_file_save

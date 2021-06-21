@@ -7,17 +7,61 @@
   <meta name="generator" content="Adobe RoboHelp 2019" />
   <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
   <meta name="rh-authors" content="Mark Alexander" />
-  <meta name="topic-comment" content="Page de référence pour xboxlive_pad_for_user" />
+  <meta name="topic-comment" content="Reference page for xboxlive_pad_for_user" />
   <meta name="rh-index-keywords" content="xboxlive_pad_for_user" />
   <meta name="search-keywords" content="xboxlive_pad_for_user" />
 </head>
-<body><!--<div class="body-scroll" style="top: 150px;">--><h1>xboxlive_pad_for_user</h1><p> Les utilisateurs de Xbox peuvent avoir différents pads assignés à leur ID utilisateur, chacun remplissant un «emplacement». Ces slots sont numérotés à partir de 0, et peuvent contenir n&#39;importe quel index de pad, donc le slot 0 pourrait être assigné au pad 3 et le slot 1 pourrait être assigné au pad 2. Cette fonction peut être utilisée pour obtenir le pad qui est assigné à un slot donné, et est particulièrement utile si un utilisateur laisse une manette de jeu sans entrée pendant un certain temps car elle s&#39;éteindra, vous pouvez donc vérifier n&#39;importe quel ID utilisateur donné en utilisant cette fonction pour vous assurer qu&#39;il a une manette de jeu active, et si c&#39;est le cas ne réagissez pas en conséquence (par exemple) en mettant votre jeu en pause. Si le pad est actif, sa valeur d&#39;index sera renvoyée, mais sinon, la fonction renverra -1.</p><p> Notez que si un pad dans un slot devient inactif, les slots ultérieurs &quot;glisseront&quot; dans la position vacante, donc si vous avez trois pads actifs affectés aux slots 0, 1 et 2, et le pad dans le slot 0 est inactif, les slots 1 et to deviendra désormais les slots 0 et 1, donc le slot 0 doit toujours contenir un pad actif à moins que tous les pads ne soient désactivés (auquel cas il renverra -1).</p><p></p><h4> Syntaxe:</h4><p class="code">xboxlive_pad_for_user(user_id, slot);</p><table><tbody><tr><th> Argument</th><th> Description</th></tr><tr><td> <span class="notranslate">user_id</span></td><td> L&#39;ID utilisateur (un pointeur) à vérifier</td></tr><tr><td> <span class="notranslate">user_id</span></td><td> L&#39;index (un entier) de l&#39;emplacement de la manette de jeu à vérifier</td></tr></tbody></table><p></p><h4> Retour:</h4><p class="code">Pointer</p><p></p><h4> Exemple:</h4><p class="code">if (xboxlive_pad_for_user(user_id, 0) == -1)<br/>     {
-    <br/>     for(var i = 0; i &lt; gamepad_get_device_count(); i++;)<br/>         {
-    <br/>         var u_id = xboxlive_user_for_pad(i);<br/>         if (u_id == -1)<br/>             {
-    <br/>             async_ID = xboxlive_pad_for_user(i, u_id);<br/>             }
-    <br/>         }
-    <br/>     }
-  </p><p> Le code ci-dessus vérifie l&#39;emplacement 0 pour le pointeur d&#39;ID utilisateur donné pour voir si des manettes de jeu ont été attribuées, et si ce n&#39;est pas le cas, une est attribuée. </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> Retour: <a href="Users_And_Accounts.htm">Utilisateurs et comptes</a></div><div style="float:right"> Suivant:<a href="xboxlive_pad_count_for_user.htm">xboxlive_pad_count_for_user</a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
+<body>
+  <!--<div class="body-scroll" style="top: 150px;">-->
+  <h1>xboxlive_pad_for_user</h1>
+  <p>Les utilisateurs de la Xbox peuvent avoir plusieurs pads assignés à leur ID utilisateur, chacun remplissant un &quot;slot&quot;. Ces emplacements sont numérotés à partir de 0 et peuvent contenir n'importe quel indice de pad. Ainsi, l'emplacement 0 peut être attribué au pad 3 et l'emplacement 1 au pad 2. Cette fonction
+    peut être utilisée pour obtenir le pad qui est assigné à un slot donné, et est particulièrement utile si un utilisateur laisse une manette de jeu sans entrée pendant un certain temps, car elle s'éteindra d'elle-même, vous pouvez donc vérifier n'importe quel ID utilisateur donné en utilisant cette fonction
+    pour vous assurer qu'il dispose d'une manette de jeu active et, si ce n'est pas le cas, réagir en conséquence (par exemple, en mettant votre jeu en pause). Si le pad est actif, la valeur de son index sera renvoyée, mais si ce n'est pas le cas, la fonction renverra -1.</p>
+  <p>Notez que si un pad dans un slot devient inactif, les slots suivants vont &quot;glisser&quot; dans la position vacante, donc si vous avez trois pads actifs assignés aux slots 0, 1 et 2, et que le pad dans le slot 0 est inactif, les slots 1 et 2 deviendront maintenant les slots 0 et 1.
+    1, donc l'emplacement 0 devrait toujours contenir un pad actif, sauf si tous les pads sont désactivés (auquel cas il renvoie -1).</p>
+  <p> </p>
+  <h4>Syntaxe :</h4>
+  <p class="code">xboxlive_pad_for_user(user_id, slot) ;</p>
+  <table>
+    <tbody>
+      <tr>
+        <th>Arguments</th>
+        <th>Description</th>
+      </tr>
+      <tr>
+        <td>nom d'utilisateur</td>
+        <td>L'ID utilisateur (un pointeur) à vérifier</td>
+      </tr>
+      <tr>
+        <td>nom d'utilisateur</td>
+        <td>L'index (un nombre entier) de l'emplacement de la manette de jeu à vérifier.</td>
+      </tr>
+    </tbody>
+  </table>
+  <p> </p>
+  <h4>Les retours :</h4>
+  <p class="code">Pointeur</p>
+  <p> </p>
+  <h4>Exemple :</h4>
+  <p class="code">if (xboxlive_pad_for_user(user_id, 0) == -1)<br> {
+    <br> for(var i = 0 ; i &lt; gamepad_get_device_count() ; i++ ;) <br> {
+    <br> var u_id = xboxlive_user_for_pad(i) ;<br> if (u_id == -1)<br> {
+    <br> async_ID = xboxlive_pad_for_user(i, u_id) ;<br> }
+    <br> }
+    <br> }
+  </p>
+  <p>Le code ci-dessus vérifie l'emplacement 0 pour le pointeur d'ID utilisateur donné pour voir si des manettes de jeu ont été attribuées, et si ce n'est pas le cas, une manette est attribuée.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <div class="footer">
+    <div class="buttons">
+      <div class="clear">
+        <div style="float:left">Retour : <a href="Users_And_Accounts.htm">Utilisateurs et comptes</a></div>
+        <div style="float:right">Suivant : <a href="xboxlive_pad_count_for_user.htm">xboxlive_pad_count_for_user</a></div>
+      </div>
+    </div>
+    <h5><span data-keyref="Copyright Notice">Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
   </div>
   <!-- KEYWORDS
 xboxlive_pad_for_user

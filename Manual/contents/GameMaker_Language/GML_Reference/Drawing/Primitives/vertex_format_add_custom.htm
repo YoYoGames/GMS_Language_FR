@@ -2,21 +2,164 @@
 
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml"><head>
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-  <title>vertex_format_add_custom</title>
-  <meta name="generator" content="Adobe RoboHelp 2019"/>
-  <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css"/>
-  <meta name="rh-authors" content="Mark Alexander"/>
-  <meta name="topic-comment" content="Référence pour vertex_format_add_custom"/>
-  <meta name="rh-index-keywords" content="vertex_format_add_custom,vertex_type_float1,vertex_type_float2,vertex_type_float3,vertex_type_float4,vertex_type_colour,vertex_type_ubyte4,vertex_usage_position,vertex_usage_colour,vertex_usage_normal,vertex_usage_textcoord,vertex_usage_blendweight,vertex_usage_blendindices,vertex_usage_depth,vertex_usage_tangent,vertex_usage_binormal,vertex_usage_fog,vertex_usage_sample"/>
-  <meta name="search-keywords" content="vertex_format_add_custom,vertex_type_float1,vertex_type_float2,vertex_type_float3,vertex_type_float4,vertex_type_colour,vertex_type_ubyte4,vertex_usage_position,vertex_usage_colour,vertex_usage_normal,vertex_usage_textcoord,vertex_usage_blendweight,vertex_usage_blendindices,vertex_usage_depth,vertex_usage_tangent,vertex_usage_binormal,vertex_usage_fog,vertex_usage_sample"/>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>format de vertex_add_custom</title>
+  <meta name="generator" content="Adobe RoboHelp 2019" />
+  <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
+  <meta name="rh-authors" content="Mark Alexander" />
+  <meta name="topic-comment" content="Reference for vertex_format_add_custom" />
+  <meta name="rh-index-keywords" content="vertex_format_add_custom,vertex_type_float1,vertex_type_float2,vertex_type_float3,vertex_type_float4,vertex_type_colour,vertex_type_ubyte4,vertex_usage_position,vertex_usage_colour,vertex_usage_normal,vertex_usage_textcoord,vertex_usage_blendweight,vertex_usage_blendindices,vertex_usage_depth,vertex_usage_tangent,vertex_usage_binormal,vertex_usage_fog,vertex_usage_sample" />
+  <meta name="search-keywords" content="vertex_format_add_custom,vertex_type_float1,vertex_type_float2,vertex_type_float3,vertex_type_float4,vertex_type_colour,vertex_type_ubyte4,vertex_usage_position,vertex_usage_colour,vertex_usage_normal,vertex_usage_textcoord,vertex_usage_blendweight,vertex_usage_blendindices,vertex_usage_depth,vertex_usage_tangent,vertex_usage_binormal,vertex_usage_fog,vertex_usage_sample" />
 </head>
-<body><!--<div class="body-scroll" style="top: 150px;">--><h1>vertex_format_add_custom</h1><p> Cette fonction vous permet d&#39;utiliser un type de données personnalisé pour des attributs de format de sommet spécifiques dans le cadre du nouveau format de sommet en cours de création. Les valeurs disponibles à utiliser sont définies par la constante de type de données que vous choisissez, répertoriée ci-dessous:</p><p></p><table><tbody><tr><th> Constant</th><th> Description</th></tr><tr><td> <span class="notranslate">vertex_type_float1</span></td><td> Une seule valeur à virgule flottante</td></tr><tr><td> <span class="notranslate">vertex_type_float2</span></td><td> Deux valeurs à virgule flottante</td></tr><tr><td> <span class="notranslate">vertex_type_float3</span></td><td> Trois valeurs à virgule flottante</td></tr><tr><td> <span class="notranslate">vertex_type_float4</span></td><td> Quatre valeurs à virgule flottante</td></tr><tr><td> <span class="notranslate">vertex_type_colour</span></td><td> Quatre valeurs de composant (r, g, b, a)</td></tr><tr><td> <span class="notranslate">vertex_type_ubyte4</span></td><td> Quatre valeurs d&#39;octet non signées (de 0 à 255)</td></tr></tbody></table><p><br/> L&#39;utilisation de ces constantes doit également être définie afin que les valeurs puissent être &quot;liées&quot; correctement dans le <span class="notranslate">shader</span> cours de création. Cela est nécessaire car DX et OpenGL ont des exigences différentes, donc si vous ne les liez pas correctement, ils ne passeront pas directement dans le <span class="notranslate">shader</span>. Les constantes d&#39;utilisation disponibles que vous pouvez choisir sont répertoriées ci-dessous et celles que vous utilisez dépendront des spécificités du <span class="notranslate">shader</span> cours de création:</p><p></p><table><tbody><tr><th> Constant</th><th> Description</th></tr><tr><td> <span class="notranslate">vertex_usage_position</span></td><td> valeurs de position (x, y, z)</td></tr><tr><td> <span class="notranslate">vertex_usage_colour</span></td><td> valeurs de couleur (r, g, b, a)</td></tr><tr><td> <span class="notranslate">vertex_usage_normal</span></td><td> valeurs normales de sommet (nx, ny, nz)</td></tr><tr><td> <span class="notranslate">vertex_usage_textcoord</span></td><td> Coordonnées UV (u, v)</td></tr><tr><td> <span class="notranslate">vertex_usage_blendweight</span></td><td> le poids de fusion de la matrice d&#39;entrée (pour une animation squelettique, par exemple)</td></tr><tr><td> <span class="notranslate">vertex_usage_blendindices</span></td><td> les indices des matrices à utiliser (pour l&#39;animation squelettique par exemple)</td></tr><tr><td> <span class="notranslate">vertex_usage_depth</span></td><td> valeur du tampon de profondeur de sommet</td></tr><tr><td> <span class="notranslate">vertex_usage_tangent</span></td><td> valeurs tangentes</td></tr><tr><td> <span class="notranslate">vertex_usage_binormal</span></td><td> valeurs binormales</td></tr><tr><td> <span class="notranslate">vertex_usage_fog</span></td><td> valeurs de brouillard</td></tr><tr><td> <span class="notranslate">vertex_usage_sample</span></td><td> index d&#39;échantillonneur</td></tr></tbody></table><p><br/> Il y a quelques points importants à noter lors de l&#39;utilisation de formats personnalisés comme ceux-ci:</p><ul class="colour"><li> Le <tt>vertex_format_add_custom()</tt> la fonction ne prend en charge que <tt>vertex_usage_position</tt>, <tt>vertex_usage_colour</tt>, <tt>vertex_usage_normal</tt> et <tt>vertex_usage_textcoord</tt> lors de l&#39;utilisation de <span class="notranslate">shaders</span> GLSL. Ceux-ci correspondront aux attributs <span class="notranslate">shader </span><tt>in_Position</tt>, <tt>in_Colour[0 - ...]</tt>, <tt>in_Normal</tt> respectivement (tout ce qui n&#39;est pas l&#39;un de ces trois attributs - par exemple: les coordonnées de texture - peut être mappé à n&#39;importe quel attribut que vous définissez).</li><li> En général, vous devez utiliser <tt>vertex_usage_textcoord</tt> pour tous les paramètres supplémentaires lorsque cela est possible, comme des types comme <tt>vertex_usage_blendweight</tt> et <tt>vertex_usage_tangent</tt> sont presque obsolètes dans la plupart des <span class="notranslate">shader</span> et ne seront probablement pas convertis correctement. Utilisez plutôt <tt>vec</tt>, <tt>vec2</tt>, <tt>vec3</tt> ou <tt>vec4</tt> les types <tt>vertex_usage_textcoord</tt> et tout devrait bien fonctionner.</li><li> GLSL ES ne prend <i>pas en</i> charge les attributs entiers, donc en passant <tt>ivec4</tt> ne fonctionne pas (ce type est généralement utilisé lors de la transmission <tt>vertex_usage_blendindices</tt> ). Ce que vous devez faire est de transmettre les coordonnées de la texture, puis dans le <span class="notranslate">shader</span>, de les convertir en <tt>ivec4</tt> comme ça:</li></ul><p></p><p class="code">attribute vec3 in_Position;<br/> attribute vec4 in_BlendIndices;<br/> attribute vec4 in_BlendWeights;<br/>
-    <br/> varying vec4 v_vColour;<br/> varying mat4 v_mat;<br/>
-    <br/> void main()<br/> {
-    <br/>     gl_Position = gm_Matrices[MATRIX_WORLD_VIEW_PROJECTION] * vec4( in_Position.xyz, 1.0);<br/>     v_vColour = in_BlendWeights;<br/>      ivec4 t = ivec4(in_BlendIndices);<br/>      v_mat = gm_Matrices[ t.x ];<br/> }
-  </p><ul class="colour"><li> Les poids de mélange sont généralement stockés dans un tableau, puis accédés à l&#39;aide d&#39;indices de fusion, mais vous pouvez voir ici qu&#39;au lieu de définir <tt>in_BlendIndices</tt> comme un <tt>ivec4</tt> attribut, c&#39;est un <tt>vec4</tt>, puis cast en un <tt>ivec4</tt> dans le code. Ceci est ensuite utilisé pour indexer le tableau créé à l&#39;aide du <tt>gm_Matrix</tt> (vous ne pouvez accéder à un tableau qu&#39;en utilisant un <tt>INT</tt> value - pas un flottant).</li><br/></ul><h4> Syntaxe:</h4><p class="code">vertex_format_add_custom(type, usage);</p><table><tbody><tr><th> Argument</th><th> Description</th></tr><tr><td> <span class="notranslate">type</span></td><td> Le type de données que ces données de sommet personnalisées contiendront (voir les <b><i>constantes de type</i></b> répertoriées ci-dessous).</td></tr><tr><td> <span class="notranslate">usage</span></td><td> L&#39;utilisation que les données vont obtenir (voir les <b><i>constantes d&#39;utilisation</i></b> répertoriées ci-dessous).</td></tr></tbody></table><p></p><h4> Retour:</h4><p class="code">N/A</p><p></p><h4> Exemple:</h4><p class="code">vertex_format_begin();<br/> vertex_format_add_textcoord();
-    <br/> vertex_format_add_custom(vertex_type_float3, vertex_usage_position);<br/> my_format = vertex_format_end();</p><p> Le code ci-dessus créera un nouveau format de sommet avec juste une texture et 3 valeurs de virgule flottante personnalisées pour la position. Il stocke alors l&#39;identifiant du format dans la variable &quot;mon_format&quot;. </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> Retour: <a href="Primitives_And_Vertex_Formats.htm">Primitives et formats de sommets</a></div><div style="float:right"> Suivant:<a href="vertex_format_end.htm">vertex_format_end</a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
+<body>
+  <!--<div class="body-scroll" style="top: 150px;">-->
+  <h1>format de vertex_add_custom</h1>
+  <p>Cette fonction vous permet d'utiliser un type de données personnalisé pour des attributs spécifiques du format des sommets dans le cadre de la création du nouveau format des sommets. Les valeurs disponibles à utiliser sont définies par la constante de type de données que vous choisissez, listée ci-dessous :</p>
+  <p> </p>
+  <table>
+    <tbody>
+      <tr>
+        <th>Constant</th>
+        <th>Description</th>
+      </tr>
+      <tr>
+        <td>vertex_type_float1</td>
+        <td>Une seule valeur à virgule flottante</td>
+      </tr>
+      <tr>
+        <td>type de sommet_float2</td>
+        <td>Deux valeurs à virgule flottante</td>
+      </tr>
+      <tr>
+        <td>vertex_type_float3</td>
+        <td>Trois valeurs à virgule flottante</td>
+      </tr>
+      <tr>
+        <td>vertex_type_float4</td>
+        <td>Quatre valeurs à virgule flottante</td>
+      </tr>
+      <tr>
+        <td>type_de_verre_couleur</td>
+        <td>Valeurs de quatre composants (r, g, b, a)</td>
+      </tr>
+      <tr>
+        <td>type de sommet_ubyte4</td>
+        <td>Valeurs d'octets non signées à quatre composantes (de 0 à 255)</td>
+      </tr>
+    </tbody>
+  </table>
+  <p><br> L'utilisation qui sera faite de ces constantes doit également être définie afin que les valeurs puissent être &quot;liées&quot; correctement dans le shader <span class="notranslate">en cours de</span> création. Ceci est nécessaire du fait que DX et OpenGL ont des exigences différentes.
+    donc si vous ne les liez pas correctement, elles n'apparaîtront pas correctement dans le shader. Les constantes d'utilisation disponibles que vous pouvez choisir sont listées ci-dessous et celles que vous utiliserez dépendront des spécificités du <span class="notranslate">shader</span> en cours de création :</p>
+  <p> </p>
+  <table>
+    <tbody>
+      <tr>
+        <th>Constant</th>
+        <th>Description</th>
+      </tr>
+      <tr>
+        <td>Position de l'utilisation des sommets</td>
+        <td>valeurs de position (x, y, z)</td>
+      </tr>
+      <tr>
+        <td>couleur d'utilisation des vertex</td>
+        <td>valeurs des couleurs (r, g, b, a)</td>
+      </tr>
+      <tr>
+        <td>vertex_usage_normal</td>
+        <td>valeurs normales des sommets (nx, ny, nz)</td>
+      </tr>
+      <tr>
+        <td>vertex_usage_textcoord</td>
+        <td>Coordonnées UV (u, v)</td>
+      </tr>
+      <tr>
+        <td>poids de mélange des sommets</td>
+        <td>le blendweight de la matrice d'entrée (pour l'animation du squelette, par exemple)</td>
+      </tr>
+      <tr>
+        <td>Indices de mélange des vertex utilisés</td>
+        <td>les indices des matrices à utiliser (pour l'animation du squelette, par exemple)</td>
+      </tr>
+      <tr>
+        <td>profondeur d'utilisation des sommets</td>
+        <td>valeur du tampon de profondeur des sommets</td>
+      </tr>
+      <tr>
+        <td>utilisation_du_verre_tangente</td>
+        <td>valeurs tangentes</td>
+      </tr>
+      <tr>
+        <td>vertex_usage_binormal</td>
+        <td>valeurs binormales</td>
+      </tr>
+      <tr>
+        <td>brouillard d'utilisation des vertex</td>
+        <td>valeurs de brouillard</td>
+      </tr>
+      <tr>
+        <td>Exemple d'utilisation des sommets</td>
+        <td>index des échantillonneurs</td>
+      </tr>
+    </tbody>
+  </table>
+  <p><br> Il y a quelques points importants à noter lorsque vous utilisez des formats personnalisés comme ceux-ci :</p>
+  <ul class="colour">
+    <li>La fonction <tt>vertex_format_add_custom()</tt> ne prend en charge les attributs <tt>vertex_usage_position</tt>, <tt>vertex_usage_colour</tt>, <tt>vertex_usage_normal</tt> et <tt>vertex_usage_textcoord</tt> que lorsqu'elle utilise des <span class="notranslate">shaders</span> GLSL. Ces attributs correspondent aux attributs du <span class="notranslate">shader</span> 
+     <tt>in_Position</tt>, <tt>in_Colour[0 - ...]</tt>, <tt>in_Normal</tt> respectivement (tout ce qui n'est pas l'un de ces trois attributs - par exemple les coordonnées de texture - peut être mappé sur n'importe quel attribut que vous définissez).</li>
+    <li>En général, vous devriez utiliser <tt>vertex_usage_textcoord</tt> pour tous les paramètres supplémentaires lorsque cela est possible, car des types comme <tt>vertex_usage_blendweight</tt> et <tt>vertex_usage_tangent</tt> sont presque dépréciés dans la plupart des langages de <span class="notranslate">shader</span>, et ne seront probablement pas convertis correctement.
+      convertir correctement. Utilisez plutôt les types <tt>vec</tt>, <tt>vec2</tt>, <tt>vec3</tt> ou <tt>vec4</tt> <tt>vertex_usage_textcoord</tt> et tout devrait fonctionner correctement.</li>
+    <li>GLSL ES <i>ne</i> prend <i>pas</i> en charge les attributs entiers, donc passer des <tt>ivec4</tt> ne fonctionne pas (ce type est généralement utilisé pour passer des <tt>vertex_usage_blendindices).</tt> Ce que vous devez faire, c'est passer des coordonnées de texture et ensuite, dans le shader
+     <span class="notranslate">shader</span>, les convertir en <tt>ivec4</tt> comme ceci :</li>
+  </ul>
+  <p> </p>
+  <p class="code">attribut vec3 in_Position ;<br> attribut vec4 in_BlendIndices ;<br> attribut vec4 in_BlendWeights ;<br>
+    <br> variable vec4 v_vColour ;<br> variable mat4 v_mat ;<br>
+    <br> void main()<br> {
+    <br> gl_Position = gm_Matrices[MATRIX_WORLD_VIEW_PROJECTION] * vec4( in_Position.xyz, 1.0) ;<br> v_vColour = in_BlendWeights ;<br> ivec4 t = ivec4(in_BlendIndices) ;<br> v_mat = gm_Matrices[ t.x ] ;<br> }
+  </p>
+  <ul class="colour">
+    <li>Les poids des mélanges sont généralement stockés dans un tableau et on y accède en utilisant les indices de mélange, mais vous pouvez voir ici qu'au lieu de définir <tt>in_BlendIndices</tt> comme un attribut <tt>ivec4</tt>, c'est un vec4 <tt>,</tt> qui est ensuite converti en ivec4 <tt>dans le</tt> code.
+      dans le code. Il est ensuite utilisé pour indexer le tableau créé à l'aide de <tt>gm_Matrix</tt> (vous ne pouvez accéder à un tableau qu'à l'aide d'une valeur <tt>INT</tt>, et non d'un flottant).</li>
+    <br />
+  </ul>
+  <h4>Syntaxe :</h4>
+  <p class="code">vertex_format_add_custom(type, usage) ;</p>
+  <table>
+    <tbody>
+      <tr>
+        <th>Arguments</th>
+        <th>Description</th>
+      </tr>
+      <tr>
+        <td>type</td>
+        <td>Le type de données que ces données de sommet personnalisées vont contenir (voir la <b><i>constantes de type</i></b> énumérés ci-dessous).</td>
+      </tr>
+      <tr>
+        <td>utilisation</td>
+        <td>L'utilisation que l'on fera des données (voir les <b><i>constantes d'utilisation</i></b> liste ci-dessous).</td>
+      </tr>
+    </tbody>
+  </table>
+  <p> </p>
+  <h4>Les retours :</h4>
+  <p class="code">N/A</p>
+  <p> </p>
+  <h4>Exemple :</h4>
+  <p class="code">vertex_format_begin() ;<br> vertex_format_add_textcoord() ;
+    <br> vertex_format_add_custom(vertex_type_float3, vertex_usage_position) ;<br> my_format = vertex_format_end() ;</p>
+  <p>Le code ci-dessus va créer un nouveau format de vertex avec seulement la texture et 3 valeurs personnalisées à virgule flottante pour la position. Il stocke ensuite l'identifiant du format dans la variable &quot;my_format&quot;.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <div class="footer">
+    <div class="buttons">
+      <div class="clear">
+        <div style="float:left">Retour : <a href="Primitives_And_Vertex_Formats.htm">Primitives et formats de sommets</a></div>
+        <div style="float:right">Suivant : <a href="vertex_format_end.htm">vertex_format_end</a></div>
+      </div>
+    </div>
+    <h5><span data-keyref="Copyright Notice">Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
   </div>
   <!-- KEYWORDS
 vertex_format_add_custom

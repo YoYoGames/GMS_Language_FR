@@ -7,24 +7,54 @@
   <meta name="generator" content="Adobe RoboHelp 2019" />
   <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
   <meta name="rh-authors" content="Mark Alexander" />
-  <meta name="topic-comment" content="Page expliquant la variable d&#39;argument" />
+  <meta name="topic-comment" content="Page explaining the argument variable" />
   <meta name="rh-index-keywords" content="argument[n],argument0 - argument15" />
   <meta name="search-keywords" content="argument" />
 </head>
-<body><!--<div class="body-scroll" style="top: 150px;">--><h1>argument</h1><p> Cette variable contient un <a href="../../Arrays.htm">tableau</a> qui est utilisé avec la variable en lecture seule<a href="argument_count.htm">argument_count</a> dans les <a href="../../Script_Functions.htm">fonctions</a> ou <a href="../../Method_Variables.htm">méthodes de</a> script. Chaque position de tableau contient une valeur d&#39;entrée pour la fonction et est spécifiquement destinée à être utilisée avec <em>des</em> fonctions d&#39;argument variable.</p><p> Notez qu&#39;il existe également une série de variables de portée globale indépendantes qui peuvent également être utilisées dans des fonctions définies par l&#39;utilisateur pour référencer les différents arguments d&#39;entrée: <span class="inline">argument0</span>, <span class="inline">argument1</span>, <span class="inline">argument2</span>, etc... jusqu&#39;à <span><span class="inline">argument15</span>.</span></p><p class="note"> <strong>REMARQUE</strong>: Cela n&#39;est plus strictement nécessaire et est fourni pour le support hérité plus que toute autre chose. Toutes les fonctions définies par l&#39;utilisateur accepteront des arguments variables, et tout argument passé dans une fonction qui ne fait pas partie des entrées nommées sera initialisé à <span class="inline" style="font-size: 14px">undefined</span> par défaut, ce qui peut être vérifié à l&#39;aide de la fonction <a href="../../../GML_Reference/Variable_Functions/is_undefined.htm">is_undefined ()</a>.</p><p></p><h4> Syntaxe:</h4><p class="code">argument[<em>n</em>]<br/> argument1
-    <br/> argument2
-    <br/> ...
-    <br/> argument15
-  </p><p></p><h4> Retour:</h4><p class="code">Value (can be of any <a href="../../Data_Types.htm">data type</a> supplied to the function)</p><p></p><h4> Exemple:</h4><p class="code">function my_array()<br/> {
-    <br/> var i, arg;<br/> for (i = 0; i &lt; 5; i += 1;)<br/>    {
-    <br/>    if argument_count &gt; i<br/>       {
-    <br/>       arg[i] = argument[i]<br/>       }
-    <br/>    else
-    <br/>       {
-    <br/>       arg[i] = -1;<br/>       }
-    <br/>    }
-    <br/> }
-  </p><p> Le code ci-dessus utilise le <tt>argument_count</tt> variable avec le <span class="inline">argument</span> array pour initialiser des variables, et est un exemple de la façon d&#39;autoriser une fonction définie par l&#39;utilisateur à accepter un nombre variable d&#39;arguments. </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> Retour: <a href="../Global_Variables.htm">Variables globales</a></div><div style="float:right"> Suivant:<a href="argument_count.htm">argument_count</a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
+<body>
+  <!--<div class="body-scroll" style="top: 150px;">-->
+  <h1>argument</h1>
+  <p>Cette variable contient un <a href="../../Arrays.htm">tableau</a> qui est utilisé avec la variable en lecture seule <a href="argument_count.htm">argument_count</a> dans les <a href="../../Script_Functions.htm">fonctions</a> ou <a href="../../Method_Variables.htm">méthodes</a> de <a href="../../Script_Functions.htm">script.</a> 
+    Chaque position du tableau contient une valeur d'entrée pour la fonction et est spécifiquement utilisée pour les fonctions à arguments <em>variables </em>.</p>
+  <p>Notez qu'il existe également une série de variables indépendantes de portée globale qui peuvent également être utilisées dans les fonctions définies par l'utilisateur pour référencer les différents arguments d'entrée : <span class="inline">argument0</span>, <span class="inline">argument1</span>, <span class="inline">argument2</span>,
+    etc... jusqu'à <span>.<span class="inline">argument15</span></span>
+  </p>
+  <p class="note"><strong>NOTE</strong>: Ceci n'est plus strictement requis et est fourni pour le support de l'héritage plus qu'autre chose. Toutes les fonctions définies par l'utilisateur accepteront des arguments variables, et tout argument passé dans une fonction qui ne fait pas partie de la fonction nommée
+    sera initialisé à <span class="inline" style="font-size: 14px">undefined</span> par défaut, ce qui peut être vérifié en utilisant la fonction <a href="../../../GML_Reference/Variable_Functions/is_undefined.htm">is_undefined()</a>.</p>
+  <p> </p>
+  <h4>Syntaxe :</h4>
+  <p class="code">argument<em>[n</em>]<br> argument1
+    <br> argument2
+    <br> ...
+    <br> argument15
+  </p>
+  <p> </p>
+  <h4>Les retours :</h4>
+  <p class="code">Valeur (peut être de n'importe quel <a href="../../Data_Types.htm">type de données</a> fournies à la fonction)</p>
+  <p> </p>
+  <h4>Exemple :</h4>
+  <p class="code">function my_array()<br> {
+    <br> var i, arg ;<br> for (i = 0 ; i &lt; 5 ; i += 1 ;)<br> {
+    <br> if argument_count &gt; i<br> {
+    <br> arg[i] = argument[i]<br> }
+    <br> else
+    <br> {
+    <br> arg[i] = -1 ;<br> }
+    <br> }
+    <br> }
+  </p>
+  <p>Le code ci-dessus utilise la variable <tt>argument_count</tt> ainsi que le tableau <span class="inline">argument</span> pour initialiser les variables, et constitue un exemple de la façon dont on peut permettre à une fonction définie par l'utilisateur d'accepter un nombre variable d'arguments.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <div class="footer">
+    <div class="buttons">
+      <div class="clear">
+        <div style="float:left">Retour : <a href="../Global_Variables.htm">Variables globales</a></div>
+        <div style="float:right">Suivant : <a href="argument_count.htm">argument_count</a></div>
+      </div>
+    </div>
+    <h5><span data-keyref="Copyright Notice">Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
   </div>
   <!-- KEYWORDS
 argument

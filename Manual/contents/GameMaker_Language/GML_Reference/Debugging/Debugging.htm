@@ -7,11 +7,57 @@
   <meta name="generator" content="Adobe RoboHelp 2019" />
   <link rel="stylesheet" href="../../../assets/css/default.css" type="text/css" />
   <meta name="rh-authors" content="Mark Alexander" />
-  <meta name="topic-comment" content="Section de référence pour les fonctions de débogage et les variables" />
+  <meta name="topic-comment" content="Reference section for Debugging  functions and variables" />
   <meta name="rh-index-keywords" content="" />
-  <meta name="search-keywords" content="Débogage" />
+  <meta name="search-keywords" content="Debugging" />
 </head>
-<body><!--<div class="body-scroll" style="top: 150px;">--><h1> Débogage</h1><p> Lors de la création d&#39;un jeu, il est souvent très important que vous connaissiez certains détails de la mécanique du jeu à des moments spécifiques, ou que vous puissiez saisir certaines valeurs clés pour certaines fonctions afin de tester différentes méthodes et idées pour votre jeu. À cette fin, <span class="notranslate">GameMaker Studio 2</span> vous fournit un certain nombre de fonctions de débogage qui afficheront des messages et demanderont des entrées en mode débogage (ou sur une <span class="notranslate">Windows</span> ) mais qui seront ignorées lors de la compilation pour d&#39;autres modules cibles en raison du fait que ces les fonctions mettent le jeu en boucle fermée jusqu&#39;à ce que l&#39;entrée soit résolue.</p><p class="note"> <b>REMARQUE:</b> bien qu&#39;ils puissent fonctionner sur certaines plates-formes, ils ne doivent pas être utilisés pour autre chose que le débogage. </p><p></p><ul class="colour"><li><a href="debug_mode.htm">debug_mode</a></li><li><a href="debug_event.htm">debug_event</a></li><li><a href="debug_get_callstack.htm">debug_get_callstack</a></li><li><a href="exception_unhandled_handler.htm">exception_unhandled_handler</a></li><li><a href="get_integer.htm">get_integer</a></li><li><a href="get_string.htm">get_string</a></li><li><a href="show_error.htm">show_error</a></li><li><a href="show_message.htm">show_message</a></li><li><a href="show_question.htm">show_question</a></li><li><a href="show_debug_message.htm">show_debug_message</a></li><li><a href="show_debug_overlay.htm">show_debug_overlay</a></li><li><a href="code_is_compiled.htm">code_is_compiled</a></li><li><a href="fps.htm">fps</a></li><li><a href="fps_real.htm">fps_real</a></li></ul><p></p><p> Outre ces fonctions spécialisées, pour vous aider lors de la création de votre jeu, <span class="notranslate">GameMaker Studio 2</span> dispose également d&#39;une longue liste de messages d&#39;erreur qui peuvent être affichés soit lors de l&#39;écriture de votre code de jeu, de la compilation de votre jeu, soit lorsque le jeu lui-même est en cours d&#39;exécution. Ces messages pointent vers l&#39;erreur spécifique en question et peuvent être utilisés pour identifier un problème dans un objet ou une fonction de script spécifique, ce qui facilite grandement le processus de débogage de votre jeu. Cependant, il n&#39;est pas toujours évident de savoir exactement ce que signifie le message d&#39;erreur.Par conséquent, les sections suivantes répertorient tous les messages possibles et expliquent ce qu&#39;ils signifient pour vous faciliter la vie:</p><p></p><ul class="colour"><li> <a href="../../../Additional_Information/Errors/Syntax_Errors.htm">Erreurs de syntaxe</a></li><li> <a href="../../../Additional_Information/Errors/Compiler_Errors.htm">Erreurs du compilateur</a></li><li> <a href="../../../Additional_Information/Errors/Runner_Errors.htm">Erreurs de coureur</a></li></ul><p></p><p> Vous pouvez également trouver plus d&#39;informations sur la façon de déboguer votre jeu dans la section sur <a href="../../../IDE_Tools/The_Debugger.htm">le débogueur</a>. </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> Retour: <a href="../GML_Reference.htm">Référence <span class="notranslate">GML</span></a></div><div style="float:right"> Suivant: <a href="../Garbage_Collection/Garbage_Collection.htm">Garbage Collection</a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
+<body>
+  <!--<div class="body-scroll" style="top: 150px;">-->
+  <h1>Débogage</h1>
+  <p>Lors de la création d'un jeu, il est souvent très important de connaître certains détails de la mécanique du jeu à des moments précis, ou de pouvoir saisir certaines valeurs clés pour certaines fonctions afin de tester différentes méthodes et idées pour votre jeu. À cette fin, GameMaker
+   <span class="notranslate">GameMaker Studio 2</span> vous fournit un certain nombre de fonctions de débogage qui afficheront des messages et demanderont des entrées en mode de débogage (ou sur une cible <span class="notranslate">Windows</span> ), mais qui seront ignorées lors de la compilation pour d'autres modules cibles, étant donné que
+    ces fonctions placent le jeu dans une boucle fermée jusqu'à ce que l'entrée soit résolue.</p>
+  <p class="note"><b>NOTE :</b> Bien qu'ils puissent fonctionner sur certaines plateformes, ils ne doivent pas être utilisés pour autre chose que le débogage.</p>
+  <p> </p>
+  <ul class="colour">
+    <li><a href="debug_mode.htm">debug_mode</a></li>
+    <li><a href="debug_event.htm">débogage_événement</a></li>
+    <li><a href="debug_get_callstack.htm">debug_get_callstack</a></li>
+    <li><a href="exception_unhandled_handler.htm">Gestionnaire d'exceptions non gérées</a></li>
+    <li><a href="get_integer.htm">get_integer</a></li>
+    <li><a href="get_string.htm">get_string</a></li>
+    <li><a href="show_error.htm">montrer_erreur</a></li>
+    <li><a href="show_message.htm">montrer_message</a></li>
+    <li><a href="show_question.htm">show_question</a></li>
+    <li><a href="show_debug_message.htm">montrer_debug_message</a></li>
+    <li><a href="show_debug_overlay.htm">show_debug_overlay</a></li>
+    <li><a href="code_is_compiled.htm">code_est_compilé</a></li>
+    <li><a href="fps.htm">fps</a></li>
+    <li><a href="fps_real.htm">fps_real</a></li>
+  </ul>
+  <p> </p>
+  <p>Outre ces fonctions spécialisées, qui vous aident à créer votre jeu, <span class="notranslate">GameMaker Studio 2</span> dispose également d'une longue liste de messages d'erreur qui peuvent être affichés lors de l'écriture du code du jeu, de la compilation du jeu ou de l'exécution du jeu lui-même.
+    Ces messages indiquent l'erreur spécifique en question et peuvent être utilisés pour localiser un problème dans un objet ou une fonction de script spécifique, ce qui facilite grandement le processus de débogage de votre jeu. Cependant, la signification exacte du message d'erreur n'est pas toujours évidente.
+    C'est pourquoi les sections suivantes énumèrent tous les messages possibles et expliquent leur signification pour vous faciliter la vie :</p>
+  <p> </p>
+  <ul class="colour">
+    <li><a href="../../../Additional_Information/Errors/Syntax_Errors.htm">Erreurs de syntaxe</a></li>
+    <li><a href="../../../Additional_Information/Errors/Compiler_Errors.htm">Erreurs de compilation</a></li>
+    <li><a href="../../../Additional_Information/Errors/Runner_Errors.htm">Erreurs des coureurs</a></li>
+  </ul>
+  <p> </p>
+  <p>Vous pouvez également trouver de plus amples informations sur la façon de déboguer votre jeu dans la section sur le <a href="../../../IDE_Tools/The_Debugger.htm">débogueur</a>.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <div class="footer">
+    <div class="buttons">
+      <div class="clear">
+        <div style="float:left">Retour : <a href="../GML_Reference.htm">Référence<span class="notranslate">GML</span></a></div>
+        <div style="float:right">Suivant : <a href="../Garbage_Collection/Garbage_Collection.htm">Collecte des déchets</a></div>
+      </div>
+    </div>
+    <h5><span data-keyref="Copyright Notice">Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
   </div>
   <!-- KEYWORDS
 Debugging

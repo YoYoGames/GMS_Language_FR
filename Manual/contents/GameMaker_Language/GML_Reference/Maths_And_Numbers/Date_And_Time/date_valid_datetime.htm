@@ -2,18 +2,80 @@
 
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml"><head>
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-  <title>date_valid_datetime</title>
-  <meta name="generator" content="Adobe RoboHelp 2019"/>
-  <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css"/>
-  <meta name="rh-authors" content="Mark Alexander"/>
-  <meta name="topic-comment" content="Page de référence pour date_valid_datetime"/>
-  <meta name="rh-index-keywords" content="date_valid_datetime"/>
-  <meta name="search-keywords" content="date_valid_datetime"/>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>date_valide_datetime</title>
+  <meta name="generator" content="Adobe RoboHelp 2019" />
+  <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
+  <meta name="rh-authors" content="Mark Alexander" />
+  <meta name="topic-comment" content="Reference page for date_valid_datetime" />
+  <meta name="rh-index-keywords" content="date_valid_datetime" />
+  <meta name="search-keywords" content="date_valid_datetime" />
 </head>
 
-<body><!--<div class="body-scroll" style="top: 150px;">--><h1>date_valid_datetime</h1><p> Avec cette fonction, vous pouvez vérifier une valeur datetime pour voir si elle est valide (renvoie <tt>true</tt> ) ou non (retourne <tt>false</tt> ). Notez que cette fonction ne considérera qu&#39;une date / <i>heure valide comme étant postérieure au</i> 1/1/1970 et tout ce qui précède retournera <tt>false</tt>, donc le plus tôt que vous pouvez vérifier serait:</p><p class="code">date_valid_datetime(1970, 01, 01, 0, 0, 0);</p><h2></h2><h4> Syntaxe:</h4><p class="code">date_valid_datetime(year, month, day, hour, minute, second);</p><table><tbody><tr><th> Argument</th><th> Description</th></tr><tr><td> <span class="notranslate">year</span></td><td> L&#39;année à vérifier.</td></tr><tr><td> <span class="notranslate">month</span></td><td> Le mois à vérifier.</td></tr><tr><td> <span class="notranslate">day</span></td><td> Le jour pour vérifier.</td></tr><tr><td> <span class="notranslate">hour</span></td><td> L&#39;heure à vérifier.</td></tr><tr><td> <span class="notranslate">minute</span></td><td> La minute pour vérifier.</td></tr><tr><td> <span class="notranslate">second</span></td><td> Le second à vérifier.</td></tr></tbody></table><p></p><h4> Retour:</h4><p class="code">Boolean</p><p></p><h4> Exemple:</h4><p class="code">if date_valid_datetime(2011, 9, 15, 10, 3, 30)<br/>     {
-    <br/>     mydatetime = date_create_datetime(2011, 9, 15, 10, 3, 30);<br/>     }</p><p> Cela définira &quot;mydatetime&quot; au 15 septembre 2011, 10: 03.30, s&#39;il s&#39;agit d&#39;une valeur valide (ce qu&#39;elle est). </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> Retour: <a href="Date_And_Time.htm">Date et heure</a></div><div style="float:right"> Suivant:<a href="date_date_of.htm">date_date_of</a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
+<body>
+
+
+
+
+  <!--<div class="body-scroll" style="top: 150px;">-->
+  <h1>date_valide_datetime</h1>
+  <p>Avec cette fonction, vous pouvez vérifier une valeur de date-heure pour voir si elle est valide (renvoie <tt>true</tt>) ou non (renvoie <tt>false</tt>). Notez que cette fonction considère qu'une date est valide uniquement si elle est <i>postérieure au</i> 1/1/1970.
+    retournera <tt>false</tt>, donc la date la plus proche que vous pouvez vérifier serait :</p>
+  <p class="code">date_valid_datetime(1970, 01, 01, 0, 0, 0) ;</p>
+  <h2> </h2>
+  <h4>Syntaxe :</h4>
+  <p class="code">date_valid_datetime(année, mois, jour, heure, minute, seconde) ;</p>
+  <table>
+    <tbody>
+      <tr>
+        <th>Arguments</th>
+        <th>Description</th>
+      </tr>
+      <tr>
+        <td>année</td>
+        <td>L'année à vérifier.</td>
+      </tr>
+      <tr>
+        <td>mois</td>
+        <td>Le mois à vérifier.</td>
+      </tr>
+      <tr>
+        <td>jour</td>
+        <td>Le jour où il faut vérifier.</td>
+      </tr>
+      <tr>
+        <td>heure</td>
+        <td>L'heure à vérifier.</td>
+      </tr>
+      <tr>
+        <td>minute</td>
+        <td>La minute à vérifier.</td>
+      </tr>
+      <tr>
+        <td>deuxième</td>
+        <td>Le deuxième à vérifier.</td>
+      </tr>
+    </tbody>
+  </table>
+  <p> </p>
+  <h4>Les retours :</h4>
+  <p class="code">Booléen</p>
+  <p> </p>
+  <h4>Exemple :</h4>
+  <p class="code">if date_valid_datetime(2011, 9, 15, 10, 3, 30)<br> {
+    <br> mydatetime = date_create_datetime(2011, 9, 15, 10, 3, 30) ;<br> }</p>
+  <p>Ceci fixera &quot;mydatetime&quot; au 15 septembre 2011, 10:03.30, si c'est une valeur valide (ce qui est le cas).</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <div class="footer">
+    <div class="buttons">
+      <div class="clear">
+        <div style="float:left">Retour : <a href="Date_And_Time.htm">Date et heure</a></div>
+        <div style="float:right">Suivant : <a href="date_date_of.htm">date_date_de</a></div>
+      </div>
+    </div>
+    <h5><span data-keyref="Copyright Notice">Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
   </div>
   <!-- KEYWORDS
 date_valid_datetime

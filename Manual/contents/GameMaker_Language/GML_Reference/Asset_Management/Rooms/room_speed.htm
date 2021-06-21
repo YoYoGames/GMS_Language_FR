@@ -3,15 +3,41 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>room_speed</title>
+  <title>vitesse de la pièce</title>
   <meta name="generator" content="Adobe RoboHelp 2019" />
   <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
   <meta name="rh-authors" content="Mark Alexander" />
-  <meta name="topic-comment" content="Page décrivant la fonction room_speed" />
+  <meta name="topic-comment" content="Page outlining the function room_speed" />
   <meta name="rh-index-keywords" content="room_speed" />
   <meta name="search-keywords" content="room_speed" />
 </head>
-<body><!--<div class="body-scroll" style="top: 150px;">--><h1> room_speed (obsolète)</h1><p> Cette variable contient la vitesse de fonctionnement de <b>toutes les</b> pièces (et du jeu) en images de jeu par seconde. Notez qu&#39;il <i>ne</i> s&#39;agit PAS du FPS (images par seconde) mais plutôt du nombre d&#39;étapes de jeu que <span class="notranslate">GameMaker Studio 2</span> essaiera de maintenir chaque seconde.</p><p class="note"> <b>IMPORTANT!</b> Cette variable est conservée pour le support hérité uniquement et ne doit pas être utilisée car elle ne définit plus la vitesse pour une seule pièce, mais pour TOUTES les pièces du jeu. Pour changer la vitesse du jeu, vous devriez plutôt utiliser la fonction <span style="font-size:1px;"><a href="../../General_Game_Control/game_set_speed.htm"><tt style="font-size: 14px">game_set_speed ()</tt></a></span>.</p><p></p><h4> Syntaxe:</h4><p class="code">room_speed;</p><p></p><h4> Retour:</h4><p class="code">Real</p><p></p><h4> Exemple:</h4><p class="code">alarm[0] = room_speed * 10;</p><p> Le code ci-dessus utilise <tt>room_speed</tt> pour régler une alarme pour qu&#39;elle s&#39;exécute pendant 10 secondes. L&#39;utilisation de la variable de cette manière garantit que l&#39;alarme fonctionne pendant 10 secondes, quelle que soit la vitesse réglée pour la pièce. </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> Retour: <a href="Rooms.htm">Chambres</a></div><div style="float:right"> Suivant:<a href="room_height.htm">room_height</a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
+<body>
+  <!--<div class="body-scroll" style="top: 150px;">-->
+  <h1>room_speed (obsolète)</h1>
+  <p>Cette variable contient la vitesse d'exécution de <b>toutes les</b> pièces (et du jeu) en images par seconde. Notez qu'il <i>ne</i> s'agit <i>PAS</i> du FPS (images par seconde), mais plutôt du nombre d'étapes de jeu que <span class="notranslate">GameMaker Studio 2</span> essaiera de maintenir à chaque seconde.
+    seconde.</p>
+  <p class="note"><b>IMPORTANT !</b> Cette variable est maintenue pour le support Legacy uniquement, et ne doit pas être utilisée car elle ne définit plus la vitesse pour une seule pièce, mais pour TOUTES les pièces du jeu. Pour changer la vitesse du jeu, vous devriez plutôt utiliser la fonction <span style="font-size:1px;"><a href="../../General_Game_Control/game_set_speed.htm"><tt style="font-size: 14px">game_set_speed()</tt></a></span>.</p>
+  <p> </p>
+  <h4>Syntaxe :</h4>
+  <p class="code">Vitesse de la pièce ;</p>
+  <p> </p>
+  <h4>Les retours :</h4>
+  <p class="code">Real</p>
+  <p> </p>
+  <h4>Exemple :</h4>
+  <p class="code">alarme[0] = room_speed * 10 ;</p>
+  <p>Le code ci-dessus utilise <tt>room_speed</tt> pour régler une alarme sur 10 secondes. En utilisant la variable de cette manière, l'alarme fonctionnera pendant 10 secondes, quelle que soit la vitesse définie pour la pièce.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <div class="footer">
+    <div class="buttons">
+      <div class="clear">
+        <div style="float:left">Retour : <a href="Rooms.htm">Pièces</a></div>
+        <div style="float:right">Suivant : <a href="room_height.htm">room_height</a></div>
+      </div>
+    </div>
+    <h5><span data-keyref="Copyright Notice">Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
   </div>
   <!-- KEYWORDS
 room_speed

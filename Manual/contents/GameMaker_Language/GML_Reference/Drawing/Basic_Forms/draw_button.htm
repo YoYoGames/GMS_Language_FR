@@ -3,15 +3,70 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>draw_button</title>
+  <title>bouton de dessin</title>
   <meta name="generator" content="Adobe RoboHelp 2019" />
   <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
   <meta name="rh-authors" content="Mark Alexander" />
-  <meta name="topic-comment" content="Référence pour la fonction draw_button" />
+  <meta name="topic-comment" content="Reference for the function draw_button" />
   <meta name="rh-index-keywords" content="draw_button" />
   <meta name="search-keywords" content="draw_button" />
 </head>
-<body><!--<div class="body-scroll" style="top: 150px;">--><h1>draw_button</h1><p> Cette fonction dessinera un &quot;bouton&quot; rectangulaire très simple en utilisant la couleur de dessin et l&#39;alpha actuellement sélectionnés où l&#39; <i>argument haut</i> définit l&#39;aspect de l&#39;effet de bord biseauté, comme indiqué dans l&#39;image ci-dessous:</p><p><img alt="Draw button exmple" class="center" src="../../../../assets/Images/Scripting_Reference/GML/Reference/Drawing/draw_button.png" /> <b>REMARQUE</b>: Si vous souhaitez dessiner une forme à l&#39;aide d&#39;un <span class="notranslate">shader</span>, sachez que la plupart des <span class="notranslate">shaders</span> attendent les entrées suivantes: sommet, texture, couleur. Cependant, lors de l&#39;utilisation de cette fonction, seules les données de sommet et de couleur sont transmises, et le <span class="notranslate">shader</span> peut ne rien dessiner (ou dessiner quelque chose mais pas correctement). Si vous devez dessiner des formes de cette manière, le <span class="notranslate">shader</span> doit être personnalisé dans cet esprit.</p><p></p><h4> Syntaxe:</h4><p class="code">draw_button(x1, y1, x2, y2, up);</p><table><tbody><tr><th> Argument</th><th> Description</th></tr><tr><td> <span class="notranslate">x1</span></td><td> La coordonnée x de la gauche du bouton</td></tr><tr><td> <span class="notranslate">y1</span></td><td> La coordonnée y du haut du bouton</td></tr><tr><td> <span class="notranslate">x2</span></td><td> La coordonnée x de la droite du bouton</td></tr><tr><td> <span class="notranslate">y2</span></td><td> La coordonnée y du bas du bouton</td></tr><tr><td> <span class="notranslate">up</span></td><td> Si le bouton est en place (<tt>true</tt> ) ou vers le bas (<tt>false</tt> )</td></tr></tbody></table><p></p><h4> Retour:</h4><p class="code">N/A</p><p></p><h4> Exemple:</h4><p class="code">draw_button(100, 100, 200, 150, !mouse_check_button(mb_left));</p><p> Cela dessinera un bouton qui apparaîtra enfoncé si le bouton gauche de la souris est maintenu enfoncé. </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> Retour: <a href="Basic_Forms.htm">Formulaires de base</a></div><div style="float:right"> Suivant:<a href="draw_healthbar.htm">draw_healthbar</a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
+<body>
+  <!--<div class="body-scroll" style="top: 150px;">-->
+  <h1>bouton de dessin</h1>
+  <p>Cette fonction dessine un &quot;bouton&quot; rectangulaire très simple en utilisant la couleur de dessin et l'alpha actuellement sélectionnés, l'<i>argument</i> &quot;up&quot; définissant l'effet de bord biseauté, comme le montre l'image ci-dessous :</p>
+  <p><img alt="Draw button exmple" class="center" src="../../../../assets/Images/Scripting_Reference/GML/Reference/Drawing/draw_button.png"><b>NOTE</b>: Si vous souhaitez dessiner une forme à l'aide d'un <span class="notranslate">shader</span>, sachez que la plupart des <span class="notranslate">shaders</span> attendent les entrées suivantes : vertex, texture, couleur, etc.
+    les entrées suivantes : vertex, texture, couleur. Cependant, en utilisant cette fonction, seules les données de vertex et de couleur sont transmises, et donc le <span class="notranslate">shader</span> peut ne rien dessiner (ou dessiner quelque chose mais pas correctement). Si vous avez besoin de dessiner des formes de cette manière, alors
+    le <span class="notranslate">shader</span> doit être personnalisé dans cette optique.</p>
+  <p> </p>
+  <h4>Syntaxe :</h4>
+  <p class="code">draw_button(x1, y1, x2, y2, up) ;</p>
+  <table>
+    <tbody>
+      <tr>
+        <th>Arguments</th>
+        <th>Description</th>
+      </tr>
+      <tr>
+        <td>x1</td>
+        <td>La coordonnée x de la gauche du bouton</td>
+      </tr>
+      <tr>
+        <td>y1</td>
+        <td>La coordonnée y du haut du bouton</td>
+      </tr>
+      <tr>
+        <td>x2</td>
+        <td>La coordonnée x de la droite du bouton</td>
+      </tr>
+      <tr>
+        <td>y2</td>
+        <td>La coordonnée y du bas du bouton</td>
+      </tr>
+      <tr>
+        <td>en haut</td>
+        <td>Si le bouton est en haut<tt>(vrai</tt>) ou en bas<tt>(faux)</tt>.</td>
+      </tr>
+    </tbody>
+  </table>
+  <p> </p>
+  <h4>Les retours :</h4>
+  <p class="code">N/A</p>
+  <p> </p>
+  <h4>Exemple :</h4>
+  <p class="code">draw_button(100, 100, 200, 150, !mouse_check_button(mb_left)) ;</p>
+  <p>Ceci dessinera un bouton qui apparaîtra enfoncé si le bouton gauche de la souris est maintenu enfoncé.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <div class="footer">
+    <div class="buttons">
+      <div class="clear">
+        <div style="float:left">Retour : <a href="Basic_Forms.htm">Formes de base</a></div>
+        <div style="float:right">Suivant : <a href="draw_healthbar.htm">draw_healthbar</a></div>
+      </div>
+    </div>
+    <h5><span data-keyref="Copyright Notice">Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
   </div>
   <!-- KEYWORDS
 draw_button

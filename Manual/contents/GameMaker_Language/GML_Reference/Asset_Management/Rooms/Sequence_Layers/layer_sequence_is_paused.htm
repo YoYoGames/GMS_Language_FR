@@ -3,18 +3,54 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>layer_sequence_is_paused</title>
+  <title>couche_séquence_est_pause</title>
   <meta name="generator" content="Adobe RoboHelp 2019" />
   <link rel="stylesheet" href="../../../../../assets/css/default.css" type="text/css" />
   <meta name="rh-authors" content="Mark Alexander" />
-  <meta name="topic-comment" content="Page décrivant la fonction layer_sequence_is_paused" />
+  <meta name="topic-comment" content="Page outlining the function layer_sequence_is_paused" />
   <meta name="rh-index-keywords" content="layer_sequence_is_paused" />
   <meta name="search-keywords" content="layer_sequence_is_paused" />
 </head>
-<body><!--<div class="body-scroll" style="top: 150px;">--><h1>layer_sequence_is_paused</h1><p> Avec cette fonction, vous fournissez l&#39;ID d&#39;élément de séquence - tel que renvoyé par <a href="layer_sequence_create.htm"><tt>layer_sequence_create()</tt></a> ou par l&#39;une des <a href="../General_Layer_Functions/General_Layer_Functions.htm">fonctions d&#39;élément de couche</a> - et il vérifiera si la séquence est actuellement en pause ou non, en retournant <tt>true</tt> s&#39;il est mis en pause, et <tt>false</tt> si ce n&#39;est pas le cas.</p><p></p><h4> Syntaxe:</h4><p class="code">layer_sequence_is_paused(sequence_element_id)</p><table><tbody><tr><th> Argument</th><th> Description</th></tr><tr><td> <span class="notranslate">sequence_element_id</span></td><td> La valeur d&#39;ID unique de l&#39;élément de séquence à cibler</td></tr></tbody></table><p></p><h4> Retour:</h4><p class="code">Boolean</p><p></p><h4> Exemple:</h4><p class="code">if layer_sequence_is_paused(title_sequence) != 0<br/>     {
-    <br/>     layer_sequence_play(title_sequence);
-    <br/>     }
-  </p><p> Le code ci-dessus vérifie si l&#39;ID d&#39;élément de séquence stocké dans la variable &quot;title_sequence&quot; est mis en pause, et s&#39;il l&#39;est, il démarre la lecture. </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> Retour: <a href="Sequence_Layers.htm">Couches de séquence</a></div><div style="float:right"> Suivant:<a href="layer_sequence_is_finished.htm">layer_sequence_is_finished</a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
+<body>
+  <!--<div class="body-scroll" style="top: 150px;">-->
+  <h1>couche_séquence_est_pause</h1>
+  <p>Avec cette fonction, vous fournissez l'ID de l'élément de séquence - tel que retourné par <a href="layer_sequence_create.htm"><tt>layer_sequence_create()</tt></a> ou par l'une des <a href="../General_Layer_Functions/General_Layer_Functions.htm">fonctions de l'élément de couche</a> - et elle vérifiera si la séquence est actuellement en pause ou non, renvoyant <tt>true</tt> si elle est en pause, et <tt>false</tt> si elle ne l'est pas.</p>
+  <p> </p>
+  <h4>Syntaxe :</h4>
+  <p class="code">layer_sequence_is_paused(sequence_element_id)</p>
+  <table>
+    <tbody>
+      <tr>
+        <th>Arguments</th>
+        <th>Description</th>
+      </tr>
+      <tr>
+        <td>id_élément_de_séquence</td>
+        <td>La valeur d'identification unique de l'élément de séquence à cibler.</td>
+      </tr>
+    </tbody>
+  </table>
+  <p> </p>
+  <h4>Les retours :</h4>
+  <p class="code">Booléen</p>
+  <p> </p>
+  <h4>Exemple :</h4>
+  <p class="code">if layer_sequence_is_paused(title_sequence) != 0<br> {
+    <br> layer_sequence_play(title_sequence) ;
+    <br> }
+  </p>
+  <p>Le code ci-dessus vérifie si l'ID de l'élément de séquence stocké dans la variable &quot;title_sequence&quot; est en pause, et si c'est le cas, il lance sa lecture.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <div class="footer">
+    <div class="buttons">
+      <div class="clear">
+        <div style="float:left">Retour : <a href="Sequence_Layers.htm">Couches de séquences</a></div>
+        <div style="float:right">Suivant : <a href="layer_sequence_is_finished.htm">layer_sequence_is_finished</a></div>
+      </div>
+    </div>
+    <h5><span data-keyref="Copyright Notice">Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
   </div>
   <!-- KEYWORDS
 layer_sequence_is_paused

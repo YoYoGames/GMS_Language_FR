@@ -3,15 +3,59 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>part_system_automatic_draw</title>
+  <title>système_de_pièce_dessin_automatique</title>
   <meta name="generator" content="Adobe RoboHelp 2019" />
   <link rel="stylesheet" href="../../../../../assets/css/default.css" type="text/css" />
   <meta name="rh-authors" content="Mark Alexander" />
-  <meta name="topic-comment" content="Page de référence pour part_system_automatic_draw" />
+  <meta name="topic-comment" content="Reference page for part_system_automatic_draw" />
   <meta name="rh-index-keywords" content="part_system_automatic_draw" />
   <meta name="search-keywords" content="part_system_automatic_draw" />
 </head>
-<body><!--<div class="body-scroll" style="top: 150px;">--><h1>part_system_automatic_draw</h1><p> Cette fonction peut être utilisée pour désactiver le dessin d&#39;un système de particules afin que les mises à jour effectuées sur le système (automatiques ou non) ne soient pas visibles. Il s&#39;agit d&#39;une option purement visuelle et lorsqu&#39;elle est définie sur <tt>false</tt> vous ne pourrez pas voir les particules car elles ne sont pas dessinées, mais elles existent toujours et changent de position, de couleur, etc. comme elles le feraient normalement. Lorsque le dessin automatique est désactivé, vous pouvez <i>explicitement</i> ordonner à <span class="notranslate">GameMaker Studio 2</span> de dessiner l&#39;état actuel du système de particules à l&#39;aide de la fonction <a href="part_system_drawit.htm"><tt>part_system_drawit()</tt></a>, et si vous réglez cette fonction sur <tt>true</tt> à nouveau, vous pouvez réactiver le dessin automatique.</p><p> Une chose à noter est que si vous utilisez les effets simples créés par les fonctions <a href="../effect_create_above.htm"><tt>effect_create_above()</tt></a> ou <a href="../effect_create_below.htm"><tt>effect_create_below()</tt></a> alors vous pouvez utiliser les valeurs de 0 (pour les effets ci-dessous) ou 1 (pour les effets ci-dessus) comme index du système de particules et ainsi basculer le dessin automatique pour ceux-ci également (cela fonctionnera également pour basculer le dessin pour les <span class="notranslate">DnD</span> de particules DnD™).</p><p></p><h4> Syntaxe:</h4><p class="code">part_system_automatic_draw(ind, automatic);</p><table><tbody><tr><th> Argument</th><th> Description</th></tr><tr><td> <span class="notranslate">ind</span></td><td> L&#39;indice du système de particules à changer.</td></tr><tr><td> <span class="notranslate">automatic</span></td><td> Si le dessin automatique est activé (vrai) ou non (faux).</td></tr></tbody></table><p></p><h4> Retour:</h4><p class="code">N/A</p><p></p><h4> Exemple:</h4><p class="code">part_system_automatic_draw(global.Sname, false);</p><p> Le code ci-dessus désactive le dessin automatique pour le système de particules indexé dans la variable globale &quot;Sname&quot;. </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> Retour: <a href="Particle_Systems.htm">Systèmes de particules</a></div><div style="float:right"> Suivant:<a href="part_system_update.htm">part_system_update</a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
+<body>
+  <!--<div class="body-scroll" style="top: 150px;">-->
+  <h1>système_de_pièce_dessin_automatique</h1>
+  <p>Cette fonction peut être utilisée pour désactiver le dessin d'un système de particules afin que toute mise à jour du système (automatique ou non) ne soit pas visible. Il s'agit d'une option purement visuelle et lorsqu'elle est définie sur <tt>false</tt>, vous ne pourrez pas voir les
+    particules car elles ne sont pas dessinées, mais elles existent toujours et changent de position, de couleur etc... comme elles le feraient normalement. Lorsque le dessin automatique est désactivé, vous pouvez demander <i>explicitement</i> à <span class="notranslate">GameMaker Studio 2</span> de dessiner l'état actuel du système de particules à l'aide de la fonction
+    en utilisant la fonction <a href="part_system_drawit.htm"><tt>part_system_drawit()</tt></a>Si vous redéfinissez cette fonction à <tt>true</tt>, vous pouvez réactiver le dessin automatique.</p>
+  <p>Une chose à noter est que si vous utilisez les effets simples créés par les fonctions <a href="../effect_create_above.htm"><tt>effet_créer_supérieur()</tt></a> ou <a href="../effect_create_below.htm"><tt>effet_create_below()</tt></a> alors vous pouvez utiliser
+    les valeurs 0 (pour les effets inférieurs) ou 1 (pour les effets supérieurs) comme index du système de particules et ainsi basculer le dessin automatique pour ceux-ci aussi (cela fonctionnera aussi pour basculer le dessin pour les effets de particules <span class="notranslate">DnD™</span>).</p>
+  <p> </p>
+  <h4>Syntaxe :</h4>
+  <p class="code">part_system_automatic_draw(ind, automatic) ;</p>
+  <table>
+    <tbody>
+      <tr>
+        <th>Arguments</th>
+        <th>Description</th>
+      </tr>
+      <tr>
+        <td>ind</td>
+        <td>L'indice du système de particules à modifier.</td>
+      </tr>
+      <tr>
+        <td>automatique</td>
+        <td>Indique si le dessin automatique est activé (true) ou non (false).</td>
+      </tr>
+    </tbody>
+  </table>
+  <p> </p>
+  <h4>Les retours :</h4>
+  <p class="code">N/A</p>
+  <p> </p>
+  <h4>Exemple :</h4>
+  <p class="code">part_system_automatic_draw(global.Sname, false) ;</p>
+  <p>Le code ci-dessus désactive le dessin automatique pour le système de particules indexé dans la variable globale &quot;Sname&quot;.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <div class="footer">
+    <div class="buttons">
+      <div class="clear">
+        <div style="float:left">Retour : <a href="Particle_Systems.htm">Systèmes de particules</a></div>
+        <div style="float:right">Suivant : <a href="part_system_update.htm">part_system_update</a></div>
+      </div>
+    </div>
+    <h5><span data-keyref="Copyright Notice">Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
   </div>
   <!-- KEYWORDS
 part_system_automatic_draw

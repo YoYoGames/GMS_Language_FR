@@ -3,17 +3,60 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>layer_sprite_exists</title>
+  <title>couche_sprite_existe</title>
   <meta name="generator" content="Adobe RoboHelp 2019" />
   <link rel="stylesheet" href="../../../../../assets/css/default.css" type="text/css" />
   <meta name="rh-authors" content="Mark Alexander" />
-  <meta name="topic-comment" content="Page décrivant la fonction layer_sprite_exists" />
+  <meta name="topic-comment" content="Page outlining the function layer_sprite_exists" />
   <meta name="rh-index-keywords" content="layer_sprite_exists" />
   <meta name="search-keywords" content="layer_sprite_exists" />
 </head>
-<body><!--<div class="body-scroll" style="top: 150px;">--><h1>layer_sprite_exists</h1><p> Vous pouvez utiliser cette fonction pour vérifier et voir si un élément de sprite existe sur un calque donné. Vous fournissez l&#39;ID de couche (que vous obtenez lorsque vous créez la couche en utilisant <a href="../General_Layer_Functions/layer_create.htm"><tt>layer_create()</tt></a> ) ou le nom du calque (sous forme de chaîne - cela aura un impact sur les performances) et l&#39;ID d&#39;élément de sprite (que vous obtenez lorsque vous créez un élément de sprite en utilisant <a href="layer_sprite_create.htm"><tt>layer_sprite_create()</tt></a> ou lorsque vous utilisez la fonction <a href="layer_sprite_get_id.htm"><tt>layer_sprite_get_id()</tt></a> ) et la fonction retournera soit <tt>true</tt> si l&#39;élément existe, ou <tt>false</tt> si ça ne fait pas.</p><p class="note"> <b>NOTE</b>: Cette fonction fonctionne dans le cadre de la salle cible actuelle - par défaut la salle dans laquelle la fonction est appelée - qui peut être définie à l&#39;aide de la fonction <span style="font-size:1px;"><a href="../General_Layer_Functions/layer_set_target_room.htm"><tt style="font-size: 14px">layer_set_target_room ()</tt></a></span>.</p><p></p><h4> Syntaxe:</h4><p class="code">layer_sprite_exists(layer_id, sprite_element_id)</p><table><tbody><tr><th> Argument</th><th> Description</th></tr><tr><td> <span class="notranslate">layer_id</span></td><td> La valeur d&#39;ID unique du calque à cibler (ou le nom du calque sous forme de chaîne)</td></tr><tr><td> <span class="notranslate">sprite_element_id</span></td><td> La valeur d&#39;ID unique de l&#39;élément de sprite à vérifier</td></tr></tbody></table><p></p><h4> Retour:</h4><p class="code">Boolean</p><p></p><h4> Exemple:</h4><p class="code">var lay_id = layer_get_id(&quot;Asset_Trees&quot;);<br/> if layer_sprite_exists(lay_id, global.TreesSprites)<br/>     {
-    <br/>     layer_sprite_destroy(lay_id, global.TreesSprites);<br/>     }
-  </p><p> Le code ci-dessus vérifie la couche &quot;Asset_trees&quot; pour voir si l&#39;élément de sprite donné existe et si c&#39;est le cas, alors il est détruit (mais pas la couche). </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> Retour: <a href="Sprite_Layers.htm">Couches de sprite</a></div><div style="float:right"> Suivant:<a href="layer_sprite_create.htm">layer_sprite_create</a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
+<body>
+  <!--<div class="body-scroll" style="top: 150px;">-->
+  <h1>couche_sprite_existe</h1>
+  <p>Vous pouvez utiliser cette fonction pour vérifier si un élément sprite existe sur un calque donné. Vous fournissez l'ID de la couche (que vous obtenez lorsque vous créez la couche à l'aide de la fonction <a href="../General_Layer_Functions/layer_create.htm"><tt>layer_create()</tt></a>) ou le nom de la couche
+    (sous forme de chaîne - cela aura un impact sur les performances) et l'ID de l'élément sprite (que vous obtenez lorsque vous créez un élément sprite à l'aide de la commande <a href="layer_sprite_create.htm"><tt>layer_sprite_create()</tt></a> ou lorsque vous utilisez la fonction <a href="layer_sprite_get_id.htm"><tt>layer_sprite_get_id()</tt></a>)
+    La fonction renvoie soit <tt>true</tt> si l'élément existe, soit <tt>false</tt> s'il n'existe pas.</p>
+  <p class="note"><b>REMARQUE</b>: Cette fonction fonctionne dans le cadre de la pièce cible actuelle - par défaut, la pièce dans laquelle la fonction est appelée - qui peut être définie à l'aide de la fonction <span style="font-size:1px;"><a href="../General_Layer_Functions/layer_set_target_room.htm"><tt style="font-size: 14px">layer_set_target_room()</tt></a></span>.</p>
+  <p> </p>
+  <h4>Syntaxe :</h4>
+  <p class="code">layer_sprite_exists(layer_id, sprite_element_id)</p>
+  <table>
+    <tbody>
+      <tr>
+        <th>Arguments</th>
+        <th>Description</th>
+      </tr>
+      <tr>
+        <td>identifiant de la couche</td>
+        <td>La valeur d'identification unique de la couche à cibler (ou le nom de la couche sous forme de chaîne).</td>
+      </tr>
+      <tr>
+        <td>sprite_element_id</td>
+        <td>La valeur d'identification unique de l'élément du sprite à vérifier.</td>
+      </tr>
+    </tbody>
+  </table>
+  <p> </p>
+  <h4>Les retours :</h4>
+  <p class="code">Booléen</p>
+  <p> </p>
+  <h4>Exemple :</h4>
+  <p class="code">var lay_id = layer_get_id(&quot;Asset_Trees&quot;) ;<br> if layer_sprite_exists(lay_id, global.TreesSprites)<br> {
+    <br> layer_sprite_destroy(lay_id, global.TreesSprites) ;<br> }
+  </p>
+  <p>Le code ci-dessus vérifie le calque &quot;Asset_trees&quot; pour voir si l'élément sprite donné existe et si c'est le cas, alors il est détruit (mais pas le calque).</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <div class="footer">
+    <div class="buttons">
+      <div class="clear">
+        <div style="float:left">Retour : <a href="Sprite_Layers.htm">Couches de sprites</a></div>
+        <div style="float:right">Suivant : <a href="layer_sprite_create.htm">layer_sprite_create</a></div>
+      </div>
+    </div>
+    <h5><span data-keyref="Copyright Notice">Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
   </div>
   <!-- KEYWORDS
 layer_sprite_exists

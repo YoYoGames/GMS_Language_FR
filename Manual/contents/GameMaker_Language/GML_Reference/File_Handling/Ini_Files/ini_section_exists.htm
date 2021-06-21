@@ -3,18 +3,56 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>ini_section_exists</title>
+  <title>ini_section_existe</title>
   <meta name="generator" content="Adobe RoboHelp 2019" />
   <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
   <meta name="rh-authors" content="Mark Alexander" />
-  <meta name="topic-comment" content="Page de référence pour ini_section_exists" />
+  <meta name="topic-comment" content="Reference page for ini_section_exists" />
   <meta name="rh-index-keywords" content="ini_section_exists" />
   <meta name="search-keywords" content="ini_section_exists" />
 </head>
-<body><!--<div class="body-scroll" style="top: 150px;">--><h1>ini_section_exists</h1><p> Cette fonction vérifie si une section existe dans l&#39;ini actuellement ouvert et retournera <tt>true</tt> si c&#39;est le cas ou <tt>false</tt> autrement. Ce n&#39;est pas une vérification nécessaire pour éviter les erreurs car, lorsqu&#39;une section n&#39;existe pas, la lecture d&#39;une section inexistante renverra simplement une valeur par défaut, mais il peut être utile de voir si un fichier ini a enregistré des données spécifiques.</p><p></p><h4> Syntaxe:</h4><p class="code">ini_section_exists(section);</p><table><tbody><tr><th> Argument</th><th> Description</th></tr><tr><td> <span class="notranslate">section</span></td><td> La section du fichier.ini ouvert à rechercher.</td></tr></tbody></table><p></p><h4> Retour:</h4><p class="code">Boolean</p><p></p><h4> Exemple:</h4><p class="code">ini_open(&quot;savedata.ini&quot;);<br/> if !ini_section_exists(&quot;save1&quot;)<br/>     {
-    <br/>     global.savegame = &quot;1&quot;;<br/>     }
-    <br/> ini_close();
-  </p><p> Cela mettra la variable global.savegame à &quot;1&quot; si &quot;save1&quot; n&#39;est PAS trouvé. Avec une boucle for, cela pourrait être utilisé comme un moyen de base de calculer le nombre de sauvegardes qu&#39;il y a pour un jeu (c&#39;est-à-dire: créer un système pour plusieurs sauvegardes simultanées pour un jeu). </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> Retour: <a href="Ini_Files.htm">Fichiers Ini</a></div><div style="float:right"> Suivant:<a href="ini_key_delete.htm">ini_key_delete</a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
+<body>
+  <!--<div class="body-scroll" style="top: 150px;">-->
+  <h1>ini_section_existe</h1>
+  <p>Cette fonction vérifie si une section existe dans l'ini actuellement ouvert et renvoie <tt>true</tt> si c'est le cas ou <tt>false</tt> sinon. Ce n'est pas une vérification nécessaire pour éviter les erreurs car, lorsqu'une section n'existe pas, la lecture d'une section inexistante renverra simplement une valeur par défaut.
+    inexistante renverra simplement une valeur par défaut, mais cela peut être utile pour voir si un fichier ini a enregistré des données spécifiques.</p>
+  <p> </p>
+  <h4>Syntaxe :</h4>
+  <p class="code">ini_section_exists(section) ;</p>
+  <table>
+    <tbody>
+      <tr>
+        <th>Arguments</th>
+        <th>Description</th>
+      </tr>
+      <tr>
+        <td>section</td>
+        <td>La section à vérifier dans le fichier .ini ouvert.</td>
+      </tr>
+    </tbody>
+  </table>
+  <p> </p>
+  <h4>Les retours :</h4>
+  <p class="code">Booléen</p>
+  <p> </p>
+  <h4>Exemple :</h4>
+  <p class="code">ini_open(&quot;savedata.ini&quot;) ;<br> if !ini_section_exists(&quot;save1&quot;)<br> {
+    <br> global.savegame = &quot;1&quot; ;<br> }
+    <br> ini_close() ;
+  </p>
+  <p>Cela donnera à la variable global.savegame la valeur &quot;1&quot; si &quot;save1&quot; n'est PAS trouvé. Avec une boucle for, cela pourrait être utilisé comme un moyen de base pour déterminer combien de sauvegardes il y a pour un jeu (par exemple, créer un système pour plusieurs sauvegardes simultanées pour un jeu).
+    simultanées pour un jeu).</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <div class="footer">
+    <div class="buttons">
+      <div class="clear">
+        <div style="float:left">Retour : <a href="Ini_Files.htm">Dossiers Ini</a></div>
+        <div style="float:right">Suivant : <a href="ini_key_delete.htm">ini_key_delete</a></div>
+      </div>
+    </div>
+    <h5><span data-keyref="Copyright Notice">Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
   </div>
   <!-- KEYWORDS
 ini_section_exists

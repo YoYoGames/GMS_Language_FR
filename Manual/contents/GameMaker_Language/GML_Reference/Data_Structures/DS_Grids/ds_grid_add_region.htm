@@ -2,17 +2,74 @@
 
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml"><head>
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <title>ds_grid_add_region</title>
-  <meta name="generator" content="Adobe RoboHelp 2019"/>
-  <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css"/>
-  <meta name="rh-authors" content="Mark Alexander"/>
-  <meta name="topic-comment" content="Page de référence pour ds_grid_add_region"/>
-  <meta name="rh-index-keywords" content="ds_grid_add_region"/>
-  <meta name="search-keywords" content="ds_grid_add_region"/>
+  <meta name="generator" content="Adobe RoboHelp 2019" />
+  <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
+  <meta name="rh-authors" content="Mark Alexander" />
+  <meta name="topic-comment" content="Reference page for ds_grid_add_region" />
+  <meta name="rh-index-keywords" content="ds_grid_add_region" />
+  <meta name="search-keywords" content="ds_grid_add_region" />
 </head>
 
-<body><!--<div class="body-scroll" style="top: 150px;">--><h1>ds_grid_add_region</h1><p> Cette fonction peut être utilisée pour ajouter une valeur donnée (réelle ou chaîne) à toutes les valeurs des cellules trouvées dans la zone définie d&#39;une grille. La valeur à ajouter doit être du même type que celle contenue dans les cellules de la grille, c&#39;est-à-dire: vous ne pouvez pas ajouter une chaîne à un réel ou vice-versa, et pour les chaînes cela correspond à la concaténation.</p><p></p><h4> Syntaxe:</h4><p class="code">ds_grid_add_region(index, x1, y1, x2, y2, val);</p><table><tbody><tr><th> Argument</th><th> Description</th></tr><tr><td> <span class="notranslate">index</span></td><td> L&#39;index de la grille.</td></tr><tr><td> <span class="notranslate">x1</span></td><td> La position x de la gauche de la région dans la grille.</td></tr><tr><td> <span class="notranslate">y1</span></td><td> La position y du haut de la région dans la grille.</td></tr><tr><td> <span class="notranslate">x2</span></td><td> La position x de la droite de la région dans la grille.</td></tr><tr><td> <span class="notranslate">y2</span></td><td> La position y du bas de la région dans la grille.</td></tr><tr><td> <span class="notranslate">val</span></td><td> La valeur à ajouter aux cellules de la région.</td></tr></tbody></table><p></p><h4> Retour:</h4><p class="code">N/A</p><p></p><h4> Exemple:</h4><p class="code">ds_grid_add_region(grid, 2, 4, 5, 5, &quot;.&quot;)</p><p> Cela ajouterait &quot;.&quot; à toutes les chaînes contenues dans les cellules dans la région définie de la grille DS référencée par la variable «grille». </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> Retour: <a href="DS_Grids.htm">DS Grids</a></div><div style="float:right"> Suivant:<a href="ds_grid_add_disk.htm">ds_grid_add_disk</a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
+<body>
+  <!--<div class="body-scroll" style="top: 150px;">-->
+  <h1>ds_grid_add_region</h1>
+  <p>Cette fonction peut être utilisée pour ajouter une valeur donnée (réelle ou chaîne de caractères) à toutes les valeurs des cellules situées dans la zone définie d'une grille. La valeur à ajouter doit être du même type que celle contenue dans les cellules de la grille, c'est-à-dire que vous ne pouvez pas ajouter une chaîne de caractères à un réel ou vice-versa.
+    c'est-à-dire que vous ne pouvez pas ajouter une chaîne de caractères à un réel ou vice-versa, et pour les chaînes de caractères, cela correspond à une concaténation.</p>
+  <p> </p>
+  <h4>Syntaxe :</h4>
+  <p class="code">ds_grid_add_region(index, x1, y1, x2, y2, val) ;</p>
+  <table>
+    <tbody>
+      <tr>
+        <th>Arguments</th>
+        <th>Description</th>
+      </tr>
+      <tr>
+        <td>indice</td>
+        <td>L'index de la grille.</td>
+      </tr>
+      <tr>
+        <td>x1</td>
+        <td>La position x de la partie gauche de la région dans la grille.</td>
+      </tr>
+      <tr>
+        <td>y1</td>
+        <td>La position y du haut de la région dans la grille.</td>
+      </tr>
+      <tr>
+        <td>x2</td>
+        <td>La position x de la droite de la région dans la grille.</td>
+      </tr>
+      <tr>
+        <td>y2</td>
+        <td>La position y du bas de la région dans la grille.</td>
+      </tr>
+      <tr>
+        <td>val</td>
+        <td>La valeur à ajouter aux cellules de la région.</td>
+      </tr>
+    </tbody>
+  </table>
+  <p> </p>
+  <h4>Les retours :</h4>
+  <p class="code">N/A</p>
+  <p> </p>
+  <h4>Exemple :</h4>
+  <p class="code">ds_grid_add_region(grid, 2, 4, 5, 5, &quot;.&quot;)</p>
+  <p>Cela ajouterait &quot;.&quot; à toutes les chaînes contenues dans les cellules de la région définie de la grille DS référencée par la variable &quot;grid&quot;.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <div class="footer">
+    <div class="buttons">
+      <div class="clear">
+        <div style="float:left">Retour : <a href="DS_Grids.htm">Grilles DS</a></div>
+        <div style="float:right">Suivant : <a href="ds_grid_add_disk.htm">ds_grid_add_disk</a></div>
+      </div>
+    </div>
+    <h5><span data-keyref="Copyright Notice">Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
   </div>
   <!-- KEYWORDS
 ds_grid_add_region

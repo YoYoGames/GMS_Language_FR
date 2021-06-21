@@ -3,19 +3,45 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>uwp_is_suspending</title>
+  <title>uwp_est_suspendu</title>
   <meta name="generator" content="Adobe RoboHelp 2019" />
   <link rel="stylesheet" href="../../../assets/css/default.css" type="text/css" />
   <meta name="rh-authors" content="Mark Alexander" />
-  <meta name="topic-comment" content="Page de référence pour uwp_is_suspending" />
+  <meta name="topic-comment" content="Reference page for uwp_is_suspending" />
   <meta name="rh-index-keywords" content="uwp_is_suspending" />
   <meta name="search-keywords" content="uwp_is_suspending" />
 </head>
-<body><!--<div class="body-scroll" style="top: 150px;">--><h1>uwp_is_suspending</h1><p> Cette fonction retournera <tt>true</tt> pour une seule image (et <tt>false</tt> autrement) de la même manière que <a href="../OS_And_Compiler/os_is_paused.htm"><tt>os_is_paused()</tt></a>. Le jeu dispose alors d&#39;une seconde pour sauvegarder l&#39;état du jeu avant qu&#39;il ne soit potentiellement interrompu par le système. Une fois que le jeu a fini de sauvegarder les données, il doit appeler <a href="uwp_suspend.htm"><tt>uwp_suspend()</tt></a> suspendre proprement. Le jeu devrait probablement également entrer dans un état de pause afin que s&#39;il est repris par le système (s&#39;il n&#39;a pas été complètement terminé), le joueur ne soit pas renvoyé directement dans une situation de jeu.</p><p></p><h4> Syntaxe:</h4><p class="code">uwp_is_suspending();</p><p></p><h4> Retour:</h4><p class="code">Boolean</p><p></p><h4> Exemple:</h4><p class="code">if uwp_is_suspending()<br/>     {
-    <br/>     scr_Save_Game_Data();
-    <br/>     uwp_suspend();
-    <br/>     }
-  </p><p> Le code ci-dessus vérifie si l&#39;application est en suspension et si c&#39;est le cas, il appelle un script pour enregistrer les données du jeu avant de suspendre le jeu. </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> Retour: <a href="UWP_And_XBox_Live.htm">UWP et XBox Live</a></div><div style="float:right"> Suivant:<a href="uwp_is_constrained.htm">uwp_is_constrained</a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
+<body>
+  <!--<div class="body-scroll" style="top: 150px;">-->
+  <h1>uwp_est_suspendu</h1>
+  <p>Cette fonction retournera <tt>vrai</tt> pour une seule image (et <tt>faux</tt> sinon) de manière similaire à la fonction <a href="../OS_And_Compiler/os_is_paused.htm"><tt>os_is_paused()</tt></a>. Le jeu a alors une seconde pour sauvegarder l'état du jeu avant d'être
+    avant d'être potentiellement interrompu par le système. Une fois que le jeu a fini de sauvegarder les données, il doit appeler <a href="uwp_suspend.htm"><tt>uwp_suspend()</tt></a> pour suspendre proprement. Le jeu devrait probablement aussi entrer dans un état de pause afin que, s'il est repris par le système (s'il n'a pas été complètement arrêté), le jeu puisse être interrompu.
+    système (s'il n'a pas été complètement arrêté), le joueur ne soit pas directement projeté dans une situation de jeu.</p>
+  <p> </p>
+  <h4>Syntaxe :</h4>
+  <p class="code">uwp_is_suspending() ;</p>
+  <p> </p>
+  <h4>Les retours :</h4>
+  <p class="code">Booléen</p>
+  <p> </p>
+  <h4>Exemple :</h4>
+  <p class="code">if uwp_is_suspending()<br> {
+    <br> scr_Save_Game_Data() ;
+    <br> uwp_suspend() ;
+    <br> }
+  </p>
+  <p>Le code ci-dessus vérifie si l'application va être suspendue et si c'est le cas, il appelle un script pour sauvegarder les données du jeu avant de le suspendre.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <div class="footer">
+    <div class="buttons">
+      <div class="clear">
+        <div style="float:left">Retour : <a href="UWP_And_XBox_Live.htm">UWP et XBox Live</a></div>
+        <div style="float:right">Suivant : <a href="uwp_is_constrained.htm">uwp_is_constrained</a></div>
+      </div>
+    </div>
+    <h5><span data-keyref="Copyright Notice">Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
   </div>
   <!-- KEYWORDS
 uwp_is_suspending

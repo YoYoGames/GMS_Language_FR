@@ -2,17 +2,91 @@
 
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml"><head>
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-  <title>dot_product</title>
-  <meta name="generator" content="Adobe RoboHelp 2019"/>
-  <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css"/>
-  <meta name="rh-authors" content="Mark Alexander"/>
-  <meta name="topic-comment" content="Page de référence pour dot_product"/>
-  <meta name="rh-index-keywords" content="dot_product"/>
-  <meta name="search-keywords" content="dot_product"/>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>point_produit</title>
+  <meta name="generator" content="Adobe RoboHelp 2019" />
+  <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
+  <meta name="rh-authors" content="Mark Alexander" />
+  <meta name="topic-comment" content="Reference page for dot_product" />
+  <meta name="rh-index-keywords" content="dot_product" />
+  <meta name="search-keywords" content="dot_product" />
 </head>
 
-<body><!--<div class="body-scroll" style="top: 150px;">--><h1>dot_product</h1><p> Le produit scalaire est une valeur exprimant la relation angulaire entre deux vecteurs et se trouve en prenant deux vecteurs, en les multipliant ensemble puis en ajoutant les résultats. Le nom «produit scalaire» est dérivé du point centré «·» qui est souvent utilisé pour désigner cette opération (le nom alternatif «produit scalaire» met l&#39;accent sur la nature scalaire plutôt que vectorielle du résultat).</p><p> La formule mathématique réelle peut être écrite comme ceci:</p><p><img alt="Dot Product formula" class="center" src="../../../../assets/Images/Scripting_Reference/GML/Reference/Maths/dot_product_image.png"/></p><p> Donc, en 2D le produit scalaire des vecteurs <span class="inline">a[x1,y1]</span> et <span class="inline">b[x2,2]</span> est <span class="inline">x1x2 + y1y2</span>, ce qui signifie que le dot_product dans <span class="notranslate">GameMaker Studio 2</span> est calculé comme suit:</p><p class="code">a · b = (x1*x2)+(y1*y2);</p><p> La chose curieuse à propos du produit scalaire est la relation qu&#39;il a avec l&#39;angle formé par les vecteurs d&#39;entrée qui peut être exprimé comme:</p><p class="code">a · b = (length of a) * (length of b) * cos(angle)</p><p> C&#39;est-à-dire que le produit scalaire de deux vecteurs sera égal au cosinus de l&#39;angle entre ces vecteurs, multiplié par les longueurs de chacun d&#39;eux. Voici une image pour illustrer:</p><p><img alt="Dot Product ilustration" class="center" height="143" src="../../../../assets/Images/Scripting_Reference/GML/Reference/Maths/dot_product_image_2.png" width="406"/></p><p class="note"> <strong>REMARQUE</strong>: pour plus d&#39;informations sur les vecteurs, <a href="../../../../Additional_Information/Vectors.htm">cliquez ici</a>.</p><p> Il y a quelques choses que nous pouvons maintenant énoncer à partir de deux vecteurs quelconques en relation avec le résultat de leur produit scalaire:</p><ul class="colour"><li> Si a et b sont perpendiculaires (à 90 degrés l&#39;un par rapport à l&#39;autre), le résultat du produit scalaire sera nul, car <span class="inline">cos(ang)</span> sera nul</li><li> Si l&#39;angle entre a et b est inférieur à 90 degrés, le produit scalaire sera positif (supérieur à zéro), comme <span class="inline">cos(ang)</span> sera positif</li><li> Si l&#39;angle entre a et b est supérieur à 90 degrés, le produit scalaire sera négatif (inférieur à zéro), comme <span class="inline">cos(ang)</span> sera négatif</li></ul><p> Alors qu&#39;est-ce que cela signifie pour ceux d&#39;entre nous qui créent des jeux? Eh bien, cette relation mathématique peut être utilisée dans de nombreuses circonstances, mais la meilleure façon de la voir est de construire un scénario réel et de voir par vous-même ce qui se passe. L&#39;un des moyens les plus simples de le faire est de générer un simple contrôle de &quot;ligne de vue&quot; pour un ennemi dans, par exemple, un jeu de plate-forme afin que l&#39;ennemi &quot;voit&quot; le joueur s&#39;il est à moins de 90 ° de chaque côté de son vecteur <i>normal</i>.</p><p><img alt="Dot product example" class="center" src="../../../../assets/Images/Scripting_Reference/GML/Reference/Maths/dot_product_image_1.png"/> Fondamentalement, nous devons obtenir le vecteur normal de l&#39;ennemi (c&#39;est-à-dire composé d&#39;une direction et d&#39;une distance de vue) et ensuite nous devons obtenir le vecteur du joueur vers l&#39;ennemi. Nous obtiendrons alors le dot_product de ces vecteurs, et si le résultat est positif, le joueur a été vu, et s&#39;il est négatif, il ne l&#39;a pas. Le code réel pour que cela fonctionne est fourni dans l&#39;exemple ci-dessous.</p><p></p><h4> <b>Syntaxe:</b></h4><p class="code">dot_product(x1, y1, x2, y2)</p><table><tbody><tr><th> Argument</th><th> Description</th></tr><tr><td> <span class="notranslate">x1</span></td><td> La coordonnée x du premier vecteur.</td></tr><tr><td> <span class="notranslate">y1</span></td><td> La coordonnée y du premier vecteur.</td></tr><tr><td> <span class="notranslate">x2</span></td><td> La coordonnée x du deuxième vecteur.</td></tr><tr><td> <span class="notranslate">y2</span></td><td> La coordonnée y du deuxième vecteur.</td></tr></tbody></table><p></p><h4> Retour:</h4><p class="code">Real</p><p></p><h4> Exemple:</h4><p class="code">var x1, y1, x2, y2;<br/> x1 = lengthdir_x(1, image_angle);<br/> y1 = lengthdir_y(1, image_angle);<br/> x2 = o_Player.x - x;<br/> y2 = o_Player.y - y;<br/> if dot_product(x1, y1, x2, y2) &gt; 0 seen=true else seen=false;</p><p> Le code ci-dessus crée un vecteur en utilisant l&#39;angle d&#39;image des instances, puis obtient le vecteur de l&#39;objet joueur &quot;o_Player&quot; pour lui-même. Enfin, il calcule le produit scalaire de ces deux vecteurs et s&#39;il est supérieur à 0, il définit la variable &quot;vu&quot; à vrai, et s&#39;il est égal ou inférieur à 0, il le met à &quot;faux&quot;. </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> Retour: <a href="Angles_And_Distance.htm">Angles et distance</a></div><div style="float:right"> Suivant:<a href="dot_product_3d.htm">dot_product_3d</a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
+<body>
+
+
+
+
+  <!--<div class="body-scroll" style="top: 150px;">-->
+  <h1>point_produit</h1>
+  <p>Le produit scalaire est une valeur exprimant la relation angulaire entre deux vecteurs. On le trouve en prenant deux vecteurs, en les multipliant et en additionnant les résultats. Le nom &quot;produit scalaire&quot; est dérivé du point centré &quot;-&quot; qui est souvent utilisé pour désigner cette opération.
+    centré qui est souvent utilisé pour désigner cette opération (l'appellation alternative &quot;produit scalaire&quot; souligne la nature scalaire plutôt que vectorielle du résultat).</p>
+  <p>La formule mathématique réelle peut être écrite comme suit :</p>
+  <p><img alt="Dot Product formula" class="center" src="../../../../assets/Images/Scripting_Reference/GML/Reference/Maths/dot_product_image.png" /></p>
+  <p>Ainsi, en 2D, le produit scalaire des vecteurs <span class="inline">a[x1,y1]</span> et <span class="inline">b[x2,2]</span> est <span class="inline">x1x2 + y1y2</span>, ce qui signifie que le produit scalaire dans <span class="notranslate">GameMaker Studio 2</span> est calculé comme suit :</p>
+  <p class="code">a - b = (x1*x2)+(y1*y2) ;</p>
+  <p>Ce qui est curieux avec le produit scalaire, c'est la relation qu'il a avec l'angle formé par les vecteurs d'entrée qui peut être exprimé comme suit :</p>
+  <p class="code">a - b = (longueur de a) * (longueur de b) * cos(angle)</p>
+  <p>C'est-à-dire que le produit scalaire de deux vecteurs sera égal au cosinus de l'angle entre ces vecteurs, multiplié par la longueur de chacun d'eux. Voici une image pour l'illustrer :</p>
+  <p><img alt="Dot Product ilustration" class="center" height="143" src="../../../../assets/Images/Scripting_Reference/GML/Reference/Maths/dot_product_image_2.png" width="406" /></p>
+  <p class="note"><strong>NOTE</strong>: Pour plus d'informations sur les vecteurs, voir <a href="../../../../Additional_Information/Vectors.htm">ici</a>.</p>
+  <p>Il y a quelques éléments que nous pouvons maintenant affirmer à partir de deux vecteurs quelconques en relation avec le résultat de leur produit scalaire :</p>
+  <ul class="colour">
+    <li>Si a et b sont perpendiculaires (à 90 degrés l'un par rapport à l'autre), le résultat du produit scalaire sera égal à zéro, car <span class="inline">cos(ang)</span> sera égal à zéro.</li>
+    <li>Si l'angle entre a et b est inférieur à 90 degrés, le produit scalaire sera positif (supérieur à zéro), car <span class="inline">cos(ang)</span> sera positif.</li>
+    <li>Si l'angle entre a et b est supérieur à 90 degrés, le produit scalaire sera négatif (inférieur à zéro), car <span class="inline">cos(ang)</span> sera négatif.</li>
+  </ul>
+  <p>Qu'est-ce que cela signifie pour ceux d'entre nous qui créent des jeux ? Eh bien, cette relation mathématique peut être utilisée dans de nombreuses circonstances, mais la meilleure façon de s'en rendre compte est de construire un scénario réel et de voir par vous-même ce qui se passe. L'une des façons les plus simples
+    L'une des façons les plus simples de le faire est de générer une simple vérification de la &quot;ligne de vue&quot; d'un ennemi dans un jeu de plates-formes, par exemple, afin que l'ennemi &quot;voie&quot; le joueur s'il se trouve à 90° de part et d'autre de sa normale vectorielle.</p>
+  <p><img alt="Dot product example" class="center" src="../../../../assets/Images/Scripting_Reference/GML/Reference/Maths/dot_product_image_1.png">En gros, nous devons obtenir le vecteur normal de l'ennemi (c'est-à-dire composé d'une direction et d'une distance de vue)
+    et ensuite nous devons obtenir le vecteur du joueur par rapport à l'ennemi. Nous obtiendrons ensuite le produit scalaire de ces vecteurs, et si le résultat est positif, le joueur a été vu, et s'il est négatif, il ne l'a pas été. Le code réel pour que cela fonctionne est fourni
+    dans l'exemple ci-dessous.</p>
+  <p> </p>
+  <h4><b>Syntaxe :</b></h4>
+  <p class="code">dot_product(x1, y1, x2, y2)</p>
+  <table>
+    <tbody>
+      <tr>
+        <th>Arguments</th>
+        <th>Description</th>
+      </tr>
+      <tr>
+        <td>x1</td>
+        <td>La coordonnée x du premier vecteur.</td>
+      </tr>
+      <tr>
+        <td>y1</td>
+        <td>La coordonnée y du premier vecteur.</td>
+      </tr>
+      <tr>
+        <td>x2</td>
+        <td>La coordonnée x du deuxième vecteur.</td>
+      </tr>
+      <tr>
+        <td>y2</td>
+        <td>La coordonnée y du deuxième vecteur.</td>
+      </tr>
+    </tbody>
+  </table>
+  <p> </p>
+  <h4>Les retours :</h4>
+  <p class="code">Real</p>
+  <p> </p>
+  <h4>Exemple :</h4>
+  <p class="code">var x1, y1, x2, y2 ;<br> x1 = lengthdir_x(1, image_angle) ;<br> y1 = lengthdir_y(1, image_angle) ;<br> x2 = o_Player.x - x ;<br> y2 = o_Player.y - y ;<br> if dot_product(x1, y1, x2, y2) &gt; 0 seen=true else seen=false ;</p>
+  <p>Le code ci-dessus crée un vecteur en utilisant l'angle de l'image de l'instance, puis il obtient le vecteur de l'objet joueur &quot;o_Player&quot; à lui-même. Enfin, il calcule le produit scalaire de ces deux vecteurs et s'il est supérieur à 0, il met la variable "seen" à true.
+    &quot;seen&quot; à true, et si elle est égale ou inférieure à 0, elle la met à &quot;false&quot;.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <div class="footer">
+    <div class="buttons">
+      <div class="clear">
+        <div style="float:left">Retour : <a href="Angles_And_Distance.htm">Angles et distances</a></div>
+        <div style="float:right">Suivant : <a href="dot_product_3d.htm">dot_product_3d</a></div>
+      </div>
+    </div>
+    <h5><span data-keyref="Copyright Notice">Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
   </div>
   <!-- KEYWORDS
 dot_product

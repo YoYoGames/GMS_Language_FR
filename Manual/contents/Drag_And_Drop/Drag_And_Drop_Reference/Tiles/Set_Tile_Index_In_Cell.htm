@@ -3,15 +3,65 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>Définir l&#39;index des mosaïques dans la cellule</title>
+  <title>Définir l'index de la tuile dans la cellule</title>
   <meta name="generator" content="Adobe RoboHelp 2019" />
   <link rel="stylesheet" href="../../../assets/css/default.css" type="text/css" />
   <meta name="rh-authors" content="Mark Alexander" />
-  <meta name="topic-comment" content="Page qui explique l&#39;action Définir l&#39;index des vignettes dans la cellule" />
-  <meta name="rh-index-keywords" content="DnD ™ - Définir l&#39;index des vignettes dans la cellule" />
-  <meta name="search-keywords" content="Définir l&#39;index des mosaïques dans la cellule" />
+  <meta name="topic-comment" content="Page that explains the Set Tile Index In Cell action" />
+  <meta name="rh-index-keywords" content="DnD™ Action - Set Tile Index In Cell" />
+  <meta name="search-keywords" content="Set Tile Index In Cell" />
 </head>
-<body><!--<div class="body-scroll" style="top: 150px;">--><h1><img alt="Set Tile Index In Cell Icon" class="icon" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Tiles/i_Tiles_Set_Tile_In_Cell.png" /> Définir l&#39;index des mosaïques dans la cellule</h1><p> Avec cette action, vous pouvez définir une tuile sur une couche donnée sur un nouvel index. Le calque est spécifié à partir du nom du calque donné (une chaîne, comme utilisé pour nommer le calque dans l&#39;éditeur de pièce), puis vous donnez la ligne et la colonne de la cellule dans le calque pour obtenir la vignette à définir. Enfin, vous fournissez l&#39;index de tuile pour définir la tuile (les tuiles sont indexées de gauche à droite de haut en bas, avec 0 en haut à gauche). Notez que vous pouvez toujours définir l&#39;index de la vignette sur 0 pour effacer la vignette.</p><p></p><h4> Syntaxe de l&#39;action:</h4><p><img alt="Set Tile Index In Cell Action" class="center" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Tiles/a_Tiles_Set_Tile_In_Cell.png" /></p><h4> Arguments:</h4><table><tbody><tr><th> Argument</th><th> Description</th></tr><tr><td> <span class="notranslate">Layer</span></td><td> Le calque sur lequel définir la vignette</td></tr><tr><td> <span class="notranslate">Column</span></td><td> La colonne (de gauche à droite) de la cellule</td></tr><tr><td> <span class="notranslate">Row</span></td><td> La ligne (de haut en bas) de la cellule</td></tr><tr><td> <span class="notranslate">Tile</span></td><td> L&#39;index de vignette sur lequel définir la cellule</td></tr></tbody></table><p></p><h4> Exemple:</h4><p><img alt="Set Tile Index In Cell Example" class="center" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Tiles/e_Tiles_Set_Tile_In_Cell.png" /> Le code de bloc d&#39;action ci-dessus crée une boucle pour parcourir la ligne supérieure de la couche de pièce donnée, et comme il le fait, il vérifie si la tuile indexée dans la cellule de la colonne est définie sur 0. Si ce n&#39;est pas l&#39;index de tuile pour cette cellule est mis à 0 et la variable temporaire (locale) est incrémentée avant que la boucle ne fasse un autre ensemble de vérifications. </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> Retour: <a href="Tile_Actions.htm">Actions de tuile</a></div><div style="float:right"> Suivant: <a href="Get_Tile_Index_In_Cell.htm">Obtenir l&#39;index des tuiles dans la cellule</a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
+<body>
+  <!--<div class="body-scroll" style="top: 150px;">-->
+  <h1><img alt="Set Tile Index In Cell Icon" class="icon" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Tiles/i_Tiles_Set_Tile_In_Cell.png"> Set Tile Index In Cell</h1>
+  <p>Avec cette action, vous pouvez définir une tuile sur une couche donnée à un nouvel indice. La couche est spécifiée à partir du nom de couche donné (une chaîne de caractères, telle qu'elle est utilisée pour nommer la couche dans l'éditeur de pièce), et ensuite vous donnez la ligne et la colonne de la cellule dans la couche pour obtenir
+    la tuile à définir. Enfin, vous fournissez l'index de la tuile à définir (les tuiles sont indexées de gauche à droite, de haut en bas, avec 0 en haut à gauche). Notez que vous pouvez toujours définir l'indice de tuile à 0 pour effacer la tuile.</p>
+  <p> </p>
+  <h4>Syntaxe de l'action :</h4>
+  <p><img alt="Set Tile Index In Cell Action" class="center" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Tiles/a_Tiles_Set_Tile_In_Cell.png" /></p>
+  <h4>Arguments :</h4>
+  
+    <table>
+      <tbody>
+        <tr>
+          <th>Arguments</th>
+          <th>Description</th>
+        </tr>
+        <tr>
+          <td>Couche</td>
+          <td>La couche sur laquelle la tuile doit être placée</td>
+        </tr>
+        <tr>
+          <td>Colonne</td>
+          <td>La colonne (de gauche à droite) de la cellule</td>
+        </tr>
+        <tr>
+          <td>Rangée</td>
+          <td>La ligne (de haut en bas) de la cellule</td>
+        </tr>
+        <tr>
+          <td>Carreaux</td>
+          <td>L'index de la tuile pour définir la cellule</td>
+        </tr>
+      </tbody>
+    </table>
+  
+  <p> </p>
+  <h4>Exemple :</h4>
+  <p><img alt="Set Tile Index In Cell Example" class="center" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Tiles/e_Tiles_Set_Tile_In_Cell.png">Le code du bloc d'action ci-dessus crée une boucle pour parcourir la rangée supérieure de la couche de la pièce donnée.
+    de la couche de la pièce donnée et, ce faisant, vérifie si la tuile indexée à la cellule de la colonne est à 0. Si ce n'est pas le cas, l'index de la tuile pour cette cellule est à 0 et la variable temporaire (locale) est incrémentée avant que la boucle n'effectue une autre série de vérifications.
+    série de vérifications.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <div class="footer">
+    <div class="buttons">
+      <div class="clear">
+        <div style="float:left">Retour : <a href="Tile_Actions.htm">Actions sur les tuiles</a></div>
+        <div style="float:right">Suivant : <a href="Get_Tile_Index_In_Cell.htm">Obtenir l'index des tuiles dans une cellule</a></div>
+      </div>
+    </div>
+    <h5><span data-keyref="Copyright Notice">Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
   </div>
   <!-- KEYWORDS
 Action - Set Tile Index In Cell

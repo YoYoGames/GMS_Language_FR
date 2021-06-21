@@ -7,12 +7,49 @@
   <meta name="generator" content="Adobe RoboHelp 2019" />
   <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
   <meta name="rh-authors" content="Mark Alexander" />
-  <meta name="topic-comment" content="Référence de la fonction gpu_set_blendenable" />
+  <meta name="topic-comment" content="Reference for the function gpu_set_blendenable" />
   <meta name="rh-index-keywords" content="gpu_set_blendenable" />
   <meta name="search-keywords" content="gpu_set_blendenable" />
 </head>
-<body><!--<div class="body-scroll" style="top: 150px;">--><h1>gpu_set_blendenable</h1><p> Cette fonction peut être utilisée pour activer et désactiver la fusion alpha. Fondamentalement, si vous avez défini sur <tt>false</tt>, toutes les images dessinées seront dessinées à 100% opaques, ce qui signifie que toute zone transparente ou semi-transparente d&#39;un sprite ou d&#39;un arrière-plan sera visible sous forme de couleur unie. Il est une bonne idée d&#39;avoir alpha mélange <i>de</i> chaque fois que possible ( en particulier lors du développement pour les appareils mobiles) car cela augmente considérablement la vitesse de tirage.</p><p><img alt="Alpha blend example" class="center" src="../../../../assets/Images/Scripting_Reference/GML/Reference/Drawing/Alphablend_Image.png" /></p><h4> Syntaxe:</h4><p class="code">gpu_set_blendenable(enable);</p><table><tbody><tr><th> Argument</th><th> Description</th></tr><tr><td> <span class="notranslate">enable</span></td><td> Activer ou désactiver la valeur de fusion alpha (<tt>true</tt> ou <tt>false</tt> ).</td></tr></tbody></table><p></p><h4> Retour:</h4><p class="code">N/A</p><p></p><h4> Exemple:</h4><p class="code">gpu_set_blendenable(false);<br/> draw_sprite(spr_Background, 0, 0, 0);<br/> gpu_set_blendenable(true);
-  </p><p> Le code ci-dessus désactive la fusion alpha pour dessiner un sprite d&#39;arrière-plan, puis le rallume pour continuer à dessiner. </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> Retour: <a href="GPU_Control.htm">Contrôle GPU</a></div><div style="float:right"> Suivant:<a href="gpu_set_ztestenable.htm">gpu_set_ztestenable</a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
+<body>
+  <!--<div class="body-scroll" style="top: 150px;">-->
+  <h1>gpu_set_blendenable</h1>
+  <p>Cette fonction peut être utilisée pour activer ou désactiver le mélange alpha. En gros, si vous mettez cette fonction à <tt>false</tt>, toutes les images dessinées seront 100% opaques, ce qui signifie que toutes les zones transparentes ou semi-transparentes d'un sprite ou d'un arrière-plan seront visibles en tant que couleur solide.
+    seront visibles sous la forme d'une couleur unie. Il est conseillé de <i>désactiver le</i> mélange alpha dans la mesure du possible (en particulier lors du développement pour les appareils mobiles), car cela augmente considérablement la vitesse d'affichage.</p>
+  <p><img alt="Alpha blend example" class="center" src="../../../../assets/Images/Scripting_Reference/GML/Reference/Drawing/Alphablend_Image.png" /></p>
+  <h4>Syntaxe :</h4>
+  <p class="code">gpu_set_blendenable(enable) ;</p>
+  <table>
+    <tbody>
+      <tr>
+        <th>Arguments</th>
+        <th>Description</th>
+      </tr>
+      <tr>
+        <td>activer</td>
+        <td>Active ou désactive la valeur du mélange alpha<tt>(true</tt> ou <tt>false</tt>).</td>
+      </tr>
+    </tbody>
+  </table>
+  <p> </p>
+  <h4>Les retours :</h4>
+  <p class="code">N/A</p>
+  <p> </p>
+  <h4>Exemple :</h4>
+  <p class="code">gpu_set_blendenable(false) ;<br> draw_sprite(spr_Background, 0, 0, 0) ;<br> gpu_set_blendenable(true) ;
+  </p>
+  <p>Le code ci-dessus désactive le mélange alpha pour dessiner un sprite d'arrière-plan, puis le réactive pour continuer à dessiner.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <div class="footer">
+    <div class="buttons">
+      <div class="clear">
+        <div style="float:left">Retour : <a href="GPU_Control.htm">Contrôle du GPU</a></div>
+        <div style="float:right">Suivant : <a href="gpu_set_ztestenable.htm">gpu_set_ztestenable</a></div>
+      </div>
+    </div>
+    <h5><span data-keyref="Copyright Notice">Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
   </div>
   <!-- KEYWORDS
 gpu_set_blendenable

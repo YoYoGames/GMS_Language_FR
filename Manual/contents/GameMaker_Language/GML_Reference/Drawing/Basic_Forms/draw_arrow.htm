@@ -3,15 +3,71 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>draw_arrow</title>
+  <title>dessiner_flèche</title>
   <meta name="generator" content="Adobe RoboHelp 2019" />
   <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
   <meta name="rh-authors" content="Mark Alexander" />
-  <meta name="topic-comment" content="Référence pour la fonction draw_arrow" />
+  <meta name="topic-comment" content="Reference for the function draw_arrow" />
   <meta name="rh-index-keywords" content="draw_arrow" />
   <meta name="search-keywords" content="draw_arrow" />
 </head>
-<body><!--<div class="body-scroll" style="top: 150px;">--><h1>draw_arrow</h1><p> Cette fonction dessinera une flèche du point (x1, y1) au point (x2, y2). La tige de la flèche est dessinée le long de ces points avec la tête de flèche réelle dessinée à la fin, où la taille de la pointe de flèche est définie par l&#39;argument &quot;taille&quot; et est calculée comme faisant partie de la tige de sorte que le point final soit toujours aligné avec la position définie par x2, y2. La largeur de la pointe de la flèche est calculée automatiquement proportionnellement à la longueur.</p><p class="note"> <b>REMARQUE</b>: Si vous souhaitez dessiner une forme à l&#39;aide d&#39;un <span class="notranslate">shader</span>, sachez que la plupart des <span class="notranslate">shaders</span> attendent les entrées suivantes: sommet, texture, couleur. Cependant, lors de l&#39;utilisation de cette fonction, seules les données de sommet et de couleur sont transmises, et le <span class="notranslate">shader</span> peut ne rien dessiner (ou dessiner quelque chose mais pas correctement). Si vous devez dessiner des formes de cette manière, le <span class="notranslate">shader</span> doit être personnalisé dans cet esprit.</p><p></p><h4> Syntaxe:</h4><p class="code">draw_arrow(x1, y1, x2, y2, size);</p><p></p><table><tbody><tr><th> Argument</th><th> Description</th></tr><tr><td> <span class="notranslate">x1</span></td><td> La coordonnée x du début de la ligne.</td></tr><tr><td> <span class="notranslate">y1</span></td><td> La coordonnée y du début de la ligne.</td></tr><tr><td> <span class="notranslate">x2</span></td><td> Coordonnée x de la fin de la ligne (où se termine la pointe de flèche).</td></tr><tr><td> <span class="notranslate">y2</span></td><td> Coordonnée y de la fin de la ligne (où se termine la pointe de flèche).</td></tr><tr><td> <span class="notranslate">size</span></td><td> La longueur de la flèche en pixels.</td></tr></tbody></table><p></p><h4> Retour:</h4><p class="code">N/A</p><p></p><h4> Exemple:</h4><p class="code">draw_arrow(x, y, mouse_x, mouse_y, 10);</p><p> Le code ci-dessus dessinera une flèche de la position de l&#39;instance à la position de la souris, la tête de la flèche mesurant 10 pixels de long. </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> Retour: <a href="Basic_Forms.htm">Formulaires de base</a></div><div style="float:right"> Suivant:<a href="draw_circle.htm">draw_circle</a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
+<body>
+  <!--<div class="body-scroll" style="top: 150px;">-->
+  <h1>dessiner_flèche</h1>
+  <p>Cette fonction va dessiner une flèche du point (x1,y1) au point (x2,y2). La tige de la flèche est dessinée le long de ces points, la tête de la flèche étant dessinée à la fin, la taille de la tête de la flèche étant définie par l'argument &quot;size&quot; et
+    est calculée comme faisant partie de la tige de sorte que le point final soit toujours aligné avec la position définie par x2,y2. La largeur de la pointe de la flèche est calculée automatiquement en proportion de la longueur.</p>
+  <p class="note"><b>NOTE</b>: Si vous souhaitez dessiner une forme à l'aide d'un <span class="notranslate">shader</span>, sachez que la plupart des <span class="notranslate">shaders</span> attendent les entrées suivantes : vertex, texture, couleur. Cependant, en utilisant cette fonction, seules les données de vertex et de couleur sont transmises, et donc le shader peut ne rien dessiner (ou dessiner quelque chose mais pas correctement).
+   <span class="notranslate">shader</span> peut ne rien dessiner (ou dessiner quelque chose mais pas correctement). Si vous avez besoin de dessiner des formes de cette manière, le <span class="notranslate">shader</span> doit être personnalisé en conséquence.</p>
+  <p> </p>
+  <h4>Syntaxe :</h4>
+  <p class="code">draw_arrow(x1, y1, x2, y2, size) ;</p>
+  <p> </p>
+  <table>
+    <tbody>
+      <tr>
+        <th>Arguments</th>
+        <th>Description</th>
+      </tr>
+      <tr>
+        <td>x1</td>
+        <td>La coordonnée x du début de la ligne.</td>
+      </tr>
+      <tr>
+        <td>y1</td>
+        <td>La coordonnée y du début de la ligne.</td>
+      </tr>
+      <tr>
+        <td>x2</td>
+        <td>La coordonnée x de la fin de la ligne (là où se termine la pointe de la flèche).</td>
+      </tr>
+      <tr>
+        <td>y2</td>
+        <td>La coordonnée y de l'extrémité de la ligne (là où se termine la pointe de la flèche).</td>
+      </tr>
+      <tr>
+        <td>taille</td>
+        <td>La longueur de la flèche en pixels.</td>
+      </tr>
+    </tbody>
+  </table>
+  <p> </p>
+  <h4>Les retours :</h4>
+  <p class="code">N/A</p>
+  <p> </p>
+  <h4>Exemple :</h4>
+  <p class="code">draw_arrow(x, y, mouse_x, mouse_y, 10) ;</p>
+  <p>Le code ci-dessus dessine une flèche de la position de l'instance à la position de la souris, la tête de la flèche faisant 10 pixels de long.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <div class="footer">
+    <div class="buttons">
+      <div class="clear">
+        <div style="float:left">Retour : <a href="Basic_Forms.htm">Formes de base</a></div>
+        <div style="float:right">Suivant : <a href="draw_circle.htm">draw_circle</a></div>
+      </div>
+    </div>
+    <h5><span data-keyref="Copyright Notice">Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
   </div>
   <!-- KEYWORDS
 draw_arrow

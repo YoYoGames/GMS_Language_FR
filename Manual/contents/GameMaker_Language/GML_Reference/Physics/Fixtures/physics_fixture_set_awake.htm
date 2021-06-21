@@ -7,11 +7,53 @@
   <meta name="generator" content="Adobe RoboHelp 2019" />
   <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
   <meta name="rh-authors" content="Mark Alexander" />
-  <meta name="topic-comment" content="Page de référence pour physics_fixture_set_awake" />
+  <meta name="topic-comment" content="Reference page for physics_fixture_set_awake" />
   <meta name="rh-index-keywords" content="physics_fixture_set_awake" />
   <meta name="search-keywords" content="physics_fixture_set_awake" />
 </head>
-<body><!--<div class="body-scroll" style="top: 150px;">--><h1>physics_fixture_set_awake</h1><p> Lorsque vous démarrez une salle avec la physique, ou liez des appareils à des instances, les appareils sont toujours considérés comme &quot;éveillés&quot;... c&#39;est-à-dire qu&#39;ils traitent des événements et interagissent avec les instances environnantes. Cependant, cela peut parfois entraîner des problèmes, en particulier si vous avez un certain nombre d&#39;instances avec des appareils qui sont côte à côte lorsqu&#39;une pièce démarre (pensez à une tour composée de plusieurs instances avec des appareils) car s&#39;ils sont «éveillés», ils se déplaceront et éventuellement changer de position en raison du début soudain de la gravité et des collisions les affectant. Dans ces cas, vous pouvez utiliser cette fonction pour marquer le projecteur comme étant &quot;endormi&quot;, auquel cas il ne traitera rien lors de sa création dans la pièce.</p><p></p><h4> Syntaxe:</h4><p class="code">physics_fixture_set_awake(fixture, state)</p><table><tbody><tr><th> Argument</th><th> Description</th></tr><tr><td> <span class="notranslate">fixture</span></td><td> l&#39;index du luminaire</td></tr><tr><td> <span class="notranslate">flag</span></td><td> si un appareil est éveillé (<tt>true</tt> ) ou non (<tt>false</tt> )</td></tr></tbody></table><p></p><h4> Retour:</h4><p class="code">N/A</p><p></p><h4> Exemple:</h4><p class="code">physics_fixture_set_awake(fix_Cloud, true);</p><p> Le code ci-dessus indique que l&#39;appareil est &quot;éveillé&quot; lorsqu&#39;il est lié à une instance. </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> Retour: <a href="Fixtures.htm">Fixtures</a></div><div style="float:right"> Suivant:<a href="physics_get_friction.htm">physics_get_friction</a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
+<body>
+  <!--<div class="body-scroll" style="top: 150px;">-->
+  <h1>physics_fixture_set_awake</h1>
+  <p>Lorsque vous démarrez une room avec de la physique, ou que vous liez des appareils à des instances, les appareils sont toujours considérés comme étant &quot;éveillés&quot;... c'est-à-dire qu'ils traitent des événements et interagissent avec les instances environnantes. Cependant, cela peut parfois conduire
+    à des problèmes, surtout si vous avez un certain nombre d'instances avec des appareils qui sont côte à côte lorsqu'une pièce commence (pensez à une tour faite de diverses instances avec des appareils) car, étant donné qu'ils sont &quot;éveillés&quot;, ils vont bouger et éventuellement changer de position
+    en raison de l'apparition soudaine de la gravité et des collisions qui les affectent. Dans ce cas, vous pouvez utiliser cette fonction pour signaler que l'appareil est &quot;endormi&quot;, auquel cas il ne traitera rien lorsqu'il sera créé dans la room.</p>
+  <p> </p>
+  <h4>Syntaxe :</h4>
+  <p class="code">physics_fixture_set_awake(fixture, state)</p>
+  <table>
+    <tbody>
+      <tr>
+        <th>Arguments</th>
+        <th>Description</th>
+      </tr>
+      <tr>
+        <td>L'appareil</td>
+        <td>l'indice du dispositif</td>
+      </tr>
+      <tr>
+        <td>drapeau</td>
+        <td>si un luminaire est éveillé<tt>(true</tt>) ou non<tt>(false)</tt></td>
+      </tr>
+    </tbody>
+  </table>
+  <p> </p>
+  <h4>Les retours :</h4>
+  <p class="code">N/A</p>
+  <p> </p>
+  <h4>Exemple :</h4>
+  <p class="code">physics_fixture_set_awake(fix_Cloud, true) ;</p>
+  <p>Le code ci-dessus signale le dispositif comme étant &quot;éveillé&quot; lorsqu'il est lié à une instance.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <div class="footer">
+    <div class="buttons">
+      <div class="clear">
+        <div style="float:left">Retour : <a href="Fixtures.htm">Fixtures</a></div>
+        <div style="float:right">Suivant : <a href="physics_get_friction.htm">physics_get_friction</a></div>
+      </div>
+    </div>
+    <h5><span data-keyref="Copyright Notice">Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
   </div>
   <!-- KEYWORDS
 physics_fixture_set_awake

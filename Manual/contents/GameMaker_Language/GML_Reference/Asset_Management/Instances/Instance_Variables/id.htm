@@ -7,15 +7,44 @@
   <meta name="generator" content="Adobe RoboHelp 2019" />
   <link rel="stylesheet" href="../../../../../assets/css/default.css" type="text/css" />
   <meta name="rh-authors" content="Mark Alexander" />
-  <meta name="topic-comment" content="Page décrivant l&#39;identifiant de la variable" />
+  <meta name="topic-comment" content="Page outlining the variable id" />
   <meta name="rh-index-keywords" content="id" />
   <meta name="search-keywords" content="id" />
 </head>
-<body><!--<div class="body-scroll" style="top: 150px;">--><h1>id</h1><p> Cette <b>variable en lecture seule</b> contient le numéro d&#39;identification unique de l&#39;instance. Chaque instance que vous créez - que ce soit via du code ou en les ajoutant à une pièce dans l&#39;éditeur de salle - reçoit un numéro qui est utilisé en interne pour identifier cette instance et la variable <span class="inline">id</span> est ce que vous pouvez utiliser pour le référencer. Le <span class="inline">id</span> est également renvoyé (et peut être stocké dans une variable) lorsqu&#39;une instance est créée à l&#39;aide de <tt><a href="../instance_create_layer.htm">instance_create_layer()</a></tt> ou <span class="inline"><a href="../instance_create_depth.htm">instance_create_depth()</a></span>, ainsi que d&#39;autres fonctions d&#39;instance.</p><p class="note"> <b>REMARQUE</b>: la valeur de cette variable n&#39;est <i>pas</i> la même que l&#39;identifiant donné à l&#39;instance dans l&#39;éditeur de salle et est également différente du <span style="font-size:1px;"><a href="../instance_id.htm" style="font-size: 14px"><tt style="font-size: 14px">tableau instance_id</tt></a></span> qui contient tous les identifiants de toutes les instances actuellement actives.</p><p></p><h4> Syntaxe:</h4><p class="code">id;</p><p></p><h4> Retour:</h4><p class="code">Real (integer - instance ID value)</p><p></p><h4> Exemple:</h4><p class="code">for(var i = 0; i &lt; instance_count; i++;)<br/>     {
-    <br/>     if instance_id[i] != id<br/>         {
-    <br/>         instance_id[i].scr += 5;<br/>         }
-    <br/>     }
-  </p><p> Le code ci-dessus ajoute 5 à la variable &quot;scr&quot; pour chaque instance active dans la salle à l&#39;exception de celle exécutant le code. Pour ce faire, il effectue une boucle sur TOUTES les instances actives (en utilisant le tableau &quot;instance_id&quot; pour renvoyer chaque ID d&#39;instance active) et en les comparant à la variable &quot;id&quot; intégrée, qui est l&#39;ID de l&#39;instance d&#39;origine exécutant le code. </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> Retour: <a href="Instance_Variables.htm">Variables d&#39;instance</a></div><div style="float:right"> Suivant:<a href="visible.htm">visible</a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
+<body>
+  <!--<div class="body-scroll" style="top: 150px;">-->
+  <h1>id</h1>
+  <p>Cette variable <b>en lecture seule</b> contient le numéro d'identification unique de l'instance. Chaque instance que vous créez - que ce soit par le biais du code ou en l'ajoutant à une pièce dans l'éditeur de pièce - reçoit un numéro qui est utilisé en interne pour identifier cette instance.
+    et la variable <span class="inline">id</span> est ce que vous pouvez utiliser pour la référencer. La variable <span class="inline">id</span> est également renvoyée (et peut être stockée dans une variable) lorsqu'une instance est créée à l'aide de la commande <tt><a href="../instance_create_layer.htm">instance_create_layer()</a></tt> ou
+    <span class="inline"><a href="../instance_create_depth.htm">instance_create_depth()</a></span> , ainsi que d'autres fonctions d'instance.</p>
+  <p class="note"><b>NOTE</b>: La valeur de cette variable <i>n'</i> est <i>pas</i> la même que l'identifiant donné à l'instance dans l'éditeur de salle et est également différente de l'identifiant du <span style="font-size:1px;"><a href="../instance_id.htm" style="font-size: 14px"><tt style="font-size: 14px">instance_id</tt></a></span> tableau
+    qui contient tous les ids de toutes les instances actuellement actives.</p>
+  <p> </p>
+  <h4>Syntaxe :</h4>
+  <p class="code">id ;</p>
+  <p> </p>
+  <h4>Les retours :</h4>
+  <p class="code">Real (nombre entier - valeur de l'ID de l'instance)</p>
+  <p> </p>
+  <h4>Exemple :</h4>
+  <p class="code">for(var i = 0 ; i &lt; instance_count ; i++ ;)<br> {
+    <br> if instance_id[i] != id<br> {
+    <br> instance_id[i].scr += 5 ;<br> }
+    <br> }
+  </p>
+  <p>Le code ci-dessus ajoute 5 à la variable &quot;scr&quot; pour chaque instance active dans la salle, sauf celle qui exécute le code. Pour ce faire, il parcourt en boucle TOUTES les instances actives (en utilisant le tableau &quot;instance_id&quot; pour retourner l'ID de chaque instance active) et les compare à la variable &quot;id&quot; intégrée.
+    ID) et en les comparant à la variable &quot;id&quot; intégrée, qui est l'ID de l'instance originale qui exécute le code.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <div class="footer">
+    <div class="buttons">
+      <div class="clear">
+        <div style="float:left">Retour : <a href="Instance_Variables.htm">Variables d'instance</a></div>
+        <div style="float:right">Suivant : <a href="visible.htm">visible</a></div>
+      </div>
+    </div>
+    <h5><span data-keyref="Copyright Notice">Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
   </div>
   <!-- KEYWORDS
 id

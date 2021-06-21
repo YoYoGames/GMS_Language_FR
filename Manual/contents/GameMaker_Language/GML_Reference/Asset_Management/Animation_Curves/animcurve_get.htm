@@ -7,13 +7,125 @@
   <meta name="generator" content="Adobe RoboHelp 2019" />
   <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
   <meta name="rh-authors" content="Mark Alexander" />
-  <meta name="topic-comment" content="Page expliquant la fonction animcurve_get" />
+  <meta name="topic-comment" content="Page explaining the function animcurve_get" />
   <meta name="rh-index-keywords" content="animcurve_get" />
   <meta name="search-keywords" content="animcurve_get" />
 </head>
-<body><!--<div class="body-scroll" style="top: 150px;">--><h1>animcurve_get</h1><p> Cette fonction retournera une <a href="../../../GML_Overview/Structs.htm">structure</a> contenant toutes les données pour la courbe d&#39;animation donnée. Vous fournissez l&#39;ID d&#39;actif de la courbe d&#39;animation (tel que défini dans le navigateur d&#39;actifs), et la fonction renverra une structure avec les variables suivantes:</p><p></p><table><tbody><tr><th> Nom de variable</th><th> Type de données</th><th> Description</th></tr><tr><td> Nom</td><td> chaîne de caractères</td><td> C&#39;est le nom de la courbe d&#39;animation.</td></tr><tr><td> canaux</td><td> pointeur de tableau</td><td> Il s&#39;agit d&#39;un tableau, où chaque élément du tableau est une structure de canal.</td></tr></tbody></table><p><br/> Lorsque vous accédez à une courbe d&#39;animation de cette manière, vous récupérez un <a href="../../../GML_Overview/Arrays.htm">tableau</a> dans lequel chaque élément du tableau est une structure avec des données relatives à un canal dans la courbe. La structure de canal aura les variables suivantes:</p><p></p><table><tbody><tr><th> Nom de variable</th><th> Type de données</th><th> Description</th></tr><tr><td> Nom</td><td> chaîne de caractères</td><td> C&#39;est le nom de la chaîne.</td></tr><tr><td> taper</td><td> constant</td><td> Ce sera l&#39;une des constantes <tt><b>animcurvetype_linear</b></tt> pour l&#39;interpolation linéaire entre les points, ou <tt><b>animcurvetype_catmullrom</b></tt> pour une interpolation &quot;douce&quot; entre les points en utilisant l&#39;interpolation catmull-rom.</td></tr><tr><td> itérations</td><td> entier</td><td> Si le canal utilise l&#39;interpolation catmull-rom (&quot;smooth&quot;), cela contient le nombre de points générés pour chaque segment de la courbe (notez que ces points supplémentaires sont internes à la fonction et utilisés uniquement pour les calculs d&#39; <span class="notranslate">runtime</span> Si le canal utilise l&#39;interpolation linéaire, cette valeur existera toujours mais peut être ignorée car elle n&#39;a aucune incidence sur la façon dont la courbe est interpolée.</td></tr><tr><td> points</td><td> pointeur de tableau</td><td> Il s&#39;agit d&#39;un tableau, où chaque élément du tableau est une structure de points.</td></tr></tbody></table><p><br/> Comme pour les canaux, les points sur un seul canal sont stockés sous forme de structures dans un tableau, où chaque élément du tableau est une structure à point unique. La structure de point a les variables suivantes:</p><p></p><table><tbody><tr><th> Nom de variable</th><th> Type de données</th><th> Description</th></tr><tr><td> posx</td><td> réel</td><td> La position dans le temps (normalisée de 0 à 1) du point.</td></tr><tr><td> évaluer</td><td> réel</td><td> La valeur du point.</td></tr></tbody></table><p><br/> Notez que si la fonction échoue (c&#39;est-à-dire que l&#39;ID de courbe d&#39;animation donné n&#39;existe pas), la fonction renverra -1.</p><p></p><p></p><h4> Syntaxe:</h4><p class="code">animcurve_get(curve_id);</p><table><tbody><tr><th> Argument</th><th> Description</th></tr><tr><td> <span class="notranslate">curve_id</span></td><td> L&#39;ID du navigateur d&#39;actifs (index) de la courbe d&#39;animation à obtenir.</td></tr></tbody></table><p></p><h4> Retour:</h4><p class="code">Struct or -1</p><p></p><h4> Exemple:</h4><p class="code">var _curve = animcurve_get(ac_ButtonTween);<br/> var _channel = _curve.channels[0];<br/> if _channel.type != animcurvetype_linear<br/>     {
-    <br/>     _channel.type = animcurvetype_linear;<br/>     }
-  </p><p> Le code ci-dessus récupère la structure de la courbe d&#39;animation pour l&#39;élément de courbe &quot;ac_ButtonTween&quot;, puis vérifie le type de courbe pour le premier canal, et s&#39;il n&#39;est pas linéaire, il le définit sur linéaire. </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> Retour: <a href="Animation_Curves.htm">Courbes d&#39;animation</a></div><div style="float:right"> Suivant:<a href="animcurve_get_channel.htm">animcurve_get_channel</a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
+<body>
+  <!--<div class="body-scroll" style="top: 150px;">-->
+  <h1>animcurve_get</h1>
+  <p>Cette fonction renvoie une <a href="../../../GML_Overview/Structs.htm">structure</a> contenant toutes les données de la courbe d'animation donnée. Vous fournissez l'ID de l'actif de la courbe d'animation (tel que défini dans le navigateur d'actifs), et la fonction renvoie une structure
+    avec les variables suivantes :</p>
+  <p> </p>
+  <table>
+    <tbody>
+      <tr>
+        <th>Nom de la variable</th>
+        <th>Type de données</th>
+        <th>Description</th>
+      </tr>
+      <tr>
+        <td>nom</td>
+        <td>chaîne de caractères</td>
+        <td>Il s'agit du nom de la courbe d'animation.</td>
+      </tr>
+      <tr>
+        <td>canaux</td>
+        <td>pointeur de tableau</td>
+        <td>C'est un tableau, où chaque élément du tableau est une structure de canal.</td>
+      </tr>
+    </tbody>
+  </table>
+  <p><br> La variable des <tt>canaux</tt> dans la structure est un <a href="../../../GML_Overview/Arrays.htm">tableau</a> où chaque élément du tableau est une structure avec des données relatives à un canal dans la courbe. La structure de canal aura les variables suivantes :</p>
+  <p> </p>
+  <table>
+    <tbody>
+      <tr>
+        <th>Nom de la variable</th>
+        <th>Type de données</th>
+        <th>Description</th>
+      </tr>
+      <tr>
+        <td>nom</td>
+        <td>chaîne de caractères</td>
+        <td>Il s'agit du nom du canal.</td>
+      </tr>
+      <tr>
+        <td>type</td>
+        <td>constant</td>
+        <td>Ce sera l'une des constantes <tt><b>animcurvetype_linear</b></tt> pour une interpolation linéaire entre les points, ou <tt><b>animcurvetype_catmullrom</b></tt> pour une interpolation &quot;lisse&quot; entre les points en utilisant l'interpolation catmull-rom.</td>
+      </tr>
+      <tr>
+        <td>itérations</td>
+        <td>entier</td>
+        <td>Si le canal utilise l'interpolation catmull-rom (&quot;lisse&quot;), cette valeur indique combien de points ont été générés pour chaque segment de la courbe (notez que ces points supplémentaires sont internes à la fonction et uniquement utilisés pour les calculs d'exécution).
+          Si le canal utilise l'interpolation linéaire, cette valeur existera toujours mais peut être ignorée car elle n'a aucune incidence sur la façon dont la courbe est interpolée.</td>
+      </tr>
+      <tr>
+        <td>points</td>
+        <td>pointeur de tableau</td>
+        <td>Il s'agit d'un tableau, où chaque élément du tableau est une structure de points.</td>
+      </tr>
+    </tbody>
+  </table>
+  <p><br> Comme pour les canaux, les points d'un seul canal sont stockés sous forme de structures dans un tableau, où chaque élément du tableau est une structure de point unique. La structure de point a les variables suivantes :</p>
+  <p> </p>
+  <table>
+    <tbody>
+      <tr>
+        <th>Nom de la variable</th>
+        <th>Type de données</th>
+        <th>Description</th>
+      </tr>
+      <tr>
+        <td>posx</td>
+        <td>réel</td>
+        <td>La position dans le temps (normalisée de 0 à 1) du point.</td>
+      </tr>
+      <tr>
+        <td>valeur</td>
+        <td>réel</td>
+        <td>La valeur du point.</td>
+      </tr>
+    </tbody>
+  </table>
+  <p><br> Notez que si la fonction échoue (c'est-à-dire que l'ID de la courbe d'animation donnée n'existe pas), elle renvoie -1.</p>
+  <p> </p>
+  <p> </p>
+  <h4>Syntaxe :</h4>
+  <p class="code">animcurve_get(curve_id) ;</p>
+  <table>
+    <tbody>
+      <tr>
+        <th>Arguments</th>
+        <th>Description</th>
+      </tr>
+      <tr>
+        <td>courbe_id</td>
+        <td>L'ID (index) du navigateur d'actifs de la courbe d'animation à obtenir.</td>
+      </tr>
+    </tbody>
+  </table>
+  <p> </p>
+  <h4>Les retours :</h4>
+  <p class="code">Structure ou -1</p>
+  <p> </p>
+  <h4>Exemple :</h4>
+  <p class="code">var _curve = animcurve_get(ac_ButtonTween) ;<br> var _channel = _curve.channels[0] ;<br> if _channel.type != animcurvetype_linear<br> {
+    <br> _channel.type = animcurvetype_linear ;<br> }
+  </p>
+  <p>Le code ci-dessus récupère la structure de courbe d'animation pour l'actif courbe &quot;ac_ButtonTween&quot;, puis vérifie le type de courbe pour le premier canal, et s'il n'est pas linéaire, il le définit comme linéaire.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <div class="footer">
+    <div class="buttons">
+      <div class="clear">
+        <div style="float:left">Retour : <a href="Animation_Curves.htm">Courbes d'animation</a></div>
+        <div style="float:right">Suivant : <a href="animcurve_get_channel.htm">animcurve_get_channel</a></div>
+      </div>
+    </div>
+    <h5><span data-keyref="Copyright Notice">Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
   </div>
   <!-- KEYWORDS
 animcurve_get

@@ -3,15 +3,48 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>game_end</title>
+  <title>fin de la partie</title>
   <meta name="generator" content="Adobe RoboHelp 2019" />
   <link rel="stylesheet" href="../../../assets/css/default.css" type="text/css" />
   <meta name="rh-authors" content="Mark Alexander" />
-  <meta name="topic-comment" content="Cette page décrit la fonction game_end" />
+  <meta name="topic-comment" content="This page outlines the function game_end" />
   <meta name="rh-index-keywords" content="game_end" />
   <meta name="search-keywords" content="game_end" />
 </head>
-<body><!--<div class="body-scroll" style="top: 150px;">--><h1>game_end</h1><p> Avec cette fonction, vous pouvez terminer le jeu (et l&#39; <a href="../../../The_Asset_Editors/Object_Properties/Other_Events.htm">événement de fin de jeu</a> sera déclenché). Cela ne se produira pas instantanément, mais plutôt à la fin de l&#39;étape en cours, donc tout code que vous avez dans la même étape après que cette fonction a été appelée sera toujours exécuté. Veuillez noter que cette fonction a les restrictions suivantes:</p><ul class="colour"><li> Sur <span class="notranslate">Android</span> appareils Android, appeler <tt>game_end()</tt> poussera l&#39;application en arrière-plan, mais ne fermera <i>pas</i> l&#39;application. Cela doit être fait par l&#39;utilisateur.</li><li> Sur <span class="notranslate">iOS</span> cela ne fera rien et échouera silencieusement.</li><li> Sur UWP, XBoxOne, PS4 et <span class="notranslate">Nintendo</span> <span class="notranslate">Switch</span> il peut planter le jeu (ou au moins échouer silencieusement) et <i>ne doit donc pas être utilisé</i>.</li><li> Sur HTML5, cela mettra fin au jeu, mais laissera l&#39;utilisateur regarder un canevas vierge sur la page Web, et en tant que tel, il n&#39;est pas recommandé de l&#39;utiliser sur cette plate-forme cible.</li><li> Sous <span class="notranslate">Windows</span>, <span class="notranslate">Linux</span> et Mac, la fonction termine simplement le jeu et ferme la fenêtre de jeu (un <a href="../../../The_Asset_Editors/Object_Properties/Other_Events.htm">événement de fin de jeu</a> sera déclenché).</li><br/><br/></ul><p></p><h4> Syntaxe:</h4><p class="code">game_end();</p><p></p><h4> Retour:</h4><p class="code">N/A</p><p></p><h4> Exemple:</h4><p class="code">if keyboard_check_pressed(vk_escape) game_end();</p><p> Cela mettrait fin au jeu si le joueur appuie sur la touche «échapper». </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> Retour: <a href="General_Game_Control.htm">Contrôle général du jeu</a></div><div style="float:right"> Suivant:<a href="game_restart.htm">game_restart</a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
+<body>
+  <!--<div class="body-scroll" style="top: 150px;">-->
+  <h1>fin de la partie</h1>
+  <p>Avec cette fonction, vous pouvez mettre fin au jeu (et l'<a href="../../../The_Asset_Editors/Object_Properties/Other_Events.htm">événement de fin de jeu</a> sera déclenché). Cela ne se produira pas instantanément, mais plutôt à la fin de l'étape actuelle.
+    que vous avez dans la même étape après l'appel de cette fonction sera toujours exécuté. Veuillez noter que cette fonction a les restrictions suivantes :</p>
+  <ul class="colour">
+    <li>Sur les appareils <span class="notranslate">Android</span>, l'appel à <tt>game_end()</tt> fera passer l'application en arrière-plan, mais <i>ne</i> la fermera <i>pas</i>. Cela doit être fait par l'utilisateur.</li>
+    <li>Sur <span class="notranslate">iOS</span>, il ne fera rien et échouera en silence.</li>
+    <li>Sur toutes les consoles (y compris l'UWP lorsqu'il est exécuté sur une Xbox), cela peut faire planter le jeu ou, au mieux, échouer silencieusement, et cela peut aussi être un échec de soumission, donc cette fonction <i>ne doit pas être utilisée</i>.</li>
+    <li>Sur HTML5, il mettra fin à la partie, mais laissera l'utilisateur face à une toile blanche sur la page web, et il n'est donc pas recommandé de l'utiliser sur cette plate-forme cible.</li>
+    <li>Sous <span class="notranslate">Windows</span> (y compris UWP sur un PC), <span class="notranslate">Linux</span> et <span class="notranslate">macOS</span>, la fonction met simplement fin au jeu et ferme la fenêtre de jeu (l'<a href="../../../The_Asset_Editors/Object_Properties/Other_Events.htm">événement de fin de jeu</a> sera également déclenché).</li>
+    <br />
+  </ul>
+  <p> </p>
+  <h4>Syntaxe :</h4>
+  <p class="code">game_end() ;</p>
+  <p> </p>
+  <h4>Les retours :</h4>
+  <p class="code">N/A</p>
+  <p> </p>
+  <h4>Exemple :</h4>
+  <p class="code">si keyboard_check_pressed(vk_escape) game_end() ;</p>
+  <p>Cela mettrait fin au jeu si le joueur appuyait sur la touche &quot;Echap&quot;.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <div class="footer">
+    <div class="buttons">
+      <div class="clear">
+        <div style="float:left">Retour : <a href="General_Game_Control.htm">Contrôle général du jeu</a></div>
+        <div style="float:right">Suivant : <a href="game_restart.htm">game_restart</a></div>
+      </div>
+    </div>
+    <h5><span data-keyref="Copyright Notice">Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
   </div>
   <!-- KEYWORDS
 game_end

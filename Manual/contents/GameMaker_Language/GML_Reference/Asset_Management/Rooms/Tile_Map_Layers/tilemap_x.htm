@@ -7,11 +7,51 @@
   <meta name="generator" content="Adobe RoboHelp 2019" />
   <link rel="stylesheet" href="../../../../../assets/css/default.css" type="text/css" />
   <meta name="rh-authors" content="Mark Alexander" />
-  <meta name="topic-comment" content="Page décrivant la fonction tilemap_x" />
+  <meta name="topic-comment" content="Page outlining the function tilemap_x" />
   <meta name="rh-index-keywords" content="tilemap_x" />
   <meta name="search-keywords" content="tilemap_x" />
 </head>
-<body><!--<div class="body-scroll" style="top: 150px;">--><h1>tilemap_x</h1><p> Cette fonction contrôle la position le long de l&#39;axe des x de la pièce de l&#39;élément de carte de tuiles d&#39;actif sur la couche. Vous donnez l&#39;ID d&#39;élément de carte de tuiles (que vous obtenez lorsque vous créez un élément de carte de tuiles à l&#39;aide de <a href="layer_tilemap_create.htm"><tt>layer_tilemap_create()</tt></a> ou lorsque vous utilisez la fonction <a href="layer_tilemap_get_id.htm"><tt>layer_tilemap_get_id()</tt></a> ), puis définissez la valeur x à utiliser (en fonction des coordonnées de la pièce).</p><p></p><h4> Syntaxe:</h4><p class="code">tilemap_x(tilemap_element_id, x);</p><table><tbody><tr><th> Argument</th><th> Description</th></tr><tr><td> <span class="notranslate">tilemap_element_id</span></td><td> La valeur d&#39;identifiant unique de l&#39;élément de mosaïque à modifier</td></tr><tr><td> <span class="notranslate">x</span></td><td> La position x de la carte de tuiles</td></tr></tbody></table><p></p><h4> Retour:</h4><p class="code">N/A</p><p></p><h4> Exemple:</h4><p class="code">var lay_id = layer_get_id(&quot;Asset_sky&quot;);<br/> var map_id = layer_tilemap_get_id(lay_id);<br/> tilemap_x(map_id, irandom(room_width));</p><p> Le code ci-dessus obtient la valeur d&#39;ID de l&#39;élément de carte de tuiles assigné à la couche &quot;Asset_sky&quot;, puis définit sa position x sur une valeur aléatoire comprise entre 0 et la largeur de la pièce. </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> Retour: <a href="Tile_Map_Layers.htm">Couches de carte de mosaïque</a></div><div style="float:right"> Suivant:<a href="tilemap_y.htm">tilemap_y</a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
+<body>
+  <!--<div class="body-scroll" style="top: 150px;">-->
+  <h1>tilemap_x</h1>
+  <p>Cette fonction contrôle la position sur l'axe des x de la pièce de l'élément de carte à carreaux de l'actif sur la couche. Vous donnez l'ID de l'élément de carte de tuiles (que vous obtenez lorsque vous créez un élément de carte de tuiles à l'aide de la fonction <a href="layer_tilemap_create.htm"><tt>layer_tilemap_create()</tt></a>    ou lorsque vous utilisez la fonction <a href="layer_tilemap_get_id.htm"><tt>layer_tilemap_get_id()</tt></a>), puis définissez la valeur x à utiliser (en fonction des coordonnées de la pièce).</p>
+  <p> </p>
+  <h4>Syntaxe :</h4>
+  <p class="code">tilemap_x(tilemap_element_id, x) ;</p>
+  <table>
+    <tbody>
+      <tr>
+        <th>Arguments</th>
+        <th>Description</th>
+      </tr>
+      <tr>
+        <td>tilemap_element_id</td>
+        <td>La valeur d'identification unique de l'élément de la carte des tuiles à modifier.</td>
+      </tr>
+      <tr>
+        <td>x</td>
+        <td>La position x de la carte des tuiles</td>
+      </tr>
+    </tbody>
+  </table>
+  <p> </p>
+  <h4>Les retours :</h4>
+  <p class="code">N/A</p>
+  <p> </p>
+  <h4>Exemple :</h4>
+  <p class="code">var lay_id = layer_get_id(&quot;Asset_sky&quot;) ;<br> var map_id = layer_tilemap_get_id(lay_id) ;<br> tilemap_x(map_id, irandom(room_width)) ;</p>
+  <p>Le code ci-dessus récupère la valeur d'identification de l'actif de la carte de carreaux attribué au calque &quot;Asset_sky&quot;, puis définit sa position x à une valeur aléatoire comprise entre 0 et la largeur de la pièce.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <div class="footer">
+    <div class="buttons">
+      <div class="clear">
+        <div style="float:left">Retour : <a href="Tile_Map_Layers.htm">Carrelage des couches de la carte</a></div>
+        <div style="float:right">Suivant : <a href="tilemap_y.htm">tilemap_y</a></div>
+      </div>
+    </div>
+    <h5><span data-keyref="Copyright Notice">Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
   </div>
   <!-- KEYWORDS
 tilemap_x

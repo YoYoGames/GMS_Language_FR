@@ -3,15 +3,57 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>Système de particules de pause</title>
+  <title>Système de particules Pause</title>
   <meta name="generator" content="Adobe RoboHelp 2019" />
   <link rel="stylesheet" href="../../../assets/css/default.css" type="text/css" />
   <meta name="rh-authors" content="Mark Alexander" />
-  <meta name="topic-comment" content="Page qui explique l&#39;action Pause du système de particules" />
-  <meta name="rh-index-keywords" content="DnD ™ - Pause du système de particules" />
-  <meta name="search-keywords" content="Système de particules de pause" />
+  <meta name="topic-comment" content="Page that explains the Pause Particle System action" />
+  <meta name="rh-index-keywords" content="DnD™ Action - Pause Particle System" />
+  <meta name="search-keywords" content="Pause Particle System" />
 </head>
-<body><!--<div class="body-scroll" style="top: 150px;">--><h1><img alt="Pause Particle System Icon" class="icon" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Particles/i_Particles_Pause_Particle_System.png" /> Système de particules de pause</h1><p> Cette action mettra en pause le système de particules donné. Vous fournissez la valeur d&#39;ID unique pour le système à mettre en pause, telle qu&#39;elle est renvoyée lorsque vous avez créé le système avec l&#39;action <a href="Create_Particle_System.htm">Créer un système de particules</a>. Un système de particules en pause attirera toujours les particules qui ont été générées, mais elles ne mettront plus à jour leur couleur, leur position ou leur alpha, et elles ne termineront pas leur durée de vie et disparaîtront jusqu&#39;à ce que vous réactiviez le système. Notez que cela ne met <i>pas en</i> pause les émetteurs qui diffusent des particules, ni n&#39;arrêtera l&#39;éclatement d&#39;un émetteur de particules - les émetteurs créeront toujours des particules lorsqu&#39;ils seront appelés, mais lorsque le système sera mis en pause, les particules ne feront rien et seront dessinées exactement là où elles sont créées jusqu&#39;à ce que vous réinitialisez l&#39;état de pause ou appelez <a href="Update_Particle_System.htm">Update Particle System</a>.</p><p></p><h4> Syntaxe de l&#39;action:</h4><p><img alt="Pause Particle System Action" class="center" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Particles/a_Particles_Pause_Particle_System.png" /></p><h4> Arguments:</h4><table><tbody><tr><th> Argument</th><th> Description</th></tr><tr><td> <span class="notranslate">System</span></td><td> La valeur d&#39;ID unique du système à mettre en pause</td></tr></tbody></table><p></p><h4> Exemple:</h4><p><img alt="Pause Particle System Example" class="center" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Particles/e_Particles_Pause_Particle_System.png" /> Le code de bloc d&#39;action ci-dessus vérifiera une variable globale et si elle retourne <tt>true</tt> alors le système de particules donné sera mis en pause, sinon il ne le sera pas. </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> Retour: <a href="Particle_Actions.htm">Actions de particules</a></div><div style="float:right"> Suivant: <a href="Update_Particle_System.htm">Mettre à jour le système de particules</a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
+<body>
+  <!--<div class="body-scroll" style="top: 150px;">-->
+  <h1><img alt="Pause Particle System Icon" class="icon" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Particles/i_Particles_Pause_Particle_System.png"> Système de particules Pause</h1>
+  <p>Cette action mettra en pause le système de particules donné. Vous fournissez la valeur d'identification unique du système à mettre en pause, telle qu'elle est retournée lorsque vous avez créé le système avec l'action <a href="Create_Particle_System.htm">Créer un système de particules</a>. Un système de particules en pause
+    dessinera toujours les particules qui ont été créées, mais elles ne mettront plus à jour leur couleur, leur position ou leur alpha, et elles ne termineront pas leur vie et disparaîtront jusqu'à ce que vous repreniez le système. Vous pouvez choisir de mettre en pause ou de reprendre le système en utilisant l'option
+    l'option &quot;État&quot;.</p>
+  <p>Notez que cela <i>ne</i> met <i>pas</i> en pause les émetteurs qui diffusent des particules, et n'arrête pas non plus un émetteur qui émet des particules - les émetteurs continueront à créer des particules lorsqu'ils seront appelés, mais lorsque le système est en pause, les particules ne feront rien et seront dessinées exactement là où elles ont été créées jusqu'à ce que vous réinitialisiez l'état de pause ou appeliez Update Particle System.
+    où elles ont été créées jusqu'à ce que vous réinitialisiez l'état de pause ou que vous appeliez <a href="Update_Particle_System.htm">Update Particle System.</a></p>
+  <p> </p>
+  <h4>Syntaxe de l'action :</h4>
+  <p><img alt="Pause Particle System Action" class="center" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Particles/a_Particles_Pause_Particle_System.png" /></p>
+  <h4>Arguments :</h4>
+  <table>
+    <tbody>
+      <tr>
+        <th>Arguments</th>
+        <th>Description</th>
+      </tr>
+      <tr>
+        <td>Système</td>
+        <td>La valeur d'identification unique du système à mettre en pause.</td>
+      </tr>
+      <tr>
+        <td>État</td>
+        <td>Permet de mettre en pause ou de reprendre le système de particules</td>
+      </tr>
+    </tbody>
+  </table>
+  <p> </p>
+  <h4>Exemple :</h4>
+  <p><img alt="Pause Particle System Example" class="center" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Particles/e_Particles_Pause_Particle_System.png">Le code du bloc d'action ci-dessus vérifiera une variable globale et s'il retourne
+   <tt>vrai</tt>, alors le système de particules donné sera mis en pause, sinon il sera repris.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <div class="footer">
+    <div class="buttons">
+      <div class="clear">
+        <div style="float:left">Retour : <a href="Particle_Actions.htm">Actions des particules</a></div>
+        <div style="float:right">Suivant : <a href="Update_Particle_System.htm">Mise à jour du système de particules</a></div>
+      </div>
+    </div>
+    <h5><span data-keyref="Copyright Notice">Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
   </div>
   <!-- KEYWORDS
 Action - Pause Particle System

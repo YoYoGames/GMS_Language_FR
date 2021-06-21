@@ -3,15 +3,53 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>object_get_visible</title>
+  <title>objet_get_visible</title>
   <meta name="generator" content="Adobe RoboHelp 2019" />
   <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
   <meta name="rh-authors" content="Mark Alexander" />
-  <meta name="topic-comment" content="Page décrivant la fonction object_get_visible" />
+  <meta name="topic-comment" content="Page outlining the function object_get_visible" />
   <meta name="rh-index-keywords" content="object_get_visible" />
   <meta name="search-keywords" content="object_get_visible" />
 </head>
-<body><!--<div class="body-scroll" style="top: 150px;">--><h1>object_get_visible</h1><p> Cette fonction vous dira si l&#39;objet que vous vérifiez a été marqué comme &quot;visible&quot; (exécute son événement de dessin) ou non (n&#39;exécute pas son événement de dessin). Veuillez noter qu&#39;il ne s&#39;agit pas d&#39;une fonction d&#39;instance! Ainsi, vous pouvez avoir un objet visible et une instance invisible du même objet et vice-versa. Vous pouvez définir la visibilité d&#39;une instance individuelle à l&#39;aide de la <a href="../Instances/Instance_Variables/visible.htm"><tt>visible</tt></a> variable d&#39;instance.</p><p></p><h4> Syntaxe:</h4><p class="code">object_get_visible(obj);</p><table><tbody><tr><th> Argument</th><th> Description</th></tr><tr><td> <span class="notranslate">obj</span></td><td> L&#39;index de l&#39;objet à vérifier.</td></tr></tbody></table><p></p><h4> Retour:</h4><p class="code">Boolean</p><p></p><h4> Exemple:</h4><p class="code">if (!visible) &amp;&amp; (object_get_visible(object_index))<br/>     {<br/>     visible = true;<br/>     }</p><p> Le code ci-dessus vérifiera l&#39;instance qui l&#39;exécute pour voir si elle est visible ou non et vérifiera l&#39;index d&#39;objet de l&#39;instance pour voir si elle est marquée comme visible ou non. Si l&#39;instance n&#39;est <i>pas</i> encore visible, l&#39;index d&#39;objet est marqué comme activé, il définira «visible» sur true pour cette instance. </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> Retour: <a href="Objects.htm">Objets</a></div><div style="float:right"> Suivant:<a href="object_get_physics.htm">object_get_physics</a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
+<body>
+  <!--<div class="body-scroll" style="top: 150px;">-->
+  <h1>objet_get_visible</h1>
+  <p>Cette fonction vous dira si l'objet que vous vérifiez a été marqué comme &quot;visible&quot; (exécute son événement de dessin) ou non (n'exécute pas son événement de dessin). Veuillez noter qu'il ne s'agit pas d'une fonction d'instance ! Ainsi, vous pouvez avoir un objet visible
+    et une instance invisible du même objet et vice-versa. Vous pouvez définir la visibilité d'une instance individuelle en utilisant la variable <a href="../Instances/Instance_Variables/visible.htm"><tt>visible</tt></a> instance.</p>
+  <p> </p>
+  <h4>Syntaxe :</h4>
+  <p class="code">objet_get_visible(obj) ;</p>
+  <table>
+    <tbody>
+      <tr>
+        <th>Arguments</th>
+        <th>Description</th>
+      </tr>
+      <tr>
+        <td>obj.</td>
+        <td>L'index de l'objet à vérifier.</td>
+      </tr>
+    </tbody>
+  </table>
+  <p> </p>
+  <h4>Les retours :</h4>
+  <p class="code">Booléen</p>
+  <p> </p>
+  <h4>Exemple :</h4>
+  <p class="code">if (!visible) &amp;&amp; (object_get_visible(object_index))<br> {<br> visible = true ;<br> }</p>
+  <p>Le code ci-dessus vérifiera l'instance en cours d'exécution pour voir si elle est visible ou non, ainsi que l'index de l'objet de l'instance pour voir si elle est marquée comme visible ou non. Si l'instance <i>n'</i> est <i>pas</i> encore visible, l'index de l'objet est marqué comme on,
+    il définira &quot;visible&quot; à true pour cette instance.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <div class="footer">
+    <div class="buttons">
+      <div class="clear">
+        <div style="float:left">Retour : <a href="Objects.htm">Objets</a></div>
+        <div style="float:right">Suivant : <a href="object_get_physics.htm">object_get_physics</a></div>
+      </div>
+    </div>
+    <h5><span data-keyref="Copyright Notice">Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
   </div>
   <!-- KEYWORDS
 object_get_visible

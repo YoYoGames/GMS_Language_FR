@@ -1,26 +1,72 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>Adressage de variables dans d&#39;autres instances</title>
-  <meta name="generator" content="Adobe RoboHelp 2019" />
+  <title>Adressage des variables dans d'autres instances</title>
+  <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../assets/css/default.css" type="text/css" />
   <meta name="rh-authors" content="Mark Alexander" />
-  <meta name="topic-comment" content="Page décrivant la houe pour adresser les variables dans d&#39;autres instances" />
-  <meta name="rh-index-keywords" content="Adressage de variables dans d&#39;autres instances" />
+  <meta name="topic-comment" content="Page outlining hoe to address variables in other instances" />
+  <meta name="rh-index-keywords" content="Addressing Variables In Other Instances" />
   <meta name="search-keywords" content="" />
 </head>
-<body><!--<div class="body-scroll" style="top: 150px;">--><h1> Adressage de variables dans d&#39;autres instances</h1><p> Dans les sections dédiées aux <a href="Variables_And_Variable_Scope.htm">variables,</a> vous avez découvert comment créer et utiliser des variables dans une seule instance, ou sur une portée globale, mais que se passe-t-il si vous voulez qu&#39;une instance accède à une variable dans une autre instance différente? Il y a de nombreux cas où vous voudrez peut-être faire cela, par exemple dans une collision avec un objet de balle, vous voudrez peut-être savoir combien de dégâts la balle fait en accédant à une variable dans la balle, ou vous voudrez peut-être arrêter le mouvement de toutes les boules d&#39;un puzzle, ou vous pouvez déplacer le personnage principal vers une position particulière, ou un certain nombre d&#39;autres situations que vous rencontrez généralement dans n&#39;importe quel jeu. Heureusement, le <span class="notranslate">GameMaker Language</span> est équipé de mécanismes pour y parvenir.</p><p> L&#39;une des méthodes les plus courantes pour accéder ou modifier une variable dans une autre instance consiste à utiliser son nom d&#39;objet comme identificateur, puis à utiliser un point &quot;<span class="inline">.</span> &quot;pour indiquer à <span class="notranslate">GameMaker Studio 2</span> que la variable utilisée après doit être affectée ou modifiée dans cet objet. La syntaxe est la suivante:</p><p class="code">&lt;object_id&gt;.&lt;<em>variable</em>&gt; = &lt;value&gt;; </p><p> En pratique, cela ressemblerait à ceci:</p><p class="code">obj_ball.speed = 0;</p><p> Avec le code ci-dessus, vous définissez la vitesse d&#39;une instance de &quot;<tt>obj_ball</tt> &quot;. Cependant, si vous avez plus d&#39;une instance de l&#39;objet donné dans la salle, <em>cela s&#39;appliquera à TOUS de la même manière</em> - à moins que vous n&#39;utilisiez <b>HTML5</b>, auquel cas cela n&#39;affectera qu&#39;une <em>seule</em>, mais vous n&#39;avez aucun moyen de le savoir lequel cela affectera - donc si vous avez besoin d&#39;accéder à toutes les instances d&#39;un objet, vous devriez utiliser <a href="Language_Features/with.htm"><tt>with()</tt></a>, car il est 100% compatible multiplateforme. En général, ce format ne doit être utilisé que lorsque vous avez une seule instance de l&#39;objet dans la salle, ou (comme vous le verrez dans la partie suivante) lorsque vous avez un <i><b>ID d&#39;</b> instance</i> spécifique.</p><p> Vous pouvez également accéder à une seule instance d&#39;un objet lorsqu&#39;il y a plusieurs instances dans la salle en utilisant le <b>nom d&#39;instance</b> unique pour indiquer à <span class="notranslate">GameMaker Studio 2</span> exactement l&#39;instance à laquelle nous souhaitons nous adresser. La <b>constante de nom d&#39;instance</b> est la constante d&#39;identification unique qui est donnée à chaque instance ajoutée à une salle de votre jeu. Vous pouvez trouver cette constante en double-cliquant sur une instance dans l&#39; <a href="../../The_Asset_Editors/Rooms.htm">éditeur de salle</a>:</p><p><img alt="The instance constant in the room editor" class="center" src="../../assets/Images/Scripting_Reference/GML/Overview/Instance_Constant.png" /> Notez que ce nom peut être modifié et donner un nom plus descriptif - bien que le nom <em>doive</em> être unique à l&#39;ensemble du jeu - et il peut être utilisé comme côté gauche du point:</p><p class="code">inst_4DB70D2.speed = 0;</p><p> Cependant, la méthode de loin la plus courante et la plus pratique consiste à utiliser une <i>variable</i> à gauche du point, tant que la variable en question <i>a stocké un <b>identifiant d&#39;instance</b></i> valide. Les exemples suivants illustrent cela.</p><p class="code">// Example 1<br/> var _inst = instance_position(mouse_x, mouse_y, all);<br/> if instance_exists(_inst)<br/>     {
-    <br/>     _inst.speed = 0;<br/>     }
-    <br/>
-    <br/> // Example 2<br/> var _inst = instance_create_layer(mouse_x, mouse_y, &quot;Enemies&quot;, obj_E_Parent);<br/> _inst.direction = point_direction(_inst.x, _inst.y, x, y);<br/> _inst.target = id;</p><p> Dans le code ci-dessus pour l&#39;exemple 1, il y a un <a href="../GML_Reference/Asset_Management/Instances/instance_exists.htm"><tt>instance_exists()</tt></a> appelez le bloc de code. En effet, l&#39;utilisation de la méthode point pour accéder ou modifier une autre valeur d&#39;instance donnera une erreur et plantera le jeu si l&#39;instance n&#39;existe pas, et il est possible que ce soit le cas dans cet exemple. Cependant, nous n&#39;avons pas besoin de la vérification dans les exemples 2 et 3 car nous <i>savons</i> que l&#39;instance est là puisque dans l&#39;exemple 2 nous l&#39;avons créée, et dans l&#39;exemple 3, c&#39;est l&#39;autre instance dans un événement de collision. Cependant, s&#39;il y a <i>une</i> possibilité que l&#39;instance soit détruite, désactivée ou supprimée de la salle lors de l&#39;utilisation de cette méthode, vous devez <i>toujours</i> vérifier au préalable en utilisant le <tt>instance_exists()</tt> fonction ou le <a href="../GML_Reference/Asset_Management/Instances/instance_number.htm"><tt>instance_number()</tt></a> fonction.</p><p> Notez que vous ne pouvez pas utiliser le <a href="Instance_Keywords.htm">mot clé</a> spécial &quot;<tt>all</tt> &quot;avec cette méthode pour cibler toutes les instances (par exemple: <span class="inline">all.val = 10</span> donnerait une erreur), mais vous <i>pouvez</i> utiliser les mots clés &quot;<tt>other</tt> &quot; et &quot;<tt>self</tt> &quot;sans problème. Par exemple, en utilisant <tt>other</tt> en <a href="../../The_Asset_Editors/Object_Properties/Object_Events.htm">cas de collision</a>:</p><p class="code">// Example 3 other.hp -= 10;<br/> if other.hp &lt;= 0<br/>     {
-    <br/>     other.sprite_index = spr_E_Dead;<br/>     }
-  </p><p> Il est également important de noter que vous ne pouvez utiliser aucune fonction seule comme côté gauche d&#39;une affectation. Par exemple, le code suivant vous donnerait une erreur:</p><p class="code">instance_nearest(x, y, obj).speed = 0;</p><p> La valeur de retour de l&#39;expression dans cet exemple de code est un nombre entier (la valeur d&#39;ID unique pour l&#39;instance la plus proche) et doit donc être placée entre crochets <span class="inline">()</span> à utiliser de cette manière et adresser correctement l&#39;instance requise. Le code ci-dessus serait correctement écrit comme suit:</p><p class="code">(instance_nearest(x, y, obj)).speed = 0;<br/>
-    <br/> //or
-    <br/>
-    <br/> var inst = instance_nearest(x, y, obj);<br/> inst.speed = 0;</p><p> Ce sont tous des moyens parfaitement valables de lire, de modifier et de définir des variables dans d&#39;autres instances, et fonctionnent parce que le point est en fait un <i>opérateur</i>. Il prend une valeur comme <a class="glossterm" data-glossterm="opérande" href="#">opérande de</a> gauche et une variable comme opérande de droite, et renvoie l&#39;adresse de cette variable particulière dans l&#39;objet ou l&#39;instance indiqué. Tous les noms d&#39;objets, constantes, identifiants, etc. représentent simplement des valeurs et celles-ci peuvent être traitées comme n&#39;importe quelle autre valeur.</p><p> L&#39;autre façon de référencer des variables dans une autre instance est d&#39;utiliser la fonction <span class="notranslate">GameMaker Language</span> <span class="inline">with()</span>, qui est discuté en détail <a href="Language_Features/with.htm">ici</a>: </p><p class="code">// This will affect all instances of the object &quot;obj_Enemy&quot;<br/> with (obj_Enemy)<br/>     {<br/>     target = other.parent;<br/>     }<br/>
-    <br/> // This will affect one instance of the object &quot;obj_Enemy&quot;<br/> var _enemy = instance_nearest(x, y, obj_Enemy);<br/> if instance_exists(_enemy)<br/>     {<br/>     with (_enemy)<br/>         {<br/>         target_x = mouse_x;<br/>            target.y = mouse_y;<br/>         }<br/>     }</p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> Retour: <a href="GML_Overview.htm">Présentation de <span class="notranslate">GML</span></a></div><div style="float:right"> Suivant: <a href="Evaluation_Order.htm">Ordre d&#39;évaluation</a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
+<body>
+  <!--<div class="body-scroll" style="top: 150px;">-->
+  <h1>Adressage des variables dans d'autres instances</h1>
+  <p>Dans les sections consacrées aux <a href="Variables_And_Variable_Scope.htm">variables</a>, vous avez découvert comment créer et utiliser des variables au sein d'une seule instance, ou sur une portée globale, mais que se passe-t-il si vous voulez qu'une instance accède à une variable dans une autre,
+    instance différente ? Il y a de nombreux cas où vous pouvez vouloir faire cela, par exemple lors d'une collision avec un objet balle, vous pouvez vouloir connaître les dégâts causés par la balle en accédant à une variable dans la balle, ou vous pouvez vouloir arrêter le mouvement de toutes les balles dans un puzzle, en accédant à une variable dans l'objet balle.
+    de toutes les balles d'un puzzle, ou encore déplacer le personnage principal vers une position particulière, ou toute autre situation que l'on rencontre habituellement dans un jeu. Heureusement, le <span class="notranslate">langage GameMaker</span> est équipé de mécanismes permettant d'atteindre ces objectifs.
+    cela.</p>
+  <p>L'une des méthodes les plus courantes pour accéder à une variable ou la modifier dans une autre instance consiste à utiliser son nom d'objet comme identifiant, puis à utiliser un point &quot;<span class="inline">.</span>&quot; pour indiquer à GameMaker <span class="notranslate">Studio 2 que la</span> variable utilisée après
+    doit être affectée ou modifiée dans cet objet. La syntaxe utilisée est la suivante</p>
+  <p class="code">&lt;identification de l'objet&gt;.&lt; variable&gt;<em>= &lt;valeur&gt;</em>; </p>
+  <p>En pratique, cela ressemblerait à ceci :</p>
+  <p class="code">obj_ball.speed = 0 ;</p>
+  <p>Avec le code ci-dessus, vous définissez la vitesse d'une instance de &quot; obj_ball<tt>&quot;.</tt> Cependant, si vous avez plus d'une instance de l'objet donné dans la pièce, le <em>code s'appliquera à TOUTES les instances de la même manière</em>, sauf si vous utilisez <b>HTML5</b>,
+    dans ce cas, elle n'<em>en</em> affectera qu'<em>une</em> seule, mais vous n'avez aucun moyen de savoir laquelle. Donc, si vous avez besoin d'accéder à toutes les instances d'un objet, vous devez utiliser la commande <a href="Language_Features/with.htm"><tt>avec()</tt></a>car il est
+    100% compatible avec les autres plates-formes. En général, ce format ne doit être utilisé que lorsque vous n'avez qu'une seule instance de l'objet dans la pièce, ou (comme vous le verrez dans la partie suivante) lorsque vous avez un <i> <b>ID d'</b></i>instance spécifique.</p>
+  <p>Vous pouvez également accéder à une instance unique d'un objet lorsqu'il existe plusieurs instances dans la pièce en utilisant le <b>nom d'instance</b> unique pour indiquer à <span class="notranslate">GameMaker Studio 2</span> exactement à quelle instance nous souhaitons nous adresser. La <b>constante du nom d'instance</b> est la
+    constante d'identification unique qui est attribuée à chaque instance ajoutée à une room de votre jeu. Vous pouvez trouver cette constante en double-cliquant sur une instance dans l'<a href="../../The_Asset_Editors/Rooms.htm">éditeur de salle</a>:</p>
+  <p><img alt="The instance constant in the room editor" class="center" src="../../assets/Images/Scripting_Reference/GML/Overview/Instance_Constant.png">Notez que vous pouvez modifier ce nom et lui donner un nom plus descriptif - bien que ce nom <em>doive</em> être unique pour l'ensemble du jeu.
+    unique pour l'ensemble du jeu - et il peut être utilisé comme côté gauche du point :</p>
+  <p class="code">inst_4DB70D2.speed = 0 ;</p>
+  <p>Toutefois, la méthode de loin la plus courante et la plus pratique consiste à utiliser une <i>variable</i> à gauche du point, pour autant que la variable en question<i> ait enregistré un <b>identifiant d'instance</b></i> valide. Les exemples suivants illustrent cette méthode.</p>
+  <p class="code">// Exemple 1<br> var _inst = instance_position(mouse_x, mouse_y, all) ;<br> if instance_exists(_inst)<br> {
+    <br> _inst.speed = 0 ;<br> }
+    <br>
+    <br> // Exemple 2<br> var _inst = instance_create_layer(mouse_x, mouse_y, &quot;Enemies&quot;, obj_E_Parent) ;<br> _inst.direction = point_direction(_inst.x, _inst.y, x, y) ;<br> _inst.target = id ;</p>
+  <p>Dans le code de l'exemple 1 ci-dessus, il y a un appel à la fonction <a href="../GML_Reference/Asset_Management/Instances/instance_exists.htm"><tt>instance_exists()</tt></a> dans le bloc de code. Ceci est dû au fait que l'utilisation de la méthode point pour accéder ou changer la valeur d'une autre instance
+    donnera une erreur et fera planter le jeu si l'instance n'existe pas, et il est possible que ce soit le cas dans cet exemple. Nous n'avons pas besoin de cette vérification dans les exemples 2 et 3, car nous savons que l'instance est là
+    puisque dans l'exemple 2 nous l'avons créée, et dans l'exemple 3, c'est l'autre instance dans un événement de collision. Cependant, s'il existe <i>une</i> possibilité que l'instance soit détruite, désactivée ou retirée de la room pendant l'utilisation de cette méthode,
+    vous devriez <i>toujours</i> vérifier au préalable en utilisant la fonction <tt>instance_exists()</tt> ou la fonction <a href="../GML_Reference/Asset_Management/Instances/instance_number.htm"><tt>numéro_instance()</tt></a> fonction.</p>
+  <p>Notez que vous ne pouvez pas utiliser le <a href="Instance_Keywords.htm">mot-clé</a> spécial &quot; all &quot; avec cette méthode pour cibler toutes les instances (par exemple : <span class="inline">all.val = 10</span> donnerait une erreur), mais vous pouvez utiliser <i>les</i> mots-clés
+    &quot;other<tt>&quot; et</tt>&quot;self&quot; sans problème. Par exemple, l'utilisation de <tt>other</tt> dans un <a href="../../The_Asset_Editors/Object_Properties/Object_Events.htm">événement de collision</a>:</p>
+  <p class="code">// Exemple 3 other.hp -= 10 ;<br> if other.hp &lt;= 0<br> {
+    <br> other.sprite_index = spr_E_Dead ;<br> }
+  </p>
+  <p>Il est également important de noter que vous ne pouvez pas utiliser une fonction seule comme partie gauche d'une affectation. Par exemple, le code suivant vous donnerait une erreur :</p>
+  <p class="code">instance_nearest(x, y, obj).speed = 0 ;</p>
+  <p>La valeur de retour de l'expression dans cet exemple de code est un nombre entier (la valeur d'identification unique de l'instance la plus proche) et elle doit donc être placée entre parenthèses <span class="inline">()</span> pour être utilisée de cette manière et adresser correctement l'instance
+    nécessaire. Le code ci-dessus serait correctement écrit comme suit</p>
+  <p class="code">(instance_nearest(x, y, obj)).speed = 0 ;<br>
+    <br> //or
+    <br>
+    <br> var inst = instance_nearest(x, y, obj) ;<br> inst.speed = 0 ;</p>
+  <p>Toutes ces méthodes sont parfaitement valables pour lire, modifier et définir des variables dans d'autres instances, et fonctionnent parce que le point est en fait un <i>opérateur</i>. Il prend une valeur comme <a class="glossterm" data-glossterm="opérande" href="#">opérande</a> gauche et une variable comme opérande droit, et renvoie l'adresse de cette variable particulière dans l'objet ou l'instance indiqué. Tous les noms d'objets, les constantes, les ID, etc... représentent simplement des valeurs et celles-ci peuvent être traitées comme n'importe quelle autre valeur.</p>
+  <p>L'autre moyen de référencer des variables dans une autre instance est d'utiliser la fonction du <span class="notranslate">langage GameMaker</span> <span class="inline">with()</span>, qui est présentée en détail <a href="Language_Features/with.htm">ici</a>:</p>
+  <p class="code">// Ceci affectera toutes les instances de l'objet &quot;obj_Enemy&quot;<br> with (obj_Enemy)<br> {<br> target = other.parent ;<br> } <br>
+    <br> // Ceci affectera une instance de l'objet &quot;obj_Enemy&quot;<br> var _enemy = instance_nearest(x, y, obj_Enemy) ;<br> if instance_exists(_enemy)<br> {<br> with (_enemy)<br> {<br> target_x = mouse_x ;<br> target.y = mouse_y ;<br> } <br> }</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <div class="footer">
+    <div class="buttons">
+      <div class="clear">
+        <div style="float:left">Retour : <a href="GML_Overview.htm">Aperçu du<span class="notranslate">GML</span></a></div>
+        <div style="float:right">Suivant : <a href="Evaluation_Order.htm">Ordre d'évaluation</a></div>
+      </div>
+    </div>
+    <h5><span data-keyref="Copyright Notice">Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
   </div>
   <!-- KEYWORDS
 variables - addressing
@@ -29,5 +75,5 @@ addressing variables
   <!-- TAGS
 addressing_variables
 -->
-</body>
-</html>
+
+</body></html>

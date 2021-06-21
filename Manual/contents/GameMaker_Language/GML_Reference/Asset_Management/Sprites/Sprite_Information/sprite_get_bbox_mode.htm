@@ -7,13 +7,69 @@
   <meta name="generator" content="Adobe RoboHelp 2019" />
   <link rel="stylesheet" href="../../../../../assets/css/default.css" type="text/css" />
   <meta name="rh-authors" content="Mark Alexander" />
-  <meta name="topic-comment" content="Page expliquant la fonction sprite_get_bbox_mode" />
+  <meta name="topic-comment" content="Page explaining the function sprite_get_bbox_mode" />
   <meta name="rh-index-keywords" content="sprite_get_bbox_mode,bboxmode_automatic,bboxmode_fullimage,bboxmode_manual" />
   <meta name="search-keywords" content="sprite_get_bbox_mode,bboxmode_automatic,bboxmode_fullimage,bboxmode_manual" />
 </head>
-<body><!--<div class="body-scroll" style="top: 150px;">--><h1>sprite_get_bbox_mode</h1><p> Cette fonction renverra le &quot;mode&quot; actuel pour les calculs de la boîte englobante. Vous fournissez l&#39;index du sprite du sprite à vérifier, et la fonction renverra l&#39;une des constantes ci-dessous.</p><p></p><h4> Syntaxe:</h4><p class="code">sprite_get_bbox_mode(ind);</p><table><tbody><tr><th> Argument</th><th> Description</th></tr><tr><td> <span class="notranslate">ind</span></td><td> L&#39;index du sprite à vérifier.</td></tr></tbody></table><p></p><h4> Retour</h4><p class="code">Constant</p><table><tbody><tr><th> Constant</th><th> Description </th></tr><tr><td><span class="notranslate"><tt>bboxmode_automatic</tt></span></td><td> Automatique - Le cadre de délimitation sera calculé automatiquement, en fonction du paramètre de tolérance de l&#39;image-objet </td></tr><tr><td><span class="notranslate"><tt>bboxmode_fullimage</tt></span></td><td> Image complète - La zone de délimitation sera définie pour utiliser toute la largeur et la hauteur de l&#39;image-objet, indépendamment de la tolérance et des pixels «vides»</td></tr><tr><td><span class="notranslate"><tt>bboxmode_manual</tt></span></td><td> Manuel - Le cadre de sélection a été défini manuellement sur les valeurs définies par l&#39;utilisateur (soit dans l&#39;éditeur de sprite, soit à l&#39;aide de la fonction <a href="../Sprite_Manipulation/sprite_set_bbox.htm"><tt>sprite_set_bbox()</tt></a> )</td></tr></tbody></table><p></p><h4> Exemple:</h4><p class="code">if sprite_get_bbox_mode(sprite_index) != 0<br/>     {
-    <br/>     sprite_set_bbox_mode(sprite_index, bboxmode_automatic);<br/>     }
-  </p><p> Ce qui précède vérifie le mode bbox pour le sprite actuel et si ce n&#39;est pas le cas <tt>automatic</tt>, puis il le définit sur cette valeur. </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> Retour: <a href="Sprite_Information.htm">Informations sur les sprites</a></div><div style="float:right"> Suivant: <a href="sprite_get_nineslice.htm">sprite_get_nineslice</a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
+<body>
+  <!--<div class="body-scroll" style="top: 150px;">-->
+  <h1>sprite_get_bbox_mode</h1>
+  <p>Cette fonction renvoie le &quot;mode&quot; actuel pour les calculs de la boîte englobante. Vous fournissez l'index du sprite à vérifier et la fonction renverra l'une des constantes indiquées ci-dessous.</p>
+  <p> </p>
+  <h4>Syntaxe :</h4>
+  <p class="code">sprite_get_bbox_mode(ind) ;</p>
+  <table>
+    <tbody>
+      <tr>
+        <th>Arguments</th>
+        <th>Description</th>
+      </tr>
+      <tr>
+        <td>ind</td>
+        <td>L'index du sprite à vérifier.</td>
+      </tr>
+    </tbody>
+  </table>
+  <p> </p>
+  <h4>Renvoie à</h4>
+  <p class="code">Constant</p>
+  <table>
+    <tbody>
+      <tr>
+        <th>Constant</th>
+        <th>Description</th>
+      </tr>
+      <tr>
+        <td><tt>bboxmode_automatic</tt></td>
+        <td>Automatique - La boîte de délimitation sera calculée automatiquement, sur la base du paramètre de tolérance du sprite.</td>
+      </tr>
+      <tr>
+        <td><tt>bboxmode_fullimage</tt></td>
+        <td>Image complète - La boîte de délimitation sera définie pour utiliser la largeur et la hauteur complètes du sprite, sans tenir compte de la tolérance et des pixels &quot;vides&quot;.</td>
+      </tr>
+      <tr>
+        <td><tt>bboxmode_manual</tt></td>
+        <td>Manuel - Le rectangle de délimitation a été réglé manuellement sur des valeurs définies par l'utilisateur (soit dans l'éditeur de sprites, soit à l'aide de la fonction <a href="../Sprite_Manipulation/sprite_set_bbox.htm"><tt>sprite_set_bbox()</tt></a>)</td>
+      </tr>
+    </tbody>
+  </table>
+  <p> </p>
+  <h4>Exemple :</h4>
+  <p class="code">if sprite_get_bbox_mode(sprite_index) != 0<br> {
+    <br> sprite_set_bbox_mode(sprite_index, bboxmode_automatic) ;<br> }
+  </p>
+  <p>La commande ci-dessus vérifie le mode bbox du sprite actuel et s'il n'est pas <tt>automatique,</tt> il le définit à cette valeur.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <div class="footer">
+    <div class="buttons">
+      <div class="clear">
+        <div style="float:left">Retour : <a href="Sprite_Information.htm">Informations sur le Sprite</a></div>
+        <div style="float:right">Suivant : <a href="sprite_get_nineslice.htm">sprite_get_nineslice</a></div>
+      </div>
+    </div>
+    <h5><span data-keyref="Copyright Notice">Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
   </div>
   <!-- KEYWORDS
 sprite_get_bbox_mode

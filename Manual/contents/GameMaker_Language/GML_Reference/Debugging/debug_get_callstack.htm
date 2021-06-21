@@ -7,21 +7,62 @@
   <meta name="generator" content="Adobe RoboHelp 2019" />
   <link rel="stylesheet" href="../../../assets/css/default.css" type="text/css" />
   <meta name="rh-authors" content="Mark Alexander" />
-  <meta name="topic-comment" content="Page de référence pour debug_get_callstack" />
+  <meta name="topic-comment" content="Reference page for debug_get_callstack" />
   <meta name="rh-index-keywords" content="debug_get_callstack" />
   <meta name="search-keywords" content="debug_get_callstack" />
 </head>
-<body><!--<div class="body-scroll" style="top: 150px;">--><h1>debug_get_callstack</h1><p> Cette fonction génère un tableau de chaînes en tant que &quot;pile d&#39;appels&quot; où le script actuel est répertorié en premier, puis tous les autres scripts qui ont été exécutés pour que le script actuel soit exécuté. Le format exact de la chaîne variera en fonction de la plate-forme cible choisie, mais il aura principalement le nom du script / événement, puis un signe deux-points: et le numéro de ligne, similaire à ceci:</p><p class="code"><tt>&quot;gml_Script_script2:1&quot;<br/>
-&quot;gml_Script_script1:32&quot;<br/>
-&quot;gml_Script_script0:64&quot;<br/>
-&quot;gml_Object_object0_Create_0:1&quot;</tt></p><p> La fonction permet de passer un argument facultatif, qui correspond à la profondeur maximale de la pile d&#39;appels renvoyée. Cette valeur correspond au nombre de scripts inclus dans le tableau renvoyé à partir du script actuel. Si cet argument n&#39;est pas spécifié, la pile d&#39;appels complète sera renvoyée.</p><p> Notez que le tableau retourné contiendra toujours 0 à sa dernière position, après avoir répertorié les scripts de la pile d&#39;appels.</p><p></p><h4> Syntaxe:</h4><p class="code">debug_get_callstack([maxdepth])</p><table><tbody><tr><th> Argument</th><th> La description</th></tr><tr><td> <span class="notranslate">[maxdepth]</span></td><td> La profondeur maximale de la pile d&#39;appels</td></tr></tbody></table><p></p><h4> Retour:</h4><p class="code">Array</p><p></p><h4> <b>Exemple:</b></h4><p class="code">if debug_mode<br/>     {
-    <br/>     if keyboard_check(vk_escape)<br/>         {
-    <br/>         var _a = debug_get_callstack(4);<br/>         for (var i = 0; i &lt; array_length_id(_a); ++i;)<br/>             {
-    <br/>             show_debug_message(_a[i]);
-    <br/>             }
-    <br/>         }
-    <br/>     }
-  </p><p> Le code ci-dessus vérifie si le mode de débogage est activé et s&#39;il l&#39;est, vérifie si une touche est maintenue enfoncée. Dans ce cas, il sort la pile d&#39;appels actuelle vers la console, avec une profondeur maximale de 4. </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> Retour: <a href="Debugging.htm">Débogage</a></div><div style="float:right"> Suivant: <a href="exception_unhandled_handler.htm"><span class="notranslate">exception_unhandled_handler</span></a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
+<body>
+  <!--<div class="body-scroll" style="top: 150px;">-->
+  <h1>debug_get_callstack</h1>
+  <p>Cette fonction génère un tableau de chaînes de caractères en tant que &quot;callstack&quot; où le script actuel est listé en premier, puis tous les autres scripts qui ont été exécutés pour que le script actuel soit exécuté. Le format exact de la chaîne varie en fonction de la
+    de la plate-forme cible choisie, mais il comprendra généralement le nom du script/événement, puis deux points : et le numéro de ligne, comme ceci :</p>
+  <p class="code"><tt>&quot;gml_Script_script2:1&quot;<br>
+&quot;gml_Script_script1:32&quot;<br>
+&quot;gml_Script_script0:64&quot;<br>
+&quot;gml_Object_object0_Create_0:1&quot;</tt></p>
+  <p>La fonction permet de passer un argument facultatif, qui est la profondeur maximale de la pile d'appels retournée. Cette valeur est le nombre de scripts qui sont inclus dans le tableau retourné en commençant par le script actuel. Si cet argument n'est pas
+    spécifié, alors la pile d'appels complète sera retournée.</p>
+  <p>Notez que le tableau retourné contiendra toujours 0 dans sa dernière position, après avoir listé les scripts de la pile d'appels.</p>
+  <p> </p>
+  <h4>Syntaxe :</h4>
+  <p class="code">debug_get_callstack([maxdepth])</p>
+  <table>
+    <tbody>
+      <tr>
+        <th>Arguments</th>
+        <th>Description</th>
+      </tr>
+      <tr>
+        <td>[maxdepth]</td>
+        <td>La profondeur maximale de la pile d'appels</td>
+      </tr>
+    </tbody>
+  </table>
+  <p> </p>
+  <h4>Les retours :</h4>
+  <p class="code">Array</p>
+  <p> </p>
+  <h4><b>Exemple :</b></h4>
+  <p class="code">if debug_mode<br> {
+    <br> if keyboard_check(vk_escape)<br> {
+    <br> var _a = debug_get_callstack(4) ;<br> for (var i = 0 ; i &lt; array_length_id(_a) ; ++i ;) <br> {
+    <br> show_debug_message(_a[i]) ;
+    <br> }
+    <br> }
+    <br> }
+  </p>
+  <p>Le code ci-dessus vérifie si le mode débogage est activé et si c'est le cas, il vérifie si une touche est maintenue enfoncée. Dans ce cas, il affiche la pile d'appels actuelle sur la console, avec une profondeur maximale de 4.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <div class="footer">
+    <div class="buttons">
+      <div class="clear">
+        <div style="float:left">Retour : <a href="Debugging.htm">Débogage</a></div>
+        <div style="float:right">Suivant : <a href="exception_unhandled_handler.htm">exception_unhandled_handler</a></div>
+      </div>
+    </div>
+    <h5><span data-keyref="Copyright Notice">Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
   </div>
   <!-- KEYWORDS
 debug_get_callstack

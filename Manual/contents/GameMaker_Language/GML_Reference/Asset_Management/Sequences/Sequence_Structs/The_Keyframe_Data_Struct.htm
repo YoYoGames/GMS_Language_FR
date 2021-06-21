@@ -2,22 +2,79 @@
 
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml"><head>
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-  <title>La Keyframe données d&#39;images clés</title>
-  <meta name="generator" content="Adobe RoboHelp 2019"/>
-  <link rel="stylesheet" href="../../../../../assets/css/default.css" type="text/css"/>
-  <meta name="rh-authors" content="Mark Alexander"/>
-  <meta name="topic-comment" content="Page décrivant la Keyframe données d&#39;images clés"/>
-  <meta name="rh-index-keywords" content="Structure de données d&#39; Keyframe séquence"/>
-  <meta name="search-keywords" content="La Keyframe données d&#39;images clés,seqaudiokey_loop,seqaudiokey_oneshot,channel,spriteIndex,soundIndex,playbackMode,curve,value,colour,sequence,objectIndex,events,event"/>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>La structure de données des images clés</title>
+  <meta name="generator" content="Adobe RoboHelp 2019" />
+  <link rel="stylesheet" href="../../../../../assets/css/default.css" type="text/css" />
+  <meta name="rh-authors" content="Mark Alexander" />
+  <meta name="topic-comment" content="Page outlining The Keyframe Data Struct" />
+  <meta name="rh-index-keywords" content="Sequence Keyframe Data Struct" />
+  <meta name="search-keywords" content="The Keyframe Data Struct,seqaudiokey_loop,seqaudiokey_oneshot,channel,spriteIndex,soundIndex,playbackMode,curve,value,colour,sequence,objectIndex,events,event" />
 </head>
-<body><!--<div class="body-scroll" style="top: 150px;">--><h1> La <span class="notranslate">Keyframe</span> données d&#39;images clés</h1><p> Lorsque vous définissez une <a href="The_Keyframe_Struct.htm">structure d&#39; <span class="notranslate">keyframe</span></a> pour une piste, vous devez également définir les données qui lui seront associées. Celui-ci est composé de différents <i>canaux</i> et chaque canal peut recevoir un type de données spécifique en fonction du type de piste pour lequel vous définissez les données d&#39; <span class="notranslate">keyframe</span> Ces propriétés sont:</p><ul class="colour"><li><tt>channel</tt>: Il s&#39;agit du canal auquel les <span class="notranslate">keyframe</span> doivent être appliquées. Il s&#39;agit d&#39;une valeur entière positive commençant à 0, et il convient de noter que lors de la création de pistes de paramètres pour les <span class="notranslate">keyframes</span> «position» ou «échelle», vous devez utiliser des valeurs de canal très spécifiques. Ce sont: le canal 0 est la position X ou l&#39;échelle X, le canal 1 est la position Y ou l&#39;échelle Y.</li><li><tt>spriteIndex</tt>: L&#39;index de la ressource de sprite à utiliser pour la piste. Cette propriété n&#39;est disponible que pour les pistes du type <tt>seqtracktype_graphic</tt> et vous pouvez l&#39;obtenir ou le définir.</li><li><tt>soundIndex</tt>: L&#39;index de l&#39;élément audio à utiliser pour la piste. Cette propriété n&#39;est disponible que pour les pistes du type <tt>seqtracktype_audio</tt> et vous pouvez l&#39;obtenir ou le définir.</li><li><tt>playbackMode</tt>: Le mode de lecture du son. Cette propriété n&#39;est disponible que pour les pistes du type <tt>seqtracktype_audio</tt> et vous pouvez l&#39;obtenir ou le définir. La propriété doit être l&#39;une des constantes suivantes:</li></ul><table><tbody><tr><th> Constant</th><th> Description</th><th> Évaluer</th></tr><tr><td> <span class="notranslate">seqaudiokey_loop</span></td><td> Le son bouclera lors de la lecture.</td><td> <span class="notranslate">0</span></td></tr><tr><td> <span class="notranslate">seqaudiokey_oneshot</span></td><td> Le son ne jouera qu&#39;une seule fois puis s&#39;arrêtera.</td><td> <span class="notranslate">1 </span></td></tr></tbody></table><p></p><ul class="colour"><li><tt>curve</tt>: Cette propriété nécessite une structure de courbe d&#39;animation (voir <a href="../../Animation_Curves/animcurve_channel_new.htm">ici</a> pour plus d&#39;informations) et n&#39;est disponible que pour les pistes de type <tt>seqtracktype_real</tt>. Si aucune structure de courbe n&#39;est utilisée, la valeur de cette propriété sera -1.</li><li><tt>value</tt>: Cette propriété est simplement une valeur associée au <span class="notranslate">keyframe</span>, et n&#39;est disponible que pour les pistes du type <tt>seqtracktype_real</tt> quand non <tt>curve</tt> struct est fourni.<tt></tt></li><li><tt>colour</tt>: Cette propriété renvoie (ou requiert, si elle est définie) un <a href="../../../../GML_Overview/Arrays.htm">tableau</a> pour la valeur de couleur de l&#39; <span class="notranslate">keyframe</span> au format [A, R, V, B]. Ceci n&#39;est disponible que pour les pistes du type <tt>seqtracktype_colour</tt>. Notez que les valeurs de chaque composant doivent être exprimées entre 0 et 1, où 0 correspond à la valeur HEX # 00 et 1 correspond à la valeur HEX #FF (0 à 255 comme indiqué dans le sélecteur de couleur pour les pistes de couleur dans les séquences Éditeur).</li><li><tt>sequence</tt>: Cette propriété renverra (ou nécessite, si elle est définie) une <a href="The_Sequence_Object_Struct.htm">structure d&#39;objet de séquence</a> et n&#39;est disponible que pour les pistes de type <tt>seqtracktype_sequence</tt>.</li><li><tt>objectIndex</tt>: Cette propriété renverra (ou nécessite, si elle est définie) un index d&#39;objet et n&#39;est disponible que pour les pistes de type <tt>seqtracktype_instance</tt>.</li><li><tt>events</tt>: Cette propriété permet d&#39;accéder aux <b>événements</b> et aux <b>messages de diffusion</b> associés à la structure de données d&#39; <span class="notranslate">keyframe</span> Vous pouvez obtenir ou définir cette propriété, et lors de son obtention, un tableau de chaînes est renvoyé, et lors de sa définition, un tableau de chaînes doit être spécifié. Pour plus d&#39;informations sur les événements, veuillez consulter la section <a href="../Sequence_Events_Moments_Broadcast.htm">Événements et moments de séquence</a>. Cette propriété n&#39;est disponible que pour les pistes du type <tt>seqtracktype_message</tt>.</li><li><tt>event</tt>: Cette propriété renverra (ou peut être définie sur) le<a href="../../../Variable_Functions/method.htm">method</a> associé à la structure de données d&#39; <span class="notranslate">keyframe</span> Si aucune méthode n&#39;a été spécifiée ou si vous souhaitez supprimer la méthode, la propriété doit être -1. Cette propriété n&#39;est disponible que pour les pistes du type <tt>seqtracktype_moment</tt>. </li></ul><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> Retour: <a href="../Sequences.htm">Séquences</a></div><div style="float:right"> Suivant: <a href="The_Sequence_Object_Struct.htm">La structure de l&#39;objet de séquence</a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
+<body>
+  <!--<div class="body-scroll" style="top: 150px;">-->
+  <h1>La structure de données des <span class="notranslate">images clés</span> </h1>
+  <p>Lorsque vous définissez une <a href="The_Keyframe_Struct.htm">structure d'<span class="notranslate">image clé</span></a> pour une piste, vous devez également définir les données qui lui seront associées. Celles-ci sont composées de différents <i>canaux</i>, et chaque canal peut recevoir un type de données spécifique en fonction du type de piste pour lequel vous définissez les données d'image clé.
+    type de données spécifique en fonction du type de piste pour lequel vous définissez les données d'<span class="notranslate">image clé</span>. Ces propriétés sont les suivantes :</p>
+  <ul class="colour">
+    <li><tt>canal</tt>: Il s'agit du canal auquel les données de l'<span class="notranslate">image clé</span> doivent être appliquées. Il s'agit d'une valeur entière positive commençant à 0. Il convient de noter que lorsque vous créez des pistes de paramètres pour des images clés de &quot;position&quot; ou d'&quot;échelle&quot;,
+      vous devez utiliser des valeurs de canal très spécifiques. Celles-ci sont les suivantes : le canal 0 correspond à la position X ou à l'échelle X, le canal 1 correspond à la position Y ou à l'échelle Y.</li>
+    <li><tt>spriteIndex</tt>: L'index de l'actif sprite à utiliser pour la piste. Cette propriété est uniquement disponible pour les pistes de type <tt>seqtracktype_graphic</tt> et vous pouvez l'obtenir ou la définir.</li>
+    <li><tt>soundIndex</tt>: L'index de l'actif audio à utiliser pour la piste. Cette propriété est uniquement disponible pour les pistes de type <tt>seqtracktype_audio</tt> et vous pouvez l'obtenir ou la définir.</li>
+    <li><tt>playbackMode</tt>: Le mode de lecture du son. Cette propriété est uniquement disponible pour les pistes de type <tt>seqtracktype_audio</tt> et vous pouvez l'obtenir ou la définir. La propriété doit être l'une des constantes suivantes :</li>
+  </ul>
+  <table>
+    <tbody>
+      <tr>
+        <th>Constant</th>
+        <th>Description</th>
+        <th>Valeur</th>
+      </tr>
+      <tr>
+        <td>seqaudiokey_loop</td>
+        <td>Le son est joué en boucle.</td>
+        <td>0</td>
+      </tr>
+      <tr>
+        <td>seqaudiokey_oneshot</td>
+        <td>Le son ne sera joué qu'une fois puis s'arrêtera.</td>
+        <td>1</td>
+      </tr>
+    </tbody>
+  </table>
+  <p> </p>
+  <ul class="colour">
+    <li><tt>curve</tt>: Cette propriété nécessite une structure de courbe d'animation (voir <a href="../../Animation_Curves/animcurve_channel_new.htm">ici</a> pour plus d'informations) et n'est disponible que pour les pistes de type <tt>seqtracktype_real</tt>. Si aucune structure de courbe
+      n'est utilisée, la valeur de cette propriété sera -1.</li>
+    <li><tt>valeur</tt>: Cette propriété est simplement une valeur associée au canal de données d'<span class="notranslate">image clé</span>, et n'est disponible que pour les pistes de type <tt>seqtracktype_real</tt> lorsqu'aucune <tt>courbe</tt> struct
+      n'est fournie.<tt></tt></li>
+    <li><tt>colour</tt>: cette propriété renvoie (ou exige, si elle est définie) un <a href="../../../../GML_Overview/Arrays.htm">tableau</a> pour la valeur de couleur de l'<span class="notranslate">image clé</span> au format [A, R, G, B]. Cette propriété n'est disponible que pour les pistes de type <tt>seqtracktype_colour</tt>.
+      Notez que les valeurs de chaque composant doivent être exprimées entre 0 et 1, où 0 correspond à la valeur HEX #00 et 1 correspond à la valeur HEX #FF (0 - 255 comme indiqué dans le sélecteur de couleur pour les pistes en couleur dans l'éditeur de séquences).</li>
+    <li><tt>séquence</tt>: Cette propriété renvoie (ou exige, si elle est définie) une <a href="The_Sequence_Object_Struct.htm">structure d'objet de séquence</a> et n'est disponible que pour les pistes du type <tt>seqtracktype_sequence</tt>.</li>
+    <li><tt>objectIndex</tt>: Cette propriété renvoie (ou requiert, si elle est définie) un index d'objet et n'est disponible que pour les pistes de type <tt>seqtracktype_instance</tt>.</li>
+    <li><tt>événements</tt>: Cette propriété permet d'accéder aux <b>événements</b> et aux <b>messages de diffusion</b> associés à la structure de données des <span class="notranslate">images clés.</span> Vous pouvez obtenir ou configurer cette propriété.
+      tableau de chaînes est renvoyé, et lorsqu'elle est définie, un tableau de chaînes doit être spécifié. Pour plus d'informations sur les événements, veuillez consulter la section <a href="../Sequence_Events_Moments_Broadcast.htm">Événements et moments de la séquence</a>. Cette propriété
+      propriété n'est disponible que pour les pistes de type <tt>seqtracktype_message</tt>.</li>
+    <li><tt>événement</tt>: Cette propriété renverra (ou peut être définie sur) la <a href="../../../Variable_Functions/method.htm">méthode</a> associée à la structure de données d'<span class="notranslate">image clé.</span> Si aucune méthode n'a été spécifiée ou si vous souhaitez supprimer la méthode, la propriété doit être -1.
+      Cette propriété est uniquement disponible pour les pistes de type <tt>seqtracktype_moment</tt>.</li>
+  </ul>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <div class="footer">
+    <div class="buttons">
+      <div class="clear">
+        <div style="float:left">Retour : <a href="../Sequences.htm">Séquences</a></div>
+        <div style="float:right">Suivant : <a href="The_Sequence_Object_Struct.htm">La structure de l'objet séquence</a></div>
+      </div>
+    </div>
+    <h5><span data-keyref="Copyright Notice">Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
   </div>
   <!-- KEYWORDS
-The Keyframe Data Struct
+The <span class="notranslate">Keyframe</span> Data Struct
 -->
   <!-- TAGS
-sequence_keyframe_data
+sequence_<span class="notranslate">keyframe</span>_data
 -->
 
 </body></html>

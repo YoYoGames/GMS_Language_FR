@@ -3,17 +3,43 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>image_speed</title>
+  <title>vitesse de l'image</title>
   <meta name="generator" content="Adobe RoboHelp 2019" />
   <link rel="stylesheet" href="../../../../../assets/css/default.css" type="text/css" />
   <meta name="rh-authors" content="Mark Alexander" />
-  <meta name="topic-comment" content="Page expliquant la variable image_speed" />
+  <meta name="topic-comment" content="Page explaining the variable image_speed" />
   <meta name="rh-index-keywords" content="image_speed" />
   <meta name="search-keywords" content="image_speed" />
 </head>
-<body><!--<div class="body-scroll" style="top: 150px;">--><h1>image_speed</h1><p> Cette variable détermine la vitesse à laquelle <span class="notranslate">GameMaker Studio 2</span> les sous-images de l&#39;image-objet de l&#39;instance actuelle. La valeur de vitesse donnée est un <i>multiplicateur</i>, 1 étant la valeur par défaut, et la définir sur 0,5 réduira la moitié de la vitesse de l&#39;animation - telle que définie dans l&#39; <a href="../../../../../The_Asset_Editors/Sprites.htm">éditeur de sprite</a> ou l&#39; <a href="../../../../../The_Asset_Editors/Image_Editor.htm">éditeur d&#39;images</a> - tandis que la définir sur 2 la doublera. Si le sprite utilisé n&#39;a pas de sous-images, cette variable n&#39;aura aucun effet.</p><p></p><h4> Syntaxe:</h4><p class="code">image_speed;</p><p></p><h4> Retour:</h4><p class="code">Real (single precision floating point value)</p><p></p><h4> Exemple:</h4><p class="code">with (instance_create_layer(x, y, &quot;Effects&quot;, obj_Explosion))<br/>     {
-    <br/>     image_speed = 0.5;<br/>     }
-  </p><p> Le code ci-dessus crée une instance de l&#39;objet &quot;obj_Explosion&quot; et définit son image_speed sur 0,5 (réduisant de moitié la vitesse de défilement). </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> Retour: <a href="Sprite_Instance_Variables.htm">Variables d&#39;instance de sprite</a></div><div style="float:right"> Suivant:<a href="image_xscale.htm">image_xscale</a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
+<body>
+  <!--<div class="body-scroll" style="top: 150px;">-->
+  <h1>vitesse de l'image</h1>
+  <p>Cette variable détermine la vitesse à laquelle <span class="notranslate">GameMaker Studio 2</span> fera défiler les sous-images du sprite d'instance actuel. La valeur de la vitesse est un <i>multiplicateur</i>, 1 étant la valeur par défaut. Si vous la réglez sur 0,5, la vitesse de l'animation sera réduite de moitié (comme définie dans l'éditeur de sprites ou l'éditeur d'images).
+    La valeur de vitesse indiquée est un multiplicateur, 1 étant la valeur par défaut. Si le sprite utilisé n'a
+    n'a pas de sous-images, cette variable n'aura aucun effet.</p>
+  <p> </p>
+  <h4>Syntaxe :</h4>
+  <p class="code">image_speed ;</p>
+  <p> </p>
+  <h4>Les retours :</h4>
+  <p class="code">Réel (valeur à virgule flottante de précision simple)</p>
+  <p> </p>
+  <h4>Exemple :</h4>
+  <p class="code">with (instance_create_layer(x, y, &quot;Effects&quot;, obj_Explosion))<br> {
+    <br> image_speed = 0.5 ;<br> }
+  </p>
+  <p>Le code ci-dessus crée une instance de l'objet &quot;obj_Explosion&quot; et définit son image_speed à 0,5 (ce qui réduit de moitié la vitesse de déplacement).</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <div class="footer">
+    <div class="buttons">
+      <div class="clear">
+        <div style="float:left">Retour : <a href="Sprite_Instance_Variables.htm">Variables d'instance de sprite</a></div>
+        <div style="float:right">Suivant : <a href="image_xscale.htm">image_xscale</a></div>
+      </div>
+    </div>
+    <h5><span data-keyref="Copyright Notice">Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
   </div>
   <!-- KEYWORDS
 image_speed

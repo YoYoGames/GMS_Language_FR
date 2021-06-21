@@ -2,19 +2,59 @@
 
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml"><head>
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <title>gamepad_get_axis_deadzone</title>
-  <meta name="generator" content="Adobe RoboHelp 2019"/>
-  <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css"/>
-  <meta name="rh-authors" content="Mark Alexander"/>
-  <meta name="topic-comment" content="Page de référence pour gamepad_get_axis_deadzone"/>
-  <meta name="rh-index-keywords" content="gamepad_get_axis_deadzone"/>
-  <meta name="search-keywords" content="gamepad_get_axis_deadzone"/>
+  <meta name="generator" content="Adobe RoboHelp 2019" />
+  <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
+  <meta name="rh-authors" content="Mark Alexander" />
+  <meta name="topic-comment" content="Reference page for gamepad_get_axis_deadzone" />
+  <meta name="rh-index-keywords" content="gamepad_get_axis_deadzone" />
+  <meta name="search-keywords" content="gamepad_get_axis_deadzone" />
 </head>
 
-<body><!--<div class="body-scroll" style="top: 150px;">--><h1>gamepad_get_axis_deadzone</h1><p> Cette fonction peut être utilisée pour obtenir la valeur &quot;zone morte&quot; de l&#39;axe du joystick. Vous spécifiez l&#39;emplacement de périphérique à obtenir et la fonction renverra une valeur comprise entre 0 et 1, où la valeur reflète le seuil sous lequel l&#39;axe du joystick est considéré comme à 0.</p><p></p><h4> Syntaxe:</h4><p class="code">gamepad_get_axis_deadzone(device);</p><table><tbody><tr><th> Argument</th><th> Description</th></tr><tr><td> <span class="notranslate">device</span></td><td> Quel «slot» de périphérique de manette de jeu vérifier.</td></tr></tbody></table><p></p><h4> Retour:</h4><p class="code">Real</p><p></p><h4> Exemple:</h4><p class="code">if gamepad_get_axis_deadzone(global.PadId) != 0.5<br/>     {
-    <br/>     gamepad_set_axis_deadzone(global.PadId, 0.5);<br/>     }
-  </p><p> Le code ci-dessus vérifie le seuil de l&#39;axe analogique de la manette de jeu connectée à l&#39;appareil &quot;slot&quot; stocké dans la variable globale et si ce n&#39;est pas la valeur par défaut de 0,5, il est mis à cette valeur. </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> Retour: <a href="Gamepad_Input.htm">Entrée de la manette de jeu</a></div><div style="float:right"> Suivant: <a href="gamepad_get_option.htm">gamepad_get_option</a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
+<body>
+
+
+
+  <!--<div class="body-scroll" style="top: 150px;">-->
+  <h1>gamepad_get_axis_deadzone</h1>
+  <p>Cette fonction peut être utilisée pour obtenir la valeur de la &quot;zone morte&quot; de l'axe du joystick. Vous spécifiez l'emplacement du dispositif à obtenir et la fonction renvoie une valeur comprise entre 0 et 1, où la valeur reflète le seuil en dessous duquel l'axe du joystick est considéré comme étant à 0.
+    comme étant à 0.</p>
+  <p> </p>
+  <h4>Syntaxe :</h4>
+  <p class="code">gamepad_get_axis_deadzone(device) ;</p>
+  <table>
+    <tbody>
+      <tr>
+        <th>Arguments</th>
+        <th>Description</th>
+      </tr>
+      <tr>
+        <td>dispositif</td>
+        <td>Quel &quot;slot&quot; de périphérique gamepad vérifier.</td>
+      </tr>
+    </tbody>
+  </table>
+  <p> </p>
+  <h4>Les retours :</h4>
+  <p class="code">Real</p>
+  <p> </p>
+  <h4>Exemple :</h4>
+  <p class="code">if gamepad_get_axis_deadzone(global.PadId) !.= 0.5<br> {
+    <br> gamepad_set_axis_deadzone(global.PadId, 0.5) ;<br> }
+  </p>
+  <p>Le code ci-dessus vérifie le seuil de l'axe analogique de la manette de jeu connectée au dispositif &quot;slot&quot; stocké dans la variable globale et s'il n'est pas la valeur par défaut de 0,5, il est défini à cette valeur.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <div class="footer">
+    <div class="buttons">
+      <div class="clear">
+        <div style="float:left">Retour : <a href="Gamepad_Input.htm">Entrée de la manette de jeu</a></div>
+        <div style="float:right">Suivant : <a href="gamepad_get_option.htm"> gamepad_get_option </a></div>
+      </div>
+    </div>
+    <h5><span data-keyref="Copyright Notice">Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
   </div>
   <!-- KEYWORDS
 gamepad_get_axis_deadzone

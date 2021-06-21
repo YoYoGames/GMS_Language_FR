@@ -7,16 +7,40 @@
   <meta name="generator" content="Adobe RoboHelp 2019" />
   <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
   <meta name="rh-authors" content="Mark Alexander" />
-  <meta name="topic-comment" content="Référence pour la fonction gpu_get_alphatestref" />
+  <meta name="topic-comment" content="Reference for the function gpu_get_alphatestref" />
   <meta name="rh-index-keywords" content="gpu_get_alphatestref" />
   <meta name="search-keywords" content="gpu_get_alphatestref" />
 </head>
-<body><!--<div class="body-scroll" style="top: 150px;">--><h1>gpu_get_alphatestref</h1><p> Vous pouvez utiliser cette fonction pour trouver la valeur actuelle de la référence de test alpha (la valeur par défaut est 0, mais vous pouvez utiliser <a href="gpu_set_alphatestref.htm"><tt>gpu_set_alphatestref()</tt></a> pour définir cette valeur sur autre chose).</p><p></p><h4> Syntaxe:</h4><p class="code">gpu_get_alphatestref();</p><p></p><h4> Retour:</h4><p class="code">Real (from 0 - 255)</p><p></p><h4> Exemple:</h4><p class="code">if gpu_get_alphatestenable()<br/>     {
-    <br/>     if gpu_get_alphatestref() &lt; 254<br/>         {
-    <br/>         gpu_set_alphatestref(254);
-    <br/>         }
-    <br/>     }
-  </p><p> Le code ci-dessus vérifie si le test alpha est activé, et si tel est le cas, il vérifie la valeur de référence du test alpha actuelle et la définit si elle est inférieure à 254. </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> Retour: <a href="GPU_Control.htm">Contrôle GPU</a></div><div style="float:right"> Suivant:<a href="gpu_get_texfilter.htm">gpu_get_texfilter</a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
+<body>
+  <!--<div class="body-scroll" style="top: 150px;">-->
+  <h1>gpu_get_alphatestref</h1>
+  <p>Vous pouvez utiliser cette fonction pour trouver la valeur actuelle de la référence du test alpha (la valeur par défaut est 0, mais vous pouvez utiliser la fonction <a href="gpu_set_alphatestref.htm"><tt>gpu_set_alphatestref()</tt></a> pour définir cette valeur à une autre valeur).</p>
+  <p> </p>
+  <h4>Syntaxe :</h4>
+  <p class="code">gpu_get_alphatestref() ;</p>
+  <p> </p>
+  <h4>Les retours :</h4>
+  <p class="code">Réel (de 0 à 255)</p>
+  <p> </p>
+  <h4>Exemple :</h4>
+  <p class="code">if gpu_get_alphatestenable()<br> {
+    <br> if gpu_get_alphatestref() &lt; 254<br> {
+    <br> gpu_set_alphatestref(254) ;
+    <br> }
+    <br> }
+  </p>
+  <p>Le code ci-dessus vérifie si le test alpha est activé, et si c'est le cas, il vérifie la valeur de référence actuelle du test alpha et la définit si elle est inférieure à 254.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <div class="footer">
+    <div class="buttons">
+      <div class="clear">
+        <div style="float:left">Retour : <a href="GPU_Control.htm">Contrôle du GPU</a></div>
+        <div style="float:right">Suivant : <a href="gpu_get_texfilter.htm">gpu_get_texfilter</a></div>
+      </div>
+    </div>
+    <h5><span data-keyref="Copyright Notice">Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
   </div>
   <!-- KEYWORDS
 gpu_get_alphatestref

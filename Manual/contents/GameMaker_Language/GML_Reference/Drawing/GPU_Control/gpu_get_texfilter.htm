@@ -7,18 +7,43 @@
   <meta name="generator" content="Adobe RoboHelp 2019" />
   <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
   <meta name="rh-authors" content="Mark Alexander" />
-  <meta name="topic-comment" content="Référence de la fonction gpu_get_texfilter" />
+  <meta name="topic-comment" content="Reference for the function gpu_get_texfilter" />
   <meta name="rh-index-keywords" content="gpu_get_texfilter" />
   <meta name="search-keywords" content="gpu_get_texfilter" />
 </head>
-<body><!--<div class="body-scroll" style="top: 150px;">--><h1>gpu_get_texfilter</h1><p> Avec cette fonction, vous pouvez vérifier si le filtrage de texture (interpolation linéaire) est activé (renvoie <tt>true</tt> ) ou non (retourne <tt>false</tt> ). Pour plus d&#39;informations sur le filtrage des textures, consultez la fonction <a href="gpu_set_texfilter.htm"><tt>gpu_set_texfilter()</tt></a>.</p><p class="note"> <b>REMARQUE</b>: sur la cible HTML5, cette fonction ne fonctionnera qu&#39;avec WebGL activé.</p><p></p><h4> Syntaxe:</h4><p class="code">gpu_get_texfilter();</p><p></p><h4> Retour:</h4><p class="code">Boolean</p><p></p><h4> Exemple:</h4><p class="code">if gpu_get_texfilter()<br/>     {
-    <br/>     gpu_set_texfilter(false);
-    <br/>     }
-    <br/> else
-    <br/>     {
-    <br/>     gpu_set_texfilter(true);
-    <br/>     }
-  </p><p> Le code ci-dessus vérifie si le filtrage de texture est activé ou désactivé et le règle en conséquence. </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> Retour: <a href="GPU_Control.htm">Contrôle GPU</a></div><div style="float:right"> Suivant:<a href="gpu_get_texfilter_ext.htm">gpu_get_texfilter_ext</a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
+<body>
+  <!--<div class="body-scroll" style="top: 150px;">-->
+  <h1>gpu_get_texfilter</h1>
+  <p>Cette fonction permet de vérifier si le filtrage des textures (interpolation linéaire) est activé (renvoie <tt>true</tt>) ou non (renvoie <tt>false</tt>). Pour plus d'informations sur le filtrage des textures, voir la fonction <a href="gpu_set_texfilter.htm"><tt>gpu_set_texfilter()</tt></a>.</p>
+  <p class="note"><b>REMARQUE</b>: sur la cible HTML5, cette fonction ne fonctionnera que si WebGL est activé.</p>
+  <p> </p>
+  <h4>Syntaxe :</h4>
+  <p class="code">gpu_get_texfilter() ;</p>
+  <p> </p>
+  <h4>Les retours :</h4>
+  <p class="code">Booléen</p>
+  <p> </p>
+  <h4>Exemple :</h4>
+  <p class="code">if gpu_get_texfilter()<br> {
+    <br> gpu_set_texfilter(false) ;
+    <br> }
+    <br> else
+    <br> {
+    <br> gpu_set_texfilter(true) ;
+    <br> }
+  </p>
+  <p>Le code ci-dessus vérifie si le filtrage des textures est activé ou non et l'active en conséquence.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <div class="footer">
+    <div class="buttons">
+      <div class="clear">
+        <div style="float:left">Retour : <a href="GPU_Control.htm">Contrôle du GPU</a></div>
+        <div style="float:right">Suivant : <a href="gpu_get_texfilter_ext.htm">gpu_get_texfilter_ext</a></div>
+      </div>
+    </div>
+    <h5><span data-keyref="Copyright Notice">Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
   </div>
   <!-- KEYWORDS
 gpu_get_texfilter

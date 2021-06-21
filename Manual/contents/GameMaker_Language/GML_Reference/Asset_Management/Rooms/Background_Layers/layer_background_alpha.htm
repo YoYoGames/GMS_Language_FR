@@ -3,15 +3,58 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>layer_background_alpha</title>
+  <title>couche_arrière-plan_alpha</title>
   <meta name="generator" content="Adobe RoboHelp 2019" />
   <link rel="stylesheet" href="../../../../../assets/css/default.css" type="text/css" />
   <meta name="rh-authors" content="Mark Alexander" />
-  <meta name="topic-comment" content="Page décrivant la fonction layer_background_alpha" />
+  <meta name="topic-comment" content="Page outlining the function layer_background_alpha" />
   <meta name="rh-index-keywords" content="layer_background_alpha" />
   <meta name="search-keywords" content="layer_background_alpha" />
 </head>
-<body><!--<div class="body-scroll" style="top: 150px;">--><h1>layer_background_alpha</h1><p> Cette fonction contrôle l&#39;alpha (transparence) du sprite d&#39;arrière-plan. Vous donnez l&#39;ID d&#39;élément d&#39;arrière-plan (que vous obtenez lorsque vous créez un élément d&#39;arrière-plan en utilisant <a href="layer_background_create.htm"><tt>layer_background_create()</tt></a> ou lorsque vous utilisez la fonction <a href="layer_background_get_id.htm"><tt>layer_background_get_id()</tt></a> ), puis définissez la valeur alpha à utiliser. Alpha peut être compris entre 0 (entièrement transparent) et 1 (entièrement opaque), la valeur alpha par défaut de l&#39;élément d&#39;arrière-plan étant 1. Notez que si le calque auquel l&#39;élément d&#39;arrière-plan a été affecté n&#39;est pas visible - ou l&#39;élément lui-même a été créé invisible - vous ne verrez aucune différence avec cette fonction tant que le calque ou l&#39;élément n&#39;a pas été rendu visible à nouveau.</p><p></p><h4> Syntaxe:</h4><p class="code">layer_background_alpha(background_element_id, alpha);</p><table><tbody><tr><th> Argument</th><th> Description</th></tr><tr><td> <span class="notranslate">background_element_id</span></td><td> La valeur d&#39;identifiant unique de l&#39;élément d&#39;arrière-plan à modifier</td></tr><tr><td> <span class="notranslate">alpha</span></td><td> L&#39;alpha du sprite d&#39;arrière-plan, de 0 à 1 (la valeur par défaut est 1)</td></tr></tbody></table><p></p><h4> Retour:</h4><p class="code">N/A</p><p></p><h4> Exemple:</h4><p class="code">var lay_id = layer_get_id(&quot;Background_sky&quot;);<br/> var back_id = layer_background_get_id(lay_id);<br/> layer_background_alpha(back_id, random(1));</p><p> Le code ci-dessus obtient la valeur d&#39;ID de l&#39;arrière-plan affectée au calque &quot;Background_sky&quot;, puis définit son alpha sur une valeur aléatoire entre 0 et 1. </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> Retour: <a href="Background_Layers.htm">Calques d&#39;arrière-plan</a></div><div style="float:right"> Suivant:<a href="layer_background_index.htm">layer_background_index</a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
+<body>
+  <!--<div class="body-scroll" style="top: 150px;">-->
+  <h1>couche_arrière-plan_alpha</h1>
+  <p>Cette fonction contrôle l'alpha (la transparence) du sprite d'arrière-plan. Vous donnez l'ID de l'élément d'arrière-plan (que vous obtenez lorsque vous créez un élément d'arrière-plan à l'aide de la fonction <a href="layer_background_create.htm"><tt>layer_background_create()</tt></a> ou lorsque
+    vous utilisez la fonction <a href="layer_background_get_id.htm"><tt>layer_background_get_id()</tt></a>), puis définissez la valeur alpha à utiliser. L'alpha peut être compris entre 0 (totalement transparent) et 1 (totalement opaque), la valeur alpha par défaut de l'élément background
+    étant de 1. Notez que si le calque auquel l'élément d'arrière-plan a été attribué n'est pas visible - ou si l'élément lui-même a été rendu invisible - vous ne verrez aucune différence avec cette fonction jusqu'à ce que le calque ou l'élément soit à nouveau visible.
+    à nouveau.</p>
+  <p> </p>
+  <h4>Syntaxe :</h4>
+  <p class="code">layer_background_alpha(background_element_id, alpha) ;</p>
+  <table>
+    <tbody>
+      <tr>
+        <th>Arguments</th>
+        <th>Description</th>
+      </tr>
+      <tr>
+        <td>id_élément_fond</td>
+        <td>La valeur d'identification unique de l'élément d'arrière-plan à modifier.</td>
+      </tr>
+      <tr>
+        <td>alpha</td>
+        <td>L'alpha du sprite d'arrière-plan, de 0 à 1 (par défaut, 1).</td>
+      </tr>
+    </tbody>
+  </table>
+  <p> </p>
+  <h4>Les retours :</h4>
+  <p class="code">N/A</p>
+  <p> </p>
+  <h4>Exemple :</h4>
+  <p class="code">var lay_id = layer_get_id(&quot;Background_sky&quot;) ;<br> var back_id = layer_background_get_id(lay_id) ;<br> layer_background_alpha(back_id, random(1)) ;</p>
+  <p>Le code ci-dessus récupère la valeur d'identification de l'arrière-plan attribué au calque &quot;Background_sky&quot;, puis définit son alpha à une valeur aléatoire comprise entre 0 et 1.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <div class="footer">
+    <div class="buttons">
+      <div class="clear">
+        <div style="float:left">Retour : <a href="Background_Layers.htm">Calques d'arrière-plan</a></div>
+        <div style="float:right">Suivant : <a href="layer_background_index.htm">layer_background_index</a></div>
+      </div>
+    </div>
+    <h5><span data-keyref="Copyright Notice">Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
   </div>
   <!-- KEYWORDS
 layer_background_alpha

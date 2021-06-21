@@ -3,15 +3,71 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>draw_roundrect</title>
+  <title>dessiner_roundrect</title>
   <meta name="generator" content="Adobe RoboHelp 2019" />
   <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
   <meta name="rh-authors" content="Mark Alexander" />
-  <meta name="topic-comment" content="Référence pour la fonction draw_roundrect" />
+  <meta name="topic-comment" content="Reference for the function draw_roundrect" />
   <meta name="rh-index-keywords" content="draw_roundrect" />
   <meta name="search-keywords" content="draw_roundrect" />
 </head>
-<body><!--<div class="body-scroll" style="top: 150px;">--><h1>draw_roundrect</h1><p> Avec cette fonction, vous pouvez dessiner le contour d&#39;un rectangle arrondi ou un rectangle arrondi rempli où la position (x1, y1) est le coin supérieur gauche et la position (x2, y2) est le coin inférieur droit. Vous pouvez définir la précision du dessin des coins avec la fonction <a href="draw_set_circle_precision.htm"><tt>draw_set_circle_precision()</tt></a>, mais cette fonction utilise un rayon fixe pour eux (si vous devez changer le rayon du coin, utilisez la fonction <a href="draw_roundrect_ext.htm"><tt>draw_roundrect_ext()</tt></a> ). Veuillez noter que le rectangle dessiné peut nécessiter des valeurs différentes (+/- 1 sur le x, y, ou la largeur ou la hauteur) pour être dessiné avec les dimensions souhaitées en raison des différences entre les différentes plates-formes prises en charge.</p><p class="note"> <b>REMARQUE</b>: Si vous souhaitez dessiner une forme à l&#39;aide d&#39;un <span class="notranslate">shader</span>, sachez que la plupart des <span class="notranslate">shaders</span> attendent les entrées suivantes: sommet, texture, couleur. Cependant, lors de l&#39;utilisation de cette fonction, seules les données de sommet et de couleur sont transmises, et le <span class="notranslate">shader</span> peut ne rien dessiner (ou dessiner quelque chose mais pas correctement). Si vous devez dessiner des formes de cette manière, le <span class="notranslate">shader</span> doit être personnalisé dans cet esprit.</p><p></p><h4> Syntaxe:</h4><p class="code">draw_roundrect(x1, y1, x2, y2, outline);</p><table><tbody><tr><th> Argument</th><th> Description</th></tr><tr><td> <span class="notranslate">x1</span></td><td> La coordonnée x du coin supérieur gauche du rectangle arrondi (comme s&#39;il s&#39;agissait d&#39;un rectangle normal).</td></tr><tr><td> <span class="notranslate">y1</span></td><td> La coordonnée y du coin supérieur gauche du rectangle arrondi (comme s&#39;il s&#39;agissait d&#39;un rectangle normal).</td></tr><tr><td> <span class="notranslate">x2</span></td><td> La coordonnée x du coin inférieur droit du rectangle arrondi (comme s&#39;il s&#39;agissait d&#39;un rectangle normal).</td></tr><tr><td> <span class="notranslate">y2</span></td><td> La coordonnée y du coin inférieur droit du rectangle arrondi (comme s&#39;il s&#39;agissait d&#39;un rectangle normal).</td></tr><tr><td> <span class="notranslate">outline</span></td><td> Indique si le rectangle arrondi est dessiné rempli (faux) ou sous la forme d&#39;un contour large d&#39;un pixel (vrai).</td></tr></tbody></table><p></p><h4> Retour:</h4><p class="code">N/A</p><p></p><h4> Exemple:</h4><p class="code">draw_set_colour(c_lime);<br/> draw_roundrect(50, 100, 250, 200, 0);</p><p> Cela dessinera un rectangle arrondi rempli, avec son coin supérieur gauche théorique (avant d&#39;être courbé) à (50,100) et son coin inférieur droit théorique à (250,200). </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> Retour: <a href="Basic_Forms.htm">Formulaires de base</a></div><div style="float:right"> Suivant:<a href="draw_roundrect_colour.htm">draw_roundrect_colour</a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
+<body>
+  <!--<div class="body-scroll" style="top: 150px;">-->
+  <h1>dessiner_roundrect</h1>
+  <p>Avec cette fonction, vous pouvez dessiner soit le contour d'un rectangle arrondi, soit un rectangle arrondi rempli dont la position (x1,y1) est le coin supérieur gauche et la position (x2,y2) le coin inférieur droit. Vous pouvez définir la précision du dessin des
+    coins avec la fonction <a href="draw_set_circle_precision.htm"><tt>draw_set_circle_precision()</tt></a>mais cette fonction utilise un rayon fixe pour les coins (si vous souhaitez modifier le rayon des coins, utilisez la fonction <a href="draw_roundrect_ext.htm"><tt>draw_roundrect_ext()</tt></a>).
+    Veuillez noter que le rectangle dessiné peut nécessiter des valeurs différentes (+/-1 sur les x, y, ou la largeur ou la hauteur) pour être dessiné avec les dimensions souhaitées en raison des différences entre les diverses plateformes prises en charge.</p>
+  <p class="note"><b>REMARQUE</b>: Si vous souhaitez dessiner une forme à l'aide d'un <span class="notranslate">shader</span>, sachez que la plupart des <span class="notranslate">shaders</span> attendent les entrées suivantes : vertex, texture, couleur. Cependant, en utilisant cette fonction, seules les données de vertex et de couleur sont transmises, et donc le shader peut ne rien dessiner (ou dessiner quelque chose mais pas correctement).
+   <span class="notranslate">shader</span> peut ne rien dessiner (ou dessiner quelque chose mais pas correctement). Si vous avez besoin de dessiner des formes de cette manière, le <span class="notranslate">shader</span> doit être personnalisé en conséquence.</p>
+  <p> </p>
+  <h4>Syntaxe :</h4>
+  <p class="code">draw_roundrect(x1, y1, x2, y2, outline) ;</p>
+  <table>
+    <tbody>
+      <tr>
+        <th>Arguments</th>
+        <th>Description</th>
+      </tr>
+      <tr>
+        <td>x1</td>
+        <td>La coordonnée x du coin supérieur gauche du rectangle arrondi (comme s'il s'agissait d'un rectangle normal).</td>
+      </tr>
+      <tr>
+        <td>y1</td>
+        <td>La coordonnée y du coin supérieur gauche du rectangle arrondi (comme s'il s'agissait d'un rectangle normal).</td>
+      </tr>
+      <tr>
+        <td>x2</td>
+        <td>La coordonnée x du coin inférieur droit du rectangle arrondi (comme s'il s'agissait d'un rectangle normal).</td>
+      </tr>
+      <tr>
+        <td>y2</td>
+        <td>La coordonnée y du coin inférieur droit du rectangle arrondi (comme s'il s'agissait d'un rectangle normal).</td>
+      </tr>
+      <tr>
+        <td>aperçu</td>
+        <td>Indique si le rectangle arrondi est dessiné rempli (false) ou comme un contour d'un pixel de large (true).</td>
+      </tr>
+    </tbody>
+  </table>
+  <p> </p>
+  <h4>Les retours :</h4>
+  <p class="code">N/A</p>
+  <p> </p>
+  <h4>Exemple :</h4>
+  <p class="code">draw_set_colour(c_lime) ;<br> draw_roundrect(50, 100, 250, 200, 0) ;</p>
+  <p>Ceci dessinera un rectangle arrondi rempli, avec son coin supérieur gauche théorique (avant d'être courbé) à (50,100) et son coin inférieur droit théorique à (250,200).</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <div class="footer">
+    <div class="buttons">
+      <div class="clear">
+        <div style="float:left">Retour : <a href="Basic_Forms.htm">Formes de base</a></div>
+        <div style="float:right">Suivant : <a href="draw_roundrect_colour.htm">draw_roundrect_colour</a></div>
+      </div>
+    </div>
+    <h5><span data-keyref="Copyright Notice">Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
   </div>
   <!-- KEYWORDS
 draw_roundrect

@@ -3,15 +3,53 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>object_get_sprite</title>
+  <title>objet_get_sprite</title>
   <meta name="generator" content="Adobe RoboHelp 2019" />
   <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
   <meta name="rh-authors" content="Mark Alexander" />
-  <meta name="topic-comment" content="Page décrivant la fonction object_get_sprite" />
+  <meta name="topic-comment" content="Page outlining the function object_get_sprite" />
   <meta name="rh-index-keywords" content="object_get_sprite" />
   <meta name="search-keywords" content="object_get_sprite" />
 </head>
-<body><!--<div class="body-scroll" style="top: 150px;">--><h1>object_get_sprite</h1><p> Cette fonction vous dira si l&#39;objet que vous vérifiez a un sprite ou non, et si c&#39;est le cas, alors elle retournera l&#39;index de ce sprite, ou -1 si ce n&#39;est pas le cas. Veuillez noter qu&#39;il ne s&#39;agit pas d&#39;une fonction d&#39;instance! Vous pouvez avoir un objet sans sprite alors qu&#39;une instance de ce même objet peut en avoir un et vice-versa, ou ils peuvent même avoir des sprites différents. Vous pouvez définir un sprite d&#39;instances individuelles à l&#39;aide de la <a href="../Sprites/Sprite_Instance_Variables/sprite_index.htm"><tt>sprite_index</tt></a> variable d&#39;instance.</p><p></p><h4> Syntaxe:</h4><p class="code">object_get_sprite(obj);</p><table><tbody><tr><th> Argument</th><th> Description</th></tr><tr><td> <span class="notranslate">obj</span></td><td> L&#39;index de l&#39;objet à vérifier</td></tr></tbody></table><p></p><h4> Retour:</h4><p class="code">Real (sprite asset ID)</p><p></p><h4> Exemple:</h4><p class="code">var _spr = object_get_sprite(object_index);<br/> if (sprite_index != _spr)<br/>     {<br/>     sprite_index = _spr;<br/>     }</p><p> L&#39;exemple ci-dessus vérifiera le <span class="inline">sprite_index</span> de l&#39;instance contre le sprite du <span class="inline">object_index</span> de l&#39;instance. S&#39;ils ne sont pas identiques, il attribuera le même sprite que celui de l&#39;index d&#39;objet à l&#39;instance. </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> Retour: <a href="Objects.htm">Objets</a></div><div style="float:right"> Suivant:<a href="object_get_visible.htm">object_get_visible</a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
+<body>
+  <!--<div class="body-scroll" style="top: 150px;">-->
+  <h1>objet_get_sprite</h1>
+  <p>Cette fonction vous dira si l'objet que vous vérifiez a un sprite ou non, et si c'est le cas, elle retournera l'index de ce sprite, ou -1 si ce n'est pas le cas. Veuillez noter qu'il ne s'agit pas d'une fonction d'instance ! Vous pouvez avoir un objet sans
+    alors qu'une instance de ce même objet peut en avoir un et vice-versa, ou ils peuvent même avoir des sprites différents. Vous pouvez définir le sprite d'une instance individuelle en utilisant la variable <a href="../Sprites/Sprite_Instance_Variables/sprite_index.htm"><tt>sprite_index</tt></a>    instance.</p>
+  <p> </p>
+  <h4>Syntaxe :</h4>
+  <p class="code">objet_get_sprite(obj) ;</p>
+  <table>
+    <tbody>
+      <tr>
+        <th>Arguments</th>
+        <th>Description</th>
+      </tr>
+      <tr>
+        <td>obj.</td>
+        <td>L'index de l'objet à vérifier</td>
+      </tr>
+    </tbody>
+  </table>
+  <p> </p>
+  <h4>Les retours :</h4>
+  <p class="code">Real (ID de l'actif du sprite)</p>
+  <p> </p>
+  <h4>Exemple :</h4>
+  <p class="code">var _spr = object_get_sprite(object_index) ;<br> if (sprite_index != _spr)<br> {<br> sprite_index = _spr ;<br> }</p>
+  <p>L'exemple ci-dessus vérifiera le <span class="inline">sprite_index</span> de l'instance par rapport au sprite du <span class="inline">object_index</span> de l'instance. S'ils ne sont pas identiques, il attribuera à l'instance le même sprite que celui de l'index de l'objet.
+    l'index de l'objet à l'instance.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <div class="footer">
+    <div class="buttons">
+      <div class="clear">
+        <div style="float:left">Retour : <a href="Objects.htm">Objets</a></div>
+        <div style="float:right">Suivant : <a href="object_get_visible.htm">objet_get_visible</a></div>
+      </div>
+    </div>
+    <h5><span data-keyref="Copyright Notice">Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
   </div>
   <!-- KEYWORDS
 object_get_sprite

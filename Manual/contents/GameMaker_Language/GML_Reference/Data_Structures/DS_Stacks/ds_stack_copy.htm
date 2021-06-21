@@ -2,19 +2,60 @@
 
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml"><head>
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <title>ds_stack_copy</title>
-  <meta name="generator" content="Adobe RoboHelp 2019"/>
-  <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css"/>
-  <meta name="rh-authors" content="Mark Alexander"/>
-  <meta name="topic-comment" content="Page de référence pour ds_stack_copy"/>
-  <meta name="rh-index-keywords" content="ds_stack_copy"/>
-  <meta name="search-keywords" content="ds_stack_copy"/>
+  <meta name="generator" content="Adobe RoboHelp 2019" />
+  <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
+  <meta name="rh-authors" content="Mark Alexander" />
+  <meta name="topic-comment" content="Reference page for ds_stack_copy" />
+  <meta name="rh-index-keywords" content="ds_stack_copy" />
+  <meta name="search-keywords" content="ds_stack_copy" />
 </head>
 
-<body><!--<div class="body-scroll" style="top: 150px;">--><h1>ds_stack_copy</h1><p> Cette fonction peut être utilisée pour copier le contenu d&#39;une pile dans une autre. Notez que cela ne <i>supprime PAS</i> le contenu de la pile d&#39;origine, ni ne détruit la pile d&#39;origine. Lorsque vous utilisez cette fonction, la pile dans laquelle la copie doit avoir été créée au préalable et si elle contenait des éléments avant la copie, ceux-ci seront effacés en premier (ce qui signifie que ces informations seront perdues).</p><p></p><h4> Syntaxe:</h4><p class="code">ds_stack_copy(id, source);</p><table><tbody><tr><th> Argument</th><th> Description</th></tr><tr><td> <span class="notranslate">id</span></td><td> L&#39;identifiant de la NOUVELLE pile.</td></tr><tr><td> <span class="notranslate">source</span></td><td> La pile ORIGINALE à copier sur id.</td></tr></tbody></table><p></p><h4> Retour:</h4><p class="code">N/A</p><p></p><h4> Exemple:</h4><p class="code">with (instance_create_layer(x, y, &quot;Enemies&quot;, obj_Enemy))<br/>     {
-    <br/>     stack = ds_stack_create();<br/>     ds_stack_copy(stack, other.stack);<br/>     }
-  </p><p> La fonction ci-dessus crée une nouvelle instance, puis dans cette instance, elle crée une nouvelle pile DS et copie le contenu de la pile dans l&#39;instance exécutant le bloc de code, dans la pile d&#39;instances nouvellement créée. </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> Retour:<a href="ds_stack_create.htm">ds_stack_create</a></div><div style="float:right"> Suivant:<a href="ds_stack_top.htm">ds_stack_top</a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
+<body>
+  <!--<div class="body-scroll" style="top: 150px;">-->
+  <h1>ds_stack_copy</h1>
+  <p>Cette fonction peut être utilisée pour copier le contenu d'une pile dans une autre. Notez que cela <i>ne</i> supprime <i>PAS</i> le contenu de la pile d'origine, ni ne détruit la pile d'origine. Lorsque vous utilisez cette fonction, la pile sur laquelle la copie est effectuée doit avoir été créée précédemment.
+    Si elle contenait des éléments avant la copie, ceux-ci seront effacés en premier (ce qui signifie que ces informations seront perdues).</p>
+  <p> </p>
+  <h4>Syntaxe :</h4>
+  <p class="code">ds_stack_copy(id, source) ;</p>
+  <table>
+    <tbody>
+      <tr>
+        <th>Arguments</th>
+        <th>Description</th>
+      </tr>
+      <tr>
+        <td>id</td>
+        <td>L'identifiant de la nouvelle pile.</td>
+      </tr>
+      <tr>
+        <td>source</td>
+        <td>La pile ORIGINALE à copier sur id.</td>
+      </tr>
+    </tbody>
+  </table>
+  <p> </p>
+  <h4>Les retours :</h4>
+  <p class="code">N/A</p>
+  <p> </p>
+  <h4>Exemple :</h4>
+  <p class="code">with (instance_create_layer(x, y, &quot;Enemies&quot;, obj_Enemy))<br> {
+    <br> stack = ds_stack_create() ;<br> ds_stack_copy(stack, other.stack) ;<br> }
+  </p>
+  <p>La fonction ci-dessus crée une nouvelle instance, puis dans cette instance, elle crée une nouvelle pile DS et copie le contenu de la pile de l'instance qui exécute le bloc de code, dans la pile de l'instance nouvellement créée.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <div class="footer">
+    <div class="buttons">
+      <div class="clear">
+        <div style="float:left">Retour : <a href="ds_stack_create.htm">ds_stack_create</a></div>
+        <div style="float:right">Suivant : <a href="ds_stack_top.htm">ds_stack_top</a></div>
+      </div>
+    </div>
+    <h5><span data-keyref="Copyright Notice">Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
   </div>
   <!-- KEYWORDS
 ds_stack_copy

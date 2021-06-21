@@ -7,14 +7,38 @@
   <meta name="generator" content="Adobe RoboHelp 2019" />
   <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
   <meta name="rh-authors" content="Mark Alexander" />
-  <meta name="topic-comment" content="Page de référence pour phy_sleeping" />
+  <meta name="topic-comment" content="Reference page for phy_sleeping" />
   <meta name="rh-index-keywords" content="phy_sleeping" />
   <meta name="search-keywords" content="phy_sleeping" />
 </head>
-<body><!--<div class="body-scroll" style="top: 150px;">--><h1>phy_sleeping</h1><p> Cette <b>variable en lecture seule</b> renvoie si l&#39;instance est actuellement &quot;en veille&quot; ou non (<tt>true</tt> ) ou non (<tt>false</tt> ), Une instance &quot;endormie&quot; est une instance qui n&#39;est activement engagée dans aucune simulation physique. <span class="notranslate">GameMaker Studio 2</span> mettra les objets en veille pour enregistrer les cycles de simulation lorsqu&#39;une instance est au repos et non en collision avec une autre instance</p><p></p><h4> Syntaxe:</h4><p class="code">phy_sleeping;</p><p></p><h4> Retour:</h4><p class="code">Boolean (or <tt>undefined</tt> if the instance is not physics enabled)</p><p></p><h4> Exemple:</h4><p class="code">if phy_sleeping<br/>     {
-    <br/>     instance_destroy();
-    <br/>     }
-  </p><p> Le code ci-dessus vérifie si l&#39;objet est activement simulé ou non et s&#39;il ne l&#39;est pas, il est détruit. </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> Retour: <a href="Physics_Variables.htm">Variables de physique</a></div><div style="float:right"> Suivant:<a href="phy_collision_points.htm">phy_collision_points</a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
+<body>
+  <!--<div class="body-scroll" style="top: 150px;">-->
+  <h1>phy_sleeping</h1>
+  <p>Cette variable <b>en lecture seule</b> indique si l'instance est actuellement &quot;endormie&quot; (true) ou non<tt>(</tt>false). Une instance<tt>&quot;</tt>endormie&quot; est une instance qui n'est pas activement engagée dans une simulation physique. <span class="notranslate">GameMaker Studio 2</span> met les objets en sommeil pour économiser des cycles de simulation lorsqu'une instance est au repos et n'entre pas en collision avec une autre instance.</p>
+  <p> </p>
+  <h4>Syntaxe :</h4>
+  <p class="code">phy_sleeping ;</p>
+  <p> </p>
+  <h4>Les retours :</h4>
+  <p class="code">Booléen (ou <tt>indéfini</tt> si l'instance n'est pas activée pour la physique)</p>
+  <p> </p>
+  <h4>Exemple :</h4>
+  <p class="code">if phy_sleeping<br> {
+    <br> instance_destroy() ;
+    <br> }
+  </p>
+  <p>Le code ci-dessus vérifie si l'objet est activement simulé ou non et s'il ne l'est pas, il est détruit.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <div class="footer">
+    <div class="buttons">
+      <div class="clear">
+        <div style="float:left">Retour : <a href="Physics_Variables.htm">Variables de physique</a></div>
+        <div style="float:right">Suivant : <a href="phy_collision_points.htm">phy_collision_points</a></div>
+      </div>
+    </div>
+    <h5><span data-keyref="Copyright Notice">Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
   </div>
   <!-- KEYWORDS
 phy_sleeping

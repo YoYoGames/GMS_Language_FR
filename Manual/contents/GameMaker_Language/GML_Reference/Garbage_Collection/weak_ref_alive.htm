@@ -1,18 +1,54 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <title>weak_ref_alive</title>
-  <meta name="generator" content="Adobe RoboHelp 2019" />
+  <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../assets/css/default.css" type="text/css" />
   <meta name="rh-authors" content="Mark Alexander" />
-  <meta name="topic-comment" content="Page de référence pour low_ref_alive" />
+  <meta name="topic-comment" content="Reference page for weak_ref_alive" />
   <meta name="rh-index-keywords" content="weak_ref_alive" />
   <meta name="search-keywords" content="weak_ref_alive" />
 </head>
-<body><!--<div class="body-scroll" style="top: 150px;">--><h1>weak_ref_create</h1><p> Avec cette fonction, vous pouvez vérifier la <a class="glossterm" data-glossterm="référence faible" href="#">référence faible</a> à une structure pour voir si elle est toujours &quot;vivante&quot; ou non. Vous fournissez la référence faible à vérifier (comme renvoyée par la fonction<a
-      href="weak_ref_create.htm"><span class="inline">weak_ref_create()</span></a> ), et la fonction retournera <span class="inline">true</span> si la structure est toujours référencée quelque part ou <span class="inline">false</span> si ce n&#39;est pas le cas et a été ramassé. Notez que si vous fournissez une valeur qui n&#39;est pas une référence faible, la fonction retournera <span class="inline">undefined</span>.</p><p></p><h4> Syntaxe:</h4><p class="code">weak_ref_alive(weak_ref);</p><table><tbody><tr><th> Argument</th><th> Description</th></tr><tr><td> <span class="notranslate">weak_ref</span></td><td> La référence faible à la structure que vous souhaitez vérifier.</td></tr></tbody></table><p></p><h4> Retour:</h4><p class="code">Boolean (or undefined)</p><p></p><h4> Exemple:</h4><p class="code">if weak_ref_alive(inventory_ref)<br/>     {<br/>     inventory = -1;<br/>     }</p><p> Le code ci-dessus vérifie une référence faible à une structure et si elle est toujours active, la variable la référençant est définie sur -1, dé-référençant la structure et lui permettant d&#39;être garbage collection. </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> Retour: <a href="Garbage_Collection.htm">Ramassage des ordures</a></div><div style="float:right"> Suivant:<a href="weak_ref_any_alive.htm">weak_ref_any_alive</a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
+<body>
+  <!--<div class="body-scroll" style="top: 150px;">-->
+  <h1>weak_ref_create</h1>
+  <p>Avec cette fonction, vous pouvez vérifier la <a class="glossterm" data-glossterm="faible référence" href="#">référence faible</a> d'une structure pour voir si elle est toujours &quot;vivante&quot; ou non. Vous fournissez la référence faible à vérifier (telle que retournée par la fonction
+    <a href="weak_ref_create.htm"><span class="inline">weak_ref_create()</span></a>), et la fonction renvoie <span class="inline">true</span> si la structure est toujours référencée quelque part ou <span class="inline">false</span> si elle ne l'est pas et a été collectée.
+      Notez que si vous fournissez une valeur qui n'est pas une référence faible, la fonction retournera <span class="inline">undefined</span>.</p>
+  <p> </p>
+  <h4>Syntaxe :</h4>
+  <p class="code">weak_ref_alive(weak_ref) ;</p>
+  <table>
+    <tbody>
+      <tr>
+        <th>Arguments</th>
+        <th>Description</th>
+      </tr>
+      <tr>
+        <td>faible_réf</td>
+        <td>La référence faible de la structure que vous voulez vérifier.</td>
+      </tr>
+    </tbody>
+  </table>
+  <p> </p>
+  <h4>Les retours :</h4>
+  <p class="code">Booléen (ou indéfini)</p>
+  <p> </p>
+  <h4>Exemple :</h4>
+  <p class="code">if weak_ref_alive(inventory_ref)<br> {<br> inventory = -1 ;<br> }</p>
+  <p>Le code ci-dessus vérifie une référence faible à une structure et si elle est toujours vivante, la variable qui la référence est mise à -1, déréférençant la structure et lui permettant d'être collectée par les ordures.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <div class="footer">
+    <div class="buttons">
+      <div class="clear">
+        <div style="float:left">Retour : <a href="Garbage_Collection.htm">Collecte des ordures</a></div>
+        <div style="float:right">Suivant : <a href="weak_ref_any_alive.htm">weak_ref_any_alive</a></div>
+      </div>
+    </div>
+    <h5><span data-keyref="Copyright Notice">Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
   </div>
   <!-- KEYWORDS
 weak_ref_alive
@@ -20,5 +56,5 @@ weak_ref_alive
   <!-- TAGS
 weak_ref_alive
 -->
-</body>
-</html>
+
+</body></html>

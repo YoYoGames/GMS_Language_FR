@@ -2,17 +2,101 @@
 
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml"><head>
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-  <title>Fonctions numériques</title>
-  <meta name="generator" content="Adobe RoboHelp 2019"/>
-  <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css"/>
-  <meta name="rh-authors" content="Mark Alexander"/>
-  <meta name="topic-comment" content="Section de référence pour les fonctions numériques"/>
-  <meta name="rh-index-keywords" content=""/>
-  <meta name="search-keywords" content="Fonctions numériques,Nombres"/>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>Fonctions des nombres</title>
+  <meta name="generator" content="Adobe RoboHelp 2019" />
+  <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
+  <meta name="rh-authors" content="Mark Alexander" />
+  <meta name="topic-comment" content="Reference section for Number functions" />
+  <meta name="rh-index-keywords" content="" />
+  <meta name="search-keywords" content="Number Functions,numbers" />
 </head>
 
-<body><!--<div class="body-scroll" style="top: 150px;">--><h1> Fonctions numériques</h1><p> Les nombres réels dans <span class="notranslate">GameMaker Studio 2</span> sont considérés comme <i>des nombres à virgule flottante double précision</i> - c&#39;est-à-dire qu&#39;ils ont un point décimal en eux sans nombre fixe de chiffres avant ou après le point - ou des <i>entiers</i> - c&#39;est-à-dire qu&#39;ils sont nombres entiers sans valeur de virgule décimale. 2, par exemple, est un entier mais 2,01 est un réel à virgule flottante.</p><p class="note"> <b>REMARQUE</b>: sur la <b>cible HTML5</b>, tous les nombres réels sont des doubles.</p><p> Cette distinction entre les nombres entiers et les nombres flottants est très importante lorsqu&#39;il s&#39;agit de développement multiplateforme car la précision des calculs effectués sur un PC <span class="notranslate">Windows</span> <i>n&#39;est pas</i> la même que la précision de ces mêmes calculs lorsqu&#39;ils sont effectués sur un appareil mobile. Cela signifie que vous devez porter une attention particulière lorsque vous effectuez des comparaisons, par exemple:</p><p class="code">if (image_index == 1)<br/>     {<br/>     do something...<br/>     }</p><p> Dans l&#39;exemple ci-dessus, si nous avons défini le <tt>image_speed</tt> à 0,25 - par exemple - puis après quatre étapes, vous pouvez supposer que le <tt>image_index</tt> valeur serait 1, mais il <i>peut</i> s&#39;agir d&#39;une valeur telle que 1.0000002 en raison du fonctionnement des mathématiques en virgule flottante et donc l&#39;évaluation ne sera pas <tt>true</tt>. Ces types d&#39;erreurs peuvent être assez difficiles à déboguer et il est donc toujours bon d&#39;en être conscient et de planifier à l&#39;avance et d&#39;utiliser d&#39;autres moyens de vérifier les valeurs ou d&#39;utiliser les fonctions de revêtement de sol ou d&#39;arrondi appropriées (répertoriées ci-dessous) pour convertir le nombre en vérifier dans un entier (pour plus d&#39;informations sur les mathématiques en virgule flottante et pourquoi c&#39;est un problème, veuillez <a href="https://floating-point-gui.de/" target="_blank">voir ici</a> ). Par exemple, le code ci-dessus pourrait être écrit comme suit:</p><p class="code">if (floor(image_index) == 1)<br/>     {<br/>     do something...<br/>     }</p><p> Il est également intéressant de noter que lors de l&#39;utilisation des <b>cibles du compilateur <span class="notranslate">YoYo</span></b>, toutes les expressions et fonctions sont <i>évaluées de gauche à droite</i>, tandis que sur toutes les autres plates-formes cibles, elles sont évaluées <i>de droite à gauche</i>, ce qui signifie que cela - par exemple - donnera des résultats différents selon Sur la plateforme:</p><p class="code">val = max(num, ++num, num++);</p><p class="note"> <strong>REMARQUE</strong>: pour plus d&#39;informations, reportez-vous à la section sur la <a href="../../../GML_Overview/Evaluation_Order.htm">commande d&#39;évaluation</a>.</p><p> Vous pouvez également utiliser une fonction spéciale disponible dans <span class="notranslate">GameMaker Studio 2</span> pour définir la <b>valeur epsilon</b> pour les calculs en virgule flottante. Lorsqu&#39;un nombre réel est arrondi au nombre à virgule flottante le plus proche, l&#39;epsilon (également connu sous le nom de &quot;machine epsilon&quot;) forme une limite supérieure sur l&#39;erreur relative, et vous pouvez obtenir et définir la valeur epsilon à l&#39;aide des fonctions suivantes:</p><p></p><ul class="colour"><li><a href="math_set_epsilon.htm">math_set_epsilon</a></li><li><a href="math_get_epsilon.htm">math_get_epsilon</a></li></ul><p></p><p> Ces fonctions traitent toutes de l&#39;utilisation de nombres et de valeurs aléatoires:</p><p class="note"> <b>REMARQUE:</b> lorsque vous utilisez les fonctions aléatoires, <span class="notranslate">GameMaker Studio 2</span> conserve la même graine aléatoire à chaque fois que vous démarrez le jeu. Cela rend le débogage beaucoup plus facile car vous avez la garantie que les fonctions aléatoires renverront toujours initialement la même valeur, mais si vous ne souhaitez pas que cela se produise, vous devez d&#39;abord définir une nouvelle graine aléatoire au tout début du jeu, soit en utilisant <span style="font-size:1px;"><a href="randomise.htm"><tt style="font-size: 14px">randomise ( )</tt></a></span> ou <span style="font-size:1px;"><a href="random_set_seed.htm"><tt style="font-size: 14px">random_set_seed ()</tt></a></span>. </p><p></p><ul class="colour"><li><a href="choose.htm">choose</a></li><li><a href="random.htm">random</a></li><li><a href="random_range.htm">random_range</a></li><li><a href="irandom.htm">irandom</a></li><li><a href="irandom_range.htm">irandom_range</a></li><li><a href="random_set_seed.htm">random_set_seed</a></li><li><a href="random_get_seed.htm">random_get_seed</a></li><li><a href="randomise.htm">randomise</a><b></b></li></ul><p></p><p> Ce sont toutes des fonctions qui arrondiront les valeurs d&#39;une manière ou d&#39;une autre, ou sélectionneront une seule valeur parmi diverses valeurs données: </p><p></p><ul class="colour"><li><a href="round.htm">round</a></li><li><a href="floor.htm">floor</a></li><li><a href="frac.htm">frac</a></li><li><a href="abs.htm">abs</a></li><li><a href="sign.htm">sign</a></li><li><a href="ceil.htm">ceil</a></li><li><a href="max.htm">max</a></li><li><a href="mean.htm">mean</a></li><li><a href="median.htm">median</a></li><li><a href="min.htm">min</a></li><li><a href="lerp.htm">lerp</a></li><li><a href="clamp.htm">clamp</a></li></ul><p></p><p> Enfin, nous avons une collection diverse de fonctions mathématiques importantes: </p><p></p><ul class="colour"><li><a href="exp.htm">exp</a></li><li><a href="ln.htm">ln</a></li><li><a href="power.htm">power</a></li><li><a href="sqr.htm">sqr</a></li><li><a href="sqrt.htm">sqrt</a></li><li><a href="log2.htm">log2</a></li><li><a href="log10.htm">log10</a></li><li><a href="logn.htm">logn</a></li></ul><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> Retour: <a href="../Maths_And_Numbers.htm">Maths et nombres</a></div><div style="float:right"> Suivant: <a href="../Angles_And_Distance/Angles_And_Distance.htm">Vecteurs</a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
+<body>
+
+
+
+
+  <!--<div class="body-scroll" style="top: 150px;">-->
+  <h1>Fonctions des nombres</h1>
+  <p>Dans <span class="notranslate">GameMaker Studio 2</span>, les nombres réels sont considérés comme des <i>nombres à virgule flottante en double précision</i> - c'est-à-dire qu'ils comportent une virgule décimale sans qu'il y ait un nombre fixe de chiffres
+    avant ou après le point - ou des <i>nombres entiers</i> - c'est-à-dire qu'ils sont des nombres entiers sans valeur de point décimal. 2, par exemple, est un nombre entier mais 2,01 est un réel à virgule flottante.</p>
+  <p class="note"><b>NOTE</b>: Sur la cible <b>HTML5</b>, tous les nombres réels sont des doubles.</p>
+  <p>Cette distinction entre les nombres entiers et les nombres flottants est très importante pour le développement multiplateforme, car la précision des calculs effectués sur un PC <span class="notranslate">Windows</span> <i>n'</i> est <i>pas</i> la même que la précision de ces mêmes calculs
+    lorsqu'ils sont effectués sur un appareil mobile. Cela signifie que vous devez faire particulièrement attention lorsque vous effectuez des comparaisons, par exemple :</p>
+  <p class="code">if (image_index == 1)<br> {<br> faire quelque chose...<br> }</p>
+  <p>Dans l'exemple ci-dessus, si nous avons réglé l'<tt>image_speed</tt> sur 0.25 - par exemple - alors après quatre étapes, vous pouvez supposer que la valeur de l'<tt>image_index</tt> sera de 1, mais il <i>se peut qu'</i> il s'agisse d'une valeur comme 1.0000002 en raison du fonctionnement des mathématiques à virgule flottante.
+    une valeur comme 1.0000002 en raison de la façon dont les mathématiques à virgule flottante fonctionnent et donc l'évaluation ne sera pas <tt>vraie</tt>. Ces types d'erreurs peuvent être assez difficiles à déboguer, c'est pourquoi il est toujours bon d'en être conscient et d'utiliser d'autres moyens de vérifier les valeurs ou d'utiliser des outils de contrôle.
+    d'autres moyens de vérifier les valeurs ou d'utiliser les fonctions de plancher ou d'arrondi appropriées (énumérées ci-dessous) pour convertir le nombre à vérifier en un nombre entier (pour plus d'informations sur les mathématiques en virgule flottante et sur les raisons de ce problème, <a href="https://floating-point-gui.de/" target="_blank">voir ici</a>). Par exemple, le code ci-dessus pourrait être écrit comme suit :</p>
+  <p class="code">if (floor(image_index) == 1)<br> {<br> faire quelque chose...<br> }</p>
+  <p>Il convient également de noter que lors de l'utilisation des cibles <b><span class="notranslate">YoYo</span></b> Compiler, toutes les expressions et fonctions sont <i>évaluées de gauche à droite</i>, alors que sur toutes les autres plateformes cibles, elles sont évaluées <i>de droite à gauche</i>,
+    ce qui signifie que ceci - par exemple - donnera des résultats différents selon la plateforme :</p>
+  <p class="code">val = max(num, ++num, num++) ;</p>
+  <p class="note"><strong>NOTE</strong>: Pour plus d'informations, voir la section sur l'<a href="../../../GML_Overview/Evaluation_Order.htm">ordre d'évaluation</a>.</p>
+  <p>Vous pouvez également utiliser une fonction spéciale disponible dans <span class="notranslate">GameMaker Studio 2</span> pour définir la valeur <b>epsilon</b> pour les mathématiques en virgule flottante. Lorsqu'un nombre réel est arrondi au nombre à virgule flottante le plus proche,
+    l'epsilon (également appelé &quot;epsilon machine&quot;) constitue une limite supérieure de l'erreur relative. Vous pouvez obtenir et définir la valeur de l'epsilon à l'aide des fonctions suivantes :</p>
+  <p> </p>
+  <ul class="colour">
+    <li><a href="math_set_epsilon.htm">math_set_epsilon</a></li>
+    <li><a href="math_get_epsilon.htm">math_get_epsilon</a></li>
+  </ul>
+  <p> </p>
+  <p>Ces fonctions traitent toutes de l'utilisation de nombres et de valeurs aléatoires :</p>
+  <p class="note"><b>REMARQUE : </b>lorsque vous utilisez les fonctions aléatoires, <span class="notranslate">GameMaker Studio 2</span> conserve la même graine aléatoire à chaque fois que vous démarrez le jeu. Cela facilite grandement le débogage, car vous avez la garantie que les fonctions aléatoires renverront toujours la même valeur au départ.
+    Toutefois, si vous ne souhaitez pas que cela se produise, vous devez d'abord définir une nouvelle graine aléatoire au tout début du jeu, en utilisant les fonctions <span style="font-size:1px;"><a href="randomise.htm"><tt style="font-size: 14px">randomise()</tt></a></span> ou 
+    <span style="font-size:1px;"><a href="random_set_seed.htm"><tt style="font-size: 14px">random_set_seed()</tt></a></span>.</p>
+  <p> </p>
+  <ul class="colour">
+    <li><a href="choose.htm">choisissez</a></li>
+    <li><a href="random.htm">au hasard</a></li>
+    <li><a href="random_range.htm">gamme_aléatoire</a></li>
+    <li><a href="irandom.htm">irandom</a></li>
+    <li><a href="irandom_range.htm">irandom_range</a></li>
+    <li><a href="random_set_seed.htm">random_set_seed</a></li>
+    <li><a href="random_get_seed.htm">random_get_seed</a></li>
+    <li><a href="randomise.htm">randomiser</a><b></b></li>
+  </ul>
+  <p> </p>
+  <p>Ce sont toutes des fonctions qui arrondissent les valeurs d'une manière ou d'une autre, ou qui sélectionnent une valeur unique parmi plusieurs valeurs données :</p>
+  <p> </p>
+  <ul class="colour">
+    <li><a href="round.htm">rond</a></li>
+    <li><a href="floor.htm">sol</a></li>
+    <li><a href="frac.htm">frac</a></li>
+    <li><a href="abs.htm">abs</a></li>
+    <li><a href="sign.htm">signe</a></li>
+    <li><a href="ceil.htm">plafond</a></li>
+    <li><a href="max.htm">max</a></li>
+    <li><a href="mean.htm">moyenne</a></li>
+    <li><a href="median.htm">médiane</a></li>
+    <li><a href="min.htm">min</a></li>
+    <li><a href="lerp.htm">lerp</a></li>
+    <li><a href="clamp.htm">pince</a></li>
+  </ul>
+  <p> </p>
+  <p>Enfin, nous avons une collection diverse de fonctions mathématiques importantes :</p>
+  <p> </p>
+  <ul class="colour">
+    <li><a href="exp.htm">exp</a></li>
+    <li><a href="ln.htm">ln</a></li>
+    <li><a href="power.htm">puissance</a></li>
+    <li><a href="sqr.htm">sqr</a></li>
+    <li><a href="sqrt.htm">sqrt</a></li>
+    <li><a href="log2.htm">log2</a></li>
+    <li><a href="log10.htm">log10</a></li>
+    <li><a href="logn.htm">logn</a></li>
+  </ul>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <div class="footer">
+    <div class="buttons">
+      <div class="clear">
+        <div style="float:left">Retour : <a href="../Maths_And_Numbers.htm">Maths et chiffres</a></div>
+        <div style="float:right">Suivant : <a href="../Angles_And_Distance/Angles_And_Distance.htm">Vecteurs</a></div>
+      </div>
+    </div>
+    <h5><span data-keyref="Copyright Notice">Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
   </div>
   <!-- KEYWORDS
 Number Functions

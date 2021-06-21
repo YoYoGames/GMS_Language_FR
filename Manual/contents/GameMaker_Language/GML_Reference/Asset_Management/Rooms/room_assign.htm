@@ -3,15 +3,57 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>room_assign</title>
+  <title>chambre_assignation</title>
   <meta name="generator" content="Adobe RoboHelp 2019" />
   <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
   <meta name="rh-authors" content="Mark Alexander" />
-  <meta name="topic-comment" content="Page décrivant la fonction room_assign" />
+  <meta name="topic-comment" content="Page outlining the function room_assign" />
   <meta name="rh-index-keywords" content="room_assign" />
   <meta name="search-keywords" content="room_assign" />
 </head>
-<body><!--<div class="body-scroll" style="top: 150px;">--><h1>room_assign</h1><p> Cette fonction copiera une pièce dans une autre, supprimant toutes les instances, tuiles, etc. de la pièce dans laquelle la copie est effectuée et les remplaçant complètement par le nouveau contenu de la pièce. Vous fournissez l&#39;index vers pour la pièce à copier (soit comme défini dans le navigateur de ressources, soit comme renvoyé par la fonction <a href="room_add.htm"><tt>room_add()</tt></a> ) ainsi que l&#39;index de la salle source. Notez que l&#39;appel de cette fonction sur un élément de salle créé dans le navigateur d&#39;actifs <strong>modifiera définitivement le contenu de la salle</strong>, et même l&#39;appel <span class="inline">game_restart()</span> ne ramènera pas la salle à son état d&#39;origine (le seul fait de terminer le jeu et de l&#39;ouvrir à nouveau recommencera avec la salle dans son état d&#39;origine).</p><p></p><h4> Syntaxe:</h4><p class="code">room_assign(ind, source);</p><table><tbody><tr><th> Argument</th><th> Description</th></tr><tr><td> <span class="notranslate">ind</span></td><td> L&#39;index de la pièce à <i>copier</i>.</td></tr><tr><td> <span class="notranslate">source</span></td><td> L&#39;index de la pièce à <i>copier</i>.</td></tr></tbody></table><p></p><h4> Retour:</h4><p class="code">N/A</p><p></p><h4> Exemple:</h4><p class="code">global.rm = room_add();<br/> room_assign(global.rm, rm_Base);</p><p> Le code ci-dessus ajoutera une nouvelle salle au jeu et y copiera ensuite le contenu de la salle indexée comme &quot;rm_Base&quot;. </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> Retour: <a href="Rooms.htm">Chambres</a></div><div style="float:right"> Suivant:<a href="room_instance_add.htm">room_instance_add</a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
+<body>
+  <!--<div class="body-scroll" style="top: 150px;">-->
+  <h1>chambre_assignation</h1>
+  <p>Cette fonction copiera une room vers une autre, en supprimant toutes les instances, tuiles, etc... de la room vers laquelle elle est copiée et en les remplaçant complètement par le contenu de la nouvelle room. Vous fournissez l'index de la room à copier (tel que défini dans le navigateur d'actifs ou tel que renvoyé par la fonction de copie).
+    dans le navigateur d'actifs ou tel que renvoyé par la fonction <a href="room_add.htm"><tt>room_add()</tt></a>) ainsi que l'index de la pièce source. Notez que l'appel de cette fonction sur un asset de salle créé dans le navigateur d'assets <strong>modifiera de façon permanente le contenu de la salle</strong>,
+    et même en appelant <span class="inline">game_restart()</span>, la pièce ne reviendra pas à son état d'origine (seule la fin du jeu et sa réouverture permettront de retrouver la pièce dans son état d'origine).</p>
+  <p> </p>
+  <h4>Syntaxe :</h4>
+  <p class="code">room_assign(ind, source) ;</p>
+  <table>
+    <tbody>
+      <tr>
+        <th>Arguments</th>
+        <th>Description</th>
+      </tr>
+      <tr>
+        <td>ind</td>
+        <td>L'index de la pièce à <i>copier</i>.</td>
+      </tr>
+      <tr>
+        <td>source</td>
+        <td>L'index de la pièce à <i>copier</i>.</td>
+      </tr>
+    </tbody>
+  </table>
+  <p> </p>
+  <h4>Les retours :</h4>
+  <p class="code">N/A</p>
+  <p> </p>
+  <h4>Exemple :</h4>
+  <p class="code">global.rm = room_add() ;<br> room_assign(global.rm, rm_Base) ;</p>
+  <p>Le code ci-dessus ajoutera une nouvelle pièce au jeu, puis y copiera le contenu de la pièce indexée comme &quot;rm_Base&quot;.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <div class="footer">
+    <div class="buttons">
+      <div class="clear">
+        <div style="float:left">Retour : <a href="Rooms.htm">Pièces</a></div>
+        <div style="float:right">Suivant : <a href="room_instance_add.htm">room_instance_add</a></div>
+      </div>
+    </div>
+    <h5><span data-keyref="Copyright Notice">Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
   </div>
   <!-- KEYWORDS
 room_assign

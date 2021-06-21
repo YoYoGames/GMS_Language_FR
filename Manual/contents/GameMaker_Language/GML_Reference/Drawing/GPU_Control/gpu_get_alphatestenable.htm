@@ -7,15 +7,39 @@
   <meta name="generator" content="Adobe RoboHelp 2019" />
   <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
   <meta name="rh-authors" content="Mark Alexander" />
-  <meta name="topic-comment" content="Référence de la fonction gpu_get_alphatestenable" />
+  <meta name="topic-comment" content="Reference for the function gpu_get_alphatestenable" />
   <meta name="rh-index-keywords" content="gpu_get_alphatestenable" />
   <meta name="search-keywords" content="gpu_get_alphatestenable" />
 </head>
-<body><!--<div class="body-scroll" style="top: 150px;">--><h1>gpu_get_alphatestenable</h1><p> Avec cette fonction, vous pouvez vérifier si le test alpha est activé (renvoie <tt>true</tt> ) ou non (retourne <tt>false</tt> ). Pour plus d&#39;informations sur les tests alpha, consultez la fonction <a href="gpu_set_alphatestref.htm"><tt>gpu_set_alphatestref()</tt></a>.</p><p></p><h4> Syntaxe:</h4><p class="code">gpu_get_alphatestenable();</p><p></p><h4> Retour:</h4><p class="code">Boolean</p><p></p><h4> Exemple:</h4><p class="code">if !gpu_get_alphatestenable()<br/>     {
-    <br/>     gpu_set_alphatestenable(true);
-    <br/>     gpu_set_alphatestref(128);
-    <br/>     }
-  </p><p> Le code ci-dessus vérifiera si le test alpha est activé et sinon, il activera le test alpha et définira le seuil de test sur 128 (seuls les pixels avec un alpha supérieur à 0,5 seront dessinés). </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> Retour: <a href="GPU_Control.htm">Contrôle GPU</a></div><div style="float:right"> Suivant:<a href="gpu_get_alphatestref.htm">gpu_get_alphatestref</a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
+<body>
+  <!--<div class="body-scroll" style="top: 150px;">-->
+  <h1>gpu_get_alphatestenable</h1>
+  <p>Cette fonction permet de vérifier si le test alpha est activé (renvoie <tt>true</tt>) ou non (renvoie <tt>false</tt>). Pour plus d'informations sur le test alpha, consultez la fonction <a href="gpu_set_alphatestref.htm"><tt>gpu_set_alphatestref()</tt></a>.</p>
+  <p> </p>
+  <h4>Syntaxe :</h4>
+  <p class="code">gpu_get_alphatestenable() ;</p>
+  <p> </p>
+  <h4>Les retours :</h4>
+  <p class="code">Booléen</p>
+  <p> </p>
+  <h4>Exemple :</h4>
+  <p class="code">if !gpu_get_alphatestenable()<br> {
+    <br> gpu_set_alphatestenable(true) ;
+    <br> gpu_set_alphatestref(128) ;
+    <br> }
+  </p>
+  <p>Le code ci-dessus vérifie si le test d'alpha est activé et, si ce n'est pas le cas, il active le test d'alpha et fixe le seuil de test à 128 (seuls les pixels dont l'alpha est supérieur à 0,5 seront dessinés).</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <div class="footer">
+    <div class="buttons">
+      <div class="clear">
+        <div style="float:left">Retour : <a href="GPU_Control.htm">Contrôle du GPU</a></div>
+        <div style="float:right">Suivant : <a href="gpu_get_alphatestref.htm">gpu_get_alphatestref</a></div>
+      </div>
+    </div>
+    <h5><span data-keyref="Copyright Notice">Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
   </div>
   <!-- KEYWORDS
 gpu_get_alphatestenable

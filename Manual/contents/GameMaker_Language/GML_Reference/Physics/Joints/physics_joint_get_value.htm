@@ -7,17 +7,60 @@
   <meta name="generator" content="Adobe RoboHelp 2019" />
   <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
   <meta name="rh-authors" content="Mark Alexander" />
-  <meta name="topic-comment" content="Page de référence pour physics_joint_get_value" />
+  <meta name="topic-comment" content="Reference page for physics_joint_get_value" />
   <meta name="rh-index-keywords" content="physics_joint_get_value" />
   <meta name="search-keywords" content="physics_joint_get_value" />
 </head>
-<body><!--<div class="body-scroll" style="top: 150px;">--><h1>physics_joint_get_value</h1><p> En utilisant une série de constantes prédéfinies, vous pouvez demander à <span class="notranslate">GameMaker Studio 2</span> de vous dire un certain nombre de choses sur l&#39;état d&#39;une articulation donnée. Ceci est très utile car cela vous donne la possibilité de supprimer des joints ou de modifier le comportement d&#39;une instance en fonction de vos besoins à ce moment-là. Il existe un certain nombre de constantes qui peuvent être utilisées dans cette fonction et elles peuvent être trouvées ici: <a href="Physics_Joint_Constants.htm">Physics Joint Constants</a>, mais sachez que des calculs complexes sont effectués lorsque vous les appelez, ils doivent donc être utilisés avec précaution et uniquement lorsque cela est nécessaire et notez que <i>beaucoup sont uniques à un type spécifique de joint</i>.</p><p> Si la propriété n&#39;existe pas (si, par exemple, vous vérifiez une articulation de poulie pour une translation prismatique), 0 sera la valeur de retour.</p><p></p><h4> Syntaxe:</h4><p class="code">physics_joint_get_value(joint, value)</p><table><tbody><tr><th> Argument</th><th> Description</th></tr><tr><td> <span class="notranslate">joint</span></td><td> L&#39;index de l&#39;articulation que vous souhaitez tester</td></tr><tr><td> <span class="notranslate">value</span></td><td> La constante de la propriété commune que vous souhaitez tester</td></tr></tbody></table><p></p><h4> Retour:</h4><p class="code">Real</p><p></p><h4> Exemple:</h4><p class="code">if shipJoint<br/>     {
-    <br/>     var reactionForceX = physics_joint_get_value(shipJoint, phy_joint_reaction_force_x);<br/>     var reactionForceY = physics_joint_get_value(shipJoint, phy_joint_reaction_force_y);<br/>     var reactionForce = point_distance(0, 0, reactionForceX,
-    reactionForceY);<br/>     if reactionForce &gt; 2<br/>         {
-    <br/>         physics_joint_delete(shipJoint);
-    <br/>         shipJoint = -1;<br/>         }
-    <br/>     }
-  </p><p> Le code ci-dessus vérifie si la variable &quot;shipJoint&quot; contient un index d&#39;articulation et si c&#39;est le cas, il calcule alors la force appliquée à cette articulation en utilisant les deux constantes. Enfin, si la force totale est supérieure à 2, l&#39;articulation est supprimée. </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> Arrière: <a href="Joints.htm">Joints</a></div><div style="float:right"> Suivant:<a href="physics_joint_set_value.htm">physics_joint_set_value</a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
+<body>
+  <!--<div class="body-scroll" style="top: 150px;">-->
+  <h1>physics_joint_get_value</h1>
+  <p>En utilisant une série de constantes prédéfinies, vous pouvez demander à <span class="notranslate">GameMaker Studio 2</span> de vous dire un certain nombre de choses sur l'état d'une articulation donnée. Cette fonction est très utile car elle vous permet de supprimer des articulations ou de modifier le comportement d'une instance en fonction de vos besoins du moment.
+    en fonction de vos besoins du moment. Il y a un certain nombre de constantes qui peuvent être utilisées dans cette fonction et elles peuvent être trouvées ici : <a href="Physics_Joint_Constants.htm">Constantes des articulations physiques</a>, mais sachez que des calculs complexes sont effectués lorsque vous les appelez.
+    lorsque vous les appelez, elles doivent donc être utilisées avec précaution et uniquement lorsque cela est nécessaire. Notez que <i>beaucoup d'entre elles sont uniques à un type de joint spécifique</i>.</p>
+  <p>Si la propriété n'existe pas (si, par exemple, vous vérifiez la translation prismatique d'une articulation de poulie), la valeur de retour sera 0.</p>
+  <p> </p>
+  <h4>Syntaxe :</h4>
+  <p class="code">physics_joint_get_value(joint, valeur)</p>
+  <table>
+    <tbody>
+      <tr>
+        <th>Arguments</th>
+        <th>Description</th>
+      </tr>
+      <tr>
+        <td>joint</td>
+        <td>L'indice de l'articulation que vous souhaitez tester.</td>
+      </tr>
+      <tr>
+        <td>valeur</td>
+        <td>La constante du bien commun que vous souhaitez tester.</td>
+      </tr>
+    </tbody>
+  </table>
+  <p> </p>
+  <h4>Les retours :</h4>
+  <p class="code">Real</p>
+  <p> </p>
+  <h4>Exemple :</h4>
+  <p class="code">if shipJoint<br> {
+    <br> var reactionForceX = physics_joint_get_value(shipJoint, phy_joint_reaction_force_x) ;<br> var reactionForceY = physics_joint_get_value(shipJoint, phy_joint_reaction_force_y) ;<br> var reactionForce = point_distance(0, 0, reactionForceX,
+    reactionForceY) ;<br> if reactionForce &gt; 2<br> {
+    <br> physics_joint_delete(shipJoint) ;
+    <br> shipJoint = -1 ;<br> }
+    <br> }
+  </p>
+  <p>Le code ci-dessus vérifie si la variable &quot;shipJoint&quot; contient un indice d'articulation et si c'est le cas, il calcule la force appliquée à cette articulation à l'aide des deux constantes. Enfin, si la force totale est supérieure à 2, l'articulation est supprimée.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <div class="footer">
+    <div class="buttons">
+      <div class="clear">
+        <div style="float:left">Dos : <a href="Joints.htm">Articulations</a></div>
+        <div style="float:right">Suivant : <a href="physics_joint_set_value.htm">physics_joint_set_value</a></div>
+      </div>
+    </div>
+    <h5><span data-keyref="Copyright Notice">Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
   </div>
   <!-- KEYWORDS
 physics_joint_get_value

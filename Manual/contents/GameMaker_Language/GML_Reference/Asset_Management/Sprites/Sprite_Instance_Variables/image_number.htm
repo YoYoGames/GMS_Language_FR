@@ -3,17 +3,43 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>image_number</title>
+  <title>numéro de l'image</title>
   <meta name="generator" content="Adobe RoboHelp 2019" />
   <link rel="stylesheet" href="../../../../../assets/css/default.css" type="text/css" />
   <meta name="rh-authors" content="Mark Alexander" />
-  <meta name="topic-comment" content="Page expliquant la variable image_number" />
+  <meta name="topic-comment" content="Page explaining the variable image_number" />
   <meta name="rh-index-keywords" content="image_number" />
   <meta name="search-keywords" content="image_number" />
 </head>
-<body><!--<div class="body-scroll" style="top: 150px;">--><h1>image_number</h1><p> Cette <b>variable en lecture seule</b> peut être utilisée pour obtenir le nombre de sous-images dans un sprite qui a été affecté à une instance (si vous avez besoin du nombre de sous-images pour un sprite autre que celui affecté à l&#39;instance, vous devez utiliser <a href="../Sprite_Information/sprite_get_number.htm"><tt>sprite_get_number()</tt></a> ). Veuillez noter que lorsqu&#39;il y a (par exemple) 1 sous-image, cette variable renverra &quot;1&quot; mais l&#39;image_index de cette sous-image est 0.</p><p></p><h4> Syntaxe:</h4><p class="code">image_number;</p><p></p><h4> Retour:</h4><p class="code">Real (single precision floating point value)</p><p></p><h4> Exemple:</h4><p class="code">if image_speed &gt; 0<br/>     {
-    <br/>     if image_index &gt; image_number - 1 instance_destroy();<br/>     }
-  </p><p> Le code ci-dessus vérifie si le sprite est en cours d&#39;animation, et si c&#39;est le cas, vérifie si l&#39;image_index actuelle est supérieure au nombre de sous-images et si c&#39;est le cas, il détruit l&#39;instance. </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> Retour: <a href="Sprite_Instance_Variables.htm">Variables d&#39;instance de sprite</a></div><div style="float:right"> Suivant:<a href="image_speed.htm">image_speed</a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
+<body>
+  <!--<div class="body-scroll" style="top: 150px;">-->
+  <h1>numéro de l'image</h1>
+  <p>Cette variable en <b>lecture seule</b> peut être utilisée pour obtenir le nombre de sous-images dans un sprite qui a été attribué à une instance (si vous avez besoin du nombre de sous-images pour un sprite autre que celui attribué à l'instance, vous devez utiliser la variable
+    devez utiliser <a href="../Sprite_Information/sprite_get_number.htm"><tt>sprite_get_number()</tt></a>). Veuillez noter que lorsqu'il y a (par exemple) 1 sous-image, cette variable retournera &quot;1&quot; mais l'image_index de cette sous-image
+    est égal à 0.</p>
+  <p> </p>
+  <h4>Syntaxe :</h4>
+  <p class="code">numéro d'image ;</p>
+  <p> </p>
+  <h4>Les retours :</h4>
+  <p class="code">Réel (valeur à virgule flottante de simple précision)</p>
+  <p> </p>
+  <h4>Exemple :</h4>
+  <p class="code">si image_speed &gt; 0<br> {
+    <br> if image_index &gt; image_number - 1 instance_destroy() ;<br> }
+  </p>
+  <p>Le code ci-dessus vérifie si le sprite est en cours d'animation, et si c'est le cas, il vérifie ensuite si l'image_index actuelle est supérieure au nombre de sous-images et si c'est le cas, il détruit l'instance.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <div class="footer">
+    <div class="buttons">
+      <div class="clear">
+        <div style="float:left">Retour : <a href="Sprite_Instance_Variables.htm">Variables d'instance de sprite</a></div>
+        <div style="float:right">Suivant : <a href="image_speed.htm">image_speed</a></div>
+      </div>
+    </div>
+    <h5><span data-keyref="Copyright Notice">Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
   </div>
   <!-- KEYWORDS
 image_number

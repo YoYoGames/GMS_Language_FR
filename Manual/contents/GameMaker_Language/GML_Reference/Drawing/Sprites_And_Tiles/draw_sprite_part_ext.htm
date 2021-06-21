@@ -3,15 +3,104 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>draw_sprite_part_ext</title>
+  <title>dessiner_sprite_part_ext.</title>
   <meta name="generator" content="Adobe RoboHelp 2019" />
   <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
   <meta name="rh-authors" content="Mark Alexander" />
-  <meta name="topic-comment" content="Page de référence pour draw_sprite_part_ext" />
+  <meta name="topic-comment" content="Reference page for draw_sprite_part_ext" />
   <meta name="rh-index-keywords" content="draw_sprite_part_ext" />
   <meta name="search-keywords" content="draw_sprite_part_ext" />
 </head>
-<body><!--<div class="body-scroll" style="top: 150px;">--><h1>draw_sprite_part_ext</h1><p> Cette fonction dessine une partie du sprite choisi à la position donnée en suivant les mêmes règles que par <a href="draw_sprite_part.htm"><tt>draw_sprite_part()</tt></a>, ce n&#39;est que maintenant que vous pouvez mettre à l&#39;échelle la pièce, mélanger une couleur avec elle ou changer son alpha lorsque vous la dessinez à l&#39;écran (comme lorsque vous dessinez un sprite avec <a href="draw_sprite_ext.htm"><tt>draw_sprite_ext()</tt></a> ). Vous devez noter que si la page de texture autorise le recadrage automatique, cette fonction peut ne pas fonctionner comme prévu, car l&#39;espace &quot;vide&quot; supplémentaire autour du sprite aura été supprimé pour créer la page de texture. Pour résoudre ce problème, vous devrez définir les paramètres de la page de texture (dans l&#39; <a href="../../../../Settings/Texture_Groups.htm">éditeur de groupe de texture</a> ) pour désactiver le <b>recadrage automatique</b>.</p><p class="note"> <b>REMARQUE:</b> lorsque vous dessinez avec cette fonction, le <a href="../../Asset_Management/Sprites/Sprite_Instance_Variables/sprite_xoffset.htm">décalage x</a> et le <a href="../../Asset_Management/Sprites/Sprite_Instance_Variables/sprite_yoffset.htm">décalage</a> y du sprite sont ignorés et la partie du sprite sera dessinée avec le coin supérieur gauche à la position x / y spécifiée dans la pièce.</p><p class="note"> <b>REMARQUE</b>: Cette fonction n&#39;est utile que pour <b>les</b> sprites bitmap et ne fonctionnera pas avec les sprites SWF ou JSON (Spine).</p><p class="note"> <b>REMARQUE</b>: La fusion des couleurs n&#39;est recommandée pour la cible HTML5 que lorsque WebGL est activé, bien que vous puissiez toujours définir la couleur de fusion si elle n&#39;est pas activée et elle mélangera l&#39;image-objet comme d&#39;habitude. Cependant, tout mélange de cette manière crée un sprite en double qui est ensuite stocké dans le cache et utilisé lorsque cela est nécessaire. Ceci est loin d&#39;être optimal et si vous utilisez plusieurs changements de couleur, cela ralentira les performances de vos jeux à moins que vous n&#39;activiez WebGL. si vous ne souhaitez pas utiliser WebGL, vous pouvez définir la taille du cache de polices pour essayer de limiter cela si nécessaire en utilisant la fonction <a href="../../Asset_Management/Sprites/Sprite_Manipulation/sprite_set_cache_size_ext.htm"><tt>sprite_set_cache_size()</tt></a>.</p><p></p><h4> Syntaxe:</h4><p class="code">draw_sprite_part_ext(sprite, subimg, left, top, width, height, x, y, xscale, yscale, colour, alpha);</p><table><tbody><tr><th> Argument</th><th> Description</th></tr><tr><td> <span class="notranslate">sprite</span></td><td> L&#39;index du sprite à dessiner.</td></tr><tr><td> <span class="notranslate">subimg</span></td><td> Le subimg (frame) du sprite à dessiner (image_index ou -1 en corrélation avec l&#39;image courante de l&#39;animation dans l&#39;objet).</td></tr><tr><td> <span class="notranslate">left</span></td><td> La position x sur le sprite du coin supérieur gauche de la zone à dessiner.</td></tr><tr><td> <span class="notranslate">top</span></td><td> La position y sur le sprite du coin supérieur gauche de la zone à dessiner.</td></tr><tr><td> <span class="notranslate">width</span></td><td> La largeur de la zone à dessiner.</td></tr><tr><td> <span class="notranslate">height</span></td><td> La hauteur de la zone à dessiner.</td></tr><tr><td> <span class="notranslate">x</span></td><td> La coordonnée x de l&#39;endroit où dessiner le sprite.</td></tr><tr><td> <span class="notranslate">y</span></td><td> La coordonnée y de l&#39;endroit où dessiner le sprite.</td></tr><tr><td> <span class="notranslate">xscale</span></td><td> La mise à l&#39;échelle horizontale du sprite, sous forme de multiplicateur: 1 = mise à l&#39;échelle normale, 0,5 est la moitié etc...</td></tr><tr><td> <span class="notranslate">yscale</span></td><td> La mise à l&#39;échelle verticale du sprite, en tant que multiplicateur: 1 = mise à l&#39;échelle normale, 0,5 est la moitié etc...</td></tr><tr><td> <span class="notranslate">colour</span></td><td> La couleur avec laquelle mélanger le sprite. c_white est de l&#39;afficher normalement.</td></tr><tr><td> <span class="notranslate">alpha</span></td><td> L&#39;alpha du sprite (de 0 à 1 où 0 est transparent et 1 opaque).</td></tr></tbody></table><p></p><h4> Retour:</h4><p class="code">N/A</p><p></p><h4> Exemple:</h4><p class="code">draw_sprite_part_ext(sprite_index, image_index, 8, 8, sprite_width-16, sprite_height-16, x, y, 2, 0.5, c_black, 1);</p><p> Cela dessinera les instances assignées au sprite (sprite_index) et son image d&#39;animation actuelle (image_index), mais cela réduira une marge de 8px sur les quatre côtés du sprite. Il sera ensuite étiré pour doubler sa largeur habituelle mais la moitié de sa hauteur habituelle, et bien que l&#39;alpha soit toujours 1, il sera mélangé avec du noir (le transformant en silhouette). </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> Face arrière: <a href="Sprites_And_Tiles.htm">Sprites et tuiles</a></div><div style="float:right"> Suivant: <a href="draw_sprite_stretched.htm">draw_sprite_streteched</a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
+<body>
+  <!--<div class="body-scroll" style="top: 150px;">-->
+  <h1>dessiner_sprite_part_ext.</h1>
+  <p>Cette fonction va dessiner une partie du sprite choisi à la position donnée en suivant les mêmes règles que par <a href="draw_sprite_part.htm"><tt>draw_sprite_part()</tt></a>sauf que maintenant vous pouvez mettre la partie à l'échelle, y mélanger une couleur, ou changer son alpha lorsque vous la dessinez à l'écran.
+    l'afficher à l'écran (comme pour le dessin d'un sprite avec la fonction <a href="draw_sprite_ext.htm"><tt>draw_sprite_ext()</tt></a>). Notez que si la page de texture permet un recadrage automatique, cette fonction peut ne pas fonctionner comme prévu, car
+    l'espace &quot;vide&quot; supplémentaire autour du sprite aura été supprimé pour créer la page de texture. Pour résoudre ce problème, vous devrez régler les paramètres de la page de texture (dans l'<a href="../../../../Settings/Texture_Groups.htm">éditeur de groupe de texture</a>)
+    pour désactiver le <b>recadrage automatique</b>.</p>
+  <p class="note"><b>REMARQUE : </b>Lorsque vous dessinez avec cette fonction, les <a href="../../Asset_Management/Sprites/Sprite_Instance_Variables/sprite_xoffset.htm">décalages x</a> et <a href="../../Asset_Management/Sprites/Sprite_Instance_Variables/sprite_yoffset.htm">y</a> du sprite sont ignorés et la partie du sprite sera dessinée avec le coin supérieur gauche à la position x/y spécifiée dans la pièce.</p>
+  <p class="note"><b>REMARQUE</b>: Cette fonction n'est utile que pour les sprites <b>bitmap</b> et ne fonctionnera pas avec les sprites SWF ou JSON (Spine).</p>
+  <p class="note"><b>REMARQUE</b>: le mélange des couleurs n'est recommandé pour la cible HTML5 que lorsque WebGL est activé, bien que vous puissiez toujours définir la couleur de mélange si elle n'est pas activée et le sprite sera mélangé normalement. Cependant, tout mélange de cette manière crée un sprite dupliqué qui est ensuite stocké dans la base de données.
+    sprite qui est ensuite stocké dans le cache et utilisé au besoin. C'est loin d'être optimal et si vous utilisez plusieurs changements de couleur, cela ralentira les performances de votre jeu, à moins que vous n'activiez WebGL. Si vous ne souhaitez pas utiliser WebGL, vous pouvez définir la taille du cache des polices pour essayer de limiter les effets de la taille de la police.
+    la taille du cache des polices pour tenter de limiter ce phénomène si nécessaire en utilisant la fonction <a href="../../Asset_Management/Sprites/Sprite_Manipulation/sprite_set_cache_size_ext.htm"><tt>sprite_set_cache_size()</tt></a>.</p>
+  <p> </p>
+  <h4>Syntaxe :</h4>
+  <p class="code">draw_sprite_part_ext(sprite, subimg, left, top, width, height, x, y, xscale, yscale, colour, alpha) ;</p>
+  <table>
+    <tbody>
+      <tr>
+        <th>Arguments</th>
+        <th>Description</th>
+      </tr>
+      <tr>
+        <td>sprite</td>
+        <td>L'index du sprite à dessiner.</td>
+      </tr>
+      <tr>
+        <td>sous-image</td>
+        <td>La sous-image (frame) du sprite à dessiner (image_index ou -1 correspondent à la frame d'animation actuelle de l'objet).</td>
+      </tr>
+      <tr>
+        <td>gauche</td>
+        <td>La position x sur le sprite du coin supérieur gauche de la zone à dessiner.</td>
+      </tr>
+      <tr>
+        <td>top</td>
+        <td>La position y sur le sprite du coin supérieur gauche de la zone à dessiner.</td>
+      </tr>
+      <tr>
+        <td>largeur</td>
+        <td>La largeur de la zone à dessiner.</td>
+      </tr>
+      <tr>
+        <td>hauteur</td>
+        <td>La hauteur de la zone à dessiner.</td>
+      </tr>
+      <tr>
+        <td>x</td>
+        <td>La coordonnée x de l'endroit où dessiner le sprite.</td>
+      </tr>
+      <tr>
+        <td>y</td>
+        <td>La coordonnée y de l'endroit où dessiner le sprite.</td>
+      </tr>
+      <tr>
+        <td>xscale</td>
+        <td>La mise à l'échelle horizontale du sprite, sous forme de multiplicateur : 1 = mise à l'échelle normale, 0.5 est la moitié etc...</td>
+      </tr>
+      <tr>
+        <td>yscale</td>
+        <td>La mise à l'échelle verticale du sprite, sous forme de multiplicateur : 1 = mise à l'échelle normale, 0.5 est la moitié etc...</td>
+      </tr>
+      <tr>
+        <td>couleur</td>
+        <td>La couleur avec laquelle le sprite doit être mélangé. c_white permet de l'afficher normalement.</td>
+      </tr>
+      <tr>
+        <td>alpha</td>
+        <td>L'alpha du sprite (de 0 à 1 où 0 est transparent et 1 opaque).</td>
+      </tr>
+    </tbody>
+  </table>
+  <p> </p>
+  <h4>Les retours :</h4>
+  <p class="code">N/A</p>
+  <p> </p>
+  <h4>Exemple :</h4>
+  <p class="code">draw_sprite_part_ext(sprite_index, image_index, 8, 8, sprite_width-16, sprite_height-16, x, y, 2, 0.5, c_black, 1) ;</p>
+  <p>Cela va dessiner le sprite assigné aux instances (sprite_index) et son image d'animation actuelle (image_index), mais en supprimant une marge de 8px sur les quatre côtés du sprite. Il sera ensuite étiré au double de sa largeur habituelle mais à la moitié de sa hauteur habituelle.
+    et, bien que son alpha soit toujours égal à 1, il sera mélangé à du noir (ce qui le transformera en silhouette).</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <div class="footer">
+    <div class="buttons">
+      <div class="clear">
+        <div style="float:left">Retour : <a href="Sprites_And_Tiles.htm">Sprites et tuiles</a></div>
+        <div style="float:right">Suivant : <a href="draw_sprite_stretched.htm">draw_sprite_streteched</a></div>
+      </div>
+    </div>
+    <h5><span data-keyref="Copyright Notice">Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
   </div>
   <!-- KEYWORDS
 draw_sprite_part_ext

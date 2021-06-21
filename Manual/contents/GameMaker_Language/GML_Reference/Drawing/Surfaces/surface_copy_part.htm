@@ -7,16 +7,84 @@
   <meta name="generator" content="Adobe RoboHelp 2019" />
   <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
   <meta name="rh-authors" content="Mark Alexander" />
-  <meta name="topic-comment" content="Référence pour surface_copy_part" />
+  <meta name="topic-comment" content="Reference for surface_copy_part" />
   <meta name="rh-index-keywords" content="surface_copy_part" />
   <meta name="search-keywords" content="surface_copy_part" />
 </head>
-<body><!--<div class="body-scroll" style="top: 150px;">--><h1>surface_copy_part</h1><p> Cette fonction prend simplement l&#39;image d&#39;une surface et la copie sur une autre à la position locale spécifiée dans cette surface (où la position (0,0) est le coin supérieur gauche de la surface de destination). Vous pouvez spécifier une position x et y locale à partir de laquelle copier, ainsi que la largeur et la hauteur de la section. Veuillez noter que ce sont des coordonnées basées sur la <i>taille de</i> la surface et non sur la position à laquelle la surface est dessinée dans la pièce. Si la surface de destination possède déjà des informations ce sera remplacée par la copie et la fonction ne change <i>pas</i> la surface de la source de quelque façon.</p><p class="note"><b></b> <b>REMARQUE</b>: lorsque vous travaillez avec des surfaces, il est possible qu&#39;elles cessent d&#39;exister à tout moment car elles sont stockées dans la mémoire de texture. Vous devez <b>TOUJOURS</b> vérifier qu&#39;une surface existe en utilisant <span style="font-size:1px;"><a href="surface_exists.htm"><tt style="font-size: 14px">surface_exists ()</tt></a></span> avant de les référencer directement.</p><p></p><h4> Syntaxe:</h4><p class="code">surface_copy_part(destination, x, y, source, xs, ys, ws, hs);</p><table><tbody><tr><th> Argument</th><th> Description</th></tr><tr><td> <span class="notranslate">destination</span></td><td> ID de la surface sur laquelle copier l&#39;autre surface.</td></tr><tr><td> <span class="notranslate">x</span></td><td> La position x vers laquelle copier.</td></tr><tr><td> <span class="notranslate">y</span></td><td> La position y vers laquelle copier.</td></tr><tr><td> <span class="notranslate">source</span></td><td> L&#39;ID de la surface à copier.</td></tr><tr><td> <span class="notranslate">xs</span></td><td> Position x dans la surface source à partir de laquelle effectuer la copie.</td></tr><tr><td> <span class="notranslate">ys</span></td><td> La position y dans la surface source à partir de laquelle effectuer la copie.</td></tr><tr><td> <span class="notranslate">ws</span></td><td> Largeur de la zone de la surface source à partir de laquelle effectuer la copie.</td></tr><tr><td> <span class="notranslate">hs</span></td><td> Hauteur de la zone de la surface source à partir de laquelle effectuer la copie.</td></tr></tbody></table><p></p><h4> Retour:</h4><p class="code">N/A</p><p></p><h4> Exemple:</h4><p class="code">if view_current == 0<br/>     {
-    <br/>     surface_copy_part(surf, 0, 0, temp_surf, 0, 0, view_xview[1] - mouse_x, view_yview[1] - mouse_y);<br/>     }
-    <br/> else
-    <br/>     {
-    <br/>     draw_surface(surf, 0, 0);<br/>     }
-  </p><p> Le code ci-dessus vérifiera la vue en cours de dessin et s&#39;il s&#39;agit de la vue [0], il copie la surface indexée dans la variable &quot;temp_surf&quot; sur la surface indexée dans la variable &quot;surf&quot;. La zone copiée correspond à un rectangle formé par la position relative de la souris dans la surface telle qu&#39;elle serait dessinée dans la vue [1]. Si la vue actuelle est autre chose que la vue [0], la surface &quot;surf&quot; est dessinée à l&#39;écran. </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> Retour: <a href="Surfaces.htm">Surfaces</a></div><div style="float:right"> Suivant:<a href="surface_depth_disable.htm">surface_depth_disable</a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
+<body>
+  <!--<div class="body-scroll" style="top: 150px;">-->
+  <h1>surface_copy_part</h1>
+  <p>Cette fonction prend simplement l'image d'une surface et la copie sur une autre à la position locale spécifiée dans cette surface (où la position (0,0) est le coin supérieur gauche de la surface de destination). Vous pouvez spécifier une position locale x et y
+    à copier, ainsi que la largeur et la hauteur de la section. Veuillez noter que ces coordonnées sont basées sur la <i>taille de la surface</i> et non sur la position à laquelle la surface est dessinée dans la pièce. Si la surface de destination possède déjà des informations
+    celles-ci seront écrasées par la copie, et la fonction <i>ne</i> modifie en rien la surface source.</p>
+  <p class="note"><b></b><b>NOTE</b>: Lorsque vous travaillez avec des surfaces, il est possible qu'elles cessent d'exister à tout moment, car elles sont stockées dans la mémoire des textures. Vous devez <b>TOUJOURS</b> vérifier qu'une surface existe en utilisant <span style="font-size:1px;"><a href="surface_exists.htm"><tt style="font-size: 14px">surface_exists()</tt></a></span>    avant de les référencer directement.</p>
+  <p> </p>
+  <h4>Syntaxe :</h4>
+  <p class="code">surface_copy_part(destination, x, y, source, xs, ys, ws, hs) ;</p>
+  <table>
+    <tbody>
+      <tr>
+        <th>Arguments</th>
+        <th>Description</th>
+      </tr>
+      <tr>
+        <td>destination</td>
+        <td>L'ID de la surface sur laquelle copier l'autre surface.</td>
+      </tr>
+      <tr>
+        <td>x</td>
+        <td>La position x à copier.</td>
+      </tr>
+      <tr>
+        <td>y</td>
+        <td>La position y à copier.</td>
+      </tr>
+      <tr>
+        <td>source</td>
+        <td>L'ID de la surface à copier.</td>
+      </tr>
+      <tr>
+        <td>xs</td>
+        <td>La position x de la surface source à copier.</td>
+      </tr>
+      <tr>
+        <td>ys</td>
+        <td>La position y de la surface source à copier.</td>
+      </tr>
+      <tr>
+        <td>ws</td>
+        <td>La largeur de la zone de la surface source à copier.</td>
+      </tr>
+      <tr>
+        <td>hs</td>
+        <td>La hauteur de la zone de la surface source à copier.</td>
+      </tr>
+    </tbody>
+  </table>
+  <p> </p>
+  <h4>Les retours :</h4>
+  <p class="code">N/A</p>
+  <p> </p>
+  <h4>Exemple :</h4>
+  <p class="code">if view_current == 0<br> {
+    <br> surface_copy_part(surf, 0, 0, temp_surf, 0, 0, view_xview[1] - mouse_x, view_yview[1] - mouse_y) ;<br> }
+    <br> else
+    <br> {
+    <br> draw_surface(surf, 0, 0) ;<br> }
+  </p>
+  <p>Le code ci-dessus va vérifier la vue courante en cours de dessin et si c'est la vue[0], il copie la surface indexée dans la variable &quot;temp_surf&quot; sur la surface indexée dans la variable &quot;surf&quot;. La surface copiée correspond à un rectangle formé
+    par la position relative de la souris dans la surface telle qu'elle serait dessinée dans la vue [1]. Si la vue actuelle n'est pas la vue [0], la surface &quot;surf&quot; est dessinée à l'écran.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <div class="footer">
+    <div class="buttons">
+      <div class="clear">
+        <div style="float:left">Retour : <a href="Surfaces.htm">Surfaces</a></div>
+        <div style="float:right">Suivant : <a href="surface_depth_disable.htm">surface_depth_disable</a></div>
+      </div>
+    </div>
+    <h5><span data-keyref="Copyright Notice">Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
   </div>
   <!-- KEYWORDS
 surface_copy_part

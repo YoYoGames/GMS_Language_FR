@@ -3,15 +3,68 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>Dessiner des vies d&#39;instance</title>
+  <title>Draw Instance Lives</title>
   <meta name="generator" content="Adobe RoboHelp 2019" />
   <link rel="stylesheet" href="../../../assets/css/default.css" type="text/css" />
   <meta name="rh-authors" content="Mark Alexander" />
-  <meta name="topic-comment" content="Page qui explique l&#39;action Draw Instance Lives" />
-  <meta name="rh-index-keywords" content="DnD ™ - Dessiner des vies d&#39;instance" />
-  <meta name="search-keywords" content="Dessiner des vies d&#39;instance" />
+  <meta name="topic-comment" content="Page that explains the Draw Instance Lives action" />
+  <meta name="rh-index-keywords" content="DnD™ Action - Draw Instance Lives" />
+  <meta name="search-keywords" content="Draw Instance Lives" />
 </head>
-<body><!--<div class="body-scroll" style="top: 150px;">--><h1><img alt="Draw Instance Lives Icon" class="icon" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Drawing/i_Drawing_Draw_Instance_Lives.png" /> Dessiner des vies d&#39;instance</h1><p> Cette action dessinera un sprite pour représenter chacune des vies de l&#39;instance actuellement. Le nombre à dessiner est tiré de la valeur actuelle de la variable d&#39;instance locale <tt>lives</tt>, qui est une variable spéciale créée automatiquement dans l&#39;instance si vous utilisez l&#39;une des actions qui le nécessitent. Vous donnez le sprite à dessiner pour les vies et l&#39;ordre de la pile, qui peut être soit une <b>ligne</b> (horizontalement, de gauche à droite), soit une <b>colonne</b> (verticalement, de haut en bas), ainsi que la position. La position peut être une position absolue dans la pièce, ou une position relative à la position de l&#39;occurrence faisant le dessin, et l&#39;espacement entre les images sera basé sur la largeur ou la hauteur de l&#39;image-objet. Notez que cela dessine simplement une image statique - l&#39;image unique initiale (image 0) du sprite donné - et toutes les autres images seront ignorées, de même que toutes les transformations qui ont été ajoutées à l&#39;instance en modifiant les variables d&#39;instance (comme <tt>image_xscale</tt> ou <tt>image_blend</tt> ). Le texte de la légende sera dessiné avant la valeur des lives et s&#39;il s&#39;agit de texte, il doit être entouré de &quot;&quot;, et les deux seront formatés en utilisant la police, la couleur et l&#39;alignement actuels du dessin.</p><p><b></b></p><p class="note"> <b>REMARQUE</b>: cette action est uniquement destinée à être utilisée dans les divers <a href="../../../The_Asset_Editors/Object_Properties/Draw_Events.htm">événements de tirage au sort</a> et ne tirera rien si elle est utilisée ailleurs.</p><p></p><p></p><h4> Syntaxe de l&#39;action:</h4><p><img alt="Draw Instance Lives" class="center" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Drawing/a_Drawing_Draw_Instance_Lives.png" /></p><h4> Arguments:</h4><table><tbody><tr><th> Argument</th><th> Description</th></tr><tr><td> <span class="notranslate">Caption</span></td><td> La chaîne à dessiner avec la valeur du score (précédente et peut être laissée vide)</td></tr><tr><td> <span class="notranslate">Stack Order</span></td><td> L&#39;ordre dans lequel dessiner (ligne ou colonne)</td></tr><tr><td> <span class="notranslate">x</span></td><td> La position x pour dessiner les vies à</td></tr><tr><td> <span class="notranslate">y</span></td><td> La position y pour dessiner les vies à</td></tr></tbody></table><p></p><h4> Exemple:</h4><p><img alt="Draw Instance Lives Example" class="center" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Drawing/e_Drawing_Draw_Instance_Lives.png" /> Le code de bloc d&#39;action ci-dessus dessine des sprites par rapport à l&#39;instance pour représenter le courant <tt>lives</tt> évaluer. </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> Retour: <a href="Drawing_Actions.htm">Actions de dessin</a></div><div style="float:right"> Suivant: <a href="Set_Draw_Colour.htm">Définir la couleur de dessin</a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
+<body>
+  <!--<div class="body-scroll" style="top: 150px;">-->
+  <h1><img alt="Draw Instance Lives Icon" class="icon" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Drawing/i_Drawing_Draw_Instance_Lives.png"> Draw Instance Lives</h1>
+  <p>Cette action va dessiner un sprite pour représenter chacune des vies que l'instance possède actuellement. Le nombre à dessiner est tiré de la valeur actuelle de la variable locale <tt>lives</tt>, qui est une variable spéciale créée automatiquement dans l'instance si vous utilisez une action qui la requiert.
+    l'instance si vous utilisez l'une des actions qui la requièrent. Vous indiquez le sprite à dessiner pour les vies et l'ordre de la pile, qui peut être soit <b>Row</b> (horizontalement, de gauche à droite), soit <b>column</b> (verticalement, de haut en bas), ainsi que la position.
+    La position peut être une position absolue dans la room, ou relative à la position de l'instance effectuant le dessin, et l'espacement entre les images sera basé sur la largeur ou la hauteur du sprite. Notez que ceci dessine simplement une image statique
+    - l'image unique initiale (image 0) du sprite donné - et toutes les autres images seront ignorées, tout comme les transformations ajoutées à l'instance en modifiant les variables de l'instance (comme <tt>image_xscale</tt> ou <tt>image_blend</tt>).
+    Le texte de la légende sera dessiné avant la valeur de la vie et si c'est du texte, il devra être entouré de &quot;&quot;, et les deux seront formatés en utilisant la police, la couleur et l'alignement actuels du dessin.</p>
+  <p><b></b></p>
+  <p class="note"><b>REMARQUE</b>: Cette action est uniquement destinée à être utilisée dans les différents <a href="../../../The_Asset_Editors/Object_Properties/Draw_Events.htm">événements de tirage au sort</a>, et ne tirera rien si elle est utilisée ailleurs.</p>
+  <p> </p>
+  <p> </p>
+  <h4>Syntaxe de l'action :</h4>
+  <p><img alt="Draw Instance Lives" class="center" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Drawing/a_Drawing_Draw_Instance_Lives.png" /></p>
+  <h4>Arguments :</h4>
+  <table>
+    <tbody>
+      <tr>
+        <th>Arguments</th>
+        <th>Description</th>
+      </tr>
+      <tr>
+        <td>Légende</td>
+        <td>La chaîne à dessiner avec la valeur du score (précédent et peut être laissé vide)</td>
+      </tr>
+      <tr>
+        <td>Ordre d'empilage</td>
+        <td>L'ordre dans lequel il faut dessiner (soit en ligne, soit en colonne).</td>
+      </tr>
+      <tr>
+        <td>x</td>
+        <td>La position x à laquelle dessiner les vies</td>
+      </tr>
+      <tr>
+        <td>y</td>
+        <td>La position y pour dessiner les vies à</td>
+      </tr>
+    </tbody>
+  </table>
+  <p> </p>
+  <h4>Exemple :</h4>
+  <p><img alt="Draw Instance Lives Example" class="center" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Drawing/e_Drawing_Draw_Instance_Lives.png">Le code du bloc d'action ci-dessus dessine des sprites relatifs à l'instance pour représenter
+    la valeur de la <tt>vie</tt> courante.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <div class="footer">
+    <div class="buttons">
+      <div class="clear">
+        <div style="float:left">Retour : <a href="Drawing_Actions.htm">Actions de dessin</a></div>
+        <div style="float:right">Suivant : <a href="Set_Draw_Colour.htm">Définir la couleur du dessin</a></div>
+      </div>
+    </div>
+    <h5><span data-keyref="Copyright Notice">Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
   </div>
   <!-- KEYWORDS
 Action - Draw Instance Lives

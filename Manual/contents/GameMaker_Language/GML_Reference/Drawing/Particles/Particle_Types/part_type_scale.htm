@@ -3,15 +3,60 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>part_type_scale</title>
+  <title>partie_type_échelle</title>
   <meta name="generator" content="Adobe RoboHelp 2019" />
   <link rel="stylesheet" href="../../../../../assets/css/default.css" type="text/css" />
   <meta name="rh-authors" content="Mark Alexander" />
-  <meta name="topic-comment" content="Page de référence pour part_type_scale" />
+  <meta name="topic-comment" content="Reference page for part_type_scale" />
   <meta name="rh-index-keywords" content="part_type_scale" />
   <meta name="search-keywords" content="part_type_scale" />
 </head>
-<body><!--<div class="body-scroll" style="top: 150px;">--><h1>part_type_scale</h1><p> Cette fonction définira l&#39;échelle horizontale et verticale de la particule avant toute autre modification de taille. Cette fonction fonctionne sur le rapport de la taille du sprite, donc une valeur de 1 (la valeur par défaut) est un rapport 1: 1, ce qui signifie que 0,5 serait la moitié et 2 le double.</p><p></p><h4> Syntaxe:</h4><p class="code">part_type_scale(ind, xscale, yscale);</p><table><tbody><tr><th> Argument</th><th> Description</th></tr><tr><td> <span class="notranslate">ind</span></td><td> L&#39;indice du type de particule à modifier.</td></tr><tr><td> <span class="notranslate">xscale</span></td><td> La mise à l&#39;échelle horizontale de la particule de base.</td></tr><tr><td> <span class="notranslate">yscale</span></td><td> La mise à l&#39;échelle verticale de la particule de base.</td></tr></tbody></table><p></p><h4> Retour:</h4><p class="code">N/A</p><p></p><h4> Exemple:</h4><p class="code">part_type_shape(particle1, pt_shape_flare);<br/> part_type_size(particle1, 2, 2, 0.10, 1);<br/> part_type_scale(particle1, 8, 0.50);<br/> part_type_colour3(particle1, 8388608, 4227327, 8454143);<br/> part_type_alpha3(particle1, 0.10, 0.10, 0);<br/>    part_type_speed(particle1, 0, 1, 0.18, 20);<br/> part_type_direction(particle1, 0, 359, 0, 0);<br/> part_type_orientation(particle1, 0, 0, 0, 0, 1);<br/> part_type_blend(particle1, 1);<br/> part_type_life(particle1, 10, 40);</p><p> Le code ci-dessus définira diverses valeurs de particules, y compris l&#39;échelle qui définit l&#39;échelle x à huit fois la taille et l&#39;échelle y à la moitié de la taille. </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> Retour: <a href="Particle_Types.htm">Types de particules</a></div><div style="float:right"> Suivant:<a href="part_type_speed.htm">part_type_speed</a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
+<body>
+  <!--<div class="body-scroll" style="top: 150px;">-->
+  <h1>partie_type_échelle</h1>
+  <p>Cette fonction définit l'échelle horizontale et verticale de la particule avant tout autre changement de taille. Cette fonction fonctionne sur le ratio de la taille du sprite, donc une valeur de 1 (la valeur par défaut) est un ratio 1:1, ce qui signifie que 0.5 serait la moitié de la taille du sprite
+    et 2 le double.</p>
+  <p> </p>
+  <h4>Syntaxe :</h4>
+  <p class="code">part_type_scale(ind, xscale, yscale) ;</p>
+  <table>
+    <tbody>
+      <tr>
+        <th>Arguments</th>
+        <th>Description</th>
+      </tr>
+      <tr>
+        <td>ind</td>
+        <td>L'indice du type de particule à modifier.</td>
+      </tr>
+      <tr>
+        <td>xscale</td>
+        <td>La mise à l'échelle horizontale de la particule de base.</td>
+      </tr>
+      <tr>
+        <td>yscale</td>
+        <td>La mise à l'échelle verticale de la particule de base.</td>
+      </tr>
+    </tbody>
+  </table>
+  <p> </p>
+  <h4>Les retours :</h4>
+  <p class="code">N/A</p>
+  <p> </p>
+  <h4>Exemple :</h4>
+  <p class="code">part_type_shape(particle1, pt_shape_flare) ;<br> part_type_size(particle1, 2, 2, 0.10, 1) ;<br> part_type_scale(particle1, 8, 0.50) ;<br> part_type_colour3(particle1, 8388608, 4227327, 8454143) ;<br> part_type_alpha3(particle1, 0.10, 0.10, 0) ;<br> part_type_speed(particle1, 0, 1, 0.18, 20) ;<br> part_type_direction(particle1, 0, 359, 0, 0) ;<br> part_type_orientation(particle1, 0, 0, 0, 0, 1) ;<br> part_type_blend(particle1, 1) ;<br> part_type_life(particle1, 10, 40) ;</p>
+  <p>Le code ci-dessus définit diverses valeurs de particules, y compris l'échelle qui définit l'échelle x à huit fois la taille et l'échelle y à la moitié de la taille.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <div class="footer">
+    <div class="buttons">
+      <div class="clear">
+        <div style="float:left">Retour : <a href="Particle_Types.htm">Types de particules</a></div>
+        <div style="float:right">Suivant : <a href="part_type_speed.htm">part_type_speed</a></div>
+      </div>
+    </div>
+    <h5><span data-keyref="Copyright Notice">Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
   </div>
   <!-- KEYWORDS
 part_type_scale

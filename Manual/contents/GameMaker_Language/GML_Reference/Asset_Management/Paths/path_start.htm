@@ -3,15 +3,97 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>path_start</title>
+  <title>Début du chemin</title>
   <meta name="generator" content="Adobe RoboHelp 2019" />
   <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
   <meta name="rh-authors" content="Mark Alexander" />
-  <meta name="topic-comment" content="Page expliquant la fonction path_start" />
+  <meta name="topic-comment" content="Page explaining the function path_start" />
   <meta name="rh-index-keywords" content="path_start,path_action_stop,path_action_restart,path_action_continue,path_action_reverse" />
   <meta name="search-keywords" content="path_start,path_action_stop,path_action_restart,path_action_continue,path_action_reverse" />
 </head>
-<body><!--<div class="body-scroll" style="top: 150px;">--><h1>path_start</h1><p> Un tracé est créé à partir d&#39;une série de points de définition qui sont liés entre eux, puis utilisés pour planifier les mouvements d&#39;une instance. Ils peuvent être créés avec du code <i>ou</i> dans l&#39;éditeur de chemin et ils sont affectés à une instance à utiliser dans le jeu. Vous utiliseriez ensuite cette fonction pour indiquer à votre instance quel chemin suivre, quelle vitesse suivre le chemin (mesurée en pixels par étape), comment se comporter lorsqu&#39;il atteint la fin du chemin et s&#39;il faut suivre le chemin <i>absolu</i> ou <i>relatif.</i> positionner. Cette dernière partie signifie qu&#39;il commence et suit le chemin exactement comme vous l&#39;avez conçu et placé dans l&#39; <a href="../../../../The_Asset_Editors/Paths.htm">éditeur de chemin</a> (absolu), ou qu&#39;il commence et suit le chemin à partir de la position à laquelle l&#39;instance a été créée (relative).</p><p><img alt="Relative or Absolute path examples" class="center" src="../../../../assets/Images/Scripting_Reference/GML/Reference/Paths/path_relative_image.png" /> Comme vous pouvez le voir dans l&#39;image ci-dessus, les deux instances suivent le même chemin commencé par <tt>path_start()</tt>, mais l&#39;une des instances suit le chemin absolu tandis que l&#39;autre suit le chemin relatif. Il convient de noter que lorsque relative est défini sur false (absolu), l&#39;instance «sautera» au début du chemin, peu importe où dans la pièce elle est placée.</p><p> Les constantes utilisées pour définir le comportement de l&#39;instance lorsqu&#39;elle atteint la fin du chemin sont les suivantes:<br/></p><table><tbody><tr><th> Constant</th><th> Description</th></tr><tr><td> <span class="notranslate">path_action_stop</span></td><td> Terminer le chemin</td></tr><tr><td> <span class="notranslate">path_action_restart</span></td><td> Continuez le chemin depuis le début, en sautant à nouveau à la position de départ si le chemin n&#39;est pas fermé</td></tr><tr><td> <span class="notranslate">path_action_continue</span></td><td> Continuer à partir de la position actuelle</td></tr><tr><td> <span class="notranslate">path_action_reverse</span></td><td> Reculer le long du chemin (obtenu en inversant la vitesse de déplacement du chemin)</td></tr></tbody></table><p></p><h4> Syntaxe:</h4><p class="code">path_start(path, speed, endaction, absolute);</p><table><tbody><tr><th> Argument</th><th> Description</th></tr><tr><td> <span class="notranslate">path</span></td><td> L&#39;index de chemin pour commencer.</td></tr><tr><td> <span class="notranslate">speed</span></td><td> La vitesse à laquelle suivre le chemin en pixels par pas, signifiant négatif en arrière.</td></tr><tr><td> <span class="notranslate">endaction</span></td><td> Que faire lorsque la fin du chemin est atteinte (voir les constantes répertoriées ci-dessous).</td></tr><tr><td> <span class="notranslate">absolute</span></td><td> Si l&#39;instance appelante doit suivre le chemin absolu tel qu&#39;il est dans l&#39;éditeur (true) ou un chemin relatif vers sa position actuelle (false).</td></tr></tbody></table><p></p><h4> Retour:</h4><p class="code">N/A</p><p></p><h4> Exemple:</h4><p class="code">path_start(path, 4, path_action_reverse, 0);</p><p> Cela obligera l&#39;instance appelante à suivre le chemin indexé dans la variable &quot;chemin&quot; à une vitesse de 4 pixels par étape. Il suivra le chemin par rapport à sa propre position, et quand il atteindra la fin, il inversera la direction et reviendra dans le sens où il est venu. </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> Retour: <a href="Paths.htm">Chemins</a></div><div style="float:right"> Suivant:<a href="path_end.htm">path_end</a></div><div style="float:right"></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
+<body>
+  <!--<div class="body-scroll" style="top: 150px;">-->
+  <h1>Début du chemin</h1>
+  <p>Un chemin est créé à partir d'une série de points de définition qui sont reliés entre eux et ensuite utilisés pour planifier les mouvements d'une instance. Ils peuvent être créés avec du code <i>ou</i> dans l'éditeur de chemin et sont assignés à une instance pour être utilisés dans le jeu.
+    à utiliser dans le jeu. Vous utiliserez alors cette fonction pour indiquer à votre instance quel chemin suivre, à quelle vitesse suivre le chemin (mesurée en pixels par pas), comment se comporter lorsqu'elle atteint la fin du chemin et si elle doit suivre la position <i>absolue</i> ou <i>relative</i> du chemin.
+    position. Cette dernière partie signifie qu'il démarre et suit le chemin exactement comme vous l'avez conçu et placé dans l'<a href="../../../../The_Asset_Editors/Paths.htm">éditeur de chemin</a> (absolu), ou qu'il démarre et suit le chemin à partir de la position à laquelle l'instance a été créée (relatif).
+    à laquelle l'instance a été créée (relative).</p>
+  <p><img alt="Relative or Absolute path examples" class="center" src="../../../../assets/Images/Scripting_Reference/GML/Reference/Paths/path_relative_image.png">Comme vous pouvez le voir dans l'image ci-dessus, les deux instances suivent le même chemin commencé avec <tt>path_start()</tt>,
+    mais l'une des instances suit le chemin absolu tandis que l'autre suit le chemin relatif. Il est à noter que lorsque relative est définie sur false (absolu), l'instance &quot;sautera&quot; au début du chemin, peu importe où elle se trouve dans la pièce.
+    la pièce où elle est placée.</p>
+  <p>Les constantes utilisées pour définir le comportement de l'instance lorsqu'elle atteint la fin du chemin sont les suivantes :<br>
+  </p>
+  <table>
+    <tbody>
+      <tr>
+        <th>Constant</th>
+        <th>Description</th>
+      </tr>
+      <tr>
+        <td>path_action_stop</td>
+        <td>Terminer le chemin</td>
+      </tr>
+      <tr>
+        <td>path_action_restart</td>
+        <td>Poursuivre le chemin depuis le début, en revenant à la position de départ si le chemin n'est pas fermé.</td>
+      </tr>
+      <tr>
+        <td>path_action_continue</td>
+        <td>Continuer à partir de la position actuelle</td>
+      </tr>
+      <tr>
+        <td>path_action_reverse</td>
+        <td>Revenir en arrière sur le chemin (en inversant la vitesse de déplacement du chemin).</td>
+      </tr>
+    </tbody>
+  </table>
+  <p> </p>
+  <h4>Syntaxe :</h4>
+  <p class="code">path_start(path, speed, endaction, absolute) ;</p>
+  <table>
+    <tbody>
+      <tr>
+        <th>Arguments</th>
+        <th>Description</th>
+      </tr>
+      <tr>
+        <td>chemin</td>
+        <td>L'index du chemin pour commencer.</td>
+      </tr>
+      <tr>
+        <td>vitesse</td>
+        <td>La vitesse à laquelle il faut suivre le chemin en pixels par pas, négatif signifiant aller en arrière.</td>
+      </tr>
+      <tr>
+        <td>action</td>
+        <td>Ce qu'il faut faire lorsque la fin du chemin est atteinte (voir les constantes listées ci-dessous).</td>
+      </tr>
+      <tr>
+        <td>absolu</td>
+        <td>Si l'instance appelante doit suivre le chemin absolu tel qu'il est dans l'éditeur (true) ou un chemin relatif à sa position actuelle (false).</td>
+      </tr>
+    </tbody>
+  </table>
+  <p> </p>
+  <h4>Les retours :</h4>
+  <p class="code">N/A</p>
+  <p> </p>
+  <h4>Exemple :</h4>
+  <p class="code">path_start(path, 4, path_action_reverse, 0) ;</p>
+  <p>L'instance appelante suivra le chemin indexé dans la variable &quot;path&quot; à une vitesse de 4 pixels par pas. Elle suivra le chemin par rapport à sa propre position, et lorsqu'elle atteindra la fin, elle inversera sa direction et retournera sur ses pas.
+    chemin qu'elle a suivi.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <div class="footer">
+    <div class="buttons">
+      <div class="clear">
+        <div style="float:left">Retour : <a href="Paths.htm">Chemins d'accès</a></div>
+        <div style="float:right">Suivant : <a href="path_end.htm">path_end</a></div>
+        <div style="float:right"> </div>
+      </div>
+    </div>
+    <h5><span data-keyref="Copyright Notice">Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
   </div>
   <!-- KEYWORDS
 path_start

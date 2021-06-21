@@ -7,13 +7,49 @@
   <meta name="generator" content="Adobe RoboHelp 2019" />
   <link rel="stylesheet" href="../../../../../assets/css/default.css" type="text/css" />
   <meta name="rh-authors" content="Mark Alexander" />
-  <meta name="topic-comment" content="Page décrivant la fonction tilemap_get_tileset" />
+  <meta name="topic-comment" content="Page outlining the function tilemap_get_tileset" />
   <meta name="rh-index-keywords" content="tilemap_get_tileset" />
   <meta name="search-keywords" content="tilemap_get_tileset" />
 </head>
-<body><!--<div class="body-scroll" style="top: 150px;">--><h1>tilemap_get_tileset</h1><p> À l&#39;aide de cette fonction, vous pouvez récupérer la valeur d&#39;index de la ressource de jeu de tuiles affectée à un élément de carte de tuiles donné sur une couche. Vous donnez l&#39;ID d&#39;élément de carte de tuiles (que vous obtenez lorsque vous créez un élément de carte de tuiles à l&#39;aide de <a href="layer_tilemap_create.htm"><tt>layer_tilemap_create()</tt></a> ou lorsque vous utilisez la fonction <a href="layer_tilemap_get_id.htm"><tt>layer_tilemap_get_id()</tt></a> ), et la fonction renverra la valeur d&#39;index du jeu de tuiles.</p><p></p><h4> Syntaxe:</h4><p class="code">tilemap_get_tileset(tilemap_element_id);</p><table><tbody><tr><th> Argument</th><th> Description</th></tr><tr><td> <span class="notranslate">tilemap_element_id</span></td><td> La valeur d&#39;ID unique de l&#39;élément de carte de tuiles à partir de laquelle obtenir le jeu de tuiles</td></tr></tbody></table><p></p><h4> Retour:</h4><p class="code">Tile Set index value (Real)</p><p></p><h4> Exemple:</h4><p class="code">var lay_id = layer_get_id(&quot;Tiles_trees&quot;);<br/> var map_id = layer_tilemap_get_id(lay_id);<br/> if tilemap_get_tileset(map_id) != ts_Nighttime<br/>     {
-    <br/>     tilemap_tileset(map_id, ts_Nighttime);<br/>     }
-  </p><p> Le code ci-dessus vérifie le jeu de tuiles actuel affecté à la couche &quot;Tiles_trees&quot; et si ce n&#39;est pas &quot;ts_Nighttime&quot; alors ce jeu de tuiles est affecté à la carte de tuiles. </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> Retour: <a href="Tile_Map_Layers.htm">Couches de carte de mosaïque</a></div><div style="float:right"> Suivant:<a href="tilemap_get_frame.htm">tilemap_get_frame</a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
+<body>
+  <!--<div class="body-scroll" style="top: 150px;">-->
+  <h1>tilemap_get_tileset</h1>
+  <p>Cette fonction vous permet de récupérer la valeur de l'index de la ressource de l'ensemble de tuiles affectée à un élément de carte de tuiles donné sur une couche. Vous donnez l'ID de l'élément de carte de tuiles (que vous obtenez lorsque vous créez un élément de carte de tuiles à l'aide de la fonction <a href="layer_tilemap_create.htm"><tt>layer_tilemap_create()</tt></a>    ou lorsque vous utilisez la fonction <a href="layer_tilemap_get_id.htm"><tt>layer_tilemap_get_id()</tt></a>), et la fonction renvoie la valeur de l'index du jeu de tuiles.</p>
+  <p> </p>
+  <h4>Syntaxe :</h4>
+  <p class="code">tilemap_get_tileset(tilemap_element_id) ;</p>
+  <table>
+    <tbody>
+      <tr>
+        <th>Arguments</th>
+        <th>Description</th>
+      </tr>
+      <tr>
+        <td>tilemap_element_id</td>
+        <td>La valeur d'identification unique de l'élément de la carte des tuiles pour obtenir l'ensemble de tuiles à partir de</td>
+      </tr>
+    </tbody>
+  </table>
+  <p> </p>
+  <h4>Les retours :</h4>
+  <p class="code">Valeur de l'index de la tuile (Real)</p>
+  <p> </p>
+  <h4>Exemple :</h4>
+  <p class="code">var lay_id = layer_get_id(&quot;Tiles_trees&quot;) ;<br> var map_id = layer_tilemap_get_id(lay_id) ;<br> if tilemap_get_tileset(map_id) != ts_Nighttime<br> {
+    <br> tilemap_tileset(map_id, ts_Nighttime) ;<br> }
+  </p>
+  <p>Le code ci-dessus vérifie le jeu de tuiles actuel attribué à la couche &quot;Tiles_trees&quot; et si ce n'est pas &quot;ts_Nighttime&quot;, alors ce jeu de tuiles est attribué à la carte des tuiles.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <div class="footer">
+    <div class="buttons">
+      <div class="clear">
+        <div style="float:left">Retour : <a href="Tile_Map_Layers.htm">Carrelage des couches de la carte</a></div>
+        <div style="float:right">Suivant : <a href="tilemap_get_frame.htm">tilemap_get_frame</a></div>
+      </div>
+    </div>
+    <h5><span data-keyref="Copyright Notice">Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
   </div>
   <!-- KEYWORDS
 tilemap_get_tileset

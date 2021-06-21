@@ -1,20 +1,60 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>game_save</title>
-  <meta name="generator" content="Adobe RoboHelp 2019" />
+  <title>sauvegarde du jeu</title>
+  <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../assets/css/default.css" type="text/css" />
   <meta name="rh-authors" content="Mark Alexander" />
-  <meta name="topic-comment" content="Cette page décrit la fonction game_save" />
+  <meta name="topic-comment" content="This page outlines the function game_save" />
   <meta name="rh-index-keywords" content="game_save" />
   <meta name="search-keywords" content="game_save" />
 </head>
-<body><!--<div class="body-scroll" style="top: 150px;">--><h1>game_save</h1><p> Avec cette fonction, vous pouvez effectuer une sauvegarde de base du jeu dans un fichier donné.</p><p class="note"> <b>REMARQUE</b>: Cette fonction est <i>très</i> limitée et est conçue pour que le débutant puisse mettre en place un système de sauvegarde et le faire fonctionner rapidement, mais les utilisateurs plus avancés peuvent préférer coder leur propre système en utilisant les <a href="../File_Handling/File_Handling.htm">fonctions de fichier</a>, car le jeu <i>ne</i> sera pas sauvegardé. toutes les ressources dynamiques telles que les structures de données, les surfaces, les sprites ajoutés, etc.</p><p></p><h4> Syntaxe:</h4><p class="code">game_save(filename);</p><table><tbody><tr><th> Argument</th><th> Description</th></tr><tr><td> <span class="notranslate">filename</span></td><td> Le nom du fichier dans lequel enregistrer le jeu.</td></tr></tbody></table><p></p><h4> Retour:</h4><p class="code">N/A</p><p></p><h4> Exemple:</h4><p class="code">if keyboard_check_pressed(ord(&quot;S&quot;))<br/>     {
-    <br/>     global.Saved = true;<br/>     game_save(&quot;Save.dat&quot;);
-    <br/>     }
-  </p><p> Le code ci-dessus définira une variable globale sur <tt>true</tt> puis enregistre le jeu dans le fichier &quot;Save.dat&quot; lorsque la touche &quot;S&quot; est enfoncée. </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> Retour: <a href="General_Game_Control.htm">Contrôle général du jeu</a></div><div style="float:right"> Suivant:<a href="game_save_buffer.htm">game_save_buffer</a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
+<body>
+  <!--<div class="body-scroll" style="top: 150px;">-->
+  <h1>sauvegarde du jeu</h1>
+  <p>Il s'agit d'une ancienne fonction qui peut être utilisée pour sauvegarder l'état actuel du jeu et dont l'utilisation n'est plus recommandée. Utilisez plutôt les <a href="../File_Handling/File_Handling.htm">fonctions File</a> pour créer un système de sauvegarde personnalisé dans lequel vous ne sauvegardez et ne chargez que des données de jeu spécifiques.
+    et charger des données de jeu spécifiques.</p>
+  <p>Cette fonction sauvegardera l'état du jeu tel qu'il est, mais pas les ressources dynamiques utilisées à ce moment-là, comme les structures de données, les surfaces, les ressources ajoutées au moment de l'exécution <span class="notranslate">,</span> etc. Si un tel fichier de sauvegarde est chargé, toutes les mises à jour du jeu qui ont été
+    Si un tel fichier de sauvegarde est chargé, les mises à jour du jeu effectuées après la sauvegarde ne seront pas visibles, car la version du jeu utilisée pour créer la sauvegarde sera restaurée.</p>
+  <p>Notez que les fichiers de sauvegarde créés à l'aide de cette fonction peuvent ne pas être pris en charge par les versions mises à jour. <a class="glossterm" data-glossterm="Temps d'exécution" href="#"><span class="notranslate">Runtime</span></a> mises à jour. Il est donc essentiel de remplacer cette fonction par un nouveau système de sauvegarde pour garantir la compatibilité avec les futures mises à jour de GameMaker.
+    les futures mises à jour de <span class="notranslate">GameMaker</span> et, pour les raisons mentionnées ci-dessus, les mises à jour de votre propre jeu.</p>
+  <p> </p>
+  <h4>Syntaxe :</h4>
+  <p class="code">game_save(nom du fichier) ;</p>
+  <table>
+    <tbody>
+      <tr>
+        <th>Arguments</th>
+        <th>Description</th>
+      </tr>
+      <tr>
+        <td>nom de fichier</td>
+        <td>Le nom du fichier dans lequel le jeu sera sauvegardé.</td>
+      </tr>
+    </tbody>
+  </table>
+  <p> </p>
+  <h4>Les retours :</h4>
+  <p class="code">N/A</p>
+  <p> </p>
+  <h4>Exemple :</h4>
+  <p class="code">if keyboard_check_pressed(ord(&quot;S&quot;))<br> {
+    <br> global.Saved = true ;<br> game_save(&quot;Save.dat&quot;) ;
+    <br> }
+  </p>
+  <p>Le code ci-dessus définira une variable globale à <tt>true</tt> et sauvegardera le jeu dans le fichier &quot;Save.dat&quot; lorsque la touche &quot;S&quot; sera pressée.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <div class="footer">
+    <div class="buttons">
+      <div class="clear">
+        <div style="float:left">Retour : <a href="General_Game_Control.htm">Contrôle général du jeu</a></div>
+        <div style="float:right">Suivant : <a href="game_save_buffer.htm">game_save_buffer</a></div>
+      </div>
+    </div>
+    <h5><span data-keyref="Copyright Notice">Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
   </div>
   <!-- KEYWORDS
 game_save
@@ -22,5 +62,5 @@ game_save
   <!-- TAGS
 game_save
 -->
-</body>
-</html>
+
+</body></html>

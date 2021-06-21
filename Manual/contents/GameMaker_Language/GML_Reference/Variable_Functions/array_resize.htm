@@ -3,20 +3,65 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>array_resize</title>
+  <title>tableau_resize</title>
   <meta name="generator" content="Adobe RoboHelp 2019" />
   <link rel="stylesheet" href="../../../assets/css/default.css" type="text/css" />
   <meta name="rh-authors" content="Mark Alexander" />
-  <meta name="topic-comment" content="Page expliquant la fonction array_resize" />
+  <meta name="topic-comment" content="Page explaining the function array_resize" />
   <meta name="rh-index-keywords" content="array_resize" />
   <meta name="search-keywords" content="array_resize" />
 </head>
-<body><!--<div class="body-scroll" style="top: 150px;">--><h1>array_resize</h1><p> Avec cette fonction, vous pouvez redimensionner une dimension de tableau existante pour qu&#39;elle devienne une nouvelle taille. Vous fournissez le tableau à redimensionner ainsi que le nouveau nombre d&#39;index pour le tableau, et la fonction redimensionnera ce tableau. Notez que cette fonction est conçue pour un redimensionnement en <i>bas</i> de tableau à une longueur inférieure que vous pouvez redimensionner par simple réglage d&#39; un nouvel indice dans le tableau. Cela dit, si vous l&#39;utilisez pour dimensionner un tableau, tous les nouveaux indices seront définis sur la valeur par défaut de 0.</p><p> Cette fonction peut également être utilisée pour les tableaux multidimensionnels, à condition de spécifier la dimension à redimensionner lorsque vous fournissez l&#39;index du tableau, en suivant ce modèle:</p><p class="code">// Resize the first dimension of the array<br/> array_resize(my_array, 10);<br/>
-    <br/> // Resize the second dimension of the array<br/> array_resize(my_array[0], 10);<br/>
-    <br/> // Resize the third dimension of the array<br/> array_resize(my_array[0][0], 10);<br/>
-    <br/> // etc...</p><p></p><h4> Syntaxe:</h4><p class="code">array_resize(array_index, new_size);</p><table><tbody><tr><th> Argument</th><th> Description</th></tr><tr><td> <span class="notranslate">array_index</span></td><td> L&#39;index du tableau à redimensionner.</td></tr><tr><td> <span class="notranslate">new_size</span></td><td> La nouvelle taille du tableau (un entier, à partir de 0).</td></tr></tbody></table><p></p><h4> Retour:</h4><p class="code">N/A</p><p></p><h4> Exemple:</h4><p class="code">if array_length(a) &gt; 10<br/>     {
-    <br/>     array_resize(a, 10);<br/>     }
-  </p><p> Le code ci-dessus vérifie la longueur d&#39;un tableau et s&#39;il a plus de 10 indices, il est redimensionné. </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> Retour: <a href="Variable_Functions.htm">Fonctions variables</a></div><div style="float:right"> Suivant:<a href="array_length_1d.htm">array_length_1d</a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
+<body>
+  <!--<div class="body-scroll" style="top: 150px;">-->
+  <h1>tableau_resize</h1>
+  <p>Avec cette fonction, vous pouvez redimensionner un tableau existant pour lui donner une nouvelle dimension. Vous fournissez le tableau à redimensionner ainsi que le nouveau nombre d'indices pour le tableau, et la fonction redimensionnera ce tableau. Notez que cette fonction est conçue pour redimensionner
+    un tableau à une longueur <i>plus</i> petite, car vous pouvez le redimensionner en fixant simplement un nouvel index dans le tableau. Cela dit, si vous l'utilisez pour redimensionner un tableau, tous les nouveaux indices seront fixés à la valeur par défaut de 0.</p>
+  <p>Cette fonction peut également être utilisée pour des tableaux multidimensionnels, à condition de préciser quelle dimension vous souhaitez redimensionner lorsque vous fournissez l'indice du tableau, en suivant ce modèle :</p>
+  <p class="code">// Redimensionne la première dimension du tableau<br> array_resize(my_array, 10) ;<br>
+    <br> // Redimensionne la deuxième dimension du tableau<br> array_resize(my_array[0], 10) ;<br>
+    <br> // Redimensionne la troisième dimension du tableau<br> array_resize(my_array[0][0], 10) ;<br>
+    <br> // etc...</p>
+  <p> </p>
+  <h4>Syntaxe :</h4>
+  <p class="code">array_resize(array_index, new_size) ;</p>
+  
+    <table>
+      <tbody>
+        <tr>
+          <th>Arguments</th>
+          <th>Description</th>
+        </tr>
+        <tr>
+          <td>tableau_index</td>
+          <td>L'index du tableau à redimensionner.</td>
+        </tr>
+        <tr>
+          <td>nouvelle_taille</td>
+          <td>La nouvelle taille du tableau (un nombre entier, commençant à 0).</td>
+        </tr>
+      </tbody>
+    </table>
+  
+  <p> </p>
+  <h4>Les retours :</h4>
+  <p class="code">N/A</p>
+  <p> </p>
+  <h4>Exemple :</h4>
+  <p class="code">si array_length(a) &gt; 10<br> {
+    <br> array_resize(a, 10) ;<br> }
+  </p>
+  <p>Le code ci-dessus vérifie la longueur d'un tableau et s'il a plus de 10 indices, il est redimensionné.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <div class="footer">
+    <div class="buttons">
+      <div class="clear">
+        <div style="float:left">Retour : <a href="Variable_Functions.htm">Fonctions variables</a></div>
+        <div style="float:right">Suivant : <a href="array_length_1d.htm">array_length_1d</a></div>
+      </div>
+    </div>
+    <h5><span data-keyref="Copyright Notice">Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
   </div>
   <!-- KEYWORDS
 array_resize

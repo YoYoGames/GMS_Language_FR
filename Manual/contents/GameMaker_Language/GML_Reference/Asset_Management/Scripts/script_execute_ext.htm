@@ -7,11 +7,62 @@
   <meta name="generator" content="Adobe RoboHelp 2019" />
   <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
   <meta name="rh-authors" content="Mark Alexander" />
-  <meta name="topic-comment" content="Page expliquant la fonction script_execute_ext" />
+  <meta name="topic-comment" content="Page explaining the function script_execute_ext" />
   <meta name="rh-index-keywords" content="script_execute_ext" />
   <meta name="search-keywords" content="script_execute_ext" />
 </head>
-<body><!--<div class="body-scroll" style="top: 150px;">--><h1>script_execute_ext</h1><p> Cette fonction fonctionne de la même manière que la fonction <a href="script_execute.htm">script_execute ().</a> Vous seul pouvez fournir un <a href="../../../GML_Overview/Arrays.htm">tableau</a> contenant les arguments requis pour la fonction / le script appelé. Vous pouvez également fournir deux arguments facultatifs à la fonction pour spécifier un décalage dans le tableau à partir duquel obtenir les arguments, ainsi que le nombre d&#39;arguments à utiliser à partir du tableau (ce doit être un maximum de array_length - offset).</p><p></p><h4> Syntaxe:</h4><p class="code">script_execute(scr, array_args, [offset], [num_args]);</p><table><tbody><tr><th> Argument</th><th> Description</th></tr><tr><td> <span class="notranslate">scr</span></td><td> Le nom de la fonction / du script que vous souhaitez appeler</td></tr><tr><td> <span class="notranslate">array_args</span></td><td> Le tableau contenant les arguments de la fonction / du script</td></tr><tr><td> <span class="notranslate">[offset]</span></td><td> <em>OPTIONNEL!</em> Le décalage dans le tableau d&#39;arguments</td></tr><tr><td> <span class="notranslate">[num_args]</span></td><td> <em>OPTIONNEL!</em> Le nombre d&#39;arguments à (à partir du décalage)</td></tr></tbody></table><p></p><h4> Retour:</h4><p class="code">Will depend on the return value from the function/script being called</p><p></p><h4> Exemple:</h4><p class="code">script_execute_ext(move_inst, move_array, floor(random(4)), 1);</p><p> L&#39;exemple de code ci-dessus utilisera <tt>script_execute_ext</tt> pour appeler la fonction donnée, en fournissant un tableau de quatre arguments, mais en n&#39;utilisant qu&#39;un seul d&#39;entre eux au hasard.</p><p class="note"> <b>REMARQUE</b>: Cette fonction ne peut pas être utilisée avec les fonctions intégrées. </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> Retour: <a href="Scripts.htm">Scripts</a></div><div style="float:right"> Suivant:<a href="script_exists.htm">script_exists</a></div><div style="float:right"></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
+<body>
+  <!--<div class="body-scroll" style="top: 150px;">-->
+  <h1>script_execute_ext</h1>
+  <p>Cette fonction fonctionne de la même manière que la fonction <a href="script_execute.htm">script_execute()</a>, mais vous pouvez fournir un <a href="../../../GML_Overview/Arrays.htm">tableau</a> contenant les arguments requis pour la fonction/script appelée. Vous
+    pouvez également fournir deux arguments facultatifs à la fonction pour spécifier un décalage dans le tableau pour obtenir les arguments, ainsi que le nombre d'arguments à utiliser à partir du tableau (cela doit être un maximum de array_length - offset). </p>
+  <p> </p>
+  <h4>Syntaxe :</h4>
+  <p class="code">script_execute(scr, array_args, [offset], [num_args]) ;</p>
+  <table>
+    <tbody>
+      <tr>
+        <th>Arguments</th>
+        <th>Description</th>
+      </tr>
+      <tr>
+        <td>scr</td>
+        <td>Le nom de la fonction/script que vous voulez appeler</td>
+      </tr>
+      <tr>
+        <td>array_args</td>
+        <td>Le tableau contenant les arguments de la fonction/script.</td>
+      </tr>
+      <tr>
+        <td>[offset]</td>
+        <td><em>FACULTATIF !</em> Le décalage dans le tableau des arguments</td>
+      </tr>
+      <tr>
+        <td>[num_args]</td>
+        <td><em>FACULTATIF !</em> Le nombre d'arguments à (à partir de l'offset)</td>
+      </tr>
+    </tbody>
+  </table>
+  <p> </p>
+  <h4>Les retours :</h4>
+  <p class="code">Cela dépendra de la valeur de retour de la fonction/script appelée.</p>
+  <p> </p>
+  <h4>Exemple :</h4>
+  <p class="code">script_execute_ext(move_inst, move_array, floor(random(4)), 1) ;</p>
+  <p>L'exemple de code ci-dessus utilisera <tt>script_execute_ext</tt> pour appeler la fonction donnée, en fournissant un tableau de quatre arguments, mais en n'utilisant qu'un seul d'entre eux au hasard.</p>
+  <p class="note"><b>REMARQUE</b>: Cette fonction ne peut pas être utilisée avec les fonctions intégrées.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <div class="footer">
+    <div class="buttons">
+      <div class="clear">
+        <div style="float:left">Retour : <a href="Scripts.htm">Scripts</a></div>
+        <div style="float:right">Suivant : <a href="script_exists.htm">script_exists</a></div>
+        <div style="float:right"> </div>
+      </div>
+    </div>
+    <h5><span data-keyref="Copyright Notice">Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
   </div>
   <!-- KEYWORDS
 script_execute_ext

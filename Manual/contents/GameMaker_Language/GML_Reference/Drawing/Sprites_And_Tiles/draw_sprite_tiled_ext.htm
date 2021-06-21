@@ -7,11 +7,80 @@
   <meta name="generator" content="Adobe RoboHelp 2019" />
   <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
   <meta name="rh-authors" content="Mark Alexander" />
-  <meta name="topic-comment" content="Page de référence pour draw_sprite_tiled_ext" />
+  <meta name="topic-comment" content="Reference page for draw_sprite_tiled_ext" />
   <meta name="rh-index-keywords" content="draw_sprite_tiled_ext" />
   <meta name="search-keywords" content="draw_sprite_tiled_ext" />
 </head>
-<body><!--<div class="body-scroll" style="top: 150px;">--><h1>draw_sprite_tiled_ext</h1><p> Cette fonction prendra un sprite puis le tuera à plusieurs reprises sur toute la vue (ou la pièce si aucune vue n&#39;est définie), en commençant par les coordonnées que vous donnez dans la fonction et avec chaque tuile mise à l&#39;échelle, couleur mélangée et avec l&#39;alpha que vous définissez (ces propriétés sont les mêmes que celles utilisées dans <a href="draw_sprite_ext.htm"><tt>draw_sprite_ext()</tt></a> ). Cette fonction est réservée aux projections 2D (orthographiques) et ne fonctionnera pas correctement lorsqu&#39;une projection de caméra 3D est utilisée.</p><p class="note"> <b>REMARQUE</b>: La fusion des couleurs n&#39;est recommandée pour la cible HTML5 que lorsque WebGL est activé, bien que vous puissiez toujours définir la couleur de fusion si elle n&#39;est pas activée et elle mélangera l&#39;image-objet comme d&#39;habitude. Cependant, tout mélange de cette manière crée un sprite en double qui est ensuite stocké dans le cache et utilisé lorsque cela est nécessaire. Ceci est loin d&#39;être optimal et si vous utilisez plusieurs changements de couleur, cela ralentira les performances de vos jeux à moins que vous n&#39;activiez WebGL. si vous ne souhaitez pas utiliser WebGL, vous pouvez définir la taille du cache de polices pour essayer de limiter cela si nécessaire en utilisant la fonction <a href="../../Asset_Management/Sprites/Sprite_Manipulation/sprite_set_cache_size_ext.htm"><tt>sprite_set_cache_size()</tt></a>.</p><p></p><h4> Syntaxe:</h4><p class="code">draw_sprite_tiled_ext(sprite, subimg, x, y, xscale, yscale, colour, alpha);</p><table><tbody><tr><th> Argument</th><th> Description</th></tr><tr><td> <span class="notranslate">sprite</span></td><td> L&#39;index du sprite à dessiner.</td></tr><tr><td> <span class="notranslate">subimg</span></td><td> Le subimg (frame) du sprite à dessiner (image_index ou -1 en corrélation avec l&#39;image courante de l&#39;animation dans l&#39;objet).</td></tr><tr><td> <span class="notranslate">x</span></td><td> La coordonnée x de l&#39;endroit où dessiner le sprite.</td></tr><tr><td> <span class="notranslate">y</span></td><td> La coordonnée y de l&#39;endroit où dessiner le sprite.</td></tr><tr><td> <span class="notranslate">xscale</span></td><td> La mise à l&#39;échelle horizontale du sprite. Un multiplicateur &#39;1 = mise à l&#39;échelle normale, 0,5 est la moitié, etc.</td></tr><tr><td> <span class="notranslate">yscale</span></td><td> La mise à l&#39;échelle verticale du sprite. Un multiplicateur &#39;1 = mise à l&#39;échelle normale, 0,5 est la moitié, etc.</td></tr><tr><td> <span class="notranslate">colour</span></td><td> La couleur avec laquelle mélanger le sprite. c_white est de l&#39;afficher normalement.</td></tr><tr><td> <span class="notranslate">alpha</span></td><td> L&#39;alpha du sprite (de 0 à 1 où 0 est transparent et 1 opaque).</td></tr></tbody></table><p></p><h4> Retour:</h4><p class="code">N/A</p><p></p><h4> Exemple:</h4><p class="code">draw_sprite_tiled_ext(sprite_index, image_index, x, y, 2, 2, c_red, 0.5);</p><p> Cela dessinera les instances assignées au sprite (sprite_index) et son image d&#39;animation actuelle (image_index) à la position x et y des instances, mais redimensionnées à deux fois la taille normale, mélangées en rouge et avec la moitié de l&#39;alpha normal. Le sprite sera carrelé horizontalement et verticalement dans la vue. </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> Face arrière: <a href="Sprites_And_Tiles.htm">Sprites et tuiles</a></div><div style="float:right"> Suivant:<a href="draw_enable_swf_aa.htm">draw_enable_swf_aa</a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
+<body>
+  <!--<div class="body-scroll" style="top: 150px;">-->
+  <h1>draw_sprite_tiled_ext</h1>
+  <p>Cette fonction va prendre un sprite et l'afficher de façon répétée dans toute la vue (ou la pièce si aucune vue n'est définie), en partant des coordonnées que vous donnez dans la fonction et avec chaque tuile mise à l'échelle, mélangée à la couleur et avec l'alpha que vous avez défini.
+    (ces propriétés sont les mêmes que celles utilisées dans la fonction <a href="draw_sprite_ext.htm"><tt>draw_sprite_ext()</tt></a>). Cette fonction est destinée aux projections 2D (orthographiques) uniquement, et ne fonctionnera pas correctement si une projection de caméra 3D est utilisée.</p>
+  <p class="note"><b>REMARQUE</b>: le mélange des couleurs n'est recommandé pour la cible HTML5 que lorsque WebGL est activé, bien que vous puissiez toujours définir la couleur de mélange si elle n'est pas activée et le sprite sera mélangé normalement. Cependant, tout mélange de cette manière crée un sprite dupliqué qui est ensuite stocké dans la base de données.
+    sprite qui est ensuite stocké dans le cache et utilisé au besoin. C'est loin d'être optimal et si vous utilisez plusieurs changements de couleur, cela ralentira les performances de votre jeu, à moins que vous n'activiez WebGL. Si vous ne souhaitez pas utiliser WebGL, vous pouvez définir la taille du cache des polices pour essayer de limiter les effets de la taille de la police.
+    la taille du cache des polices pour essayer de limiter ce phénomène si nécessaire en utilisant la fonction <a href="../../Asset_Management/Sprites/Sprite_Manipulation/sprite_set_cache_size_ext.htm"><tt>sprite_set_cache_size()</tt></a>.</p>
+  <p> </p>
+  <h4>Syntaxe :</h4>
+  <p class="code">draw_sprite_tiled_ext(sprite, subimg, x, y, xscale, yscale, colour, alpha) ;</p>
+  <table>
+    <tbody>
+      <tr>
+        <th>Arguments</th>
+        <th>Description</th>
+      </tr>
+      <tr>
+        <td>sprite</td>
+        <td>L'index du sprite à dessiner.</td>
+      </tr>
+      <tr>
+        <td>sous-image</td>
+        <td>La sous-image (frame) du sprite à dessiner (image_index ou -1 correspondent à la frame d'animation actuelle de l'objet).</td>
+      </tr>
+      <tr>
+        <td>x</td>
+        <td>La coordonnée x de l'endroit où dessiner le sprite.</td>
+      </tr>
+      <tr>
+        <td>y</td>
+        <td>La coordonnée y de l'endroit où dessiner le sprite.</td>
+      </tr>
+      <tr>
+        <td>xscale</td>
+        <td>La mise à l'échelle horizontale du sprite. Un multiplicateur ' 1 = mise à l'échelle normale, 0.5 est la moitié, etc.</td>
+      </tr>
+      <tr>
+        <td>yscale</td>
+        <td>La mise à l'échelle verticale du sprite. Un multiplicateur ' 1 = mise à l'échelle normale, 0.5 est la moitié, etc.</td>
+      </tr>
+      <tr>
+        <td>couleur</td>
+        <td>La couleur avec laquelle le sprite doit être mélangé. c_white permet de l'afficher normalement.</td>
+      </tr>
+      <tr>
+        <td>alpha</td>
+        <td>L'alpha du sprite (de 0 à 1 où 0 est transparent et 1 opaque).</td>
+      </tr>
+    </tbody>
+  </table>
+  <p> </p>
+  <h4>Les retours :</h4>
+  <p class="code">N/A</p>
+  <p> </p>
+  <h4>Exemple :</h4>
+  <p class="code">draw_sprite_tiled_ext(sprite_index, image_index, x, y, 2, 2, c_red, 0.5) ;</p>
+  <p>Ceci dessinera le sprite assigné à l'instance (sprite_index) et son image d'animation actuelle (image_index) à la position x et y de l'instance, mais mis à l'échelle à deux fois la taille normale, mélangé en rouge et avec la moitié de l'alpha normal. Le sprite sera empilé
+    horizontalement et verticalement dans la vue.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <div class="footer">
+    <div class="buttons">
+      <div class="clear">
+        <div style="float:left">Retour : <a href="Sprites_And_Tiles.htm">Sprites et tuiles</a></div>
+        <div style="float:right">Suivant : <a href="draw_enable_swf_aa.htm">draw_enable_swf_aa</a></div>
+      </div>
+    </div>
+    <h5><span data-keyref="Copyright Notice">Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
   </div>
   <!-- KEYWORDS
 draw_sprite_tiled_ext

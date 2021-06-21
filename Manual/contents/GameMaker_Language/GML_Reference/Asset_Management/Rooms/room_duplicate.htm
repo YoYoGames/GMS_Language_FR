@@ -3,15 +3,52 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>room_duplicate</title>
+  <title>chambre_duplicate</title>
   <meta name="generator" content="Adobe RoboHelp 2019" />
   <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
   <meta name="rh-authors" content="Mark Alexander" />
-  <meta name="topic-comment" content="Page décrivant la fonction room_duplicate" />
+  <meta name="topic-comment" content="Page outlining the function room_duplicate" />
   <meta name="rh-index-keywords" content="room_duplicate" />
   <meta name="search-keywords" content="room_duplicate" />
 </head>
-<body><!--<div class="body-scroll" style="top: 150px;">--><h1>room_duplicate</h1><p> Cela dupliquera une salle donnée et retournera l&#39;index des doublons à utiliser dans tous les appels ultérieurs pour référencer la nouvelle salle.</p><p class="note"> <b>REMARQUE</b>: les nouvelles salles ne font pas partie de la commande habituelle des salles, elles n&#39;ont donc pas de pièce &quot;précédente&quot; ou &quot;suivante&quot; (ce qui signifie que les fonctions <span style="font-size:1px;"><a href="room_next.htm"><tt style="font-size: 14px">room_next ()</tt></a></span> et <span style="font-size:1px;"><a href="room_previous.htm"><tt style="font-size: 14px">room_previous ()</tt></a></span> ne fonctionneront pas). Pour passer de la pièce ajoutée à une autre, vous devez utiliser l&#39;index de la pièce elle-même.</p><p></p><h4> Syntaxe:</h4><p class="code">room_duplicate(index);</p><table><tbody><tr><th> Argument</th><th> Description</th></tr><tr><td> <span class="notranslate">index</span></td><td> L&#39;index de la salle d&#39;origine à dupliquer.</td></tr></tbody></table><p></p><h4> Retour:</h4><p class="code">Index</p><p></p><h4> Exemple:</h4><p class="code">global.myroom = room_duplicate(rm_level);</p><p> Cela dupliquera la salle indexée par &quot;rm_level&quot; et attribuera l&#39;index de la salle de cette nouvelle salle à la variable &quot;global.myroom&quot;. </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> Retour: <a href="Rooms.htm">Chambres</a></div><div style="float:right"> Suivant:<a href="room_assign.htm">room_assign</a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
+<body>
+  <!--<div class="body-scroll" style="top: 150px;">-->
+  <h1>chambre_duplicate</h1>
+  <p>Ceci va dupliquer une pièce donnée et retourner l'index des doublons qui sera utilisé dans tous les appels ultérieurs pour référencer la nouvelle pièce.</p>
+  <p class="note"><b>REMARQUE</b>: Les nouvelles pièces ne font pas partie de l'ordre habituel des pièces, elles n'ont donc pas de pièce &quot;précédente&quot; ou &quot;suivante&quot; (ce qui signifie que les fonctions <span style="font-size:1px;"><a href="room_next.htm"><tt style="font-size: 14px">room_next()</tt></a></span>    et <span style="font-size:1px;"><a href="room_previous.htm"><tt style="font-size: 14px">pièce_précédente()</tt></a></span> ne fonctionneront pas). Pour passer de la pièce ajoutée à une autre, vous devez utiliser l'index de la pièce elle-même.</p>
+  <p> </p>
+  <h4>Syntaxe :</h4>
+  <p class="code">room_duplicate(index) ;</p>
+  <table>
+    <tbody>
+      <tr>
+        <th>Arguments</th>
+        <th>Description</th>
+      </tr>
+      <tr>
+        <td>indice</td>
+        <td>L'index de la pièce originale à dupliquer.</td>
+      </tr>
+    </tbody>
+  </table>
+  <p> </p>
+  <h4>Les retours :</h4>
+  <p class="code">Index</p>
+  <p> </p>
+  <h4>Exemple :</h4>
+  <p class="code">global.myroom = room_duplicate(rm_level) ;</p>
+  <p>Cela va dupliquer la pièce indexée par &quot;rm_level&quot; et assigner l'index de cette nouvelle pièce à la variable &quot;global.myroom&quot;.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <div class="footer">
+    <div class="buttons">
+      <div class="clear">
+        <div style="float:left">Retour : <a href="Rooms.htm">Pièces</a></div>
+        <div style="float:right">Suivant : <a href="room_assign.htm">room_assign</a></div>
+      </div>
+    </div>
+    <h5><span data-keyref="Copyright Notice">Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
   </div>
   <!-- KEYWORDS
 room_duplicate

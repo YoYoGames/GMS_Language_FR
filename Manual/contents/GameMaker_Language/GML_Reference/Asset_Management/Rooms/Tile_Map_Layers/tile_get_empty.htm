@@ -3,21 +3,57 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>tile_get_empty</title>
+  <title>tuile_get_empty</title>
   <meta name="generator" content="Adobe RoboHelp 2019" />
   <link rel="stylesheet" href="../../../../../assets/css/default.css" type="text/css" />
   <meta name="rh-authors" content="Mark Alexander" />
-  <meta name="topic-comment" content="Page décrivant la fonction tile_get_empty" />
+  <meta name="topic-comment" content="Page outlining the function tile_get_empty" />
   <meta name="rh-index-keywords" content="tile_get_empty" />
   <meta name="search-keywords" content="tile_get_empty" />
 </head>
-<body><!--<div class="body-scroll" style="top: 150px;">--><h1>tile_get_empty</h1><p> Cette fonction peut être utilisée pour vérifier si un ensemble donné de données de tuile est pour une tuile vide ou non. Vous donnez les données de tuile, qui peuvent être récupérées à l&#39;aide de la fonction <a href="tilemap_get.htm"><tt>tilemap_get()</tt></a>, et la fonction retournera <tt>true</tt> si la tuile est vide, ou <tt>false</tt> s&#39;il existe un index de tuiles.</p><p></p><h4> Syntaxe:</h4><p class="code">tile_get_empty(tiledata)</p><table><tbody><tr><th> Argument</th><th> Description</th></tr><tr><td> <span class="notranslate">tiledata</span></td><td> les données de tuile à vérifier</td></tr></tbody></table><p></p><h4> Retour:</h4><p class="code">Boolean</p><p></p><h4> Exemple:</h4><p class="code">var lay_id = layer_get_id(&quot;Tiles_sky&quot;);<br/> var map_id = layer_tilemap_get_id(lay_id);<br/> for (var i = 0; i &lt; tilemap_get_width(map_id); i++;)<br/>     {
-    <br/>     for (var j = 0; j &lt; tilemap_get_height(map_id); j++;)<br/>         {
-    <br/>         var data = tilemap_get(map_id, i, j);<br/>         if !tile_get_empty(data)<br/>             {
-    <br/>             data = tile_set_empty(data)<br/>             tilemap_set(map_id, data, i, j);<br/>             }
-    <br/>         }
-    <br/>     }
-  </p><p> Le code ci-dessus obtient l&#39;ID de carte de tuile de la couche donnée, puis vérifie chaque cellule de tuile sur la carte pour voir si elle contient des données ou non. Si tel est le cas, la vignette est définie comme vide. </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> Retour: <a href="Tile_Map_Layers.htm">Couches de carte de mosaïque</a></div><div style="float:right"> Suivant:<a href="tile_get_index.htm">tile_get_index</a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
+<body>
+  <!--<div class="body-scroll" style="top: 150px;">-->
+  <h1>tuile_get_empty</h1>
+  <p>Cette fonction peut être utilisée pour vérifier si un ensemble donné de données de tuiles correspond à une tuile vide ou non. Vous donnez les données des tuiles, qui peuvent être récupérées en utilisant la fonction <a href="tilemap_get.htm"><tt>tilemap_get()</tt></a>et la fonction retournera <tt>vrai</tt> si la tuile est vide, ou <tt>faux</tt> s'il y a un index de tuile.</p>
+  <p> </p>
+  <h4>Syntaxe :</h4>
+  <p class="code">tile_get_empty(tiledata)</p>
+  <table>
+    <tbody>
+      <tr>
+        <th>Arguments</th>
+        <th>Description</th>
+      </tr>
+      <tr>
+        <td>données en mosaïque</td>
+        <td>les données de la tuile à vérifier</td>
+      </tr>
+    </tbody>
+  </table>
+  <p> </p>
+  <h4>Les retours :</h4>
+  <p class="code">Booléen</p>
+  <p> </p>
+  <h4>Exemple :</h4>
+  <p class="code">var lay_id = layer_get_id(&quot;Tiles_sky&quot;) ;<br> var map_id = layer_tilemap_get_id(lay_id) ;<br> for (var i = 0 ; i &lt; tilemap_get_width(map_id) ; i++ ;) <br> {
+    <br> for (var j = 0 ; j &lt; tilemap_get_height(map_id) ; j++ ;) <br> {
+    <br> var data = tilemap_get(map_id, i, j) ;<br> if !tile_get_empty(data)<br> {
+    <br> data = tile_set_empty(data)<br> tilemap_set(map_id, data, i, j) ;<br> }
+    <br> }
+    <br> }
+  </p>
+  <p>Le code ci-dessus récupère l'ID de la carte des tuiles à partir de la couche donnée, puis vérifie chaque cellule de la carte pour voir si elle contient des données ou non. Si c'est le cas, la tuile est définie comme vide.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <div class="footer">
+    <div class="buttons">
+      <div class="clear">
+        <div style="float:left">Retour : <a href="Tile_Map_Layers.htm">Carrelage des couches de la carte</a></div>
+        <div style="float:right">Suivant : <a href="tile_get_index.htm">tile_get_index</a></div>
+      </div>
+    </div>
+    <h5><span data-keyref="Copyright Notice">Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
   </div>
   <!-- KEYWORDS
 tile_get_empty

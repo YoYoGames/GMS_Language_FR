@@ -3,16 +3,53 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>instance_number</title>
+  <title>numéro d'instance</title>
   <meta name="generator" content="Adobe RoboHelp 2019" />
   <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
   <meta name="rh-authors" content="Mark Alexander" />
-  <meta name="topic-comment" content="Page décrivant la fonction numéro_instance" />
+  <meta name="topic-comment" content="Page outlining the function instance_number" />
   <meta name="rh-index-keywords" content="instance_number" />
   <meta name="search-keywords" content="instance_number" />
 </head>
-<body><!--<div class="body-scroll" style="top: 150px;">--><h1>instance_number</h1><p> Avec cette fonction, vous pouvez savoir combien d&#39;instances actives de l&#39;objet spécifié existent dans la pièce. Lors de la vérification à l&#39;aide de cette fonction, si l&#39;objet est un <b>parent</b>, <i>tous les objets enfants seront également inclus dans la valeur de retour</i>, et notez également que les instances qui ont été désactivées avec les fonctions de <a href="Deactivating_Instances/Deactivating_Instances.htm">désactivation d&#39;instance</a> <i>ne</i> seront pas incluses dans cette vérification.</p><p></p><h4> Syntaxe:</h4><p class="code">instance_number(obj);</p><table><tbody><tr><th> Argument</th><th> Description</th></tr><tr><td> <span class="notranslate">obj</span></td><td> Objet pour lequel totaliser le nombre d&#39;instances.</td></tr></tbody></table><p></p><h4> Retour:</h4><p class="code">Real</p><p></p><h4> Exemple:</h4><p class="code">if instance_number(object_index) &lt; 50<br/>     {<br/>     instance_create_layer(random(room_width), random(room_height), &quot;Instances&quot;, object_index);<br/>     }
-  </p><p> Le code ci-dessus vérifiera le nombre d&#39;instances créées à partir du même objet que l&#39;instance actuelle, puis s&#39;il y en a moins de 50, en crée une autre à une position aléatoire dans la salle. </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> Retour: <a href="Instances.htm">Instances</a></div><div style="float:right"> Suivant:<a href="instance_place.htm">instance_place</a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
+<body>
+  <!--<div class="body-scroll" style="top: 150px;">-->
+  <h1>numéro d'instance</h1>
+  <p>Cette fonction vous permet de savoir combien d'instances actives de l'objet spécifié existent dans la pièce. Lors de la vérification à l'aide de cette fonction, si l'objet est un <b>parent</b>, alors <i>tous les objets enfants seront également inclus dans la valeur de retour</i>, et
+    Notez également que les instances qui ont été désactivées avec les fonctions de <a href="Deactivating_Instances/Deactivating_Instances.htm">désactivation d'instance</a> <i>ne seront pas</i> incluses dans cette vérification.</p>
+  <p> </p>
+  <h4>Syntaxe :</h4>
+  <p class="code">numéro_instance(obj) ;</p>
+  <table>
+    <tbody>
+      <tr>
+        <th>Arguments</th>
+        <th>Description</th>
+      </tr>
+      <tr>
+        <td>obj.</td>
+        <td>L'objet dont on veut totaliser le nombre d'instances.</td>
+      </tr>
+    </tbody>
+  </table>
+  <p> </p>
+  <h4>Les retours :</h4>
+  <p class="code">Real</p>
+  <p> </p>
+  <h4>Exemple :</h4>
+  <p class="code">if instance_number(object_index) &lt; 50<br> {<br> instance_create_layer(random(room_width), random(room_height), &quot;Instances&quot;, object_index) ;<br> }
+  </p>
+  <p>Le code ci-dessus vérifie le nombre d'instances créées à partir du même objet que l'instance actuelle et, s'il y en a moins de 50, il en crée une autre à un endroit aléatoire de la pièce.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <div class="footer">
+    <div class="buttons">
+      <div class="clear">
+        <div style="float:left">Retour : <a href="Instances.htm">Instances</a></div>
+        <div style="float:right">Suivant : <a href="instance_place.htm">instance_place</a></div>
+      </div>
+    </div>
+    <h5><span data-keyref="Copyright Notice">Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
   </div>
   <!-- KEYWORDS
 instance_number

@@ -3,18 +3,56 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>sequence_destroy</title>
+  <title>séquence_destruction</title>
   <meta name="generator" content="Adobe RoboHelp 2019" />
   <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
   <meta name="rh-authors" content="Mark Alexander" />
-  <meta name="topic-comment" content="Page décrivant la fonction sequence_destroy" />
+  <meta name="topic-comment" content="Page outlining function sequence_destroy" />
   <meta name="rh-index-keywords" content="sequence_destroy" />
   <meta name="search-keywords" content="sequence_destroy" />
 </head>
-<body><!--<div class="body-scroll" style="top: 150px;">--><h1>sequence_destroy</h1><p> Avec cette fonction, vous pouvez détruire un objet séquence qui a été créé dynamiquement. Vous fournissez soit la structure d&#39;objet de séquence (telle que renvoyée par la fonction <a href="sequence_create.htm"><tt>sequence_create()</tt></a> ) ou l&#39;ID de séquence (tel que renvoyé par la fonction <a href="../Rooms/Sequence_Layers/layer_sequence_get_sequence.htm"><tt>layer_sequence_get_sequence()</tt></a> ou à partir de la propriété struct de l&#39;instance de séquence <tt>sequence</tt> ). Cette fonction doit être utilisée chaque fois qu&#39;une séquence créée dynamiquement n&#39;est plus nécessaire pour libérer la mémoire qui lui est associée.</p><p></p><h4> Syntaxe:</h4><p class="code">sequence_destroy(sequence_struct_or_id);</p><table><tbody><tr><th> Argument</th><th> Description</th></tr><tr><td> <span class="notranslate">sequence_struct_or_id</span></td><td> La structure ou l&#39;ID de l&#39;objet séquence à détruire</td></tr></tbody></table><p></p><h4> Retour:</h4><p class="code">N/A</p><p></p><h4> Exemple:</h4><p class="code">if sequence_exists(my_seq)<br/>     {
-    <br/>     sequence_destroy(my_seq);
-    <br/>     }
-  </p><p> Le code ci-dessus vérifie si l&#39;objet de séquence donné existe et s&#39;il le fait, il est détruit. </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> Retour: <a href="Sequences.htm">Séquences</a></div><div style="float:right"> Suivant:<a href="sequence_get.htm">sequence_get</a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
+<body>
+  <!--<div class="body-scroll" style="top: 150px;">-->
+  <h1>séquence_destruction</h1>
+  <p>Cette fonction permet de détruire un objet séquence qui a été créé dynamiquement. Vous fournissez soit la structure de l'objet séquence (telle que retournée par la fonction <a href="sequence_create.htm"><tt>séquence_créer()</tt></a>) ou l'ID de la séquence (tel que retourné
+    par la fonction <a href="../Rooms/Sequence_Layers/layer_sequence_get_sequence.htm"><tt>layer_sequence_get_sequence()</tt></a> ou à partir de la propriété <tt>sequence</tt> de la structure d'instance de la séquence). Cette fonction doit être utilisée lorsqu'une séquence créée dynamiquement n'est plus nécessaire afin de libérer de l'espace.
+    n'est plus nécessaire afin de libérer la mémoire qui lui est associée.</p>
+  <p> </p>
+  <h4>Syntaxe :</h4>
+  <p class="code">sequence_destroy(sequence_struct_or_id) ;</p>
+  <table>
+    <tbody>
+      <tr>
+        <th>Arguments</th>
+        <th>Description</th>
+      </tr>
+      <tr>
+        <td>séquence_structure_ou_id</td>
+        <td>La structure ou l'ID de l'objet de la séquence à détruire</td>
+      </tr>
+    </tbody>
+  </table>
+  <p> </p>
+  <h4>Les retours :</h4>
+  <p class="code">N/A</p>
+  <p> </p>
+  <h4>Exemple :</h4>
+  <p class="code">if sequence_exists(my_seq)<br> {
+    <br> sequence_destroy(my_seq) ;
+    <br> }
+  </p>
+  <p>Le code ci-dessus vérifie si l'objet séquence donné existe et si c'est le cas, il est détruit.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <div class="footer">
+    <div class="buttons">
+      <div class="clear">
+        <div style="float:left">Retour : <a href="Sequences.htm">Séquences</a></div>
+        <div style="float:right">Suivant : <a href="sequence_get.htm">sequence_get</a></div>
+      </div>
+    </div>
+    <h5><span data-keyref="Copyright Notice">Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
   </div>
   <!-- KEYWORDS
 sequence_destroy

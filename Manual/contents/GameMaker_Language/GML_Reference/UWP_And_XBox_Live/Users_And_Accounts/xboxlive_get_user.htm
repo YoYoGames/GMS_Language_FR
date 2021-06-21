@@ -7,14 +7,54 @@
   <meta name="generator" content="Adobe RoboHelp 2019" />
   <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
   <meta name="rh-authors" content="Mark Alexander" />
-  <meta name="topic-comment" content="Page de référence pour xboxlive_get_user" />
+  <meta name="topic-comment" content="Reference page for xboxlive_get_user" />
   <meta name="rh-index-keywords" content="xboxlive_get_user" />
   <meta name="search-keywords" content="xboxlive_get_user" />
 </head>
-<body><!--<div class="body-scroll" style="top: 150px;">--><h1>xboxlive_get_user</h1><p> Avec cette fonction, vous pouvez récupérer le pointeur de l&#39;ID utilisateur pour l&#39;utilisateur indexé. Si l&#39;utilisateur n&#39;existe pas, la fonction retournera la constante <tt>pointer_null</tt> au lieu. Vous pouvez trouver le nombre d&#39;utilisateurs actuellement connectés avec la fonction <a
-      href="xboxlive_get_user_count.htm"><tt>xboxlive_get_user_count()</tt></a>.</p><p class="note"> <b>IMPORTANT</b>: cette fonction ne doit être utilisée qu&#39;avec <tt>xboxlive_get_user_count()</tt> - ne l&#39;utilisez pas avec des manettes de jeu. Utilisation <span class="inline"><a href="xboxlive_user_for_pad.htm"><span style="font-size:14px;">xboxlive_user_for_pad()</span> au lieu.</p><p></p><p></p><h4> Syntaxe:</h4><p class="code">xboxlive_get_user(index);</p><table><tbody><tr><th> Argument</th><th> Description</th></tr><tr><td> <span class="notranslate">index</span></td><td> L&#39;index (un entier) à partir duquel obtenir l&#39;ID utilisateur.</td></tr></tbody></table><p></p><h4> Retour:</h4><p class="code">Pointer</p><p></p><h4> Exemple:</h4><p class="code">for(var i = 0; i &lt; xboxlive_get_user_count(); ++i;)<br/>     {
-    <br/>     user_id[i] = xboxlive_get_user(i);<br/>     }
-  </p><p> Ce qui précède parcourt tous les utilisateurs connectés et stocke leur pointeur d&#39;ID unique dans un tableau. </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> Retour: <a href="Users_And_Accounts.htm">Utilisateurs et comptes</a></div><div style="float:right"> Suivant:<a href="xboxlive_get_activating_user.htm">xboxlive_get_activating_user</a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
+<body>
+  <!--<div class="body-scroll" style="top: 150px;">-->
+  <h1>xboxlive_get_user</h1>
+  <p>Avec cette fonction, vous pouvez récupérer le pointeur d'identification de l'utilisateur indexé. Si l'utilisateur n'existe pas, la fonction renverra la constante <tt>pointer_null</tt> à la place. Vous pouvez trouver le nombre d'utilisateurs actuellement connectés avec la fonction
+    <a href="xboxlive_get_user_count.htm"><tt>xboxlive_get_user_count()</tt></a>.</p>
+  <p class="note"><b>IMPORTANT</b>: Cette fonction ne doit être utilisée qu'avec <tt>xboxlive_get_user_count()</tt> - ne l'utilisez pas avec les gamepads. Utilisez <span class="inline"><a href="xboxlive_user_for_pad.htm"><span style="font-size:14px;">xboxlive_user_for_pad()</span>
+    
+    à la place.</p>
+  <p> </p>
+  <p> </p>
+  <h4>Syntaxe :</h4>
+  <p class="code">xboxlive_get_user(index) ;</p>
+  <table>
+    <tbody>
+      <tr>
+        <th>Arguments</th>
+        <th>Description</th>
+      </tr>
+      <tr>
+        <td>indice</td>
+        <td>L'index (un nombre entier) pour obtenir l'ID de l'utilisateur.</td>
+      </tr>
+    </tbody>
+  </table>
+  <p> </p>
+  <h4>Les retours :</h4>
+  <p class="code">Pointeur</p>
+  <p> </p>
+  <h4>Exemple :</h4>
+  <p class="code">for(var i = 0 ; i &lt; xboxlive_get_user_count() ; ++i ;) <br> {
+    <br> user_id[i] = xboxlive_get_user(i) ;<br> }
+  </p>
+  <p>La boucle ci-dessus passe en revue tous les utilisateurs inscrits et stocke leur pointeur d'identification unique dans un tableau.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <div class="footer">
+    <div class="buttons">
+      <div class="clear">
+        <div style="float:left">Retour : <a href="Users_And_Accounts.htm">Utilisateurs et comptes</a></div>
+        <div style="float:right">Suivant : <a href="xboxlive_get_activating_user.htm">xboxlive_get_activating_user</a></div>
+      </div>
+    </div>
+    <h5><span data-keyref="Copyright Notice">Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
   </div>
   <!-- KEYWORDS
 xboxlive_get_user

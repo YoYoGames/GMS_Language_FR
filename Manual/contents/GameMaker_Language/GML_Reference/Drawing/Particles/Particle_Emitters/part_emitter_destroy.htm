@@ -3,17 +3,58 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>part_emitter_destroy</title>
+  <title>partie_émetteur_destruction</title>
   <meta name="generator" content="Adobe RoboHelp 2019" />
   <link rel="stylesheet" href="../../../../../assets/css/default.css" type="text/css" />
   <meta name="rh-authors" content="Mark Alexander" />
-  <meta name="topic-comment" content="Page de référence pour part_emitter_destroy" />
+  <meta name="topic-comment" content="Reference page for part_emitter_destroy" />
   <meta name="rh-index-keywords" content="part_emitter_destroy" />
   <meta name="search-keywords" content="part_emitter_destroy" />
 </head>
-<body><!--<div class="body-scroll" style="top: 150px;">--><h1>part_emitter_destroy</h1><p> Cette fonction supprimera l&#39;émetteur spécifié du système donné et l&#39;effacera de la mémoire (cela empêchera également toute particule d&#39;être produite par l&#39;émetteur donné, mais ne les <i>supprimera PAS</i> de la pièce). Cette fonction doit toujours être appelée lorsque l&#39;émetteur donné n&#39;est plus nécessaire au système pour éviter les fuites de mémoire et les erreurs.</p><p></p><h4> Syntaxe:</h4><p class="code">part_emitter_destroy( ps, ind );</p><table><tbody><tr><th> Argument</th><th> Description</th></tr><tr><td> <span class="notranslate">ps</span></td><td> Le système de particules pour détruire l&#39;émetteur.</td></tr><tr><td> <span class="notranslate">ind</span></td><td> L&#39;indice de l&#39;émetteur à détruire.</td></tr></tbody></table><p></p><h4> Retour:</h4><p class="code">N/A</p><p></p><h4> Exemple:</h4><p class="code">if part_emitter_exists(global.Sname, p_emit)<br/>     {
-    <br/>     part_emitter_destroy(global.Sname, p_emit1);<br/>     }
-  </p><p> Le code ci-dessus vérifiera si l&#39;émetteur de particules indexé dans la variable &quot;p_emit&quot; existe dans le système de particules donné et s&#39;il le fait, il est détruit. </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> Retour: <a href="Particle_Emitters.htm">Émetteurs de particules</a></div><div style="float:right"> Suivant:<a href="part_emitter_destroy_all.htm">part_emitter_destroy_all</a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
+<body>
+  <!--<div class="body-scroll" style="top: 150px;">-->
+  <h1>partie_émetteur_destruction</h1>
+  <p>Cette fonction supprimera l'émetteur spécifié du système donné et l'effacera de la mémoire (cela empêchera également toute particule d'être produite par l'émetteur donné, mais <i>ne</i> les supprimera <i>PAS</i> de la pièce). Cette fonction devrait toujours
+    être appelée lorsque l'émetteur donné n'est plus nécessaire pour le système afin d'éviter les fuites de mémoire et les erreurs.</p>
+  <p> </p>
+  <h4>Syntaxe :</h4>
+  <p class="code">part_emitter_destroy( ps, ind ) ;</p>
+  <table>
+    <tbody>
+      <tr>
+        <th>Arguments</th>
+        <th>Description</th>
+      </tr>
+      <tr>
+        <td>ps</td>
+        <td>Le système de particules dont il faut détruire l'émetteur.</td>
+      </tr>
+      <tr>
+        <td>ind</td>
+        <td>L'index de l'émetteur à détruire.</td>
+      </tr>
+    </tbody>
+  </table>
+  <p> </p>
+  <h4>Les retours :</h4>
+  <p class="code">N/A</p>
+  <p> </p>
+  <h4>Exemple :</h4>
+  <p class="code">if part_emitter_exists(global.Sname, p_emit)<br> {
+    <br> part_emitter_destroy(global.Sname, p_emit1) ;<br> }
+  </p>
+  <p>Le code ci-dessus va vérifier si l'émetteur de particules indexé dans la variable &quot;p_emit&quot; existe dans le système de particules donné et si c'est le cas, il est détruit.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <div class="footer">
+    <div class="buttons">
+      <div class="clear">
+        <div style="float:left">Retour : <a href="Particle_Emitters.htm">Émetteurs de particules</a></div>
+        <div style="float:right">Suivant : <a href="part_emitter_destroy_all.htm">part_emitter_destroy_all</a></div>
+      </div>
+    </div>
+    <h5><span data-keyref="Copyright Notice">Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
   </div>
   <!-- KEYWORDS
 part_emitter_destroy

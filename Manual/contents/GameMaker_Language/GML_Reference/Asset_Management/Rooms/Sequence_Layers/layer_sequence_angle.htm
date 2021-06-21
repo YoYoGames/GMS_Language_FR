@@ -3,17 +3,60 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>layer_sequence_angle</title>
+  <title>angle_séquence_couche</title>
   <meta name="generator" content="Adobe RoboHelp 2019" />
   <link rel="stylesheet" href="../../../../../assets/css/default.css" type="text/css" />
   <meta name="rh-authors" content="Mark Alexander" />
-  <meta name="topic-comment" content="Page décrivant la fonction layer_sequence_angle" />
+  <meta name="topic-comment" content="Page outlining the function layer_sequence_angle" />
   <meta name="rh-index-keywords" content="layer_sequence_y" />
   <meta name="search-keywords" content="layer_sequence_angle" />
 </head>
-<body><!--<div class="body-scroll" style="top: 150px;">--><h1>layer_sequence_angle</h1><p> Avec cette fonction, vous pouvez définir l&#39;angle de rotation pour l&#39;élément de séquence donné. Vous fournissez l&#39;ID d&#39;élément de séquence renvoyé par <a href="layer_sequence_create.htm"><tt>layer_sequence_create()</tt></a> ou par l&#39;une des <a href="../General_Layer_Functions/General_Layer_Functions.htm">fonctions d&#39;élément de calque</a> avec le nouvel angle à définir et la séquence sera tournée autour de son origine vers la nouvelle position. Les angles dans <span class="notranslate">GameMaker</span> sont calculés avec 0 ° vers la droite et dans le sens anti-horaire - donc 90 ° est vers le haut, 180 ° vers la gauche et 270 ° vers le bas - et l&#39;angle par défaut pour une séquence serait de 0 °.</p><p> Notez que vous ne devez pas modifier le <span class="inline">image_xscale</span> \ <span class="inline">image_yscale</span> \ <span class="inline">image_angle</span> \ <span class="inline">x</span> \ <span class="inline">y</span> variables pour toutes les instances d&#39;une séquence qui utilise cette fonction car elles seront écrasées dès que la séquence sera mise à jour après l&#39;appel de la fonction.</p><p></p><h4> Syntaxe:</h4><p class="code">layer_sequence_angle(sequence_element_id, angle)</p><table><tbody><tr><th> Argument</th><th> Description</th></tr><tr><td> <span class="notranslate">sequence_element_id</span></td><td> La valeur d&#39;ID unique de l&#39;élément de séquence à cibler</td></tr><tr><td> <span class="notranslate">angle</span></td><td> Le nouvel angle vers lequel faire pivoter l&#39;élément de séquence</td></tr></tbody></table><p></p><h4> Retour:</h4><p class="code">N/A</p><p></p><h4> Exemple:</h4><p class="code">if current_angle &lt; 90<br/>     {
-    <br/>     current_angle += 1;<br/>     layer_sequence_angle(my_seq, current_angle);<br/>     }
-  </p><p> Le code ci-dessus vérifie la valeur contenue dans le <span class="inline">current_angle</span> variable, et s&#39;il est inférieur à 90, il y ajoute puis utilise la valeur pour définir l&#39;angle de l&#39;élément de séquence référencé dans la variable <span class="inline">my_seq</span>. </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> Retour: <a href="Sequence_Layers.htm">Couches de séquence</a></div><div style="float:right"> Suivant:<a href="layer_sequence_xscale.htm">layer_sequence_xscale</a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
+<body>
+  <!--<div class="body-scroll" style="top: 150px;">-->
+  <h1>angle_séquence_couche</h1>
+  <p>Avec cette fonction, vous pouvez définir l'angle de rotation pour l'élément de séquence donné. Vous fournissez l'ID de l'élément de séquence tel que retourné par <a href="layer_sequence_create.htm"><tt>layer_sequence_create()</tt></a> ou par l'une des <a href="../General_Layer_Functions/General_Layer_Functions.htm">fonctions d'élément de calque</a> avec le nouvel angle à définir et la séquence sera tournée autour de son origine vers la nouvelle position. Dans <span class="notranslate">GameMaker</span>, les angles sont calculés en partant de 0º à droite et en allant dans le sens inverse des aiguilles d'une montre (90º pour le haut, 180º pour la gauche et 270º pour le bas).
+    pour une séquence serait de 0º.</p>
+  <p>Notez que vous ne devez pas modifier les variables <span class="inline">image_xscale</span> \ <span class="inline">image_yscale</span> \ <span class="inline">image_angle</span> \ <span class="inline">x</span> \ <span class="inline">y</span> pour toute instance
+    dans une séquence qui utilise cette fonction, car elles seront écrasées dès que la séquence sera mise à jour après l'appel de la fonction.</p>
+  <p> </p>
+  <h4>Syntaxe :</h4>
+  <p class="code">layer_sequence_angle(sequence_element_id, angle)</p>
+  <table>
+    <tbody>
+      <tr>
+        <th>Arguments</th>
+        <th>Description</th>
+      </tr>
+      <tr>
+        <td>id_élément_de_séquence</td>
+        <td>La valeur d'identification unique de l'élément de séquence à cibler.</td>
+      </tr>
+      <tr>
+        <td>angle</td>
+        <td>Le nouvel angle de rotation de l'élément de la séquence.</td>
+      </tr>
+    </tbody>
+  </table>
+  <p> </p>
+  <h4>Les retours :</h4>
+  <p class="code">N/A</p>
+  <p> </p>
+  <h4>Exemple :</h4>
+  <p class="code">if current_angle &lt; 90<br> {
+    <br> current_angle += 1 ;<br> layer_sequence_angle(my_seq, current_angle) ;<br> }
+  </p>
+  <p>Le code ci-dessus vérifie la valeur contenue dans la variable <span class="inline">current_angle</span>, et si elle est inférieure à 90, il l'ajoute puis utilise la valeur pour définir l'angle de l'élément de séquence référencé dans la variable <span class="inline">my_seq</span>.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <div class="footer">
+    <div class="buttons">
+      <div class="clear">
+        <div style="float:left">Retour : <a href="Sequence_Layers.htm">Couches de séquences</a></div>
+        <div style="float:right">Suivant : <a href="layer_sequence_xscale.htm">layer_sequence_xscale</a></div>
+      </div>
+    </div>
+    <h5><span data-keyref="Copyright Notice">Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
   </div>
   <!-- KEYWORDS
 layer_sequence_angle

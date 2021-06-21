@@ -7,14 +7,39 @@
   <meta name="generator" content="Adobe RoboHelp 2019" />
   <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
   <meta name="rh-authors" content="Mark Alexander" />
-  <meta name="topic-comment" content="Référence de la fonction gpu_get_tex_max_mip" />
+  <meta name="topic-comment" content="Reference for the function gpu_get_tex_max_mip" />
   <meta name="rh-index-keywords" content="gpu_get_tex_max_mip" />
   <meta name="search-keywords" content="gpu_get_tex_max_mip" />
 </head>
-<body><!--<div class="body-scroll" style="top: 150px;">--><h1>gpu_get_tex_max_mip</h1><p> Avec cette fonction, vous pouvez obtenir le niveau de mipmap maximum actuellement défini qui doit être utilisé, où une valeur de 0 est la résolution la plus élevée, 1 est d&#39;utiliser le premier mipmap, 2 est le second etc... Notez que cela peut être assez utile pour éviter les artefacts de saignement lors du rendu des textures, par exemple, définir la bordure de la page de texture sur 8px, puis définir le niveau maximal de mipmap sur 3 vous assurera de ne pas avoir de problèmes de saignement à des distances de rendu plus grandes.</p><p></p><h4> Syntaxe:</h4><p class="code">gpu_get_tex_max_mip();</p><p></p><h4> Retour:</h4><p class="code">Real (default: 16)</p><p></p><h4> Exemple:</h4><p class="code">if gpu_get_tex_max_mip() != 4<br/>     {
-    <br/>     gpu_set_tex_max_mip(4);
-    <br/>     }
-  </p><p> Le code ci-dessus vérifiera le niveau maximum actuel de mipmap et s&#39;il n&#39;est pas 4, il est mis à 4. </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> Retour: <a href="Mipmapping.htm">Mipmapping</a></div><div style="float:right"> Suivant:<a href="gpu_get_tex_max_mip_ext.htm">gpu_get_tex_max_mip_ext</a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
+<body>
+  <!--<div class="body-scroll" style="top: 150px;">-->
+  <h1>gpu_get_tex_max_mip</h1>
+  <p>Avec cette fonction, vous pouvez obtenir le niveau maximum de mipmap actuellement défini qui doit être utilisé, où une valeur de 0 est la résolution la plus élevée, 1 est d'utiliser la première mipmap, 2 est la deuxième etc.... Notez que cela peut être très utile pour éviter les artefacts de saignement lors du rendu des textures.
+    lors du rendu de textures, par exemple, en définissant la bordure de la page de texture à 8px et en définissant le niveau de mipmap maximum à 3, vous serez sûr de ne pas avoir de problèmes de saignement à des distances de rendu plus importantes.</p>
+  <p> </p>
+  <h4>Syntaxe :</h4>
+  <p class="code">gpu_get_tex_max_mip() ;</p>
+  <p> </p>
+  <h4>Les retours :</h4>
+  <p class="code">Real (par défaut : 16)</p>
+  <p> </p>
+  <h4>Exemple :</h4>
+  <p class="code">if gpu_get_tex_max_mip() != 4<br> {
+    <br> gpu_set_tex_max_mip(4) ;
+    <br> }
+  </p>
+  <p>Le code ci-dessus vérifie le niveau maximum actuel de mipmap et s'il n'est pas égal à 4, il est fixé à 4.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <div class="footer">
+    <div class="buttons">
+      <div class="clear">
+        <div style="float:left">Retour : <a href="Mipmapping.htm">Mipmapping</a></div>
+        <div style="float:right">Suivant : <a href="gpu_get_tex_max_mip_ext.htm">gpu_get_tex_max_mip_ext</a></div>
+      </div>
+    </div>
+    <h5><span data-keyref="Copyright Notice">Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
   </div>
   <!-- KEYWORDS
 gpu_get_tex_max_mip

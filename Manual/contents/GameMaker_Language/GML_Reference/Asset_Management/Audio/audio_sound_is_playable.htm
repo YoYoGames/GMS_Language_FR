@@ -7,13 +7,51 @@
   <meta name="generator" content="Adobe RoboHelp 2019" />
   <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
   <meta name="rh-authors" content="Mark Alexander" />
-  <meta name="topic-comment" content="Page expliquant la fonction audio_sound_is_playable" />
+  <meta name="topic-comment" content="Page explaining the function audio_sound_is_playable" />
   <meta name="rh-index-keywords" content="audio_sound_is_playable" />
   <meta name="search-keywords" content="audio_sound_is_playable" />
 </head>
-<body><!--<div class="body-scroll" style="top: 150px;">--><h1>audio_sound_is_playable</h1><p> Cette fonction peut être utilisée pour vérifier si l&#39;index sonore donné peut être lu actuellement. Cela est nécessaire en raison des différentes façons dont la lecture audio diffusée et non diffusée est gérée sur la plate-forme cible <b>HTML5, et retournera </b><tt>true</tt> si le son peut être joué et <tt>false</tt> si ça ne peut pas. Notez que sur toutes les autres plates-formes autres que HTML5, la fonction retournera toujours true.</p><p></p><h4> Syntaxe:</h4><p class="code">audio_sound_is_playable(index);</p><table><tbody><tr><th> Argument</th><th> Description</th></tr><tr><td> <span class="notranslate">index</span></td><td> L&#39;index du son à vérifier.</td></tr></tbody></table><p></p><h4> Retour:</h4><p class="code">Real</p><p></p><h4> Exemple:</h4><p class="code">if audio_sound_get_pitch(snd_Explode) != 1<br/>    {
-    <br/>    audio_sound_pitch(snd_Explode, 1);<br/>    }
-  </p><p> Le code ci-dessus changera la hauteur de l&#39;audio lu à partir du son indexé comme &quot;snd_Explode&quot; si sa hauteur n&#39;est pas égale à 1. </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> Retour: <a href="Audio.htm">Audio</a></div><div style="float:right"> Suivant:<a href="audio_falloff_set_model.htm">audio_falloff_set_model</a></div><div style="float:right"></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
+<body>
+  <!--<div class="body-scroll" style="top: 150px;">-->
+  <h1>audio_sound_is_playable</h1>
+  <p>Cette fonction peut être utilisée pour vérifier si l'indice sonore donné peut être lu actuellement. Cette fonction est nécessaire en raison des différentes façons dont la lecture du son en flux continu ou non continu est gérée sur la plate-forme cible <b>HTML5</b>.
+    retournera <tt>true</tt> si le son peut être joué et <tt>false</tt> si ce n'est pas le cas. Notez que sur toutes les autres plateformes autres que HTML5, la fonction retournera toujours true...</p>
+  <p> </p>
+  <h4>Syntaxe :</h4>
+  <p class="code">audio_sound_is_playable(index) ;</p>
+  <table>
+    <tbody>
+      <tr>
+        <th>Arguments</th>
+        <th>Description</th>
+      </tr>
+      <tr>
+        <td>indice</td>
+        <td>L'index du son à vérifier.</td>
+      </tr>
+    </tbody>
+  </table>
+  <p> </p>
+  <h4>Les retours :</h4>
+  <p class="code">Real</p>
+  <p> </p>
+  <h4>Exemple :</h4>
+  <p class="code">if audio_sound_get_pitch(snd_Explode) != 1<br> {
+    <br> audio_sound_pitch(snd_Explode, 1) ;<br> }
+  </p>
+  <p>Le code ci-dessus changera la hauteur de l'audio joué à partir du son indexé comme &quot;snd_Explode&quot; si sa hauteur n'est pas égale à 1.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <div class="footer">
+    <div class="buttons">
+      <div class="clear">
+        <div style="float:left">Retour : <a href="Audio.htm">Audio</a></div>
+        <div style="float:right">Suivant : <a href="audio_falloff_set_model.htm">audio_falloff_set_model</a></div>
+        <div style="float:right"> </div>
+      </div>
+    </div>
+    <h5><span data-keyref="Copyright Notice">Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
   </div>
   <!-- KEYWORDS
 audio_sound_is_playable

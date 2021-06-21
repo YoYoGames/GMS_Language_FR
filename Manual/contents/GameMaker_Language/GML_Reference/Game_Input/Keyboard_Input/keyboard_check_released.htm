@@ -2,19 +2,60 @@
 
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml"><head>
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-  <title>keyboard_check_released</title>
-  <meta name="generator" content="Adobe RoboHelp 2019"/>
-  <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css"/>
-  <meta name="rh-authors" content="Mark Alexander"/>
-  <meta name="topic-comment" content="Page de référence pour keyboard_check_released"/>
-  <meta name="rh-index-keywords" content="keyboard_check_released"/>
-  <meta name="search-keywords" content="keyboard_check_released"/>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>contrôle du clavier</title>
+  <meta name="generator" content="Adobe RoboHelp 2019" />
+  <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
+  <meta name="rh-authors" content="Mark Alexander" />
+  <meta name="topic-comment" content="Reference page for keyboard_check_released" />
+  <meta name="rh-index-keywords" content="keyboard_check_released" />
+  <meta name="search-keywords" content="keyboard_check_released" />
 </head>
 
-<body><!--<div class="body-scroll" style="top: 150px;">--><h1>keyboard_check_released</h1><p> Avec cette fonction, vous pouvez vérifier si une touche a été relâchée ou non. Contrairement au <a href="keyboard_check.htm"><tt>keyboard_check()</tt></a>, cette fonction ne fonctionnera qu&#39;une seule fois pour chaque fois que la touche est levée, donc pour qu&#39;elle se déclenche à nouveau, la touche doit d&#39;abord être enfoncée puis relâchée à nouveau. La fonction prendra une valeur de code clé telle que renvoyée par la fonction <a href="../../Strings/ord.htm"><tt>ord()</tt></a> (uniquement <i>les</i> lettres majuscules de A à Z ou les chiffres de 0 à 9), ou l&#39;un des <tt>vk_*</tt> constantes répertoriées sur la page <a href="Keyboard_Input.htm">principale de saisie au clavier.</a></p><p></p><h4> <b>Syntaxe:</b></h4><p class="code">keyboard_check_released(key);</p><table><tbody><tr><th> Argument</th><th> Description</th></tr><tr><td> <span class="notranslate">key</span></td><td> La clé pour vérifier l&#39;état libéré de.</td></tr></tbody></table><p></p><h4> <b>Retour:</b></h4><p class="code">Boolean</p><p></p><h4> <b>Exemple:</b></h4><p class="code">if keyboard_check_released(ord(&quot;P&quot;))<br/>    {
-    <br/>    instance_create_layer(0, 0, &quot;Controllers&quot;, obj_Pause);<br/>    }
-  </p><p> Le code ci-dessus vérifiera si la touche &quot;P&quot; a été relâchée et si c&#39;est le cas, créera une instance de &quot;obj_Pause&quot;. </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> Retour: <a href="Keyboard_Input.htm">Entrée clavier</a></div><div style="float:right"> Suivant:<a href="keyboard_check_direct.htm">keyboard_check_direct</a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
+<body>
+
+
+
+  <!--<div class="body-scroll" style="top: 150px;">-->
+  <h1>contrôle du clavier</h1>
+  <p>Avec cette fonction, vous pouvez vérifier si une touche a été relâchée ou non. Contrairement à la fonction <a href="keyboard_check.htm"><tt>vérification du clavier()</tt></a> cette fonction ne s'exécutera qu'une fois pour chaque fois que la touche est relâchée, donc pour qu'elle se déclenche à nouveau,
+    la touche doit d'abord être pressée puis relâchée à nouveau. La fonction prendra une valeur de code de touche telle que retournée par la fonction <a href="../../Strings/ord.htm"><tt>ord()</tt></a> (uniquement les lettres <i>majuscules</i> de A à Z ou les chiffres de 0 à 9), ou l'une des constantes
+   <tt>vk_*</tt> constantes listées sur la page principale de <a href="Keyboard_Input.htm">saisie du clavier</a>.</p>
+  <p> </p>
+  <h4><b>Syntaxe :</b></h4>
+  <p class="code">keyboard_check_released(key) ;</p>
+  <table>
+    <tbody>
+      <tr>
+        <th>Arguments</th>
+        <th>Description</th>
+      </tr>
+      <tr>
+        <td>clé</td>
+        <td>La clé pour vérifier l'état de libération de.</td>
+      </tr>
+    </tbody>
+  </table>
+  <p> </p>
+  <h4><b>Les retours :</b></h4>
+  <p class="code">Booléen</p>
+  <p> </p>
+  <h4><b>Exemple :</b></h4>
+  <p class="code">if keyboard_check_released(ord(&quot;P&quot;))<br> {
+    <br> instance_create_layer(0, 0, &quot;Controllers&quot;, obj_Pause) ;<br> }
+  </p>
+  <p>Le code ci-dessus vérifiera si la touche &quot;P&quot; a été relâchée et, si c'est le cas, créera une instance de &quot;obj_Pause&quot;.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <div class="footer">
+    <div class="buttons">
+      <div class="clear">
+        <div style="float:left">Retour : <a href="Keyboard_Input.htm">Entrée du clavier</a></div>
+        <div style="float:right">Suivant : <a href="keyboard_check_direct.htm">keyboard_check_direct</a></div>
+      </div>
+    </div>
+    <h5><span data-keyref="Copyright Notice">Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
   </div>
   <!-- KEYWORDS
 keyboard_check_released

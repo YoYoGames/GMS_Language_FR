@@ -3,15 +3,52 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>camera_get_view_x</title>
+  <title>caméra_get_view_x</title>
   <meta name="generator" content="Adobe RoboHelp 2019" />
   <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
   <meta name="rh-authors" content="Mark Alexander" />
-  <meta name="topic-comment" content="Page de référence pour camera_get_view_x" />
+  <meta name="topic-comment" content="Reference page for camera_get_view_x" />
   <meta name="rh-index-keywords" content="camera_get_view_x" />
   <meta name="search-keywords" content="camera_get_view_x" />
 </head>
-<body><!--<div class="body-scroll" style="top: 150px;">--><h1>camera_get_view_x</h1><p> Cette fonction peut être utilisée pour récupérer la position x de la vue pour une caméra donnée. Notez que cette fonction est <i>uniquement</i> valable pour les caméras créées à l&#39; aide <a href="camera_create_view.htm"><tt>camera_create_view()</tt></a> ou pour ceux ajoutés dans l&#39;éditeur de salle.</p><p></p><h4> Syntaxe:</h4><p class="code">camera_get_view_x(camera_id)</p><table><tbody><tr><th> Argument</th><th> Description</th></tr><tr><td> <span class="notranslate">camera_id</span></td><td> La valeur d&#39;ID de caméra unique renvoyée lors de la création de la caméra</td></tr></tbody></table><p></p><h4> Retour:</h4><p class="code">Real</p><p></p><h4> Exemple:</h4><p class="code">var vx = camera_get_view_x(view_camera[0]);<br/> var vy = camera_get_view_y(view_camera[0]);<br/> draw_text(vx + 5, vy + 5, &quot;SCORE&quot; + string(score));</p><p> Le code ci-dessus récupère la position de la caméra affectée au port d&#39;affichage [0], puis dessine le texte par rapport à cette position. </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> Arrière: <a href="Cameras_And_View_Ports.htm">caméras et ports d&#39;affichage</a></div><div style="float:right"> Suivant:<a href="camera_get_view_y.htm">camera_get_view_y</a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
+<body>
+  <!--<div class="body-scroll" style="top: 150px;">-->
+  <h1>caméra_get_view_x</h1>
+  <p>Cette fonction peut être utilisée pour récupérer la position x de la vue pour une caméra donnée. Notez que cette fonction <i>n'</i> est valable <i>que</i> pour les caméras créées à l'aide de la fonction <a href="camera_create_view.htm"><tt>camera_create_view()</tt></a> ou pour celles ajoutées dans l'éditeur de pièces
+    éditeur de salle.</p>
+  <p> </p>
+  <h4>Syntaxe :</h4>
+  <p class="code">camera_get_view_x(camera_id)</p>
+  <table>
+    <tbody>
+      <tr>
+        <th>Arguments</th>
+        <th>Description</th>
+      </tr>
+      <tr>
+        <td>camera_id</td>
+        <td>La valeur d'identification unique de la caméra renvoyée lorsque vous avez créé la caméra.</td>
+      </tr>
+    </tbody>
+  </table>
+  <p> </p>
+  <h4>Les retours :</h4>
+  <p class="code">Real</p>
+  <p> </p>
+  <h4>Exemple :</h4>
+  <p class="code">varx = camera_get_view_x(view_camera[0]) ;<br> vary = camera_get_view_y(view_camera[0]) ;<br> draw_text(vx + 5, vy + 5, &quot;SCORE&quot; + string(score)) ;</p>
+  <p>Le code ci-dessus récupère la position de la caméra affectée au port de vue [0], puis dessine le texte par rapport à cette position.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <div class="footer">
+    <div class="buttons">
+      <div class="clear">
+        <div style="float:left">Retour : <a href="Cameras_And_View_Ports.htm">Caméras et ports d'observation</a></div>
+        <div style="float:right">Suivant : <a href="camera_get_view_y.htm">camera_get_view_y</a></div>
+      </div>
+    </div>
+    <h5><span data-keyref="Copyright Notice">Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
   </div>
   <!-- KEYWORDS
 camera_get_view_x

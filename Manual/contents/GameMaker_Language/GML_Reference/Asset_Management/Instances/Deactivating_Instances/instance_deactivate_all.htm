@@ -3,16 +3,57 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>instance_deactivate_all</title>
+  <title>instance_désactivation_tous</title>
   <meta name="generator" content="Adobe RoboHelp 2019" />
   <link rel="stylesheet" href="../../../../../assets/css/default.css" type="text/css" />
   <meta name="rh-authors" content="Mark Alexander" />
-  <meta name="topic-comment" content="Page décrivant la fonction instance_deactivate_all" />
+  <meta name="topic-comment" content="Page outlining the function instance_deactivate_all" />
   <meta name="rh-index-keywords" content="instance_deactivate_all" />
   <meta name="search-keywords" content="instance_deactivate_all" />
 </head>
-<body><!--<div class="body-scroll" style="top: 150px;">--><h1>instance_deactivate_all</h1><p> Cette fonction désactivera <b>toutes les</b> instances présentes dans la salle au moment de l&#39;exécution du code. Cela peut inclure l&#39;instance exécutant le code si l&#39;indicateur &quot;notme&quot; est défini sur <tt>false</tt>, mais normalement vous voudriez que cette instance soit active, auquel cas l&#39;indicateur &quot;notme&quot; doit être défini sur <tt>true</tt>. Notez que la désactivation n&#39;est pas instantanée et qu&#39;une instance ainsi désactivée ne sera considérée comme inactive qu&#39;à la fin de l&#39;événement au cours duquel la fonction a été appelée.</p><p class="note"> <b>REMARQUE</b>: Si vous désactivez une instance au démarrage de la salle (c&#39;est-à-dire à partir du code de création de salle, ou à partir d&#39;un événement de création d&#39;instance d&#39;une instance dans la salle), toutes les instances placées dans la salle à partir de l&#39;éditeur de salle <b>continueront d&#39;exécuter leur événement de création.</b> avant d&#39;être désactivé.</p><p class="note"><b></b> <b>AVERTISSEMENT</b>: la désactivation des instances sur lesquelles la physique est activée n&#39;empêchera <b>PAS</b> leurs appareils d&#39;interagir dans la simulation physique. Pour cela, vous devez définir leur variable <span style="font-size:1px;"><a href="../../../Physics/Physics_Variables/phy_active.htm"><tt style="font-size: 14px">phy_active sur </tt></a></span><tt>true</tt> ou <tt>false</tt> lorsque vous activez / désactivez les instances.</p><p></p><h4> Syntaxe:</h4><p class="code">instance_deactivate_all(notme);</p><table><tbody><tr><th> Argument</th><th> Description</th></tr><tr><td> <span class="notranslate">notme</span></td><td> Indique si l&#39;instance appelante doit rester activée (true) ou non (false).</td></tr></tbody></table><p></p><h4> Retour:</h4><p class="code">N/A</p><p></p><h4> Exemple:</h4><p class="code">instance_deactivate_all(true);<br/> var _vx = camera_get_view_x(view_camera[0]);<br/> var _vy = camera_get_view_y(view_camera[0]);<br/> var _vw = camera_get_view_width(view_camera[0]);<br/> var _vh = camera_get_view_height(view_camera[0]);<br/> instance_activate_region(_vx
-    - 64, _vy - 64, _vw + 128, _vh + 128, false);</p><p> Le code ci-dessus désactive toutes les instances sauf celle qui exécute le code, puis active une région dans la salle. </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> Retour: <a href="Deactivating_Instances.htm">Désactivation d&#39;instances</a></div><div style="float:right"> Suivant:<a href="instance_deactivate_object.htm">instance_deactivate_object</a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
+<body>
+  <!--<div class="body-scroll" style="top: 150px;">-->
+  <h1>instance_désactivation_tous</h1>
+  <p>Cette fonction désactivera <b>toutes les</b> instances qui se trouvent dans la salle au moment où le code est exécuté. Cela peut inclure l'instance qui exécute le code si l'indicateur &quot;notme&quot; est mis à false, mais normalement vous voudriez que cette instance soit active, auquel cas l'indicateur &quot;notme&quot; devrait être mis à true.
+    soit active, auquel cas l'indicateur &quot;notme&quot; doit être défini sur true. Notez que la désactivation n'est pas instantanée, et une instance qui a été désactivée de cette manière ne sera pas considérée comme inactive jusqu'à la fin de l'événement
+    dans lequel la fonction a été appelée.</p>
+  <p class="note"><b>NOTE</b>: Si vous désactivez une instance au démarrage de la room (c'est-à-dire à partir du code de création de la room, ou à partir d'un événement de création d'une instance dans la room), toutes les instances qui sont placées dans la room à partir de l'éditeur de room <b>exécuteront toujours leur événement de création</b> avant d'être désactivées.</p>
+  <p class="note"><b></b><b>AVERTISSEMENT</b>: La désactivation des instances dont la physique est activée <b>n'</b> empêchera <b>PAS</b> leurs appareils d'interagir dans la simulation physique. Pour cela, vous devez définir leur <span style="font-size:1px;"><a href="../../../Physics/Physics_Variables/phy_active.htm"><tt style="font-size: 14px">phy_active</tt></a></span> variable
+    à <tt>true</tt> ou <tt>false</tt> lorsque vous activez/désactivez les instances.</p>
+  <p> </p>
+  <h4>Syntaxe :</h4>
+  <p class="code">instance_deactivate_all(notme) ;</p>
+  <table>
+    <tbody>
+      <tr>
+        <th>Arguments</th>
+        <th>Description</th>
+      </tr>
+      <tr>
+        <td>notme</td>
+        <td>Si l'instance appelante doit rester activée (true) ou non (false).</td>
+      </tr>
+    </tbody>
+  </table>
+  <p> </p>
+  <h4>Les retours :</h4>
+  <p class="code">N/A</p>
+  <p> </p>
+  <h4>Exemple :</h4>
+  <p class="code">instance_deactivate_all(true) ;<br> var _vx = camera_get_view_x(view_camera[0]) ;<br> var _vy = camera_get_view_y(view_camera[0]) ;<br> var _vw = camera_get_view_width(view_camera[0]) ;<br> var _vh = camera_get_view_height(view_camera[0]) ;<br> instance_activate_region(_vx
+    - 64, _vy - 64, _vw + 128, _vh + 128, false) ;</p>
+  <p>Le code ci-dessus désactive toutes les instances, sauf celle qui exécute le code, puis active une région dans la pièce.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <div class="footer">
+    <div class="buttons">
+      <div class="clear">
+        <div style="float:left">Retour : <a href="Deactivating_Instances.htm">Désactiver les instances</a></div>
+        <div style="float:right">Suivant : <a href="instance_deactivate_object.htm">instance_deactivate_object</a></div>
+      </div>
+    </div>
+    <h5><span data-keyref="Copyright Notice">Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
   </div>
   <!-- KEYWORDS
 instance_deactivate_all

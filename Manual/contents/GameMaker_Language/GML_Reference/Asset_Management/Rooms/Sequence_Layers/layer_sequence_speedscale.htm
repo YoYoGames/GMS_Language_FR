@@ -3,15 +3,56 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>layer_sequence_speedscale</title>
+  <title>échelle de vitesse de la séquence des couches</title>
   <meta name="generator" content="Adobe RoboHelp 2019" />
   <link rel="stylesheet" href="../../../../../assets/css/default.css" type="text/css" />
   <meta name="rh-authors" content="Mark Alexander" />
-  <meta name="topic-comment" content="Page décrivant la fonction layer_sequence_speedscale" />
+  <meta name="topic-comment" content="Page outlining the function layer_sequence_speedscale" />
   <meta name="rh-index-keywords" content="layer_sequence_speedscale" />
   <meta name="search-keywords" content="layer_sequence_speedscale" />
 </head>
-<body><!--<div class="body-scroll" style="top: 150px;">--><h1>layer_sequence_speedscale</h1><p> Avec cette fonction, vous pouvez changer la vitesse de lecture de la séquence donnée. Vous fournissez l&#39;ID d&#39;élément de séquence renvoyé par <a href="layer_sequence_create.htm"><tt>layer_sequence_create()</tt></a> ou par l&#39;une des <a href="../General_Layer_Functions/General_Layer_Functions.htm">fonctions d&#39;élément de couche</a> puis une valeur d&#39;échelle de vitesse. Cette valeur est un <i>multiplicateur</i>, où 1 est la vitesse de lecture par défaut et des valeurs inférieures à 1 ralentiront la lecture et des valeurs supérieures à 1 l&#39;accéléreront, par exemple: une valeur de 0,5 serait la moitié de la vitesse de lecture, tandis qu&#39;une valeur de 2 être le double de la vitesse de lecture.</p><p></p><h4> Syntaxe:</h4><p class="code">layer_sequence_speedscale(sequence_element_id, speedscale)</p><table><tbody><tr><th> Argument</th><th> Description</th></tr><tr><td> <span class="notranslate">sequence_element_id</span></td><td> La valeur d&#39;ID unique de l&#39;élément de séquence à cibler</td></tr><tr><td> <span class="notranslate">speedscale</span></td><td> L&#39;échelle de vitesse à utiliser (un multiplicateur), la valeur par défaut est 1</td></tr></tbody></table><p></p><h4> Retour:</h4><p class="code">N/A</p><p></p><h4> Exemple:</h4><p class="code">var _seq = layer_sequence_create(&quot;Background&quot;, 0, 0, seq_AnimatedBackground);<br/> layer_sequence_speedscale(_seq, 0.75);</p><p> Le code ci-dessus crée une nouvelle séquence sur la couche de l&#39;instance appelante, puis définit sa valeur d&#39;échelle de vitesse sur 0,75 (vitesse de lecture par défaut des trois quarts). </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> Retour: <a href="Sequence_Layers.htm">Couches de séquence</a></div><div style="float:right"> Suivant:<a href="layer_sequence_get_x.htm">layer_sequence_get_x</a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
+<body>
+  <!--<div class="body-scroll" style="top: 150px;">-->
+  <h1>échelle de vitesse de la séquence des couches</h1>
+  <p>Cette fonction permet de modifier la vitesse de lecture de la séquence donnée. Vous fournissez l'ID de l'élément de séquence tel que renvoyé par <a href="layer_sequence_create.htm"><tt>layer_sequence_create()</tt></a> ou par l'une des <a href="../General_Layer_Functions/General_Layer_Functions.htm">fonctions de l'élément de couche</a>, puis une valeur d'échelle de vitesse. Cette valeur est un <i>multiplicateur</i>, où 1 est la vitesse de lecture par défaut et les valeurs inférieures à 1 ralentissent la lecture et les valeurs supérieures à 1 l'accélèrent, par exemple : une valeur de 0,5 correspond à la moitié de la vitesse de lecture, tandis qu'une valeur de 2 correspond au double de la vitesse de lecture.
+    une valeur de 2 correspond à une vitesse de lecture double.</p>
+  <p> </p>
+  <h4>Syntaxe :</h4>
+  <p class="code">layer_sequence_speedscale(sequence_element_id, speedscale)</p>
+  <table>
+    <tbody>
+      <tr>
+        <th>Arguments</th>
+        <th>Description</th>
+      </tr>
+      <tr>
+        <td>id_élément_de_séquence</td>
+        <td>La valeur d'identification unique de l'élément de séquence à cibler.</td>
+      </tr>
+      <tr>
+        <td>échelle de vitesse</td>
+        <td>L'échelle de vitesse à utiliser (un multiplicateur), la valeur par défaut est 1.</td>
+      </tr>
+    </tbody>
+  </table>
+  <p> </p>
+  <h4>Les retours :</h4>
+  <p class="code">N/A</p>
+  <p> </p>
+  <h4>Exemple :</h4>
+  <p class="code">var _seq = layer_sequence_create(&quot;Background&quot;, 0, 0, seq_AnimatedBackground) ;<br> layer_sequence_speedscale(_seq, 0.75) ;</p>
+  <p>Le code ci-dessus crée une nouvelle séquence sur le calque de l'instance appelante, puis définit sa valeur d'échelle de vitesse à 0,75 (trois quarts de la vitesse de lecture par défaut).</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <div class="footer">
+    <div class="buttons">
+      <div class="clear">
+        <div style="float:left">Retour : <a href="Sequence_Layers.htm">Couches de séquences</a></div>
+        <div style="float:right">Suivant : <a href="layer_sequence_get_x.htm">layer_sequence_get_x</a></div>
+      </div>
+    </div>
+    <h5><span data-keyref="Copyright Notice">Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
   </div>
   <!-- KEYWORDS
 layer_sequence_speedscale

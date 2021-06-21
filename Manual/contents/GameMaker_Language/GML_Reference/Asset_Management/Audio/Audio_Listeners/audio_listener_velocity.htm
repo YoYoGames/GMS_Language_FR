@@ -3,17 +3,68 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>audio_listener_velocity</title>
+  <title>vitesse de l'auditeur audio</title>
   <meta name="generator" content="Adobe RoboHelp 2019" />
   <link rel="stylesheet" href="../../../../../assets/css/default.css" type="text/css" />
   <meta name="rh-authors" content="Mark Alexander" />
-  <meta name="topic-comment" content="Page expliquant la fonction audio_listener_velocity" />
+  <meta name="topic-comment" content="Page explaining the function audio_listener_velocity" />
   <meta name="rh-index-keywords" content="audio_listener_velocity" />
   <meta name="search-keywords" content="audio_listener_velocity" />
 </head>
-<body><!--<div class="body-scroll" style="top: 150px;">--><h1>audio_listener_velocity</h1><p> Cette fonction peut être utilisée pour donner à l&#39;auditeur <em>des</em> effets Doppler et simuler un mouvement audio basé sur le vecteur qui est résolu à partir des positions relatives x, y et z données. Si l&#39;auditeur lui-même ne bougera jamais, ou si le mouvement n&#39;est pas un mouvement constant, vous n&#39;auriez normalement pas besoin de définir ces valeurs, mais, par exemple, si vous faites un jeu à défilement où le joueur a un fond constant à mouvement du haut et les ennemis un mouvement constant de haut en bas, vous <i>définiriez les vitesses d&#39;écoute et d&#39;</i> émetteur (pour les émetteurs que vous utiliseriez <span class="inline"><a href="../Audio_Emitters/audio_emitter_velocity.htm"><tt>audio_emitter_velocity()</tt></a></span> ) aux vecteurs appropriés pour simuler l&#39;effet Doppler correct lorsqu&#39;ils se déplacent au-delà de l&#39;instance du lecteur.</p><p class="note"> <b>NOTE:</b> si vous avez plusieurs écouteurs, vous devez utiliser la fonction <span style="font-size:1px;"><a href="audio_listener_set_velocity.htm"><tt style="font-size: 14px">audio_listener_set_velocity ()</tt></a></span>.</p><p> L&#39;image ci-dessous montre comment cela pourrait être configuré pour l&#39;exemple de jeu ci-dessus:</p><p><img alt="Audio Listener Velocity Example" class="center" src="../../../../../assets/Images/Scripting_Reference/GML/Reference/Audio/Audio_Listener_Velocity.png" /></p><p></p><h4> Syntaxe:</h4><p class="code">audio_listener_velocity(vx, vy, vz);</p><table><tbody><tr><th> Argument</th><th> Description</th></tr><tr><td> <span class="notranslate">vx</span></td><td> Le composant de vitesse x de l&#39;auditeur (0 par défaut).</td></tr><tr><td> <span class="notranslate">vy</span></td><td> Le composant de vitesse y de l&#39;auditeur (0 par défaut).</td></tr><tr><td> <span class="notranslate">vz</span></td><td> Le composant de vitesse z de l&#39;auditeur (0 par défaut).</td></tr></tbody></table><p></p><h4> Retour:</h4><p class="code">N/A</p><p></p><h4> Exemple:</h4><p class="code">if speed &gt; 0<br/>    {
-    <br/>    audio_listener_velocity(abs(hspeed), abs(vspeed), 0);<br/>    }
-  </p><p> Le code ci-dessus vérifie si la vitesse de l&#39;instance du lecteur est supérieure à 0 et si c&#39;est le cas, elle utilise alors l&#39;absolu approprié <span class="inline">hspeed</span> et <span class="inline">vspeed</span> composants pour définir la vélocité de l&#39;auditeur. </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> Retour: <a href="Audio_Listeners.htm">Auditeurs audio</a></div><div style="float:right"> Suivant:<a href="audio_listener_orientation.htm">audio_listener_orientation</a></div><div style="float:right"></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
+<body>
+  <!--<div class="body-scroll" style="top: 150px;">-->
+  <h1>vitesse de l'auditeur audio</h1>
+  <p>Cette fonction peut être utilisée pour donner à l'auditeur des effets <em>Doppler </em>et simuler un mouvement audio basé sur le vecteur qui est résolu à partir des positions relatives x, y et z données. Si l'auditeur lui-même ne se déplace jamais, ou si le mouvement n'est pas constant, il n'est normalement pas nécessaire de définir ces paramètres.
+    Si l'écouteur lui-même ne se déplace jamais, ou si le mouvement n'est pas constant, vous n'avez normalement pas besoin de définir ces valeurs, mais, par exemple, si vous créez un jeu de défilement où le joueur a un mouvement constant de bas en haut et les ennemis un mouvement constant de haut en bas, vous définirez la vitesse de l'écouteur et de l'émetteur en fonction de la position de l'écouteur.
+    vitesse de l'auditeur <i>et de l'</i> émetteur (pour les émetteurs, vous utiliserez <span class="inline"><a href="../Audio_Emitters/audio_emitter_velocity.htm"><tt>audio_emitter_velocity()</tt></a></span>) aux vecteurs appropriés pour simuler l'effet Doppler correct lorsqu'ils passent devant l'instance du joueur.
+    correct lorsqu'ils passent devant l'instance du joueur.</p>
+  <p class="note"><b>NOTE : </b>si vous avez plusieurs écouteurs, vous devez utiliser la fonction <span style="font-size:1px;"><a href="audio_listener_set_velocity.htm"><tt style="font-size: 14px">audio_listener_set_velocity()</tt></a></span>.</p>
+  <p>L'image ci-dessous montre comment cela pourrait être configuré pour l'exemple de jeu donné ci-dessus :</p>
+  <p><img alt="Audio Listener Velocity Example" class="center" src="../../../../../assets/Images/Scripting_Reference/GML/Reference/Audio/Audio_Listener_Velocity.png" /></p>
+  <p> </p>
+  <h4>Syntaxe :</h4>
+  <p class="code">audio_listener_velocity(vx, vy, vz) ;</p>
+  <table>
+    <tbody>
+      <tr>
+        <th>Arguments</th>
+        <th>Description</th>
+      </tr>
+      <tr>
+        <td>vx</td>
+        <td>La composante de vitesse x de l'auditeur (par défaut 0).</td>
+      </tr>
+      <tr>
+        <td>vy</td>
+        <td>La composante y de la vélocité de l'auditeur (par défaut 0).</td>
+      </tr>
+      <tr>
+        <td>vz</td>
+        <td>La composante z de la vélocité de l'auditeur (par défaut 0).</td>
+      </tr>
+    </tbody>
+  </table>
+  <p> </p>
+  <h4>Les retours :</h4>
+  <p class="code">N/A</p>
+  <p> </p>
+  <h4>Exemple :</h4>
+  <p class="code">si vitesse &gt; 0<br> {
+    <br> audio_listener_velocity(abs(hspeed), abs(vspeed), 0) ;<br> }
+  </p>
+  <p>Le code ci-dessus vérifie si la vitesse de l'instance du lecteur est supérieure à 0 et si c'est le cas, il utilise les composants absolus appropriés <span class="inline">hspeed</span> et <span class="inline">vspeed</span> pour définir la vitesse de l'auditeur.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <div class="footer">
+    <div class="buttons">
+      <div class="clear">
+        <div style="float:left">Retour : <a href="Audio_Listeners.htm">Écouteurs audio</a></div>
+        <div style="float:right">Suivant : <a href="audio_listener_orientation.htm">audio_listener_orientation</a></div>
+        <div style="float:right"> </div>
+      </div>
+    </div>
+    <h5><span data-keyref="Copyright Notice">Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
   </div>
   <!-- KEYWORDS
 audio_listener_velocity

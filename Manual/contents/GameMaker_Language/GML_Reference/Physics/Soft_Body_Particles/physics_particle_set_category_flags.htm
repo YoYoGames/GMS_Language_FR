@@ -7,12 +7,105 @@
   <meta name="generator" content="Adobe RoboHelp 2019" />
   <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
   <meta name="rh-authors" content="Mark Alexander" />
-  <meta name="topic-comment" content="Page de référence pour physics_particle_set_category_flags" />
+  <meta name="topic-comment" content="Reference page for physics_particle_set_category_flags" />
   <meta name="rh-index-keywords" content="physics_particle_set_category_flags,phy_particle_flag_water,phy_particle_flag_zombie,phy_particle_flag_wall,phy_particle_flag_spring,phy_particle_flag_elastic,phy_particle_flag_viscous,phy_particle_flag_powder,phy_particle_flag_tensile,phy_particle_flag_colourmixing,phy_particle_flag_colormixing" />
-  <meta name="search-keywords" content="physics_particle_set_category_flags,phy_particle_flag_water,phy_particle_flag_zombie,phy_particle_flag_wall,phy_particle_flag_spring,phy_particle_flag_elastic,phy_particle_flag_viscous,phy_particle_flag_powder,phy_particle_flag_tensile,phy_particle_flag_colourmixing,phy_particle_flag_colormixing"
-  />
+  <meta name="search-keywords" content="physics_particle_set_category_flags,phy_particle_flag_water,phy_particle_flag_zombie,phy_particle_flag_wall,phy_particle_flag_spring,phy_particle_flag_elastic,phy_particle_flag_viscous,phy_particle_flag_powder,phy_particle_flag_tensile,phy_particle_flag_colourmixing,phy_particle_flag_colormixing" />
 </head>
-<body><!--<div class="body-scroll" style="top: 150px;">--><h1>physics_particle_set_category_flags</h1><p> Avec cette fonction, vous pouvez modifier les indicateurs de particules pour une catégorie de particules. Le <tt>category</tt> la valeur est celle que vous avez définie dans la fonction <a href="physics_particle_create.htm"><tt>physics_particle_create()</tt></a> ou (si vous avez créé un groupe)<a href="physics_particle_group_begin.htm"><tt>physics_particle_group_begin()</tt></a>, tandis que les indicateurs sont la valeur de retour d&#39;une combinaison des <b>constantes</b> suivantes:</p><p></p><table><tbody><tr><th> Constant</th><th> Description</th></tr><tr><td> <span class="notranslate">phy_particle_flag_water</span></td><td> Les propriétés par défaut d&#39;une particule de corps mou.</td></tr><tr><td> <span class="notranslate">phy_particle_flag_zombie</span></td><td> Une particule de zombie est une particule qui sera détruite en une seule étape avec toutes les autres marquées de cette manière.</td></tr><tr><td> <span class="notranslate">phy_particle_flag_wall</span></td><td> Cela définit la particule comme <i>statique</i>, la créant essentiellement comme un objet immobile dans la simulation physique, car elles resteront dans une position fixe, peu importe ce qui les heurte. Vous devez utiliser cet indicateur plutôt que de définir la densité sur 0.</td></tr><tr><td> <span class="notranslate">phy_particle_flag_spring</span></td><td> Les particules de ressort produisent l&#39;effet d&#39;être attachées les unes aux autres, comme par un ressort. Les particules créées avec ce drapeau sont &quot;connectées&quot; par paires, chaque particule étant connectée à celle qui en était la plus proche au moment de la création. Une fois appariées, les particules ne changent pas de «partenaires», et plus une force externe les tire les unes des autres, plus la puissance avec laquelle elles entreront en collision lorsque cette force externe est supprimée est grande. Notez que quelle que soit la distance entre les particules appariées, la connexion entre elles ne se cassera pas.</td></tr><tr><td> <span class="notranslate">phy_particle_flag_elastic</span></td><td> Les particules élastiques se déforment et peuvent également rebondir lorsqu&#39;elles entrent en collision avec d&#39;autres corps rigides dans la simulation physique.</td></tr><tr><td> <span class="notranslate">phy_particle_flag_viscous</span></td><td> Une particule visqueuse est une particule qui présente une «adhérence» ou une «adhérence», comme l&#39;huile. Les particules visqueuses s&#39;agglutineront et se colleront davantage.</td></tr><tr><td> <span class="notranslate">phy_particle_flag_powder</span></td><td> Les particules de poudre produisent un effet de dispersion tel que vous pourriez le voir avec du sable ou de la poussière.</td></tr><tr><td> <span class="notranslate">phy_particle_flag_tensile</span></td><td> Les particules de traction sont utilisées pour produire l&#39;effet de la tension superficielle, ou la courbure tendue sur la surface d&#39;un corps de liquide. Ils peuvent être utilisés, par exemple, pour créer la tension superficielle que vous verriez sur une goutte d&#39;eau. Une fois la tension rompue, les particules rebondissent comme si elles étaient élastiques, mais continuent également à s&#39;attirer les unes les autres. En conséquence, les particules ont tendance à former des grappes lorsqu&#39;elles rebondissent.</td></tr><tr><td> <span class="notranslate">phy_particle_flag_colourmixing</span></td><td> Les particules de mélange de couleurs prennent une partie de la couleur des autres particules avec lesquelles elles entrent en collision. Notez que si une seule des deux particules en collision est une particule mélangeant des couleurs, l&#39;autre particule conserve sa couleur d&#39;avant la collision.</td></tr></tbody></table><p></p><p> Ces indicateurs utilisent le masquage de bits pour créer une valeur de sortie finale qui est ensuite vérifiée pour définir les différentes propriétés de base de la catégorie de particules (la propriété de base étant toujours celle de <tt>phy_particle_flag_water</tt> ). Par exemple, si vous souhaitez simuler un liquide visqueux avec une tension superficielle, vous utiliserez le <a href="../../../../Additional_Information/Bitwise_Operators.htm">bit au niveau <i>du bit ou</i></a> &quot;|&quot; pour masquer les bits appropriés comme indiqué dans l&#39;exemple ci-dessous. De cette façon, vous pouvez définir différentes propriétés (autres que les propriétés globales) pour chaque catégorie de particule créée.</p><p></p><h4> Syntaxe:</h4><p class="code">physics_particle_set_category_flags(category, flags)</p><table><tbody><tr><th> Argument</th><th> Description</th></tr><tr><td> <span class="notranslate">category</span></td><td> La catégorie de particules à définir.</td></tr><tr><td> <span class="notranslate">flags</span></td><td> Les drapeaux à placer sur la particule.</td></tr></tbody></table><p></p><h4> Retour:</h4><p class="code">N/A</p><p></p><h4> Exemple:</h4><p class="code">var flags = phy_particle_flag_water | phy_particle_flag_viscous | phy_particle_flag_tensile;<br/> physics_particle_set_category_flags(1, flags);</p><p> Le code ci-dessus créera une variable pour stocker la valeur des indicateurs, puis l&#39;utilisera pour définir les indicateurs de toutes les particules créées avec la valeur de catégorie 1. </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> Retour: <a href="Soft_Body_Particles.htm">Particules corporelles molles</a></div><div style="float:right"> Suivant:<a href="physics_particle_set_group_flags.htm">physics_particle_set_group_flags</a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
+<body>
+  <!--<div class="body-scroll" style="top: 150px;">-->
+  <h1>physics_particle_set_category_flags</h1>
+  <p>Cette fonction vous permet de modifier les indicateurs de particules pour une catégorie de particules. La valeur de la <tt>catégorie</tt> est celle que vous avez définie dans la fonction <a href="physics_particle_create.htm"><tt>physics_particle_create()</tt></a> ou (si vous avez créé un
+    groupe) <a href="physics_particle_group_begin.htm"><tt>physics_particle_group_begin()</tt></a>tandis que les indicateurs sont la valeur de retour d'une combinaison des <b>constantes</b> suivantes :</p>
+  <p> </p>
+  <table>
+    <tbody>
+      <tr>
+        <th>Constant</th>
+        <th>Description</th>
+      </tr>
+      <tr>
+        <td>phy_particle_flag_water</td>
+        <td>Les propriétés par défaut d'une particule de corps mou.</td>
+      </tr>
+      <tr>
+        <td>phy_particle_flag_zombie</td>
+        <td>Une particule zombie est une particule qui sera détruite en une seule étape, toutes les autres étant marquées de cette manière.</td>
+      </tr>
+      <tr>
+        <td>phy_particle_flag_wall</td>
+        <td>Cela définit la particule comme <i>statique</i>, la créant essentiellement comme un objet inamovible dans la simulation physique, car elle restera dans une position fixe, peu importe ce qui entre en collision avec elle. Vous devriez utiliser cet indicateur plutôt que de définir la densité
+          à 0.</td>
+      </tr>
+      <tr>
+        <td>phy_particle_flag_spring</td>
+        <td>Les particules à ressort produisent l'effet d'être attachées les unes aux autres, comme par un ressort. Les particules créées avec ce drapeau sont &quot;connectées&quot; par paires, chaque particule étant connectée à celle qui était la plus proche d'elle au moment de la création.
+          Une fois appariées, les particules ne changent pas de &quot;partenaires&quot;, et plus une force extérieure les éloigne les unes des autres, plus la puissance avec laquelle elles entreront en collision lorsque cette force extérieure sera supprimée sera grande. Notez que peu importe la distance entre des particules appariées
+          l'une de l'autre, la connexion entre elles ne se rompra pas.</td>
+      </tr>
+      <tr>
+        <td>phy_particle_flag_elastic</td>
+        <td>Les particules élastiques se déforment et peuvent également rebondir lorsqu'elles entrent en collision avec d'autres corps rigides dans la simulation physique.</td>
+      </tr>
+      <tr>
+        <td>phy_particle_flag_viscous</td>
+        <td>Une particule visqueuse est une particule qui présente un caractère &quot;collant&quot;, comme l'huile. Les particules visqueuses s'agglutinent et collent davantage les unes aux autres.</td>
+      </tr>
+      <tr>
+        <td>phy_particle_flag_powder (poudre)</td>
+        <td>Les particules de poudre produisent un effet de dispersion tel que celui que l'on peut observer avec le sable ou la poussière.</td>
+      </tr>
+      <tr>
+        <td>phy_particle_flag_tensile</td>
+        <td>Les particules de tension sont utilisées pour produire l'effet de la tension de surface, ou la courbure tendue à la surface d'un corps liquide. Elles peuvent être utilisées, par exemple, pour créer la tension de surface que l'on observe sur une goutte d'eau. Une fois que la tension est
+          Une fois la tension rompue, les particules rebondissent comme si elles étaient élastiques, mais continuent également à s'attirer les unes les autres. Par conséquent, les particules ont tendance à former des amas lorsqu'elles rebondissent.</td>
+      </tr>
+      <tr>
+        <td>phy_particule_flag_colourmixing</td>
+        <td>Les particules dont la couleur est mélangée prennent une partie de la couleur des autres particules avec lesquelles elles entrent en collision. Notez que si une seule des deux particules qui entrent en collision est une particule à couleur mixte, l'autre particule conserve sa couleur d'avant la collision.</td>
+      </tr>
+    </tbody>
+  </table>
+  <p> </p>
+  <p>Ces indicateurs utilisent le masquage de bits pour créer une valeur de sortie finale qui est ensuite vérifiée pour définir les différentes propriétés de base de la catégorie de particules (la propriété de base étant toujours celle de <tt>phy_particle_flag_water</tt>). Par exemple, si vous voulez
+    simuler un liquide visqueux avec une tension de surface, vous utiliserez le <a href="../../../../Additional_Information/Bitwise_Operators.htm">bitwise <i>ou</i></a> &quot;|&quot; pour masquer les bits appropriés comme indiqué dans l'exemple ci-dessous. De cette façon, vous
+    pouvez définir différentes propriétés (autres que les propriétés globales) pour chaque catégorie de particule créée.</p>
+  <p> </p>
+  <h4>Syntaxe :</h4>
+  <p class="code">physics_particle_set_category_flags(category, flags)</p>
+  <table>
+    <tbody>
+      <tr>
+        <th>Arguments</th>
+        <th>Description</th>
+      </tr>
+      <tr>
+        <td>catégorie</td>
+        <td>La catégorie de particules à définir.</td>
+      </tr>
+      <tr>
+        <td>drapeaux</td>
+        <td>Les drapeaux à définir sur la particule.</td>
+      </tr>
+    </tbody>
+  </table>
+  <p> </p>
+  <h4>Les retours :</h4>
+  <p class="code">N/A</p>
+  <p> </p>
+  <h4>Exemple :</h4>
+  <p class="code">var flags = phy_particle_flag_water | phy_particle_flag_viscous | phy_particle_flag_tensile ;<br> physics_particle_set_category_flags(1, flags) ;</p>
+  <p>Le code ci-dessus crée une variable pour stocker la valeur des drapeaux, puis l'utilise pour définir les drapeaux de toutes les particules créées avec la valeur de catégorie 1.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <div class="footer">
+    <div class="buttons">
+      <div class="clear">
+        <div style="float:left">Retour : <a href="Soft_Body_Particles.htm">Particules molles du corps</a></div>
+        <div style="float:right">Suivant : <a href="physics_particle_set_group_flags.htm">physics_particle_set_group_flags</a></div>
+      </div>
+    </div>
+    <h5><span data-keyref="Copyright Notice">Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
   </div>
   <!-- KEYWORDS
 physics_particle_set_category_flags

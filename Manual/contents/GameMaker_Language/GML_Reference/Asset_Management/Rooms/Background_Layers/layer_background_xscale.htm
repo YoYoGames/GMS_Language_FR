@@ -7,11 +7,53 @@
   <meta name="generator" content="Adobe RoboHelp 2019" />
   <link rel="stylesheet" href="../../../../../assets/css/default.css" type="text/css" />
   <meta name="rh-authors" content="Mark Alexander" />
-  <meta name="topic-comment" content="Page décrivant la fonction layer_background_xscale" />
+  <meta name="topic-comment" content="Page outlining the function layer_background_xscale" />
   <meta name="rh-index-keywords" content="layer_background_xscale" />
   <meta name="search-keywords" content="layer_background_xscale" />
 </head>
-<body><!--<div class="body-scroll" style="top: 150px;">--><h1>layer_background_xscale</h1><p> Cette fonction peut être utilisée pour définir l&#39;échelle le long de l&#39;axe des x d&#39;un élément d&#39;arrière-plan. Vous donnez l&#39;ID d&#39;élément d&#39;arrière-plan (que vous obtenez lorsque vous créez un élément d&#39;arrière-plan en utilisant <a href="layer_background_create.htm"><tt>layer_background_create()</tt></a> ou lorsque vous utilisez la fonction <a href="layer_background_get_id.htm"><tt>layer_background_get_id()</tt></a> ), puis définissez la valeur d&#39;échelle. La valeur d&#39;échelle que vous donnez est un multiplicateur qui sera utilisé pour changer la façon dont l&#39;élément d&#39;arrière-plan est affiché, où une valeur de 0,5 afficherait l&#39;élément à demi-échelle et une valeur de 2 s&#39;afficherait à double échelle. Notez que les valeurs négatives sont valides et &quot;retournent&quot; l&#39;élément autour de la position (0,0), donc une échelle x de -1 afficherait l&#39;image inversée.</p><p></p><h4> Syntaxe:</h4><p class="code">layer_background_xscale(background_element_id, xscale);</p><table><tbody><tr><th> Argument</th><th> Description</th></tr><tr><td> <span class="notranslate">background_element_id</span></td><td> La valeur d&#39;identifiant unique de l&#39;élément d&#39;arrière-plan à modifier</td></tr><tr><td> <span class="notranslate">xscale</span></td><td> La valeur d&#39;échelle à utiliser (1 n&#39;est pas de mise à l&#39;échelle)</td></tr></tbody></table><p></p><h4> Retour:</h4><p class="code">N/A</p><p></p><h4> Exemple:</h4><p class="code">var lay_id = layer_get_id(&quot;Background_water&quot;);<br/> var back_id = layer_background_get_id(lay_id);<br/> layer_background_xscale(back_id, -1);</p><p> Le code ci-dessus obtiendra l&#39;ID de la couche nommée &quot;Background_water&quot;, puis l&#39;utilisera pour obtenir l&#39;ID de l&#39;élément d&#39;arrière-plan sur cette couche. Cet identifiant est ensuite utilisé pour modifier l&#39;élément xscale. </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> Retour: <a href="Background_Layers.htm">Calques d&#39;arrière-plan</a></div><div style="float:right"> Suivant:<a href="layer_background_get_yscale.htm">layer_background_yscale</a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
+<body>
+  <!--<div class="body-scroll" style="top: 150px;">-->
+  <h1>layer_background_xscale</h1>
+  <p>Cette fonction peut être utilisée pour définir l'échelle le long de l'axe des x d'un élément d'arrière-plan. Vous donnez l'ID de l'élément d'arrière-plan (que vous obtenez lorsque vous créez un élément d'arrière-plan à l'aide de la fonction <a href="layer_background_create.htm"><tt>layer_background_create()</tt></a>    ou lorsque vous utilisez la fonction <a href="layer_background_get_id.htm"><tt>layer_background_get_id()</tt></a>), puis vous définissez la valeur de l'échelle. La valeur d'échelle que vous donnez est un multiplicateur qui sera utilisé pour modifier la façon dont l'élément d'arrière-plan est affiché,
+    où une valeur de 0,5 affiche l'élément à la moitié de son échelle, et une valeur de 2 l'affiche à l'échelle double. Notez que les valeurs négatives sont valables, et qu'elles &quot; retourneront &quot; l'élément autour de la position (0,0), donc une échelle x de -1 affichera l'image inversée.
+    l'image inversée.</p>
+  <p> </p>
+  <h4>Syntaxe :</h4>
+  <p class="code">layer_background_xscale(background_element_id, xscale) ;</p>
+  <table>
+    <tbody>
+      <tr>
+        <th>Arguments</th>
+        <th>Description</th>
+      </tr>
+      <tr>
+        <td>id_élément_fond</td>
+        <td>La valeur d'identification unique de l'élément d'arrière-plan à modifier.</td>
+      </tr>
+      <tr>
+        <td>xscale</td>
+        <td>La valeur de l'échelle à utiliser (1 n'est pas une échelle).</td>
+      </tr>
+    </tbody>
+  </table>
+  <p> </p>
+  <h4>Les retours :</h4>
+  <p class="code">N/A</p>
+  <p> </p>
+  <h4>Exemple :</h4>
+  <p class="code">var lay_id = layer_get_id(&quot;Background_water&quot;) ;<br> var back_id = layer_background_get_id(lay_id) ;<br> layer_background_xscale(back_id, -1) ;</p>
+  <p>Le code ci-dessus récupère l'ID du calque nommé &quot;Background_water&quot; et l'utilise ensuite pour obtenir l'ID de l'élément d'arrière-plan sur ce calque. Cet ID est ensuite utilisé pour modifier le xscale de l'élément.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <div class="footer">
+    <div class="buttons">
+      <div class="clear">
+        <div style="float:left">Retour : <a href="Background_Layers.htm">Calques d'arrière-plan</a></div>
+        <div style="float:right">Suivant : <a href="layer_background_get_yscale.htm">layer_background_yscale</a></div>
+      </div>
+    </div>
+    <h5><span data-keyref="Copyright Notice">Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
   </div>
   <!-- KEYWORDS
 layer_background_xscale

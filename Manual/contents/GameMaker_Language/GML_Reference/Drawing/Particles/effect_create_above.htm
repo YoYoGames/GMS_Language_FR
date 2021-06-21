@@ -3,19 +3,143 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>effect_create_above</title>
+  <title>effet_créer_supérieur</title>
   <meta name="generator" content="Adobe RoboHelp 2019" />
   <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
   <meta name="rh-authors" content="Mark Alexander" />
-  <meta name="topic-comment" content="Page de référence pour effect_create_above" />
+  <meta name="topic-comment" content="Reference page for effect_create_above" />
   <meta name="rh-index-keywords" content="effect_create_above,ef_cloud,ef_ellipse,ef_explosion,ef_firework,ef_flare,ef_rain,ef_ring,ef_smoke,ef_smokeup,ef_snow,ef_spark,ef_star" />
   <meta name="search-keywords" content="effect_create_above,ef_cloud,ef_ellipse,ef_explosion,ef_firework,ef_flare,ef_rain,ef_ring,ef_smoke,ef_smokeup,ef_snow,ef_spark,ef_star" />
 </head>
-<body><!--<div class="body-scroll" style="top: 150px;">--><h1>effect_create_above</h1><p> Avec cette fonction, vous pouvez créer un effet simple au-dessus de toutes les instances de votre pièce (il est en fait créé à une profondeur de -100000). Si l&#39;effet est autre chose <tt>ef_rain</tt> ou <tt>ef_snow</tt> alors vous pouvez définir une position x / y pour créer l&#39;effet, et la taille peut être une valeur de 0, 1 ou 2, où 0 est petit, 1 est moyen et 2 est grand.</p><p> Il est à noter que ces effets peuvent avoir leur dessin activé et désactivé, ainsi que leur dessin mis en pause, en utilisant les fonctions <a href="Particle_Systems/part_system_automatic_draw.htm"><tt>part_system_automatic_draw()</tt></a> et <a
-      href="Particle_Systems/part_system_automatic_update.htm"><tt>part_system_automatic_update()</tt></a> avec la valeur appropriée pour l&#39;indice du système de particules (où 0 est pour les effets ci-dessous et 1 pour les effets ci-dessus).</p><p> Les constantes disponibles pour les différents types de particules sont:</p><table><tbody><tr><th> Constant</th><th> Exemple</th><th> Description</th></tr><tr><td> <span class="notranslate">ef_cloud</span></td><td style="text-align: center"><img alt="cloud effect example" class="icon" src="../../../../assets/Images/Scripting_Reference/GML/Reference/Drawing/ef_cloud.png" /></td><td> <span class="notranslate">An effect that creates random cloud particles of varying sizes</span></td></tr><tr><td> <span class="notranslate">ef_ellipse</span></td><td style="text-align: center"><img alt="ellipse effect example" class="icon" src="../../../../assets/Images/Scripting_Reference/GML/Reference/Drawing/ef_ellipse.png" /></td><td> <span class="notranslate">An effect that creates expanding ellipses</span></td></tr><tr><td> <span class="notranslate">ef_explosion</span></td><td style="text-align: center"><img alt="explosion effect example" class="icon" src="../../../../assets/Images/Scripting_Reference/GML/Reference/Drawing/ef_explosion.png" /></td><td> <span class="notranslate">An effect that creates expanding fading explosions</span></td></tr><tr><td> <span class="notranslate">ef_firework</span></td><td style="text-align: center"><img alt="firework effect example" class="icon" src="../../../../assets/Images/Scripting_Reference/GML/Reference/Drawing/ef_firework.png" /></td><td> <span class="notranslate">An effect that creates multiple small particles to generate a firework explosion</span></td></tr><tr><td> <span class="notranslate">ef_flare</span></td><td style="text-align: center"><img alt="flare effect example" class="icon" src="../../../../assets/Images/Scripting_Reference/GML/Reference/Drawing/ef_flare.png" /></td><td> <span class="notranslate">An effect that generates a brilliant point that flares up and fades out</span></td></tr><tr><td> <span class="notranslate">ef_rain</span></td><td style="text-align: center"><img alt="rain effect example" class="icon" src="../../../../assets/Images/Scripting_Reference/GML/Reference/Drawing/ef_rain.png" /></td><td> <span class="notranslate">An effect that generates rain particles coming down from the top of the screen</span></td></tr><tr><td> <span class="notranslate">ef_ring</span></td><td style="text-align: center"><img alt="circle effect example" class="icon" src="../../../../assets/Images/Scripting_Reference/GML/Reference/Drawing/ef_ring.png" /></td><td> <span class="notranslate">An effect that generates expanding and fading circles</span></td></tr><tr><td> <span class="notranslate">ef_smoke</span></td><td style="text-align: center"><img alt="smoke effect example" class="icon" src="../../../../assets/Images/Scripting_Reference/GML/Reference/Drawing/ef_smoke.png" /></td><td> <span class="notranslate">An effect that generates little puffs of smoke</span></td></tr><tr><td> <span class="notranslate">ef_smokeup</span></td><td style="text-align: center"><img alt="rising smoke effect example" class="icon" src="../../../../assets/Images/Scripting_Reference/GML/Reference/Drawing/ef_smokeup.png" /></td><td> <span class="notranslate">An effect that creates a smoke plume that rises up the screen</span></td></tr><tr><td> <span class="notranslate">ef_snow</span></td><td style="text-align: center"><img alt="snow effect example" class="icon" src="../../../../assets/Images/Scripting_Reference/GML/Reference/Drawing/ef_snow.png" /></td><td> <span class="notranslate">An effect that generates multiple snow particles falling down the screen</span></td></tr><tr><td> <span class="notranslate">ef_spark</span></td><td style="text-align: center"><img alt="spark effect example" class="icon" src="../../../../assets/Images/Scripting_Reference/GML/Reference/Drawing/ef_spark.png" /></td><td> <span class="notranslate">An effect that generates a small spark</span></td></tr><tr><td> <span class="notranslate">ef_star</span></td><td style="text-align: center"><img alt="star effect example" class="icon" src="../../../../assets/Images/Scripting_Reference/GML/Reference/Drawing/ef_star.png" /></td><td> <span class="notranslate">An effect that generates star particles</span></td></tr></tbody></table><p></p><h4> Syntaxe:</h4><p class="code">effect_create_above(kind, x, y, size, colour);</p><table><tbody><tr><th> Argument</th><th> Description</th></tr><tr><td> <span class="notranslate">kind</span></td><td> Le type d&#39;effet (utilisez l&#39;une des constantes répertoriées <span>ci</span> -dessus).</td></tr><tr><td> <span class="notranslate">x</span></td><td> Le positionnement x de l&#39;effet le cas échéant.</td></tr><tr><td> <span class="notranslate">y</span></td><td> Le positionnement y de l&#39;effet le cas échéant.</td></tr><tr><td> <span class="notranslate">size</span></td><td> La taille de l&#39;effet.</td></tr><tr><td> <span class="notranslate">colour</span></td><td> La couleur de l&#39;effet.</td></tr></tbody></table><p></p><h4> Retour:</h4><p class="code">N/A</p><p></p><h4> Exemple:</h4><p class="code">if health &lt;= 0<br/>     {
-    <br/>     effect_create_above(ef_explosion, x, y, 1, c_yellow);<br/>     instance_destroy();
-    <br/>     }
-  </p><p> Le code ci-dessus créera une explosion moyenne, jaune, au-dessus de l&#39;instance et la détruira si la variable «santé» est inférieure ou égale à 0. </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> Retour: <a href="Particles.htm">Particules</a></div><div style="float:right"> Suivant:<a href="effect_clear.htm">effect_clear</a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
+<body>
+  <!--<div class="body-scroll" style="top: 150px;">-->
+  <h1>effet_créer_supérieur</h1>
+  <p>Avec cette fonction, vous pouvez créer un effet simple au-dessus de toutes les instances de votre pièce (il est en fait créé à une profondeur de -100000). Si l'effet est autre que <tt>ef_rain</tt> ou <tt>ef_snow</tt>, vous pouvez définir une position x/y pour créer l'effet.
+    et la taille peut être une valeur de 0, 1 ou 2, où 0 est petit, 1 est moyen et 2 est grand.</p>
+  <p>Il est intéressant de noter que ces effets peuvent être activés et désactivés, et que leur dessin peut être mis en pause, en utilisant les fonctions <a href="Particle_Systems/part_system_automatic_draw.htm"><tt>part_system_automatic_draw()</tt></a> et
+    <a href="Particle_Systems/part_system_automatic_update.htm"><tt>part_system_automatic_update()</tt></a> avec la valeur appropriée pour l'indice du système de particules (où 0 correspond aux effets inférieurs et 1 aux effets supérieurs).</p>
+  <p>Les constantes disponibles pour les différents types de particules sont les suivantes :</p>
+  <table>
+    <tbody>
+      <tr>
+        <th>Constant</th>
+        <th>Exemple</th>
+        <th>Description</th>
+      </tr>
+      <tr>
+        <td>ef_cloud</td>
+        <td style="text-align: center"><img alt="cloud effect example" class="icon" src="../../../../assets/Images/Scripting_Reference/GML/Reference/Drawing/ef_cloud.png" /></td>
+        <td>Un effet qui crée des particules de nuage aléatoires de différentes tailles.</td>
+      </tr>
+      <tr>
+        <td>ef_ellipse</td>
+        <td style="text-align: center"><img alt="ellipse effect example" class="icon" src="../../../../assets/Images/Scripting_Reference/GML/Reference/Drawing/ef_ellipse.png" /></td>
+        <td>Un effet qui crée des ellipses en expansion</td>
+      </tr>
+      <tr>
+        <td>ef_explosion</td>
+        <td style="text-align: center"><img alt="explosion effect example" class="icon" src="../../../../assets/Images/Scripting_Reference/GML/Reference/Drawing/ef_explosion.png" /></td>
+        <td>Un effet qui crée des explosions en expansion qui s'estompent</td>
+      </tr>
+      <tr>
+        <td>ef_firework</td>
+        <td style="text-align: center"><img alt="firework effect example" class="icon" src="../../../../assets/Images/Scripting_Reference/GML/Reference/Drawing/ef_firework.png" /></td>
+        <td>Un effet qui crée de multiples petites particules pour générer une explosion de feu d'artifice.</td>
+      </tr>
+      <tr>
+        <td>ef_flare</td>
+        <td style="text-align: center"><img alt="flare effect example" class="icon" src="../../../../assets/Images/Scripting_Reference/GML/Reference/Drawing/ef_flare.png" /></td>
+        <td>Un effet qui génère un point brillant qui s'allume et s'éteint.</td>
+      </tr>
+      <tr>
+        <td>ef_rain</td>
+        <td style="text-align: center"><img alt="rain effect example" class="icon" src="../../../../assets/Images/Scripting_Reference/GML/Reference/Drawing/ef_rain.png" /></td>
+        <td>Un effet qui génère des particules de pluie descendant du haut de l'écran.</td>
+      </tr>
+      <tr>
+        <td>ef_ring</td>
+        <td style="text-align: center"><img alt="circle effect example" class="icon" src="../../../../assets/Images/Scripting_Reference/GML/Reference/Drawing/ef_ring.png" /></td>
+        <td>Un effet qui génère des cercles en expansion et en décroissance</td>
+      </tr>
+      <tr>
+        <td>ef_smoke</td>
+        <td style="text-align: center"><img alt="smoke effect example" class="icon" src="../../../../assets/Images/Scripting_Reference/GML/Reference/Drawing/ef_smoke.png" /></td>
+        <td>Un effet qui génère de petites bouffées de fumée.</td>
+      </tr>
+      <tr>
+        <td>ef_smokeup</td>
+        <td style="text-align: center"><img alt="rising smoke effect example" class="icon" src="../../../../assets/Images/Scripting_Reference/GML/Reference/Drawing/ef_smokeup.png" /></td>
+        <td>Un effet qui crée un panache de fumée qui monte à l'écran.</td>
+      </tr>
+      <tr>
+        <td>ef_snow</td>
+        <td style="text-align: center"><img alt="snow effect example" class="icon" src="../../../../assets/Images/Scripting_Reference/GML/Reference/Drawing/ef_snow.png" /></td>
+        <td>Un effet qui génère de multiples particules de neige tombant sur l'écran.</td>
+      </tr>
+      <tr>
+        <td>ef_spark</td>
+        <td style="text-align: center"><img alt="spark effect example" class="icon" src="../../../../assets/Images/Scripting_Reference/GML/Reference/Drawing/ef_spark.png" /></td>
+        <td>Un effet qui génère une petite étincelle</td>
+      </tr>
+      <tr>
+        <td>ef_star</td>
+        <td style="text-align: center"><img alt="star effect example" class="icon" src="../../../../assets/Images/Scripting_Reference/GML/Reference/Drawing/ef_star.png" /></td>
+        <td>Un effet qui génère des particules d'étoiles</td>
+      </tr>
+    </tbody>
+  </table>
+  <p> </p>
+  <h4>Syntaxe :</h4>
+  <p class="code">effet_create_above(kind, x, y, size, colour) ;</p>
+  <table>
+    <tbody>
+      <tr>
+        <th>Arguments</th>
+        <th>Description</th>
+      </tr>
+      <tr>
+        <td>genre</td>
+        <td>Le type d'effet (utilisez l'une des constantes énumérées<span> ci-dessus</span>).</td>
+      </tr>
+      <tr>
+        <td>x</td>
+        <td>Le positionnement x de l'effet, le cas échéant.</td>
+      </tr>
+      <tr>
+        <td>y</td>
+        <td>Le positionnement y de l'effet, le cas échéant.</td>
+      </tr>
+      <tr>
+        <td>taille</td>
+        <td>L'ampleur de l'effet.</td>
+      </tr>
+      <tr>
+        <td>couleur</td>
+        <td>La couleur de l'effet.</td>
+      </tr>
+    </tbody>
+  </table>
+  <p> </p>
+  <h4>Les retours :</h4>
+  <p class="code">N/A</p>
+  <p> </p>
+  <h4>Exemple :</h4>
+  <p class="code">if health &lt;= 0<br> {
+    <br> effect_create_above(ef_explosion, x, y, 1, c_yellow) ;<br> instance_destroy() ;
+    <br> }
+  </p>
+  <p>Le code ci-dessus créera une explosion moyenne, jaune, au-dessus de l'instance et la détruira si la variable &quot;health&quot; est inférieure ou égale à 0.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <div class="footer">
+    <div class="buttons">
+      <div class="clear">
+        <div style="float:left">Retour : <a href="Particles.htm">Particules</a></div>
+        <div style="float:right">Suivant : <a href="effect_clear.htm">effect_clear</a></div>
+      </div>
+    </div>
+    <h5><span data-keyref="Copyright Notice">Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
   </div>
   <!-- KEYWORDS
 effect_create_above

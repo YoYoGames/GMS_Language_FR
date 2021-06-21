@@ -3,17 +3,63 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>buffer_compress</title>
+  <title>tampon_compressé</title>
   <meta name="generator" content="Adobe RoboHelp 2019" />
   <link rel="stylesheet" href="../../../assets/css/default.css" type="text/css" />
   <meta name="rh-authors" content="Mark Alexander" />
-  <meta name="topic-comment" content="Page de référence pour buffer_compress" />
+  <meta name="topic-comment" content="Reference page for buffer_compress" />
   <meta name="rh-index-keywords" content="buffer_compress" />
   <meta name="search-keywords" content="buffer_compress" />
 </head>
-<body><!--<div class="body-scroll" style="top: 150px;">--><h1>buffer_compress</h1><p> Avec cette fonction, vous pouvez compresser une partie (ou la totalité) d&#39;un tampon en utilisant la <a href="https://en.wikipedia.org/wiki/Zlib">compression zlib</a>. Vous fournissez l&#39;ID du tampon à compresser (tel que renvoyé par <a href="buffer_create.htm"><tt>buffer_create()</tt></a> ), le décalage dans le tampon à utiliser en octets et la taille des données du tampon à compresser (également en octets). La fonction renvoie une nouvelle valeur d&#39;ID de tampon pour le tampon compressé, ou une valeur inférieure à 0 si elle a échoué pour une raison quelconque. Cette fonction ne modifiera pas le tampon d&#39;origine.</p><p></p><h4> Syntaxe:</h4><p class="code">buffer_compress(buffer, offset, size);</p><table><tbody><tr><th> Argument</th><th> Description</th></tr><tr><td> <span class="notranslate">buffer</span></td><td> L&#39;index du tampon à compresser.</td></tr><tr><td> <span class="notranslate">offset</span></td><td> Le décalage dans le tampon à compresser (en octets).</td></tr><tr><td> <span class="notranslate">size</span></td><td> La taille de la zone tampon à compresser (en octets).</td></tr></tbody></table><p></p><h4> Retour:</h4><p class="code">Int (Buffer ID value)</p><p></p><h4> Exemple:</h4><p class="code">var srcBuff = buffer_create(1024, buffer_grow, 1);<br/> buffer_write(srcBuff, global.DataString);<br/> var cmpBuff = buffer_compress(srcBuff, 0, buffer_tell(srcBuff));<br/> buffer_save(cmpBuff, &quot;Player_Save.sav&quot;);<br/> buffer_delete(srcBuff);
-    <br/> buffer_delete(cmpBuff);
-  </p><p> Le code ci-dessus créera un tampon puis le remplira avec les données d&#39;une chaîne. Ce tampon est ensuite compressé et enregistré, et les tampons source et compressé sont supprimés </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> Retour: <a href="Buffers.htm">Tampons</a></div><div style="float:right"> Suivant:<a href="buffer_decompress.htm">buffer_decompress</a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
+<body>
+  <!--<div class="body-scroll" style="top: 150px;">-->
+  <h1>tampon_compressé</h1>
+  <p>Avec cette fonction, vous pouvez compresser une partie (ou la totalité) d'un tampon en utilisant la <a href="https://en.wikipedia.org/wiki/Zlib">compression zlib</a>. Vous fournissez l'ID du tampon à compresser (tel que renvoyé par la fonction <a href="buffer_create.htm"><tt>buffer_create()</tt></a>),
+    le décalage dans le tampon à utiliser en octets, et la taille des données du tampon à compresser (également en octets). La fonction renverra une nouvelle valeur d'ID de tampon pour le tampon compressé, ou une valeur inférieure à 0 si elle a échoué pour une raison quelconque. Cette fonction
+    ne modifiera pas le tampon d'origine.</p>
+  <p> </p>
+  <h4>Syntaxe :</h4>
+  <p class="code">buffer_compress(buffer, offset, size) ;</p>
+  <table>
+    <tbody>
+      <tr>
+        <th>Arguments</th>
+        <th>Description</th>
+      </tr>
+      <tr>
+        <td>tampon</td>
+        <td>L'index du tampon à compresser.</td>
+      </tr>
+      <tr>
+        <td>décalage</td>
+        <td>Le décalage dans le tampon à compresser (en octets).</td>
+      </tr>
+      <tr>
+        <td>taille</td>
+        <td>La taille de la zone tampon à compresser (en octets).</td>
+      </tr>
+    </tbody>
+  </table>
+  <p> </p>
+  <h4>Les retours :</h4>
+  <p class="code">Int (valeur de l'ID du tampon)</p>
+  <p> </p>
+  <h4>Exemple :</h4>
+  <p class="code">var srcBuff = buffer_create(1024, buffer_grow, 1) ;<br> buffer_write(srcBuff, global.DataString) ;<br> var cmpBuff = buffer_compress(srcBuff, 0, buffer_tell(srcBuff)) ;<br> buffer_save(cmpBuff, &quot;Player_Save.sav&quot;) ;<br> buffer_delete(srcBuff) ;
+    <br> buffer_delete(cmpBuff) ;
+  </p>
+  <p>Le code ci-dessus va créer un tampon puis le remplir avec les données d'une chaîne. Ce tampon est ensuite compressé et sauvegardé, puis les tampons source et compressé sont supprimés.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <div class="footer">
+    <div class="buttons">
+      <div class="clear">
+        <div style="float:left">Retour : <a href="Buffers.htm">Tampons</a></div>
+        <div style="float:right">Suivant : <a href="buffer_decompress.htm">buffer_decompress</a></div>
+      </div>
+    </div>
+    <h5><span data-keyref="Copyright Notice">Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
   </div>
   <!-- KEYWORDS
 buffer_compress

@@ -7,27 +7,76 @@
   <meta name="generator" content="Adobe RoboHelp 2019" />
   <link rel="stylesheet" href="../../../../../assets/css/default.css" type="text/css" />
   <meta name="rh-authors" content="Mark Alexander" />
-  <meta name="topic-comment" content="Page décrivant la fonction layer_script_begin" />
+  <meta name="topic-comment" content="Page outlining the function layer_script_begin" />
   <meta name="rh-index-keywords" content="layer_script_begin" />
   <meta name="search-keywords" content="layer_script_begin" />
 </head>
-<body><!--<div class="body-scroll" style="top: 150px;">--><h1>layer_script_begin</h1><p> Avec cette fonction, vous pouvez attribuer une <a href="../../../../GML_Overview/Script_Functions.htm">fonction de script</a> à une couche et elle sera appelée avant que la couche ne soit rendue. Lors de l&#39;ajout d&#39;une fonction à un calque, de cette façon, elle sera exécutée au début de <i>chacun des différents événements de</i> dessin.Vous voudrez peut-être vérifier dans la fonction affectée quel événement est actuellement rendu et adapter le code en conséquence. Cela peut être fait en vérifiant le <a href="../../Objects/Object_Events/event_type.htm"><tt>event_type</tt></a> et / ou le <a href="../../Objects/Object_Events/event_number.htm"><tt>event_number</tt></a> (voir l&#39;exemple étendu ci-dessous). Notez que la fonction n&#39;est <i>pas</i> destinée à être appelée dans des événements de dessin ou d&#39;étape, mais doit plutôt être appelée au début de la salle dans le <strong>code de création de salle</strong> ou dans l&#39; <strong>événement Créer un événement</strong> / <strong>début de salle</strong> d&#39;une instance.</p><p></p><h4> Syntaxe:</h4><p class="code">layer_script_begin(layer_id, script);</p><table><tbody><tr><th> Argument</th><th> Description</th></tr><tr><td> <span class="notranslate">layer_id</span></td><td> La valeur d&#39;ID unique du calque à cibler (ou le nom du calque sous forme de chaîne)</td></tr><tr><td> <span class="notranslate">script</span></td><td> L&#39;index de la fonction de script à affecter au calque</td></tr></tbody></table><p></p><h4> Retour:</h4><p class="code">N/A</p><p></p><h4> Exemple étendu:</h4><p> Dans cet exemple étendu, nous allons d&#39;abord vous montrer comment une fonction de script simple est structurée pour définir des <span class="notranslate">shader</span> sorte que lorsque la couche donnée est dessinée, cette fonction sera exécutée et le <span class="notranslate">shader</span> fonctionnera correctement. Dans l&#39;exemple, il convient de noter comment nous vérifions quel événement est appelé afin que le reste de la fonction ne soit exécuté que sur l&#39;événement spécifique sur lequel nous en avons besoin pour travailler - dans ce cas, uniquement sur l&#39;événement de tirage principal:</p><p class="code">/// @function layer_shader_start();<br/> function layer_shader_start()
-    <br/> {
-    <br/> if event_type == ev_draw<br/>    {
-    <br/>    if event_number == 0<br/>       {
-    <br/>       colour_to_find = shader_get_uniform(sShaderDemo5, &quot;f_Colour1&quot;);<br/>       colour_to_set = shader_get_uniform(sShaderDemo5, &quot;f_Colour2&quot;);<br/>       shader_set(s_ColourChanger);
-    <br/>       shader_set_uniform_f(colour_to_find, 1,1,1 );<br/>       shader_set_uniform_f(colour_to_set, 1,0,0 );<br/>       }
-    <br/>    }
-    <br/> }
-  </p><p> Nous aurions alors une fonction compagnon pour réinitialiser le <span class="notranslate">shader</span> fois le dessin terminé:</p><p class="code">/// @function layer_shader_end();<br/> function layer_shader_end()
-    <br/> {
-    <br/> if event_type == ev_draw<br/>    {
-    <br/>    if event_number == 0<br/>       {
-    <br/>       shader_reset();
-    <br/>       }
-    <br/>    }
-    <br/> }
-  </p><p> Maintenant que nous avons défini nos fonctions de script pour définir le <span class="notranslate">shader</span>, nous devons ensuite les affecter à un calque spécifique afin que le calque sache les appeler. Cela serait fait dans le code de création de salle, ou dans l&#39;événement de création ou l&#39;événement de début de salle d&#39;un objet contrôleur (ils n&#39;ont pas besoin d&#39;être définis à chaque étape, mais plutôt une fois au début de la salle, ou lorsque la couche est initialement créé):</p><p class="code">var lay_id = layer_get_id(&quot;Instances&quot;);<br/> layer_script_begin(lay_id, layer_shader_start);<br/> layer_script_end(lay_id, layer_shader_end);</p><p> Ce dernier bloc de code affecte les scripts à la couche. </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> Retour: <a href="General_Layer_Functions.htm">Fonctions générales des calques</a></div><div style="float:right"> Suivant:<a href="layer_script_end.htm">layer_script_end</a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
+<body>
+  <!--<div class="body-scroll" style="top: 150px;">-->
+  <h1>layer_script_begin</h1>
+  <p>Avec cette fonction, vous pouvez attribuer une <a href="../../../../GML_Overview/Script_Functions.htm">fonction de script</a> à un calque et elle sera appelée avant le rendu du calque. Lorsque vous ajoutez une fonction à un calque, de cette manière, elle sera exécutée au début de chacun des différents événements de dessin.
+    de <i>chacun des différents événements de dessin</i>. Vous pouvez donc vérifier dans la fonction assignée quel événement est en cours de rendu et adapter le code en conséquence. Cela peut être fait en vérifiant les paramètres <a href="../../Objects/Object_Events/event_type.htm"><tt>event_type</tt></a>    et/ou la fonction <a href="../../Objects/Object_Events/event_number.htm"><tt>numéro_de_l'événement</tt></a> (voir l'exemple étendu ci-dessous). Notez que la fonction <i>n'est pas</i> censée être appelée dans les événements de dessin ou les événements d'étape, mais qu'elle doit être appelée uniquement
+    au début de la pièce dans le <strong>code de création de pièce</strong> ou dans l'<strong>événement de création </strong>/ <strong>événement de début de pièce</strong> d'une instance.</p>
+  <p> </p>
+  <h4>Syntaxe :</h4>
+  <p class="code">layer_script_begin(layer_id, script) ;</p>
+  <table>
+    <tbody>
+      <tr>
+        <th>Arguments</th>
+        <th>Description</th>
+      </tr>
+      <tr>
+        <td>identifiant de la couche</td>
+        <td>La valeur d'identification unique de la couche à cibler (ou le nom de la couche sous forme de chaîne).</td>
+      </tr>
+      <tr>
+        <td>script</td>
+        <td>L'index de la fonction de script à affecter à la couche</td>
+      </tr>
+    </tbody>
+  </table>
+  <p> </p>
+  <h4>Les retours :</h4>
+  <p class="code">N/A</p>
+  <p> </p>
+  <h4>Exemple étendu :</h4>
+  <p>Dans cet exemple étendu, nous allons d'abord vous montrer comment une simple fonction de script est structurée pour définir certaines données uniformes du <span class="notranslate">shader de</span> sorte que lorsque la couche donnée est dessinée, cette fonction sera exécutée et le <span class="notranslate">shader</span> fonctionnera correctement. Dans l'exemple, il est intéressant de
+    Dans l'exemple, il est intéressant de noter comment nous vérifions quel événement est appelé afin que le reste de la fonction ne soit exécuté que sur l'événement spécifique sur lequel nous voulons qu'elle fonctionne - dans ce cas, uniquement sur l'événement principal de dessin :</p>
+  <p class="code">/// @function layer_shader_start() ;<br> function layer_shader_start()
+    <br> {
+    <br> if event_type == ev_draw<br> {
+    <br> if event_number == 0<br> {
+    <br> colour_to_find = <span class="notranslate">shader_get_uniform</span>(sShaderDemo5, &quot;f_Colour1&quot;) ;<br> colour_to_set = shader_get_uniform(sShaderDemo5<span class="notranslate">, &quot;f_Colour2</span>&quot;) ;<br> shader_set(s_ColourChanger) ;
+    <br> <span class="notranslate">shader_set_uniform_f</span>(colour_to_find, 1,1,1 ) ;<br> <span class="notranslate">shader_set_uniform_f</span>(colour_to_set, 1,0,0 ) ;<br> }
+    <br> }
+    <br> }
+  </p>
+  <p>Nous aurions alors une fonction complémentaire pour réinitialiser le <span class="notranslate">shader</span> une fois le dessin terminé :</p>
+  <p class="code">/// @function layer_shader_end() ;<br> function layer_shader_end()
+    <br> {
+    <br> if event_type == ev_draw<br> {
+    <br> if event_number == 0<br> {
+    <br> <span class="notranslate">shader_reset</span>() ;
+    <br> }
+    <br> }
+    <br> }
+  </p>
+  <p>Maintenant que nous avons défini nos fonctions de script pour le réglage du <span class="notranslate">shader</span>, nous devons les affecter à un calque spécifique afin que ce dernier sache comment les appeler. Cela peut être fait dans le code de création de la pièce, ou dans l'événement de création ou l'événement de démarrage de la pièce d'un objet contrôleur.
+    (il n'est pas nécessaire de les définir à chaque étape, mais plutôt une fois au début de la pièce, ou lorsque la couche est initialement créée) :</p>
+  <p class="code">var lay_id = layer_get_id(&quot;Instances&quot;) ;<br> layer_script_begin(lay_id, layer_shader_start<span class="notranslate">) ;</span><br> layer_script_end(lay_id, layer_shader_end<span class="notranslate">) ;</span></p>
+  <p>Ce dernier bloc de code affecte les scripts à la couche.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <div class="footer">
+    <div class="buttons">
+      <div class="clear">
+        <div style="float:left">Retour : <a href="General_Layer_Functions.htm">Fonctions générales des couches</a></div>
+        <div style="float:right">Suivant : <a href="layer_script_end.htm">layer_script_end</a></div>
+      </div>
+    </div>
+    <h5><span data-keyref="Copyright Notice">Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
   </div>
   <!-- KEYWORDS
 layer_script_begin

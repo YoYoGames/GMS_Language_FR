@@ -7,17 +7,75 @@
   <meta name="generator" content="Adobe RoboHelp 2019" />
   <link rel="stylesheet" href="../../../assets/css/default.css" type="text/css" />
   <meta name="rh-authors" content="Mark Alexander" />
-  <meta name="topic-comment" content="Page de référence pour os_check_permission" />
+  <meta name="topic-comment" content="Reference page for os_check_permission" />
   <meta name="rh-index-keywords" content="os_check_permission,os_permission_granted,os_permission_denied,os_permission_denied_dont_request" />
   <meta name="search-keywords" content="os_check_permission,os_permission_granted,os_permission_denied,os_permission_denied_dont_request" />
 </head>
-<body><!--<div class="body-scroll" style="top: 150px;">--><h1>os_check_permission</h1><p> Avec cette fonction, vous pouvez vérifier si une autorisation spécifique a été accordée au jeu par l&#39;utilisateur. Vous fournissez l&#39;autorisation de vérifier sous forme de chaîne en utilisant le format &quot;<tt>android.permission.&lt;permission&gt;</tt> &quot;, afin de vérifier le <tt>RECORD_AUDIO</tt> permission (par exemple) que vous appelleriez</p><p class="code">os_check_permission(&quot;android.permission.RECORD_AUDIO&quot;);</p><p> La fonction retournera retournera l&#39;une des trois constantes - illustrées ci-dessous - pour indiquer au jeu comment l&#39;état de l&#39;autorisation. Pour plus d&#39;informations sur les autorisations des applications, veuillez consulter la <a href="https://developer.android.com/guide/topics/permissions/overview"
-      target="_blank">documentation <span class="notranslate">Android</span></a>.</p><p class="note"> <b>IMPORTANT!</b> Cette fonction est uniquement <b><span class="notranslate">Android</span></b></p><p></p><h4> Syntaxe:</h4><p class="code">os_check_permission(permission)</p><table><tbody><tr><th> Argument</th><th> Description</th></tr><tr><td> <span class="notranslate">permission</span></td><td> La permission de vérifier (une chaîne)</td></tr></tbody></table><p></p><h4> Retour:</h4><p class="code">Constant</p><table><tbody><tr><th> Constant</th><th> Description</th></tr><tr><td> <span class="notranslate">os_permission_granted</span></td><td> Cela indique que l&#39;autorisation a été accordée</td></tr><tr><td> <span class="notranslate">os_permission_denied</span></td><td> Cela indique que l&#39;autorisation n&#39;a pas été accordée</td></tr><tr><td> <span class="notranslate">os_permission_denied_dont_request</span></td><td> Cela indique que l&#39;autorisation a été bloquée par les paramètres du téléphone ou que l&#39;utilisateur a précédemment refusé la demande et sélectionné &quot;Ne plus demander&quot;.</td></tr></tbody></table><p></p><h4> Exemple:</h4><p class="code">if (os_type == os_android)<br/>     {
-    <br/>     if (os_check_permission(&quot;android.permission.INTERNET&quot;) == os_permission_denied)<br/>         {
-    <br/>         os_request_permission(&quot;android.permission.INTERNET&quot;);
-    <br/>         }
-    <br/>     }
-  </p><p> Le code ci-dessus vérifie le type de système d&#39;exploitation et s&#39;il s&#39;agit d&#39; <span class="notranslate">Android</span>, il effectue une vérification des autorisations et si l&#39;autorisation &quot;INTERNET&quot; n&#39;a pas encore été accordée, il la demande. </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> Retour: <a href="OS_And_Compiler.htm">OS et compilateur</a></div><div style="float:right"> Suivant:<a href="os_request_permission.htm">os_request_permission</a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
+<body>
+  <!--<div class="body-scroll" style="top: 150px;">-->
+  <h1>os_check_permission</h1>
+  <p>Avec cette fonction, vous pouvez vérifier si une permission spécifique a été accordée au jeu par l'utilisateur. Vous fournissez la permission à vérifier sous forme de chaîne de caractères en utilisant le format &quot; android<tt>.permission.&lt;permission&gt; &quot;, ainsi pour</tt> vérifier la <tt>permission</tt> RECORD_AUDIO <tt>(</tt> par exemple) vous appellerez</p>
+  <p class="code">os_check_permission(&quot;android.permission.RECORD_AUDIO&quot;) ;</p>
+  <p>La fonction renverra l'une des trois constantes - indiquées ci-dessous - pour indiquer au jeu l'état de la permission. Pour plus d'informations sur les permissions des applications, veuillez consulter la <a href="https://developer.android.com/guide/topics/permissions/overview" target="_blank">documentation<span class="notranslate">Android</span></a>.</p>
+  <p class="note"><b>IMPORTANT !</b> Cette fonction est destinée à la <b><span class="notranslate">Android</span></b> cible uniquement.</p>
+  <p> </p>
+  <h4>Syntaxe :</h4>
+  <p class="code">os_check_permission(permission)</p>
+  <table>
+    <tbody>
+      <tr>
+        <th>Arguments</th>
+        <th>Description</th>
+      </tr>
+      <tr>
+        <td>autorisation</td>
+        <td>L'autorisation à vérifier (une chaîne de caractères)</td>
+      </tr>
+    </tbody>
+  </table>
+  <p> </p>
+  <h4>Les retours :</h4>
+  <p class="code">Constant</p>
+  <table>
+    <tbody>
+      <tr>
+        <th>Constant</th>
+        <th>Description</th>
+      </tr>
+      <tr>
+        <td>os_permission_granted</td>
+        <td>Cela indique que l'autorisation a été accordée</td>
+      </tr>
+      <tr>
+        <td>os_permission_denied</td>
+        <td>Cela indique que l'autorisation n'a pas été accordée</td>
+      </tr>
+      <tr>
+        <td>os_permission_denied_dont_request</td>
+        <td>Cela indique que l'autorisation a été bloquée par les paramètres du téléphone, ou que l'utilisateur a précédemment refusé la demande et sélectionné &quot;Ne plus demander&quot;.</td>
+      </tr>
+    </tbody>
+  </table>
+  <p> </p>
+  <h4>Exemple :</h4>
+  <p class="code">if (os_type == os_android)<br> {
+    <br> if (os_check_permission(&quot;android.permission.INTERNET&quot;) == os_permission_denied)<br> {
+    <br> os_request_permission(&quot;android.permission.INTERNET&quot;) ;
+    <br> }
+    <br> }
+  </p>
+  <p>Le code ci-dessus vérifie le type de système d'exploitation et s'il s'agit d'<span class="notranslate">Android</span>, il effectue une vérification des permissions et si la permission &quot;INTERNET&quot; n'a pas encore été accordée, il la demande.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <div class="footer">
+    <div class="buttons">
+      <div class="clear">
+        <div style="float:left">Retour : <a href="OS_And_Compiler.htm">Système d'exploitation et compilateur</a></div>
+        <div style="float:right">Suivant : <a href="os_request_permission.htm">os_request_permission</a></div>
+      </div>
+    </div>
+    <h5><span data-keyref="Copyright Notice">Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
   </div>
   <!-- KEYWORDS
 os_check_permission

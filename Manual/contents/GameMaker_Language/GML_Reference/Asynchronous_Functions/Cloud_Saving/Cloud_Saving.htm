@@ -3,15 +3,42 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>Économie dans le cloud</title>
+  <title>Sauvegarde des nuages</title>
   <meta name="generator" content="Adobe RoboHelp 2019" />
   <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
   <meta name="rh-authors" content="Mark Alexander" />
-  <meta name="topic-comment" content="Section de référence pour toutes les fonctions Cloud Saving" />
+  <meta name="topic-comment" content="Reference section for all the Cloud Saving functions" />
   <meta name="rh-index-keywords" content="" />
-  <meta name="search-keywords" content="Économie dans le cloud" />
+  <meta name="search-keywords" content="Cloud Saving" />
 </head>
-<body><!--<div class="body-scroll" style="top: 150px;">--><h1> Économie dans le cloud</h1><p> Lors de la création de jeux, il est souvent nécessaire de stocker des informations sur l&#39;état du jeu dans un fichier d&#39;un certain type, mais stocker ces informations sur l&#39;appareil n&#39;est pas toujours la meilleure option car, si le joueur supprimait le jeu puis le réinstalle, cela des informations peuvent être perdues. Pour éviter cela, vous pouvez utiliser différents <b>services cloud</b>, qui offrent un stockage de données sur Internet pour la récupération et la modification à tout moment. Notez que cette fonction est limitée à <b>un</b> seul &quot;blob&quot; de données par jeu, donc chaque fois que vous envoyez une nouvelle sauvegarde au service cloud, qu&#39;il s&#39;agisse d&#39;une chaîne ou d&#39;un fichier, elle écrasera toutes les données précédemment stockées.</p><p class="note"> <b>REMARQUE:</b> actuellement, seule la <b><span class="notranslate">Android</span></b> utilise ces fonctions et vous devez cocher la <b>case Activer Google Cloud Saving</b> dans la section <b>Social</b> <a href="../../../../Settings/Game_Options/Android.htm">des options de jeu</a> <span class="notranslate">Android</span>. Cela vous invitera à télécharger l&#39; <a href="https://marketplace.yoyogames.com/assets/2008/google-play-services" target="_blank">extension Google Services</a>, qui est requise pour que l&#39;enregistrement dans le cloud sur <span class="notranslate">Android</span> fonctionne. Pour plus d&#39;informations sur Cloud Saving, veuillez consulter l&#39;article suivant du service d&#39;assistance: <a href="https://help.yoyogames.com/hc/en-us/articles/360003087452"><span class="notranslate">Android</span> Cloud Saving</a></p><p> <span class="notranslate">GameMaker Studio 2</span> prend en charge cela avec quelques fonctions simples qui fonctionnent en conjonction avec l&#39; <a href="../../../../The_Asset_Editors/Object_Properties/Async_Events/Cloud.htm">événement Asynchronous Cloud</a>. Ces fonctions sont expliquées dans les pages suivantes: </p><p></p><ul class="colour"><li><a href="cloud_synchronise.htm">cloud_synchronise</a></li><li><a href="cloud_string_save.htm">cloud_string_save</a></li><li><a href="cloud_file_save.htm">cloud_file_save</a></li></ul><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> Retour: <a href="../Asynchronous_Functions.htm">Fonctions asynchrones</a></div><div style="float:right"> Suivant: <a href="../Push_Notifications/Push_Notifications.htm">Notifications push</a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
+<body>
+  <!--<div class="body-scroll" style="top: 150px;">-->
+  <h1>Sauvegarde des nuages</h1>
+  <p>Lors de la création de jeux, il est souvent nécessaire de stocker des informations sur l'état du jeu dans un fichier quelconque, mais stocker ces informations sur l'appareil n'est pas toujours la meilleure option car, si le joueur supprime le jeu et le réinstalle ensuite, ces informations peuvent être perdues.
+    peuvent être perdues. Pour éviter cela, vous pouvez utiliser différents <b>services en nuage</b>, qui permettent de stocker des données sur Internet afin de les récupérer et de les modifier à tout moment. Vous devez noter que cette fonction est limitée à <b>un</b> seul "blob" de données par jeu.
+    Vous devez noter que cette fonction est limitée à un seul &quot;blob&quot; de données par jeu, de sorte que chaque fois que vous envoyez une nouvelle sauvegarde au service en nuage, qu'il s'agisse d'une chaîne ou d'un fichier, elle écrasera toutes les données précédemment stockées.</p>
+  <p class="note"><b>REMARQUE : </b>Actuellement, seule la cible <b><span class="notranslate">Android</span></b> cible utilise ces fonctions, et vous devez cocher la case <b>Activer la sauvegarde dans le nuage de Google</b> dans la section <b>Sociale</b> 
+    des <a href="../../../../Settings/Game_Options/Android.htm">options du jeu</a> <span class="notranslate">Android</span>. Cela vous invitera à télécharger l'extension <a href="https://marketplace.yoyogames.com/assets/2008/google-play-services" target="_blank">Google Services</a>,
+    qui est nécessaire au fonctionnement de la sauvegarde dans le nuage sur <span class="notranslate">Android</span>. Pour plus d'informations sur la sauvegarde dans le nuage, veuillez consulter l'article suivant du service d'assistance : <a href="https://help.yoyogames.com/hc/en-us/articles/360003087452"><span class="notranslate">Android</span></a>Cloud Saving</p>
+  <p><span class="notranslate">GameMaker Studio 2</span> prend en charge cette fonction grâce à quelques fonctions simples qui fonctionnent conjointement avec l'<a href="../../../../The_Asset_Editors/Object_Properties/Async_Events/Cloud.htm">événement Asynchronous Cloud</a>. Ces fonctions
+    sont expliquées dans les pages suivantes :</p>
+  <p> </p>
+  <ul class="colour">
+    <li><a href="cloud_synchronise.htm">cloud_synchroniser</a></li>
+    <li><a href="cloud_string_save.htm">cloud_string_save</a></li>
+    <li><a href="cloud_file_save.htm">Sauvegarde du fichier dans le nuage</a></li>
+  </ul>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <div class="footer">
+    <div class="buttons">
+      <div class="clear">
+        <div style="float:left">Retour : <a href="../Asynchronous_Functions.htm">Fonctions asynchrones</a></div>
+        <div style="float:right">Suivant : <a href="../Push_Notifications/Push_Notifications.htm">Notifications push</a></div>
+      </div>
+    </div>
+    <h5><span data-keyref="Copyright Notice">Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
   </div>
   <!-- KEYWORDS
 Cloud Saving Functions

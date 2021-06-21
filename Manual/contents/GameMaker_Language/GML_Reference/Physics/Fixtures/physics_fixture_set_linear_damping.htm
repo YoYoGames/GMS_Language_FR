@@ -7,11 +7,54 @@
   <meta name="generator" content="Adobe RoboHelp 2019" />
   <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
   <meta name="rh-authors" content="Mark Alexander" />
-  <meta name="topic-comment" content="Page de référence pour physics_fixture_set_linear_damping" />
+  <meta name="topic-comment" content="Reference page for physics_fixture_set_linear_damping" />
   <meta name="rh-index-keywords" content="physics_fixture_set_linear_damping" />
   <meta name="search-keywords" content="physics_fixture_set_linear_damping" />
 </head>
-<body><!--<div class="body-scroll" style="top: 150px;">--><h1>physics_fixture_set_linear_damping</h1><p> L&#39;amortissement est utilisé pour réduire la vitesse du monde physique des instances, et diffère du frottement en ce que le frottement ne se produit que lorsque deux instances avec des fixations sont en contact. L&#39;amortissement est également beaucoup moins cher à simuler que le frottement, mais veuillez noter que l&#39;amortissement ne remplace pas le frottement; les deux effets peuvent et doivent être utilisés ensemble. Voici une image pour illustrer l&#39;amortissement:</p><p><img alt="Linear damping illustration" class="center" src="../../../../assets/Images/Scripting_Reference/GML/Reference/Physics/physics_fixture_set_linear_damping_image.png" /> Les paramètres d&#39;amortissement doivent être compris entre 0 et l&#39;infini, 0 signifiant aucun amortissement et l&#39;infini signifiant un amortissement complet. Normalement, vous utiliserez une valeur d&#39;amortissement comprise entre 0 et 1, mais vous pouvez utiliser n&#39;importe quelle valeur non négative si nécessaire.</p><p></p><h4> Syntaxe:</h4><p class="code">physics_fixture_set_linear_damping(fixture, damping)</p><table><tbody><tr><th> Argument</th><th> Description</th></tr><tr><td> <span class="notranslate">fixture</span></td><td> l&#39;index du luminaire</td></tr><tr><td> <span class="notranslate">damping</span></td><td> l&#39;amortissement du luminaire, généralement entre 0 et 1</td></tr></tbody></table><p></p><h4> Retour:</h4><p class="code">N/A</p><p></p><h4> Exemple:</h4><p class="code">physics_fixture_set_linear_damping(fix_Ball, 0.1);</p><p> Le code ci-dessus définira l&#39;amortissement linéaire de l&#39;appareil indexé dans &quot;fix_ball&quot; à 0,1. </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> Retour: <a href="Fixtures.htm">Fixtures</a></div><div style="float:right"> Suivant:<a href="physics_fixture_set_angular_damping.htm">physics_fixture_set_angular_damping</a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
+<body>
+  <!--<div class="body-scroll" style="top: 150px;">-->
+  <h1>physics_fixture_set_linear_damping</h1>
+  <p>L'amortissement est utilisé pour réduire la vitesse des instances dans le monde physique, et diffère de la friction en ce que la friction ne se produit que lorsque deux instances avec des fixtures sont en contact. L'amortissement est également beaucoup moins cher à simuler que la friction, mais veuillez noter que l'amortissement ne remplace pas la friction.
+    ne remplace pas la friction ; les deux effets peuvent, et doivent, être utilisés ensemble. Voici une image pour illustrer l'amortissement :</p>
+  <p><img alt="Linear damping illustration" class="center" src="../../../../assets/Images/Scripting_Reference/GML/Reference/Physics/physics_fixture_set_linear_damping_image.png">Les paramètres d'amortissement doivent être compris entre 0 et l'infini, 0 signifiant aucun amortissement,
+    et l'infini un amortissement total. Normalement, vous utiliserez une valeur d'amortissement comprise entre 0 et 1, mais vous pouvez utiliser toute valeur non négative si nécessaire.</p>
+  <p> </p>
+  <h4>Syntaxe :</h4>
+  <p class="code">physics_fixture_set_linear_damping(fixture, damping)</p>
+  <table>
+    <tbody>
+      <tr>
+        <th>Arguments</th>
+        <th>Description</th>
+      </tr>
+      <tr>
+        <td>L'appareil</td>
+        <td>l'indice du dispositif</td>
+      </tr>
+      <tr>
+        <td>amortissement</td>
+        <td>l'amortissement du dispositif, généralement entre 0 et 1</td>
+      </tr>
+    </tbody>
+  </table>
+  <p> </p>
+  <h4>Les retours :</h4>
+  <p class="code">N/A</p>
+  <p> </p>
+  <h4>Exemple :</h4>
+  <p class="code">physics_fixture_set_linear_damping(fix_Ball, 0.1) ;</p>
+  <p>Le code ci-dessus fixera l'amortissement linéaire de l'accessoire indexé dans &quot;fix_ball&quot; à 0.1.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <div class="footer">
+    <div class="buttons">
+      <div class="clear">
+        <div style="float:left">Retour : <a href="Fixtures.htm">Fixtures</a></div>
+        <div style="float:right">Suivant : <a href="physics_fixture_set_angular_damping.htm">physics_fixture_set_angular_damping</a></div>
+      </div>
+    </div>
+    <h5><span data-keyref="Copyright Notice">Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
   </div>
   <!-- KEYWORDS
 physics_fixture_set_linear_damping

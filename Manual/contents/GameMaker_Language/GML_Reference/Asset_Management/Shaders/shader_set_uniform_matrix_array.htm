@@ -7,20 +7,62 @@
   <meta name="generator" content="Adobe RoboHelp 2019" />
   <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
   <meta name="rh-authors" content="Mark Alexander" />
-  <meta name="topic-comment" content="Page décrivant la fonction shader _set_uniform_matrix_array" />
+  <meta name="topic-comment" content="Page outlining the function shader_set_uniform_matrix_array" />
   <meta name="rh-index-keywords" content="shader_set_uniform_matrix_array" />
   <meta name="search-keywords" content="shader_set_uniform_matrix_array" />
 </head>
-<body><!--<div class="body-scroll" style="top: 150px;">--><h1> <span class="notranslate">shader</span> _set_uniform_matrix_array</h1><p> Avec cette fonction, vous pouvez définir une <span class="notranslate">shader</span> pour contenir un tableau de valeurs de matrice. Vous devez au préalable avoir obtenu le &quot;handle&quot; de la constante en utilisant la fonction <a href="shader_get_uniform.htm"><tt>shader_get_uniform()</tt></a>, et vous devrez avoir préalablement initialisé le tableau comme un tableau de valeurs à virgule flottante, où chaque groupe successif de 16 flottants est une matrice 4x4.</p><p class="note"> <b>REMARQUE</b>: tous les uniformes doivent être définis <b>après avoir</b> appelé la fonction <span style="font-size:1px;"><a href="shader_set.htm"><tt style="font-size: 14px"><span class="notranslate">shader</span> _set ()</tt></a></span> et avant d&#39;appeler <span
-      style="font-size:1px;"><a href="shader_reset.htm"><tt style="font-size: 14px"><span class="notranslate">shader</span> _reset ()</tt></a></span>.</p><p></p><h4> Syntaxe:</h4><p class="code">shader_set_uniform_matrix_array(handle, array);</p><table><tbody><tr><th> Argument</th><th> Description</th></tr><tr><td> <span class="notranslate">handle</span></td><td> La poignée de la <span class="notranslate">shader</span> à définir.</td></tr><tr><td> <span class="notranslate">array</span></td><td> Un tableau précédemment initialisé de valeurs à virgule flottante.</td></tr></tbody></table><p></p><h4> Retour:</h4><p class="code">N/A</p><p></p><h4> Exemple:</h4><p class="code">shader_set(shader_Glass);<br/> shader_params = shader_get_uniform(shader_tint, &quot;cMatrixArray&quot;);<br/> shader_set_uniform_matrix_array(shader_params, matrix_array);<br/> draw_self();
-    <br/> shader_reset();
-  </p><p> Le code ci-dessus obtiendra le handle de la <span class="notranslate">shader</span> &quot;cMatrixArray&quot; puis définira cette constante sur le tableau donné. </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> Retour: <a href="Shaders.htm"><span class="notranslate">Shaders</span></a></div><div style="float:right"> Suivant: <a href="shader_reset.htm"><span class="notranslate">shader</span> _reset</a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
+<body>
+  <!--<div class="body-scroll" style="top: 150px;">-->
+  <h1><span class="notranslate">shader_set_uniform_matrix_array</span></h1>
+  <p>Avec cette fonction, vous pouvez définir une constante de <span class="notranslate">shader</span> pour contenir un tableau de valeurs de matrice. Vous devez auparavant avoir obtenu le &quot;handle&quot; de la constante en utilisant la fonction <a href="shader_get_uniform.htm"><tt><span class="notranslate">shader_get_uniform</span>()</tt></a>,
+    et vous devrez avoir préalablement initialisé le tableau comme un tableau de valeurs à virgule flottante, où chaque groupe successif de 16 flottants est une matrice 4x4.</p>
+  <p class="note"><b>NOTE</b>: Tous les uniformes doivent être définis <b>après avoir</b> appelé la fonction <span style="font-size:1px;"><a href="shader_set.htm"><tt style="font-size: 14px"><span class="notranslate">shader_set</span>()</tt></a></span>et avant d'appeler 
+    <span style="font-size:1px;"><a href="shader_reset.htm"><tt style="font-size: 14px"><span class="notranslate">shader_reset</span>()</tt></a></span>.</p>
+  <p> </p>
+  <h4>Syntaxe :</h4>
+  <p class="code"><span class="notranslate">shader_set_uniform_matrix_array</span>(handle, array) ;</p>
+  <table>
+    <tbody>
+      <tr>
+        <th>Arguments</th>
+        <th>Description</th>
+      </tr>
+      <tr>
+        <td>poignée</td>
+        <td>Le handle de la constante du <span class="notranslate">shader</span> à définir.</td>
+      </tr>
+      <tr>
+        <td>tableau</td>
+        <td>Un tableau de valeurs à virgule flottante préalablement initialisé.</td>
+      </tr>
+    </tbody>
+  </table>
+  <p> </p>
+  <h4>Les retours :</h4>
+  <p class="code">N/A</p>
+  <p> </p>
+  <h4>Exemple :</h4>
+  <p class="code"><span class="notranslate">shader_set</span><span class="notranslate">(shader_Glass</span>) ;<br> <span class="notranslate">shader_params</span>= <span class="notranslate">shader_get_uniform</span><span class="notranslate">(shader_tint</span>, &quot;cMatrixArray&quot;) ;<br> shader_set_uniform_matrix_array(shader_params<span class="notranslate">,</span> matrix_array) ;<br> draw_self() ;
+    <br> <span class="notranslate">shader_reset</span>() ;
+  </p>
+  <p>Le code ci-dessus obtiendra l'identifiant de la constante du <span class="notranslate">shader</span> &quot;cMatrixArray&quot; puis fixera cette constante au tableau donné.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <div class="footer">
+    <div class="buttons">
+      <div class="clear">
+        <div style="float:left">Retour : <a href="Shaders.htm"><span class="notranslate">Shaders</span></a></div>
+        <div style="float:right">Suivant : <a href="shader_reset.htm"><span class="notranslate">shader_reset</span></a></div>
+      </div>
+    </div>
+    <h5><span data-keyref="Copyright Notice">Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
   </div>
   <!-- KEYWORDS
-shader_set_uniform_matrix_array
+<span class="notranslate">shader</span>_set_uniform_matrix_array
 -->
   <!-- TAGS
-shader_set_uniform_matrix_array
+<span class="notranslate">shader</span>_set_uniform_matrix_array
 -->
 </body>
 </html>

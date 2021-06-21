@@ -3,16 +3,63 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>path_shift</title>
+  <title>chemin_décalage</title>
   <meta name="generator" content="Adobe RoboHelp 2019" />
   <link rel="stylesheet" href="../../../../../assets/css/default.css" type="text/css" />
   <meta name="rh-authors" content="Mark Alexander" />
-  <meta name="topic-comment" content="Page expliquant la fonction path_shift" />
+  <meta name="topic-comment" content="Page explaining the function path_shift" />
   <meta name="rh-index-keywords" content="path_shift" />
   <meta name="search-keywords" content="path_shift" />
 </head>
-<body><!--<div class="body-scroll" style="top: 150px;">--><h1>path_shift</h1><p> Avec cette fonction, vous pouvez déplacer un chemin le long de l&#39;axe horizontal et vertical. Veuillez noter que cela n&#39;aura aucun effet visible dans le jeu si l&#39;instance suivant le chemin en cours de déplacement le suit relativement (plutôt qu&#39;absolument) car la position du chemin est alors ignorée. <strong>Cette fonction modifie l&#39;actif du chemin réel</strong>, et affectera donc de manière permanente la façon dont le chemin est utilisé par toutes les instances du jeu à partir du moment où la fonction est utilisée jusqu&#39;à la fin du jeu. Si ce n&#39;est pas ce dont vous avez besoin, vous devez utiliser une fonction telle que <span class="inline"><a href="path_duplicate.htm">path_duplicate()</a></span> pour créer d&#39;abord une copie du chemin, puis appelez cette fonction sur l&#39;actif dupliqué (n&#39;oubliez pas d&#39;appeler <span
-      class="inline"><a href="path_delete.htm">path_delete ()</a></span> sur l&#39;actif lorsqu&#39;il n&#39;est plus nécessaire).</p><p></p><h4> Syntaxe:</h4><p class="code">path_shift(index, xshift, yshift);</p><table><tbody><tr><th> Argument</th><th> Description</th></tr><tr><td> <span class="notranslate">index</span></td><td> L&#39;index du chemin à changer.</td></tr><tr><td> <span class="notranslate">xshift</span></td><td> Le nombre de pixels horizontaux pour décaler le chemin. Négatif = gauche, positif = droite.</td></tr><tr><td> <span class="notranslate">yshift</span></td><td> Le nombre de pixels verticaux pour décaler le chemin. Négatif = haut, positif = bas.</td></tr></tbody></table><p></p><h4> Retour:</h4><p class="code">N/A</p><p></p><h4> Exemple:</h4><p class="code">my_path = path_duplicate(pth_AI);<br/> path_shift(my_path, 50, 50);<br/> path_start(my_path, 4, path_action_reverse, true);</p><p> Le code ci-dessus duplique un élément de chemin et stocke sa valeur d&#39;identification dans une variable. Cette variable est ensuite utilisée pour décaler la position du chemin dupliqué, puis l&#39;instance démarre le chemin. </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> Retour: <a href="Path_Manipulation.htm">Manipulation de chemin</a></div><div style="float:right"> Suivant:<a href="../Path_Variables/path_index.htm">path_index</a></div><div style="float:right"></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
+<body>
+  <!--<div class="body-scroll" style="top: 150px;">-->
+  <h1>chemin_décalage</h1>
+  <p>Avec cette fonction, vous pouvez déplacer un chemin le long de l'axe horizontal et vertical. Veuillez noter que cela n'aura aucun effet visible dans le jeu si l'instance qui suit le chemin décalé le suit de manière relative (plutôt qu'absolue) car la position du chemin n'est alors pas prise en compte.
+    du chemin n'est pas prise en compte dans ce cas. <strong>Cette fonction modifie l'actif réel du chemin</strong>, et affectera donc de façon permanente la façon dont le chemin est utilisé par toutes les instances du jeu, depuis le moment où la fonction est utilisée jusqu'à la fin du jeu. Si ce n'est pas
+    pas ce dont vous avez besoin, utilisez une fonction comme <span class="inline"><a href="path_duplicate.htm">path_duplicate()</a></span> pour créer d'abord une copie du chemin, puis appelez cette fonction sur l'actif dupliqué (n'oubliez pas d'appeler la fonction
+    <span class="inline"><a href="path_delete.htm">path_delete()</a></span> sur la ressource lorsqu'elle n'est plus nécessaire).</p>
+  <p> </p>
+  <h4>Syntaxe :</h4>
+  <p class="code">path_shift(index, xshift, yshift) ;</p>
+  <table>
+    <tbody>
+      <tr>
+        <th>Arguments</th>
+        <th>Description</th>
+      </tr>
+      <tr>
+        <td>indice</td>
+        <td>L'index du chemin à modifier.</td>
+      </tr>
+      <tr>
+        <td>xshift</td>
+        <td>Le nombre de pixels horizontaux pour décaler le chemin. Négatif=gauche, positif=droite.</td>
+      </tr>
+      <tr>
+        <td>yshift</td>
+        <td>Le nombre de pixels verticaux pour décaler le chemin. Négatif=haut, positif=bas.</td>
+      </tr>
+    </tbody>
+  </table>
+  <p> </p>
+  <h4>Les retours :</h4>
+  <p class="code">N/A</p>
+  <p> </p>
+  <h4>Exemple :</h4>
+  <p class="code">my_path = path_duplicate(pth_AI) ;<br> path_shift(my_path, 50, 50) ;<br> path_start(my_path, 4, path_action_reverse, true) ;</p>
+  <p>Le code ci-dessus duplique un actif de chemin et stocke sa valeur ID dans une variable. Cette variable est ensuite utilisée pour déplacer la position du chemin dupliqué, puis l'instance démarre le chemin.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <div class="footer">
+    <div class="buttons">
+      <div class="clear">
+        <div style="float:left">Retour : <a href="Path_Manipulation.htm">Manipulation des chemins</a></div>
+        <div style="float:right">Suivant : <a href="../Path_Variables/path_index.htm">path_index</a></div>
+        <div style="float:right"> </div>
+      </div>
+    </div>
+    <h5><span data-keyref="Copyright Notice">Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
   </div>
   <!-- KEYWORDS
 path_shift

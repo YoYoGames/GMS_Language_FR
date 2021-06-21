@@ -7,13 +7,50 @@
   <meta name="generator" content="Adobe RoboHelp 2019" />
   <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
   <meta name="rh-authors" content="Mark Alexander" />
-  <meta name="topic-comment" content="Page de référence pour xboxlive_gamedisplayname_for_user" />
+  <meta name="topic-comment" content="Reference page for xboxlive_gamedisplayname_for_user" />
   <meta name="rh-index-keywords" content="xboxlive_gamedisplayname_for_user" />
   <meta name="search-keywords" content="xboxlive_gamedisplayname_for_user" />
 </head>
-<body><!--<div class="body-scroll" style="top: 150px;">--><h1>xboxlive_gamedisplayname_for_user</h1><p> Avec cette fonction, vous pouvez récupérer le nom d&#39;affichage - sous forme de chaîne - à partir du pointeur d&#39;ID utilisateur donné. Notez que si l&#39;utilisateur est local, la valeur renvoyée est simplement une chaîne de son nom d&#39;affichage, mais s&#39;il s&#39;agit d&#39;un utilisateur distant, la chaîne sera son gamertag qui peut ensuite être utilisé, par exemple, pour désactiver / réactiver la voix. discuter.</p><p></p><h4> Syntaxe:</h4><p class="code">xboxlive_gamedisplayname_for_user(user_id);</p><table><tbody><tr><th> Argument</th><th> Description</th></tr><tr><td> <span class="notranslate">user_id</span></td><td> Le pointeur d&#39;ID de l&#39;utilisateur à vérifier.</td></tr></tbody></table><p></p><h4> Retour:</h4><p class="code">String</p><p></p><h4> Exemple:</h4><p class="code">for(var i = 0; i &lt; xboxlive_get_user_count(); ++i;)<br/>     {
-    <br/>     user_id[i] = xboxlive_get_user(i);<br/>     user_name[i] = xboxlive_gamedisplayname_for_user(user_id[i]);<br/>     }
-  </p><p> Le code ci-dessus obtient le pointeur d&#39;ID utilisateur pour chaque compte d&#39;utilisateur disponible, puis stocke le pointeur avec le nom d&#39;affichage dans deux tableaux. </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> Retour: <a href="Users_And_Accounts.htm">Utilisateurs et comptes</a></div><div style="float:right"> Suivant:<a href="xboxlive_user_for_pad.htm">xboxlive_user_for_pad</a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
+<body>
+  <!--<div class="body-scroll" style="top: 150px;">-->
+  <h1>xboxlive_gamedisplayname_for_user</h1>
+  <p>Cette fonction permet de récupérer le nom d'affichage - sous forme de chaîne - à partir du pointeur d'identification de l'utilisateur. Notez que si l'utilisateur est local, la valeur retournée est simplement une chaîne de son nom d'affichage, mais s'il s'agit d'un utilisateur distant, la chaîne sera son gamertag.
+    sera son gamertag, qui peut alors être utilisé, par exemple, pour activer/désactiver le mode silencieux dans le chat vocal.</p>
+  <p> </p>
+  <h4>Syntaxe :</h4>
+  <p class="code">xboxlive_gamedisplayname_for_user(user_id) ;</p>
+  <table>
+    <tbody>
+      <tr>
+        <th>Arguments</th>
+        <th>Description</th>
+      </tr>
+      <tr>
+        <td>nom d'utilisateur</td>
+        <td>Le pointeur d'identification de l'utilisateur à vérifier.</td>
+      </tr>
+    </tbody>
+  </table>
+  <p> </p>
+  <h4>Les retours :</h4>
+  <p class="code">Chaîne de caractères</p>
+  <p> </p>
+  <h4>Exemple :</h4>
+  <p class="code">for(var i = 0 ; i &lt; xboxlive_get_user_count() ; ++i ;) <br> {
+    <br> user_id[i] = xboxlive_get_user(i) ;<br> user_name[i] = xboxlive_gamedisplayname_for_user(user_id[i]) ;<br> }
+  </p>
+  <p>Le code ci-dessus récupère le pointeur d'identification de l'utilisateur pour chaque compte d'utilisateur disponible, puis stocke le pointeur ainsi que le nom d'affichage dans deux tableaux.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <div class="footer">
+    <div class="buttons">
+      <div class="clear">
+        <div style="float:left">Retour : <a href="Users_And_Accounts.htm">Utilisateurs et comptes</a></div>
+        <div style="float:right">Suivant : <a href="xboxlive_user_for_pad.htm">xboxlive_user_for_pad</a></div>
+      </div>
+    </div>
+    <h5><span data-keyref="Copyright Notice">Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
   </div>
   <!-- KEYWORDS
 xboxlive_gamedisplayname_for_user

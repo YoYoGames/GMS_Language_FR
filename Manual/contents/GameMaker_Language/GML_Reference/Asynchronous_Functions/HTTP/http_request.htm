@@ -7,13 +7,76 @@
   <meta name="generator" content="Adobe RoboHelp 2019" />
   <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
   <meta name="rh-authors" content="Mark Alexander" />
-  <meta name="topic-comment" content="Page de référence pour http_request" />
+  <meta name="topic-comment" content="Reference page for http_request" />
   <meta name="rh-index-keywords" content="http_request" />
   <meta name="search-keywords" content="http_request" />
 </head>
-<body><!--<div class="body-scroll" style="top: 150px;">--><h1>http_request</h1><p> Avec cette fonction, vous pouvez créer une requête d&#39;en-tête HTTP pour définir les paramètres de fonctionnement d&#39;une transaction HTTP, qui peut être utilisée pour de nombreuses choses comme (par exemple) l&#39;authentification via les en-têtes HTTP si vous utilisez des API RESTful. La fonction nécessite l&#39;adresse IP complète du serveur à partir de laquelle effectuer la requête ainsi que le type de requête à effectuer (sous forme de chaîne, voir la remarque ci-dessous): &quot;GET&quot;, &quot;HEAD&quot;, &quot;POST&quot;, &quot;PUT&quot;, &quot; SUPPRIMER &quot;,&quot; TRACER &quot;,&quot; OPTIONS &quot;ou&quot; CONNEXION &quot;. Vous devrez également fournir un <tt><a href="../../Data_Structures/DS_Maps/DS_Maps.htm">DS map</a></tt> de paires clé / valeur (sous forme de chaînes, où la clé est le champ d&#39;en-tête et la valeur est les données requises pour l&#39;en-tête), et l&#39;argument final est une chaîne de données facultative que vous pouvez ajouter à la demande, et si elle n&#39;est pas nécessaire alors il peut être 0 ou une chaîne vide &quot;&quot;. Notez que vous pouvez également envoyer un tampon (voir la section sur les <a href="../../Buffers/Buffers.htm">tampons</a> pour plus de détails), auquel cas le dernier argument serait le &quot;handle&quot; du tampon à envoyer.</p><p class="note"> <b>REMARQUE</b>: les en-têtes HTTP suivent normalement le format «clé: valeur», mais étant donné que GMS crée ces paires pour vous à partir de ds_map, il n&#39;est pas nécessaire d&#39;inclure les deux points «:» dans votre clé de carte ou vos chaînes de valeur.</p><p class="note"> <b>REMARQUE</b>: lorsque vous utilisez un tampon pour l&#39;argument body, si la position de recherche de la mémoire tampon est au début (0), aucun corps n&#39;est envoyé et la mémoire tampon est remplie avec la réponse de l&#39;appel http, mais si la position de recherche de la mémoire tampon est non- zéro, alors le contenu de la chaîne de tampon est envoyé en tant que corps.</p><p class="note"> <b>REMARQUE</b>: vous devez savoir qu&#39;en raison de la protection XSS dans les navigateurs, les demandes et les tentatives de chargement de ressources à partir de plusieurs domaines sont bloquées et peuvent sembler renvoyer des résultats vides. Veuillez consulter la partie sur les <a href="HTTP.htm">problèmes interdomaines</a> pour plus de détails.</p><p> Cet événement générera un &quot;rappel&quot; qui est capté par tout <a href="../../../../The_Asset_Editors/Object_Properties/Async_Events/HTTP.htm">événement HTTP</a>, auquel cas il générera un <tt>DS Map</tt> (plus communément appelé «dictionnaire») qui est exclusif à cet événement et est stocké dans la variable spéciale <a href="../../../GML_Overview/Variables/Builtin_Global_Variables/async_load.htm"><b>async_load</b></a>. Cette carte DS a les deux touches suivantes liées à la fonction de requête:</p><ul class="colour"><li> <b>id:</b> l&#39;ID renvoyé par la commande. Si vous déclenchez une série de <tt>http_</tt> demandes, vous devez savoir à laquelle vous obtenez la réponse, et vous utiliserez donc cette valeur pour la comparer à la valeur que vous avez stockée lorsque vous avez initialement envoyé la demande pour trouver la bonne.</li><li> <b>response_headers:</b> si cette valeur a une valeur supérieure ou égale à 0, elle contient une mappe DS qui contient les en-têtes HTTP renvoyés avec la réponse à la requête HTTP.</li></ul><p></p><h4> Syntaxe:</h4><p class="code">http_request(url, method, header_map, body);</p><table><tbody><tr><th> Argument</th><th> Description</th></tr><tr><td> <span class="notranslate">url</span></td><td> L&#39;adresse Web du serveur dont vous souhaitez obtenir des informations</td></tr><tr><td> <span class="notranslate">method</span></td><td> La méthode de requête (normalement &quot;POST&quot; ou &quot;GET&quot;, mais toutes les méthodes sont prises en charge)</td></tr><tr><td> <span class="notranslate">header_map</span></td><td> Un ds_map avec les champs d&#39;en-tête requis</td></tr><tr><td> <span class="notranslate">body</span></td><td> Les données à transmettre suivant les en-têtes (peut être un handle de tampon binaire)</td></tr></tbody></table><p></p><h4> Retour:</h4><p class="code">Real</p><p></p><h4> Exemple:</h4><p class="code">var map = ds_map_create();<br/> ds_map_add(map, &quot;Host&quot;, &quot;225.0.0.97:3000&quot;);<br/> ds_map_add(map, &quot;Connection&quot;, &quot;keep-alive&quot;);<br/> ds_map_add(map, &quot;Content-Length&quot;, &quot;169&quot;);<br/> ds_map_add(map,
-    &quot;Cache-Control&quot;, &quot;max-age=0&quot;);<br/> ds_map_add(map, &quot;Authorization&quot;, &quot;Basic eW95b19hZG1pbjpjNG5lZmllbGQ=&quot;);<br/> ds_map_add(map, &quot;Accept&quot;, &quot;text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8&quot;);<br/>    ds_map_add(map, &quot;User-Agent&quot;, &quot;Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/31.0.1650.57 Safari/537.36&quot;);<br/> ds_map_add(map, &quot;Content-Type&quot;, &quot;application/x-www-form-urlencoded&quot;);<br/>    ds_map_add(map, &quot;Accept-Encoding&quot;, &quot;gzip,deflate,sdch&quot;);<br/> ds_map_add(map, &quot;Accept-Language&quot;, &quot;en-GB,en-US;q=0.8,en;q=0.6&quot;);<br/> ds_map_add(map, &quot;Cookie&quot;, &quot;request_method=GET; _InAppPurchases_session=69bb6ef6eec2b&quot;);<br/>    var data=&quot;utf8=%E2%9C%93&amp;authenticity_token=kPmS14DcYcuKgMFZUsN3XFfj3mhs%3D&amp;product%5Bname%5D=CatchTheHaggis&amp;product%5Bproduct_id%5D=http_test&amp;commit=Create+Product&quot;;<br/> request = http_request(&quot;http:225.0.0.97:3000/products&quot;,
-    &quot;POST&quot;, map, data);</p><p> Le code ci-dessus crée une carte DS avec les en-têtes HTTP appropriés pour la fonction, puis crée une chaîne de données à utiliser car il s&#39;agit d&#39;une requête POST. Enfin, la fonction est appelée, sa valeur ID étant stockée dans la variable &quot;request&quot; pour vérifier l&#39;événement asynchrone HTTP. </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> Retour: <a href="HTTP.htm">HTTP</a></div><div style="float:right"> Suivant:<a href="http_get.htm">http_get</a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
+<body>
+  <!--<div class="body-scroll" style="top: 150px;">-->
+  <h1>http_request</h1>
+  <p>Avec cette fonction, vous pouvez créer une requête d'en-tête HTTP pour définir les paramètres de fonctionnement d'une transaction HTTP, qui peut être utilisée pour de nombreuses choses comme (par exemple) l'authentification via les en-têtes HTTP si vous utilisez des API RESTful. La fonction requiert
+    l'adresse IP complète du serveur à partir duquel la requête doit être effectuée ainsi que le type de requête à effectuer (sous forme de chaîne, voir la note ci-dessous) : &quot;GET&quot;, &quot;HEAD&quot;, &quot;POST&quot;, &quot;PUT&quot;, &quot;DELETE&quot;, &quot;TRACE&quot;, &quot;OPTIONS&quot;,
+    ou &quot;CONNECT&quot;. Vous devrez également fournir un <tt><a href="../../Data_Structures/DS_Maps/DS_Maps.htm">Carte DS</a></tt> de paires clé/valeur (sous forme de chaînes, où la clé est le champ d'en-tête et la valeur est la donnée requise pour l'en-tête), et
+    le dernier argument est une chaîne de données facultative que vous pouvez ajouter à la requête, et si elle n'est pas nécessaire, elle peut être 0 ou une chaîne vide &quot;&quot;. Notez que vous pouvez également envoyer un tampon (voir la section sur les <a href="../../Buffers/Buffers.htm">tampons</a> pour plus de détails), auquel cas le dernier argument sera le &quot;handle&quot; du tampon à envoyer.</p>
+  <p class="note"><b>NOTE</b>: Les en-têtes HTTP suivent normalement le format &quot;key:value&quot;, mais comme GMS crée ces paires pour vous à partir du ds_map, il n'est pas nécessaire d'inclure les deux points &quot; :&quot; dans les chaînes de clés ou de valeurs de votre map.</p>
+  <p class="note"><b>REMARQUE</b>: Lors de l'utilisation d'un tampon pour l'argument body, si la position de recherche du tampon est au début (0), aucun body n'est envoyé et le tampon est rempli avec la réponse de l'appel http.
+    est envoyé comme corps.</p>
+  <p class="note"><b>REMARQUE</b>: Vous devez savoir qu'en raison de la protection XSS des navigateurs, les demandes et les tentatives de chargement de ressources provenant d'autres domaines sont bloquées et peuvent donner lieu à des résultats vides. Veuillez consulter la partie sur les <a href="HTTP.htm">problèmes inter-domaines</a> pour plus de détails.</p>
+  <p>Cet événement génère un &quot;call back&quot; qui est capté par tout <a href="../../../../The_Asset_Editors/Object_Properties/Async_Events/HTTP.htm">événement</a> HTTP <a href="../../../../The_Asset_Editors/Object_Properties/Async_Events/HTTP.htm">, auquel</a> cas il génère une carte DS ( <tt>plus</tt> communément appelée &quot;dictionnaire&quot;)
+    qui est exclusive à cet événement et est stockée dans la variable spéciale <a href="../../../GML_Overview/Variables/Builtin_Global_Variables/async_load.htm"><b>async_load</b></a>. Cette carte DS possède les deux clés suivantes liées à la fonction de requête :</p>
+  <ul class="colour">
+    <li><b>id : </b>L'ID qui a été renvoyé par la commande. Si vous lancez une série de requêtes <tt>http_</tt>, vous devez savoir à laquelle vous recevez une réponse, et donc utiliser cette valeur pour la comparer à la valeur que vous avez stockée lors de l'envoi initial de la requête pour trouver la bonne.
+      la demande pour trouver la bonne.</li>
+    <li><b>response_headers :</b> Si cette valeur est supérieure ou égale à 0, elle contient une carte DS qui contient les en-têtes HTTP renvoyés avec la réponse à la demande HTTP.</li>
+  </ul>
+  <p> </p>
+  <h4>Syntaxe :</h4>
+  <p class="code">http_request(url, method, header_map, body) ;</p>
+  <table>
+    <tbody>
+      <tr>
+        <th>Arguments</th>
+        <th>Description</th>
+      </tr>
+      <tr>
+        <td>url</td>
+        <td>L'adresse web du serveur auprès duquel vous souhaitez obtenir des informations.</td>
+      </tr>
+      <tr>
+        <td>méthode</td>
+        <td>La méthode de requête (normalement &quot;POST&quot; ou &quot;GET&quot;, mais toutes les méthodes sont supportées)</td>
+      </tr>
+      <tr>
+        <td>carte_en-tête</td>
+        <td>Un ds_map avec les champs d'en-tête requis</td>
+      </tr>
+      <tr>
+        <td>corps</td>
+        <td>Les données à transmettre à la suite des en-têtes (peut être un gestionnaire de tampon binaire).</td>
+      </tr>
+    </tbody>
+  </table>
+  <p> </p>
+  <h4>Les retours :</h4>
+  <p class="code">Real</p>
+  <p> </p>
+  <h4>Exemple :</h4>
+  <p class="code">var map = ds_map_create() ;<br> ds_map_add(map, &quot;Host&quot;, &quot;225.0.0.97:3000&quot;) ;<br> ds_map_add(map, &quot;Connection&quot;, &quot;keep-alive&quot;) ;<br> ds_map_add(map, &quot;Content-Length&quot;, &quot;169&quot;) ;<br> ds_map_add(map,
+    &quot;Cache-Control&quot;, &quot;max-age=0&quot;) ;<br> ds_map_add(map, &quot;Authorization&quot;, &quot;Basic eW95b19hZG1pbjpjNG5lZmllbGQ=&quot;) ;<br> ds_map_add(map, &quot;Accept&quot;, &quot;text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8&quot;) ;<br> ds_map_add(map, &quot;User-Agent&quot;, &quot;Mozilla/5.0 (Windows NT 6.3 ; WOW64<span class="notranslate">)</span> AppleWebKit/537.36 (KHTML, like Gecko) Chrome/31.0.1650.57 Safari/537.36&quot;) ;<br> ds_map_add(map, &quot;Content-Type&quot;, &quot;application/x-www-form-urlencoded&quot;) ;<br> ds_map_add(map, &quot;Accept-Encoding&quot;, &quot;gzip,deflate,sdch&quot;) ;<br> ds_map_add(map, &quot;Accept-Language&quot;, &quot;en-GB,en-US;q=0.8,en;q=0.6&quot;) ;<br> ds_map_add(map, &quot;Cookie&quot;, &quot;request_method=GET ; _InAppPurchases_session=69bb6ef6eec2b&quot;) ;<br> var data=&quot;utf8=%E2%9C%93&amp;authenticity_token=kPmS14DcYcuKgMFZUsN3XFfj3mhs%3D&amp;product%5Bname%5D=CatchTheHaggis&amp;product%5Bproduct_id%5D=http_test&amp;commit=Create+Product&quot; ;<br> request = http_request(&quot;http :225.0.0.97:3000/products&quot;,
+    &quot;POST&quot;, map, data) ;</p>
+  <p>Le code ci-dessus crée une carte DS avec les en-têtes HTTP pertinents pour la fonction, puis crée une chaîne de données à utiliser car il s'agit d'une requête POST. Enfin, la fonction est appelée, sa valeur d'ID étant stockée dans la variable &quot;request&quot; pour être
+    vérification dans l'événement asynchrone HTTP.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <div class="footer">
+    <div class="buttons">
+      <div class="clear">
+        <div style="float:left">Retour : <a href="HTTP.htm">HTTP</a></div>
+        <div style="float:right">Suivant : <a href="http_get.htm">http_get</a></div>
+      </div>
+    </div>
+    <h5><span data-keyref="Copyright Notice">Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
   </div>
   <!-- KEYWORDS
 http_request

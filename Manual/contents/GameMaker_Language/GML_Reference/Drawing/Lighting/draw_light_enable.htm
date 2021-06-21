@@ -7,11 +7,52 @@
   <meta name="generator" content="Adobe RoboHelp 2019" />
   <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
   <meta name="rh-authors" content="Mark Alexander" />
-  <meta name="topic-comment" content="Page de référence pour draw_light_enable" />
+  <meta name="topic-comment" content="Reference page for draw_light_enable" />
   <meta name="rh-index-keywords" content="draw_light_enable" />
   <meta name="search-keywords" content="draw_light_enable" />
 </head>
-<body><!--<div class="body-scroll" style="top: 150px;">--><h1>draw_light_enable</h1><p> Cette fonction est utilisée pour activer une lumière définie. Lorsque vous définissez un feu de position ou un feu directionnel, vous devez lui attribuer un numéro d&#39;index qui est ensuite utilisé par cette fonction pour allumer ou éteindre l&#39;éclairage. La valeur par défaut est désactivée (<tt>false</tt> ).</p><p class="note"> <b>REMARQUE</b>: Il n&#39;y a que 8 voyants matériels disponibles, donc seuls 8 voyants définis peuvent être activés à la fois (bien que d&#39;autres puissent être définis).</p><p></p><h4> Syntaxe:</h4><p class="code">draw_light_enable(ind, enable);</p><table><tbody><tr><th> Argument</th><th> Description</th></tr><tr><td> <span class="notranslate">ind</span></td><td> Le numéro d&#39;index de la lumière (de 0 à 7)</td></tr><tr><td> <span class="notranslate">enable</span></td><td> Activer ou désactiver tous les éclairages (<tt>true</tt> ou fausse)</td></tr></tbody></table><p></p><h4> Retour:</h4><p class="code">N/A</p><p></p><h4> Exemple:</h4><p class="code">draw_set_lighting(true);<br/> draw_light_define_direction(1, 0, 1, 0, c_white);<br/> draw_light_enable(1, true);</p><p> Le code ci-dessus activera l&#39;éclairage pour toute la scène, définira ensuite une lumière directionnelle blanche dans l&#39;espace de la pièce, puis allumera finalement cette lumière. </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> Retour: <a href="Lighting.htm">Éclairage</a></div><div style="float:right"> Suivant:<a href="draw_set_lighting.htm">draw_set_lighting</a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
+<body>
+  <!--<div class="body-scroll" style="top: 150px;">-->
+  <h1>draw_light_enable</h1>
+  <p>Cette fonction est utilisée pour activer un feu défini. Lorsque vous définissez un feu positionnel ou directionnel, vous devez lui attribuer un numéro d'index qui est ensuite utilisé par cette fonction pour allumer ou éteindre le feu. La valeur par défaut est désactivée<tt>(false</tt>).</p>
+  <p class="note"><b>REMARQUE</b>: il n'y a que 8 lumières matérielles disponibles, donc seulement 8 lumières définies peuvent être activées à un moment donné (bien que d'autres puissent être définies).</p>
+  <p> </p>
+  <h4>Syntaxe :</h4>
+  <p class="code">draw_light_enable(ind, enable) ;</p>
+  <table>
+    <tbody>
+      <tr>
+        <th>Arguments</th>
+        <th>Description</th>
+      </tr>
+      <tr>
+        <td>ind</td>
+        <td>Le numéro d'index du feu (de 0 à 7)</td>
+      </tr>
+      <tr>
+        <td>activer</td>
+        <td>Activer ou désactiver tous les éclairages<tt>(vrai</tt> ou faux)</td>
+      </tr>
+    </tbody>
+  </table>
+  <p> </p>
+  <h4>Les retours :</h4>
+  <p class="code">N/A</p>
+  <p> </p>
+  <h4>Exemple :</h4>
+  <p class="code">draw_set_lighting(true) ;<br> draw_light_define_direction(1, 0, 1, 0, c_white) ;<br> draw_light_enable(1, true) ;</p>
+  <p>Le code ci-dessus va activer l'éclairage de l'ensemble de la scène, puis définir une lumière blanche directionnelle dans l'espace de la pièce, et enfin allumer cette lumière.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <div class="footer">
+    <div class="buttons">
+      <div class="clear">
+        <div style="float:left">Retour : <a href="Lighting.htm">Éclairage</a></div>
+        <div style="float:right">Suivant : <a href="draw_set_lighting.htm">draw_set_lighting</a></div>
+      </div>
+    </div>
+    <h5><span data-keyref="Copyright Notice">Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
   </div>
   <!-- KEYWORDS
 draw_light_enable

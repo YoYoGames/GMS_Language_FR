@@ -3,18 +3,57 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>game_save_buffer</title>
+  <title>tampon_sauvegarde_jeu</title>
   <meta name="generator" content="Adobe RoboHelp 2019" />
   <link rel="stylesheet" href="../../../assets/css/default.css" type="text/css" />
   <meta name="rh-authors" content="Mark Alexander" />
-  <meta name="topic-comment" content="Cette page décrit la fonction game_save_buffer" />
+  <meta name="topic-comment" content="This page outlines the function game_save_buffer" />
   <meta name="rh-index-keywords" content="game_save_buffer" />
   <meta name="search-keywords" content="game_save_buffer" />
 </head>
-<body><!--<div class="body-scroll" style="top: 150px;">--><h1>game_save_buffer</h1><p> Avec cette fonction, vous pouvez enregistrer l&#39;état actuel du jeu dans un tampon de &quot;croissance&quot; créé précédemment (voir <a href="../Buffers/Buffers.htm">Tampons</a> ) qui peut ensuite être chargé à nouveau à tout moment en utilisant <a href="game_load_buffer.htm"><tt>game_load_buffer()</tt></a> fonction. Cette fonction est conçue pour être utilisée dans une seule pièce à la fois (c&#39;est-à-dire: il n&#39;est pas conseillé de faire une sauvegarde de tampon dans une pièce, puis d&#39;essayer de charger le tampon à partir d&#39;une autre) et devrait idéalement être utilisée uniquement pour les points de contrôle ou les redémarrages de niveau.</p><p class="note"> <b>REMARQUE</b>: Cette fonction est <i>très</i> limitée et est conçue pour que le débutant puisse mettre en place un système de point de contrôle et le faire fonctionner rapidement, mais les utilisateurs plus avancés peuvent préférer coder leur propre système en utilisant les <a href="../File_Handling/File_Handling.htm">fonctions de fichier</a>, car le jeu <i>ne</i> sera pas sauvegardé. toutes les ressources dynamiques telles que les structures de données, les surfaces, les sprites ajoutés, etc.</p><p></p><h4> Syntaxe:</h4><p class="code">game_save_buffer(buffer);</p><table><tbody><tr><th> Argument</th><th> Description</th></tr><tr><td> <span class="notranslate">buffer</span></td><td> L&#39;identifiant du tampon dans lequel enregistrer.</td></tr></tbody></table><p></p><h4> Retour:</h4><p class="code">N/A</p><p></p><h4> Exemple:</h4><p class="code">if keyboard_check_pressed(ord(&quot;S&quot;))<br/>     {
-    <br/>     global.Checkpoint = true;<br/>     game_save_buffer(save_buff);
-    <br/>     }
-  </p><p> Le code ci-dessus définira une variable globale sur <tt>true</tt> puis enregistrez l&#39;état actuel du jeu dans le tampon indexé dans la variable &quot;save_buff&quot; lorsque la touche &quot;S&quot; est enfoncée. </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> Retour: <a href="General_Game_Control.htm">Contrôle général du jeu</a></div><div style="float:right"> Suivant:<a href="game_get_speed.htm">game_get_speed</a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
+<body>
+  <!--<div class="body-scroll" style="top: 150px;">-->
+  <h1>tampon_sauvegarde_jeu</h1>
+  <p>Il s'agit d'une variante de la fonction <tt><a href="game_save.htm">game_save()</a></tt> veuillez donc lire <a href="game_save.htm">sa page</a> en premier car elle contient des informations importantes relatives à son utilisation et à celle de cette fonction.</p>
+  <p>Cette fonction permet de sauvegarder l'état actuel du jeu dans un tampon &quot;grow&quot; préalablement créé (voir Tampons) <a href="../Buffers/Buffers.htm">qui</a> peut ensuite être rechargé à tout moment à l'aide de la fonction <a href="game_load_buffer.htm"><tt>game_load_buffer()</tt></a>    fonction. Cette fonction est conçue pour être utilisée dans une seule pièce à la fois (c'est-à-dire qu'il n'est pas conseillé de sauvegarder un tampon dans une pièce, puis d'essayer de charger le tampon depuis une autre pièce) et ne devrait idéalement être utilisée que pour les points de contrôle ou les redémarrages de niveau.</p>
+  <p class="note"><b>NOTE</b>: Cette fonction est <i>très</i> limitée et est conçue pour les débutants afin de mettre en place un système de checkpoint rapidement, mais les utilisateurs plus avancés peuvent préférer coder leur propre système en utilisant les fonctions du <a href="../File_Handling/File_Handling.htm">fichier</a>,
+    car le jeu <i>ne</i> sauvegardera <i>aucune</i> des ressources dynamiques telles que les structures de données, les surfaces, les sprites ajoutés, etc.</p>
+  <p> </p>
+  <h4>Syntaxe :</h4>
+  <p class="code">game_save_buffer(buffer) ;</p>
+  <table>
+    <tbody>
+      <tr>
+        <th>Arguments</th>
+        <th>Description</th>
+      </tr>
+      <tr>
+        <td>tampon</td>
+        <td>L'identifiant du tampon à sauvegarder.</td>
+      </tr>
+    </tbody>
+  </table>
+  <p> </p>
+  <h4>Les retours :</h4>
+  <p class="code">N/A</p>
+  <p> </p>
+  <h4>Exemple :</h4>
+  <p class="code">if keyboard_check_pressed(ord(&quot;S&quot;))<br> {
+    <br> global.Checkpoint = true ;<br> game_save_buffer(save_buff) ;
+    <br> }
+  </p>
+  <p>Le code ci-dessus va définir une variable globale à <tt>true</tt> et ensuite sauvegarder l'état actuel du jeu dans le tampon indexé dans la variable &quot;save_buff&quot; lorsque la touche &quot;S&quot; est pressée.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <div class="footer">
+    <div class="buttons">
+      <div class="clear">
+        <div style="float:left">Retour : <a href="General_Game_Control.htm">Contrôle général du jeu</a></div>
+        <div style="float:right">Suivant : <a href="game_get_speed.htm">game_get_speed</a></div>
+      </div>
+    </div>
+    <h5><span data-keyref="Copyright Notice">Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
   </div>
   <!-- KEYWORDS
 game_save_buffer

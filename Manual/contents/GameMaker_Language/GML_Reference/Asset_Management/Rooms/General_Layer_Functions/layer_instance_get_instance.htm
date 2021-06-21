@@ -3,20 +3,56 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>layer_instance_get_instance</title>
+  <title>couche_instance_get_instance</title>
   <meta name="generator" content="Adobe RoboHelp 2019" />
   <link rel="stylesheet" href="../../../../../assets/css/default.css" type="text/css" />
   <meta name="rh-authors" content="Mark Alexander" />
-  <meta name="topic-comment" content="Page décrivant la fonction layer_instance_get_instance" />
+  <meta name="topic-comment" content="Page outlining the function layer_instance_get_instance" />
   <meta name="rh-index-keywords" content="layer_instance_get_instance" />
   <meta name="search-keywords" content="layer_instance_get_instance" />
 </head>
-<body><!--<div class="body-scroll" style="top: 150px;">--><h1>layer_instance_get_instance</h1><p> Cette fonction peut être utilisée pour obtenir l&#39;ID d&#39;instance unique de l&#39;élément d&#39;instance donné. Vous donnez l&#39; <i>ID d&#39;élément d&#39;</i> instance (voir l&#39;exemple de code ci-dessous pour savoir comment l&#39;obtenir), et la fonction renverra une valeur réelle qui représente l&#39; <a
-      href="../../Instances/Instance_Variables/id.htm">ID d&#39;instance</a> unique de l&#39;élément. Si l&#39;élément n&#39;est pas une instance, la fonction renverra -1.</p><p></p><h4> Syntaxe:</h4><p class="code">layer_instance_get_instance(element_id)</p><table><tbody><tr><th> Argument</th><th> Description</th></tr><tr><td> <span class="notranslate">element_id</span></td><td> La valeur d&#39;ID unique de l&#39;élément d&#39;instance pour obtenir l&#39;ID de</td></tr></tbody></table><p></p><h4> Retour:</h4><p class="code">Real (Unique ID value for an instance)</p><p></p><h4> Exemple:</h4><p class="code">elements = layer_get_all_elements(&quot;Instances&quot;);<br/> for (var i = 0; i &lt; array_length(elements); i++)<br/>     {
-    <br/>      if (layer_get_element_type(elements[i]) == layerelementtype_instance)<br/>         {
-    <br/>         var layerelement = elements[i];<br/>         var inst = layer_instance_get_instance(layerelement);<br/>         inst.x = inst.x + 10;<br/>         }
-    <br/>     }
-  </p><p> Le code ci-dessus vérifiera obtenir tous les éléments d&#39;instance sur une couche, puis obtiendra leur valeur d&#39;identification unique et l&#39;utilisera pour les déplacer de 10 pixels vers la droite. </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> Retour: <a href="General_Layer_Functions.htm">Fonctions générales des calques</a></div><div style="float:right"> Suivant:<a href="layer_destroy_instances.htm">layer_destroy_instances</a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
+<body>
+  <!--<div class="body-scroll" style="top: 150px;">-->
+  <h1>couche_instance_get_instance</h1>
+  <p>Cette fonction peut être utilisée pour obtenir l'ID d'instance unique de l'élément d'instance donné. Vous donnez l'ID de l'<i>élément d'</i> instance (voir l'exemple de code ci-dessous pour savoir comment l'obtenir), et la fonction renvoie une valeur réelle qui représente l'unique
+    unique <a href="../../Instances/Instance_Variables/id.htm">de</a> l'élément. Si l'élément n'est pas une instance, la fonction renvoie -1.</p>
+  <p> </p>
+  <h4>Syntaxe :</h4>
+  <p class="code">layer_instance_get_instance(element_id)</p>
+  <table>
+    <tbody>
+      <tr>
+        <th>Arguments</th>
+        <th>Description</th>
+      </tr>
+      <tr>
+        <td>identifiant de l'élément</td>
+        <td>La valeur d'ID unique de l'élément d'instance dont on veut obtenir l'ID</td>
+      </tr>
+    </tbody>
+  </table>
+  <p> </p>
+  <h4>Les retours :</h4>
+  <p class="code">Real (valeur d'identification unique pour une instance)</p>
+  <p> </p>
+  <h4>Exemple :</h4>
+  <p class="code">elements = layer_get_all_elements(&quot;Instances&quot;) ;<br> for (var i = 0 ; i &lt; array_length(elements) ; i++)<br> {
+    <br> si (layer_get_element_type(elements[i]) == layerelementtype_instance)<br> {
+    <br> var layerelement = elements[i] ;<br> var inst = layer_instance_get_instance(layerelement) ;<br> inst.x = inst.x + 10 ;<br> }
+    <br> }
+  </p>
+  <p>Le code ci-dessus vérifie tous les éléments d'instance sur un calque, puis récupère leur valeur d'identification unique et l'utilise pour les déplacer de 10px vers la droite.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <div class="footer">
+    <div class="buttons">
+      <div class="clear">
+        <div style="float:left">Retour : <a href="General_Layer_Functions.htm">Fonctions générales des couches</a></div>
+        <div style="float:right">Suivant : <a href="layer_destroy_instances.htm">layer_destroy_instances</a></div>
+      </div>
+    </div>
+    <h5><span data-keyref="Copyright Notice">Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
   </div>
   <!-- KEYWORDS
 layer_instance_get_instance

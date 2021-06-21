@@ -7,11 +7,60 @@
   <meta name="generator" content="Adobe RoboHelp 2019" />
   <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
   <meta name="rh-authors" content="Mark Alexander" />
-  <meta name="topic-comment" content="Page de référence pour physics_fixture_set_density" />
+  <meta name="topic-comment" content="Reference page for physics_fixture_set_density" />
   <meta name="rh-index-keywords" content="physics_fixture_set_density" />
   <meta name="search-keywords" content="physics_fixture_set_density" />
 </head>
-<body><!--<div class="body-scroll" style="top: 150px;">--><h1>physics_fixture_set_density</h1><p> La densité de quelque chose est définie comme sa masse par unité de volume, ce qui signifie essentiellement <i>combien de masse est entassée dans l&#39;espace qu&#39;elle occupe dans le monde</i>. Ainsi, un ballon aurait une faible densité car il a peu de masse qui occupe un grand espace, tandis qu&#39;une barre de plomb aurait une densité élevée car elle a une grande masse, mais occupe peu d&#39;espace.</p><p><img alt="Physics density illustration" class="center" src="../../../../assets/Images/Scripting_Reference/GML/Reference/Physics/physics_fixture_set_density_image.png" /> Dans le <span class="notranslate">GameMaker Studio 2</span>, la masse est calculée automatiquement pour vous à partir des valeurs que vous saisissez pour la <b>densité</b> et par la <b>surface</b> de la forme que vous définissez pour l&#39;appareil. Cela aura un impact direct sur l&#39;inertie d&#39;un appareil ainsi que sur la façon dont il réagit aux collisions et aux forces, donc si vous créez une petite forme avec une densité élevée, elle aura une très grande masse (comme une barre de plomb), mais si vous définissez une grande forme avec une faible densité, elle aura une masse beaucoup plus petite (comme un ballon).</p><p class="note"> <b>REMARQUE</b>: Si vous souhaitez que l&#39;instance qui va recevoir l&#39;appareil soit <strong>statique</strong> (c&#39;est-à-dire immobile dans le monde du jeu), alors la densité doit être définie sur 0, ce qui lui donne essentiellement une densité infinie.</p><p class="note"> REMARQUE: Un appareil statique peut être <strong>cinématique</strong> (c&#39;est-à-dire qu&#39;il peut se déplacer mais sans les effets de la force ou de la gravité) en lui donnant une densité de 0, puis en réglant le<span class="inline"><a href="../Physics_Variables/phy_speed_x.htm"><span style="font-size:14px;">phy_speed_x</span>, <span class="inline"><a href="../Physics_Variables/phy_speed_y.htm"><span style="font-size:14px;">phy_speed_y</span>, ou<span class="inline"><a href="../Physics_Variables/phy_angular_velocity.htm"><span style="font-size:14px;">phy_angular_velocity</span> variables.</p><p></p><h4> Syntaxe:</h4><p class="code">physics_fixture_set_density(fixture, density)</p><table><tbody><tr><th> Argument</th><th> Description</th></tr><tr><td> <span class="notranslate">fixture</span></td><td> l&#39;index du luminaire</td></tr><tr><td> <span class="notranslate">density</span></td><td> la densité du luminaire calculée en kg / m²</td></tr></tbody></table><p></p><h4> Retour:</h4><p class="code">N/A</p><p></p><h4> Exemple:</h4><p class="code">physics_fixture_set_density(fix_Balloon, 0.1);</p><p> Le code ci-dessus définira la densité de l&#39;appareil indexé dans &quot;fix_Ballon&quot; à 0,1. </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> Retour: <a href="Fixtures.htm">Fixtures</a></div><div style="float:right"> Suivant:<a href="physics_fixture_set_friction.htm">physics_fixture_set_friction</a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
+<body>
+  <!--<div class="body-scroll" style="top: 150px;">-->
+  <h1>physics_fixture_set_density</h1>
+  <p>La densité d'une chose est définie comme sa masse par unité de volume, ce qui signifie essentiellement <i>la quantité de masse entassée dans l'espace qu'elle occupe dans le monde</i>. Ainsi, un ballon aurait une faible densité car il a une faible masse qui occupe un grand espace,
+    alors qu'une barre de plomb aurait une densité élevée car elle a une grande masse, mais occupe peu d'espace.</p>
+  <p><img alt="Physics density illustration" class="center" src="../../../../assets/Images/Scripting_Reference/GML/Reference/Physics/physics_fixture_set_density_image.png">Dans le monde physique 2D de <span class="notranslate">GameMaker Studio 2</span>, la masse est calculée automatiquement à partir des valeurs de densité et de surface de la forme que vous définissez pour le support.
+    pour vous à partir des valeurs que vous saisissez pour la <b>densité</b> et de la <b>surface</b> de la forme que vous définissez pour le support. Cela a un impact direct sur le degré d'inertie d'un accessoire ainsi que sur sa réaction aux collisions et aux forces.
+    si vous créez une petite forme avec une densité élevée, elle aura une masse très importante (comme une barre de plomb), mais si vous définissez une grande forme avec une faible densité, elle aura une masse beaucoup plus faible (comme un ballon).</p>
+  <p class="note"><b>REMARQUE</b>: si vous souhaitez que l'instance qui va recevoir le dispositif soit <strong>statique </strong>(c'est-à-dire immobile dans le monde du jeu), la densité doit être fixée à 0, ce qui lui donne une densité infinie.</p>
+  <p class="note">REMARQUE : Un appareil statique peut être rendu <strong>cinématique</strong> (c'est-à-dire qu'il peut se déplacer mais sans les effets de la force ou de la gravité) en lui donnant une densité de 0, puis en définissant les paramètres suivants : 1. <span class="inline"><a href="../Physics_Variables/phy_speed_x.htm"><span style="font-size:14px;">phy_speed_x</span>
+    , <span class="inline"><a href="../Physics_Variables/phy_speed_y.htm"><span style="font-size:14px;">phy_speed_y</span>
+    , ou <span class="inline"><a href="../Physics_Variables/phy_angular_velocity.htm"><span style="font-size:14px;">phy_angular_velocity</span>
+     variables.</p>
+  <p> </p>
+  <h4>Syntaxe :</h4>
+  <p class="code">physics_fixture_set_density(fixture, density)</p>
+  <table>
+    <tbody>
+      <tr>
+        <th>Arguments</th>
+        <th>Description</th>
+      </tr>
+      <tr>
+        <td>L'appareil</td>
+        <td>l'indice du dispositif</td>
+      </tr>
+      <tr>
+        <td>densité</td>
+        <td>la densité de l'objet calculé en kg/m².</td>
+      </tr>
+    </tbody>
+  </table>
+  <p> </p>
+  <h4>Les retours :</h4>
+  <p class="code">N/A</p>
+  <p> </p>
+  <h4>Exemple :</h4>
+  <p class="code">physics_fixture_set_density(fix_Balloon, 0.1) ;</p>
+  <p>Le code ci-dessus définira la densité du dispositif indexé dans &quot;fix_Ballon&quot; à 0.1.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <div class="footer">
+    <div class="buttons">
+      <div class="clear">
+        <div style="float:left">Retour : <a href="Fixtures.htm">Fixtures</a></div>
+        <div style="float:right">Suivant : <a href="physics_fixture_set_friction.htm">physics_fixture_set_friction</a></div>
+      </div>
+    </div>
+    <h5><span data-keyref="Copyright Notice">Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
   </div>
   <!-- KEYWORDS
 physics_fixture_set_density

@@ -7,17 +7,101 @@
   <meta name="generator" content="Adobe RoboHelp 2019" />
   <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
   <meta name="rh-authors" content="Mark Alexander" />
-  <meta name="topic-comment" content="Page de référence pour xboxlive_stats_get_social_leaderboard" />
-  <meta name="rh-index-keywords" content="xboxlive_stats_get_social_leaderboard,achievement_stat_event" />
+  <meta name="topic-comment" content="Reference page for xboxlive_stats_get_social_leaderboard" />
+  <meta name="rh-index-keywords" content="xboxlive_stats_get_social_leaderboard, achievement_stat_event" />
   <meta name="search-keywords" content="xboxlive_stats_get_social_leaderboard,achievement_stat_event" />
 </head>
-<body><!--<div class="body-scroll" style="top: 150px;">--><h1>xboxlive_stats_get_social_leaderboard</h1><p> Cette fonction peut être utilisée pour récupérer un classement social des classements pour une statistique donnée. Vous fournissez l&#39;ID utilisateur (tel que renvoyé, par exemple, par la fonction <a href="../Users_And_Accounts/xboxlive_get_user.htm"><tt>xboxlive_get_user()</tt></a> ), la chaîne de statistiques (telle que définie lorsque vous l&#39;avez créée à l&#39;aide des fonctions xboxlive_stats_set_stat_ *), puis vous spécifiez un certain nombre de détails sur les informations de classement que vous souhaitez récupérer. Notez que vous ne pouvez récupérer un classement social que pour les statistiques int ou réelles, mais pas pour les statistiques de chaîne, et que si vous marquez l&#39;argument &quot;favourites_only&quot; comme vrai, les résultats ne contiendront que des données pour les amis marqués par l&#39;utilisateur. comme &quot;favoris&quot;.</p><p class="note"> <b>IMPORTANT!</b> Les statistiques utilisées dans les classements sociaux n&#39;ont <b>pas</b> besoin d&#39;être enregistrées en tant que &quot;Statistiques en vedette&quot; dans le XDP / <span class="notranslate">Windows</span> Dev Center.</p><p> La fonction générera un rappel qui déclenchera un <a href="../../../../The_Asset_Editors/Object_Properties/Async_Events/System.htm">événement asynchrone du système</a>. Cet événement aura la carte spéciale DS <a href="../../../GML_Overview/Variables/Builtin_Global_Variables/async_load.htm"><tt>async_load</tt></a> qui doit ensuite être analysé pour les clés suivantes:</p><ul class="colour"><li> &quot; <b>id</b> &quot; - Tiendra la constante <tt>achievement_stat_event</tt></li><li> &quot; <b>event</b> <i>&quot; - Contiendra</i> la chaîne &quot;GetLeaderboardComplete&quot;</li><li> &quot; <b>userid</b> &quot; - L&#39;ID utilisateur associé à la demande</li><li> &quot; <b>error</b> &quot; - 0 en cas de succès, une autre valeur en cas d&#39;erreur. Voici l&#39;erreur la plus courante renvoyée:<ul><li> -2145844848: Mauvaise requête (la statistique n&#39;est pas un type de classement valide, c&#39;est-à-dire: une chaîne)</li></ul></li><li> &quot; <b>message d&#39;erreur</b> &quot; - Une chaîne avec un message d&#39;erreur, le cas échéant</li><li> &quot; <b>display_name</b> &quot; - L&#39;ID unique du classement tel que défini sur le tableau de bord du fournisseur.</li><li> &quot; <b>numentries</b> &quot; - Le nombre d&#39;entrées dans le classement que vous avez reçues.</li></ul><p> Le reste de la carte DS contiendra également les données du classement au format suivant (où &quot;N&quot; est la position dans les données du classement, de 0 à &quot;numentries&quot;):</p><ul class="colour"><li> &quot; <b>Player <i>N</i></b> &quot; - Le nom du joueur, où &quot;N&quot; est une valeur entière correspondant à sa position dans la liste des entrées du classement.</li><li> &quot; <b>Playerid <i>N</i></b> &quot; - L&#39;identifiant unique du joueur, &quot;N&quot;.</li><li> « <b>Rank <i>N</i></b> » - Le rang du joueur «N» dans le classement.</li><li> &quot; <b>Score <i>N</i></b> &quot; - Le score du joueur &quot;N&quot;.</li></ul><p></p><h4> Syntaxe:</h4><p class="code">xboxlive_stats_get_social_leaderboard(user_id, stat, num_entries, start_rank, start_at_user, favourites_only);</p><table><tbody><tr><th> Argument</th><th> Description</th></tr><tr><td> <span class="notranslate">user_id</span></td><td> L&#39;ID utilisateur de l&#39;utilisateur pour lequel obtenir le classement</td></tr><tr><td> <span class="notranslate">stat</span></td><td> La statistique (sous forme de chaîne) pour créer le classement mondial à partir de</td></tr><tr><td> <span class="notranslate">num_entries</span></td><td> Le nombre d&#39;entrées du classement mondial à récupérer</td></tr><tr><td> <span class="notranslate">start_rank</span></td><td> Le rang dans le classement à partir duquel commencer (utilisez 0 si l&#39;argument &quot;start_at_user&quot; est défini sur <tt>true</tt> )</td></tr><tr><td> <span class="notranslate">start_at_user</span></td><td> Mis à <tt>true</tt> pour commencer au rang de l&#39;ID utilisateur, <tt>false</tt> sinon (défini sur <tt>false</tt> si l&#39;argument &quot;start_rank&quot; est autre que 0)</td></tr><tr><td> <span class="notranslate">favourites_only</span></td><td> Mis à <tt>true</tt> pour afficher uniquement les amis marqués comme &quot;favoris&quot; ou <tt>false</tt> autrement</td></tr></tbody></table><p></p><h4> Retour:</h4><p class="code">N/A</p><p></p><h4> Exemple étendu:</h4><p> Voici un exemple détaillé de la façon dont cette fonction peut être utilisée. Pour commencer, vous l&#39;appelez dans un événement comme <b>Room Start</b> ou <b>Create</b>:</p><p class="code">xboxlive_stats_get_social_leaderboard(user_id, &quot;GlobalTime&quot;, 20, 1, false, false);</p><p> Le code ci-dessus serait appelé pour obtenir une liste de toutes les positions de classement mondial pour le jeu, et générera un rappel d&#39;événement social asynchrone que nous traiterions de la manière suivante:</p><p class="code">if (async_load[? &quot;id&quot;] == achievement_stat_event)<br/>     {
-    <br/>     if (async_load[? &quot;event&quot;] == &quot;GetLeaderboardComplete&quot;)<br/>         {
-    <br/>         global.numentries = async_load[? &quot;numentries&quot;];<br/>         for(var i = 0; i &lt; numentries; i++;)<br/>             {
-    <br/>             global.playername[i] = async_load[? &quot;Player&quot; + string(i)];<br/>             global.playerid[i] = async_load[? &quot;Playerid&quot; + string(i)];<br/>             global.playerrank[i] = async_load[? &quot;Rank&quot; + string(i)];<br/>                global.playerscore[i] = async_load[? &quot;Score&quot; + string(i]);<br/>             }
-    <br/>         }
-    <br/>     }
-  </p><p> Le code ci-dessus vérifie la carte DS renvoyée dans l&#39;événement asynchrone social et si son &quot;id&quot; correspond à la constante vérifiée, il vérifie ensuite si l&#39;événement a été déclenché par les données de classement renvoyées avant de parcourir la carte et de stocker tous les différents valeurs dans un certain nombre de tableaux globaux. </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> Retour: <a href="Stats_And_Leaderboards.htm">Statistiques et classements</a></div><div style="float:right"> Suivant:<a href="xboxlive_achievements_set_progress.htm">xboxlive_achievements_set_progress</a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
+<body>
+  <!--<div class="body-scroll" style="top: 150px;">-->
+  <h1>xboxlive_stats_get_social_leaderboard</h1>
+  <p>Cette fonction peut être utilisée pour récupérer un classement social des rangs pour une statistique donnée. Vous fournissez l'ID de l'utilisateur (tel que renvoyé, par exemple, par la fonction <a href="../Users_And_Accounts/xboxlive_get_user.htm"><tt>xboxlive_get_user()</tt></a>), la
+    (telle qu'elle a été définie lorsque vous l'avez créée à l'aide des fonctions xboxlive_stats_set_stat_*), puis vous spécifiez un certain nombre de détails sur les informations du classement que vous souhaitez récupérer. Notez que vous ne pouvez récupérer un classement social que pour des statistiques de type
+    int ou real, mais pas pour les statistiques de type string, et que si vous attribuez la valeur true à l'argument &quot;favourites_only&quot;, les résultats ne contiendront que les données relatives aux amis que l'utilisateur a marqués comme &quot;favoris&quot;.</p>
+  <p class="note"><b>IMPORTANT !</b> Les statistiques utilisées dans les classements sociaux <b>n'ont pas</b> besoin d'être enregistrées comme &quot;Featured Stats&quot; dans le XDP/Windows<span class="notranslate">Dev</span> Center .</p>
+  <p>La fonction générera un callback qui déclenchera un <a href="../../../../The_Asset_Editors/Object_Properties/Async_Events/System.htm">événement asynchrone du système</a>. Cet événement aura la carte spéciale DS <a href="../../../GML_Overview/Variables/Builtin_Global_Variables/async_load.htm"><tt>async_load</tt></a>    qui devra ensuite être analysée pour les clés suivantes :</p>
+  <ul class="colour">
+    <li>&quot; id&quot; - Contiendra la constante <tt>achievement_stat_event</tt></li>
+    <li>&quot;événement<b>&quot; -</b> Contient la chaîne de caractères &quot;GetLeaderboardComplete<i>&quot;</i>.</li>
+    <li>&quot; userid<b>&quot; -</b> L'ID utilisateur associé à la demande</li>
+    <li>&quot;error<b>&quot; - 0</b> en cas de succès, une autre valeur s'il y a eu une erreur. Les erreurs les plus courantes sont les suivantes :
+      <ul>
+        <li>-2145844848 : Mauvaise requête (la statistique n'est pas un type de classement valide, c'est-à-dire une chaîne).</li>
+      </ul>
+    </li>
+    <li>&quot;errormessage<b>&quot; - Une</b> chaîne contenant un message d'erreur, s'il y en a un.</li>
+    <li>&quot;<b>display_name &quot; -</b> L'identifiant unique du leaderboard tel que défini sur le tableau de bord du fournisseur.</li>
+    <li>&quot; numentries<b>&quot; -</b> Le nombre d'entrées dans le classement que vous avez reçues.</li>
+  </ul>
+  <p>Le reste de la carte DS contiendra également les données du classement au format suivant (où &quot;N&quot; est la position dans les données du classement, de 0 à &quot;numentries&quot;) :</p>
+  <ul class="colour">
+    <li>&quot;<b>PlayerN&quot; -</b> Le nom du joueur, où &quot;N&quot; est une valeur entière correspondant à sa position dans la liste des entrées du classement.</li>
+    <li>&quot;<b>PlayeridN&quot; -</b> L'identifiant unique du joueur, &quot;N&quot;.</li>
+    <li>&quot;RankN<b>&quot; -</b> Le rang du joueur &quot;N&quot; dans le classement.</li>
+    <li>&quot;ScoreN<b>&quot; -</b> Le score du joueur &quot;N&quot;.</li>
+  </ul>
+  <p> </p>
+  <h4>Syntaxe :</h4>
+  <p class="code">xboxlive_stats_get_social_leaderboard(user_id, stat, num_entries, start_rank, start_at_user, favourites_only) ;</p>
+  <table>
+    <tbody>
+      <tr>
+        <th>Arguments</th>
+        <th>Description</th>
+      </tr>
+      <tr>
+        <td>nom d'utilisateur</td>
+        <td>L'ID de l'utilisateur pour lequel le classement doit être obtenu.</td>
+      </tr>
+      <tr>
+        <td>stat</td>
+        <td>La statistique (sous forme de chaîne) à partir de laquelle le classement mondial sera créé.</td>
+      </tr>
+      <tr>
+        <td>nombre d'entrées</td>
+        <td>Le nombre d'entrées du classement mondial à récupérer.</td>
+      </tr>
+      <tr>
+        <td>start_rank</td>
+        <td>Le rang dans le classement à partir duquel il faut commencer (utilisez 0 si l'argument &quot;start_at_user&quot; est défini comme vrai).</td>
+      </tr>
+      <tr>
+        <td>start_at_user</td>
+        <td>Défini à <tt>true</tt> pour commencer au rang de l'ID utilisateur, <tt>false</tt> sinon (défini à <tt>false</tt> si l'argument &quot;start_rank&quot; est différent de 0).</td>
+      </tr>
+      <tr>
+        <td>favoris_seulement</td>
+        <td>Défini à <tt>true</tt> pour montrer seulement les amis qui sont marqués comme &quot;favoris&quot; ou false <tt>autrement</tt> </td>
+      </tr>
+    </tbody>
+  </table>
+  <p> </p>
+  <h4>Les retours :</h4>
+  <p class="code">N/A</p>
+  <p> </p>
+  <h4>Exemple étendu :</h4>
+  <p>Voici un exemple détaillé de la façon dont cette fonction peut être utilisée. Pour commencer, vous l'appelez dans un événement comme Room <b>Start ou</b> <b>Create :</b></p>
+  <p class="code">xboxlive_stats_get_social_leaderboard(user_id, &quot;GlobalTime&quot;, 20, 1, false, false) ;</p>
+  <p>Le code ci-dessus sera appelé pour obtenir une liste de toutes les positions du classement mondial pour le jeu, et générera un appel à l'événement social asynchrone que nous traiterons de la manière suivante :</p>
+  <p class="code">if (async_load[ ? &quot;id&quot;] == achievement_stat_event)<br> {
+    <br> if (async_load[ ? &quot;event&quot;] == &quot;GetLeaderboardComplete&quot;)<br> {
+    <br> global.numentries = async_load[ ? &quot;numentries&quot;] ;<br> for(var i = 0 ; i &lt; numentries ; i++ ;)<br> {
+    <br> global.playername[i] = async_load[ ? &quot;Player&quot; + string(i)] ;<br> global.playerid[i] = async_load[ ? &quot;Playerid&quot; + string(i)] ;<br> global.playerrank[i] = async_load[ ? &quot;Rank&quot; + string(i)] ;<br> global.playerscore[i] = async_load[ ? &quot;Score&quot; + string(i]) ;<br> }
+    <br> }
+    <br> }
+  </p>
+  <p>Le code ci-dessus vérifie la carte DS retournée dans l'événement social asynchrone et si son &quot;id&quot; correspond à la constante vérifiée, il vérifie ensuite si l'événement a été déclenché par des données de classement retournées avant de parcourir la carte en boucle
+    et de stocker toutes les différentes valeurs dans un certain nombre de tableaux globaux.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <div class="footer">
+    <div class="buttons">
+      <div class="clear">
+        <div style="float:left">Retour : <a href="Stats_And_Leaderboards.htm">Stats et classements</a></div>
+        <div style="float:right">Suivant : <a href="xboxlive_achievements_set_progress.htm">xboxlive_achievements_set_progress</a></div>
+      </div>
+    </div>
+    <h5><span data-keyref="Copyright Notice">Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
   </div>
   <!-- KEYWORDS
 xboxlive_stats_get_social_leaderboard

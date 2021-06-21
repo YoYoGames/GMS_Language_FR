@@ -7,13 +7,54 @@
   <meta name="generator" content="Adobe RoboHelp 2019" />
   <link rel="stylesheet" href="../../../assets/css/default.css" type="text/css" />
   <meta name="rh-authors" content="Mark Alexander" />
-  <meta name="topic-comment" content="Page expliquant la fonction variable_struct_exists" />
+  <meta name="topic-comment" content="Page explaining the function variable_struct_exists" />
   <meta name="rh-index-keywords" content="variable_struct_exists" />
   <meta name="search-keywords" content="variable_struct_exists" />
 </head>
-<body><!--<div class="body-scroll" style="top: 150px;">--><h1>variable_struct_exists</h1><p> Avec cette fonction, vous pouvez vérifier si une variable existe dans la structure donnée ou non. Vous fournissez la référence de structure à utiliser ainsi que le nom de la variable à vérifier <i>sous forme de chaîne</i> (voir l&#39;exemple de code ci-dessous). La fonction retournera <tt>true</tt> si une variable avec le nom donné existe pour la structure et <tt>false</tt> autrement.</p><p></p><h4> Syntaxe:</h4><p class="code">variable_struct_exists(struct, name);</p><table><tbody><tr><th> Argument</th><th> Description</th></tr><tr><td> <span class="notranslate">struct</span></td><td> La référence struct à vérifier</td></tr><tr><td> <span class="notranslate">name</span></td><td> Le nom de la variable struct à vérifier (sous forme de chaîne)</td></tr></tbody></table><p></p><h4> Retour:</h4><p class="code">Boolean</p><p></p><h4> Exemple:</h4><p class="code">if !variable_struct_exists(mystruct, &quot;shields&quot;))<br/> {
-    <br/> mystruct.shields = 0;<br/> }
-  </p><p> Le code ci-dessus vérifiera si la variable appelée &quot;shields&quot; existe dans la structure donnée et si ce n&#39;est pas le cas, elle est créée et initialisée à 0. </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> Retour: <a href="Variable_Functions.htm">Fonctions variables</a></div><div style="float:right"> Suivant:<a href="variable_struct_get.htm">variable_struct_get</a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
+<body>
+  <!--<div class="body-scroll" style="top: 150px;">-->
+  <h1>variable_struct_exists</h1>
+  <p>Avec cette fonction, vous pouvez vérifier si une variable existe ou non dans une structure donnée. Vous fournissez la référence de la structure à utiliser ainsi que le nom de la variable à vérifier <i>sous forme de chaîne de caractères</i> (voir l'exemple de code ci-dessous). La fonction
+    retournera <tt>vrai</tt> si une variable avec le nom donné existe pour la structure et <tt>faux</tt> sinon.</p>
+  <p> </p>
+  <h4>Syntaxe :</h4>
+  <p class="code">variable_struct_exists(struct, nom) ;</p>
+  <table>
+    <tbody>
+      <tr>
+        <th>Arguments</th>
+        <th>Description</th>
+      </tr>
+      <tr>
+        <td>struct</td>
+        <td>La référence de la structure à vérifier</td>
+      </tr>
+      <tr>
+        <td>nom</td>
+        <td>Le nom de la variable de structure à vérifier (sous forme de chaîne).</td>
+      </tr>
+    </tbody>
+  </table>
+  <p> </p>
+  <h4>Les retours :</h4>
+  <p class="code">Booléen</p>
+  <p> </p>
+  <h4>Exemple :</h4>
+  <p class="code">if !variable_struct_exists(mystruct, &quot;shields&quot;))<br> {
+    <br> mystruct.shields = 0 ;<br> }
+  </p>
+  <p>Le code ci-dessus va vérifier si la variable appelée &quot;shields&quot; existe dans la structure donnée et si ce n'est pas le cas, elle est créée et initialisée à 0.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <div class="footer">
+    <div class="buttons">
+      <div class="clear">
+        <div style="float:left">Retour : <a href="Variable_Functions.htm">Fonctions variables</a></div>
+        <div style="float:right">Suivant : <a href="variable_struct_get.htm">variable_struct_get</a></div>
+      </div>
+    </div>
+    <h5><span data-keyref="Copyright Notice">Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
   </div>
   <!-- KEYWORDS
 variable_struct_exists

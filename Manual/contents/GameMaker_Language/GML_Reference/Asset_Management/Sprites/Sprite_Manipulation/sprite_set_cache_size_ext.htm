@@ -7,11 +7,56 @@
   <meta name="generator" content="Adobe RoboHelp 2019" />
   <link rel="stylesheet" href="../../../../../assets/css/default.css" type="text/css" />
   <meta name="rh-authors" content="Mark Alexander" />
-  <meta name="topic-comment" content="Page expliquant la fonction sprite_set_cache_size_ext" />
+  <meta name="topic-comment" content="Page explaining the function sprite_set_cache_size_ext" />
   <meta name="rh-index-keywords" content="sprite_set_cache_size_ext" />
   <meta name="search-keywords" content="sprite_set_cache_size_ext" />
 </head>
-<body><!--<div class="body-scroll" style="top: 150px;">--><h1>sprite_set_cache_size_ext</h1><p> Lors de la fusion d&#39;images, HTML5 ne peut pas le faire de manière dynamique de la même manière qu&#39;un exécutable pourrait être exécuté. Par conséquent, <span class="notranslate">GameMaker Studio 2</span> doit temporairement enregistrer une copie mélangée de l&#39;image et la charger. Cette fonction définit le nombre de copies mélangées du sprite donné pouvant être mises en cache avant que les anciennes ne soient écrasées. La valeur par défaut est 4. Ceci est appliqué à une seule sous-image donnée du sprite.</p><p></p><h4> Syntaxe:</h4><p class="code">sprite_set_cache_size_ext(ind, index, max);</p><table><tbody><tr><th> Argument</th><th> Description</th></tr><tr><td> <span class="notranslate">ind</span></td><td> L&#39;index de l&#39;image-objet pour modifier la taille du cache.</td></tr><tr><td> <span class="notranslate">index</span></td><td> La sous-image de ind pour modifier la taille du cache.</td></tr><tr><td> <span class="notranslate">max</span></td><td> Le nombre maximal de copies mises en cache de l&#39;image-objet pouvant être stockées.</td></tr></tbody></table><p></p><h4> Retour</h4><p class="code">N/A</p><p></p><h4> Exemple:</h4><p class="code">sprite_set_cache_size_ext(sprite0, 0, 2);</p><p> Cela définira le cache de sprite de la première sous-image de sprite0 à 2 copies. </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> Retour: <a href="Sprite_Manipulation.htm">Manipulation des sprites</a></div><div style="float:right"> Suivant:<a href="sprite_save.htm">sprite_save</a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
+<body>
+  <!--<div class="body-scroll" style="top: 150px;">-->
+  <h1>sprite_set_cache_size_ext</h1>
+  <p>Lorsqu'il effectue le mélange d'images, HTML5 ne peut pas le faire de manière dynamique de la même manière qu'un exécutable. <span class="notranslate">GameMaker Studio 2</span> doit donc enregistrer temporairement une copie mélangée de l'image et la charger. Cette fonction définit le nombre de copies mélangées
+    du sprite donné peuvent être mises en cache avant que les anciennes ne soient écrasées. La valeur par défaut est 4. Ceci est appliqué à une seule sous-image donnée du sprite.</p>
+  <p> </p>
+  <h4>Syntaxe :</h4>
+  <p class="code">sprite_set_cache_size_ext(ind, index, max) ;</p>
+  <table>
+    <tbody>
+      <tr>
+        <th>Arguments</th>
+        <th>Description</th>
+      </tr>
+      <tr>
+        <td>ind</td>
+        <td>L'index du sprite dont la taille du cache doit être modifiée.</td>
+      </tr>
+      <tr>
+        <td>indice</td>
+        <td>La sous-image de ind pour changer la taille du cache.</td>
+      </tr>
+      <tr>
+        <td>max</td>
+        <td>Le nombre maximum de copies en cache du sprite qui peuvent être stockées.</td>
+      </tr>
+    </tbody>
+  </table>
+  <p> </p>
+  <h4>Renvoie à</h4>
+  <p class="code">N/A</p>
+  <p> </p>
+  <h4>Exemple :</h4>
+  <p class="code">sprite_set_cache_size_ext(sprite0, 0, 2) ;</p>
+  <p>Le cache du sprite de la première sous-image du sprite0 sera ainsi réglé sur 2 copies.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <div class="footer">
+    <div class="buttons">
+      <div class="clear">
+        <div style="float:left">Retour : <a href="Sprite_Manipulation.htm">Manipulation des sprites</a></div>
+        <div style="float:right">Suivant : <a href="sprite_save.htm">sprite_save</a></div>
+      </div>
+    </div>
+    <h5><span data-keyref="Copyright Notice">Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
   </div>
   <!-- KEYWORDS
 sprite_set_cache_size_ext

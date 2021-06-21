@@ -7,11 +7,71 @@
   <meta name="generator" content="Adobe RoboHelp 2019" />
   <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
   <meta name="rh-authors" content="Mark Alexander" />
-  <meta name="topic-comment" content="Page décrivant la fonction font_replace_sprite" />
+  <meta name="topic-comment" content="Page outlining the function font_replace_sprite" />
   <meta name="rh-index-keywords" content="font_replace_sprite" />
   <meta name="search-keywords" content="font_replace_sprite" />
 </head>
-<body><!--<div class="body-scroll" style="top: 150px;">--><h1>font_replace_sprite</h1><p> Avec cette fonction, vous pouvez utiliser une «bande de sprite» pour remplacer un actif de police de sprite précédemment créé, où chaque sous-image serait un symbole ou une lettre individuelle. L&#39;index est le numéro de carte UTF8 pour le premier caractère à utiliser et les plages à utiliser sont les mêmes que vous le feriez pour une police normale, commençant par &quot;!&quot; mais rappelez-vous que vous ne devez inclure que ce dont vous avez besoin et que vous devez utiliser le <a href="../../Strings/ord.htm"><tt>ord()</tt></a> pour obtenir la valeur UTF8 correcte de la lettre de départ.</p><p> Vous pouvez également définir l&#39;espacement de la police pour qu&#39;il soit proportionnel (<tt>true</tt> ) ou non (<tt>false</tt> ), où une police proportionnelle est espacée en fonction de la largeur réelle des lettres (la lettre «i» prend donc moins de place que la lettre «w», par exemple) tandis qu&#39;une police non proportionnelle sera espacée en fonction du sous- largeur de l&#39;image, comme une police à espacement fixe. Enfin, vous pouvez définir l&#39;espace à laisser entre chaque lettre lors de l&#39;écriture, et cela peut être n&#39;importe quelle valeur entière, 0 étant sans espace (les lettres &quot;toucheront&quot; si elles sont proportionnelles).</p><p> Si la fonction échoue, elle échouera silencieusement sans remplacer la police de sprite donnée.</p><p> Il est également intéressant de noter qu&#39;il ne peut y avoir d&#39; <i>espaces</i> dans la table de caractères, de sorte que si vous, par exemple, utilisez &#39;.&#39; et &#39;0&#39; mais pas &#39;/&#39;, vous devez quand même inclure &#39;/&#39; ou laisser une sous-image vide entre les deux caractères utilisés. L&#39;image ci-dessous montre une disposition de police de sprite typique:</p><p></p><h4> Syntaxe:</h4><p class="code">font_replace_sprite(ind, spr, first, prop, sep);</p><table><tbody><tr><th> Argument</th><th> Description</th></tr><tr><td> <span class="notranslate">ind</span></td><td> L&#39;index de la police qui doit être remplacée (c&#39;est-à-dire que toutes les références à cette ressource après cette fonction feront référence à la nouvelle police, pas à l&#39;original).</td></tr><tr><td> <span class="notranslate">spr</span></td><td> Le sprite sur lequel ajouter une police.</td></tr><tr><td> <span class="notranslate">first</span></td><td> L&#39;index du premier caractère disponible.</td></tr><tr><td> <span class="notranslate">prop</span></td><td> Si l&#39;espace blanc autour de chaque lettre doit être supprimé (s&#39;il est faux, la police créée sera monospace, sinon ce sera comme la plupart des polices régulières).</td></tr><tr><td> <span class="notranslate">sep</span></td><td> L&#39;espace entre chaque lettre, 0 signifiant la droite d&#39;une lettre touche juste la gauche de la suivante.</td></tr></tbody></table><p></p><h4> Retour:</h4><p class="code">N/A</p><p></p><h4> Exemple:</h4><p class="code">font_replace_sprite(global.Font, working_directory + &quot;Sprites\spr_Font.png&quot;, ord(&quot;!&quot;), true, 2);</p><p> Le code ci-dessus remplacera la ressource de police indexée dans la variable globale &quot;Police&quot; par une nouvelle ressource de police à partir d&#39;un fichier image externe. </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> Retour: <a href="Fonts.htm">Polices</a></div><div style="float:right"> Suivant:<a href="font_replace_sprite_ext.htm">font_replace_sprite_ext</a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
+<body>
+  <!--<div class="body-scroll" style="top: 150px;">-->
+  <h1>font_replace_sprite</h1>
+  <p>Avec cette fonction, vous pouvez utiliser une &quot;bande de sprites&quot; pour remplacer une ressource de police de sprites précédemment créée, où chaque sous-image serait un symbole ou une lettre individuelle. L'index est le numéro de carte UTF8 pour le premier caractère à utiliser et les intervalles
+    à utiliser sont les mêmes que pour une police normale, en commençant par &quot; !&quot;, mais n'oubliez pas que vous ne devez inclure que ce dont vous avez besoin et que vous devez utiliser la fonction <a href="../../Strings/ord.htm"><tt>ord()</tt></a> pour obtenir la valeur
+    UTF8 correcte pour la lettre de départ.</p>
+  <p>Vous pouvez également définir l'espacement de la police pour qu'elle soit proportionnelle<tt>(true</tt>) ou non<tt>(false</tt>), où une police proportionnelle est espacée sur la base de la largeur réelle des lettres (ainsi, la lettre &quot;i&quot; prend moins de place que la lettre &quot;w&quot;,
+    par exemple), tandis qu'une police non proportionnelle sera espacée en fonction de la largeur de la sous-image, comme une police monospace. Enfin, vous pouvez définir l'espace à laisser entre chaque lettre lors de l'écriture, et il peut s'agir de n'importe quelle valeur entière, 0 correspondant à l'absence d'espace (les lettres se "toucheront" si elles sont proportionnelles).
+    lettres se &quot;toucheront&quot; si elles sont proportionnelles). </p>
+  <p>Si la fonction échoue, elle échouera en silence sans remplacer la police de sprites donnée.</p>
+  <p>Il convient également de noter qu'il ne peut y avoir d'<i>espace</i> dans la carte de caractères, de sorte que si vous utilisez, par exemple, '.' et '0' mais pas '/', vous devez soit inclure '/' de toute façon, soit laisser un sous-image vide entre les deux caractères utilisés.
+    deux caractères utilisés. L'image ci-dessous montre une disposition typique de police sprite :</p>
+  <p> </p>
+  <h4>Syntaxe :</h4>
+  <p class="code">font_replace_sprite(ind, spr, first, prop, sep) ;</p>
+  <table>
+    <tbody>
+      <tr>
+        <th>Arguments</th>
+        <th>Description</th>
+      </tr>
+      <tr>
+        <td>ind</td>
+        <td>L'index de la police qui doit être remplacée (c'est-à-dire que toutes les références à cette ressource après cette fonction feront référence à la nouvelle police, et non à l'originale).</td>
+      </tr>
+      <tr>
+        <td>spr</td>
+        <td>Le sprite sur lequel ajouter une police.</td>
+      </tr>
+      <tr>
+        <td>premièrement</td>
+        <td>L'index du premier caractère disponible.</td>
+      </tr>
+      <tr>
+        <td>accessoire</td>
+        <td>Si l'espace blanc autour de chaque lettre doit être supprimé (si false, la police créée sera monospaced, sinon elle sera comme la plupart des polices régulières).</td>
+      </tr>
+      <tr>
+        <td>sep</td>
+        <td>L'espace entre chaque lettre, 0 signifiant que la droite d'une lettre touche juste la gauche de la suivante.</td>
+      </tr>
+    </tbody>
+  </table>
+  <p> </p>
+  <h4>Les retours :</h4>
+  <p class="code">N/A</p>
+  <p> </p>
+  <h4>Exemple :</h4>
+  <p class="code">font_replace_sprite(global.Font, working_directory + &quot;Sprites\spr_Font.png&quot;, ord(&quot; !&quot;), true, 2) ;</p>
+  <p>Le code ci-dessus va remplacer la police indexée dans la variable globale &quot;Font&quot; par une nouvelle police provenant d'un fichier image externe.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <div class="footer">
+    <div class="buttons">
+      <div class="clear">
+        <div style="float:left">Retour : <a href="Fonts.htm">Polices de caractères</a></div>
+        <div style="float:right">Suivant : <a href="font_replace_sprite_ext.htm">font_replace_sprite_ext</a></div>
+      </div>
+    </div>
+    <h5><span data-keyref="Copyright Notice">Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
   </div>
   <!-- KEYWORDS
 font_replace_sprite

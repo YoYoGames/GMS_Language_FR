@@ -3,17 +3,65 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>place_meeting</title>
+  <title>lieu_réunion</title>
   <meta name="generator" content="Adobe RoboHelp 2019" />
   <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
   <meta name="rh-authors" content="Mark Alexander" />
-  <meta name="topic-comment" content="Page qui donne un aperçu de la fonction place_meeting" />
+  <meta name="topic-comment" content="Page that gives an overview of the funtion place_meeting" />
   <meta name="rh-index-keywords" content="place_meeting" />
   <meta name="search-keywords" content="place_meeting" />
 </head>
-<body><!--<div class="body-scroll" style="top: 150px;">--><h1>place_meeting</h1><p> Avec cette fonction, vous pouvez vérifier une position pour une collision avec une autre instance ou toutes les instances d&#39;un objet en utilisant le masque de collision de l&#39;instance qui exécute le code pour la vérification. Lorsque vous l&#39;utilisez, vous demandez effectivement à <span class="notranslate">GameMaker Studio 2</span> de déplacer l&#39;instance vers la nouvelle position, de rechercher une collision, de revenir en arrière et de vous dire si une collision a été trouvée ou non. Cela fonctionnera pour des collisions précises, mais uniquement si l&#39;instance et l&#39;objet à vérifier ont tous deux des masques de collision précis sélectionnés, sinon seules les collisions de boîte englobante sont appliquées. Cette fonction accepte également les mots-clés spéciaux <b>tous</b> et <b>autres</b>. Veuillez noter que si vous avez besoin d&#39;obtenir l&#39; <b>ID d&#39;</b> instance unique de l&#39;objet avec lequel il entre en collision, vous devez utiliser <a href="../../Asset_Management/Instances/instance_place.htm"><tt>instance_place()</tt></a>.</p><p><img alt="Place meeting example" class="center" src="../../../../assets/Images/Scripting_Reference/GML/Reference/Movement_Collisions/place_meeting.png" /> Notez que les coordonnées x / y données seront étalées à l&#39;entier le plus proche avant que la vérification ne soit effectuée.</p><p></p><h4> Syntaxe:</h4><p class="code">place_meeting(x, y, obj);</p><table><tbody><tr><th> Argument</th><th> Description</th></tr><tr><td> <span class="notranslate">x</span></td><td> La position x à vérifier.</td></tr><tr><td> <span class="notranslate">y</span></td><td> La position y à vérifier.</td></tr><tr><td> <span class="notranslate">obj</span></td><td> L&#39;instance ou l&#39;objet à rechercher.</td></tr></tbody></table><p></p><h4> Retour:</h4><p class="code">Boolean</p><p></p><h4> Exemple:</h4><p class="code">if keyboard_check(vk_left)<br/>    {
-    <br/>    if !place_meeting(x - 5, y, obj_wall) x -=5;<br/>    }
-  </p><p> Le code ci-dessus vérifie s&#39;il n&#39;y a <i>pas de</i> collision à gauche de l&#39;instance et déplace l&#39;instance s&#39;il n&#39;y en a pas. </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> Retour: <a href="Collisions.htm">Collisions</a></div><div style="float:right"> Suivant:<a href="position_empty.htm">position_empty</a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
+<body>
+  <!--<div class="body-scroll" style="top: 150px;">-->
+  <h1>lieu_réunion</h1>
+  <p>Cette fonction vous permet de vérifier la présence d'une collision entre une position et une autre instance ou toutes les instances d'un objet en utilisant le masque de collision de l'instance qui exécute le code de vérification. Lorsque vous utilisez cette fonction, vous demandez en fait à <span class="notranslate">GameMaker Studio 2</span> de déplacer l'instance vers la nouvelle position, de vérifier s'il y a une collision, de revenir en arrière et de vous dire si une collision a été trouvée ou non. Cela fonctionnera pour les collisions précises, mais seulement si l'instance et l'objet à vérifier ont tous deux des masques de collisions précises
+    sélectionnés, sinon seules les collisions de la boîte englobante sont appliquées. Cette fonction accepte également les mots-clés spéciaux <b>all</b> et <b>other</b>. Veuillez noter que si vous avez besoin d'obtenir l'<b>identifiant</b> unique <b>de</b> l'instance de l'objet avec lequel la collision a lieu, vous devez
+    devez utiliser <a href="../../Asset_Management/Instances/instance_place.htm"><tt>instance_place()</tt></a>.</p>
+  <p><img alt="Place meeting example" class="center" src="../../../../assets/Images/Scripting_Reference/GML/Reference/Movement_Collisions/place_meeting.png">Notez que les coordonnées x/y données seront ramenées à l'entier le plus proche avant que la vérification ne soit effectuée.
+    contrôle.</p>
+  <p> </p>
+  <h4>Syntaxe :</h4>
+  <p class="code">place_meeting(x, y, obj) ;</p>
+  <table>
+    <tbody>
+      <tr>
+        <th>Arguments</th>
+        <th>Description</th>
+      </tr>
+      <tr>
+        <td>x</td>
+        <td>La position x à vérifier.</td>
+      </tr>
+      <tr>
+        <td>y</td>
+        <td>La position y à vérifier.</td>
+      </tr>
+      <tr>
+        <td>obj.</td>
+        <td>L'instance ou l'objet à vérifier.</td>
+      </tr>
+    </tbody>
+  </table>
+  <p> </p>
+  <h4>Les retours :</h4>
+  <p class="code">Booléen</p>
+  <p> </p>
+  <h4>Exemple :</h4>
+  <p class="code">if keyboard_check(vk_left)<br> {
+    <br> if !place_meeting(x - 5, y, obj_wall) x -=5 ;<br> }
+  </p>
+  <p>Le code ci-dessus vérifie qu'il <i>n'y a pas de</i> collision à gauche de l'instance et déplace l'instance s'il n'y en a pas.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <div class="footer">
+    <div class="buttons">
+      <div class="clear">
+        <div style="float:left">Retour : <a href="Collisions.htm">Collisions</a></div>
+        <div style="float:right">Suivant : <a href="position_empty.htm">position_empty</a></div>
+      </div>
+    </div>
+    <h5><span data-keyref="Copyright Notice">Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
   </div>
   <!-- KEYWORDS
 place_meeting

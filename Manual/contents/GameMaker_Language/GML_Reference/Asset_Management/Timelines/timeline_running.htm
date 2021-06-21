@@ -3,17 +3,42 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>timeline_running</title>
+  <title>chronologie_fonctionnement</title>
   <meta name="generator" content="Adobe RoboHelp 2019" />
   <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
   <meta name="rh-authors" content="Mark Alexander" />
-  <meta name="topic-comment" content="Page décrivant la fonction timeline_running" />
+  <meta name="topic-comment" content="Page outlining the function timeline_running" />
   <meta name="rh-index-keywords" content="timeline_running" />
   <meta name="search-keywords" content="timeline_running" />
 </head>
-<body><!--<div class="body-scroll" style="top: 150px;">--><h1>timeline_running</h1><p> Cette variable contient l&#39;état actuel de la ligne de temps assignée et retournera <tt>true</tt> s&#39;il est en cours d&#39;exécution et false dans le cas contraire. Vous pouvez également définir cette variable sur <tt>true</tt> ou <tt>false</tt> pour démarrer et arrêter la chronologie à tout moment. il convient de noter qu&#39;une ligne de temps arrêtée n&#39;est <i>pas</i> réinitialisée, et donc la redémarrer ultérieurement la redémarrera à partir du moment exact où elle a été arrêtée.</p><p></p><h4> Syntaxe:</h4><p class="code">timeline_running;</p><p></p><h4> Retour:</h4><p class="code">Boolean</p><p></p><h4> Exemple:</h4><p class="code">if !timeline_running<br/>     {
-    <br/>     timeline_position = 0;<br/>     timeline_running = true;<br/>     }
-  </p><p> Le code ci-dessus vérifiera si l&#39;instance exécute une ligne de temps, et si ce n&#39;est pas le cas, il réinitialise la ligne de temps assignée pour démarrer au premier moment, puis la démarre. </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> Retour: <a href="Timelines.htm">Chronologies</a></div><div style="float:right"> Suivant:<a href="timeline_speed.htm">timeline_speed</a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
+<body>
+  <!--<div class="body-scroll" style="top: 150px;">-->
+  <h1>chronologie_fonctionnement</h1>
+  <p>Cette variable contient l'état actuel de la ligne de temps assignée et renvoie <tt>true</tt> si elle est en cours d'exécution et false si elle ne l'est pas. Vous pouvez également définir cette variable sur <tt>true</tt> ou <tt>false</tt> pour
+    Il convient de noter qu'une ligne de temps arrêtée <i>n'</i> est <i>pas</i> réinitialisée, et donc la relancer ultérieurement la fera repartir à partir du moment exact où elle a été arrêtée.</p>
+  <p> </p>
+  <h4>Syntaxe :</h4>
+  <p class="code">la chronologie des opérations ;</p>
+  <p> </p>
+  <h4>Les retours :</h4>
+  <p class="code">Booléen</p>
+  <p> </p>
+  <h4>Exemple :</h4>
+  <p class="code">if !timeline_running<br> {
+    <br> timeline_position = 0 ;<br> timeline_running = true ;<br> }
+  </p>
+  <p>Le code ci-dessus vérifiera si l'instance exécute une ligne de temps, et si ce n'est pas le cas, il réinitialisera la ligne de temps assignée pour qu'elle démarre au premier moment, puis la lancera.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <div class="footer">
+    <div class="buttons">
+      <div class="clear">
+        <div style="float:left">Retour : <a href="Timelines.htm">Lignes du temps</a></div>
+        <div style="float:right">Suivant : <a href="timeline_speed.htm">timeline_speed</a></div>
+      </div>
+    </div>
+    <h5><span data-keyref="Copyright Notice">Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
   </div>
   <!-- KEYWORDS
 timeline_running

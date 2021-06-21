@@ -7,11 +7,59 @@
   <meta name="generator" content="Adobe RoboHelp 2019" />
   <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
   <meta name="rh-authors" content="Mark Alexander" />
-  <meta name="topic-comment" content="Page de référence pour xboxlive_stats_set_stat_int" />
+  <meta name="topic-comment" content="Reference page for xboxlive_stats_set_stat_int" />
   <meta name="rh-index-keywords" content="xboxlive_stats_set_stat_int" />
   <meta name="search-keywords" content="xboxlive_stats_set_stat_int" />
 </head>
-<body><!--<div class="body-scroll" style="top: 150px;">--><h1>xboxlive_stats_set_stat_int</h1><p> Cette fonction peut être utilisée pour définir la valeur d&#39;une statistique pour l&#39;ID utilisateur donné. Vous fournissez l&#39;ID utilisateur tel que renvoyé par (par exemple) la fonction <a href="../Users_And_Accounts/xboxlive_get_user.htm"><tt>xboxlive_get_user()</tt></a>, puis la chaîne de statistiques à définir ( <b>si la chaîne de statistiques n&#39;existe pas déjà, une nouvelle statistique sera créée et définie sur la valeur donnée</b> ) et une valeur (un entier) pour définir la statistique. Notez que le nom de la statistique doit être alphanumérique uniquement, sans symboles ni espaces.</p><p> Lors de la définition de la valeur de la statistique, toute valeur précédente sera remplacée, il vous appartient donc de déterminer si la valeur de la statistique doit être mise à jour ou non (c&#39;est-à-dire vérifier que le score le plus élevé est réellement le plus élevé) en comparant à la valeur de la statistique actuelle avec le nouveau avant de le régler.</p><p> La fonction renverra -1 s&#39;il y a eu une erreur ou si l&#39;ID utilisateur n&#39;est pas valide, ou toute autre valeur si la fonction a été appelée avec succès.</p><p></p><h4> Syntaxe:</h4><p class="code">xboxlive_stats_set_stat_int(user_id, stat, value);</p><table><tbody><tr><th> Argument</th><th> Description</th></tr><tr><td> <span class="notranslate">user_id</span></td><td> Le pointeur d&#39;ID utilisateur pour définir la statistique pour</td></tr><tr><td> <span class="notranslate">stat</span></td><td> La statistique à définir (une chaîne)</td></tr><tr><td> <span class="notranslate">value</span></td><td> La valeur à laquelle définir la statistique (un entier)</td></tr></tbody></table><p></p><h4> Retour:</h4><p class="code">Real</p><p></p><h4> Exemple:</h4><p class="code">var _val = xboxlive_stats_get_stat(p_user_id, &quot;GamesPlayed&quot;);<br/> xboxlive_stats_set_stat_int(p_user_id, &quot;GamesPlayed&quot;, ++_val);</p><p> Le code ci-dessus récupère la valeur de la statistique &quot;GamesPlayed&quot;, puis définit la même statistique sur cette valeur plus 1. </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> Retour: <a href="Stats_And_Leaderboards.htm">Statistiques et classements</a></div><div style="float:right"> Suivant:<a href="xboxlive_stats_set_stat_string.htm">xboxlive_stats_set_stat_string</a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
+<body>
+  <!--<div class="body-scroll" style="top: 150px;">-->
+  <h1>xboxlive_stats_set_stat_int</h1>
+  <p>Cette fonction peut être utilisée pour définir la valeur d'une statistique pour l'ID utilisateur donné. Vous fournissez l'ID utilisateur tel que retourné par (par exemple) la fonction <a href="../Users_And_Accounts/xboxlive_get_user.htm"><tt>xboxlive_get_user()</tt></a>puis la chaîne de caractères de la statistique
+    à définir<b>(si la chaîne de statuts n'existe pas encore, un nouveau statut sera créé et défini à la valeur donnée</b>) et une valeur (un nombre entier) à définir pour le statut. Notez que le nom de la statue doit être uniquement alphanumérique, sans symboles ni espaces.</p>
+  <p>Lors de la définition de la valeur de la stat, toute valeur précédente sera remplacée, c'est donc à vous de déterminer si la valeur de la stat doit être mise à jour ou non (par exemple, vérifier que le meilleur score est bien le plus élevé) en comparant la valeur de la stat actuelle avec la nouvelle valeur avant de la définir.
+    la nouvelle valeur avant de la définir.</p>
+  <p>La fonction renverra -1 s'il y a eu une erreur ou si l'ID utilisateur est invalide, ou toute autre valeur si la fonction a été appelée avec succès.</p>
+  <p> </p>
+  <h4>Syntaxe :</h4>
+  <p class="code">xboxlive_stats_set_stat_int(user_id, stat, value) ;</p>
+  <table>
+    <tbody>
+      <tr>
+        <th>Arguments</th>
+        <th>Description</th>
+      </tr>
+      <tr>
+        <td>nom d'utilisateur</td>
+        <td>Le pointeur d'identification de l'utilisateur pour définir le statut de l'utilisateur.</td>
+      </tr>
+      <tr>
+        <td>stat</td>
+        <td>La statistique à définir (une chaîne de caractères)</td>
+      </tr>
+      <tr>
+        <td>valeur</td>
+        <td>La valeur à donner à la stat (un nombre entier)</td>
+      </tr>
+    </tbody>
+  </table>
+  <p> </p>
+  <h4>Les retours :</h4>
+  <p class="code">Real</p>
+  <p> </p>
+  <h4>Exemple :</h4>
+  <p class="code">var _val = xboxlive_stats_get_stat(p_user_id, &quot;GamesPlayed&quot;) ;<br> xboxlive_stats_set_stat_int(p_user_id, &quot;GamesPlayed&quot;, ++_val) ;</p>
+  <p>Le code ci-dessus récupère la valeur de la statistique &quot;Jeux joués&quot;, puis définit cette même statistique à cette valeur plus 1.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <div class="footer">
+    <div class="buttons">
+      <div class="clear">
+        <div style="float:left">Retour : <a href="Stats_And_Leaderboards.htm">Stats et classements</a></div>
+        <div style="float:right">Suivant : <a href="xboxlive_stats_set_stat_string.htm">xboxlive_stats_set_stat_string</a></div>
+      </div>
+    </div>
+    <h5><span data-keyref="Copyright Notice">Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
   </div>
   <!-- KEYWORDS
 xboxlive_stats_set_stat_int

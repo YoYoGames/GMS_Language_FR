@@ -7,11 +7,58 @@
   <meta name="generator" content="Adobe RoboHelp 2019" />
   <link rel="stylesheet" href="../../../../../assets/css/default.css" type="text/css" />
   <meta name="rh-authors" content="Mark Alexander" />
-  <meta name="topic-comment" content="Page décrivant les différentes fonctions et variables associées aux tampons audio" />
+  <meta name="topic-comment" content="Page outlining the different functions and variables associated with Audio Buffers" />
   <meta name="rh-index-keywords" content="" />
-  <meta name="search-keywords" content="Tampons audio" />
+  <meta name="search-keywords" content="Audio Buffers" />
 </head>
-<body><!--<div class="body-scroll" style="top: 150px;">--><h1> Tampons audio</h1><p> Vous pouvez utiliser <b>des tampons audio</b> pour charger, enregistrer et manipuler des fichiers audio dans vos jeux. Ces tampons sont créés au préalable à l&#39;aide des <a href="../../../Buffers/Buffers.htm">fonctions de tampon</a> appropriées, puis vous pouvez utiliser les fonctions suivantes pour créer un son à utiliser dans votre projet:</p><p></p><ul class="colour"><li><a href="audio_create_buffer_sound.htm">audio_create_buffer_sound</a></li><li><a href="audio_free_buffer_sound.htm">audio_free_buffer_sound</a></li></ul><p></p><p> Notez qu&#39;une fois que vous avez créé un son à partir d&#39;un tampon audio, vous <i>ne</i> créez pas un nouveau son en mémoire, mais pointez plutôt vers la position dans le tampon où le son est stocké. Vous ne devez pas modifier ce tampon après qu&#39;un son lui a été associé, sinon vous obtiendrez des résultats inattendus et vous ne pourrez pas supprimer le tampon lorsqu&#39;un son lui est associé. Au lieu de cela, libérez d&#39;abord le son (ou les sons), puis supprimez le tampon. Une fois que vous avez créé votre nouvelle ressource audio à partir d&#39;un tampon, vous pouvez utiliser sa valeur d&#39;index dans l&#39;une des fonctions audio normales pour la lire, changer son gain ou sa hauteur, la mettre en pause, etc... Notez que le tampon utilisé pour charger le l&#39;audio <b>ne peut prendre en charge que les sons PCM</b>, de sorte que les formats tels que OGG ne seront pas pris en charge.</p><p> Une autre caractéristique de l&#39;audio mis en mémoire tampon est que vous pouvez utiliser une mémoire tampon pour créer une file d&#39;attente d&#39;audio qui peut ensuite être diffusée sur le périphérique exécutant votre projet. Une file d&#39;attente audio prend un tampon normal que vous avez précédemment rempli de données audio, et vous permet de &quot;pointer&quot; vers des parties de celui-ci et de dire à <span class="notranslate">GameMaker Studio 2</span>: Studio de diffuser l&#39;audio dans un ordre donné à partir de ce tampon. Les fonctions disponibles pour les files d&#39;attente audio sont: </p><p></p><ul class="colour"><li><a href="audio_create_play_queue.htm">audio_create_play_queue</a></li><li><a href="audio_free_play_queue.htm">audio_free_play_queue</a></li><li><a href="audio_queue_sound.htm">audio_queue_sound</a></li></ul><p></p><p> Une fois qu&#39;une file d&#39;attente a été créée, vous pouvez utiliser l&#39;index de file d&#39;attente renvoyé comme vous le feriez pour n&#39;importe quel son normal pour le lire, le mettre en pause, le redémarrer ou modifier son gain et sa hauteur. La seule chose que vous ne pouvez pas faire est d&#39;obtenir la longueur de la piste ou de définir la position de la piste, mais à part cela, une file d&#39;attente audio peut être utilisée comme n&#39;importe quel autre son. Vous devez également noter que certaines des fonctions de file d&#39;attente audio déclencheront également un <a href="../../../../../The_Asset_Editors/Object_Properties/Async_Events/Audio_Playback.htm">événement asynchrone de lecture audio</a>.</p><p> Les tampons audio vous permettront également d&#39;enregistrer le son de l&#39;une des sources disponibles (comme les microphones ou le système d&#39;exploitation), qui peuvent ensuite être mis en file d&#39;attente et diffusés en utilisant les fonctions ci-dessus (par exemple). L&#39;enregistrement audio déclenchera un <a href="../../../../../The_Asset_Editors/Object_Properties/Async_Events/Audio_Recording.htm">événement asynchrone d&#39;enregistrement audio</a> qui contiendra des informations spécifiques sur ce qui est enregistré.<br/><br/> Pour l&#39;enregistrement audio, les fonctions suivantes sont disponibles: </p><p></p><ul class="colour"><li><a href="audio_start_recording.htm">audio_start_recording</a></li><li><a href="audio_stop_recording.htm">audio_stop_recording</a></li><li><a href="audio_get_recorder_count.htm">audio_get_recorder_count</a></li><li><a href="audio_get_recorder_info.htm">audio_get_recorder_info</a></li></ul><p></p><p class="note"><b>REMARQUE: la</b> plupart des plates-formes, à l&#39; <b>exception de HTML5,</b> prennent en charge l&#39;enregistrement audio sous une forme ou une autre, mais cela ne signifie pas que tous les périphériques le permettront, même si la plate-forme le fait, vous devez donc toujours vérifier que la fonction <span style="font-size:1px;"><a href="audio_get_recorder_count.htm"><tt style="font-size: 14px">audio_get_recorder_count ()</tt></a></span> renvoie une valeur supérieure à 0 pour vérifier que les appareils d&#39;enregistrement sont disponibles avant d&#39;utiliser le reste des fonctions d&#39;enregistrement. </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> Retour: <a href="../Audio.htm">Audio</a></div><div style="float:right"> Suivant: <a href="../Audio_Synchronisation/Audio_Synchronisation.htm">Synchronisation audio</a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
+<body>
+  <!--<div class="body-scroll" style="top: 150px;">-->
+  <h1>Tampons audio</h1>
+  <p>Vous pouvez utiliser des <b>tampons audio</b> pour charger, sauvegarder et manipuler des fichiers audio dans vos jeux. Ces tampons sont créés au préalable à l'aide des <a href="../../../Buffers/Buffers.htm">fonctions de tampon</a> appropriées, puis vous pouvez utiliser les fonctions suivantes
+    pour créer un son à utiliser dans votre projet :</p>
+  <p> </p>
+  <ul class="colour">
+    <li><a href="audio_create_buffer_sound.htm">audio_create_buffer_sound</a></li>
+    <li><a href="audio_free_buffer_sound.htm">audio_free_buffer_sound</a></li>
+  </ul>
+  <p> </p>
+  <p>Notez qu'une fois que vous avez créé un son à partir d'un tampon audio, vous <i>ne</i> créez <i>pas</i> un nouveau son en mémoire, mais vous indiquez plutôt la position dans le tampon où le son est stocké. Vous ne devez pas modifier ce tampon après qu'un son lui ait été associé.
+    Vous ne devez pas modifier ce tampon après qu'un son lui ait été associé, sinon vous obtiendrez des résultats inattendus, et vous ne pouvez pas supprimer le tampon lorsqu'un son lui est associé. Au lieu de cela, libérez d'abord le son (ou les sons) puis supprimez le tampon. Une fois que vous avez créé votre nouvelle ressource audio à partir
+    un tampon, vous pouvez utiliser sa valeur d'index dans n'importe quelle fonction audio normale pour la lire, modifier son gain ou sa hauteur, la mettre en pause, etc... Notez que le tampon utilisé pour charger l'audio <b>ne peut supporter que des sons PCM</b>, donc des formats comme OGG ne seront pas supportés.
+    ne seront pas supportés.</p>
+  <p>Une autre caractéristique de l'audio en mémoire tampon est que vous pouvez utiliser un tampon pour créer une file d'attente d'audio qui peut ensuite être diffusée sur le périphérique exécutant votre projet. Une file d'attente audio prend un tampon ordinaire que vous avez préalablement rempli de données audio et vous permet de " pointer " des parties de ce tampon et d'indiquer à GameMaker Studio 2.
+    de &quot;pointer&quot; vers des parties de celui-ci et d'indiquer à GameMaker <span class="notranslate">Studio 2 : Studio</span> de diffuser l'audio dans un ordre donné à partir de ce tampon. Les fonctions disponibles pour les files d'attente audio sont les suivantes :</p>
+  <p> </p>
+  <ul class="colour">
+    <li><a href="audio_create_play_queue.htm">file d'attente_audio_créer_lecture</a></li>
+    <li><a href="audio_free_play_queue.htm">audio_free_play_queue</a></li>
+    <li><a href="audio_queue_sound.htm">audio_queue_sound</a></li>
+  </ul>
+  <p> </p>
+  <p>Une fois qu'une file d'attente a été créée, vous pouvez utiliser l'index de la file d'attente renvoyée comme vous le feriez pour l'index d'un son normal afin de le lire, de le mettre en pause, de le redémarrer ou de modifier son gain et sa hauteur. La seule chose que vous ne pouvez pas faire est d'obtenir la longueur de la piste
+    ou définir la position de la piste, mais à part cela, une file d'attente audio peut être utilisée comme n'importe quel autre son. Vous devez également noter que certaines des fonctions de la file d'attente audio déclencheront également un <a href="../../../../../The_Asset_Editors/Object_Properties/Async_Events/Audio_Playback.htm">événement asynchrone de lecture audio</a>.</p>
+  <p>Les tampons audio vous permettront également d'enregistrer du son à partir de n'importe quelle source disponible (comme des microphones ou le système d'exploitation), qui peut ensuite être mis en file d'attente et diffusé en utilisant les fonctions ci-dessus (par exemple). L'enregistrement audio déclenchera un <a href="../../../../../The_Asset_Editors/Object_Properties/Async_Events/Audio_Recording.htm">événement asynchrone d'enregistrement audio</a> qui contiendra des informations spécifiques sur ce qui est enregistré.<br>
+    <br> Pour l'enregistrement audio, les fonctions suivantes sont disponibles :</p>
+  <p> </p>
+  <ul class="colour">
+    <li><a href="audio_start_recording.htm">enregistrement_début_audio</a></li>
+    <li><a href="audio_stop_recording.htm">audio_stop_recording</a></li>
+    <li><a href="audio_get_recorder_count.htm">audio_get_recorder_count</a></li>
+    <li><a href="audio_get_recorder_info.htm">audio_get_recorder_info</a></li>
+  </ul>
+  <p> </p>
+  <p class="note"><b>REMARQUE : </b>la plupart des plates-formes <b>, à l'exception de HTML5</b>, prennent en charge l'enregistrement audio sous une forme ou une autre, mais cela ne signifie pas que tous les périphériques le permettront, même si la plate-forme le fait. Vous devez donc toujours vérifier que la fonction <span style="font-size:1px;"><a href="audio_get_recorder_count.htm"><tt style="font-size: 14px">audio_get_recorder_count()</tt></a></span>    renvoie une valeur supérieure à 0 pour vérifier que les périphériques d'enregistrement sont disponibles avant d'utiliser le reste des fonctions d'enregistrement.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <div class="footer">
+    <div class="buttons">
+      <div class="clear">
+        <div style="float:left">Retour : <a href="../Audio.htm">Audio</a></div>
+        <div style="float:right">Suivant : <a href="../Audio_Synchronisation/Audio_Synchronisation.htm">Synchronisation audio</a></div>
+      </div>
+    </div>
+    <h5><span data-keyref="Copyright Notice">Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
   </div>
   <!-- KEYWORDS
 Audio Buffers

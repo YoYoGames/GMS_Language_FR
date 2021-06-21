@@ -3,19 +3,60 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>layer_element_move</title>
+  <title>couche_élément_mouvement</title>
   <meta name="generator" content="Adobe RoboHelp 2019" />
   <link rel="stylesheet" href="../../../../../assets/css/default.css" type="text/css" />
   <meta name="rh-authors" content="Mark Alexander" />
-  <meta name="topic-comment" content="Page décrivant la fonction layer_element_move" />
+  <meta name="topic-comment" content="Page outlining the function layer_element_move" />
   <meta name="rh-index-keywords" content="layer_element_move" />
   <meta name="search-keywords" content="layer_element_move" />
 </head>
-<body><!--<div class="body-scroll" style="top: 150px;">--><h1>layer_element_move</h1><p> Vous pouvez utiliser cette fonction pour déplacer un élément d&#39;un calque à un autre. Vous donnez l&#39; <b>ID d&#39;élément</b>, tel que renvoyé par la fonction utilisée pour créer l&#39;élément ou l&#39;éditeur de pièce ou la fonction <a href="layer_get_all_elements.htm"><tt>layer_get_all_elements()</tt></a>, puis vous donnez l&#39;ID du calque (que vous obtenez lorsque vous créez le calque en utilisant <a href="layer_create.htm"><tt>layer_create()</tt></a> ) ou le nom de la couche (sous forme de chaîne - cela aura un impact sur les performances).</p><p></p><h4> Syntaxe:</h4><p class="code">layer_element_move(element_id, layer_id)</p><table><tbody><tr><th> Argument</th><th> Description</th></tr><tr><td> <span class="notranslate">element_id</span></td><td> La valeur d&#39;identifiant unique de l&#39;élément à déplacer</td></tr><tr><td> <span class="notranslate">layer_id</span></td><td> La valeur d&#39;ID unique du calque vers lequel déplacer l&#39;élément (ou le nom du calque sous forme de chaîne)</td></tr></tbody></table><p></p><h4> Retour:</h4><p class="code">N/A</p><p></p><h4> Exemple:</h4><p class="code">var a = layer_get_all_elements(layer);<br/> asset_layer = layer_create(-100);<br/> for (var i = 0; i Alt; array_length(a); i++;)<br/>    {
-    <br/>    if layer_get_element_type(a[i]) == layerelementtype_sprite<br/>       {
-    <br/>       layer_element_move(a[i], asset_layer)<br/>       }
-    <br/>    }
-  </p><p> Le code ci-dessus récupère les éléments sur la couche à laquelle l&#39;instance exécutant le code est affectée, puis les vérifie pour voir s&#39;il s&#39;agit d&#39;actifs de sprite, et s&#39;ils le sont, ils sont alors déplacés vers la couche avec l&#39;ID stocké dans la variable &quot;asset_layer &quot;. </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> Retour: <a href="General_Layer_Functions.htm">Fonctions générales des calques</a></div><div style="float:right"> Suivant:<a href="layer_set_visible.htm">layer_set_visible</a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
+<body>
+  <!--<div class="body-scroll" style="top: 150px;">-->
+  <h1>couche_élément_mouvement</h1>
+  <p>Vous pouvez utiliser cette fonction pour déplacer un élément d'une couche à une autre. Vous donnez l'<b>ID de l'élément</b>, tel que renvoyé par la fonction utilisée pour créer l'élément ou l'éditeur de pièce ou la fonction <a href="layer_get_all_elements.htm"><tt>layer_get_all_elements()</tt></a>,
+    et ensuite vous donnez l'ID de la couche (que vous obtenez lorsque vous créez la couche en utilisant la fonction <a href="layer_create.htm"><tt>couche_créer()</tt></a>) ou le nom de la couche (sous forme de chaîne - cela aura un impact sur les performances).</p>
+  <p> </p>
+  <h4>Syntaxe :</h4>
+  <p class="code">layer_element_move(element_id, layer_id)</p>
+  <table>
+    <tbody>
+      <tr>
+        <th>Arguments</th>
+        <th>Description</th>
+      </tr>
+      <tr>
+        <td>identifiant de l'élément</td>
+        <td>La valeur d'identification unique de l'élément à déplacer</td>
+      </tr>
+      <tr>
+        <td>identifiant de la couche</td>
+        <td>La valeur d'identification unique de la couche vers laquelle déplacer l'élément (ou le nom de la couche sous forme de chaîne).</td>
+      </tr>
+    </tbody>
+  </table>
+  <p> </p>
+  <h4>Les retours :</h4>
+  <p class="code">N/A</p>
+  <p> </p>
+  <h4>Exemple :</h4>
+  <p class="code">var a = layer_get_all_elements(layer) ;<br> asset_layer = layer_create(-100) ;<br> for (var i = 0 ; i Alt ; array_length(a) ; i++ ;) <br> {
+    <br> if layer_get_element_type(a[i]) == layerelementtype_sprite<br> {
+    <br> layer_element_move(a[i], asset_layer)<br> }
+    <br> }
+  </p>
+  <p>Le code ci-dessus récupère les éléments sur le calque auquel l'instance qui exécute le code est assignée, puis vérifie s'il s'agit de sprites, et si c'est le cas, ils sont déplacés vers le calque dont l'ID est stocké dans la variable &quot;asset_layer&quot;.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <div class="footer">
+    <div class="buttons">
+      <div class="clear">
+        <div style="float:left">Retour : <a href="General_Layer_Functions.htm">Fonctions générales des couches</a></div>
+        <div style="float:right">Suivant : <a href="layer_set_visible.htm">layer_set_visible</a></div>
+      </div>
+    </div>
+    <h5><span data-keyref="Copyright Notice">Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
   </div>
   <!-- KEYWORDS
 layer_element_move

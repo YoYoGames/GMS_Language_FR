@@ -7,15 +7,74 @@
   <meta name="generator" content="Adobe RoboHelp 2019" />
   <link rel="stylesheet" href="../../../assets/css/default.css" type="text/css" />
   <meta name="rh-authors" content="Mark Alexander" />
-  <meta name="topic-comment" content="Page de référence pour buffer_load_async" />
+  <meta name="topic-comment" content="Reference page for buffer_load_async" />
   <meta name="rh-index-keywords" content="buffer_load_async" />
   <meta name="search-keywords" content="buffer_load_async" />
 </head>
-<body><!--<div class="body-scroll" style="top: 150px;">--><h1>buffer_load_async</h1><p> Avec cette fonction, vous pouvez charger un fichier que vous avez créé précédemment en utilisant le <a href="buffer_save.htm"><tt>buffer_save()</tt></a> (ou l&#39;une des autres fonctions de sauvegarde des tampons) dans un tampon. Le &quot;décalage&quot; définit la position de départ dans le tampon pour le chargement (en octets), et la &quot;taille&quot; est la taille de la zone de tampon à charger à partir de ce décalage (également en octets). Vous pouvez fournir une valeur de -1 pour l&#39;argument de taille et le tampon entier sera chargé. Notez que la fonction se chargera à partir d&#39;un dossier «par défaut», qui n&#39;a <i>pas</i> besoin d&#39;être inclus dans le chemin du fichier que vous fournissez. Ce dossier sera créé s&#39;il n&#39;existe pas ou lorsque vous enregistrez un fichier à l&#39;aide de <a href="buffer_save_async.htm"><tt>buffer_save_async()</tt></a>.</p><p> La fonction renvoie une valeur d&#39;ID unique qui peut ensuite être utilisée dans l&#39; <a href="../../../The_Asset_Editors/Object_Properties/Async_Events/Save_Load.htm">événement Save / Load Asynchronous</a> pour vérifier le <a href="../../GML_Overview/Variables/Builtin_Global_Variables/async_load.htm"><tt>async_load</tt></a> Valeur d&#39;ID, comme indiqué dans l&#39;exemple étendu ci-dessous. Le <tt>async_load</tt> map dans l&#39;événement aura les deux paires clé / valeur suivantes:</p><ul class="colour"><li> <b>&quot;id&quot;:</b> l&#39;ID de la fonction asynchrone tel que renvoyé par la fonction de sauvegarde.</li><li> <b>&quot;status&quot;:</b> retournera <tt>true</tt> si les données ont été enregistrées / chargées correctement, et <tt>false</tt> autrement.</li></ul><p class="note"> <b>REMARQUE</b>: sur <b>HTML5</b>, c&#39;est la méthode préférée pour charger un fichier si vous chargez à partir d&#39;un serveur et non d&#39;un stockage local, car le chargement synchrone est obsolète sur la plupart des navigateurs et finira par devenir obsolète.</p><p></p><h4> Syntaxe:</h4><p class="code">buffer_load_async(buffer, filename, offset, size);</p><table><tbody><tr><th> Argument</th><th> Description</th></tr><tr><td> <span class="notranslate">buffer</span></td><td> L&#39;index du tampon à charger.</td></tr><tr><td> <span class="notranslate">filename</span></td><td> Le nom du fichier à charger.</td></tr><tr><td> <span class="notranslate">offset</span></td><td> Décalage dans la mémoire tampon vers lequel charger (en octets).</td></tr><tr><td> <span class="notranslate">size</span></td><td> La taille de la zone tampon à charger (en octets).</td></tr></tbody></table><p></p><h4> Retour:</h4><p class="code">Real</p><p></p><h4> Exemple étendu:</h4><p> Le <tt>buffer_load_async()</tt> La fonction peut être appelée à partir de n&#39;importe quel événement, et comme elle est asynchrone, le rappel peut être presque instantané ou prendre plusieurs secondes. L&#39;appel de la fonction est simple et ressemblerait à ceci:</p><p class="code">loadid = buffer_load_async(buff, &quot;Player_Save.sav&quot;, 0, 16384);</p><p> Le code ci-dessus charge le contenu du fichier &quot; <i>Player_Save.sav</i> &quot; dans le tampon donné, en stockant l&#39;ID de l&#39;appel de fonction dans la variable &quot; <i>loadid</i> &quot;. Lorsque le chargement est terminé, l&#39;événement asynchrone Save / Load sera déclenché et vous pourrez analyser le <tt>async_load</tt> map pour l&#39;ID correct de la fonction, comme ceci:</p><p class="code">if ds_map_find_value(async_load, &quot;id&quot;) == loadid<br/>     {
-    <br/>     if ds_map_find_value(async_load, &quot;status&quot;) == false<br/>         {
-    <br/>         show_debug_message(&quot;Load failed!&quot;);<br/>         }
-    <br/>     }
-  </p><p> Le code ci-dessus vérifiera d&#39;abord l&#39;ID de la carte DS qui a été créée, puis vérifiera l&#39;état du rappel, en publiant un message de débogage s&#39;il y a eu des problèmes. </p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> Retour: <a href="Buffers.htm">Tampons</a></div><div style="float:right"> Suivant:<a href="buffer_load_partial.htm">buffer_load_partial</a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
+<body>
+  <!--<div class="body-scroll" style="top: 150px;">-->
+  <h1>buffer_load_async</h1>
+  <p>Avec cette fonction, vous pouvez charger un fichier que vous avez créé précédemment à l'aide de la fonction <a href="buffer_save.htm"><tt>buffer_save()</tt></a> (ou l'une des autres fonctions de sauvegarde des tampons) dans un tampon. L'&quot;offset&quot; définit la position de départ
+    dans le tampon à charger (en octets), et la &quot;taille&quot; est la taille de la zone du tampon à charger à partir de ce décalage (également en octets). Vous pouvez fournir une valeur de -1 pour l'argument taille et le tampon entier sera chargé.
+    Notez que la fonction chargera un dossier &quot;par défaut&quot;, qui n'a pas besoin d <i>'</i> être inclus dans le chemin du fichier que vous fournissez. Ce dossier sera créé s'il n'existe pas ou lorsque vous enregistrez un fichier à l'aide de la commande <a href="buffer_save_async.htm"><tt>buffer_save_async()</tt></a>.</p>
+  <p>La fonction renvoie une valeur d'identification unique qui peut ensuite être utilisée dans l'<a href="../../../The_Asset_Editors/Object_Properties/Async_Events/Save_Load.htm">événement asynchrone Save / Load</a> pour vérifier la valeur d'identification, comme le montre l'exemple étendu ci-dessous.  <a href="../../GML_Overview/Variables/Builtin_Global_Variables/async_load.htm"><tt>async_load</tt></a>    ID, comme le montre l'exemple étendu ci-dessous. La carte <tt>async_load</tt> dans l'événement aura les deux paires clé/valeur suivantes :</p>
+  <ul class="colour">
+    <li><b>&quot;id&quot; : l'ID de la </b>fonction asynchrone tel que retourné par la fonction de sauvegarde.</li>
+    <li><b>&quot;status&quot; : </b>retournera true si <tt>les</tt> données ont été sauvegardées/chargées correctement, et false <tt>sinon</tt>.</li>
+  </ul>
+  <p class="note"><b>REMARQUE</b>: sur <b>HTML5</b>, il s'agit de la méthode préférée pour charger un fichier si vous le chargez à partir d'un serveur et non d'un stockage local, car le chargement synchrone a été déprécié sur la plupart des navigateurs et sera éventuellement obsolète.</p>
+  <p> </p>
+  <h4>Syntaxe :</h4>
+  <p class="code">buffer_load_async(buffer, filename, offset, size) ;</p>
+  <table>
+    <tbody>
+      <tr>
+        <th>Arguments</th>
+        <th>Description</th>
+      </tr>
+      <tr>
+        <td>tampon</td>
+        <td>L'index du tampon à charger.</td>
+      </tr>
+      <tr>
+        <td>nom de fichier</td>
+        <td>Le nom du fichier à charger.</td>
+      </tr>
+      <tr>
+        <td>décalage</td>
+        <td>Le décalage dans le tampon à charger (en octets).</td>
+      </tr>
+      <tr>
+        <td>taille</td>
+        <td>La taille de la zone tampon à charger (en octets).</td>
+      </tr>
+    </tbody>
+  </table>
+  <p> </p>
+  <h4>Les retours :</h4>
+  <p class="code">Real</p>
+  <p> </p>
+  <h4>Exemple étendu :</h4>
+  <p>La fonction <tt>buffer_load_async()</tt> peut être appelée à partir de n'importe quel événement, et comme elle est asynchrone, le rappel peut être presque instantané ou prendre plusieurs secondes. L'appel de la fonction est simple et ressemble à quelque chose comme ceci :</p>
+  <p class="code">loadid = buffer_load_async(buff, &quot;Player_Save.sav&quot;, 0, 16384) ;</p>
+  <p>Le code ci-dessus charge le contenu du fichier &quot;<i>Player_Save.sav &quot; dans le</i> tampon donné, en stockant l'ID de l'appel de fonction dans la variable &quot; loadid &quot;. Lorsque le chargement est terminé, l'événement asynchrone Save/Load sera déclenché et
+    déclenché et vous pouvez analyser la carte <tt>async_load</tt> pour trouver l'ID correct de la fonction, comme ceci :</p>
+  <p class="code">if ds_map_find_value(async_load, &quot;id&quot;) == loadid<br> {
+    <br> if ds_map_find_value(async_load, &quot;status&quot;) == false<br> {
+    <br> show_debug_message(&quot;Load failed !&quot;) ;<br> }
+    <br> }
+  </p>
+  <p>Le code ci-dessus vérifie d'abord l'ID de la carte DS qui a été créée, puis le statut de la fonction de rappel, en affichant un message de débogage s'il y a eu des problèmes.</p>
+  <p> </p>
+  <p> </p>
+  <div class="footer">
+    <div class="buttons">
+      <div class="clear">
+        <div style="float:left">Retour : <a href="Buffers.htm">Tampons</a></div>
+        <div style="float:right">Suivant : <a href="buffer_load_partial.htm">buffer_load_partial</a></div>
+      </div>
+    </div>
+    <h5><span data-keyref="Copyright Notice">Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
   </div>
   <!-- KEYWORDS
 buffer_load_async

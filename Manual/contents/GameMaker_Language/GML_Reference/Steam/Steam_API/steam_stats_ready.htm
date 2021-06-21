@@ -7,21 +7,45 @@
   <meta name="generator" content="Adobe RoboHelp 2019" />
   <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
   <meta name="rh-authors" content="Mark Alexander" />
-  <meta name="topic-comment" content="Page de référence pour steam _stats_ready" />
+  <meta name="topic-comment" content="Reference page for steam_stats_ready" />
   <meta name="rh-index-keywords" content="steam_stats_ready" />
   <meta name="search-keywords" content="steam_stats_ready" />
 </head>
-<body><!--<div class="body-scroll" style="top: 150px;">--><h1> <span class="notranslate">steam</span> _stats_ready</h1><p> Lors de l&#39;utilisation de l&#39; <span class="notranslate">Steam</span>, cette fonction peut être appelée pour vérifier que l&#39; <span class="notranslate">Steam</span> a correctement initialisé les statistiques de votre jeu.</p><p></p><h4> Syntaxe:</h4><p class="code">steam_stats_ready();</p><p></p><h4> Retour:</h4><p class="code">Boolean</p><p></p><h4> Exemple:</h4><p class="code">global.steam_api = false;<br/> if steam_initialised()<br/>     {
-    <br/>     if steam_stats_ready() &amp;&amp; steam_is_overlay_enabled()<br/>         {
-    <br/>         global.steam_api = true;<br/>         }
-    <br/>     }
-  </p><p> Le code ci-dessus définira une variable globale sur <tt>true</tt> si l&#39; <span class="notranslate">Steam</span> est correctement initialisée, avec les <span class="notranslate">Steam</span> et la fonctionnalité de superposition, ou elle définira la variable sur <tt>false</tt> autrement. </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> Retour: <a href="Steam_API.htm">API <span class="notranslate">Steam</span> générale</a></div><div style="float:right"> Suivant: <a href="steam_get_app_id.htm"><span class="notranslate">steam</span> _get_app_id</a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
+<body>
+  <!--<div class="body-scroll" style="top: 150px;">-->
+  <h1><span class="notranslate">steam_stats_ready</span></h1>
+  <p>Lorsque vous utilisez l'API <span class="notranslate">Steam</span>, cette fonction peut être appelée pour vérifier que l'API client <span class="notranslate">Steam</span> a correctement initialisé les statistiques de votre jeu.</p>
+  <p> </p>
+  <h4>Syntaxe :</h4>
+  <p class="code"><span class="notranslate">steam_stats_ready</span>() ;</p>
+  <p> </p>
+  <h4>Les retours :</h4>
+  <p class="code">Booléen</p>
+  <p> </p>
+  <h4>Exemple :</h4>
+  <p class="code">global.<span class="notranslate">steam_api</span>= false ;<br> if <span class="notranslate">steam_initialised</span>()<br> {
+    <br> if <span class="notranslate">steam_stats_ready</span>() &amp;&amp; steam_is_overlay_enabled()<br> {
+    <br> global.<span class="notranslate">steam_api</span>= true ;<br> }
+    <br> }
+  </p>
+  <p>Le code ci-dessus définira une variable globale à <tt>true</tt> si l'API client <span class="notranslate">Steam</span> est correctement initialisée, ainsi que les statistiques <span class="notranslate">Steam</span> et la fonctionnalité de superposition, ou il définira la variable à <tt>false</tt> sinon.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <div class="footer">
+    <div class="buttons">
+      <div class="clear">
+        <div style="float:left">Retour : <a href="Steam_API.htm">API générale de <span class="notranslate">la vapeur</span></a></div>
+        <div style="float:right">Suivant : <a href="steam_get_app_id.htm"><span class="notranslate">steam_get_app_id</span></a></div>
+      </div>
+    </div>
+    <h5><span data-keyref="Copyright Notice">Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
   </div>
   <!-- KEYWORDS
-steam_stats_ready
+<span class="notranslate">steam</span>_stats_ready
 -->
   <!-- TAGS
-steam_stats_ready
+<span class="notranslate">steam</span>_stats_ready
 -->
 </body>
 </html>

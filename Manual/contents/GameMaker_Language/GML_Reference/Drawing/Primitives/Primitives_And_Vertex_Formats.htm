@@ -7,11 +7,89 @@
   <meta name="generator" content="Adobe RoboHelp 2019" />
   <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
   <meta name="rh-authors" content="Mark Alexander" />
-  <meta name="topic-comment" content="Section de référence pour les fonctions et variables du format primitif et sommet" />
+  <meta name="topic-comment" content="Reference section for the Primitive And Vertex Format functions and variables" />
   <meta name="rh-index-keywords" content="" />
-  <meta name="search-keywords" content="Primitives et formats de sommets,Primitives,Tampons Vertex,Formats de sommet" />
+  <meta name="search-keywords" content="Primitives And Vertex Formats,Primitives,Vertex Buffers,Vertex Formats" />
 </head>
-<body><!--<div class="body-scroll" style="top: 150px;">--><h1> Primitives et formats de sommets</h1><p> Une primitive est un type de dessin réalisé à l&#39;aide de points pour définir ce qui est affiché à l&#39;écran. Ils peuvent être constitués de points uniques, de lignes ou de triangles et peuvent être colorés, avoir un mélange alpha et même recevoir une texture, ce qui signifie qu&#39;ils peuvent être utilisés pour créer des effets très excitants dans un jeu 2D! Par exemple, vous pouvez créer un rectangle en utilisant plusieurs primitives de triangle, puis le texturer avec un sprite drapeau et dans l&#39;événement de dessin d&#39;une instance, avoir ce drapeau &quot;vague&quot; dans le vent et déformer le sprite que vous avez utilisé en modifiant simplement les points qui forment le primitif.</p><p class="note"> <b>ATTENTION!</b> Ces fonctions ne fonctionnent pas avec le module HTML5 sauf si vous avez activé OpenGL dans les <a href="../../../../Settings/Game_Options/HTML5.htm">options de jeu</a>.</p><p> Vous trouverez des informations sur les primitives de dessin dans les pages suivantes: </p><p></p><ul class="colour"><li><a href="draw_primitive_begin.htm">draw_primitive_begin</a></li><li><a href="draw_primitive_begin_texture.htm">draw_primitive_begin_texture</a></li><li><a href="draw_primitive_end.htm">draw_primitive_end</a></li><li><a href="draw_vertex.htm">draw_vertex</a></li><li><a href="draw_vertex_colour.htm">draw_vertex_colour</a></li><li><a href="draw_vertex_texture.htm">draw_vertex_texture</a></li><li><a href="draw_vertex_texture_colour.htm">draw_vertex_texture_colour</a></li></ul><p></p><p> <span class="notranslate">GameMaker Studio 2</span> vous permet de définir vos propres <strong>formats de sommets à</strong> partir desquels vous pouvez créer vos propres primitives personnalisées. Cela peut considérablement accélérer les <span class="notranslate">shader</span> ou peut être utilisé pour étendre leurs capacités et créer des effets surprenants. Vous pouvez trouver des informations à ce sujet dans les sections suivantes: </p><p></p><ul class="colour"><li><a href="vertex_format_begin.htm">vertex_format_begin</a></li><li><a href="vertex_format_add_colour.htm">vertex_format_add_colour</a></li><li><a href="vertex_format_add_position.htm">vertex_format_add_position</a></li><li><a href="vertex_format_add_position_3d.htm">vertex_format_add_position_3d</a></li><li><a href="vertex_format_add_texcoord.htm">vertex_format_add_texcoord</a></li><li><a href="vertex_format_add_normal.htm">vertex_format_add_normal</a></li><li><a href="vertex_format_add_custom.htm">vertex_format_add_custom</a></li><li><a href="vertex_format_end.htm">vertex_format_end</a></li><li><a href="vertex_format_delete.htm">vertex_format_delete</a></li></ul><p></p><p> Une fois que vous avez créé votre format de sommet (voir la section ci-dessus), vous pouvez ensuite l&#39;utiliser pour créer les primitives que vous souhaitez dessiner à l&#39;aide des fonctions de tampon veretx suivantes: </p><p></p><ul class="colour"><li><a href="vertex_create_buffer.htm">vertex_create_buffer</a></li><li><a href="vertex_create_buffer_ext.htm">vertex_create_buffer_ext</a></li><li><a href="vertex_create_buffer_from_buffer.htm">vertex_create_buffer_from_buffer</a></li><li><a href="vertex_create_buffer_from_buffer_ext.htm">vertex_create_buffer_from_buffer_ext</a></li><li><a href="vertex_get_buffer_size.htm">vertex_get_buffer_size</a></li><li><a href="vertex_get_number.htm">vertex_get_number</a></li><li><a href="vertex_delete_buffer.htm">vertex_delete_buffer</a></li><li><a href="vertex_begin.htm">vertex_begin</a></li><li><a href="vertex_colour.htm">vertex_colour</a></li><li><a href="vertex_normal.htm">vertex_normal</a></li><li><a href="vertex_position.htm">vertex_position</a></li><li><a href="vertex_position_3d.htm">vertex_position_3d</a></li><li><a href="vertex_argb.htm">vertex_argb</a></li><li><a href="vertex_texcoord.htm">vertex_texcoord</a></li><li><a href="vertex_float1.htm">vertex_float1</a></li><li><a href="vertex_float2.htm">vertex_float2</a></li><li><a href="vertex_float3.htm">vertex_float3</a></li><li><a href="vertex_float4.htm">vertex_float4</a></li><li><a href="vertex_ubyte4.htm">vertex_ubyte4</a></li><li><a href="vertex_end.htm">vertex_end</a></li><li><a href="vertex_freeze.htm">vertex_freeze</a></li><li><a href="vertex_submit.htm">vertex_submit</a></li></ul><p></p><p class="note"><b>IMPORTANT!</b> Les primitives que vous créez doivent suivre le format que vous avez défini à l&#39;aide des fonctions de format de sommet, donc si vous avez défini un format de sommet avec uniquement des données de position, il est inutile de construire votre primitive avec des données de couleur. Vous devez noter que l&#39;ordre dans lequel vous ajoutez des propriétés à la primitive que vous construisez est défini par l&#39;ordre dans lequel vous avez ajouté ces propriétés lors de la création du format de sommet, donc si vous avez défini le format vectoriel avec la position, la couleur et la texture de l&#39;ordre coordonnée, vous <i>devez</i> ajouter ces propriétés à la primitive en cours de construction dans le même ordre, sinon vous obtiendrez des erreurs.</p><p> Pour une vue d&#39;ensemble de la création de primitives à l&#39;aide des fonctions de sommet, voir:</p><ul class="colour"><li> <a href="../../../../Additional_Information/Guide_To_Primitives_And_Vertex_Building.htm">Guide des primitives et de la construction de sommets</a> </li></ul><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> Retour: <a href="../Drawing.htm">Dessin</a></div><div style="float:right"> Suivant: <a href="../Surfaces/Surfaces.htm">Surfaces</a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
+<body>
+  <!--<div class="body-scroll" style="top: 150px;">-->
+  <h1>Primitives et formats de sommets</h1>
+  <p>Une primitive est un type de dessin réalisé à l'aide de points pour définir ce qui est affiché à l'écran. Elles peuvent être composées de points, de lignes ou de triangles et peuvent être colorées, avoir un mélange alpha et même une texture, ce qui signifie qu'elles peuvent être utilisées pour créer des effets très intéressants dans un jeu 2D !
+    pour créer des effets très intéressants dans un jeu en 2D ! Par exemple, vous pouvez créer un rectangle à l'aide de plusieurs primitives triangulaires, puis le texturer avec un sprite de drapeau et, dans l'événement de dessin d'une instance, faire &quot;onduler&quot; ce drapeau dans le vent et
+    déformer le sprite que vous avez utilisé en modifiant simplement les points qui forment la primitive.</p>
+  <p class="note"><b>ATTENTION ! </b>Ces fonctions ne fonctionnent pas avec le module HTML5 à moins que vous n'ayez activé OpenGL dans les <a href="../../../../Settings/Game_Options/HTML5.htm">options du jeu</a>.</p>
+  <p>Vous trouverez des informations sur les primitives de dessin dans les pages suivantes :</p>
+  <p> </p>
+  <ul class="colour">
+    <li><a href="draw_primitive_begin.htm">draw_primitive_begin</a></li>
+    <li><a href="draw_primitive_begin_texture.htm">draw_primitive_begin_texture</a></li>
+    <li><a href="draw_primitive_end.htm">draw_primitive_end</a></li>
+    <li><a href="draw_vertex.htm">dessiner_vertex</a></li>
+    <li><a href="draw_vertex_colour.htm">dessiner_vertex_couleur</a></li>
+    <li><a href="draw_vertex_texture.htm">dessiner_texture_vertex</a></li>
+    <li><a href="draw_vertex_texture_colour.htm">dessiner_vertex_texture_couleur</a></li>
+  </ul>
+  <p> </p>
+  <p><span class="notranslate">GameMaker Studio 2</span> vous permet de définir vos propres <strong>formats de sommets</strong> à partir desquels vous pouvez créer vos propres primitives personnalisées. Cela peut accélérer considérablement les opérations des <span class="notranslate">shaders</span> ou être utilisé pour étendre leurs capacités et créer des effets surprenants.
+    surprenants. Vous trouverez des informations à ce sujet dans les sections suivantes :</p>
+  <p> </p>
+  <ul class="colour">
+    <li><a href="vertex_format_begin.htm">format_de_verre_début</a></li>
+    <li><a href="vertex_format_add_colour.htm">format de vertex_add_colour</a></li>
+    <li><a href="vertex_format_add_position.htm">format_de_verre_add_position</a></li>
+    <li><a href="vertex_format_add_position_3d.htm">format_vertex_add_position_3d</a></li>
+    <li><a href="vertex_format_add_texcoord.htm">format_de_verre_add_texcoord</a></li>
+    <li><a href="vertex_format_add_normal.htm">format_de_verre_add_normal</a></li>
+    <li><a href="vertex_format_add_custom.htm">format de vertex_add_custom</a></li>
+    <li><a href="vertex_format_end.htm">Fin du formatage des sommets</a></li>
+    <li><a href="vertex_format_delete.htm">format_vertextes_suppression</a></li>
+  </ul>
+  <p> </p>
+  <p>Une fois que vous avez créé votre format de vertex (voir la section ci-dessus), vous pouvez l'utiliser pour construire les primitives que vous souhaitez dessiner en utilisant les fonctions de tampon veretx suivantes :</p>
+  <p> </p>
+  <ul class="colour">
+    <li><a href="vertex_create_buffer.htm">tampon de création de vertex</a></li>
+    <li><a href="vertex_create_buffer_ext.htm">création_de_tampon_de_vertueux</a></li>
+    <li><a href="vertex_create_buffer_from_buffer.htm">Création de tampon de sommet à partir d'un tampon</a></li>
+    <li><a href="vertex_create_buffer_from_buffer_ext.htm">Création de tampon de sommet à partir d'un tampon externe</a></li>
+    <li><a href="vertex_get_buffer_size.htm">taille_du_buffer_des_verrex</a></li>
+    <li><a href="vertex_get_number.htm">vertex_get_number</a></li>
+    <li><a href="vertex_delete_buffer.htm">tampon_suppression_dex</a></li>
+    <li><a href="vertex_begin.htm">Début du sommet</a></li>
+    <li><a href="vertex_colour.htm">vertex_colour</a></li>
+    <li><a href="vertex_normal.htm">vertex_normal</a></li>
+    <li><a href="vertex_position.htm">vertex_position</a></li>
+    <li><a href="vertex_position_3d.htm">vertex_position_3d</a></li>
+    <li><a href="vertex_argb.htm">vertex_argb</a></li>
+    <li><a href="vertex_texcoord.htm">vertex_texcoord</a></li>
+    <li><a href="vertex_float1.htm">vertex_float1</a></li>
+    <li><a href="vertex_float2.htm">vertex_float2</a></li>
+    <li><a href="vertex_float3.htm">vertex_float3</a></li>
+    <li><a href="vertex_float4.htm">vertex_float4</a></li>
+    <li><a href="vertex_ubyte4.htm">vertex_ubyte4</a></li>
+    <li><a href="vertex_end.htm">vertex_end</a></li>
+    <li><a href="vertex_freeze.htm">vertex_freeze</a></li>
+    <li><a href="vertex_submit.htm">soumettre le vertex_submit</a></li>
+  </ul>
+  <p> </p>
+  <p class="note"><b>IMPORTANT !</b> Les primitives que vous construisez doivent suivre le format que vous avez défini à l'aide des fonctions de format de sommet, donc si vous avez défini un format de sommet avec uniquement des données positionnelles, il est inutile de construire votre primitive avec des
+    données de couleur. Vous devez noter que l'ordre dans lequel vous ajoutez les propriétés à la primitive que vous construisez est défini par l'ordre dans lequel vous avez ajouté ces propriétés lors de la création du format de sommet.
+    ordre position, couleur et coordonnée de texture, vous <i>devez</i> ajouter ces propriétés à la primitive en cours de construction dans le même ordre, sinon vous obtiendrez des erreurs.</p>
+  <p>Pour un aperçu de la manière de construire des primitives à l'aide des fonctions de sommet, voir :</p>
+  <ul class="colour">
+    <li><a href="../../../../Additional_Information/Guide_To_Primitives_And_Vertex_Building.htm">Guide des primitives et de la construction de sommets</a></li>
+  </ul>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <div class="footer">
+    <div class="buttons">
+      <div class="clear">
+        <div style="float:left">Retour : <a href="../Drawing.htm">Dessin</a></div>
+        <div style="float:right">Suivant : <a href="../Surfaces/Surfaces.htm">Surfaces</a></div>
+      </div>
+    </div>
+    <h5><span data-keyref="Copyright Notice">Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
   </div>
   <!-- KEYWORDS
 Primitives And Vertex Formats

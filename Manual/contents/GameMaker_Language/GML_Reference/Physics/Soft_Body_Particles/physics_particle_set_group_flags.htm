@@ -7,11 +7,72 @@
   <meta name="generator" content="Adobe RoboHelp 2019" />
   <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
   <meta name="rh-authors" content="Mark Alexander" />
-  <meta name="topic-comment" content="Page de référence pour physics_particle_set_group_flags" />
+  <meta name="topic-comment" content="Reference page for physics_particle_set_group_flags" />
   <meta name="rh-index-keywords" content="physics_particle_set_group_flags,phy_particle_group_flag_solid,phy_particle_group_flag_rigid" />
   <meta name="search-keywords" content="physics_particle_set_group_flags,phy_particle_group_flag_solid,phy_particle_group_flag_rigid" />
 </head>
-<body><!--<div class="body-scroll" style="top: 150px;">--><h1>physics_particle_set_group_flags</h1><p> Avec cette fonction, vous pouvez modifier les indicateurs de groupe pour un groupe de particules. Le <tt>group</tt> valeur est celle qui a été renvoyée lors de la création du groupe de particules à l&#39;aide de la fonction <a href="physics_particle_group_end.htm"><tt>physics_particle_group_end()</tt></a>, tandis que les indicateurs sont la valeur de retour d&#39;une combinaison des <b>constantes</b> suivantes:</p><p></p><table><tbody><tr><th> Constant</th><th> Description</th></tr><tr><td> <span class="notranslate">phy_particle_group_flag_solid</span></td><td> Un groupe de particules solides empêche les autres appareils de s&#39;y loger. Si quelque chose y pénètre, le groupe de particules solides repousse l&#39;appareil défectueux vers sa surface, ce qui fait qu&#39;un groupe de particules solides possède une force de répulsion particulièrement forte.</td></tr><tr><td> <span class="notranslate">phy_particle_group_flag_rigid</span></td><td> Les groupes de particules rigides sont ceux dont la forme ne change pas, même lorsqu&#39;ils entrent en collision avec d&#39;autres appareils.</td></tr></tbody></table><p></p><p> Ces indicateurs de groupe utilisent le masquage de bits pour créer une valeur de sortie finale qui est ensuite vérifiée pour définir les différentes propriétés de base du groupe, en dehors de celles définies par les indicateurs de particule. Vous pouvez utiliser aucune, une ou les deux de ces constantes en utilisant le <a href="../../../../Additional_Information/Bitwise_Operators.htm">bit au niveau <i>du bit ou</i></a> &quot;|&quot; pour masquer les bits appropriés (comme indiqué dans l&#39;exemple ci-dessous).</p><p></p><h4> Syntaxe:</h4><p class="code">physics_particle_set_group_flags(group, flags)</p><table><tbody><tr><th> Argument</th><th> Description</th></tr><tr><td> <span class="notranslate">group</span></td><td> Le groupe de particules à définir.</td></tr><tr><td> <span class="notranslate">flags</span></td><td> Les drapeaux à placer sur la particule.</td></tr></tbody></table><p></p><h4> Retour:</h4><p class="code">N/A</p><p></p><h4> Exemple:</h4><p class="code">var flags = phy_particle_group_flag_solid | phy_particle_group_flag_rigid;<br/> physics_particle_set_group_flags(group, flags);</p><p> Le code ci-dessus créera une variable pour stocker la valeur des indicateurs, puis l&#39;utilisera pour définir les indicateurs de toutes les particules créées dans le groupe indexé par la variable «groupe». </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> Retour: <a href="Soft_Body_Particles.htm">Particules corporelles molles</a></div><div style="float:right"> Suivant:<a href="physics_particle_get_group_flags.htm">physics_particle_get_group_flags</a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
+<body>
+  <!--<div class="body-scroll" style="top: 150px;">-->
+  <h1>physics_particle_set_group_flags</h1>
+  <p>Cette fonction permet de modifier les indicateurs de groupe d'un groupe de particules. La valeur du <tt>groupe</tt> est celle qui a été renvoyée lorsque vous avez créé le groupe de particules à l'aide de la fonction <a href="physics_particle_group_end.htm"><tt>physics_particle_group_end()</tt></a>,
+    tandis que les indicateurs sont la valeur de retour d'une combinaison des <b>constantes</b> suivantes :</p>
+  <p> </p>
+  <table>
+    <tbody>
+      <tr>
+        <th>Constant</th>
+        <th>Description</th>
+      </tr>
+      <tr>
+        <td>phy_particle_group_flag_solid</td>
+        <td>Un groupe de particules solides empêche les autres appareils de se loger à l'intérieur. Si un objet y pénètre, le groupe de particules solides repousse l'objet en question vers sa surface, ce qui confère au groupe de particules solides une force de répulsion particulièrement forte.
+          force répulsive particulièrement forte.</td>
+      </tr>
+      <tr>
+        <td>phy_particle_group_flag_rigid</td>
+        <td>Les groupes de particules rigides sont ceux dont la forme ne change pas, même lorsqu'ils entrent en collision avec d'autres appareils.</td>
+      </tr>
+    </tbody>
+  </table>
+  <p> </p>
+  <p>Ces indicateurs de groupe utilisent le masquage de bits pour créer une valeur de sortie finale qui est ensuite vérifiée pour définir les différentes propriétés de base du groupe, en dehors de celles définies par les indicateurs de particules. Vous pouvez utiliser aucune, une ou les deux de ces constantes en utilisant le <a href="../../../../Additional_Information/Bitwise_Operators.htm">bitwise <i>ou</i></a> &quot;|&quot; pour masquer les bits appropriés (comme indiqué dans l'exemple ci-dessous).</p>
+  <p> </p>
+  <h4>Syntaxe :</h4>
+  <p class="code">physics_particle_set_group_flags(group, flags)</p>
+  <table>
+    <tbody>
+      <tr>
+        <th>Arguments</th>
+        <th>Description</th>
+      </tr>
+      <tr>
+        <td>groupe</td>
+        <td>Le groupe de particules à définir.</td>
+      </tr>
+      <tr>
+        <td>drapeaux</td>
+        <td>Les drapeaux à définir sur la particule.</td>
+      </tr>
+    </tbody>
+  </table>
+  <p> </p>
+  <h4>Les retours :</h4>
+  <p class="code">N/A</p>
+  <p> </p>
+  <h4>Exemple :</h4>
+  <p class="code">var flags = phy_particle_group_flag_solid | phy_particle_group_flag_rigid ;<br> physics_particle_set_group_flags(group, flags) ;</p>
+  <p>Le code ci-dessus créera une variable pour stocker la valeur de flags et l'utilisera pour définir les flags de toutes les particules créées dans le groupe indexé par la variable &quot;group&quot;.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <div class="footer">
+    <div class="buttons">
+      <div class="clear">
+        <div style="float:left">Retour : <a href="Soft_Body_Particles.htm">Particules molles du corps</a></div>
+        <div style="float:right">Suivant : <a href="physics_particle_get_group_flags.htm">physics_particle_get_group_flags</a></div>
+      </div>
+    </div>
+    <h5><span data-keyref="Copyright Notice">Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
   </div>
   <!-- KEYWORDS
 physics_particle_set_group_flags

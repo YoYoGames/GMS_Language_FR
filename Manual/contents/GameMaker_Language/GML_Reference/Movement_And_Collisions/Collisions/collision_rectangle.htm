@@ -3,17 +3,83 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>collision_rectangle</title>
+  <title>rectangle de collision</title>
   <meta name="generator" content="Adobe RoboHelp 2019" />
   <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
   <meta name="rh-authors" content="Mark Alexander" />
-  <meta name="topic-comment" content="Page qui donne un aperçu de la fonction collision_rectangle" />
+  <meta name="topic-comment" content="Page that gives an overview of the funtion collision_rectangle" />
   <meta name="rh-index-keywords" content="collision_rectangle" />
   <meta name="search-keywords" content="collision_rectangle" />
 </head>
-<body><!--<div class="body-scroll" style="top: 150px;">--><h1>collision_rectangle</h1><p><span class="inline">Collision_rectangle</span> utilise les quatre premiers arguments (x1, y1, x2, y2) pour définir une zone dans la pièce actuelle, puis vérifie si <b>un</b> objet défini par l&#39;argument &quot;obj&quot; est en collision avec cette zone. Cette collision peut être vérifiée comme précise ou non, et vous pouvez également choisir de vérifier l&#39;instance exécutant le code lui-même ou non. Considérez cette image:</p><p><img alt="Collision rectangle example" class="center" src="../../../../assets/Images/Scripting_Reference/GML/Reference/Movement_Collisions/collision_rectangle_illustration.png" /> Ici, l&#39;instance du milieu utilise un rectangle de collision pour rechercher des objets balle. Maintenant, les bleus n&#39;ont <i>pas de cadre de</i> délimitation précis et comme vous pouvez le voir, même si le sprite ne touche pas réellement le rectangle, la collision se produira toujours (même si vous définissez l&#39;option précise dans la fonction sur true) comme le la boîte englobante de ce sprite chevauche le rectangle de collision. D&#39;un autre côté, les boules vertes ne seront considérées en collision que si le sprite réel chevauche le rectangle. Rappelez - vous, pour des collisions précises à considérer à la <i>fois</i> l&#39;image - objet de l&#39; objet et la fonction de collision doit avoir marqué comme précis sur. Il convient également de noter que la valeur de retour de la fonction peut être l&#39;identifiant de <i>l&#39;une quelconque</i> des instances considérées comme étant en collision.</p><p> Notez qu&#39;au lieu d&#39;un index d&#39;objet, vous pouvez fournir une instance <a href="../../Asset_Management/Instances/Instance_Variables/id.htm"><tt>id</tt></a> pour rechercher une instance spécifique ou les <a href="../../../GML_Overview/Instance_Keywords.htm">mots-clés de l&#39;instance</a> <span class="inline">all</span>, ou <span class="inline">other</span> (en fonction de l&#39;événement et de la portée du code actuel).</p><p></p><h4> Syntaxe:</h4><p class="code">collision_rectangle(x1, y1, x2, y2, obj, prec, notme);</p><table><tbody><tr><th> Argument</th><th> Description</th></tr><tr><td> <span class="notranslate">x1</span></td><td> La coordonnée x du côté gauche du rectangle à vérifier.</td></tr><tr><td> <span class="notranslate">y1</span></td><td> Coordonnée y du côté supérieur du rectangle à vérifier.</td></tr><tr><td> <span class="notranslate">x2</span></td><td> La coordonnée x du côté droit du rectangle à vérifier.</td></tr><tr><td> <span class="notranslate">y2</span></td><td> La coordonnée y du côté inférieur du rectangle à vérifier.</td></tr><tr><td> <span class="notranslate">obj</span></td><td> L&#39;objet à vérifier par exemple les collisions.</td></tr><tr><td> <span class="notranslate">prec</span></td><td> Si la vérification est basée sur des collisions précises (<tt>true</tt>, qui est plus lent) ou sa boîte englobante en général (<tt>false</tt>, plus rapide).</td></tr><tr><td> <span class="notranslate">notme</span></td><td> Si l&#39;instance appelante, le cas échéant, doit être exclue (<tt>true</tt> ) ou non (<tt>false</tt> ).</td></tr></tbody></table><p></p><h4> Retour:</h4><p class="code">Instance id or noone</p><p></p><h4> Exemple:</h4><p class="code">var inst;<br/> inst = collision_rectangle(50, 50, 200, 100, obj_Ball, false, true);<br/> if inst != noone<br/>    {
-    <br/>    with (inst) instance_destroy();<br/>    }
-  </p><p> Ce code court utilise collision_rectangle pour vérifier une zone de la pièce de 50x, 50y (en haut à gauche du rectangle) à 200x, 200y (en bas à droite du rectangle) pour une instance d&#39;un objet appelé &quot;obj_ball&quot;. Il stocke la valeur de retour dans une variable temporaire qui est ensuite vérifiée pour voir si cette valeur est un identifiant d&#39;instance ou le mot-clé <a href="../../../GML_Overview/Instance_Keywords.htm"><b>noone</b></a>. Si ce n&#39;est <i>pas</i> <b>personne,</b> il utilise l&#39;ID d&#39;instance stocké pour détruire l&#39;objet. </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> Retour: <a href="Collisions.htm">Collisions</a></div><div style="float:right"> Suivant:<a href="collision_rectangle_list.htm">collision_rectangle_list</a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
+<body>
+  <!--<div class="body-scroll" style="top: 150px;">-->
+  <h1>rectangle de collision</h1>
+  <p><span class="inline">Collision_rectangle</span> utilise les quatre premiers arguments (x1,y1,x2,y2) pour définir une zone dans la pièce actuelle et vérifie ensuite si <b>un</b> objet défini par l'argument &quot;obj&quot; entre en collision avec cette zone.
+    zone. Cette collision peut être vérifiée comme précise ou non, et vous pouvez également choisir de vérifier l'instance qui exécute le code elle-même ou non. Considérez cette image :</p>
+  <p><img alt="Collision rectangle example" class="center" src="../../../../assets/Images/Scripting_Reference/GML/Reference/Movement_Collisions/collision_rectangle_illustration.png">Ici, l'instance au milieu utilise un rectangle de collision pour vérifier
+    les objets de type balle. Comme vous pouvez le constater, même si le sprite ne touche <i>pas</i> le rectangle, la collision se produira (même si vous avez défini l'option precise de la fonction sur true).
+    car la boîte englobante de ce sprite dépasse le rectangle de collision. D'autre part, les balles vertes ne seront considérées en collision que si le sprite réel dépasse le rectangle. N'oubliez pas que pour que les collisions précises soient prises en compte, le sprite de l'objet et la fonction de collision doivent <i>tous deux</i> avoir la précision activée. Il convient également de noter que la valeur de retour de la fonction peut être l'identifiant de <i>n'importe laquelle</i> des instances considérées comme étant en collision.</p>
+  <p>Notez qu'au lieu d'un index d'objet, vous pouvez fournir une instance <a href="../../Asset_Management/Instances/Instance_Variables/id.htm"><tt>id</tt></a> pour rechercher une instance spécifique, ou les <a href="../../../GML_Overview/Instance_Keywords.htm">mots-clés d'instance</a> <span class="inline">all</span>, ou <span class="inline">other</span> (en fonction de l'événement et de la portée actuelle du code).</p>
+  <p> </p>
+  <h4>Syntaxe :</h4>
+  <p class="code">collision_rectangle(x1, y1, x2, y2, obj, prec, notme) ;</p>
+  <table>
+    <tbody>
+      <tr>
+        <th>Arguments</th>
+        <th>Description</th>
+      </tr>
+      <tr>
+        <td>x1</td>
+        <td>La coordonnée x du côté gauche du rectangle à vérifier.</td>
+      </tr>
+      <tr>
+        <td>y1</td>
+        <td>La coordonnée y du côté supérieur du rectangle à vérifier.</td>
+      </tr>
+      <tr>
+        <td>x2</td>
+        <td>La coordonnée x du côté droit du rectangle à vérifier.</td>
+      </tr>
+      <tr>
+        <td>y2</td>
+        <td>La coordonnée y du côté inférieur du rectangle à vérifier.</td>
+      </tr>
+      <tr>
+        <td>obj.</td>
+        <td>L'objet à vérifier pour les collisions d'instance.</td>
+      </tr>
+      <tr>
+        <td>préc</td>
+        <td>Si la vérification est basée sur des collisions précises<tt>(vrai</tt>, ce qui est plus lent) ou sur sa boîte de délimitation en général<tt>(faux</tt>, plus rapide).</td>
+      </tr>
+      <tr>
+        <td>notme</td>
+        <td>Si l'instance appelante, si elle est pertinente, doit être exclue<tt>(true</tt>) ou non<tt>(false)</tt>.</td>
+      </tr>
+    </tbody>
+  </table>
+  <p> </p>
+  <h4>Les retours :</h4>
+  <p class="code">Identité de l'instance ou personne</p>
+  <p> </p>
+  <h4>Exemple :</h4>
+  <p class="code">var inst ;<br> inst = collision_rectangle(50, 50, 200, 100, obj_Ball, false, true) ;<br> if inst != noone<br> {
+    <br> with (inst) instance_destroy() ;<br> }
+  </p>
+  <p>Ce code court utilise collision_rectangle pour vérifier une zone dans la pièce de 50x, 50y (en haut à gauche du rectangle) à 200x, 200y (en bas à droite du rectangle) pour une instance d'un objet appelé &quot;obj_ball&quot;. Elle stocke la valeur de retour dans une variable temporaire
+    temporaire qui est ensuite vérifiée pour voir si cette valeur est un identifiant d'instance, ou le mot-clé <a href="../../../GML_Overview/Instance_Keywords.htm"><b>noone</b></a>. Si ce <i>n'est pas</i> <b>noone</b>, elle utilise l'identifiant d'instance stocké pour détruire l'objet.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <div class="footer">
+    <div class="buttons">
+      <div class="clear">
+        <div style="float:left">Retour : <a href="Collisions.htm">Collisions</a></div>
+        <div style="float:right">Suivant : <a href="collision_rectangle_list.htm">collision_rectangle_list</a></div>
+      </div>
+    </div>
+    <h5><span data-keyref="Copyright Notice">Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
   </div>
   <!-- KEYWORDS
 collision_rectangle

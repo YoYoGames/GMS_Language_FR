@@ -7,12 +7,39 @@
   <meta name="generator" content="Adobe RoboHelp 2019" />
   <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
   <meta name="rh-authors" content="Mark Alexander" />
-  <meta name="topic-comment" content="Page de référence pour ini_close" />
+  <meta name="topic-comment" content="Reference page for ini_close" />
   <meta name="rh-index-keywords" content="ini_close" />
   <meta name="search-keywords" content="ini_close" />
 </head>
-<body><!--<div class="body-scroll" style="top: 150px;">--><h1>ini_close</h1><p> Cette fonction doit être appelée au moment où vous avez fini de lire ou d&#39;écrire dans un fichier ini ouvert. Si vous n&#39;utilisez pas la fonction après avoir utilisé l&#39;une des fonctions d&#39;écriture ini, rien ne sera écrit sur le disque, car les informations du fichier sont conservées en mémoire jusqu&#39;à ce que cette fonction soit appelée, ce qui force l&#39;écriture. Si vous essayez d&#39;ouvrir un ini sans en avoir préalablement fermé un autre (ou le même), vous obtiendrez également une erreur.</p><p> La fonction renverra également une chaîne avec le fichier ini encodé dedans. Cette chaîne peut ensuite être enregistrée sur un serveur et / ou réutilisée avec la fonction <a href="ini_open_from_string.htm"><tt>ini_open_from_string()</tt></a> pour recréer le fichier ini.</p><p></p><h4> Syntaxe:</h4><p class="code">ini_close();</p><p></p><h4> Retour:</h4><p class="code">String</p><p></p><h4> Exemple:</h4><p class="code">ini_open(&quot;savedata.ini&quot;);<br/> score = ini_read_real(&quot;save1&quot;, &quot;score&quot;, 0);<br/> ini_close();
-  </p><p> Cela ouvrira &#39;savedata.ini&#39; et définira le score sur la valeur sous la section &quot;save1&quot; avec la clé &quot;score&quot; dedans, puis refermera le.ini. S&#39;il n&#39;y a aucune valeur sous &quot;save1&quot;, &quot;score&quot; ou s&#39;il n&#39;y a pas de fichier &quot;savedata.ini&quot; présent, le score sera mis à 0 et un nouveau ini_file sera créé. </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> Retour: <a href="Ini_Files.htm">Fichiers Ini</a></div><div style="float:right"> Suivant:<a href="ini_write_real.htm">ini_write_real</a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
+<body>
+  <!--<div class="body-scroll" style="top: 150px;">-->
+  <h1>ini_close</h1>
+  <p>Cette fonction doit être appelée au moment où vous avez fini de lire ou d'écrire dans un fichier ini ouvert. Si vous n'utilisez pas cette fonction après avoir utilisé l'une des fonctions d'écriture ini, rien ne sera écrit sur le disque, car les informations du fichier sont conservées en mémoire jusqu'à ce que cette fonction soit appelée, ce qui force l'écriture.
+    en mémoire jusqu'à ce que cette fonction soit appelée, ce qui force l'écriture. Si vous essayez d'ouvrir un ini sans en avoir préalablement fermé un autre (ou le même), vous obtiendrez également une erreur.</p>
+  <p>La fonction retournera également une chaîne de caractères avec le fichier ini encodé dedans. Cette chaîne peut alors être sauvegardée sur un serveur et/ou utilisée à nouveau avec la fonction <a href="ini_open_from_string.htm"><tt>ini_open_from_string()</tt></a> pour recréer le fichier ini.</p>
+  <p> </p>
+  <h4>Syntaxe :</h4>
+  <p class="code">ini_close() ;</p>
+  <p> </p>
+  <h4>Les retours :</h4>
+  <p class="code">Chaîne de caractères</p>
+  <p> </p>
+  <h4>Exemple :</h4>
+  <p class="code">ini_open(&quot;savedata.ini&quot;) ;<br> score = ini_read_real(&quot;save1&quot;, &quot;score&quot;, 0) ;<br> ini_close() ;
+  </p>
+  <p>Cela ouvrira le fichier 'savedata.ini' et définira le score à la valeur de la section &quot;save1&quot; avec la clé &quot;score&quot;, puis refermera le fichier .ini. S'il n'y a pas de valeur sous &quot;save1&quot;, &quot;score&quot; ou si le fichier
+    ou s'il n'y a pas de fichier &quot;savedata.ini&quot;, score sera mis à 0 et un nouveau fichier ini sera créé.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <div class="footer">
+    <div class="buttons">
+      <div class="clear">
+        <div style="float:left">Retour : <a href="Ini_Files.htm">Dossiers Ini</a></div>
+        <div style="float:right">Suivant : <a href="ini_write_real.htm">ini_write_real</a></div>
+      </div>
+    </div>
+    <h5><span data-keyref="Copyright Notice">Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
   </div>
   <!-- KEYWORDS
 ini_close

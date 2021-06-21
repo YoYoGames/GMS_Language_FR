@@ -1,22 +1,63 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <title>instanceof</title>
-  <meta name="generator" content="Adobe RoboHelp 2019" />
+  <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../assets/css/default.css" type="text/css" />
   <meta name="rh-authors" content="Mark Alexander" />
-  <meta name="topic-comment" content="Page expliquant la fonction instanceof" />
+  <meta name="topic-comment" content="Page explaining the function instanceof" />
   <meta name="rh-index-keywords" content="instanceof" />
   <meta name="search-keywords" content="" />
 </head>
-<body><!--<div class="body-scroll" style="top: 150px;">--><h1>instanceof</h1><p> Cette fonction peut être utilisée pour obtenir le nom de la fonction qui a été utilisée pour créer une structure lorsque la structure a été créée à l&#39;aide d&#39;une <a href="../../GML_Overview/Structs.htm">fonction constructeur</a> et le <a href="../../GML_Overview/Language_Features/new.htm"><tt></tt></a><a href="../../GML_Overview/Language_Features/new.htm"><tt>new</tt></a> opérateur. Vous fournissez la variable avec la référence de structure à vérifier et la fonction renverra soit une chaîne avec le nom de la fonction, soit <tt>undefined</tt>. Notez que si vous passez à la fonction une structure littérale (c&#39;est-à-dire: une structure créée sans utiliser de fonction constructeur), elle retournera simplement la chaîne &quot;struct&quot;. Cette fonction peut également être utilisée pour vérifier si une référence struct est une <strong><a class="glossterm" data-glossterm="référence faible" href="#">référence faible</a></strong> ou non, auquel cas la fonction retournera la chaîne &quot;<span class="inline">weakref</span> &quot;au lieu du nom de la fonction qui a créé la structure pour plus d&#39;informations, consultez la fonction <span class="inline">weak_ref_create()</span> ).</p><p></p><h4> Syntaxe:</h4><p class="code">instanceof(struct_id);</p><table><tbody><tr><th> Argument</th><th> Description</th></tr><tr><td> <span class="notranslate">struct</span></td><td> La référence struct à utiliser.</td></tr></tbody></table><p></p><h4> Retour:</h4><p class="code">String or <tt>undefined</tt></p><p></p><h4> Exemple étendu:</h4><p> Dans cet exemple, nous devons d&#39;abord définir la fonction qui sera utilisée comme constructeur pour la structure:</p><p class="code">function init_struct(_a, _b, _c) constructor<br/>     {
-    <br/>     a = _a;<br/>     b = _b;<br/>     c = _c;<br/>     }
-  </p><p> Cette fonction peut ensuite être utilisée avec le <tt>new</tt> opérateur pour créer une structure et la remplir avec les variables définies sur les valeurs des arguments utilisés dans la fonction:</p><p class="code">mystruct = new init_struct(10, 100, &quot;Hello World&quot;);</p><p> Nous pouvons alors obtenir le nom de la fonction qui a été utilisée comme ceci: </p><p class="code">var _name = instanceof(mystruct);<br/> if is_string(_name)<br/>     {
-    <br/>     show_debug_message(_name);
-    <br/>     }
-  </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> Retour: <a href="Variable_Functions.htm">Fonctions variables</a></div><div style="float:right"> Suivant:<a href="array_create.htm">array_create</a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
+<body>
+  <!--<div class="body-scroll" style="top: 150px;">-->
+  <h1>instanceof</h1>
+  <p>Cette fonction peut être utilisée pour obtenir le nom de la fonction qui a été utilisée pour créer une structure lorsque celle-ci a été créée à l'aide d'une <a href="../../GML_Overview/Structs.htm">fonction de construction</a> et que l'attribut <a href="../../GML_Overview/Language_Features/new.htm"><tt></tt></a>    <a href="../../GML_Overview/Language_Features/new.htm"><tt>nouveau</tt></a> et l'opérateur Vous fournissez la variable avec la référence de la structure à vérifier et la fonction retournera soit une chaîne avec le nom de la fonction, soit <tt>undefined</tt>. Notez que si vous
+    passez à la fonction un littéral de structure (c'est-à-dire une structure qui a été créée sans utiliser de fonction de construction), elle retournera simplement la chaîne &quot;struct&quot;. Cette fonction peut également être utilisée pour vérifier si une référence de structure est un objet <strong><a class="glossterm" data-glossterm="faible référence" href="#">référence faible</a></strong> ou
+    Dans ce cas, la fonction renvoie la chaîne &quot;<span class="inline">weakref</span>&quot; au lieu du nom de la fonction qui a créé la structure (pour plus d'informations, voir la fonction <span class="inline">weak_ref_create()</span>).</p>
+  <p> </p>
+  <h4>Syntaxe :</h4>
+  <p class="code">instanceof(struct_id) ;</p>
+  <table>
+    <tbody>
+      <tr>
+        <th>Arguments</th>
+        <th>Description</th>
+      </tr>
+      <tr>
+        <td>struct</td>
+        <td>La référence de la structure à utiliser.</td>
+      </tr>
+    </tbody>
+  </table>
+  <p> </p>
+  <h4>Les retours :</h4>
+  <p class="code">Chaîne ou <tt>indéfini</tt></p>
+  <p> </p>
+  <h4>Exemple étendu :</h4>
+  <p>Dans cet exemple, nous devons d'abord définir la fonction qui sera utilisée comme constructeur de la structure :</p>
+  <p class="code">function init_struct(_a, _b, _c) constructor<br> {
+    <br> a = _a ;<br> b = _b ;<br> c = _c ;<br> }
+  </p>
+  <p>Cette fonction peut ensuite être utilisée avec l'opérateur <tt>new</tt> pour créer une structure et la remplir avec les variables définies par les valeurs des arguments utilisés dans la fonction :</p>
+  <p class="code">mystruct = new init_struct(10, 100, &quot;Hello World&quot;) ;</p>
+  <p>Nous pouvons alors obtenir le nom de la fonction qui a été utilisée comme ceci :</p>
+  <p class="code">var _name = instanceof(mystruct) ;<br> if is_string(_name)<br> {
+    <br> show_debug_message(_name) ;
+    <br> }
+  </p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <div class="footer">
+    <div class="buttons">
+      <div class="clear">
+        <div style="float:left">Retour : <a href="Variable_Functions.htm">Fonctions variables</a></div>
+        <div style="float:right">Suivant : <a href="array_create.htm">array_create</a></div>
+      </div>
+    </div>
+    <h5><span data-keyref="Copyright Notice">Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
   </div>
   <!-- KEYWORDS
 instanceof
@@ -24,5 +65,5 @@ instanceof
   <!-- TAGS
 instanceof
 -->
-</body>
-</html>
+
+</body></html>

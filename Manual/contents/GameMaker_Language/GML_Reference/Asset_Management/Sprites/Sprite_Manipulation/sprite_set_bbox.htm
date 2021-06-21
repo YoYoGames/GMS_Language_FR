@@ -7,14 +7,68 @@
   <meta name="generator" content="Adobe RoboHelp 2019" />
   <link rel="stylesheet" href="../../../../../assets/css/default.css" type="text/css" />
   <meta name="rh-authors" content="Mark Alexander" />
-  <meta name="topic-comment" content="Page expliquant la fonction sprite_set_bbox" />
+  <meta name="topic-comment" content="Page explaining the function sprite_set_bbox" />
   <meta name="rh-index-keywords" content="sprite_set_bbox" />
   <meta name="search-keywords" content="sprite_set_bbox" />
 </head>
-<body><!--<div class="body-scroll" style="top: 150px;">--><h1>sprite_set_bbox</h1><p> Cette fonction peut être utilisée pour définir les valeurs de la boîte englobante pour un sprite. Vous fournissez l&#39;index de sprite à utiliser, puis les valeurs gauche, supérieure, droite et inférieure pour les positions de la zone de délimitation. Les positions sont <i>des</i> valeurs absolues, où la position (0, 0) correspond au coin supérieur gauche du sprite, quel que soit le décalage du sprite, les pixels &quot;vides&quot; que le sprite peut avoir, ou où il est dessiné dans le sprite salle.</p><p class="note"> <b>REMARQUE:</b> Cette fonction affecte la <b>ressource de</b> sprite afin que toutes les autres instances avec cette image-objet aient le même cadre de délimitation.</p><p></p><h4> Syntaxe:</h4><p class="code">sprite_set_bbox(ind, left, top, right, bottom);</p><table><tbody><tr><th> Argument</th><th> Description</th></tr><tr><td> <span class="notranslate">ind</span></td><td> L&#39;index de l&#39;image-objet sur lequel définir le cadre de sélection.</td></tr><tr><td> <span class="notranslate">left</span></td><td> Le côté gauche du cadre de sélection</td></tr><tr><td> <span class="notranslate">top</span></td><td> Le haut de la boîte englobante.</td></tr><tr><td> <span class="notranslate">right</span></td><td> Le côté droit de la boîte englobante</td></tr><tr><td> <span class="notranslate">bottom</span></td><td> Le bas de la boîte englobante.</td></tr></tbody></table><p></p><h4> Retour</h4><p class="code">N/A</p><p></p><h4> Exemple:</h4><p class="code">if sprite_get_bbox_mode(sprite_index) == 2<br/>     {
-    <br/>     left = irandom(sprite_width / 2);<br/>     right = irandom((sprite_width / 2) + irandom(sprite_width / 2));<br/>     top = irandom(sprite_height / 2);<br/>     bottom = irandom((sprite_height / 2) + irandom(sprite_height / 2));<br/>     sprite_set_bbox(sprite_index,
-    left, top, right, bottom);<br/>     }
-  </p><p> Le code ci-dessus vérifiera le mode de la boîte englobante du sprite assigné au <tt>sprite_index</tt>, et s&#39;il est défini sur <tt>manual</tt> alors sa boîte englobante sera modifiée. </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> Retour: <a href="Sprite_Manipulation.htm">Manipulation des sprites</a></div><div style="float:right"> Suivant:<a href="sprite_set_speed.htm">sprite_set_speed</a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
+<body>
+  <!--<div class="body-scroll" style="top: 150px;">-->
+  <h1>sprite_set_bbox</h1>
+  <p>Cette fonction peut être utilisée pour définir les valeurs du bounding box d'un sprite. Vous fournissez l'index du sprite à utiliser, puis les valeurs gauche, haut, droite et bas pour les positions du rectangle de délimitation. Les positions sont des valeurs <i>absolues</i>, où la position (0, 0) correspond au coin supérieur gauche du sprite.
+    correspond au coin supérieur gauche du sprite, indépendamment du décalage du sprite, de tout pixel &quot;vide&quot; que le sprite peut avoir, ou de l'endroit où il est dessiné dans la pièce.</p>
+  <p class="note"><b>REMARQUE :</b> cette fonction affecte l'<b>actif du </b>sprite de sorte que toutes les autres instances de ce sprite auront la même boîte de délimitation.</p>
+  <p> </p>
+  <h4>Syntaxe :</h4>
+  <p class="code">sprite_set_bbox(ind, left, top, right, bottom) ;</p>
+  <table>
+    <tbody>
+      <tr>
+        <th>Arguments</th>
+        <th>Description</th>
+      </tr>
+      <tr>
+        <td>ind</td>
+        <td>L'index du sprite sur lequel définir la boîte de délimitation.</td>
+      </tr>
+      <tr>
+        <td>gauche</td>
+        <td>Le côté gauche de la boîte de délimitation</td>
+      </tr>
+      <tr>
+        <td>top</td>
+        <td>Le haut de la boîte de délimitation.</td>
+      </tr>
+      <tr>
+        <td>droite</td>
+        <td>Le côté droit de la boîte de délimitation</td>
+      </tr>
+      <tr>
+        <td>fond</td>
+        <td>Le bas de la boîte de délimitation.</td>
+      </tr>
+    </tbody>
+  </table>
+  <p> </p>
+  <h4>Renvoie à</h4>
+  <p class="code">N/A</p>
+  <p> </p>
+  <h4>Exemple :</h4>
+  <p class="code">if sprite_get_bbox_mode(sprite_index) == 2<br> {
+    <br> left = irandom(sprite_width / 2) ;<br> right = irandom((sprite_width / 2) + irandom(sprite_width / 2)) ;<br> top = irandom(sprite_height / 2) ;<br> bottom = irandom((sprite_height / 2) + irandom(sprite_height / 2)) ;<br> sprite_set_bbox(sprite_index,
+    left, top, right, bottom) ;<br> }
+  </p>
+  <p>Le code ci-dessus vérifie le mode de délimitation du sprite affecté à l'<tt>indice sprite_index</tt>, et s'il est défini comme <tt>manuel</tt>, sa délimitation sera modifiée.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <div class="footer">
+    <div class="buttons">
+      <div class="clear">
+        <div style="float:left">Retour : <a href="Sprite_Manipulation.htm">Manipulation des sprites</a></div>
+        <div style="float:right">Suivant : <a href="sprite_set_speed.htm">sprite_set_speed</a></div>
+      </div>
+    </div>
+    <h5><span data-keyref="Copyright Notice">Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
   </div>
   <!-- KEYWORDS
 sprite_set_bbox

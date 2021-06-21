@@ -1,24 +1,320 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>Erreurs de coureur</title>
-  <meta name="generator" content="Adobe RoboHelp 2019" />
+  <title>Erreurs des coureurs</title>
+  <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../assets/css/default.css" type="text/css" />
   <meta name="rh-authors" content="Mark Alexander" />
-  <meta name="topic-comment" content="Page qui explique les différentes erreurs du coureur" />
-  <meta name="rh-index-keywords" content="Erreurs d&#39; Runtime,Erreurs de coureur" />
-  <meta name="search-keywords" content="erreurs de coureur" />
+  <meta name="topic-comment" content="Page that explains the various runner errors" />
+  <meta name="rh-index-keywords" content="Runtime Errors,Runner Errors" />
+  <meta name="search-keywords" content="runner errors" />
 </head>
-<body><!--<div class="body-scroll" style="top: 150px;">--><h1> Erreurs de coureur</h1><p> Même après la vérification de la syntaxe dans l&#39;éditeur de code et après que le compilateur vérifie votre code pour <a href="Compiler_Errors.htm">les erreurs du compilateur</a>, il y a encore des occasions où quelque chose peut mal tourner. Dans la plupart des cas, cela générera une <strong><span class="notranslate">runtime</span></strong> <a class="glossterm"
-      data-glossterm="Machine virtuelle (VM)" href="#">machine virtuelle (VM)</a> (également appelée <strong>exception d&#39;</strong> exécution) qui ressemble à ceci:</p><p><img alt="Runner Error Window" class="center" src="../../assets/Images/Scripting_Reference/Additional_Information/Error_Report.png" /> Les erreurs de runner sont généralement plus graves que les erreurs de compilation car cela signifie qu&#39;il y a quelque chose de grave dans votre code que ni l&#39;éditeur de code ni le compilateur n&#39;ont pu détecter, et en tant que tel, vous devez faire attention à toutes ces erreurs. Lorsque cela se produit, vous pouvez utiliser le <strong>bouton Copier de</strong> la fenêtre contextuelle pour copier l&#39;erreur dans le presse-papiers que vous pouvez ensuite coller dans un fichier texte (ou ailleurs) pour référence future.</p><p> La structure de cette erreur est la suivante:</p><ul class="colour"><li><img alt="Error Object And Event" class="icon" src="../../assets/Images/Scripting_Reference/Additional_Information/Error_Text_ObjectEvent.png" /><br/> Cela montre l&#39;événement dans lequel l&#39;erreur s&#39;est produite ainsi que l&#39;objet (le cas échéant).</li><li><img alt="Error Text Information" class="icon" height="16" src="../../assets/Images/Scripting_Reference/Additional_Information/Error_Text_Information.png" width="436" /><br/> Cela montre l&#39;erreur réelle. Ainsi, il montre la <em>portée</em> de l&#39;erreur et le type d&#39;erreur qu&#39;il s&#39;agit. La première valeur entre parenthèses sera l&#39;ID d&#39;instance de l&#39;instance qui exécutait le code - ou il pourrait s&#39;agir de l&#39;une des valeurs spéciales répertoriées dans le tableau ci-dessous - et la seconde est une valeur interne que <span class="notranslate">YoYo Games</span> utilise pour identifier les bogues et peut être ignoré. Dans le cas de l&#39;image ci-dessus, il est dit que la variable <span class="inline">_image</span> n&#39;a pas été défini (c&#39;est-à-dire: n&#39;existe pas avant d&#39;être accédé) sur l&#39;objet <span class="inline">obj_EA_DEMO_Control</span>.</li><li><img alt="Error Line Number Position" class="icon" height="16" src="../../assets/Images/Scripting_Reference/Additional_Information/Error_LineNumber.png" width="354" /><br/> Cela montre le numéro de ligne sur lequel l&#39;erreur se produit ainsi qu&#39;un extrait de code indiquant la position. Notez que ce n&#39;est pas toujours précis à 100% en raison de la façon dont le jeu est compilé, mais cela devrait suffire pour vous aider à trouver exactement où se situe le problème.</li></ul><p> Comme mentionné ci-dessus, certains messages d&#39;erreur identifieront la portée non pas par une valeur d&#39;ID d&#39;instance, mais plutôt par une valeur <em>négative.</em> Ces valeurs peuvent être utilisées pour identifier la nature exacte de l&#39;erreur et à quoi elle fait référence avec les valeurs suivantes possibles:</p><p></p><table><tbody><tr><th> Préfixe</th><th> Portée</th></tr><tr><td style="text-align: center"> -1</td><td> Soi</td></tr><tr><td style="text-align: center"> -2</td><td> Autre</td></tr><tr><td style="text-align: center"> -3</td><td> Tout</td></tr><tr><td style="text-align: center"> -4</td><td> Personne</td></tr><tr><td style="text-align: center"> -5</td><td> Global</td></tr><tr><td style="text-align: center"> -6</td><td> Non spécifié</td></tr><tr><td style="text-align: center"> -7</td><td> Local</td></tr></tbody></table><p></p><p> Les erreurs possibles du VM runner sont les suivantes:</p><p></p><table><tbody><tr><th> Erreur</th><th> Un message</th><th> Opération</th><th> Description </th></tr><tr><td style="text-align: center;padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px"><span class="inline">DoSet</span></td><td style="border-width: 1px;border-style: #333333;border-color: 1px;padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px"> Type de comparaison non valide</td><td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px"> Types de données</td><td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px"> Cela indique que le coureur a essayé de comparer deux types de données incompatibles, comme un nombre réel avec une chaîne. </td></tr><tr><td style="text-align: center;padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px"><span class="inline">DoConv</span></td><td style="border-width: 1px;border-style: #333333;border-color: 1px;padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px"> Erreur d&#39;exécution</td><td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px"> Types de données</td><td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px"> Cela dénote une erreur lors de la conversion d&#39;un type de données en un autre. </td></tr><tr><td colspan="4" style="text-align: center;padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px"><hr/></td></tr><tr><td style="text-align: center;padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px"><span class="inline">DoAdd</span></td><td style="border-width: 1px;border-style: #333333;border-color: 1px;padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px"> Erreur d&#39;exécution</td><td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px"> Mathématiques</td><td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px"> Une erreur s&#39;est produite lors de l&#39;utilisation de l&#39;addition (<span class="inline">+</span> ) expression. </td></tr><tr><td style="text-align: center;padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px"><span class="inline">DoMul</span></td><td style="border-width: 1px;border-style: #333333;border-color: 1px;padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px"> Erreur d&#39;exécution</td><td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px"> Mathématiques</td><td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px"> Une erreur s&#39;est produite lors de l&#39;utilisation de la multiplication (<span class="inline">*</span> ) expression. </td></tr><tr><td style="text-align: center;padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px"><span class="inline">DoSub</span></td><td style="border-width: 1px;border-style: #333333;border-color: 1px;padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px"> Erreur d&#39;exécution</td><td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px"> Mathématiques</td><td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px"> Une erreur s&#39;est produite lors de l&#39;utilisation de la soustraction (<span class="inline">-</span> ) expression. </td></tr><tr><td style="text-align: center;padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px"><span class="inline">DoSub</span></td><td style="border-width: 1px;border-style: #333333;border-color: 1px;padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px"> Moteur d&#39;exécution - Ne peut pas fonctionner sur le type de chaîne</td><td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px"> Mathématiques</td><td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px"> Vous essayez de soustraire le mauvais type de variables (par exemple soustraire une chaîne d&#39;un réel). </td></tr><tr><td style="text-align: center;padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px"><span class="inline">DoDiv</span></td><td style="border-width: 1px;border-style: #333333;border-color: 1px;padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px"> Erreur d&#39;exécution</td><td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px"> Mathématiques</td><td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px"> Un problème est survenu lors de l&#39;utilisation de la division (<span class="inline">/</span> ou <span class="inline">div</span> ) expression. </td></tr><tr><td style="text-align: center;padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px"><span class="inline">DoDiv</span></td><td style="border-width: 1px;border-style: #333333;border-color: 1px;padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px"> Moteur d&#39;exécution - Ne peut pas fonctionner sur le type de chaîne</td><td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px"> Mathématiques</td><td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px"> Vous essayez de diviser le mauvais type de variables (par exemple, divisez une chaîne par un réel). </td></tr><tr><td style="text-align: center;padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px"><span class="inline">DoDiv</span></td><td style="border-width: 1px;border-style: #333333;border-color: 1px;padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px"> Diviser par zéro</td><td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px"> Mathématiques</td><td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px"> Vous essayez de diviser par 0 (notez que cela ne se produira que lors de l&#39;utilisation de la division entière, la division d&#39;un réel (non nul) par 0 donnera l&#39;infini comme réponse, la division de zéro par zéro donnera NaN comme réponse). Vous pouvez vérifier ces valeurs avec (<span class="inline">is_infinity</span> ) et (<span class="inline">is_nan</span> ) </td></tr><tr><td style="text-align: center;padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px"><span class="inline">DoMod</span></td><td style="border-width: 1px;border-style: #333333;border-color: 1px;padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px"> Erreur d&#39;exécution</td><td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px"> Mathématiques</td><td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px"> Une erreur s&#39;est produite lors de l&#39;utilisation du modulo (<span class="inline">mod</span> ) expression. </td></tr><tr><td style="text-align: center;padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px"><span class="inline">DoMod</span></td><td style="border-width: 1px;border-style: #333333;border-color: 1px;padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px"> Moteur d&#39;exécution - Ne peut pas fonctionner sur le type de chaîne</td><td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px"> Mathématiques</td><td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px"> Vous essayez d&#39;utiliser modulo (<span class="inline">mod</span> ) sur le mauvais type de variables (par exemple <span class="inline">mod</span> une chaîne par un réel). </td></tr><tr><td colspan="4" style="text-align: center;padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px"><hr/></td></tr><tr><td style="text-align: center;padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px"><span class="inline">DoAnd</span></td><td style="border-width: 1px;border-style: #333333;border-color: 1px;padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px"> Erreur d&#39;exécution</td><td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px"> Bitwise</td><td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px"> Une erreur s&#39;est produite lors de l&#39;utilisation du bit &quot;et&quot; (<span class="inline">&amp;</span> ) expression. </td></tr><tr><td style="text-align: center;padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px"><span class="inline">DoAnd</span></td><td style="border-width: 1px;border-style: #333333;border-color: 1px;padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px"> Moteur d&#39;exécution - Ne peut pas fonctionner sur le type de chaîne</td><td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px"> Bitwise</td><td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px"> Vous essayez d&#39;utiliser au niveau du bit &quot;et&quot; (<span class="inline">&amp;</span> ) sur le mauvais type de variables (par exemple en essayant de &quot;et&quot; une chaîne avec un réel). </td></tr><tr><td style="text-align: center;padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px"><span class="inline">DoOr</span></td><td style="border-width: 1px;border-style: #333333;border-color: 1px;padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px"> Erreur d&#39;exécution</td><td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px"> Bitwise</td><td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px"> Une erreur s&#39;est produite lors de l&#39;utilisation du bit &quot;ou&quot; (<span class="inline">|</span> ) expression. </td></tr><tr><td style="text-align: center;padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px"><span class="inline">DoOr</span></td><td style="border-width: 1px;border-style: #333333;border-color: 1px;padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px"> Moteur d&#39;exécution - Ne peut pas fonctionner sur le type de chaîne</td><td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px"> Bitwise</td><td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px"> Vous essayez d&#39;utiliser &quot;ou&quot; (<span class="inline">|</span> ) sur le mauvais type de variables (par exemple en essayant de &quot;ou&quot; une chaîne avec un réel). </td></tr><tr><td style="text-align: center;padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px"><span class="inline">DoXor</span></td><td style="border-width: 1px;border-style: #333333;border-color: 1px;padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px"> Erreur d&#39;exécution</td><td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px"> Bitwise</td><td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px"> Une erreur s&#39;est produite lors de l&#39;utilisation du &quot;xor&quot; au niveau du bit (<span class="inline">^</span> ) expression. </td></tr><tr><td style="text-align: center;padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px"><span class="inline">DoXor</span></td><td style="border-width: 1px;border-style: #333333;border-color: 1px;padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px"> Moteur d&#39;exécution - Ne peut pas fonctionner sur le type de chaîne</td><td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px"> Bitwise</td><td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px"> Vous essayez d&#39;utiliser &quot;xor&quot; (<span class="inline">^</span> ) sur le mauvais type de variables (par exemple en essayant de &quot;xor&quot; une chaîne avec un réel). </td></tr><tr><td style="text-align: center;padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px"><span class="inline">DoShl</span></td><td style="border-width: 1px;border-style: #333333;border-color: 1px;padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px"> Erreur d&#39;exécution</td><td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px"> Bitwise</td><td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px"> Un problème est survenu lors du changement de bits à gauche (<span class="inline">&lt;&lt;</span> ) une valeur. </td></tr><tr><td style="text-align: center;padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px"><span class="inline">DoShl</span></td><td style="border-width: 1px;border-style: #333333;border-color: 1px;padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px"> Moteur d&#39;exécution - Ne peut pas fonctionner sur le type de chaîne</td><td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px"> Bitwise</td><td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px"> Vous essayez de quitter le bithift (<span class="inline">&lt;&lt;</span> ) le mauvais type de variables (par exemple en essayant de décaler une chaîne de bits). </td></tr><tr><td style="text-align: center;padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px"><span class="inline">DoShr</span></td><td style="border-width: 1px;border-style: #333333;border-color: 1px;padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px"> Erreur d&#39;exécution</td><td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px"> Bitwise</td><td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px"> Quelque chose s&#39;est mal passé lors du changement de bits à droite (<span class="inline">&gt;&gt;</span> ) une valeur. </td></tr><tr><td style="text-align: center;padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px"><span class="inline">DoShr</span></td><td style="border-width: 1px;border-style: #333333;border-color: 1px;padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px"> Moteur d&#39;exécution - Ne peut pas fonctionner sur le type de chaîne</td><td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px"> Bitwise</td><td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px"> Vous essayez de changer de bits à droite (<span class="inline">&gt;&gt;</span> ) le mauvais type de variables (par exemple en essayant de décaler une chaîne de bits). </td></tr><tr><td colspan="4" style="text-align: center;padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px"><hr/></td></tr><tr><td style="text-align: center;padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px"><span class="inline">DoNeg</span></td><td style="border-width: 1px;border-style: #333333;border-color: 1px;padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px"> Erreur d&#39;exécution</td><td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px"> Nier</td><td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px"> Vous essayez de transformer un type de variable en négatif lorsque ce type ne permet pas une telle opération. </td></tr><tr><td style="text-align: center;padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px"><span class="inline">DoNot</span></td><td style="border-width: 1px;border-style: #333333;border-color: 1px;padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px"> Erreur d&#39;exécution</td><td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px"> Nier</td><td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px"> Vous essayez de &quot;ne pas&quot; un type de variable lorsque ce type ne permet pas une telle opération. </td></tr><tr><td colspan="4" style="text-align: center;padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px"><hr/></td></tr><tr><td style="text-align: center;padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px"><span class="inline">Push</span></td><td style="border-width: 1px;border-style: #333333;border-color: 1px;padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px"> Erreur d&#39;exécution - Index variable hors limites (var)</td><td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px"> Empiler</td><td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px"> La variable en cours d&#39;accès est sortie avec la plage établie pour le coureur. </td></tr><tr><td style="text-align: center;padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px"><span class="inline">Push</span></td><td style="border-width: 1px;border-style: #333333;border-color: 1px;padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px"> Variable Get (var)</td><td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px"> Empiler</td><td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px"> La variable donnée n&#39;a pas été définie ou est inconnue. </td></tr><tr><td style="text-align: center;padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px"><span class="inline">Pop</span></td><td style="border-width: 1px;border-style: #333333;border-color: 1px;padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px"> Index variable hors plage (var)</td><td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px"> Empiler</td><td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px"> La variable en cours d&#39;accès est sortie avec la plage établie pour le coureur. </td></tr><tr><td style="text-align: center;padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px"><span class="inline">Pop</span></td><td style="border-width: 1px;border-style: #333333;border-color: 1px;padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px"> Variable Get (var)</td><td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px"> Empiler</td><td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px"> La variable donnée n&#39;a pas été définie ou est inconnue. </td></tr><tr><td colspan="4" style="text-align: center;padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px"><hr/></td></tr><tr><td style="text-align: center;padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px"><span class="inline">With</span></td><td style="border-width: 1px;border-style: #333333;border-color: 1px;padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px"> Impossible d&#39;utiliser global dans l&#39;instruction with</td><td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px"> Avec</td><td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px"> Vous avez essayé d&#39;utiliser &quot;<span class="inline">global</span> &quot;en tant que variable dans un&quot;<span class="inline">with</span> &quot;déclaration, c&#39;est-à-dire: <br/> <span class="inline">with (global)<br/>
+<body>
+  <!--<div class="body-scroll" style="top: 150px;">-->
+  <h1>Erreurs des coureurs</h1>
+  <p>Même après avoir vérifié la syntaxe dans l'éditeur de code et après avoir demandé au compilateur de vérifier votre code pour détecter les <a href="Compiler_Errors.htm">erreurs de compilation</a>, il peut arriver que quelque chose ne fonctionne pas. Dans la plupart des cas, il s'agit d'une erreur d'exécution de la <a class="glossterm" data-glossterm="Machine virtuelle (VM)" href="#">machine virtuelle (VM)</a> (également appelée <strong>exception d'<span class="notranslate">exécution</span></strong>) qui ressemble à ceci :</p>
+  <p>Les erreurs de<img alt="Runner Error Window" class="center" src="../../assets/Images/Scripting_Reference/Additional_Information/Error_Report.png">Runner sont généralement plus graves que les erreurs de compilation, car elles signifient que quelque chose de grave ne va pas dans votre code que ni l'éditeur de code ni le compilateur n'ont pu détecter.
+    votre code que ni l'éditeur de code ni le compilateur n'ont pu détecter, et vous devez donc prêter attention à toutes ces erreurs. Lorsque l'une d'entre elles se produit, vous pouvez utiliser le bouton <strong>Copier</strong> de la fenêtre contextuelle pour copier l'erreur dans le presse-papiers.
+    que vous pouvez ensuite coller dans un fichier texte (ou autre) pour référence ultérieure.</p>
+  <p>La structure de cette erreur est la suivante :</p>
+  <ul class="colour">
+    <li><img alt="Error Object And Event" class="icon" src="../../assets/Images/Scripting_Reference/Additional_Information/Error_Text_ObjectEvent.png"><br> Cette page indique l'événement dans lequel l'erreur s'est produite ainsi que l'objet (le cas échéant).</li>
+    <li><img alt="Error Text Information" class="icon" height="16" src="../../assets/Images/Scripting_Reference/Additional_Information/Error_Text_Information.png" width="436"><br> Cela montre l'erreur réelle.  Donc, cela montre l'<em>étendue </em>de l'erreur
+      et le type d'erreur dont il s'agit. La première valeur entre parenthèses sera l'ID de l'instance qui exécutait le code - ou ce pourrait être une des valeurs spéciales listées dans le tableau ci-dessous - et la seconde est une valeur interne que <span class="notranslate">YoYo Games</span>
+      utilise pour identifier les bugs et peut être ignorée. Dans le cas de l'image ci-dessus, cela signifie que la variable <span class="inline">_image</span> n'a pas été définie (c'est-à-dire qu'elle n'existe pas avant d'être accédée) sur l'objet <span class="inline">obj_EA_DEMO_Control</span>.</li>
+    <li><img alt="Error Line Number Position" class="icon" height="16" src="../../assets/Images/Scripting_Reference/Additional_Information/Error_LineNumber.png" width="354"><br> Il indique le numéro de la ligne où l'erreur s'est produite ainsi qu'un extrait de code indiquant la position.
+      montrant la position. Notez que ce n'est pas toujours précis à 100% en raison de la façon dont le jeu est compilé, mais cela devrait suffire pour vous aider à trouver exactement où se situe le problème.</li>
+  </ul>
+  <p>Comme mentionné ci-dessus, certains messages d'erreur ne seront pas identifiés par une valeur d'ID d'instance, mais plutôt par une valeur <em>négative </em>. Ces valeurs peuvent être utilisées pour identifier la nature exacte de l'erreur et ce à quoi elle se réfère avec les valeurs suivantes
+    possible :</p>
+  <p> </p>
+  <table>
+    <tbody>
+      <tr>
+        <th>Préfixe</th>
+        <th>Portée</th>
+      </tr>
+      <tr>
+        <td style="text-align: center">-1</td>
+        <td>Self</td>
+      </tr>
+      <tr>
+        <td style="text-align: center">-2</td>
+        <td>Autre</td>
+      </tr>
+      <tr>
+        <td style="text-align: center">-3</td>
+        <td>Tous</td>
+      </tr>
+      <tr>
+        <td style="text-align: center">-4</td>
+        <td>Personne</td>
+      </tr>
+      <tr>
+        <td style="text-align: center">-5</td>
+        <td>Global</td>
+      </tr>
+      <tr>
+        <td style="text-align: center">-6</td>
+        <td>Non spécifié</td>
+      </tr>
+      <tr>
+        <td style="text-align: center">-7</td>
+        <td>Local</td>
+      </tr>
+    </tbody>
+  </table>
+  <p> </p>
+  <p>Les erreurs possibles du VM runner sont les suivantes :</p>
+  <p> </p>
+  <table>
+    <tbody>
+      <tr>
+        <th>Erreur</th>
+        <th>Message</th>
+        <th>Opération</th>
+        <th>Description</th>
+      </tr>
+      <tr>
+        <td style="text-align: center;padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px"><span class="inline">DoSet</span></td>
+        <td style="border-width: 1px;border-style: #333333;border-color: 1px;padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">Type de comparaison non valide</td>
+        <td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">Types de données</td>
+        <td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">Cela indique que le coureur a essayé de comparer deux types de données incompatibles, comme un nombre réel avec une chaîne de caractères.</td>
+      </tr>
+      <tr>
+        <td style="text-align: center;padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px"><span class="inline">DoConv</span></td>
+        <td style="border-width: 1px;border-style: #333333;border-color: 1px;padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">Erreur d'exécution</td>
+        <td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">Types de données</td>
+        <td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">Cela dénote une erreur dans la conversion d'un type de données en un autre.</td>
+      </tr>
+      <tr>
+        <td colspan="4" style="text-align: center;padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">
+          <hr />
+        </td>
+      </tr>
+      <tr>
+        <td style="text-align: center;padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px"><span class="inline">DoAdd</span></td>
+        <td style="border-width: 1px;border-style: #333333;border-color: 1px;padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">Erreur d'exécution</td>
+        <td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">Maths</td>
+        <td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">Un problème est survenu lors de l'utilisation de l'expression d'addition (<span class="inline">+</span>).</td>
+      </tr>
+      <tr>
+        <td style="text-align: center;padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px"><span class="inline">DoMul</span></td>
+        <td style="border-width: 1px;border-style: #333333;border-color: 1px;padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">Erreur d'exécution</td>
+        <td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">Maths</td>
+        <td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">Un problème est survenu lors de l'utilisation de l'expression de multiplication (<span class="inline">*</span>).</td>
+      </tr>
+      <tr>
+        <td style="text-align: center;padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px"><span class="inline">DoSub</span></td>
+        <td style="border-width: 1px;border-style: #333333;border-color: 1px;padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">Erreur d'exécution</td>
+        <td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">Maths</td>
+        <td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">Un problème est survenu lors de l'utilisation de l'expression de soustraction (<span class="inline">-</span>).</td>
+      </tr>
+      <tr>
+        <td style="text-align: center;padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px"><span class="inline">DoSub</span></td>
+        <td style="border-width: 1px;border-style: #333333;border-color: 1px;padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">Moteur d'exécution - Impossible d'opérer sur un type de chaîne de caractères</td>
+        <td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">Maths</td>
+        <td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">Vous essayez de soustraire le mauvais type de variables (par exemple, soustraire une chaîne de caractères d'un réel).</td>
+      </tr>
+      <tr>
+        <td style="text-align: center;padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px"><span class="inline">DoDiv</span></td>
+        <td style="border-width: 1px;border-style: #333333;border-color: 1px;padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">Erreur d'exécution</td>
+        <td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">Maths</td>
+        <td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">Un problème est survenu lors de l'utilisation de l'expression de division (<span class="inline">/</span> ou <span class="inline">div</span>).</td>
+      </tr>
+      <tr>
+        <td style="text-align: center;padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px"><span class="inline">DoDiv</span></td>
+        <td style="border-width: 1px;border-style: #333333;border-color: 1px;padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">Moteur d'exécution - Impossible d'opérer sur un type de chaîne de caractères</td>
+        <td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">Maths</td>
+        <td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">Vous essayez de diviser le mauvais type de variables (par exemple, diviser une chaîne de caractères par un réel).</td>
+      </tr>
+      <tr>
+        <td style="text-align: center;padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px"><span class="inline">DoDiv</span></td>
+        <td style="border-width: 1px;border-style: #333333;border-color: 1px;padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">Diviser par zéro</td>
+        <td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">Maths</td>
+        <td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">Vous tentez de diviser par 0 (notez que cela ne se produit que lors de la division d'entiers, la division d'un réel (non nul) par 0 donnera l'infini comme réponse, la division de zéro par zéro donnera NaN comme réponse). Vous pouvez vérifier ces valeurs avec
+          (<span class="inline">is_infinity</span>) et (<span class="inline">is_nan</span>)</td>
+      </tr>
+      <tr>
+        <td style="text-align: center;padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px"><span class="inline">DoMod</span></td>
+        <td style="border-width: 1px;border-style: #333333;border-color: 1px;padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">Erreur d'exécution</td>
+        <td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">Maths</td>
+        <td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">Un problème est survenu lors de l'utilisation de l'expression modulo (<span class="inline">mod</span>).</td>
+      </tr>
+      <tr>
+        <td style="text-align: center;padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px"><span class="inline">DoMod</span></td>
+        <td style="border-width: 1px;border-style: #333333;border-color: 1px;padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">Moteur d'exécution - Impossible d'opérer sur un type de chaîne de caractères</td>
+        <td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">Maths</td>
+        <td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">Vous essayez d'utiliser le modulo (<span class="inline">mod</span>) sur le mauvais type de variables (par exemple <span class="inline">mod</span> une chaîne de caractères par un réel).</td>
+      </tr>
+      <tr>
+        <td colspan="4" style="text-align: center;padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">
+          <hr />
+        </td>
+      </tr>
+      <tr>
+        <td style="text-align: center;padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px"><span class="inline">DoAnd</span></td>
+        <td style="border-width: 1px;border-style: #333333;border-color: 1px;padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">Erreur d'exécution</td>
+        <td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">Par bit :</td>
+        <td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">Un problème est survenu lors de l'utilisation de l'expression binaire &quot;et&quot; (<span class="inline">&amp;</span>).</td>
+      </tr>
+      <tr>
+        <td style="text-align: center;padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px"><span class="inline">DoAnd</span></td>
+        <td style="border-width: 1px;border-style: #333333;border-color: 1px;padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">Moteur d'exécution - Impossible d'opérer sur un type de chaîne de caractères</td>
+        <td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">Par bit :</td>
+        <td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">Vous essayez d'utiliser la fonction &quot;et&quot; (<span class="inline">&amp;</span>) sur le mauvais type de variables (par exemple, vous essayez de &quot;et&quot; une chaîne de caractères avec un réel).</td>
+      </tr>
+      <tr>
+        <td style="text-align: center;padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px"><span class="inline">DoOr</span></td>
+        <td style="border-width: 1px;border-style: #333333;border-color: 1px;padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">Erreur d'exécution</td>
+        <td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">Par bit :</td>
+        <td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">Un problème est survenu lors de l'utilisation de l'expression &quot;ou&quot; binaire (<span class="inline">|</span>).</td>
+      </tr>
+      <tr>
+        <td style="text-align: center;padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px"><span class="inline">DoOr</span></td>
+        <td style="border-width: 1px;border-style: #333333;border-color: 1px;padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">Moteur d'exécution - Impossible d'opérer sur un type de chaîne de caractères</td>
+        <td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">Par bit :</td>
+        <td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">Vous essayez d'utiliser &quot;ou&quot; (<span class="inline">|</span>) sur le mauvais type de variables (par exemple, vous essayez de &quot;ou&quot; une chaîne de caractères avec un réel).</td>
+      </tr>
+      <tr>
+        <td style="text-align: center;padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px"><span class="inline">DoXor</span></td>
+        <td style="border-width: 1px;border-style: #333333;border-color: 1px;padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">Erreur d'exécution</td>
+        <td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">Par bit :</td>
+        <td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">Un problème est survenu lors de l'utilisation de l'expression binaire &quot;xor&quot; (<span class="inline">^</span>).</td>
+      </tr>
+      <tr>
+        <td style="text-align: center;padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px"><span class="inline">DoXor</span></td>
+        <td style="border-width: 1px;border-style: #333333;border-color: 1px;padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">Moteur d'exécution - Impossible d'opérer sur un type de chaîne de caractères</td>
+        <td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">Par bit :</td>
+        <td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">Vous essayez d'utiliser &quot;xor&quot; (<span class="inline">^</span>) sur le mauvais type de variables (par exemple, vous essayez de &quot;xor&quot; une chaîne de caractères avec un réel).</td>
+      </tr>
+      <tr>
+        <td style="text-align: center;padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px"><span class="inline">DoShl</span></td>
+        <td style="border-width: 1px;border-style: #333333;border-color: 1px;padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">Erreur d'exécution</td>
+        <td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">Par bit :</td>
+        <td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">Quelque chose s'est mal passé lors du décalage des bits vers la gauche (<span class="inline">&lt;&lt;</span>) d'une valeur.</td>
+      </tr>
+      <tr>
+        <td style="text-align: center;padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px"><span class="inline">DoShl</span></td>
+        <td style="border-width: 1px;border-style: #333333;border-color: 1px;padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">Moteur d'exécution - Impossible d'opérer sur un type de chaîne de caractères</td>
+        <td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">Par bit :</td>
+        <td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">Vous essayez de décaler à gauche (<span class="inline">&lt;&lt;</span>) le mauvais type de variables (par exemple, vous essayez de décaler une chaîne de caractères).</td>
+      </tr>
+      <tr>
+        <td style="text-align: center;padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px"><span class="inline">DoShr</span></td>
+        <td style="border-width: 1px;border-style: #333333;border-color: 1px;padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">Erreur d'exécution</td>
+        <td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">Par bit :</td>
+        <td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">Quelque chose s'est mal passé lors du décalage de bits vers la droite (<span class="inline">&gt;&gt;</span>) d'une valeur.</td>
+      </tr>
+      <tr>
+        <td style="text-align: center;padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px"><span class="inline">DoShr</span></td>
+        <td style="border-width: 1px;border-style: #333333;border-color: 1px;padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">Moteur d'exécution - Impossible d'opérer sur un type de chaîne de caractères</td>
+        <td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">Par bit :</td>
+        <td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">Vous essayez de décaler à droite (<span class="inline">&gt;&gt;</span>) le mauvais type de variables (par exemple, vous essayez de décaler une chaîne de caractères).</td>
+      </tr>
+      <tr>
+        <td colspan="4" style="text-align: center;padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">
+          <hr />
+        </td>
+      </tr>
+      <tr>
+        <td style="text-align: center;padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px"><span class="inline">DoNeg</span></td>
+        <td style="border-width: 1px;border-style: #333333;border-color: 1px;padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">Erreur d'exécution</td>
+        <td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">Négliger</td>
+        <td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">Vous essayez de transformer un type de variable en négatif alors que ce type ne permet pas une telle opération.</td>
+      </tr>
+      <tr>
+        <td style="text-align: center;padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px"><span class="inline">DoNot</span></td>
+        <td style="border-width: 1px;border-style: #333333;border-color: 1px;padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">Erreur d'exécution</td>
+        <td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">Négliger</td>
+        <td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">Vous essayez de &quot;ne pas&quot; utiliser un type de variable alors que ce type ne permet pas une telle opération.</td>
+      </tr>
+      <tr>
+        <td colspan="4" style="text-align: center;padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">
+          <hr />
+        </td>
+      </tr>
+      <tr>
+        <td style="text-align: center;padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px"><span class="inline">Push</span></td>
+        <td style="border-width: 1px;border-style: #333333;border-color: 1px;padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">Erreur d'exécution - Variable Index out of range (var)</td>
+        <td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">Pile</td>
+        <td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">La variable à laquelle on accède est en dehors de la plage établie pour le coureur.</td>
+      </tr>
+      <tr>
+        <td style="text-align: center;padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px"><span class="inline">Push</span></td>
+        <td style="border-width: 1px;border-style: #333333;border-color: 1px;padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">Récupération de la variable (var)</td>
+        <td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">Pile</td>
+        <td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">La variable donnée n'a pas été définie ou est inconnue.</td>
+      </tr>
+      <tr>
+        <td style="text-align: center;padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px"><span class="inline">Pop</span></td>
+        <td style="border-width: 1px;border-style: #333333;border-color: 1px;padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">Index de la variable hors de la plage (var)</td>
+        <td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">Pile</td>
+        <td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">La variable à laquelle on accède est en dehors de la plage établie pour le coureur.</td>
+      </tr>
+      <tr>
+        <td style="text-align: center;padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px"><span class="inline">Pop</span></td>
+        <td style="border-width: 1px;border-style: #333333;border-color: 1px;padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">Récupération de la variable (var)</td>
+        <td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">Pile</td>
+        <td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">La variable donnée n'a pas été définie ou est inconnue.</td>
+      </tr>
+      <tr>
+        <td colspan="4" style="text-align: center;padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">
+          <hr />
+        </td>
+      </tr>
+      <tr>
+        <td style="text-align: center;padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px"><span class="inline">With</span></td>
+        <td style="border-width: 1px;border-style: #333333;border-color: 1px;padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">Impossible d'utiliser global dans l'instruction with</td>
+        <td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">Avec</td>
+        <td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">Vous avez essayé d'utiliser &quot;<span class="inline">global</span>&quot; comme variable dans une déclaration &quot;<span class="inline">with</span>&quot;, c'est-à-dire que vous avez essayé d'utiliser &quot; &quot; comme variable dans une déclaration &quot; &quot; :<br>
+          <span class="inline">with (global)<br/>
 			   {<br/>
 			   //do something;<br/>
-			   }</span></td></tr><tr><td style="text-align: center;padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px"><span class="inline">With</span></td><td style="border-width: 1px;border-style: #333333;border-color: 1px;padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px"> Impossible d&#39;utiliser local dans l&#39;instruction with</td><td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px"> Avec</td><td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px"> Vous avez essayé d&#39;utiliser &quot;<span class="inline">local</span> &quot;en tant que variable dans un&quot;<span class="inline">with</span> &quot;déclaration, c&#39;est-à-dire: <br/> <span class="inline">with (local)<br/>
+			   }</span></td>
+      </tr>
+      <tr>
+        <td style="text-align: center;padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px"><span class="inline">With</span></td>
+        <td style="border-width: 1px;border-style: #333333;border-color: 1px;padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">Impossible d'utiliser local dans l'instruction with</td>
+        <td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">Avec</td>
+        <td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">Vous avez essayé d'utiliser &quot;<span class="inline">local</span>&quot; comme variable dans une déclaration &quot;<span class="inline">with</span>&quot;, c'est-à-dire que vous avez essayé d'utiliser &quot; &quot; comme variable dans une déclaration &quot; &quot; :<br>
+          <span class="inline">with (local)<br/>
 			   {<br/>
 			   //do something;<br/>
-			   }</span></td></tr><tr><td colspan="4" style="text-align: center;padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px"><hr/></td></tr><tr><td style="text-align: center;padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px"><span class="inline">DoCall</span></td><td style="border-width: 1px;border-style: #333333;border-color: 1px;padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px"> Erreur de type de moteur d&#39;exécution</td><td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px"> Moteur</td><td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px"> Il s&#39;agit d&#39;une erreur non définie dans la machine virtuelle. Vous devez déposer un rapport de bogue si cela se produit (voir: Le menu Aide pour plus de détails sur la façon de procéder. </td></tr><tr><td style="text-align: center;padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px"><span class="inline">Stack Overflow</span></td><td style="border-width: 1px;border-style: #333333;border-color: 1px;padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px"> -</td><td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px"> Moteur</td><td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px"> Un débordement de pile se produit lorsque trop de mémoire est utilisée sur la pile d&#39;appels et lorsque votre jeu tente d&#39;utiliser plus d&#39;espace que celui disponible sur la pile d&#39;appels (c&#39;est-à-dire lorsqu&#39;il tente d&#39;accéder à la mémoire au-delà des limites de la pile d&#39;appels, ce qui est essentiellement un buffer overflow), on dit que la pile déborde, ce qui entraîne un plantage du programme. Redémarrez votre ordinateur et <span class="notranslate">GameMaker</span>: Studio et si l&#39;erreur persiste, veuillez contacter l&#39;assistance et / ou signaler un bogue (comme expliqué ci-dessus). </td></tr></tbody></table><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> Retour: <a href="../Error_Reporting.htm">Rapport d&#39;erreurs</a></div><div style="float:right"> Suivant: <a href="Syntax_Errors.htm">Erreurs de syntaxe</a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
+			   }</span></td>
+      </tr>
+      <tr>
+        <td colspan="4" style="text-align: center;padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">
+          <hr />
+        </td>
+      </tr>
+      <tr>
+        <td style="text-align: center;padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px"><span class="inline">DoCall</span></td>
+        <td style="border-width: 1px;border-style: #333333;border-color: 1px;padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">Erreur de type de moteur d'exécution</td>
+        <td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">Moteur</td>
+        <td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">Il s'agit d'une erreur non définie dans la machine virtuelle. Si cela se produit, vous devez remplir un rapport de bogue (voir : le menu d'aide pour plus de détails sur la façon de procéder).</td>
+      </tr>
+      <tr>
+        <td style="text-align: center;padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px"><span class="inline">Stack Overflow</span></td>
+        <td style="border-width: 1px;border-style: #333333;border-color: 1px;padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">-</td>
+        <td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">Moteur</td>
+        <td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">Un dépassement de pile se produit lorsque trop de mémoire est utilisée sur la pile d'appels et lorsque votre jeu tente d'utiliser plus d'espace que celui disponible sur la pile d'appels (c'est-à-dire lorsqu'il tente d'accéder à la mémoire au-delà des limites de la pile d'appels, ce qui constitue essentiellement
+          un dépassement de mémoire tampon), on dit que la pile déborde, ce qui entraîne un plantage du programme. Redémarrez votre ordinateur et <span class="notranslate">GameMaker</span>: Studio et si l'erreur persiste, contactez le support technique et/ou signalez un bug (comme expliqué ci-dessus).</td>
+      </tr>
+    </tbody>
+  </table>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <div class="footer">
+    <div class="buttons">
+      <div class="clear">
+        <div style="float:left">Retour : <a href="../Error_Reporting.htm">Rapport d'erreur</a></div>
+        <div style="float:right">Suivant : <a href="Syntax_Errors.htm">Erreurs de syntaxe</a></div>
+      </div>
+    </div>
+    <h5><span data-keyref="Copyright Notice">Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
   </div>
   <!-- KEYWORDS
 Runner Errors
@@ -26,5 +322,5 @@ Runner Errors
   <!-- TAGS
 runner_errors
 -->
-</body>
-</html>
+
+</body></html>

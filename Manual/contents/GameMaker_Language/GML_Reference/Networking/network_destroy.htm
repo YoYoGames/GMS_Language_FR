@@ -3,18 +3,55 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>network_destroy</title>
+  <title>réseau_destruction</title>
   <meta name="generator" content="Adobe RoboHelp 2019" />
   <link rel="stylesheet" href="../../../assets/css/default.css" type="text/css" />
   <meta name="rh-authors" content="Mark Alexander" />
-  <meta name="topic-comment" content="Page de référence pour network_destroy" />
+  <meta name="topic-comment" content="Reference page for network_destroy" />
   <meta name="rh-index-keywords" content="network_destroy" />
   <meta name="search-keywords" content="network_destroy" />
 </head>
-<body><!--<div class="body-scroll" style="top: 150px;">--><h1>network_destroy</h1><p> Avec cette fonction, vous pouvez supprimer une connexion de socket réseau de votre jeu.</p><p class="note"> <b>REMARQUE</b>: cette fonction ne fonctionnera pas lorsqu&#39;elle est utilisée dans un projet exécuté sur la cible HTML5.</p><p></p><h4> Syntaxe:</h4><p class="code">network_destroy(socket);</p><table><tbody><tr><th> Argument</th><th> Description</th></tr><tr><td> <span class="notranslate">socket</span></td><td> L&#39;identifiant du socket à supprimer.</td></tr></tbody></table><p></p><h4> Retour:</h4><p class="code">N/A</p><p></p><h4> Exemple:</h4><p class="code">if !os_is_network_connected()<br/>    {
-    <br/>    network_destroy(sock);
-    <br/>    }
-  </p><p> Le code ci-dessus vérifiera s&#39;il y a une connexion de données et si aucune n&#39;est trouvée, détruisez la socket avec l&#39;id &quot;chaussette&quot;. </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> Retour: <a href="Networking.htm">Réseautage</a></div><div style="float:right"> Suivant:<a href="network_create_server.htm">network_create_server</a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
+<body>
+  <!--<div class="body-scroll" style="top: 150px;">-->
+  <h1>réseau_destruction</h1>
+  <p>Cette fonction vous permet de supprimer une connexion de prise réseau de votre jeu.</p>
+  <p class="note"><b>NOTE</b>: Cette fonction ne fonctionnera pas si elle est utilisée dans un projet fonctionnant sur la cible HTML5.</p>
+  <p> </p>
+  <h4>Syntaxe :</h4>
+  <p class="code">network_destroy(socket) ;</p>
+  <table>
+    <tbody>
+      <tr>
+        <th>Arguments</th>
+        <th>Description</th>
+      </tr>
+      <tr>
+        <td>prise de courant</td>
+        <td>L'identifiant de la prise à supprimer.</td>
+      </tr>
+    </tbody>
+  </table>
+  <p> </p>
+  <h4>Les retours :</h4>
+  <p class="code">N/A</p>
+  <p> </p>
+  <h4>Exemple :</h4>
+  <p class="code">if !os_is_network_connected()<br> {
+    <br> network_destroy(sock) ;
+    <br> }
+  </p>
+  <p>Le code ci-dessus vérifiera s'il existe une connexion de données et si aucune n'est trouvée, il détruira le socket avec l'id &quot;sock&quot;.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <div class="footer">
+    <div class="buttons">
+      <div class="clear">
+        <div style="float:left">Retour : <a href="Networking.htm">Mise en réseau</a></div>
+        <div style="float:right">Suivant : <a href="network_create_server.htm">réseau_créer_serveur</a></div>
+      </div>
+    </div>
+    <h5><span data-keyref="Copyright Notice">Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
   </div>
   <!-- KEYWORDS
 network_destroy

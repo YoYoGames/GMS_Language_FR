@@ -3,16 +3,64 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>sprite_merge</title>
+  <title>fusion de sprites</title>
   <meta name="generator" content="Adobe RoboHelp 2019" />
   <link rel="stylesheet" href="../../../../../assets/css/default.css" type="text/css" />
   <meta name="rh-authors" content="Mark Alexander" />
-  <meta name="topic-comment" content="Page expliquant la fonction sprite_merge" />
+  <meta name="topic-comment" content="Page explaining the function sprite_merge" />
   <meta name="rh-index-keywords" content="sprite_merge" />
   <meta name="search-keywords" content="sprite_merge" />
 </head>
-<body><!--<div class="body-scroll" style="top: 150px;">--><h1>sprite_merge</h1><p> Cette fonction fusionnera le sprite indexé en argument 1 (&quot;ind2&quot;) avec celui qui est indexé en argument 0 (&quot;ind1&quot;). Les images elles-mêmes ne sont <b>PAS</b> fusionnées ensemble, mais plutôt les indices d&#39;image sont fusionnés, avec les sous-images du sprite &quot;ind2&quot; ajoutées à celles du sprite &quot;ind1&quot;, c&#39;est-à-dire: elles sont ajoutées à la fin. Notez que si les sprites sont de tailles différentes, alors les sprites ajoutés sont étirés pour s&#39;adapter à la taille de l&#39;image pour &quot;ind1&quot;.</p><p> Ce changement est permanent, et à partir du moment où vous utilisez cette fonction jusqu&#39;à ce que le jeu soit fermé ou que le sprite soit supprimé, le sprite qui est fusionné sera changé, mais le sprite avec lequel il est fusionné restera le même.</p><p class="note"> <b>REMARQUE</b>: ni l&#39;élément d&#39;image qui est fusionné dans, ni l&#39;élément d&#39;image qui doit fusionner, ne peuvent être l&#39;une des ressources de jeu d&#39;origine. Vous devez d&#39;abord utiliser <span style="font-size:1px;"><a href="sprite_duplicate.htm"><tt style="font-size: 14px">sprite_duplicate ()</tt></a></span> pour créer deux nouvelles ressources (si vous fusionnez des éléments de jeu inclus), puis les fusionner.</p><p class="note"> <b>REMARQUE</b>: Cette fonction n&#39;est utile que pour <b>les</b> sprites bitmap et ne fonctionnera pas avec les sprites SWF ou JSON (Spine).</p><p></p><h4> Syntaxe:</h4><p class="code">sprite_merge(ind1, ind2);</p><table><tbody><tr><th> Argument</th><th> Description</th></tr><tr><td> <span class="notranslate">ind1</span></td><td> L&#39;index du sprite à fusionner.</td></tr><tr><td> <span class="notranslate">ind2</span></td><td> L&#39;index du sprite avec lequel ind1 doit être fusionné.</td></tr></tbody></table><p></p><h4> Retour</h4><p class="code">N/A</p><p></p><h4> Exemple:</h4><p class="code">var tspr;<br/> tspr[0] = spr_add(working_directory + &quot;Sprite Assets\explode1.png&quot;, 16, true, true, 0, 0);<br/> tspr[1] = sprite_duplicate(spr_Explosion);<br/> sprite_merge(tspr[0], tspr[1]);<br/> sprite_index = t_spr[0];<br/> sprite_delete(tspr[1]);
-  </p><p> Le code ci-dessus charge un sprite dans une variable locale puis le fusionne avec un autre sprite qui a été dupliqué. Enfin, le sprite fusionné est affecté à l&#39;instance <tt>sprite_index</tt> tandis que le sprite chargé est supprimé pour libérer la mémoire qu&#39;il utilise. Notez qu&#39;à un moment donné après cette opération, comme dans les événements Destroy ou Room End, vous devrez également utiliser <a href="sprite_delete.htm"><tt>sprite_delete()</tt></a> pour supprimer également le sprite fusionné de la mémoire. </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> Retour: <a href="Sprite_Manipulation.htm">Manipulation des sprites</a></div><div style="float:right"> Suivant:<a href="sprite_create_from_surface.htm">sprite_create_from_surface</a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
+<body>
+  <!--<div class="body-scroll" style="top: 150px;">-->
+  <h1>fusion de sprites</h1>
+  <p>Cette fonction fusionnera le sprite indexé dans l'argument 1 (&quot;ind2&quot;) avec celui qui est indexé dans l'argument 0 (&quot;ind1&quot;). Les images elles-mêmes <b>ne</b> sont <b>PAS</b> fusionnées, mais plutôt les indices des images sont
+    fusionnées, avec les sous-images du sprite &quot;ind2&quot; ajoutées à celles du sprite &quot;ind1&quot;, c'est-à-dire qu'elles sont ajoutées à la fin. Notez que si les sprites sont de tailles différentes, alors les sprites ajoutés sont étirés pour s'adapter à la taille de l'image
+    pour &quot;ind1&quot;.</p>
+  <p>Ce changement est permanent, et à partir du moment où vous utilisez cette fonction jusqu'à la fermeture du jeu ou la suppression du sprite, le sprite dans lequel il est fusionné sera modifié, mais le sprite avec lequel il est fusionné restera le même.</p>
+  <p class="note"><b>REMARQUE</b>: ni l'image qui fait l'objet de la fusion, ni l'image qui fait l'objet de la fusion, ne peuvent faire partie des ressources originales du jeu. Vous devez utiliser <span style="font-size:1px;"><a href="sprite_duplicate.htm"><tt style="font-size: 14px">sprite_duplicate()</tt></a></span> premièrement
+    pour créer deux nouvelles ressources (si vous fusionnez des ressources de jeu incluses), puis les fusionner.</p>
+  <p class="note"><b>REMARQUE</b>: Cette fonction n'est utile que pour les sprites <b>bitmap</b> et ne fonctionne pas avec les sprites SWF ou JSON (Spine).</p>
+  <p> </p>
+  <h4>Syntaxe :</h4>
+  <p class="code">sprite_merge(ind1, ind2) ;</p>
+  <table>
+    <tbody>
+      <tr>
+        <th>Arguments</th>
+        <th>Description</th>
+      </tr>
+      <tr>
+        <td>ind1</td>
+        <td>L'index du sprite à fusionner.</td>
+      </tr>
+      <tr>
+        <td>ind2</td>
+        <td>L'index du sprite avec lequel ind1 doit être fusionné.</td>
+      </tr>
+    </tbody>
+  </table>
+  <p> </p>
+  <h4>Renvoie à</h4>
+  <p class="code">N/A</p>
+  <p> </p>
+  <h4>Exemple :</h4>
+  <p class="code">var tspr ;<br> tspr[0] = spr_add(working_directory + &quot;Sprite Assets\explode1.png&quot;, 16, true, true, 0, 0) ;<br> tspr[1] = sprite_duplicate(spr_Explosion) ;<br> sprite_merge(tspr[0], tspr[1]) ;<br> sprite_index = t_spr[0] ;<br> sprite_delete(tspr[1]) ;
+  </p>
+  <p>Le code ci-dessus charge un sprite dans une variable locale puis le fusionne avec un autre sprite qui a été dupliqué. Enfin, le sprite fusionné est assigné à l'instance <tt>sprite_index</tt> tandis que le sprite chargé est supprimé pour libérer la mémoire qu'il utilise.
+    pour libérer la mémoire qu'il utilise. Notez qu'à un moment donné après cette opération, comme dans les événements Destroy ou Room End, vous devrez également utiliser la fonction <a href="sprite_delete.htm"><tt>sprite_delete()</tt></a> pour supprimer le sprite fusionné
+    de la mémoire également.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <div class="footer">
+    <div class="buttons">
+      <div class="clear">
+        <div style="float:left">Retour : <a href="Sprite_Manipulation.htm">Manipulation des sprites</a></div>
+        <div style="float:right">Suivant : <a href="sprite_create_from_surface.htm">sprite_create_from_surface</a></div>
+      </div>
+    </div>
+    <h5><span data-keyref="Copyright Notice">Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
   </div>
   <!-- KEYWORDS
 sprite_merge

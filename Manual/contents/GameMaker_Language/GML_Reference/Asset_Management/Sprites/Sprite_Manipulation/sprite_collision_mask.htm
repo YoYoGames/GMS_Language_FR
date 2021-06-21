@@ -3,15 +3,116 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>sprite_collision_mask</title>
+  <title>masque_collision_site</title>
   <meta name="generator" content="Adobe RoboHelp 2019" />
   <link rel="stylesheet" href="../../../../../assets/css/default.css" type="text/css" />
   <meta name="rh-authors" content="Mark Alexander" />
-  <meta name="topic-comment" content="Page expliquant la fonction sprite_collision_mask" />
+  <meta name="topic-comment" content="Page explaining the function sprite_collision_mask" />
   <meta name="rh-index-keywords" content="sprite_collision_mask" />
   <meta name="search-keywords" content="sprite_collision_mask" />
 </head>
-<body><!--<div class="body-scroll" style="top: 150px;">--><h1>sprite_collision_mask</h1><p> Avec cette fonction, vous pouvez définir les propriétés du masque de collision qu&#39;un sprite doit avoir. Si vous sélectionnez automatique (0) ou image complète (1) comme mode de zone de délimitation, les valeurs de la zone de délimitation individuelle peuvent être définies sur 0. Cependant, pour un masque défini par l&#39;utilisateur (2), vous devrez définir ces valeurs. Les différentes valeurs de la boîte englobante sont toujours relatives au coin supérieur gauche de l&#39;image-objet (indépendamment de l&#39;origine x et y) qui est considérée comme la position (0, 0).</p><p> La définition du type de masque définit la forme générale du masque lui-même, mais notez que tout autre élément qu&#39;un masque rectangulaire nécessitera plus de puissance de traitement lors de la résolution des collisions, ce qui entraînera une baisse des performances. En général, vous ne devez utiliser des types de masque autres que rectangulaires que lorsque cela est absolument nécessaire.</p><p class="note"> <b>REMARQUE</b>: Cette fonction n&#39;autorise pas le type de masque de collision <b>rectangle pivoté.</b></p><p> Le type de masque qui peut être défini sera l&#39;une des constantes suivantes:</p><table><tbody><tr><th> Constant</th><th> Description </th></tr><tr><td><span class="notranslate"><tt>bboxkind_rectangular</tt></span></td><td> Une forme de masque de collision rectangle rectangulaire (non rotatif)</td></tr><tr><td><span class="notranslate"><tt>bboxkind_ellipse</tt></span></td><td> Une forme de masque de collision elliptique </td></tr><tr><td><span class="notranslate"><tt>bboxkind_diamond</tt></span></td><td> Une forme de masque de collision en diamant </td></tr><tr><td><span class="notranslate"><tt>bboxkind_precise</tt></span></td><td> Un masque de collision précis, où le masque se conformera aux pixels non transparents du sprite, basé sur la valeur de tolérance donnée (voir ci-dessous))</td></tr></tbody></table><p><br/> Enfin, la tolérance est utilisée pour définir la précision du masque (lorsqu&#39;il est utilisé avec un masque &quot;pleine image&quot;, cela n&#39;aura aucun effet), avec une tolérance de 0 signifiant que le masque suivra chaque pixel qui a une transparence au-dessus de 0, tandis que d&#39;autres valeurs déplaceront le périmètre du masque de collision en fonction de la transparence des pixels.</p><p class="note"> <b>REMARQUE</b>: Cette fonction n&#39;est utile que pour <b>les</b> sprites bitmap et ne fonctionnera pas avec les sprites SWF ou JSON (Spine).</p><p class="note"> <b>REMARQUE</b>: Cette fonction ne fonctionnera que sur les sprites ajoutés ou les sprites dupliqués et <b>pas</b> directement sur les ressources prédéfinies. Vous pouvez dupliquer des sprites en utilisant la fonction <span style="font-size:1px;"><a href="sprite_duplicate.htm"><tt style="font-size: 14px">sprite_duplicate ()</tt></a></span>.</p><p></p><h4> Syntaxe:</h4><p class="code">sprite_collision_mask(ind, sepmasks, bboxmode, bbleft, bbtop, bbright, bbbottom, kind, tolerance);</p><table><tbody><tr><th> Argument</th><th> Description</th></tr><tr><td> <span class="notranslate">ind</span></td><td> L&#39;index de l&#39;image-objet pour définir le cadre de sélection.</td></tr><tr><td> <span class="notranslate">sepmasks</span></td><td> S&#39;il faut créer des masques de collision pour chaque sous-image du sprite (<tt>true</tt> ), ou un masque pour tous (<tt>false</tt> ).</td></tr><tr><td> <span class="notranslate">bboxmode</span></td><td> Quel type de cadre de délimitation utiliser. 0 = automatique, 1 = image complète, 2 = défini par l&#39;utilisateur.</td></tr><tr><td> <span class="notranslate">bbleft</span></td><td> La position gauche maximale du cadre de sélection.</td></tr><tr><td> <span class="notranslate">bbtop</span></td><td> La position supérieure maximale du cadre de sélection.</td></tr><tr><td> <span class="notranslate">bbright</span></td><td> La position droite maximale du cadre de sélection.</td></tr><tr><td> <span class="notranslate">bbbottom</span></td><td> La position inférieure maximale du cadre de sélection.</td></tr><tr><td> <span class="notranslate">kind</span></td><td> Le type de masque, une constante (voir le tableau dans la description).</td></tr><tr><td> <span class="notranslate">tolerance</span></td><td> Indique la tolérance dans la valeur de transparence (0 = aucune tolérance, 255 = tolérance totale).</td></tr></tbody></table><p></p><h4> Retour</h4><p class="code">N/A</p><p></p><h4> Exemple:</h4><p class="code">spr = sprite_add(&quot;player_5.png&quot;, 16, true, true, 0, 0);<br/> sprite_collision_mask(spr, true, 1, 0, 0, 0, 0, 0, 0);</p><p> Le code ci-dessus charge un sprite à partir d&#39;une source externe et stocke le nouvel index dans la variable &quot;spr&quot;. Le code définit ensuite le nouveau sprite pour avoir un masque de collision précis pour chacune de ses sous-images. </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> Retour: <a href="Sprite_Manipulation.htm">Manipulation des sprites</a></div><div style="float:right"> Suivant: <a href="sprite_nineslice_create.htm">sprite_nineslice_create</a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
+<body>
+  <!--<div class="body-scroll" style="top: 150px;">-->
+  <h1>masque_collision_spirite</h1>
+  <p>Cette fonction vous permet de définir les propriétés du masque de collision qu'un sprite doit avoir. Si vous sélectionnez le mode bounding box automatique (0) ou image complète (1), les valeurs individuelles du bounding box peuvent être réglées sur 0.
+    Toutefois, pour un masque défini par l'utilisateur (2), vous devrez définir ces valeurs. Les différentes valeurs du bounding box sont toujours relatives au coin supérieur gauche du sprite (indépendamment de l'origine x et y) qui est considéré comme la position (0, 0).</p>
+  <p>La définition du type de masque définit la forme générale du masque lui-même, mais notez que tout ce qui n'est pas un masque rectangulaire nécessitera plus de puissance de traitement lors de la résolution des collisions, ce qui entraînera une baisse des performances. En général, vous ne devriez
+    utiliser des types de masque autres que rectangulaires qu'en cas de nécessité absolue.</p>
+  <p class="note"><b>REMARQUE</b>: Cette fonction ne permet pas le type de masque de collision du <b>rectangle tourné</b>.</p>
+  <p>Le type de masque qui peut être défini sera l'une des constantes suivantes :</p>
+  <table>
+    <tbody>
+      <tr>
+        <th>Constant</th>
+        <th>Description</th>
+      </tr>
+      <tr>
+        <td><tt>bboxkind_rectangulaire</tt></td>
+        <td>Forme de masque de collision rectangulaire (non rotatif)</td>
+      </tr>
+      <tr>
+        <td><tt>bboxkind_ellipse</tt></td>
+        <td>Une forme de masque de collision elliptique</td>
+      </tr>
+      <tr>
+        <td><tt>bboxkind_diamond</tt></td>
+        <td>Un masque de collision en forme de diamant</td>
+      </tr>
+      <tr>
+        <td><tt>bboxkind_precise</tt></td>
+        <td>Un masque de collision précis, où le masque se conformera aux pixels non transparents du sprite, en fonction de la valeur de tolérance donnée (voir ci-dessous)).</td>
+      </tr>
+    </tbody>
+  </table>
+  <p><br> Enfin, la tolérance est utilisée pour définir le degré de précision du masque (lorsqu'il est utilisé avec un masque &quot;image complète&quot;, cela n'aura aucun effet), avec une tolérance de 0 signifiant que le masque suivra chaque pixel ayant une transparence
+    supérieure à 0, tandis que d'autres valeurs décalent le périmètre du masque de collision en fonction de la transparence des pixels.</p>
+  <p class="note"><b>REMARQUE</b>: Cette fonction n'est utile que pour les sprites <b>bitmap</b> et ne fonctionnera pas avec les sprites SWF ou JSON (Spine).</p>
+  <p class="note"><b>REMARQUE</b>: Cette fonction ne fonctionnera que sur les sprites ajoutés ou les sprites dupliqués et <b>pas</b> directement sur les ressources pré-fabriquées. Vous pouvez dupliquer des sprites en utilisant la fonction <span style="font-size:1px;"><a href="sprite_duplicate.htm"><tt style="font-size: 14px">sprite_duplicate()</tt></a></span>.</p>
+  <p> </p>
+  <h4>Syntaxe :</h4>
+  <p class="code">sprite_collision_mask(ind, sepmasks, bboxmode, bbleft, bbtop, bbright, bbbottom, kind, tolerance) ;</p>
+  <table>
+    <tbody>
+      <tr>
+        <th>Arguments</th>
+        <th>Description</th>
+      </tr>
+      <tr>
+        <td>ind</td>
+        <td>L'index du sprite dont il faut définir la boîte de délimitation.</td>
+      </tr>
+      <tr>
+        <td>sepmasks</td>
+        <td>Indique s'il faut créer des masques de collision pour chaque sous-image du sprite<tt>(true)</tt>, ou un seul masque pour tous<tt>(false)</tt>.</td>
+      </tr>
+      <tr>
+        <td>bboxmode</td>
+        <td>Quel type de boîte de délimitation utiliser. 0 = automatique, 1 = image complète, 2 = défini par l'utilisateur.</td>
+      </tr>
+      <tr>
+        <td>bbleft</td>
+        <td>La position gauche maximale de la boîte englobante.</td>
+      </tr>
+      <tr>
+        <td>bbtop</td>
+        <td>La position supérieure maximale de la boîte englobante.</td>
+      </tr>
+      <tr>
+        <td>bbright</td>
+        <td>La position maximale à droite de la boîte englobante.</td>
+      </tr>
+      <tr>
+        <td>bbbottom</td>
+        <td>La position inférieure maximale de la boîte englobante.</td>
+      </tr>
+      <tr>
+        <td>genre</td>
+        <td>Le type de masque, une constante (voir le tableau dans la description).</td>
+      </tr>
+      <tr>
+        <td>tolérance</td>
+        <td>Indique la tolérance dans la valeur de la transparence (0=pas de tolérance, 255=tolérance totale).</td>
+      </tr>
+    </tbody>
+  </table>
+  <p> </p>
+  <h4>Renvoie à</h4>
+  <p class="code">N/A</p>
+  <p> </p>
+  <h4>Exemple :</h4>
+  <p class="code">spr = sprite_add(&quot;player_5.png&quot;, 16, true, true, 0, 0) ;<br> sprite_collision_mask(spr, true, 1, 0, 0, 0, 0, 0, 0, 0) ;</p>
+  <p>Le code ci-dessus charge un sprite à partir d'une source externe et enregistre le nouvel indice dans la variable &quot;spr&quot;. Le code définit ensuite le nouveau sprite pour qu'il ait un masque de collision précis pour chacune de ses sous-images.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <div class="footer">
+    <div class="buttons">
+      <div class="clear">
+        <div style="float:left">Retour : <a href="Sprite_Manipulation.htm">Manipulation des sprites</a></div>
+        <div style="float:right">Suivant : <a href="sprite_nineslice_create.htm">sprite_nineslice_create</a></div>
+      </div>
+    </div>
+    <h5><span data-keyref="Copyright Notice">Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
   </div>
   <!-- KEYWORDS
 sprite_collision_mask

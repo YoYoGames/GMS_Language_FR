@@ -3,15 +3,43 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>cursor_sprite</title>
+  <title>curseur_sprite</title>
   <meta name="generator" content="Adobe RoboHelp 2019" />
   <link rel="stylesheet" href="../../../assets/css/default.css" type="text/css" />
   <meta name="rh-authors" content="Mark Alexander" />
-  <meta name="topic-comment" content="Cette page décrit la fonction cursor_sprite" />
+  <meta name="topic-comment" content="This page outlines the function cursor_sprite" />
   <meta name="rh-index-keywords" content="cursor_sprite" />
   <meta name="search-keywords" content="cursor_sprite" />
 </head>
-<body><!--<div class="body-scroll" style="top: 150px;">--><h1>cursor_sprite</h1><p> La définition de cette variable indiquera à <span class="notranslate">GameMaker Studio 2</span> d&#39;utiliser le sprite désigné comme curseur (en le définissant essentiellement sur la position x / y actuelle de la souris à chaque étape). La valeur par défaut est -1, ce qui n&#39;est pas un sprite pour le curseur, mais vous pouvez attribuer n&#39;importe quel index de sprite à partir des ressources du jeu ou qui a été importé à partir d&#39;une ressource externe. Veuillez noter qu&#39;il n&#39;y a aucun moyen de contrôler la vitesse de l&#39;animation ou image_index, donc si le sprite a des sous-images, celles-ci seront cyclées à la même vitesse que la vitesse de la salle. Pour supprimer l&#39;image-objet du curseur, vous pouvez redéfinir cette variable sur -1.</p><p> Il est également intéressant de noter que cette variable ne <i>remplace pas</i> le curseur de la fenêtre de jeu, et qu&#39;elle sera toujours dessinée normalement. Pour éviter cela, vous pouvez utiliser la fonction <a href="../Cameras_And_Display/The_Game_Window/window_set_cursor.htm"><tt>window_set_cursor()</tt></a> et réglez-le sur la constante <tt>cr_none</tt> ce qui rendra le curseur standard invisible.</p><p></p><h4> Syntaxe:</h4><p class="code">cursor_sprite;</p><p></p><h4> Retour:</h4><p class="code">Real</p><p></p><h4> Exemple:</h4><p class="code">cursor_sprite = spr_CustomCursor;</p><p> Le code ci-dessus définira le sprite indexé dans la variable &quot;spr_CustomCursor&quot; pour être le sprite curseur pour le jeu. </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> Retour: <a href="General_Game_Control.htm">Contrôle général du jeu</a></div><div style="float:right"> Suivant:<a href="game_id.htm">game_id</a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
+<body>
+  <!--<div class="body-scroll" style="top: 150px;">-->
+  <h1>curseur_sprite</h1>
+  <p>La définition de cette variable demandera à <span class="notranslate">GameMaker Studio 2</span> d'utiliser le sprite désigné comme curseur (en fait, il sera réglé sur la position x/y actuelle de la souris à chaque étape). La valeur par défaut est -1, ce qui signifie qu'il n'y a pas de sprite pour le curseur.
+    mais vous pouvez attribuer n'importe quel index de sprite provenant des ressources du jeu ou importé d'une ressource externe. Veuillez noter qu'il n'y a aucun moyen de contrôler la vitesse d'animation ou l'index d'image, donc si le sprite a des sous-images, celles-ci seront cycliques à la même vitesse que la vitesse de la pièce.
+    à la même vitesse que celle de la pièce. Pour supprimer le sprite du curseur, vous pouvez redonner à cette variable la valeur -1.</p>
+  <p>Il convient également de noter que cette variable <i>ne</i> remplace <i>pas</i> le curseur de la fenêtre de jeu, et qu'il sera toujours dessiné normalement. Pour éviter cela, vous pouvez utiliser la fonction <a href="../Cameras_And_Display/The_Game_Window/window_set_cursor.htm"><tt>window_set_cursor()</tt></a> et
+    et lui attribuer la constante <tt>cr_none</tt> qui rendra le curseur standard invisible.</p>
+  <p> </p>
+  <h4>Syntaxe :</h4>
+  <p class="code">curseur_sprite ;</p>
+  <p> </p>
+  <h4>Les retours :</h4>
+  <p class="code">Real</p>
+  <p> </p>
+  <h4>Exemple :</h4>
+  <p class="code">curseur_sprite = spr_CustomCursor ;</p>
+  <p>Le code ci-dessus va définir le sprite indexé dans la variable &quot;spr_CustomCursor&quot; comme étant le sprite du curseur du jeu.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <div class="footer">
+    <div class="buttons">
+      <div class="clear">
+        <div style="float:left">Retour : <a href="General_Game_Control.htm">Contrôle général du jeu</a></div>
+        <div style="float:right">Suivant : <a href="game_id.htm">game_id</a></div>
+      </div>
+    </div>
+    <h5><span data-keyref="Copyright Notice">Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
   </div>
   <!-- KEYWORDS
 highscore_value

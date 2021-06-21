@@ -2,19 +2,59 @@
 
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml"><head>
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-  <title>distance_to_object</title>
-  <meta name="generator" content="Adobe RoboHelp 2019"/>
-  <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css"/>
-  <meta name="rh-authors" content="Mark Alexander"/>
-  <meta name="topic-comment" content="Page de référence pour distance_to_object"/>
-  <meta name="rh-index-keywords" content="distance_to_object"/>
-  <meta name="search-keywords" content="distance_to_object"/>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>distance_à_l'objet</title>
+  <meta name="generator" content="Adobe RoboHelp 2019" />
+  <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
+  <meta name="rh-authors" content="Mark Alexander" />
+  <meta name="topic-comment" content="Reference page for distance_to_object" />
+  <meta name="rh-index-keywords" content="distance_to_object" />
+  <meta name="search-keywords" content="distance_to_object" />
 </head>
 
-<body><!--<div class="body-scroll" style="top: 150px;">--><h1>distance_to_object</h1><p> Cette fonction calcule la distance entre le bord de la boîte englobante de l&#39;instance appelante et le bord le plus proche de l&#39;instance la plus proche de l&#39;objet spécifié. L&#39;objet peut être un index d&#39;objet ou un ID d&#39;instance spécifique ainsi que le <a href="../../../GML_Overview/Instance_Keywords.htm"><i>mot</i></a> <b>-clé other</b>, et la distance est renvoyée en pixels. Notez que si l&#39;un des objets n&#39;a aucun sprite ou aucun masque défini, les résultats seront incorrects.</p><p></p><h4> <b>Syntaxe:</b></h4><p class="code">distance_to_object(obj);</p><table><tbody><tr><th> Argument</th><th> Description</th></tr><tr><td> <span class="notranslate">obj</span></td><td> L&#39;objet à rechercher.</td></tr></tbody></table><p></p><h4> Retour:</h4><p class="code">Real.</p><p></p><h4> Exemple:</h4><p class="code">if (distance_to_object(obj_Player) &lt; range)<br/>     {
-    <br/>     canshoot = true;<br/>     }
-  </p><p> Le code ci-dessus vérifiera la distance par rapport à l&#39;objet joueur et si elle est inférieure à la valeur stockée dans la variable «range», la variable «canshoot» est définie sur true. </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> Retour: <a href="Angles_And_Distance.htm">Angles et distance</a></div><div style="float:right"> Suivant:<a href="distance_to_point.htm">distance_to_point</a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
+<body>
+
+
+
+
+  <!--<div class="body-scroll" style="top: 150px;">-->
+  <h1>distance_à_l'objet</h1>
+  <p>Cette fonction calcule la distance entre le bord de la boîte englobante de l'instance appelante et le bord le plus proche de l'instance la plus proche de l'objet spécifié. L'objet peut être un index d'objet ou un ID d'instance spécifique ainsi que l'un ou l'autre <a href="../../../GML_Overview/Instance_Keywords.htm"><i>mot-clé</i></a>    l <b>'autre</b>, et la distance est renvoyée en pixels. Notez que si l'un des objets n'a pas de sprite ou de masque défini, les résultats seront incorrects.</p>
+  <p> </p>
+  <h4><b>Syntaxe :</b></h4>
+  <p class="code">distance_to_object(obj) ;</p>
+  <table>
+    <tbody>
+      <tr>
+        <th>Arguments</th>
+        <th>Description</th>
+      </tr>
+      <tr>
+        <td>obj.</td>
+        <td>L'objet à vérifier.</td>
+      </tr>
+    </tbody>
+  </table>
+  <p> </p>
+  <h4>Les retours :</h4>
+  <p class="code">Réel.</p>
+  <p> </p>
+  <h4>Exemple :</h4>
+  <p class="code">if (distance_to_object(obj_Player) &lt; range)<br> {
+    <br> canshoot = true ;<br> }
+  </p>
+  <p>Le code ci-dessus vérifie la distance de l'objet joueur et si elle est inférieure à la valeur stockée dans la variable &quot;range&quot;, la variable &quot;canshoot&quot; est mise à true.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <div class="footer">
+    <div class="buttons">
+      <div class="clear">
+        <div style="float:left">Retour : <a href="Angles_And_Distance.htm">Angles et distances</a></div>
+        <div style="float:right">Suivant : <a href="distance_to_point.htm">distance_to_point</a></div>
+      </div>
+    </div>
+    <h5><span data-keyref="Copyright Notice">Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
   </div>
   <!-- KEYWORDS
 distance_to_object

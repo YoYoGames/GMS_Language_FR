@@ -7,14 +7,73 @@
   <meta name="generator" content="Adobe RoboHelp 2019" />
   <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
   <meta name="rh-authors" content="Mark Alexander" />
-  <meta name="topic-comment" content="Page de référence pour physics_joint_gear_create" />
+  <meta name="topic-comment" content="Reference page for physics_joint_gear_create" />
   <meta name="rh-index-keywords" content="physics_joint_gear_create" />
   <meta name="search-keywords" content="physics_joint_gear_create" />
 </head>
-<body><!--<div class="body-scroll" style="top: 150px;">--><h1>physics_joint_gear_create</h1><p> Si vous souhaitez créer un engin mécanique sophistiqué, vous voudrez peut-être utiliser des engrenages. En principe, vous pouvez créer des engrenages dans <span class="notranslate">GameMaker Studio 2</span> en utilisant des instances de composition pour modéliser les dents d&#39;engrenage, mais ce n&#39;est pas très efficace et peut être fastidieux à créer! Heureusement, il existe une méthode plus simple, à savoir utiliser un <i>joint d&#39;engrenage</i>. Pour en faire un, vous devez avoir préalablement défini vos appareils et créé les deux joints de base qui vont constituer votre équipement - ceux-ci <b>doivent</b> être constitués d&#39;un <a href="physics_joint_revolute_create.htm">joint tournant</a> et d&#39;un <a href="physics_joint_prismatic_create.htm">joint prismatique</a> ou d&#39;un autre <i>joint tournant</i>. L&#39;image ci-dessous montre comment un équipement serait généralement créé dans un jeu:</p><p><img alt="Gear joint illustration" class="center" src="../../../../assets/Images/Scripting_Reference/GML/Reference/Physics/gear_joint_image.png" /> Alors que se passe-t-il? Eh bien, une fois que les deux articulations sont ajoutées à l&#39;engrenage, l&#39;interaction avec l&#39;une aura un effet sur l&#39;autre, donc dans l&#39;exemple d&#39;image ci-dessus, si vous faites pivoter inst2, inst3 se déplacera de haut en bas, ou si vous déplacez inst3 de haut en bas. puis inst2 tournera. Vous pouvez également modifier le rapport de démultiplication, ce qui signifie que vous devez déplacer une instance de plus (ou moins) pour obtenir l&#39;effet souhaité. Le code dans l&#39;exemple en bas montre comment quelque chose comme l&#39;image ci-dessus peut être créé.</p><p class="note"> <b>REMARQUE</b>: Si vous devez supprimer l&#39;une des deux instances impliquées dans le joint d&#39;engrenage (ou simplement supprimer leurs joints), vous <b>devez d&#39;abord</b> supprimer le joint d&#39;engrenage en utilisant <span style="font-size:1px;"><a href="physics_joint_delete.htm"><tt style="font-size: 14px">physics_joint_delete (),</tt></a></span> sinon vous obtiendrez une erreur!</p><p></p><h4> Syntaxe:</h4><p class="code">physics_joint_gear_create(inst1, inst2, joint_1, joint_2, ratio)</p><table><tbody><tr><th> Argument</th><th> Description</th></tr><tr><td> <span class="notranslate">inst1</span></td><td> La première instance à se connecter avec l&#39;articulation</td></tr><tr><td> <span class="notranslate">inst2</span></td><td> La deuxième instance pour se connecter avec l&#39;articulation</td></tr><tr><td> <span class="notranslate">joint_1</span></td><td> Une articulation <b>révolutionnaire</b> préalablement définie</td></tr><tr><td> <span class="notranslate">joint_2</span></td><td> Une articulation <i>révolutionnaire ou</i> prismatique préalablement définie</td></tr><tr><td> <span class="notranslate">ratio</span></td><td> Réglez le rapport de vitesse entre les deux articulations</td></tr></tbody></table><p></p><h4> Retour:</h4><p class="code">Integer (index of the joint)</p><p></p><h4> Exemple:</h4><p class="code">var t_fix, g_fix, inst1, inst2, inst3, r_joint, p_joint;<br/> g_fix = physics_fixture_create();<br/> physics_fixture_set_box_shape(g_fix, 40, 10);<br/> t_fix = physics_fixture_create();<br/> physics_fixture_set_circle_shape(t_fix, 10);<br/> physics_fixture_set_density(t_fix,
-    0.5);<br/> inst1 = instance_create_layer(60, room_height - 30, &quot;Background&quot;, obj_Ground);<br/> inst2 = instance_create_layer(40, room_height - 300, &quot;Instances&quot;, obj_Cog);<br/> inst3 = instance_create_layer(150, room_height - 300,
-    &quot;Instances&quot;, obj_Barrel);<br/> physics_fixture_bind(g_fix, inst1);<br/> physics_fixture_bind(t_fix, inst2);<br/> physics_fixture_bind(t_fix, inst3);<br/> r_joint = physics_create_revolute_joint(inst1, inst2, 40, room_height - 300, -80, 80,
-    1, 10, 0.5, 1, 0);<br/> p_joint = physics_create_prismatic_joint(inst1, inst3, 150, room_height - 300, 0, 1, -10, 10, true, 0, 0, 0, 0);<br/> physics_create_gear_joint(inst2, inst3, r_joint, p_joint, 0.5);</p><p> Le code ci-dessus crée et définit deux fixture puis crée trois instances, une &quot;obj_Ground&quot; et deux autres, &quot;obj_Cog&quot; et &quot;obj_Barrel&quot;. Les fixtures sont alors liées à ces instances et deux liaisons sont créées. Un joint tournant entre le sol et le pignon, et un joint prismatique entre le sol et le canon. Enfin, un joint d&#39;engrenage est créé entre les instances de pignon et de barillet en utilisant les joints révolutionnaires et prismatiques précédemment définis. </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> Arrière: <a href="Joints.htm">Joints</a></div><div style="float:right"> Suivant:<a href="physics_joint_rope_create.htm">physics_joint_rope_create</a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
+<body>
+  <!--<div class="body-scroll" style="top: 150px;">-->
+  <h1>physics_joint_gear_create</h1>
+  <p>Si vous souhaitez créer un engin mécanique sophistiqué, vous pouvez utiliser des engrenages. En principe, vous pouvez créer des engrenages dans <span class="notranslate">GameMaker Studio 2</span> en utilisant des instances de composition pour modéliser les dents de l'engrenage, mais ce n'est pas très efficace et cela peut être
+    fastidieux pour l'auteur ! Heureusement, il existe une méthode plus simple, qui consiste à utiliser un <i>joint d'engrenage</i>. Pour en créer un, vous devez avoir préalablement défini vos montages et créé les deux articulations de base qui composeront votre engrenage - celles-ci <b>doivent</b> être constituées d'une <a href="physics_joint_revolute_create.htm">articulation rotative</a> et d'une <a href="physics_joint_prismatic_create.htm">articulation prismatique</a> ou d'une autre <i>articulation rotative</i>. L'image ci-dessous montre comment un engrenage est généralement créé
+    dans un jeu :</p>
+  <p><img alt="Gear joint illustration" class="center" src="../../../../assets/Images/Scripting_Reference/GML/Reference/Physics/gear_joint_image.png">Alors que se passe-t-il ? Eh bien, une fois que les deux joints sont ajoutés à l'engrenage, l'interaction avec l'un aura un effet sur l'autre.
+    Ainsi, dans l'exemple ci-dessus, si vous faites tourner inst2, inst3 se déplacera vers le haut et vers le bas, ou si vous faites bouger inst3 vers le haut et vers le bas, inst2 tournera. Vous pouvez également modifier le rapport de démultiplication, ce qui signifie que vous devez déplacer une instance de plus (ou de moins) pour obtenir l'effet souhaité.
+    moins) pour obtenir l'effet désiré. Le code de l'exemple en bas de page montre comment on peut créer quelque chose comme l'image ci-dessus.</p>
+  <p class="note"><b>REMARQUE</b>: si vous devez supprimer l'une des deux instances impliquées dans le joint d'engrenage (ou simplement supprimer leurs joints), vous <b>devez</b> d'abord supprimer le joint d'engrenage à l'aide de la méthode <span style="font-size:1px;"><a href="physics_joint_delete.htm"><tt style="font-size: 14px">physics_joint_delete()</tt></a></span>    sinon vous obtiendrez une erreur !</p>
+  <p> </p>
+  <h4>Syntaxe :</h4>
+  <p class="code">physics_joint_gear_create(inst1, inst2, joint_1, joint_2, ratio)</p>
+  <table>
+    <tbody>
+      <tr>
+        <th>Arguments</th>
+        <th>Description</th>
+      </tr>
+      <tr>
+        <td>inst1</td>
+        <td>La première instance à se connecter avec l'articulation</td>
+      </tr>
+      <tr>
+        <td>inst2</td>
+        <td>La deuxième instance pour se connecter avec le joint</td>
+      </tr>
+      <tr>
+        <td>joint_1</td>
+        <td>Un joint <b>tournant</b> précédemment défini</td>
+      </tr>
+      <tr>
+        <td>joint_2</td>
+        <td>Une articulation rotative <i>ou</i> prismatique préalablement définie</td>
+      </tr>
+      <tr>
+        <td>rapport</td>
+        <td>Définir le rapport de vitesse entre les deux joints.</td>
+      </tr>
+    </tbody>
+  </table>
+  <p> </p>
+  <h4>Les retours :</h4>
+  <p class="code">Nombre entier (indice de l'articulation)</p>
+  <p> </p>
+  <h4>Exemple :</h4>
+  <p class="code">var t_fix, g_fix, inst1, inst2, inst3, r_joint, p_joint ;<br> g_fix = physics_fixture_create() ;<br> physics_fixture_set_box_shape(g_fix, 40, 10) ;<br> t_fix = physics_fixture_create() ;<br> physics_fixture_set_circle_shape(t_fix, 10) ;<br> physics_fixture_set_density(t_fix,
+    0.5) ;<br> inst1 = instance_create_layer(60, room_height - 30, &quot;Background&quot;, obj_Ground) ;<br> inst2 = instance_create_layer(40, room_height - 300, &quot;Instances&quot;, obj_Cog) ;<br> inst3 = instance_create_layer(150, room_height - 300,
+    &quot;Instances&quot;, obj_Barrel) ;<br> physics_fixture_bind(g_fix, inst1) ;<br> physics_fixture_bind(t_fix, inst2) ;<br> physics_fixture_bind(t_fix, inst3) ;<br> r_joint = physics_create_revolute_joint(inst1, inst2, 40, room_height - 300, -80, 80,
+    1, 10, 0.5, 1, 0) ;<br> p_joint = physics_create_prismatic_joint(inst1, inst3, 150, room_height - 300, 0, 1, -10, 10, true, 0, 0, 0, 0, 0) ;<br> physics_create_gear_joint(inst2, inst3, r_joint, p_joint, 0.5) ;</p>
+  <p>Le code ci-dessus crée et définit deux fixtures, puis crée trois instances, une &quot;obj_Ground&quot; et deux autres, &quot;obj_Cog&quot; et &quot;obj_Barrel&quot;. Les fixtures sont ensuite liées à ces instances et deux joints sont créés. A
+    rotatif entre le sol et le pignon, et un joint prismatique entre le sol et le canon. Enfin, un joint d'engrenage est créé entre les instances de pignon et de baril en utilisant les joints revolute et prismatique définis précédemment.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <div class="footer">
+    <div class="buttons">
+      <div class="clear">
+        <div style="float:left">Dos : <a href="Joints.htm">Articulations</a></div>
+        <div style="float:right">Suivant : <a href="physics_joint_rope_create.htm">physics_joint_rope_create</a></div>
+      </div>
+    </div>
+    <h5><span data-keyref="Copyright Notice">Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
   </div>
   <!-- KEYWORDS
 physics_joint_gear_create

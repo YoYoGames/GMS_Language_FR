@@ -7,13 +7,39 @@
   <meta name="generator" content="Adobe RoboHelp 2019" />
   <link rel="stylesheet" href="../../../../../assets/css/default.css" type="text/css" />
   <meta name="rh-authors" content="Mark Alexander" />
-  <meta name="topic-comment" content="Page décrivant la variable visible" />
+  <meta name="topic-comment" content="Page outlining the variable visible" />
   <meta name="rh-index-keywords" content="visible" />
   <meta name="search-keywords" content="visible" />
 </head>
-<body><!--<div class="body-scroll" style="top: 150px;">--><h1>visible</h1><p> Une instance peut être marquée comme <tt>visible</tt> ou pas en définissant cette variable sur <tt>true</tt> (visible) ou <tt>false</tt> (invisible). Cela fonctionne en disant à <span class="notranslate">GameMaker Studio 2</span> d&#39;ignorer l&#39;événement de dessin pour cette instance, donc il faut être prudent lors de son utilisation car cela signifie qu&#39;aucun code placé dans l&#39;événement de dessin ne sera exécuté tant que l&#39;instance n&#39;est pas visible. Notez également que si le<a href="layer.htm">layer</a> à laquelle l&#39;instance est affectée est marquée comme invisible, définissant cette variable sur <tt>true</tt> n&#39;aura aucun effet tant que le calque lui-même ne sera pas marqué comme visible.</p><p></p><h4> Syntaxe:</h4><p class="code">visible;</p><p></p><h4> Retour:</h4><p class="code">Boolean</p><p></p><h4> Exemple:</h4><p class="code">if other.visible = true<br/>     {
-    <br/>     x = xprevious;<br/>     y = yprevious;<br/>     }
-  </p><p> Le code ci-dessus vérifiera l&#39;indicateur visible de l&#39;instance &quot;autre&quot; dans un <i>événement de collision</i> et s&#39;il est défini sur <tt>true</tt> ramener cette instance à sa position précédente. </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> Retour: <a href="Instance_Variables.htm">Variables d&#39;instance</a></div><div style="float:right"> Suivant:<a href="solid.htm">solid</a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
+<body>
+  <!--<div class="body-scroll" style="top: 150px;">-->
+  <h1>visible</h1>
+  <p>Une instance peut être marquée comme <tt>visible</tt> ou non en donnant à cette variable la valeur <tt>true</tt> (visible) ou <tt>false</tt> (invisible). Ceci fonctionne en indiquant à <span class="notranslate">GameMaker Studio 2</span> d'ignorer l'événement de dessin pour cette instance.
+    lorsque vous l'utilisez, car cela signifie qu'aucun code placé dans l'événement de dessin ne sera exécuté tant que l'instance n'est pas visible. Notez également que si le <a href="layer.htm">calque</a> auquel l'instance est affectée est signalé comme invisible, la définition de cette variable à la valeur
+   <tt>true</tt> n'aura aucun effet jusqu'à ce que le calque lui-même soit également marqué comme visible.</p>
+  <p> </p>
+  <h4>Syntaxe :</h4>
+  <p class="code">visible ;</p>
+  <p> </p>
+  <h4>Les retours :</h4>
+  <p class="code">Booléen</p>
+  <p> </p>
+  <h4>Exemple :</h4>
+  <p class="code">if other.visible = true<br> {
+    <br> x = xprevious ;<br> y = yprevious ;<br> }
+  </p>
+  <p>Le code ci-dessus vérifiera le drapeau visible de l'autre instance lors d'un <i>événement de</i> collision <i>et, s'</i> il est vrai, ramènera <tt>l</tt> 'instance à sa position précédente.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <div class="footer">
+    <div class="buttons">
+      <div class="clear">
+        <div style="float:left">Retour : <a href="Instance_Variables.htm">Variables d'instance</a></div>
+        <div style="float:right">Suivant : <a href="solid.htm">solide</a></div>
+      </div>
+    </div>
+    <h5><span data-keyref="Copyright Notice">Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
   </div>
   <!-- KEYWORDS
 visible

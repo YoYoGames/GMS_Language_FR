@@ -3,15 +3,60 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>part_type_alpha2</title>
+  <title>partie_type_alpha2</title>
   <meta name="generator" content="Adobe RoboHelp 2019" />
   <link rel="stylesheet" href="../../../../../assets/css/default.css" type="text/css" />
   <meta name="rh-authors" content="Mark Alexander" />
-  <meta name="topic-comment" content="Page de référence pour part_type_alpha2" />
+  <meta name="topic-comment" content="Reference page for part_type_alpha2" />
   <meta name="rh-index-keywords" content="part_type_alpha2" />
   <meta name="search-keywords" content="part_type_alpha2" />
 </head>
-<body><!--<div class="body-scroll" style="top: 150px;">--><h1>part_type_alpha2</h1><p> Cette fonction peut être utilisée pour définir un gradient de valeur alpha (transparence) pour chaque particule créée du type donné. Le premier alpha est celui avec lequel toutes les particules commenceront, et le second alpha est celui avec lequel la particule se terminera, et un changement de gradient progressif se produira vers l&#39;alpha au cours de la durée de vie des particules de l&#39;un à l&#39;autre. Cela peut être compris entre 0 (transparent) et 1 (opaque).</p><p></p><h4> Syntaxe:</h4><p class="code">part_type_alpha2(ind, alpha1, alpha2);</p><table><tbody><tr><th> Argument</th><th> Description</th></tr><tr><td> <span class="notranslate">ind</span></td><td> L&#39;indice du type de particule à modifier.</td></tr><tr><td> <span class="notranslate">alpha1</span></td><td> Le début alpha de la particule.</td></tr><tr><td> <span class="notranslate">alpha2</span></td><td> La fin alpha de la particule.</td></tr></tbody></table><p></p><h4> Retour:</h4><p class="code">N/A</p><p></p><h4> Exemple:</h4><p class="code">part_type_alpha2(global.Snow_Part, 0, 1);</p><p> Le code ci-dessus définira toutes les particules créées du type de particule indexé dans la variable globale &quot;Snow_Part&quot; pour avoir une valeur alpha de 0 (transparent) et ensuite se fondre pour avoir un alpha de 1 (opaque) à la fin de leur durée de vie. </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> Retour: <a href="Particle_Types.htm">Types de particules</a></div><div style="float:right"> Suivant:<a href="part_type_alpha3.htm">part_type_alpha3</a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
+<body>
+  <!--<div class="body-scroll" style="top: 150px;">-->
+  <h1>partie_type_alpha2</h1>
+  <p>Cette fonction peut être utilisée pour définir un gradient de valeur alpha (transparence) pour chaque particule créée du type donné. Le premier alpha est celui avec lequel toutes les particules commenceront, et le second alpha est celui avec lequel la particule finira,
+    et un changement de gradient lisse se produira sur l'alpha au cours de la vie des particules de l'un à l'autre. Cela peut aller de 0 (transparent) à 1 (opaque).</p>
+  <p> </p>
+  <h4>Syntaxe :</h4>
+  <p class="code">partie_type_alpha2(ind, alpha1, alpha2) ;</p>
+  <table>
+    <tbody>
+      <tr>
+        <th>Arguments</th>
+        <th>Description</th>
+      </tr>
+      <tr>
+        <td>ind</td>
+        <td>L'indice du type de particule à modifier.</td>
+      </tr>
+      <tr>
+        <td>alpha1</td>
+        <td>L'alpha de départ de la particule.</td>
+      </tr>
+      <tr>
+        <td>alpha2</td>
+        <td>L'alpha final de la particule.</td>
+      </tr>
+    </tbody>
+  </table>
+  <p> </p>
+  <h4>Les retours :</h4>
+  <p class="code">N/A</p>
+  <p> </p>
+  <h4>Exemple :</h4>
+  <p class="code">part_type_alpha2(global.Snow_Part, 0, 1) ;</p>
+  <p>Le code ci-dessus définira toutes les particules créées du type de particule indexé dans la variable globale &quot;Snow_Part&quot; pour avoir une valeur alpha de 0 (transparent) et ensuite s'estomper pour avoir un alpha de 1 (opaque) à la fin de leur vie.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <div class="footer">
+    <div class="buttons">
+      <div class="clear">
+        <div style="float:left">Retour : <a href="Particle_Types.htm">Types de particules</a></div>
+        <div style="float:right">Suivant : <a href="part_type_alpha3.htm">part_type_alpha3</a></div>
+      </div>
+    </div>
+    <h5><span data-keyref="Copyright Notice">Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
   </div>
   <!-- KEYWORDS
 part_type_alpha2

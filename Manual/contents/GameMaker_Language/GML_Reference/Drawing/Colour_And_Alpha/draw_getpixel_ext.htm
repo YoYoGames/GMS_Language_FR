@@ -7,11 +7,53 @@
   <meta name="generator" content="Adobe RoboHelp 2019" />
   <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
   <meta name="rh-authors" content="Mark Alexander" />
-  <meta name="topic-comment" content="Section de référence la fonction draw_getpixel_ext" />
+  <meta name="topic-comment" content="Reference section the function draw_getpixel_ext" />
   <meta name="rh-index-keywords" content="draw_getpixel_ext" />
   <meta name="search-keywords" content="draw_getpixel_ext" />
 </head>
-<body><!--<div class="body-scroll" style="top: 150px;">--><h1>draw_getpixel_ext</h1><p> Avec cette fonction, vous pouvez obtenir la <b>valeur abgr 32 bits</b> complète de tout pixel dessiné vers la cible de rendu actuelle. Cela signifie que les résultats dépendront de l&#39;événement dans lequel la fonction est appelée, ainsi que de la surface cible utilisée.</p><p class="note"> <b>REMARQUE</b>: Cette fonction entraînera un énorme impact sur les performances et ne doit donc être utilisée que lorsque cela est absolument nécessaire.</p><p></p><h4> Syntaxe:</h4><p class="code">draw_getpixel_ext(x, y);</p><table><tbody><tr><th> Argument</th><th> Description</th></tr><tr><td> <span class="notranslate">x</span></td><td> La coordonnée x du pixel à vérifier</td></tr><tr><td> <span class="notranslate">y</span></td><td> La coordonnée y du pixel à vérifier</td></tr></tbody></table><p></p><h4> Retour:</h4><p class="code">Real</p><p></p><h4> Exemple:</h4><p class="code">col = draw_getpixel_ext(mouse_x, mouse_y);<br/> alpha = (col &gt;&gt; 24) &amp; 255;<br/> blue = (col &gt;&gt; 16) &amp; 255;<br/> green = (col &gt;&gt; 8) &amp; 255;<br/> red = col &amp; 255;</p><p> Le code ci-dessus obtiendra la valeur de couleur 32 bits à la position de la souris, puis la divisera en ses valeurs de composants, en les stockant dans des variables. </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> Dos: <a href="Colour_And_Alpha.htm">couleur et alpha</a></div><div style="float:right"> Suivant:<a href="draw_get_colour.htm">draw_get_colour</a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
+<body>
+  <!--<div class="body-scroll" style="top: 150px;">-->
+  <h1>draw_getpixel_ext</h1>
+  <p>Avec cette fonction, vous pouvez obtenir la valeur complète <b>abgr 32bit</b> de n'importe quel pixel qui est dessiné sur la cible de rendu actuelle. Cela signifie que les résultats dépendront de l'événement dans lequel la fonction est appelée, et aussi de la surface cible utilisée.
+    utilisée.</p>
+  <p class="note"><b>REMARQUE</b>: Cette fonction entraîne une baisse considérable des performances et ne doit donc être utilisée qu'en cas de nécessité absolue.</p>
+  <p> </p>
+  <h4>Syntaxe :</h4>
+  <p class="code">draw_getpixel_ext(x, y) ;</p>
+  <table>
+    <tbody>
+      <tr>
+        <th>Arguments</th>
+        <th>Description</th>
+      </tr>
+      <tr>
+        <td>x</td>
+        <td>La coordonnée x du pixel à vérifier</td>
+      </tr>
+      <tr>
+        <td>y</td>
+        <td>La coordonnée y du pixel à vérifier</td>
+      </tr>
+    </tbody>
+  </table>
+  <p> </p>
+  <h4>Les retours :</h4>
+  <p class="code">Real</p>
+  <p> </p>
+  <h4>Exemple :</h4>
+  <p class="code">col = draw_getpixel_ext(mouse_x, mouse_y) ;<br> alpha = (col &gt;&gt; 24) &amp; 255 ;<br> blue = (col &gt;&gt; 16) &amp; 255 ;<br> green = (col &gt;&gt; 8) &amp; 255 ;<br> red = col &amp; 255 ;</p>
+  <p>Le code ci-dessus récupère la valeur de la couleur 32 bits à la position de la souris, puis la divise en ses valeurs composantes et les stocke dans des variables.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <div class="footer">
+    <div class="buttons">
+      <div class="clear">
+        <div style="float:left">Dos : <a href="Colour_And_Alpha.htm">Couleur et alpha</a></div>
+        <div style="float:right">Suivant : <a href="draw_get_colour.htm">draw_get_colour</a></div>
+      </div>
+    </div>
+    <h5><span data-keyref="Copyright Notice">Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
   </div>
   <!-- KEYWORDS
 draw_getpixel_ext

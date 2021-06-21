@@ -1,17 +1,46 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>Variables d&#39;instance</title>
-  <meta name="generator" content="Adobe RoboHelp 2019" />
+  <title>Variables d'instance</title>
+  <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../assets/css/default.css" type="text/css" />
   <meta name="rh-authors" content="Mark Alexander" />
-  <meta name="topic-comment" content="Page expliquant les variables d&#39;instance" />
-  <meta name="rh-index-keywords" content="Variables d&#39;instance" />
-  <meta name="search-keywords" content="variables d&#39;instance" />
+  <meta name="topic-comment" content="Page explaining instance variables" />
+  <meta name="rh-index-keywords" content="Instance Variables" />
+  <meta name="search-keywords" content="instance variables" />
 </head>
-<body><!--<div class="body-scroll" style="top: 150px;">--><h1> Variables d&#39;instance</h1><p> Une <strong>variable d&#39;instance</strong> est créée dans une instance d&#39;un objet et est considérée comme unique à cette instance - c&#39;est-à-dire: de nombreuses instances du même objet peuvent avoir la même variable, mais chaque variable peut contenir une valeur différente car elles sont <em>uniques</em> à chaque instance. Mais <i>comment</i> une variable d&#39;instance est-elle créée? Eh bien, vous créez de nouvelles variables en leur affectant simplement une valeur comme indiqué dans ce petit exemple (cela s&#39;appelle <em>déclarer</em> la variable):</p><p class="code">potions = 12;<br/> life = 100;<br/> name = &quot;Jock MacSweeney&quot;;<br/> strength = 5.5;<br/> armour = -2;</p><p> Comme vous pouvez le voir, il vous suffit de donner le nom, puis une valeur (la valeur peut être n&#39;importe quel <a href="../Data_Types.htm">type de données</a> ) pour définir cette variable et la préparer à être utilisée dans une instance de l&#39;objet pour lequel vous codez (notez que la valeur peut proviennent de la valeur de retour d&#39;une fonction ou du résultat d&#39;une opération entre d&#39;autres variables, etc...). Ces variables peuvent ensuite être utilisées et modifiées de différentes manières à partir de l’instance, par exemple ce code pourrait être dans un événement de collision et utilisé pour retirer un montant de la variable &quot;<span class="inline">life</span> &quot;:</p><p class="code">life -= 5 + armour;</p><p> Si &quot;<span class="inline">life</span> &quot;est à 100, il aura maintenant une valeur de 97 (100 - (5 + -2) = 97). Maintenant, c&#39;est un exemple simple, et vous <i>pouvez</i> remplacer&quot;<span class="inline">armour</span> &quot;pour la valeur réelle de -2, mais que se passe-t-il si cette valeur est <a class="glossterm" data-glossterm="codé en dur" href="#">codée</a> en dur à plusieurs endroits et que vous décidez de la modifier? Vous devrez parcourir TOUT votre code et changer tous les -2 en quelle que soit la nouvelle valeur, ce qui prend du temps et est très sujet aux erreurs! Mais si vous utilisez une variable, tout ce que vous avez à faire est de lui réaffecter une nouvelle valeur et le code utilisera automatiquement cette nouvelle valeur à partir de là, ce qui rend les choses beaucoup plus flexibles et beaucoup plus faciles à utiliser. correction en cas de problème. Il convient également de noter que même si une valeur ne change pas, il est beaucoup plus facile de se souvenir de ce qu’une variable appelle &quot;<span class="inline">life</span> &quot;signifie plutôt que de simplement regarder un nombre.</p><p> <span class="notranslate">GameMaker Studio 2</span> possède également une collection de variables d&#39;instance &quot;intégrées&quot;, vous devez donc en être conscient car vous pouvez nommer l&#39;une de vos propres variables d&#39;instance de la même manière ou souhaiter avoir votre propre variable globale avec le même nom et vous demander pourquoi vous obtiennent des erreurs. Ils sont cependant faciles à repérer, car ils sont affichés dans une couleur différente dans l&#39;éditeur de code et apparaissent également en saisie semi-automatique et sont affichés dans la barre en bas de l&#39; <a href="../../../The_Asset_Editors/Scripts.htm">éditeur de code</a>.</p><p> Il existe de nombreuses <a href="../Runtime_Functions.htm">fonctions d&#39; <span class="notranslate">runtime</span></a> conçues pour vous aider à gérer les variables d&#39;instance, qui sont toutes répertoriées dans la section suivante:</p><ul class="colour"><li> <a href="../../GML_Reference/Variable_Functions/Variable_Functions.htm">Fonctions variables</a> </li></ul><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> Retour: <a href="../Variables_And_Variable_Scope.htm">Portée des variables et des variables</a></div><div style="float:right"> Suivant: <a href="Global_Variables.htm">Variables globales</a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
+<body>
+  <!--<div class="body-scroll" style="top: 150px;">-->
+  <h1>Variables d'instance</h1>
+  <p>Une variable d'<strong>instance </strong>est créée dans une instance d'un objet et est considérée comme unique à cette instance - c'est-à-dire que plusieurs instances du même objet peuvent avoir la même variable, mais chaque variable peut avoir une valeur différente car elle est <em>unique </em>à chaque instance.
+    chaque instance. Mais <i>comment</i> une variable d'instance est-elle créée ? Eh bien, vous créez de nouvelles variables en leur attribuant simplement une valeur, comme le montre ce petit exemple (cela s'appelle <em>déclarer la</em> variable) :</p>
+  <p class="code">potions = 12 ;<br> vie = 100 ;<br> nom = &quot;Jock MacSweeney&quot; ;<br> force = 5,5 ;<br> armure = -2 ;</p>
+  <p>Comme vous pouvez le voir, il suffit de donner un nom et une valeur (la valeur peut être de n'importe quel <a href="../Data_Types.htm">type</a>) pour définir cette variable et la rendre prête à être utilisée dans une instance de l'objet pour lequel vous codez (notez que la valeur peut provenir de la valeur de retour d'une fonction ou du résultat d'une opération entre d'autres variables, etc...).
+    provenir de la valeur de retour d'une fonction ou du résultat d'une opération entre d'autres variables, etc...). Ces variables peuvent ensuite être utilisées et modifiées de plusieurs façons à l'intérieur de l'instance, par exemple ce code pourrait être dans un événement de collision
+    et être utilisé pour retirer un montant de la variable &quot;<span class="inline">life</span>&quot; :</p>
+  <p class="code">vie -= 5 + armure ;</p>
+  <p>Si &quot;<span class="inline">life</span>&quot; est à 100, il aura maintenant une valeur de 97 (100 - (5 + -2) = 97). Il s'agit là d'un exemple simple, et vous <i>pourriez</i> remplacer &quot;<span class="inline">armour</span>&quot; par la valeur réelle de -2,
+    mais que se passe-t-il si cette valeur est <a class="glossterm" data-glossterm="codé en dur" href="#">codée en dur</a> à plusieurs endroits et que vous décidez de la modifier ? Vous devrez passer en revue TOUT votre code et remplacer chaque -2 par la nouvelle valeur.
+    ce qui prend du temps et est source d'erreurs ! Mais si vous utilisez une variable, tout ce que vous avez à faire est de lui réassigner une nouvelle valeur et le code utilisera automatiquement cette nouvelle valeur à partir de ce moment-là, ce qui rend les choses beaucoup plus flexibles et beaucoup plus faciles à résoudre
+    en cas de problème. Il convient également de noter que même si une valeur ne change pas, il est beaucoup plus facile de se souvenir de la signification d'une variable appelée &quot;<span class="inline">life</span>&quot; que de regarder un simple chiffre.</p>
+  <p><span class="notranslate">GameMaker Studio 2</span> dispose également d'une collection de variables d'instance &quot;intégrées&quot;. Vous devez donc les connaître car vous pouvez donner le même nom à l'une de vos propres variables d'instance ou souhaiter avoir votre propre variable globale portant le même nom et vous demander pourquoi
+    vous obtenez des erreurs. Elles sont cependant faciles à repérer, car elles sont affichées dans une couleur différente dans l'éditeur de code, elles apparaissent également dans la saisie automatique et sont affichées dans une barre au bas de l'<a href="../../../The_Asset_Editors/Scripts.htm">éditeur de code</a>.</p>
+  <p>Il existe un certain nombre de <a href="../Runtime_Functions.htm">fonctions d'<span class="notranslate">exécution</span></a> conçues pour vous aider à traiter les variables d'instance, qui sont toutes répertoriées dans la section suivante :</p>
+  <ul class="colour">
+    <li><a href="../../GML_Reference/Variable_Functions/Variable_Functions.htm">Fonctions variables</a></li>
+  </ul>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <div class="footer">
+    <div class="buttons">
+      <div class="clear">
+        <div style="float:left">Retour : <a href="../Variables_And_Variable_Scope.htm">Variables et champ d'application des variables</a></div>
+        <div style="float:right">Suivant : <a href="Global_Variables.htm">Variables globales</a></div>
+      </div>
+    </div>
+    <h5><span data-keyref="Copyright Notice">Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
   </div>
   <!-- KEYWORDS
 instance variables
@@ -19,5 +48,5 @@ instance variables
   <!-- TAGS
 instance_variables
 -->
-</body>
-</html>
+
+</body></html>

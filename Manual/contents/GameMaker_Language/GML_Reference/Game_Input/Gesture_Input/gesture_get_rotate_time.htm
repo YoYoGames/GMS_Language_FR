@@ -2,20 +2,49 @@
 
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml"><head>
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-  <title>gesture_get_rotate_time</title>
-  <meta name="generator" content="Adobe RoboHelp 2019"/>
-  <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css"/>
-  <meta name="rh-authors" content="Mark Alexander"/>
-  <meta name="topic-comment" content="Page de référence pour gesture_get_rotate_time"/>
-  <meta name="rh-index-keywords" content="gesture_get_rotate_time"/>
-  <meta name="search-keywords" content="gesture_get_rotate_time"/>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>geste_get_rotate_time</title>
+  <meta name="generator" content="Adobe RoboHelp 2019" />
+  <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
+  <meta name="rh-authors" content="Mark Alexander" />
+  <meta name="topic-comment" content="Reference page for gesture_get_rotate_time" />
+  <meta name="rh-index-keywords" content="gesture_get_rotate_time" />
+  <meta name="search-keywords" content="gesture_get_rotate_time" />
 </head>
 
-<body><!--<div class="body-scroll" style="top: 150px;">--><h1>gesture_get_rotate_time</h1><p> Cette fonction est utilisée pour obtenir le temps pendant lequel une paire de touches doit tourner dans une direction cohérente pour qu&#39;un <a href="../../../../The_Asset_Editors/Object_Properties/Gesture_Events.htm">geste de rotation de départ</a> soit déclenché. Le temps est mesuré en secondes et a une valeur par défaut de 0,16 s.</p><p class="note"> <b>IMPORTANT!</b> Actuellement, pour un jeu à 60 ips, vous ne pouvez régler cela que sur une seconde au maximum, sinon aucune rotation ne sera détectée. Cela augmentera pour une fréquence d&#39;images inférieure, par exemple un jeu à 30 ips peut avoir une durée maximale de 2 secondes.</p><p></p><h4> <b>Syntaxe:</b></h4><p class="code">gesture_get_rotate_time();</p><p></p><h4> Retour:</h4><p class="code">Real (inches)</p><p></p><h4> Exemple:</h4><p class="code">if gesture_get_rotate_time() != 0.1<br/>     {
-    <br/>     gesture_rotate_time(0.1);
-    <br/>     }
-  </p><p> Le code ci-dessus vérifie si le temps de rotation des gestes est défini sur 0,1 seconde et s&#39;il ne l&#39;est pas, il le définit sur cette valeur. </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> Retour: <a href="Gesture_Input.htm">Entrée gestuelle</a></div><div style="float:right"> Suivant:<a href="gesture_get_rotate_angle.htm">gesture_get_rotate_angle</a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
+<body>
+
+
+
+  <!--<div class="body-scroll" style="top: 150px;">-->
+  <h1>geste_get_rotate_time</h1>
+  <p>Cette fonction est utilisée pour obtenir le temps pendant lequel une paire de touches doit tourner dans une direction cohérente pour qu'un <a href="../../../../The_Asset_Editors/Object_Properties/Gesture_Events.htm">geste de démarrage de rotation</a> soit déclenché. Le temps est
+    secondes et sa valeur par défaut est de 0,16s.</p>
+  <p class="note"><b>IMPORTANT !</b> Actuellement, pour un jeu à 60 images par seconde, vous ne pouvez régler ce paramètre que sur un maximum d'une seconde, sinon aucune rotation ne sera détectée. Cette valeur augmentera pour un framrate inférieur, par exemple un jeu à 30fps peut avoir un temps maximum de 2 secondes.</p>
+  <p> </p>
+  <h4><b>Syntaxe :</b></h4>
+  <p class="code">gesture_get_rotate_time() ;</p>
+  <p> </p>
+  <h4>Les retours :</h4>
+  <p class="code">Réel (pouces)</p>
+  <p> </p>
+  <h4>Exemple :</h4>
+  <p class="code">if gesture_get_rotate_time() !.= 0.1<br> {
+    <br> gesture_rotate_time(0.1) ;
+    <br> }
+  </p>
+  <p>Le code ci-dessus vérifie si le temps de rotation des gestes est réglé sur 0,1 seconde et, si ce n'est pas le cas, il le règle sur cette valeur.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <div class="footer">
+    <div class="buttons">
+      <div class="clear">
+        <div style="float:left">Retour : <a href="Gesture_Input.htm">Saisie gestuelle</a></div>
+        <div style="float:right">Suivant : <a href="gesture_get_rotate_angle.htm">gesture_get_rotate_angle</a></div>
+      </div>
+    </div>
+    <h5><span data-keyref="Copyright Notice">Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
   </div>
   <!-- KEYWORDS
 gesture_get_rotate_time

@@ -3,18 +3,59 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>skeleton_animation_list</title>
+  <title>liste d'animation du squelette</title>
   <meta name="generator" content="Adobe RoboHelp 2019" />
   <link rel="stylesheet" href="../../../../../../assets/css/default.css" type="text/css" />
   <meta name="rh-authors" content="Mark Alexander" />
-  <meta name="topic-comment" content="Page expliquant la fonction skeleton_animation_list" />
+  <meta name="topic-comment" content="Page explaining the function skeleton_animation_list" />
   <meta name="rh-index-keywords" content="skeleton_animation_list" />
   <meta name="search-keywords" content="skeleton_animation_list" />
 </head>
-<body><!--<div class="body-scroll" style="top: 150px;">--><h1>skeleton_animation_list</h1><p> Avec cette fonction, vous pouvez remplir une <a href="../../../../Data_Structures/DS_Lists/DS_Lists.htm">liste DS</a> (pré-créée) avec tous les noms des animations incluses dans le sprite d&#39;animation squelette. Les noms seront des chaînes et pourront ensuite être utilisés dans les autres fonctions d&#39;animation de ces types de sprite.</p><p></p><h4> Syntaxe:</h4><p class="code">skeleton_animation_list(sprite, list);</p><table><tbody><tr><th> Argument</th><th> Description</th></tr><tr><td> <span class="notranslate">sprite</span></td><td> Index de sprite de l&#39;animation squelettique Spine à partir de laquelle obtenir la liste.</td></tr><tr><td> <span class="notranslate">list</span></td><td> ID de la liste DS à renseigner avec les noms d&#39;animation.</td></tr></tbody></table><p></p><h4> Retour:</h4><p class="code">N/A</p><p></p><h4> Exemple:</h4><p class="code">var list = ds_list_create();<br/> skeleton_animation_list(sprite_index, list);<br/> for (var i = 1; i &lt; ds_list_size(list); i++;)<br/>     {
-    <br/>     skeleton_animation_mix(list[| 0], list[| i], 0.5);<br/>     }
-    <br/> ds_list_destroy(list);
-  </p><p> Le code ci-dessus crée une liste DS de tous les noms d&#39;animation pour l&#39;image-objet utilisée par l&#39;instance. Il les boucle ensuite et définit la valeur de mixage pour chacun d&#39;eux avec la première animation à 0,5. </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> Retour: <a href="Animation.htm">Animation</a></div><div style="float:right"> Suivant:<a href="skeleton_animation_clear.htm">skeleton_animation_clear</a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
+<body>
+  <!--<div class="body-scroll" style="top: 150px;">-->
+  <h1>liste d'animation du squelette</h1>
+  <p>Avec cette fonction, vous pouvez remplir une <a href="../../../../Data_Structures/DS_Lists/DS_Lists.htm">liste DS</a> (pré-créée) avec tous les noms des animations incluses dans le sprite d'animation squelettique. Les noms seront des chaînes de caractères et pourront ensuite
+    être utilisés dans les autres fonctions d'animation pour ces types de sprites.</p>
+  <p> </p>
+  <h4>Syntaxe :</h4>
+  <p class="code">skeleton_animation_list(sprite, liste) ;</p>
+  <table>
+    <tbody>
+      <tr>
+        <th>Arguments</th>
+        <th>Description</th>
+      </tr>
+      <tr>
+        <td>sprite</td>
+        <td>L'index du sprite de l'animation squelettique Spine pour obtenir la liste.</td>
+      </tr>
+      <tr>
+        <td>liste</td>
+        <td>L'ID de la liste DS à remplir avec les noms des animations.</td>
+      </tr>
+    </tbody>
+  </table>
+  <p> </p>
+  <h4>Les retours :</h4>
+  <p class="code">N/A</p>
+  <p> </p>
+  <h4>Exemple :</h4>
+  <p class="code">var list = ds_list_create() ;<br> skeleton_animation_list(sprite_index, list) ;<br> for (var i = 1 ; i &lt; ds_list_size(list) ; i++ ;) <br> {
+    <br> skeleton_animation_mix(list[| 0], list[| i], 0.5) ;<br> }
+    <br> ds_list_destroy(list) ;
+  </p>
+  <p>Le code ci-dessus crée une liste DS de tous les noms d'animation pour le sprite utilisé par l'instance. Il les parcourt ensuite en boucle et fixe la valeur de mixage de toutes les animations avec la première à 0.5.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <div class="footer">
+    <div class="buttons">
+      <div class="clear">
+        <div style="float:left">Retour : <a href="Animation.htm">Animation</a></div>
+        <div style="float:right">Suivant : <a href="skeleton_animation_clear.htm">skeleton_animation_clear</a></div>
+      </div>
+    </div>
+    <h5><span data-keyref="Copyright Notice">Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
   </div>
   <!-- KEYWORDS
 skeleton_animation_list

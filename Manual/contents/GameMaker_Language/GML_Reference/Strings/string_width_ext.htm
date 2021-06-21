@@ -2,17 +2,63 @@
 
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml"><head>
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <title>string_width_ext</title>
-  <meta name="generator" content="Adobe RoboHelp 2019"/>
-  <link rel="stylesheet" href="../../../assets/css/default.css" type="text/css"/>
-  <meta name="rh-authors" content="Mark Alexander"/>
-  <meta name="topic-comment" content="Page de référence pour string_width_ext"/>
-  <meta name="rh-index-keywords" content="string_width_ext"/>
-  <meta name="search-keywords" content="string_width_ext"/>
+  <meta name="generator" content="Adobe RoboHelp 2019" />
+  <link rel="stylesheet" href="../../../assets/css/default.css" type="text/css" />
+  <meta name="rh-authors" content="Mark Alexander" />
+  <meta name="topic-comment" content="Reference page for string_width_ext" />
+  <meta name="rh-index-keywords" content="string_width_ext" />
+  <meta name="search-keywords" content="string_width_ext" />
 </head>
 
-<body><!--<div class="body-scroll" style="top: 150px;">--><h1>string_width_ext</h1><p> Cette fonction retournera la largeur maximale (en pixels) de la chaîne d&#39;entrée, en tenant compte de la séparation de ligne et de la largeur de saut de ligne (qui est définie comme le nombre de pixels que la chaîne peut occuper avant qu&#39;un saut de ligne ne soit inséré). Il est très pratique pour calculer les distances entre les éléments de texte en fonction de la largeur maximale d&#39;une chaîne qui est divisée sur plusieurs lignes comme elle serait dessinée avec <a href="../Drawing/Text/draw_text_ext.htm"><tt>draw_text_ext()</tt></a> en utilisant la police actuellement définie. La séparation et la largeur peuvent être définies sur -1 pour obtenir l&#39;espacement par défaut.</p><p></p><h4> Syntaxe:</h4><p class="code">string_width_ext(string, sep, w);</p><table><tbody><tr><th> Argument</th><th> Description</th></tr><tr><td> <span class="notranslate">string</span></td><td> La chaîne pour mesurer la largeur de.</td></tr><tr><td> <span class="notranslate">sep</span></td><td> La distance en pixels entre les lignes de texte comme si la chaîne était dessinée.</td></tr><tr><td> <span class="notranslate">w</span></td><td> La largeur maximale (en pixels) de la chaîne avant un saut de ligne comme si la chaîne était dessinée.</td></tr></tbody></table><p></p><h4> Retour:</h4><p class="code">Real</p><p></p><h4> Exemple:</h4><p class="code">var ww = string_width_ext(str_Story_Text[1], -1, 100);<br/> draw_text_ext(32, 32, str_Story_Text[1], -1, 100);<br/> draw_text_ext(32 + ww, 32, str_Story_Text[2], -1, 100);</p><p> Le code ci-dessus obtiendra la largeur de la chaîne donnée, en tenant compte de la séparation de ligne et de la largeur du saut de ligne, puis dessinera deux lignes de texte, en utilisant la largeur de chaîne totale renvoyée comme séparateur. </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> Retour: <a href="Strings.htm">Cordes</a></div><div style="float:right"> Suivant:<a href="string_hash_to_newline.htm">string_hash_to_newline</a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
+<body>
+  <!--<div class="body-scroll" style="top: 150px;">-->
+  <h1>string_width_ext</h1>
+  <p>Cette fonction renvoie la largeur maximale (en pixels) de la chaîne de caractères en entrée, en tenant compte de la séparation des lignes et de la largeur du saut de ligne (qui est définie comme le nombre de pixels que la chaîne de caractères peut occuper avant l'insertion d'un saut de ligne). Cette fonction est très
+    pratique pour calculer les distances entre les éléments de texte sur la base de la largeur maximale d'une chaîne de caractères répartie sur plusieurs lignes, telle qu'elle serait dessinée à l'aide de la fonction <a href="../Drawing/Text/draw_text_ext.htm"><tt>draw_text_ext()</tt></a> en utilisant la police actuellement définie
+    actuellement définie. La séparation et la largeur peuvent être définies à -1 pour obtenir l'espacement par défaut.</p>
+  <p> </p>
+  <h4>Syntaxe :</h4>
+  <p class="code">string_width_ext(string, sep, w) ;</p>
+  <table>
+    <tbody>
+      <tr>
+        <th>Arguments</th>
+        <th>Description</th>
+      </tr>
+      <tr>
+        <td>chaîne de caractères</td>
+        <td>La chaîne de caractères dont il faut mesurer la largeur.</td>
+      </tr>
+      <tr>
+        <td>sep</td>
+        <td>La distance en pixels entre les lignes de texte, comme si la chaîne était dessinée.</td>
+      </tr>
+      <tr>
+        <td>w</td>
+        <td>La largeur maximale (en pixels) de la chaîne avant un saut de ligne, comme si la chaîne était dessinée.</td>
+      </tr>
+    </tbody>
+  </table>
+  <p> </p>
+  <h4>Les retours :</h4>
+  <p class="code">Real</p>
+  <p> </p>
+  <h4>Exemple :</h4>
+  <p class="code">var ww = string_width_ext(str_Story_Text[1], -1, 100) ;<br> draw_text_ext(32, 32, str_Story_Text[1], -1, 100) ;<br> draw_text_ext(32 + ww, 32, str_Story_Text[2], -1, 100) ;</p>
+  <p>Le code ci-dessus obtient la largeur de la chaîne de caractères donnée, en tenant compte de la largeur de la séparation et du saut de ligne, puis dessine deux lignes de texte en utilisant la largeur totale de la chaîne de caractères comme séparateur.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <div class="footer">
+    <div class="buttons">
+      <div class="clear">
+        <div style="float:left">Retour : <a href="Strings.htm">Cordes</a></div>
+        <div style="float:right">Suivant : <a href="string_hash_to_newline.htm">string_hash_to_newline</a></div>
+      </div>
+    </div>
+    <h5><span data-keyref="Copyright Notice">Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
   </div>
   <!-- KEYWORDS
 string_width_ext

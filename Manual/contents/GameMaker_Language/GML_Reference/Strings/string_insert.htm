@@ -2,17 +2,62 @@
 
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml"><head>
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <title>string_insert</title>
-  <meta name="generator" content="Adobe RoboHelp 2019"/>
-  <link rel="stylesheet" href="../../../assets/css/default.css" type="text/css"/>
-  <meta name="rh-authors" content="Mark Alexander"/>
-  <meta name="topic-comment" content="Page de référence pour string_insert"/>
-  <meta name="rh-index-keywords" content="string_insert"/>
-  <meta name="search-keywords" content="string_insert"/>
+  <meta name="generator" content="Adobe RoboHelp 2019" />
+  <link rel="stylesheet" href="../../../assets/css/default.css" type="text/css" />
+  <meta name="rh-authors" content="Mark Alexander" />
+  <meta name="topic-comment" content="Reference page for string_insert" />
+  <meta name="rh-index-keywords" content="string_insert" />
+  <meta name="search-keywords" content="string_insert" />
 </head>
 
-<body><!--<div class="body-scroll" style="top: 150px;">--><h1>string_insert</h1><p> Avec cette fonction, vous pouvez créer une nouvelle chaîne composée de deux chaînes, où l&#39;une a été insérée dans l&#39;autre à une position donnée. Il peut être utile, par exemple, d&#39;ajouter un nom d&#39;utilisateur dans un texte prédéfini et ainsi faire en sorte que le joueur de votre jeu se sente plus impliqué dans l&#39;action. Gardez à l&#39;esprit que lorsque vous calculez la position à insérer, les chaînes sont indexées à partir de 1, de sorte que le premier caractère d&#39;une chaîne est 1 et non 0 comme vous pouvez vous y attendre.</p><p></p><h4> Syntaxe:</h4><p class="code">string_insert(substr, str, index);</p><table><tbody><tr><th> Argument</th><th> Description</th></tr><tr><td> <span class="notranslate">substr</span></td><td> La sous-chaîne à insérer.</td></tr><tr><td> <span class="notranslate">str</span></td><td> La chaîne à copier.</td></tr><tr><td> <span class="notranslate">index</span></td><td> La position en caractères de la chaîne pour insérer la sous-chaîne.</td></tr></tbody></table><p></p><h4> Retour:</h4><p class="code">String</p><p></p><h4> Exemple:</h4><p class="code">str2 = string_insert(username, &quot;Hello, , how are you?&quot;, 8);</p><p> Cela insérera la chaîne dans la variable &quot;username&quot; dans la phrase donnée avec la chaîne résultante ressemblant à ceci: &quot;Hello, NAME, how are you?&quot;. </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> Retour: <a href="Strings.htm">Cordes</a></div><div style="float:right"> Suivant:<a href="string_length.htm">string_length</a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
+<body>
+  <!--<div class="body-scroll" style="top: 150px;">-->
+  <h1>string_insert</h1>
+  <p>Cette fonction permet de créer une nouvelle chaîne de caractères composée de deux chaînes de caractères, l'une ayant été insérée dans l'autre à une position donnée. Cela peut être utile, par exemple, pour ajouter un nom d'utilisateur dans un texte prédéfini et ainsi faire en sorte que le joueur de votre jeu se sente plus impliqué dans l'action.
+    plus impliqué dans l'action. Gardez à l'esprit, lorsque vous calculez la position à insérer, que les chaînes de caractères sont indexées à partir de 1, de sorte que le premier caractère d'une chaîne de caractères est 1 et non 0 comme vous pouvez vous y attendre.</p>
+  <p> </p>
+  <h4>Syntaxe :</h4>
+  <p class="code">string_insert(substr, str, index) ;</p>
+  <table>
+    <tbody>
+      <tr>
+        <th>Arguments</th>
+        <th>Description</th>
+      </tr>
+      <tr>
+        <td>substrat</td>
+        <td>La sous-chaîne à insérer.</td>
+      </tr>
+      <tr>
+        <td>str</td>
+        <td>La chaîne de caractères à copier.</td>
+      </tr>
+      <tr>
+        <td>indice</td>
+        <td>La position en caractères de la chaîne pour insérer la sous-chaîne.</td>
+      </tr>
+    </tbody>
+  </table>
+  <p> </p>
+  <h4>Les retours :</h4>
+  <p class="code">Chaîne de caractères</p>
+  <p> </p>
+  <h4>Exemple :</h4>
+  <p class="code">str2 = string_insert(username, &quot;Hello, , how are you ?&quot;, 8) ;</p>
+  <p>Cela insérera la chaîne de la variable &quot;username&quot; dans la phrase donnée, la chaîne résultante ressemblant à ceci : &quot;Hello, NAME, how are you ?&quot;.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <div class="footer">
+    <div class="buttons">
+      <div class="clear">
+        <div style="float:left">Retour : <a href="Strings.htm">Cordes</a></div>
+        <div style="float:right">Suivant : <a href="string_length.htm">string_length</a></div>
+      </div>
+    </div>
+    <h5><span data-keyref="Copyright Notice">Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
   </div>
   <!-- KEYWORDS
 string_insert

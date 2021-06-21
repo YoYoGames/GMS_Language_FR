@@ -1,17 +1,50 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>Préférences de l&#39;éditeur de polices</title>
-  <meta name="generator" content="Adobe RoboHelp 2019" />
+  <title>Préférences de l'éditeur de polices</title>
+  <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../assets/css/default.css" type="text/css" />
   <meta name="rh-authors" content="Mark Alexander" />
-  <meta name="topic-comment" content="Les préférences de l&#39;éditeur de polices" />
-  <meta name="rh-index-keywords" content="Préfs - Polices" />
-  <meta name="search-keywords" content="Préf. De police,Préférences de l&#39;éditeur de polices" />
+  <meta name="topic-comment" content="The Font Editor Preferences" />
+  <meta name="rh-index-keywords" content="Prefs - Fonts" />
+  <meta name="search-keywords" content="Font Prefs,Font Editor Preferences" />
 </head>
-<body><!--<div class="body-scroll" style="top: 150px;">--><h1> Préférences de l&#39;éditeur de polices</h1><p><img alt="Font Editor Preferences" class="center" src="../../assets/Images/Setup_And_Version/Preferences/FontEditor_Prefs.png" style="cursor: nesw-resize;" /> Les <strong>préférences de l&#39;éditeur de polices</strong> permettent de définir le comportement de l&#39; <a href="../../The_Asset_Editors/Fonts.htm">éditeur de polices.</a> Les différentes options disponibles sont répertoriées ci-dessous avec une description de ce que chacune fait.</p><ul class="colour"><li> <strong>Mettre à jour les polices importées des projets <span class="notranslate">GameMaker Studio</span></strong> 1: lorsque cette case est cochée, <span class="notranslate">GameMaker Studio 2</span> tentera de mettre à jour les polices et de régénérer leur texture. Cela ne se produira que si:<ul class="Disc"><li> Cette préférence est activée</li><li> La police est disponible sur la machine</li><li> <span class="notranslate">GameMaker Studio 2</span> peut localiser un visage correspondant dans la famille de polices (c&#39;est la cause la plus probable d&#39;incohérence lors de l&#39;importation)</li></ul> Notez que cela se produira également si la <span class="notranslate">GameMaker Studio</span> 1 n&#39;a pas de texture de police mise en <a class="glossterm" data-glossterm="Cache" href="#">cache.</a> Si une police héritée ne peut pas être mise à jour, <span class="notranslate">GameMaker Studio 2</span> utilisera par défaut la texture de police mise en cache, et l&#39;éditeur de polices ne vous permettra plus de modifier la police, affichant une option de sauvegarde et de mise à jour vers une autre:<br/><br/><img alt="Font Editor Backup And Upgrade" class="center" src="../../assets/Images/Setup_And_Version/Preferences/FontEditor_Backup.png" /> En cliquant dessus, vous pourrez modifier la police, soit en ajoutant la police manquante, soit en en définissant une autre, et la police sauvegardée est stockée dans le dossier de la ressource de police, comme <span class="inline">&lt;font name&gt;.yy.gms1</span> et <span class="inline">&lt;font name&gt;.png.gms1</span>. Pour restaurer ces fichiers, supprimez manuellement le <span class="inline">&lt;font name&gt;.yy</span> et remplacez-les par ceux-ci en supprimant le <span class="inline">.gms1</span> extension des noms de fichiers. <em><strong>Important!</strong></em> Tous les actifs stockent leurs noms dans le <span class="inline">.yy</span> fichier, vous devez donc les modifier et mettre le bon nom de la ressource dans le <span class="inline">&lt;name&gt;</span> champ également (si différent).</li><li> <strong>Choix automatique de la boîte de dialogue de régénération de contenu ayant échoué</strong>: lorsque vous régénérez une texture de ressource de police, un avertissement s&#39;affiche. Régler cette option sur &quot;OK&quot; signifie que la police est régénérée sans que l&#39;avertissement ne soit affiché.</li><li> <strong>Choix automatique de la boîte de dialogue de régénération de police ayant échoué</strong>: lorsque la régénération d&#39;une texture de ressource de police échoue, un avertissement s&#39;affiche. Si vous réglez cette option sur &quot;OK&quot;, le message ne sera pas affiché.</li><li> <strong>Choix automatique pour la mise à niveau des polices héritées importées</strong>: lorsque vous importez un projet hérité, vous pouvez recevoir un avertissement concernant les polices héritées et l&#39;offre de mise à niveau. Régler cette option sur &quot;OK&quot; validera la mise à jour automatiquement sans afficher ce message. </li></ul><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> Retour: <a href="../IDE_Preferences.htm">Préférences IDE</a></div><div style="float:right"> Suivant: <a href="Room_Editor_Preferences.htm">Préférences de l&#39;éditeur de salle</a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
+<body>
+  <!--<div class="body-scroll" style="top: 150px;">-->
+  <h1>Préférences de l'éditeur de polices</h1>
+  <p><img alt="Font Editor Preferences" class="center" src="../../assets/Images/Setup_And_Version/Preferences/FontEditor_Prefs.png" style="cursor: nesw-resize;">Les <strong>préférences de l'éditeur de polices</strong> sont utilisées pour définir le comportement de l'<a href="../../The_Asset_Editors/Fonts.htm">éditeur de polices</a>.
+    Les différentes options disponibles sont listées ci-dessous avec une description de ce que fait chacune d'entre elles.</p>
+  <ul class="colour">
+    <li><strong>Mettre à jour les polices importées de projets <span class="notranslate">GameMaker Studio</span></strong> 1: Lorsque cette case est cochée, <span class="notranslate">GameMaker Studio 2</span> tentera de mettre à jour les polices et de régénérer leur texture. Cela ne se produira que si :
+      <ul class="Disc">
+        <li>Cette préférence est activée</li>
+        <li>La police est disponible sur la machine</li>
+        <li><span class="notranslate">GameMaker Studio 2</span> peut localiser une face correspondante dans la famille de polices (c'est la cause la plus probable d'incohérence à l'importation).</li>
+      </ul>
+      Notez que cela se produira également si la police <span class="notranslate">GameMaker Studio</span> 1 ne dispose pas d'une texture de police <a class="glossterm" data-glossterm="Cache" href="#">mise en cache</a>. Si une police héritée ne peut pas être mise à jour, <span class="notranslate">GameMaker Studio 2</span> utilisera par défaut la texture de la police mise en cache.
+      et l'éditeur de police ne vous permettra plus d'éditer la police, affichant une option de sauvegarde et de mise à jour vers une autre :<br>
+      <br>
+      <img alt="Font Editor Backup And Upgrade" class="center" src="../../assets/Images/Setup_And_Version/Preferences/FontEditor_Backup.png">. En cliquant sur cette option, vous pourrez éditer la police, soit en ajoutant la police manquante, soit en en définissant une autre.
+      La police sauvegardée est stockée dans le dossier des actifs de la police, comme <span class="inline">&lt;font name&gt;.yy.gms1</span> et <span class="inline">&lt;font name&gt;.png.gms1</span>. Pour restaurer ces fichiers, supprimez manuellement les fichiers <span class="inline">&lt;font name&gt;.yy</span> et remplacez-les par ceux-ci en retirant l'extension <span class="inline">.gms1</span> des noms de fichiers. <em> <strong>Important !</strong></em> Toutes les ressources stockent leurs noms dans le fichier <span class="inline">.yy</span>, vous devez donc les modifier et mettre le bon nom de la ressource.
+      et mettre le bon nom de la ressource dans le champ <span class="inline">&lt;name&gt;</span> également (si différent).</li>
+    <li><strong>Choix automatique pour la boîte de dialogue de régénération du contenu ayant échoué</strong>: Lorsque vous voulez régénérer une texture de police, un avertissement s'affiche. Si vous réglez cette option sur &quot;OK&quot;, la police sera régénérée sans que l'avertissement soit affiché.
+      l'avertissement.</li>
+    <li><strong>Choix automatique de la boîte de dialogue en cas d'échec de la régénération des polices</strong>: Lorsque la régénération d'une texture de police échoue, un message d'avertissement s'affiche. Si vous réglez cette option sur &quot;OK&quot;, le message ne sera pas affiché.</li>
+    <li><strong>Choix automatique de la mise à niveau des polices héritées importées</strong>: Lorsque vous importez un projet patrimonial, vous pouvez recevoir un avertissement concernant les polices patrimoniales et l'offre de mise à niveau. Si vous réglez cette option sur &quot;OK&quot;, la mise à jour se fera automatiquement sans afficher ce message.
+      sans afficher ce message.</li>
+  </ul>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <div class="footer">
+    <div class="buttons">
+      <div class="clear">
+        <div style="float:left">Retour : <a href="../IDE_Preferences.htm">Préférences de l'IDE</a></div>
+        <div style="float:right">Suivant : <a href="Room_Editor_Preferences.htm">Préférences de l'éditeur de pièce</a></div>
+      </div>
+    </div>
+    <h5><span data-keyref="Copyright Notice">Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
   </div>
   <!-- KEYWORDS
 Preferences - Font Editor
@@ -19,5 +52,5 @@ Preferences - Font Editor
   <!-- TAGS
 prefs_font_editor
 -->
-</body>
-</html>
+
+</body></html>

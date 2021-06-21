@@ -3,17 +3,62 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>skeleton_attachment_set</title>
+  <title>jeu_attachement_squelette</title>
   <meta name="generator" content="Adobe RoboHelp 2019" />
   <link rel="stylesheet" href="../../../../../../assets/css/default.css" type="text/css" />
   <meta name="rh-authors" content="Mark Alexander" />
-  <meta name="topic-comment" content="Page expliquant la fonction skeleton_attachment_set" />
+  <meta name="topic-comment" content="Page explaining the function skeleton_attachment_set" />
   <meta name="rh-index-keywords" content="skeleton_attachment_set" />
   <meta name="search-keywords" content="skeleton_attachment_set" />
 </head>
-<body><!--<div class="body-scroll" style="top: 150px;">--><h1>skeleton_attachment_set</h1><p> Un sprite d&#39;animation squelettique peut avoir d&#39;autres images ajoutées en tant que pièces jointes, ces images étant ajoutées à un emplacement nommé (le nom est donné lorsque vous créez l&#39;emplacement de pièce jointe dans votre programme d&#39;animation) et elles seront dessinées avec l&#39;animation du sprite actuel. Avec cette fonction, vous pouvez définir une pièce jointe à un emplacement donné, où vous devez donner les noms (sous forme de chaînes) de l&#39;emplacement et de la pièce jointe. Ces noms sont définis par le programme d&#39;animation utilisé, ou (dans le cas de la pièce jointe) lorsque vous appelez <a href="skeleton_attachment_create.htm"><tt>skeleton_attachment_create()</tt></a>.</p><p> Notez que vous pouvez également passer un <tt>sprite_index</tt> en tant que pièce jointe, et ce sprite sera utilisé, ou vous pouvez utiliser -1 pour supprimer la pièce jointe de l&#39;emplacement. Lorsque vous passez un index de sprite en tant qu&#39;argument, il créera un emplacement de pièce jointe en utilisant le nom du sprite comme chaîne pour nommer l&#39;emplacement (donc en utilisant <tt>spr_sword</tt>, par exemple, créera un emplacement de pièce jointe &quot;spr_sword&quot;), et l&#39;emplacement utilisera le premier index d&#39;image (0) du sprite, ainsi que son décalage d&#39;origine x et y, avec une échelle de (1,1) et une rotation de 0.</p><p></p><h4> Syntaxe:</h4><p class="code">skeleton_attachment_set(slot, attachment);</p><table><tbody><tr><th> Argument</th><th> Description</th></tr><tr><td> <span class="notranslate">slot</span></td><td> Le nom de l&#39;emplacement (une chaîne) pour obtenir la pièce jointe.</td></tr><tr><td> <span class="notranslate">attachment</span></td><td> Le nom (sous forme de chaîne ou de sprite_index) de l&#39;image de la pièce jointe.</td></tr></tbody></table><p></p><h4> Retour:</h4><p class="code">String</p><p></p><h4> Exemple:</h4><p class="code">if skeleton_attachment_get(&quot;slot_leftHand&quot;) == &quot;&quot;<br/>     {
-    <br/>     skeleton_attachment_set(&quot;slot_leftHand&quot;, choose(&quot;sword&quot;, &quot;spear&quot;, &quot;knife&quot;));<br/>     }
-  </p><p> Le code ci-dessus vérifierait le nom de pièce jointe actuellement attribué pour l&#39;emplacement nommé &quot;slot_leftHand&quot; et si une chaîne vide est renvoyée, un nouveau sprite est attaché. </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> Retour: <a href="Attachments.htm">Pièces jointes</a></div><div style="float:right"> Suivant:<a href="skeleton_attachment_create.htm">skeleton_attachment_create</a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
+<body>
+  <!--<div class="body-scroll" style="top: 150px;">-->
+  <h1>jeu_attachement_squelette</h1>
+  <p>Un sprite d'animation squelettique peut avoir d'autres images ajoutées en tant qu'attachements, ces images étant ajoutées à un slot nommé (le nom est donné lorsque vous créez le slot d'attachement dans votre programme d'animation) et elles seront dessinées en même temps que l'animation de
+    le sprite actuel. Avec cette fonction, vous pouvez définir un accessoire à un slot donné, où vous devez donner les noms (sous forme de chaînes) du slot et de l'accessoire. Ces noms sont définis par le programme d'animation utilisé, ou (dans le cas de l'accessoire)
+    lorsque vous appelez <a href="skeleton_attachment_create.htm"><tt>skeleton_attachment_create()</tt></a>.</p>
+  <p>Notez que vous pouvez également passer un <tt>sprite_index</tt> en tant que pièce jointe, et ce sprite sera utilisé, ou vous pouvez utiliser -1 pour supprimer la pièce jointe du slot. Lorsque vous passez un index de sprite en tant qu'argument, un slot d'attachement sera créé en utilisant le nom du sprite comme argument.
+    un slot d'attachement en utilisant le nom du sprite comme chaîne de caractères pour nommer le slot (ainsi, l'utilisation de <tt>spr_sword</tt>, par exemple, créera un slot d'attachement &quot;spr_sword&quot;), et le slot utilisera le premier index d'image (0) du sprite
+    ainsi que son décalage d'origine x et y, avec une échelle de (1,1) et une rotation de 0.</p>
+  <p> </p>
+  <h4>Syntaxe :</h4>
+  <p class="code">skeleton_attachment_set(slot, attachment) ;</p>
+  <table>
+    <tbody>
+      <tr>
+        <th>Arguments</th>
+        <th>Description</th>
+      </tr>
+      <tr>
+        <td>fente</td>
+        <td>Le nom du slot (une chaîne de caractères) pour obtenir l'attachement.</td>
+      </tr>
+      <tr>
+        <td>pièce jointe</td>
+        <td>Le nom (sous forme de chaîne ou de sprite_index) de l'image jointe.</td>
+      </tr>
+    </tbody>
+  </table>
+  <p> </p>
+  <h4>Les retours :</h4>
+  <p class="code">Chaîne de caractères</p>
+  <p> </p>
+  <h4>Exemple :</h4>
+  <p class="code">if skeleton_attachment_get(&quot;slot_leftHand&quot;) == &quot;&quot;<br> {
+    <br> skeleton_attachment_set(&quot;slot_leftHand&quot;, choose(&quot;sword&quot;, &quot;spear&quot;, &quot;knife&quot;)) ;<br> }
+  </p>
+  <p>Le code ci-dessus vérifie le nom d'attachement actuellement attribué au slot nommé &quot;slot_leftHand&quot; et si une chaîne vide est retournée, un nouveau sprite est attaché.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <div class="footer">
+    <div class="buttons">
+      <div class="clear">
+        <div style="float:left">Retour : <a href="Attachments.htm">Pièces jointes</a></div>
+        <div style="float:right">Suivant : <a href="skeleton_attachment_create.htm">skeleton_attachment_create</a></div>
+      </div>
+    </div>
+    <h5><span data-keyref="Copyright Notice">Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
   </div>
   <!-- KEYWORDS
 skeleton_attachment_set

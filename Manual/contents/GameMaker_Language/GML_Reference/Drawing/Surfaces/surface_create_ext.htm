@@ -7,11 +7,64 @@
   <meta name="generator" content="Adobe RoboHelp 2019" />
   <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
   <meta name="rh-authors" content="Mark Alexander" />
-  <meta name="topic-comment" content="Référence pour surface_create_ext" />
+  <meta name="topic-comment" content="Reference for surface_create_ext" />
   <meta name="rh-index-keywords" content="surface_create_ext" />
   <meta name="search-keywords" content="surface_create_ext" />
 </head>
-<body><!--<div class="body-scroll" style="top: 150px;">--><h1>surface_create_ext</h1><p> Cette fonction vous permet d&#39;attacher une surface à un élément de canevas qui existe déjà dans votre page Web, ce qui signifie que vous pouvez efficacement diviser des parties de votre jeu à dessiner à différents endroits de la page. Pour cela, vous <i>devez</i> avoir défini correctement l&#39;élément canvas dans le <tt>*.html</tt> page de votre jeu en utilisant les tailles et les noms corrects qui correspondent aux surfaces que vous souhaitez créer. Ainsi, vous auriez votre canevas &quot;principal&quot;, puis vos éléments de canevas de surface secondaires, qui seront affectés en utilisant cette fonction aux bonnes surfaces. L&#39;image suivante est un exemple de configuration d&#39;une page avec trois éléments de canevas:</p><p><img alt="Multi canvas layour example" class="center" src="../../../../assets/Images/Scripting_Reference/GML/Reference/Drawing/surface_ext_1.png" /> La mise en page peut être délicate, surtout si vous souhaitez que tous les éléments s&#39;alignent correctement, mais une fois la tâche difficile de création de la mise en page terminée, vous pouvez alors ajouter ceci <tt>html</tt> comme fichier de page par défaut pour le jeu à l&#39;aide de l&#39; <a href="../../../../Settings/Game_Options/HTML5.htm">onglet HTML5</a> des <a href="../../../../Settings/Game_Options.htm">options de jeu</a>. La prochaine chose que vous devez faire est de configurer votre pièce et vos vues, car chaque surface devra être associée à une vue spécifique pour «capturer» les images du jeu (voir la variable de vue <a href="../../Cameras_And_Display/Cameras_And_Viewports/view_surface_id.htm"><tt>view_surface_id[0...7]</tt></a> ). L&#39;image ci-dessous montre comment la salle de jeu de l&#39;exemple de toile ci-dessus serait présentée:</p><p><img alt="Multi canvas layour example" class="center" src="../../../../assets/Images/Scripting_Reference/GML/Reference/Drawing/surface_ext_2.png" /> Enfin, vous utiliserez ensuite cette fonction pour créer les surfaces, le nom étant le même que celui utilisé pour les éléments du canevas et la taille correspondant à la taille de ce même canevas. La fonction retournera l&#39;index de la surface qui devrait être stockée dans une variable pour les futurs appels de fonction. Lorsque la surface est créée pour la première fois, elle peut contenir du «bruit» car il s’agit essentiellement d’une zone de mémoire réservée à cet effet (et cette mémoire peut encore contenir des informations), vous pouvez donc effacer la surface avant de l’utiliser avec une fonction comme <a href="../Colour_And_Alpha/draw_clear_alpha.htm"><tt>draw_clear_alpha()</tt></a>.</p><p class="note"> <b>REMARQUE</b>: cette fonction n&#39;est disponible que pour une utilisation avec le module HTML5.</p><p></p><h4> Syntaxe:</h4><p class="code">surface_create_ext(name, w, h);</p><table><tbody><tr><th> Argument</th><th> Description</th></tr><tr><td> <span class="notranslate">name</span></td><td> Le nom de l&#39;élément de canevas auquel lier la surface.</td></tr><tr><td> <span class="notranslate">w</span></td><td> La largeur de la surface à créer.</td></tr><tr><td> <span class="notranslate">h</span></td><td> La hauteur de la surface à créer.</td></tr></tbody></table><p></p><h4> Retour:</h4><p class="code">Real</p><p></p><h4> Exemple:</h4><p class="code">s1 = surface_create_ext(&quot;surface1&quot;, 192, 550);<br/> s2 = surface_create_ext(&quot;surface2&quot;, 608, 186);<br/> view_surface_id[1] = s1;<br/> view_surface_id[2] = s2;</p><p> Le code ci-dessus crée deux surfaces de tailles différentes, en attribuant chacune à un élément de canevas différent, puis ces surfaces sont affectées à deux vues afin que la partie correcte de la pièce soit capturée. </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> Retour: <a href="Surfaces.htm">Surfaces</a></div><div style="float:right"> Suivant:<a href="surface_resize.htm">surface_resize</a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
+<body>
+  <!--<div class="body-scroll" style="top: 150px;">-->
+  <h1>surface_create_ext</h1>
+  <p>Cette fonction vous permet d'attacher une surface à un élément de canevas qui existe déjà dans votre page Web, ce qui signifie que vous pouvez effectivement diviser des parties de votre jeu pour les dessiner à différents endroits de la page. À cette fin, vous <i>devez</i> avoir défini correctement l'élément canvas dans la page <tt>*.html</tt> de votre jeu en utilisant les tailles et les noms corrects qui correspondent aux surfaces que vous souhaitez créer. Ainsi, vous disposez d'un canevas &quot;principal&quot; et de surfaces secondaires.
+    qui seront affectés aux surfaces correctes à l'aide de cette fonction. L'image suivante est un exemple de la configuration d'une page comportant trois éléments de canevas :</p>
+  <p><img alt="Multi canvas layour example" class="center" src="../../../../assets/Images/Scripting_Reference/GML/Reference/Drawing/surface_ext_1.png">La mise en page peut être délicate, surtout si vous souhaitez que tous les éléments s'alignent correctement.
+    Mais une fois la tâche difficile de la mise en page terminée, vous pouvez ajouter ce fichier <tt>html</tt> comme fichier de page par défaut pour le jeu en utilisant l'<a href="../../../../Settings/Game_Options/HTML5.htm">onglet HTML5</a> des <a href="../../../../Settings/Game_Options.htm">options du jeu</a>.
+    La prochaine chose à faire est de configurer votre salle et vos vues, car chaque surface devra être associée à une vue spécifique pour &quot;capturer&quot; les images du jeu (voir la variable de vue <a href="../../Cameras_And_Display/Cameras_And_Viewports/view_surface_id.htm"><tt>view_surface_id[0...7]</tt></a>).
+    L'image ci-dessous montre la configuration de la salle de jeu pour l'exemple de toile ci-dessus :</p>
+  <p><img alt="Multi canvas layour example" class="center" src="../../../../assets/Images/Scripting_Reference/GML/Reference/Drawing/surface_ext_2.png">Enfin, vous utiliserez cette fonction pour créer les surfaces, le nom étant le même que celui utilisé pour les éléments du canevas et la taille correspondant à la taille de ce même canevas.
+    utilisé pour les éléments du canevas et la taille correspondant à la taille de ce même canevas. La fonction renvoie l'indice de la surface, qui doit être stocké dans une variable pour les futurs appels de fonction. Lorsque la surface est créée pour la première fois, elle peut contenir
+    du &quot;bruit&quot;, car il s'agit en fait d'une zone de mémoire réservée à cet effet (et cette mémoire peut encore contenir des informations). Vous pouvez donc effacer la surface avant de l'utiliser avec une fonction telle que <a href="../Colour_And_Alpha/draw_clear_alpha.htm"><tt>draw_clear_alpha()</tt></a>.</p>
+  <p class="note"><b>REMARQUE</b>: Cette fonction n'est disponible qu'avec le module HTML5.</p>
+  <p> </p>
+  <h4>Syntaxe :</h4>
+  <p class="code">surface_create_ext(name, w, h) ;</p>
+  <table>
+    <tbody>
+      <tr>
+        <th>Arguments</th>
+        <th>Description</th>
+      </tr>
+      <tr>
+        <td>nom</td>
+        <td>Le nom de l'élément du canevas auquel la surface doit être liée.</td>
+      </tr>
+      <tr>
+        <td>w</td>
+        <td>La largeur de la surface à créer.</td>
+      </tr>
+      <tr>
+        <td>h</td>
+        <td>La hauteur de la surface à créer.</td>
+      </tr>
+    </tbody>
+  </table>
+  <p> </p>
+  <h4>Les retours :</h4>
+  <p class="code">Real</p>
+  <p> </p>
+  <h4>Exemple :</h4>
+  <p class="code">s1 = surface_create_ext(&quot;surface1&quot;, 192, 550) ;<br> s2 = surface_create_ext(&quot;surface2&quot;, 608, 186) ;<br> view_surface_id[1] = s1 ;<br> view_surface_id[2] = s2 ;</p>
+  <p>Le code ci-dessus crée deux surfaces de tailles différentes, en les affectant chacune à un élément de canevas différent, puis ces surfaces sont affectées à deux vues afin de capturer la bonne partie de la pièce.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <div class="footer">
+    <div class="buttons">
+      <div class="clear">
+        <div style="float:left">Retour : <a href="Surfaces.htm">Surfaces</a></div>
+        <div style="float:right">Suivant : <a href="surface_resize.htm">surface_resize</a></div>
+      </div>
+    </div>
+    <h5><span data-keyref="Copyright Notice">Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
   </div>
   <!-- KEYWORDS
 surface_create_ext

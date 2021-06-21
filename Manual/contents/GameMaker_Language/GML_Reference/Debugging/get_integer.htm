@@ -7,11 +7,52 @@
   <meta name="generator" content="Adobe RoboHelp 2019" />
   <link rel="stylesheet" href="../../../assets/css/default.css" type="text/css" />
   <meta name="rh-authors" content="Mark Alexander" />
-  <meta name="topic-comment" content="Page de référence pour get_integer" />
+  <meta name="topic-comment" content="Reference page for get_integer" />
   <meta name="rh-index-keywords" content="get_integer" />
   <meta name="search-keywords" content="get_integer" />
 </head>
-<body><!--<div class="body-scroll" style="top: 150px;">--><h1>get_integer</h1><p> Cela crée une fenêtre contextuelle affichant un message personnalisé, avec un bouton intitulé «Ok», et invite l&#39;utilisateur à saisir une valeur entière. La fonction retournera l&#39;entier tapé, ou la valeur par défaut si rien n&#39;a été entré.</p><p class="note"> <b>REMARQUE:</b> cette fonction est destinée au <b>débogage uniquement</b> sur les cibles Desktop, mais est <b>déconseillée</b> sur toutes les autres cibles.</p><p></p><h4> Syntaxe:</h4><p class="code">get_integer(str, def);</p><table><tbody><tr><th> Argument</th><th> Description</th></tr><tr><td> <span class="notranslate">str</span></td><td> La chaîne à afficher dans le message contextuel.</td></tr><tr><td> <span class="notranslate">def</span></td><td> La valeur par défaut dans la zone de texte.</td></tr></tbody></table><p></p><h4> Retour:</h4><p class="code">Real</p><p></p><h4> Exemple:</h4><p class="code">global.level = get_integer(&quot;Level to test?&quot;, 1);</p><p> Le code ci-dessus affichera un message invitant l&#39;utilisateur à sélectionner un niveau pour le test. La valeur de retour sera stockée dans la variable globale &quot;global.level&quot;. </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> Retour: <a href="Debugging.htm">Débogage</a></div><div style="float:right"> Suivant:<a href="get_string.htm">get_string</a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
+<body>
+  <!--<div class="body-scroll" style="top: 150px;">-->
+  <h1>get_integer</h1>
+  <p>Cette fonction crée une fenêtre contextuelle affichant un message personnalisé, avec un bouton intitulé &quot;Ok&quot;, et invite l'utilisateur à saisir une valeur entière. La fonction renvoie le nombre entier saisi, ou la valeur par défaut si rien n'a été saisi.</p>
+  <p class="note"><b>REMARQUE :</b> Cette fonction est destinée à être <b>utilisée pour le débogage uniquement</b> sur les cibles Desktop, mais est <b>dépréciée</b> sur toutes les autres cibles.</p>
+  <p> </p>
+  <h4>Syntaxe :</h4>
+  <p class="code">get_integer(str, def) ;</p>
+  <table>
+    <tbody>
+      <tr>
+        <th>Arguments</th>
+        <th>Description</th>
+      </tr>
+      <tr>
+        <td>str</td>
+        <td>La chaîne à afficher dans le message pop-up.</td>
+      </tr>
+      <tr>
+        <td>def</td>
+        <td>La valeur par défaut dans la zone de texte.</td>
+      </tr>
+    </tbody>
+  </table>
+  <p> </p>
+  <h4>Les retours :</h4>
+  <p class="code">Real</p>
+  <p> </p>
+  <h4>Exemple :</h4>
+  <p class="code">global.level = get_integer(&quot;Niveau à tester ?&quot;, 1) ;</p>
+  <p>Le code ci-dessus affichera un message invitant l'utilisateur à sélectionner un niveau à tester. La valeur de retour sera stockée dans la variable globale &quot;global.level&quot;.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <div class="footer">
+    <div class="buttons">
+      <div class="clear">
+        <div style="float:left">Retour : <a href="Debugging.htm">Débogage</a></div>
+        <div style="float:right">Suivant : <a href="get_string.htm">get_string</a></div>
+      </div>
+    </div>
+    <h5><span data-keyref="Copyright Notice">Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
   </div>
   <!-- KEYWORDS
 get_integer

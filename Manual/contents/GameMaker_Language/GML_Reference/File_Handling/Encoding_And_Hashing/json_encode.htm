@@ -7,14 +7,66 @@
   <meta name="generator" content="Adobe RoboHelp 2019" />
   <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
   <meta name="rh-authors" content="Mark Alexander" />
-  <meta name="topic-comment" content="Page de référence pour json_encode" />
+  <meta name="topic-comment" content="Reference page for json_encode" />
   <meta name="rh-index-keywords" content="json_encode" />
   <meta name="search-keywords" content="json_encode" />
 </head>
-<body><!--<div class="body-scroll" style="top: 150px;">--><h1>json_encode</h1><h3> <strong>IMPORTANT!</strong> Cette fonction - tout en étant toujours valide - a été supplantée par la fonction <span class="inline"><a href="json_stringify.htm">json_stringify()</a></span>, et nous vous recommandons de n&#39;utiliser cette fonction que pour le support hérité.</h3><p> JSON (JavaScript Object Notation) est un format d&#39;échange de données léger qui est facile à lire et à écrire, pour les personnes et les machines. Il est construit sur deux structures de base:</p><ul class="colour"><li> Une collection de paires nom / valeur, appelée <a href="../../Data_Structures/DS_Maps/DS_Maps.htm"><tt>DS Map</tt></a> dans <span class="notranslate">GameMaker Studio 2</span> mais également appelé «dictionnaire» ou «objet» dans d&#39;autres langages de programmation.</li><li> Une liste ordonnée de valeurs, appelée <a href="../../Data_Structures/DS_Lists/DS_Lists.htm"><tt>DS </tt><tt>List</tt></a> dans <span class="notranslate">GameMaker Studio 2</span> mais cela peut également être appelé «tableau» ou «séquence» dans d&#39;autres langages de programmation.</li></ul><p><tt>json_encode()</tt> prend une carte ou un tableau DS que vous avez précédemment créé et l&#39;encode en tant que chaîne JSON que vous pouvez ensuite utiliser comme partie (par exemple) d&#39;un <a href="../../Asynchronous_Functions/HTTP/http_post_string.htm"><tt>http_post_string()</tt></a> appel, ou - afin qu&#39;il puisse être stocké en externe - il peut être écrit dans un fichier. Si vous utilisez un tableau comme structure de niveau supérieur, le tableau ne peut contenir que des valeurs valides ou d&#39;autres tableaux, et <em>non</em> des structures de données. Pour cela, vous devez utiliser les fonctions DS appropriées.</p><p class="note"> <strong>IMPORTANT!</strong> JSON est indépendant des nombres. Dans n&#39;importe quel langage de programmation, il peut y avoir une variété de types de nombres de capacités et de compléments variés, fixes ou flottants, binaires ou décimaux. Cela peut rendre difficile l&#39;échange entre différents langages de programmation. JSON offre à la place uniquement la représentation des nombres que les humains utilisent: une séquence de chiffres. Tous les langages de programmation savent comment donner un sens aux séquences de chiffres même s&#39;ils ne sont pas d&#39;accord sur les représentations internes. Pour plus d&#39;informations, consultez la <a href="http://www.ecma-international.org/publications/standards/Ecma-404.htm">norme ECMA JSON</a>.</p><p> Notez que des précautions doivent être prises lors de l&#39;écriture de JSON dans un fichier ini, car les spécifications ini peuvent causer des problèmes lors de l&#39;utilisation de guillemets et de caractères d&#39;échappement. Voir la fonction <a href="../Ini_Files/ini_write_string.htm"><tt>ini_write_string()</tt></a> pour plus d&#39;informations. Notez également que si vous encodez un int64 en JSON, il l&#39;écrira comme un <i>int</i> s&#39;il est dans la plage valide pour un int32, comme un <i>double</i> s&#39;il peut le faire sans perdre de précision ou (si aucun de ces cas n&#39;est applicable) comme une <i>chaîne</i> avec un identifiant &quot;<tt>@i64@</tt> &quot;avant et &quot;<tt>$i64$</tt> &quot;après. Lorsque vous venez de décoder le JSON en une carte à nouveau, <span class="notranslate">GameMaker Studio 2</span> récupérera ces identifiants et reconvertira la valeur en int64. Cela signifie que si le JSON est destiné à un serveur ou à un autre non- <span class="notranslate">GameMaker</span>, ces valeurs ne seront pas appropriées et doivent donc être évitées.</p><p class="note"> <b>REMARQUE</b>: la fonctionnalité hiérarchique de JSON est disponible via des fonctions spéciales de mappage DS et de liste DS (par exemple <span class="inline"><a href="../../Data_Structures/DS_Maps/ds_map_add_list.htm" style="font-size: 14px">ds_map_add_list()</a></span> ou <span class="inline"><a href="../../Data_Structures/DS_Lists/ds_list_mark_as_map.htm" style="font-size: 14px">ds_list_mark_as_map()</a></span> ), vous pouvez donc encoder des sous-listes et des cartes.</p><p></p><h4> Syntaxe:</h4><p class="code">json_encode(map)</p><table><tbody><tr><th> Argument</th><th> Description</th></tr><tr><td> <span class="notranslate">map</span></td><td> une carte DS avec les informations à encoder (ou un tableau)</td></tr></tbody></table><p></p><h4> Retour:</h4><p class="code">string</p><p></p><h4> Exemple:</h4><p class="code">var hiscore_map, i, str;<br/> hiscore_map = ds_map_create();<br/> for (i = 0; i &lt; 10; i ++;)<br/>     {
-    <br/>     ds_map_add(hiscore_map, name[i], score[i]);<br/>     }
-    <br/> str = json_encode(hiscore_map);<br/> get[0] = http_post_string(&quot;http://www.angusgames.com/game?game_id=&quot; + string(global.game_id), str)<br/> ds_map_destroy(hiscore_map);
-  </p><p> Le code ci-dessus crée une carte DS, puis parcourt les tableaux de noms et de scores, ajoutant chaque paire clé / valeur à la nouvelle carte. Ensuite, cette carte est encodée en utilisant <tt>json_encode()</tt> et stocké sous forme de chaîne dans la variable &quot;str&quot;. Cette chaîne est ensuite envoyée à un serveur Web en utilisant <tt>http_post_string()</tt> et la carte DS est détruite pour éviter une fuite de mémoire car elle n&#39;est plus nécessaire. </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> Retour: <a href="Encoding_And_Hashing.htm">Encodage de fichiers</a></div><div style="float:right"> Suivant:<a href="json_decode.htm">json_decode</a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
+<body>
+  <!--<div class="body-scroll" style="top: 150px;">-->
+  <h1>json_encode</h1>
+  <h3><strong>IMPORTANT !</strong> Cette fonction - bien qu'elle soit toujours valide - a été remplacée par la fonction <span class="inline"><a href="json_stringify.htm">json_stringify()</a></span>, et nous vous recommandons de n'utiliser cette fonction que pour le support historique.</h3>
+  <p>JSON (JavaScript Object Notation) est un format d'échange de données léger, facile à lire et à écrire, tant pour les personnes que pour les machines. Il repose sur deux structures de base :</p>
+  <ul class="colour">
+    <li>Une collection de paires nom/valeur, appelée un <a href="../../Data_Structures/DS_Maps/DS_Maps.htm"><tt>Carte DS</tt></a> dans <span class="notranslate">GameMaker Studio 2</span> mais également appelée &quot;dictionnaire&quot; ou &quot;objet&quot; dans d'autres langages de programmation.</li>
+    <li>Une liste ordonnée de valeurs, appelée <a href="../../Data_Structures/DS_Lists/DS_Lists.htm"><tt>DS </tt><tt>Liste</tt></a> dans <span class="notranslate">GameMaker Studio 2</span>, mais elle peut également être appelée &quot;tableau&quot; ou &quot;séquence&quot; dans d'autres langages de programmation.</li>
+  </ul>
+  <p><tt>json_encode()</tt> prend une carte ou un tableau DS que vous avez précédemment créé et l'encode sous forme de chaîne JSON que vous pouvez ensuite utiliser (par exemple) dans le cadre d'un appel <a href="../../Asynchronous_Functions/HTTP/http_post_string.htm"><tt>http_post_string()</tt></a>    ou - pour qu'elle puisse être stockée en externe - elle peut être écrite dans un fichier. Si vous utilisez un tableau comme structure de niveau supérieur, le tableau ne peut contenir que des valeurs valides ou d'autres tableaux, et <em>non</em> des structures de données. Pour cela, vous devez utiliser les fonctions
+    DS appropriées.</p>
+  <p class="note"><strong>IMPORTANT !</strong> JSON est agnostique en ce qui concerne les nombres. Dans tout langage de programmation, il peut y avoir une variété de types de nombres de différentes capacités et compléments, fixes ou flottants, binaires ou décimaux. Cela peut rendre difficile l'échange entre différents
+    langages de programmation. Au lieu de cela, JSON offre uniquement la représentation des nombres que les humains utilisent : une séquence de chiffres. Tous les langages de programmation savent comment donner un sens aux séquences de chiffres, même s'ils ne sont pas d'accord sur les représentations internes. Pour
+    plus d'informations, consultez la <a href="http://www.ecma-international.org/publications/standards/Ecma-404.htm">norme ECMA JSON</a>.</p>
+  <p>Notez que des précautions doivent être prises lors de l'écriture de JSON dans un fichier ini, car les spécifications ini peuvent causer des problèmes lors de l'utilisation de guillemets et de caractères d'échappement. Voir la fonction <a href="../Ini_Files/ini_write_string.htm"><tt>ini_write_string()</tt></a> pour plus
+    informations. Notez également que si vous encodez un int64 en JSON, il l'écrira comme un <i>int</i> s'il est dans la plage valide pour un int32, comme un <i>double</i> s'il peut le faire sans perdre de précision ou (si aucun de ces cas n'est applicable) comme une <i>chaîne</i> avec un identifiant &quot; @i64@<tt>&quot;</tt> avant et &quot; $i64$ &quot; après<tt>.</tt> Lorsque vous décodez à nouveau le JSON en carte, <span class="notranslate">GameMaker Studio 2</span> récupère ces identifiants et reconvertit la valeur en int64. Cela signifie
+    que si le JSON est destiné à un serveur ou à une autre cible non GameMaker, ces valeurs ne seront pas appropriées et doivent donc être évitées.</p>
+  <p class="note"><b>REMARQUE</b>: La fonctionnalité hiérarchique de JSON est disponible par l'intermédiaire de fonctions spéciales DS map et DS list (par exemple <span class="inline"><a href="../../Data_Structures/DS_Maps/ds_map_add_list.htm" style="font-size: 14px">ds_map_add_list()</a></span> ou
+    <span class="inline"><a href="../../Data_Structures/DS_Lists/ds_list_mark_as_map.htm" style="font-size: 14px">ds_list_mark_as_map()</a></span> ), ce qui vous permet d'encoder des sous-listes et des cartes.</p>
+  <p> </p>
+  <h4>Syntaxe :</h4>
+  <p class="code">json_encode(map)</p>
+  <table>
+    <tbody>
+      <tr>
+        <th>Arguments</th>
+        <th>Description</th>
+      </tr>
+      <tr>
+        <td>carte</td>
+        <td>une carte DS avec les informations à encoder (ou un tableau)</td>
+      </tr>
+    </tbody>
+  </table>
+  <p> </p>
+  <h4>Les retours :</h4>
+  <p class="code">chaîne de caractères</p>
+  <p> </p>
+  <h4>Exemple :</h4>
+  <p class="code">var hiscore_map, i, str ;<br> hiscore_map = ds_map_create() ;<br> for (i = 0 ; i &lt; 10 ; i ++ ;)<br> {
+    <br> ds_map_add(hiscore_map, name[i], score[i]) ;<br> }
+    <br> str = json_encode(hiscore_map) ;<br> get[0] = http_post_string(&quot;http://www.angusgames.com/game?game_id=&quot; + string(global.game_id), str)<br> ds_map_destroy(hiscore_map) ;
+  </p>
+  <p>Le code ci-dessus crée une carte DS et boucle ensuite sur les tableaux de noms et de scores, en ajoutant chaque paire clé/valeur à la nouvelle carte. Ensuite, cette carte est codée à l'aide de <tt>json_encode()</tt> et stockée sous forme de chaîne dans la variable &quot;str&quot;. Cette chaîne est
+    Cette chaîne est ensuite envoyée à un serveur Web à l'aide de <tt>http_post_string()</tt> et la carte DS est détruite pour éviter une fuite de mémoire, car elle n'est plus nécessaire.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <div class="footer">
+    <div class="buttons">
+      <div class="clear">
+        <div style="float:left">Retour : <a href="Encoding_And_Hashing.htm">Codage des fichiers</a></div>
+        <div style="float:right">Suivant : <a href="json_decode.htm">json_decode</a></div>
+      </div>
+    </div>
+    <h5><span data-keyref="Copyright Notice">Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
   </div>
   <!-- KEYWORDS
 json_encode

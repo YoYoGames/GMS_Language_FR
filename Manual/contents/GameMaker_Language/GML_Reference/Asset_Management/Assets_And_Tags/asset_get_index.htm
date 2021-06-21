@@ -3,17 +3,55 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>asset_get_index</title>
+  <title>actif_get_index</title>
   <meta name="generator" content="Adobe RoboHelp 2019" />
   <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
   <meta name="rh-authors" content="Mark Alexander" />
-  <meta name="topic-comment" content="Page expliquant la fonction asset_get_index" />
+  <meta name="topic-comment" content="Page explaining the function asset_get_index" />
   <meta name="rh-index-keywords" content="asset_get_index" />
   <meta name="search-keywords" content="asset_get_index" />
 </head>
-<body><!--<div class="body-scroll" style="top: 150px;">--><h1>asset_get_index</h1><p> Vous pouvez utiliser cette fonction pour obtenir l&#39;index d&#39;identification unique d&#39;un élément de jeu à partir de son nom. Si l&#39;actif n&#39;est pas trouvé, la fonction renverra une valeur de -1, sinon elle renverra l&#39;ID d&#39;index unique pour l&#39;actif en cours de vérification. Cet identifiant peut ensuite être utilisé dans d&#39;autres fonctions comme vous le feriez pour toute autre valeur d&#39;index, comme le <a href="../Sprites/Sprite_Instance_Variables/sprite_index.htm"><tt>sprite_index</tt></a> ou la <a href="../Paths/Path_Variables/path_index.htm"><tt>path_index</tt></a>, par exemple. Veuillez noter que bien que cette fonction puisse être utilisée pour référencer des actifs à partir de chaînes (voir l&#39;exemple ci-dessous), vous devez toujours vous assurer que l&#39;actif existe avant de l&#39;utiliser, sinon vous risquez d&#39;obtenir des erreurs qui planteront votre jeu.</p><p></p><h4> Syntaxe:</h4><p class="code">asset_get_index(name);</p><table><tbody><tr><th> Argument</th><th> Description</th></tr><tr><td> <span class="notranslate">name</span></td><td> Le nom de l&#39;élément de jeu pour obtenir l&#39;index (une chaîne).</td></tr></tbody></table><p></p><h4> Retour:</h4><p class="code">Asset Index (Integer)</p><p></p><h4> Exemple:</h4><p class="code">var obj = asset_get_index(&quot;obj_Enemy_&quot; + string(global.Level));<br/> if obj &gt; -1<br/>     {
-    <br/>     instance_create_layer(random(room_width), random(room_height), obj, &quot;Enemy_Layer&quot;);<br/>     }
-  </p><p> Le code ci-dessus obtiendra un index d&#39;objet à partir d&#39;une chaîne, et si cet index existe, créera une instance de l&#39;objet dans le jeu. </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> Retour: <a href="Assets_And_Tags.htm">Actifs et balises</a></div><div style="float:right"> Suivant:<a href="asset_get_type.htm">asset_get_type</a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
+<body>
+  <!--<div class="body-scroll" style="top: 150px;">-->
+  <h1>actif_get_index</h1>
+  <p>Vous pouvez utiliser cette fonction pour obtenir l'indice d'identification unique d'une ressource de jeu à partir de son nom. Si la ressource n'est pas trouvée, la fonction renvoie la valeur -1, sinon elle renvoie l'identifiant d'index unique de la ressource vérifiée. Cet identifiant peut alors
+    être utilisé dans d'autres fonctions comme vous le feriez avec n'importe quelle autre valeur d'index, comme la fonction <a href="../Sprites/Sprite_Instance_Variables/sprite_index.htm"><tt>sprite_index</tt></a> ou le <a href="../Paths/Path_Variables/path_index.htm"><tt>path_index</tt></a>,
+    par exemple. Veuillez noter que, bien que cette fonction puisse être utilisée pour référencer des ressources à partir de chaînes (voir l'exemple ci-dessous), vous devez toujours vous assurer que la ressource existe avant de l'utiliser, sinon vous risquez d'obtenir des erreurs qui feront planter votre jeu.</p>
+  <p> </p>
+  <h4>Syntaxe :</h4>
+  <p class="code">asset_get_index(name) ;</p>
+  <table>
+    <tbody>
+      <tr>
+        <th>Arguments</th>
+        <th>Description</th>
+      </tr>
+      <tr>
+        <td>nom</td>
+        <td>Le nom de la ressource du jeu dont on veut obtenir l'index (une chaîne de caractères).</td>
+      </tr>
+    </tbody>
+  </table>
+  <p> </p>
+  <h4>Les retours :</h4>
+  <p class="code">Indice de l'actif (nombre entier)</p>
+  <p> </p>
+  <h4>Exemple :</h4>
+  <p class="code">var obj = asset_get_index(&quot;obj_Enemy_&quot; + string(global.Level)) ;<br> if obj &gt; -1<br> {
+    <br> instance_create_layer(random(room_width), random(room_height), obj, &quot;Enemy_Layer&quot;) ;<br> }
+  </p>
+  <p>Le code ci-dessus récupère un index d'objet à partir d'une chaîne de caractères, et si cet index existe, il crée une instance de l'objet dans le jeu.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <div class="footer">
+    <div class="buttons">
+      <div class="clear">
+        <div style="float:left">Retour : <a href="Assets_And_Tags.htm">Actifs et étiquettes</a></div>
+        <div style="float:right">Suivant : <a href="asset_get_type.htm">asset_get_type</a></div>
+      </div>
+    </div>
+    <h5><span data-keyref="Copyright Notice">Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
   </div>
   <!-- KEYWORDS
 asset_get_index

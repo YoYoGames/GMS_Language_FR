@@ -3,24 +3,69 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>skeleton_slot_data_instance</title>
+  <title>données_instance_slot_squelette</title>
   <meta name="generator" content="Adobe RoboHelp 2019" />
   <link rel="stylesheet" href="../../../../../../assets/css/default.css" type="text/css" />
   <meta name="rh-authors" content="Mark Alexander" />
-  <meta name="topic-comment" content="Page expliquant la fonction skeleton_slot_data_instance" />
+  <meta name="topic-comment" content="Page explaining the function skeleton_slot_data_instance" />
   <meta name="rh-index-keywords" content="skeleton_slot_data_instance" />
   <meta name="search-keywords" content="skeleton_slot_data_instance" />
 </head>
-<body><!--<div class="body-scroll" style="top: 150px;">--><h1>skeleton_slot_data_instance</h1><p> Avec cette fonction, vous pouvez remplir une <a href="../../../../Data_Structures/DS_Lists/DS_Lists.htm">liste DS</a> (pré-créée) avec des données pour chacun des emplacements de pièce jointe disponibles pour le sprite Spine associé à l&#39;instance actuelle (y compris toutes les modifications de pièce jointe). Ces données sont renvoyées dans le forum d&#39;une <a href="../../../../Data_Structures/DS_Maps/DS_Maps.htm">carte DS</a> qui contient les paires clé / valeur suivantes:</p><ul class="colour"><li> <b>&quot;nom&quot;:</b> le nom de l&#39;emplacement.</li><li> <b>&quot;bone&quot;:</b> Le nom de l&#39;os.</li><li> <b>&quot;pièce jointe&quot;:</b> le nom de la pièce jointe si elle est utilisée ou &quot;(aucune)&quot; si aucune pièce n&#39;est attribuée.</li></ul><p> Les valeurs de chaque clé seront des chaînes et peuvent ensuite être utilisées dans les autres fonctions de rattachement squelette pour ces types de sprite. Notez que le <tt>DS Map</tt> créés <i>ne</i> sont pas détruits, vous devrez donc parcourir la liste DS et détruire vous-même chacune des cartes créées.</p><p></p><h4> Syntaxe:</h4><p class="code">skeleton_slot_data_instance(list);</p><table><tbody><tr><th> Argument</th><th> Description</th></tr><tr><td> <span class="notranslate">list</span></td><td> ID de la liste DS à remplir avec les cartes DS.</td></tr></tbody></table><p></p><h4> Retour:</h4><p class="code">N/A</p><p></p><h4> Exemple:</h4><p class="code">var list = ds_list_create();<br/> var open = true;<br/> slot_name = &quot;&quot;;<br/> skeleton_slot_data_instance(list);
-    <br/> for (var i = 0; i &lt; ds_list_size(list); i++;)<br/>     {
-    <br/>     var map = list[| i];<br/>     if open<br/>         {
-    <br/>         if map[? &quot;attachment&quot;] == &quot;(none)&quot;<br/>             {
-    <br/>             open = false;<br/>             slot_name = map[? &quot;name&quot;];<br/>             }
-    <br/>         }
-    <br/>     ds_map_destroy(map);
-    <br/>     }
-    <br/> ds_list_destroy(list);
-  </p><p> Le code ci-dessus crée une liste DS, puis la remplit avec les données d&#39;emplacement pour l&#39;image-objet d&#39;instance. Ces données sont ensuite analysées pour extraire les cartes DS individuelles avec les données de slot. Ceci est ensuite vérifié pour voir s&#39;il y a un emplacement vide, et si tel est le cas, la variable &quot;nom_emplacement&quot; reçoit le nom de l&#39;emplacement vide avant que la carte DS ne soit détruite. Enfin, nous détruisons la liste DS car elle n&#39;est plus nécessaire. </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> Retour: <a href="Slots.htm">Slots</a></div><div style="float:right"> Suivant:<a href="skeleton_find_slot.htm">skeleton_find_slot</a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
+<body>
+  <!--<div class="body-scroll" style="top: 150px;">-->
+  <h1>données_instance_slot_squelette</h1>
+  <p>Avec cette fonction, vous pouvez remplir une <a href="../../../../Data_Structures/DS_Lists/DS_Lists.htm">liste DS</a> (pré-créée) avec des données pour chacun des emplacements d'attachement disponibles pour le sprite Spine associé à l'instance courante (y compris toute
+    modifications de l'attachement). Ces données sont retournées dans le forum d'une <a href="../../../../Data_Structures/DS_Maps/DS_Maps.htm">carte DS</a> qui contient les paires clé/valeur suivantes :</p>
+  <ul class="colour">
+    <li><b>&quot;name&quot; :</b> Le nom de l'emplacement.</li>
+    <li><b>&quot;bone&quot; :</b> Le nom de l'os.</li>
+    <li><b>&quot;attachment&quot; :</b> Le nom de la pièce jointe s'il y en a une ou &quot;(none)&quot; s'il n'y en a pas.</li>
+  </ul>
+  <p>Les valeurs de chaque clé seront des chaînes de caractères et pourront ensuite être utilisées dans les autres fonctions d'attachement du squelette pour ces types de sprites. Notez que les <tt>cartes DS</tt> créées <i>ne</i> sont <i>pas</i> détruites. Vous devrez donc parcourir en boucle la liste DS et détruire vous-même chacune des cartes créées.
+    chacune des cartes créées vous-même.</p>
+  <p> </p>
+  <h4>Syntaxe :</h4>
+  <p class="code">skeleton_slot_data_instance(list) ;</p>
+  <table>
+    <tbody>
+      <tr>
+        <th>Arguments</th>
+        <th>Description</th>
+      </tr>
+      <tr>
+        <td>liste</td>
+        <td>L'ID de la liste DS à remplir avec les cartes DS.</td>
+      </tr>
+    </tbody>
+  </table>
+  <p> </p>
+  <h4>Les retours :</h4>
+  <p class="code">N/A</p>
+  <p> </p>
+  <h4>Exemple :</h4>
+  <p class="code">var list = ds_list_create() ;<br> var open = true ;<br> slot_name = &quot;&quot; ;<br> skeleton_slot_data_instance(list) ;
+    <br> for (var i = 0 ; i &lt; ds_list_size(list) ; i++ ;) <br> {
+    <br> var map = list[| i] ;<br> if open<br> {
+    <br> if map[ ? &quot;attachment&quot;] == &quot;(none)&quot;<br> {
+    <br> open = false ;<br> slot_name = map[ ? &quot;name&quot;] ;<br> }
+    <br> }
+    <br> ds_map_destroy(map) ;
+    <br> }
+    <br> ds_list_destroy(list) ;
+  </p>
+  <p>Le code ci-dessus crée une liste de DS et la remplit ensuite avec les données de slot pour le sprite d'instance. Ces données sont ensuite analysées pour extraire les cartes DS individuelles avec les données de slot. On vérifie ensuite s'il existe un slot vide, et si c'est le cas, la variable
+    &quot;slot_name&quot; se voit attribuer le nom du slot vide avant que la carte DS ne soit détruite. Enfin, nous détruisons la liste des DS car elle n'est plus nécessaire.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <div class="footer">
+    <div class="buttons">
+      <div class="clear">
+        <div style="float:left">Retour : <a href="Slots.htm">Slots</a></div>
+        <div style="float:right">Suivant : <a href="skeleton_find_slot.htm">skeleton_find_slot</a></div>
+      </div>
+    </div>
+    <h5><span data-keyref="Copyright Notice">Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
   </div>
   <!-- KEYWORDS
 skeleton_slot_data_instance

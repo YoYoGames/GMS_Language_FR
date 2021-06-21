@@ -7,21 +7,68 @@
   <meta name="generator" content="Adobe RoboHelp 2019" />
   <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
   <meta name="rh-authors" content="Mark Alexander" />
-  <meta name="topic-comment" content="Page décrivant la fonction shader _set_uniform_f" />
+  <meta name="topic-comment" content="Page outlining the function shader_set_uniform_f" />
   <meta name="rh-index-keywords" content="shader_set_uniform_f" />
   <meta name="search-keywords" content="shader_set_uniform_f" />
 </head>
-<body><!--<div class="body-scroll" style="top: 150px;">--><h1> <span class="notranslate">shader</span> _set_uniform_f</h1><p> Avec cette fonction, vous pouvez définir la ou les valeurs d&#39;une constante de <span class="notranslate">shader</span> Vous devez au préalable avoir obtenu le &quot;handle&quot; de la constante en utilisant la fonction <a href="shader_get_uniform.htm"><tt>shader_get_uniform()</tt></a>, et vous devrez savoir de quel type de constante il s&#39;agit pour lui passer le nombre correct de valeurs en virgule flottante, c&#39;est-à-dire: si vous avez un <tt>vec2</tt> vous devrez passer deux valeurs à la fonction.</p><p> Une exception à la règle ci-dessus concerne les valeurs de couleur 32 bits. Vous pouvez passer dans le <span class="notranslate">shader</span> jusqu&#39;à huit valeurs de couleur 32 bits et elles seront automatiquement converties pour vous en valeurs vec4 de 0 à 1. Cependant, pour cela, vous <i>devez</i> utiliser le nom de la constante de <span class="notranslate">shader </span><tt>in_Colour</tt>, pour une seule couleur, ou <tt>in_Colour0</tt>, <tt>in_Colour1</tt>, etc... jusqu&#39;à <tt>in_Colour7</tt> pour plusieurs valeurs d&#39;entrée. Les exemples suivants montrent à quoi cela ressemblerait dans le <span class="notranslate">shader</span> lui-même:</p><p class="code">    //Single colour<br/>     attribute vec2 in_Position;<br/>     attribute vec4 in_Colour;<br/>     attribute vec2 in_TextureCoord;<br/>
-    <br/>     //Multiple colours<br/>     attribute vec2 in_Position;<br/>     attribute vec4 in_Colour0;<br/>     attribute vec4 in_Colour1;<br/>     attribute vec2 in_TextureCoord;</p><p> Notez aussi que si vous voulez faire des normales compressées etc... en utilisant un format de couleur de 4 octets, alors vous devrez également utiliser le même format &quot;in_Colour&quot; comme indiqué ci-dessus.</p><p class="note"><b></b> <b>REMARQUE</b>: tous les uniformes doivent être définis <b>après avoir</b> appelé la fonction <span style="font-size:1px;"><a href="shader_set.htm"><tt style="font-size: 14px"><span class="notranslate">shader</span> _set ()</tt></a></span> et avant d&#39;appeler <span
-      style="font-size:1px;"><a href="shader_reset.htm"><tt style="font-size: 14px"><span class="notranslate">shader</span> _reset ()</tt></a></span>.</p><p></p><h4> Syntaxe:</h4><p class="code">shader_set_uniform_f(handle, value1 [, value2, value3, value4]);</p><table><tbody><tr><th> Argument</th><th> Description</th></tr><tr><td> <span class="notranslate">handle</span></td><td> La poignée de la <span class="notranslate">shader</span> à définir.</td></tr><tr><td> <span class="notranslate">value1... value4</span></td><td> Valeur à virgule flottante (ou valeurs) sur laquelle définir la constante d&#39; <span class="notranslate">shader</span></td></tr></tbody></table><p></p><h4> Retour:</h4><p class="code">N/A</p><p></p><h4> Exemple:</h4><p class="code">shader_set(shader_Glass);<br/> shader_params = shader_get_uniform(shader_glass, &quot;u_vParams&quot;);<br/> shader_set_uniform_f(shader_params, 0.1, 0.8, 0.25);<br/> draw_self();
-    <br/> shader_reset();
-  </p><p> Le code ci-dessus obtiendra le handle de la <span class="notranslate">shader</span> &quot;u_vParams&quot; (un <tt>vec3</tt> ), puis définissez cette constante sur les valeurs données. </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> Retour: <a href="Shaders.htm"><span class="notranslate">Shaders</span></a></div><div style="float:right"> Suivant: <a href="shader_set_uniform_f_array.htm"><span class="notranslate">shader</span> _set_uniform_f_array</a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
+<body>
+  <!--<div class="body-scroll" style="top: 150px;">-->
+  <h1><span class="notranslate">shader_set_uniform_f</span></h1>
+  <p>Avec cette fonction, vous pouvez définir la valeur (ou les valeurs) d'une constante de <span class="notranslate">shader</span>. Vous devez auparavant avoir obtenu le &quot;handle&quot; de la constante en utilisant la fonction <a href="shader_get_uniform.htm"><tt><span class="notranslate">shader_get_uniform</span>()</tt></a>et
+    vous devez savoir de quel type de constante il s'agit pour lui transmettre le nombre correct de valeurs à virgule flottante, c'est-à-dire que si vous avez un <tt>vec2</tt>, vous devrez transmettre deux valeurs à la fonction.</p>
+  <p>Une exception à la règle ci-dessus est le traitement des valeurs de couleur 32bit. Vous pouvez passer dans le <span class="notranslate">shader</span> jusqu'à huit valeurs de couleur 32bit et elles seront automatiquement converties pour vous en valeurs vec4 de 0 - 1. Cependant pour cela vous <i>devez</i> utiliser
+    le nom de la constante du <span class="notranslate">shader</span> <tt>in_Colour</tt>, pour une seule couleur, ou <tt>in_Colour0</tt>, <tt>in_Colour1</tt>, etc... jusqu'à <tt>in_Colour7</tt> pour des valeurs d'entrée multiples. Les exemples suivants
+    exemples suivants montrent comment cela se présente dans le <span class="notranslate">shader</span> lui-même :</p>
+  <p class="code">    //Simple couleur<br> attribut vec2 in_Position ;<br> attribut vec4 in_Colour ;<br> attribut vec2 in_TextureCoord ;<br>
+    <br> //Multiple couleur<br> attribut vec2 in_Position ;<br> attribut vec4 in_Colour0 ;<br> attribut vec4 in_Colour1 ;<br> attribut vec2 in_TextureCoord ;</p>
+  <p>Notez également que si vous voulez faire des normales compressées etc... en utilisant un format de couleur de 4 octets, vous devrez également utiliser le même format &quot;in_Colour&quot; comme indiqué ci-dessus.</p>
+  <p class="note"><b></b><b>NOTE</b>: Tous les uniformes doivent être définis <b>après avoir</b> appelé la fonction <span style="font-size:1px;"><a href="shader_set.htm"><tt style="font-size: 14px"><span class="notranslate">shader_set</span>()</tt></a></span>et avant d'appeler 
+    <span style="font-size:1px;"><a href="shader_reset.htm"><tt style="font-size: 14px"><span class="notranslate">shader_reset</span>()</tt></a></span>.</p>
+  <p> </p>
+  <h4>Syntaxe :</h4>
+  <p class="code"><span class="notranslate">shader_set_uniform_f</span>(handle, value1 [, value2, value3, value4]) ;</p>
+  <table>
+    <tbody>
+      <tr>
+        <th>Arguments</th>
+        <th>Description</th>
+      </tr>
+      <tr>
+        <td>poignée</td>
+        <td>Le handle de la constante du <span class="notranslate">shader</span> à définir.</td>
+      </tr>
+      <tr>
+        <td>valeur1 ... valeur4</td>
+        <td>La (ou les) valeur(s) à virgule flottante(s) à laquelle (auxquelles) la constante du <span class="notranslate">shader</span> doit être définie.</td>
+      </tr>
+    </tbody>
+  </table>
+  <p> </p>
+  <h4>Les retours :</h4>
+  <p class="code">N/A</p>
+  <p> </p>
+  <h4>Exemple :</h4>
+  <p class="code"><span class="notranslate">shader_set</span><span class="notranslate">(shader_Glass</span>) ;<br> <span class="notranslate">shader_params</span>= <span class="notranslate">shader_get_uniform</span><span class="notranslate">(shader_glass</span>, &quot;u_vParams&quot;) ;<br> shader_set_uniform_f(shader_params<span class="notranslate">, 0</span>.1, 0.8, 0.25) ;<br> draw_self() ;
+    <br> <span class="notranslate">shader_reset</span>() ;
+  </p>
+  <p>Le code ci-dessus obtiendra le handle de la constante du <span class="notranslate">shader</span> &quot;u_vParams&quot; ( un vec3), <tt>puis</tt> réglera cette constante sur les valeurs données.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <div class="footer">
+    <div class="buttons">
+      <div class="clear">
+        <div style="float:left">Retour : <a href="Shaders.htm"><span class="notranslate">Shaders</span></a></div>
+        <div style="float:right">Suivant : <a href="shader_set_uniform_f_array.htm"><span class="notranslate">shader_set_uniform_f_array</span></a></div>
+      </div>
+    </div>
+    <h5><span data-keyref="Copyright Notice">Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
   </div>
   <!-- KEYWORDS
-shader_set_uniform_f
+<span class="notranslate">shader</span>_set_uniform_f
 -->
   <!-- TAGS
-shader_set_uniform_f
+<span class="notranslate">shader</span>_set_uniform_f
 -->
 </body>
 </html>

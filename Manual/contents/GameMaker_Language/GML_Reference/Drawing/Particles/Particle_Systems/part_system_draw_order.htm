@@ -3,16 +3,59 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>part_system_draw_order</title>
+  <title>ordre de tirage des pièces</title>
   <meta name="generator" content="Adobe RoboHelp 2019" />
   <link rel="stylesheet" href="../../../../../assets/css/default.css" type="text/css" />
   <meta name="rh-authors" content="Mark Alexander" />
-  <meta name="topic-comment" content="Page de référence pour part_system_draw_order" />
+  <meta name="topic-comment" content="Reference page for part_system_draw_order" />
   <meta name="rh-index-keywords" content="part_system_draw_order" />
   <meta name="search-keywords" content="part_system_draw_order" />
 </head>
-<body><!--<div class="body-scroll" style="top: 150px;">--><h1>part_system_draw_order</h1><p> Avec cette fonction, vous pouvez définir la manière dont les particules sont dessinées lorsqu&#39;elles sont créées à l&#39;écran. Le système par défaut utilise un ancien&gt; nouveau look (la fonction est définie sur <tt>true</tt> ), où les anciennes particules sont dessinées à une profondeur plus élevée que les plus récentes et apparaissent ainsi &quot;sous&quot; les nouvelles particules, mais en définissant cette fonction sur <tt>false</tt> vous pouvez inverser cet ordre et faire dessiner les nouvelles particules plus haut et ainsi apparaître «sous» les plus anciennes. Les images ci-dessous illustrent cela, l&#39;image de gauche étant la valeur par défaut de <tt>true</tt> et l&#39;image de droite <tt>false</tt>:</p><center><img alt="Old to new particle example" src="../../../../../assets/Images/Scripting_Reference/GML/Reference/Drawing/frontback.gif" /><img alt="New to old particle example" src="../../../../../assets/Images/Scripting_Reference/GML/Reference/Drawing/backfront.gif"
-    /></center><p class="note"> <b>REMARQUE</b>: lorsque les particules sont dessinées avec un mode de fusion additif, l&#39;effet de cette fonction peut ne pas toujours être évident.</p><p></p><h4> Syntaxe:</h4><p class="code">part_system_draw_order(ind, oldtonew);</p><table><tbody><tr><th> Argument</th><th> Description</th></tr><tr><td> <span class="notranslate">ind</span></td><td> L&#39;indice du système de particules à changer.</td></tr><tr><td> <span class="notranslate">oldtonew</span></td><td> Si les anciennes particules doivent être dessinées derrière les plus récentes (vrai) ou vice versa (faux).</td></tr></tbody></table><p></p><h4> Retour:</h4><p class="code">N/A</p><p></p><h4> Exemple:</h4><p class="code">mysystem = part_system_create();<br/> part_system_draw_order(mysystem, true);</p><p> Cela créera un nouveau système de particules avec l&#39;index &quot;<tt>mysystem</tt> &quot;, puis il définit les particules pour attirer des particules plus récentes sur les plus anciennes. </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> Retour: <a href="Particle_Systems.htm">Systèmes de particules</a></div><div style="float:right"> Suivant:<a href="part_particles_create.htm">part_particles_create</a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
+<body>
+  <!--<div class="body-scroll" style="top: 150px;">-->
+  <h1>ordre de tirage des pièces</h1>
+  <p>Avec cette fonction, vous pouvez définir la façon dont les particules sont dessinées lorsqu'elles sont créées à l'écran. Le système par défaut utilise un look ancien &gt; nouveau (la fonction est définie à <tt>true),</tt> où les anciennes particules sont dessinées à une profondeur plus élevée que les nouvelles et apparaissent donc "sous" les nouvelles particules.
+    Les anciennes particules sont dessinées à une profondeur plus élevée que les nouvelles et apparaissent donc &quot;sous&quot; les nouvelles particules, mais en définissant cette fonction à false vous <tt>pouvez</tt> inverser cet ordre et avoir les nouvelles particules dessinées plus haut et donc apparaître &quot;sous&quot; les anciennes. Les images ci-dessous illustrent cela,
+    avec l'image de gauche étant la valeur par défaut de <tt>true</tt> et l'image de droite étant <tt>false</tt>:</p>
+  <center><img alt="Old to new particle example" src="../../../../../assets/Images/Scripting_Reference/GML/Reference/Drawing/frontback.gif" /> <img alt="New to old particle example" src="../../../../../assets/Images/Scripting_Reference/GML/Reference/Drawing/backfront.gif" /></center>
+  <p class="note"><b>NOTE</b>: Lorsque les particules sont dessinées avec un mode de fusion additif, l'effet de cette fonction n'est pas toujours évident.</p>
+  <p> </p>
+  <h4>Syntaxe :</h4>
+  <p class="code">part_system_draw_order(ind, oldtonew) ;</p>
+  <table>
+    <tbody>
+      <tr>
+        <th>Arguments</th>
+        <th>Description</th>
+      </tr>
+      <tr>
+        <td>ind</td>
+        <td>L'indice du système de particules à modifier.</td>
+      </tr>
+      <tr>
+        <td>oldtonew</td>
+        <td>Si les anciennes particules doivent être dessinées derrière les plus récentes (true) ou vice versa (false).</td>
+      </tr>
+    </tbody>
+  </table>
+  <p> </p>
+  <h4>Les retours :</h4>
+  <p class="code">N/A</p>
+  <p> </p>
+  <h4>Exemple :</h4>
+  <p class="code">mysystem = part_system_create() ;<br> part_system_draw_order(mysystem, true) ;</p>
+  <p>Cela créera un nouveau système de particules avec l'index &quot; mysystem<tt>&quot;,</tt> et ensuite, il définira les particules pour dessiner les nouvelles particules au dessus des anciennes.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <div class="footer">
+    <div class="buttons">
+      <div class="clear">
+        <div style="float:left">Retour : <a href="Particle_Systems.htm">Systèmes de particules</a></div>
+        <div style="float:right">Suivant : <a href="part_particles_create.htm">part_particles_create</a></div>
+      </div>
+    </div>
+    <h5><span data-keyref="Copyright Notice">Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
   </div>
   <!-- KEYWORDS
 part_system_draw_order

@@ -3,15 +3,51 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>Si fin de tampon</title>
+  <title>Si Fin De Tampon</title>
   <meta name="generator" content="Adobe RoboHelp 2019" />
   <link rel="stylesheet" href="../../../assets/css/default.css" type="text/css" />
   <meta name="rh-authors" content="Mark Alexander" />
-  <meta name="topic-comment" content="Page qui explique l&#39;action If End Of Buffer" />
-  <meta name="rh-index-keywords" content="DnD ™ - Si fin de tampon" />
-  <meta name="search-keywords" content="Si fin de tampon" />
+  <meta name="topic-comment" content="Page that explains the If End Of Buffer action" />
+  <meta name="rh-index-keywords" content="DnD™ Action - If End Of Buffer" />
+  <meta name="search-keywords" content="If End Of Buffer" />
 </head>
-<body><!--<div class="body-scroll" style="top: 150px;">--><h1><img alt="If End Of Buffer Icon" class="icon" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Buffers/i_Buffers_If_End_Of_Buffer.png" /> Si fin de tampon</h1><p> Cette action peut être utilisée pour vérifier si la position de lecture / écriture a atteint la fin du tampon. Vous fournissez la valeur d&#39;ID de tampon unique renvoyée par l&#39;action <a href="Create_Buffer.htm">Créer un tampon</a>, puis l&#39;action retournera <tt>true</tt> si la position de lecture / écriture a atteint la fin de toutes les données disponibles dans le tampon, ou <tt>false</tt> si ce n&#39;est pas le cas. Vous pouvez marquer &quot;non&quot; pour que l&#39;action vérifie si la position de lecture / écriture n&#39;est <i>pas</i> à la fin du tampon.</p><p> Notez que pour ajouter des actions dans le bloc &quot;if&quot;, elles doivent être déposées sur le côté de l&#39;action, comme indiqué dans l&#39;image ci-dessous:</p><p><img alt="End Of Buffer drop actions" class="center" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Buffers/If_End_Drop.png" /></p><p></p><h4> Syntaxe de l&#39;action:</h4><p><img alt="End Of Buffer Action" class="center" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Buffers/a_Buffers_If_End_Of_Buffer.png" /></p><h4> Arguments:</h4><table><tbody><tr><th> Argument</th><th> Description</th></tr><tr><td> <span class="notranslate">Buffer</span></td><td> L&#39;index du tampon (stocké dans une variable)</td></tr></tbody></table><p></p><h4> Exemple:</h4><p><img alt="End Of Buffer Example" class="center" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Buffers/e_Buffers_If_End_Of_Buffer.png" /> Le code de bloc d&#39;action ci-dessus crée une liste DS dans l&#39;instance, puis parcourt les données dans le tampon donné en lisant les données et en les ajoutant à la liste. Cela continue jusqu&#39;à ce que la fin du tampon soit atteinte, moment auquel la boucle est interrompue. </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> Retour: <a href="Buffer_Actions.htm">Actions de tampon</a></div><div style="float:right"> Suivant: <a href="Create_Buffer.htm">Créer un tampon</a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
+<body>
+  <!--<div class="body-scroll" style="top: 150px;">-->
+  <h1><img alt="If End Of Buffer Icon" class="icon" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Buffers/i_Buffers_If_End_Of_Buffer.png"> If End Of Buffer</h1>
+  <p>Cette action peut être utilisée pour vérifier si la position de lecture/écriture a atteint la fin du tampon. Vous fournissez la valeur unique de l'ID du tampon telle qu'elle est retournée par l'action <a href="Create_Buffer.htm">Create Buffer</a> et l'action retournera <tt>vrai</tt> si la position de lecture/écriture a atteint la fin de toutes les données disponibles dans le tampon, ou <tt>faux</tt> si ce n'est pas le cas. Vous pouvez marquer &quot;not&quot; pour que l'action vérifie si la position de lecture/écriture n'est pas à la fin du tampon.</p>
+  <p>Notez que pour ajouter des actions dans le bloc &quot;if&quot;, elles doivent être déposées sur le côté de l'action, comme le montre l'image ci-dessous :</p>
+  <p><img alt="End Of Buffer drop actions" class="center" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Buffers/If_End_Drop.png" /></p>
+  <p> </p>
+  <h4>Syntaxe de l'action :</h4>
+  <p><img alt="End Of Buffer Action" class="center" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Buffers/a_Buffers_If_End_Of_Buffer.png" /></p>
+  <h4>Arguments :</h4>
+  <table>
+    <tbody>
+      <tr>
+        <th>Arguments</th>
+        <th>Description</th>
+      </tr>
+      <tr>
+        <td>Tampon</td>
+        <td>L'index du tampon (stocké dans une variable)</td>
+      </tr>
+    </tbody>
+  </table>
+  <p> </p>
+  <h4>Exemple :</h4>
+  <p><img alt="End Of Buffer Example" class="center" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Buffers/e_Buffers_If_End_Of_Buffer.png">Le code du bloc d'action ci-dessus crée une liste de DS dans l'instance et boucle ensuite sur les
+    données dans la mémoire tampon donnée en lisant les données et en les ajoutant à la liste. Cette opération se poursuit jusqu'à ce que la fin du tampon soit atteinte, auquel cas la boucle est interrompue.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <div class="footer">
+    <div class="buttons">
+      <div class="clear">
+        <div style="float:left">Retour : <a href="Buffer_Actions.htm">Actions tampon</a></div>
+        <div style="float:right">Suivant : <a href="Create_Buffer.htm">Créer un tampon</a></div>
+      </div>
+    </div>
+    <h5><span data-keyref="Copyright Notice">Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
   </div>
   <!-- KEYWORDS
 Action - If End Of Buffer

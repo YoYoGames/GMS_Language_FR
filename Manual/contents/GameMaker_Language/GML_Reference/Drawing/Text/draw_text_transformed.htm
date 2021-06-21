@@ -7,12 +7,69 @@
   <meta name="generator" content="Adobe RoboHelp 2019" />
   <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
   <meta name="rh-authors" content="Mark Alexander" />
-  <meta name="topic-comment" content="Page de référence pour draw_text_transformed" />
+  <meta name="topic-comment" content="Reference page for draw_text_transformed" />
   <meta name="rh-index-keywords" content="draw_text_transformed" />
   <meta name="search-keywords" content="draw_text_transformed" />
 </head>
-<body><!--<div class="body-scroll" style="top: 150px;">--><h1>draw_text_transformed</h1><p> Cette fonction dessine le texte de la même manière que <a href="draw_text.htm"><tt>draw_text </tt><tt>()</tt><tt></tt></a> Ce n&#39;est que maintenant que vous pouvez choisir de mettre le texte à l&#39;échelle le long de l&#39;axe horizontal ou vertical (en l&#39;étirant ou en le réduisant efficacement) et que <span class="notranslate">GameMaker Studio 2</span> dessine à un angle (où 0 est normal et chaque degré sur 0 fait pivoter le texte dans le sens anti-horaire).</p><p></p><h4> Syntaxe:</h4><p class="code">draw_text_transformed(x, y, string, xscale, yscale, angle);</p><table><tbody><tr><th> Argument</th><th> Description</th></tr><tr><td> <span class="notranslate">x</span></td><td> La coordonnée x de la chaîne dessinée.</td></tr><tr><td> <span class="notranslate">y</span></td><td> La coordonnée y de la chaîne dessinée.</td></tr><tr><td> <span class="notranslate">string</span></td><td> La chaîne à dessiner.</td></tr><tr><td> <span class="notranslate">xscale</span></td><td> L&#39;échelle horizontale (par défaut 1).</td></tr><tr><td> <span class="notranslate">yscale</span></td><td> L&#39;échelle verticale (par défaut 1).</td></tr><tr><td> <span class="notranslate">angle</span></td><td> L&#39;angle du texte.</td></tr></tbody></table><p></p><h4> Retour:</h4><p class="code">N/A</p><p></p><h4> Exemple:</h4><p class="code">draw_set_halign(fa_center);<br/> draw_set_valign(fa_middle);
-    <br/> image_angle += 1;<br/> draw_text_transformed(room_width / 2, room_height / 2, &quot;GAME OVER!&quot;, 2, 2, image_angle);</p><p> Le code ci-dessus dessinera le texte donné au milieu de la pièce, en tournant et en le redimensionnant à deux fois sa taille d&#39;origine. </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> Retour: <a href="Text.htm">Texte</a></div><div style="float:right"> Suivant:<a href="draw_text_ext_colour.htm">draw_text_ext_colour</a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
+<body>
+  <!--<div class="body-scroll" style="top: 150px;">-->
+  <h1>draw_text_transformed</h1>
+  <p>Cette fonction permet de dessiner du texte de manière similaire à la fonction <a href="draw_text.htm"><tt>dessiner_texte</tt><tt>()</tt><tt></tt></a> sauf que vous pouvez maintenant choisir de mettre le texte à l'échelle le long de l'axe horizontal ou vertical (ce qui a pour effet de l'étirer ou de le rétrécir) et aussi de faire en sorte que
+   <span class="notranslate">GameMaker Studio 2</span> de le dessiner selon un angle (où 0 est la valeur normale et chaque degré au-dessus de 0 fait tourner le texte dans le sens inverse des aiguilles d'une montre).</p>
+  <p> </p>
+  <h4>Syntaxe :</h4>
+  <p class="code">draw_text_transformed(x, y, string, xscale, yscale, angle) ;</p>
+  <table>
+    <tbody>
+      <tr>
+        <th>Arguments</th>
+        <th>Description</th>
+      </tr>
+      <tr>
+        <td>x</td>
+        <td>La coordonnée x de la chaîne dessinée.</td>
+      </tr>
+      <tr>
+        <td>y</td>
+        <td>La coordonnée y de la chaîne dessinée.</td>
+      </tr>
+      <tr>
+        <td>chaîne de caractères</td>
+        <td>La ficelle à tirer.</td>
+      </tr>
+      <tr>
+        <td>xscale</td>
+        <td>L'échelle horizontale (par défaut 1).</td>
+      </tr>
+      <tr>
+        <td>yscale</td>
+        <td>L'échelle verticale (par défaut 1).</td>
+      </tr>
+      <tr>
+        <td>angle</td>
+        <td>L'angle du texte.</td>
+      </tr>
+    </tbody>
+  </table>
+  <p> </p>
+  <h4>Les retours :</h4>
+  <p class="code">N/A</p>
+  <p> </p>
+  <h4>Exemple :</h4>
+  <p class="code">draw_set_halign(fa_center) ;<br> draw_set_valign(fa_middle) ;
+    <br> image_angle += 1 ;<br> draw_text_transformed(room_width / 2, room_height / 2, &quot;GAME OVER !&quot;, 2, 2, image_angle) ;</p>
+  <p>Le code ci-dessus dessinera le texte donné au milieu de la pièce, en le faisant tourner et en le mettant à l'échelle au double de sa taille originale.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <div class="footer">
+    <div class="buttons">
+      <div class="clear">
+        <div style="float:left">Retour : <a href="Text.htm">Texte</a></div>
+        <div style="float:right">Suivant : <a href="draw_text_ext_colour.htm">draw_text_ext_colour</a></div>
+      </div>
+    </div>
+    <h5><span data-keyref="Copyright Notice">Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
   </div>
   <!-- KEYWORDS
 draw_text_transformed

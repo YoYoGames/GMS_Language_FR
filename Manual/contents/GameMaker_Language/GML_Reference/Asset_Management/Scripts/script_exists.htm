@@ -3,18 +3,57 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>script_exists</title>
+  <title>script_existe</title>
   <meta name="generator" content="Adobe RoboHelp 2019" />
   <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
   <meta name="rh-authors" content="Mark Alexander" />
-  <meta name="topic-comment" content="Page expliquant la fonction script_exists" />
+  <meta name="topic-comment" content="Page explaining the function script_exists" />
   <meta name="rh-index-keywords" content="script_exists" />
   <meta name="search-keywords" content="script_exists" />
 </head>
-<body><!--<div class="body-scroll" style="top: 150px;">--><h1>script_exists</h1><p> Cette fonction retournera <tt>true</tt> ou <tt>false</tt> selon que le script ou la <a href="../../../GML_Overview/Script_Functions.htm">fonction de script</a> avec l&#39;index donné existe. Notez qu&#39;il <i>ne s&#39;agit pas d&#39;</i> une chaîne, mais plutôt du nom d&#39;actif qui contient l&#39;index unique de chaque script (tel qu&#39;il apparaîtrait dans l&#39;EDI) ou de la variable de nom de fonction de script, comme défini dans l&#39;actif de script (notez que cela ne sera pas travailler pour les <a href="../../../GML_Overview/Method_Variables.htm">variables de méthode</a> ). Pour plus d&#39;informations sur les scripts, consultez l&#39; <a href="../../../../The_Asset_Editors/Scripts.htm">éditeur de scripts</a>.</p><p></p><h4> Syntaxe:</h4><p class="code">script_exists(scr);</p><table><tbody><tr><th> Argument</th><th> Description</th></tr><tr><td> <span class="notranslate">scr</span></td><td> Le nom du script que vous souhaitez vérifier.</td></tr></tbody></table><p></p><h4> Retour:</h4><p class="code">Boolean</p><p></p><h4> Exemple:</h4><p class="code">script[0] = -1;<br/> script[1] = AI_Left;<br/> script[2] = AI_Right;<br/> var script_num = choose(0, 1, 2);<br/> if script_exists(script[script_num])<br/>     {
-    <br/>     script_execute(script[script_num]);
-    <br/>     }
-  </p><p> L&#39;exemple ci-dessus ajoute deux fonctions de script et une valeur dans un tableau, puis procède à l&#39;obtention d&#39;un nombre aléatoire et l&#39;utilise pour choisir une fonction de script à exécuter, à moins que -1 ne soit choisi, auquel cas rien ne se passera. </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> Retour: <a href="Scripts.htm">Scripts</a></div><div style="float:right"> Suivant:<a href="script_get_name.htm">script_get_name</a></div><div style="float:right"></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
+<body>
+  <!--<div class="body-scroll" style="top: 150px;">-->
+  <h1>script_existe</h1>
+  <p>Cette fonction retournera <tt>vrai</tt> ou <tt>faux</tt> selon que le script ou la <a href="../../../GML_Overview/Script_Functions.htm">fonction de script</a> avec l'index donné existe ou non. Note,
+    qu'il <i>ne</i> s'agit <i>pas</i> d'une chaîne, mais plutôt du nom de l'actif qui contient l'index unique de chaque script (tel qu'il apparaîtrait dans l'IDE) ou de la variable du nom de la fonction de script, telle qu'elle est définie dans l'actif du script (notez que
+    ceci ne fonctionne pas pour les <a href="../../../GML_Overview/Method_Variables.htm">variables de méthode</a>). Pour plus d'informations sur les scripts, voir <a href="../../../../The_Asset_Editors/Scripts.htm">L'éditeur de script</a>.</p>
+  <p> </p>
+  <h4>Syntaxe :</h4>
+  <p class="code">script_exists(scr) ;</p>
+  <table>
+    <tbody>
+      <tr>
+        <th>Arguments</th>
+        <th>Description</th>
+      </tr>
+      <tr>
+        <td>scr</td>
+        <td>Le nom du script que vous voulez vérifier.</td>
+      </tr>
+    </tbody>
+  </table>
+  <p> </p>
+  <h4>Les retours :</h4>
+  <p class="code">Booléen</p>
+  <p> </p>
+  <h4>Exemple :</h4>
+  <p class="code">script[0] = -1 ;<br> script[1] = AI_Gauche ;<br> script[2] = AI_Droit ;<br> var script_num = choisir(0, 1, 2) ;<br> if script_exists(script[script_num])<br> {
+    <br> script_execute(script[script_num]) ;
+    <br> }
+  </p>
+  <p>L'exemple ci-dessus ajoute deux fonctions de script et une valeur dans un tableau, puis procède à l'obtention d'un nombre aléatoire et l'utilise pour choisir une fonction de script à exécuter, sauf si le -1 est choisi, auquel cas rien ne se passera.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <div class="footer">
+    <div class="buttons">
+      <div class="clear">
+        <div style="float:left">Retour : <a href="Scripts.htm">Scripts</a></div>
+        <div style="float:right">Suivant : <a href="script_get_name.htm">script_get_name</a></div>
+        <div style="float:right"> </div>
+      </div>
+    </div>
+    <h5><span data-keyref="Copyright Notice">Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
   </div>
   <!-- KEYWORDS
 script_exists

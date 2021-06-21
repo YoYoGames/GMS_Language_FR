@@ -7,13 +7,61 @@
   <meta name="generator" content="Adobe RoboHelp 2019" />
   <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
   <meta name="rh-authors" content="Mark Alexander" />
-  <meta name="topic-comment" content="Page de référence pour xboxlive_get_file_error" />
+  <meta name="topic-comment" content="Reference page for xboxlive_get_file_error" />
   <meta name="rh-index-keywords" content="xboxlive_get_file_error,xboxlive_fileerror_outoflocalstorage,xboxlive_fileerror_quotaexceeded,xboxlive_fileerror_noerror" />
   <meta name="search-keywords" content="xboxlive_get_file_error,xboxlive_fileerror_outoflocalstorage,xboxlive_fileerror_quotaexceeded,xboxlive_fileerror_noerror" />
 </head>
-<body><!--<div class="body-scroll" style="top: 150px;">--><h1>xboxlive_get_savedata_user</h1><p> Cette fonction renverra une constante (illustrée ci-dessous) pour aider à déboguer pourquoi une fonction de fichier a échoué afin que vous puissiez prendre les mesures appropriées dans votre code de jeu. Lorsque l&#39;une des fonctions de fichier échoue, vous pouvez appeler la fonction pour savoir exactement quelle était l&#39;erreur.</p><p class="note"> <b>REMARQUE</b>: lors de l&#39;utilisation des fonctions de <a href="../../Buffers/buffer_save_async.htm">sauvegarde</a> / <a href="../../Buffers/buffer_load_async.htm">chargement</a> asynchrones, le <a href="../../../GML_Overview/Variables/Builtin_Global_Variables/async_load.htm"><tt>async_load</tt></a> map aura une clé supplémentaire, &quot; <b>error</b> &quot;, qui contiendra également l&#39;une des constantes (illustrées ci-dessous).</p><p></p><h4> Syntaxe:</h4><p class="code">xboxlive_get_file_error();</p><p></p><h4> Retour:</h4><p class="code">Constant</p><table><tbody><tr><th> Constant</th><th> Description</th></tr><tr><td> <span class="notranslate">xboxlive_fileerror_outoflocalstorage</span></td><td> Si cela se produit pendant l&#39;enregistrement, cela signifie que tout l&#39;espace de sauvegarde disponible a été utilisé et que l&#39;utilisateur a refusé l&#39;offre (présentée par le système d&#39;exploitation) de libérer de l&#39;espace. Le jeu doit confirmer à l&#39;utilisateur qu&#39;il a l&#39;intention de continuer à jouer sans enregistrer. S&#39;ils veulent toujours pouvoir sauvegarder, le jeu doit réessayer l&#39;opération de sauvegarde.</td></tr><tr><td> <span class="notranslate">xboxlive_fileerror_quotaexceeded</span></td><td> Si cela se produit, le jeu doit informer l&#39;utilisateur qu&#39;il ne peut plus enregistrer de données jusqu&#39;à ce qu&#39;il libère de l&#39;espace, puis lui présenter un moyen de le faire.</td></tr><tr><td> <span class="notranslate">xboxlive_fileerror_noerror</span></td><td> La fonction de sauvegarde ou de chargement de fichier a été exécutée sans problème.</td></tr></tbody></table><p></p><p></p><h4> Exemple:</h4><p class="code">buffer_save(buff, &quot;SaveGame.bin&quot;);<br/> if (xboxlive_get_file_error() != xboxlive_fileerror_noerror)<br/>     {
-    <br/>     show_debug_message(&quot;Save failed. Error code = &quot; + string(xboxlive_get_file_error()));<br/>     }
-  </p><p> Le code ci-dessus vérifie s&#39;il y a eu une erreur lors de l&#39;enregistrement et si tel est le cas, le code d&#39;erreur est imprimé sur la console. </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> Retour: <a href="Saving_Data.htm">Sauvegarde des données</a></div><div style="float:right"> Suivant:<a href="xboxlive_set_savedata_user.htm">xboxlive_set_savedata_user</a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
+<body>
+  <!--<div class="body-scroll" style="top: 150px;">-->
+  <h1>xboxlive_get_savedata_user</h1>
+  <p>Cette fonction renvoie une constante (illustrée ci-dessous) qui permet de déboguer la raison de l'échec d'une fonction de fichier afin que vous puissiez prendre les mesures appropriées dans votre code de jeu. Lorsque l'une des fonctions de fichier échoue, vous pouvez appeler la fonction pour connaître la nature exacte de l'erreur.
+    l'erreur.</p>
+  <p class="note"><b>NOTE</b>: Lorsque vous utilisez les fonctions de <a href="../../Buffers/buffer_save_async.htm">sauvegarde/chargement</a> asynchrones, la carte <a href="../../../GML_Overview/Variables/Builtin_Global_Variables/async_load.htm"><tt>async_load</tt></a>    aura une clé supplémentaire, &quot;error<b>&quot;</b> qui contiendra également une des constantes (montrée ci-dessous).</p>
+  <p> </p>
+  <h4>Syntaxe :</h4>
+  <p class="code">xboxlive_get_file_error() ;</p>
+  <p> </p>
+  <h4>Les retours :</h4>
+  <p class="code">Constant</p>
+  <table>
+    <tbody>
+      <tr>
+        <th>Constant</th>
+        <th>Description</th>
+      </tr>
+      <tr>
+        <td>xboxlive_fileerror_outoflocalstorage</td>
+        <td>Si cela se produit pendant la sauvegarde, cela signifie que tout l'espace de sauvegarde disponible a été utilisé et que l'utilisateur a refusé l'offre (présentée par le système d'exploitation) de libérer de l'espace. Le jeu doit confirmer à l'utilisateur qu'il a l'intention de continuer à jouer sans sauvegarder.
+          sans sauvegarder. S'il souhaite toujours pouvoir sauvegarder, le jeu doit réessayer l'opération de sauvegarde.</td>
+      </tr>
+      <tr>
+        <td>xboxlive_fileerror_quotaexceeded</td>
+        <td>Dans ce cas, le jeu doit avertir l'utilisateur qu'il ne peut plus enregistrer de données tant qu'il n'a pas libéré de l'espace, et lui proposer un moyen de le faire.</td>
+      </tr>
+      <tr>
+        <td>xboxlive_fileerror_noerror</td>
+        <td>La fonction de sauvegarde ou de chargement de fichiers s'est déroulée sans problème.</td>
+      </tr>
+    </tbody>
+  </table>
+  <p> </p>
+  <p> </p>
+  <h4>Exemple :</h4>
+  <p class="code">buffer_save(buff, &quot;SaveGame.bin&quot;) ;<br> if (xboxlive_get_file_error() != xboxlive_fileerror_noerror)<br> {
+    <br> show_debug_message(&quot;Save failed. Error code = &quot; + string(xboxlive_get_file_error())) ;<br> }
+  </p>
+  <p>Le code ci-dessus vérifie s'il y a eu une erreur lors de la sauvegarde et si c'est le cas, le code d'erreur est imprimé sur la console.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <div class="footer">
+    <div class="buttons">
+      <div class="clear">
+        <div style="float:left">Retour : <a href="Saving_Data.htm">Sauvegarde des données</a></div>
+        <div style="float:right">Suivant : <a href="xboxlive_set_savedata_user.htm">xboxlive_set_savedata_user</a></div>
+      </div>
+    </div>
+    <h5><span data-keyref="Copyright Notice">Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
   </div>
   <!-- KEYWORDS
 xboxlive_get_savedata_user

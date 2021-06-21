@@ -7,12 +7,60 @@
   <meta name="generator" content="Adobe RoboHelp 2019" />
   <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
   <meta name="rh-authors" content="Mark Alexander" />
-  <meta name="topic-comment" content="Page de référence pour ini_write_string" />
+  <meta name="topic-comment" content="Reference page for ini_write_string" />
   <meta name="rh-index-keywords" content="ini_write_string" />
   <meta name="search-keywords" content="ini_write_string" />
 </head>
-<body><!--<div class="body-scroll" style="top: 150px;">--><h1>ini_write_string</h1><p> Vous pouvez utiliser cette fonction pour écrire une chaîne (texte) dans un fichier de données ini. Les fichiers Ini sont divisés en <b>sections</b>, puis chaque section est ensuite divisée en paires <b>clé</b> - <b>valeur.</b> Ainsi, un fichier ini typique ressemblerait à ceci:</p><p><img alt="Ini file contents example" class="center" src="../../../../assets/Images/Scripting_Reference/GML/Reference/Files/IniExample.png" /> Il est à noter que l&#39;utilisation de guillemets et de caractères d&#39;échappement lors de l&#39;écriture de chaînes ini peut entraîner des problèmes lors de la lecture ultérieure des données car elles peuvent être prématurément tronquées. Par exemple, écrire ceci sera un problème:</p><p class="code">ini_write_string(&quot;test2&quot;, &quot;section&quot;, &quot;hello \&quot;Fritz\&quot;&quot;);</p><p></p><p></p><h4> Syntaxe:</h4><p class="code">ini_write_string(section, key, value);</p><table><tbody><tr><th> Argument</th><th> Description</th></tr><tr><td> <span class="notranslate">section</span></td><td> La section du.ini sur laquelle écrire.</td></tr><tr><td> <span class="notranslate">key</span></td><td> La clé dans la section appropriée du.ini à écrire.</td></tr><tr><td> <span class="notranslate">value</span></td><td> La chaîne à écrire dans la destination appropriée.</td></tr></tbody></table><p></p><h4> Retour:</h4><p class="code">N/A</p><p></p><h4> Exemple:</h4><p class="code">ini_open(&quot;savedata.ini&quot;);<br/> ini_write_string(&quot;Save&quot;, &quot;Player&quot;, global.Name);<br/> ini_close();
-  </p><p> Le code ci-dessus ouvre un fichier ini pour la lecture et l&#39;écriture, puis écrit la chaîne stockée dans la variable globale &quot;Nom&quot; dans la section &quot;Enregistrer&quot; avec la touche &quot;Player&quot; avant de refermer le fichier. </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> Retour: <a href="Ini_Files.htm">Fichiers Ini</a></div><div style="float:right"> Suivant:<a href="ini_read_real.htm">ini_read_real</a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
+<body>
+  <!--<div class="body-scroll" style="top: 150px;">-->
+  <h1>ini_write_string</h1>
+  <p>Vous pouvez utiliser cette fonction pour écrire une chaîne (texte) dans un fichier de données ini. Les fichiers ini sont divisés en <b>sections</b>, puis chaque section est ensuite divisée en paires <b>clé-valeur</b>. Ainsi, un fichier ini typique ressemblerait à quelque chose comme ceci :</p>
+  <p><img alt="Ini file contents example" class="center" src="../../../../assets/Images/Scripting_Reference/GML/Reference/Files/IniExample.png">Il convient de noter que l'utilisation de guillemets et de caractères d'échappement lors de l'écriture de chaînes ini peut poser des problèmes lors de la relecture ultérieure des données, celles-ci pouvant être tronquées prématurément.
+    problèmes lors de la relecture des données, car elles peuvent être prématurément tronquées. Par exemple, écrire ceci posera un problème :</p>
+  <p class="code">ini_write_string(&quot;test2&quot;, &quot;section&quot;, &quot;hello \&quot;Fritz\&quot;&quot;) ;</p>
+  <p> </p>
+  <p> </p>
+  <h4>Syntaxe :</h4>
+  <p class="code">ini_write_string(section, clé, valeur) ;</p>
+  <table>
+    <tbody>
+      <tr>
+        <th>Arguments</th>
+        <th>Description</th>
+      </tr>
+      <tr>
+        <td>section</td>
+        <td>La section du fichier .ini dans laquelle il faut écrire.</td>
+      </tr>
+      <tr>
+        <td>clé</td>
+        <td>La clé dans la section pertinente du .ini pour écrire.</td>
+      </tr>
+      <tr>
+        <td>valeur</td>
+        <td>La chaîne à écrire à la destination pertinente.</td>
+      </tr>
+    </tbody>
+  </table>
+  <p> </p>
+  <h4>Les retours :</h4>
+  <p class="code">N/A</p>
+  <p> </p>
+  <h4>Exemple :</h4>
+  <p class="code">ini_open(&quot;savedata.ini&quot;) ;<br> ini_write_string(&quot;Save&quot;, &quot;Player&quot;, global.Name) ;<br> ini_close() ;
+  </p>
+  <p>Le code ci-dessus ouvre un fichier ini pour la lecture et l'écriture, puis écrit la chaîne stockée dans la variable globale &quot;Name&quot; dans la section &quot;Save&quot; avec la clé &quot;Player&quot; avant de refermer le fichier.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <div class="footer">
+    <div class="buttons">
+      <div class="clear">
+        <div style="float:left">Retour : <a href="Ini_Files.htm">Dossiers Ini</a></div>
+        <div style="float:right">Suivant : <a href="ini_read_real.htm">ini_read_real</a></div>
+      </div>
+    </div>
+    <h5><span data-keyref="Copyright Notice">Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
   </div>
   <!-- KEYWORDS
 ini_write_string

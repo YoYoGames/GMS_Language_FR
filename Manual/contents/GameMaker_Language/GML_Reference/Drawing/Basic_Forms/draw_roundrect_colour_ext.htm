@@ -7,11 +7,84 @@
   <meta name="generator" content="Adobe RoboHelp 2019" />
   <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
   <meta name="rh-authors" content="Mark Alexander" />
-  <meta name="topic-comment" content="Référence pour la fonction draw_roundrect_colour_ext" />
+  <meta name="topic-comment" content="Reference for the function draw_roundrect_colour_ext" />
   <meta name="rh-index-keywords" content="draw_roundrect_colour_ext" />
   <meta name="search-keywords" content="draw_roundrect_colour_ext,draw_roundrect_color_ext" />
 </head>
-<body><!--<div class="body-scroll" style="top: 150px;">--><h1>draw_roundrect_colour_ext</h1><p> Avec cette fonction, vous pouvez dessiner le contour d&#39;un rectangle arrondi ou un rectangle arrondi rempli où la position (x1, y1) est le coin supérieur gauche et la position (x2, y2) est le coin inférieur droit. Si le rectangle est rempli, les arguments de couleur seront utilisés pour générer un dégradé de couleur du centre vers les bords, où la couleur 1 est la couleur centrale et la couleur 2 la couleur des bords. Vous devez également fournir des valeurs de rayon pour les axes x et y (en pixels) et les coins seront arrondis de ces montants. Vous pouvez définir la précision du dessin des coins avec la fonction <a href="draw_set_circle_precision.htm"><tt>draw_set_circle_precision()</tt></a>. Veuillez noter que le rectangle dessiné peut nécessiter des valeurs différentes (+/- 1 sur le x, y, ou la largeur ou la hauteur) pour être dessiné avec les dimensions souhaitées en raison des différences entre les différentes plates-formes prises en charge.</p><p class="note"> <b>REMARQUE</b>: Si vous souhaitez dessiner une forme à l&#39;aide d&#39;un <span class="notranslate">shader</span>, sachez que la plupart des <span class="notranslate">shaders</span> attendent les entrées suivantes: sommet, texture, couleur. Cependant, lors de l&#39;utilisation de cette fonction, seules les données de sommet et de couleur sont transmises, et le <span class="notranslate">shader</span> peut ne rien dessiner (ou dessiner quelque chose mais pas correctement). Si vous devez dessiner des formes de cette manière, le <span class="notranslate">shader</span> doit être personnalisé dans cet esprit.</p><p></p><h4> Syntaxe:</h4><p class="code">draw_roundrect_colour_ext(x1, y1, x2, y2, xrad, yrad, col1, col2, outline);</p><table><tbody><tr><th> Argument</th><th> Description</th></tr><tr><td> <span class="notranslate">x1</span></td><td> Coordonnée x de la gauche du rectangle arrondi.</td></tr><tr><td> <span class="notranslate">y1</span></td><td> Coordonnée y du haut du rectangle arrondi.</td></tr><tr><td> <span class="notranslate">x2</span></td><td> Coordonnée x de la droite du rectangle arrondi.</td></tr><tr><td> <span class="notranslate">y2</span></td><td> Coordonnée y du bas du rectangle arrondi.</td></tr><tr><td> <span class="notranslate">xrad</span></td><td> Le rayon de la courbe le long de l&#39;axe x à partir des coins du rectangle.</td></tr><tr><td> <span class="notranslate">yrad</span></td><td> Le rayon de la courbe le long de l&#39;axe y à partir des coins du rectangle.</td></tr><tr><td> <span class="notranslate">col1</span></td><td> La couleur centrale.</td></tr><tr><td> <span class="notranslate">col2</span></td><td> La couleur du bord extérieur.</td></tr><tr><td> <span class="notranslate">outline</span></td><td> Si le rectangle est un contour (vrai) ou rempli (faux).</td></tr></tbody></table><p></p><h4> Retour:</h4><p class="code">N/A</p><p></p><h4> Exemple:</h4><p class="code">var dist = point_distance(x, y, mouse_x, mouse_y) / 10;<br/> var col = make_colour_hsv(clamp(dist, 0, 255), 255, 255);<br/> draw_roundrect_colour_ext(x - 50, y - 50, x + 50, y + 50, dist, dist, col, c_white, 0);</p><p> Cela dessinerait un carré rempli avec des coins arrondis, dont le rayon est défini par la distance entre l&#39;occurrence faisant le dessin et la souris. Cette valeur est également utilisée pour calculer la couleur de fusion centrale. </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> Retour: <a href="Basic_Forms.htm">Formulaires de base</a></div><div style="float:right"> Suivant:<a href="draw_triangle.htm">draw_triangle</a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
+<body>
+  <!--<div class="body-scroll" style="top: 150px;">-->
+  <h1>draw_roundrect_colour_ext</h1>
+  <p>Cette fonction permet de dessiner soit le contour d'un rectangle arrondi, soit un rectangle arrondi rempli dont la position (x1,y1) est le coin supérieur gauche et la position (x2,y2) le coin inférieur droit. Si le rectangle est rempli, alors les arguments de couleur
+    seront utilisés pour générer un gradient de couleur du centre vers les bords, où la couleur 1 est la couleur du centre et la couleur 2 la couleur des bords. Vous devez également fournir des valeurs de rayon pour les axes x et y (en pixels) et les coins seront arrondis de ces valeurs.
+    de ces valeurs. Vous pouvez définir la précision du dessin des coins à l'aide de la fonction <a href="draw_set_circle_precision.htm"><tt>draw_set_circle_precision()</tt></a>. Veuillez noter que le rectangle dessiné peut nécessiter des valeurs différentes (+/-1
+    sur les x, y, ou la largeur ou la hauteur) pour être dessiné avec les dimensions souhaitées en raison des différences entre les diverses plateformes prises en charge.</p>
+  <p class="note"><b>NOTE</b>: Si vous souhaitez dessiner une forme à l'aide d'un <span class="notranslate">shader</span>, sachez que la plupart des <span class="notranslate">shaders</span> attendent les entrées suivantes : vertex, texture, couleur. Cependant, en utilisant cette fonction, seules les données de vertex et de couleur sont transmises, et donc le shader peut ne rien dessiner (ou dessiner quelque chose mais pas correctement).
+   <span class="notranslate">shader</span> peut ne rien dessiner (ou dessiner quelque chose mais pas correctement). Si vous avez besoin de dessiner des formes de cette manière, le <span class="notranslate">shader</span> doit être personnalisé en conséquence.</p>
+  <p> </p>
+  <h4>Syntaxe :</h4>
+  <p class="code">draw_roundrect_colour_ext(x1, y1, x2, y2, xrad, yrad, col1, col2, outline) ;</p>
+  <table>
+    <tbody>
+      <tr>
+        <th>Arguments</th>
+        <th>Description</th>
+      </tr>
+      <tr>
+        <td>x1</td>
+        <td>La coordonnée x de la partie gauche du rectangle arrondi.</td>
+      </tr>
+      <tr>
+        <td>y1</td>
+        <td>La coordonnée y du haut du rectangle arrondi.</td>
+      </tr>
+      <tr>
+        <td>x2</td>
+        <td>La coordonnée x de la droite du rectangle arrondi.</td>
+      </tr>
+      <tr>
+        <td>y2</td>
+        <td>La coordonnée y du bas du rectangle arrondi.</td>
+      </tr>
+      <tr>
+        <td>xrad</td>
+        <td>Le rayon de la courbe le long de l'axe x à partir des coins du rectangle.</td>
+      </tr>
+      <tr>
+        <td>yrad</td>
+        <td>Le rayon de la courbe le long de l'axe des y à partir des coins du rectangle.</td>
+      </tr>
+      <tr>
+        <td>col1</td>
+        <td>La couleur centrale.</td>
+      </tr>
+      <tr>
+        <td>col2</td>
+        <td>La couleur du bord extérieur.</td>
+      </tr>
+      <tr>
+        <td>aperçu</td>
+        <td>Indique si le rectangle est un contour (true) ou rempli (false).</td>
+      </tr>
+    </tbody>
+  </table>
+  <p> </p>
+  <h4>Les retours :</h4>
+  <p class="code">N/A</p>
+  <p> </p>
+  <h4>Exemple :</h4>
+  <p class="code">var dist = point_distance(x, y, mouse_x, mouse_y) / 10 ;<br> var col = make_colour_hsv(clamp(dist, 0, 255), 255, 255) ;<br> draw_roundrect_colour_ext(x - 50, y - 50, x + 50, y + 50, dist, dist, col, c_white, 0) ;</p>
+  <p>Cela dessine un carré rempli avec des coins arrondis, dont le rayon est défini par la distance entre l'instance qui effectue le dessin et la souris. Cette valeur est également utilisée pour calculer la couleur de fusion centrale.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <div class="footer">
+    <div class="buttons">
+      <div class="clear">
+        <div style="float:left">Retour : <a href="Basic_Forms.htm">Formes de base</a></div>
+        <div style="float:right">Suivant : <a href="draw_triangle.htm">draw_triangle</a></div>
+      </div>
+    </div>
+    <h5><span data-keyref="Copyright Notice">Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
   </div>
   <!-- KEYWORDS
 draw_roundrect_colour_ext

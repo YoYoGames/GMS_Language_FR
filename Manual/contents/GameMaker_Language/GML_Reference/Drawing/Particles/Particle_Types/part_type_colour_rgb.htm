@@ -3,15 +3,76 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>part_type_colour_rgb</title>
+  <title>partie_type_couleur_rgb</title>
   <meta name="generator" content="Adobe RoboHelp 2019" />
   <link rel="stylesheet" href="../../../../../assets/css/default.css" type="text/css" />
   <meta name="rh-authors" content="Mark Alexander" />
-  <meta name="topic-comment" content="Page de référence pour part_type_colour_rgb" />
+  <meta name="topic-comment" content="Reference page for part_type_colour_rgb" />
   <meta name="rh-index-keywords" content="part_type_colour_rgb,part_type_color_rgb" />
   <meta name="search-keywords" content="part_type_colour_rgb,part_type_color_rgb" />
 </head>
-<body><!--<div class="body-scroll" style="top: 150px;">--><h1>part_type_colour_rgb</h1><p> Avec cette fonction, vous pouvez définir le mélange de couleurs rouge, verte et bleue pour toutes les particules créées du type donné. Vous fournissez une valeur minimale et une valeur maximale pour chacun des trois composants et les particules créées auront une couleur aléatoire basée sur la plage de paramètres donnée. Toutes les valeurs doivent être comprises entre 0 et 255.</p><p></p><h4> Syntaxe:</h4><p class="code">part_type_colour_rgb(ind, rmin, rmax, gmin, gmax, bmin, bmax p&gt;</p><table><tbody><tr><th> Argument</th><th> Description</th></tr><tr><td> <span class="notranslate">ind</span></td><td> L&#39;indice du type de particule à modifier.</td></tr><tr><td> <span class="notranslate">rmin</span></td><td> Le minimum de la composante rouge de la couleur finale peut être.</td></tr><tr><td> <span class="notranslate">rmax</span></td><td> Le maximum de la composante rouge de la couleur finale peut être.</td></tr><tr><td> <span class="notranslate">gmin</span></td><td> Le minimum de la composante verte de la couleur finale peut être.</td></tr><tr><td> <span class="notranslate">gmax</span></td><td> Le maximum de la composante verte de la couleur finale peut être.</td></tr><tr><td> <span class="notranslate">bmin</span></td><td> Le minimum de la composante bleue de la couleur finale peut être.</td></tr><tr><td> <span class="notranslate">bmax</span></td><td> Le maximum de la composante bleue de la couleur finale peut être.</td></tr></tbody></table><p></p><h4> Retour:</h4><p class="code">N/A</p><p></p><h4> Exemple:</h4><p class="code">part_type_rgb(global.Blood_Part, 0, 255, 0, 0, 0, 0);</p><p> Le code ci-dessus définit chaque particule émise du type de particule indexé dans la variable globale &quot;Blood_Part&quot; pour n&#39;être que des nuances de rouge différentes. </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> Retour: <a href="Particle_Types.htm">Types de particules</a></div><div style="float:right"> Suivant:<a href="part_type_colour_hsv.htm">part_type_colour_hsv</a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
+<body>
+  <!--<div class="body-scroll" style="top: 150px;">-->
+  <h1>partie_type_couleur_rgb</h1>
+  <p>Avec cette fonction, vous pouvez définir le mélange de couleurs rouge, vert et bleu pour toutes les particules créées du type donné. Vous fournissez une valeur minimale et une valeur maximale pour chacun des trois composants et les particules créées auront une couleur aléatoire basée sur la gamme de paramètres donnée.
+    sur la base de la plage de paramètres donnée. Toutes les valeurs doivent être comprises entre 0 et 255.</p>
+  <p> </p>
+  <h4>Syntaxe :</h4>
+  <p class="code">part_type_colour_rgb(ind, rmin, rmax, gmin, gmax, bmin, bmax p&gt;</p>
+  <table>
+    <tbody>
+      <tr>
+        <th>Arguments</th>
+        <th>Description</th>
+      </tr>
+      <tr>
+        <td>ind</td>
+        <td>L'indice du type de particule à modifier.</td>
+      </tr>
+      <tr>
+        <td>rmin</td>
+        <td>Le minimum que peut atteindre la composante rouge de la couleur finale.</td>
+      </tr>
+      <tr>
+        <td>rmax</td>
+        <td>Le maximum que peut atteindre la composante rouge de la couleur finale.</td>
+      </tr>
+      <tr>
+        <td>gmin</td>
+        <td>Le minimum que peut atteindre la composante verte de la couleur finale.</td>
+      </tr>
+      <tr>
+        <td>gmax</td>
+        <td>Le maximum que peut atteindre la composante verte de la couleur finale.</td>
+      </tr>
+      <tr>
+        <td>bmin</td>
+        <td>Le minimum que peut atteindre la composante bleue de la couleur finale.</td>
+      </tr>
+      <tr>
+        <td>bmax</td>
+        <td>Le maximum que peut atteindre la composante bleue de la couleur finale.</td>
+      </tr>
+    </tbody>
+  </table>
+  <p> </p>
+  <h4>Les retours :</h4>
+  <p class="code">N/A</p>
+  <p> </p>
+  <h4>Exemple :</h4>
+  <p class="code">part_type_rgb(global.Blood_Part, 0, 255, 0, 0, 0, 0, 0) ;</p>
+  <p>Le code ci-dessus définit chaque particule émise du type de particule indexé dans la variable globale &quot;Blood_Part&quot; pour qu'elle soit uniquement de différentes nuances de rouge.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <div class="footer">
+    <div class="buttons">
+      <div class="clear">
+        <div style="float:left">Retour : <a href="Particle_Types.htm">Types de particules</a></div>
+        <div style="float:right">Suivant : <a href="part_type_colour_hsv.htm">part_type_colour_hsv</a></div>
+      </div>
+    </div>
+    <h5><span data-keyref="Copyright Notice">Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
   </div>
   <!-- KEYWORDS
 part_type_colour_rgb

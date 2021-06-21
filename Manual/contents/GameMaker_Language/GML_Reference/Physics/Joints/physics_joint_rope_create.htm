@@ -7,13 +7,85 @@
   <meta name="generator" content="Adobe RoboHelp 2019" />
   <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
   <meta name="rh-authors" content="Mark Alexander" />
-  <meta name="topic-comment" content="Page de référence pour physics_joint_rope_create" />
+  <meta name="topic-comment" content="Reference page for physics_joint_rope_create" />
   <meta name="rh-index-keywords" content="physics_joint_rope_create" />
   <meta name="search-keywords" content="physics_joint_rope_create" />
 </head>
-<body><!--<div class="body-scroll" style="top: 150px;">--><h1>physics_joint_rope_create</h1><p> Un joint de corde est celui qui est utilisé pour joindre deux instances que vous souhaitez garder une distance constante l&#39;une de l&#39;autre, quelles que soient les autres forces qui agissent sur elle. Avec un joint à distance, vous pouvez obtenir un «étirement du joint» où les deux fixations se sépareront et se comporteront de façon étrange si trop de pression était exercée sur le joint, mais le joint de corde ne le fait pas et ne s&#39;étirera pas plus loin que la longueur maximale définie. Lorsque vous créez une liaison de corde, les deux instances doivent déjà être créées et avoir un appareil assigné, puis vous définissez les deux points d&#39;ancrage dans les coordonnées de la pièce. Le premier point d&#39;ancrage est connecté à l&#39;instance 1, le deuxième point d&#39;ancrage est connecté à l&#39;instance 2 et la distance et l&#39;argument maxlength définissent la contrainte de longueur maximale sur l&#39;articulation. L&#39;image ci-dessous montre comment cela fonctionne:</p><p><img alt="Rope joint illustration" class="center" src="../../../../assets/Images/Scripting_Reference/GML/Reference/Physics/direction_joint_image.png" /> Comme vous pouvez le voir, les points d&#39;ancrage sont spécifiés en tant que coordonnées de la pièce, il faut donc faire attention lors de leur définition, en particulier si les instances sont créées en même temps que les joints plutôt que d&#39;être placées dans la pièce via l&#39;éditeur de pièce. Vous devez également vous rendre compte que les liaisons sont créées indépendamment de la taille du sprite des instances ou des appareils qu&#39;elles ont attachés. Ainsi, si vous créez une liaison de corde ailleurs qu&#39;à l&#39;origine de l&#39;instance, elle est toujours valide et contraindra les deux instances par rapport à la position à laquelle elle a été créée. Si vous définissez la valeur &quot;col&quot; sur <tt>true</tt> alors les deux instances peuvent interagir et entrer en collision l&#39;une avec l&#39;autre, mais <i>uniquement</i> si elles ont des événements de collision, mais si elle est définie sur <tt>false</tt>, ils n&#39;entreront pas en collision quoi qu&#39;il arrive.</p><p></p><h4> Syntaxe:</h4><p class="code">physics_joint_rope_create(inst1, inst2, w_anchor1_x, w_anchor1_y, w_anchor2_x, w_anchor2_y, maxlength, col)</p><table><tbody><tr><th> Argument</th><th> Description</th></tr><tr><td> <span class="notranslate">inst1</span></td><td> La première instance à se connecter avec l&#39;articulation</td></tr><tr><td> <span class="notranslate">inst2</span></td><td> La deuxième instance pour se connecter avec l&#39;articulation</td></tr><tr><td> <span class="notranslate">w_anchor1_x</span></td><td> La première coordonnée x pour l&#39;articulation, dans le monde du jeu</td></tr><tr><td> <span class="notranslate">w_anchor1_y</span></td><td> La première coordonnée y pour l&#39;articulation, dans le monde du jeu</td></tr><tr><td> <span class="notranslate">w_anchor2_x</span></td><td> La deuxième coordonnée x pour l&#39;articulation, dans le monde du jeu</td></tr><tr><td> <span class="notranslate">w_anchor2_y</span></td><td> la deuxième coordonnée y pour l&#39;articulation, dans le monde du jeu</td></tr><tr><td> <span class="notranslate">maxlength</span></td><td> La longueur maximale que l&#39;articulation peut «étirer»</td></tr><tr><td> <span class="notranslate">col</span></td><td> Si les deux instances peuvent entrer en collision (vrai) ou non (faux)</td></tr></tbody></table><p></p><h4> Retour:</h4><p class="code">Integer (index of the joint)</p><p></p><h4> Exemple:</h4><p class="code">var mainFixture, o_id;<br/> mainFixture = physics_fixture_create();<br/> physics_fixture_set_circle_shape(mainFixture, sprite_get_width(sprite_index) / 2);<br/> o_id=instance_create_layer(x+300, y, &quot;Instances&quot;, obj_Rudder);<br/> physics_fixture_bind(mainFixture,
-    id);<br/> physics_fixture_bind(mainFixture, o_id);<br/> physics_joint_rope_create(id, o_id, x + 50, y, o_id.x - 50, o_id.y, 300, 0);<br/> physics_fixture_delete(mainFixture);
-  </p><p> Le code ci-dessus crée et définit un nouvel appareil, puis crée une instance de &quot;obj_Rudder&quot;. L&#39;appareil est ensuite affecté à l&#39;instance qui exécute le code ainsi qu&#39;à l&#39;instance nouvellement créée et un joint de corde est créé entre eux. Enfin, l&#39;appareil est supprimé car il n&#39;est plus nécessaire. </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> Arrière: <a href="Joints.htm">Joints</a></div><div style="float:right"> Suivant:<a href="physics_joint_wheel_create.htm">physics_joint_wheel_create</a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
+<body>
+  <!--<div class="body-scroll" style="top: 150px;">-->
+  <h1>physics_joint_rope_create</h1>
+  <p>Une articulation à corde est utilisée pour joindre deux instances que l'on souhaite maintenir à une distance constante, quelles que soient les autres forces qui agissent sur elles. Avec un joint de distance, vous pouvez obtenir un &quot;étirement du joint&quot; où les deux montages se sépareront
+    et se comporteront de manière étrange si une trop grande tension est exercée sur le joint, alors que le joint en corde ne le fait pas et ne s'étendra pas plus loin que la longueur maximale définie. Lorsque vous créez un joint en corde, les deux instances doivent déjà être créées et avoir une fixation assignée.
+    Ensuite, vous définissez les deux points d'ancrage en coordonnées de pièce. Le premier point d'ancrage est connecté à l'instance 1, le second point d'ancrage est connecté à l'instance 2 et la distance et l'argument maxlength définissent la contrainte de longueur maximale sur le joint.
+    la contrainte de longueur maximale sur le joint. L'image ci-dessous montre comment cela fonctionne :</p>
+  <p><img alt="Rope joint illustration" class="center" src="../../../../assets/Images/Scripting_Reference/GML/Reference/Physics/direction_joint_image.png">Comme vous pouvez le constater, les points d'ancrage sont spécifiés en tant que coordonnées de la pièce.
+    surtout si les instances sont créées en même temps que les articulations plutôt que d'être placées dans la room via l'éditeur de room. Vous devez également savoir que les articulations sont créées indépendamment de la taille du sprite des instances
+    ou des fixtures qu'elles ont attachées. Ainsi, si vous créez un joint de corde ailleurs qu'à l'origine de l'instance, il est toujours valide et contraindra les deux instances par rapport à la position à laquelle il a été créé. Si vous définissez la valeur &quot;col&quot;
+    à <tt>true (vrai)</tt>, les deux instances peuvent interagir et entrer en collision l'une avec l'autre, mais <i>seulement</i> si elles ont des événements de collision, alors que si elle est réglée à <tt>false (faux)</tt>, elles n'entreront jamais en collision.</p>
+  <p> </p>
+  <h4>Syntaxe :</h4>
+  <p class="code">physics_joint_rope_create(inst1, inst2, w_anchor1_x, w_anchor1_y, w_anchor2_x, w_anchor2_y, maxlength, col)</p>
+  <table>
+    <tbody>
+      <tr>
+        <th>Arguments</th>
+        <th>Description</th>
+      </tr>
+      <tr>
+        <td>inst1</td>
+        <td>La première instance à se connecter avec l'articulation</td>
+      </tr>
+      <tr>
+        <td>inst2</td>
+        <td>La deuxième instance pour se connecter avec le joint</td>
+      </tr>
+      <tr>
+        <td>w_anchor1_x</td>
+        <td>La première coordonnée x de l'articulation, dans l'univers du jeu.</td>
+      </tr>
+      <tr>
+        <td>w_anchor1_y</td>
+        <td>La première coordonnée y de l'articulation, dans l'univers du jeu.</td>
+      </tr>
+      <tr>
+        <td>w_anchor2_x</td>
+        <td>La deuxième coordonnée x de l'articulation, dans l'univers du jeu.</td>
+      </tr>
+      <tr>
+        <td>w_anchor2_y</td>
+        <td>la deuxième coordonnée y de l'articulation, dans l'univers de jeu</td>
+      </tr>
+      <tr>
+        <td>longueur maximale</td>
+        <td>La longueur maximale que l'articulation peut &quot;s'étirer&quot;.</td>
+      </tr>
+      <tr>
+        <td>col</td>
+        <td>Si les deux instances peuvent entrer en collision (vrai) ou non (faux).</td>
+      </tr>
+    </tbody>
+  </table>
+  <p> </p>
+  <h4>Les retours :</h4>
+  <p class="code">Nombre entier (indice de l'articulation)</p>
+  <p> </p>
+  <h4>Exemple :</h4>
+  <p class="code">var mainFixture, o_id ;<br> mainFixture = physics_fixture_create() ;<br> physics_fixture_set_circle_shape(mainFixture, sprite_get_width(sprite_index) / 2) ;<br> o_id=instance_create_layer(x+300, y, &quot;Instances&quot;, obj_Rudder) ;<br> physics_fixture_bind(mainFixture,
+    id) ;<br> physics_fixture_bind(mainFixture, o_id) ;<br> physics_joint_rope_create(id, o_id, x + 50, y, o_id.x - 50, o_id.y, 300, 0) ;<br> physics_fixture_delete(mainFixture) ;
+  </p>
+  <p>Le code ci-dessus crée et définit un nouveau dispositif, puis crée une instance de &quot;obj_Rudder&quot;. Le dispositif est ensuite assigné à l'instance qui exécute le code ainsi qu'à l'instance nouvellement créée et une corde est créée entre elles.
+    Enfin, le dispositif est supprimé car il n'est plus nécessaire.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <div class="footer">
+    <div class="buttons">
+      <div class="clear">
+        <div style="float:left">Dos : <a href="Joints.htm">Articulations</a></div>
+        <div style="float:right">Suivant : <a href="physics_joint_wheel_create.htm">physics_joint_wheel_create</a></div>
+      </div>
+    </div>
+    <h5><span data-keyref="Copyright Notice">Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
   </div>
   <!-- KEYWORDS
 physics_joint_rope_create

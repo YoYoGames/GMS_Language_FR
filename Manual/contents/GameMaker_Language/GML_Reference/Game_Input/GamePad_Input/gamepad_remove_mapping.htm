@@ -2,20 +2,61 @@
 
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml"><head>
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <title>gamepad_remove_mapping</title>
-  <meta name="generator" content="Adobe RoboHelp 2019"/>
-  <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css"/>
-  <meta name="rh-authors" content="Mark Alexander"/>
-  <meta name="topic-comment" content="Page de référence pour gamepad_remove_mapping"/>
-  <meta name="rh-index-keywords" content="gamepad_remove_mapping"/>
-  <meta name="search-keywords" content="gamepad_remove_mapping"/>
+  <meta name="generator" content="Adobe RoboHelp 2019" />
+  <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
+  <meta name="rh-authors" content="Mark Alexander" />
+  <meta name="topic-comment" content="Reference page for gamepad_remove_mapping" />
+  <meta name="rh-index-keywords" content="gamepad_remove_mapping" />
+  <meta name="search-keywords" content="gamepad_remove_mapping" />
 </head>
 
-<body><!--<div class="body-scroll" style="top: 150px;">--><h1>gamepad_remove_mapping</h1><p> Cette fonction peut être utilisée pour supprimer le mappage de périphérique actuel de l&#39;index d&#39;emplacement de manette de jeu donné. Une fois appelé, l&#39;index d&#39;emplacement devra être remappé à l&#39;aide du <a href="gamepad_test_mapping.htm"><tt>gamepad_test_mapping()</tt></a> si vous voulez pouvoir utiliser les constantes de la manette de jeu pour détecter correctement l&#39;entrée (l&#39;entrée directe peut toujours être récupérée à l&#39;aide du <tt><a href="gamepad_axis_count.htm">gamepad_axis</a>/<a href="gamepad_button_count.htm">button</a>/<a href="gamepad_hat_count.htm">hat_count()</a></tt> et <tt><a href="gamepad_axis_value.htm">gamepad_axis</a>/<a href="gamepad_button_value.htm">button</a>/<a href="gamepad_hat_value.htm">hat_value()</a></tt> fonctionne ensemble).</p><p></p><h4> Syntaxe:</h4><p class="code">gamepad_remove_mapping(index);</p><table><tbody><tr><th> Argument</th><th> Description</th></tr><tr><td> <span class="notranslate">index</span></td><td> De quel «emplacement» d&#39;index de manette de jeu supprimer le mappage.</td></tr></tbody></table><p></p><h4> Retour:</h4><p class="code">N/A</p><p></p><h4> Exemple:</h4><p class="code">if remap == true<br/>     {
-    <br/>     gamepad_remove_mapping(global.PadIndex);
-    <br/>     }
-  </p><p> Le code ci-dessus supprimera le mappage de l&#39;emplacement d&#39;index de la manette de jeu donné en fonction de la valeur d&#39;une variable. </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> Retour: <a href="Gamepad_Input.htm">Entrée de la manette de jeu</a></div><div style="float:right"> Suivant:<a href="gamepad_is_supported.htm">gamepad_is_supported</a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
+<body>
+
+
+
+  <!--<div class="body-scroll" style="top: 150px;">-->
+  <h1>gamepad_remove_mapping</h1>
+  <p>Cette fonction peut être utilisée pour supprimer le mappage de périphérique actuel de l'index de slot de gamepad donné. Une fois appelé, l'index du slot devra être remappé en utilisant la fonction <a href="gamepad_test_mapping.htm"><tt>gamepad_test_mapping()</tt></a> si vous voulez
+    être en mesure d'utiliser les constantes du gamepad pour détecter correctement les entrées (les entrées directes peuvent toujours être récupérées à l'aide des fonctions <tt><a href="gamepad_axis_count.htm">gamepad_axis/button/hat_count</a><a href="gamepad_hat_count.htm">()</a></tt> et
+   <tt><a href="gamepad_axis_value.htm">gamepad_axis/button/hat_value</a><a href="gamepad_hat_value.htm">()</a></tt> ensemble).</p>
+  <p> </p>
+  <h4>Syntaxe :</h4>
+  <p class="code">gamepad_remove_mapping(index) ;</p>
+  <table>
+    <tbody>
+      <tr>
+        <th>Arguments</th>
+        <th>Description</th>
+      </tr>
+      <tr>
+        <td>indice</td>
+        <td>De quel &quot;slot&quot; de l'index du gamepad faut-il retirer le mapping ?</td>
+      </tr>
+    </tbody>
+  </table>
+  <p> </p>
+  <h4>Les retours :</h4>
+  <p class="code">N/A</p>
+  <p> </p>
+  <h4>Exemple :</h4>
+  <p class="code">if remap == true<br> {
+    <br> gamepad_remove_mapping(global.PadIndex) ;
+    <br> }
+  </p>
+  <p>Le code ci-dessus supprime le mappage de l'emplacement d'indexation du gamepad donné en fonction de la valeur d'une variable.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <div class="footer">
+    <div class="buttons">
+      <div class="clear">
+        <div style="float:left">Retour : <a href="Gamepad_Input.htm">Entrée de la manette de jeu</a></div>
+        <div style="float:right">Suivant : <a href="gamepad_is_supported.htm">gamepad_is_supported</a></div>
+      </div>
+    </div>
+    <h5><span data-keyref="Copyright Notice">Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
   </div>
   <!-- KEYWORDS
 gamepad_remove_mapping

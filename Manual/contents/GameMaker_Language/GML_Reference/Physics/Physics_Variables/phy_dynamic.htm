@@ -3,19 +3,43 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>phy_dynamic</title>
+  <title>phy_dynamique</title>
   <meta name="generator" content="Adobe RoboHelp 2019" />
   <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
   <meta name="rh-authors" content="Mark Alexander" />
-  <meta name="topic-comment" content="Page de référence pour phy_dynamic" />
+  <meta name="topic-comment" content="Reference page for phy_dynamic" />
   <meta name="rh-index-keywords" content="phy_dynamic" />
   <meta name="search-keywords" content="phy_dynamic" />
 </head>
-<body><!--<div class="body-scroll" style="top: 150px;">--><h1>phy_dynamic</h1><p> Une instance dynamique est une instance entièrement simulée dans le monde de la physique et cette variable en <b>lecture seule retournera </b><tt>true</tt> si l&#39;instance en cours de vérification est entièrement simulée ou <tt>false</tt> si ce n&#39;est pas le cas</p><p></p><h4> Syntaxe:</h4><p class="code">phy_dynamic;</p><p></p><h4> Retour:</h4><p class="code">Boolean (or <tt>undefined</tt> if the instance is not physics enabled)</p><p></p><h4> Exemple:</h4><p class="code">if other.phy_dynamic<br/>     {
-    <br/>     with (other)<br/>         {
-    <br/>         var dir;<br/>         dir = point_direction(x, y, other.x, other.y);<br/>         physics_apply_impulse(x, y, x + lengthdir_x(100, dir), y + lengthdir_y(100, dir));<br/>         }
-    <br/>     }
-  </p><p> Le code ci-dessus crée une nouvelle instance et la définit ensuite comme étant une «balle» dans le monde de la physique avant de lui donner une impulsion massive le long de l&#39;axe y. </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> Retour: <a href="Physics_Variables.htm">Variables de physique</a></div><div style="float:right"> Suivant:<a href="phy_kinematic.htm">phy_kinematic</a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
+<body>
+  <!--<div class="body-scroll" style="top: 150px;">-->
+  <h1>phy_dynamique</h1>
+  <p>Une instance dynamique est une instance qui est entièrement simulée dans le monde de la physique. Cette variable <b>en lecture seule</b> renverra un message <tt>vrai</tt> si l'instance vérifiée est entièrement simulée ou <tt>faux</tt> si elle ne l'est pas.</p>
+  <p> </p>
+  <h4>Syntaxe :</h4>
+  <p class="code">phy_dynamique ;</p>
+  <p> </p>
+  <h4>Les retours :</h4>
+  <p class="code">Booléen (ou <tt>indéfini</tt> si l'instance n'est pas activée pour la physique)</p>
+  <p> </p>
+  <h4>Exemple :</h4>
+  <p class="code">if other.phy_dynamic<br> {
+    <br> with (other)<br> {
+    <br> var dir ;<br> dir = point_direction(x, y, other.x, other.y) ;<br> physics_apply_impulse(x, y, x + lengthdir_x(100, dir), y + lengthdir_y(100, dir)) ;<br> }
+    <br> }
+  </p>
+  <p>Le code ci-dessus crée une nouvelle instance, puis la définit comme étant une &quot;balle&quot; dans le monde de la physique avant de lui donner une impulsion massive le long de l'axe y.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <div class="footer">
+    <div class="buttons">
+      <div class="clear">
+        <div style="float:left">Retour : <a href="Physics_Variables.htm">Variables de physique</a></div>
+        <div style="float:right">Suivant : <a href="phy_kinematic.htm">phy_kinematic</a></div>
+      </div>
+    </div>
+    <h5><span data-keyref="Copyright Notice">Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
   </div>
   <!-- KEYWORDS
 phy_dynamic

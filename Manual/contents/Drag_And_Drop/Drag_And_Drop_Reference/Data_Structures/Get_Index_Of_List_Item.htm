@@ -3,15 +3,59 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>Obtenir l&#39;index de l&#39;élément de liste</title>
+  <title>Obtenir l'index d'un élément de liste</title>
   <meta name="generator" content="Adobe RoboHelp 2019" />
   <link rel="stylesheet" href="../../../assets/css/default.css" type="text/css" />
   <meta name="rh-authors" content="Mark Alexander" />
-  <meta name="topic-comment" content="Page qui explique l&#39;action Obtenir l&#39;index de l&#39;élément de liste" />
-  <meta name="rh-index-keywords" content="DnD ™ - Obtenir l&#39;index de l&#39;élément de liste" />
-  <meta name="search-keywords" content="Obtenir l&#39;index de l&#39;élément de liste" />
+  <meta name="topic-comment" content="Page that explains the Get Index Of List Item action" />
+  <meta name="rh-index-keywords" content="DnD™ Action - Get Index Of List Item" />
+  <meta name="search-keywords" content="Get Index Of List Item" />
 </head>
-<body><!--<div class="body-scroll" style="top: 150px;">--><h1><img alt="Get Index Of List Item Icon" class="icon" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Data_Structures/i_DS_Get_Index_Of_List_Item.png" /> Obtenir l&#39;index de l&#39;élément de liste</h1><p> Avec cette action, vous pouvez récupérer la position d&#39;index d&#39;un élément dans la liste donnée. Vous fournissez la variable qui stocke l&#39;index de la liste (tel que renvoyé par l&#39;action <a href="Create_List.htm">Créer une liste</a> ) et la valeur dont vous souhaitez trouver la position d&#39;index dans la liste, ainsi qu&#39;une variable cible pour stocker la position d&#39;index renvoyée pour l&#39;élément (qui peut être marqué comme une variable locale temporaire à utiliser jusqu&#39;à la fin du script ou de l&#39;événement). Notez que si la valeur que vous recherchez n&#39;existe pas dans la liste, il n&#39;y aura pas de position d&#39;index de liste à renvoyer, et donc la valeur de retour sera -1.</p><p></p><h4> Syntaxe de l&#39;action:</h4><p><img alt="Get Index Of List Item Action" class="center" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Data_Structures/a_DS_Get_Index_Of_List_Item.png" /></p><h4> Arguments:</h4><table><tbody><tr><th> Argument</th><th> Description</th></tr><tr><td> <span class="notranslate">List</span></td><td> L&#39;index (stocké dans une variable) de la liste à supprimer</td></tr><tr><td> <span class="notranslate">Value</span></td><td> La valeur pour laquelle vérifier la liste</td></tr><tr><td> <span class="notranslate">Target</span></td><td> La variable cible pour stocker l&#39;index renvoyé</td></tr></tbody></table><p></p><h4> Exemple:</h4><p><img alt="Get Index Of List Item Example" class="center" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Data_Structures/e_DS_Remove_From_List.png" /> Le code de bloc d&#39;action ci-dessus vérifie la présence d&#39;une collision à la position de l&#39;instance et s&#39;il en trouve une, la valeur d&#39;ID unique de l&#39;instance est stockée dans une variable temporaire, puis vérifiée pour voir si elle existe dans la structure de données de la liste. S&#39;il existe, l&#39;élément est supprimé de la liste et l&#39;instance détruite. </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> Retour: <a href="Data_Structure_Actions.htm">Actions de structure de données</a></div><div style="float:right"> Suivant: <a href="Insert_Into_List.htm">Insérer dans la liste</a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
+<body>
+  <!--<div class="body-scroll" style="top: 150px;">-->
+  <h1><img alt="Get Index Of List Item Icon" class="icon" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Data_Structures/i_DS_Get_Index_Of_List_Item.png"> Obtenir l'index d'un élément de la liste</h1>
+  <p>Avec cette action, vous pouvez récupérer la position de l'index d'un élément dans une liste donnée. Vous fournissez la variable qui stocke l'index de la liste (tel que retourné par l'action <a href="Create_List.htm">Créer une liste</a>) et la valeur dont vous voulez trouver la position de l'index dans la liste.
+    dans la liste, ainsi qu'une variable cible pour stocker la position de l'indice retourné pour l'élément (qui peut être marquée comme une variable locale temporaire à utiliser jusqu'à la fin du script ou de l'événement). Notez que si la valeur recherchée n'existe pas dans la liste, il n'y a pas d'autre solution.
+    n'existe pas dans la liste, alors il n'y aura pas de position d'index de liste à retourner, et donc la valeur de retour sera -1.</p>
+  <p> </p>
+  <h4>Syntaxe de l'action :</h4>
+  <p><img alt="Get Index Of List Item Action" class="center" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Data_Structures/a_DS_Get_Index_Of_List_Item.png" /></p>
+  <h4>Arguments :</h4>
+  <table>
+    <tbody>
+      <tr>
+        <th>Arguments</th>
+        <th>Description</th>
+      </tr>
+      <tr>
+        <td>Liste</td>
+        <td>L'index (stocké dans une variable) de la liste à retirer de la liste</td>
+      </tr>
+      <tr>
+        <td>Valeur</td>
+        <td>La valeur à vérifier dans la liste</td>
+      </tr>
+      <tr>
+        <td>Cible</td>
+        <td>La variable cible pour stocker l'indice retourné</td>
+      </tr>
+    </tbody>
+  </table>
+  <p> </p>
+  <h4>Exemple :</h4>
+  <p><img alt="Get Index Of List Item Example" class="center" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Data_Structures/e_DS_Remove_From_List.png">Le code du bloc d'action ci-dessus vérifie la présence d'une collision à la position de l'instance.
+    et s'il en trouve une, la valeur d'identification unique de l'instance est stockée dans une variable temporaire, puis vérifiée pour voir si elle existe dans la structure de données de la liste. Si elle existe, l'élément est retiré de la liste et l'instance est détruite.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <div class="footer">
+    <div class="buttons">
+      <div class="clear">
+        <div style="float:left">Retour : <a href="Data_Structure_Actions.htm">Actions sur les structures de données</a></div>
+        <div style="float:right">Suivant : <a href="Insert_Into_List.htm">Insérer dans une liste</a></div>
+      </div>
+    </div>
+    <h5><span data-keyref="Copyright Notice">Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
   </div>
   <!-- KEYWORDS
 Action - Get Index Of List Item

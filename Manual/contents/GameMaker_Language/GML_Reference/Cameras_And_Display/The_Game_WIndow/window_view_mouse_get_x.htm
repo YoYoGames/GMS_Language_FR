@@ -7,15 +7,52 @@
   <meta name="generator" content="Adobe RoboHelp 2019" />
   <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
   <meta name="rh-authors" content="Mark Alexander" />
-  <meta name="topic-comment" content="Page de référence pour window_view_mouse_get_x" />
+  <meta name="topic-comment" content="Reference page for window_view_mouse_get_x" />
   <meta name="rh-index-keywords" content="window_view_mouse_get_x" />
   <meta name="search-keywords" content="window_view_mouse_get_x" />
 </head>
-<body><!--<div class="body-scroll" style="top: 150px;">--><h1>window_view_mouse_get_x</h1><p> Cette fonction renverra la position x de la souris par rapport à la vue sélectionnée.</p><p class="note"> <b>REMARQUE</b>: pour les fonctions normales de la souris, voir la section sur l&#39; <a href="../../Game_Input/Mouse_Input/Mouse_Input.htm">entrée de la souris</a></p><p></p><h4> Syntaxe:</h4><p class="code">window_view_mouse_get_x( id );</p><table><tbody><tr><th> Argument</th><th> Description</th></tr><tr><td> <span class="notranslate">id</span></td><td> Identifiant de la vue à laquelle comparer la position de la souris.</td></tr></tbody></table><p></p><h4> Retour:</h4><p class="code">Real</p><p></p><h4> Exemple:</h4><p class="code">if mouse_check_button_pressed(mb_left)<br/>     {
-    <br/>     var xx, yy;<br/>     xx = window_view_mouse_get_x(0);<br/>     yy = window_view_mouse_get_y(0);<br/>     if xx &gt; 0 &amp;&amp; xx &lt; 32 &amp;&amp; yy &gt; 0 &amp;&amp; yy &lt; 32<br/>         {
-    <br/>         b_press[0] = true;<br/>         }
-    <br/>     }
-  </p><p> Le code ci-dessus vérifiera si un bouton de la souris est enfoncé, et si c&#39;est le cas, il obtient alors la position de la souris par rapport à la vue [0] et la compare pour voir si une variable doit être définie sur true. </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> Retour: <a href="../The_Game_Window/The_Game_Window.htm">La fenêtre de jeu</a></div><div style="float:right"> Suivant:<a href="../The_Game_Window/window_view_mouse_get_y.htm">window_view_mouse_get_y</a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
+<body>
+  <!--<div class="body-scroll" style="top: 150px;">-->
+  <h1>window_view_mouse_get_x</h1>
+  <p>Cette fonction renvoie la position x de la souris par rapport à la vue sélectionnée.</p>
+  <p class="note"><b>NOTE</b>: Pour les fonctions normales de la souris, voir la section sur la <a href="../../Game_Input/Mouse_Input/Mouse_Input.htm">saisie de la souris.</a></p>
+  <p> </p>
+  <h4>Syntaxe :</h4>
+  <p class="code">window_view_mouse_get_x( id ) ;</p>
+  <table>
+    <tbody>
+      <tr>
+        <th>Arguments</th>
+        <th>Description</th>
+      </tr>
+      <tr>
+        <td>id</td>
+        <td>L'identifiant de la vue à laquelle comparer la position de la souris.</td>
+      </tr>
+    </tbody>
+  </table>
+  <p> </p>
+  <h4>Les retours :</h4>
+  <p class="code">Real</p>
+  <p> </p>
+  <h4>Exemple :</h4>
+  <p class="code">if mouse_check_button_pressed(mb_left)<br> {
+    <br> var xx, yy ;<br> xx = window_view_mouse_get_x(0) ;<br> yy = window_view_mouse_get_y(0) ;<br> if xx &gt; 0 &amp;&amp; xx &lt; 32 &amp;&amp; yy &gt; 0 &amp;&amp; yy &lt; 32<br> {
+    <br> b_press[0] = true ;<br> }
+    <br> }
+  </p>
+  <p>Le code ci-dessus vérifie si un bouton de la souris a été pressé, et si c'est le cas, il obtient la position de la souris par rapport à la vue [0] et la compare pour voir si une variable doit être définie comme vraie.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <div class="footer">
+    <div class="buttons">
+      <div class="clear">
+        <div style="float:left">Retour : <a href="../The_Game_Window/The_Game_Window.htm">La fenêtre de jeu</a></div>
+        <div style="float:right">Suivant : <a href="../The_Game_Window/window_view_mouse_get_y.htm">window_view_mouse_get_y</a></div>
+      </div>
+    </div>
+    <h5><span data-keyref="Copyright Notice">Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
   </div>
   <!-- KEYWORDS
 window_view_mouse_get_x

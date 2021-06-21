@@ -7,17 +7,63 @@
   <meta name="generator" content="Adobe RoboHelp 2019" />
   <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
   <meta name="rh-authors" content="Mark Alexander" />
-  <meta name="topic-comment" content="Page de référence pour push_get_next_local_notification" />
+  <meta name="topic-comment" content="Reference page for push_get_next_local_notification" />
   <meta name="rh-index-keywords" content="" />
   <meta name="search-keywords" content="push_get_next_local_notification" />
 </head>
-<body><!--<div class="body-scroll" style="top: 150px;">--><h1>push_get_next_local_notification</h1><p> Cette fonction remplira une <a href="../../Data_Structures/DS_Maps/DS_Maps.htm">carte DS</a> prédéfinie avec une série de paires clé / valeur pour la prochaine notification push locale dans la file d&#39;attente à afficher. Il renvoie -1 s&#39;il n&#39;y a plus de notifications en file d&#39;attente, ou une valeur réelle représentant autrement l&#39;ID de la notification. Cet identifiant peut ensuite être utilisé pour annuler la notification à l&#39;aide de la fonction <a href="push_cancel_local_notification.htm"><tt>push_cancel_local_notification()</tt></a>. Vous devez appeler la fonction <a href="push_get_first_local_notification.htm"><tt>push_get_first_local_notification()</tt></a> pour obtenir la première notification dans la file d&#39;attente, puis utilisez cette fonction pour continuer.</p><p class="note"> <b>REMARQUE</b>: cette fonction est limitée aux modules cibles <b><span class="notranslate">iOS</span></b> et <b><span class="notranslate">Android</span></b></p><p> La carte DS contiendra les paires clé / valeur suivantes:</p><ul class="colour"><li> &quot; <b>title</b> &quot; - Le titre de la notification (il ne sera disponible que sur la <i><span class="notranslate">Android</span></i> forme <span class="notranslate">iOS</span> ne stocke pas les informations sur le titre)</li><li> &quot; <b>message</b> &quot; - Le texte du corps du message</li><li> &quot; <b>data</b> &quot; - La chaîne du package de données</li></ul><p></p><h4> Syntaxe:</h4><p class="code">push_get_next_local_notification(map);</p><table><tbody><tr><th> Argument</th><th> Description</th></tr><tr><td> <span class="notranslate">map</span></td><td> Le <tt>DS Map</tt> ID à utiliser.</td></tr></tbody></table><p></p><h4> Retour:</h4><p class="code">Real</p><p></p><h4> Exemple:</h4><p class="code">var map = ds_map_create();<br/> var ntf = push_get_first_local_notification(map);<br/> while(ntf &gt;= 0)<br/>     {
-    <br/>     var data = ds_map_find_value(map, &quot;data&quot;);<br/>     if data == &quot;Daily_Reward&quot;<br/>         {
-    <br/>         push_cancel_local_notification(ntf);
-    <br/>         }
-    <br/>     ntf = push_get_next_local_notification(map);<br/>     }
-    <br/> ds_map_destroy(map);
-  </p><p> Le code ci-dessus crée un <tt>DS Map</tt> puis demande des données pour la première notification disponible dans la file d&#39;attente. Si une notification existe, la carte est remplie et le code vérifie alors la clé &quot;données&quot; pour une chaîne spécifique. Si la chaîne est trouvée, la notification est annulée et passe à la vérification de la notification suivante jusqu&#39;à ce que tous les éléments de la file d&#39;attente aient été vérifiés. </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> Retour: <a href="Push_Notifications.htm">Notifications push</a></div><div style="float:right"> Suivant:<a href="push_cancel_local_notification.htm">push_cancel_local_notification</a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
+<body>
+  <!--<div class="body-scroll" style="top: 150px;">-->
+  <h1>push_get_next_local_notification</h1>
+  <p>Cette fonction va remplir une <a href="../../Data_Structures/DS_Maps/DS_Maps.htm">carte DS</a> prédéfinie avec une série de paires clé/valeur pour la prochaine notification push locale dans la file d'attente à afficher. Elle renvoie -1 s'il n'y a pas d'autres notifications
+    en file d'attente, ou sinon une valeur réelle représentant l'ID de la notification. Cet ID peut ensuite être utilisé pour annuler la notification à l'aide de la fonction <a href="push_cancel_local_notification.htm"><tt>push_cancel_local_notification()</tt></a>. Vous devez
+    appeler la fonction <a href="push_get_first_local_notification.htm"><tt>push_get_first_local_notification()</tt></a> pour obtenir la première notification dans la file d'attente, puis utiliser cette fonction pour la parcourir.</p>
+  <p class="note"><b>NOTE</b>: Cette fonction est limitée aux <b><span class="notranslate">iOS</span></b> et <b><span class="notranslate">Android</span></b> modules cibles.</p>
+  <p>a carte DS contiendra les paires clé/valeur suivantes :</p>
+  <ul class="colour">
+    <li>&quot;title<b>&quot; -</b> Le titre de la notification (disponible uniquement sur la plateforme <i><span class="notranslate">Android</span></i> plateforme car <span class="notranslate">iOS</span> ne stocke pas les informations relatives au titre)</li>
+    <li>&quot;<b>message&quot; -</b> Le texte du corps du message</li>
+    <li>&quot;data&quot;<b>-</b> La chaîne du paquet de données</li>
+  </ul>
+  <p> </p>
+  <h4>Syntaxe :</h4>
+  <p class="code">push_get_next_local_notification(map) ;</p>
+  <table>
+    <tbody>
+      <tr>
+        <th>Arguments</th>
+        <th>Description</th>
+      </tr>
+      <tr>
+        <td>carte</td>
+        <td>L'ID de <tt>carte DS</tt> à utiliser.</td>
+      </tr>
+    </tbody>
+  </table>
+  <p> </p>
+  <h4>Les retours :</h4>
+  <p class="code">Real</p>
+  <p> </p>
+  <h4>Exemple :</h4>
+  <p class="code">var map = ds_map_create() ;<br> var ntf = push_get_first_local_notification(map) ;<br> while(ntf &gt;= 0)<br> {
+    <br> var data = ds_map_find_value(map, &quot;data&quot;) ;<br> if data == &quot;Daily_Reward&quot;<br> {
+    <br> push_cancel_local_notification(ntf) ;
+    <br> }
+    <br> ntf = push_get_next_local_notification(map) ;<br> }
+    <br> ds_map_destroy(map) ;
+  </p>
+  <p>Le code ci-dessus crée une <tt>carte DS</tt> et demande ensuite des données pour la première notification disponible dans la file d'attente. Si une notification existe, la carte est remplie et le code vérifie ensuite la clé &quot;data&quot; pour une chaîne spécifique. Si la chaîne
+    est trouvée, la notification est annulée et passe à la notification suivante jusqu'à ce que toutes les notifications de la file d'attente aient été vérifiées.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <div class="footer">
+    <div class="buttons">
+      <div class="clear">
+        <div style="float:left">Retour : <a href="Push_Notifications.htm">Notifications push</a></div>
+        <div style="float:right">Suivant : <a href="push_cancel_local_notification.htm">push_cancel_local_notification</a></div>
+      </div>
+    </div>
+    <h5><span data-keyref="Copyright Notice">Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
   </div>
   <!-- KEYWORDS
 push_get_next_local_notification

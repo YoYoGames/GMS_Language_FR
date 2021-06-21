@@ -1,17 +1,56 @@
 <?xml version="1.0" encoding="utf-8" ?>
-
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml"><head>
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <title>sha1_file</title>
-  <meta name="generator" content="Adobe RoboHelp 2019"/>
-  <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css"/>
-  <meta name="rh-authors" content="Mark Alexander"/>
-  <meta name="topic-comment" content="Page de référence pour sha1_file"/>
-  <meta name="rh-index-keywords" content="sha1_file"/>
-  <meta name="search-keywords" content="sha1_file"/>
+  <meta name="generator" content="Adobe RoboHelp 2019" />
+  <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
+  <meta name="rh-authors" content="Mark Alexander" />
+  <meta name="topic-comment" content="Reference page for sha1_file" />
+  <meta name="rh-index-keywords" content="sha1_file" />
+  <meta name="search-keywords" content="sha1_file" />
 </head>
-<body><!--<div class="body-scroll" style="top: 150px;">--><h1>sha1_file</h1><p> En cryptographie, SHA-1 est une fonction de hachage cryptographique conçue par l&#39; <i>Agence nationale de sécurité</i> des États-Unis et est utilisée dans plusieurs applications largement utilisées, <b><span class="notranslate">Git</span></b> où il est utilisé pour vérifier les modifications de fichiers, ainsi que les protocoles TLS et SSL, PGP, SSH, S / MIME et IPsec. Cette fonction prend un fichier d&#39;entrée et renvoie un résumé de message de 160 bits au format ASCII unique à ce fichier pour être utilisé pour la vérification de l&#39;intégrité à une date ultérieure.</p><p></p><h4> Syntaxe:</h4><p class="code">sha1_file(filename)</p><p></p><table><tbody><tr><th> Argument</th><th> Description</th></tr><tr><td> <span class="notranslate">filename</span></td><td> Le fichier pour lequel générer le hachage sha1.</td></tr></tbody></table><p></p><h4> Retour:</h4><p class="code">String</p><p></p><h4> Exemple:</h4><p class="code">hash = sha1_file(working_directory + &quot;game_data.ini&quot;)</p><p> Le code ci-dessus générera un hachage sha1 pour le fichier spécifié et stockera la valeur renvoyée dans la variable «hachage». </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> Retour: <a href="Encoding_And_Hashing.htm">Encodage de fichiers</a></div><div style="float:right"> Suivant:<a href="zip_unzip.htm">zip_unzip</a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
+<body>
+  <!--<div class="body-scroll" style="top: 150px;">-->
+  <h1>sha1_file</h1>
+  <p>En cryptographie, SHA-1 est une fonction de hachage cryptographique conçue par l'<i>Agence de sécurité nationale</i> des États-Unis et est employée dans plusieurs applications largement utilisées : populaire <b><span class="notranslate">Git</span></b> où elle est utilisée pour vérifier les changements de fichiers, et les protocoles
+    TLS et SSL, PGP, SSH, S/MIME et IPsec. Cette fonction prend un fichier d'entrée et renvoie un condensé de message de 160 bits au format ASCII, unique à ce fichier, qui peut être utilisé ultérieurement pour vérifier son intégrité.</p>
+  <p class="note"><strong>NOTE</strong>: SHA-1 n'est pas complètement sécurisé et peut être cassé. Voir <a href="https://en.wikipedia.org/wiki/SHA-1">cette page</a> pour plus d'informations.</p>
+  <p> </p>
+  <h4>Syntaxe :</h4>
+  <p class="code">sha1_file(nom du fichier)</p>
+  <p> </p>
+  <table>
+    <tbody>
+      <tr>
+        <th>Arguments</th>
+        <th>Description</th>
+      </tr>
+      <tr>
+        <td>nom de fichier</td>
+        <td>Le fichier pour lequel il faut générer le hachage sha1.</td>
+      </tr>
+    </tbody>
+  </table>
+  <p> </p>
+  <h4>Les retours :</h4>
+  <p class="code">Chaîne de caractères</p>
+  <p> </p>
+  <h4>Exemple :</h4>
+  <p class="code">hash = sha1_file(working_directory + &quot;game_data.ini&quot;)</p>
+  <p>Le code ci-dessus va générer un hachage sha1 pour le fichier spécifié et stocker la valeur retournée dans la variable &quot;hash&quot;.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <div class="footer">
+    <div class="buttons">
+      <div class="clear">
+        <div style="float:left">Retour : <a href="Encoding_And_Hashing.htm">Codage des fichiers</a></div>
+        <div style="float:right">Suivant : <a href="zip_unzip.htm">zip_unzip</a></div>
+      </div>
+    </div>
+    <h5><span data-keyref="Copyright Notice">Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
   </div>
   <!-- KEYWORDS
 sha1_file
@@ -19,5 +58,5 @@ sha1_file
   <!-- TAGS
 sha1_file
 -->
-
-</body></html>
+</body>
+</html>

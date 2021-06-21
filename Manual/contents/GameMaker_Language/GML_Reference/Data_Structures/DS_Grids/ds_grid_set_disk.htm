@@ -2,17 +2,71 @@
 
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml"><head>
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <title>ds_grid_set_disk</title>
-  <meta name="generator" content="Adobe RoboHelp 2019"/>
-  <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css"/>
-  <meta name="rh-authors" content="Mark Alexander"/>
-  <meta name="topic-comment" content="Page de référence pour ds_grid_set_disk"/>
-  <meta name="rh-index-keywords" content="ds_grid_set_disk"/>
-  <meta name="search-keywords" content="ds_grid_set_disk"/>
+  <meta name="generator" content="Adobe RoboHelp 2019" />
+  <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
+  <meta name="rh-authors" content="Mark Alexander" />
+  <meta name="topic-comment" content="Reference page for ds_grid_set_disk" />
+  <meta name="rh-index-keywords" content="ds_grid_set_disk" />
+  <meta name="search-keywords" content="ds_grid_set_disk" />
 </head>
 
-<body><!--<div class="body-scroll" style="top: 150px;">--><h1>ds_grid_set_disk</h1><p> Avec cette fonction, vous pouvez définir une région circulaire d&#39;une grille sur une certaine valeur. Vous devez fournir une cellule de grille de départ (sous forme de coordonnées des axes x et y) ainsi que le rayon du disque à définir et la valeur que vous souhaitez également définir pour le disque, comme le montre l&#39;illustration ci-dessous:</p><p><img alt="DS grid set disk" class="center" src="../../../../assets/Images/Scripting_Reference/GML/Reference/Data_Structures/ds_grid_set_disk.png"/></p><p></p><h4> Syntaxe:</h4><p class="code">ds_grid_set_disk(index, xm, ym, r, val);</p><table><tbody><tr><th> Argument</th><th> Description</th></tr><tr><td> <span class="notranslate">index</span></td><td> L&#39;index de la grille.</td></tr><tr><td> <span class="notranslate">xm</span></td><td> La position x du disque sur la grille.</td></tr><tr><td> <span class="notranslate">ym</span></td><td> La position y du disque sur la grille.</td></tr><tr><td> <span class="notranslate">r</span></td><td> Le rayon du disque sur la grille.</td></tr><tr><td> <span class="notranslate">val</span></td><td> La valeur à définir avec les cellules du disque.</td></tr></tbody></table><p></p><h4> Retour:</h4><p class="code">N/A</p><p></p><h4> Exemple:</h4><p class="code">ds_grid_set_disk(grid, ds_grid_width(grid) div 2, ds_grid_height(grid) div 2, 5, -4)</p><p> Le code ci-dessus définira une région circulaire avec un rayon de 5 cellules dans la grille DS indexée dans la variable «grille» à une valeur de -4. </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> Retour: <a href="DS_Grids.htm">DS Grids</a></div><div style="float:right"> Suivant:<a href="ds_grid_set_grid_region.htm">ds_grid_set_grid_region</a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
+<body>
+  <!--<div class="body-scroll" style="top: 150px;">-->
+  <h1>ds_grid_set_disk</h1>
+  <p>Cette fonction vous permet de définir une région circulaire d'une grille à une certaine valeur. Vous devez fournir une cellule de grille de départ (en tant que coordonnée d'axe x et y) ainsi que le rayon du disque à définir et la valeur que vous souhaitez donner au disque, comme le montre l'illustration suivante
+    comme le montre l'illustration ci-dessous :</p>
+  <p><img alt="DS grid set disk" class="center" src="../../../../assets/Images/Scripting_Reference/GML/Reference/Data_Structures/ds_grid_set_disk.png" /></p>
+  <p> </p>
+  <h4>Syntaxe :</h4>
+  <p class="code">ds_grid_set_disk(index, xm, ym, r, val) ;</p>
+  <table>
+    <tbody>
+      <tr>
+        <th>Arguments</th>
+        <th>Description</th>
+      </tr>
+      <tr>
+        <td>indice</td>
+        <td>L'index de la grille.</td>
+      </tr>
+      <tr>
+        <td>xm</td>
+        <td>La position x du disque sur la grille.</td>
+      </tr>
+      <tr>
+        <td>ym</td>
+        <td>La position y du disque sur la grille.</td>
+      </tr>
+      <tr>
+        <td>r</td>
+        <td>Le rayon du disque sur la grille.</td>
+      </tr>
+      <tr>
+        <td>val</td>
+        <td>La valeur à définir avec les cellules du disque.</td>
+      </tr>
+    </tbody>
+  </table>
+  <p> </p>
+  <h4>Les retours :</h4>
+  <p class="code">N/A</p>
+  <p> </p>
+  <h4>Exemple :</h4>
+  <p class="code">ds_grid_set_disk(grid, ds_grid_width(grid) div 2, ds_grid_height(grid) div 2, 5, -4)</p>
+  <p>Le code ci-dessus va définir une région circulaire avec un rayon de 5 cellules dans la grille DS indexée dans la variable &quot;grid&quot; à une valeur de -4.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <div class="footer">
+    <div class="buttons">
+      <div class="clear">
+        <div style="float:left">Retour : <a href="DS_Grids.htm">Grilles DS</a></div>
+        <div style="float:right">Suivant : <a href="ds_grid_set_grid_region.htm">ds_grid_set_grid_region</a></div>
+      </div>
+    </div>
+    <h5><span data-keyref="Copyright Notice">Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
   </div>
   <!-- KEYWORDS
 ds_grid_set_disk

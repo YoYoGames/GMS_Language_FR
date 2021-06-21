@@ -3,15 +3,90 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>audio_create_play_queue</title>
+  <title>file d'attente_audio_créer_lecture</title>
   <meta name="generator" content="Adobe RoboHelp 2019" />
   <link rel="stylesheet" href="../../../../../assets/css/default.css" type="text/css" />
   <meta name="rh-authors" content="Mark Alexander" />
-  <meta name="topic-comment" content="Page expliquant la fonction audio_create_play_queue" />
+  <meta name="topic-comment" content="Page explaining the function audio_create_play_queue" />
   <meta name="rh-index-keywords" content="audio_create_play_queue,audio_mono,audio_stereo,audio_3D" />
   <meta name="search-keywords" content="audio_create_play_queue,audio_mono,audio_stereo,audio_3D" />
 </head>
-<body><!--<div class="body-scroll" style="top: 150px;">--><h1>audio_create_play_queue</h1><p> Cette fonction prépare une file d&#39;attente de tampon pour l&#39;audio. Vous passez le format de données (uniquement <tt>buffer_u8</tt> ou <tt>buffer_s16</tt> sont actuellement pris en charge), la fréquence d&#39;échantillonnage (qui peut être comprise entre 1000 Hz et 48000 Hz) et les canaux requis par l&#39;audio à partir de l&#39;une des constantes répertoriées ci-dessous:</p><table><tbody><tr><th> Constant</th><th> Description</th></tr><tr><td><span class="notranslate"><span class="inline">audio_mono</span></span></td><td> Audio mono (canal unique).</td></tr><tr><td><span class="notranslate"><span class="inline">audio_stereo</span></span></td><td> Audio stéréo (double canal).</td></tr><tr><td><span class="notranslate"><span class="inline">audio_3D</span></span></td><td> Audio 3D (5.1).</td></tr></tbody></table><p><br/> Notez que vous devez libérer toutes les files d&#39;attente audio créées avec cette fonction lorsqu&#39;elles ne sont plus nécessaires pour éviter les fuites de mémoire à l&#39;aide de la fonction <a href="audio_free_play_queue.htm"><tt>audio_free_play_queue()</tt></a>.</p><p> Cette fonction déclenchera un <a href="../../../../../The_Asset_Editors/Object_Properties/Async_Events/Audio_Playback.htm">événement asynchrone de lecture audio</a> lorsque la file d&#39;attente aura atteint la fin, et dans ce cas, une <a href="../../../Data_Structures/DS_Maps/DS_Maps.htm">carte DS</a> spéciale sera créée dans la variable <a href="../../../../GML_Overview/Variables/Builtin_Global_Variables/async_load.htm"><tt>async_load</tt></a> avec les paires clé / valeur suivantes:</p><ul class="colour"><li> &quot; <strong>queue_id</strong> &quot; - la file d&#39;attente qui a fini de lire les données</li><li> &quot; <strong>buffer_id</strong> &quot; - le tampon qui n&#39;est plus lu à partir de</li><li> &quot; <strong>queue_shutdown</strong> &quot; - il est mis à 0 pendant la lecture normale et à 1 lorsque l&#39;événement est reçu car <a href="audio_free_play_queue.htm"><tt>audio_free_play_queue()</tt></a> a été appelé. Lorsqu&#39;il est défini sur 1, vous ne souhaitez pas mettre d&#39;autres données en file d&#39;attente.</li></ul><p></p><h4> Syntaxe:</h4><p class="code">audio_create_play_queue(queueFormat, queueRate, queueChannels);</p><table><tbody><tr><th> Argument</th><th> Description</th></tr><tr><td> <span class="notranslate">queueFormat</span></td><td> Le format des données de tampon à utiliser (<tt>buffer_u8</tt> ou <tt>buffer_s16</tt> ).</td></tr><tr><td> <span class="notranslate">queueRate</span></td><td> La fréquence d&#39;échantillonnage des données dans la file d&#39;attente de la mémoire tampon.</td></tr><tr><td> <span class="notranslate">queueChannels</span></td><td> Les canaux à utiliser à partir de l&#39;une des constantes répertoriées ci-dessous.</td></tr></tbody></table><p></p><h4> Retour:</h4><p class="code">Real (Buffer ID)</p><p></p><h4> Exemple:</h4><p class="code">audio_queue = audio_create_play_queue(buffer_s16, 11052, audio_mono);</p><p> Le code ci-dessus crée une nouvelle file d&#39;attente audio et attribue son ID à une variable pour référence future. </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> Arrière: <a href="../Audio.htm">Tampons audio</a></div><div style="float:right"> Suivant:<a href="audio_free_play_queue.htm">audio_free_play_queue</a></div><div style="float:right"></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
+<body>
+  <!--<div class="body-scroll" style="top: 150px;">-->
+  <h1>file d'attente_audio_créer_lecture</h1>
+  <p>Cette fonction prépare une file d'attente tampon pour l'audio. Vous passez le format des données (seuls <tt>buffer_u8</tt> ou <tt>buffer_s16</tt> sont actuellement pris en charge), la fréquence d'échantillonnage (qui peut être comprise entre 1000hz et 48000hz), et les canaux que l'audio requiert à partir de
+    l'une des constantes listées ci-dessous :</p>
+  <table>
+    <tbody>
+      <tr>
+        <th>Constant</th>
+        <th>Description</th>
+      </tr>
+      <tr>
+        <td><span class="inline">audio_mono</span></td>
+        <td>Audio mono (un seul canal).</td>
+      </tr>
+      <tr>
+        <td><span class="inline">audio_stereo</span></td>
+        <td>Audio stéréo (double canal).</td>
+      </tr>
+      <tr>
+        <td><span class="inline">audio_3D</span></td>
+        <td>Audio 3D (5.1).</td>
+      </tr>
+    </tbody>
+  </table>
+  <p><br> Notez que vous devez libérer toutes les files d'attente audio créées avec cette fonction lorsqu'elles ne sont plus nécessaires afin d'éviter les fuites de mémoire en utilisant la fonction <a href="audio_free_play_queue.htm"><tt>audio_free_play_queue()</tt></a>.</p>
+  <p>Cette fonction déclenchera un <a href="../../../../../The_Asset_Editors/Object_Properties/Async_Events/Audio_Playback.htm">événement asynchrone de lecture audio</a> lorsque la file d'attente aura atteint sa fin <a href="../../../Data_Structures/DS_Maps/DS_Maps.htm">.</a> 
+    sera créée dans la variable <a href="../../../../GML_Overview/Variables/Builtin_Global_Variables/async_load.htm"><tt>async_load</tt></a> avec les paires clé/valeur suivantes :</p>
+  <ul class="colour">
+    <li>&quot;queue_id<strong>&quot; -</strong> la file d'attente qui a terminé la lecture des données.</li>
+    <li>&quot;<strong>buffer_id&quot; -</strong> le tampon qui n'est plus lu.</li>
+    <li>&quot;queue_shutdown<strong>&quot; -</strong> ceci est mis à 0 pendant la lecture normale et à 1 lorsque l'événement est reçu car <a href="audio_free_play_queue.htm"><tt>audio_free_play_queue()</tt></a> a été appelé. Lorsque ce paramètre est défini à 1, vous ne voulez pas
+      ne voulez pas mettre en file d'attente d'autres données.</li>
+  </ul>
+  <p> </p>
+  <h4>Syntaxe :</h4>
+  <p class="code">audio_create_play_queue(queueFormat, queueRate, queueChannels) ;</p>
+  <table>
+    <tbody>
+      <tr>
+        <th>Arguments</th>
+        <th>Description</th>
+      </tr>
+      <tr>
+        <td>queueFormat</td>
+        <td>Le format des données de la mémoire tampon à utiliser<tt>(buffer_u8</tt> ou <tt>buffer_s16</tt>).</td>
+      </tr>
+      <tr>
+        <td>taux de file d'attente</td>
+        <td>Le taux d'échantillonnage des données dans la file d'attente de la mémoire tampon.</td>
+      </tr>
+      <tr>
+        <td>canaux de file d'attente</td>
+        <td>Les canaux à utiliser à partir d'une des constantes listées ci-dessous.</td>
+      </tr>
+    </tbody>
+  </table>
+  <p> </p>
+  <h4>Les retours :</h4>
+  <p class="code">Real (ID de la mémoire tampon)</p>
+  <p> </p>
+  <h4>Exemple :</h4>
+  <p class="code">audio_queue = audio_create_play_queue(buffer_s16, 11052, audio_mono) ;</p>
+  <p>Le code ci-dessus crée une nouvelle file d'attente audio et attribue son ID à une variable pour référence ultérieure.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <div class="footer">
+    <div class="buttons">
+      <div class="clear">
+        <div style="float:left">Retour : <a href="../Audio.htm">Tampons audio</a></div>
+        <div style="float:right">Suivant : <a href="audio_free_play_queue.htm">audio_free_play_queue</a></div>
+        <div style="float:right"> </div>
+      </div>
+    </div>
+    <h5><span data-keyref="Copyright Notice">Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
   </div>
   <!-- KEYWORDS
 audio_create_play_queue

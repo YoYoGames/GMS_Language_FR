@@ -7,17 +7,61 @@
   <meta name="generator" content="Adobe RoboHelp 2019" />
   <link rel="stylesheet" href="../../../../../assets/css/default.css" type="text/css" />
   <meta name="rh-authors" content="Mark Alexander" />
-  <meta name="topic-comment" content="Page décrivant la fonction layer_ shader" />
+  <meta name="topic-comment" content="Page outlining the function layer_shader" />
   <meta name="rh-index-keywords" content="layer_shader" />
   <meta name="search-keywords" content="layer_shader" />
 </head>
-<body><!--<div class="body-scroll" style="top: 150px;">--><h1> layer_ <span class="notranslate">shader</span></h1><p> Avec cette fonction, vous pouvez affecter une <span class="notranslate">shader</span> à n&#39;importe quel calque donné et le calque sera ensuite rendu en utilisant ce <span class="notranslate">shader</span>. Vous fournissez soit la valeur d&#39;ID unique du calque, soit le nom du calque (sous forme de chaîne - cela aura un impact sur les performances), ainsi que l&#39;ID du <span class="notranslate">shader</span> à utiliser. Le <span class="notranslate">shader</span> doit avoir été créé au préalable dans le navigateur de ressources et l&#39; <span class="notranslate">shader</span> (le nom de la <span class="notranslate">shader</span> ) est ensuite passé à cette fonction. Si le calque attribué a des instances ajoutées, alors le <span class="notranslate">shader</span> sera appliqué à <i>tous</i> les événements de dessin que l&#39;instance utilise - par exemple si l&#39;instance a un événement Draw GUI Begin, alors le <span class="notranslate">shader</span> sera appliqué automatiquement. Le <span class="notranslate">shader</span> affectera également tous les autres éléments graphiques dessinés sur ce calque, comme les ressources de sprite ou les cartes de tuiles.</p><p> Notez que la fonction n&#39;est <i>pas</i> destinée à être appelée dans des événements de dessin ou d&#39;étape, mais doit plutôt être appelée au début de la salle dans le <b>code de création de salle</b> ou dans l&#39; <b>événement Créer un événement</b> / <b>début de salle</b> d&#39;une instance.</p><p></p><h4> Syntaxe:</h4><p class="code">layer_shader(layer_id, shader)</p><table><tbody><tr><th> Argument</th><th> Description</th></tr><tr><td> <span class="notranslate">layer_id</span></td><td> La valeur d&#39;ID unique du calque à cibler (ou le nom du calque sous forme de chaîne)</td></tr><tr><td> <span class="notranslate"><span class="notranslate">shader</span></span></td><td> L&#39; <span class="notranslate">shader</span> à attribuer au calque</td></tr></tbody></table><p></p><h4> Retour:</h4><p class="code">N/A</p><p></p><h4> Exemple:</h4><p class="code">var lay_id = layer_get_id(&quot;Instances&quot;);<br/> layer_shader(lay_id, shd_Sepia);</p><p> Le code ci-dessus attribuera la <span class="notranslate">shader</span> &quot;shd_Sepia&quot; au calque donné pour tous les dessins. </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> Retour: <a href="General_Layer_Functions.htm">Fonctions générales des calques</a></div><div style="float:right"> Suivant:<a href="layer_get_script_begin.htm">layer_get_script_begin</a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
+<body>
+  <!--<div class="body-scroll" style="top: 150px;">-->
+  <h1>layer_shader</h1>
+  <p>Avec cette fonction, vous pouvez affecter une ressource de <span class="notranslate">shaders</span> à un calque donné et le calque sera alors rendu en utilisant ce <span class="notranslate">shader</span>. Vous fournissez soit la valeur d'identification unique de la couche, soit le nom de la couche (sous forme de chaîne - cela aura un impact sur les performances)
+    ainsi que l'ID du <span class="notranslate">shader</span> à utiliser. Le <span class="notranslate">shader</span> doit avoir été créé précédemment dans l'Asset Browser et l'index du <span class="notranslate">shader</span> (le nom de la ressource du <span class="notranslate">shader</span> ) est ensuite transmis à cette fonction. Si des instances ont été ajoutées à la couche attribuée, alors
+    le <span class="notranslate">shader</span> sera appliqué à <i>tous les</i> événements de dessin que l'instance utilise - par exemple, si l'instance a un événement Draw GUI Begin, le <span class="notranslate">shader</span> lui sera appliqué automatiquement. Le <span class="notranslate">shader</span> affectera également tout autre élément graphique dessiné sur cette couche, comme les sprites.
+    sur cette couche, comme les sprites ou les cartes de tuiles.</p>
+  <p>Notez que la fonction <i>n'est pas</i> censée être appelée dans des événements de dessin ou des événements d'étape, mais qu'elle ne doit être appelée qu'au début de la pièce dans le <b>code de création de pièce</b> ou dans l'<b>événement de création </b>/ de <b>début de pièce</b> d'une instance.</p>
+  <p> </p>
+  <h4>Syntaxe :</h4>
+  <p class="code">layer_shader(layer_id, <span class="notranslate">shader</span>)</p>
+  <table>
+    <tbody>
+      <tr>
+        <th>Arguments</th>
+        <th>Description</th>
+      </tr>
+      <tr>
+        <td>identifiant de la couche</td>
+        <td>La valeur d'identification unique de la couche à cibler (ou le nom de la couche sous forme de chaîne).</td>
+      </tr>
+      <tr>
+        <td><span class="notranslate">nuanceur</span></td>
+        <td>L'index du <span class="notranslate">shader</span> à affecter à la couche</td>
+      </tr>
+    </tbody>
+  </table>
+  <p> </p>
+  <h4>Les retours :</h4>
+  <p class="code">N/A</p>
+  <p> </p>
+  <h4>Exemple :</h4>
+  <p class="code">var lay_id = layer_get_id(&quot;Instances&quot;) ;<br> layer_shader(lay_id<span class="notranslate">,</span> shd_Sepia) ;</p>
+  <p>Le code ci-dessus assignera la ressource <span class="notranslate">shader</span> &quot;shd_Sepia&quot; à la couche donnée pour tous les dessins.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <div class="footer">
+    <div class="buttons">
+      <div class="clear">
+        <div style="float:left">Retour : <a href="General_Layer_Functions.htm">Fonctions générales des couches</a></div>
+        <div style="float:right">Suivant : <a href="layer_get_script_begin.htm">layer_get_script_begin</a></div>
+      </div>
+    </div>
+    <h5><span data-keyref="Copyright Notice">Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
   </div>
   <!-- KEYWORDS
-layer_shader
+layer_<span class="notranslate">shader</span>
 -->
   <!-- TAGS
-layer_shader
+layer_<span class="notranslate">shader</span>
 -->
 </body>
 </html>

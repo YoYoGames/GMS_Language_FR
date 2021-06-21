@@ -3,15 +3,41 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>audio_emitter_create</title>
+  <title>création d'un émetteur audio</title>
   <meta name="generator" content="Adobe RoboHelp 2019" />
   <link rel="stylesheet" href="../../../../../assets/css/default.css" type="text/css" />
   <meta name="rh-authors" content="Mark Alexander" />
-  <meta name="topic-comment" content="Page expliquant la fonction audio_emitter_create" />
+  <meta name="topic-comment" content="Page explaining the function audio_emitter_create" />
   <meta name="rh-index-keywords" content="audio_emitter_create" />
   <meta name="search-keywords" content="audio_emitter_create" />
 </head>
-<body><!--<div class="body-scroll" style="top: 150px;">--><h1>audio_emitter_create</h1><p> Cette fonction crée un nouvel émetteur audio et renvoie son index. Cet index doit être stocké dans une variable pour toutes les autres fonctions liées à cet émetteur, puis lorsqu&#39;il n&#39;est plus nécessaire, il doit être supprimé de la mémoire à l&#39;aide de la fonction <a href="audio_emitter_free.htm"><tt>audio_emitter_free()</tt></a> pour éviter les fuites de mémoire qui pourraient éventuellement planter votre jeu.</p><p></p><h4> Syntaxe:</h4><p class="code">audio_emitter_create();</p><p></p><h4> Retour:</h4><p class="code">Integer (emitter ID) </p><p></p><h4> Exemple:</h4><p class="code">s_emit = audio_emitter_create();</p><p> Le code ci-dessus crée un nouvel émetteur audio et assigne son index à la variable &quot;s_emit&quot;. </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> Retour: <a href="Audio_Emitters.htm">Émetteurs audio</a></div><div style="float:right"> Suivant:<a href="audio_emitter_exists.htm">audio_emitter_exists</a></div><div style="float:right"></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
+<body>
+  <!--<div class="body-scroll" style="top: 150px;">-->
+  <h1>création d'un émetteur audio</h1>
+  <p>Cette fonction crée un nouvel émetteur audio et renvoie son index. Cet index doit être stocké dans une variable pour toutes les fonctions ultérieures qui se rapportent à cet émetteur, et lorsqu'il n'est plus nécessaire, il doit être supprimé de la mémoire en utilisant la fonction
+    fonction <a href="audio_emitter_free.htm"><tt>audio_emitter_free()</tt></a> pour éviter les fuites de mémoire qui peuvent éventuellement faire planter votre jeu.</p>
+  <p> </p>
+  <h4>Syntaxe :</h4>
+  <p class="code">audio_emitter_create() ;</p>
+  <p> </p>
+  <h4>Les retours :</h4>
+  <p class="code">Entier (ID de l'émetteur) </p>
+  <p> </p>
+  <h4>Exemple :</h4>
+  <p class="code">s_emit = audio_emitter_create() ;</p>
+  <p>Le code ci-dessus crée un nouvel émetteur audio et assigne son index à la variable &quot;s_emit&quot;.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <div class="footer">
+    <div class="buttons">
+      <div class="clear">
+        <div style="float:left">Retour : <a href="Audio_Emitters.htm">Émetteurs audio</a></div>
+        <div style="float:right">Suivant : <a href="audio_emitter_exists.htm">audio_emitter_exists</a></div>
+        <div style="float:right"> </div>
+      </div>
+    </div>
+    <h5><span data-keyref="Copyright Notice">Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
   </div>
   <!-- KEYWORDS
 audio_emitter_create

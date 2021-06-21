@@ -7,16 +7,44 @@
   <meta name="generator" content="Adobe RoboHelp 2019" />
   <link rel="stylesheet" href="../../../assets/css/default.css" type="text/css" />
   <meta name="rh-authors" content="Mark Alexander" />
-  <meta name="topic-comment" content="Page de référence pour buffer_async_group_end" />
+  <meta name="topic-comment" content="Reference page for buffer_async_group_end" />
   <meta name="rh-index-keywords" content="buffer_async_group_end" />
   <meta name="search-keywords" content="buffer_async_group_end" />
 </head>
-<body><!--<div class="body-scroll" style="top: 150px;">--><h1>buffer_async_group_end</h1><p> Cette fonction termine la définition d&#39;un groupe de sauvegarde de tampon. Vous devez avoir préalablement appelé la fonction <a href="buffer_async_group_begin.htm"><tt>buffer_async_group_begin()</tt></a> pour lancer le groupe, puis appelez la fonction <a href="buffer_save_async.htm"><tt>buffer_save_async()</tt></a> pour chaque fichier que vous souhaitez enregistrer. Enfin, vous appelez cette fonction, qui lancera la sauvegarde des fichiers. La fonction renverra une valeur d&#39;ID unique pour la sauvegarde, qui peut ensuite être utilisée dans l&#39; <a href="../../../The_Asset_Editors/Object_Properties/Async_Events/Save_Load.htm">événement Asynchronous Save / Load</a> pour analyser les résultats de la<a href="../../GML_Overview/Variables/Builtin_Global_Variables/async_load.htm">async_load</a> Carte DS.</p><p></p><h4> Syntaxe:</h4><p class="code">buffer_async_group_end();</p><p></p><h4> Retour:</h4><p class="code">Real</p><p></p><h4> Exemple étendu:</h4><p> Le <tt>buffer_async_group_end()</tt> La fonction peut être appelée à partir de n&#39;importe quel événement, et comme elle est asynchrone, le rappel peut être presque instantané ou prendre plusieurs secondes. L&#39;appel de la fonction est simple et ressemblerait à ceci:</p><p class="code">buffer_async_group_begin(&quot;SaveGame&quot;);<br/> save1 = buffer_save_async(buff1, &quot;Player_Save1.sav&quot;, 0, 16384);<br/> save2 = buffer_save_async(buff2, &quot;Player_Save2.sav&quot;, 0, 16384);<br/> save3 = buffer_save_async(buff3, &quot;Player_Save3.sav&quot;,
-    0, 16384);<br/> save4 = buffer_save_async(buff4, &quot;Player_Save4.sav&quot;, 0, 16384);<br/> save_id = buffer_async_group_end();</p><p> Le code ci-dessus démarre un groupe de tampons puis le définit pour enregistrer 4 fichiers de manière asynchrone. La définition du groupe est alors terminée (à quel point la sauvegarde commencera), en stockant l&#39;ID de l&#39;appel de fonction dans la variable &quot; <i>save_id</i> &quot;. Lorsque la sauvegarde est terminée, l&#39;événement asynchrone Save / Load sera déclenché et vous pourrez analyser le <tt>async_load</tt> map pour l&#39;ID correct de la fonction, comme ceci:</p><p class="code">if ds_map_find_value(async_load, &quot;id&quot;) == saveid<br/>     {
-    <br/>     if ds_map_find_value(async_load, &quot;status&quot;) == false<br/>         {
-    <br/>         show_debug_message(&quot;Save failed!&quot;);<br/>         }
-    <br/>     }
-  </p><p> Le code ci-dessus vérifiera d&#39;abord l&#39;ID de la carte DS qui a été créée, puis vérifiera l&#39;état du rappel, en publiant un message de débogage s&#39;il y a eu des problèmes. </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> Retour: <a href="Buffers.htm">Tampons</a></div><div style="float:right"> Suivant:<a href="buffer_copy.htm">buffer_copy</a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
+<body>
+  <!--<div class="body-scroll" style="top: 150px;">-->
+  <h1>buffer_async_group_end</h1>
+  <p>Cette fonction termine la définition d'un groupe de sauvegarde de la mémoire tampon. Vous devez avoir préalablement appelé la fonction <a href="buffer_async_group_begin.htm"><tt>buffer_async_group_begin()</tt></a> pour initier le groupe, puis appeler la fonction <a href="buffer_save_async.htm"><tt>buffer_save_async()</tt></a>    pour chaque fichier que vous souhaitez sauvegarder. Enfin, vous appelez cette fonction, qui lancera la sauvegarde des fichiers. La fonction renvoie une valeur d'identification unique pour la sauvegarde, qui peut ensuite être utilisée dans l'<a href="../../../The_Asset_Editors/Object_Properties/Async_Events/Save_Load.htm">événement Asynchronous Save / Load</a> pour analyser les résultats de la carte DS <a href="../../GML_Overview/Variables/Builtin_Global_Variables/async_load.htm">async_load</a>.</p>
+  <p> </p>
+  <h4>Syntaxe :</h4>
+  <p class="code">buffer_async_group_end() ;</p>
+  <p> </p>
+  <h4>Les retours :</h4>
+  <p class="code">Real</p>
+  <p> </p>
+  <h4>Exemple étendu :</h4>
+  <p>La fonction <tt>buffer_async_group_end()</tt> peut être appelée à partir de n'importe quel événement, et comme elle est asynchrone, le rappel peut être presque instantané ou prendre plusieurs secondes. L'appel de la fonction est simple et ressemble à quelque chose comme ceci :</p>
+  <p class="code">buffer_async_group_begin(&quot;SaveGame&quot;) ;<br> save1 = buffer_save_async(buff1, &quot;Player_Save1.sav&quot;, 0, 16384) ;<br> save2 = buffer_save_async(buff2, &quot;Player_Save2.sav&quot;, 0, 16384) ;<br> save3 = buffer_save_async(buff3, &quot;Player_Save3.sav&quot;,
+    0, 16384) ;<br> save4 = buffer_save_async(buff4, &quot;Player_Save4.sav&quot;, 0, 16384) ;<br> save_id = buffer_async_group_end() ;</p>
+  <p>Le code ci-dessus démarre un groupe de tampons puis le définit pour sauvegarder 4 fichiers de manière asynchrone. La définition du groupe est ensuite terminée (à ce moment-là, la sauvegarde commencera), en stockant l'ID de l'appel de fonction dans la variable &quot; save_id<i>&quot;.</i> Lorsque la sauvegarde
+    est terminée, l'événement asynchrone Save/Load est déclenché et vous pouvez analyser la carte <tt>async_load</tt> pour trouver l'ID correct de la fonction, comme ceci :</p>
+  <p class="code">if ds_map_find_value(async_load, &quot;id&quot;) == saveid<br> {
+    <br> if ds_map_find_value(async_load, &quot;status&quot;) == false<br> {
+    <br> show_debug_message(&quot;Save failed !&quot;) ;<br> }
+    <br> }
+  </p>
+  <p>Le code ci-dessus vérifiera d'abord l'id de la carte DS qui a été créée, puis le statut de la callback, en affichant un message de débogage s'il y a eu des problèmes.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <div class="footer">
+    <div class="buttons">
+      <div class="clear">
+        <div style="float:left">Retour : <a href="Buffers.htm">Tampons</a></div>
+        <div style="float:right">Suivant : <a href="buffer_copy.htm">buffer_copy</a></div>
+      </div>
+    </div>
+    <h5><span data-keyref="Copyright Notice">Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
   </div>
   <!-- KEYWORDS
 buffer_async_group_end

@@ -7,14 +7,65 @@
   <meta name="generator" content="Adobe RoboHelp 2019" />
   <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
   <meta name="rh-authors" content="Mark Alexander" />
-  <meta name="topic-comment" content="Page décrivant la fonction instance_place" />
+  <meta name="topic-comment" content="Page outlining the function instance_place" />
   <meta name="rh-index-keywords" content="instance_place" />
   <meta name="search-keywords" content="instance_place" />
 </head>
-<body><!--<div class="body-scroll" style="top: 150px;">--><h1>instance_place</h1><p> Avec cette fonction, vous pouvez vérifier une position pour une collision avec une autre instance ou toutes les instances d&#39;un objet en utilisant le masque de collision de l&#39;instance qui exécute le code pour la vérification. Lorsque vous l&#39;utilisez, vous demandez effectivement à <span class="notranslate">GameMaker Studio 2</span> de déplacer l&#39;instance vers la nouvelle position, de rechercher une collision, de revenir en arrière et de vous dire si une collision a été trouvée ou non. Cela fonctionnera pour des collisions précises, mais uniquement si l&#39;instance et l&#39;objet à vérifier ont tous deux des masques de collision précis sélectionnés, sinon seules les collisions de boîte englobante sont appliquées. cette fonction renverra l&#39;instance unique <a href="Instance_Variables/id.htm"><tt>id</tt></a> de l&#39;objet en collision, mais si cela n&#39;est pas nécessaire, il est légèrement plus rapide d&#39;utiliser la fonction <a href="../../Movement_And_Collisions/Collisions/place_meeting.htm"><tt>place_meeting()</tt></a>. Cette fonction accepte également les mots-clés spéciaux <span class="inline"><b>all</b></span> et <span class="inline"><b>other</b></span> et renverra le <a href="../../../GML_Overview/Instance_Keywords.htm">mot-clé</a> <span class="inline"><b>noone</b></span> si aucune collision ne se produit, ou la valeur d&#39;ID d&#39;instance unique de l&#39;instance trouvée si une collision se produit.</p><p> Notez que les coordonnées x / y données seront arrondies à l&#39;entier le plus proche avant que la vérification ne soit effectuée, donc si ce n&#39;est <i>pas</i> ce dont vous avez besoin (ou si vous avez utilisé un ancien <span class="notranslate">GameMaker</span> ), vous devriez <tt>floor</tt> les coordonnées dans le chèque:</p><p class="code">instance_place_list(floor(x), floor(y), obj_Enemy, list, true).</p><p></p><h4> Syntaxe:</h4><p class="code">instance_place(x, y, obj);</p><table><tbody><tr><th> Argument</th><th> Description</th></tr><tr><td> <span class="notranslate">x</span></td><td> La position x pour rechercher des instances.</td></tr><tr><td> <span class="notranslate">y</span></td><td> La position y pour rechercher des instances.</td></tr><tr><td> <span class="notranslate">obj</span></td><td> Objet pour lequel rechercher des instances.</td></tr></tbody></table><p></p><h4> Retour:</h4><p class="code">Real (either an instance ID value or the keyword <tt>noone</tt>)</p><p></p><h4> Exemple:</h4><p class="code">var _inst = instance_place(x, y, obj_Enemy);<br/> if _inst != noone<br/>     {
-    <br/>     hp -= _inst.dmg;<br/>     instance_destroy(_inst);
-    <br/>     }
-  </p><p> Le code ci-dessus vérifiera une collision avec les instances de &quot;obj_Enemy&quot; et s&#39;il y en a une, il réduira la variable &quot;hp&quot; de la quantité stockée dans la variable &quot;dmg&quot; de l&#39;instance en collision, puis détruira l&#39;instance en collision. </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> Retour: <a href="Instances.htm">Instances</a></div><div style="float:right"> Suivant:<a href="instance_place_list.htm">instance_place_list</a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
+<body>
+  <!--<div class="body-scroll" style="top: 150px;">-->
+  <h1>instance_place</h1>
+  <p>Cette fonction vous permet de vérifier la présence d'une collision entre une position et une autre instance ou toutes les instances d'un objet en utilisant le masque de collision de l'instance qui exécute le code de vérification. Lorsque vous utilisez cette fonction, vous demandez effectivement à <span class="notranslate">GameMaker Studio 2</span> de déplacer l'instance vers la nouvelle position, de vérifier s'il y a une collision, de revenir en arrière et de vous dire si une collision a été trouvée ou non. Cela fonctionnera pour les collisions précises, mais seulement si l'instance et l'objet à vérifier ont tous deux des masques de collisions précises
+    de collision précis, sinon seules les collisions de la boîte englobante sont appliquées. <a href="Instance_Variables/id.htm"><tt>id</tt></a> de l'objet en collision, mais si cela n'est pas nécessaire, il est légèrement plus rapide d'utiliser la fonction
+    fonction <a href="../../Movement_And_Collisions/Collisions/place_meeting.htm"><tt>place_meeting()</tt></a>. Cette fonction accepte également les mots-clés spéciaux <span class="inline"><b>all</b></span> et <span class="inline"><b>other</b></span> et renvoie le mot-clé
+    retournera le <a href="../../../GML_Overview/Instance_Keywords.htm">mot-clé</a> <span class="inline"><b>noone</b></span> si aucune collision ne se produit, ou la valeur d'ID d'instance unique de l'instance trouvée si une collision se produit.</p>
+  <p>Notez que les coordonnées x/y données seront arrondies à l'entier le plus proche avant que la vérification ne soit effectuée, donc si ce <i>n'est pas</i> ce dont vous avez besoin (ou si vous avez utilisé un ancien produit <span class="notranslate">GameMaker</span> ), vous devez <tt>plancher</tt> les coordonnées dans l'option
+    vérification :</p>
+  <p class="code">instance_place_list(floor(x), floor(y), obj_Enemy, list, true).</p>
+  <p> </p>
+  <h4>Syntaxe :</h4>
+  <p class="code">instance_place(x, y, obj) ;</p>
+  <table>
+    <tbody>
+      <tr>
+        <th>Arguments</th>
+        <th>Description</th>
+      </tr>
+      <tr>
+        <td>x</td>
+        <td>La position x à vérifier pour les instances.</td>
+      </tr>
+      <tr>
+        <td>y</td>
+        <td>La position y pour vérifier les instances.</td>
+      </tr>
+      <tr>
+        <td>obj.</td>
+        <td>L'objet dont il faut rechercher les instances.</td>
+      </tr>
+    </tbody>
+  </table>
+  <p> </p>
+  <h4>Les retours :</h4>
+  <p class="code">Real (soit une valeur d'ID d'instance, soit le mot clé <tt>noone</tt>)</p>
+  <p> </p>
+  <h4>Exemple :</h4>
+  <p class="code">var _inst = instance_place(x, y, obj_Enemy) ;<br> if _inst != noone<br> {
+    <br> hp -= _inst.dmg ;<br> instance_destroy(_inst) ;
+    <br> }
+  </p>
+  <p>Le code ci-dessus vérifiera s'il y a une collision avec des instances de &quot;obj_Enemy&quot; et s'il y en a une, il réduira la variable &quot;hp&quot; de la quantité stockée dans la variable &quot;dmg&quot; de l'instance en collision, puis détruira l'instance en collision.
+    collision.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <div class="footer">
+    <div class="buttons">
+      <div class="clear">
+        <div style="float:left">Retour : <a href="Instances.htm">Instances</a></div>
+        <div style="float:right">Suivant : <a href="instance_place_list.htm">instance_place_list</a></div>
+      </div>
+    </div>
+    <h5><span data-keyref="Copyright Notice">Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
   </div>
   <!-- KEYWORDS
 instance_place

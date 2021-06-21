@@ -7,14 +7,69 @@
   <meta name="generator" content="Adobe RoboHelp 2019" />
   <link rel="stylesheet" href="../../../../../assets/css/default.css" type="text/css" />
   <meta name="rh-authors" content="Mark Alexander" />
-  <meta name="topic-comment" content="Page expliquant la fonction audio_play_sound_on" />
+  <meta name="topic-comment" content="Page explaining the function audio_play_sound_on" />
   <meta name="rh-index-keywords" content="audio_play_sound_on" />
   <meta name="search-keywords" content="audio_play_sound_on" />
 </head>
-<body><!--<div class="body-scroll" style="top: 150px;">--><h1>audio_play_sound_on</h1><p> Avec cette fonction, vous pouvez jouer n&#39;importe quelle ressource sonore via un émetteur, avec tout changement de gain, de position, de hauteur ou de vélocité de l&#39;émetteur affectant la manière dont l&#39;utilisateur entend le son final joué. Vous fournissez l&#39;index de l&#39;émetteur à utiliser, l&#39;index du son du son à jouer, puis vous spécifiez si le son doit être mis en boucle ou non. Enfin, vous pouvez attribuer une priorité, qui est ensuite utilisée pour déterminer comment les sons sont traités lorsque le nombre de sons joués dépasse la limite définie par la fonction <a
-      href="../audio_channel_num.htm"><tt>audio_channel_num()</tt></a>. Les sons de priorité inférieure seront arrêtés au profit des sons de priorité plus élevée, et la valeur de priorité peut être n&#39;importe quel nombre réel (la valeur réelle est arbitraire, et peut être de 0 à 1 ou de 0 à 100, car <span class="notranslate">GameMaker Studio 2</span> donnera la même priorité. ). Notez que lorsqu&#39;il s&#39;agit de priorité, <i>plus</i> le nombre est <i>élevé, plus</i> la priorité est élevée, de sorte qu&#39;un son de priorité 100 sera privilégié par rapport à un son de priorité 1.</p><p> Cette fonction renverra également un numéro d&#39;index unique pour le son en cours de lecture qui peut ensuite être stocké dans une variable afin que vous puissiez ensuite le mettre en pause ou l&#39;arrêter avec les fonctions appropriées. Cela signifie que si plusieurs instances du même son sont lues à un moment donné, vous pouvez cibler une seule instance de ce son à utiliser avec les fonctions audio.</p><p></p><h4> Syntaxe:</h4><p class="code">audio_play_sound_on(emitter, sound, loop, priority);</p><table><tbody><tr><th> Argument</th><th> Description</th></tr><tr><td> <span class="notranslate">emitter</span></td><td> L&#39;indice de l&#39;émetteur à utiliser.</td></tr><tr><td> <span class="notranslate">sound</span></td><td> L&#39;index du son à utiliser.</td></tr><tr><td> <span class="notranslate">loop</span></td><td> Marque le son comme en boucle ou non.</td></tr><tr><td> <span class="notranslate">priority</span></td><td> Définissez la priorité du canal pour le son.</td></tr></tbody></table><p></p><h4> Retour:</h4><p class="code">Index</p><p></p><h4> Exemple:</h4><p class="code">if global.SFX<br/>    {
-    <br/>    audio_play_sound_on(s_emit, snd_Explode, false, 1);<br/>    }
-  </p><p> Le code ci-dessus vérifie la variable globale &quot;SFX&quot; et si elle renvoie <tt>true</tt> puis le son indexé dans la variable &quot;snd_Explode&quot; sera joué via l&#39;émetteur indexé dans la variable &quot;s_emit&quot; avec une priorité basse et sans bouclage. </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> Retour: <a href="Audio_Emitters.htm">Émetteurs audio</a></div><div style="float:right"> Suivant:<a href="audio_emitter_get_gain.htm">audio_emitter_get_gain</a></div><div style="float:right"></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
+<body>
+  <!--<div class="body-scroll" style="top: 150px;">-->
+  <h1>audio_play_sound_on</h1>
+  <p>Cette fonction permet de lire n'importe quelle ressource sonore par le biais d'un émetteur, les modifications apportées au gain, à la position, à la hauteur ou à la vitesse de l'émetteur affectant la façon dont l'utilisateur entend le son final joué. Vous fournissez l'indice d'émetteur à utiliser, l'indice de son
+    du son à jouer, puis vous indiquez si le son doit être joué en boucle ou non. Enfin, vous pouvez attribuer une priorité, qui est ensuite utilisée pour déterminer comment les sons sont traités lorsque le nombre de sons joués dépasse la limite fixée par la fonction 
+    <a href="../audio_channel_num.htm"><tt>audio_channel_num()</tt></a>. Les sons de priorité inférieure seront arrêtés au profit des sons de priorité supérieure. La valeur de la priorité peut être un nombre réel quelconque (la valeur réelle est arbitraire et peut être comprise entre 0 et 1 ou 0 et 100, car <span class="notranslate">GameMaker Studio 2</span> leur attribuera la même priorité).
+      les classera de la même façon). Notez que lorsqu'il s'agit de priorité, plus le nombre est <i>élevé</i>, plus la priorité est <i>élevée</i>, de sorte qu'un son de priorité 100 sera favorisé par rapport à un son de priorité 1.
+      priorité 1.</p>
+  <p>Cette fonction renvoie également un numéro d'index unique pour le son en cours de lecture, qui peut ensuite être stocké dans une variable afin que vous puissiez le mettre en pause ou l'arrêter avec les fonctions appropriées. Cela signifie que si vous avez plusieurs instances du même son en cours de lecture, vous pouvez cibler une seule instance de ce son.
+    son en cours de lecture à un moment donné, vous pouvez cibler une seule instance de ce son à traiter à l'aide des fonctions audio.</p>
+  <p> </p>
+  <h4>Syntaxe :</h4>
+  <p class="code">audio_play_sound_on(emitter, sound, loop, priority) ;</p>
+  <table>
+    <tbody>
+      <tr>
+        <th>Arguments</th>
+        <th>Description</th>
+      </tr>
+      <tr>
+        <td>émetteur</td>
+        <td>L'indice de l'émetteur à utiliser.</td>
+      </tr>
+      <tr>
+        <td>son</td>
+        <td>L'index du son à utiliser.</td>
+      </tr>
+      <tr>
+        <td>boucle</td>
+        <td>Indique que le son est en boucle ou non.</td>
+      </tr>
+      <tr>
+        <td>priorité</td>
+        <td>Définissez la priorité du canal pour le son.</td>
+      </tr>
+    </tbody>
+  </table>
+  <p> </p>
+  <h4>Les retours :</h4>
+  <p class="code">Index</p>
+  <p> </p>
+  <h4>Exemple :</h4>
+  <p class="code">if global.SFX<br> {
+    <br> audio_play_sound_on(s_emit, snd_Explode, false, 1) ;<br> }
+  </p>
+  <p>Le code ci-dessus vérifie la variable globale &quot;SFX&quot; et s'il retourne vrai, alors <tt>le</tt> son indexé dans la variable &quot;snd_Explode&quot; sera joué par l'émetteur indexé dans la variable &quot;s_emit&quot;.
+    avec une faible priorité et sans bouclage.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <div class="footer">
+    <div class="buttons">
+      <div class="clear">
+        <div style="float:left">Retour : <a href="Audio_Emitters.htm">Émetteurs audio</a></div>
+        <div style="float:right">Suivant : <a href="audio_emitter_get_gain.htm">audio_emitter_get_gain</a></div>
+        <div style="float:right"> </div>
+      </div>
+    </div>
+    <h5><span data-keyref="Copyright Notice">Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
   </div>
   <!-- KEYWORDS
 audio_play_sound_on

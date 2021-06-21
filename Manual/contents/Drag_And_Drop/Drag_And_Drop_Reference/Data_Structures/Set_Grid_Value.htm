@@ -7,11 +7,58 @@
   <meta name="generator" content="Adobe RoboHelp 2019" />
   <link rel="stylesheet" href="../../../assets/css/default.css" type="text/css" />
   <meta name="rh-authors" content="Mark Alexander" />
-  <meta name="topic-comment" content="Page qui explique l&#39;action Définir la valeur de grille" />
-  <meta name="rh-index-keywords" content="DnD ™ - Définir la valeur de la grille" />
-  <meta name="search-keywords" content="Définir la valeur de la grille" />
+  <meta name="topic-comment" content="Page that explains the Set Grid Value action" />
+  <meta name="rh-index-keywords" content="DnD™ Action - Set Grid Value" />
+  <meta name="search-keywords" content="Set Grid Value" />
 </head>
-<body><!--<div class="body-scroll" style="top: 150px;">--><h1><img alt="Set Grid Value Icon" class="icon" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Data_Structures/i_DS_Set_Grid_Value.png" /> Définir la valeur de la grille</h1><p> Avec cette action, vous pouvez définir une cellule spécifique dans la structure de données de grille sur une valeur. Vous fournissez la variable qui contient l&#39;index de la grille (tel que renvoyé par l&#39;action <a href="Create_Grid.htm">Créer une grille</a> ), puis indiquez la position x et y (la colonne et la ligne) de la cellule à définir, puis enfin la valeur de cette cellule. La valeur peut être n&#39;importe quel type de données valide, mais les positions x et y doivent être des entiers entiers dans les limites de la grille.</p><p></p><h4> Syntaxe de l&#39;action:</h4><p><img alt="Set Grid Value Action" class="center" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Data_Structures/a_DS_Set_Grid_Value.png" /></p><h4> Arguments:</h4><table><tbody><tr><th> Argument</th><th> Description</th></tr><tr><td> <span class="notranslate">Grid</span></td><td> L&#39;index (stocké dans une variable) de la grille à définir</td></tr><tr><td> <span class="notranslate">x</span></td><td> La position de la cellule le long de l&#39;axe x à définir (la colonne)</td></tr><tr><td> <span class="notranslate">y</span></td><td> La position de la cellule le long de l&#39;axe y à définir (la ligne)</td></tr><tr><td> <span class="notranslate">Value</span></td><td> La valeur sur laquelle définir la cellule de la grille</td></tr></tbody></table><p></p><h4> Exemple:</h4><p><img alt="Set Grid Value Example" class="center" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Data_Structures/e_DS_Set_Grid_Value.png" /> Le code de bloc d&#39;action ci-dessus crée une nouvelle structure de données de grille et conserve sa valeur d&#39;index dans une variable globale. Il parcourt ensuite toutes les instances de la salle et ajoute leur valeur d&#39;identifiant unique dans la cellule correspondant à leur position. </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> Retour: <a href="Data_Structure_Actions.htm">Actions de structure de données</a></div><div style="float:right"> Suivant: <a href="Get_Grid_Value.htm">Obtenir la valeur de la grille</a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
+<body>
+  <!--<div class="body-scroll" style="top: 150px;">-->
+  <h1><img alt="Set Grid Value Icon" class="icon" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Data_Structures/i_DS_Set_Grid_Value.png"> Définir la valeur de la grille</h1>
+  <p>Cette action vous permet de définir une valeur pour une cellule spécifique de la structure de données de la grille. Vous fournissez la variable qui contient l'index de la grille (tel que retourné par l'action <a href="Create_Grid.htm">Créer une grille</a>), puis vous donnez la position x et y (la colonne et la ligne) de la cellule à définir et enfin la valeur de cette cellule.
+    et ligne) pour la cellule à définir, et enfin la valeur de cette cellule. La valeur peut être n'importe quel type de données valide, mais les positions x et y doivent être des nombres entiers dans les limites de la grille.</p>
+  <p> </p>
+  <h4>Syntaxe de l'action :</h4>
+  <p><img alt="Set Grid Value Action" class="center" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Data_Structures/a_DS_Set_Grid_Value.png" /></p>
+  <h4>Arguments :</h4>
+  <table>
+    <tbody>
+      <tr>
+        <th>Arguments</th>
+        <th>Description</th>
+      </tr>
+      <tr>
+        <td>Grille</td>
+        <td>L'index (stocké dans une variable) de la grille à définir</td>
+      </tr>
+      <tr>
+        <td>x</td>
+        <td>La position de la cellule le long de l'axe x à définir (la colonne)</td>
+      </tr>
+      <tr>
+        <td>y</td>
+        <td>La position de la cellule le long de l'axe des y à définir (la ligne)</td>
+      </tr>
+      <tr>
+        <td>Valeur</td>
+        <td>La valeur à donner à la cellule de la grille</td>
+      </tr>
+    </tbody>
+  </table>
+  <p> </p>
+  <h4>Exemple :</h4>
+  <p><img alt="Set Grid Value Example" class="center" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Data_Structures/e_DS_Set_Grid_Value.png">Le code du bloc d'action ci-dessus crée une nouvelle structure de données de grille et maintient sa valeur d'indice
+    dans une variable globale. Il parcourt ensuite toutes les instances de la salle et ajoute leur valeur d'identification unique dans la cellule qui correspond à leur position.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <div class="footer">
+    <div class="buttons">
+      <div class="clear">
+        <div style="float:left">Retour : <a href="Data_Structure_Actions.htm">Actions sur les structures de données</a></div>
+        <div style="float:right">Suivant : <a href="Get_Grid_Value.htm">Obtenir la valeur de la grille</a></div>
+      </div>
+    </div>
+    <h5><span data-keyref="Copyright Notice">Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
   </div>
   <!-- KEYWORDS
 Action - Set Grid Value

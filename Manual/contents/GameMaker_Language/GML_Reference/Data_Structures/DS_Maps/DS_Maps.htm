@@ -7,11 +7,79 @@
   <meta name="generator" content="Adobe RoboHelp 2019" />
   <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
   <meta name="rh-authors" content="Mark Alexander" />
-  <meta name="topic-comment" content="Section de référence pour DS Maps" />
+  <meta name="topic-comment" content="Reference section for DS Maps" />
   <meta name="rh-index-keywords" content="" />
-  <meta name="search-keywords" content="Cartes DS" />
+  <meta name="search-keywords" content="DS Maps" />
 </head>
-<body><!--<div class="body-scroll" style="top: 150px;">--><h1> Cartes DS</h1><p> La structure de données de la carte DS est extrêmement utile car elle vous permet de stocker <b>des</b> paires de clés et de <b>valeurs.</b> Par exemple, un personnage de votre jeu peut avoir une quantité d&#39;objets différents ( <i>clés</i> ) et pour chaque objet individuel, il peut en avoir un certain nombre ( <i>valeurs</i> ), comme dans un RPG où vous pouvez avoir 10 potions de santé, 5 potions de mana et 100 pièces d&#39;or. Les cartes maintiennent toutes ces paires ensemble dans un seul endroit et vous pouvez ajouter des paires à la carte et rechercher la valeur correspondant à certaines clés en utilisant également quelques fonctions simples. Cependant, il y a quelques choses que vous devez savoir sur les cartes avant de les utiliser! Les cartes <i>ne</i> sont triées d&#39;aucune manière (reconnaissable), ce qui signifie que pour trouver une certaine clé, vous devrez peut-être parcourir le tout (ce qui est <b>très</b> lent). Il n&#39;y a pas non plus moyen de conserver deux clés identiques, ni d&#39;attribuer une clé à deux valeurs.</p><p class="note"> <b>REMARQUE:</b> comme pour toutes les ressources dynamiques, les structures de données occupent de la mémoire et doivent donc <b>toujours</b> être détruites lorsqu&#39;elles ne sont plus nécessaires pour éviter les fuites de mémoire qui ralentiront et finiront par planter votre jeu.</p><p class="note"> <b>NOTE:</b> si vous avez besoin de vérifier si une structure de données existe, vous pouvez utiliser la fonction <span style="font-size:1px;"><a href="../ds_exists.htm"><tt style="font-size: 14px">ds_exists ()</tt></a></span>.</p><p> Outre les fonctions spécifiques répertoriées ci-dessous, vous pouvez tous utiliser une <a class="tooltip" title="Une expression est une combinaison d&#39;une ou plusieurs constantes, variables, opérateurs et / ou fonctions qui sont interprétées selon des règles particulières de priorité et d&#39;association pour renvoyer une autre valeur. Une expression simple serait (5 + 5), qui renvoie 10.">expression</a> (appelée <i>accesseur</i> ) pour ajouter ou modifier le contenu de votre carte DS. Cet accesseur ressemble à un tableau 1D avec la syntaxe suivante:</p><p class="code">map_index[? key]</p><p> Vous pouvez trouver plus d&#39;informations, ainsi que des exemples, à partir de la <span class="notranslate">GML</span> Overview sur <a href="../../../GML_Overview/Accessors.htm">Accessors</a>.</p><p> Les fonctions suivantes existent qui traitent des cartes DS. </p><p></p><ul class="colour"><li><a href="ds_map_exists.htm">ds_map_exists</a></li><li><a href="ds_map_create.htm">ds_map_create</a></li><li><a href="ds_map_add.htm">ds_map_add</a></li><li><a href="ds_map_clear.htm">ds_map_clear</a></li><li><a href="ds_map_copy.htm">ds_map_copy</a></li><li><a href="ds_map_replace.htm">ds_map_replace</a></li><li><a href="ds_map_delete.htm">ds_map_delete</a></li><li><a href="ds_map_empty.htm">ds_map_empty</a></li><li><a href="ds_map_size.htm">ds_map_size</a></li><li><a href="ds_map_find_first.htm">ds_map_find_first</a></li><li><a href="ds_map_find_last.htm">ds_map_find_last</a></li><li><a href="ds_map_find_next.htm">ds_map_find_next</a></li><li><a href="ds_map_find_previous.htm">ds_map_find_previous</a></li><li><a href="ds_map_find_value.htm">ds_map_find_value</a></li><li><a href="ds_map_keys_to_array.htm">ds_map_keys_to_array</a></li><li><a href="ds_map_values_to_array.htm"><span>ds_map_values_to_array</span></a> </li><li><a href="ds_map_set.htm">ds_map_set</a></li><li><a href="ds_map_read.htm">ds_map_read</a></li><li><a href="ds_map_write.htm">ds_map_write</a></li><li><a href="ds_map_destroy.htm">ds_map_destroy</a></li></ul><p></p><p> Quatre autres fonctions sont disponibles pour enregistrer et charger une carte DS. Ces fonctions obscurciront la carte et la stockeront dans un emplacement sécurisé sur la plate-forme cible en utilisant un format de fichier qui signifie que le fichier final ne peut pas être transféré entre les appareils: </p><p></p><ul class="colour"><li><a href="ds_map_secure_save.htm">ds_map_secure_save</a></li><li><a href="ds_map_secure_save_buffer.htm">ds_map_secure_save_buffer</a></li><li><a href="ds_map_secure_load.htm">ds_map_secure_load</a></li><li><a href="ds_map_secure_load_buffer.htm">ds_map_secure_load_buffer</a></li></ul><p></p><p> L&#39;une des utilisations des cartes DS est lorsque vous travaillez avec JSON, et il y a donc quelques fonctions spéciales qui sont spécifiques à cela: </p><p></p><ul class="colour"><li><a href="ds_map_add_list.htm">ds_map_add_list</a></li><li><a href="ds_map_add_map.htm">ds_map_add_map</a></li><li><a href="ds_map_replace_list.htm">ds_map_replace_list</a></li><li><a href="ds_map_replace_map.htm">ds_map_replace_map</a></li><li><a href="ds_map_is_list.htm">ds_map_is_list</a></li><li><a href="ds_map_is_map.htm">ds_map_is_map</a></li></ul><p class="note"> <b>REMARQUE:</b> Bien que ces fonctions vous permettent d&#39;ajouter des listes et des cartes dans une carte, elles sont inutiles pour autre chose que JSON, et les cartes et listes imbriquées ne seront pas lues correctement si elles sont écrites sur le disque ou accessibles d&#39;une autre manière. </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> Retour: <a href="../Data_Structures.htm">Structures de données</a></div><div style="float:right"> Suivant: <a href="../DS_Priority_Queues/DS_Priority_Queues.htm">Files d’attente prioritaires DS</a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
+<body>
+  <!--<div class="body-scroll" style="top: 150px;">-->
+  <h1>Cartes DS</h1>
+  <p>La structure de données DS map est exceptionnellement utile car elle vous permet de stocker des paires de <b>clés</b> et de <b>valeurs</b>. Par exemple, un personnage de votre jeu peut avoir une quantité d'objets différents<i>(clés</i>) et pour chaque objet individuel, il peut en avoir un certain nombre (valeurs).
+    d'entre eux<i>(valeurs</i>), comme dans un RPG où vous pouvez avoir 10 potions de santé, 5 potions de mana et 100 or. Les cartes conservent ces paires toutes ensemble au même endroit et vous pouvez ajouter des paires à la carte et rechercher la valeur correspondant à certaines clés
+    en utilisant quelques fonctions simples. Il y a cependant quelques choses que vous devez savoir sur les cartes avant de les utiliser ! Les cartes <i>ne</i> sont <i>pas</i> triées d'une manière (reconnaissable), ce qui signifie que pour trouver une certaine clé, vous devrez peut-être itérer à travers l'ensemble de la carte (ce qui est très lent).
+    tout le système (ce qui est <b>très</b> lent). Il n'est pas non plus possible de conserver deux clés identiques, ni d'attribuer deux valeurs à une même clé.</p>
+  <p class="note"><b>REMARQUE :</b> comme toutes les ressources dynamiques, les structures de données occupent de la mémoire et doivent donc <b>toujours</b> être détruites lorsqu'elles ne sont plus nécessaires afin d'éviter les fuites de mémoire qui ralentiront et finiront par faire planter votre jeu.</p>
+  <p class="note"><b>NOTE :</b> si vous avez besoin de vérifier si une structure de données existe, vous pouvez utiliser la fonction <span style="font-size:1px;"><a href="../ds_exists.htm"><tt style="font-size: 14px">ds_exists()</tt></a></span> fonction.</p>
+  <p>En dehors des fonctions spécifiques énumérées ci-dessous, vous pouvez toutes utiliser une <a class="tooltip" title="An expression is a combination of one or more constants, variables, operators, and/or functions that are interpreted according to particular rules of precedence and association to return another value. A simple expression would be (5 + 5), which returns 10.">expression</a> (appelée un <i>accesseur</i>) pour ajouter ou modifier le contenu de votre carte DS. Cet accesseur ressemble à un tableau 1D avec la syntaxe suivante :</p>
+  <p class="code">map_index[ ? key]</p>
+  <p>Vous trouverez de plus amples informations, ainsi que des exemples, sur la page de présentation du <span class="notranslate">GML</span> sur les <a href="../../../GML_Overview/Accessors.htm">accesseurs</a>.</p>
+  <p>Les fonctions suivantes traitent des cartes DS.</p>
+  <p> </p>
+  <ul class="colour">
+    <li><a href="ds_map_exists.htm">ds_map_exists</a></li>
+    <li><a href="ds_map_create.htm">ds_map_create</a></li>
+    <li><a href="ds_map_add.htm">ds_map_add</a></li>
+    <li><a href="ds_map_clear.htm">ds_map_clear</a></li>
+    <li><a href="ds_map_copy.htm">ds_map_copy</a></li>
+    <li><a href="ds_map_replace.htm">ds_map_replace</a></li>
+    <li><a href="ds_map_delete.htm">ds_map_delete</a></li>
+    <li><a href="ds_map_empty.htm">ds_map_empty</a></li>
+    <li><a href="ds_map_size.htm">ds_map_size</a></li>
+    <li><a href="ds_map_find_first.htm">ds_map_find_first</a></li>
+    <li><a href="ds_map_find_last.htm">ds_map_find_last</a></li>
+    <li><a href="ds_map_find_next.htm">ds_map_find_next</a></li>
+    <li><a href="ds_map_find_previous.htm">ds_map_find_previous</a></li>
+    <li><a href="ds_map_find_value.htm">ds_map_find_value</a></li>
+    <li><a href="ds_map_keys_to_array.htm">ds_map_keys_to_array</a></li>
+    <li><a href="ds_map_values_to_array.htm"><span>ds_map_values_to_array</span></a></li>
+    <li><a href="ds_map_set.htm">ds_map_set</a></li>
+    <li><a href="ds_map_read.htm">ds_map_read</a></li>
+    <li><a href="ds_map_write.htm">ds_map_write</a></li>
+    <li><a href="ds_map_destroy.htm">ds_map_destroy</a></li>
+  </ul>
+  <p> </p>
+  <p>Quatre autres fonctions sont disponibles pour sauvegarder et charger une carte DS. Ces fonctions permettent d'obscurcir la carte et de la stocker dans un emplacement sécurisé sur la plate-forme cible en utilisant un format de fichier qui empêche le transfert du fichier final
+    entre les appareils :</p>
+  <p> </p>
+  <ul class="colour">
+    <li><a href="ds_map_secure_save.htm">ds_map_secure_save</a></li>
+    <li><a href="ds_map_secure_save_buffer.htm">ds_map_secure_save_buffer</a></li>
+    <li><a href="ds_map_secure_load.htm">ds_map_secure_load</a></li>
+    <li><a href="ds_map_secure_load_buffer.htm">ds_map_secure_load_buffer</a></li>
+  </ul>
+  <p> </p>
+  <p>L'une des utilisations des cartes DS est le travail avec JSON, et il y a donc quelques fonctions spéciales qui sont spécifiques à cela :</p>
+  <p> </p>
+  <ul class="colour">
+    <li><a href="ds_map_add_list.htm">ds_map_add_list</a></li>
+    <li><a href="ds_map_add_map.htm">ds_map_add_map</a></li>
+    <li><a href="ds_map_replace_list.htm">ds_map_replace_list</a></li>
+    <li><a href="ds_map_replace_map.htm">ds_map_replace_map</a></li>
+    <li><a href="ds_map_is_list.htm">ds_map_is_list</a></li>
+    <li><a href="ds_map_is_map.htm">ds_map_is_map</a></li>
+  </ul>
+  <p class="note"><b>NOTE :</b> Bien que ces fonctions vous permettent d'ajouter des listes et des cartes à l'intérieur d'une carte, elles sont inutiles pour tout ce qui n'est pas JSON, et les cartes et listes imbriquées ne seront pas lues correctement si elles sont écrites sur le disque ou si on y accède d'une autre manière.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <div class="footer">
+    <div class="buttons">
+      <div class="clear">
+        <div style="float:left">Retour : <a href="../Data_Structures.htm">Structures de données</a></div>
+        <div style="float:right">Suivant : <a href="../DS_Priority_Queues/DS_Priority_Queues.htm">Files d'attente prioritaires DS</a></div>
+      </div>
+    </div>
+    <h5><span data-keyref="Copyright Notice">Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
   </div>
   <!-- KEYWORDS
 DS Maps

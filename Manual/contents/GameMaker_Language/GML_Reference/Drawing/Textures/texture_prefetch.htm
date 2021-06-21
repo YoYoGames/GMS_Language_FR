@@ -7,14 +7,51 @@
   <meta name="generator" content="Adobe RoboHelp 2019" />
   <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
   <meta name="rh-authors" content="Mark Alexander" />
-  <meta name="topic-comment" content="Page de référence pour texture_prefetch" />
+  <meta name="topic-comment" content="Reference page for ​texture_prefetch" />
   <meta name="rh-index-keywords" content="texture_prefetch" />
   <meta name="search-keywords" content="texture_prefetch" />
 </head>
-<body><!--<div class="body-scroll" style="top: 150px;">--><h1>texture_prefetch</h1><p> Cette fonction peut être utilisée pour &quot;pré-extraire&quot; une page de texture ou un groupe de pages de texture, c&#39;est-à-dire: les charger dans la VRAM si nécessaire. Vous fournissez l&#39; <b>ID de page de texture</b> unique (tel que renvoyé par le <tt>texturegroup_*</tt> fonctions) pour pré-extraire une seule page, ou vous pouvez fournir un <b>nom de groupe de textures</b> (tel que défini dans l&#39; <a href="../../../../Settings/Texture_Groups.htm">éditeur de groupe de textures</a> ) pour pré-extraire toutes les pages de textures du groupe.</p><p></p><h4> Syntaxe:</h4><p class="code">texture_prefetch(tex_id);</p><table><tbody><tr><th> Argument</th><th> Description</th></tr><tr><td> <span class="notranslate">tex_id</span></td><td> L&#39;ID de page de texture (un entier) <i>ou</i> un ID de groupe de texture (une chaîne)</td></tr></tbody></table><p></p><h4> Retour:</h4><p class="code">N/A</p><p></p><h4> Exemple:</h4><p class="code">var _tex_array = texturegroup_get_textures( &quot;MainMenu&quot;);<br/> for (var i = 0; i &lt; array_length(_tex_array); ++i;)<br/>     {
-    <br/>     texture_prefetch(_tex_array[i]);
-    <br/>     }
-  </p><p> Le code ci-dessus prélèvera toutes les pages de texture sous le groupe de textures &quot;MainMenu&quot;. </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> Retour: <a href="Textures.htm">Textures</a></div><div style="float:right"> Suivant:<a href="texture_flush.htm">texture_flush</a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
+<body>
+  <!--<div class="body-scroll" style="top: 150px;">-->
+  <h1>texture_prefetch</h1>
+  <p>Cette fonction peut être utilisée pour &quot;prélever&quot; une page de texture ou un groupe de pages de texture, c'est-à-dire les charger dans la VRAM quand cela est nécessaire. Vous fournissez l'<b>ID</b> unique <b>de la page de texture</b> (tel que renvoyé par les fonctions <tt>texturegroup_*</tt> ) pour prélever une seule page
+    ou vous pouvez fournir le <b>nom d'</b> un <b>groupe de textures</b> (tel que défini dans l'<a href="../../../../Settings/Texture_Groups.htm">éditeur de groupe de textures</a>) pour précharger toutes les pages de textures du groupe.</p>
+  <p> </p>
+  <h4>Syntaxe :</h4>
+  <p class="code">texture_prefetch(tex_id) ;</p>
+  <table>
+    <tbody>
+      <tr>
+        <th>Arguments</th>
+        <th>Description</th>
+      </tr>
+      <tr>
+        <td>tex_id</td>
+        <td>L'ID de la page de texture (un nombre entier) <i>ou</i> l'ID d'un groupe de texture (une chaîne de caractères).</td>
+      </tr>
+    </tbody>
+  </table>
+  <p> </p>
+  <h4>Les retours :</h4>
+  <p class="code">N/A</p>
+  <p> </p>
+  <h4>Exemple :</h4>
+  <p class="code">var _tex_array = texturegroup_get_textures( &quot;MainMenu&quot;) ;<br> for (var i = 0 ; i &lt; array_length(_tex_array) ; ++i ;) <br> {
+    <br> texture_prefetch(_tex_array[i]) ;
+    <br> }
+  </p>
+  <p>Le code ci-dessus va prélever toutes les pages de texture sous le groupe de texture &quot;MainMenu&quot;.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <div class="footer">
+    <div class="buttons">
+      <div class="clear">
+        <div style="float:left">Retour : <a href="Textures.htm">Textures</a></div>
+        <div style="float:right">Suivant : <a href="texture_flush.htm">texture_flush</a></div>
+      </div>
+    </div>
+    <h5><span data-keyref="Copyright Notice">Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
   </div>
   <!-- KEYWORDS
 texture_prefetch

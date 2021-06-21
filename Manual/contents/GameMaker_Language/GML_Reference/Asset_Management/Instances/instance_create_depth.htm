@@ -3,17 +3,70 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>instance_create_depth</title>
+  <title>instance_création_profondeur</title>
   <meta name="generator" content="Adobe RoboHelp 2019" />
   <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
   <meta name="rh-authors" content="Mark Alexander" />
-  <meta name="topic-comment" content="Page décrivant la fonction instance_create_depth" />
+  <meta name="topic-comment" content="Page outlining the function instance_create_depth" />
   <meta name="rh-index-keywords" content="instance_create_depth" />
   <meta name="search-keywords" content="instance_create_depth" />
 </head>
-<body><!--<div class="body-scroll" style="top: 150px;">--><h1>instance_create_depth</h1><p> Avec cette fonction, vous pouvez créer une nouvelle instance de l&#39;objet spécifié à n&#39;importe quel point donné dans la pièce et à la profondeur spécifiée. La profondeur peut être n&#39;importe quelle valeur, où plus la profondeur est basse, plus les objets sont &quot;proches&quot; de la caméra et plus la profondeur est élevée, plus ils sont éloignés, de sorte qu&#39;une instance à une profondeur de -200 sera dessinée sur une instance à une profondeur de +300 ( par exemple).</p><p> Notez que cette fonction créera en fait une couche de pièce pour l&#39;instance, puisque toutes les instances <i>doivent</i> être sur une couche dans la pièce, mais puisqu&#39;il s&#39;agit d&#39;une <i>couche gérée</i> (c&#39;est-à-dire: pas celle que vous avez créée via le code ou dans la pièce, mais celui que <span class="notranslate">GameMaker Studio 2</span> a créé automatiquement) vous ne pouvez pas y accéder, et le <a href="Instance_Variables/layer.htm"><tt>layer</tt></a> la variable d&#39;instance renverra -1.</p><p class="note"> <b>IMPORTANT!</b> Il existe une profondeur de couche minimale et maximale de -16 000 à 16 000. Tout ce qui est placé à une profondeur en dehors de cette plage <b>ne sera pas dessiné</b> bien que tous les événements se déroulent toujours normalement.</p><p> Cette fonction renvoie le <a href="Instance_Variables/id.htm"><tt>id</tt></a> de la nouvelle instance qui peut ensuite être stockée dans une variable ou utilisée pour accéder à cette instance. Notez que cette fonction appellera également l&#39; <a href="../../../../The_Asset_Editors/Object_Properties/Object_Events.htm">événement Create</a> de l&#39;instance en cours de création <i>avant de</i> continuer avec le code ou les actions pour l&#39;événement qui a appelé la fonction.</p><p></p><h4> Syntaxe:</h4><p class="code">instance_create_depth(x, y, depth, obj);</p><table><tbody><tr><th> Argument</th><th> Description</th></tr><tr><td> <span class="notranslate">x</span></td><td> La position x à laquelle l&#39;objet sera créé</td></tr><tr><td> <span class="notranslate">y</span></td><td> La position y à laquelle l&#39;objet sera créé</td></tr><tr><td> <span class="notranslate">depth</span></td><td> La profondeur à laquelle affecter l&#39;instance créée</td></tr><tr><td> <span class="notranslate">obj</span></td><td> L&#39;index d&#39;objet de l&#39;objet pour créer une instance de</td></tr></tbody></table><p></p><h4> Retour:</h4><p class="code">Real (instance ID value)</p><p></p><h4> Exemple:</h4><p class="code">var inst = instance_create_depth(x, y, -10000, obj_Bullet);<br/> with (inst)<br/>     {
-    <br/>     speed = other.shoot_speed;<br/>     direction = other.image_angle;<br/>     }
-  </p><p> Le code ci-dessus crée une nouvelle instance de l&#39;objet &quot;obj_Bullet&quot; et stocke l&#39;ID d&#39;instance dans une variable. Cette variable est ensuite utilisée pour attribuer <tt>speed</tt> et <tt>direction</tt> à la nouvelle instance. </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> Retour: <a href="Instances.htm">Instances</a></div><div style="float:right"> Suivant:<a href="instance_destroy.htm">instance_destroy</a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
+<body>
+  <!--<div class="body-scroll" style="top: 150px;">-->
+  <h1>instance_création_profondeur</h1>
+  <p>Avec cette fonction, vous pouvez créer une nouvelle instance de l'objet spécifié en tout point de la pièce et à la profondeur spécifiée. La profondeur peut être n'importe quelle valeur, où plus la profondeur est faible, plus les objets seront dessinés &quot;près&quot; de la caméra et plus la profondeur est élevée, plus ils seront éloignés.
+    plus la profondeur est élevée, plus l'objet est éloigné de la caméra. Ainsi, une instance située à une profondeur de -200 sera dessinée par rapport à une instance située à une profondeur de +300 (par exemple).</p>
+  <p>Notez que cette fonction créera en fait un calque de room pour l'instance, puisque toutes les instances <i>doivent</i> se trouver sur un calque de la room, mais comme il s'agit d'un calque <i>géré</i> (c'est-à-dire un calque que vous n'avez pas créé par le biais du code ou dans la room, mais un calque créé automatiquement par GameMaker Studio 2), vous ne pourrez pas y accéder.
+   <span class="notranslate">GameMaker Studio 2</span> l'a créé automatiquement), vous ne pouvez pas y accéder et la variable <a href="Instance_Variables/layer.htm"><tt>calque</tt></a> renverra la variable d'instance -1.</p>
+  <p class="note"><b>IMPORTANT !</b> Il existe une profondeur de couche minimale et maximale de -16000 à 16000. Tout ce qui est placé sur une profondeur en dehors de cette plage <b>ne sera pas dessiné</b>, mais tous les événements se dérouleront normalement.</p>
+  <p>Cette fonction renvoie l'identifiant <a href="Instance_Variables/id.htm"><tt>id</tt></a> de la nouvelle instance qui peut alors être stockée dans une variable ou utilisée pour accéder à cette instance. Notez que cette fonction appellera également l'<a href="../../../../The_Asset_Editors/Object_Properties/Object_Events.htm">événement Create</a> de l'instance en cours de création <i>avant de</i> poursuivre le code ou les actions de l'événement qui a appelé la fonction.</p>
+  <p> </p>
+  <h4>Syntaxe :</h4>
+  <p class="code">instance_create_depth(x, y, depth, obj) ;</p>
+  <table>
+    <tbody>
+      <tr>
+        <th>Arguments</th>
+        <th>Description</th>
+      </tr>
+      <tr>
+        <td>x</td>
+        <td>La position x à laquelle l'objet sera créé</td>
+      </tr>
+      <tr>
+        <td>y</td>
+        <td>La position y à laquelle l'objet sera créé</td>
+      </tr>
+      <tr>
+        <td>profondeur</td>
+        <td>La profondeur à laquelle affecter l'instance créée</td>
+      </tr>
+      <tr>
+        <td>obj.</td>
+        <td>L'index de l'objet dont il faut créer une instance.</td>
+      </tr>
+    </tbody>
+  </table>
+  <p> </p>
+  <h4>Les retours :</h4>
+  <p class="code">Real (valeur de l'ID de l'instance)</p>
+  <p> </p>
+  <h4>Exemple :</h4>
+  <p class="code">var inst = instance_create_depth(x, y, -10000, obj_Bullet) ;<br> with (inst)<br> {
+    <br> speed = other.shoot_speed ;<br> direction = other.image_angle ;<br> }
+  </p>
+  <p>Le code ci-dessus crée une nouvelle instance de l'objet &quot;obj_Bullet&quot; et stocke l'identifiant de l'instance dans une variable. Cette variable est ensuite utilisée pour attribuer la <tt>vitesse</tt> et la <tt>direction</tt> à la nouvelle instance.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <div class="footer">
+    <div class="buttons">
+      <div class="clear">
+        <div style="float:left">Retour : <a href="Instances.htm">Instances</a></div>
+        <div style="float:right">Suivant : <a href="instance_destroy.htm">instance_destroy</a></div>
+      </div>
+    </div>
+    <h5><span data-keyref="Copyright Notice">Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
   </div>
   <!-- KEYWORDS
 instance_create_depth

@@ -2,19 +2,103 @@
 
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml"><head>
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-  <title>Actions de fichier</title>
-  <meta name="generator" content="Adobe RoboHelp 2019"/>
-  <link rel="stylesheet" href="../../../assets/css/default.css" type="text/css"/>
-  <meta name="rh-authors" content="Mark Alexander"/>
-  <meta name="topic-comment" content="Section détaillant toutes les actions de fichier"/>
-  <meta name="rh-index-keywords" content="DnD de DnD ™ - Bibliothèque d&#39;actions sur les fichiers"/>
-  <meta name="search-keywords" content="Actions de fichier"/>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>Actions sur les fichiers</title>
+  <meta name="generator" content="Adobe RoboHelp 2019" />
+  <link rel="stylesheet" href="../../../assets/css/default.css" type="text/css" />
+  <meta name="rh-authors" content="Mark Alexander" />
+  <meta name="topic-comment" content="Section detailing all the File actions" />
+  <meta name="rh-index-keywords" content="DnD™ Overview - File Actions Library" />
+  <meta name="search-keywords" content="File Actions" />
 </head>
-<body><!--<div class="body-scroll" style="top: 150px;">--><h1> Bibliothèque d&#39;actions de fichiers</h1><p><img class="center" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Files/Lib_Files.png"/></p><p> Les <b>actions de fichier</b> traitent de deux types de fichiers différents - les fichiers tampon et les fichiers Ini - et ont également certaines actions génériques sur les fichiers pour renommer ou copier des fichiers existants.<b></b></p><p> <b>Les fichiers tampons</b> sont créés en sauvegardant les données d&#39;un tampon que vous avez précédemment créé et ces données peuvent ensuite être chargées à nouveau dans un tampon à tout moment dans le futur. Vous pouvez trouver plus d&#39;informations sur les buffers ici: <a href="../Buffers/Buffer_Actions.htm">Buffer Actions</a>.<b></b></p><p> <b>Les fichiers Ini</b> sont des fichiers petits et légers compatibles avec la plupart des plates-formes. Ils sont idéaux pour stocker de petites informations, comme les préférences d&#39;interface, les meilleurs scores locaux, les données de niveau, etc. et sont très faciles à utiliser. Les fichiers Ini n&#39;ont pas besoin d&#39;avoir été créés auparavant pour utiliser ces actions, et vous pouvez lire à partir d&#39;un fichier Ini inexistant et vous obtiendrez simplement un <tt>default</tt> valeur de retour (que vous spécifiez), cependant nous vous recommandons de créer au moins un fichier ini &quot;de base&quot; pour ouvrir et modifier avant d&#39;utiliser les actions. Ce fichier ini de base peut être créé en appelant simplement l&#39; <a a="" href="Open_Ini_File.htm">action Ouvrir le fichier Ini</a> suivie de <a href="Close_Ini_File.htm">Fermer le fichier Ini</a>, car la fermeture du fichier l&#39;écrira sur le disque, ou vous pouvez en inclure un dans les <a href="../../../Settings/Included_Files.htm">fichiers inclus</a> du navigateur d&#39;actifs. Si vous utilisez un fichier inclus dans Asset Browser comme votre Ini de base, vous devriez également lire la section du manuel sur le <a href="../../../Additional_Information/The_File_System.htm">fonctionnement du système de fichiers</a>.</p><p class="note"> <b>REMARQUE</b>: pour les jeux avec des localisations, il est très important que les lettres accentuées puissent être lues à partir de fichiers externes. Cela signifie que vous devez d&#39;abord créer le fichier ini au <b>format UTF8,</b> puis l&#39;ajouter dans <span class="notranslate">GameMaker Studio 2</span> tant que fichier inclus afin qu&#39;il soit exporté lors de l&#39;exécution du jeu et utilisé à la place du fichier ini au format ANSI par défaut créé par l&#39;ini fonctionne lorsqu&#39;aucun n&#39;a été précédemment fourni. De cette façon, vous pouvez lire et écrire correctement avec tous les accents et les lettres non romaines conservés.</p><p> Les actions suivantes existent pour travailler avec des fichiers:</p><p></p><table class="dnd" style="text-align: left;margin-left:"><tbody><tr style="height: 1px;"><td class="icons" style="margin-left: 16px;"><img alt="Load Buffer Icon" class="icon" height="32" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Files/i_Files_Load_Buffer.png" width="32"/></td><td class="dnd" style=""> <a href="Load_Buffer.htm">Charger le tampon</a></td></tr><tr><td class="dnd_icons" style="margin-left: 16px;"><img alt="Save Buffer Icon" class="icon" height="32" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Files/i_Files_Save_Buffer.png" width="32"/></td><td class="dnd" style=""><a href="Save_Buffer.htm">Enregistrer le tampon</a></td></tr><tr><td class="dnd_icons" style="margin-left: 16px;"><img alt="Rename File Icon" class="icon" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Files/i_Files_Rename_File.png"/></td><td class="dnd" style=""><a href="Rename_File.htm">Renommer le fichier</a></td></tr><tr><td class="dnd_icons" style="margin-left: 16px;"><img alt="Copy File Icon" class="icon" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Files/i_Files_Copy_File.png"/></td><td class="dnd" style=""><a href="Copy_File.htm">Copier un fichier</a></td></tr><tr><td class="dnd_icons" style="margin-left: 16px;"><img alt="Delete File Icon" class="icon" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Files/i_Files_Delete_File.png"/></td><td class="dnd" style=""><a href="Delete_File.htm">Supprimer le fichier</a></td></tr><tr><td class="dnd_icons" style="margin-left: 16px;"><img alt="Open Ini File Icon" class="icon" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Files/i_Files_Open_Ini_File.png"/></td><td class="dnd" style=""><a href="Open_Ini_File.htm">Ouvrir le fichier Ini</a></td></tr><tr><td class="dnd_icons" style="margin-left: 16px;"><img alt="Close Ini File Icon" class="icon" height="32" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Files/i_Files_Close_Ini_File.png" width="32"/></td><td class="dnd" style=""><a href="Close_Ini_File.htm">Fermer le fichier Ini</a></td></tr><tr><td class="dnd_icons" style="margin-left: 16px;"><img alt="Write To Ini File Icon" class="icon" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Files/i_Files_Write_To_Ini_File.png"/></td><td class="dnd" style=""><a href="Write_To_Ini_File.htm">Écrire dans un fichier Ini</a></td></tr><tr><td class="dnd_icons" style="margin-left: 16px;"><img alt="Read Ini File Icon" class="icon" height="32" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Files/i_Files_Read_Ini_File.png" width="32"/></td><td class="dnd" style=""><a href="Read_Ini_File.htm">Lire le fichier Ini</a></td></tr><tr><td class="dnd_icons" style="margin-left: 16px;"><img alt="If File Exists Icon" class="icon" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Files/i_Files_If_File_Exists.png"/></td><td class="dnd" style=""><a href="If_File_Exists.htm">Si le fichier existe</a> </td></tr></tbody></table><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> Retour: <a href="../DnD_Reference.htm">Index</a></div><div style="float:right"> Suivant: <a href="../Data_Types/Data_Type_Actions.htm">Actions de type de données</a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
+<body>
+  <!--<div class="body-scroll" style="top: 150px;">-->
+  <h1>Fichiers Bibliothèque d'action</h1>
+  <p><img class="center" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Files/Lib_Files.png" /></p>
+  <p>Les <b>actions sur les fichiers</b> traitent de deux types de fichiers différents - les fichiers tampons et les fichiers Ini - et comportent également certaines actions génériques permettant de renommer ou de copier des fichiers existants.<b></b></p>
+  <p>Les<b>fichiers tampons</b> sont créés en sauvegardant les données d'un tampon que vous avez précédemment créé et ces données peuvent ensuite être rechargées dans un tampon à tout moment dans le futur. Vous pouvez trouver plus d'informations sur les tampons ici : <a href="../Buffers/Buffer_Actions.htm">Actions sur les tampons</a>.<b></b></p>
+  <p>Les<b>fichiers Ini</b> sont des fichiers petits et légers, compatibles avec la plupart des plateformes. Ils sont idéaux pour stocker de petits éléments d'information, comme les préférences d'interface, les meilleurs scores locaux, les données de niveau etc... et sont très faciles à utiliser. Les fichiers Ini n'ont pas
+    n'ont pas besoin d'avoir été créés auparavant pour utiliser ces actions, et vous pouvez lire à partir d'un fichier Ini inexistant et vous obtiendrez simplement une valeur de retour <tt>par défaut</tt> (que vous spécifiez), cependant nous vous recommandons de créer au moins un fichier ini &quot;de base&quot; pour ouvrir et modifier les actions.
+    pour l'ouvrir et le modifier avant d'utiliser les actions. Ce fichier ini de base peut être créé en appelant simplement l'action <a a="" href="Open_Ini_File.htm">Open Ini File</a> suivie de l'action <a href="Close_Ini_File.htm">Close Ini File</a>, puisque la fermeture du fichier l'écrira sur le disque.
+    Ce fichier ini de base peut être créé en appelant simplement l'action Ouvrir le fichier Ini suivie de l'action Fermer le fichier Ini, puisque la fermeture du fichier l'écrira sur le disque <a href="../../../Settings/Included_Files.htm">.</a> Si vous utilisez un fichier inclus dans l'explorateur d'assets comme Ini de base, vous devez également lire
+    la section du manuel concernant <a href="../../../Additional_Information/The_File_System.htm">le fonctionnement du système de fichiers</a>.</p>
+  <p class="note"><b>REMARQUE</b>: pour les jeux comportant des localisations, il est très important que les lettres accentuées puissent être lues à partir de fichiers externes. Cela signifie que vous devez d'abord créer le fichier ini au <b>format UTF8</b>, puis l'ajouter dans <span class="notranslate">GameMaker Studio 2</span> en tant que fichier inclus.
+    afin qu'il soit exporté lors de l'exécution du jeu et utilisé à la place du fichier ini par défaut au format ANSI qui est créé par les fonctions ini lorsqu'aucun fichier n'a été fourni auparavant. De cette façon, vous pouvez lire et écrire correctement dans ce fichier en conservant tous les accents et les lettres non romaines.
+    sont conservés.</p>
+  <p>Les actions suivantes existent pour travailler avec les fichiers :</p>
+  <p> </p>
+  <table class="dnd" style="text-align: left;margin-left:">
+    <tbody>
+      <tr style="height: 1px;">
+        <td class="icons" style="margin-left: 16px;"><img alt="Load Buffer Icon" class="icon" height="32" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Files/i_Files_Load_Buffer.png" width="32" /></td>
+        <td class="dnd" style=""><a href="Load_Buffer.htm">Chargement de la mémoire tampon</a></td>
+      </tr>
+      <tr>
+        <td class="dnd_icons" style="margin-left: 16px;"><img alt="Save Buffer Icon" class="icon" height="32" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Files/i_Files_Save_Buffer.png" width="32" /></td>
+        <td class="dnd" style=""><a href="Save_Buffer.htm">Sauvegarder le tampon</a></td>
+      </tr>
+      <tr>
+        <td class="dnd_icons" style="margin-left: 16px;"><img alt="Rename File Icon" class="icon" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Files/i_Files_Rename_File.png" /></td>
+        <td class="dnd" style=""><a href="Rename_File.htm">Renommer un fichier</a></td>
+      </tr>
+      <tr>
+        <td class="dnd_icons" style="margin-left: 16px;"><img alt="Copy File Icon" class="icon" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Files/i_Files_Copy_File.png" /></td>
+        <td class="dnd" style=""><a href="Copy_File.htm">Copier le fichier</a></td>
+      </tr>
+      <tr>
+        <td class="dnd_icons" style="margin-left: 16px;"><img alt="Delete File Icon" class="icon" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Files/i_Files_Delete_File.png" /></td>
+        <td class="dnd" style=""><a href="Delete_File.htm">Supprimer le fichier</a></td>
+      </tr>
+      <tr>
+        <td class="dnd_icons" style="margin-left: 16px;"><img alt="Open Ini File Icon" class="icon" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Files/i_Files_Open_Ini_File.png" /></td>
+        <td class="dnd" style=""><a href="Open_Ini_File.htm">Ouvrir un fichier Ini</a></td>
+      </tr>
+      <tr>
+        <td class="dnd_icons" style="margin-left: 16px;"><img alt="Close Ini File Icon" class="icon" height="32" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Files/i_Files_Close_Ini_File.png" width="32" /></td>
+        <td class="dnd" style=""><a href="Close_Ini_File.htm">Fermer le fichier Ini</a></td>
+      </tr>
+      <tr>
+        <td class="dnd_icons" style="margin-left: 16px;"><img alt="Write To Ini File Icon" class="icon" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Files/i_Files_Write_To_Ini_File.png" /></td>
+        <td class="dnd" style=""><a href="Write_To_Ini_File.htm">Ecrire dans un fichier Ini</a></td>
+      </tr>
+      <tr>
+        <td class="dnd_icons" style="margin-left: 16px;"><img alt="Read Ini File Icon" class="icon" height="32" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Files/i_Files_Read_Ini_File.png" width="32" /></td>
+        <td class="dnd" style=""><a href="Read_Ini_File.htm">Lire le fichier Ini</a></td>
+      </tr>
+      <tr>
+        <td class="dnd_icons" style="margin-left: 16px;"><img alt="If File Exists Icon" class="icon" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Files/i_Files_If_File_Exists.png" /></td>
+        <td class="dnd" style=""><a href="If_File_Exists.htm">Si le fichier existe</a></td>
+      </tr>
+    </tbody>
+  </table>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <div class="footer">
+    <div class="buttons">
+      <div class="clear">
+        <div style="float:left">Retour : <a href="../DnD_Reference.htm">Index</a></div>
+        <div style="float:right">Suivant : <a href="../Data_Types/Data_Type_Actions.htm">Actions sur les types de données</a></div>
+      </div>
+    </div>
+    <h5><span data-keyref="Copyright Notice">Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
   </div>
   <!-- KEYWORDS
-Drag And Drop File Actions
+<span class="notranslate">Drag And Drop</span> File Actions
 File Actions
 -->
   <!-- TAGS

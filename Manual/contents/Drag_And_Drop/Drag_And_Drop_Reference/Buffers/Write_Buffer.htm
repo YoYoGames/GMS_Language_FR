@@ -3,15 +3,56 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>Tampon d&#39;écriture</title>
+  <title>Tampon d'écriture</title>
   <meta name="generator" content="Adobe RoboHelp 2019" />
   <link rel="stylesheet" href="../../../assets/css/default.css" type="text/css" />
   <meta name="rh-authors" content="Mark Alexander" />
-  <meta name="topic-comment" content="Page qui explique l&#39;action du tampon d&#39;écriture" />
-  <meta name="rh-index-keywords" content="DnD ™ - Tampon d&#39;écriture" />
-  <meta name="search-keywords" content="Tampon d&#39;écriture" />
+  <meta name="topic-comment" content="Page that explains the Write Buffer action" />
+  <meta name="rh-index-keywords" content="DnD™ Action - Write Buffer" />
+  <meta name="search-keywords" content="Write Buffer" />
 </head>
-<body><!--<div class="body-scroll" style="top: 150px;">--><h1><img alt="Write Buffer Icon" class="icon" height="32" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Buffers/i_Buffers_Write_Buffer.png" width="32" /> Tampon d&#39;écriture</h1><p> Cette action peut être utilisée pour écrire des données dans un tampon. Vous fournissez l&#39;ID de tampon unique dans <a href="Create_Buffer.htm">lequel écrire (tel que renvoyé par l&#39;action Créer un tampon</a> ), puis la valeur à écrire, qui peut être un réel ou une chaîne, mais notez que <b>toutes les valeurs sont stockées sous forme de chaînes,</b> donc lorsque vous lisez à partir du buffer (à l&#39;aide du <a href="Read_Buffer.htm">tampon de lecture</a> ), vous devrez peut-être utiliser l&#39;une des <a href="../Data_Types/Data_Type_Actions.htm">actions de type de données</a> pour le convertir d&#39;une chaîne à la valeur d&#39;origine. Gardez à l&#39;esprit également que les tampons sont lus et écrits <i>séquentiellement</i> et que l&#39;écriture dans un tampon déplacera la position «de recherche» le long d&#39;un, ce qui signifie que pour écrire divers éléments de données, vous appelez simplement cette action le nombre de fois requis.</p><p></p><h4> Syntaxe de l&#39;action:</h4><p><img alt="Write Buffer Action" class="center" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Buffers/a_Buffers_Write_Buffer.png" /></p><h4> Arguments:</h4><table><tbody><tr><th> Argument</th><th> Description</th></tr><tr><td> <span class="notranslate">Buffer</span></td><td> L&#39;index du tampon (stocké dans une variable)</td></tr><tr><td> <span class="notranslate">Value</span></td><td> La valeur à ajouter dans le tampon</td></tr></tbody></table><p></p><h4> Exemple:</h4><p><img alt="Write Buffer Example" class="center" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Buffers/e_Buffers_Create_Buffer.png" /> Le code de bloc d&#39;action ci-dessus crée une variable globale, puis un tampon, affectant l&#39;ID de tampon unique à la variable. Ce tampon contient deux données écrites. </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> Retour: <a href="Buffer_Actions.htm">Actions de tampon</a></div><div style="float:right"> Suivant: <a href="Get_Buffer_Size.htm">Seek Buffer</a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
+<body>
+  <!--<div class="body-scroll" style="top: 150px;">-->
+  <h1><img alt="Write Buffer Icon" class="icon" height="32" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Buffers/i_Buffers_Write_Buffer.png" width="32"> Tampon d'écriture</h1>
+  <p>Cette action peut être utilisée pour écrire des données dans un tampon. Vous fournissez l'ID unique du tampon dans lequel vous souhaitez écrire (tel que retourné par l'action <a href="Create_Buffer.htm">Create Buffer</a>) et ensuite la valeur à écrire, qui peut être un réel ou une chaîne, mais notez que
+   <b>toutes les valeurs sont stockées en tant que chaînes de caractères</b>, donc lorsque vous lisez à partir du tampon (en utilisant <a href="Read_Buffer.htm">Read Buffer</a>), vous pouvez avoir besoin d'utiliser l'une des <a href="../Data_Types/Data_Type_Actions.htm">actions de type de données</a> pour le convertir d'une chaîne de caractères à la valeur originale.
+    en valeur d'origine. Gardez également à l'esprit que les tampons sont lus et écrits <i>séquentiellement</i> et que l'écriture dans un tampon déplace la position de recherche d'une unité, ce qui signifie que pour écrire divers éléments de données, il suffit d'appeler cette action
+    le nombre de fois nécessaire.</p>
+  <p> </p>
+  <h4>Syntaxe de l'action :</h4>
+  <p><img alt="Write Buffer Action" class="center" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Buffers/a_Buffers_Write_Buffer.png" /></p>
+  <h4>Arguments :</h4>
+  <table>
+    <tbody>
+      <tr>
+        <th>Arguments</th>
+        <th>Description</th>
+      </tr>
+      <tr>
+        <td>Tampon</td>
+        <td>L'index du tampon (stocké dans une variable)</td>
+      </tr>
+      <tr>
+        <td>Valeur</td>
+        <td>La valeur à ajouter dans le tampon</td>
+      </tr>
+    </tbody>
+  </table>
+  <p> </p>
+  <h4>Exemple :</h4>
+  <p><img alt="Write Buffer Example" class="center" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Buffers/e_Buffers_Create_Buffer.png">Le code du bloc d'action ci-dessus crée une variable globale, puis un tampon, en affectant l'ID de tampon unique à la variable.
+    unique du tampon à la variable. Deux données sont ensuite écrites dans ce tampon.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <div class="footer">
+    <div class="buttons">
+      <div class="clear">
+        <div style="float:left">Retour : <a href="Buffer_Actions.htm">Actions tampon</a></div>
+        <div style="float:right">Suivant : <a href="Get_Buffer_Size.htm">Tampon de recherche</a></div>
+      </div>
+    </div>
+    <h5><span data-keyref="Copyright Notice">Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
   </div>
   <!-- KEYWORDS
 Action - Write Buffer

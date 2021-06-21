@@ -3,20 +3,96 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>layer_get_element_type</title>
+  <title>couche_get_élément_type</title>
   <meta name="generator" content="Adobe RoboHelp 2019" />
   <link rel="stylesheet" href="../../../../../assets/css/default.css" type="text/css" />
   <meta name="rh-authors" content="Mark Alexander" />
-  <meta name="topic-comment" content="Page décrivant la fonction layer_get_element_type" />
-  <meta name="rh-index-keywords" content="layer_get_element_type,layerelementtype_background,layerelementtype_instance,layerelementtype_tilemap,layerelementtype_sprite,layerelementtype_particlesystem,layerelementtype_tile,layerelementtype_sequence" />
-  <meta name="search-keywords" content="layer_get_element_type,layerelementtype_background,layerelementtype_instance,layerelementtype_tilemap,layerelementtype_sprite,layerelementtype_particlesystem,layerelementtype_tile,layerelementtype_sequence" />
+  <meta name="topic-comment" content="Page outlining the function layer_get_element_type" />
+  <meta name="rh-index-keywords" content="layer_get_element_type,layerelementtype_background	,layerelementtype_instance,layerelementtype_tilemap,layerelementtype_sprite,layerelementtype_particlesystem,layerelementtype_tile,layerelementtype_sequence" />
+  <meta name="search-keywords" content="layer_get_element_type,layerelementtype_background	,layerelementtype_instance,layerelementtype_tilemap,layerelementtype_sprite,layerelementtype_particlesystem,layerelementtype_tile,layerelementtype_sequence" />
 </head>
-<body><!--<div class="body-scroll" style="top: 150px;">--><h1>layer_get_element_type</h1><p> Vous pouvez utiliser cette fonction pour obtenir le <i>type d&#39;élément</i> de l&#39;élément donné. Vous fournissez la valeur d&#39;ID d&#39;élément unique (par exemple, comme renvoyé la fonction qui a créé l&#39;élément ou à partir de l&#39;éditeur de pièce) et la fonction renverra l&#39;une des constantes suivantes (ou -1 si l&#39;élément n&#39;existe pas ou la valeur de l&#39;ID est erroné):</p><p></p><table><tbody><tr><th> Constant</th><th> Description</th></tr><tr><td> <span class="notranslate">layerelementtype_background</span></td><td> L&#39;élément est un arrière-plan.</td></tr><tr><td> <span class="notranslate">layerelementtype_instance</span></td><td> L&#39;élément est une instance.</td></tr><tr><td> <span class="notranslate">layerelementtype_sprite</span></td><td> L&#39;élément est un atout de sprite.</td></tr><tr><td> <span class="notranslate">layerelementtype_tilemap</span></td><td> L&#39;élément est un tilemap.</td></tr><tr><td> <span class="notranslate">layerelementtype_particlesystem</span></td><td> L&#39;élément est un système de particules.</td></tr><tr><td> <span class="notranslate">layerelementtype_tile</span></td><td> L&#39;élément est une vignette d&#39;arrière-plan héritée (ceci n&#39;est valable que pour les projets qui ont été importés à partir de versions précédentes de <i><span class="notranslate">GameMaker</span></i> ).</td></tr><tr><td> <span class="notranslate">layerelementtype_sequence</span></td><td> L&#39;élément est un actif de séquence.</td></tr></tbody></table><p></p><p> Notez que cette fonction est plus utile lorsque vous avez plusieurs types d&#39;éléments différents affectés à une couche, et que vous pouvez obtenir une liste de tous les éléments sur une couche donnée en utilisant la fonction <a href="layer_get_all_elements.htm"><tt>layer_get_all_elements()</tt></a>.</p><p></p><h4> Syntaxe:</h4><p class="code">layer_get_element_type(element_id)</p><table><tbody><tr><th> Argument</th><th> Description</th></tr><tr><td> <span class="notranslate">layer</span></td><td> La valeur d&#39;identifiant unique de l&#39;élément pour obtenir le type de</td></tr></tbody></table><p></p><h4> Retour:</h4><p class="code">Constant (see table, above) or -1 if element does not exist or is invalid</p><p></p><h4> Exemple:</h4><p class="code">var a = layer_get_all_elements(layer);<br/> for (var i = 0; i &lt; array_length(a); i++;)<br/>    {
-    <br/>    if layer_get_element_type(a[i]) == layerelementtype_sprite<br/>       {
-    <br/>       layer_sprite_destroy(a[i])
-    <br/>       }
-    <br/>    }
-  </p><p> Le code ci-dessus obtient les ID de tous les éléments d&#39;instance affectés à la couche de l&#39;instance exécutant le code. Le code vérifie ensuite si l&#39;un des éléments renvoyés est un actif de sprite et s&#39;il est détruit. </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> Retour: <a href="General_Layer_Functions.htm">Fonctions générales des calques</a></div><div style="float:right"> Suivant:<a href="layer_get_x.htm">layer_get_x</a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
+<body>
+  <!--<div class="body-scroll" style="top: 150px;">-->
+  <h1>couche_get_élément_type</h1>
+  <p>Vous pouvez utiliser cette fonction pour obtenir le <i>type d'élément</i> pour l'élément donné. Vous fournissez la valeur d'identification unique de l'élément (par exemple, telle que renvoyée par la fonction qui a créé l'élément ou par l'éditeur de pièce) et la fonction renverra l'une des valeurs suivantes
+    (ou -1 si l'élément n'existe pas ou si la valeur de l'ID est erronée) :</p>
+  <p> </p>
+  <table>
+    <tbody>
+      <tr>
+        <th>Constant</th>
+        <th>Description</th>
+      </tr>
+      <tr>
+        <td>layerelementtype_background</td>
+        <td>L'élément est un fond.</td>
+      </tr>
+      <tr>
+        <td>layerelementtype_instance</td>
+        <td>L'élément est une instance.</td>
+      </tr>
+      <tr>
+        <td>layerelementtype_sprite</td>
+        <td>L'élément est un actif de type sprite.</td>
+      </tr>
+      <tr>
+        <td>layerelementtype_tilemap</td>
+        <td>L'élément est une mosaïque.</td>
+      </tr>
+      <tr>
+        <td>layerelementtype_particlesystem</td>
+        <td>L'élément est un système de particules.</td>
+      </tr>
+      <tr>
+        <td>type d'élément_carreau</td>
+        <td>L'élément est une tuile d'arrière-plan héritée (ceci n'est valable que pour les projets qui ont été importés de versions précédentes de <i><span class="notranslate">GameMaker</span></i>).</td>
+      </tr>
+      <tr>
+        <td>séquence_type_élémentaire</td>
+        <td>L'élément est un actif de séquence.</td>
+      </tr>
+    </tbody>
+  </table>
+  <p> </p>
+  <p>Notez que cette fonction est plus utile lorsque vous avez plusieurs types d'éléments différents assignés à une couche, et que vous pouvez obtenir une liste de tous les éléments sur une couche donnée en utilisant la fonction <a href="layer_get_all_elements.htm"><tt>layer_get_all_elements()</tt></a>.</p>
+  <p> </p>
+  <h4>Syntaxe :</h4>
+  <p class="code">layer_get_element_type(element_id)</p>
+  <table>
+    <tbody>
+      <tr>
+        <th>Arguments</th>
+        <th>Description</th>
+      </tr>
+      <tr>
+        <td>couche</td>
+        <td>La valeur d'identification unique de l'élément dont on veut obtenir le type.</td>
+      </tr>
+    </tbody>
+  </table>
+  <p> </p>
+  <h4>Les retours :</h4>
+  <p class="code">Constante (voir tableau ci-dessus) ou -1 si l'élément n'existe pas ou est invalide.</p>
+  <p> </p>
+  <h4>Exemple :</h4>
+  <p class="code">var a = layer_get_all_elements(layer) ;<br> for (var i = 0 ; i &lt; array_length(a) ; i++ ;) <br> {
+    <br> if layer_get_element_type(a[i]) == layerelementtype_sprite<br> {
+    <br> layer_sprite_destroy(a[i])
+    <br> }
+    <br> }
+  </p>
+  <p>Le code ci-dessus récupère les ID de tous les éléments d'instance affectés au layer de l'instance qui exécute le code. Le code vérifie ensuite si l'un des éléments retournés est un sprite et s'il l'est, il est détruit.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <div class="footer">
+    <div class="buttons">
+      <div class="clear">
+        <div style="float:left">Retour : <a href="General_Layer_Functions.htm">Fonctions générales des couches</a></div>
+        <div style="float:right">Suivant : <a href="layer_get_x.htm">layer_get_x</a></div>
+      </div>
+    </div>
+    <h5><span data-keyref="Copyright Notice">Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
   </div>
   <!-- KEYWORDS
 layer_get_element_type

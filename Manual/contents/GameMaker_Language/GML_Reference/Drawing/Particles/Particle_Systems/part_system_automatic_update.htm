@@ -3,17 +3,61 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>part_system_automatic_update</title>
+  <title>mise à jour automatique du système partiel</title>
   <meta name="generator" content="Adobe RoboHelp 2019" />
   <link rel="stylesheet" href="../../../../../assets/css/default.css" type="text/css" />
   <meta name="rh-authors" content="Mark Alexander" />
-  <meta name="topic-comment" content="Page de référence pour part_system_automatic_update" />
+  <meta name="topic-comment" content="Reference page for part_system_automatic_update" />
   <meta name="rh-index-keywords" content="part_system_automatic_update" />
   <meta name="search-keywords" content="part_system_automatic_update" />
 </head>
-<body><!--<div class="body-scroll" style="top: 150px;">--><h1>part_system_automatic_update</h1><p> Cette fonction contrôle si <span class="notranslate">GameMaker Studio 2</span> doit mettre à jour le système de particules automatiquement ou non, et normalement vous n&#39;auriez pas besoin d&#39;utiliser cette fonction comme valeur par défaut de <tt>true</tt> (la mise à jour automatique est activée) est ce que vous souhaitez. Cependant, pour les effets spéciaux ou pour mettre le jeu en pause, vous pouvez le régler sur <tt>false</tt> et cela empêchera toute mise à jour effectuée sur le système de particules donné à moins que cela <i>ne</i> soit explicitement commandé par l&#39;utilisation de la fonction <a href="part_system_update.htm"><tt>part_system_update()</tt></a> ou vous utilisez à nouveau cette fonction pour activer les mises à jour automatiques. Aucune mise à jour signifie que les particules créées dans ce système ne changeront plus de position, de couleur ou de tout autre paramètre et que les émetteurs cesseront également de fonctionner, &quot;gelant&quot; le système au point exact où la mise à jour automatique a été définie sur <tt>false</tt>.</p><p> Une chose à noter est que si vous utilisez les effets simples créés par les fonctions <a href="../effect_create_above.htm"><tt>effect_create_above()</tt></a> ou <a href="../effect_create_below.htm"><tt>effect_create_below()</tt></a> alors vous pouvez utiliser les valeurs de 0 (pour les effets ci-dessous) ou 1 (pour les effets ci-dessus) comme index du système de particules et ainsi basculer la mise à jour automatique pour ceux-ci également (cela fonctionnera également pour activer la mise à jour des <span class="notranslate">DnD</span> de particules DnD™).</p><p></p><h4> Syntaxe:</h4><p class="code">part_system_automatic_update(ind, automatic);</p><table><tbody><tr><th> Argument</th><th> Description</th></tr><tr><td> <span class="notranslate">ind</span></td><td> L&#39;indice du système de particules à changer.</td></tr><tr><td> <span class="notranslate">automatic</span></td><td> Si la mise à jour automatique est activée (<tt>true</tt> ) ou non (faux).</td></tr></tbody></table><p></p><h4> Retour:</h4><p class="code">N/A</p><p></p><h4> Exemple:</h4><p class="code">if global.Pause<br/>     {
-    <br/>     part_system_automatic_update(global.Sname, false);<br/>     }
-  </p><p> Le code ci-dessus désactivera les mises à jour des particules si la variable globale &quot;Paused&quot; est vraie. </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> Retour: <a href="Particle_Systems.htm">Systèmes de particules</a></div><div style="float:right"> Suivant:<a href="part_system_automatic_draw.htm">part_system_automatic_draw</a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
+<body>
+  <!--<div class="body-scroll" style="top: 150px;">-->
+  <h1>mise à jour automatique du système partiel</h1>
+  <p>Cette fonction contrôle si <span class="notranslate">GameMaker Studio 2</span> doit mettre à jour le système de particules automatiquement ou non. Normalement, vous n'avez pas besoin d'utiliser cette fonction car la valeur par défaut de <tt>true</tt> (la mise à jour automatique est activée) correspond à ce que vous souhaitez qu'il se passe.
+    ce que vous souhaitez. Cependant, pour des effets spéciaux ou pour mettre le jeu en pause, vous pouvez définir cette valeur sur <tt>false</tt> et cela empêchera toute mise à jour du système de particules donné, à moins qu'elle ne soit <i>explicitement</i> commandée par l'utilisation de la fonction <a href="part_system_update.htm"><tt>part_system_update()</tt></a>    ou si vous utilisez à nouveau cette fonction pour activer les mises à jour automatiques. L'absence de mise à jour signifie que les particules créées dans ce système ne changeront plus de position, de couleur ou de tout autre paramètre et que les émetteurs cesseront également de fonctionner, ce qui aura pour effet de &quot;geler&quot; le système
+    à l'endroit exact où la mise à jour automatique a été réglée sur <tt>false</tt>.</p>
+  <p>Une chose à noter est que si vous utilisez les effets simples créés par les fonctions <a href="../effect_create_above.htm"><tt>effet_créer_supérieur()</tt></a> ou <a href="../effect_create_below.htm"><tt>effet_create_below()</tt></a> alors vous pouvez utiliser
+    les valeurs 0 (pour les effets inférieurs) ou 1 (pour les effets supérieurs) comme index du système de particules et ainsi activer la mise à jour automatique pour ceux-ci également (cela fonctionnera également pour activer la mise à jour pour les effets de particules <span class="notranslate">DnD™</span>).</p>
+  <p> </p>
+  <h4>Syntaxe :</h4>
+  <p class="code">part_system_automatic_update(ind, automatic) ;</p>
+  <table>
+    <tbody>
+      <tr>
+        <th>Arguments</th>
+        <th>Description</th>
+      </tr>
+      <tr>
+        <td>ind</td>
+        <td>L'indice du système de particules à modifier.</td>
+      </tr>
+      <tr>
+        <td>automatique</td>
+        <td>Si la mise à jour automatique est activée<tt>(true</tt>) ou non (false).</td>
+      </tr>
+    </tbody>
+  </table>
+  <p> </p>
+  <h4>Les retours :</h4>
+  <p class="code">N/A</p>
+  <p> </p>
+  <h4>Exemple :</h4>
+  <p class="code">if global.Pause<br> {
+    <br> part_system_automatic_update(global.Sname, false) ;<br> }
+  </p>
+  <p>Le code ci-dessus désactivera les mises à jour des particules si la variable globale &quot;Paused&quot; est vraie.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <div class="footer">
+    <div class="buttons">
+      <div class="clear">
+        <div style="float:left">Retour : <a href="Particle_Systems.htm">Systèmes de particules</a></div>
+        <div style="float:right">Suivant : <a href="part_system_automatic_draw.htm">part_system_automatic_draw</a></div>
+      </div>
+    </div>
+    <h5><span data-keyref="Copyright Notice">Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
   </div>
   <!-- KEYWORDS
 part_system_automatic_update

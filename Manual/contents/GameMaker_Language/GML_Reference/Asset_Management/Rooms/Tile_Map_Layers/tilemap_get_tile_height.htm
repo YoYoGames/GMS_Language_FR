@@ -7,11 +7,47 @@
   <meta name="generator" content="Adobe RoboHelp 2019" />
   <link rel="stylesheet" href="../../../../../assets/css/default.css" type="text/css" />
   <meta name="rh-authors" content="Mark Alexander" />
-  <meta name="topic-comment" content="Page décrivant la fonction tilemap_get_tile_height" />
+  <meta name="topic-comment" content="Page outlining the function tilemap_get_tile_height" />
   <meta name="rh-index-keywords" content="tilemap_get_tile_height" />
   <meta name="search-keywords" content="tilemap_get_tile_height" />
 </head>
-<body><!--<div class="body-scroll" style="top: 150px;">--><h1>tilemap_get_tile_height</h1><p> En utilisant cette fonction, vous pouvez récupérer la hauteur (en pixels) de chaque cellule de tuile de l&#39;élément de carte de tuile. Vous donnez l&#39;ID d&#39;élément de carte de tuiles (que vous obtenez lorsque vous créez un élément de carte de tuiles à l&#39;aide de <a href="layer_tilemap_create.htm"><tt>layer_tilemap_create()</tt></a> ou lorsque vous utilisez la fonction <a href="layer_tilemap_get_id.htm"><tt>layer_tilemap_get_id()</tt></a> ), et la fonction renverra la hauteur de cellule du jeu de tuiles.</p><p></p><h4> Syntaxe:</h4><p class="code">tilemap_get_tile_height(tilemap_element_id);</p><table><tbody><tr><th> Argument</th><th> Description</th></tr><tr><td> <span class="notranslate">tilemap_element_id</span></td><td> La valeur d&#39;ID unique de l&#39;élément de mappage de tuiles pour obtenir la hauteur de cellule de tuile de</td></tr></tbody></table><p></p><h4> Retour:</h4><p class="code">Real</p><p></p><h4> Exemple:</h4><p class="code">var lay_id = layer_get_id(&quot;Tiles_Walls&quot;);<br/> var map_id = layer_tilemap_get_id(lay_id);<br/> global.snap_x = tilemap_get_tile_width(map_id);<br/> global.snap_y = tilemap_get_tile_height(map_id);</p><p> Le code ci-dessus utilise l&#39;ID de mappage de tuiles récupéré pour obtenir la largeur et la hauteur de la cellule de tuiles et les utiliser pour définir deux variables globales. </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> Retour: <a href="Tile_Map_Layers.htm">Couches de carte de mosaïque</a></div><div style="float:right"> Suivant:<a href="tilemap_get_width.htm">tilemap_get_width</a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
+<body>
+  <!--<div class="body-scroll" style="top: 150px;">-->
+  <h1>tilemap_get_tile_height</h1>
+  <p>Cette fonction vous permet de récupérer la hauteur (en pixels) de chaque cellule de l'élément de carte de carreaux. Vous donnez l'ID de l'élément de carte de tuiles (que vous obtenez lorsque vous créez un élément de carte de tuiles à l'aide de la fonction <a href="layer_tilemap_create.htm"><tt>layer_tilemap_create()</tt></a>    ou lorsque vous utilisez la fonction <a href="layer_tilemap_get_id.htm"><tt>layer_tilemap_get_id()</tt></a>), et la fonction renvoie la hauteur de la cellule du jeu de tuiles.</p>
+  <p> </p>
+  <h4>Syntaxe :</h4>
+  <p class="code">tilemap_get_tile_height(tilemap_element_id) ;</p>
+  <table>
+    <tbody>
+      <tr>
+        <th>Arguments</th>
+        <th>Description</th>
+      </tr>
+      <tr>
+        <td>tilemap_element_id</td>
+        <td>La valeur d'identification unique de l'élément de la carte des tuiles pour obtenir la hauteur de la cellule de la tuile.</td>
+      </tr>
+    </tbody>
+  </table>
+  <p> </p>
+  <h4>Les retours :</h4>
+  <p class="code">Real</p>
+  <p> </p>
+  <h4>Exemple :</h4>
+  <p class="code">var lay_id = layer_get_id(&quot;Tiles_Walls&quot;) ;<br> var map_id = layer_tilemap_get_id(lay_id) ;<br> global.snap_x = tilemap_get_tile_width(map_id) ;<br> global.snap_y = tilemap_get_tile_height(map_id) ;</p>
+  <p>Le code ci-dessus utilise l'ID de la carte des tuiles récupérée pour obtenir la largeur et la hauteur des cellules des tuiles et les utiliser pour définir deux variables globales.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <div class="footer">
+    <div class="buttons">
+      <div class="clear">
+        <div style="float:left">Retour : <a href="Tile_Map_Layers.htm">Carrelage des couches de la carte</a></div>
+        <div style="float:right">Suivant : <a href="tilemap_get_width.htm">tilemap_get_width</a></div>
+      </div>
+    </div>
+    <h5><span data-keyref="Copyright Notice">Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
   </div>
   <!-- KEYWORDS
 tilemap_get_tile_height

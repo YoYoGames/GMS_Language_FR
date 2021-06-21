@@ -7,12 +7,54 @@
   <meta name="generator" content="Adobe RoboHelp 2019" />
   <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
   <meta name="rh-authors" content="Mark Alexander" />
-  <meta name="topic-comment" content="Page de référence pour camera_set_proj_mat" />
+  <meta name="topic-comment" content="Reference page for camera_set_proj_mat" />
   <meta name="rh-index-keywords" content="camera_set_proj_mat" />
   <meta name="search-keywords" content="camera_set_proj_mat" />
 </head>
-<body><!--<div class="body-scroll" style="top: 150px;">--><h1>camera_set_proj_mat</h1><p> Cette fonction définira la <b>matrice de projection</b> pour une caméra donnée. Vous donnez la valeur d&#39;ID de caméra unique (telle qu&#39;elle est renvoyée par les différents <a href="camera_create.htm"><tt>camera_create()</tt></a> fonctions) et une matrice de vue à appliquer. Vous pouvez en savoir plus sur la création de matrices de projection dans la section <a href="../../Maths_And_Numbers/Matrix_Functions/Matrix_Functions.htm">Fonctions de matrice</a>, en particulier <tt><a href="../../Maths_And_Numbers/Matrix_Functions/matrix_build_projection_perspective.htm">matrix_build_projection_perspective()</a></tt> et <a href="../../Maths_And_Numbers/Matrix_Functions/matrix_build_projection_ortho.htm"><tt>matrix_build_projection_ortho()</tt></a>. Notez que si votre caméra effectue un suivi automatique des objets, c&#39;est-à-dire qu&#39;elle a été créée en utilisant <a href="camera_create_view.htm"><tt>camera_create_view()</tt></a> avec un index d&#39;objet / ID d&#39;instance qui n&#39;est pas -1, ou vous définissez une caméra définie dans l&#39;éditeur de salle, ou vous définissez la caméra par défaut - alors cette matrice sera écrasée la prochaine image de jeu.</p><p></p><h4> Syntaxe:</h4><p class="code">camera_set_proj_mat(camera_id, matrix)</p><table><tbody><tr><th> Argument</th><th> Description</th></tr><tr><td> <span class="notranslate">camera_id</span></td><td> La valeur d&#39;ID de caméra unique renvoyée lors de la création de la caméra.</td></tr><tr><td> <span class="notranslate">matrix</span></td><td> ID de matrice unique renvoyé lors de la création de la matrice.</td></tr></tbody></table><p></p><h4> Retour:</h4><p class="code">N/A</p><p></p><h4> Exemple:</h4><p class="code">view_camera[0] = camera_create();<br/> var viewmat = matrix_build_lookat(640, 240, -10, 640, 240, 0, 0, 1, 0);<br/> var projmat = matrix_build_projection_ortho(640, 480, 1.0, 32000.0);<br/> camera_set_view_mat(view_camera[0], viewmat);<br/> camera_set_proj_mat(view_camera[0],
-    projmat);</p><p> Le code ci-dessus crée une nouvelle caméra et l&#39;affecte au port d&#39;affichage [0]. Cette caméra a alors ses matrices de vue et de projection définies. </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> Arrière: <a href="Cameras_And_View_Ports.htm">caméras et ports d&#39;affichage</a></div><div style="float:right"> Suivant:<a href="camera_set_update_script.htm">camera_set_update_script</a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
+<body>
+  <!--<div class="body-scroll" style="top: 150px;">-->
+  <h1>camera_set_proj_mat</h1>
+  <p>Cette fonction va définir la <b>matrice de projection</b> pour une caméra donnée. Vous donnez la valeur unique de l'ID de la caméra (telle que retournée par les différentes <a href="camera_create.htm"><tt>camera_create()</tt></a> fonctions) et une matrice de vue à appliquer. Vous pouvez trouver
+    plus d'informations sur la création de matrices de projection dans la section <a href="../../Maths_And_Numbers/Matrix_Functions/Matrix_Functions.htm">Fonctions de matrice</a>, en particulier <tt><a href="../../Maths_And_Numbers/Matrix_Functions/matrix_build_projection_perspective.htm">matrix_build_projection_perspective()</a></tt> et
+    <a href="../../Maths_And_Numbers/Matrix_Functions/matrix_build_projection_ortho.htm"><tt>matrix_build_projection_ortho()</tt></a>. Notez que si votre caméra effectue un suivi automatique des objets - c'est-à-dire qu'elle a été créée à l'aide de <a href="camera_create_view.htm"><tt>camera_create_view()</tt></a>    avec un indice d'objet / ID d'instance qui n'est pas -1, ou si vous définissez une caméra dans l'éditeur de salle, ou si vous définissez la caméra par défaut - alors cette matrice sera écrasée à la prochaine image de jeu.</p>
+  <p> </p>
+  <h4>Syntaxe :</h4>
+  <p class="code">camera_set_proj_mat(camera_id, matrix)</p>
+  <table>
+    <tbody>
+      <tr>
+        <th>Arguments</th>
+        <th>Description</th>
+      </tr>
+      <tr>
+        <td>camera_id</td>
+        <td>La valeur d'identification unique de la caméra renvoyée lorsque vous avez créé la caméra.</td>
+      </tr>
+      <tr>
+        <td>matrice</td>
+        <td>L'identifiant unique de la matrice renvoyé lorsque vous avez créé la matrice.</td>
+      </tr>
+    </tbody>
+  </table>
+  <p> </p>
+  <h4>Les retours :</h4>
+  <p class="code">N/A</p>
+  <p> </p>
+  <h4>Exemple :</h4>
+  <p class="code">view_camera[0] = camera_create() ;<br> var viewmat = matrix_build_lookat(640, 240, -10, 640, 240, 0, 0, 1, 0) ;<br> var projmat = matrix_build_projection_ortho(640, 480, 1.0, 32000.0) ;<br> camera_set_view_mat(view_camera[0], viewmat) ;<br> camera_set_proj_mat(view_camera[0],
+    projmat) ;</p>
+  <p>Le code ci-dessus crée une nouvelle caméra et l'affecte au port de vue [0]. Cette caméra a ensuite ses matrices de vue et de projection définies.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <div class="footer">
+    <div class="buttons">
+      <div class="clear">
+        <div style="float:left">Retour : <a href="Cameras_And_View_Ports.htm">Caméras et ports d'observation</a></div>
+        <div style="float:right">Suivant : <a href="camera_set_update_script.htm">camera_set_update_script</a></div>
+      </div>
+    </div>
+    <h5><span data-keyref="Copyright Notice">Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
   </div>
   <!-- KEYWORDS
 camera_set_proj_mat

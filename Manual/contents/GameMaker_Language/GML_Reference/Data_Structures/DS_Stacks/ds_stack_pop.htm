@@ -2,19 +2,56 @@
 
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml"><head>
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <title>ds_stack_pop</title>
-  <meta name="generator" content="Adobe RoboHelp 2019"/>
-  <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css"/>
-  <meta name="rh-authors" content="Mark Alexander"/>
-  <meta name="topic-comment" content="Page de référence pour ds_stack_pop"/>
-  <meta name="rh-index-keywords" content="ds_stack_pop"/>
-  <meta name="search-keywords" content="ds_stack_pop"/>
+  <meta name="generator" content="Adobe RoboHelp 2019" />
+  <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
+  <meta name="rh-authors" content="Mark Alexander" />
+  <meta name="topic-comment" content="Reference page for ds_stack_pop" />
+  <meta name="rh-index-keywords" content="ds_stack_pop" />
+  <meta name="search-keywords" content="ds_stack_pop" />
 </head>
 
-<body><!--<div class="body-scroll" style="top: 150px;">--><h1>ds_stack_pop</h1><p> Cette fonction <i>pop</i> la valeur supérieure de la pile hors DS, retirer de la pile et en retournant la valeur à stocker dans une variable. Si la pile est vide, la fonction retournera la constante <tt>undefined</tt>, sinon il renverra la valeur réelle ou chaîne contenue dans la pile.</p><p></p><h4> Syntaxe:</h4><p class="code">ds_stack_pop(id);</p><table><tbody><tr><th> Argument</th><th> Description</th></tr><tr><td> <span class="notranslate">id</span></td><td> L&#39;identifiant de la structure de données à partir de laquelle apparaître.</td></tr></tbody></table><p></p><h4> Retour:</h4><p class="code">Data type value that is stored in the stack or undefined</p><p></p><h4> Exemple:</h4><p class="code">if !ds_stack_empty(move_stack)<br/>     {
-    <br/>     var xx = ds_stack_pop(move_stack);<br/>     var yy = ds_stack_pop(move_stack);<br/>     move_towards_point(xx, yy, 4);<br/>     }
-  </p><p> Le code ci-dessus vérifie la pile DS indexée dans la variable &quot;move_stack&quot; pour voir si elle est vide, et si ce n&#39;est pas le cas, il fait apparaître les deux premières valeurs de la pile et les utilise pour définir une direction pour le mouvement. </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> Retour:<a href="ds_stack_create.htm">ds_stack_create</a></div><div style="float:right"> Suivant:<a href="ds_stack_push.htm">ds_stack_push</a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
+<body>
+  <!--<div class="body-scroll" style="top: 150px;">-->
+  <h1>ds_stack_pop</h1>
+  <p>Cette fonction <i>extrait</i> la valeur supérieure de la pile DS, la supprime de la pile et renvoie la valeur à stocker dans une variable. Si la pile est vide, la fonction renvoie la constante <tt>indéfinie</tt>, sinon elle renvoie la valeur réelle ou la chaîne de caractères contenue dans la pile.
+    la valeur réelle ou la chaîne de caractères contenue dans la pile.</p>
+  <p> </p>
+  <h4>Syntaxe :</h4>
+  <p class="code">ds_stack_pop(id) ;</p>
+  <table>
+    <tbody>
+      <tr>
+        <th>Arguments</th>
+        <th>Description</th>
+      </tr>
+      <tr>
+        <td>id</td>
+        <td>L'identifiant de la structure de données à extraire.</td>
+      </tr>
+    </tbody>
+  </table>
+  <p> </p>
+  <h4>Les retours :</h4>
+  <p class="code">Valeur du type de données qui est stockée dans la pile ou indéfinie</p>
+  <p> </p>
+  <h4>Exemple :</h4>
+  <p class="code">if !ds_stack_empty(move_stack)<br> {
+    <br> var xx = ds_stack_pop(move_stack) ;<br> var yy = ds_stack_pop(move_stack) ;<br> move_towards_point(xx, yy, 4) ;<br> }
+  </p>
+  <p>Le code ci-dessus vérifie la pile DS indexée dans la variable &quot;move_stack&quot; pour voir si elle est vide, et si elle ne l'est pas, il extrait les deux valeurs supérieures de la pile et les utilise pour définir une direction pour le mouvement.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <div class="footer">
+    <div class="buttons">
+      <div class="clear">
+        <div style="float:left">Retour : <a href="ds_stack_create.htm">ds_stack_create</a></div>
+        <div style="float:right">Suivant : <a href="ds_stack_push.htm">ds_stack_push</a></div>
+      </div>
+    </div>
+    <h5><span data-keyref="Copyright Notice">Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
   </div>
   <!-- KEYWORDS
 ds_stack_pop

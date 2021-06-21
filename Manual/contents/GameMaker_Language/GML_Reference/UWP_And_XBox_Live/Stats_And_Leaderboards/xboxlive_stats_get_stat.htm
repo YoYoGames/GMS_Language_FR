@@ -7,15 +7,56 @@
   <meta name="generator" content="Adobe RoboHelp 2019" />
   <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
   <meta name="rh-authors" content="Mark Alexander" />
-  <meta name="topic-comment" content="Page de référence pour xboxlive_stats_get_stat" />
+  <meta name="topic-comment" content="Reference page for xboxlive_stats_get_stat" />
   <meta name="rh-index-keywords" content="xboxlive_stats_get_stat" />
   <meta name="search-keywords" content="xboxlive_stats_get_stat" />
 </head>
-<body><!--<div class="body-scroll" style="top: 150px;">--><h1>xboxlive_stats_get_stat</h1><p> Cette fonction peut être utilisée pour récupérer une seule valeur statistique du gestionnaire de statistiques pour un utilisateur donné. Vous fournissez l&#39;ID utilisateur tel que renvoyé par (par exemple) la fonction <a href="../Users_And_Accounts/xboxlive_get_user.htm"><tt>xboxlive_get_user()</tt></a>, puis la chaîne de statistiques telle que définie lorsque vous l&#39;avez créée à l&#39;aide de l&#39;un des <tt>xboxlive_stats_set_stat_*</tt> les fonctions. La valeur de retour peut être une chaîne ou un réel (selon la statistique vérifiée) ou la constante <span class="notranslate">GML </span><tt>undefined</tt> si la statistique n&#39;existe pas ou s&#39;il y a eu une erreur.</p><p></p><h4> Syntaxe:</h4><p class="code">xboxlive_stats_get_stat(user_id, stat);</p><table><tbody><tr><th> Argument</th><th> Description</th></tr><tr><td> <span class="notranslate">user_id</span></td><td> Le pointeur d&#39;ID utilisateur pour obtenir les noms statistiques de</td></tr><tr><td> <span class="notranslate">stat</span></td><td> La statistique à définir (une chaîne)</td></tr></tbody></table><p></p><h4> Retour:</h4><p class="code">Real, string or undefined</p><p></p><h4> Exemple:</h4><p class="code">if (game_over == true)<br/>     {
-    <br/>     if (xboxlive_stats_get_stat(p_user_id, &quot;PercentDone&quot;) &lt; 100)<br/>         {
-    <br/>         var _val = (global.LevelsFinished / global.LevelsTotal) * 100;<br/>         xboxlive_stats_set_stat_real(p_user_id, &quot;PercentDone&quot;, _val);<br/>         }
-    <br/>     }
-  </p><p> Le code ci-dessus vérifie une variable et si c&#39;est <tt>true</tt>, puis il vérifiera la valeur de la statistique &quot;PercentDone&quot;. Si cette valeur est inférieure à 100, une valeur est alors générée et la statistique définie sur cette valeur. </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> Retour: <a href="Stats_And_Leaderboards.htm">Statistiques et classements</a></div><div style="float:right"> Suivant:<a href="xboxlive_stats_get_leaderboard.htm">xboxlive_stats_get_leaderboard</a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
+<body>
+  <!--<div class="body-scroll" style="top: 150px;">-->
+  <h1>xboxlive_stats_get_stat</h1>
+  <p>Cette fonction peut être utilisée pour récupérer une seule valeur de stat dans le gestionnaire de stat pour un utilisateur donné. Vous fournissez l'ID de l'utilisateur tel que renvoyé par (par exemple) la fonction <a href="../Users_And_Accounts/xboxlive_get_user.htm"><tt>xboxlive_get_user()</tt></a>,
+    puis la chaîne de caractères de la statistique telle qu'elle a été définie lorsque vous l'avez créée à l'aide de l'une des fonctions <tt>xboxlive_stats_set_stat_*</tt>. La valeur de retour peut être une chaîne de caractères ou un réel (en fonction de la statistique vérifiée) ou la constante <span class="notranslate">GML</span> <tt>undefined</tt> si la statistique n'existe pas ou s'il y a eu une erreur.</p>
+  <p> </p>
+  <h4>Syntaxe :</h4>
+  <p class="code">xboxlive_stats_get_stat(user_id, stat) ;</p>
+  <table>
+    <tbody>
+      <tr>
+        <th>Arguments</th>
+        <th>Description</th>
+      </tr>
+      <tr>
+        <td>nom d'utilisateur</td>
+        <td>Le pointeur d'identification de l'utilisateur pour obtenir les noms de stat de</td>
+      </tr>
+      <tr>
+        <td>stat</td>
+        <td>La statistique à définir (une chaîne de caractères)</td>
+      </tr>
+    </tbody>
+  </table>
+  <p> </p>
+  <h4>Les retours :</h4>
+  <p class="code">Réel, chaîne de caractères ou indéfini</p>
+  <p> </p>
+  <h4>Exemple :</h4>
+  <p class="code">if (game_over == true)<br> {
+    <br> if (xboxlive_stats_get_stat(p_user_id, &quot;PercentDone&quot;) &lt; 100)<br> {
+    <br> var _val = (global.LevelsFinished / global.LevelsTotal) * 100 ;<br> xboxlive_stats_set_stat_real(p_user_id, &quot;PercentDone&quot;, _val) ;<br> }
+    <br> }
+  </p>
+  <p>Le code ci-dessus vérifie une variable et si elle est vraie <tt>,</tt> il vérifie la valeur de la statistique &quot;PercentDone&quot;. Si cette valeur est inférieure à 100, une valeur est alors générée et la stat est fixée à cette valeur.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <div class="footer">
+    <div class="buttons">
+      <div class="clear">
+        <div style="float:left">Retour : <a href="Stats_And_Leaderboards.htm">Stats et classements</a></div>
+        <div style="float:right">Suivant : <a href="xboxlive_stats_get_leaderboard.htm">xboxlive_stats_get_leaderboard</a></div>
+      </div>
+    </div>
+    <h5><span data-keyref="Copyright Notice">Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
   </div>
   <!-- KEYWORDS
 xboxlive_stats_get_stat

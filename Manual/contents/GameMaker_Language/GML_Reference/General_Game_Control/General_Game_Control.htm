@@ -7,11 +7,71 @@
   <meta name="generator" content="Adobe RoboHelp 2019" />
   <link rel="stylesheet" href="../../../assets/css/default.css" type="text/css" />
   <meta name="rh-authors" content="Mark Alexander" />
-  <meta name="topic-comment" content="Section de référence pour les fonctions générales de contrôle du jeu" />
+  <meta name="topic-comment" content="Reference section for General Game Control functions" />
   <meta name="rh-index-keywords" content="" />
-  <meta name="search-keywords" content="Contrôle général du jeu,Fonctions du jeu" />
+  <meta name="search-keywords" content="General Game Control,Game Functions" />
 </head>
-<body><!--<div class="body-scroll" style="top: 150px;">--><h1> Contrôle général du jeu</h1><p> Ces fonctions et variables sont toutes liées à des fonctionnalités spécifiques au jeu, comme le chargement / enregistrement ou le redémarrage, etc.</p><p> Les <strong>variables intégrées de</strong> <a href="../../GML_Overview/Variables/Global_Variables.htm">portée globale</a> suivantes sont utiles pour déboguer votre jeu - elles peuvent être utilisées comme sortie d&#39;un fichier journal en cas de problèmes, par exemple - ainsi que pour afficher l&#39;ID de build actuel, etc... pour l&#39;utilisateur: </p><p></p><ul class="colour"><li><a href="game_id.htm">game_id</a></li><li><a href="game_save_id.htm">game_save_id</a></li><li><a href="game_display_name.htm">game_display_name</a></li><li><a href="game_project_name.htm">game_project_name</a></li></ul><p></p><p> Les fonctions suivantes sont utilisées pour le contrôle général du jeu: </p><p></p><ul class="colour"><li><a href="game_end.htm">game_end</a></li><li><a href="game_restart.htm">game_restart</a></li><li><a href="game_load.htm">game_load</a></li><li><a href="game_load_buffer.htm">game_load_buffer</a></li><li><a href="game_save.htm">game_save</a></li><li><a href="game_save_buffer.htm">game_save_buffer</a></li><li><a href="game_get_speed.htm">game_get_speed</a></li><li><a href="game_set_speed.htm">game_set_speed</a></li></ul><p></p><p> Pour vous aider à créer et à maintenir des scores <span class="notranslate">GameMaker Studio 2</span> <a href="../../GML_Overview/Arrays.htm">crée un tableau</a> global des meilleurs scores de 10 emplacements auxquels vous pouvez accéder, ajouter et modifier pour créer vos propres listes personnalisées de meilleurs scores sans trop d&#39;histoires. Cette fonctionnalité est locale au jeu et fonctionne sur toutes les plates-formes, de sorte que vous pouvez facilement stocker et maintenir un tableau des meilleurs scores de base en utilisant ces fonctions avec les <a href="../File_Handling/File_Handling.htm">fonctions de gestion de fichiers</a>.</p><p> Les fonctions suivantes existent qui traitent de la liste interne des meilleurs scores. </p><p></p><ul class="colour"><li><a href="highscore_add.htm">highscore_add</a></li><li><a href="highscore_name.htm">highscore_name</a></li><li><a href="highscore_value.htm">highscore_value</a></li><li><a href="highscore_clear.htm">highscore_clear</a></li></ul><p></p><p> <span class="notranslate">GameMaker Studio 2</span> comprend également une fonction pour dessiner les meilleurs scores à l&#39;écran sous forme de liste, mais c&#39;est très basique et il est recommandé de l&#39;utiliser pour le débogage plus que toute autre chose car créer votre propre tableau des meilleurs scores est facile et vous donnera vous avez beaucoup plus de contrôle sur la façon dont il est affiché:</p><p></p><ul class="colour"><li><a href="../Drawing/Text/draw_highscore.htm">draw_highscore</a></li></ul><p></p><p> Enfin, nous avons une fonction qui vous permet d&#39;assigner un sprite au curseur de la souris:</p><p></p><ul class="colour"><li><a href="cursor_sprite.htm">cursor_sprite</a></li></ul><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> Retour: <a href="../GML_Reference.htm">Référence <span class="notranslate">GML</span></a></div><div style="float:right"> Suivant: <a href="../Movement_And_Collisions/Movement_And_Collisions.htm">Mouvement et collisions</a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
+<body>
+  <!--<div class="body-scroll" style="top: 150px;">-->
+  <h1>Contrôle général du jeu</h1>
+  <p>Ces fonctions et variables sont toutes liées à des fonctionnalités spécifiques au jeu, comme le chargement/la sauvegarde ou le redémarrage, etc...</p>
+  <p>Les variables <a href="../../GML_Overview/Variables/Global_Variables.htm">globales</a> <strong>intégrées</strong> suivantes sont utiles pour le débogage de votre jeu - elles peuvent être utilisées comme sortie vers un fichier journal en cas de problème, par exemple.
+    ainsi que pour montrer l'ID de la version actuelle, etc... à l'utilisateur :</p>
+  <p> </p>
+  <ul class="colour">
+    <li><a href="game_id.htm">identifiant du jeu</a></li>
+    <li><a href="game_save_id.htm">game_save_id</a></li>
+    <li><a href="game_display_name.htm">nom_affichage_du_jeu</a></li>
+    <li><a href="game_project_name.htm">nom_du_projet_de_jeu</a></li>
+  </ul>
+  <p> </p>
+  <p>Les fonctions suivantes sont utilisées pour le contrôle général du jeu :</p>
+  <p> </p>
+  <ul class="colour">
+    <li><a href="game_end.htm">fin de la partie</a></li>
+    <li><a href="game_restart.htm">redémarrage du jeu</a></li>
+    <li><a href="game_load.htm">chargement du jeu</a></li>
+    <li><a href="game_load_buffer.htm">tampon de chargement de jeu</a></li>
+    <li><a href="game_save.htm">sauvegarde du jeu</a></li>
+    <li><a href="game_save_buffer.htm">tampon_sauvegarde_jeu</a></li>
+    <li><a href="game_get_speed.htm">jeu_get_speed</a></li>
+    <li><a href="game_set_speed.htm">jeu_set_speed</a></li>
+  </ul>
+  <p> </p>
+  <p>Pour vous aider à créer et à maintenir les meilleurs scores de vos jeux, <span class="notranslate">GameMaker Studio 2</span> crée un <a href="../../GML_Overview/Arrays.htm">tableau</a> global des meilleurs scores à 10 endroits auxquels vous pouvez accéder, ajouter et modifier pour créer vos propres listes personnalisées de meilleurs scores sans aucun problème.
+    personnalisés sans trop d'efforts. Cette fonctionnalité est locale au jeu et fonctionne sur toutes les plates-formes. Vous pouvez donc facilement stocker et maintenir un tableau de scores élevés de base en utilisant ces fonctions ainsi que les <a href="../File_Handling/File_Handling.htm">fonctions de traitement des fichiers</a>.</p>
+  <p>Les fonctions suivantes traitent de la liste interne des meilleurs scores.</p>
+  <p> </p>
+  <ul class="colour">
+    <li><a href="highscore_add.htm">highscore_add</a></li>
+    <li><a href="highscore_name.htm">nom_highscore</a></li>
+    <li><a href="highscore_value.htm">valeur_highscore</a></li>
+    <li><a href="highscore_clear.htm">highscore_clear</a></li>
+  </ul>
+  <p> </p>
+  <p><span class="notranslate">GameMaker Studio 2</span> comprend également une fonction permettant d'afficher les meilleurs scores à l'écran sous forme de liste, mais elle est très basique et il est recommandé de l'utiliser pour le débogage plutôt que pour autre chose.
+    La création de votre propre tableau des meilleurs scores est facile et vous permettra de mieux contrôler la façon dont il est affiché :</p>
+  <p> </p>
+  <ul class="colour">
+    <li><a href="../Drawing/Text/draw_highscore.htm">dessiner_highscore</a></li>
+  </ul>
+  <p> </p>
+  <p>Enfin, nous avons une fonction qui vous permet d'assigner un sprite au curseur de la souris :</p>
+  <p> </p>
+  <ul class="colour">
+    <li><a href="cursor_sprite.htm">curseur_sprite</a></li>
+  </ul>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <div class="footer">
+    <div class="buttons">
+      <div class="clear">
+        <div style="float:left">Retour : <a href="../GML_Reference.htm">Référence<span class="notranslate">GML</span></a></div>
+        <div style="float:right">Suivant : <a href="../Movement_And_Collisions/Movement_And_Collisions.htm">Mouvement et collisions</a></div>
+      </div>
+    </div>
+    <h5><span data-keyref="Copyright Notice">Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
   </div>
   <!-- KEYWORDS
 General Game Control

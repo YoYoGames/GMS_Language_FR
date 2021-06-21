@@ -7,20 +7,57 @@
   <meta name="generator" content="Adobe RoboHelp 2019" />
   <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
   <meta name="rh-authors" content="Mark Alexander" />
-  <meta name="topic-comment" content="Page de référence pour steam _activate_overlay_store" />
+  <meta name="topic-comment" content="Reference page for steam_activate_overlay_store" />
   <meta name="rh-index-keywords" content="steam_activate_overlay_store" />
   <meta name="search-keywords" content="steam_activate_overlay_store" />
 </head>
-<body><!--<div class="body-scroll" style="top: 150px;">--><h1> <span class="notranslate">steam</span> _activate_overlay_store</h1><p> Avec cette fonction, vous pouvez ouvrir la <span class="notranslate">Steam</span> sur la page du magasin pour un jeu afin que les utilisateurs puissent acheter ou télécharger des DLC (par exemple). Vous devez fournir l&#39;ID d&#39;application unique pour le jeu ou le DLC que vous obtiendriez à partir du <span class="notranslate">Steam</span> lorsque vous le configurez.</p><p></p><h4> Syntaxe:</h4><p class="code">steam_activate_overlay_store(app_id);</p><table><tbody><tr><th> Argument</th><th> Description</th></tr><tr><td> <span class="notranslate">app_id</span></td><td> L&#39;ID d&#39;application unique pour votre jeu.</td></tr></tbody></table><p></p><h4> Retour:</h4><p class="code">N/A</p><p></p><h4> Exemple:</h4><p class="code">if keyboard_check_pressed(vk_f1)<br/>     {
-    <br/>     steam_activate_overlay_store(global.DLC_id);
-    <br/>     }
-  </p><p> Le code ci-dessus interroge le clavier pour la touche F1 et si c&#39;est le cas, la <span class="notranslate">Steam</span> sera ouverte sur la page du contenu du jeu à l&#39;aide de l&#39;ID d&#39;application stocké dans la variable globale. </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> Retour: <a href="Steam_Overlay.htm">Superposition de <span class="notranslate">Steam</span></a></div><div style="float:right"> Suivant: <a href="steam_activate_overlay_user.htm"><span class="notranslate">steam</span> _activate_overlay_user</a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
+<body>
+  <!--<div class="body-scroll" style="top: 150px;">-->
+  <h1><span class="notranslate">steam_activate_overlay_store</span></h1>
+  <p>Cette fonction vous permet d'ouvrir la superposition <span class="notranslate">Steam</span> sur la page de la boutique d'un jeu afin que les utilisateurs puissent acheter ou télécharger des DLC (par exemple). Vous devez fournir l'App ID unique du jeu ou du DLC que vous obtiendrez du tableau de bord <span class="notranslate">Steam</span> lorsque vous le configurerez.
+    l'installer.</p>
+  <p> </p>
+  <h4>Syntaxe :</h4>
+  <p class="code"><span class="notranslate">steam_activate_overlay_store</span>(app_id) ;</p>
+  <table>
+    <tbody>
+      <tr>
+        <th>Arguments</th>
+        <th>Description</th>
+      </tr>
+      <tr>
+        <td>identifiant de l'application</td>
+        <td>L'identifiant unique de l'application pour votre jeu.</td>
+      </tr>
+    </tbody>
+  </table>
+  <p> </p>
+  <h4>Les retours :</h4>
+  <p class="code">N/A</p>
+  <p> </p>
+  <h4>Exemple :</h4>
+  <p class="code">if keyboard_check_pressed(vk_f1)<br> {
+    <br> <span class="notranslate">steam_activate_overlay_store</span>(global.DLC_id) ;
+    <br> }
+  </p>
+  <p>Le code ci-dessus recherche la touche F1 sur le clavier et si c'est le cas, la superposition <span class="notranslate">Steam</span> sera ouverte sur la page pour le contenu du jeu en utilisant l'identifiant de l'application stocké dans la variable globale.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <div class="footer">
+    <div class="buttons">
+      <div class="clear">
+        <div style="float:left">Retour : <a href="Steam_Overlay.htm">Superposition de la<span class="notranslate">vapeur</span></a></div>
+        <div style="float:right">Suivant : <a href="steam_activate_overlay_user.htm"><span class="notranslate">steam_activate_overlay_user</span></a></div>
+      </div>
+    </div>
+    <h5><span data-keyref="Copyright Notice">Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
   </div>
   <!-- KEYWORDS
-steam_activate_overlay_store
+<span class="notranslate">steam</span>_activate_overlay_store
 -->
   <!-- TAGS
-steam_activate_overlay_store
+<span class="notranslate">steam</span>_activate_overlay_store
 -->
 </body>
 </html>

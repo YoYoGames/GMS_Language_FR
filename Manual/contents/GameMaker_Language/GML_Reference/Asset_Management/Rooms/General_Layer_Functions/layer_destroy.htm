@@ -3,18 +3,57 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>layer_destroy</title>
+  <title>couche_destruction</title>
   <meta name="generator" content="Adobe RoboHelp 2019" />
   <link rel="stylesheet" href="../../../../../assets/css/default.css" type="text/css" />
   <meta name="rh-authors" content="Mark Alexander" />
-  <meta name="topic-comment" content="Page décrivant la fonction layer_destroy" />
+  <meta name="topic-comment" content="Page outlining the function layer_destroy" />
   <meta name="rh-index-keywords" content="layer_destroy" />
   <meta name="search-keywords" content="layer_destroy" />
 </head>
-<body><!--<div class="body-scroll" style="top: 150px;">--><h1>layer_destroy</h1><p> Cette fonction détruira la couche donnée. Vous fournissez l&#39;ID de couche (que vous obtenez lorsque vous créez la couche en utilisant <a href="layer_create.htm"><tt>layer_create()</tt></a> ) ou le nom du calque (sous forme de chaîne - cela aura un impact sur les performances) et cela le supprimera de la pièce actuelle. Si le calque est celui qui a été conçu dans l&#39;éditeur de salle, la prochaine fois que vous quittez la pièce puis que vous revenez, le calque sera recréé à nouveau avec le contenu d&#39;origine, mais si la pièce est persistante, le calque sera supprimé à moins que la persistance de la pièce est à nouveau désactivée. Lorsque vous détruisez une couche de cette manière, tout son contenu sera également supprimé, de sorte que tous les ID de référence pour les arrière-plans ou les cartes de tuiles, etc. ne seront plus valides et toutes les instances affectées à la couche seront détruites (en effectuant leur <strong>Destroy Événement</strong> en même temps, s&#39;ils en ont un, ainsi que l&#39; <strong>événement de nettoyage</strong> ).</p><p></p><h4> Syntaxe:</h4><p class="code">layer_destroy(layer_id)</p><table><tbody><tr><th> Argument</th><th> Description</th></tr><tr><td> <span class="notranslate">layer_id</span></td><td> La valeur d&#39;identifiant unique du calque à détruire (ou le nom du calque sous forme de chaîne)</td></tr></tbody></table><p></p><h4> Retour:</h4><p class="code">N/A</p><p></p><h4> Exemple:</h4><p class="code">if !instance_exists(obj_Bullet_Parent)<br/>    {
-    <br/>    layer_destroy(global.Bullet_Layer);
-    <br/>    }
-  </p><p> Le code ci-dessus vérifiera si des instances de l&#39;objet &quot;obj_Bullet_Parent&quot; existent, et si elles ne le font pas, il détruira la couche avec l&#39;ID stocké dans la variable globale. </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> Retour: <a href="General_Layer_Functions.htm">Fonctions générales des calques</a></div><div style="float:right"> Suivant:<a href="layer_x.htm">layer_x</a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
+<body>
+  <!--<div class="body-scroll" style="top: 150px;">-->
+  <h1>couche_destruction</h1>
+  <p>Cette fonction va détruire la couche donnée. Vous fournissez l'ID de la couche (que vous obtenez lorsque vous créez la couche en utilisant <a href="layer_create.htm"><tt>layer_create()</tt></a>) ou le nom de la couche (sous forme de chaîne - cela aura un impact sur les performances) et cette fonction
+    le supprimera de la pièce actuelle. Si le calque a été conçu dans l'éditeur de pièce, la prochaine fois que vous quitterez la pièce et y reviendrez, le calque sera recréé avec son contenu original,
+    la couche sera supprimée à moins que la persistance de la pièce ne soit à nouveau désactivée. Lorsque vous détruisez un calque de cette manière, tout son contenu sera également supprimé, donc tout ID de référence pour les arrière-plans ou les cartes de tuiles, etc... ne seront plus valides et toute instance
+    assignées à la couche seront détruites (en exécutant leur <strong>événement Destroy</strong> en même temps, si elles en ont un, ainsi que l'<strong>événement Clean Up</strong>).</p>
+  <p> </p>
+  <h4>Syntaxe :</h4>
+  <p class="code">layer_destroy(layer_id)</p>
+  <table>
+    <tbody>
+      <tr>
+        <th>Arguments</th>
+        <th>Description</th>
+      </tr>
+      <tr>
+        <td>identifiant de la couche</td>
+        <td>La valeur d'identification unique de la couche à détruire (ou le nom de la couche sous forme de chaîne).</td>
+      </tr>
+    </tbody>
+  </table>
+  <p> </p>
+  <h4>Les retours :</h4>
+  <p class="code">N/A</p>
+  <p> </p>
+  <h4>Exemple :</h4>
+  <p class="code">if !instance_exists(obj_Bullet_Parent)<br> {
+    <br> layer_destroy(global.Bullet_Layer) ;
+    <br> }
+  </p>
+  <p>Le code ci-dessus vérifie si des instances de l'objet &quot;obj_Bullet_Parent&quot; existent, et si ce n'est pas le cas, il détruit le calque avec l'ID stocké dans la variable globale.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <div class="footer">
+    <div class="buttons">
+      <div class="clear">
+        <div style="float:left">Retour : <a href="General_Layer_Functions.htm">Fonctions générales des couches</a></div>
+        <div style="float:right">Suivant : <a href="layer_x.htm">layer_x</a></div>
+      </div>
+    </div>
+    <h5><span data-keyref="Copyright Notice">Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
   </div>
   <!-- KEYWORDS
 layer_destroy

@@ -7,11 +7,52 @@
   <meta name="generator" content="Adobe RoboHelp 2019" />
   <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
   <meta name="rh-authors" content="Mark Alexander" />
-  <meta name="topic-comment" content="Référence pour la fonction draw_set_circle_precision" />
+  <meta name="topic-comment" content="Reference for the function draw_set_circle_precision" />
   <meta name="rh-index-keywords" content="draw_set_circle_precision" />
   <meta name="search-keywords" content="draw_set_circle_precision" />
 </head>
-<body><!--<div class="body-scroll" style="top: 150px;">--><h1>draw_set_circle_precision</h1><p> Pour optimiser les performances lors du dessin de cercles, <span class="notranslate">GameMaker Studio 2</span> dessine essentiellement une forme de polygone avec suffisamment de côtés pour lui donner une <i>apparence</i> circulaire. Cependant, selon la taille de vos cercles, vous constaterez peut-être que la modification de cette valeur peut vous aider à améliorer les performances de votre jeu ou à améliorer l&#39;apparence des cercles. La valeur de précision que vous pouvez entrer dans cette fonction est le nombre de côtés du polygone circulaire, et ce nombre peut être compris entre 4 et 64, <i>mais doit être un nombre divisible par 4</i>, avec une valeur par défaut de 24.</p><p><img alt="Circle precision example" class="center" src="../../../../assets/Images/Scripting_Reference/GML/Reference/Drawing/draw_set_circle_precision.png" /></p><p class="note"> <b>REMARQUE</b>: Si vous souhaitez dessiner une forme à l&#39;aide d&#39;un <span class="notranslate">shader</span>, sachez que la plupart des <span class="notranslate">shaders</span> attendent les entrées suivantes: sommet, texture, couleur. Cependant, lors de l&#39;utilisation de cette fonction, seules les données de sommet et de couleur sont transmises, et le <span class="notranslate">shader</span> peut ne rien dessiner (ou dessiner quelque chose mais pas correctement). Si vous devez dessiner des formes de cette manière, le <span class="notranslate">shader</span> doit être personnalisé dans cet esprit.</p><p></p><h4> Syntaxe:</h4><p class="code">draw_set_circle_precision(precision);</p><table><tbody><tr><th> Argument</th><th> Description</th></tr><tr><td> <span class="notranslate">precision</span></td><td> La précision de tous les cercles dessinés après cette fonction est appelée.</td></tr></tbody></table><p></p><h4> Retour:</h4><p class="code">N/A</p><p></p><h4> Exemple:</h4><p class="code">draw_set_circle_precision(12);</p><p> Le code ci-dessus dessinera tous les cercles en utilisant un polygone à 12 côtés. </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> Retour: <a href="Basic_Forms.htm">Formulaires de base</a></div><div style="float:right"> Suivant:<a href="draw_button.htm">draw_button</a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
+<body>
+  <!--<div class="body-scroll" style="top: 150px;">-->
+  <h1>draw_set_circle_precision</h1>
+  <p>Pour optimiser les performances lors du dessin de cercles, <span class="notranslate">GameMaker Studio 2</span> dessine une forme polygonale avec suffisamment de côtés pour qu'elle <i>paraisse</i> circulaire. Toutefois, en fonction de la taille des cercles que vous souhaitez créer, il se peut que la modification de cette valeur vous permette d'améliorer les performances de votre jeu ou d'améliorer l'apparence des cercles.
+    cette valeur peut contribuer à améliorer les performances de votre jeu ou à donner un meilleur aspect aux cercles. La valeur de précision que vous pouvez entrer dans cette fonction est le nombre de côtés du polygone circulaire, et ce nombre peut être compris entre 4 et 64,
+   <i>mais doit être un nombre divisible par 4</i>, avec une valeur par défaut de 24.</p>
+  <p><img alt="Circle precision example" class="center" src="../../../../assets/Images/Scripting_Reference/GML/Reference/Drawing/draw_set_circle_precision.png" /></p>
+  <p class="note"><b>NOTE</b>: Si vous souhaitez dessiner une forme à l'aide d'un <span class="notranslate">shader</span>, sachez que la plupart des <span class="notranslate">shaders</span> attendent les entrées suivantes : vertex, texture, couleur. Cependant, en utilisant cette fonction, seules les données de vertex et de couleur sont transmises, et donc le shader peut ne rien dessiner (ou dessiner quelque chose mais pas correctement).
+   <span class="notranslate">shader</span> peut ne rien dessiner (ou dessiner quelque chose mais pas correctement). Si vous avez besoin de dessiner des formes de cette manière, le <span class="notranslate">shader</span> doit être personnalisé en conséquence.</p>
+  <p> </p>
+  <h4>Syntaxe :</h4>
+  <p class="code">draw_set_circle_precision(precision) ;</p>
+  <table>
+    <tbody>
+      <tr>
+        <th>Arguments</th>
+        <th>Description</th>
+      </tr>
+      <tr>
+        <td>précision</td>
+        <td>La précision de tous les cercles dessinés après l'appel de cette fonction.</td>
+      </tr>
+    </tbody>
+  </table>
+  <p> </p>
+  <h4>Les retours :</h4>
+  <p class="code">N/A</p>
+  <p> </p>
+  <h4>Exemple :</h4>
+  <p class="code">draw_set_circle_precision(12) ;</p>
+  <p>Le code ci-dessus dessine tous les cercles en utilisant un polygone à 12 côtés.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <div class="footer">
+    <div class="buttons">
+      <div class="clear">
+        <div style="float:left">Retour : <a href="Basic_Forms.htm">Formes de base</a></div>
+        <div style="float:right">Suivant : <a href="draw_button.htm">draw_button</a></div>
+      </div>
+    </div>
+    <h5><span data-keyref="Copyright Notice">Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
   </div>
   <!-- KEYWORDS
 draw_set_circle_precision

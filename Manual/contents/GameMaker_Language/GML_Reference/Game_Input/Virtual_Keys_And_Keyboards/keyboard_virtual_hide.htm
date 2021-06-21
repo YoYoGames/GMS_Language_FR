@@ -2,20 +2,60 @@
 
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml"><head>
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-  <title>keyboard_virtual_hide</title>
-  <meta name="generator" content="Adobe RoboHelp 2019"/>
-  <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css"/>
-  <meta name="rh-authors" content="Mark Alexander"/>
-  <meta name="topic-comment" content="Page de référence pour keyboard_virtual_hide"/>
-  <meta name="rh-index-keywords" content="keyboard_virtual_hide"/>
-  <meta name="search-keywords" content="keyboard_virtual_hide"/>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>clavier_virtuel_cacher</title>
+  <meta name="generator" content="Adobe RoboHelp 2019" />
+  <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
+  <meta name="rh-authors" content="Mark Alexander" />
+  <meta name="topic-comment" content="Reference page for keyboard_virtual_hide" />
+  <meta name="rh-index-keywords" content="keyboard_virtual_hide" />
+  <meta name="search-keywords" content="keyboard_virtual_hide" />
 </head>
 
-<body><!--<div class="body-scroll" style="top: 150px;">--><h1>keyboard_virtual_hide</h1><p> Cette fonction peut être utilisée pour masquer le clavier virtuel sur l&#39;appareil exécutant le jeu. L&#39;appel de cette fonction générera un <a href="../../../../The_Asset_Editors/Object_Properties/Async_Events/System.htm">événement asynchrone système</a>, dans lequel le <tt>async_load</tt> La carte DS sera remplie avec les paires clé / valeur suivantes:</p><ul class="colour"><li> &quot; <b>event_type</b> &quot; - ce sera &quot;l&#39; <b>état du clavier virtuel</b> &quot; lorsqu&#39;il est déclenché par les fonctions du clavier virtuel.</li><li> &quot; <b>screen_height</b> &quot; - la hauteur du clavier virtuel (en pixels). Ce sera 0 si le clavier est invisible.</li><li> &quot; <b>keyboard_status</b> &quot; - l&#39;état actuel du clavier, renvoyé par l&#39;une des chaînes suivantes:<ul class="colour"><li> &quot;cache&quot;</li><li> &quot;caché&quot;</li><li> &quot;montrant&quot;</li><li> &quot;visible&quot;</li></ul></li></ul><p></p><h4> Syntaxe</h4><p class="code">keyboard_virtual_hide();</p><p></p><h4> Retour:</h4><p class="code">N/A</p><p></p><h4> Exemple:</h4><p class="code">if input == true<br/>     {
-    <br/>     input = false;<br/>     keyboard_virtual_hide();
-    <br/>     }
-  </p><p> Le code ci-dessus masquera le clavier virtuel du système d&#39;exploitation si la variable donnée n&#39;est pas définie sur <tt>false</tt>. </p><p><b></b></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> Retour: <a href="Virtual_Keys_And_Keyboards.htm">Clés et claviers virtuels</a></div><div style="float:right"> Suivant:<a href="keyboard_virtual_status.htm">keyboard_virtual_status</a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
+<body>
+
+
+
+  <!--<div class="body-scroll" style="top: 150px;">-->
+  <h1>clavier_virtuel_cacher</h1>
+  <p>Cette fonction peut être utilisée pour masquer le clavier virtuel sur le périphérique exécutant le jeu. L'appel de cette fonction génère un <a href="../../../../The_Asset_Editors/Object_Properties/Async_Events/System.htm">événement asynchrone système</a>, dans lequel la carte DS
+   <tt>async_load</tt> DS map sera remplie avec les paires clé/valeur suivantes :</p>
+  <ul class="colour">
+    <li>&quot;event_type<b>&quot; -</b> ce sera &quot;l'<b>état du clavier</b> virtuel<b>&quot; lorsqu'il sera déclenché</b> par les fonctions du clavier virtuel.</li>
+    <li>&quot;<b>screen_height &quot; -</b> la hauteur du clavier virtuel (en pixels). Elle sera de 0 si le clavier est invisible.</li>
+    <li>&quot;<b>keyboard_status &quot; -</b> l'état actuel du clavier, renvoyé comme l'une des chaînes suivantes :
+      <ul class="colour">
+        <li>&quot;hiding&quot; (caché)</li>
+        <li>&quot;caché&quot;</li>
+        <li>&quot;visible&quot;</li>
+        <li>&quot;visible&quot;</li>
+      </ul>
+    </li>
+  </ul>
+  <p> </p>
+  <h4>Syntaxe</h4>
+  <p class="code">keyboard_virtual_hide() ;</p>
+  <p> </p>
+  <h4>Les retours :</h4>
+  <p class="code">N/A</p>
+  <p> </p>
+  <h4>Exemple :</h4>
+  <p class="code">if input == true<br> {
+    <br> input = false ;<br> keyboard_virtual_hide() ;
+    <br> }
+  </p>
+  <p>Le code ci-dessus masquera le clavier virtuel du système d'exploitation si la variable donnée n'est pas définie comme <tt>fausse</tt>.</p>
+  <p><b></b></p>
+  <p> </p>
+  <p> </p>
+  <div class="footer">
+    <div class="buttons">
+      <div class="clear">
+        <div style="float:left">Retour : <a href="Virtual_Keys_And_Keyboards.htm">Touches et claviers virtuels</a></div>
+        <div style="float:right">Suivant : <a href="keyboard_virtual_status.htm">keyboard_virtual_status</a></div>
+      </div>
+    </div>
+    <h5><span data-keyref="Copyright Notice">Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
   </div>
   <!-- KEYWORDS
 keyboard_virtual_hide

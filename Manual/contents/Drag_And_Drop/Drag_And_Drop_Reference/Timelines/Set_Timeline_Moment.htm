@@ -3,15 +3,54 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>Définir le moment de la chronologie</title>
+  <title>Fixer le moment de la chronologie</title>
   <meta name="generator" content="Adobe RoboHelp 2019" />
   <link rel="stylesheet" href="../../../assets/css/default.css" type="text/css" />
   <meta name="rh-authors" content="Mark Alexander" />
-  <meta name="topic-comment" content="Page qui explique l&#39;action Définir le moment de la chronologie" />
-  <meta name="rh-index-keywords" content="DnD ™ - Définir le moment de la chronologie" />
-  <meta name="search-keywords" content="Définir le moment de la chronologie" />
+  <meta name="topic-comment" content="Page that explains the Set Timeline Moment action" />
+  <meta name="rh-index-keywords" content="DnD™ Action - Set Timeline Moment" />
+  <meta name="search-keywords" content="Set Timeline Moment" />
 </head>
-<body><!--<div class="body-scroll" style="top: 150px;">--><h1><img alt="Set Timeline Moment Icon" class="icon" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Timelines/i_Timelines_Set_Timeline_Moment.png" style="cursor: nwse-resize;" /> Définir le moment de la chronologie</h1><p> Cette action permet de passer une chronologie du moment actuel à une nouvelle. Les chronologies avancent à travers différents «moments», et chaque moment occupe généralement une image de jeu (comme l&#39;événement Step d&#39;un objet). Une fois qu&#39;une chronologie a commencé, elle progressera à travers les moments jusqu&#39;à ce qu&#39;elle atteigne la fin, à quel point elle reviendra au premier moment de la chronologie ou s&#39;arrêtera complètement. Cependant, cette approche linéaire des chronologies peut être modifiée à l&#39;aide de cette action pour définir un moment différent à tout moment, vous permettant de créer vos propres boucles de chronologie, ou de sauter des sections d&#39;une chronologie dans certaines circonstances, etc... Avec cette action, vous définissez simplement le moment auquel sauter dans la chronologie et l&#39;image de jeu suivante s&#39;exécutera à ce moment (notez que vous devez avoir attribué une chronologie à l&#39;instance en utilisant l&#39;action <a href="Set_Instance_Timeline.htm">Définir la chronologie de l&#39;instance</a> ).</p><p></p><h4> Syntaxe de l&#39;action:</h4><p><img alt="Set Timeline Moment Action" class="center" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Timelines/a_Timelines_Set_Timeline_Moment.png" style="cursor: nesw-resize;" /></p><h4> Arguments:</h4><table><tbody><tr><th> Argument</th><th> Description</th></tr><tr><td> <span class="notranslate">Moment</span></td><td> Le moment auquel définir la chronologie attribuée</td></tr></tbody></table><p></p><h4> Exemple:</h4><p><img alt="Set Timeline Moment Example" class="center" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Timelines/e_Timelines_Set_Instance_Timeline.png" /> Le code de bloc d&#39;action ci-dessus attribuera une chronologie à l&#39;instance appelant les actions et définira le moment initial sur 10, puis la vitesse de la chronologie sur 2. </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> Retour: <a href="Timeline_Actions.htm">Actions de la chronologie</a></div><div style="float:right"> Suivant: <a href="Set_Timeline_Speed.htm">Définir la vitesse de la chronologie</a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
+<body>
+  <!--<div class="body-scroll" style="top: 150px;">-->
+  <h1><img alt="Set Timeline Moment Icon" class="icon" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Timelines/i_Timelines_Set_Timeline_Moment.png" style="cursor: nwse-resize;"> Définir le moment de la chronologie</h1>
+  <p>Cette action est utilisée pour sauter une ligne de temps du moment actuel à un nouveau moment. Les lignes de temps avancent à travers différents &quot;moments&quot;, et chaque moment occupe généralement une image du jeu (comme l'événement Step d'un objet). Une fois qu'une ligne de temps a commencé
+    elle progresse à travers les moments jusqu'à ce qu'elle atteigne la fin. À ce moment-là, elle revient au premier moment de la ligne de temps ou s'arrête complètement. Cependant, cette approche linéaire des lignes de temps peut être modifiée en utilisant cette action pour définir un moment différent à tout moment.
+    moment différent à tout moment, vous permettant de créer vos propres boucles de ligne de temps, ou de sauter des sections d'une ligne de temps dans certaines circonstances, etc... Avec cette action, il vous suffit de définir le moment auquel sauter dans la ligne de temps et la prochaine image de jeu se déroulera
+    ce moment (notez que vous devez avoir assigné une timeline à l'instance en utilisant l'action <a href="Set_Instance_Timeline.htm">Set Instance Timeline</a>).</p>
+  <p> </p>
+  <h4>Syntaxe de l'action :</h4>
+  <p><img alt="Set Timeline Moment Action" class="center" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Timelines/a_Timelines_Set_Timeline_Moment.png" style="cursor: nesw-resize;" /></p>
+  <h4>Arguments :</h4>
+  
+    <table>
+      <tbody>
+        <tr>
+          <th>Arguments</th>
+          <th>Description</th>
+        </tr>
+        <tr>
+          <td>Moment</td>
+          <td>Le moment pour définir la ligne de temps assignée</td>
+        </tr>
+      </tbody>
+    </table>
+  
+  <p> </p>
+  <h4>Exemple :</h4>
+  <p><img alt="Set Timeline Moment Example" class="center" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Timelines/e_Timelines_Set_Instance_Timeline.png">Le code du bloc d'action ci-dessus attribuera une timeline
+    à l'instance qui appelle les actions, ainsi qu'à définir le moment initial à 10 et la vitesse de la ligne de temps à 2.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <div class="footer">
+    <div class="buttons">
+      <div class="clear">
+        <div style="float:left">Retour : <a href="Timeline_Actions.htm">Actions de la ligne de temps</a></div>
+        <div style="float:right">Suivant : <a href="Set_Timeline_Speed.htm">Définir la vitesse de la ligne de temps</a></div>
+      </div>
+    </div>
+    <h5><span data-keyref="Copyright Notice">Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
   </div>
   <!-- KEYWORDS
 Action - Set Timeline Moment

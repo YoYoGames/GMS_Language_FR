@@ -3,15 +3,77 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>draw_surface_part</title>
+  <title>dessiner_partie_de_surface</title>
   <meta name="generator" content="Adobe RoboHelp 2019" />
   <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
   <meta name="rh-authors" content="Mark Alexander" />
-  <meta name="topic-comment" content="Référence pour draw_surface_part" />
+  <meta name="topic-comment" content="Reference for draw_surface_part" />
   <meta name="rh-index-keywords" content="draw_surface_part" />
   <meta name="search-keywords" content="draw_surface_part" />
 </head>
-<body><!--<div class="body-scroll" style="top: 150px;">--><h1>draw_surface_part</h1><p> Avec cette fonction, vous pouvez dessiner une partie de n&#39;importe quelle surface à une position donnée dans la pièce. Comme avec <tt><a href="draw_surface.htm">draw_surface()</a></tt> vous pouvez spécifier une surface, mais vous devez ensuite spécifier les <i>coordonnées relatives</i> dans la surface d&#39;une zone à sélectionner pour le dessin. Cela signifie qu&#39;une position gauche de 0 et une position supérieure de 0 serait le coin supérieur gauche de la surface et toutes les autres coordonnées devraient être prises à partir de cette position.</p><p class="note"><b></b> <b>REMARQUE</b>: lorsque vous travaillez avec des surfaces, il est possible qu&#39;elles cessent d&#39;exister à tout moment car elles sont stockées dans la mémoire de texture. Vous devez <b>TOUJOURS</b> vérifier qu&#39;une surface existe en utilisant <span style="font-size:1px;"><a href="surface_exists.htm"><tt style="font-size: 14px">surface_exists ()</tt></a></span> avant de les référencer directement.</p><p></p><h4> Syntaxe:</h4><p class="code">draw_surface_part(id, left, top, w, h, x, y);</p><table><tbody><tr><th> Argument</th><th> Description</th></tr><tr><td> <span class="notranslate">id</span></td><td> La valeur d&#39;identifiant unique de la surface à dessiner.</td></tr><tr><td> <span class="notranslate">left</span></td><td> La position gauche dans la surface de la pièce à dessiner.</td></tr><tr><td> <span class="notranslate">top</span></td><td> La position supérieure dans la surface de la pièce à dessiner.</td></tr><tr><td> <span class="notranslate">w</span></td><td> La largeur de la pièce à dessiner, à partir de la gauche.</td></tr><tr><td> <span class="notranslate">h</span></td><td> La hauteur de la pièce à dessiner, à partir du haut.</td></tr><tr><td> <span class="notranslate">x</span></td><td> La position x de l&#39;endroit où dessiner la surface.</td></tr><tr><td> <span class="notranslate">y</span></td><td> La position y de l&#39;endroit où dessiner la surface.</td></tr></tbody></table><p></p><h4> Retour:</h4><p class="code">N/A</p><p></p><h4> Exemple:</h4><p class="code">draw_surface_part(surf, 8, 8, 32, 32, x, y);</p><p> Cela dessinera une zone de 32x32 8px par 8px à partir du coin supérieur gauche de la surface indexée en &quot;surf&quot;, à la position des instances (x, y). </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> Retour: <a href="Surfaces.htm">Surfaces</a></div><div style="float:right"> Suivant:<a href="draw_surface_part_ext.htm">draw_surface_part_ext</a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
+<body>
+  <!--<div class="body-scroll" style="top: 150px;">-->
+  <h1>dessiner_partie_de_surface</h1>
+  <p>Cette fonction vous permet de dessiner une partie de n'importe quelle surface à un endroit donné de la pièce. Comme avec <tt><a href="draw_surface.htm">draw_surface()</a></tt> vous pouvez spécifier une surface, mais vous devez ensuite spécifier les <i>coordonnées relatives</i> dans la surface d'une zone à sélectionner pour le dessin.
+    surface d'une zone à sélectionner pour le dessin. Cela signifie qu'une position gauche de 0 et une position supérieure de 0 correspondent au coin supérieur gauche de la surface et que toutes les autres coordonnées doivent être prises à partir de cette position.</p>
+  <p class="note"><b></b><b>NOTE</b>: Lorsque vous travaillez avec des surfaces, il est possible qu'elles cessent d'exister à tout moment, car elles sont stockées dans la mémoire des textures. Vous devez <b>TOUJOURS</b> vérifier qu'une surface existe en utilisant <span style="font-size:1px;"><a href="surface_exists.htm"><tt style="font-size: 14px">surface_exists()</tt></a></span>    avant de les référencer directement.</p>
+  <p> </p>
+  <h4>Syntaxe :</h4>
+  <p class="code">draw_surface_part(id, left, top, w, h, x, y) ;</p>
+  <table>
+    <tbody>
+      <tr>
+        <th>Arguments</th>
+        <th>Description</th>
+      </tr>
+      <tr>
+        <td>id</td>
+        <td>La valeur d'identification unique de la surface à dessiner.</td>
+      </tr>
+      <tr>
+        <td>gauche</td>
+        <td>La position gauche dans la surface de la pièce à dessiner.</td>
+      </tr>
+      <tr>
+        <td>top</td>
+        <td>La position supérieure dans la surface de la pièce à dessiner.</td>
+      </tr>
+      <tr>
+        <td>w</td>
+        <td>La largeur de la partie à dessiner, de gauche à droite.</td>
+      </tr>
+      <tr>
+        <td>h</td>
+        <td>La hauteur de la partie à dessiner, à partir du haut.</td>
+      </tr>
+      <tr>
+        <td>x</td>
+        <td>La position x de l'endroit où dessiner la surface.</td>
+      </tr>
+      <tr>
+        <td>y</td>
+        <td>La position y de l'endroit où dessiner la surface.</td>
+      </tr>
+    </tbody>
+  </table>
+  <p> </p>
+  <h4>Les retours :</h4>
+  <p class="code">N/A</p>
+  <p> </p>
+  <h4>Exemple :</h4>
+  <p class="code">draw_surface_part(surf, 8, 8, 32, 32, x, y) ;</p>
+  <p>Cela va dessiner une zone de 32x32 de 8px par 8px en haut et à gauche de la surface indexée dans &quot;surf&quot;, à la position (x,y) des instances.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <div class="footer">
+    <div class="buttons">
+      <div class="clear">
+        <div style="float:left">Retour : <a href="Surfaces.htm">Surfaces</a></div>
+        <div style="float:right">Suivant : <a href="draw_surface_part_ext.htm">draw_surface_part_ext</a></div>
+      </div>
+    </div>
+    <h5><span data-keyref="Copyright Notice">Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
   </div>
   <!-- KEYWORDS
 draw_surface_part

@@ -7,17 +7,59 @@
   <meta name="generator" content="Adobe RoboHelp 2019" />
   <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
   <meta name="rh-authors" content="Mark Alexander" />
-  <meta name="topic-comment" content="Page décrivant la fonction shader _get_uniform" />
+  <meta name="topic-comment" content="Page outlining the function shader_get_uniform" />
   <meta name="rh-index-keywords" content="shader_get_uniform" />
   <meta name="search-keywords" content="shader_get_uniform" />
 </head>
-<body><!--<div class="body-scroll" style="top: 150px;">--><h1> <span class="notranslate">shader</span> _get_uniform</h1><p> Comme vous ne pouvez pas modifier la valeur d&#39;une constante de <span class="notranslate">shader</span> <span class="notranslate">shader</span> lui-même, vous devez la définir avant d&#39;appeler le <span class="notranslate">shader</span> aide de l&#39;une des fonctions de <strong>jeu uniforme disponibles.</strong> Cependant, pour pouvoir faire cela, vous devez d&#39;abord appeler cette fonction pour obtenir le &quot;handle&quot; de la <span class="notranslate">shader</span> que vous voudrez changer.</p><p class="note"> <b>REMARQUE</b>: Bien qu&#39;un <span class="notranslate">shader</span> soit composé de deux programmes discrets (sommet et fragment), cette fonction ne différenciera pas les deux et renverra la poignée de la <span class="notranslate">shader</span> de l&#39;un ou l&#39;autre.</p><p></p><h4> Syntaxe:</h4><p class="code">shader_get_uniform(shader, uniform);</p><table><tbody><tr><th> Argument</th><th> Description</th></tr><tr><td> <span class="notranslate"><span class="notranslate">shader</span></span></td><td> L&#39;index du <span class="notranslate">shader</span> à utiliser.</td></tr><tr><td> <span class="notranslate">uniform</span></td><td> La <span class="notranslate">shader</span> pour obtenir le handle de (une chaîne).</td></tr></tbody></table><p></p><h4> Retour:</h4><p class="code">Real (Uniform handle)</p><p></p><h4> Exemple:</h4><p class="code">shader_params = shader_get_uniform(shd_glass, &quot;u_vRefractColour&quot;);</p><p> Le code ci-dessus obtiendra le handle de la <span class="notranslate">shader</span> &quot;u_vRefractColour&quot;. </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> Retour: <a href="Shaders.htm"><span class="notranslate">Shaders</span></a></div><div style="float:right"> Suivant: <a href="shader_get_sampler_index.htm"><span class="notranslate">shader</span> _get_sampler_index</a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
+<body>
+  <!--<div class="body-scroll" style="top: 150px;">-->
+  <h1><span class="notranslate">shader_get_uniform</span></h1>
+  <p>Puisque vous ne pouvez pas modifier la valeur d'une constante d'<span class="notranslate">ombrage</span> dans l'<span class="notranslate">ombrage</span> lui-même, vous devez la définir avant d'appeler l'<span class="notranslate">ombrage</span> à l'aide de l'une des fonctions <strong>d'uniformisation</strong> disponibles. Cependant, pour pouvoir le faire, vous devez d'abord appeler cette fonction
+    pour obtenir le &quot;handle&quot; de la <span class="notranslate">constante du</span> shader que vous souhaitez modifier.</p>
+  <p class="note"><b>NOTE</b>: Bien qu'un <span class="notranslate">shader</span> soit composé de deux programmes discrets (vertex et fragment), cette fonction ne fera pas la différence entre les deux et retournera le handle de la constante du <span class="notranslate">shader</span> de l'un ou l'autre.</p>
+  <p> </p>
+  <h4>Syntaxe :</h4>
+  <p class="code"><span class="notranslate">shader_get_uniform</span><span class="notranslate">(shader</span>, uniform) ;</p>
+  <table>
+    <tbody>
+      <tr>
+        <th>Arguments</th>
+        <th>Description</th>
+      </tr>
+      <tr>
+        <td><span class="notranslate">nuanceur</span></td>
+        <td>L'index du <span class="notranslate">shader</span> à utiliser.</td>
+      </tr>
+      <tr>
+        <td>uniforme</td>
+        <td>La constante du <span class="notranslate">shader</span> pour obtenir le handle de (une chaîne).</td>
+      </tr>
+    </tbody>
+  </table>
+  <p> </p>
+  <h4>Les retours :</h4>
+  <p class="code">Real (poignée uniforme)</p>
+  <p> </p>
+  <h4>Exemple :</h4>
+  <p class="code"><span class="notranslate">shader_params</span>= <span class="notranslate">shader_get_uniform</span>(shd_glass, &quot;u_vRefractColour&quot;) ;</p>
+  <p>Le code ci-dessus obtiendra le gestionnaire de la constante du <span class="notranslate">shader</span> &quot;u_vRefractColour&quot;.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <div class="footer">
+    <div class="buttons">
+      <div class="clear">
+        <div style="float:left">Retour : <a href="Shaders.htm"><span class="notranslate">Shaders</span></a></div>
+        <div style="float:right">Suivant : <a href="shader_get_sampler_index.htm"><span class="notranslate">shader_get_sampler_index</span></a></div>
+      </div>
+    </div>
+    <h5><span data-keyref="Copyright Notice">Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
   </div>
   <!-- KEYWORDS
-shader_get_uniform
+<span class="notranslate">shader</span>_get_uniform
 -->
   <!-- TAGS
-shader_get_uniform
+<span class="notranslate">shader</span>_get_uniform
 -->
 </body>
 </html>

@@ -3,17 +3,44 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>event_inherited</title>
+  <title>événement_hérité</title>
   <meta name="generator" content="Adobe RoboHelp 2019" />
   <link rel="stylesheet" href="../../../../../assets/css/default.css" type="text/css" />
   <meta name="rh-authors" content="Mark Alexander" />
-  <meta name="topic-comment" content="Page décrivant la fonction event_inherited" />
+  <meta name="topic-comment" content="Page outlining the function event_inherited" />
   <meta name="rh-index-keywords" content="event_inherited" />
   <meta name="search-keywords" content="event_inherited" />
 </head>
-<body><!--<div class="body-scroll" style="top: 150px;">--><h1>event_inherited</h1><p> Cette fonction appellera l&#39;événement actuel de l&#39;objet parent de l&#39;instance. Normalement, lorsqu&#39;une instance a un objet parent, elle hérite automatiquement de tous les mêmes événements que le parent, mais si (par exemple) votre objet parent a un événement create et que vous en ajoutez un à votre objet enfant, toutes les instances de l&#39;objet enfant seront exécutez le nouvel événement de création que vous avez ajouté et <i>non</i> celui qui se trouve dans l&#39;objet parent. Si vous devez utiliser à la fois l&#39;événement d&#39;objet parent et l&#39;événement d&#39;objet enfant du même type, vous devez utiliser cette fonction car elle exécutera l&#39;événement d&#39;objet parent avant de continuer avec le reste du code ou des actions que l&#39;événement enfant contient.</p><p></p><h4> Syntaxe:</h4><p class="code">event_inherited();</p><p></p><h4> Retour:</h4><p class="code">N/A</p><p></p><h4> Exemple:</h4><p class="code">event_inherited();<br/> switch (sprite_index)<br/>     {
-    <br/>     case spr_Enemy_1: dmg += 2; break;<br/>     case spr_Enemy_4: dmg -= 1; break;<br/>     case spr_Enemy_10: dmg +=10; break;<br/>     }
-  </p><p> Le code ci-dessus appelle l&#39;événement parent hérité (dans lequel nous initialisons la variable &quot;<span class="inline">dmg</span> &quot;) puis modifie le&quot;<span class="inline">dmg</span> &quot;variable. S&#39;il n&#39;y a pas de parent spécifié pour l&#39;instance exécutant ce code, nous obtiendrions une erreur&quot; variable inconnue &quot;comme <span class="inline">dmg</span> n&#39;a pas été défini. </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> Retour: <a href="Generating_Object_Events.htm">Génération d&#39;événements d&#39;objets</a></div><div style="float:right"> Suivant:<a href="event_perform.htm">event_perform</a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
+<body>
+  <!--<div class="body-scroll" style="top: 150px;">-->
+  <h1>événement_hérité</h1>
+  <p>Cette fonction appellera l'événement courant de l'objet parent de l'instance. Normalement, lorsqu'une instance a un objet parent, elle hérite automatiquement des mêmes événements que le parent, mais si (par exemple) votre objet parent a un événement create et que vous en ajoutez un à votre objet enfant, toutes les instances de l'objet enfant exécuteront le nouvel événement create que vous avez ajouté et non celui de l'objet parent.
+    vous en ajoutez un à votre objet enfant, toutes les instances de l'objet enfant exécuteront le nouvel événement de création que vous avez ajouté et <i>non</i> celui de l'objet parent. Si vous avez besoin d'utiliser à la fois l'événement de l'objet parent et l'événement de l'objet enfant
+    du même type, vous devriez utiliser cette fonction car elle exécutera l'événement de l'objet parent avant de continuer avec le reste du code ou des actions que l'événement enfant contient.</p>
+  <p> </p>
+  <h4>Syntaxe :</h4>
+  <p class="code">event_inherited() ;</p>
+  <p> </p>
+  <h4>Les retours :</h4>
+  <p class="code">N/A</p>
+  <p> </p>
+  <h4>Exemple :</h4>
+  <p class="code">event_inherited() ;<br> switch (sprite_index)<br> {
+    <br> case spr_Enemy_1 : dmg += 2 ; break ;<br> case spr_Enemy_4 : dmg -= 1 ; break ;<br> case spr_Enemy_10 : dmg +=10 ; break ;<br> }
+  </p>
+  <p>Le code ci-dessus appelle l'événement parent hérité (dans lequel nous initialisons la variable &quot;<span class="inline">dmg</span>&quot;) et modifie ensuite la variable &quot;<span class="inline">dmg</span>&quot;. S'il n'y a pas de parent spécifié pour
+    l'instance qui exécute ce code, nous obtiendrions une erreur de type &quot;variable inconnue&quot; car <span class="inline">dmg</span> n'a pas été défini.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <div class="footer">
+    <div class="buttons">
+      <div class="clear">
+        <div style="float:left">Retour : <a href="Generating_Object_Events.htm">Génération d'événements d'objets</a></div>
+        <div style="float:right">Suivant : <a href="event_perform.htm">event_perform</a></div>
+      </div>
+    </div>
+    <h5><span data-keyref="Copyright Notice">Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
   </div>
   <!-- KEYWORDS
 event_inherited

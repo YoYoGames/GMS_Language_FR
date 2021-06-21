@@ -3,15 +3,58 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>path_get_speed</title>
+  <title>chemin_get_speed</title>
   <meta name="generator" content="Adobe RoboHelp 2019" />
   <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
   <meta name="rh-authors" content="Mark Alexander" />
-  <meta name="topic-comment" content="Page expliquant la fonction path_get_speed" />
+  <meta name="topic-comment" content="Page explaining the function path_get_speed" />
   <meta name="rh-index-keywords" content="path_get_speed" />
   <meta name="search-keywords" content="path_get_speed" />
 </head>
-<body><!--<div class="body-scroll" style="top: 150px;">--><h1>path_get_speed</h1><p> Cette fonction renvoie le facteur de vitesse de toute position donnée sur un chemin. La position doit être une valeur comprise entre 0 et 1 (vous pouvez utiliser <a href="Path_Variables/path_position.htm"><tt>path_position</tt></a>, par exemple, si vous avez besoin de la position actuelle de l&#39;instance), 0 étant la position de départ et 1 la fin. La valeur renvoyée sera le facteur par lequel la valeur réelle <tt><a href="Path_Variables/path_speed.htm">path_speed</a> </tt> est en cours de définition. Par exemple, sur un chemin avec seulement deux points, 0 et 1, où le facteur de vitesse du point 0 est 100 et le facteur de vitesse du point 1 est 0, la fonction <tt>path_get_speed(path, 0.5)</tt> retournera 50.</p><p></p><h4> Syntaxe:</h4><p class="code">path_get_speed(ind, pos);</p><table><tbody><tr><th> Argument</th><th> Description</th></tr><tr><td> <span class="notranslate">index</span></td><td> L&#39;index du chemin à vérifier.</td></tr><tr><td> <span class="notranslate">pos</span></td><td> À quelle distance du chemin à vérifier. Entre 0 (début) et 1 (fin), peut être décimal.</td></tr></tbody></table><p></p><h4> Retour:</h4><p class="code">Real</p><p></p><h4> Exemple:</h4><p class="code">speed = path_get_speed(pth_Patrol, 0.5) / 20;</p><p> Cela définira la vitesse de l&#39;instance appelante sur le facteur de vitesse du point exactement à mi-chemin du chemin donné, divisé par 20. Donc, si le facteur de vitesse trouvé est la valeur par défaut de 100, il définira la vitesse de l&#39;instance appelante sur 5. </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> Retour: <a href="Paths.htm">Chemins</a></div><div style="float:right"> Suivant:<a href="path_get_x.htm">path_get_x</a></div><div style="float:right"></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
+<body>
+  <!--<div class="body-scroll" style="top: 150px;">-->
+  <h1>chemin_get_speed</h1>
+  <p>Cette fonction renvoie le facteur de vitesse d'une position donnée sur un chemin. La position doit être une valeur entre 0 et 1 (vous pouvez utiliser <a href="Path_Variables/path_position.htm"><tt>path_position</tt></a>par exemple, si vous avez besoin de la position actuelle
+    de l'instance), 0 étant la position de départ et 1 la position d'arrivée. La valeur renvoyée sera le facteur par lequel la valeur actuelle de <tt><a href="Path_Variables/path_speed.htm">path_speed</a> </tt>est défini. Par exemple, sur un chemin
+    avec seulement deux points, 0 et 1, où le facteur de vitesse du point 0 est 100 et le facteur de vitesse du point 1 est 0, la fonction <tt>path_get_speed(path, 0.5)</tt> retournera 50.</p>
+  <p> </p>
+  <h4>Syntaxe :</h4>
+  <p class="code">path_get_speed(ind, pos) ;</p>
+  <table>
+    <tbody>
+      <tr>
+        <th>Arguments</th>
+        <th>Description</th>
+      </tr>
+      <tr>
+        <td>indice</td>
+        <td>L'index du chemin à vérifier.</td>
+      </tr>
+      <tr>
+        <td>pos</td>
+        <td>Jusqu'à quel point du chemin il faut vérifier. Entre 0 (début) et 1 (fin), peut être décimal.</td>
+      </tr>
+    </tbody>
+  </table>
+  <p> </p>
+  <h4>Les retours :</h4>
+  <p class="code">Real</p>
+  <p> </p>
+  <h4>Exemple :</h4>
+  <p class="code">vitesse = path_get_speed(pth_Patrol, 0.5) / 20 ;</p>
+  <p>Ceci fixera la vitesse de l'instance appelante au facteur de vitesse du point situé exactement à mi-chemin du chemin donné, divisé par 20. Ainsi, si le facteur de vitesse trouvé est le facteur par défaut 100, la vitesse de l'instance appelante sera fixée à 5.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <div class="footer">
+    <div class="buttons">
+      <div class="clear">
+        <div style="float:left">Retour : <a href="Paths.htm">Chemins d'accès</a></div>
+        <div style="float:right">Suivant : <a href="path_get_x.htm">path_get_x</a></div>
+        <div style="float:right"> </div>
+      </div>
+    </div>
+    <h5><span data-keyref="Copyright Notice">Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
   </div>
   <!-- KEYWORDS
 path_get_speed

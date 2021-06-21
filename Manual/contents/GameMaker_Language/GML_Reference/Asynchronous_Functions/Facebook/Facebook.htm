@@ -7,13 +7,54 @@
   <meta name="generator" content="Adobe RoboHelp 2019" />
   <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
   <meta name="rh-authors" content="Mark Alexander" />
-  <meta name="topic-comment" content="Section de référence pour toutes les fonctions Facebook" />
-  <meta name="rh-index-keywords" content="facebook_init (obsolète),facebook_login (obsolète),facebook_request_publish_permissions (Obsolète),facebook_request_read_permissions (obsolète),facebook_check_permission (obsolète),facebook_status (obsolète),facebook_accesstoken (obsolète),facebook_user_id (obsolète),facebook_graph_request (obsolète),facebook_dialog (obsolète),facebook_send_invite (obsolète),facebook_post_message (obsolète),facebook_logout (obsolète),facebook_launch_offerwall (obsolète)"
-  />
-  <meta name="search-keywords" content="Facebook,facebook_init,Identifiant Facebook,facebook_request_publish_permissions,facebook_request_read_permissions,facebook_check_permission,statut Facebook,facebook_accesstoken,facebook_user_id,facebook_graph_request,facebook_dialog,facebook_send_invite,facebook_post_message,facebook_logout,facebook_launch_offerwall"
-  />
+  <meta name="topic-comment" content="Reference section for all the Facebook functions" />
+  <meta name="rh-index-keywords" content="facebook_init (Obsolete),facebook_login (Obsolete),facebook_request_publish_permissions (Obsolete),facebook_request_read_permissions (Obsolete),facebook_check_permission (Obsolete),facebook_status (Obsolete),facebook_accesstoken (Obsolete),facebook_user_id (Obsolete),facebook_graph_request (Obsolete),facebook_dialog (Obsolete),facebook_send_invite (Obsolete),facebook_post_message (Obsolete),facebook_logout (Obsolete),facebook_launch_offerwall (Obsolete)" />
+  <meta name="search-keywords" content="Facebook,facebook_init,facebook_login,facebook_request_publish_permissions,facebook_request_read_permissions,facebook_check_permission,facebook_status,facebook_accesstoken,facebook_user_id,facebook_graph_request,facebook_dialog,facebook_send_invite,facebook_post_message,facebook_logout,facebook_launch_offerwall" />
 </head>
-<body><!--<div class="body-scroll" style="top: 150px;">--><h1> Facebook</h1><p> Facebook est l&#39;un des sites de médias sociaux les plus importants sur Internet et de nombreux jeux et développeurs ont actuellement leurs propres pages pour publier des jeux et des médias. <span class="notranslate">GameMaker Studio 2</span> a une extension qui vous permet de vous connecter à Facebook et d&#39;effectuer certaines actions et tâches que leur API permet. Il est recommandé de visiter la <a href="https://developers.facebook.com/" target="_blank">page Facebook Developers</a> avant de commencer à utiliser l&#39;extension, car il est essentiel de bien comprendre le fonctionnement de Facebook Graph et les appels et autorisations disponibles pour que vous puissiez tirer le meilleur parti de ces fonctions.<br/><br/> Vous pouvez découvrir comment configurer et utiliser l&#39;extension Facebook pour toutes les plates-formes disponibles à partir du lien suivant:</p><ul class="colour"><li> <a href="https://help.yoyogames.com/hc/en-us/articles/360004488072-iOS-Android-and-HTML5-Integrating-Facebook"><span class="notranslate">Android</span>, <span class="notranslate">iOS</span> et HTML5: intégrer Facebook</a></li></ul><p></p><p> Les fonctions suivantes sont <b>obsolètes</b> qui n&#39;étaient valables que pour l&#39;ancienne API Facebook. En tant que tel, vous <b>ne pouvez plus utiliser ces fonctions</b> dans vos projets et elles sont répertoriées ici au cas où vous auriez importé un ancien projet avec elles. Pour la fonctionnalité Facebook actuelle, vous devez avoir activé l&#39; <b>API Facebook</b> dans les <a href="../../../../Settings/Game_Options.htm">options de jeu</a> appropriées pour la plate-forme cible, ce qui vous demandera de télécharger et d&#39;installer une extension. L&#39;extension est livrée avec un <tt>*.pdf</tt> format &quot;mini-manuel&quot; expliquant comment l&#39;utiliser ainsi que toutes les définitions de fonctions et exemples. Toutes les références à l&#39;ancien <tt>facebook_*()</tt> les fonctions devront être remplacées (et mises à jour) pour utiliser l&#39;extension <tt>fb_*()</tt> équivalents.</p><p> Les fonctions répertoriées ci-dessous concernaient l&#39;intégration de votre jeu avec Facebook: </p><p></p><ul class="colour"><li><span class="inline">facebook_init</span></li><li><span class="inline">facebook_login</span></li><li><span class="inline">facebook_request_publish_permissions</span></li><li><span class="inline">facebook_request_read_permissions</span></li><li><span class="inline">facebook_check_permission</span></li><li><span class="inline">facebook_status</span></li><li><span class="inline">facebook_accesstoken</span></li><li><span class="inline">facebook_user_id</span></li><li><span class="inline">facebook_graph_request</span></li><li><span class="inline">facebook_dialog</span></li><li><span class="inline">facebook_send_invite</span></li><li><span class="inline">facebook_post_message</span></li><li><span class="inline">facebook_logout</span></li><li><span class="inline">facebook_launch_offerwall</span></li></ul><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> Retour: <a href="../Asynchronous_Functions.htm">Fonctions asynchrones</a></div><div style="float:right"> Suivant: <a href="../Achievements_And_Leaderboards/Achievements_And_Leaderboards.htm">Réalisations et classements</a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
+<body>
+  <!--<div class="body-scroll" style="top: 150px;">-->
+  <h1>Facebook</h1>
+  <p>Facebook est l'un des plus importants sites de médias sociaux sur Internet et de nombreux jeux et développeurs ont actuellement leurs propres pages pour publier des jeux et des médias. <span class="notranslate">GameMaker Studio 2</span> possède une extension qui vous permet de vous connecter à Facebook et d'effectuer
+    certaines actions et tâches que leur API permet. Il est recommandé de visiter la page des <a href="https://developers.facebook.com/" target="_blank">développeurs Facebook</a> avant de commencer à utiliser l'extension, afin de bien comprendre le fonctionnement du graphique Facebook et les appels et tâches disponibles.
+    Facebook Graph et des appels et autorisations disponibles est essentielle pour que vous puissiez tirer le meilleur parti de ces fonctions.<br>
+    <br> Vous pouvez découvrir comment configurer et utiliser l'extension Facebook pour toutes les plateformes disponibles à partir du lien suivant :</p>
+  <ul class="colour">
+    <li><a href="https://help.yoyogames.com/hc/en-us/articles/360004488072-iOS-Android-and-HTML5-Integrating-Facebook"><span class="notranslate">Android</span>, <span class="notranslate">iOS</span> et HTML5 : Intégration de Facebook</a></li>
+  </ul>
+  <p> </p>
+  <p>Les <b>fonctions</b> suivantes sont <b>obsolètes</b> et n'étaient valables que pour l'ancienne API Facebook. En tant que telles, vous <b>ne pouvez plus utiliser ces fonctions</b> dans vos projets. Elles sont répertoriées ici au cas où vous auriez importé un ancien projet les contenant. Pour
+    la fonctionnalité Facebook actuelle, vous devez avoir activé l'<b>API Facebook</b> dans les <a href="../../../../Settings/Game_Options.htm">options de jeu</a> appropriées pour la plate-forme cible, ce qui vous invitera à télécharger et à installer une extension.
+    L'extension est accompagnée d'un &quot;mini-manuel&quot; au format <tt>*.pdf</tt> expliquant comment l'utiliser et montrant toutes les définitions de fonctions et les exemples. Toutes les références aux anciennes fonctions <tt>facebook_*()</tt> devront être remplacées (et mises à jour) pour utiliser l'extension fb.
+    mises à jour) pour utiliser les équivalents de l'extension <tt>fb_*()</tt>.</p>
+  <p>Les fonctions énumérées ci-dessous ont permis d'intégrer votre jeu à Facebook :</p>
+  <p> </p>
+  <ul class="colour">
+    <li><span class="inline">facebook_init</span></li>
+    <li><span class="inline">facebook_login</span></li>
+    <li><span class="inline">facebook_request_publish_permissions</span></li>
+    <li><span class="inline">facebook_request_read_permissions</span></li>
+    <li><span class="inline">facebook_check_permission</span></li>
+    <li><span class="inline">facebook_status</span></li>
+    <li><span class="inline">facebook_accesstoken</span></li>
+    <li><span class="inline">facebook_user_id</span></li>
+    <li><span class="inline">facebook_graph_request</span></li>
+    <li><span class="inline">facebook_dialog</span></li>
+    <li><span class="inline">facebook_send_invite</span></li>
+    <li><span class="inline">facebook_post_message</span></li>
+    <li><span class="inline">facebook_logout</span></li>
+    <li><span class="inline">facebook_launch_offerwall</span></li>
+  </ul>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <div class="footer">
+    <div class="buttons">
+      <div class="clear">
+        <div style="float:left">Retour : <a href="../Asynchronous_Functions.htm">Fonctions asynchrones</a></div>
+        <div style="float:right">Suivant : <a href="../Achievements_And_Leaderboards/Achievements_And_Leaderboards.htm">Réalisations et classements</a></div>
+      </div>
+    </div>
+    <h5><span data-keyref="Copyright Notice">Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
   </div>
   <!-- KEYWORDS
 Facebook Functions

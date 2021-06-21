@@ -7,11 +7,37 @@
   <meta name="generator" content="Adobe RoboHelp 2019" />
   <link rel="stylesheet" href="../../../assets/css/default.css" type="text/css" />
   <meta name="rh-authors" content="Mark Alexander" />
-  <meta name="topic-comment" content="Détails de la section Appliquer à ..." />
-  <meta name="rh-index-keywords" content="DnD ™ - Appliquer à ..." />
+  <meta name="topic-comment" content="Section detailing Apply To..." />
+  <meta name="rh-index-keywords" content="DnD™ Action - Apply To..." />
   <meta name="search-keywords" content="" />
 </head>
-<body><!--<div class="body-scroll" style="top: 150px;">--><h1><img alt="Apply To... Icon" class="icon" height="32" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Common/i_Common_Apply_To.png" width="32" /> Postuler à...</h1><p> Cette action peut être utilisée pour modifier la <a href="../../Drag_And_Drop_Overview/Applying_Actions_To_Other_Instances.htm">portée</a> de l&#39;action pour toutes les autres actions à enchaîner à celle-ci. Comme avec un<a href="If_Variable.htm">if</a> action, si vous déposez d&#39;autres actions à droite de l&#39; <b>action Appliquer à...,</b> elles seront exécutées à partir de l&#39;objet ou de l&#39;instance de portée. La portée est choisie dans le menu contextuel affiché lorsque vous cliquez sur la petite flèche en haut à droite de l&#39;action, et de cette façon, vous pouvez indiquer à un autre ensemble d&#39;objets - ou même à une seule instance si vous avez l&#39;ID d&#39;instance - à exécutez plusieurs actions avant de continuer avec le code de l&#39;objet actuel.</p><p> Notez que pour ajouter des actions dans le bloc &quot;S&#39;applique à&quot;, elles doivent être déposées sur le <i>côté</i> de l&#39;action, comme indiqué dans l&#39;image ci-dessous:</p><p><img alt="Apply To... drop actions example" class="center" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Common/Drop_Applies_To.png" /> Ces actions seront désormais exécutées à partir de l&#39;objet ou de l&#39;instance ciblée par le bloc «S&#39;applique à», tandis que toutes les actions déposées ailleurs seront exécutées après le bloc «S&#39;applique à».</p><p></p><h4> Syntaxe de l&#39;action:</h4><p><img alt="Apply To... Action" class="center" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Common/a_Common_Apply_To.png" /></p><h4> Exemple:</h4><p><img alt="Apply To... Example" class="center" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Common/e_Common_Apply_To.png" /> Le code de bloc d&#39;action ci-dessus vérifie une variable pour voir si elle est égale à 100 et si c&#39;est le cas, il change la portée en &quot; <span class="inline">obj_Player</span> &quot;et leur dit d&#39;exécuter l&#39; <a href="../Instance/Set_Sprite.htm">action Set Sprite</a> (toutes les instances de cet objet dans la salle changeront de sprite à ce stade), avant de continuer à ajouter 1 sur la variable dans l&#39;instance exécutant le bloc de code complet. </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> Retour: <a href="Common_Actions_Library.htm">Actions courantes</a></div><div style="float:right"> Suivant: <a href="Return.htm">Retour</a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
+<body>
+  <!--<div class="body-scroll" style="top: 150px;">-->
+  <h1><img alt="Apply To... Icon" class="icon" height="32" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Common/i_Common_Apply_To.png" width="32"> Appliquer à...</h1>
+  <p>Cette action peut être utilisée pour changer la <a href="../../Drag_And_Drop_Overview/Applying_Actions_To_Other_Instances.htm">portée de l'action</a> pour toutes les autres actions enchaînées à celle-ci. Comme dans le cas d'une action <a href="If_Variable.htm">if</a>, si vous déposez d'autres
+    à droite de l'action <b>Appliquer à.</b>.., elles seront exécutées à partir de l'objet ou de l'instance concerné. La portée est choisie dans le menu contextuel affiché lorsque vous cliquez sur la petite flèche en haut à droite de l'action.
+    un ensemble différent d'objets - ou même une seule instance si vous avez l'ID de l'instance - d'exécuter plusieurs actions avant de continuer avec le code de l'objet actuel.</p>
+  <p>Notez que pour ajouter des actions dans le bloc &quot;S'applique à&quot;, elles doivent être déposées sur le côté de <i>l</i> 'action, comme le montre l'image ci-dessous :</p>
+  <p><img alt="Apply To... drop actions example" class="center" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Common/Drop_Applies_To.png">Ces actions seront désormais exécutées à partir de l'objet ou de l'instance ciblé par le bloc "Applies To".
+    &quot;Applies To&quot;, tandis que toute action déposée ailleurs sera exécutée après le bloc &quot;Applies To&quot;.</p>
+  <p> </p>
+  <h4>Syntaxe de l'action :</h4>
+  <p><img alt="Apply To... Action" class="center" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Common/a_Common_Apply_To.png" /></p>
+  <h4>Exemple :</h4>
+  <p><img alt="Apply To... Example" class="center" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Common/e_Common_Apply_To.png">Le code du bloc d'action ci-dessus vérifie une variable pour voir si elle est égale à 100.
+    aux instances de &quot; <span class="inline">obj_Player</span>&quot; et leur demande d'exécuter l'<a href="../Instance/Set_Sprite.htm">action</a> Set Sprite <a href="../Instance/Set_Sprite.htm">(</a> toutes les instances de cet objet dans la pièce changeront de sprite à ce moment-là), avant de continuer à ajouter 1 à la variable dans l'instance exécutant le bloc de code complet.
+    d'ajouter 1 à la variable dans l'instance qui exécute le bloc de code complet.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <div class="footer">
+    <div class="buttons">
+      <div class="clear">
+        <div style="float:left">Retour : <a href="Common_Actions_Library.htm">Actions communes</a></div>
+        <div style="float:right">Suivant : <a href="Return.htm">Retour</a></div>
+      </div>
+    </div>
+    <h5><span data-keyref="Copyright Notice">Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
   </div>
   <!-- KEYWORDS
 Action - Apply To

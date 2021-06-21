@@ -3,15 +3,69 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>buffer_fill</title>
+  <title>remplissage de la mémoire tampon</title>
   <meta name="generator" content="Adobe RoboHelp 2019" />
   <link rel="stylesheet" href="../../../assets/css/default.css" type="text/css" />
   <meta name="rh-authors" content="Mark Alexander" />
-  <meta name="topic-comment" content="Page de référence pour buffer_fill" />
+  <meta name="topic-comment" content="Reference page for buffer_fill" />
   <meta name="rh-index-keywords" content="buffer_fill,buffer_u8,buffer_s8,buffer_u16,buffer_s16,buffer_u32,buffer_s32,buffer_u64,buffer_f16,buffer_f32,buffer_f64,buffer_bool,buffer_string,buffer_text" />
   <meta name="search-keywords" content="buffer_fill" />
 </head>
-<body><!--<div class="body-scroll" style="top: 150px;">--><h1>buffer_fill</h1><p> Cette fonction peut être utilisée pour remplir un tampon créé précédemment avec un type de données et une valeur donnés. Les données avec lesquelles vous remplissez le tampon doivent être en accord avec l&#39;argument &quot;type&quot; de cette fonction, ce qui signifie que vous ne pouvez pas essayer de remplir avec une chaîne et d&#39;utiliser le type entier 16 bits non signé, par exemple. Les constantes de type sont les mêmes que celles utilisées par le <a href="buffer_read.htm"><tt>buffer_read()</tt></a> et <a href="buffer_write.htm"><tt>buffer_write()</tt></a> les fonctions. La &quot;taille&quot; est la taille du tampon (en octets) que vous souhaitez remplir, tandis que le décalage est la valeur de décalage (également en octets) à partir du début du tampon à partir duquel commencer le remplissage.</p><p></p><h4> Syntaxe:</h4><p class="code">buffer_fill(buffer, offset, type, value, size);</p><table><tbody><tr><th> Argument</th><th> Description</th></tr><tr><td> <span class="notranslate">buffer</span></td><td> L&#39;index du tampon à remplir.</td></tr><tr><td> <span class="notranslate">offset</span></td><td> La valeur de décalage des données (en octets).</td></tr><tr><td> <span class="notranslate">type</span></td><td> Le type de données à écrire dans le tampon (voir la liste des constantes <a href="buffer_write.htm">ici</a> ).</td></tr><tr><td> <span class="notranslate">value</span></td><td> Les données à écrire.</td></tr><tr><td> <span class="notranslate">size</span></td><td> La taille du tampon (en octets) que vous souhaitez remplir.</td></tr></tbody></table><p></p><h4> Retour:</h4><p class="code">N/A</p><p></p><h4> Exemple:</h4><p class="code">map_buffer = buffer_create(16384, buffer_fixed, 0);<br/> buffer_fill(map_buffer, 0, buffer_u16, 0, 16384);</p><p> Le code ci-dessus trouve le début du tampon avec l&#39;ID stocké dans la variable &quot;buff&quot; et y écrit une série de valeurs entières 16 bits signées. </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> Retour: <a href="Buffers.htm">Tampons</a></div><div style="float:right"> Suivant:<a href="buffer_seek.htm">buffer_seek</a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
+<body>
+  <!--<div class="body-scroll" style="top: 150px;">-->
+  <h1>remplissage de la mémoire tampon</h1>
+  <p>Cette fonction peut être utilisée pour remplir un tampon précédemment créé avec un type de données et une valeur donnés. Les données avec lesquelles vous remplissez le tampon doivent être en accord avec l'argument &quot;type&quot; de cette fonction, ce qui signifie que vous ne pouvez pas essayer de remplir avec une chaîne de caractères et utiliser le type entier 16 bits non signé, par exemple.
+    chaîne de caractères et utiliser le type "unsigned 16bit integer", par exemple. Les constantes de type sont les mêmes que celles utilisées par les fonctions <a href="buffer_read.htm"><tt>buffer_read()</tt></a> et <a href="buffer_write.htm"><tt>buffer_write()</tt></a> . Le paramètre &quot;size
+    est la taille du tampon (en octets) que vous souhaitez remplir, tandis que le décalage est la valeur du décalage (également en octets) à partir du début du tampon pour commencer le remplissage.</p>
+  <p> </p>
+  <h4>Syntaxe :</h4>
+  <p class="code">buffer_fill(buffer, offset, type, valeur, taille) ;</p>
+  <table>
+    <tbody>
+      <tr>
+        <th>Arguments</th>
+        <th>Description</th>
+      </tr>
+      <tr>
+        <td>tampon</td>
+        <td>L'index du tampon à remplir.</td>
+      </tr>
+      <tr>
+        <td>décalage</td>
+        <td>La valeur du décalage des données (en octets).</td>
+      </tr>
+      <tr>
+        <td>type</td>
+        <td>Le type de données qui doit être écrit dans le tampon (voir la liste des constantes <a href="buffer_write.htm">ici</a>).</td>
+      </tr>
+      <tr>
+        <td>valeur</td>
+        <td>Les données à écrire.</td>
+      </tr>
+      <tr>
+        <td>taille</td>
+        <td>La taille du tampon (en octets) que vous souhaitez remplir.</td>
+      </tr>
+    </tbody>
+  </table>
+  <p> </p>
+  <h4>Les retours :</h4>
+  <p class="code">N/A</p>
+  <p> </p>
+  <h4>Exemple :</h4>
+  <p class="code">map_buffer = buffer_create(16384, buffer_fixed, 0) ;<br> buffer_fill(map_buffer, 0, buffer_u16, 0, 16384) ;</p>
+  <p>Le code ci-dessus trouve le début du tampon avec l'identifiant stocké dans la variable &quot;buff&quot; et y écrit une série de valeurs entières signées de 16 bits.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <div class="footer">
+    <div class="buttons">
+      <div class="clear">
+        <div style="float:left">Retour : <a href="Buffers.htm">Tampons</a></div>
+        <div style="float:right">Suivant : <a href="buffer_seek.htm">buffer_seek</a></div>
+      </div>
+    </div>
+    <h5><span data-keyref="Copyright Notice">Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
   </div>
   <!-- KEYWORDS
 buffer_fill

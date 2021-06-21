@@ -3,15 +3,64 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>Tandis que</title>
+  <title>Alors que</title>
   <meta name="generator" content="Adobe RoboHelp 2019" />
   <link rel="stylesheet" href="../../../assets/css/default.css" type="text/css" />
   <meta name="rh-authors" content="Mark Alexander" />
-  <meta name="topic-comment" content="Page qui explique l&#39;action While" />
-  <meta name="rh-index-keywords" content="DnD ™ - Pendant" />
-  <meta name="search-keywords" content="Tandis que" />
+  <meta name="topic-comment" content="Page that explains the While action" />
+  <meta name="rh-index-keywords" content="DnD™ Action - While" />
+  <meta name="search-keywords" content="While" />
 </head>
-<body><!--<div class="body-scroll" style="top: 150px;">--><h1><img alt="While Icon" class="icon" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Loops/i_Loops_While.png" /> Tandis que</h1><p> L&#39; <b>action While</b> est utilisée pour effectuer des boucles qui ne se terminent que lorsqu&#39;une condition spécifique est renvoyée <tt>true</tt>. Par exemple, vous pouvez utiliser une variable et la définir sur <tt>false</tt> puis exécutez la boucle While et demandez-lui de vérifier cette variable, puis à un moment donné de la boucle, vous définissez la variable sur <tt>true</tt> et la boucle se terminera. Notez que quel que soit l&#39;endroit où vous définissez la condition dans la boucle while, <i>toutes les</i> actions de la boucle seront exécutées jusqu&#39;à la fin avant que le reste du script ou de l&#39;événement se poursuive, la modification de la condition ne sort pas instantanément de la boucle.</p><p> Lorsque vous ajoutez une action While dans votre code, vous devez fournir la variable à vérifier, le type de vérification à effectuer (inférieur à, supérieur à, égal, etc.) et la valeur par rapport à laquelle vérifier la variable (vous peut également marquer de <i>ne</i> pas avoir la vérification de la boucle While pour voir si la condition n&#39;est <i>pas</i> vraie). Vous ajoutez ensuite les actions à effectuer dans la boucle While, de la même manière que vous ajouteriez une action à un &quot;si&quot;, c&#39;est-à-dire en le déposant sur le côté de l&#39;action plutôt qu&#39;en dessous:</p><p><img alt="While drop actions" class="center" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Loops/While_Drop.png" /> Toutes les actions ajoutées sur le côté seront incluses dans le While et seront exécutées avant que l&#39;événement ou le script ne se poursuive avec les actions ajoutées sous (comme indiqué dans l&#39;exemple ci-dessous). Notez que vous pouvez mettre fin prématurément à n&#39;importe quelle boucle si vous appelez l&#39;action <a href="Break.htm">Break.</a></p><p></p><h4> Syntaxe de l&#39;action:</h4><p><img alt="While Action" class="center" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Loops/a_Loops_While.png" /></p><h4> Arguments:</h4><table><tbody><tr><th> Argument</th><th> Description</th></tr><tr><td> <span class="notranslate">Variable</span></td><td> La variable à utiliser dans le chèque</td></tr><tr><td> <span class="notranslate">Is</span></td><td> Le type d&#39;évaluation à effectuer (inférieur à, supérieur, égal à, supérieur ou égal à et inférieur ou égal à)</td></tr><tr><td> <span class="notranslate">Value</span></td><td> La valeur par rapport à laquelle vérifier la variable</td></tr></tbody></table><p></p><h4> Exemple:</h4><p><img alt="While Example" class="center" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Loops/e_Loops_While.png" /> Le code de bloc d&#39;action ci-dessus crée une variable locale temporaire et la définit sur <tt>false</tt>. Cette variable est ensuite vérifiée dans l&#39;action de boucle While et tant qu&#39;elle renvoie false, la boucle s&#39;exécute. Dans la boucle, nous obtenons deux variables locales temporaires pour une position x / y aléatoire dans la pièce, puis nous vérifions cette position pour une collision. Si aucune collision n&#39;est trouvée, la variable initiale est définie sur <tt>true</tt>, mettant fin à la boucle. Une fois la boucle terminée, une nouvelle instance est créée à la position aléatoire que nous avons découverte sans collision. </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> Retour: <a href="Loop_Actions.htm">Actions de boucle</a></div><div style="float:right"> Suivant: <a href="For.htm">Pour</a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
+<body>
+  <!--<div class="body-scroll" style="top: 150px;">-->
+  <h1><img alt="While Icon" class="icon" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Loops/i_Loops_While.png"> Alors que</h1>
+  <p>L'action <b>While</b> est utilisée pour exécuter des boucles qui ne se terminent que lorsqu'une condition spécifique renvoie la <tt>vérité</tt>. Par exemple, vous pouvez utiliser une variable et lui attribuer la valeur <tt>false</tt>, puis exécuter la boucle While et lui faire vérifier cette variable.
+    Puis, à un moment donné dans la boucle, vous donnez à la variable la valeur <tt>true</tt> et la boucle se termine. Notez que, quel que soit l'endroit où vous définissez la condition dans la boucle while, <i>toutes les</i> actions de la boucle seront exécutées jusqu'à la fin avant que le reste du script ou de l'événement ne se poursuive.
+    ou l'événement ne se poursuive, le fait de changer la condition ne permet pas de sortir instantanément de la boucle.</p>
+  <p>Lorsque vous ajoutez une action While dans votre code, vous devez fournir la variable à vérifier, le type de vérification à effectuer (inférieur à, supérieur à, égal à, etc...) et la valeur à comparer à la variable (vous pouvez également choisir de <i>ne pas</i> faire vérifier par la boucle While
+    vérifie si la condition <i>n'est pas</i> vraie). Vous ajoutez ensuite les actions à exécuter dans la boucle While, de la même manière que vous ajouteriez une action à un &quot;if&quot;, c'est-à-dire en la plaçant à côté de l'action plutôt qu'en dessous :</p>
+  <p><img alt="While drop actions" class="center" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Loops/While_Drop.png">Toutes les actions ajoutées au côté seront incluses dans le While et seront exécutées avant que l'événement ou le script
+    ne continue avec les actions ajoutées en dessous (comme le montre l'exemple ci-dessous). Notez que vous pouvez mettre fin à toute boucle prématurément si vous appelez l'action <a href="Break.htm">Break</a>.</p>
+  <p> </p>
+  <h4>Syntaxe de l'action :</h4>
+  <p><img alt="While Action" class="center" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Loops/a_Loops_While.png" /></p>
+  <h4>Arguments :</h4>
+  <table>
+    <tbody>
+      <tr>
+        <th>Arguments</th>
+        <th>Description</th>
+      </tr>
+      <tr>
+        <td>Variable</td>
+        <td>La variable à utiliser dans le contrôle</td>
+      </tr>
+      <tr>
+        <td>Est</td>
+        <td>Le type d'évaluation à effectuer (inférieur à, supérieur à, égal à, supérieur ou égal à et inférieur ou égal à)</td>
+      </tr>
+      <tr>
+        <td>Valeur</td>
+        <td>La valeur pour vérifier la variable par rapport à</td>
+      </tr>
+    </tbody>
+  </table>
+  <p> </p>
+  <h4>Exemple :</h4>
+  <p><img alt="While Example" class="center" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Loops/e_Loops_While.png">Le code du bloc d'action ci-dessus crée une variable locale temporaire et lui attribue la valeur <tt>false</tt>. Cette variable est
+    ensuite vérifiée dans l'action de la boucle While et si elle renvoie false, la boucle s'exécute. Dans la boucle, nous obtenons deux variables locales temporaires pour une position x/y aléatoire dans la pièce, puis nous vérifions que cette position ne présente pas de collision. Si aucune collision n'est trouvée, la variable initiale
+    est mise à <tt>true</tt>, ce qui met fin à la boucle. Une fois la boucle terminée, une nouvelle instance est créée à la position aléatoire où nous avons découvert qu'il n'y avait pas de collision.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <div class="footer">
+    <div class="buttons">
+      <div class="clear">
+        <div style="float:left">Retour : <a href="Loop_Actions.htm">Actions en boucle</a></div>
+        <div style="float:right">Suivant : <a href="For.htm">Pour</a></div>
+      </div>
+    </div>
+    <h5><span data-keyref="Copyright Notice">Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
   </div>
   <!-- KEYWORDS
 Action - While

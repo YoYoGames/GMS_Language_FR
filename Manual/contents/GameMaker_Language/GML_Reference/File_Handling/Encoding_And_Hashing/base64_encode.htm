@@ -2,17 +2,54 @@
 
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml"><head>
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <title>base64_encode</title>
-  <meta name="generator" content="Adobe RoboHelp 2019"/>
-  <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css"/>
-  <meta name="rh-authors" content="Mark Alexander"/>
-  <meta name="topic-comment" content="Page de référence pour base64_encode"/>
-  <meta name="rh-index-keywords" content="base64_encode"/>
-  <meta name="search-keywords" content="base64_encode"/>
+  <meta name="generator" content="Adobe RoboHelp 2019" />
+  <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
+  <meta name="rh-authors" content="Mark Alexander" />
+  <meta name="topic-comment" content="Reference page for base64_encode" />
+  <meta name="rh-index-keywords" content="base64_encode" />
+  <meta name="search-keywords" content="base64_encode" />
 </head>
-<body><!--<div class="body-scroll" style="top: 150px;">--><h1>base64_encode</h1><p> Cette fonction convertit une chaîne en une chaîne encodée au format base64. Il s&#39;agit d&#39;un schéma de codage couramment utilisé qui est souvent utilisé pour tout média devant être stocké ou transféré sur Internet sous forme de texte, et rend la sortie illisible à l&#39;œil humain.</p><p></p><h4> Syntaxe:</h4><p class="code">base64_encode(string)</p><table><tbody><tr><th> Argument</th><th> Description</th></tr><tr><td> <span class="notranslate">string</span></td><td> La chaîne à encoder.</td></tr></tbody></table><p></p><h4> Retour:</h4><p class="code">String</p><p></p><h4> Exemple:</h4><p class="code">var str, file;<br/> str = base64_encode(game_data);<br/> file = file_text_open_write(&quot;save.txt&quot;);<br/> file_text_write_string(file, str);<br/> file_text_close(file);
-  </p><p> Le code ci-dessus convertira la chaîne stockée dans &quot;game_data&quot; en une chaîne encodée en base64 qui est ensuite stockée dans un fichier texte externe. </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> Retour: <a href="Encoding_And_Hashing.htm">Encodage de fichiers</a></div><div style="float:right"> Suivant:<a href="base64_decode.htm">base64_decode</a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
+<body>
+  <!--<div class="body-scroll" style="top: 150px;">-->
+  <h1>base64_encode</h1>
+  <p>Cette fonction convertit une chaîne en une chaîne encodée au format base64. Il s'agit d'un schéma de codage couramment utilisé pour tout média devant être stocké ou transféré sur Internet sous forme de texte, et qui rend la sortie illisible à l'œil humain.
+    l'œil humain.</p>
+  <p> </p>
+  <h4>Syntaxe :</h4>
+  <p class="code">base64_encode(string)</p>
+  <table>
+    <tbody>
+      <tr>
+        <th>Arguments</th>
+        <th>Description</th>
+      </tr>
+      <tr>
+        <td>chaîne de caractères</td>
+        <td>La chaîne à encoder.</td>
+      </tr>
+    </tbody>
+  </table>
+  <p> </p>
+  <h4>Les retours :</h4>
+  <p class="code">Chaîne de caractères</p>
+  <p> </p>
+  <h4>Exemple :</h4>
+  <p class="code">var str, file ;<br> str = base64_encode(game_data) ;<br> file = file_text_open_write(&quot;save.txt&quot;) ;<br> file_text_write_string(file, str) ;<br> file_text_close(file) ;
+  </p>
+  <p>Le code ci-dessus transformera la chaîne stockée dans &quot;game_data&quot; en une chaîne codée en base64 qui sera ensuite stockée dans un fichier texte externe.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <div class="footer">
+    <div class="buttons">
+      <div class="clear">
+        <div style="float:left">Retour : <a href="Encoding_And_Hashing.htm">Codage des fichiers</a></div>
+        <div style="float:right">Suivant : <a href="base64_decode.htm">base64_decode</a></div>
+      </div>
+    </div>
+    <h5><span data-keyref="Copyright Notice">Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
   </div>
   <!-- KEYWORDS
 base64_encode

@@ -7,11 +7,94 @@
   <meta name="generator" content="Adobe RoboHelp 2019" />
   <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
   <meta name="rh-authors" content="Mark Alexander" />
-  <meta name="topic-comment" content="Section de référence pour les fonctions et variables de collision" />
+  <meta name="topic-comment" content="Reference section for Collision functions and variables" />
   <meta name="rh-index-keywords" content="" />
-  <meta name="search-keywords" content="collisions,fonctions de collision" />
+  <meta name="search-keywords" content="collisions,collision functions" />
 </head>
-<body><!--<div class="body-scroll" style="top: 150px;">--><h1> Collisions</h1><p> Lors de la planification de mouvements ou de la décision sur certaines actions, il est souvent important de voir s&#39;il y a des collisions avec d&#39;autres objets à certains endroits dans le monde du jeu, et souvent choisir la bonne collision pour le travail est la tâche la plus importante de toutes. <span class="notranslate">GameMaker Studio 2</span> dispose d&#39;un certain nombre de fonctions intégrées pour vous aider à gérer les collisions correctement et conformément aux besoins de votre projet.</p><p class="note"> <b>IMPORTANT!</b> Toutes les fonctions de collision fonctionnent avec des positions entières, quelles que soient les valeurs d&#39;entrée. Toutes les valeurs non entières seront arrondies à l&#39;entier le plus proche.</p><p></p><h2> <label for="one">Vérification simple des collisions</label></h2><p> Les fonctions suivantes traitent des différentes manières dont vous pouvez demander à une instance de vérifier les collisions avec une autre instance: </p><p></p><ul class="colour"><li><a href="place_empty.htm">place_empty</a></li><li><a href="place_free.htm">place_free</a></li><li><a href="place_meeting.htm">place_meeting</a></li><li><a href="position_empty.htm">position_empty</a></li><li><a href="position_meeting.htm">position_meeting</a></li><li><a href="position_change.htm">position_change</a></li><li><a href="position_destroy.htm">position_destroy</a></li><li><a href="../../Asset_Management/Instances/instance_place.htm">instance_place</a></li><li><a href="../../Asset_Management/Instances/instance_place_list.htm">instance_place_list</a></li><li><a href="../../Asset_Management/Instances/instance_position.htm">instance_position</a></li><li><a href="../../Asset_Management/Instances/instance_position_list.htm">instance_position_list</a></li></ul><p></p><h2> Vérification avancée des collisions</h2><p> Les routines suivantes peuvent être utilisées pour cela (ainsi que d&#39;autres fonctions détaillées dans les sections relatives aux <b>déplacements</b> et aux <b>instances</b> ). Ces fonctions de collision fonctionnent toutes légèrement différemment mais elles conservent trois arguments communs que nous expliquerons ici:</p><ul class="colour"><li> <b>obj</b>. C&#39;est là que nous spécifions l&#39;objet avec lequel la fonction doit vérifier une collision. Il peut s&#39;agir d&#39;un identifiant d&#39;instance, d&#39;un type d&#39;objet ou du mot clé spécial GM <b>all</b>. Il convient également de noter que si le type d&#39;objet choisi est le <b>parent</b> désigné des autres objets, tous les <i>enfants</i> de cet objet seront également inclus dans cette vérification.<b></b></li><li> <b>prec</b>. Cela peut être soit <tt>true</tt> ou <tt>false</tt> et concerne la précision de la vérification des collisions. Si défini sur <tt>true</tt>, alors des collisions précises doivent être calculées (mais seulement si l&#39;objet en cours de vérification a marqué &quot;précis&quot; pour sa détection de collision dans ses propriétés de masque), ce qui est une tâche légèrement plus complexe pour le CPU et doit donc être utilisée avec précaution. Si <tt>false</tt> puis les collisions seront calculées en fonction de la boîte englobante de l&#39;objet à vérifier.<b></b></li><li> <b>pas moi</b>. Vous devrez peut-être vérifier les collisions avec un objet qui a le même index que l&#39;objet qui exécute le code, donc pour empêcher le code de trouver une collision avec lui-même, vous pouvez définir ceci sur <tt>true</tt>. Si vous recherchez spécifiquement l&#39;instance de l&#39;objet exécutant le code, ou si ce n&#39;est pas important, il peut être laissé comme <tt>false</tt>.</li></ul><p> Les fonctions de base renverront soit l&#39;ID d&#39;une instance trouvée en collision, soit le mot-clé spécial <tt>noone</tt> lorsqu&#39;il n&#39;y a pas de collision, tandis que les <i>fonctions de liste</i> renverront le nombre d&#39;instances qui sont en collision et rempliront une liste DS prédéfinie avec leurs ID. Notez que s&#39;il y a plusieurs collisions avec les zones définies par ces fonctions et instances de l&#39;objet donné, <i>un</i> seul ID d&#39;instance est renvoyé et il peut s&#39;agir <i>de l&#39;une des instances de la collision</i>.</p><p> Les fonctions suivantes existent pour traiter les collisions avancées. </p><p></p><ul class="colour"><li><a href="collision_circle.htm">collision_circle</a></li><li><a href="collision_circle_list.htm">collision_circle_list</a></li><li><a href="collision_ellipse.htm">collision_ellipse</a></li><li><a href="collision_ellipse_list.htm">collision_ellipse_list</a></li><li><a href="collision_line.htm">collision_line</a></li><li><a href="collision_line_list.htm">collision_line_list</a></li><li><a href="collision_point.htm">collision_point</a></li><li><a href="collision_point_list.htm">collision_point_list</a></li><li><a href="collision_rectangle.htm">collision_rectangle</a></li><li><a href="collision_rectangle_list.htm">collision_rectangle_list</a></li></ul><p></p><h2> Vérification des collisions sans masque</h2><p> Toutes les fonctions ci-dessus sont liées aux <i>instances de</i> vérification de collision et, en tant que telles, dépendent du masque de collision défini pour l&#39;instance. Cependant, il y a de nombreux moments où vous avez besoin de vérifier les &quot;collisions&quot; avec un point ou une zone, en particulier lorsque votre instance n&#39;a pas de sprite assigné, ou lorsque vous travaillez avec la souris etc... Par conséquent <span class="notranslate">GameMaker Studio 2</span> aussi fournit les fonctions suivantes pour vous aider dans ces situations: </p><p></p><ul class="colour"><li><a href="point_in_rectangle.htm">point_in_rectangle</a></li><li><a href="point_in_triangle.htm">point_in_triangle</a></li><li><a href="point_in_circle.htm">point_in_circle</a></li><li><a href="rectangle_in_rectangle.htm">rectangle_in_rectangle</a></li><li><a href="rectangle_in_triangle.htm">rectangle_in_triangle</a></li><li><a href="rectangle_in_circle.htm">rectangle_in_circle</a></li></ul><p></p><h2> Collisions physiques</h2><p> Lors de l&#39;utilisation de la construction en physique, les fonctions de collision ci-dessus ne sont pas garanties de fonctionner pour les instances activées pour la physique. Cela est principalement dû au fait que ces instances n&#39;utilisent plus la majorité des variables intégrées régulières (à la place, les instances activées pour la physique ont leur <a href="../../Physics/Physics_Variables/Physics_Variables.htm">propre ensemble de variables</a> ) et n&#39;utilisent pas non plus le masque de collision ou la boîte englobante, car elles utilisent des <a href="../../Physics/Fixtures/Fixtures.htm">fixtures.</a> au lieu. Cependant, il existe une fonction spéciale pour tester les collisions avec la physique activée qui vérifie les appareils qui se chevauchent:</p><p></p><ul class="colour"><li><a href="../../Physics/physics_test_overlap.htm">physics_test_overlap</a></li></ul><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> Retour: <a href="../Movement_And_Collisions.htm">Mouvement et collisions</a></div><div style="float:right"> Suivant: <a href="../Movement/Movement.htm">Mouvement</a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
+<body>
+  <!--<div class="body-scroll" style="top: 150px;">-->
+  <h1>Collisions</h1>
+  <p>Lorsque vous planifiez des mouvements ou décidez de certaines actions, il est souvent important de voir s'il y a des collisions avec d'autres objets à certains endroits dans le monde du jeu.
+    de toutes les tâches. <span class="notranslate">GameMaker Studio 2</span> dispose d'un certain nombre de fonctions intégrées pour vous aider à gérer les collisions correctement et en fonction des besoins de votre projet.</p>
+  <p class="note"><b>IMPORTANT !</b> Toutes les fonctions de collision fonctionnent avec des positions entières, quelles que soient les valeurs d'entrée. Toutes les valeurs non entières seront arrondies au nombre entier le plus proche.</p>
+  <p> </p>
+  <h2><label for="one">Vérification simple des collisions</label></h2>
+  <p>Les fonctions suivantes traitent des différentes manières dont vous pouvez faire en sorte qu'une instance vérifie les collisions avec une autre instance :</p>
+  <p> </p>
+  <ul class="colour">
+    <li><a href="place_empty.htm">place_vide</a></li>
+    <li><a href="place_free.htm">place_free</a></li>
+    <li><a href="place_meeting.htm">lieu_réunion</a></li>
+    <li><a href="position_empty.htm">position_vide</a></li>
+    <li><a href="position_meeting.htm">position_réunion</a></li>
+    <li><a href="position_change.htm">changement de position</a></li>
+    <li><a href="position_destroy.htm">position_destroy</a></li>
+    <li><a href="../../Asset_Management/Instances/instance_place.htm">instance_place</a></li>
+    <li><a href="../../Asset_Management/Instances/instance_place_list.htm">liste_de_lieux_instances</a></li>
+    <li><a href="../../Asset_Management/Instances/instance_position.htm">instance_position</a></li>
+    <li><a href="../../Asset_Management/Instances/instance_position_list.htm">liste_position_instance</a></li>
+  </ul>
+  <p> </p>
+  <h2>Contrôle avancé des collisions</h2>
+  <p>Les routines suivantes peuvent être utilisées pour cela (ainsi que d'autres fonctions détaillées dans les sections relatives aux <b>déplacements</b> et aux <b>instances</b>). Ces fonctions de collision fonctionnent toutes légèrement différemment mais elles conservent trois arguments communs
+    que nous allons expliquer ici :</p>
+  <ul class="colour">
+    <li><b>obj</b>. C'est ici que nous spécifions l'objet avec lequel la fonction doit vérifier la présence d'une collision. Il peut s'agir d'un identifiant d'instance, d'un type d'objet ou du mot-clé spécial GM <b>all</b>. Il est également intéressant de noter que si le type d'objet choisi est le parent désigné d'autres objets, tous les enfants de cet objet seront considérés comme des parents.
+     <b>parent</b> d'autres objets, alors tous les <i>enfants</i> de cet objet seront également inclus dans cette vérification.<b></b></li>
+    <li><b>prec</b>. Cette valeur peut être <tt>vraie</tt> ou <tt>fausse</tt> et concerne la précision du contrôle des collisions. Si elle est définie sur <tt>true</tt>, des collisions précises seront calculées (mais seulement si l'objet contrôlé a &quot;precise&quot; dans ses propriétés de masque).
+      pour sa détection de collision dans les propriétés de son masque), ce qui est une tâche légèrement plus complexe pour le CPU et doit donc être utilisé avec prudence. Si elle est <tt>fausse</tt>, les collisions seront calculées sur la base de la boîte englobante de l'objet à contrôler.
+      pour.<b></b></li>
+    <li><b>notme</b>. Vous pouvez avoir besoin de vérifier les collisions avec un objet qui a le même index que l'objet qui exécute le code, donc pour empêcher le code de trouver une collision avec lui-même, vous pouvez mettre cette valeur à <tt>true</tt>. Si vous recherchez spécifiquement
+      l'instance de l'objet qui exécute le code, ou que ce n'est pas important, vous pouvez laisser cette valeur à <tt>false.</tt></li>
+  </ul>
+  <p>Les fonctions de base renverront soit l'ID d'une instance en collision, soit le mot-clé spécial <tt>noone</tt> s'il n'y a pas de collision, tandis que les fonctions de <i>liste</i> renverront le nombre d'instances en collision et rempliront une liste DS préétablie avec leurs ID.
+    une liste DS prédéfinie avec leurs ID. Notez que s'il y a plusieurs collisions avec les zones définies par ces fonctions et les instances de l'objet donné, <i>un</i> seul ID d'instance est retourné, et il peut s'agir de <i>n'importe laquelle des instances de la collision</i>.</p>
+  <p>Les fonctions suivantes permettent de traiter les collisions avancées.</p>
+  <p> </p>
+  <ul class="colour">
+    <li><a href="collision_circle.htm">cercle de collision</a></li>
+    <li><a href="collision_circle_list.htm">liste_circulaire_de_collision</a></li>
+    <li><a href="collision_ellipse.htm">collision_ellipse</a></li>
+    <li><a href="collision_ellipse_list.htm">liste_ellipse_collision</a></li>
+    <li><a href="collision_line.htm">ligne de collision</a></li>
+    <li><a href="collision_line_list.htm">liste de lignes de collision</a></li>
+    <li><a href="collision_point.htm">point de collision</a></li>
+    <li><a href="collision_point_list.htm">liste de points de collision</a></li>
+    <li><a href="collision_rectangle.htm">rectangle de collision</a></li>
+    <li><a href="collision_rectangle_list.htm">liste de rectangles de collision</a></li>
+  </ul>
+  <p> </p>
+  <h2>Contrôle des collisions sans masque</h2>
+  <p>Toutes les fonctions ci-dessus sont liées à des <i>instances de</i> contrôle de collision et, en tant que telles, reposent sur le masque de collision défini pour l'instance. Cependant, il y a de nombreux moments où vous devez vérifier les &quot;collisions&quot; avec un point ou une zone, en particulier lorsque votre instance n'a pas de sprite assigné, ou lorsque vous travaillez avec le masque de collision.
+    ou une zone, notamment lorsque votre instance n'a pas de sprite assigné, ou lorsque vous travaillez avec la souris, etc... C'est pourquoi <span class="notranslate">GameMaker Studio 2</span> fournit également les fonctions suivantes pour vous aider dans ces situations :</p>
+  <p> </p>
+  <ul class="colour">
+    <li><a href="point_in_rectangle.htm">point_dans_rectangle</a></li>
+    <li><a href="point_in_triangle.htm">point_dans_triangle</a></li>
+    <li><a href="point_in_circle.htm">point_in_circle</a></li>
+    <li><a href="rectangle_in_rectangle.htm">rectangle_dans_rectangle</a></li>
+    <li><a href="rectangle_in_triangle.htm">rectangle_dans_triangle</a></li>
+    <li><a href="rectangle_in_circle.htm">rectangle_en_cercle</a></li>
+  </ul>
+  <p> </p>
+  <h2>Physique Collisions</h2>
+  <p>Lors de l'utilisation de la physique intégrée, le fonctionnement des fonctions de collision ci-dessus n'est pas garanti pour les instances avec physique. Ceci est principalement dû au fait que ces instances n'utilisent plus la majorité des variables régulières intégrées (les instances activées par la physique ont leur propre jeu de variables).
+    ont leur <a href="../../Physics/Physics_Variables/Physics_Variables.htm">propre jeu de variables</a>) et elles n'utilisent pas non plus le masque de collision ou la boîte englobante, car elles utilisent des <a href="../../Physics/Fixtures/Fixtures.htm">fixtures à</a> la place. Cependant, il existe une fonction spéciale pour tester les collisions avec la physique activée qui vérifie le chevauchement des fixtures :</p>
+  <p> </p>
+  <ul class="colour">
+    <li><a href="../../Physics/physics_test_overlap.htm">test_physique_chevauchement</a></li>
+  </ul>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <div class="footer">
+    <div class="buttons">
+      <div class="clear">
+        <div style="float:left">Le dos : <a href="../Movement_And_Collisions.htm">Mouvement et collisions</a></div>
+        <div style="float:right">Suivant : <a href="../Movement/Movement.htm">Mouvement</a></div>
+      </div>
+    </div>
+    <h5><span data-keyref="Copyright Notice">Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
   </div>
   <!-- KEYWORDS
 Collision Functions

@@ -3,15 +3,62 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>sequence_instance_override_object</title>
+  <title>objet de recouvrement de l'instance de la séquence</title>
   <meta name="generator" content="Adobe RoboHelp 2019" />
   <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
   <meta name="rh-authors" content="Mark Alexander" />
-  <meta name="topic-comment" content="Page décrivant la fonction sequence_instance_override_object" />
+  <meta name="topic-comment" content="Page outlining function sequence_instance_override_object" />
   <meta name="rh-index-keywords" content="sequence_instance_override_object" />
   <meta name="search-keywords" content="sequence_instance_override_object" />
 </head>
-<body><!--<div class="body-scroll" style="top: 150px;">--><h1>sequence_instance_override_object</h1><p> Avec cette fonction, vous pouvez remplacer (remplacer) toutes les instances d&#39;un objet utilisé dans une séquence par une autre. Vous fournissez l&#39;ID de structure d&#39;instance de séquence (tel que renvoyé lorsque l&#39;instance de séquence a été créée dans la pièce ou en utilisant l&#39;une des fonctions de couche de pièce - voir <a href="../Rooms/Sequence_Layers/Sequence_Layers.htm">ici</a> ), ainsi que l&#39;index d&#39;objet (tel que défini dans le navigateur d&#39;actifs) pour l&#39;objet que vous souhaitez remplacer. Enfin, vous donnez un index d&#39;objet ou un ID d&#39;instance à utiliser comme objet qui va remplacer la séquence (la fourniture d&#39;un ID d&#39;instance utilisera simplement l&#39;objet à partir duquel l&#39;instance a été créée comme remplacement). Notez que cela ne peut être fait que sur des instances de séquence (pas sur des objets de séquence) et doit être fait avant que la séquence ne commence à jouer, sinon cela ne fonctionnera pas.</p><p></p><h4> Syntaxe:</h4><p class="code">sequence_instance_override_object(sequence_instance_struct, object_id, instance_or_object_id);</p><table><tbody><tr><th> Argument</th><th> Description</th></tr><tr><td> <span class="notranslate">sequence_instance_struct</span></td><td> Structure d&#39;instance de séquence à modifier.</td></tr><tr><td> <span class="notranslate">object_id</span></td><td> Index d&#39;objet de l&#39;objet dans la séquence à remplacer.</td></tr><tr><td> <span class="notranslate">instance_or_object_id</span></td><td> L&#39;index d&#39;objet ou l&#39;ID d&#39;instance à utiliser pour remplacer les objets de séquence.</td></tr></tbody></table><p></p><h4> Retour:</h4><p class="code">N/A</p><p></p><h4> Exemple:</h4><p class="code">var _seq = layer_sequence_create(&quot;Background&quot;, 0, 0, seq_AnimatedBackground);<br/> var _seq_inst = layer_sequence_get_instance(_seq); sequence_instance_override_object(_seq_inst, obj_Trees_Winter, obj_Trees_Summer);</p><p> Le code ci-dessus crée une nouvelle instance de séquence sur le calque donné, puis la modifie afin que toutes les instances de l&#39;objet &quot;obj_Trees_Winter&quot; soient remplacées par des instances de l&#39;objet &quot;obj_Trees_Summer&quot;. </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> Retour: <a href="Sequences.htm">Séquences</a></div><div style="float:right"> Suivant:<a href="in_sequence.htm">in_sequence</a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
+<body>
+  <!--<div class="body-scroll" style="top: 150px;">-->
+  <h1>objet de recouvrement de l'instance de la séquence</h1>
+  <p>Avec cette fonction, vous pouvez remplacer toutes les instances d'un objet utilisé dans une séquence par une autre. Vous devez fournir l'ID de structure de l'instance de la séquence (tel que renvoyé lorsque l'instance de la séquence a été créée dans la pièce ou en utilisant l'une des fonctions de calque de pièce
+    voir <a href="../Rooms/Sequence_Layers/Sequence_Layers.htm">ici</a>), ainsi que l'index de l'objet (tel que défini dans le navigateur de ressources) pour l'objet que vous souhaitez remplacer. Enfin, vous donnez un index d'objet ou un ID d'instance à utiliser comme
+    l'objet qui va remplacer la séquence (fournir un ID d'instance utilisera simplement l'objet à partir duquel l'instance a été créée comme remplacement). Notez que ceci ne peut être fait que sur les instances de séquence (pas sur les objets de séquence) et doit être fait
+    avant que la séquence ne commence à être lue, sinon cela ne fonctionnera pas.</p>
+  <p> </p>
+  <h4>Syntaxe :</h4>
+  <p class="code">sequence_instance_override_object(sequence_instance_struct, object_id, instance_or_object_id) ;</p>
+  <table>
+    <tbody>
+      <tr>
+        <th>Arguments</th>
+        <th>Description</th>
+      </tr>
+      <tr>
+        <td>séquence_instance_struct</td>
+        <td>La structure de l'instance de la séquence à modifier.</td>
+      </tr>
+      <tr>
+        <td>identifiant de l'objet</td>
+        <td>L'indice de l'objet à remplacer dans la séquence.</td>
+      </tr>
+      <tr>
+        <td>instance_ou_objet_id</td>
+        <td>L'index de l'objet ou l'ID de l'instance à utiliser pour remplacer les objets de la séquence.</td>
+      </tr>
+    </tbody>
+  </table>
+  <p> </p>
+  <h4>Les retours :</h4>
+  <p class="code">N/A</p>
+  <p> </p>
+  <h4>Exemple :</h4>
+  <p class="code">var _seq = layer_sequence_create(&quot;Background&quot;, 0, 0, seq_AnimatedBackground) ;<br> var _seq_inst = layer_sequence_get_instance(_seq) ; sequence_instance_override_object(_seq_inst, obj_Trees_Winter, obj_Trees_Summer) ;</p>
+  <p>Le code ci-dessus crée une nouvelle instance de séquence sur la couche donnée, puis la modifie de sorte que toutes les instances de l'objet &quot;obj_Trees_Winter&quot; soient remplacées par des instances de l'objet &quot;obj_Trees_Summer&quot;.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <div class="footer">
+    <div class="buttons">
+      <div class="clear">
+        <div style="float:left">Retour : <a href="Sequences.htm">Séquences</a></div>
+        <div style="float:right">Suivant : <a href="in_sequence.htm">in_sequence</a></div>
+      </div>
+    </div>
+    <h5><span data-keyref="Copyright Notice">Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
   </div>
   <!-- KEYWORDS
 sequence_instance_override_object

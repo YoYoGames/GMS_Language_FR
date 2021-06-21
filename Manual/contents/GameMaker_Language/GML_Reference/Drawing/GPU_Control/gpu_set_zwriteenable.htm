@@ -7,15 +7,55 @@
   <meta name="generator" content="Adobe RoboHelp 2019" />
   <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
   <meta name="rh-authors" content="Mark Alexander" />
-  <meta name="topic-comment" content="Référence de la fonction gpu_set_zwriteenable" />
+  <meta name="topic-comment" content="Reference for the function gpu_set_zwriteenable" />
   <meta name="rh-index-keywords" content="gpu_set_zwriteenable" />
   <meta name="search-keywords" content="gpu_set_zwriteenable" />
 </head>
-<body><!--<div class="body-scroll" style="top: 150px;">--><h1>gpu_set_zwriteenable</h1><p> Cette fonction peut être utilisée pour activer (<tt>true</tt> ) Et hors (<tt>false</tt> ) ordre de profondeur en utilisant le z-buffer. Lorsqu&#39;une instance est rendue dans <span class="notranslate">GameMaker Studio 2</span>, la profondeur d&#39;un pixel généré (sa coordonnée z) est stockée dans le z-buffer, puis, si une autre instance de la scène doit être rendue au même pixel, les deux profondeurs sont comparées (z-testing - voir <a href="gpu_set_ztestenable.htm"><tt>gpu_set_ztestenable()</tt></a> ) et celui &quot;plus proche&quot; de l&#39;observateur est alors sauvegardé dans le z-buffer, remplaçant l&#39;ancien. Cependant, ce n&#39;est pas toujours ce que vous souhaitez et il y a des moments où vous voudrez peut-être que quelque chose soit dessiné sur tout le reste, quelle que soit sa valeur z. Dans ces cas, vous pouvez utiliser cette fonction pour désactiver l&#39;écriture dans le z-buffer et ainsi forcer ce qui est dessiné à être dessiné sur tout le reste. Notez que la description donnée ici concerne le <i>mode de comparaison par défaut</i> des tests z, mais cela peut être modifié</p><p> La valeur par défaut est que le z-buffering est activé (<tt>true</tt> ).</p><p></p><h4> Syntaxe:</h4><p class="code">gpu_set_zwriteenable(enable);</p><table><tbody><tr><th> Argument</th><th> Description</th></tr><tr><td> <span class="notranslate">enable</span></td><td> Le mode de comparaison à utiliser (voir liste ci-dessus)</td></tr></tbody></table><p></p><h4> Retour:</h4><p class="code">N/A</p><p></p><h4> Exemple:</h4><p class="code">gpu_set_zwriteenable(false);<br/> with (obj_Menu_Containers)<br/>     {
-    <br/>     draw_self();
-    <br/>     }
-    <br/> gpu_set_zwriteenable(true);
-  </p><p> Le code ci-dessus désactive l&#39;écriture z-buffer, dessine un certain nombre d&#39;objets, puis le rallume pour continuer à dessiner. </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> Retour: <a href="GPU_Control.htm">Contrôle GPU</a></div><div style="float:right"> Suivant:<a href="gpu_set_fog.htm">gpu_set_fog</a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
+<body>
+  <!--<div class="body-scroll" style="top: 150px;">-->
+  <h1>gpu_set_zwriteenable</h1>
+  <p>Cette fonction peut être utilisée pour activer<tt>(true</tt>) et désactiver<tt>(false</tt>) le classement de la profondeur en utilisant le z-buffer. Lorsqu'une instance est rendue dans <span class="notranslate">GameMaker Studio 2</span>, la profondeur d'un pixel généré (sa coordonnée z) est stockée dans le z-buffer,
+    Ensuite, si une autre instance de la scène doit être rendue au même pixel, les deux profondeurs sont comparées (z-testing - cf. <a href="gpu_set_ztestenable.htm"><tt>gpu_set_ztestenable()</tt></a>) et celle qui est &quot;plus proche&quot; de l'observateur est alors sauvegardée
+    dans le z-buffer, en remplacement de l'ancienne. Cependant, ce n'est pas toujours ce que vous souhaitez et il y a des moments où vous voulez qu'un élément soit dessiné par-dessus tout le reste, quelle que soit sa valeur z. Dans ces cas, vous pouvez utiliser cette fonction
+    pour désactiver l'écriture dans le tampon z et ainsi forcer ce qui est dessiné à être dessiné par-dessus tout le reste. Notez que la description donnée ici concerne le mode de comparaison <i>par défaut</i> du test z, mais qu'il est possible de le modifier.</p>
+  <p>La valeur par défaut est que le z-buffering est activé<tt>(true</tt>).</p>
+  <p> </p>
+  <h4>Syntaxe :</h4>
+  <p class="code">gpu_set_zwriteenable(enable) ;</p>
+  <table>
+    <tbody>
+      <tr>
+        <th>Arguments</th>
+        <th>Description</th>
+      </tr>
+      <tr>
+        <td>activer</td>
+        <td>Le mode de comparaison à utiliser (voir liste ci-dessus)</td>
+      </tr>
+    </tbody>
+  </table>
+  <p> </p>
+  <h4>Les retours :</h4>
+  <p class="code">N/A</p>
+  <p> </p>
+  <h4>Exemple :</h4>
+  <p class="code">gpu_set_zwriteenable(false) ;<br> with (obj_Menu_Containers)<br> {
+    <br> draw_self() ;
+    <br> }
+    <br> gpu_set_zwriteenable(true) ;
+  </p>
+  <p>Le code ci-dessus désactive l'écriture dans le z-buffer, dessine un certain nombre d'objets, puis la réactive pour continuer à dessiner.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <div class="footer">
+    <div class="buttons">
+      <div class="clear">
+        <div style="float:left">Retour : <a href="GPU_Control.htm">Contrôle du GPU</a></div>
+        <div style="float:right">Suivant : <a href="gpu_set_fog.htm">gpu_set_fog</a></div>
+      </div>
+    </div>
+    <h5><span data-keyref="Copyright Notice">Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
   </div>
   <!-- KEYWORDS
 gpu_set_zwriteenable

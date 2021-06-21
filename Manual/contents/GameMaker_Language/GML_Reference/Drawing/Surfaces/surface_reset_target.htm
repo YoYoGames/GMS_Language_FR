@@ -7,21 +7,50 @@
   <meta name="generator" content="Adobe RoboHelp 2019" />
   <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
   <meta name="rh-authors" content="Mark Alexander" />
-  <meta name="topic-comment" content="Référence pour surface_reset_target" />
+  <meta name="topic-comment" content="Reference for surface_reset_target" />
   <meta name="rh-index-keywords" content="surface_reset_target" />
   <meta name="search-keywords" content="surface_reset_target" />
 </head>
-<body><!--<div class="body-scroll" style="top: 150px;">--><h1>surface_reset_target</h1><p> Avec cette fonction, vous réinitialisez tous les autres dessins de la surface cible à l&#39;écran. Veuillez noter que pour commencer à dessiner sur une surface, vous devez d&#39;abord avoir appelé la fonction <a href="surface_set_target.htm"><tt>surface_set_target()</tt></a> puis celui-ci une fois que vous avez terminé, <i>pour chaque cible de surface que vous avez définie,</i> sinon rien ne sera dessiné à l&#39;écran car tout autre dessin (même dans d&#39;autres cas) sera effectué sur la surface. Vous devez également vous rendre compte que rien ne sera vu si la surface elle-même n&#39;est pas dessinée à l&#39;écran lors de l&#39;événement de dessin d&#39;une instance.</p><p class="note"> <b>REMARQUE</b>: Si vous n&#39;avez pas précédemment défini de cible de rendu avec la fonction <span style="font-size:1px;"><a href="surface_set_target.htm"><tt style="font-size: 14px">surface_set_target ()</tt></a></span>, l&#39;utilisation de cette fonction mettra fin en silence (c&#39;est-à-dire sans aucun message d&#39;erreur) à toute exécution de code supplémentaire pour l&#39;événement.</p><p></p><h4> Syntaxe:</h4><p class="code">surface_reset_target();</p><p></p><h4> Retour:</h4><p class="code">N/A</p><p></p><h4> Exemple:</h4><p class="code">if view_current = 0<br/>     {
-    <br/>     surface_set_target(surf);
-    <br/>     with (obj_Effect)<br/>         {
-    <br/>         draw_self();
-    <br/>         }
-    <br/>     surface_reset_target();
-    <br/>     }
-    <br/> else
-    <br/>     {
-    <br/>     draw_surface(surf, 0, 0);<br/>     }
-  </p><p> Le code ci-dessus vérifiera quelle vue est actuellement dessinée, et si c&#39;est view [0], il définit la cible de dessin sur une surface et dessine toutes les instances de l&#39;objet &quot;obj_Effect&quot; avant de réinitialiser à nouveau la cible de dessin. Si la vue n&#39;est pas vue [0], la surface est dessinée sur l&#39;écran. </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> Retour: <a href="Surfaces.htm">Surfaces</a></div><div style="float:right"> Suivant:<a href="surface_copy.htm">surface_copy</a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
+<body>
+  <!--<div class="body-scroll" style="top: 150px;">-->
+  <h1>surface_reset_target</h1>
+  <p>Avec cette fonction, vous réinitialisez tout dessin ultérieur de la surface cible vers l'écran. Veuillez noter que pour commencer à dessiner sur une surface, vous devez d'abord avoir appelé la fonction <a href="surface_set_target.htm"><tt>surface_set_target()</tt></a> et
+    puis celle-ci après avoir terminé, <i>pour chaque surface cible que vous avez définie</i>, sinon rien ne sera dessiné à l'écran car tous les dessins ultérieurs (même dans d'autres instances) seront effectués sur la surface. Vous devez également savoir que rien
+    ne sera vu si la surface elle-même n'est pas dessinée à l'écran dans l'événement draw d'une instance.</p>
+  <p class="note"><b>NOTE</b>: Si vous n'avez pas précédemment défini une cible de rendu avec la fonction <span style="font-size:1px;"><a href="surface_set_target.htm"><tt style="font-size: 14px">surface_set_target()</tt></a></span>l'utilisation de cette fonction mettra fin silencieusement (c'est-à-dire sans
+    messages d'erreur) mettra fin à l'exécution de tout autre code pour l'événement.</p>
+  <p> </p>
+  <h4>Syntaxe :</h4>
+  <p class="code">surface_reset_target() ;</p>
+  <p> </p>
+  <h4>Les retours :</h4>
+  <p class="code">N/A</p>
+  <p> </p>
+  <h4>Exemple :</h4>
+  <p class="code">if view_current = 0<br> {
+    <br> surface_set_target(surf) ;
+    <br> with (obj_Effect)<br> {
+    <br> draw_self() ;
+    <br> }
+    <br> surface_reset_target() ;
+    <br> }
+    <br> else
+    <br> {
+    <br> draw_surface(surf, 0, 0) ;<br> }
+  </p>
+  <p>Le code ci-dessus vérifie quelle vue est actuellement dessinée, et si c'est la vue [0], il définit la cible de dessin sur une surface et dessine toutes les instances de l'objet &quot;obj_Effect&quot; avant de réinitialiser à nouveau la cible de dessin. Si la vue n'est pas view[0]
+    la surface est dessinée à l'écran.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <div class="footer">
+    <div class="buttons">
+      <div class="clear">
+        <div style="float:left">Retour : <a href="Surfaces.htm">Surfaces</a></div>
+        <div style="float:right">Suivant : <a href="surface_copy.htm">surface_copy</a></div>
+      </div>
+    </div>
+    <h5><span data-keyref="Copyright Notice">Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
   </div>
   <!-- KEYWORDS
 surface_reset_target

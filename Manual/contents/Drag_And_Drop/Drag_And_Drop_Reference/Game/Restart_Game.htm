@@ -3,16 +3,37 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>Recommencer le jeu</title>
+  <title>Redémarrer le jeu</title>
   <meta name="generator" content="Adobe RoboHelp 2019" />
   <link rel="stylesheet" href="../../../assets/css/default.css" type="text/css" />
   <meta name="rh-authors" content="Mark Alexander" />
-  <meta name="topic-comment" content="Page qui explique l&#39;action Redémarrer le jeu" />
-  <meta name="rh-index-keywords" content="DnD ™ - Redémarrer le jeu" />
-  <meta name="search-keywords" content="Recommencer le jeu" />
+  <meta name="topic-comment" content="Page that explains the Restart Game action" />
+  <meta name="rh-index-keywords" content="DnD™ Action - Restart Game" />
+  <meta name="search-keywords" content="Restart Game" />
 </head>
-<body><!--<div class="body-scroll" style="top: 150px;">--><h1><img alt="Restart Game Icon" class="icon" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Game/i_Game_Restart_Game.png" /> Recommencer le jeu</h1><p> Avec cette action, vous pouvez redémarrer le jeu. Ceci est similaire à l&#39;exécution du jeu pour la première fois et donc l&#39; <a href="../../../The_Asset_Editors/Object_Properties/Other_Events.htm">événement Autre - Début du jeu</a> sera déclenché, ainsi que l&#39; <a href="../../../The_Asset_Editors/Object_Properties/Other_Events.htm">événement Autre - Fin du jeu</a>. Cependant, il convient de noter que les variables globales ne seront pas réinitialisées à moins qu&#39;elles ne soient explicitement codées en tant que telles - ce qui signifie que si vous ne les définissez pas et ne les définissez pas dans la toute première pièce du jeu, elles conserveront leurs valeurs précédentes - et que <a
-      href="../Data_Structures/Data_Structure_Actions.htm">les structures de données</a> et les <a href="../Particles/Particle_Actions.htm">particules</a> ne seront pas non plus libérées et cela devrait être fait <i>avant que</i> l&#39;action de redémarrage du jeu ne soit appelée <i>ou</i> lors de l&#39;événement de fin de partie. Notez également que le jeu <i>ne</i> redémarrera pas au moment où cette action est appelée, mais plutôt à la fin du script ou de l&#39;événement où l&#39;action est placée, donc s&#39;il y a des actions placées après celle-ci, elles seront toujours appelées et le jeu redémarré à la fin du bloc.</p><p></p><h4> Syntaxe de l&#39;action:</h4><p><img alt="Restart Game Action" class="center" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Game/a_Game_Restart_Game.png" /></p><h4> Exemple:</h4><p><img alt="Restart Game Example" class="center" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Game/e_Game_Restart_Game.png" /> Le code de bloc d&#39;action ci-dessus vérifiera une pression sur le bouton de la manette de jeu et si un est détecté, il redémarrera le jeu. </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> Retour: <a href="Game_Actions.htm">Actions de jeu</a></div><div style="float:right"> Suivant: <a href="Exit_Game.htm">Quitter le jeu</a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
+<body>
+  <!--<div class="body-scroll" style="top: 150px;">-->
+  <h1><img alt="Restart Game Icon" class="icon" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Game/i_Game_Restart_Game.png"> Redémarrer le jeu</h1>
+  <p>Cette action vous permet de redémarrer le jeu. Cela revient à lancer le jeu pour la première fois et l'<a href="../../../The_Asset_Editors/Object_Properties/Other_Events.htm">événement Other - Game Start Event</a> sera donc déclenché, ainsi que l'<a href="../../../The_Asset_Editors/Object_Properties/Other_Events.htm">événement Other - Game End Event</a>.
+    Cependant, il faut noter que les variables globales ne seront pas réinitialisées à moins qu'elles ne soient explicitement codées comme telles - ce qui signifie que si vous ne les définissez pas dans la toute première pièce du jeu, elles conserveront leurs valeurs précédentes - et que
+    Les <a href="../Data_Structures/Data_Structure_Actions.htm">structures de données</a> et les <a href="../Particles/Particle_Actions.htm">particules</a> ne seront pas non plus libérées, ce qui doit être fait <i>avant l'</i> appel de l'action "Restart Game" <i>ou</i> dans l'événement "Game End". Notez également que le jeu <i>ne</i> redémarrera <i>pas</i> au moment où cette action est appelée, mais plutôt à la fin du script ou de l'événement où l'action est placée, donc si d'autres actions sont placées après celle-ci, elles seront toujours appelées et le jeu redémarrera à la fin du bloc.</p>
+  <p> </p>
+  <h4>Syntaxe de l'action :</h4>
+  <p><img alt="Restart Game Action" class="center" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Game/a_Game_Restart_Game.png" /></p>
+  <h4>Exemple :</h4>
+  <p><img alt="Restart Game Example" class="center" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Game/e_Game_Restart_Game.png">Le code du bloc d'action ci-dessus vérifie s'il y a une pression sur le bouton de la manette de jeu et, s'il y en a une, il redémarre le jeu.
+    le jeu.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <div class="footer">
+    <div class="buttons">
+      <div class="clear">
+        <div style="float:left">Retour : <a href="Game_Actions.htm">Actions de jeu</a></div>
+        <div style="float:right">Suivant : <a href="Exit_Game.htm">Exit Game</a></div>
+      </div>
+    </div>
+    <h5><span data-keyref="Copyright Notice">Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
   </div>
   <!-- KEYWORDS
 Action - Restart Game

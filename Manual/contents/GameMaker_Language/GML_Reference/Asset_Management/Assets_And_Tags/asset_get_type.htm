@@ -3,20 +3,120 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>asset_get_type</title>
+  <title>type d'actif_get</title>
   <meta name="generator" content="Adobe RoboHelp 2019" />
   <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
   <meta name="rh-authors" content="Mark Alexander" />
-  <meta name="topic-comment" content="Page expliquant la fonction asset_get_type" />
+  <meta name="topic-comment" content="Page explaining the function asset_get_type" />
   <meta name="rh-index-keywords" content="asset_get_type,asset_object,asset_sprite,asset_sound,asset_room,asset_tiles,asset_path,asset_script,asset_font,asset_timeline,asset_shader,asset_animationcurve,asset_sequence,asset_unknown" />
   <meta name="search-keywords" content="asset_get_type,asset_object,asset_sprite,asset_sound,asset_room,asset_tiles,asset_path,asset_script,asset_font,asset_timeline,asset_shader,asset_animationcurve,asset_sequence,asset_unknown" />
 </head>
-<body><!--<div class="body-scroll" style="top: 150px;">--><h1>asset_get_type</h1><p> Avec cette fonction, vous pouvez obtenir le type d&#39;actif référencé à partir de son nom (une chaîne). L&#39;une des <b>constantes</b> répertoriées ci-dessous sera renvoyée.</p><p></p><h4> Syntaxe:</h4><p class="code">asset_get_type(name);</p><table><tbody><tr><th> Argument</th><th> Description</th></tr><tr><td> <span class="notranslate">name</span></td><td> Le nom de l&#39;élément de jeu pour obtenir le type de (une chaîne).</td></tr></tbody></table><p></p><h4> Retour:</h4><p class="code">Constant</p><blockquote><table><tbody><tr><th> Constant</th><th> Description</th></tr><tr><td> <span class="notranslate">asset_object</span></td><td> Le nom donné fait référence à un <a href="../../../../The_Asset_Editors/Objects.htm">objet</a>.</td></tr><tr><td> <span class="notranslate">asset_sprite</span></td><td> Le nom donné fait référence à un <a href="../../../../The_Asset_Editors/Sprites.htm">sprite</a>.</td></tr><tr><td> <span class="notranslate">asset_sound</span></td><td> Le prénom fait référence à un <a href="../../../../The_Asset_Editors/Sounds.htm">son</a>.</td></tr><tr><td> <span class="notranslate">asset_room</span></td><td> Le prénom fait référence à un<a href="../../../../The_Asset_Editors/Rooms.htm">room</a>.</td></tr><tr><td> <span class="notranslate">asset_tiles</span></td><td> Le nom donné fait référence à un <a href="../../../../The_Asset_Editors/Tile_Sets.htm">jeu de tuiles</a>.</td></tr><tr><td> <span class="notranslate">asset_path</span></td><td> Le nom donné fait référence à un <a href="../../../../The_Asset_Editors/Paths.htm">chemin</a>.</td></tr><tr><td> <span class="notranslate">asset_script</span></td><td> Le prénom fait référence à un<a href="../../../../The_Asset_Editors/Scripts.htm">script</a>.</td></tr><tr><td> <span class="notranslate">asset_font</span></td><td> Le prénom fait référence à une <a href="../../../../The_Asset_Editors/Fonts.htm">police</a>.</td></tr><tr><td> <span class="notranslate">asset_timeline</span></td><td> Le prénom fait référence à une <a href="../../../../The_Asset_Editors/Timelines.htm">chronologie</a>.</td></tr><tr><td> <span class="notranslate">asset_ <span class="notranslate">shader</span></span></td><td> Le prénom fait référence à un <a href="../../../../The_Asset_Editors/Shaders.htm"><span class="notranslate">shader</span></a>.</td></tr><tr><td> <span class="notranslate">asset_animationcurve</span></td><td> Le nom donné fait référence à une <a href="../../../../The_Asset_Editors/Animation_Curves.htm">courbe d&#39;animation</a>.</td></tr><tr><td> <span class="notranslate">asset_sequence</span></td><td> Le prénom fait référence à une <a href="../../../../The_Asset_Editors/Sequences.htm">séquence</a>.</td></tr><tr><td> <span class="notranslate">asset_unknown</span></td><td> Le nom donné fait référence à un actif qui n&#39;existe pas ou qui ne fait pas partie de la liste ci-dessus.</td></tr></tbody></table></blockquote><p></p><h4> Exemple:</h4><p class="code">if asset_get_type(&quot;pth_Path_&quot; + string(global.Game)) == asset_unknown<br/>     {
-    <br/>     show_debug_message(&quot;Path doesn&#39;t exist!!!&quot;);<br/>     }
-    <br/> else
-    <br/>     {
-    <br/>     path_index = asset_get_index(&quot;pth_Path_&quot; + string(global.Game));<br/>     }
-  </p><p> Le code ci-dessus vérifie un nom d&#39;actif créé dynamiquement pour voir si l&#39;actif est du type correct. Si ce n&#39;est pas le cas, un message de débogage s&#39;affiche, sinon le nom de l&#39;actif est utilisé pour affecter l&#39;actif à l&#39;instance. </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> Retour: <a href="Assets_And_Tags.htm">Actifs et balises</a></div><div style="float:right"> Suivant:<a href="tag_get_asset_ids.htm">tag_get_asset_ids</a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
+<body>
+  <!--<div class="body-scroll" style="top: 150px;">-->
+  <h1>type d'actif_get</h1>
+  <p>Cette fonction permet d'obtenir le type de poste référencé à partir de son nom (une chaîne de caractères). L'une des <b>constantes</b> listées ci-dessous sera retournée.</p>
+  <p> </p>
+  <h4>Syntaxe :
+    
+  </h4>
+  <p class="code">asset_get_type(name) ;</p>
+  <table>
+    <tbody>
+      <tr>
+        <th>Arguments</th>
+        <th>Description</th>
+      </tr>
+      <tr>
+        <td>nom</td>
+        <td>Le nom de la ressource du jeu dont il faut obtenir le type (une chaîne).</td>
+      </tr>
+    </tbody>
+  </table>
+  <p> </p>
+  <h4>Les retours :</h4>
+  <p class="code">Constant</p>
+  <blockquote>
+    <table>
+      <tbody>
+        <tr>
+          <th>Constant</th>
+          <th>Description</th>
+        </tr>
+        <tr>
+          <td>objet_actif</td>
+          <td>Le nom donné fait référence à un <a href="../../../../The_Asset_Editors/Objects.htm">objet</a>.</td>
+        </tr>
+        <tr>
+          <td>actif_sprite</td>
+          <td>Le nom donné fait référence à un <a href="../../../../The_Asset_Editors/Sprites.htm">sprite</a>.</td>
+        </tr>
+        <tr>
+          <td>actif_son</td>
+          <td>Le prénom fait référence à un <a href="../../../../The_Asset_Editors/Sounds.htm">son</a>.</td>
+        </tr>
+        <tr>
+          <td>salle des actifs</td>
+          <td>Le prénom fait référence à une <a href="../../../../The_Asset_Editors/Rooms.htm">pièce</a>.</td>
+        </tr>
+        <tr>
+          <td>piliers_de_l'actif</td>
+          <td>Le nom donné fait référence à un <a href="../../../../The_Asset_Editors/Tile_Sets.htm">ensemble de carreaux</a>.</td>
+        </tr>
+        <tr>
+          <td>chemin_de_l'actif</td>
+          <td>Le nom donné fait référence à un <a href="../../../../The_Asset_Editors/Paths.htm">chemin</a>.</td>
+        </tr>
+        <tr>
+          <td>script_de_l'actif</td>
+          <td>Le nom donné fait référence à un <a href="../../../../The_Asset_Editors/Scripts.htm">script</a>.</td>
+        </tr>
+        <tr>
+          <td>asset_font</td>
+          <td>Le nom donné fait référence à une <a href="../../../../The_Asset_Editors/Fonts.htm">police de caractères</a>.</td>
+        </tr>
+        <tr>
+          <td>chronologie des actifs</td>
+          <td>Le prénom fait référence à une <a href="../../../../The_Asset_Editors/Timelines.htm">ligne de temps</a>.</td>
+        </tr>
+        <tr>
+          <td>asset_shader</td>
+          <td>Le nom donné fait référence à un <a href="../../../../The_Asset_Editors/Shaders.htm"><span class="notranslate">shader</span></a>.</td>
+        </tr>
+        <tr>
+          <td>courbe d'animation de l'actif</td>
+          <td>Le nom donné fait référence à une <a href="../../../../The_Asset_Editors/Animation_Curves.htm">courbe d'animation</a>.</td>
+        </tr>
+        <tr>
+          <td>séquence_d'actifs</td>
+          <td>Le nom donné fait référence à une <a href="../../../../The_Asset_Editors/Sequences.htm">Séquence</a>.</td>
+        </tr>
+        <tr>
+          <td>actif_inconnu</td>
+          <td>Le nom donné fait référence à un actif qui n'existe pas ou qui n'est pas l'un de ceux énumérés ci-dessus.</td>
+        </tr>
+      </tbody>
+    </table>
+  </blockquote>
+  <p> </p>
+  <h4>Exemple :</h4>
+  <p class="code">if asset_get_type(&quot;pth_Path_&quot; + string(global.Game)) == asset_unknown<br> {
+    <br> show_debug_message(&quot;Le chemin n'existe pas ! !!&quot;) ;<br> }
+    <br> else
+    <br> {
+    <br> path_index = asset_get_index(&quot;pth_Path_&quot; + string(global.Game)) ;<br> }
+  </p>
+  <p>Le code ci-dessus vérifie un nom d'asset créé dynamiquement pour voir si l'asset est du bon type. Si ce n'est pas le cas, un message de débogage est affiché, sinon le nom de l'actif est utilisé pour affecter l'actif à l'instance.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <div class="footer">
+    <div class="buttons">
+      <div class="clear">
+        <div style="float:left">Retour : <a href="Assets_And_Tags.htm">Actifs et étiquettes</a></div>
+        <div style="float:right">Suivant : <a href="tag_get_asset_ids.htm">tag_get_asset_ids</a></div>
+      </div>
+    </div>
+    <h5><span data-keyref="Copyright Notice">Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
   </div>
   <!-- KEYWORDS
 asset_get_type
@@ -29,7 +129,7 @@ asset_path
 asset_script
 asset_font
 asset_timeline
-asset_shader
+asset_<span class="notranslate">shader</span>
 asset_animationcurve
 asset_sequence
 asset_unknown

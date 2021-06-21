@@ -1,19 +1,57 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>room_goto</title>
-  <meta name="generator" content="Adobe RoboHelp 2019" />
+  <title>chambre_goto</title>
+  <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
   <meta name="rh-authors" content="Mark Alexander" />
-  <meta name="topic-comment" content="Page décrivant la fonction room_goto" />
+  <meta name="topic-comment" content="Page outlining the function room_goto" />
   <meta name="rh-index-keywords" content="room_goto" />
   <meta name="search-keywords" content="room_goto" />
 </head>
-<body><!--<div class="body-scroll" style="top: 150px;">--><h1>room_goto</h1><p> Cette fonction vous permet d&#39;accéder à n&#39;importe quelle pièce de votre projet de jeu, qu&#39;elle soit créée à l&#39;aide de code ou dans le navigateur d&#39;actifs. Vous fournissez la valeur d&#39;ID de pièce unique (stockée dans la variable pour le nom de la pièce, ou comme variable renvoyée par la fonction <a href="room_add.htm"><tt>room_add()</tt></a> ). Notez que la salle ne changera pas avant la fin de l&#39;événement où la fonction a été appelée, donc tout code après l&#39;appel sera toujours exécuté s&#39;il se trouve dans le même événement. La mise en garde à ceci est que tout code qui crée des instances qui est appelé après cela, <i>ne</i> créera pas l&#39;instance et devrait donc être appelé avant de changer de salle. Cette fonction déclenchera également l&#39;événement de <b>fin de pièce.</b></p><p></p><h4> Syntaxe:</h4><p class="code">room_goto(index);</p><table><tbody><tr><th> Argument</th><th> Description</th></tr><tr><td> <span class="notranslate">index</span></td><td> L&#39;index de la pièce où aller.</td></tr></tbody></table><p></p><h4> Retour:</h4><p class="code">N/A</p><p></p><h4> Exemple:</h4><p class="code">switch (global.rm)<br/>     {
-    <br/>     case 0: room_goto(rm_level1); break;<br/>     case 1: room_goto(rm_level2); break;<br/>     case 2: room_goto(rm_level3); break;<br/>     }
-  </p><p> Le code ci-dessus vérifiera une variable globale et changera de salle en fonction de la valeur qu&#39;elle contient. </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> Retour: <a href="Rooms.htm">Chambres</a></div><div style="float:right"> Suivant:<a href="room_goto_next.htm">room_goto_next</a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
+<body>
+  <!--<div class="body-scroll" style="top: 150px;">-->
+  <h1>chambre_goto</h1>
+  <p>Cette fonction vous permet d'accéder à n'importe quelle pièce de votre projet de jeu, qu'elle ait été créée à l'aide du code ou dans le navigateur d'actifs. Vous fournissez l'index de la pièce (stocké dans la variable correspondant au nom de la pièce, ou comme une variable renvoyée par la fonction <a href="room_add.htm"><tt>room_add()</tt></a>).
+    Notez que la room ne changera pas jusqu'à la fin de l'événement où la fonction a été appelée, donc tout code après l'appel de la fonction sera toujours exécuté s'il se trouve dans le même événement. Le problème est que tout code qui crée des instances et qui est appelé après cette fonction ne créera pas l'instance et ne sera pas exécuté.
+    après cette fonction, <i>ne</i> créera <i>pas</i> l'instance et doit donc être appelé avant de changer la salle. Cette fonction déclenchera également l'événement <b>Room End</b>.</p>
+  <p class="note"><strong>Remarque</strong>: Les identifiants de salle ne sont pas basés sur leur ordre dans l'Asset Browser ou le Room Manager, et vous devez donc éviter de fournir directement une valeur numérique. Utilisez plutôt la <a class="glossterm" data-glossterm="constant" href="#">constante de</a> salle pour
+    l'actif que vous souhaitez référencer (qui est simplement son nom) ou récupérez-le par le biais d'une fonction.</p>
+  <h4>Syntaxe :</h4>
+  <p class="code">chambre_goto(index) ;</p>
+  <table>
+    <tbody>
+      <tr>
+        <th>Arguments</th>
+        <th>Description</th>
+      </tr>
+      <tr>
+        <td>indice</td>
+        <td>L'index de la pièce où se rendre.</td>
+      </tr>
+    </tbody>
+  </table>
+  <p> </p>
+  <h4>Les retours :</h4>
+  <p class="code">N/A</p>
+  <p> </p>
+  <h4>Exemple :</h4>
+  <p class="code">switch (global.level)<br> {
+    <br> cas 0 : room_goto(rm_level1) ; pause ;<br> cas 1 : room_goto(rm_level2) ; pause ;<br> cas 2 : room_goto(rm_level3) ; pause ;<br> }
+  </p>
+  <p>Le code ci-dessus vérifiera une variable globale et changera de pièce en fonction de la valeur qu'elle contient.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <div class="footer">
+    <div class="buttons">
+      <div class="clear">
+        <div style="float:left">Retour : <a href="Rooms.htm">Pièces</a></div>
+        <div style="float:right">Suivant : <a href="room_goto_next.htm">room_goto_next</a></div>
+      </div>
+    </div>
+    <h5><span data-keyref="Copyright Notice">Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
   </div>
   <!-- KEYWORDS
 room_goto
@@ -21,5 +59,5 @@ room_goto
   <!-- TAGS
 room_goto
 -->
-</body>
-</html>
+
+</body></html>

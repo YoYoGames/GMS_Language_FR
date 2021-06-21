@@ -3,16 +3,54 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>Désactiver des instances</title>
+  <title>Désactivation des instances</title>
   <meta name="generator" content="Adobe RoboHelp 2019" />
   <link rel="stylesheet" href="../../../../../assets/css/default.css" type="text/css" />
   <meta name="rh-authors" content="Mark Alexander" />
-  <meta name="topic-comment" content="Page décrivant les différentes fonctions de désactivation d&#39;instances" />
+  <meta name="topic-comment" content="Page outlining the different functions for Deactivating Instances" />
   <meta name="rh-index-keywords" content="" />
-  <meta name="search-keywords" content="Désactiver des instances" />
+  <meta name="search-keywords" content="Deactivating Instances" />
 </head>
-<body><!--<div class="body-scroll" style="top: 150px;">--><h1> Désactiver des instances</h1><p> <span class="notranslate">GameMaker Studio 2</span> vous offre la possibilité de &quot;désactiver&quot; les instances afin qu&#39;elles ne soient plus traitées de quelque manière que ce soit. Techniquement, ils n&#39;existent plus vraiment, sauf en tant que pointeur dans le processus de désactivation lui-même, ce qui signifie qu&#39;une instance désactivée ne peut pas être manipulée ou modifiée de quelque manière que ce soit jusqu&#39;à ce qu&#39;elle soit réactivée à nouveau. Donc, ces fonctions doivent être utilisées avec beaucoup de précaution car elles peuvent causer des problèmes lorsqu&#39;elles ne sont pas utilisées correctement, en particulier avec des objets persistants, car un objet persistant qui a été désactivé ne sera pas déplacé vers la pièce suivante à moins qu&#39;il ne soit réactivé en premier (effectivement en le supprimant du jeu). Notez également que l&#39; <strong>activation et la désactivation ne sont pas instantanées</strong> et qu&#39;une instance dont l&#39;état a été modifié de cette manière ne sera pas considérée comme active / inactive jusqu&#39;à la <em>fin de l&#39;événement au cours duquel la fonction a été appelée</em>.</p><p> Il n&#39;est normalement pas nécessaire de désactiver les instances à chaque étape de votre jeu, ce qui peut entraîner des problèmes de performances dans votre jeu. Au lieu de cela, il est recommandé d&#39;exécuter ces fonctions uniquement toutes les quelques étapes d&#39;une alarme (par exemple), ou si la vue de la caméra a changé de position, et il est particulièrement important de ne pas utiliser ces fonctions dans l&#39;événement de dessin car cela peut entraîner à de graves erreurs dans votre jeu.</p><p> Une instance désactivée cesse effectivement d&#39;exister dans le jeu, mais les instances individuelles peuvent toujours avoir accès à leurs variables. Vous ne pouvez pas utiliser <tt>with(object)</tt> ou <tt>with(instance)</tt> cependant, mais vous devez plutôt accéder à l&#39;instance directement en utilisant son ID unique sous la forme suivante:</p><p class="code">val = inst.variable;</p><p> Dans l&#39;exemple ci-dessus, &quot;inst&quot; serait une variable qui contient l&#39;ID de l&#39;instance désactivée, et c&#39;est la seule façon pour qu&#39;une instance désactivée puisse être référencée sans qu&#39;elle soit activée auparavant.</p><p class="note"> <b>REMARQUE:</b> Si vous désactivez une instance au démarrage de la salle (c&#39;est-à-dire à partir du code de création de salle, ou à partir d&#39;un événement de création d&#39;instance d&#39;une instance dans la salle), toutes les instances placées dans la salle à partir de l&#39;éditeur de salle continueront d&#39;exécuter leur événement de création. avant d&#39;être désactivé.</p><p class="note"> <b>AVERTISSEMENT: la</b> désactivation des instances sur lesquelles la physique est activée n&#39;empêchera PAS leurs appareils d&#39;interagir dans la simulation physique. Pour cela, vous devez définir leur variable <span class="inline" style="font-size: 14px">phy_active</span> <span
-      class="inline"><span style="font-size:14px">sur true</span></span> ou <span class="inline"><span style="font-size:14px">false</span> lorsque vous activez / désactivez les instances.<b></b></p><p><b></b> Les fonctions suivantes existent pour désactiver les instances: </p><p></p><ul class="colour"><li><a href="instance_activate_all.htm">instance_activate_all</a></li><li><a href="instance_activate_object.htm">instance_activate_object</a></li><li><a href="instance_activate_region.htm">instance_activate_region</a></li><li><a href="instance_activate_layer.htm">instance_activate_layer</a></li><li><a href="instance_deactivate_all.htm">instance_deactivate_all</a></li><li><a href="instance_deactivate_object.htm">instance_deactivate_object</a></li><li><a href="instance_deactivate_region.htm">instance_deactivate_region</a></li><li><a href="instance_deactivate_layer.htm">instance_deactivate_layer</a></li></ul><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> Retour: <a href="../Instances.htm">Instances</a></div><div style="float:right"> Suivant: <a href="../Instance_Variables/Instance_Variables.htm">Variables d&#39;instance</a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
+<body>
+  <!--<div class="body-scroll" style="top: 150px;">-->
+  <h1>Désactivation des instances</h1>
+  <p><span class="notranslate">GameMaker Studio 2</span> vous offre la possibilité de &quot;désactiver&quot; des instances afin qu'elles ne soient plus traitées d'aucune manière. Techniquement, elles n'existent plus vraiment, sauf en tant que pointeur dans le processus de désactivation lui-même.
+    ce qui signifie qu'une instance désactivée ne peut être manipulée ou modifiée de quelque manière que ce soit jusqu'à ce qu'elle soit réactivée à nouveau. Ces fonctions doivent donc être utilisées avec beaucoup de précaution car elles peuvent causer des problèmes lorsqu'elles ne sont pas utilisées correctement, en particulier avec les objets persistants.
+    les objets persistants, car un objet persistant qui a été désactivé ne sera pas déplacé vers la pièce suivante à moins d'être réactivé au préalable (ce qui le supprime effectivement du jeu). Notez également que <strong>l'activation et la désactivation ne sont pas instantanées</strong>,
+    et une instance dont l'état a été modifié de cette manière ne sera pas considérée comme active/inactive avant la <em>fin de l'événement dans lequel la fonction a été appelée</em>.</p>
+  <p>Il n'est normalement pas nécessaire de désactiver les instances à chaque étape de votre jeu et cela peut en fait causer des problèmes de performance à votre jeu. Il est plutôt recommandé de n'exécuter ces fonctions que toutes les quelques étapes d'une alarme (par exemple), ou bien
+    si la vue de la caméra a changé de position, et il est particulièrement important que vous n'utilisiez pas ces fonctions dans l'événement draw, car cela peut entraîner de graves erreurs dans votre jeu.</p>
+  <p>Une instance désactivée cesse effectivement d'exister dans le jeu, mais les instances individuelles peuvent toujours avoir accès à leurs variables. Vous ne pouvez cependant pas utiliser <tt>with(object)</tt> ou <tt>with(instance)</tt>,
+    mais vous devez accéder directement à l'instance en utilisant son ID unique sous la forme suivante :</p>
+  <p class="code">val = inst.variable ;</p>
+  <p>Dans l'exemple ci-dessus, &quot;inst&quot; serait une variable qui contient l'ID de l'instance désactivée, et c'est la seule façon de référencer une instance désactivée sans qu'elle ait été activée auparavant.</p>
+  <p class="note"><b>REMARQUE :</b> Si vous désactivez une instance au démarrage de la room (c'est-à-dire à partir du code de création de la room, ou à partir d'un événement de création d'une instance dans la room), toutes les instances placées dans la room à partir de l'éditeur de room exécuteront encore leur événement de création avant d'être désactivées.
+    leur événement de création avant d'être désactivées.</p>
+  <p class="note"><b>AVERTISSEMENT : </b>La désactivation des instances dont la physique est activée n'empêchera PAS leurs appareils d'interagir dans la simulation physique. Pour cela, vous devez définir leur variable <span class="inline" style="font-size: 14px">phy_active</span> sur
+    <span class="inline"><span style="font-size:14px">true</span></span> ou <span class="inline"><span style="font-size:14px">false</span> lorsque vous activez/désactivez les instances.<b></b></p>
+  <p><b></b>Les fonctions suivantes permettent de désactiver les instances :</p>
+  <p> </p>
+  <ul class="colour">
+    <li><a href="instance_activate_all.htm">instance_activate_all</a></li>
+    <li><a href="instance_activate_object.htm">instance_activate_object</a></li>
+    <li><a href="instance_activate_region.htm">instance_activate_region</a></li>
+    <li><a href="instance_activate_layer.htm">instance_activate_layer</a></li>
+    <li><a href="instance_deactivate_all.htm">instance_désactivation_tous</a></li>
+    <li><a href="instance_deactivate_object.htm">instance_désactivation_objet</a></li>
+    <li><a href="instance_deactivate_region.htm">instance_désactivation_région</a></li>
+    <li><a href="instance_deactivate_layer.htm">instance_désactiver_couche</a></li>
+  </ul>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <div class="footer">
+    <div class="buttons">
+      <div class="clear">
+        <div style="float:left">Retour : <a href="../Instances.htm">Instances</a></div>
+        <div style="float:right">Suivant : <a href="../Instance_Variables/Instance_Variables.htm">Variables d'instance</a></div>
+      </div>
+    </div>
+    <h5><span data-keyref="Copyright Notice">Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
   </div>
   <!-- KEYWORDS
 Deactivating Instances

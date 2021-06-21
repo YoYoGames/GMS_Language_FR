@@ -3,15 +3,66 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>buffer_load_partial</title>
+  <title>Chargement partiel de la mémoire tampon</title>
   <meta name="generator" content="Adobe RoboHelp 2019" />
   <link rel="stylesheet" href="../../../assets/css/default.css" type="text/css" />
   <meta name="rh-authors" content="Mark Alexander" />
-  <meta name="topic-comment" content="Page de référence pour buffer_load_partial" />
+  <meta name="topic-comment" content="Reference page for buffer_load_partial" />
   <meta name="rh-index-keywords" content="buffer_load_partial" />
   <meta name="search-keywords" content="buffer_load_partial" />
 </head>
-<body><!--<div class="body-scroll" style="top: 150px;">--><h1>buffer_load_partial</h1><p> <span>Cette fonction chargera certaines des données de tampon qui ont été précédemment sauvegardées à l&#39;aide du </span><a href="buffer_save.htm"><tt>buffer_save()</tt></a> <span>fonctionne dans un tampon déjà créé. Vous donnez l&#39;id du tampon précédemment créé à charger, puis le fichier de tampon enregistré à charger, puis le décalage depuis le début du tampon (en octets) à partir duquel vous souhaitez charger les données. Les arguments suivants permettent de définir la longueur des données du tampon (en octets) à partir du point de décalage initial que vous souhaitez charger et du point de décalage vers lequel charger les données dans le tampon (encore une fois, en octets).</span></p><p></p><h4> Syntaxe:</h4><p class="code">buffer_load_partial(buffer, filename, offset, src_len, dest_offset);</p><table><tbody><tr><th> Argument</th><th> Description</th></tr><tr><td> <span class="notranslate">buffer</span></td><td> L&#39;index du tampon à charger.</td></tr><tr><td> <span class="notranslate">filename</span></td><td> Le nom du fichier à charger.</td></tr><tr><td> <span class="notranslate">offset</span></td><td> Décalage dans la mémoire tampon vers lequel charger (en octets).</td></tr><tr><td> <span class="notranslate">src_len</span></td><td> La longueur de la partie du tampon à charger (en octets).</td></tr><tr><td> <span class="notranslate">dest_offset</span></td><td> Le décalage où commencer à placer les données partielles dans le nouveau tampon (en octets).</td></tr></tbody></table><p></p><h4> Retour:</h4><p class="code">Real</p><p></p><h4> Exemple:</h4><p class="code">buff = buffer_create(256, buffer_grow, 1);<br/> var _file = &quot;save.dat&quot;;<br/> var _so = 6;<br/> var _sl = 5;<br/> var _do= 0;<br/> buffer_load_partial(buff, _file, _so, _sl, _do);</p><p> Le code ci-dessus créera un nouveau tampon de «croissance» puis chargera une partie des données enregistrées dans le fichier «save.dat» sur celui-ci. </p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> Retour: <a href="Buffers.htm">Tampons</a></div><div style="float:right"> Suivant:<a href="buffer_compress.htm">buffer_compress</a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
+<body>
+  <!--<div class="body-scroll" style="top: 150px;">-->
+  <h1>Chargement partiel de la mémoire tampon</h1>
+  <p><span>Cette fonction chargera certaines des données de la mémoire tampon qui ont été précédemment sauvegardées à l'aide de la méthode </span><a href="buffer_save.htm"><tt>buffer_save()</tt></a><span> dans un tampon déjà créé. Vous indiquez l'identifiant du tampon précédemment créé dans lequel vous souhaitez charger, puis le fichier tampon sauvegardé à charger, et enfin le décalage par rapport au début du tampon (en octets) à partir duquel vous souhaitez charger les données. Les arguments suivants permettent de définir la longueur des données de la mémoire tampon (en octets) à partir du point de décalage initial que vous souhaitez charger et le point de décalage auquel charger les données dans la mémoire tampon (à nouveau, en octets).</span></p>
+  <p> </p>
+  <h4>Syntaxe :</h4>
+  <p class="code">buffer_load_partial(buffer, filename, offset, src_len, dest_offset) ;</p>
+  <table>
+    <tbody>
+      <tr>
+        <th>Arguments</th>
+        <th>Description</th>
+      </tr>
+      <tr>
+        <td>tampon</td>
+        <td>L'index du tampon à charger.</td>
+      </tr>
+      <tr>
+        <td>nom de fichier</td>
+        <td>Le nom du fichier à charger.</td>
+      </tr>
+      <tr>
+        <td>décalage</td>
+        <td>Le décalage dans le tampon à charger (en octets).</td>
+      </tr>
+      <tr>
+        <td>src_len</td>
+        <td>La longueur de la partie du tampon à charger (en octets).</td>
+      </tr>
+      <tr>
+        <td>dest_offset</td>
+        <td>Le décalage où commencer à placer les données partielles dans le nouveau tampon (en octets).</td>
+      </tr>
+    </tbody>
+  </table>
+  <p> </p>
+  <h4>Les retours :</h4>
+  <p class="code">Real</p>
+  <p> </p>
+  <h4>Exemple :</h4>
+  <p class="code">buff = buffer_create(256, buffer_grow, 1) ;<br> var _file = &quot;save.dat&quot; ;<br> var _so = 6 ;<br> var _sl = 5 ;<br> var _do= 0 ;<br> buffer_load_partial(buff, _file, _so, _sl, _do) ;</p>
+  <p>Le code ci-dessus va créer un nouveau tampon &quot;grow&quot; et y charger une partie des données enregistrées dans le fichier &quot;save.dat&quot;.</p>
+  <p> </p>
+  <p> </p>
+  <div class="footer">
+    <div class="buttons">
+      <div class="clear">
+        <div style="float:left">Retour : <a href="Buffers.htm">Tampons</a></div>
+        <div style="float:right">Suivant : <a href="buffer_compress.htm">buffer_compress</a></div>
+      </div>
+    </div>
+    <h5><span data-keyref="Copyright Notice">Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
   </div>
   <!-- KEYWORDS
 buffer_load_partial

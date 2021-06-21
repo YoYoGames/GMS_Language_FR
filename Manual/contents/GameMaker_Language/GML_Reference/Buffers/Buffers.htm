@@ -7,11 +7,100 @@
   <meta name="generator" content="Adobe RoboHelp 2019" />
   <link rel="stylesheet" href="../../../assets/css/default.css" type="text/css" />
   <meta name="rh-authors" content="Mark Alexander" />
-  <meta name="topic-comment" content="Section de référence pour les fonctions Buffer" />
+  <meta name="topic-comment" content="Reference section for the Buffer functions" />
   <meta name="rh-index-keywords" content="" />
-  <meta name="search-keywords" content="Tampons" />
+  <meta name="search-keywords" content="Buffers" />
 </head>
-<body><!--<div class="body-scroll" style="top: 150px;">--><h1> Tampons</h1><p> Un tampon est une région de mémoire physique utilisée pour contenir temporairement des données pendant qu&#39;elles sont déplacées d&#39;un endroit à un autre ou manipulées d&#39;une manière ou d&#39;une autre, par exemple, vous pouvez utiliser une mémoire tampon pour contenir des données de paquet en attente de transmission sur un réseau ou pour stocker un paquet. qui a été reçu sur un réseau. <span class="notranslate">GameMaker Studio 2</span> a un certain nombre de fonctions spécifiques liées à la création, la modification et le chargement / enregistrement de tampons, mais avant de les utiliser, veuillez noter les points suivants:</p><ul class="colour"><li> Lorsqu&#39;un tampon est créé, il est automatiquement effacé et rempli à 0.</li><li> L&#39;argument &quot;taille&quot; des fonctions de tampon se réfère toujours à la taille <i>en octets</i> du tampon.</li><li> L&#39;argument &quot;Alignement&quot; fait référence à la manière dont les données sont stockées dans un tampon. Si votre alignement est défini sur 4 et que vous écrivez une seule donnée d&#39;une taille de 1 octet, effectuez un <tt>buffer_tell</tt>, vous obtiendrez un décalage de 1. Cependant, si vous écrivez un autre élément de données, également de 1 octet, effectuez un <tt>buffer_tell</tt>, vous obtiendrez un décalage de 5 car l&#39;alignement a &quot;rempli&quot; les données à cette taille. L&#39;alignement n&#39;affecte que l&#39; <i>endroit où les</i> choses sont écrites, donc si vous faites un <tt>buffer_tell</tt> après avoir écrit quelque chose, il retournera la position d&#39;écriture actuelle qui suit immédiatement les données que vous avez écrites. Notez, cependant, que si vous écrivez ensuite un autre élément de données, le tampon déplacera en interne la position d&#39;écriture le long du multiple suivant de la taille d&#39;alignement avant d&#39;écrire réellement l&#39;élément de données.</li><li> Lorsqu&#39;il s&#39;agit de &quot;offset&quot;, il s&#39;agit de la valeur <i>en octets</i> pour décaler les données dans le tampon donné. Donc, si votre tampon est aligné sur 2 octets et que vous souhaitez ignorer les 4 premiers emplacements alignés, vous auriez un décalage de <tt>2 * 4 bytes</tt>.</li><li> Certaines des fonctions de tampon créent également un nouveau tampon (comme <tt>buffer_load</tt> par exemple). N&#39;oubliez pas que ces tampons devront également être supprimés de la mémoire lorsqu&#39;ils ne sont pas utilisés à l&#39;aide du <tt>buffer_delete</tt> fonction.</li><li> La mémoire utilisée pour créer des tampons est la <i>mémoire</i> système.Ainsi, même lorsque le jeu n&#39;a pas le focus, toutes les données stockées dans une mémoire tampon doivent être en sécurité, mais si l&#39;application est fermée ou redémarrée, elle sera perdue.</li></ul><p> Les pages suivantes expliquent comment les tampons fonctionnent dans le contexte de <span class="notranslate">GameMaker Studio 2</span> et contiennent quelques exemples de code pour les utilisateurs qui ne savent pas comment les utiliser:</p><ul class="colour"><li> <a href="../../../Additional_Information/Guide_To_Using_Buffers.htm">Utilisation de tampons</a></li></ul><p class="note"> <em><strong>IMPORTANT!</strong></em> Lorsque vous créez un tampon, la valeur d&#39;index utilisée pour l&#39;identifier est une valeur entière commençant à 0. Ces indices sont réutilisés par <span class="notranslate">GameMaker</span>, donc une valeur d&#39;index de tampon détruit peut être utilisée par une valeur nouvellement créée par la suite, et nous recommandons que vous définissez toute variable contenant un index de tampon à -1 après avoir détruit le tampon.</p><p> Vous pouvez utiliser les fonctions suivantes avec des tampons binaires dans vos jeux: </p><p></p><ul class="colour"><li><a href="buffer_exists.htm">buffer_exists</a></li><li><a href="buffer_create.htm">buffer_create</a></li><li><a href="buffer_create_from_vertex_buffer.htm">buffer_create_from_vertex_buffer</a></li><li><a href="buffer_create_from_vertex_buffer_ext.htm">buffer_create_from_vertex_buffer_ext</a></li><li><a href="buffer_delete.htm">buffer_delete</a></li><li><a href="buffer_read.htm">buffer_read</a></li><li><a href="buffer_write.htm">buffer_write</a></li><li><a href="buffer_fill.htm">buffer_fill</a></li><li><a href="buffer_seek.htm">buffer_seek</a></li><li><a href="buffer_tell.htm">buffer_tell</a></li><li><a href="buffer_peek.htm">buffer_peek</a></li><li><a href="buffer_poke.htm">buffer_poke</a></li><li><a href="buffer_save.htm">buffer_save</a></li><li><a href="buffer_save_ext.htm">buffer_save_ext</a></li><li><a href="buffer_save_async.htm">buffer_save_async</a></li><li><a href="buffer_load.htm">buffer_load</a></li><li><a href="buffer_load_ext.htm">buffer_load_ext</a></li><li><a href="buffer_load_async.htm">buffer_load_async</a></li><li><a href="buffer_load_partial.htm">buffer_load_partial</a></li><li><a href="buffer_compress.htm">buffer_compress</a></li><li><a href="buffer_decompress.htm">buffer_decompress</a></li><li><a href="buffer_async_group_begin.htm">buffer_async_group_begin</a></li><li><a href="buffer_async_group_option.htm">buffer_async_group_option</a></li><li><a href="buffer_async_group_end.htm">buffer_async_group_end</a></li><li><a href="buffer_copy.htm">buffer_copy</a></li><li><a href="buffer_copy_from_vertex_buffer.htm">buffer_copy_from_vertex_buffer</a></li><li><a href="buffer_get_type.htm">buffer_get_type</a></li><li><a href="buffer_get_alignment.htm">buffer_get_alignment</a></li><li><a href="buffer_get_address.htm">buffer_get_address</a></li><li><a href="buffer_get_size.htm">buffer_get_size</a></li><li><a href="buffer_get_surface.htm">buffer_get_surface</a></li><li><a href="buffer_set_surface.htm">buffer_set_surface</a></li><li><a href="buffer_resize.htm">buffer_resize</a></li><li><a href="buffer_sizeof.htm">buffer_sizeof</a></li><li><a href="buffer_md5.htm">buffer_md5</a></li><li><a href="buffer_sha1.htm">buffer_sha1</a></li><li><a href="buffer_crc32.htm">buffer_crc32</a></li><li><a href="buffer_base64_encode.htm">buffer_base64_encode</a></li><li><a href="buffer_base64_decode.htm">buffer_base64_decode</a></li><li><a href="buffer_base64_decode_ext.htm">buffer_base64_decode_ext</a></li></ul><p></p><p> Il existe également deux fonctions supplémentaires liées aux tampons qui peuvent être utilisées pour enregistrer et charger les états de jeu (notez qu&#39;elles nécessitent la création préalable d&#39;un tampon):</p><p></p><ul class="colour"><li><a href="../General_Game_Control/game_load_buffer.htm">game_load_buffer</a></li><li><a href="../General_Game_Control/game_save_buffer.htm">game_save_buffer</a></li></ul><p></p><p> Enfin, vous pouvez également utiliser des <b>tampons Vertex</b> spéciaux pour créer vos propres primitives ou modèles personnalisés, etc... Vous pouvez en savoir plus à ce sujet dans la section suivante du manuel:</p><p></p><ul class="colour"><li> <a href="../Drawing/Primitives/Primitives_And_Vertex_Formats.htm">Bâtiment primitif</a> </li></ul><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> Retour: <a href="../GML_Reference.htm">Référence <span class="notranslate">GML</span></a></div><div style="float:right"> Suivant: <a href="../UWP_And_XBox_Live/UWP_And_XBox_Live.htm">UWP et XBox Live</a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
+<body>
+  <!--<div class="body-scroll" style="top: 150px;">-->
+  <h1>Tampons</h1>
+  <p>Une mémoire tampon est une région de la mémoire physique utilisée pour contenir temporairement des données pendant qu'elles sont déplacées d'un endroit à un autre ou manipulées d'une manière ou d'une autre, par exemple vous pouvez utiliser une mémoire tampon pour contenir des paquets de données en attente de transmission sur un réseau ou pour stocker un paquet reçu sur un réseau.
+    un paquet qui a été reçu sur un réseau. <span class="notranslate">GameMaker Studio 2</span> dispose d'un certain nombre de fonctions spécifiques liées à la création, à la modification et au chargement/à la sauvegarde des tampons, mais avant de les utiliser, veuillez noter les points suivants :</p>
+  <ul class="colour">
+    <li>Lorsqu'un tampon est créé, il est automatiquement effacé et rempli à 0.</li>
+    <li>L'argument &quot;size&quot; des fonctions de tampon fait toujours référence à la taille en octets <i>du</i> tampon.</li>
+    <li>L'argument &quot;Alignement&quot; fait référence à la façon dont les données sont stockées dans un tampon. Si votre alignement est fixé à 4, par exemple, et que vous écrivez une seule donnée d'un octet, puis effectuez un <tt>buffer_tell</tt>, vous obtiendrez un décalage de 1. Cependant, si vous écrivez une autre donnée, d'un octet également, puis effectuez un buffer_tell, vous obtiendrez un décalage de 5,
+      si vous écrivez une autre donnée, également d'un octet, et que vous faites un <tt>buffer_tell</tt>, vous obtiendrez un décalage de 5 car l'alignement a &quot;rembourré&quot; les données à cette taille. L'alignement n'affecte que l <i>'endroit où</i> les données sont écrites.
+      vous faites un <tt>buffer_tell</tt> après avoir écrit quelque chose, il retournera la position d'écriture actuelle qui suit immédiatement les données que vous avez écrites. Notez cependant que si vous écrivez ensuite une autre donnée, le tampon déplacera en interne la position d'écriture vers le multiple suivant de la position d'écriture.
+      la position d'écriture au multiple suivant de la taille d'alignement avant d'écrire réellement la donnée.</li>
+    <li>Lorsqu'on parle de &quot;décalage&quot;, il s'agit de la valeur en octets <i>pour décaler</i> les données dans le tampon donné. Ainsi, si votre tampon est aligné sur 2 octets et que vous voulez sauter les 4 premiers emplacements alignés, vous aurez un décalage de <tt>2 * 4 octets</tt>.</li>
+    <li>Certaines des fonctions de tampon créent également un nouveau tampon (comme <tt>buffer_load</tt> par exemple). N'oubliez pas que ces tampons devront également être supprimés de la mémoire lorsqu'ils ne sont pas utilisés à l'aide de la fonction <tt>buffer_delete</tt>.</li>
+    <li>La mémoire utilisée pour la création des tampons est la <i>mémoire système</i>. Ainsi, même lorsque le jeu n'est pas au centre de l'attention, toutes les données stockées dans un tampon sont en sécurité.</li>
+  </ul>
+  <p>Les pages suivantes expliquent le fonctionnement des tampons dans le contexte de <span class="notranslate">GameMaker Studio 2</span> et contiennent quelques exemples de code pour les utilisateurs qui ne savent pas comment les utiliser :</p>
+  <ul class="colour">
+    <li><a href="../../../Additional_Information/Guide_To_Using_Buffers.htm">Utilisation des tampons</a></li>
+  </ul>
+  <p class="note"><em><strong>IMPORTANT !</strong></em> Lorsque vous créez un tampon, la valeur d'index utilisée pour l'identifier est une valeur entière commençant à 0. Ces index sont réutilisés par <span class="notranslate">GameMaker</span>, ainsi une valeur d'index de tampon détruite peut être utilisée par un tampon nouvellement créé par la suite,
+    Nous vous recommandons donc de donner la valeur -1 à toute variable contenant un index de tampon après avoir détruit le tampon.</p>
+  <p>Les fonctions suivantes existent pour que vous puissiez les utiliser avec les tampons binaires dans vos jeux :</p>
+  <ul class="colour">
+    <li><a href="buffer_exists.htm">tampon_existant</a></li>
+    <li><a href="buffer_create.htm">création d'un tampon</a></li>
+    <li><a href="buffer_create_from_vertex_buffer.htm">création d'un tampon à partir d'un tampon_vertex</a></li>
+    <li><a href="buffer_create_from_vertex_buffer_ext.htm">tampon_créer_à partir de_vertex_buffer_ext</a></li>
+    <li><a href="buffer_delete.htm">tampon_suppression</a></li>
+    <li><a href="buffer_read.htm">buffer_read</a></li>
+    <li><a href="buffer_write.htm">buffer_write</a></li>
+    <li><a href="buffer_fill.htm">remplissage de la mémoire tampon</a></li>
+    <li><a href="buffer_seek.htm">recherche de tampon</a></li>
+    <li><a href="buffer_tell.htm">buffer_tell</a></li>
+    <li><a href="buffer_peek.htm">buffer_peek</a></li>
+    <li><a href="buffer_poke.htm">tampon_poke</a></li>
+    <li><a href="buffer_save.htm">Sauvegarde de la mémoire tampon</a></li>
+    <li><a href="buffer_save_ext.htm">tampon_save_ext</a></li>
+    <li><a href="buffer_save_async.htm">buffer_save_async</a></li>
+    <li><a href="buffer_load.htm">Chargement de la mémoire tampon</a></li>
+    <li><a href="buffer_load_ext.htm">buffer_load_ext</a></li>
+    <li><a href="buffer_load_async.htm">buffer_load_async</a></li>
+    <li><a href="buffer_load_partial.htm">Chargement partiel de la mémoire tampon</a></li>
+    <li><a href="buffer_compress.htm">tampon_compressé</a></li>
+    <li><a href="buffer_decompress.htm">tampon_décompression</a></li>
+    <li><a href="buffer_async_group_begin.htm">tampon_async_groupe_début</a></li>
+    <li><a href="buffer_async_group_option.htm">option_groupe_asynchrone_tampon</a></li>
+    <li><a href="buffer_async_group_end.htm">buffer_async_group_end</a></li>
+    <li><a href="buffer_copy.htm">buffer_copy</a></li>
+    <li><a href="buffer_copy_from_vertex_buffer.htm">buffer_copy_from_vertex_buffer</a></li>
+    <li><a href="buffer_get_type.htm">tampon_get_type</a></li>
+    <li><a href="buffer_get_alignment.htm">tampon_get_alignement</a></li>
+    <li><a href="buffer_get_address.htm">tampon_get_adresse</a></li>
+    <li><a href="buffer_get_size.htm">tampon_get_taille</a></li>
+    <li><a href="buffer_get_surface.htm">tampon_get_surface</a></li>
+    <li><a href="buffer_set_surface.htm">tampon_set_surface</a></li>
+    <li><a href="buffer_resize.htm">redimensionnement du tampon</a></li>
+    <li><a href="buffer_sizeof.htm">Taille de la mémoire tampon</a></li>
+    <li><a href="buffer_md5.htm">tampon_md5</a></li>
+    <li><a href="buffer_sha1.htm">tampon_sha1</a></li>
+    <li><a href="buffer_crc32.htm">buffer_crc32</a></li>
+    <li><a href="buffer_base64_encode.htm">tampon_base64_encode</a></li>
+    <li><a href="buffer_base64_decode.htm">buffer_base64_decode</a></li>
+    <li><a href="buffer_base64_decode_ext.htm">tampon_base64_decode_ext</a></li>
+    <li><a href="buffer_set_used_size.htm">buffer_set_used_size</a></li>
+  </ul>
+  <p> </p>
+  <p>Il existe également deux fonctions supplémentaires liées aux tampons qui peuvent être utilisées pour sauvegarder et charger des états de jeu (notez qu'elles nécessitent qu'un tampon ait été créé auparavant) :</p>
+  <p> </p>
+  <ul class="colour">
+    <li><a href="../General_Game_Control/game_load_buffer.htm">tampon de chargement de jeu</a></li>
+    <li><a href="../General_Game_Control/game_save_buffer.htm">tampon_sauvegarde_jeu</a></li>
+  </ul>
+  <p> </p>
+  <p>Enfin, vous pouvez également utiliser des <b>Vertex Buffers</b> spéciaux pour créer vos propres primitives ou modèles personnalisés, etc... Vous pouvez en savoir plus à ce sujet dans la section suivante du manuel :</p>
+  <p> </p>
+  <ul class="colour">
+    <li><a href="../Drawing/Primitives/Primitives_And_Vertex_Formats.htm">Bâtiment primitif</a></li>
+  </ul>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <div class="footer">
+    <div class="buttons">
+      <div class="clear">
+        <div style="float:left">Retour : <a href="../GML_Reference.htm">Référence<span class="notranslate">GML</span></a></div>
+        <div style="float:right">Suivant : <a href="../UWP_And_XBox_Live/UWP_And_XBox_Live.htm">UWP et XBox Live</a></div>
+      </div>
+    </div>
+    <h5><span data-keyref="Copyright Notice">Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
   </div>
   <!-- KEYWORDS
 Buffers

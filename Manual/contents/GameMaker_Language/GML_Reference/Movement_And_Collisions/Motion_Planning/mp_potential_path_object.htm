@@ -7,11 +7,73 @@
   <meta name="generator" content="Adobe RoboHelp 2019" />
   <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
   <meta name="rh-authors" content="Mark Alexander" />
-  <meta name="topic-comment" content="Cette page décrit la fonction mp_potential_path_object" />
+  <meta name="topic-comment" content="This page outlines the function mp_potential_path_object" />
   <meta name="rh-index-keywords" content="mp_potential_path_object" />
   <meta name="search-keywords" content="mp_potential_path_object" />
 </head>
-<body><!--<div class="body-scroll" style="top: 150px;">--><h1>mp_potential_path_object</h1><p> Cette fonction calcule un chemin pour l&#39;instance depuis sa position <i>et son orientation actuelles</i> jusqu&#39;à la position spécifiée par les arguments xgoal, ygoal. Il utilise la taille de pas indiquée tout en essayant d&#39;éviter la collision avec les instances de l&#39;objet spécifié par l&#39;argument &quot;obj&quot;. Comme dans la fonction <a href="mp_potential_step.htm"><tt>mp_potential_step()</tt></a> il utilise des étapes de champ potentielles pour accomplir cela et la manière dont il le fait peut être modifiée via la fonction <a href="mp_potential_settings.htm"><tt>mp_potential_settings()</tt></a>. Le chemin indiqué doit déjà exister et il sera écrasé par le nouveau chemin. La fonction retournera si un chemin a été trouvé (vrai) ou non (faux).</p><p> Pour éviter que la fonction continue à calculer indéfiniment, vous devez fournir un facteur supérieur à 1 - la fonction s&#39;arrêtera et signalera un échec si elle ne peut pas trouver un chemin plus court que ce facteur multiplié par la distance entre le début et l&#39;objectif. Un facteur de 4 est normalement suffisant, mais si vous prévoyez de longs détours, vous pourriez les allonger. S&#39;il échoue, un chemin est toujours créé qui court dans la direction approximative de l&#39;objectif, mais il ne l&#39;atteindra pas.</p><p class="note"> <b>REMARQUE</b>: cette fonction ne déplace pas l&#39;instance. Il définit un chemin uniquement et vous devez utiliser les <a href="../../Asset_Management/Paths/Paths.htm">fonctions Chemin</a> pour le mouvement.</p><p></p><h4> Syntaxe:</h4><p class="code">mp_potential_path_object(path, xgoal, ygoal, stepsize, factor, obj)</p><table><tbody><tr><th> Argument</th><th> Description</th></tr><tr><td> <span class="notranslate">path</span></td><td> index du chemin à utiliser par la fonction</td></tr><tr><td> <span class="notranslate">xgoal</span></td><td> La position x cible.</td></tr><tr><td> <span class="notranslate">ygoal</span></td><td> La position y cible.</td></tr><tr><td> <span class="notranslate">stepsize</span></td><td> Vitesse de déplacement de l&#39;instance en pixels par étape.</td></tr><tr><td> <span class="notranslate">factor</span></td><td> Ce nombre est utilisé pour empêcher une boucle infinie. Il doit être supérieur à 1. Voir la description de la fonction pour plus d&#39;informations.</td></tr><tr><td> <span class="notranslate">obj</span></td><td> L&#39;objet qui doit bloquer le chemin. Peut être un index d&#39;objet, un identifiant d&#39;instance ou le mot clé spécial, <b>tous</b></td></tr></tbody></table><p></p><h4> Retour:</h4><p class="code">Boolean</p><p></p><h4> Exemple:</h4><p class="code">path = path_add();<br/> mp_potential_path_object(path, obj_Player.x, obj_Player.y, 3, 4, obj_Wall);<br/> path_start(path, 3, 0, 0);</p><p> Le code ci-dessus crée une nouvelle ressource de chemin et stocke son index dans la variable &quot;chemin&quot;. Il génère ensuite un chemin en utilisant <tt>mp_potential_path</tt> entre l&#39;objet avec ce code et l&#39;objet &quot;obj_Player&quot;, vérification des collisions avec l&#39;objet &quot;obj_Wall&quot;. Enfin, il démarre l&#39;objet le long de ce chemin, même si la fonction n&#39;a pas réussi à renvoyer une route complète vers le &quot;obj_Player&quot;. </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> Retour: <a href="Motion_Planning.htm">Planification de mouvement</a></div><div style="float:right"> Suivant:<a href="mp_grid_create.htm">mp_grid_create</a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
+<body>
+  <!--<div class="body-scroll" style="top: 150px;">-->
+  <h1>mp_potential_path_object</h1>
+  <p>Cette fonction calcule un chemin pour l'instance depuis sa position <i>et son orientation</i> actuelles jusqu'à la position spécifiée par les arguments xgoal, ygoal. Elle utilise la taille de pas indiquée tout en essayant d'éviter toute collision avec les instances de l'objet spécifié
+    par l'argument &quot;obj&quot;. Comme dans la fonction <a href="mp_potential_step.htm"><tt>mp_potential_step()</tt></a> elle utilise des étapes de champ potentiel pour y parvenir et la manière dont elle le fait peut être modifiée par la fonction <a href="mp_potential_settings.htm"><tt>mp_potential_settings()</tt></a>.
+    Le chemin indiqué doit déjà exister et il sera écrasé par le nouveau chemin. La fonction renvoie si un chemin a été trouvé (true) ou non (false).</p>
+  <p>Pour éviter que la fonction ne continue à calculer indéfiniment, vous devez fournir un facteur supérieur à 1. La fonction s'arrêtera et signalera un échec si elle ne peut pas trouver un chemin plus court que ce facteur multiplié par la distance entre le départ et le but. Un facteur de 4
+    est normalement suffisant, mais si vous prévoyez de longs détours, vous pouvez l'augmenter. En cas d'échec, un chemin est tout de même créé dans la direction approximative du but, mais il ne l'atteindra pas.</p>
+  <p class="note"><b>NOTE</b>: Cette fonction ne déplace pas l'instance. Elle définit uniquement un chemin, et vous devez utiliser les fonctions <a href="../../Asset_Management/Paths/Paths.htm">Path</a> pour le déplacement.</p>
+  <p> </p>
+  <h4>Syntaxe :</h4>
+  <p class="code">mp_potential_path_object(path, xgoal, ygoal, stepsize, factor, obj)</p>
+  <table>
+    <tbody>
+      <tr>
+        <th>Arguments</th>
+        <th>Description</th>
+      </tr>
+      <tr>
+        <td>chemin</td>
+        <td>indice du chemin qui doit être utilisé par la fonction</td>
+      </tr>
+      <tr>
+        <td>xgoal</td>
+        <td>La position x de la cible.</td>
+      </tr>
+      <tr>
+        <td>ygoal</td>
+        <td>La position y de la cible.</td>
+      </tr>
+      <tr>
+        <td>taille d'étape</td>
+        <td>La vitesse de déplacement de l'instance en pixels par pas.</td>
+      </tr>
+      <tr>
+        <td>facteur</td>
+        <td>Ce nombre est utilisé pour éviter une boucle infinie. Il doit être supérieur à 1. Voir la description de la fonction pour plus d'informations.</td>
+      </tr>
+      <tr>
+        <td>obj.</td>
+        <td>L'objet qui doit bloquer le chemin. Peut être un index d'objet, un id d'instance ou le mot-clé spécial<b>,all</b></td>
+      </tr>
+    </tbody>
+  </table>
+  <p> </p>
+  <h4>Les retours :</h4>
+  <p class="code">Booléen</p>
+  <p> </p>
+  <h4>Exemple :</h4>
+  <p class="code">path = path_add() ;<br> mp_potential_path_object(path, obj_Player.x, obj_Player.y, 3, 4, obj_Wall) ;<br> path_start(path, 3, 0, 0) ;</p>
+  <p>Le code ci-dessus crée une nouvelle ressource path et stocke son index dans la variable &quot;path&quot;. Il génère ensuite un chemin en utilisant <tt>mp_potential_path</tt> entre l'objet avec ce code et l'objet &quot;obj_Player&quot;, en vérifiant qu'il n'y a pas de collision avec l'objet &quot;obj_Wall&quot;.
+    avec l'objet &quot;obj_Wall&quot;. Enfin, elle lance l'objet le long de ce chemin, même si la fonction n'a pas réussi à renvoyer un chemin complet vers l'objet &quot;obj_Player&quot;.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <div class="footer">
+    <div class="buttons">
+      <div class="clear">
+        <div style="float:left">Retour : <a href="Motion_Planning.htm">Planification des mouvements</a></div>
+        <div style="float:right">Suivant : <a href="mp_grid_create.htm">mp_grid_create</a></div>
+      </div>
+    </div>
+    <h5><span data-keyref="Copyright Notice">Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
   </div>
   <!-- KEYWORDS
 mp_potential_path_object

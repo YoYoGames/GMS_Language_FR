@@ -7,19 +7,44 @@
   <meta name="generator" content="Adobe RoboHelp 2019" />
   <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
   <meta name="rh-authors" content="Mark Alexander" />
-  <meta name="topic-comment" content="Page de référence pour steam _get_user_ steam" />
+  <meta name="topic-comment" content="Reference page for steam_get_user_steam_id" />
   <meta name="rh-index-keywords" content="steam_get_user_steam_id" />
   <meta name="search-keywords" content="steam_get_user_steam_id" />
 </head>
-<body><!--<div class="body-scroll" style="top: 150px;">--><h1> <span class="notranslate">steam</span> _get_user_ <span class="notranslate">steam</span> _id</h1><p> Vous pouvez utiliser cette fonction pour renvoyer l&#39; <b>identifiant</b> <span class="notranslate">Steam</span> de l&#39;utilisateur actuellement connecté au client <span class="notranslate">Steam</span> Il s&#39;agit d&#39;une valeur unique de 64 bits qui peut être utilisée pour identifier des utilisateurs individuels et <i>non</i> leur nom d&#39;utilisateur à l&#39;écran (cela peut être trouvé à l&#39;aide de la fonction <a href="steam_get_persona_name.htm"><tt>steam_get_persona_name()</tt></a> ). Comme il s&#39;agit d&#39;un int64, vous devrez peut-être le convertir en tant que tel lors de son utilisation dans des fonctions ultérieures en utilisant le <a href="../../Variable_Functions/int64.htm"><tt>int64()</tt></a> fonction.</p><p></p><h4> Syntaxe:</h4><p class="code">steam_get_user_steam_id();</p><p></p><h4> Retour:</h4><p class="code">Integer (int64)</p><p></p><h4> Exemple:</h4><p class="code">if steam_initialised()<br/>     {
-    <br/>     global.u_id = steam_get_user_steam_id();<br/>     }
-  </p><p> Le code ci-dessus définira une variable globale sur l&#39; <span class="notranslate">Steam</span> unique de l&#39;utilisateur actuel si l&#39; <span class="notranslate">Steam</span> est correctement initialisée. </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> Retour: <a href="Steam_API.htm">API <span class="notranslate">Steam</span> générale</a></div><div style="float:right"> Suivant: <a href="steam_get_persona_name.htm"><span class="notranslate">steam</span> _get_persona_name</a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
+<body>
+  <!--<div class="body-scroll" style="top: 150px;">-->
+  <h1><span class="notranslate">steam_get_user_steam_id</span></h1>
+  <p>Vous pouvez utiliser cette fonction pour retourner l'<b>identifiant</b> unique <b>de</b> l'<b>utilisateur</b> <span class="notranslate">Steam</span> actuellement connecté au client <span class="notranslate">Steam</span>. Il s'agit d'une valeur unique de 64 bits qui peut être utilisée pour identifier les utilisateurs individuels et <i>non</i> leur nom d'utilisateur à l'écran (qui peut être trouvé en utilisant la fonction
+    trouvé à l'aide de la fonction <a href="steam_get_persona_name.htm"><tt><span class="notranslate">steam_get_persona_name</span>()</tt></a>). Comme il s'agit d'un int64, vous devrez peut-être le convertir en tant que tel lorsque vous l'utiliserez dans les fonctions suivantes en utilisant la fonction <a href="../../Variable_Functions/int64.htm"><tt>int64()</tt></a>    fonction.</p>
+  <p> </p>
+  <h4>Syntaxe :</h4>
+  <p class="code"><span class="notranslate">steam_get_user_steam_id</span>() ;</p>
+  <p> </p>
+  <h4>Les retours :</h4>
+  <p class="code">Entier (int64)</p>
+  <p> </p>
+  <h4>Exemple :</h4>
+  <p class="code">if <span class="notranslate">steam_initialised</span>()<br> {
+    <br> global.u_id = <span class="notranslate">steam_get_user_steam_id</span>() ;<br> }
+  </p>
+  <p>Le code ci-dessus définira une variable globale pour l'ID <span class="notranslate">Steam</span> unique de l'utilisateur actuel si l'API client <span class="notranslate">Steam</span> est correctement initialisée.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <div class="footer">
+    <div class="buttons">
+      <div class="clear">
+        <div style="float:left">Retour : <a href="Steam_API.htm">API générale de <span class="notranslate">la vapeur</span></a></div>
+        <div style="float:right">Suivant : <a href="steam_get_persona_name.htm"><span class="notranslate">steam_get_persona_name</span></a></div>
+      </div>
+    </div>
+    <h5><span data-keyref="Copyright Notice">Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
   </div>
   <!-- KEYWORDS
-steam_get_user_steam_id
+<span class="notranslate">steam</span>_get_user_<span class="notranslate">steam</span>_id
 -->
   <!-- TAGS
-steam_get_user_steam_id
+<span class="notranslate">steam</span>_get_user_<span class="notranslate">steam</span>_id
 -->
 </body>
 </html>

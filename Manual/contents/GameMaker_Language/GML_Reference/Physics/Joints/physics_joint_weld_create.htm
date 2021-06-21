@@ -3,20 +3,92 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>physics_joint_weld_create</title>
+  <title>physique_joint_soudure_créer</title>
   <meta name="generator" content="Adobe RoboHelp 2019" />
   <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
   <meta name="rh-authors" content="Mark Alexander" />
-  <meta name="topic-comment" content="Page de référence pour physics_joint_weld_create" />
+  <meta name="topic-comment" content="Reference page for physics_joint_weld_create" />
   <meta name="rh-index-keywords" content="physics_joint_weld_create" />
   <meta name="search-keywords" content="physics_joint_weld_create" />
 </head>
-<body><!--<div class="body-scroll" style="top: 150px;">--><h1>physics_joint_weld_create</h1><p> Le joint de soudure est conçu pour attacher deux fixations ensemble dans une liaison solide mais flexible. Le joint de soudure permettra la flexion entre les deux fixations jointes mais sans l&#39;étirement associé, par exemple, à un joint de distance, et essaiera toujours de &quot;ressortir&quot; à l&#39;angle de référence lorsqu&#39;il est soumis à une contrainte ou une charge. Vous définissez le point dans la pièce où le joint doit être créé, ainsi que l&#39;angle que vous souhaitez que le joint essaie de maintenir à tout moment, comme indiqué dans l&#39;image ci-dessous:</p><p><img alt="Weld joint illustration" class="center" src="../../../../assets/Images/Scripting_Reference/GML/Reference/Physics/weld_joint_image.png" /> Comme vous pouvez le voir, les points d&#39;ancrage sont spécifiés en tant que coordonnées de la pièce, il faut donc faire attention lors de leur définition, en particulier si les instances sont créées en même temps que les joints plutôt que d&#39;être placées dans la pièce via l&#39;éditeur de pièce. Vous devez également vous rendre compte que les liaisons sont créées indépendamment de la taille du sprite des instances ou des appareils qu&#39;elles ont attachés. Ainsi, si vous créez un joint de soudure ailleurs qu&#39;à l&#39;origine de l&#39;instance, il est toujours valide et contraindra les deux instances par rapport à la position à laquelle il a été créé.</p><p> Étant donné que le joint de soudure est flexible et se pliera et fléchira sous n&#39;importe quelle contrainte, vous pouvez définir la fréquence d&#39;oscillation (en Hz) ainsi que le rapport d&#39;amortissement du joint pour obtenir des effets différents - vous devrez peut-être jouer avec ces valeurs pour affiner réglez-les et il est recommandé de commencer par des valeurs plus petites et de les incrémenter jusqu&#39;à ce que vous obteniez l&#39;effet souhaité.</p><p> Si vous définissez la valeur &quot;col&quot; sur <tt>true</tt> alors les deux instances peuvent interagir et entrer en collision l&#39;une avec l&#39;autre, mais <i>uniquement</i> si elles ont des événements de collision, mais si elle est définie sur <tt>false</tt>, ils n&#39;entreront pas en collision quoi qu&#39;il arrive.</p><p></p><h4> Syntaxe:</h4><p class="code">physics_joint_weld_create(inst1, inst2, anchor_x, anchor_y, ref_angle, freq_hz, damping_ratio, col)</p><table><tbody><tr><th> Argument</th><th> Description</th></tr><tr><td> <span class="notranslate">inst1</span></td><td> La première instance à se connecter avec l&#39;articulation</td></tr><tr><td> <span class="notranslate">inst2</span></td><td> La deuxième instance pour se connecter avec l&#39;articulation</td></tr><tr><td> <span class="notranslate">anchor_x</span></td><td> La coordonnée x pour l&#39;articulation, dans le monde du jeu</td></tr><tr><td> <span class="notranslate">anchor_y</span></td><td> La coordonnée y pour l&#39;articulation, dans le monde du jeu</td></tr><tr><td> <span class="notranslate">ref_angle</span></td><td> L&#39;angle d&#39;articulation à maintenir</td></tr><tr><td> <span class="notranslate">freq_hz</span></td><td> C&#39;est la fréquence d&#39;oscillation de l&#39;articulation, en hertz</td></tr><tr><td> <span class="notranslate">damping_ratio</span></td><td> Ce rapport d&#39;amortissement pour le joint</td></tr><tr><td> <span class="notranslate">col</span></td><td> Si les deux instances peuvent entrer en collision (vrai) ou non (faux)</td></tr></tbody></table><p></p><h4> Retour:</h4><p class="code">Integer (index of the joint)</p><p></p><h4> Exemple:</h4><p class="code">var i, fix, o_id, p_id;<br/> p_id = noone;<br/> o_id = noone;<br/> fix = physics_fixture_create();<br/> physics_fixture_set_box_shape(fix, 64, 32);<br/> for (i = 0; i &lt; 5; i++;)<br/>     {
-    <br/>     o_id = instance_create_layer(x + (128 * i), y, &quot;Instances&quot;, obj_BridgePart);<br/>     physics_fixture_bind(fix, o_id);<br/>     if i &gt; 0 &amp;&amp; i &lt; 4<br/>         {
-    <br/>         physics_joint_weld_create(p_id, o_id, x + (128 * i) - 64, y, 0, 10, 12, true);<br/>         }
-    <br/>     p_id = o_id;<br/>     }
-    <br/> physics-fixture_delete(fix);
-  </p><p> Le code ci-dessus créera un appareil, puis utilisera une boucle pour créer un certain nombre d&#39;instances, liant l&#39;appareil à chaque nouvelle instance, puis les joignant tous ensemble à l&#39;aide d&#39;un joint de soudure. Enfin, l&#39;appareil est supprimé de la mémoire. </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> Arrière: <a href="Joints.htm">Joints</a></div><div style="float:right"> Suivant:<a href="physics_joint_friction_create.htm">physics_joint_friction_create</a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
+<body>
+  <!--<div class="body-scroll" style="top: 150px;">-->
+  <h1>physique_joint_soudure_créer</h1>
+  <p>Le joint de soudure est conçu pour fixer deux appareils ensemble dans une liaison solide, mais flexible. Le joint de soudure permet la flexion entre les deux pièces jointes, mais sans l'étirement associé, par exemple, à un joint à distance.
+    Il essaiera toujours de revenir à l'angle de référence lorsqu'il sera soumis à une contrainte ou à une charge. Vous définissez le point de la pièce où le joint doit être créé, ainsi que l'angle que vous souhaitez que le joint essaie de maintenir à tout moment, comme le montre l'image ci-dessous.
+    l'image ci-dessous :</p>
+  <p><img alt="Weld joint illustration" class="center" src="../../../../assets/Images/Scripting_Reference/GML/Reference/Physics/weld_joint_image.png">Comme vous pouvez le constater, les points d'ancrage sont spécifiés en tant que coordonnées de la pièce.
+    surtout si les instances sont créées en même temps que les articulations plutôt que d'être placées dans la room via l'éditeur de room. Vous devez également savoir que les articulations sont créées indépendamment de la taille du sprite des instances
+    ou des fixtures qu'elles ont attachées. Ainsi, si vous créez un joint de soudure ailleurs qu'à l'origine de l'instance, il est toujours valide et contraindra les deux instances par rapport à la position à laquelle il a été créé.</p>
+  <p>Puisque le joint de soudure est flexible et qu'il se pliera et fléchira sous l'effet d'une quelconque contrainte, vous pouvez définir la fréquence d'oscillation (en Hz) ainsi que le taux d'amortissement du joint pour obtenir différents effets - vous devrez peut-être jouer avec ces valeurs pour les affiner
+    et il est recommandé de commencer par de petites valeurs et de les augmenter jusqu'à ce que vous obteniez l'effet désiré.</p>
+  <p>Si vous définissez la valeur &quot;col&quot; à true, <tt>les</tt> deux instances peuvent interagir et entrer en collision l'une avec l'autre, mais seulement si <i>elles</i> ont des événements de collision, mais si elle est définie à false, <tt>elles</tt> n'entreront pas en collision quoi qu'il arrive.</p>
+  <p> </p>
+  <h4>Syntaxe :</h4>
+  <p class="code">physics_joint_weld_create(inst1, inst2, anchor_x, anchor_y, ref_angle, freq_hz, damping_ratio, col)</p>
+  <table>
+    <tbody>
+      <tr>
+        <th>Arguments</th>
+        <th>Description</th>
+      </tr>
+      <tr>
+        <td>inst1</td>
+        <td>La première instance à se connecter avec l'articulation</td>
+      </tr>
+      <tr>
+        <td>inst2</td>
+        <td>La deuxième instance pour se connecter avec le joint</td>
+      </tr>
+      <tr>
+        <td>anchor_x</td>
+        <td>La coordonnée x de l'articulation, dans l'univers du jeu.</td>
+      </tr>
+      <tr>
+        <td>anchor_y</td>
+        <td>La coordonnée y de l'articulation, dans l'univers du jeu.</td>
+      </tr>
+      <tr>
+        <td>réf_angle</td>
+        <td>L'angle d'articulation à maintenir</td>
+      </tr>
+      <tr>
+        <td>freq_hz</td>
+        <td>C'est la fréquence d'oscillation de l'articulation, en hertz.</td>
+      </tr>
+      <tr>
+        <td>rapport d'amortissement</td>
+        <td>Ce rapport d'amortissement pour l'articulation</td>
+      </tr>
+      <tr>
+        <td>col</td>
+        <td>Si les deux instances peuvent entrer en collision (vrai) ou non (faux).</td>
+      </tr>
+    </tbody>
+  </table>
+  <p> </p>
+  <h4>Les retours :</h4>
+  <p class="code">Nombre entier (indice de l'articulation)</p>
+  <p> </p>
+  <h4>Exemple :</h4>
+  <p class="code">var i, fix, o_id, p_id ;<br> p_id = noone ;<br> o_id = noone ;<br> fix = physics_fixture_create() ;<br> physics_fixture_set_box_shape(fix, 64, 32) ;<br> for (i = 0 ; i &lt; 5 ; i++ ;)<br> {
+    <br> o_id = instance_create_layer(x + (128 * i), y, &quot;Instances&quot;, obj_BridgePart) ;<br> physics_fixture_bind(fix, o_id) ;<br> if i &gt; 0 &amp;&amp; i &lt; 4<br> {
+    <br> physics_joint_weld_create(p_id, o_id, x + (128 * i) - 64, y, 0, 10, 12, true) ;<br> }
+    <br> p_id = o_id ;<br> }
+    <br> physics-fixture_delete(fix) ;
+  </p>
+  <p>Le code ci-dessus crée un dispositif, puis utilise une boucle pour créer un certain nombre d'instances, en liant le dispositif à chaque nouvelle instance, puis en les réunissant toutes à l'aide d'un joint soudé. Enfin, le dispositif est supprimé de la mémoire.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <div class="footer">
+    <div class="buttons">
+      <div class="clear">
+        <div style="float:left">Dos : <a href="Joints.htm">Articulations</a></div>
+        <div style="float:right">Suivant : <a href="physics_joint_friction_create.htm">physics_joint_friction_create</a></div>
+      </div>
+    </div>
+    <h5><span data-keyref="Copyright Notice">Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
   </div>
   <!-- KEYWORDS
 physics_joint_weld_create

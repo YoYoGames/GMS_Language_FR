@@ -7,16 +7,59 @@
   <meta name="generator" content="Adobe RoboHelp 2019" />
   <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
   <meta name="rh-authors" content="Mark Alexander" />
-  <meta name="topic-comment" content="Référence de la fonction gpu_set_texrepeat_ext" />
+  <meta name="topic-comment" content="Reference for the function gpu_set_texrepeat_ext" />
   <meta name="rh-index-keywords" content="gpu_set_texrepeat_ext" />
   <meta name="search-keywords" content="gpu_set_texrepeat_ext" />
 </head>
-<body><!--<div class="body-scroll" style="top: 150px;">--><h1>gpu_set_texrepeat_ext</h1><p> Cette fonction peut être utilisée pour définir si un seul «emplacement» d&#39;échantillonneur répète la texture donnée lors de l&#39;utilisation de <a href="../../Asset_Management/Shaders/Shaders.htm"><span class="notranslate">Shaders</span></a> dans <span class="notranslate">GameMaker Studio 2</span>. Le régler sur <tt>true</tt> répétera la texture si les coordonnées uv sont en dehors de la plage 0-1, tandis qu&#39;un paramètre de <tt>false</tt> signifiera pas de répétition. Le cas d&#39;utilisation probable de ces fonctions est de répéter une texture en 3D, mais pour que cela fonctionne et ne pas extraire des images du reste de la page de texture, le sprite utilisé devra être marqué comme étant sur une &quot;Page de texture séparée&quot; dans l&#39;éditeur de sprites.</p><p class="note"> <b>REMARQUE:</b> ce paramètre sera remplacé par la valeur définie lors de l&#39;appel de la fonction <span style="font-size:1px;"><a href="gpu_set_texrepeat.htm"><tt style="font-size: 14px">gpu_set_texrepeat ()</tt></a></span>.</p><p></p><h4> Syntaxe:</h4><p class="code">gpu_set_texrepeat_ext(sampler_id, enable);</p><table><tbody><tr><th> Argument</th><th> Description</th></tr><tr><td> <span class="notranslate">sampler_id</span></td><td> L&#39;identifiant de l&#39;échantillonneur du <span class="notranslate">shader</span>.</td></tr><tr><td> <span class="notranslate">enable</span></td><td> Activer ou désactiver le filtrage des textures (<tt>true</tt> /<tt>false</tt> )</td></tr></tbody></table><p></p><h4> Retour:</h4><p class="code">N/A</p><p></p><h4> Exemple:</h4><p class="code">var s_tex = shader_get_sampler_index(shader_glass, &quot;s_NoiseSampler&quot;);<br/> if gpu_get_texfilter_ext(s_tex)<br/>     {
-    <br/>     gpu_set_texfilter_ext(s_tex, false);<br/>     }
-    <br/> else
-    <br/>     {
-    <br/>     gpu_set_texfilter_ext(s_tex, true);<br/>     }
-  </p><p> Le code ci-dessus vérifie si le filtrage de texture est activé ou désactivé pour un ID d&#39;échantillonneur spécifique (stocké dans une variable locale) et le change en conséquence. </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> Retour: <a href="GPU_Control.htm">Contrôle GPU</a></div><div style="float:right"> Suivant:<a href="gpu_push_state.htm">gpu_push_state</a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
+<body>
+  <!--<div class="body-scroll" style="top: 150px;">-->
+  <h1>gpu_set_texrepeat_ext</h1>
+  <p>Cette fonction peut être utilisée pour définir si un seul &quot;slot&quot; d'échantillonneur répète la texture donnée lors de l'utilisation de la fonction <a href="../../Asset_Management/Shaders/Shaders.htm"><span class="notranslate">Shaders</span></a> dans <span class="notranslate">GameMaker Studio 2</span>. Si elle est définie sur <tt>true</tt>, la texture sera répétée
+    texture si les coordonnées uv se situent dans la plage 0-1, tandis qu'une valeur de <tt>false</tt> signifie qu'il n'y a pas de répétition. Le cas le plus probable d'utilisation de ces fonctions est la répétition d'une texture en 3D, mais pour que cela fonctionne et ne tire pas d'images du reste de la page de texture, le sprite doit être un élément de la page de texture.
+    de la page de texture, le sprite utilisé devra être marqué comme étant sur une &quot;page de texture séparée&quot; dans l'éditeur de sprites.</p>
+  <p class="note"><b>NOTE : </b>Ce paramètre sera remplacé par la valeur définie lors de l'appel de la fonction <span style="font-size:1px;"><a href="gpu_set_texrepeat.htm"><tt style="font-size: 14px">gpu_set_texrepeat()</tt></a></span>.</p>
+  <p> </p>
+  <h4>Syntaxe :</h4>
+  <p class="code">gpu_set_texrepeat_ext(sampler_id, enable) ;</p>
+  <table>
+    <tbody>
+      <tr>
+        <th>Arguments</th>
+        <th>Description</th>
+      </tr>
+      <tr>
+        <td>sampler_id</td>
+        <td>L'identifiant de l'échantillonneur du <span class="notranslate">shader</span>.</td>
+      </tr>
+      <tr>
+        <td>activer</td>
+        <td>Activer ou désactiver le filtrage des textures<tt>(true</tt> / <tt>false</tt>)</td>
+      </tr>
+    </tbody>
+  </table>
+  <p> </p>
+  <h4>Les retours :</h4>
+  <p class="code">N/A</p>
+  <p> </p>
+  <h4>Exemple :</h4>
+  <p class="code">var s_tex = <span class="notranslate">shader_get_sampler_index</span><span class="notranslate">(shader_glass</span>, &quot;s_NoiseSampler&quot;) ;<br> if gpu_get_texfilter_ext(s_tex)<br> {
+    <br> gpu_set_texfilter_ext(s_tex, false) ;<br> }
+    <br> else
+    <br> {
+    <br> gpu_set_texfilter_ext(s_tex, true) ;<br> }
+  </p>
+  <p>Le code ci-dessus vérifie si le filtrage de texture est activé ou non pour un ID d'échantillonneur spécifique (stocké dans une variable locale) et l'active en conséquence.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <div class="footer">
+    <div class="buttons">
+      <div class="clear">
+        <div style="float:left">Retour : <a href="GPU_Control.htm">Contrôle du GPU</a></div>
+        <div style="float:right">Suivant : <a href="gpu_push_state.htm">gpu_push_state</a></div>
+      </div>
+    </div>
+    <h5><span data-keyref="Copyright Notice">Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
   </div>
   <!-- KEYWORDS
 gpu_set_texrepeat_ext

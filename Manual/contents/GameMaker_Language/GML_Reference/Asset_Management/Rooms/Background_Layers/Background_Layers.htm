@@ -3,15 +3,69 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>Couches d&#39;arrière-plan</title>
+  <title>Couches d'arrière-plan</title>
   <meta name="generator" content="Adobe RoboHelp 2019" />
   <link rel="stylesheet" href="../../../../../assets/css/default.css" type="text/css" />
   <meta name="rh-authors" content="Mark Alexander" />
-  <meta name="topic-comment" content="Page décrivant les différentes fonctions et variables associées aux calques d&#39;arrière-plan" />
+  <meta name="topic-comment" content="Page outlining the different functions and variables associated with Background Layers" />
   <meta name="rh-index-keywords" content="" />
-  <meta name="search-keywords" content="Couches d&#39;arrière-plan" />
+  <meta name="search-keywords" content="Background Layers" />
 </head>
-<body><!--<div class="body-scroll" style="top: 150px;">--><h1> Couches d&#39;arrière-plan</h1><p> L&#39; <a href="../../../../../The_Asset_Editors/Rooms.htm">éditeur de pièce</a> <span class="notranslate">GameMaker Studio 2</span> vous permet d&#39;ajouter des arrière-plans dans n&#39;importe quelle pièce à l&#39;aide de <i>calques</i>. Comme son nom l&#39;indique, un calque d&#39;arrière-plan est simplement un élément de sprite utilisé comme arrière-plan sur un calque à une profondeur définie dans la pièce, et en empilant des calques, vous pouvez faire dessiner certaines choses sur ou sous d&#39;autres. Vous pouvez également contrôler certains aspects des couches à partir du code, ajouter ou supprimer des éléments ou modifier certaines propriétés de la couche ou de ce qu&#39;elle contient au moment de l&#39;exécution. Vous trouverez ci-dessous une liste de toutes les fonctions pouvant être utilisées pour modifier <a href="../../../../../The_Asset_Editors/Room_Properties/Layer_Properties.htm"><b>les calques d&#39;arrière-plan</b></a>: </p><p></p><ul class="colour"><li><a href="layer_background_get_id.htm">layer_background_get_id</a></li><li><a href="layer_background_exists.htm">layer_background_exists</a></li><li><a href="layer_background_create.htm">layer_background_create</a></li><li><a href="layer_background_destroy.htm">layer_background_destroy</a></li><li><a href="layer_background_visible.htm">layer_background_visible</a></li><li><a href="layer_background_sprite.htm">layer_background_sprite</a></li><li><a href="layer_background_htiled.htm">layer_background_htiled</a></li><li><a href="layer_background_vtiled.htm">layer_background_vtiled</a></li><li><a href="layer_background_stretch.htm">layer_background_stretch</a></li><li><a href="layer_background_blend.htm">layer_background_blend</a></li><li><a href="layer_background_alpha.htm">layer_background_alpha</a></li><li><a href="layer_background_index.htm">layer_background_index</a></li><li><a href="layer_background_speed.htm">layer_background_speed</a></li><li><a href="layer_background_xscale.htm">layer_background_xscale</a></li><li><a href="layer_background_yscale.htm">layer_background_yscale</a></li><li><a href="layer_background_get_visible.htm">layer_background_get_visible</a></li><li><a href="layer_background_get_sprite.htm">layer_background_get_sprite</a></li><li><a href="layer_background_get_htiled.htm">layer_background_get_htiled</a></li><li><a href="layer_background_get_vtiled.htm">layer_background_get_vtiled</a></li><li><a href="layer_background_get_stretch.htm">layer_background_get_stretch</a></li><li><a href="layer_background_get_blend.htm">layer_background_get_blend</a></li><li><a href="layer_background_get_alpha.htm">layer_background_get_alpha</a></li><li><a href="layer_background_get_index.htm">layer_background_get_index</a></li><li><a href="layer_background_get_speed.htm">layer_background_get_speed</a></li><li><a href="layer_background_get_xscale.htm">layer_background_get_xscale</a></li><li><a href="layer_background_get_yscale.htm">layer_background_get_yscale</a></li></ul><p></p><p> Notez que si vous souhaitez définir la position de l&#39;arrière-plan ou la vitesse de défilement horizontal ou vertical de l&#39;arrière-plan, vous devez utiliser les fonctions générales de calque suivantes: </p><p></p><ul class="colour"><li><a href="../General_Layer_Functions/layer_x.htm">layer_x</a></li><li><a href="../General_Layer_Functions/layer_y.htm">layer_y</a></li><li><a href="../General_Layer_Functions/layer_hspeed.htm">layer_hspeed</a></li><li><a href="../General_Layer_Functions/layer_vspeed.htm">layer_vspeed</a></li></ul><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> Retour: <a href="../Rooms.htm">Chambres</a></div><div style="float:right"> Suivant: <a href="../Sprite_Layers/Sprite_Layers.htm">Couches de sprite</a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
+<body>
+  <!--<div class="body-scroll" style="top: 150px;">-->
+  <h1>Couches d'arrière-plan</h1>
+  <p>L'<a href="../../../../../The_Asset_Editors/Rooms.htm">éditeur de pièces de</a> <span class="notranslate">GameMaker Studio 2</span> vous permet d'ajouter des arrière-plans dans une pièce donnée à l'aide de <i>calques</i>. Comme son nom l'indique, un calque d'arrière-plan est simplement un sprite qui est utilisé comme arrière-plan sur un calque à une profondeur donnée dans la pièce.
+    Comme son nom l'indique, un calque d'arrière-plan est simplement un sprite utilisé comme arrière-plan sur un calque à une profondeur définie dans la pièce. En empilant les calques, vous pouvez faire en sorte que certains éléments soient dessinés au-dessus ou au-dessous d'autres. Vous pouvez également contrôler certains aspects des couches à partir du code, en ajoutant ou en supprimant des éléments, ou en modifiant certaines propriétés de la couche ou de ce qu'elle contient à un moment donné.
+    de la couche ou de ce qu'elle contient au moment de l'exécution. Vous trouverez ci-dessous une liste de toutes les fonctions qui peuvent être utilisées pour l'édition. <a href="../../../../../The_Asset_Editors/Room_Properties/Layer_Properties.htm"><b>couches d'arrière-plan</b></a>:</p>
+  <p> </p>
+  <ul class="colour">
+    <li><a href="layer_background_get_id.htm">layer_background_get_id</a></li>
+    <li><a href="layer_background_exists.htm">couche_arrière-plan_existe</a></li>
+    <li><a href="layer_background_create.htm">couche_arrière-plan_créer</a></li>
+    <li><a href="layer_background_destroy.htm">layer_background_destroy</a></li>
+    <li><a href="layer_background_visible.htm">couche_arrière-plan_visible</a></li>
+    <li><a href="layer_background_sprite.htm">layer_background_sprite</a></li>
+    <li><a href="layer_background_htiled.htm">layer_background_htiled</a></li>
+    <li><a href="layer_background_vtiled.htm">layer_background_vtiled</a></li>
+    <li><a href="layer_background_stretch.htm">layer_background_stretch</a></li>
+    <li><a href="layer_background_blend.htm">couche_fond_mélange</a></li>
+    <li><a href="layer_background_alpha.htm">couche_arrière-plan_alpha</a></li>
+    <li><a href="layer_background_index.htm">layer_background_index</a></li>
+    <li><a href="layer_background_speed.htm">layer_background_speed</a></li>
+    <li><a href="layer_background_xscale.htm">layer_background_xscale</a></li>
+    <li><a href="layer_background_yscale.htm">couche_arrière-plan_échelle</a></li>
+    <li><a href="layer_background_get_visible.htm">couche_arrière-plan_get_visible</a></li>
+    <li><a href="layer_background_get_sprite.htm">couche_arrière-plan_get_sprite</a></li>
+    <li><a href="layer_background_get_htiled.htm">layer_background_get_htiled</a></li>
+    <li><a href="layer_background_get_vtiled.htm">layer_background_get_vtiled</a></li>
+    <li><a href="layer_background_get_stretch.htm">couche_arrière-plan_get_stretch</a></li>
+    <li><a href="layer_background_get_blend.htm">couche_arrière-plan_get_blend</a></li>
+    <li><a href="layer_background_get_alpha.htm">couche_arrière-plan_get_alpha</a></li>
+    <li><a href="layer_background_get_index.htm">layer_background_get_index</a></li>
+    <li><a href="layer_background_get_speed.htm">couche_arrière-plan_get_speed</a></li>
+    <li><a href="layer_background_get_xscale.htm">couche_arrière-plan_get_xscale</a></li>
+    <li><a href="layer_background_get_yscale.htm">layer_background_get_yscale</a></li>
+  </ul>
+  <p> </p>
+  <p>Notez que si vous souhaitez définir la position de l'arrière-plan ou la vitesse de défilement horizontal ou vertical de l'arrière-plan, vous devez utiliser les fonctions générales de couche suivantes :</p>
+  <p> </p>
+  <ul class="colour">
+    <li><a href="../General_Layer_Functions/layer_x.htm">couche_x</a></li>
+    <li><a href="../General_Layer_Functions/layer_y.htm">couche_y</a></li>
+    <li><a href="../General_Layer_Functions/layer_hspeed.htm">vitesse de la couche</a></li>
+    <li><a href="../General_Layer_Functions/layer_vspeed.htm">couche_vitesse</a></li>
+  </ul>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <div class="footer">
+    <div class="buttons">
+      <div class="clear">
+        <div style="float:left">Retour : <a href="../Rooms.htm">Pièces</a></div>
+        <div style="float:right">Suivant : <a href="../Sprite_Layers/Sprite_Layers.htm">Couches de sprites</a></div>
+      </div>
+    </div>
+    <h5><span data-keyref="Copyright Notice">Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
   </div>
   <!-- KEYWORDS
 Background Layers

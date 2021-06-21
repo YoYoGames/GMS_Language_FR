@@ -3,17 +3,413 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>event_perform</title>
+  <title>événement_performer</title>
   <meta name="generator" content="Adobe RoboHelp 2019" />
   <link rel="stylesheet" href="../../../../../assets/css/default.css" type="text/css" />
   <meta name="rh-authors" content="Mark Alexander" />
-  <meta name="topic-comment" content="Page décrivant la fonction event_perform" />
-  <meta name="rh-index-keywords" content="event_perform,ev_create,ev_destroy,ev_cleanup,ev_step,ev_step_normal,ev_step_begin,ev_step_end,ev_alarm,ev_keyboard,ev_keypress,ev_keyrelease,ev_mouse,ev_left_button,ev_right_button,ev_middle_button,ev_no_button,ev_left_press,ev_right_press,ev_middle_press,ev_left_release,ev_right_release,ev_middle_release,ev_mouse_enter,ev_mouse_leave,ev_mouse_wheel_up,ev_mouse_wheel_down,ev_global_left_button,ev_global_right_button,ev_global_middle_button,ev_global_left_press,ev_global_right_press,ev_global_middle_press,ev_global_left_release,ev_global_right_release,ev_global_middle_release,ev_gesture,ev_gesture_tap,ev_gesture_double_tap,ev_gesture_drag_start,ev_gesture_dragging,ev_gesture_drag_end,ev_gesture_flick,ev_gesture_pinch_start,ev_gesture_pinch_in,ev_gesture_pinch_out,ev_gesture_pinch_end,ev_gesture_rotate_start,ev_gesture_rotating,ev_gesture_rotate_end,ev_global_gesture_tap,ev_global_gesture_double_tap,ev_global_gesture_drag_start,ev_global_gesture_dragging,ev_global_gesture_drag_end,ev_global_gesture_flick,ev_global_gesture_pinch_start,ev_global_gesture_pinch_in,ev_global_gesture_pinch_out,ev_global_gesture_pinch_end,ev_global_gesture_rotate_start,ev_global_gesture_rotating,ev_global_gesture_rotate_end,ev_collision,ev_other,ev_outside,ev_boundary,ev_game_start,ev_game_end,ev_room_start,ev_room_end,ev_no_more_lives,ev_no_more_health,ev_animation_end,ev_end_of_path,ev_close_button,ev_user,ev_draw,ev_draw_begin,ev_draw_end,ev_draw_pre,ev_draw_post,ev_gui,ev_gui_begin,ev_gui_end"
-  />
-  <meta name="search-keywords" content="event_perform,ev_create,ev_destroy,ev_cleanup,ev_step,ev_step_normal,ev_step_begin,ev_step_end,ev_alarm,ev_keyboard,ev_keypress,ev_keyrelease,ev_mouse,ev_left_button,ev_right_button,ev_middle_button,ev_no_button,ev_left_press,ev_right_press,ev_middle_press,ev_left_release,ev_right_release,ev_middle_release,ev_mouse_enter,ev_mouse_leave,ev_mouse_wheel_up,ev_mouse_wheel_down,ev_global_left_button,ev_global_right_button,ev_global_middle_button,ev_global_left_press,ev_global_right_press,ev_global_middle_press,ev_global_left_release,ev_global_right_release,ev_global_middle_release,ev_gesture,ev_gesture_tap,ev_gesture_double_tap,ev_gesture_drag_start,ev_gesture_dragging,ev_gesture_drag_end,ev_gesture_flick,ev_gesture_pinch_start,ev_gesture_pinch_in,ev_gesture_pinch_out,ev_gesture_pinch_end,ev_gesture_rotate_start,ev_gesture_rotating,ev_gesture_rotate_end,ev_global_gesture_tap,ev_global_gesture_double_tap,ev_global_gesture_drag_start,ev_global_gesture_dragging,ev_global_gesture_drag_end,ev_global_gesture_flick,ev_global_gesture_pinch_start,ev_global_gesture_pinch_in,ev_global_gesture_pinch_out,ev_global_gesture_pinch_end,ev_global_gesture_rotate_start,ev_global_gesture_rotating,ev_global_gesture_rotate_end,ev_collision,ev_other,ev_outside,ev_boundary,ev_game_start,ev_game_end,ev_room_start,ev_room_end,ev_no_more_lives,ev_no_more_health,ev_animation_end,ev_end_of_path,ev_close_button,ev_user,ev_draw,ev_draw_begin,ev_draw_end,ev_draw_pre,ev_draw_post,ev_gui,ev_gui_begin,ev_gui_end"
-  />
+  <meta name="topic-comment" content="Page outlining the function event_perform" />
+  <meta name="rh-index-keywords" content="event_perform,ev_create,ev_destroy,ev_cleanup,ev_step,ev_step_normal,ev_step_begin,ev_step_end,ev_alarm,ev_keyboard,ev_keypress,ev_keyrelease,ev_mouse,ev_left_button,ev_right_button,ev_middle_button,ev_no_button,ev_left_press,ev_right_press,ev_middle_press,ev_left_release,ev_right_release,ev_middle_release,ev_mouse_enter,ev_mouse_leave,ev_mouse_wheel_up,ev_mouse_wheel_down,ev_global_left_button,ev_global_right_button,ev_global_middle_button,ev_global_left_press,ev_global_right_press,ev_global_middle_press,ev_global_left_release,ev_global_right_release,ev_global_middle_release,ev_gesture,ev_gesture_tap,ev_gesture_double_tap,ev_gesture_drag_start,ev_gesture_dragging,ev_gesture_drag_end,ev_gesture_flick,ev_gesture_pinch_start,ev_gesture_pinch_in,ev_gesture_pinch_out,ev_gesture_pinch_end,ev_gesture_rotate_start,ev_gesture_rotating,ev_gesture_rotate_end,ev_global_gesture_tap,ev_global_gesture_double_tap,ev_global_gesture_drag_start,ev_global_gesture_dragging,ev_global_gesture_drag_end,ev_global_gesture_flick,ev_global_gesture_pinch_start,ev_global_gesture_pinch_in,ev_global_gesture_pinch_out,ev_global_gesture_pinch_end,ev_global_gesture_rotate_start,ev_global_gesture_rotating,ev_global_gesture_rotate_end,ev_collision,ev_other,ev_outside,ev_boundary,ev_game_start,ev_game_end,ev_room_start,ev_room_end,ev_no_more_lives,ev_no_more_health,ev_animation_end,ev_end_of_path,ev_close_button,ev_user,ev_draw,ev_draw_begin,ev_draw_end,ev_draw_pre,ev_draw_post,ev_gui,ev_gui_begin,ev_gui_end" />
+  <meta name="search-keywords" content="event_perform,ev_create,ev_destroy,ev_cleanup,ev_step,ev_step_normal,ev_step_begin,ev_step_end,ev_alarm,ev_keyboard,ev_keypress,ev_keyrelease,ev_mouse,ev_left_button,ev_right_button,ev_middle_button,ev_no_button,ev_left_press,ev_right_press,ev_middle_press,ev_left_release,ev_right_release,ev_middle_release,ev_mouse_enter,ev_mouse_leave,ev_mouse_wheel_up,ev_mouse_wheel_down,ev_global_left_button,ev_global_right_button,ev_global_middle_button,ev_global_left_press,ev_global_right_press,ev_global_middle_press,ev_global_left_release,ev_global_right_release,ev_global_middle_release,ev_gesture,ev_gesture_tap,ev_gesture_double_tap,ev_gesture_drag_start,ev_gesture_dragging,ev_gesture_drag_end,ev_gesture_flick,ev_gesture_pinch_start,ev_gesture_pinch_in,ev_gesture_pinch_out,ev_gesture_pinch_end,ev_gesture_rotate_start,ev_gesture_rotating,ev_gesture_rotate_end,ev_global_gesture_tap,ev_global_gesture_double_tap,ev_global_gesture_drag_start,ev_global_gesture_dragging,ev_global_gesture_drag_end,ev_global_gesture_flick,ev_global_gesture_pinch_start,ev_global_gesture_pinch_in,ev_global_gesture_pinch_out,ev_global_gesture_pinch_end,ev_global_gesture_rotate_start,ev_global_gesture_rotating,ev_global_gesture_rotate_end,ev_collision,ev_other,ev_outside,ev_boundary,ev_game_start,ev_game_end,ev_room_start,ev_room_end,ev_no_more_lives,ev_no_more_health,ev_animation_end,ev_end_of_path,ev_close_button,ev_user,ev_draw,ev_draw_begin,ev_draw_end,ev_draw_pre,ev_draw_post,ev_gui,ev_gui_begin,ev_gui_end" />
 </head>
-<body><!--<div class="body-scroll" style="top: 150px;">--><h1>event_perform</h1><p> Cette fonction exécutera l&#39;événement spécifié, avec l&#39;argument désigné, pour l&#39;instance exécutant le code. Il existe de nombreuses options ici qui permettent une simulation complète de tous les événements possibles, mais notez que cela exécute littéralement tout le code de l&#39;événement et le jeu ne modifiera rien pour le faire se déclencher manuellement, par exemple si vous choisissez d&#39;effectuer un clavier appuyez sur l&#39;événement, l&#39;événement sera déclenché mais la touche correspondante ne sera pas reconnue comme ayant été enfoncée. Ou si vous effectuez un événement d&#39;alarme, le compteur d&#39;alarme ne sera pas réglé sur -1 mais continuera plutôt à décompter.</p><p> Le tableau ci-dessous présente toutes les constantes incluses dans <span class="notranslate">GameMaker Studio 2</span> pour référencer les types d&#39;événements, ainsi que leur valeur numérique. Les événements eux-mêmes sont indiqués en <b>gras</b> et sont les mêmes que les valeurs de retour du <a href="event_type.htm"><tt>event_type</tt></a> variable, tandis que leurs valeurs numériques sont marquées en <i>italique</i> et ce sont les mêmes que les valeurs de retour pour le <a href="event_number.htm"><tt>event_number</tt></a> variable:</p><p></p><table><tbody><tr><th width="40%"> Nom</th><th> Description</th></tr><tr><td> <b>ev_create</b></td><td> Créer un évènement.</td></tr><tr><td> <b>ev_destroy</b></td><td> Détruire l&#39;événement</td></tr><tr><td> <b>ev_cleanup</b></td><td> Événement de nettoyage</td></tr><tr><td> <b>ev_step</b></td><td> Événement d&#39;étape</td></tr><tr><td> <i>---- ev_step_normal</i></td><td> Étape</td></tr><tr><td> <i>---- ev_step_begin</i></td><td> Étape de début</td></tr><tr><td> <i>---- ev_step_end</i></td><td> Étape de fin</td></tr><tr><td> <b>ev_alarm</b></td><td> Événement d&#39;alarme</td></tr><tr><td> <i>---- 0... 11</i></td><td> Le numéro correspondant à laquelle des 12 alarmes vous souhaitez déclencher l&#39;événement de</td></tr><tr><td> <b>ev_keyboard, ev_keypress, ev_keyrelease</b></td><td> Clavier / clavier enfoncé / clavier libéré</td></tr><tr><td> <i>---- n&#39;importe quel code clé</i></td><td> vk_space ou ord (&quot;W&quot;) par exemple.</td></tr><tr><td> <b>ev_mouse</b></td><td> Événement souris</td></tr><tr><td> <i>---- ev_left_button</i></td><td> Bouton gauche enfoncé sur l&#39;objet</td></tr><tr><td> <i>---- ev_right_button</i></td><td> Bouton droit maintenu enfoncé sur l&#39;objet</td></tr><tr><td> <i>---- ev_middle_button</i></td><td> Bouton du milieu (ou molette cliquable) maintenu enfoncé sur l&#39;objet</td></tr><tr><td> <i>---- ev_no_button</i></td><td> Aucun bouton enfoncé</td></tr><tr><td> <i>---- ev_left_press</i></td><td> Le bouton gauche vient d&#39;appuyer sur l&#39;objet</td></tr><tr><td> <i>---- ev_right_press</i></td><td> Le bouton droit vient d&#39;appuyer sur l&#39;objet</td></tr><tr><td> <i>---- ev_middle_press</i></td><td> Bouton du milieu (ou molette cliquable) juste pressé sur l&#39;objet</td></tr><tr><td> <i>---- ev_left_release</i></td><td> Le bouton gauche vient d&#39;être relâché sur l&#39;objet</td></tr><tr><td> <i>---- ev_right_release</i></td><td> Le bouton droit vient d&#39;être relâché sur l&#39;objet</td></tr><tr><td> <i>---- ev_middle_release</i></td><td> Le bouton du milieu vient d&#39;être relâché sur l&#39;objet</td></tr><tr><td> <i>---- ev_mouse_enter</i></td><td> La souris vient d&#39;entrer dans la zone de délimitation de l&#39;objet</td></tr><tr><td> <i>---- ev_mouse_leave</i></td><td> La souris vient de quitter le cadre de délimitation de l&#39;objet</td></tr><tr><td> <i>---- ev_mouse_wheel_up</i></td><td> La molette de la souris fait défiler vers le haut</td></tr><tr><td> <i>---- ev_mouse_wheel_down</i></td><td> La molette de la souris défile vers le bas</td></tr><tr><td> <i>---- ev_global_left_button</i></td><td> Bouton gauche maintenu n&#39;importe où</td></tr><tr><td> <i>---- ev_global_right_button</i></td><td> Bouton droit maintenu n&#39;importe où</td></tr><tr><td> <i>---- ev_global_middle_button</i></td><td> Bouton central (ou molette cliquable) maintenu n&#39;importe où</td></tr><tr><td> <i>---- ev_global_left_press</i></td><td> Bouton gauche juste pressé n&#39;importe où</td></tr><tr><td> <i>---- ev_global_right_press</i></td><td> Bouton droit juste pressé n&#39;importe où</td></tr><tr><td> <i>---- ev_global_middle_press</i></td><td> Bouton du milieu (ou roue cliquable) juste pressé n&#39;importe où</td></tr><tr><td> <i>---- ev_global_left_release</i></td><td> Le bouton gauche vient d&#39;être relâché n&#39;importe où</td></tr><tr><td> <i>---- ev_global_right_release</i></td><td> Le bouton droit vient d&#39;être relâché n&#39;importe où</td></tr><tr><td> <i>---- ev_global_middle_release</i></td><td> Le bouton du milieu vient d&#39;être relâché n&#39;importe où</td></tr><tr><td> <b>ev_gesture</b></td><td> Un événement de geste (appuyez, faites glisser, feuilletez, pincez ou faites pivoter)</td></tr><tr><td> <i>---- ev_gesture_tap</i></td><td> Un simple clic / toucher et relâchement a été détecté pour une <i>instance</i></td></tr><tr><td> <i>---- ev_gesture_double_tap</i></td><td> Deux touches / clics rapides et relâchements ont été détectés pour une <i>instance</i></td></tr><tr><td> <i>---- ev_gesture_drag_start</i></td><td> Le début d&#39;un mouvement de glissement a été détecté pour une <i>instance</i></td></tr><tr><td> <i>---- ev_gesture_dragging</i></td><td> Un toucher / clic a été maintenu et déplacé pour une <i>instance</i></td></tr><tr><td> <i>---- ev_gesture_drag_end</i></td><td> Le relâchement du toucher / clic d&#39;un glissement a été détecté pour une <i>instance</i></td></tr><tr><td> <i>---- ev_gesture_flick</i></td><td> Le relâchement d&#39;un toucher / clic à partir d&#39;un glissement a eu suffisamment de mouvement pour qu&#39;un événement de flick soit détecté pour l&#39; <i>instance</i></td></tr><tr><td> <i>---- ev_gesture_pinch_start</i></td><td> Deux touches et un mouvement droit ont été détectés pour une <i>instance</i></td></tr><tr><td> <i>---- ev_gesture_pinch_in</i></td><td> Le mouvement entre deux touches pour une <i>instance</i> a été détecté comme vers l&#39;intérieur</td></tr><tr><td> <i>---- ev_gesture_pinch_out</i></td><td> Le mouvement entre deux touches pour une <i>instance</i> a été détecté comme vers l&#39;extérieur</td></tr><tr><td> <i>---- ev_gesture_pinch_end</i></td><td> Le relâchement d&#39;une (ou des deux) touches pour une pincée a été détecté pour une <i>instance</i></td></tr><tr><td> <i>---- ev_gesture_rotate_start</i></td><td> Le mouvement entre deux touches pour une <i>instance</i> a été détecté comme une rotation</td></tr><tr><td> <i>---- ev_gesture_rotating</i></td><td> Le mouvement entre deux touches pour une <i>instance</i> a été détecté comme tournant</td></tr><tr><td> <i>---- ev_gesture_rotate_end</i></td><td> Le relâchement d&#39;une (ou des deux) touches pour une rotation a été détecté pour une <i>instance</i></td></tr><tr><td> <i>---- ev_global_gesture_tap</i></td><td> Un simple clic / toucher et relâchement a été détecté <i>n&#39;importe où</i> dans la pièce</td></tr><tr><td> <i>---- ev_global_gesture_double_tap</i></td><td> Deux touches / clics rapides et relâchements ont été détectés <i>n&#39;importe où</i> dans la pièce</td></tr><tr><td> <i>---- ev_global_gesture_drag_start</i></td><td> Le début d&#39;un geste de glissement a été détecté <i>n&#39;importe où</i> dans la pièce</td></tr><tr><td> <i>---- ev_global_gesture_dragging</i></td><td> Un toucher / clic a été maintenu et déplacé <i>n&#39;importe où</i> dans la pièce</td></tr><tr><td> <i>---- ev_global_gesture_drag_end</i></td><td> Le relâchement du toucher / clic d&#39;un glissement a été détecté <i>n&#39;importe où</i> dans la pièce</td></tr><tr><td> <i>---- ev_global_gesture_flick</i></td><td> Le relâchement d&#39;un toucher / clic à partir d&#39;un glissement avait suffisamment de mouvement pour qu&#39;un événement de film soit détecté <i>n&#39;importe où</i> dans la pièce</td></tr><tr><td> <i>---- ev_global_gesture_pinch_start</i></td><td> Deux touches et un mouvement droit ont été détectés <i>n&#39;importe où</i> dans la pièce</td></tr><tr><td> <i>---- ev_global_gesture_pinch_in</i></td><td> Le mouvement entre deux touches <i>n&#39;importe où</i> dans la pièce a été détecté comme vers l&#39;intérieur</td></tr><tr><td> <i>---- ev_global_gesture_pinch_out</i></td><td> Le mouvement entre deux touches <i>n&#39;importe où</i> dans la pièce a été détecté comme vers l&#39;extérieur</td></tr><tr><td> <i>---- ev_global_gesture_pinch_end</i></td><td> Le relâchement d&#39;une (ou des deux) touches pour une pincée a été détecté <i>n&#39;importe où</i> dans la pièce</td></tr><tr><td> <i>---- ev_global_gesture_rotate_start</i></td><td> Le mouvement entre deux touches <i>n&#39;importe où</i> dans la pièce a été détecté comme une rotation</td></tr><tr><td> <i>---- ev_global_gesture_rotating</i></td><td> Le mouvement entre deux touches <i>n&#39;importe où</i> dans la pièce a été détecté comme tournant</td></tr><tr><td> <i>---- ev_global_gesture_rotate_end</i></td><td> Le relâchement d&#39;une (ou des deux) touches pour une rotation a été détecté <i>n&#39;importe où</i> dans la pièce</td></tr><tr><td> <b>ev_collision</b></td><td> Collision avec un objet</td></tr><tr><td> <i>---- L&#39;index de l&#39;objet à vérifier.</i></td><td> object1 par exemple.</td></tr><tr><td> <b>ev_other</b></td><td> L&#39;une des actions répertoriées sous «Autre»</td></tr><tr><td> <i>---- ev_outside</i></td><td> Si l&#39;instance se trouve à l&#39;extérieur de la pièce</td></tr><tr><td> <i>---- ev_boundary</i></td><td> Si l&#39;instance croise la frontière</td></tr><tr><td> <i>---- ev_game_start</i></td><td> Déclenchée uniquement au début du jeu</td></tr><tr><td> <i>---- ev_game_end</i></td><td> Uniquement déclenché à la fin du jeu</td></tr><tr><td> <i>---- ev_room_start</i></td><td> Déclenchée uniquement au début d&#39;une pièce</td></tr><tr><td> <i>---- ev_room_end</i></td><td> Déclenchée uniquement à la fin d&#39;une pièce</td></tr><tr><td> <i>---- ev_no_more_lives</i></td><td> Si toutes les vies sont épuisées (si vies == 0)</td></tr><tr><td> <i>---- ev_no_more_health</i></td><td> Si toute la santé est épuisée (si la santé == 0)</td></tr><tr><td> <i>---- ev_animation_end</i></td><td> Si l&#39;image-objet de l&#39;objet a atteint la fin de son animation</td></tr><tr><td> <i>---- ev_end_of_path</i></td><td> Si l&#39;objet a atteint la fin d&#39;un chemin, il suit</td></tr><tr><td> <i>---- ev_close_button</i></td><td> Si le bouton Fermer de la fenêtre a été enfoncé</td></tr><tr><td> <i>---- ev_user0... ev_user15</i></td><td> L&#39;un des 16 événements utilisateur disponibles.</td></tr><tr><td> <b>ev_draw</b></td><td> Événement de tirage au sort. <i><b>REMARQUE:</b> Cet événement ne peut pas être forcé en dehors d&#39;un événement de dessin et les constantes et les constantes servent uniquement à identifier l&#39;événement lorsqu&#39;elles sont exécutées dans ces cas.</i></td></tr><tr><td> <i>---- ev_draw_begin</i></td><td> L&#39;événement de début de tirage au sort.</td></tr><tr><td> <i>---- ev_draw_end</i></td><td> L&#39;événement de fin de tirage.</td></tr><tr><td> <i>---- ev_draw_pre</i></td><td> L&#39;événement de pré-tirage.</td></tr><tr><td> <i>---- ev_draw_post</i></td><td> L&#39;événement post-tirage.</td></tr><tr><td> <i>---- ev_gui</i></td><td> L&#39;événement de l&#39;interface graphique de tirage au sort.</td></tr><tr><td> <i>---- ev_gui_begin</i></td><td> L&#39;événement de début de l&#39;interface graphique de tirage au sort.</td></tr><tr><td> <i>---- ev_gui_end</i></td><td> L&#39;événement de fin de l&#39;interface graphique de tirage.</td></tr></tbody></table><p></p><h4> Syntaxe:</h4><p class="code">event_perform(type, numb);</p><table><tbody><tr><th> Argument</th><th> Description</th></tr><tr><td> <span class="notranslate">type</span></td><td> Le type d&#39;événement à réaliser. Voir ci-dessous.</td></tr><tr><td> <span class="notranslate">numb</span></td><td> La constante ou la valeur de l&#39;événement spécifique, si nécessaire (sinon, utilisez simplement 0).</td></tr></tbody></table><p></p><h4> Retour:</h4><p class="code">N/A</p><p></p><h4> Exemple étendu</h4><p><br/> Pour vous aider à comprendre comment cette fonction peut être utilisée, veuillez consulter les quelques exemples suivants:</p><p class="code">event_perform(ev_keypress, ord(&quot;W&quot;));</p><p> Cela effectuerait l&#39;événement associé à la touche Keyboard Check Pressed &quot;W&quot; (sans générer réellement une pression sur le clavier).</p><p class="code">event_perform(ev_step, ev_step_begin);</p><p> Cela exécuterait l&#39; <i>événement Begin Step</i> (s&#39;il était appelé à partir de l&#39;un des événements d&#39;étape, le code d&#39;événement de début d&#39;étape serait exécuté deux fois).</p><p class="code">event_perform(ev_create, 0);</p><p> Cela exécuterait l&#39; <i>événement Create <i>de l&#39;instance.</i></i> </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> Retour: <a href="Generating_Object_Events.htm">Génération d&#39;événements d&#39;objets</a></div><div style="float:right"> Suivant:<a href="event_perform_object.htm">event_perform_object</a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
+<body>
+  <!--<div class="body-scroll" style="top: 150px;">-->
+  <h1>événement_performer</h1>
+  <p>Cette fonction exécutera l'événement spécifié, avec l'argument désigné, pour l'instance qui exécute le code. Il existe de nombreuses options qui permettent une simulation complète de tous les événements possibles, mais notez que cette fonction ne fait qu'exécuter tout le code de l'événement.
+    dans l'événement et le jeu ne modifiera rien pour qu'il se déclenche manuellement. Par exemple, si vous choisissez d'exécuter un événement de pression du clavier, l'événement sera déclenché mais la touche correspondante ne sera pas reconnue comme ayant été pressée. Ou si vous
+    un événement d'alarme, le compteur d'alarme ne sera pas mis à -1 mais continuera à décompter.</p>
+  <p>Le tableau ci-dessous présente toutes les constantes incluses dans <span class="notranslate">GameMaker Studio 2</span> pour référencer les types d'événements, ainsi que leur valeur numérique. Les événements eux-mêmes sont marqués en <b>gras</b> et sont les mêmes que les valeurs de retour de la variable <a href="event_type.htm"><tt>type_événement</tt></a>    tandis que leurs valeurs numériques sont indiquées en <i>italique</i> et sont les mêmes que les valeurs de retour de la variable <a href="event_number.htm"><tt>numéro_événement</tt></a> variable :</p>
+  <p> </p>
+  <table>
+    <tbody>
+      <tr>
+        <th width="40%">Nom</th>
+        <th>Description</th>
+      </tr>
+      <tr>
+        <td><b>ev_create</b></td>
+        <td>Créer un événement.</td>
+      </tr>
+      <tr>
+        <td><b>ev_destroy</b></td>
+        <td>Détruire l'événement</td>
+      </tr>
+      <tr>
+        <td><b>ev_cleanup</b></td>
+        <td>Événement de nettoyage</td>
+      </tr>
+      <tr>
+        <td><b>ev_step</b></td>
+        <td>Evénement d'étape</td>
+      </tr>
+      <tr>
+        <td><i>   ---- ev_step_normal</i></td>
+        <td>Étape</td>
+      </tr>
+      <tr>
+        <td><i>   ---- ev_step_begin</i></td>
+        <td>Début de l'étape</td>
+      </tr>
+      <tr>
+        <td><i>   ---- ev_step_end</i></td>
+        <td>Étape finale</td>
+      </tr>
+      <tr>
+        <td><b>ev_alarm</b></td>
+        <td>Événement d'alarme</td>
+      </tr>
+      <tr>
+        <td><i>   ---- 0 ... 11</i></td>
+        <td>Le numéro correspondant à laquelle des 12 alarmes vous souhaitez déclencher l'événement de</td>
+      </tr>
+      <tr>
+        <td><b>ev_keyboard, ev_keypress, ev_keyrelease</b></td>
+        <td>Clavier/clavier pressé/clavier relâché</td>
+      </tr>
+      <tr>
+        <td><i>   ---- tout code clé</i></td>
+        <td>vk_space ou ord(&quot;W&quot;) par exemple.</td>
+      </tr>
+      <tr>
+        <td><b>ev_mouse</b></td>
+        <td>Événement de la souris</td>
+      </tr>
+      <tr>
+        <td><i>   ---- ev_left_button</i></td>
+        <td>Bouton gauche maintenu enfoncé sur l'objet</td>
+      </tr>
+      <tr>
+        <td><i>   ---- ev_button_droite</i></td>
+        <td>Bouton droit maintenu enfoncé sur l'objet</td>
+      </tr>
+      <tr>
+        <td><i>   ---- ev_middle_button</i></td>
+        <td>Bouton du milieu (ou roue cliquable) maintenu enfoncé sur l'objet</td>
+      </tr>
+      <tr>
+        <td><i>   ---- ev_no_button</i></td>
+        <td>Pas de boutons maintenus enfoncés</td>
+      </tr>
+      <tr>
+        <td><i>   ---- ev_left_press</i></td>
+        <td>Le bouton gauche vient d'être appuyé sur l'objet</td>
+      </tr>
+      <tr>
+        <td><i>   ---- ev_right_press</i></td>
+        <td>Le bouton droit vient d'être appuyé sur l'objet</td>
+      </tr>
+      <tr>
+        <td><i>   ---- ev_middle_press</i></td>
+        <td>Le bouton du milieu (ou la roue cliquable) vient d'être pressé sur l'objet</td>
+      </tr>
+      <tr>
+        <td><i>   ---- ev_left_release</i></td>
+        <td>Le bouton gauche vient d'être relâché sur l'objet</td>
+      </tr>
+      <tr>
+        <td><i>   ---- ev_right_release</i></td>
+        <td>Le bouton droit vient d'être relâché sur l'objet</td>
+      </tr>
+      <tr>
+        <td><i>   ---- ev_middle_release</i></td>
+        <td>Le bouton du milieu vient de se relâcher sur l'objet</td>
+      </tr>
+      <tr>
+        <td><i>   ---- ev_mouse_enter</i></td>
+        <td>La souris vient d'entrer dans la zone de délimitation de l'objet.</td>
+      </tr>
+      <tr>
+        <td><i>   ---- ev_mouse_leave</i></td>
+        <td>La souris vient de quitter le périmètre de l'objet.</td>
+      </tr>
+      <tr>
+        <td><i>   ---- ev_mouse_wheel_up</i></td>
+        <td>La molette de la souris a défilé vers le haut</td>
+      </tr>
+      <tr>
+        <td><i>   ---- ev_mouse_wheel_down</i></td>
+        <td>La molette de la souris a défilé vers le bas</td>
+      </tr>
+      <tr>
+        <td><i>   ---- ev_global_left_button</i></td>
+        <td>Bouton gauche maintenu enfoncé n'importe où</td>
+      </tr>
+      <tr>
+        <td><i>   ---- ev_global_bouton_droite</i></td>
+        <td>Bouton droit maintenu enfoncé n'importe où</td>
+      </tr>
+      <tr>
+        <td><i>   ---- ev_global_middle_button</i></td>
+        <td>Bouton du milieu (ou roue cliquable) maintenu enfoncé n'importe où</td>
+      </tr>
+      <tr>
+        <td><i>   ---- ev_global_left_press</i></td>
+        <td>Le bouton gauche vient d'être pressé n'importe où</td>
+      </tr>
+      <tr>
+        <td><i>   ---- ev_global_right_press</i></td>
+        <td>Le bouton droit vient d'être pressé n'importe où</td>
+      </tr>
+      <tr>
+        <td><i>   ---- ev_global_middle_press</i></td>
+        <td>Bouton du milieu (ou roue cliquable) appuyé n'importe où</td>
+      </tr>
+      <tr>
+        <td><i>   ---- ev_global_left_release</i></td>
+        <td>Le bouton gauche vient d'être relâché n'importe où</td>
+      </tr>
+      <tr>
+        <td><i>   ---- ev_global_right_release</i></td>
+        <td>Le bouton droit vient d'être relâché n'importe où</td>
+      </tr>
+      <tr>
+        <td><i>   ---- ev_global_middle_release</i></td>
+        <td>Le bouton du milieu s'est libéré n'importe où</td>
+      </tr>
+      <tr>
+        <td><b>ev_gesture</b></td>
+        <td>Un événement gestuel (Tap, Glisser, Pousser, Pincer ou Tourner)</td>
+      </tr>
+      <tr>
+        <td><i>   ---- ev_gesture_tap</i></td>
+        <td>Un seul clic/touche et relâchement a été détecté pour une <i>instance</i>.</td>
+      </tr>
+      <tr>
+        <td><i>   ---- ev_gesture_double_tap</i></td>
+        <td>Deux touches/clics rapides et des déclenchements ont été détectés pour une <i>instance</i>.</td>
+      </tr>
+      <tr>
+        <td><i>   ---- ev_gesture_drag_start</i></td>
+        <td>Le début d'un geste de déplacement a été détecté pour une <i>instance</i>.</td>
+      </tr>
+      <tr>
+        <td><i>   ---- ev_gesture_dragging</i></td>
+        <td>Une touche ou un clic a été maintenu et déplacé pendant une <i>instance</i>.</td>
+      </tr>
+      <tr>
+        <td><i>   ---- ev_gesture_drag_end</i></td>
+        <td>Le relâchement du toucher/clic d'un glisser a été détecté pour une <i>instance</i>.</td>
+      </tr>
+      <tr>
+        <td><i>   ---- ev_gesture_flick</i></td>
+        <td>Le relâchement d'un toucher/clic à partir d'un glisser avait suffisamment de mouvement pour qu'un événement de pichenette soit détecté pour l'<i>instance</i>.</td>
+      </tr>
+      <tr>
+        <td><i>   ---- ev_gesture_pinch_start</i></td>
+        <td>Deux touches et un mouvement droit ont été détectés pour une <i>instance</i>.</td>
+      </tr>
+      <tr>
+        <td><i>   ---- ev_gesture_pinch_in</i></td>
+        <td>Le mouvement entre deux contacts pour une <i>instance</i> a été détecté comme étant vers l'intérieur.</td>
+      </tr>
+      <tr>
+        <td><i>   ---- ev_gesture_pinch_out</i></td>
+        <td>Le mouvement entre deux contacts pour une <i>instance</i> a été détecté comme étant vers l'extérieur.</td>
+      </tr>
+      <tr>
+        <td><i>   ---- ev_gesture_pinch_end</i></td>
+        <td>Le relâchement d'une (ou des deux) touche(s) pour un pincement a été détecté pour une <i>instance</i>.</td>
+      </tr>
+      <tr>
+        <td><i>   ---- ev_gesture_rotate_start</i></td>
+        <td>Le mouvement entre deux contacts d'une <i>instance</i> a été détecté comme une rotation.</td>
+      </tr>
+      <tr>
+        <td><i>   ---- ev_gesture_rotation</i></td>
+        <td>Le mouvement entre deux touches d'une <i>instance</i> a été détecté comme étant une rotation.</td>
+      </tr>
+      <tr>
+        <td><i>   ---- ev_gesture_rotate_end</i></td>
+        <td>Le relâchement d'une (ou des deux) touche(s) pour une rotation a été détecté pour une <i>instance</i>.</td>
+      </tr>
+      <tr>
+        <td><i>   ---- ev_global_gesture_tap</i></td>
+        <td>Un clic/une touche et un relâchement ont été détectés <i>n'importe où</i> dans la pièce.</td>
+      </tr>
+      <tr>
+        <td><i>   ---- ev_global_gesture_double_tap</i></td>
+        <td>Deux touches/clics rapides et des déclenchements ont été détectés <i>n'importe où</i> dans la pièce.</td>
+      </tr>
+      <tr>
+        <td><i>   ---- ev_global_gesture_drag_start</i></td>
+        <td>Le début d'un geste de déplacement a été détecté <i>n'importe où</i> dans la pièce.</td>
+      </tr>
+      <tr>
+        <td><i>   ---- ev_global_gesture_dragging</i></td>
+        <td>Une touche ou un clic a été maintenu et déplacé <i>n'importe où</i> dans la pièce.</td>
+      </tr>
+      <tr>
+        <td><i>   ---- ev_global_gesture_drag_end</i></td>
+        <td>Le relâchement du toucher/clic d'un drag a été détecté <i>n'importe où</i> dans la pièce.</td>
+      </tr>
+      <tr>
+        <td><i>   ---- ev_global_gesture_flick</i></td>
+        <td>Le relâchement d'un toucher/clic à partir d'un drag a eu suffisamment de mouvement pour qu'un événement de pichenette soit détecté <i>n'importe où</i> dans la pièce.</td>
+      </tr>
+      <tr>
+        <td><i>   ---- ev_global_gesture_pinch_start</i></td>
+        <td>Deux touchers et un mouvement droit ont été détectés <i>n'importe où</i> dans la pièce</td>
+      </tr>
+      <tr>
+        <td><i>   ---- ev_global_gesture_pinch_in</i></td>
+        <td>Le mouvement entre deux touches, <i>n'importe où</i> dans la pièce, a été détecté comme étant vers l'intérieur.</td>
+      </tr>
+      <tr>
+        <td><i>   ---- ev_global_gesture_pinch_out</i></td>
+        <td>Le mouvement entre deux contacts <i>n'importe où</i> dans la pièce a été détecté comme étant vers l'extérieur.</td>
+      </tr>
+      <tr>
+        <td><i>   ---- ev_global_gesture_pinch_end</i></td>
+        <td>Le relâchement d'une (ou des deux) touche(s) pour un pincement a été détecté <i>n'importe où</i> dans la pièce.</td>
+      </tr>
+      <tr>
+        <td><i>   ---- ev_global_gesture_rotate_start</i></td>
+        <td>Le mouvement entre deux touches, <i>n'importe où</i> dans la pièce, a été détecté comme une rotation.</td>
+      </tr>
+      <tr>
+        <td><i>   ---- ev_global_gesture_rotation</i></td>
+        <td>Le mouvement entre deux touches, <i>n'importe où</i> dans la pièce, a été détecté comme une rotation.</td>
+      </tr>
+      <tr>
+        <td><i>   ---- ev_global_gesture_rotate_end</i></td>
+        <td>Le relâchement de l'une (ou des deux) touches pour une rotation a été détecté <i>n'importe où</i> dans la pièce.</td>
+      </tr>
+      <tr>
+        <td><b>ev_collision</b></td>
+        <td>Collision avec un objet</td>
+      </tr>
+      <tr>
+        <td><i>   ---- L'index de l'objet à vérifier.</i></td>
+        <td>objet1 par exemple.</td>
+      </tr>
+      <tr>
+        <td><b>ev_autre</b></td>
+        <td>Une des actions énumérées dans la rubrique "Autres".</td>
+      </tr>
+      <tr>
+        <td><i>   ---- ev_outside</i></td>
+        <td>Si l'instance se trouve à l'extérieur de la salle</td>
+      </tr>
+      <tr>
+        <td><i>   ---- ev_boundary</i></td>
+        <td>Si l'instance est en train d'intersecter la frontière.</td>
+      </tr>
+      <tr>
+        <td><i>   ---- ev_game_start</i></td>
+        <td>Se déclenche uniquement au début du jeu</td>
+      </tr>
+      <tr>
+        <td><i>   ---- ev_game_end</i></td>
+        <td>Se déclenche uniquement à la fin du jeu</td>
+      </tr>
+      <tr>
+        <td><i>   ---- ev_room_start</i></td>
+        <td>Déclenchement uniquement au début d'une pièce</td>
+      </tr>
+      <tr>
+        <td><i>   ---- ev_room_end</i></td>
+        <td>Déclenchement uniquement à la fin d'une pièce</td>
+      </tr>
+      <tr>
+        <td><i>   ---- ev_no_plus_lives</i></td>
+        <td>Si toutes les vies sont épuisées (if lives==0)</td>
+      </tr>
+      <tr>
+        <td><i>   ---- ev_no_more_health</i></td>
+        <td>Si toute la santé est épuisée (si health==0)</td>
+      </tr>
+      <tr>
+        <td><i>   ---- ev_animation_end</i></td>
+        <td>Si le sprite de l'objet a atteint la fin de son animation.</td>
+      </tr>
+      <tr>
+        <td><i>   ---- ev_end_of_path</i></td>
+        <td>Si l'objet a atteint la fin d'un chemin qu'il suit</td>
+      </tr>
+      <tr>
+        <td><i>   ---- ev_close_button</i></td>
+        <td>Si le bouton de fermeture de la fenêtre a été enfoncé...</td>
+      </tr>
+      <tr>
+        <td><i>   ---- ev_user0... ev_user15</i></td>
+        <td>L'un des 16 événements utilisateur disponibles.</td>
+      </tr>
+      <tr>
+        <td><b>ev_draw</b></td>
+        <td>Événement de tirage au sort. <i><b>REMARQUE : </b></i>Cet événement ne peut pas être forcé en dehors d'un événement de tirage au sort et les constantes et les constantes servent uniquement à identifier l'événement lorsqu'il est exécuté dans ces cas.</td>
+      </tr>
+      <tr>
+        <td><i>   ---- ev_draw_begin</i></td>
+        <td>L'événement de début de tirage au sort.</td>
+      </tr>
+      <tr>
+        <td><i>   ---- ev_draw_end</i></td>
+        <td>L'événement de fin de tirage au sort.</td>
+      </tr>
+      <tr>
+        <td><i>   ---- ev_draw_pre</i></td>
+        <td>L'événement préalable au tirage au sort.</td>
+      </tr>
+      <tr>
+        <td><i>   ---- ev_draw_post</i></td>
+        <td>L'événement post tirage au sort.</td>
+      </tr>
+      <tr>
+        <td><i>   ---- ev_gui</i></td>
+        <td>L'événement gui de dessin.</td>
+      </tr>
+      <tr>
+        <td><i>   ---- ev_gui_begin</i></td>
+        <td>L'événement de début du gui de dessin.</td>
+      </tr>
+      <tr>
+        <td><i>   ---- ev_gui_end</i></td>
+        <td>L'événement de fin du gui de dessin.</td>
+      </tr>
+    </tbody>
+  </table>
+  <p> </p>
+  <h4>Syntaxe :</h4>
+  <p class="code">event_perform(type, numb) ;</p>
+  <table>
+    <tbody>
+      <tr>
+        <th>Arguments</th>
+        <th>Description</th>
+      </tr>
+      <tr>
+        <td>type</td>
+        <td>Le type d'événement à réaliser. Voir ci-dessous.</td>
+      </tr>
+      <tr>
+        <td>engourdi</td>
+        <td>La constante ou la valeur spécifique de l'événement, si elle est nécessaire (sinon, utilisez simplement 0).</td>
+      </tr>
+    </tbody>
+  </table>
+  <p> </p>
+  <h4>Les retours :</h4>
+  <p class="code">N/A</p>
+  <p> </p>
+  <h4>Exemple étendu</h4>
+  <p><br> Pour mieux comprendre comment cette fonction peut être utilisée, veuillez consulter les quelques exemples suivants :</p>
+  <p class="code">event_perform(ev_keypress, ord(&quot;W&quot;)) ;</p>
+  <p>Cela permettrait d'exécuter l'événement associé à la vérification du clavier en appuyant sur la touche &quot;W&quot; (sans générer réellement une pression sur le clavier).</p>
+  <p class="code">event_perform(ev_step, ev_step_begin) ;</p>
+  <p>Cette fonction exécute l'événement <i>Begin Step</i> (si elle est appelée à partir de n'importe quel événement d'étape, le code de l'événement Begin Step est exécuté deux fois).</p>
+  <p class="code">event_perform(ev_create, 0) ;</p>
+  <p>Cela permet d'exécuter l'<i><i> événement</i>Create<i> de l'instance.</i></i>
+  </p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <div class="footer">
+    <div class="buttons">
+      <div class="clear">
+        <div style="float:left">Retour : <a href="Generating_Object_Events.htm">Génération d'événements d'objets</a></div>
+        <div style="float:right">Suivant : <a href="event_perform_object.htm">event_perform_object</a></div>
+      </div>
+    </div>
+    <h5><span data-keyref="Copyright Notice">Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
   </div>
   <!-- KEYWORDS
 event_perform

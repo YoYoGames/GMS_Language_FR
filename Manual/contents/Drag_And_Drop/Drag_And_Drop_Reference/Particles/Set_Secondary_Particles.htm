@@ -7,11 +7,65 @@
   <meta name="generator" content="Adobe RoboHelp 2019" />
   <link rel="stylesheet" href="../../../assets/css/default.css" type="text/css" />
   <meta name="rh-authors" content="Mark Alexander" />
-  <meta name="topic-comment" content="Page qui explique l&#39;action Définir les particules secondaires" />
-  <meta name="rh-index-keywords" content="DnD ™ - Définir les particules secondaires" />
-  <meta name="search-keywords" content="Définir les particules secondaires" />
+  <meta name="topic-comment" content="Page that explains the Set Secondary Particles action" />
+  <meta name="rh-index-keywords" content="DnD™ Action - Set Secondary Particles" />
+  <meta name="search-keywords" content="Set Secondary Particles" />
 </head>
-<body><!--<div class="body-scroll" style="top: 150px;">--><h1><img alt="Set Secondary Particles Icon" class="icon" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Particles/i_Particles_Set_Secondary_Particles.png" /> Définir les particules secondaires</h1><p> Cette action vous permet d&#39;utiliser un deuxième type de particule avec la particule principale. Vous donnez la valeur de l&#39;ID du type de particule principale (qui doit être la même que la valeur utilisée lorsque vous avez créé la particule à l&#39;aide de l&#39; <a href="Create_Particle_Type.htm">action Créer un type de particule</a> ), puis vous pouvez choisir de lui faire émettre un type de particule secondaire à chaque image de jeu qu&#39;elle existe et / ou à la fin de la durée de vie de chaque particule primaire. Vous devez donner une autre valeur d&#39;ID de particule pour le &quot;Secondaire&quot;, puis un nombre à créer dans le &quot;Compte&quot;.</p><p> Si l&#39;événement sélectionné est &quot;Par étape&quot;, alors chaque image de jeu où une particule primaire existe à l&#39;écran émettra le nombre donné de particules secondaires - par exemple, vous pourriez avoir une fusée avec des particules &quot;flamme&quot;, et chaque particule de flamme émet un particule de &quot;fumée&quot; secondaire. Si l&#39;événement est défini sur «À la mort», les particules secondaires ne seront désormais émises que lorsqu&#39;une particule du type primaire atteint la fin de sa durée de vie - par exemple, vous pourriez avoir une particule «explosion» qui émet une «poussière &quot;particule en fin de vie.</p><p> Il est important de noter que vous <i>ne pouvez pas</i> utiliser le même ID de type de particule que la particule principale que pour les particules secondaires, et que vous pouvez très rapidement rencontrer des problèmes de performances lors de l&#39;utilisation de cette action car il est facile de créer des milliers de particules très rapidement de cette manière - donc veillez à limiter la durée de vie et le nombre de particules créées par les types de particules primaires et secondaires. Notez également que vous pouvez attribuer une particule secondaire à n&#39;importe quel type de particule et ainsi créer des «chaînes de particules» où une particule en crée une autre à chaque étape, puis cette particule en crée une autre lorsqu&#39;elle atteint la fin de sa durée de vie, etc., des précautions doivent être prises lors de l&#39;enchaînement des particules de cette manière pour s&#39;assurer que les performances ne souffrent pas. Vous pouvez également appeler cette action deux fois pour un seul type de particule et la diffuser à l&#39;étape et éclater à la mort.</p><p></p><h4> Syntaxe de l&#39;action:</h4><p><img alt="Set Secondary Particles Action" class="center" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Particles/a_Particles_Set_Secondary_Particles.png" /></p><h4> Arguments:</h4><table><tbody><tr><th> Argument</th><th> Description</th></tr><tr><td> <span class="notranslate">Type ID</span></td><td> La valeur ID pour le type de particule à donner à la particule secondaire</td></tr><tr><td> <span class="notranslate">Event</span></td><td> Quand créer la particule secondaire, &quot;Par étape&quot; ou &quot;À la mort&quot;</td></tr><tr><td> <span class="notranslate">Death Type</span></td><td> La valeur d&#39;ID du type de particule à émettre dans l&#39;événement secondaire choisi</td></tr><tr><td> <span class="notranslate">Count</span></td><td> Le nombre de particules secondaires à créer dans l&#39;événement secondaire choisi</td></tr></tbody></table><p></p><h4> Exemple:</h4><p><img alt="Set Secondary Particles Example" class="center" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Particles/e_Particles_Set_Secondary_Particles.png" /> Le code de bloc d&#39;action ci-dessus attribuera deux particules secondaires à la particule avec l&#39;ID stocké dans la variable &quot;p_fire&quot;. </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> Retour: <a href="Particle_Actions.htm">Actions de particules</a></div><div style="float:right"> Suivant: <a href="Burst_Particles.htm">Particules éclatées</a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
+<body>
+  <!--<div class="body-scroll" style="top: 150px;">-->
+  <h1><img alt="Set Secondary Particles Icon" class="icon" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Particles/i_Particles_Set_Secondary_Particles.png"> Ensemble de particules secondaires</h1>
+  <p>Cette action vous permet d'utiliser un second type de particule en plus de la particule primaire. Vous donnez une valeur d'identification au type de particule primaire (qui doit être la même que celle utilisée lorsque vous avez créé la particule à l'aide de l'action <a href="Create_Particle_Type.htm">Créer un type de particule</a> ) et vous pouvez ensuite choisir de lui faire émettre un type de particule secondaire à chaque image de jeu où elle existe et/ou à la fin de la durée de vie de chaque particule primaire. Vous devez donner une autre valeur d'ID de particule pour le &quot;Secondaire&quot; et ensuite un nombre
+    à créer dans le &quot;Count&quot;.</p>
+  <p>Si l'événement sélectionné est &quot;Par étape&quot;, chaque image de jeu où une particule primaire existe à l'écran émettra le nombre donné de particules secondaires - par exemple, vous pouvez avoir une fusée avec des particules &quot;flamme&quot;, et chaque particule flamme émet une particule secondaire &quot;fumée&quot;.
+    de flamme émet une particule secondaire de &quot;fumée&quot;. Si l'événement est défini sur &quot;On Death&quot;, les particules secondaires ne seront émises que lorsqu'une particule du type primaire atteindra la fin de sa durée de vie.
+    avoir une particule &quot;explosion&quot; qui émet une particule &quot;poussière&quot; à la fin de sa vie.</p>
+  <p>Il est important de noter que vous <i>ne pouvez pas</i> utiliser le même ID de type de particule pour la particule primaire et pour les particules secondaires, et que vous pouvez très rapidement rencontrer des problèmes de performance en utilisant cette action car il est facile de créer des milliers de particules très rapidement de cette façon.
+    particules très rapidement de cette façon - veillez donc à limiter la durée de vie et le nombre de particules créées par les types de particules primaires et secondaires. Notez également que vous pouvez assigner une particule secondaire à n'importe quel type de particule et ainsi créer des "chaînes de particules" où une particule est créée par une autre.
+    des &quot;chaînes de particules&quot; où une particule en crée une autre à chaque étape, puis cette particule en crée une autre lorsqu'elle atteint la fin de sa durée de vie, etc... Bien que, encore une fois, il faut faire attention lorsque l'on enchaîne des particules de cette manière pour s'assurer que les performances n'en souffrent pas.
+    que les performances ne souffrent pas. Vous pouvez également appeler cette action deux fois pour un seul type de particule et faire en sorte qu'elle soit diffusée à chaque étape et qu'elle éclate à la mort.</p>
+  <p> </p>
+  <h4>Syntaxe de l'action :</h4>
+  <p><img alt="Set Secondary Particles Action" class="center" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Particles/a_Particles_Set_Secondary_Particles.png" /></p>
+  <h4>Arguments :</h4>
+  <table>
+    <tbody>
+      <tr>
+        <th>Arguments</th>
+        <th>Description</th>
+      </tr>
+      <tr>
+        <td>Type ID</td>
+        <td>La valeur d'identification du type de particule à laquelle donner la particule secondaire.</td>
+      </tr>
+      <tr>
+        <td>Événement</td>
+        <td>Quand créer la particule secondaire, soit &quot;par étape&quot;, soit &quot;à la mort&quot;.</td>
+      </tr>
+      <tr>
+        <td>Secondaire</td>
+        <td>La valeur d'identification du type de particule à émettre dans l'événement secondaire choisi.</td>
+      </tr>
+      <tr>
+        <td>Comte</td>
+        <td>Le nombre de particules secondaires à créer dans l'événement secondaire choisi.</td>
+      </tr>
+    </tbody>
+  </table>
+  <p> </p>
+  <h4>Exemple :</h4>
+  <p><img alt="Set Secondary Particles Example" class="center" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Particles/e_Particles_Set_Secondary_Particles.png">Le code du bloc d'action ci-dessus affectera deux particules secondaires à
+    la particule dont l'ID est stocké dans la variable &quot;p_fire&quot;.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <div class="footer">
+    <div class="buttons">
+      <div class="clear">
+        <div style="float:left">Retour : <a href="Particle_Actions.htm">Actions des particules</a></div>
+        <div style="float:right">Suivant : <a href="Burst_Particles.htm">Particules d'éclatement</a></div>
+      </div>
+    </div>
+    <h5><span data-keyref="Copyright Notice">Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
   </div>
   <!-- KEYWORDS
 Action - Set Secondary Particles

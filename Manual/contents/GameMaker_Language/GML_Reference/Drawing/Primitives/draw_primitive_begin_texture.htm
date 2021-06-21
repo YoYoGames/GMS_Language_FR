@@ -2,18 +2,61 @@
 
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml"><head>
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <title>draw_primitive_begin_texture</title>
-  <meta name="generator" content="Adobe RoboHelp 2019"/>
-  <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css"/>
-  <meta name="rh-authors" content="Mark Alexander"/>
-  <meta name="topic-comment" content="Référence pour draw_primitive_begin_texture"/>
-  <meta name="rh-index-keywords" content="draw_primitive_begin_texture"/>
-  <meta name="search-keywords" content="draw_primitive_begin_texture"/>
+  <meta name="generator" content="Adobe RoboHelp 2019" />
+  <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
+  <meta name="rh-authors" content="Mark Alexander" />
+  <meta name="topic-comment" content="Reference for draw_primitive_begin_texture" />
+  <meta name="rh-index-keywords" content="draw_primitive_begin_texture" />
+  <meta name="search-keywords" content="draw_primitive_begin_texture" />
 </head>
-<body><!--<div class="body-scroll" style="top: 150px;">--><h1>draw_primitive_begin_texture</h1><p> Cette fonction doit être appelée avant de définir les sommets d&#39;une primitive texturée. Vous devez donner le type de primitif à utiliser (voir <a href="draw_primitive_begin.htm"><tt>draw_primitive_begin()</tt></a> pour plus d&#39;informations) et l&#39; <b>identifiant</b> d&#39;une texture à utiliser, qui peut être un sprite ou une image d&#39;arrière-plan. Cet <b>identifiant d&#39;</b> actif peut être obtenu à partir des fonctions <a href="../../Asset_Management/Sprites/Sprite_Information/sprite_get_texture.htm"><tt>sprite_get_texture()</tt></a>, par exemple (utilisez -1 pour aucune texture).</p><p class="note"> <b>NOTE:</b> Pour qu&#39;une texture se répète, elle doit avoir une puissance de deux, c&#39;est-à-dire: 32x32, 128x128, etc...</p><p></p><h4> Syntaxe:</h4><p class="code">draw_primitive_begin_texture(kind, tex)</p><table><tbody><tr><th> Argument</th><th> Description</th></tr><tr><td> <span class="notranslate">kind</span></td><td> Le genre de primitif que vous allez dessiner.</td></tr><tr><td> <span class="notranslate">tex</span></td><td> La texture à utiliser avec le primitif.</td></tr></tbody></table><p></p><h4> Retour:</h4><p class="code">N/A</p><p></p><h4> Exemple:</h4><p class="code">draw_set_colour(c_white);<br/> var tex = sprite_get_texture(spr_Background, 0);<br/> draw_primitive_begin_texture(pr_trianglestrip, tex);<br/> draw_vertex_texture(0, 0, 0, 0);<br/> draw_vertex_texture(640, 0, 1, 0);<br/> draw_vertex_texture(0, 480,
-    0, 1);<br/> draw_vertex_texture(640, 480, 1, 1);<br/> draw_primitive_end();
-  </p><p> Le code ci-dessus dessinera une bande de triangle de 4 sommets (faisant un rectangle) texturée avec la texture contenue dans la variable &quot;tex&quot;, et la texture entière sera utilisée pour couvrir la primitive terminée. </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> Retour: <a href="Primitives_And_Vertex_Formats.htm">Primitives et formats de sommets</a></div><div style="float:right"> Suivant:<a href="draw_primitive_end.htm">draw_primitive_end</a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
+<body>
+  <!--<div class="body-scroll" style="top: 150px;">-->
+  <h1>draw_primitive_begin_texture</h1>
+  <p>Cette fonction doit être appelée avant de définir les sommets d'une primitive texturée. Vous devez donner le type de primitive à utiliser (voir <a href="draw_primitive_begin.htm"><tt>draw_primitive_begin()</tt></a> pour plus d'informations) et l'<b>identifiant</b> d'une
+    texture à utiliser, qui peut être un sprite ou une image de fond. Cet <b>identifiant d'</b> actif peut être obtenu à partir des fonctions <a href="../../Asset_Management/Sprites/Sprite_Information/sprite_get_texture.htm"><tt>sprite_get_texture()</tt></a>par exemple
+    (utilisez -1 pour ne pas utiliser de texture).</p>
+  <p class="note"><b>NOTE :</b> Pour qu'une texture soit répétée, sa taille doit être une puissance de deux, c'est-à-dire : 32x32, 128x128, etc...</p>
+  <p> </p>
+  <h4>Syntaxe :</h4>
+  <p class="code">draw_primitive_begin_texture(kind, tex)</p>
+  <table>
+    <tbody>
+      <tr>
+        <th>Arguments</th>
+        <th>Description</th>
+      </tr>
+      <tr>
+        <td>genre</td>
+        <td>Le type de primitif que vous allez dessiner.</td>
+      </tr>
+      <tr>
+        <td>tex</td>
+        <td>La texture à utiliser avec la primitive.</td>
+      </tr>
+    </tbody>
+  </table>
+  <p> </p>
+  <h4>Les retours :</h4>
+  <p class="code">N/A</p>
+  <p> </p>
+  <h4>Exemple :</h4>
+  <p class="code">draw_set_colour(c_white) ;<br> var tex = sprite_get_texture(spr_Background, 0) ;<br> draw_primitive_begin_texture(pr_trianglestrip, tex) ;<br> draw_vertex_texture(0, 0, 0, 0) ;<br> draw_vertex_texture(640, 0, 1, 0) ;<br> draw_vertex_texture(0, 480,
+    0, 1) ;<br> draw_vertex_texture(640, 480, 1, 1) ;<br> draw_primitive_end() ;
+  </p>
+  <p>Le code ci-dessus va dessiner une bande de triangle à 4 sommets (formant un rectangle) texturée avec la texture contenue dans la variable &quot;tex&quot;, et la texture entière sera utilisée pour couvrir la primitive terminée.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <div class="footer">
+    <div class="buttons">
+      <div class="clear">
+        <div style="float:left">Retour : <a href="Primitives_And_Vertex_Formats.htm">Primitives et formats de sommets</a></div>
+        <div style="float:right">Suivant : <a href="draw_primitive_end.htm">draw_primitive_end</a></div>
+      </div>
+    </div>
+    <h5><span data-keyref="Copyright Notice">Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
   </div>
   <!-- KEYWORDS
 draw_primitive_begin_texture

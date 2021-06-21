@@ -7,13 +7,51 @@
   <meta name="generator" content="Adobe RoboHelp 2019" />
   <link rel="stylesheet" href="../../../../../assets/css/default.css" type="text/css" />
   <meta name="rh-authors" content="Mark Alexander" />
-  <meta name="topic-comment" content="Page décrivant la fonction tilemap_get_mask" />
+  <meta name="topic-comment" content="Page outlining the function tilemap_get_mask" />
   <meta name="rh-index-keywords" content="tilemap_get_mask" />
   <meta name="search-keywords" content="tilemap_get_mask" />
 </head>
-<body><!--<div class="body-scroll" style="top: 150px;">--><h1>tilemap_get_mask</h1><p> Cette fonction peut être utilisée pour récupérer la valeur du masque de bits pour la mappe de tuiles donnée. Vous donnez l&#39;ID d&#39;élément de carte de tuiles (que vous obtenez lorsque vous créez un élément de carte de tuiles à l&#39;aide de <a href="layer_tilemap_create.htm"><tt>layer_tilemap_create()</tt></a> ou lorsque vous utilisez la fonction <a href="layer_tilemap_get_id.htm"><tt>layer_tilemap_get_id()</tt></a> ), et la fonction renverra la valeur actuelle du masque ou -1 s&#39;il y a une erreur ou 0 si aucun masque n&#39;est spécifié. Pour plus d&#39;informations sur les masques de bits de mosaïque, voir la fonction <a href="tilemap_set_mask.htm"><tt>tilemap_set_mask()</tt></a>.</p><p></p><h4> Syntaxe:</h4><p class="code">tilemap_get_mask(tilemap_element_id);</p><table><tbody><tr><th> Argument</th><th> Description</th></tr><tr><td> <span class="notranslate">tilemap_element_id</span></td><td> La valeur d&#39;identifiant unique de l&#39;élément de mosaïque pour obtenir le masque de</td></tr></tbody></table><p></p><h4> Retour:</h4><p class="code">Real (0 for no mask, -1 for an error)</p><p></p><h4> Exemple:</h4><p class="code">var lay_id = layer_get_id(&quot;Tiles_sky&quot;);<br/> var map_id = layer_tilemap_get_id(lay_id);<br/> var mask = tilemap_get_mask(map_id);<br/> var new_mask = tile_mirror | tile_flip | tile_rotate | 255;<br/> if mask != new_mask<br/>     {
-    <br/>     tilemap_set_mask(map_id, new_mask);<br/>     }
-  </p><p> Le code ci-dessus obtient l&#39;ID de carte de tuiles de la couche donnée, puis vérifie la valeur de masque qui lui est associée. Si ce n&#39;est pas la même que la valeur définie dans la variable &quot;new_mask&quot;, alors il est mis à cette valeur. </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> Retour: <a href="Tile_Map_Layers.htm">Couches de carte de mosaïque</a></div><div style="float:right"> Suivant:<a href="tilemap_get_global_mask.htm">tilemap_get_global_mask</a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
+<body>
+  <!--<div class="body-scroll" style="top: 150px;">-->
+  <h1>tilemap_get_mask</h1>
+  <p>Cette fonction peut être utilisée pour récupérer la valeur du masque de bits pour la carte de tuiles donnée. Vous donnez l'ID de l'élément de la carte des tuiles (que vous obtenez lorsque vous créez un élément de carte des tuiles à l'aide de la fonction <a href="layer_tilemap_create.htm"><tt>layer_tilemap_create()</tt></a> ou lorsque
+    vous utilisez la fonction <a href="layer_tilemap_get_id.htm"><tt>layer_tilemap_get_id()</tt></a>), et la fonction renvoie la valeur actuelle du masque ou -1 en cas d'erreur ou 0 si aucun masque n'est spécifié. Pour plus d'informations sur les masques de bits des cartes de tuiles,
+    consultez la fonction <a href="tilemap_set_mask.htm"><tt>tilemap_set_mask()</tt></a>.</p>
+  <p> </p>
+  <h4>Syntaxe :</h4>
+  <p class="code">tilemap_get_mask(tilemap_element_id) ;</p>
+  <table>
+    <tbody>
+      <tr>
+        <th>Arguments</th>
+        <th>Description</th>
+      </tr>
+      <tr>
+        <td>tilemap_element_id</td>
+        <td>La valeur d'identification unique de l'élément de la carte des tuiles dont on veut obtenir le masque.</td>
+      </tr>
+    </tbody>
+  </table>
+  <p> </p>
+  <h4>Les retours :</h4>
+  <p class="code">Réel (0 pour aucun masque, -1 pour une erreur)</p>
+  <p> </p>
+  <h4>Exemple :</h4>
+  <p class="code">var lay_id = layer_get_id(&quot;Tiles_sky&quot;) ;<br> var map_id = layer_tilemap_get_id(lay_id) ;<br> var mask = tilemap_get_mask(map_id) ;<br> var new_mask = tile_mirror | tile_flip | tile_rotate | 255 ;<br> if mask != new_mask<br> {
+    <br> tilemap_set_mask(map_id, new_mask) ;<br> }
+  </p>
+  <p>Le code ci-dessus récupère l'ID de la carte de tuiles de la couche donnée, puis vérifie la valeur du masque qui lui est associée. Si elle n'est pas la même que la valeur définie dans la variable &quot;new_mask&quot;, alors elle est définie à cette valeur.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <div class="footer">
+    <div class="buttons">
+      <div class="clear">
+        <div style="float:left">Retour : <a href="Tile_Map_Layers.htm">Carrelage des couches de la carte</a></div>
+        <div style="float:right">Suivant : <a href="tilemap_get_global_mask.htm">tilemap_get_global_mask</a></div>
+      </div>
+    </div>
+    <h5><span data-keyref="Copyright Notice">Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
   </div>
   <!-- KEYWORDS
 tilemap_get_mask

@@ -7,20 +7,61 @@
   <meta name="generator" content="Adobe RoboHelp 2019" />
   <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
   <meta name="rh-authors" content="Mark Alexander" />
-  <meta name="topic-comment" content="Référence pour application_surface_enable" />
+  <meta name="topic-comment" content="Reference for application_surface_enable" />
   <meta name="rh-index-keywords" content="application_surface_enable" />
   <meta name="search-keywords" content="application_surface_enable" />
 </head>
-<body><!--<div class="body-scroll" style="top: 150px;">--><h1>application_surface_enable</h1><p> Avec cette fonction, vous pouvez activer ou désactiver la surface d&#39;application. Par défaut, la surface de l&#39;application est activée et tous les dessins pour les événements de dessin seront faits à cela et la surface dessinée à l&#39;écran. Cependant, sur certains appareils plus anciens et certains chipsets, cela peut entraîner de moins bonnes performances. Dans ces cas, vous pouvez désactiver le dessin sur la surface de l&#39;application et tout le dessin d&#39;événement Draw sera alors effectué directement dans la mémoire tampon de l&#39;écran.</p><p> Vous pouvez utiliser cette fonction pour activer ou désactiver la surface d&#39;application à tout moment dans votre jeu, mais vous devez noter qu&#39;elle nécessite au moins une image (étape) pour que les modifications prennent effet. <span class="notranslate">Switch</span> <i><b>désactiver désactivera toutes les corrections de rapport hauteur / largeur</b></i>, comme défini dans les <i>options de jeu</i> de la plate-forme cible. Cela signifie que vous devez mettre en place une méthode permettant d&#39;adapter le jeu aux dimensions requises de l&#39;appareil, de la fenêtre ou de l&#39;écran. Si vous le réactivez, les <i>options de jeu</i> reprendront effet à l&#39;étape suivante.</p><p> Il est recommandé d&#39;utiliser cette fonction avec précaution car elle aura un impact sur la façon dont tout est dessiné à l&#39;écran. En général, vous voudriez l&#39;avoir comme option dans un menu de votre jeu, ou l&#39;appeler une seule fois au début de votre jeu et écrire votre code pour savoir si vous l&#39;avez activé ou désactivé.</p><p></p><h4> Syntaxe:</h4><p class="code">application_surface_enable(enable);</p><table><tbody><tr><th> Argument</th><th> Description</th></tr><tr><td> <span class="notranslate">enable</span></td><td> Définir pour activer (<tt>true</tt> ) ou désactiver (<tt>false</tt> ) la surface d&#39;application.</td></tr></tbody></table><p></p><h4> Retour:</h4><p class="code">N/A</p><p></p><h4> Exemple:</h4><p class="code">if keyboard_check_pressed(vk_space)<br/>     {
-    <br/>     if application_surface_is_enabled()<br/>         {
-    <br/>         application_surface_enable(false);
-    <br/>         }
-    <br/>     else
-    <br/>         {
-    <br/>         application_surface_enable(true);
-    <br/>         }
-    <br/>     }
-  </p><p> Le code ci-dessus vérifie la pression d&#39;une touche et active ou désactive la surface de l&#39;application en fonction de son état (comme dans un menu d&#39;options). </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> Retour: <a href="Surfaces.htm">Surfaces</a></div><div style="float:right"> Suivant:<a href="application_surface_is_enabled.htm">application_surface_is_enabled</a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
+<body>
+  <!--<div class="body-scroll" style="top: 150px;">-->
+  <h1>application_surface_enable</h1>
+  <p>Cette fonction permet d'activer ou de désactiver la surface d'application. Par défaut, la surface d'application est activée et tous les dessins pour les événements Draw seront effectués sur cette surface et la surface sera dessinée à l'écran. Cependant, sur certains appareils plus anciens et certains
+    chipsets spécifiques, cela peut entraîner une baisse des performances. Dans ce cas, vous pouvez désactiver le dessin sur la surface de l'application et tous les événements de dessin seront alors dessinés directement dans le tampon de l'écran.</p>
+  <p>Vous pouvez utiliser cette fonction pour activer ou désactiver la surface d'application à tout moment dans votre jeu, mais vous devez noter qu'il faut au moins une image (étape) pour que les changements prennent effet. <span class="notranslate">Désactiver</span>la surface d'application <i><b>Désactivera toute correction du rapport hauteur/largeur</b></i>,
+    tel que défini dans les <i>options de jeu</i> pour la plate-forme cible. Cela signifie que vous devez disposer d'une méthode permettant de mettre le jeu à l'échelle de l'appareil, de la fenêtre ou de l'écran requis. Si vous l'activez à nouveau, les <i>options du jeu</i> prendront effet à l'étape suivante.</p>
+  <p>Il est recommandé d'utiliser cette fonction avec précaution car elle aura un impact sur la façon dont tout est dessiné à l'écran. En général, il est préférable de l'utiliser comme option dans un menu de votre jeu, ou de ne l'appeler qu'une seule fois au début de votre jeu et d'écrire votre code en fonction de son activation ou de sa désactivation.
+    code pour savoir si vous l'avez activée ou désactivée.</p>
+  <p> </p>
+  <h4>Syntaxe :</h4>
+  <p class="code">application_surface_enable(enable) ;</p>
+  <table>
+    <tbody>
+      <tr>
+        <th>Arguments</th>
+        <th>Description</th>
+      </tr>
+      <tr>
+        <td>activer</td>
+        <td>Défini pour activer<tt>(true</tt>) ou désactiver<tt>(false</tt>) la surface d'application.</td>
+      </tr>
+    </tbody>
+  </table>
+  <p> </p>
+  <h4>Les retours :</h4>
+  <p class="code">N/A</p>
+  <p> </p>
+  <h4>Exemple :</h4>
+  <p class="code">if keyboard_check_pressed(vk_space)<br> {
+    <br> if application_surface_is_enabled()<br> {
+    <br> application_surface_enable(false) ;
+    <br> }
+    <br> else
+    <br> {
+    <br> application_surface_enable(true) ;
+    <br> }
+    <br> }
+  </p>
+  <p>Le code ci-dessus vérifie l'appui sur une touche et active ou désactive la surface de l'application en fonction de son état (comme dans un menu d'options).</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <div class="footer">
+    <div class="buttons">
+      <div class="clear">
+        <div style="float:left">Retour : <a href="Surfaces.htm">Surfaces</a></div>
+        <div style="float:right">Suivant : <a href="application_surface_is_enabled.htm">application_surface_is_enabled</a></div>
+      </div>
+    </div>
+    <h5><span data-keyref="Copyright Notice">Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
   </div>
   <!-- KEYWORDS
 application_surface_enable

@@ -3,16 +3,95 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>draw_text_transformed_colour</title>
+  <title>dessiner_texte_transformé_couleur</title>
   <meta name="generator" content="Adobe RoboHelp 2019" />
   <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
   <meta name="rh-authors" content="Mark Alexander" />
-  <meta name="topic-comment" content="Page de référence pour draw_text_transformed_colour" />
+  <meta name="topic-comment" content="Reference page for draw_text_transformed_colour" />
   <meta name="rh-index-keywords" content="draw_text_transformed_colour,draw_text_transformed_color" />
   <meta name="search-keywords" content="draw_text_transformed_colour,draw_text_transformed_color" />
 </head>
-<body><!--<div class="body-scroll" style="top: 150px;">--><h1>draw_text_transformed_colour</h1><p> Cette fonction est une combinaison de la base <a href="draw_text.htm"><tt>draw_text()</tt></a> fonction avec le <a href="draw_text_transformed.htm"><tt>draw_text_transformed()</tt></a> et <a href="draw_text_colour.htm"><tt>draw_text_colour()</tt></a> fonctions, vous permettant de mettre à l&#39;échelle et de faire pivoter le texte ainsi que de le colorer avec un remplissage dégradé et de modifier sa valeur alpha, en ignorant les paramètres alpha et de couleur de base pour le dessin.</p><p class="note"> <b>REMARQUE: la</b> fusion de dégradé n&#39;est pas disponible pour la cible HTML5 sauf si WebGL est activé, bien que vous puissiez toujours définir les couleurs de fusion et il fusionnera la police avec la première couleur donnée. Cependant, tout mélange de cette manière crée une police en double qui est ensuite stockée dans le cache et utilisée si nécessaire, ce qui est loin d&#39;être optimal et si vous utilisez plusieurs changements de couleur, cela ralentira les performances de vos jeux. Vous pouvez définir la taille du cache de polices pour essayer de limiter cela si nécessaire en utilisant la fonction <a href="../../Asset_Management/Fonts/font_set_cache_size.htm"><tt style="font-size: 14px">font_set_cache_size ()</tt></a>.</p><p></p><h4> Syntaxe:</h4><p class="code">draw_text_transformed_colour(x, y, string, xscale, yscale, angle, c1, c2, c3, c4, alpha);</p><table><tbody><tr><th> Argument</th><th> Description</th></tr><tr><td> <span class="notranslate">x</span></td><td> La coordonnée x de la chaîne dessinée.</td></tr><tr><td> <span class="notranslate">y</span></td><td> La coordonnée y de la chaîne dessinée.</td></tr><tr><td> <span class="notranslate">string</span></td><td> La chaîne à dessiner.</td></tr><tr><td> <span class="notranslate">xscale</span></td><td> L&#39;échelle horizontale.</td></tr><tr><td> <span class="notranslate">yscale</span></td><td> L&#39;échelle verticale.</td></tr><tr><td> <span class="notranslate">angle</span></td><td> L&#39;angle du texte.</td></tr><tr><td> <span class="notranslate">c1</span></td><td> La couleur du coin supérieur gauche du texte dessiné.</td></tr><tr><td> <span class="notranslate">c2</span></td><td> La couleur du coin supérieur droit du texte dessiné.</td></tr><tr><td> <span class="notranslate">c3</span></td><td> La couleur du coin inférieur droit du texte dessiné.</td></tr><tr><td> <span class="notranslate">c4</span></td><td> La couleur du coin inférieur gauche du texte dessiné.</td></tr><tr><td> <span class="notranslate">alpha</span></td><td> L&#39;alpha du texte.</td></tr></tbody></table><p></p><h4> Retour:</h4><p class="code">N/A</p><p></p><h4> Exemple:</h4><p class="code">draw_set_halign(fa_center);<br/> draw_set_valign(fa_middle);
-    <br/> image_angle += 1;<br/> draw_text_transformed_colour(room_width / 2, room_height / 2, keyboard_string, 2, 2, image_angle, c_red, c_red, c_yellow, c_yellow, 0.5);</p><p> Le code ci-dessus dessinera le texte donné au milieu de la pièce, en tournant et en le redimensionnant à deux fois sa taille d&#39;origine, avec un dégradé de couleur allant du jaune au rouge ainsi qu&#39;un alpha de 0,5. </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> Retour: <a href="Text.htm">Texte</a></div><div style="float:right"> Suivant:<a href="draw_text_ext_transformed_colour.htm">draw_text_ext_transformed_colour</a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
+<body>
+  <!--<div class="body-scroll" style="top: 150px;">-->
+  <h1>dessiner_texte_transformé_couleur</h1>
+  <p>Cette fonction est une combinaison de la fonction de base <a href="draw_text.htm"><tt>draw_text()</tt></a> de base avec les fonctions <a href="draw_text_transformed.htm"><tt>draw_text_transformed()</tt></a> et <a href="draw_text_colour.htm"><tt>draw_text_colour()</tt></a>    vous permettant de mettre à l'échelle et de faire pivoter le texte, de le colorer avec un dégradé et de modifier sa valeur alpha, en ignorant les paramètres alpha et couleur de base pour le dessin.</p>
+  <p class="note"><b>REMARQUE : </b>le mélange par gradient n'est pas disponible pour la cible HTML5, sauf si WebGL est activé, mais vous pouvez toujours définir les couleurs de mélange et la police sera mélangée avec la première couleur donnée. Cependant, tous les mélanges de cette manière créent une police dupliquée qui est ensuite stockée dans le cache.
+    qui est ensuite stockée dans le cache et utilisée au besoin, ce qui est loin d'être optimal et si vous utilisez plusieurs changements de couleur, cela ralentira les performances de votre jeu. Vous pouvez définir la taille du cache des polices pour essayer de limiter ce phénomène si nécessaire.
+    en utilisant la fonction <a href="../../Asset_Management/Fonts/font_set_cache_size.htm"><tt style="font-size: 14px">font_set_cache_size()</tt></a>.</p>
+  <p> </p>
+  <h4>Syntaxe :</h4>
+  <p class="code">draw_text_transformed_colour(x, y, string, xscale, yscale, angle, c1, c2, c3, c4, alpha) ;</p>
+  <table>
+    <tbody>
+      <tr>
+        <th>Arguments</th>
+        <th>Description</th>
+      </tr>
+      <tr>
+        <td>x</td>
+        <td>La coordonnée x de la chaîne dessinée.</td>
+      </tr>
+      <tr>
+        <td>y</td>
+        <td>La coordonnée y de la chaîne dessinée.</td>
+      </tr>
+      <tr>
+        <td>chaîne de caractères</td>
+        <td>La ficelle à tirer.</td>
+      </tr>
+      <tr>
+        <td>xscale</td>
+        <td>L'échelle horizontale.</td>
+      </tr>
+      <tr>
+        <td>yscale</td>
+        <td>L'échelle verticale.</td>
+      </tr>
+      <tr>
+        <td>angle</td>
+        <td>L'angle du texte.</td>
+      </tr>
+      <tr>
+        <td>c1</td>
+        <td>La couleur de la partie supérieure gauche du texte dessiné.</td>
+      </tr>
+      <tr>
+        <td>c2</td>
+        <td>La couleur de la partie supérieure droite du texte dessiné.</td>
+      </tr>
+      <tr>
+        <td>c3</td>
+        <td>La couleur de la partie inférieure droite du texte dessiné.</td>
+      </tr>
+      <tr>
+        <td>c4</td>
+        <td>La couleur de la partie inférieure gauche du texte dessiné.</td>
+      </tr>
+      <tr>
+        <td>alpha</td>
+        <td>L'alpha du texte.</td>
+      </tr>
+    </tbody>
+  </table>
+  <p> </p>
+  <h4>Les retours :</h4>
+  <p class="code">N/A</p>
+  <p> </p>
+  <h4>Exemple :</h4>
+  <p class="code">draw_set_halign(fa_center) ;<br> draw_set_valign(fa_middle) ;
+    <br> image_angle += 1 ;<br> draw_text_transformed_colour(room_width / 2, room_height / 2, keyboard_string, 2, 2, image_angle, c_red, c_red, c_yellow, c_yellow, 0.5) ;</p>
+  <p>Le code ci-dessus dessinera le texte donné au milieu de la pièce, en l'arrondissant et en le mettant à l'échelle au double de sa taille originale, avec un gradient de couleur allant du jaune au rouge ainsi qu'un alpha de 0,5.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <div class="footer">
+    <div class="buttons">
+      <div class="clear">
+        <div style="float:left">Retour : <a href="Text.htm">Texte</a></div>
+        <div style="float:right">Suivant : <a href="draw_text_ext_transformed_colour.htm">draw_text_ext_transformed_colour</a></div>
+      </div>
+    </div>
+    <h5><span data-keyref="Copyright Notice">Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
   </div>
   <!-- KEYWORDS
 draw_text_transformed_colour

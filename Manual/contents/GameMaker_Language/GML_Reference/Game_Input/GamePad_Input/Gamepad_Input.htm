@@ -7,16 +7,244 @@
   <meta name="generator" content="Adobe RoboHelp 2019" />
   <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
   <meta name="rh-authors" content="Mark Alexander" />
-  <meta name="topic-comment" content="Section de référence pour l&#39;entrée de la manette de jeu" />
-  <meta name="rh-index-keywords" content="gp_face1,gp_face2,gp_face3,gp_face4,gp_shoulderl,gp_shoulderlb,gp_shoulderr,gp_shoulderrb,gp_select,gp_start,gp_stickl,gp_stickr,gp_padu,gp_padd,gp_padl,gp_padr,gp_axislh,gp_axislv,gp_axisrh,gp_axisrv" />
-  <meta name="search-keywords" content="Entrée de la manette de jeu,manettes de jeu,gp_face1,gp_face2,gp_face3,gp_face4,gp_shoulderl,gp_shoulderlb,gp_shoulderr,gp_shoulderrb,gp_select,gp_start,gp_stickl,gp_stickr,gp_padu,gp_padd,gp_padl,gp_padr,gp_axislh,gp_axislv,gp_axisrh,gp_axisrv"
-  />
+  <meta name="topic-comment" content="Reference section for Gamepad Input" />
+  <meta name="rh-index-keywords" content="gp_face1,gp_face2,gp_face3,gp_face4,gp_shoulderl,gp_shoulderlb,gp_shoulderr,gp_shoulderrb,gp_select,gp_start,gp_stickl,gp_stickr,gp_padu,gp_padd,gp_padl,gp_padr,gp_axislh,gp_axislv,gp_axisrh,gp_axisrv,gp_axis_acceleration_x,gp_axis_acceleration_y,gp_axis_acceleration_z,gp_axis_angular_velocity_x,gp_axis_angular_velocity_y,gp_axis_angular_velocity_z,gp_axis_orientation_x,gp_axis_orientation_y,gp_axis_orientation_z,gp_axis_orientation_w" />
+  <meta name="search-keywords" content="Gamepad Input,gamepads,gp_face1,gp_face2,gp_face3,gp_face4,gp_shoulderl,gp_shoulderlb,gp_shoulderr,gp_shoulderrb,gp_select,gp_start,gp_stickl,gp_stickr,gp_padu,gp_padd,gp_padl,gp_padr,gp_axislh,gp_axislv,gp_axisrh,gp_axisrv,gp_axis_acceleration_x,gp_axis_acceleration_y,gp_axis_acceleration_z,gp_axis_angular_velocity_x,gp_axis_angular_velocity_y,gp_axis_angular_velocity_z,gp_axis_orientation_x,gp_axis_orientation_y,gp_axis_orientation_z,gp_axis_orientation_w" />
 </head>
-<body><!--<div class="body-scroll" style="top: 150px;">--><h1> Entrée de la manette de jeu</h1><p><b></b> <span class="notranslate">GameMaker Studio 2</span> dispose d&#39;un certain nombre de fonctions dédiées qui peuvent être utilisées pour détecter à la fois les commandes analogiques et numériques de plusieurs manettes de jeu connectées. Ces fonctions fonctionnent de manière similaire aux <a href="../Device_Input/Device_Input.htm">entrées de périphérique</a>, en ce sens que vous pouvez détecter jusqu&#39;à quatre manettes de jeu XInput différentes qui sont connectées (et jusqu&#39;à 8 manettes de jeu DirectInput) et gérer l&#39;entrée de chacune en utilisant les mêmes fonctions. Notez que lorsqu&#39;une manette de jeu est branchée sur votre appareil (ou qu&#39;elle est supprimée), un <a href="../../../../The_Asset_Editors/Object_Properties/Async_Events.htm">événement système</a> asynchrone est déclenché dans lequel vous pouvez gérer la situation en utilisant les fonctions appropriées.</p><p> Les &quot;slots&quot; de la manette de jeu sont indexés à partir de 0, et le slot réel attribué à une manette de jeu dépendra de divers facteurs, notamment le système d&#39;exploitation sur lequel le projet s&#39;exécute. Sur la <strong><span class="notranslate">Windows</span></strong>, les emplacements 0 à 3 inclus <i>ne sont que pour les manettes de jeu Xinput</i>, c&#39;est-à-dire: les contrôleurs Xbox360 et compatibles. Cependant, vous pouvez également vérifier les emplacements 4 à 11 inclus pour les <i>manettes de jeu DirectInput</i>, ce qui signifie que vous pouvez détecter de nombreux autres modèles de contrôleur lorsque vous êtes connecté via ces emplacements. Sur d&#39;autres plates-formes, les pads peuvent être détectés sur <em>n&#39;importe quel</em> slot que le système d&#39;exploitation lui a attribué, ce qui pourrait être le slot 3 ou le slot 20 ou plus. Par exemple, <strong><span class="notranslate">Android</span></strong> appareils Android stockeront des manettes de jeu Bluetooth dans un emplacement, puis réserveront cet emplacement pour cette manette de jeu à l&#39;avenir, qu&#39;elle soit connectée ou non, vous <em>ne pouvez donc pas</em> supposer qu&#39;une seule manette de jeu connectée est connectée à l&#39;emplacement 0, car cela sera probablement pas être le cas.</p><p> Il est à noter que lorsque vous utilisez des manettes de jeu DirectInput sur <span class="notranslate">Windows</span> ou des manettes de jeu génériques sur d&#39;autres plates-formes, les constantes données ci <strong>-dessous peuvent ne pas correspondre exactement aux boutons que vous attendez lorsqu&#39;ils sont enfoncés</strong>, en raison de la manière fragmentée et non normalisée dont l&#39;API est mis en œuvre par les fabricants de contrôleurs. Pour cette raison, il est recommandé d&#39;avoir une sorte d&#39;écran de configuration de la manette de jeu dans vos jeux où les gens peuvent redéfinir les boutons de la manette de jeu en fonction de l&#39;entrée de n&#39;importe quel appareil connecté pour atténuer les problèmes (il existe des fonctions de «cartographie» de la manette de jeu qui peuvent vous aider. sur <span class="notranslate">Android</span> <span class="notranslate">Windows</span> Desktop, <span class="notranslate">Ubuntu</span>, <span class="notranslate">macOS</span> et Android, tandis que sur tous les autres, vous devrez le faire vous-même en utilisant du code).</p><p> Lorsque vous travaillez avec les fonctions de la manette de jeu, l&#39;entrée peut provenir d&#39; <strong>axes</strong>, de <strong>boutons</strong> et / ou de <strong>chapeaux</strong> et <span class="notranslate">GameMaker Studio 2</span> attribuera à certaines ou à toutes les constantes intégrées suivantes (notez que les «chapeaux» ne sont généralement détectés que sur les contrôleurs non standard ):</p><p></p><table><tbody><tr><th> Constant</th><th> Description </th></tr><tr><td><span class="notranslate"><tt>gp_face1</tt></span></td><td> Bouton supérieur 1 (il correspond au <i>«A»</i> sur un contrôleur Xbox 360 et à la <i>croix</i> sur un contrôleur PS)</td></tr><tr><td><span class="notranslate"><tt>gp_face2</tt></span></td><td> Bouton supérieur 2 (il correspond au <i>&quot;B&quot;</i> sur un contrôleur Xbox 360 et au <i>cercle</i> sur un contrôleur PS)</td></tr><tr><td><span class="notranslate"><tt>gp_face3</tt></span></td><td> Bouton supérieur 3 (il correspond au <i>«X»</i> sur un contrôleur Xbox 360 et au <i>carré</i> sur un contrôleur PS)</td></tr><tr><td><span class="notranslate"><tt>gp_face4</tt></span></td><td> Bouton supérieur 4 (il correspond au <i>&quot;Y&quot;</i> sur un contrôleur Xbox 360 et au <i>triangle</i> sur un contrôleur PS)</td></tr><tr><td><span class="notranslate"><tt>gp_shoulderl</tt></span></td><td> Bouton d&#39;épaule gauche </td></tr><tr><td><span class="notranslate"><tt>gp_shoulderlb</tt></span></td><td> Gâchette d&#39;épaule gauche </td></tr><tr><td><span class="notranslate"><tt>gp_shoulderr</tt></span></td><td> Bouton d&#39;épaule droit </td></tr><tr><td><span class="notranslate"><tt>gp_shoulderrb</tt></span></td><td> Gâchette d&#39;épaule droite </td></tr><tr><td><span class="notranslate"><tt>gp_select</tt></span></td><td> Le bouton de sélection (c&#39;est le <i>bouton PS</i> sur un contrôleur DS4)</td></tr><tr><td><span class="notranslate"><tt>gp_start</tt></span></td><td> Le bouton de démarrage (c&#39;est le bouton &quot;options&quot; sur une manette PS4)</td></tr><tr><td><span class="notranslate"><tt>gp_stickl</tt></span></td><td> Le joystick gauche enfoncé (comme un bouton)</td></tr><tr><td><span class="notranslate"><tt>gp_stickr</tt></span></td><td> Le joystick droit enfoncé (comme un bouton)</td></tr><tr><td><span class="notranslate"><tt>gp_padu</tt></span></td><td> D-pad vers le haut </td></tr><tr><td><span class="notranslate"><tt>gp_padd</tt></span></td><td> D-pad vers le bas </td></tr><tr><td><span class="notranslate"><tt>gp_padl</tt></span></td><td> D-pad gauche </td></tr><tr><td><span class="notranslate"><tt>gp_padr</tt></span></td><td> D-pad droit </td></tr><tr><td><span class="notranslate"><tt>gp_axislh</tt></span></td><td> Axe horizontal du joystick gauche (analogique)</td></tr><tr><td><span class="notranslate"><tt>gp_axislv</tt></span></td><td> Axe vertical du joystick gauche (analogique)</td></tr><tr><td><span class="notranslate"><tt>gp_axisrh</tt></span></td><td> Axe horizontal du joystick droit (analogique)</td></tr><tr><td><span class="notranslate"><tt>gp_axisrv</tt></span></td><td> Axe vertical du joystick droit (analogique)</td></tr></tbody></table><p></p><p> Pour mieux comprendre exactement quelle partie du contrôleur chaque constante représente, vous pouvez vous référer à l&#39;image suivante d&#39;une manette de jeu Xinput standard:</p><p><img alt="Xinput gamepad illustration" class="center" src="../../../../assets/Images/Scripting_Reference/GML/Reference/Game_Input/GamePad.png" /> Vous trouverez ci-dessous une liste de toutes les fonctions de la manette de jeu: </p><p></p><ul class="colour"><li><a href="gamepad_is_supported.htm">gamepad_is_supported</a></li><li><a href="gamepad_is_connected.htm">gamepad_is_connected</a></li><li><a href="gamepad_get_guid.htm">gamepad_get_guid</a></li><li><a href="gamepad_get_device_count.htm">gamepad_get_device_count</a></li><li><a href="gamepad_get_description.htm">gamepad_get_description</a></li><li><a href="gamepad_get_button_threshold.htm">gamepad_get_button_threshold</a></li><li><a href="gamepad_get_axis_deadzone.htm">gamepad_get_axis_deadzone</a></li><li><a href="gamepad_get_option.htm">gamepad_get_option</a></li><li><a href="gamepad_set_button_threshold.htm">gamepad_set_button_threshold</a></li><li><a href="gamepad_set_axis_deadzone.htm">gamepad_set_axis_deadzone</a></li><li><a href="gamepad_set_vibration.htm">gamepad_set_vibration</a></li><li><a href="gamepad_set_colour.htm">gamepad_set_colour</a></li><li><a href="gamepad_set_option.htm">gamepad_set_option</a></li><li><a href="gamepad_axis_count.htm">gamepad_axis_count</a></li><li><a href="gamepad_axis_value.htm">gamepad_axis_value</a></li><li><a href="gamepad_button_check.htm">gamepad_button_check</a></li><li><a href="gamepad_button_check_pressed.htm">gamepad_button_check_pressed</a></li><li><a href="gamepad_button_check_released.htm">gamepad_button_check_released</a></li><li><a href="gamepad_button_count.htm">gamepad_button_count</a></li><li><a href="gamepad_button_value.htm">gamepad_button_value</a></li><li><a href="gamepad_hat_count.htm">gamepad_hat_count</a></li><li><a href="gamepad_hat_value.htm">gamepad_hat_value</a></li></ul><p></p><p> Les fonctions de manette de jeu suivantes existent également et sont utilisées pour remapper les constantes intégrées aux entrées physiques directes d&#39;une manette de jeu donnée. Ces fonctions sont uniquement destinées aux plates-formes cibles <span class="notranslate">Windows</span> Desktop, <span class="notranslate">Ubuntu</span>, <span class="notranslate">macOS</span> et <span class="notranslate">Android</span> <span class="notranslate">Windows</span>, elles ne seront valables que pour les périphériques d&#39;entrée directe. Alors que <span class="notranslate">GameMaker Studio 2</span> est livré avec des mappages pour un certain nombre de manettes de jeu différentes basées sur <a href="https://github.com/gabomdq/SDL_GameControllerDB" target="_blank">SDL Gamepad Controller DB</a>, cependant, en raison du grand nombre de types et de marques de contrôleurs, il est impossible de mapper les <span class="notranslate">GML</span> aux entrées correctes pour chaque marque et model, donc avec ces fonctions, vous avez la possibilité de créer vos propres mappages personnalisés. </p><p></p><ul class="colour"><li><a href="gamepad_get_mapping.htm">gamepad_get_mapping</a></li><li><a href="gamepad_test_mapping.htm">gamepad_test_mapping</a></li><li><a href="gamepad_remove_mapping.htm">gamepad_remove_mapping</a></li></ul><p></p><p> Il est à noter que les manettes de jeu Direct Input sont exécutées en <i>mode coopératif,</i> ce qui signifie que votre jeu n&#39;y a accès que lorsqu&#39;il s&#39;agit de l&#39;application au premier plan, ce qui entraînera la «perte» des contrôleurs Direct Input si le jeu perd le focus, puis &quot;trouvé&quot; à nouveau quand il revient dans le focus (cela peut être détecté dans l&#39;événement système et traité). De même, aucune entrée des manettes de jeu ne sera détectée tant que le jeu n&#39;est pas au point, et nous vous recommandons d&#39;utiliser la fonction <a href="../../OS_And_Compiler/os_is_paused.htm"><tt>os_is_paused()</tt></a> ou <a href="../../Cameras_And_Display/The_Game_Window/window_has_focus.htm"><tt>window_has_focus()</tt></a> pour le détecter et mettre le jeu en pause ou quelque chose de similaire, car tout bouton maintenu enfoncé au moment où le jeu perd le focus maintiendra l&#39;état maintenu enfoncé jusqu&#39;à ce que le jeu retrouve le focus.</p><p></p><h2> Compatibilité</h2><p> La liste suivante montre la compatibilité actuelle entre les plates-formes (notez que cela changera avec les futures mises à jour):</p><ul class="colour"><li> <strong><span class="notranslate">Windows</span></strong> est entièrement pris en charge avec un maximum de 12 appareils connectés autorisés à la fois (numérotés de 0 à 11, 0 - 3 étant des appareils XInput et 4 - 11 étant DirectInput). Le remappage des constantes de contrôleur est également autorisé.</li><li> <strong><span class="notranslate">macOS</span></strong> est pris en charge avec un maximum de 4 appareils connectés autorisés à la fois, et ces appareils peuvent UNIQUEMENT être du type <span class="notranslate">Playstation</span> 3 ou Xbox 360. Veuillez noter que l&#39;option «Créer pour Mac AppStore» dans les options de jeu Mac doit être désactivée pour que le support de coussin fonctionne. Le remappage des constantes de contrôleur est également autorisé.</li><li> <strong><span class="notranslate">Ubuntu</span></strong> prend également en charge l&#39;entrée Gamepad, mais vous devrez peut-être installer des bibliothèques supplémentaires à partir du référentiel <span class="notranslate">Ubuntu</span> Vous pouvez le faire facilement en ouvrant un terminal de ligne de commande et en tapant ce qui suit (cela installera la prise en charge de l&#39;interface graphique pour le joystick / gamepad ainsi que l&#39;API joystick / gamepad elle-même - le remappage des constantes du contrôleur n&#39;est <i>pas</i> autorisé):<p class="code">sudo apt-get install jstest-gtk<br/> sudo apt-get install joystick.</p></li><li> <strong>Les</strong> jeux HTML5 utilisant des manettes de jeu sont pris en charge par la plupart des principaux navigateurs, à l&#39;exception de <i>Safari</i>. Le remappage des constantes de contrôleur n&#39;est <i>pas</i> autorisé.</li><li> La prise en charge de la manette de jeu <strong><span class="notranslate">iOS</span></strong> L&#39;axe gauche correspond au contrôleur de bâton (bien que l&#39;entrée soit numérique, pas analogique), les quatre boutons «face» correspondent aux boutons avant de l&#39;armoire, et les quatre boutons d&#39;épaule correspondent à ceux à l&#39;arrière de l&#39;armoire.</li><li> <strong><span class="notranslate">Android</span></strong> exportation Android (et <strong><span class="notranslate">Amazon Fire</span></strong> ) prend en charge les contrôleurs NYKO et les contrôleurs Bluetooth génériques, mais uniquement lorsqu&#39;ils sont activés, ce qui signifie que vous devrez cocher l&#39;option iCade / Bluetooth dans la section <a href="../../../../Settings/Game_Options/Android.htm">Général</a> des options de jeu <span class="notranslate">Android</span> Ils nécessitent le niveau d&#39;API 12 pour fonctionner pleinement et il convient de noter que <span class="notranslate">GameMaker Studio 2</span> enregistrera comme connecté tous les appareils Bluetooth avec lesquels votre appareil est couplé, qu&#39;il soit réellement connecté ou non. Par conséquent, cela doit être pris en compte lors de l&#39;attribution et de la vérification des &quot;slots&quot;. Notez que le remappage des constantes de contrôleur est également autorisé.</li><li> Sur <strong>PS4</strong>, si vous souhaitez utiliser le suivi du pavé tactile, vous devez utiliser le <a href="../Device_Input/Device_Input.htm"><tt>device_mouse_*</tt></a> boutons. Le remappage des constantes de contrôleur n&#39;est <i>pas</i> autorisé.</li><li> Sur les <strong><span class="notranslate">Windows</span></strong> <strong>UWP</strong>, <strong>XBoxOne</strong> et <strong><span class="notranslate">Nintendo</span> <span class="notranslate">Switch</span></strong>, les manettes de jeu sont entièrement prises en charge, mais le remappage des constantes de contrôleur n&#39;est <i>pas</i> autorisé.</li></ul><p> Idéalement, sur <i>toutes</i> les plates-formes cibles, vous voulez énumérer une liste des «emplacements» de manette de jeu disponibles, puis les vérifier pour voir si des périphériques sont détectés, quelque chose comme ceci: </p><p class="code">var _maxpads = gamepad_get_device_count();<br/> for (var i = 0; i &lt; _maxpads; i++)<br/>     {
-    <br/>     if (gamepad_is_connected(i))<br/>         {
-    <br/>         // do stuff with pad &quot;i&quot;<br/>         }
-    <br/>     }
-  </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> Retour: <a href="../Game_Input.htm">Entrée de jeu</a></div><div style="float:right"> Suivant: <a href="../Virtual_Keys_And_Keyboards/Virtual_Keys_And_Keyboards.htm">Clés virtuelles et claviers virtuels</a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
+<body>
+  <!--<div class="body-scroll" style="top: 150px;">-->
+  <h1>GamepadInput</h1>
+  <p><b></b><span class="notranslate">GameMaker Studio 2</span> possède un certain nombre de fonctions dédiées qui peuvent être utilisées pour détecter les commandes analogiques et numériques de plusieurs manettes de jeu connectées. Ces fonctions fonctionnent de la même manière que les <a href="../Device_Input/Device_Input.htm">entrées de périphériques</a>,
+    en ce sens que vous pouvez détecter jusqu'à quatre manettes de jeu XInput différentes qui sont connectées (et jusqu'à 8 manettes de jeu DirectInput) et traiter l'entrée de chacune d'elles à l'aide des mêmes fonctions. Notez que lorsqu'un gamepad est branché à votre appareil (ou qu'il est retiré)
+    un <a href="../../../../The_Asset_Editors/Object_Properties/Async_Events.htm">événement système</a> asynchrone est déclenché et vous pouvez gérer la situation à l'aide des fonctions appropriées.</p>
+  <p>Les &quot;emplacements&quot; de la manette de jeu sont indexés à partir de 0. L'emplacement réel attribué à une manette de jeu dépend d'une série de facteurs, dont le système d'exploitation sur lequel tourne le projet n'est pas le moindre. Sur la cible <strong><span class="notranslate">Windows</span></strong> cible, les slots 0 -
+    3 inclus sont <i>uniquement pour les gamepads Xinput</i>, c'est-à-dire les manettes Xbox360 et compatibles. Cependant, vous pouvez également vérifier les emplacements 4 à 11 inclus pour les manettes de jeu à <i>entrée directe</i>, ce qui signifie que vous pouvez détecter de nombreux autres modèles de manettes lorsqu'elles sont connectées
+    par ces emplacements. Sur d'autres plateformes, les manettes peuvent être détectées sur <em>n'importe quel</em> emplacement que le système d'exploitation leur a attribué, qui peut être l'emplacement 3 ou l'emplacement 20 ou plus. Par exemple, <strong><span class="notranslate">Android</span></strong> les périphériques stockent les manettes de jeu Bluetooth dans un emplacement et réservent ensuite cet emplacement à la manette de jeu en question.
+    Par exemple, les appareils stockent les manettes de jeu Bluetooth dans un emplacement et réservent cet emplacement à cette manette à l'avenir, qu'elle soit connectée ou non. Vous <em>ne pouvez</em> donc <em>pas</em> supposer qu'une seule manette de jeu connectée est connectée à l'emplacement 0, car ce ne sera probablement pas le cas.</p>
+  <p>Il convient de noter que lorsque vous utilisez des manettes de jeu à entrée directe sous <span class="notranslate">Windows</span>, ou des manettes de jeu génériques sur d'autres plates-formes, les constantes indiquées ci-dessous <strong>peuvent ne pas correspondre exactement aux boutons que vous attendez lorsqu'ils sont pressés</strong>, en raison de la manière fragmentée et non standardisée dont l'API est implémentée par les fabricants de manettes.
+    fragmentée et non standardisée de l'API par les fabricants de contrôleurs. Pour cette raison, il est recommandé d'avoir une sorte d'écran de configuration du gamepad dans vos jeux, où les gens peuvent redéfinir les boutons du gamepad en fonction des entrées de n'importe quel périphérique connecté, afin d'atténuer les problèmes (voir l'article sur la configuration du gamepad).
+    (il existe des fonctions de &quot;mappage&quot; de manette de jeu qui peuvent vous aider dans ce domaine sur les <span class="notranslate">cibles</span> Windows <span class="notranslate">Desktop,</span> Ubuntu, <span class="notranslate">macOS</span> et Android <span class="notranslate">,</span> tandis que sur toutes les autres cibles, vous devez le faire vous-même en utilisant du code).</p>
+  <h2>Constantes d'entrée</h2>
+  <p>Lorsque vous travaillez avec les fonctions de la manette de jeu, les entrées peuvent provenir d'<strong>axes</strong>, de <strong>boutons</strong> ou de <strong>chapeaux</strong>, que <span class="notranslate">GameMaker Studio 2</span> attribuera aux constantes intégrées suivantes (notez que les &quot; chapeaux &quot; ne sont généralement détectés que sur les manettes non standard) : 1.
+    généralement détectés que sur les manettes non standard) :</p>
+  <table>
+    <tbody>
+      <tr>
+        <th>Constant</th>
+        <th>Description</th>
+      </tr>
+      <tr>
+        <td><tt>gp_face1</tt></td>
+        <td>Bouton supérieur 1 (correspond au <i>&quot;A&quot; d'une</i> manette Xbox 360 et à la croix d'une manette <i>PS</i> )</td>
+      </tr>
+      <tr>
+        <td><tt>gp_face2</tt></td>
+        <td>Bouton supérieur 2 (correspond au <i>&quot;B&quot; d'une</i> manette Xbox 360 et au cercle d'une manette <i>PS</i> )</td>
+      </tr>
+      <tr>
+        <td><tt>gp_face3</tt></td>
+        <td>Bouton supérieur 3 (correspond au <i>&quot;X&quot; d'une</i> manette Xbox 360 et au carré d'une manette <i>PS</i> )</td>
+      </tr>
+      <tr>
+        <td><tt>gp_face4</tt></td>
+        <td>Bouton supérieur 4 (correspond au <i>&quot;Y&quot; d'une</i> manette Xbox 360 et au triangle <i>d'une</i> manette <i>PS</i> )</td>
+      </tr>
+      <tr>
+        <td><tt>gp_épaulière</tt></td>
+        <td>Bouton d'épaule gauche</td>
+      </tr>
+      <tr>
+        <td><tt>gp_épaulière</tt></td>
+        <td>Gâchette de l'épaule gauche</td>
+      </tr>
+      <tr>
+        <td><tt>gp_shoulderr</tt></td>
+        <td>Bouton d'épaule droit</td>
+      </tr>
+      <tr>
+        <td><tt>gp_shoulderrb</tt></td>
+        <td>Gâchette épaule droite</td>
+      </tr>
+      <tr>
+        <td><tt>gp_select</tt></td>
+        <td>Le bouton de sélection (c'est le bouton <i>PS</i> sur un contrôleur DS4)</td>
+      </tr>
+      <tr>
+        <td><tt>gp_start</tt></td>
+        <td>Le bouton de démarrage (c'est le bouton &quot;options&quot; sur une manette PS4)</td>
+      </tr>
+      <tr>
+        <td><tt>gp_stickl</tt></td>
+        <td>Le stick gauche appuyé (comme un bouton)</td>
+      </tr>
+      <tr>
+        <td><tt>gp_stickr</tt></td>
+        <td>Le stick droit appuyé (comme un bouton)</td>
+      </tr>
+      <tr>
+        <td><tt>gp_padu</tt></td>
+        <td>Pavé numérique vers le haut</td>
+      </tr>
+      <tr>
+        <td><tt>gp_padd</tt></td>
+        <td>Pédale D vers le bas</td>
+      </tr>
+      <tr>
+        <td><tt>gp_padl</tt></td>
+        <td>D-pad gauche</td>
+      </tr>
+      <tr>
+        <td><tt>gp_padr</tt></td>
+        <td>D-pad droit</td>
+      </tr>
+      <tr>
+        <td><tt>gp_axislh</tt></td>
+        <td>Axe horizontal du stick gauche (analogique)</td>
+      </tr>
+      <tr>
+        <td><tt>gp_axislv</tt></td>
+        <td>Axe vertical du manche gauche (analogique)</td>
+      </tr>
+      <tr>
+        <td><tt>gp_axisrh</tt></td>
+        <td>Axe horizontal du manche droit (analogique)</td>
+      </tr>
+      <tr>
+        <td><tt>gp_axisrv</tt></td>
+        <td>Axe vertical du manche droit (analogique)</td>
+      </tr>
+    </tbody>
+  </table>
+  <p>Pour mieux comprendre quelle partie du contrôleur chaque constante représente exactement, vous pouvez vous référer à l'image suivante d'une manette de jeu XInput standard :</p>
+  <p><img alt="Xinput gamepad illustration" class="center" src="../../../../assets/Images/Scripting_Reference/GML/Reference/Game_Input/GamePad.png" /></p>
+  <p>Les constantes suivantes peuvent être utilisées avec la fonction <tt><a href="gamepad_axis_value.htm">gamepad_axis_value()</a></tt> lors de l'utilisation du gamepad DualSense sur une PS4 ou PS5 :</p>
+  <table>
+    <tbody>
+      <tr>
+        <th>Constant</th>
+        <th>Description</th>
+      </tr>
+      <tr>
+        <td><tt>gp_axe_accélération_x</tt></td>
+        <td>L'accélération du gamepad sur l'axe X</td>
+      </tr>
+      <tr>
+        <td><tt>gp_axe_accélération_y</tt></td>
+        <td>L'accélération du gamepad sur l'axe Y</td>
+      </tr>
+      <tr>
+        <td><tt>gp_axe_accélération_z</tt></td>
+        <td>L'accélération du gamepad sur l'axe Z</td>
+      </tr>
+      <tr>
+        <td><tt>gp_axe_vitesse_angulaire_x</tt></td>
+        <td>La vitesse angulaire du gamepad sur l'axe X</td>
+      </tr>
+      <tr>
+        <td><tt>gp_axe_vitesse_angulaire_y</tt></td>
+        <td>La vitesse angulaire du gamepad sur l'axe Y</td>
+      </tr>
+      <tr>
+        <td><tt>gp_axe_vitesse_angulaire_z</tt></td>
+        <td>La vitesse angulaire du gamepad sur l'axe Z</td>
+      </tr>
+      <tr>
+        <td><tt>gp_axis_orientation_x</tt></td>
+        <td>L'orientation X du gamepad</td>
+      </tr>
+      <tr>
+        <td><tt>gp_axis_orientation_y</tt></td>
+        <td>L'orientation Y du gamepad</td>
+      </tr>
+      <tr>
+        <td><tt>gp_axis_orientation_z</tt></td>
+        <td>L'orientation Z du gamepad</td>
+      </tr>
+      <tr>
+        <td><tt>gp_axis_orientation_w</tt></td>
+        <td>L'orientation W du gamepad</td>
+      </tr>
+    </tbody>
+  </table>
+  <p class="note"><strong>REMARQUE</strong>: l'orientation du gamepad est un quaternion <a href="https://en.wikipedia.org/wiki/Quaternion" title="Quaternion">,</a> c'est pourquoi il a quatre valeurs (X, Y, Z et W).</p>
+  <p>Ces constantes ne sont actuellement prises en charge que sur PS4 et PS5. Lorsqu'elles sont utilisées sur d'autres plateformes, les fonctions d'entrée renvoient <tt>0</tt>, même en cas d'utilisation d'un gamepad DualSense.</p>
+  <h2>Fonctions</h2>
+  <p>Vous trouverez ci-dessous une liste de toutes les fonctions du gamepad :</p>
+  <ul class="colour">
+    <li><a href="gamepad_is_supported.htm">gamepad_is_supported</a></li>
+    <li><a href="gamepad_is_connected.htm">gamepad_is_connected</a></li>
+    <li><a href="gamepad_get_guid.htm">gamepad_get_guid</a></li>
+    <li><a href="gamepad_get_device_count.htm">gamepad_get_device_count</a></li>
+    <li><a href="gamepad_get_description.htm">gamepad_get_description</a></li>
+    <li><a href="gamepad_get_button_threshold.htm">gamepad_get_button_threshold</a></li>
+    <li><a href="gamepad_get_axis_deadzone.htm">gamepad_get_axis_deadzone</a></li>
+    <li><a href="gamepad_get_option.htm">gamepad_get_option</a></li>
+    <li><a href="gamepad_set_button_threshold.htm">gamepad_set_button_threshold</a></li>
+    <li><a href="gamepad_set_axis_deadzone.htm">gamepad_set_axis_deadzone</a></li>
+    <li><a href="gamepad_set_vibration.htm">gamepad_set_vibration</a></li>
+    <li><a href="gamepad_set_colour.htm">gamepad_set_colour</a></li>
+    <li><a href="gamepad_set_option.htm">option gamepad_set</a></li>
+    <li><a href="gamepad_axis_count.htm">gamepad_axis_count</a></li>
+    <li><a href="gamepad_axis_value.htm">gamepad_axis_value</a></li>
+    <li><a href="gamepad_button_check.htm">vérification du bouton du gamepad</a></li>
+    <li><a href="gamepad_button_check_pressed.htm">gamepad_button_check_pressed</a></li>
+    <li><a href="gamepad_button_check_released.htm">gamepad_button_check_released</a></li>
+    <li><a href="gamepad_button_count.htm">nombre de boutons de la manette</a></li>
+    <li><a href="gamepad_button_value.htm">valeur_du_bouton_de_jeu</a></li>
+    <li><a href="gamepad_hat_count.htm">gamepad_hat_count</a></li>
+    <li><a href="gamepad_hat_value.htm">gamepad_hat_value</a></li>
+  </ul>
+  <p> </p>
+  <p>Les fonctions gamepad suivantes existent également et sont utilisées pour remapper les constantes intégrées aux entrées physiques directes d'un gamepad donné. Ces fonctions ne concernent que les plateformes cibles <span class="notranslate">Windows</span> Desktop, <span class="notranslate">Ubuntu</span>, <span class="notranslate">macOS</span> et <span class="notranslate">Android</span> et, sous <span class="notranslate">Windows</span>
+    elles ne seront valables que pour les périphériques à entrée directe. Bien que <span class="notranslate">GameMaker Studio 2</span> soit fourni avec des mappages pour un certain nombre de manettes de jeu différentes basés sur la <a href="https://github.com/gabomdq/SDL_GameControllerDB" target="_blank">SDL Gamepad Controller DB</a>, cependant
+    en raison du grand nombre de types et de marques de manettes, il est impossible de mapper les constantes <span class="notranslate">GML</span> aux entrées correctes pour chaque marque et chaque modèle. Ces fonctions vous permettent donc de créer vos propres mappages personnalisés.</p>
+  <p> </p>
+  <ul class="colour">
+    <li><a href="gamepad_get_mapping.htm">gamepad_get_mapping</a></li>
+    <li><a href="gamepad_test_mapping.htm">gamepad_test_mapping</a></li>
+    <li><a href="gamepad_remove_mapping.htm">gamepad_remove_mapping</a></li>
+  </ul>
+  <p> </p>
+  <p>Il convient de noter que les manettes de jeu à entrée directe sont exécutées en <i>mode coopératif</i>, ce qui signifie que votre jeu n'y a accès que lorsqu'il est l'application de premier plan.
+    Les contrôleurs à entrée directe seront donc &quot;perdus&quot; si le jeu perd le focus, puis &quot;retrouvés&quot; lorsqu'il revient au focus (ceci peut être détecté dans l'événement système et traité). De même, aucune entrée provenant des manettes de jeu ne sera détectée lorsque le jeu n'est pas au point, et nous vous recommandons de
+    d'utiliser la fonction <a href="../../OS_And_Compiler/os_is_paused.htm"><tt>os_is_paused()</tt></a> ou <a href="../../Cameras_And_Display/The_Game_Window/window_has_focus.htm"><tt>window_has_focus()</tt></a> pour détecter cela et mettre le jeu en pause ou quelque chose de similaire.
+    car tout bouton maintenu enfoncé au moment où le jeu perd le focus conservera cet état jusqu'à ce que le jeu retrouve le focus.</p>
+  <p> </p>
+  <h2>Compatibilité</h2>
+  <p>La liste suivante indique la compatibilité actuelle entre les différentes plates-formes (notez que cela changera avec les futures mises à jour) :</p>
+  <ul class="colour">
+    <li><strong><span class="notranslate">Windows</span> </strong>est entièrement pris en charge avec un maximum de 12 périphériques connectés à la fois (numérotés de 0 à 11, 0 à 3 étant des périphériques XInput et 4 à 11 des périphériques DirectInput). Le remappage des constantes du contrôleur est également autorisé.</li>
+    <li><strong><span class="notranslate">macOS</span> </strong>est pris en charge avec un maximum de 4 appareils connectés autorisés en même temps, et ces appareils peuvent UNIQUEMENT être du type <span class="notranslate">Playstation3</span>ou Xbox 360. Veuillez noter que l'option &quot;Build for Mac AppStore&quot; dans Mac Game Options
+      doit être désactivée pour que la prise en charge des manettes fonctionne. Le remappage des constantes de la manette est également autorisé.</li>
+    <li><strong><span class="notranslate">Ubuntu</span> </strong>supporte également l'entrée Gamepad, mais vous devrez peut-être installer des bibliothèques supplémentaires à partir du dépôt <span class="notranslate">Ubuntu</span>. Vous pouvez le faire facilement en ouvrant un terminal de ligne de commande et en tapant ce qui suit (ceci installera le support GUI
+      pour le joystick/gamepad ainsi que l'API joystick/gamepad elle-même - le remappage des constantes du contrôleur <i>n'</i> est <i>pas</i> autorisé) :
+     <p class="code">sudo apt-get install jstest-gtk<br> sudo apt-get install joystick.</p>
+    </li>
+    <li>Les jeux<strong>HTML5 </strong>utilisant des manettes de jeu sont pris en charge par la plupart des principaux navigateurs, à l'exception de <i>Safari</i>. Le remappage des constantes du contrôleur <i>n'</i> est <i>pas</i> autorisé.</li>
+    <li>La prise en charge de la manette de jeu s'étend également à <strong><span class="notranslate">iOS</span> </strong>avec le cabinet iCade. L'axe gauche correspond à la manette de jeu (bien que l'entrée soit numérique et non analogique), les quatre boutons &quot;frontaux&quot; correspondent aux boutons avant du boîtier et les quatre boutons d'épaule correspondent à ceux situés à l'arrière du boîtier.
+      boutons d'épaule correspondent à ceux de l'arrière du boîtier.</li>
+    <li><strong><span class="notranslate">Android</span> </strong>(et <strong><span class="notranslate">Amazon Fire</span></strong>) prennent en charge les contrôleurs NYKO et les contrôleurs Bluetooth génériques, mais uniquement lorsqu'ils sont activés, ce qui signifie que vous devrez cocher l'option iCade/Bluetooth dans la section <a href="../../../../Settings/Game_Options/Android.htm">Général</a> des options de jeu d'<span class="notranslate">Android</span>. Ils requièrent le niveau 12 de l'API pour fonctionner pleinement et il convient de noter que <span class="notranslate">GameMaker Studio 2</span> enregistrera comme étant connectés tous les périphériques Bluetooth avec lesquels votre appareil est apparié, qu'il soit réellement connecté ou non.
+      connecté. Il faut donc en tenir compte lors de l'attribution et du contrôle des &quot;slots&quot;. Notez que le remappage des constantes du contrôleur est également autorisé.</li>
+    <li>Sur la <strong>PS4</strong>, si vous souhaitez utiliser le suivi du pavé tactile, vous devez utiliser les <a href="../Device_Input/Device_Input.htm"><tt>device_mouse_*</tt></a> boutons. Le remappage des constantes du contrôleur <i>n'</i> est <i>pas</i> autorisé.</li>
+    <li>Sur <strong><span class="notranslate">Windows</span> </strong><strong>UWP</strong>, <strong>XBoxOne </strong>et <strong><span class="notranslate">Nintendo</span> <span class="notranslate">Switch</span></strong> les manettes de jeu sont entièrement prises en charge, mais le remappage des constantes de la manette <i>n'</i> est <i>pas</i> autorisé.</li>
+  </ul>
+  <p>Idéalement, sur <i>toutes les</i> plates-formes cibles, vous voulez énumérer une liste de &quot;slots&quot; de manettes de jeu disponibles et ensuite les vérifier pour voir si des périphériques sont détectés, quelque chose comme ceci :</p>
+  <p class="code">var _maxpads = gamepad_get_device_count() ;<br>
+    <br> for (var i = 0 ; i &lt; _maxpads ; i++)<br> {
+    <br> if (gamepad_is_connected(i))<br> {
+    <br> // faire des choses avec le pad &quot;i&quot;<br> }
+    <br> }
+  </p>
+  <p> </p>
+  <p> </p>
+  <div class="footer">
+    <div class="buttons">
+      <div class="clear">
+        <div style="float:left">Retour : <a href="../Game_Input.htm">Entrée du jeu</a></div>
+        <div style="float:right">Suivant : <a href="../Virtual_Keys_And_Keyboards/Virtual_Keys_And_Keyboards.htm">Touches et claviers virtuels</a></div>
+      </div>
+    </div>
+    <h5><span data-keyref="Copyright Notice">Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
   </div>
   <!-- KEYWORDS
 Gamepad Input Functions
@@ -40,6 +268,16 @@ gp_axislh
 gp_axislv
 gp_axisrh
 gp_axisrv
+gp_axis_acceleration_x
+gp_axis_acceleration_y
+gp_axis_acceleration_z
+gp_axis_angular_velocity_x
+gp_axis_angular_velocity_y
+gp_axis_angular_velocity_z
+gp_axis_orientation_x
+gp_axis_orientation_y
+gp_axis_orientation_z
+gp_axis_orientation_w
 -->
   <!-- TAGS
 gamepad_functions

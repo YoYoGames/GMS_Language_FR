@@ -3,17 +3,42 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>view_visible</title>
+  <title>vue_visible</title>
   <meta name="generator" content="Adobe RoboHelp 2019" />
   <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
   <meta name="rh-authors" content="Mark Alexander" />
-  <meta name="topic-comment" content="Page de référence pour view_visible" />
+  <meta name="topic-comment" content="Reference page for view_visible" />
   <meta name="rh-index-keywords" content="view_visible" />
   <meta name="search-keywords" content="view_visible" />
 </head>
-<body><!--<div class="body-scroll" style="top: 150px;">--><h1>view_visible</h1><p> Cette variable peut être utilisée pour savoir si un port de vue particulier est actuellement visible ou non. Vous pouvez également définir cette variable pour activer ou désactiver efficacement une vue en définissant la valeur sur <tt>true</tt> (visible) ou <tt>false</tt> (invisible). Notez que même si vous avez un port de vue défini sur visible, si les ports de vue ne sont pas activés (à l&#39;aide de la variable intégrée <a href="view_enabled.htm"><tt>view_enabled</tt></a> ou en les activant dans l&#39;éditeur de salle), ils ne seront pas dessinés à l&#39;écran.</p><p></p><h4> Syntaxe:</h4><p class="code">view_visible[0 ... 7];</p><p></p><h4> Retour:</h4><p class="code">Boolean (<tt>true</tt>: enabled, <tt>false</tt>: disabled)</p><p></p><h4> Exemple:</h4><p class="code">if !view_visible[0]<br/>     {
-    <br/>     view_visible[0] = true;<br/>     }
-  </p><p> Le code ci-dessus vérifie si la vue [0] est visible ou non et si ce n&#39;est pas le cas, il la définit alors comme visible. </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> Arrière: <a href="Cameras_And_View_Ports.htm">caméras et ports d&#39;affichage</a></div><div style="float:right"> Suivant:<a href="view_xport.htm">view_xport</a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
+<body>
+  <!--<div class="body-scroll" style="top: 150px;">-->
+  <h1>vue_visible</h1>
+  <p>Cette variable peut être utilisée pour savoir si un port de vue particulier est actuellement visible ou non. Vous pouvez également définir cette variable pour activer ou désactiver efficacement une vue en définissant la valeur à true (visible) ou <tt>false</tt> (invisible) <tt>.</tt> Notez que même si un port de vue est défini comme visible, si les ports de vue ne sont pas activés (en utilisant la variable intégrée <a href="view_enabled.htm"><tt>view_enabled</tt></a> ou en les activant dans l'éditeur de pièce), ils ne seront pas dessinés à l'écran.
+    l'écran.</p>
+  <p> </p>
+  <h4>Syntaxe :</h4>
+  <p class="code">vue_visible [0 ... 7] ;</p>
+  <p> </p>
+  <h4>Les retours :</h4>
+  <p class="code">Booléen<tt>(vrai</tt>: activé, <tt>faux</tt>: désactivé)</p>
+  <p> </p>
+  <h4>Exemple :</h4>
+  <p class="code">if !view_visible[0]<br> {
+    <br> view_visible[0] = true ;<br> }
+  </p>
+  <p>Le code ci-dessus vérifie si view[0] est visible ou non et s'il ne l'est pas, il le rend visible.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <div class="footer">
+    <div class="buttons">
+      <div class="clear">
+        <div style="float:left">Retour : <a href="Cameras_And_View_Ports.htm">Caméras et ports d'observation</a></div>
+        <div style="float:right">Suivant : <a href="view_xport.htm">view_xport</a></div>
+      </div>
+    </div>
+    <h5><span data-keyref="Copyright Notice">Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
   </div>
   <!-- KEYWORDS
 view_visible

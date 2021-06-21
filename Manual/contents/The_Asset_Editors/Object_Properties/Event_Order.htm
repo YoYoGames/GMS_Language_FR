@@ -1,17 +1,61 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <title>Ordre des événements</title>
-  <meta name="generator" content="Adobe RoboHelp 2019" />
+  <meta name="generator" content="Adobe RoboHelp 2020" />
   <meta name="rh-authors" content="Mark Alexander" />
-  <meta name="topic-comment" content="Page détaillant les événements asynchrones." />
-  <meta name="rh-index-keywords" content="Objets - Ordre des événements" />
-  <meta name="search-keywords" content="ordre d&#39;événement" />
+  <meta name="topic-comment" content="Page detailing the async events." />
+  <meta name="rh-index-keywords" content="Objects - Event Order" />
+  <meta name="search-keywords" content="event order" />
   <link rel="stylesheet" type="text/css" href="../../assets/css/default.css" />
 </head>
-<body><!--<div class="body-scroll" style="top: 150px;">--><h1> Ordre des événements</h1><p> Lors de l&#39;examen des événements dans <span class="notranslate">GameMaker Studio 2</span>, il convient de noter que <strong>l&#39;ordre exact dans lequel TOUS les événements vont se produire à chaque étape ne peut pas être clairement indiqué</strong>, simplement parce que cela dépend du fonctionnement interne de <span class="notranslate">GameMaker Studio</span> 2 et que cela est sujet à changement. au fur et à mesure que le logiciel se développe. Cependant, certains événements se <em>dérouleront toujours</em> dans le même ordre.</p><p> Le premier ensemble d&#39;événements qui se produiront toujours de la même manière sont ceux qui se produisent lors de la première entrée dans une pièce. L&#39;ordre dans lequel les différents événements se déclencheront est:</p><ul class="colour"><li> <strong>Les variables d&#39;objet / variables d&#39;instance sont initialisées</strong> (ce sont les variables que vous pouvez définir dans l&#39; <a class="glossterm" data-glossterm="IDE" href="#">EDI</a> de l&#39; <a href="../Objects.htm">éditeur d&#39;objets</a> ou de l&#39; <a href="../Rooms.htm">éditeur de pièce</a> ). Si vous avez un objet avec des variables attachées, elles seront créées avant toute autre chose, puis toutes les instances auxquelles des variables sont attachées seront définies par la suite afin que vous puissiez remplacer les variables d&#39;objet par des variables spécifiques à l&#39;instance dans l&#39;éditeur de salle.</li><li> <strong>Cr</strong> <strong><strong>eate</strong> événement</strong> suivi par <strong>l&#39;instance Création</strong> de <strong>code</strong> de <em>chaque</em> instance - afin de chaque instance est créée, elle se déroulera d&#39; abord son Créer un événement et son code instance Création avant de passer à l&#39;instance suivante à créer</li><li> <strong>Événement de début de jeu</strong> - cet événement est déclenché une fois dans la toute première salle du jeu pour toutes les instances placées dans la salle à partir de l&#39;éditeur de salle (notez que l&#39;appel de game_restart () déclenchera à nouveau cet événement.</li><li> <strong>Code de création de pièce</strong> - il s&#39;agit du code unique écrit dans l&#39;éditeur de pièce pour la première entrée dans une pièce</li><li> <strong>Événement de début de salle de toutes les instances</strong> - une des «autres» catégories d&#39;événements et se déclenchera pour toutes les instances, persistantes ou non</li></ul><p> Il convient également de noter que vous pouvez également définir l&#39;ordre dans lequel des instances spécifiques sont créées dans l&#39;éditeur de salle lui-même en les déplaçant vers le haut ou vers le bas dans la liste de la fenêtre <a href="../Room_Properties/Layer_Properties.htm">Propriétés de la couche d&#39;instance.</a></p><p> En dehors de ces événements spécifiques, le seul ordre connu qui se produira toujours de la même manière, peu importe ce qui appartient aux <strong>événements en trois étapes</strong> et aux différents événements de <strong>tirage au sort.</strong> Ceux-ci resteront toujours cohérents, donc si vous avez un code qui repose sur un timing spécifique à chaque étape de votre jeu, vous devez utiliser:</p><ul class="colour"><li> <strong>Événement de début d&#39;étape</strong></li><li> <strong>Événement d&#39;étape</strong> (notez que l&#39;événement d&#39;étape est exécuté juste avant que les instances ne soient placées dans leurs nouvelles positions)</li><li> <strong>Événement de fin d’étape</strong></li></ul><p> Tous les événements de dessin sont également toujours traités dans le même ordre comme suit (à l&#39;exception de l&#39; <strong>événement Window Resize</strong>, qui est déclenché différemment):</p><ul class="colour"><li> <strong>Événement de pré-tirage</strong></li><li> <strong>Événement de début de tirage au sort</strong></li><li> <strong>Événement de tirage au sort</strong></li><li> <strong>Événement de fin de tirage au sort</strong></li><li> <strong>Événement post-tirage</strong></li><li> <strong>Draw GUI Begin Event</strong></li><li> <strong>Dessiner un événement GUI</strong></li><li> <strong>Draw GUI End Event</strong> </li></ul><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> Retour: <a href="Object_Events.htm">Evénements d&#39;objets</a></div><div style="float:right"> Suivant: <a href="Other_Events.htm">Autres événements</a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
+<body>
+  <!--<div class="body-scroll" style="top: 150px;">-->
+  <h1>Ordre des événements</h1>
+  <p>Lorsque l'on considère les événements dans <span class="notranslate">GameMaker Studio 2</span>, il convient de noter que <strong>l'ordre exact dans lequel TOUS les événements vont se produire à chaque étape ne peut pas être clairement établi</strong>, tout simplement parce qu'il dépend du fonctionnement interne de <span class="notranslate">GameMaker Studio</span>
+    2 et cela peut changer au fur et à mesure du développement du logiciel. Cependant, certains événements se dérouleront <em>toujours </em>dans le même ordre.</p>
+  <p>La première série d'événements qui se produiront toujours de la même manière est celle qui se produit lorsqu'on entre dans une pièce pour la première fois. L'ordre dans lequel les différents événements se déclenchent est le suivant :</p>
+  <ul class="colour">
+    <li><strong>Les variables d'objet / d'instance sont initialisées</strong> (ce sont les variables que vous pouvez définir dans l'<a class="glossterm" data-glossterm="IDE" href="#">IDE</a> de l'<a href="../Objects.htm">éditeur d'objet</a> ou de l'<a href="../Rooms.htm">éditeur de salle</a>).
+      Si vous avez un objet auquel sont attachées des variables, celles-ci seront créées avant toute autre chose, puis toutes les instances auxquelles sont attachées des variables seront définies après, de sorte que vous pouvez remplacer les variables d'objet par des variables spécifiques à l'instance dans l'éditeur de salle.
+      éditeur.</li>
+    <li><strong><strong>Create</strong> </strong>Event suivi du<strong> Code de Création d'Instance </strong>de <em>chaque </em>instance - ainsi, lorsque chaque instance est créée, elle exécutera d'abord son Create Event puis son Code de Création d'Instance
+      avant de passer à l'instance suivante à créer.</li>
+    <li><strong>Événement de début de jeu</strong> - cet événement est déclenché une fois dans la toute première salle du jeu pour toutes les instances placées dans la salle à partir de l'éditeur de salle (notez que l'appel de game_restart() déclenchera à nouveau cet événement.</li>
+    <li><strong>Code de création de la pièce</strong> - il s'agit du code unique écrit dans l'éditeur de pièce lors de la première entrée dans une pièce.</li>
+    <li><strong>Room Start Event of all instances</strong> - l'un des événements de la catégorie &quot;autres&quot; qui se déclenchera pour toutes les instances, persistantes ou non.</li>
+  </ul>
+  <p>Il est également intéressant de noter que vous pouvez également définir l'ordre dans lequel les instances spécifiques sont créées dans l'éditeur de salle lui-même en les déplaçant vers le haut ou vers le bas de la liste de la fenêtre <a href="../Room_Properties/Layer_Properties.htm">Propriétés du calque d'instance</a>.</p>
+  <p>En dehors de ces événements spécifiques, le seul ordre connu qui se produira toujours de la même manière, quoi qu'il arrive, appartient aux événements des trois <strong>pas </strong>et aux différents événements de <strong>tirage </strong>. Ceux-ci resteront toujours cohérents, donc si
+    vous avez un code qui dépend d'un timing spécifique à chaque étape de votre jeu, vous devriez utiliser :</p>
+  <ul class="colour">
+    <li><strong>Début de l'événement d'étape</strong></li>
+    <li><strong>Événement step</strong> (notez que l'événement step est exécuté juste avant que les instances ne soient placées dans leurs nouvelles positions)</li>
+    <li><strong>Événement de fin d'étape</strong></li>
+  </ul>
+  <p>Tous les événements de dessin sont également toujours traités dans l'ordre suivant (à l'exception de l'événement <strong>Window Resize </strong>, qui est déclenché différemment) :</p>
+  <ul class="colour">
+    <li><strong>Événement avant le tirage au sort</strong></li>
+    <li><strong>Événement Draw Begin</strong></li>
+    <li><strong>Événement de tirage au sort</strong></li>
+    <li><strong>Événement de fin de tirage</strong></li>
+    <li><strong>Événement post-tirage</strong></li>
+    <li><strong>Événement de début du dessin de l'interface graphique</strong></li>
+    <li><strong>Événement "Draw GUI</strong></li>
+    <li><strong>Draw GUI End Event</strong></li>
+  </ul>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <div class="footer">
+    <div class="buttons">
+      <div class="clear">
+        <div style="float:left">Retour : <a href="Object_Events.htm">Événements relatifs aux objets</a></div>
+        <div style="float:right">Suivant : <a href="Other_Events.htm">Autres événements</a></div>
+      </div>
+    </div>
+    <h5><span data-keyref="Copyright Notice">Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
   </div>
   <!-- KEYWORDS
 Event Order
@@ -19,5 +63,5 @@ Event Order
   <!-- TAGS
 object_event_order
 -->
-</body>
-</html>
+
+</body></html>

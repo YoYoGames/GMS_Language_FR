@@ -7,13 +7,43 @@
   <meta name="generator" content="Adobe RoboHelp 2019" />
   <link rel="stylesheet" href="../../../../../assets/css/default.css" type="text/css" />
   <meta name="rh-authors" content="Mark Alexander" />
-  <meta name="topic-comment" content="Page expliquant la variable image_index" />
+  <meta name="topic-comment" content="Page explaining the variable image_index" />
   <meta name="rh-index-keywords" content="image_index" />
   <meta name="search-keywords" content="image_index" />
 </head>
-<body><!--<div class="body-scroll" style="top: 150px;">--><h1>image_index</h1><p> Un sprite est composé d&#39;une ou de plusieurs <i>sous-images</i> qui peuvent donner l&#39;impression que le sprite est animé lors de son passage de l&#39;une à l&#39;autre, ou peuvent-ils être basculés entre eux dans le code pour donner différents &quot;états&quot;, un peu comme un bouton dans les fenêtres. Si le sprite est animé, vous pouvez obtenir l&#39;image actuelle de l&#39;animation en vérifiant la <tt><span class="notranslate">image_index</span></tt>, ou si vous souhaitez changer l&#39;état d&#39;un sprite statique, vous pouvez sélectionner une nouvelle sous-image en définissant cette variable sur la valeur souhaitée sous-image du sprite. Veuillez noter que pour que les modifications de cette variable soient visibles, l&#39;instance doit avoir soit <i>aucun</i> événement draw (et donc <span class="notranslate">GameMaker Studio 2</span> dessine par défaut le sprite) soit être dessinée à l&#39;aide de l&#39;une des fonctions de dessin comme <a href="../../../Drawing/Sprites_And_Tiles/draw_self.htm"><tt><span class="notranslate">draw_self()</span></tt></a> ou <a href="../../../Drawing/Sprites_And_Tiles/draw_sprite_ext.htm"><tt><span class="notranslate">draw_sprite_ext()</span></tt></a> ( en fournissant l&#39;image_index dans l&#39;argument approprié).</p><p> Notez que la définition de cette variable directement sur une trame <em>ne</em> déclenchera aucun message de diffusion qui peut être présent sur cette trame.</p><p> Notez également que lorsque vous utilisez des sprites d&#39;animation squelettiques, vous pouvez toujours obtenir et définir les <tt><span class="notranslate">image_index</span></tt> - voir la fonction <a href="../Skeletal_Animation/Animation/skeleton_animation_get_duration.htm"><tt><span class="notranslate">skeleton_animation_get_duration()</span></tt></a> pour des exemples de la manière de procéder.</p><p></p><h4> Syntaxe:</h4><p class="code">image_index;</p><p></p><h4> Retour:</h4><p class="code">Real (single precision floating point value)</p><p></p><h4> Exemple:</h4><p class="code">if (image_speed &gt; 0)<br/>     {
-    <br/>     if (image_index &gt;= image_number - 1) instance_destroy();<br/>     }
-  </p><p> Le code ci-dessus vérifie si le sprite est animé, et si c&#39;est le cas, il vérifie si l&#39;image_index actuelle est à la dernière image et dans ce cas détruit l&#39;instance. </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> Retour: <a href="Sprite_Instance_Variables.htm">Variables d&#39;instance de sprite</a></div><div style="float:right"> Suivant: <a href="image_number.htm"><span class="notranslate">image_number</span></a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
+<body>
+  <!--<div class="body-scroll" style="top: 150px;">-->
+  <h1>image_index</h1>
+  <p>Un sprite est composé d'une ou plusieurs <i>sous-images</i> qui peuvent faire apparaître le sprite animé en passant de l'une à l'autre, ou qui peuvent être basculées entre elles dans le code pour donner différents &quot;états&quot;, un peu comme un bouton dans Windows.
+    Si le sprite est animé, vous pouvez obtenir l'image actuelle de l'animation en vérifiant la variable <tt>image_index</tt>, ou si vous voulez changer l'état d'un sprite statique, vous pouvez sélectionner une nouvelle sous-image en réglant cette variable sur la sous-image souhaitée du sprite.
+    sous-image souhaitée du sprite. Veuillez noter que pour que les modifications de cette variable soient visibles, l'instance <i>ne</i> doit <i>pas</i> avoir d'événement de dessin ( <span class="notranslate">GameMaker Studio 2</span> dessinera donc le sprite par défaut) ou être dessinée à l'aide d'une des fonctions de dessin telles que
+    <a href="../../../Drawing/Sprites_And_Tiles/draw_self.htm"><tt>draw_self()</tt></a> ou <a href="../../../Drawing/Sprites_And_Tiles/draw_sprite_ext.htm"><tt>draw_sprite_ext()</tt></a> (en fournissant l'index de l'image dans l'argument approprié).</p>
+  <p>Notez que le fait de définir cette variable directement sur une image <em>ne</em> déclenchera <em>pas</em> les messages de diffusion qui peuvent être présents sur cette image.</p>
+  <p>Notez également que lorsque vous utilisez des sprites d'animation squelettique, vous pouvez toujours obtenir et définir les valeurs <tt>image_index</tt> - voir la fonction <a href="../Skeletal_Animation/Animation/skeleton_animation_get_duration.htm"><tt>skeleton_animation_get_duration()</tt></a> pour
+    pour des exemples sur la façon de le faire.</p>
+  <p> </p>
+  <h4>Syntaxe :</h4>
+  <p class="code">image_index ;</p>
+  <p> </p>
+  <h4>Les retours :</h4>
+  <p class="code">Réel (valeur à virgule flottante de simple précision)</p>
+  <p> </p>
+  <h4>Exemple :</h4>
+  <p class="code">si (image_speed &gt; 0)<br> {
+    <br> if (image_index &gt;= image_number - 1) instance_destroy() ;<br> }
+  </p>
+  <p>Le code ci-dessus vérifie si le sprite est en cours d'animation, et si c'est le cas, il vérifie si l'image_index actuelle est à la dernière image et dans ce cas, il détruit l'instance.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <div class="footer">
+    <div class="buttons">
+      <div class="clear">
+        <div style="float:left">Retour : <a href="Sprite_Instance_Variables.htm">Variables d'instance de sprite</a></div>
+        <div style="float:right">Suivant : <a href="image_number.htm">numéro_d'image</a></div>
+      </div>
+    </div>
+    <h5><span data-keyref="Copyright Notice">Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
   </div>
   <!-- KEYWORDS
 image_index

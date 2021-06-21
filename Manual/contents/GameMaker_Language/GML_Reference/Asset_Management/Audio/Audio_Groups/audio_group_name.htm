@@ -3,15 +3,54 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>audio_group_name</title>
+  <title>nom_groupe_audio</title>
   <meta name="generator" content="Adobe RoboHelp 2019" />
   <link rel="stylesheet" href="../../../../../assets/css/default.css" type="text/css" />
   <meta name="rh-authors" content="Mark Alexander" />
-  <meta name="topic-comment" content="Page expliquant la fonction nom_groupe_audio" />
+  <meta name="topic-comment" content="Page explaining the function audio_group_name" />
   <meta name="rh-index-keywords" content="audio_group_name" />
   <meta name="search-keywords" content="audio_group_name" />
 </head>
-<body><!--<div class="body-scroll" style="top: 150px;">--><h1>audio_group_name</h1><p> Cette fonction renverra une chaîne contenant le nom du groupe audio donné pour l&#39;affichage ou la vérification. Lorsque vous définissez un groupe audio dans les options de jeu, vous donnez un « nom » unique qui est vraiment une constante à utiliser comme ID <i>v</i> aleur pour le groupe. Tout ce que cette fonction fait est de prendre l&#39;ID et de renvoyer une chaîne du nom d&#39;ID que vous avez donné.</p><p></p><p></p><h4> Syntaxe:</h4><p class="code">audio_group_name(groupID);</p><table><tbody><tr><th> Argument</th><th> Description</th></tr><tr><td> <span class="notranslate">groupID</span></td><td> La constante de valeur d&#39;index du groupe audio à vérifier (telle que définie dans la <a href="../../../../../Settings/Audio_Groups.htm">fenêtre Groupes audio</a> )</td></tr></tbody></table><p></p><h4> Retour:</h4><p class="code">String</p><p></p><h4> Exemple:</h4><p class="code">var name= audio_group_name(audiogroup_level1);<br/> draw_text(32, 32, &quot;Now Playing Group: &quot; + name);</p><p> Le code ci-dessus récupère le nom de la constante de groupe audio donnée et l&#39;affiche à l&#39;écran. </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> Retour: <a href="Audio_Groups.htm">Groupes audio</a></div><div style="float:right"> Suivant:<a href="audio_group_stop_all.htm">audio_group_stop_all</a></div><div style="float:right"></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
+<body>
+  <!--<div class="body-scroll" style="top: 150px;">-->
+  <h1>nom_groupe_audio</h1>
+  <p>Cette fonction renvoie une chaîne de caractères contenant le nom du groupe audio donné à afficher ou à vérifier. Lorsque vous définissez un groupe audio dans les Options du jeu, vous lui donnez un &quot;nom&quot; unique qui est en fait une constante à utiliser comme valeur d'ID
+    pour le groupe. Cette fonction ne fait que prendre l'ID et retourner une chaîne de caractères contenant le nom de l'ID que vous avez donné.</p>
+  <p> </p>
+  <p> </p>
+  <h4>Syntaxe :</h4>
+  <p class="code">audio_group_name(groupID) ;</p>
+  <table>
+    <tbody>
+      <tr>
+        <th>Arguments</th>
+        <th>Description</th>
+      </tr>
+      <tr>
+        <td>groupID</td>
+        <td>La constante de la valeur d'index du groupe audio à vérifier (comme défini dans la <a href="../../../../../Settings/Audio_Groups.htm">fenêtre Groupes audio</a>).</td>
+      </tr>
+    </tbody>
+  </table>
+  <p> </p>
+  <h4>Les retours :</h4>
+  <p class="code">Chaîne de caractères</p>
+  <p> </p>
+  <h4>Exemple :</h4>
+  <p class="code">var name= nom_du_groupe_audio(audiogroup_level1) ;<br> draw_text(32, 32, &quot;Now Playing Group : &quot; + name) ;</p>
+  <p>Le code ci-dessus récupère le nom de la constante de groupe audio donnée et l'affiche à l'écran.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <div class="footer">
+    <div class="buttons">
+      <div class="clear">
+        <div style="float:left">Retour : <a href="Audio_Groups.htm">Groupes audio</a></div>
+        <div style="float:right">Suivant : <a href="audio_group_stop_all.htm">audio_group_stop_all</a></div>
+        <div style="float:right"> </div>
+      </div>
+    </div>
+    <h5><span data-keyref="Copyright Notice">Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
   </div>
   <!-- KEYWORDS
 audio_group_name

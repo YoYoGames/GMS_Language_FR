@@ -3,15 +3,60 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>draw_tilemap</title>
+  <title>dessiner_carreau</title>
   <meta name="generator" content="Adobe RoboHelp 2019" />
   <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
   <meta name="rh-authors" content="Mark Alexander" />
-  <meta name="topic-comment" content="Page de référence pour draw_tilemap" />
+  <meta name="topic-comment" content="Reference page for draw_tilemap" />
   <meta name="rh-index-keywords" content="draw_tilemap" />
   <meta name="search-keywords" content="draw_tilemap" />
 </head>
-<body><!--<div class="body-scroll" style="top: 150px;">--><h1>draw_tilemap</h1><p> Cette fonction peut être utilisée pour dessiner un tilemap donné n&#39;importe où dans la pièce. Vous donnez l&#39;ID d&#39;élément tilemap (que vous obtenez lorsque vous créez un élément tilemap à l&#39;aide de <a href="../../Asset_Management/Rooms/Tile_Map_Layers/layer_tilemap_create.htm"><tt>layer_tilemap_create()</tt></a> ou lorsque vous utilisez la fonction <a href="../../Asset_Management/Rooms/Tile_Map_Layers/layer_tilemap_get_id.htm"><tt>layer_tilemap_get_id()</tt></a> ), puis donnez la position x / y pour le dessin (dans la pièce). Notez que cela dessinera simplement le tilemap au point spécifié, en utilisant la profondeur de couche de l&#39;instance qui appelle la fonction. Cela ne <i>déplace pas</i> le tilemap - ni ne le modifie en aucune façon - et peu importe que le tilemap soit marqué comme visible ou non.</p><p></p><h4> Syntaxe:</h4><p class="code">draw_tilemap(tilemap_element_id, x, y);</p><table><tbody><tr><th> Argument</th><th> Description</th></tr><tr><td> <span class="notranslate">tilemap_element_id</span></td><td> La valeur d&#39;ID unique de l&#39;élément tilemap pour obtenir la position y de la cellule</td></tr><tr><td> <span class="notranslate">x</span></td><td> La position x dans la pièce à laquelle dessiner</td></tr><tr><td> <span class="notranslate">y</span></td><td> La position y dans la pièce à laquelle dessiner</td></tr></tbody></table><p></p><h4> Retour:</h4><p class="code">N/A</p><p></p><h4> Exemple:</h4><p class="code">var lay_id = layer_get_id(&quot;Tiles_Effects&quot;);<br/> var map_id = layer_tilemap_get_id(lay_id);<br/> draw_tilemap(map_id, mouse_x, mouse_y);</p><p> Le code ci-dessus obtient l&#39;ID de couche puis l&#39;utilise pour obtenir un ID de tilemap spécifique qui à son tour est utilisé pour dessiner le tilemap à la position de la souris. </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> Face arrière: <a href="Sprites_And_Tiles.htm">Sprites et tuiles</a></div><div style="float:right"> Suivant:<a href="draw_self.htm">draw_self</a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
+<body>
+  <!--<div class="body-scroll" style="top: 150px;">-->
+  <h1>dessiner_carreau</h1>
+  <p>Cette fonction peut être utilisée pour dessiner une tuile donnée n'importe où dans la pièce. Vous donnez l'ID de l'élément tilemap (que vous obtenez lorsque vous créez un élément tilemap en utilisant la fonction <a href="../../Asset_Management/Rooms/Tile_Map_Layers/layer_tilemap_create.htm"><tt>layer_tilemap_create()</tt></a>    ou lorsque vous utilisez la fonction <a href="../../Asset_Management/Rooms/Tile_Map_Layers/layer_tilemap_get_id.htm"><tt>layer_tilemap_get_id()</tt></a>), puis indiquez la position x/y du dessin (dans la pièce). Notez que cette fonction va simplement dessiner la carte de tuiles à
+    point spécifié, en utilisant la profondeur de couche de l'instance qui appelle la fonction. Elle <i>ne</i> déplace <i>pas</i> la tuile - ni ne la modifie de quelque manière que ce soit - et il importe peu que la tuile soit marquée comme visible ou non.</p>
+  <p> </p>
+  <h4>Syntaxe :</h4>
+  <p class="code">draw_tilemap(tilemap_element_id, x, y) ;</p>
+  <table>
+    <tbody>
+      <tr>
+        <th>Arguments</th>
+        <th>Description</th>
+      </tr>
+      <tr>
+        <td>tilemap_element_id</td>
+        <td>La valeur d'identification unique de l'élément de la tuile pour obtenir la position y de la cellule.</td>
+      </tr>
+      <tr>
+        <td>x</td>
+        <td>La position x dans la pièce à dessiner</td>
+      </tr>
+      <tr>
+        <td>y</td>
+        <td>La position y dans la pièce à dessiner</td>
+      </tr>
+    </tbody>
+  </table>
+  <p> </p>
+  <h4>Les retours :</h4>
+  <p class="code">N/A</p>
+  <p> </p>
+  <h4>Exemple :</h4>
+  <p class="code">var lay_id = layer_get_id(&quot;Tiles_Effects&quot;) ;<br> var map_id = layer_tilemap_get_id(lay_id) ;<br> draw_tilemap(map_id, mouse_x, mouse_y) ;</p>
+  <p>Le code ci-dessus récupère l'ID du calque puis l'utilise pour obtenir l'ID d'une mosaïque spécifique qui est ensuite utilisée pour dessiner la mosaïque à la position de la souris.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <div class="footer">
+    <div class="buttons">
+      <div class="clear">
+        <div style="float:left">Retour : <a href="Sprites_And_Tiles.htm">Sprites et tuiles</a></div>
+        <div style="float:right">Suivant : <a href="draw_self.htm">draw_self</a></div>
+      </div>
+    </div>
+    <h5><span data-keyref="Copyright Notice">Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
   </div>
   <!-- KEYWORDS
 draw_tilemap

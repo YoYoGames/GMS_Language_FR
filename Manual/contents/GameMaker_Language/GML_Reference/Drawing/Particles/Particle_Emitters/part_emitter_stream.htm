@@ -3,15 +3,66 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>part_emitter_stream</title>
+  <title>Part_emitter_stream</title>
   <meta name="generator" content="Adobe RoboHelp 2019" />
   <link rel="stylesheet" href="../../../../../assets/css/default.css" type="text/css" />
   <meta name="rh-authors" content="Mark Alexander" />
-  <meta name="topic-comment" content="Page de référence pour part_emitter_stream" />
+  <meta name="topic-comment" content="Reference page for part_emitter_stream" />
   <meta name="rh-index-keywords" content="part_emitter_stream" />
   <meta name="search-keywords" content="part_emitter_stream" />
 </head>
-<body><!--<div class="body-scroll" style="top: 150px;">--><h1>part_emitter_stream</h1><p> Cette fonction vous permet de définir un émetteur pour diffuser un type spécifique de particule et est généralement utilisée pour l&#39;événement create car il s&#39;agit d&#39;un code unique qui définit l&#39;émetteur pour générer le nombre de particules spécifié à chaque étape du jeu par la suite. Les particules sont émises suivant la distribution, la forme et la position définies par la fonction <a href="part_emitter_region.htm"><tt>part_emitter_region()</tt></a>. Vous pouvez définir le nombre de particules diffusées à zéro et appeler à nouveau cette fonction pour «désactiver» le flux de particules, et la fonction acceptera également des nombres négatifs pour la quantité, auquel cas l&#39;émetteur produira des particules en fonction du hasard. Par exemple, si le nombre de particules est défini sur -5, il y a une chance de 1: 5 qu&#39;une particule soit produite à chaque étape. Si vous avez besoin que les particules apparaissent toutes à la fois plutôt qu&#39;à chaque étape, vous devez utiliser la fonction <a href="part_emitter_burst.htm"><tt>part_emitter_burst()</tt></a>.</p><p></p><h4> Syntaxe:</h4><p class="code">part_emitter_stream(ps, ind, parttype, number);</p><table><tbody><tr><th> Argument</th><th> Description</th></tr><tr><td> <span class="notranslate">ps</span></td><td> Le système de particules dans lequel se trouve l&#39;émetteur.</td></tr><tr><td> <span class="notranslate">ind</span></td><td> L&#39;indice de l&#39;émetteur à partir duquel éclater.</td></tr><tr><td> <span class="notranslate">parttype</span></td><td> L&#39;index (type) des particules à créer.</td></tr><tr><td> <span class="notranslate">number</span></td><td> Le nombre de particules à créer par étape.</td></tr></tbody></table><p></p><h4> Retour:</h4><p class="code">N/A</p><p></p><h4> Exemple:</h4><p class="code">part_emitter_stream(global. Sname, p_emit1, p1, 1);</p><p> Le code ci-dessus diffusera 1 particule à chaque étape du jeu jusqu&#39;à ce que l&#39;émetteur soit détruit ou que le flux soit mis à 0. </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> Retour: <a href="Particle_Emitters.htm">Émetteurs de particules</a></div><div style="float:right"> Suivant:<a href="part_emitter_destroy.htm">part_emitter_destroy</a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
+<body>
+  <!--<div class="body-scroll" style="top: 150px;">-->
+  <h1>Part_emitter_stream</h1>
+  <p>Cette fonction vous permet de configurer un émetteur pour qu'il diffuse un type de particule spécifique. Elle est généralement utilisée dans l'événement de création car il s'agit d'un code unique qui configure l'émetteur pour qu'il génère le nombre de particules spécifié à chaque étape du jeu. Les particules de
+    sont émises selon la distribution, la forme et la position définies par la fonction <a href="part_emitter_region.htm"><tt>partie_émetteur_région()</tt></a>. Vous pouvez définir le nombre de particules émises à zéro et appeler à nouveau cette fonction
+    pour &quot;désactiver&quot; le flux de particules. La fonction acceptera également des nombres négatifs pour la quantité, auquel cas l'émetteur produira des particules sur la base du hasard. Par exemple, si le nombre de particules est fixé à -5, il y a une chance sur cinq qu'une particule soit produite.
+    5, il y a 1 chance sur 5 qu'une particule soit produite à chaque étape. Si vous souhaitez que les particules apparaissent en une seule fois plutôt qu'à chaque étape, vous devez utiliser la fonction <a href="part_emitter_burst.htm"><tt>part_emitter_burst()</tt></a>.</p>
+  <p> </p>
+  <h4>Syntaxe :</h4>
+  <p class="code">Part_emitter_stream(ps, ind, parttype, number) ;</p>
+  <table>
+    <tbody>
+      <tr>
+        <th>Arguments</th>
+        <th>Description</th>
+      </tr>
+      <tr>
+        <td>ps</td>
+        <td>Le système de particules dans lequel se trouve l'émetteur.</td>
+      </tr>
+      <tr>
+        <td>ind</td>
+        <td>L'indice de l'émetteur à éclater.</td>
+      </tr>
+      <tr>
+        <td>type de pièce</td>
+        <td>L'index (type) des particules à créer.</td>
+      </tr>
+      <tr>
+        <td>numéro</td>
+        <td>Le nombre de particules à créer par étape.</td>
+      </tr>
+    </tbody>
+  </table>
+  <p> </p>
+  <h4>Les retours :</h4>
+  <p class="code">N/A</p>
+  <p> </p>
+  <h4>Exemple :</h4>
+  <p class="code">part_emitter_stream(global. Sname, p_emit1, p1, 1) ;</p>
+  <p>Le code ci-dessus va diffuser une particule à chaque étape du jeu jusqu'à ce que l'émetteur soit détruit ou que le flux soit mis à 0.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <div class="footer">
+    <div class="buttons">
+      <div class="clear">
+        <div style="float:left">Retour : <a href="Particle_Emitters.htm">Émetteurs de particules</a></div>
+        <div style="float:right">Suivant : <a href="part_emitter_destroy.htm">part_emitter_destroy</a></div>
+      </div>
+    </div>
+    <h5><span data-keyref="Copyright Notice">Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
   </div>
   <!-- KEYWORDS
 part_emitter_stream

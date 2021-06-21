@@ -7,11 +7,49 @@
   <meta name="generator" content="Adobe RoboHelp 2019" />
   <link rel="stylesheet" href="../../../../../assets/css/default.css" type="text/css" />
   <meta name="rh-authors" content="Mark Alexander" />
-  <meta name="topic-comment" content="Page expliquant la fonction sprite_flush" />
+  <meta name="topic-comment" content="Page explaining the function sprite_flush" />
   <meta name="rh-index-keywords" content="sprite_flush" />
   <meta name="search-keywords" content="sprite_flush" />
 </head>
-<body><!--<div class="body-scroll" style="top: 150px;">--><h1>sprite_flush</h1><p> Avec cette fonction, vous pouvez supprimer la page de texture donnée pour le sprite donné de la mémoire de texture. Vous fournissez l&#39;index du sprite (tel que défini lors de la création de la ressource de sprite) et la page de texture à laquelle elle est assignée sera supprimée de la mémoire de texture. Notez que si la page de texture est utilisée ailleurs dans la pièce (par un autre sprite d&#39;instance ou un arrière-plan, etc.), vous pouvez obtenir un impact mineur sur les performances car la page est immédiatement rechargée, il faut donc faire attention lorsque vous utilisez cette fonction. Notez que la fonction retournera <tt>-1</tt> si flush n&#39;est pas pris en charge pour la ressource choisie, ou il retournera <tt>0</tt> si tout fonctionnait correctement.</p><p></p><h4> Syntaxe:</h4><p class="code">sprite_flush(ind)</p><table><tbody><tr><th> Argument</th><th> Description</th></tr><tr><td> <span class="notranslate">ind</span></td><td> L&#39;index (nom de la ressource) de l&#39;actif de sprite à vider</td></tr></tbody></table><p></p><h4> Retour:</h4><p class="code">Int (-1 or 0)</p><p></p><h4> Exemple:</h4><p class="code">sprite_flush(spr_Player_Aura);</p><p> Le code ci-dessus vide le sprite &quot;spr_Player_Aura&quot; de la mémoire. </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> Retour: <a href="Sprite_Manipulation.htm">Manipulation des sprites</a></div><div style="float:right"> Suivant:<a href="sprite_flush_multi.htm">sprite_flush_multi</a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
+<body>
+  <!--<div class="body-scroll" style="top: 150px;">-->
+  <h1>sprite_flush</h1>
+  <p>Cette fonction permet de supprimer de la mémoire de texture la page de texture donnée pour le sprite donné. Vous fournissez l'index du sprite (tel que défini lors de la création de la ressource sprite) et la page de texture à laquelle il est assigné sera supprimée de la mémoire de texture.
+    Notez que si la page de texture est utilisée ailleurs dans la room (par un autre sprite d'instance ou un arrière-plan, etc...), vous pouvez avoir un léger impact sur les performances car la page est immédiatement rechargée, donc il faut faire attention en utilisant cette fonction. Notez que la fonction
+    renvoie <tt>-1</tt> si le flush n'est pas supporté par la ressource choisie, ou <tt>0</tt> si tout a fonctionné correctement.</p>
+  <p> </p>
+  <h4>Syntaxe :</h4>
+  <p class="code">sprite_flush(ind)</p>
+  <table>
+    <tbody>
+      <tr>
+        <th>Arguments</th>
+        <th>Description</th>
+      </tr>
+      <tr>
+        <td>ind</td>
+        <td>L'index (nom de la ressource) du sprite à purger.</td>
+      </tr>
+    </tbody>
+  </table>
+  <p> </p>
+  <h4>Les retours :</h4>
+  <p class="code">Int (-1 ou 0)</p>
+  <p> </p>
+  <h4>Exemple :</h4>
+  <p class="code">sprite_flush(spr_Player_Aura) ;</p>
+  <p>Le code ci-dessus vide le sprite &quot;spr_Player_Aura&quot; de la mémoire.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <div class="footer">
+    <div class="buttons">
+      <div class="clear">
+        <div style="float:left">Retour : <a href="Sprite_Manipulation.htm">Manipulation des sprites</a></div>
+        <div style="float:right">Suivant : <a href="sprite_flush_multi.htm">sprite_flush_multi</a></div>
+      </div>
+    </div>
+    <h5><span data-keyref="Copyright Notice">Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
   </div>
   <!-- KEYWORDS
 sprite_flush

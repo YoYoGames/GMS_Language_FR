@@ -7,12 +7,102 @@
   <meta name="generator" content="Adobe RoboHelp 2019" />
   <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
   <meta name="rh-authors" content="Mark Alexander" />
-  <meta name="topic-comment" content="Page de référence pour draw_text_ext_transformed_colour" />
+  <meta name="topic-comment" content="Reference page for draw_text_ext_transformed_colour" />
   <meta name="rh-index-keywords" content="draw_text_ext_transformed_colour,draw_text_ext_transformed_color" />
   <meta name="search-keywords" content="draw_text_ext_transformed_colour,draw_text_ext_transformed_color" />
 </head>
-<body><!--<div class="body-scroll" style="top: 150px;">--><h1>draw_text_ext_transformed_colour</h1><p> Cette fonction est une combinaison de la base <a href="draw_text.htm"><tt>draw_text </tt><tt>()</tt><tt></tt></a> fonction avec le <a href="draw_text_ext.htm"><tt>draw_text_ext </tt><tt>()</tt><tt></tt></a>, <a href="draw_text_transformed.htm"><tt>draw_text_transformed </tt><tt>()</tt><tt></tt></a> et <a href="draw_text_colour.htm"><tt>draw_text_colour </tt><tt>()</tt><tt></tt></a> les fonctions. En tant que tel, il s&#39;agit de la plus générale de toutes les fonctions de dessin de texte et offre une grande flexibilité lors du dessin. Notez que l&#39;argument &quot;largeur&quot; est basé sur une échelle de 1, donc si l&#39;échelle est différente, cette valeur doit être modifiée proportionnellement. Par exemple, si la largeur de base d&#39;un saut de ligne est de 300 et que vous définissez l&#39;échelle sur 2, le texte apparaîtra incorrect, dépassant la largeur donnée. Au lieu de cela, vous devriez avoir défini la largeur sur 150 pour compenser la mise à l&#39;échelle.</p><p class="note"> <b>REMARQUE</b>: la fusion de dégradé n&#39;est pas disponible pour la cible HTML5 sauf si WebGL est activé, bien que vous puissiez toujours définir les couleurs de fusion et il fusionnera la police avec la première couleur donnée. Cependant, tout mélange de cette manière crée une police en double qui est ensuite stockée dans le cache et utilisée si nécessaire, ce qui est loin d&#39;être optimal et si vous utilisez plusieurs changements de couleur, cela ralentira les performances de vos jeux. Vous pouvez définir la taille du cache de polices pour essayer de limiter cela si nécessaire en utilisant la fonction <a href="../../Asset_Management/Fonts/font_set_cache_size.htm"><tt style="font-size: 14px">font_set_cache_size ()</tt></a>.</p><p></p><h4> Syntaxe:</h4><p class="code">draw_text_ext_transformed_colour(x, y, string, sep, w, xscale, yscale, angle, c1, c2, c3, c4, alpha);</p><table><tbody><tr><th> Argument</th><th> Description</th></tr><tr><td> <span class="notranslate">x</span></td><td> La coordonnée x de la chaîne dessinée.</td></tr><tr><td> <span class="notranslate">y</span></td><td> La coordonnée y de la chaîne dessinée.</td></tr><tr><td> <span class="notranslate">string</span></td><td> La chaîne à dessiner.</td></tr><tr><td> <span class="notranslate">sep</span></td><td> La distance en pixels entre les lignes de texte.</td></tr><tr><td> <span class="notranslate">w</span></td><td> La largeur maximale en pixels de la chaîne avant un saut de ligne.</td></tr><tr><td> <span class="notranslate">xscale</span></td><td> L&#39;échelle horizontale.</td></tr><tr><td> <span class="notranslate">yscale</span></td><td> L&#39;échelle verticale.</td></tr><tr><td> <span class="notranslate">angle</span></td><td> L&#39;angle du texte.</td></tr><tr><td> <span class="notranslate">c1</span></td><td> La couleur du coin supérieur gauche du texte dessiné.</td></tr><tr><td> <span class="notranslate">c2</span></td><td> La couleur du coin supérieur droit du texte dessiné.</td></tr><tr><td> <span class="notranslate">c3</span></td><td> La couleur du coin inférieur droit du texte dessiné.</td></tr><tr><td> <span class="notranslate">c4</span></td><td> La couleur du coin inférieur gauche du texte dessiné.</td></tr><tr><td> <span class="notranslate">alpha</span></td><td> L&#39;alpha du texte.</td></tr></tbody></table><p></p><h4> Retour:</h4><p class="code">N/A</p><p></p><h4> Exemple:</h4><p class="code">draw_set_halign(fa_center);<br/> draw_set_valign(fa_middle);
-    <br/> draw_text_ext_transformed_colour(200, 200, &quot;My name is&quot; + global.name +&quot;.&quot;, 20, 200, 0.5, 0.5, 180, c_blue, c_blue, c_navy, c_navy, 1);</p><p> Cela dessinera le texte donné avec un dégradé de bleu à bleu foncé vers le bas, à la position (200 200) dans la pièce, tourné pour être à l&#39;envers et à la moitié de la taille de point normale de la police. Il y aura 20 pixels entre chaque ligne s&#39;il y a plus d&#39;une ligne dessinée et chaque ligne aura une largeur maximale de 200 pixels. </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> Retour: <a href="Text.htm">Texte</a></div><div style="float:right"> Suivant:<a href="draw_highscore.htm">draw_highscore</a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
+<body>
+  <!--<div class="body-scroll" style="top: 150px;">-->
+  <h1>draw_text_ext_transformed_colour</h1>
+  <p>Cette fonction est une combinaison de la fonction de base <a href="draw_text.htm"><tt>draw_text</tt><tt>()</tt><tt></tt></a> de base avec la fonction <a href="draw_text_ext.htm"><tt>draw_text_ext</tt><tt>()</tt><tt></tt></a>, <a href="draw_text_transformed.htm"><tt>draw_text_transformed</tt><tt>()</tt><tt></tt></a>    et <a href="draw_text_colour.htm"><tt>draw_text_colour</tt><tt>()</tt><tt></tt></a> et de la fonction de base. En tant que telle, elle est la plus générale de toutes les fonctions de dessin de texte et offre une grande flexibilité lors du dessin. Notez que l'argument &quot; width &quot; (largeur)
+    est basé sur une échelle de 1, donc si l'échelle est différente, cette valeur doit être modifiée proportionnellement. Par exemple, si la largeur de base d'un saut de ligne est de 300 et que vous définissez l'échelle à 2, le texte apparaîtra de manière erronée, dépassant la largeur donnée de
+    largeur donnée. Au lieu de cela, vous auriez dû définir la largeur à 150 pour compenser la mise à l'échelle.</p>
+  <p class="note"><b>REMARQUE</b>: le mélange par gradient n'est pas disponible pour la cible HTML5, sauf si WebGL est activé, mais vous pouvez toujours définir les couleurs de mélange et la police sera mélangée avec la première couleur donnée. Cependant, tous les mélanges de cette manière créent une police dupliquée qui est ensuite stockée dans le cache.
+    qui est ensuite stockée dans le cache et utilisée au besoin, ce qui est loin d'être optimal et si vous utilisez plusieurs changements de couleur, cela ralentira les performances de votre jeu. Vous pouvez définir la taille du cache des polices pour essayer de limiter ce phénomène si nécessaire.
+    en utilisant la fonction <a href="../../Asset_Management/Fonts/font_set_cache_size.htm"><tt style="font-size: 14px">font_set_cache_size()</tt></a>.</p>
+  <p> </p>
+  <h4>Syntaxe :</h4>
+  <p class="code">draw_text_ext_transformed_colour(x, y, string, sep, w, xscale, yscale, angle, c1, c2, c3, c4, alpha) ;</p>
+  <table>
+    <tbody>
+      <tr>
+        <th>Arguments</th>
+        <th>Description</th>
+      </tr>
+      <tr>
+        <td>x</td>
+        <td>La coordonnée x de la chaîne dessinée.</td>
+      </tr>
+      <tr>
+        <td>y</td>
+        <td>La coordonnée y de la chaîne dessinée.</td>
+      </tr>
+      <tr>
+        <td>chaîne de caractères</td>
+        <td>La ficelle à tirer.</td>
+      </tr>
+      <tr>
+        <td>sep</td>
+        <td>La distance en pixels entre les lignes de texte.</td>
+      </tr>
+      <tr>
+        <td>w</td>
+        <td>La largeur maximale en pixels de la chaîne avant un saut de ligne.</td>
+      </tr>
+      <tr>
+        <td>xscale</td>
+        <td>L'échelle horizontale.</td>
+      </tr>
+      <tr>
+        <td>yscale</td>
+        <td>L'échelle verticale.</td>
+      </tr>
+      <tr>
+        <td>angle</td>
+        <td>L'angle du texte.</td>
+      </tr>
+      <tr>
+        <td>c1</td>
+        <td>La couleur de la partie supérieure gauche du texte dessiné.</td>
+      </tr>
+      <tr>
+        <td>c2</td>
+        <td>La couleur de la partie supérieure droite du texte dessiné.</td>
+      </tr>
+      <tr>
+        <td>c3</td>
+        <td>La couleur de la partie inférieure droite du texte dessiné.</td>
+      </tr>
+      <tr>
+        <td>c4</td>
+        <td>La couleur de la partie inférieure gauche du texte dessiné.</td>
+      </tr>
+      <tr>
+        <td>alpha</td>
+        <td>L'alpha du texte.</td>
+      </tr>
+    </tbody>
+  </table>
+  <p> </p>
+  <h4>Les retours :</h4>
+  <p class="code">N/A</p>
+  <p> </p>
+  <h4>Exemple :</h4>
+  <p class="code">draw_set_halign(fa_center) ;<br> draw_set_valign(fa_middle) ;
+    <br> draw_text_ext_transformed_colour(200, 200, &quot;Mon nom est&quot; + global.name + &quot;.&quot;, 20, 200, 0.5, 0.5, 180, c_blue, c_blue, c_navy, c_navy, 1) ;</p>
+  <p>Le texte donné sera dessiné avec un dégradé de bleu à bleu foncé vers le bas, à la position (200,200) dans la pièce, tourné à l'envers et à la moitié de la taille normale de la police. Il y aura 20 pixels entre chaque ligne si plus d'une ligne est dessinée.
+    ligne et chaque ligne aura une largeur maximale de 200 pixels.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <div class="footer">
+    <div class="buttons">
+      <div class="clear">
+        <div style="float:left">Retour : <a href="Text.htm">Texte</a></div>
+        <div style="float:right">Suivant : <a href="draw_highscore.htm">draw_highscore</a></div>
+      </div>
+    </div>
+    <h5><span data-keyref="Copyright Notice">Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
   </div>
   <!-- KEYWORDS
 draw_text_ext_transformed_colour

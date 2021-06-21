@@ -7,13 +7,59 @@
   <meta name="generator" content="Adobe RoboHelp 2019" />
   <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
   <meta name="rh-authors" content="Mark Alexander" />
-  <meta name="topic-comment" content="Page de référence pour ini_write_real" />
+  <meta name="topic-comment" content="Reference page for ini_write_real" />
   <meta name="rh-index-keywords" content="ini_write_real" />
   <meta name="search-keywords" content="ini_write_real" />
 </head>
-<body><!--<div class="body-scroll" style="top: 150px;">--><h1>ini_write_real</h1><p> Vous pouvez utiliser cette fonction pour écrire une valeur (numérique) dans un fichier de données ini. Les fichiers Ini sont divisés en <b>sections</b>, puis chaque section est ensuite divisée en paires <b>clé</b> - <b>valeur.</b> Ainsi, un fichier ini typique ressemblerait à ceci:</p><p><img alt="Ini file contents example" class="center" src="../../../../assets/Images/Scripting_Reference/GML/Reference/Files/IniExample.png" /></p><p></p><h4> <b>Syntaxe:</b></h4><p class="code">ini_write_real(section, key, value);</p><table><tbody><tr><th> Argument</th><th> Description</th></tr><tr><td> <span class="notranslate">section</span></td><td> La section du.ini sur laquelle écrire.</td></tr><tr><td> <span class="notranslate">key</span></td><td> La clé dans la section appropriée du.ini à écrire.</td></tr><tr><td> <span class="notranslate">value</span></td><td> La valeur réelle à écrire vers la destination appropriée.</td></tr></tbody></table><p></p><h4> Retour:</h4><p class="code">N/A</p><p></p><h4> Exemple:</h4><p class="code">score = 1000;<br/> ini_open(&quot;savedata.ini&quot;);
-    <br/> ini_write_real(&quot;save1&quot;, &quot;Score&quot;, score );<br/> score2 = ini_read_real(&quot;save1&quot;, &quot;Score&quot;, 0 );<br/> ini_close();
-  </p><p> Cela définira le score à 1000, puis ouvrira &quot;savedata.ini&quot; et écrira cette valeur dans &quot;save1&quot;&gt; &quot;Score&quot;. Ensuite, il définira score2 à la valeur réelle sous &quot;save1&quot;&gt; &quot;score&quot; dedans, 1000, et fermera à nouveau le.ini. S&#39;il n&#39;avait pas trouvé cette valeur, score2 aurait fini par être défini sur 0. </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> Retour: <a href="Ini_Files.htm">Fichiers Ini</a></div><div style="float:right"> Suivant:<a href="ini_write_string.htm">ini_write_string</a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
+<body>
+  <!--<div class="body-scroll" style="top: 150px;">-->
+  <h1>ini_write_real</h1>
+  <p>Vous pouvez utiliser cette fonction pour écrire une valeur (numérique) dans un fichier de données ini. Les fichiers ini sont divisés en <b>sections</b>, puis chaque section est ensuite divisée en paires <b>clé-valeur</b>. Ainsi, un fichier ini typique ressemblerait à quelque chose comme ceci :</p>
+  <p><img alt="Ini file contents example" class="center" src="../../../../assets/Images/Scripting_Reference/GML/Reference/Files/IniExample.png" /></p>
+  <p> </p>
+  <h4><b>Syntaxe :</b></h4>
+  <p class="code">ini_write_real(section, clé, valeur) ;</p>
+  <table>
+    <tbody>
+      <tr>
+        <th>Arguments</th>
+        <th>Description</th>
+      </tr>
+      <tr>
+        <td>section</td>
+        <td>La section du fichier .ini dans laquelle il faut écrire.</td>
+      </tr>
+      <tr>
+        <td>clé</td>
+        <td>La clé dans la section pertinente du .ini pour écrire.</td>
+      </tr>
+      <tr>
+        <td>valeur</td>
+        <td>La valeur réelle à écrire à la destination pertinente.</td>
+      </tr>
+    </tbody>
+  </table>
+  <p> </p>
+  <h4>Les retours :</h4>
+  <p class="code">N/A</p>
+  <p> </p>
+  <h4>Exemple :</h4>
+  <p class="code">score = 1000 ;<br> ini_open(&quot;savedata.ini&quot;) ;
+    <br> ini_write_real(&quot;save1&quot;, &quot;Score&quot;, score ) ;<br> score2 = ini_read_real(&quot;save1&quot;, &quot;Score&quot;, 0 ) ;<br> ini_close() ;
+  </p>
+  <p>Cela va définir le score à 1000, puis ouvrir &quot;savedata.ini&quot; et écrire cette valeur dans &quot;save1&quot; &gt; &quot;Score&quot;. Ensuite, le score2 sera fixé à la valeur réelle sous &quot;save1&quot; &gt; &quot;score&quot;, soit 1000, et le fichier .ini sera refermé.
+    à nouveau. S'il n'avait pas trouvé cette valeur, le score2 aurait été fixé à 0.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <div class="footer">
+    <div class="buttons">
+      <div class="clear">
+        <div style="float:left">Retour : <a href="Ini_Files.htm">Dossiers Ini</a></div>
+        <div style="float:right">Suivant : <a href="ini_write_string.htm">ini_write_string</a></div>
+      </div>
+    </div>
+    <h5><span data-keyref="Copyright Notice">Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
   </div>
   <!-- KEYWORDS
 ini_write_real

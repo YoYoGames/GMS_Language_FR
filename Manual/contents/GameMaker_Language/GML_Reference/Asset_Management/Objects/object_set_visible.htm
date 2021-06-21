@@ -3,15 +3,59 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>object_set_visible</title>
+  <title>objet_set_visible</title>
   <meta name="generator" content="Adobe RoboHelp 2019" />
   <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
   <meta name="rh-authors" content="Mark Alexander" />
-  <meta name="topic-comment" content="Page décrivant la fonction object_set_visible" />
+  <meta name="topic-comment" content="Page outlining the function object_set_visible" />
   <meta name="rh-index-keywords" content="object_set_visible" />
   <meta name="search-keywords" content="object_set_visible" />
 </head>
-<body><!--<div class="body-scroll" style="top: 150px;">--><h1>object_set_visible</h1><p> Avec cette fonction, vous pouvez marquer un objet spécifique comme étant visible ou non (pour plus d&#39;informations sur l&#39;indicateur &quot;visible&quot;, voir la section sur l&#39; <a href="../../../../The_Asset_Editors/Objects.htm">éditeur d&#39;objets</a> ). Cela signifie que toutes les instances de cet objet créées <i>après la modification de visible</i> seront créées avec ce nouvel état, tandis que les instances qui se trouvent déjà dans la salle peuvent ne pas être affectées.</p><p> Veuillez noter qu&#39;il ne s&#39;agit pas d&#39;une fonction d&#39;instance! Vous pouvez définir l&#39;indicateur visible d&#39;instances individuelles à l&#39;aide de la <a href="../Instances/Instance_Variables/visible.htm"><tt>visible</tt></a> variable et ainsi avoir dix instances toutes marquées comme visibles même si l&#39;objet en question a l&#39;indicateur défini sur false dans l&#39;EDI, et même si vous changez l&#39;indicateur visible de l&#39;objet en true à l&#39;aide de cette fonction, toutes les instances qui se trouvent actuellement dans la salle restera tel quel, et seules les instances créées après l&#39;appel de la fonction commenceront par visible marqué comme vrai.</p><p></p><h4> Syntaxe:</h4><p class="code">object_set_visible( index, vis );</p><table><tbody><tr><th> Argument</th><th> Description</th></tr><tr><td> <span class="notranslate">index</span></td><td> L&#39;index de l&#39;objet à modifier.</td></tr><tr><td> <span class="notranslate">vis</span></td><td> La nouvelle visibilité de l&#39;objet (vrai = visible, faux = invisible).</td></tr></tbody></table><p></p><h4> Retour:</h4><p class="code">N/A</p><p></p><h4> Exemple:</h4><p class="code">if !object_get_visible(obj_Block)<br/>     {<br/>     object_set_visible(obj_Block, true);<br/>     }</p><p> Le code ci-dessus vérifie l&#39;indicateur visible de l&#39;objet &quot;obj_Block&quot; et s&#39;il est faux, il est modifié pour être marqué comme vrai. </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> Retour: <a href="Objects.htm">Objets</a></div><div style="float:right"> Suivant:<a href="object_index.htm">object_index</a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
+<body>
+  <!--<div class="body-scroll" style="top: 150px;">-->
+  <h1>objet_set_visible</h1>
+  <p>Cette fonction permet de marquer un objet spécifique comme étant visible ou non (pour plus d'informations sur le drapeau &quot;visible&quot;, voir la section sur l'<a href="../../../../The_Asset_Editors/Objects.htm">éditeur d'</a>objets <a href="../../../../The_Asset_Editors/Objects.htm">).</a> Cela signifie que toutes les instances
+    de cet objet qui sont créées <i>après que "visible" a été modifié</i> seront créées avec ce nouvel état, tandis que les instances qui sont déjà dans la pièce peuvent ne pas être affectées.</p>
+  <p>Veuillez noter qu'il ne s'agit pas d'une fonction d'instance ! Vous pouvez définir l'indicateur de visibilité des instances individuelles à l'aide de la variable <a href="../Instances/Instance_Variables/visible.htm"><tt>visible</tt></a> et ainsi avoir dix instances toutes marquées comme visibles même si
+    même si l'objet en question a le drapeau à false dans l'IDE, et même si vous changez le drapeau visible de l'objet à true en utilisant cette fonction, toutes les instances qui sont actuellement dans la pièce resteront comme elles étaient, et seulement les instances créées après l'appel de la fonction commenceront avec le drapeau visible à true.
+    l'appel de la fonction commenceront avec l'indicateur visible à true.</p>
+  <p> </p>
+  <h4>Syntaxe :</h4>
+  <p class="code">objet_set_visible( index, vis ) ;</p>
+  <table>
+    <tbody>
+      <tr>
+        <th>Arguments</th>
+        <th>Description</th>
+      </tr>
+      <tr>
+        <td>indice</td>
+        <td>L'indice de l'objet à modifier.</td>
+      </tr>
+      <tr>
+        <td>vis</td>
+        <td>La nouvelle visibilité de l'objet (true=visible, false=invisible).</td>
+      </tr>
+    </tbody>
+  </table>
+  <p> </p>
+  <h4>Les retours :</h4>
+  <p class="code">N/A</p>
+  <p> </p>
+  <h4>Exemple :</h4>
+  <p class="code">if !object_get_visible(obj_Block)<br> {<br> object_set_visible(obj_Block, true) ;<br> }</p>
+  <p>Le code ci-dessus vérifie le drapeau visible de l'objet &quot;obj_Block&quot; et s'il est faux, il est changé en drapeau vrai.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <div class="footer">
+    <div class="buttons">
+      <div class="clear">
+        <div style="float:left">Retour : <a href="Objects.htm">Objets</a></div>
+        <div style="float:right">Suivant : <a href="object_index.htm">object_index</a></div>
+      </div>
+    </div>
+    <h5><span data-keyref="Copyright Notice">Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
   </div>
   <!-- KEYWORDS
 object_set_visible

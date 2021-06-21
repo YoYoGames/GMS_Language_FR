@@ -3,18 +3,105 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>physics_joint_wheel_create</title>
+  <title>physique_joint_roue_créer</title>
   <meta name="generator" content="Adobe RoboHelp 2019" />
   <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
   <meta name="rh-authors" content="Mark Alexander" />
-  <meta name="topic-comment" content="Page de référence pour physics_joint_wheel_create" />
+  <meta name="topic-comment" content="Reference page for physics_joint_wheel_create" />
   <meta name="rh-index-keywords" content="physics_joint_wheel_create" />
   <meta name="search-keywords" content="physics_joint_wheel_create" />
 </head>
-<body><!--<div class="body-scroll" style="top: 150px;">--><h1>physics_joint_wheel_create</h1><p> Un joint de roue combine simplement un piston et un joint tournant, comme une roue montée sur l&#39;amortisseur d&#39;une voiture. Vous spécifiez le point d&#39;ancrage de l&#39;articulation ainsi que les deux instances activées pour la physique à assembler, et la première instance agira en tant que «corps» pour l&#39;articulation, tandis que la seconde sera la «roue» et sera autorisée à se déplacer librement. l&#39;axe de l&#39;articulation. Vous pouvez également définir un vecteur d&#39;axe, qui est la ligne imaginaire le long de laquelle l&#39;articulation agira comme un «ressort» permettant à la roue de rebondir le long de celle-ci lorsqu&#39;elle rencontre des obstacles (un peu comme l&#39;articulation du piston). L&#39;image suivante illustre cela:</p><p><img alt="Wheel joint illustration" class="center" src="../../../../assets/Images/Scripting_Reference/GML/Reference/Physics/wheel_joint_image.png" /> Si vous choisissez d&#39;activer un moteur, la deuxième instance tournera autour de la position d&#39;ancrage et vous pourrez définir le couple moteur maximal utilisé pour atteindre la vitesse souhaitée du moteur (N / m) ainsi que la vitesse à laquelle le moteur doit tourner.. Étant donné que l&#39;articulation de roue a également un axe le long duquel elle peut se déplacer, vous pouvez régler la fréquence d&#39;oscillation (en Hz) ainsi que le rapport d&#39;amortissement de l&#39;articulation - vous devrez peut-être jouer avec ces valeurs pour les affiner et il est recommandé que vous commencez avec des valeurs plus petites et que vous les incrémentez jusqu&#39;à ce que vous obteniez l&#39;effet souhaité.</p><p> Comme pour toutes les liaisons, si vous définissez la valeur &quot;col&quot; sur <tt>true</tt> alors les deux instances peuvent interagir et entrer en collision l&#39;une avec l&#39;autre, mais <i>uniquement</i> si elles ont des événements de collision, mais si elle est définie sur <tt>false</tt>, ils n&#39;entreront pas en collision quoi qu&#39;il arrive.</p><p></p><h4> Syntaxe:</h4><p class="code">physics_joint_wheel_create(inst1, inst2, anchor_x, anchor_y, axis_x, axis_y, enableMotor, max_motor_torque, motor_speed, freq_hz, damping_ratio, col)</p><table><tbody><tr><th> Argument</th><th> Description</th></tr><tr><td> <span class="notranslate">inst1</span></td><td> La première instance à se connecter avec l&#39;articulation</td></tr><tr><td> <span class="notranslate">inst2</span></td><td> La deuxième instance pour se connecter avec l&#39;articulation</td></tr><tr><td> <span class="notranslate">anchor_x</span></td><td> La coordonnée x où l&#39;articulation est ancrée, dans le monde du jeu</td></tr><tr><td> <span class="notranslate">anchor_y</span></td><td> La coordonnée y où l&#39;articulation est ancrée, dans le monde du jeu</td></tr><tr><td> <span class="notranslate">axis_x</span></td><td> La composante x du vecteur d&#39;axe de roue</td></tr><tr><td> <span class="notranslate">axis_y</span></td><td> La composante y du vecteur d&#39;axe de roue</td></tr><tr><td> <span class="notranslate">enableMotor</span></td><td> Si le moteur doit être actif (vrai) ou non (faux)</td></tr><tr><td> <span class="notranslate">max_motor_torque</span></td><td> Définit le couple moteur maximal utilisé pour atteindre la vitesse du moteur souhaitée (en Newtons par mètre)</td></tr><tr><td> <span class="notranslate">motor_speed</span></td><td> C&#39;est la vitesse à laquelle le moteur doit tourner</td></tr><tr><td> <span class="notranslate">freq_hz</span></td><td> C&#39;est la fréquence d&#39;oscillation de l&#39;articulation, en hertz</td></tr><tr><td> <span class="notranslate">damping_ratio</span></td><td> Ce rapport d&#39;amortissement pour le joint</td></tr><tr><td> <span class="notranslate">col</span></td><td> Si les deux instances peuvent entrer en collision (vrai) ou non (faux)</td></tr></tbody></table><p></p><h4> Retour:</h4><p class="code">Integer (index of the joint)</p><p></p><h4> Exemple:</h4><p class="code">var mainFixture = physics_fixture_create();<br/> physics_fixture_set_box_shape(mainFixture, 128, 32);<br/> var wheelFixture = physics_fixture_create();<br/> physics_fixture_set_circle_shape(wheelFixture, 32);<br/> var o_id = instance_create_layer(x+25,
-    y + 100, &quot;Instances&quot;, obj_Wheel);<br/> physics_fixture_bind(mainFixture, id);<br/> physics_fixture_bind(wheelFixture, o_id);<br/> physics_joint_wheel_create(id, o_id, o_id.x, o_id.y, 0, 1, true, 10, 1, 15, 6, false);<br/> physics_fixture_delete(mainFixture);
-    <br/> physics_fixture_delete(wheelFixture);
-  </p><p> Le code ci-dessus crée et définit deux nouveaux appareils. Ceux-ci sont ensuite liés à l&#39;instance appelante et à une nouvelle instance qui est créée avant qu&#39;une liaison de roue soit appliquée pour les connecter, après quoi les appareils sont supprimés de la mémoire. </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> Arrière: <a href="Joints.htm">Joints</a></div><div style="float:right"> Suivant:<a href="physics_joint_weld_create.htm">physics_joint_weld_create</a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
+<body>
+  <!--<div class="body-scroll" style="top: 150px;">-->
+  <h1>physique_joint_roue_créer</h1>
+  <p>Un joint de roue combine simplement un piston et un joint tournant, comme une roue montée sur l'amortisseur d'une voiture. Vous spécifiez le point d'ancrage de l'articulation ainsi que les deux instances activées par la physique pour l'articulation, et la première instance agira comme le &quot;corps&quot; de l'articulation, tandis que la seconde sera la &quot;roue&quot;.
+    pour le joint, tandis que la seconde sera la &quot;roue&quot;, et sera autorisée à se déplacer librement autour de l'axe du joint. Vous pouvez également définir un vecteur d'axe, qui est la ligne imaginaire le long de laquelle l'articulation agira comme un &quot;ressort&quot; permettant à la roue de rebondir le long de l'axe.
+    roue de rebondir le long de cette ligne lorsqu'elle rencontre des obstacles (tout comme l'articulation à piston). L'image suivante illustre cela :</p>
+  <p><img alt="Wheel joint illustration" class="center" src="../../../../assets/Images/Scripting_Reference/GML/Reference/Physics/wheel_joint_image.png">Si vous choisissez d'activer un moteur, alors la deuxième instance tournera autour de la position d'ancrage, et
+    vous pouvez définir le couple moteur maximal utilisé pour atteindre la vitesse moteur souhaitée (N/m) ainsi que la vitesse à laquelle le moteur doit tourner. Comme l'articulation de la roue a également un axe le long duquel elle peut se déplacer, vous pouvez définir la fréquence d'oscillation (en Hz) ainsi que le rapport d'amortissement pour l'articulation de la roue.
+    Vous devrez peut-être jouer avec ces valeurs pour les affiner et il est recommandé de commencer par des valeurs plus petites et de les augmenter jusqu'à ce que vous obteniez l'effet désiré.</p>
+  <p>Comme pour tous les joints, si vous définissez la valeur &quot;col&quot; sur true, <tt>les</tt> deux instances peuvent interagir et entrer en collision l'une avec l'autre, mais seulement si <i>elles</i> ont des événements de collision <tt>.</tt>
+    quoi qu'il arrive.</p>
+  <p> </p>
+  <h4>Syntaxe :</h4>
+  <p class="code">physics_joint_wheel_create(inst1, inst2, anchor_x, anchor_y, axis_x, axis_y, enableMotor, max_motor_torque, motor_speed, freq_hz, damping_ratio, col)</p>
+  <table>
+    <tbody>
+      <tr>
+        <th>Arguments</th>
+        <th>Description</th>
+      </tr>
+      <tr>
+        <td>inst1</td>
+        <td>La première instance à se connecter avec l'articulation</td>
+      </tr>
+      <tr>
+        <td>inst2</td>
+        <td>La deuxième instance pour se connecter avec le joint</td>
+      </tr>
+      <tr>
+        <td>anchor_x</td>
+        <td>La coordonnée x où l'articulation est ancrée, dans le monde du jeu.</td>
+      </tr>
+      <tr>
+        <td>anchor_y</td>
+        <td>La coordonnée y où l'articulation est ancrée, dans le monde du jeu.</td>
+      </tr>
+      <tr>
+        <td>axis_x</td>
+        <td>La composante x du vecteur de l'axe de la roue</td>
+      </tr>
+      <tr>
+        <td>axis_y</td>
+        <td>La composante y du vecteur de l'axe de la roue</td>
+      </tr>
+      <tr>
+        <td>enableMotor</td>
+        <td>Si le moteur doit être actif (true) ou non (false).</td>
+      </tr>
+      <tr>
+        <td>couple_moteur_maximal</td>
+        <td>Définit le couple moteur maximal utilisé pour atteindre la vitesse moteur souhaitée (en Newtons par mètre).</td>
+      </tr>
+      <tr>
+        <td>vitesse du moteur</td>
+        <td>C'est la vitesse à laquelle le moteur doit tourner.</td>
+      </tr>
+      <tr>
+        <td>freq_hz</td>
+        <td>C'est la fréquence d'oscillation de l'articulation, en hertz.</td>
+      </tr>
+      <tr>
+        <td>rapport d'amortissement</td>
+        <td>Ce rapport d'amortissement pour l'articulation</td>
+      </tr>
+      <tr>
+        <td>col</td>
+        <td>Si les deux instances peuvent entrer en collision (vrai) ou non (faux).</td>
+      </tr>
+    </tbody>
+  </table>
+  <p> </p>
+  <h4>Les retours :</h4>
+  <p class="code">Nombre entier (indice de l'articulation)</p>
+  <p> </p>
+  <h4>Exemple :</h4>
+  <p class="code">var mainFixture = physics_fixture_create() ;<br> physics_fixture_set_box_shape(mainFixture, 128, 32) ;<br> var wheelFixture = physics_fixture_create() ;<br> physics_fixture_set_circle_shape(wheelFixture, 32) ;<br> var o_id = instance_create_layer(x+25,
+    y + 100, &quot;Instances&quot;, obj_Wheel) ;<br> physics_fixture_bind(mainFixture, id) ;<br> physics_fixture_bind(wheelFixture, o_id) ;<br> physics_joint_wheel_create(id, o_id, o_id.x, o_id.y, 0, 1, true, 10, 1, 15, 6, false) ;<br> physics_fixture_delete(mainFixture) ;
+    <br> physics_fixture_delete(wheelFixture) ;
+  </p>
+  <p>Le code ci-dessus crée et définit deux nouveaux déplacements imposés. Ils sont ensuite liés à l'instance appelante et à une nouvelle instance qui est créée avant qu'un joint de roue ne soit appliqué pour les relier, après quoi les dispositifs sont supprimés de la mémoire.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <div class="footer">
+    <div class="buttons">
+      <div class="clear">
+        <div style="float:left">Dos : <a href="Joints.htm">Articulations</a></div>
+        <div style="float:right">Suivant : <a href="physics_joint_weld_create.htm">physics_joint_weld_create</a></div>
+      </div>
+    </div>
+    <h5><span data-keyref="Copyright Notice">Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
   </div>
   <!-- KEYWORDS
 physics_joint_wheel_create

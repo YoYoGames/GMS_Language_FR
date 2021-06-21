@@ -2,20 +2,58 @@
 
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml"><head>
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-  <title>device_mouse_dbclick_enable</title>
-  <meta name="generator" content="Adobe RoboHelp 2019"/>
-  <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css"/>
-  <meta name="rh-authors" content="Mark Alexander"/>
-  <meta name="topic-comment" content="Page de référence pour device_mouse_dbclick_enable"/>
-  <meta name="rh-index-keywords" content="device_mouse_dbclick_enable"/>
-  <meta name="search-keywords" content="device_mouse_dbclick_enable"/>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>dispositif_mouse_dbclick_enable</title>
+  <meta name="generator" content="Adobe RoboHelp 2019" />
+  <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
+  <meta name="rh-authors" content="Mark Alexander" />
+  <meta name="topic-comment" content="Reference page for device_mouse_dbclick_enable" />
+  <meta name="rh-index-keywords" content="device_mouse_dbclick_enable" />
+  <meta name="search-keywords" content="device_mouse_dbclick_enable" />
 </head>
 
-<body><!--<div class="body-scroll" style="top: 150px;">--><h1>device_mouse_dbclick_enable</h1><p> Cette fonction peut être utilisée pour configurer l&#39;appareil pour qu&#39;il détecte une double pression sur le <tt>mb_left</tt> (bouton gauche de la souris) comme <tt>mb_right</tt> (bouton droit de la souris) appuyez ou non. Par défaut, il est défini sur <tt>true</tt>, ce qui signifie que chaque fois que l&#39;utilisateur touche l&#39;écran de l&#39;appareil deux fois rapidement et consécutivement, la valeur de retour est la même que si le bouton droit de la souris avait été cliqué. Lorsqu&#39;il est activé, le premier tap sera détecté comme <tt>mb_left</tt>, et le second comme <tt>mb_right</tt>, assurez-vous donc que tout code que vous utilisez en tient compte.</p><p></p><h4> Syntaxe:</h4><p class="code">device_mouse_dbclick_enable(bool);</p><table><tbody><tr><th> Argument</th><th> Description</th></tr><tr><td> <span class="notranslate">bool</span></td><td> Activez la détection du double-clic (<tt>true</tt> ) ou désactivé (<tt>false</tt> ).</td></tr></tbody></table><p></p><h4> Retour:</h4><p class="code">Boolean</p><p></p><h4> Exemple:</h4><p class="code">if os_type == os_windows || os_type == os_mac<br/>    {
-    <br/>    device_mouse_dbclick_enable(false);
-    <br/>    }
-  </p><p> Le code ci-dessus vérifie si l&#39;appareil exécutant le jeu est un <span class="notranslate">Windows</span> ou un Mac et s&#39;il s&#39;agit de l&#39;un d&#39;entre eux, il désactive la fonction de double pression. </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> Retour: <a href="Device_Input.htm">Entrée de périphérique</a></div><div style="float:right"> Suivant:<a href="device_mouse_x.htm">device_mouse_x</a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
+<body>
+  <!--<div class="body-scroll" style="top: 150px;">-->
+  <h1>dispositif_mouse_dbclick_enable</h1>
+  <p>Cette fonction peut être utilisée pour configurer le dispositif afin qu'il détecte un double tapotement du <tt>mb_left</tt> (bouton gauche de la souris) comme un tapotement du <tt>mb_right</tt> (bouton droit de la souris) ou non. Par défaut, cette fonction est réglée sur <tt>true (vrai)</tt>, ce qui signifie que chaque fois que l'utilisateur touche l'écran du périphérique
+    deux fois rapidement et consécutivement, la valeur de retour est la même que si le bouton droit de la souris avait été cliqué. Lorsque cette option est activée, le premier tapotement sera détecté comme <tt>mb_left</tt>, et le second comme <tt>mb_right</tt>.
+    que le code que vous utilisez en tienne compte.</p>
+  <p> </p>
+  <h4>Syntaxe :</h4>
+  <p class="code">device_mouse_dbclick_enable(bool) ;</p>
+  <table>
+    <tbody>
+      <tr>
+        <th>Arguments</th>
+        <th>Description</th>
+      </tr>
+      <tr>
+        <td>bool</td>
+        <td>Active<tt>(true</tt>) ou désactive<tt>(false)</tt> la détection du double-clic.</td>
+      </tr>
+    </tbody>
+  </table>
+  <p> </p>
+  <h4>Les retours :</h4>
+  <p class="code">Booléen</p>
+  <p> </p>
+  <h4>Exemple :</h4>
+  <p class="code">if os_type == os_windows || os_type == os_mac<br> {
+    <br> device_mouse_dbclick_enable(false) ;
+    <br> }
+  </p>
+  <p>Le code ci-dessus vérifie si l'appareil qui exécute le jeu est un PC <span class="notranslate">Windows</span> ou un Mac et s'il s'agit de l'un ou l'autre, il désactive la fonction de double-clic.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <div class="footer">
+    <div class="buttons">
+      <div class="clear">
+        <div style="float:left">Retour : <a href="Device_Input.htm">Entrée du dispositif</a></div>
+        <div style="float:right">Suivant : <a href="device_mouse_x.htm">device_mouse_x</a></div>
+      </div>
+    </div>
+    <h5><span data-keyref="Copyright Notice">Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
   </div>
   <!-- KEYWORDS
 device_mouse_dbclick_enable

@@ -3,17 +3,54 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>show_message</title>
+  <title>montrer_message</title>
   <meta name="generator" content="Adobe RoboHelp 2019" />
   <link rel="stylesheet" href="../../../assets/css/default.css" type="text/css" />
   <meta name="rh-authors" content="Mark Alexander" />
-  <meta name="topic-comment" content="Page de référence pour show_message" />
+  <meta name="topic-comment" content="Reference page for show_message" />
   <meta name="rh-index-keywords" content="show_message" />
   <meta name="search-keywords" content="show_message" />
 </head>
-<body><!--<div class="body-scroll" style="top: 150px;">--><h1>show_message</h1><p> Cette fonction crée une boîte de message pop-up qui affiche la chaîne définie dans le code et un bouton marqué &quot;Ok&quot; pour le fermer.</p><p class="note"> <b>REMARQUE:</b> cette fonction est destinée au <b>débogage uniquement</b> sur les cibles Desktop et UWP, mais est <b>déconseillée</b> sur toutes les autres cibles.</p><p></p><h4> Syntaxe:</h4><p class="code">show_message(str);</p><table><tbody><tr><th> Argument</th><th> Description</th></tr><tr><td> <span class="notranslate">str</span></td><td> La chaîne à afficher dans le message contextuel.</td></tr></tbody></table><p></p><h4> Retour:</h4><p class="code">N/A</p><p></p><h4> Exemple:</h4><p class="code">var tot = 0;<br/> for (var i = 0; i &lt; 10; i += 1)<br/>    {
-    <br/>    tot += inv[i];<br/>    }
-    <br/> show_message(&quot;Total = &quot; + string(tot));</p><p> Le code ci-dessus va parcourir les valeurs stockées dans le tableau &quot;inv&quot; et les ajouter à la variable &quot;tot&quot; avant d&#39;afficher un message avec le total. </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> Retour: <a href="Debugging.htm">Débogage</a></div><div style="float:right"> Suivant:<a href="show_question.htm">show_question</a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
+<body>
+  <!--<div class="body-scroll" style="top: 150px;">-->
+  <h1>montrer_message</h1>
+  <p>Cette fonction crée une boîte de message contextuelle qui affiche la chaîne de caractères donnée et un bouton marqué &quot;Ok&quot; pour la fermer.</p>
+  <p class="note"><b>REMARQUE :</b> Cette fonction est destinée à être <b>utilisée pour le débogage uniquement</b> sur les cibles Desktop et UWP, mais est <b>dépréciée</b> sur toutes les autres cibles.</p>
+  <p> </p>
+  <h4>Syntaxe :</h4>
+  <p class="code">show_message(str) ;</p>
+  <table>
+    <tbody>
+      <tr>
+        <th>Arguments</th>
+        <th>Description</th>
+      </tr>
+      <tr>
+        <td>str</td>
+        <td>La chaîne à afficher dans le message pop-up.</td>
+      </tr>
+    </tbody>
+  </table>
+  <p> </p>
+  <h4>Les retours :</h4>
+  <p class="code">N/A</p>
+  <p> </p>
+  <h4>Exemple :</h4>
+  <p class="code">var tot = 0 ;<br> for (var i = 0 ; i &lt; 10 ; i += 1)<br> {
+    <br> tot += inv[i] ;<br> }
+    <br> show_message(&quot;Total = &quot; + string(tot)) ;</p>
+  <p>Le code ci-dessus va parcourir en boucle les valeurs stockées dans le tableau &quot;inv&quot; et les ajouter à la variable &quot;tot&quot; avant d'afficher un message avec le total.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <div class="footer">
+    <div class="buttons">
+      <div class="clear">
+        <div style="float:left">Retour : <a href="Debugging.htm">Débogage</a></div>
+        <div style="float:right">Suivant : <a href="show_question.htm">show_question</a></div>
+      </div>
+    </div>
+    <h5><span data-keyref="Copyright Notice">Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
   </div>
   <!-- KEYWORDS
 show_message

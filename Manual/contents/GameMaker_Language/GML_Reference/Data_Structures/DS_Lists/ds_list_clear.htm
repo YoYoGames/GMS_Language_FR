@@ -2,20 +2,59 @@
 
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml"><head>
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <title>ds_list_clear</title>
-  <meta name="generator" content="Adobe RoboHelp 2019"/>
-  <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css"/>
-  <meta name="rh-authors" content="Mark Alexander"/>
-  <meta name="topic-comment" content="Page de référence pour ds_list_clear"/>
-  <meta name="rh-index-keywords" content="ds_list_clear"/>
-  <meta name="search-keywords" content="ds_list_clear"/>
+  <meta name="generator" content="Adobe RoboHelp 2019" />
+  <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
+  <meta name="rh-authors" content="Mark Alexander" />
+  <meta name="topic-comment" content="Reference page for ds_list_clear" />
+  <meta name="rh-index-keywords" content="ds_list_clear" />
+  <meta name="search-keywords" content="ds_list_clear" />
 </head>
 
-<body><!--<div class="body-scroll" style="top: 150px;">--><h1>ds_list_clear</h1><p> Avec cette fonction, vous pouvez effacer toutes les données de la structure de données de la liste donnée. Cela ne <i>détruit PAS</i> la structure de données (pour cela, vous devez utiliser <a href="ds_list_destroy.htm"><tt>ds_list_destroy()</tt></a> ), il efface uniquement toutes les données de celui-ci et rend la liste vide (de taille zéro). Notez que l&#39;effacement d&#39;une liste dé-référencera toutes les structures de données qui y sont stockées, ce qui entraînera une fuite de mémoire, vous devrez donc parcourir la liste et détruire tous les éléments de la structure de données manuellement avant de l&#39;effacer pour éviter cela. Le seul moment où cela n&#39;est pas nécessaire est lorsque vous avez marqué des éléments de la liste comme une autre <a href="DS_Lists.htm">liste DS</a> ou comme une <a href="../DS_Maps/DS_Maps.htm">carte DS</a>, auquel cas ces éléments seront détruits (non effacés!) Et leur mémoire nettoyée automatiquement lorsque le parent est effacé.</p><p></p><h4> Syntaxe:</h4><p class="code">ds_list_clear(id);</p><table><tbody><tr><th> Argument</th><th> Description</th></tr><tr><td> <span class="notranslate">id</span></td><td> L&#39;identifiant de la structure de données à effacer.</td></tr></tbody></table><p></p><h4> Retour:</h4><p class="code">N/A</p><p></p><h4> Exemple:</h4><p class="code">if (count == 15) &amp;&amp; (!ds_list_empty(command_list))<br/>     {
-    <br/>     ds_list_clear(command_list);
-    <br/>     alarm[0] = room_speed;<br/>     ai_count = 0;<br/>     }
-  </p><p> Le code ci-dessus vérifie une variable pour voir si elle a atteint une valeur spécifique et si elle l&#39;a efface la liste DS indexée dans la variable &quot;command_list&quot;, définit une alarme et réinitialise la variable à 0. </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> Retour: <a href="DS_Lists.htm">Listes DS</a></div><div style="float:right"> Suivant:<a href="ds_list_empty.htm">ds_list_empty</a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
+<body>
+  <!--<div class="body-scroll" style="top: 150px;">-->
+  <h1>ds_list_clear</h1>
+  <p>Avec cette fonction, vous pouvez effacer toutes les données de la structure de données de la liste donnée. Cela <i>ne</i> détruit <i>PAS</i> la structure de données (pour cela vous devriez utiliser <a href="ds_list_destroy.htm"><tt>ds_list_destroy()</tt></a>), elle efface seulement toutes les données de celle-ci et rend
+    la liste vide (de taille nulle). Notez que l'effacement d'une liste déréférencera toutes les structures de données qui y sont stockées, ce qui entraînera une fuite de mémoire.
+    pour éviter cela. Le seul cas où cela n'est pas nécessaire est celui où vous avez marqué des éléments de la liste comme étant une autre <a href="DS_Lists.htm">liste DS</a> ou une <a href="../DS_Maps/DS_Maps.htm">carte DS</a>.
+    et leur mémoire sera nettoyée automatiquement lorsque le parent sera effacé.</p>
+  <p> </p>
+  <h4>Syntaxe :</h4>
+  <p class="code">ds_list_clear(id) ;</p>
+  <table>
+    <tbody>
+      <tr>
+        <th>Arguments</th>
+        <th>Description</th>
+      </tr>
+      <tr>
+        <td>id</td>
+        <td>L'identifiant de la structure de données à effacer.</td>
+      </tr>
+    </tbody>
+  </table>
+  <p> </p>
+  <h4>Les retours :</h4>
+  <p class="code">N/A</p>
+  <p> </p>
+  <h4>Exemple :</h4>
+  <p class="code">if (count == 15) &amp;&amp; (!ds_list_empty(command_list))<br> {
+    <br> ds_list_clear(command_list) ;
+    <br> alarm[0] = room_speed ;<br> ai_count = 0 ;<br> }
+  </p>
+  <p>Le code ci-dessus vérifie une variable pour voir si elle a atteint une valeur spécifique et si c'est le cas, il efface la liste DS indexée dans la variable &quot;command_list&quot;, déclenche une alarme et remet la variable à 0.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <div class="footer">
+    <div class="buttons">
+      <div class="clear">
+        <div style="float:left">Retour : <a href="DS_Lists.htm">Listes de DS</a></div>
+        <div style="float:right">Suivant : <a href="ds_list_empty.htm">ds_list_empty</a></div>
+      </div>
+    </div>
+    <h5><span data-keyref="Copyright Notice">Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
   </div>
   <!-- KEYWORDS
 ds_list_clear

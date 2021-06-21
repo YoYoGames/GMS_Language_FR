@@ -1,19 +1,62 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>method</title>
-  <meta name="generator" content="Adobe RoboHelp 2019" />
+  <title>méthode</title>
+  <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../assets/css/default.css" type="text/css" />
   <meta name="rh-authors" content="Mark Alexander" />
-  <meta name="topic-comment" content="Page expliquant la méthode de la fonction" />
+  <meta name="topic-comment" content="Page explaining the function method" />
   <meta name="rh-index-keywords" content="method" />
   <meta name="search-keywords" content="method" />
 </head>
-<body><!--<div class="body-scroll" style="top: 150px;">--><h1>method</h1><p> Avec cette fonction, vous pouvez lier n&#39;importe quelle fonction qui a été précédemment définie à une instance ou une structure donnée, en créant une <a href="../../GML_Overview/Method_Variables.htm">variable de méthode</a> qui peut être utilisée plus tard. Vous fournissez l&#39;ID d&#39;instance à utiliser (il <i>doit</i> s&#39;agir d&#39;une instance active et dans la salle, et ne peut pas être un ID d&#39;objet) ou une référence de structure, ainsi que l&#39;ID de la fonction que vous souhaitez lier. La fonction retournera une <a class="glossterm" data-glossterm="méthode" href="#">méthode</a> qui peut être appelée à partir de la variable à laquelle elle est affectée (voir l&#39;exemple de code ci-dessous). Il est à noter que vous pouvez lier des fonctions intégrées ainsi que des fonctions définies par l&#39;utilisateur, et vous pouvez également fournir <tt>undefined</tt> comme argument instance / struct signifiant que le courant <a href="../../GML_Overview/Instance_Keywords.htm"><tt>self</tt></a> portée sera utilisée pour la liaison.</p><p></p><h4> Syntaxe:</h4><p class="code">method(struct_ref_or_instance_id, function);</p><table><tbody><tr><th> Argument</th><th> Description</th></tr><tr><td> <span class="notranslate">struct_ref_or_instance_id</span></td><td> La référence unique ou la valeur d&#39;ID de la structure ou de l&#39;instance à utiliser (ou <tt>undefined</tt> pour <tt>self</tt> )</td></tr><tr><td> <span class="notranslate">function</span></td><td> L&#39;ID de la fonction à utiliser</td></tr></tbody></table><p></p><h4> Retour:</h4><p class="code">Method</p><p></p><h4> Exemple:</h4><p class="code">var _inst = instance_position(mouse_x, mouse_y, obj_Enemy);<br/> if instance_exists(_inst)<br/>     {
-    <br/>     enemy_func = method(_inst, enemy_ai);<br/>     }
-  </p><p> Le code ci-dessus vérifiera si une instance existe à la position donnée et si c&#39;est le cas, une fonction est liée à l&#39;instance et renvoyée en tant que variable de méthode &quot;ennemi_func&quot;. </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> Retour: <a href="Variable_Functions.htm">Fonctions variables</a></div><div style="float:right"> Suivant:<a href="method_get_self.htm">method_get_self</a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
+<body>
+  <!--<div class="body-scroll" style="top: 150px;">-->
+  <h1>méthode</h1>
+  <p>Avec cette fonction, vous pouvez lier n'importe quelle fonction qui a été précédemment définie à une instance ou une structure donnée, créant ainsi une <a href="../../GML_Overview/Method_Variables.htm">variable de méthode</a> qui peut être utilisée ultérieurement.
+    être utilisée ultérieurement. Vous fournissez l'ID de l'instance à utiliser (il <i>doit</i> s'agir d'une instance active et présente dans la room, et ne peut être un ID d'objet) ou une référence de structure, ainsi que l'ID de la fonction que vous souhaitez lier.
+    La fonction renverra une <a class="glossterm" data-glossterm="méthode" href="#">méthode</a> qui pourra être appelée depuis la variable à laquelle elle est assignée (voir l'exemple de code ci-dessous). Il est important de noter que vous pouvez lier des fonctions intégrées ainsi que des fonctions définies par l'utilisateur.
+    définies par l'utilisateur, et vous pouvez également fournir <tt>undefined</tt> comme argument d'instance/structure, ce qui signifie que le champ d'application courant <a href="../../GML_Overview/Instance_Keywords.htm"><tt>self</tt></a> courante sera
+    sera utilisé pour la liaison.</p>
+  <p> </p>
+  <h4>Syntaxe :</h4>
+  <p class="code">méthode(struct_ref_ou_instance_id, fonction) ;</p>
+  <table>
+    <tbody>
+      <tr>
+        <th>Arguments</th>
+        <th>Description</th>
+      </tr>
+      <tr>
+        <td>struct_ref_ou_instance_id</td>
+        <td>La référence unique ou la valeur ID de la structure ou de l'instance à utiliser (ou <tt>indéfini</tt> pour <tt>self</tt>)</td>
+      </tr>
+      <tr>
+        <td>fonction</td>
+        <td>L'ID de la fonction à utiliser</td>
+      </tr>
+    </tbody>
+  </table>
+  <p> </p>
+  <h4>Les retours :</h4>
+  <p class="code">Méthode</p>
+  <p> </p>
+  <h4>Exemple :</h4>
+  <p class="code">var _inst = instance_position(mouse_x, mouse_y, obj_Enemy) ;<br> if instance_exists(_inst)<br> {
+    <br> enemy_func = method(_inst, enemy_ai) ;<br> }
+  </p>
+  <p>Le code ci-dessus vérifie si une instance existe à la position donnée et si c'est le cas, une fonction est liée à l'instance et renvoyée comme variable de méthode &quot;enemy_func&quot;.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <div class="footer">
+    <div class="buttons">
+      <div class="clear">
+        <div style="float:left">Retour : <a href="Variable_Functions.htm">Fonctions variables</a></div>
+        <div style="float:right">Suivant : <a href="method_get_self.htm">méthode_get_self</a></div>
+      </div>
+    </div>
+    <h5><span data-keyref="Copyright Notice">Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
   </div>
   <!-- KEYWORDS
 method
@@ -21,5 +64,5 @@ method
   <!-- TAGS
 method
 -->
-</body>
-</html>
+
+</body></html>

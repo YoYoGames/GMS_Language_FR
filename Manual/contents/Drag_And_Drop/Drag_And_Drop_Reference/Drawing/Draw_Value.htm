@@ -3,15 +3,65 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>Dessiner une valeur</title>
+  <title>Valeur du tirage au sort</title>
   <meta name="generator" content="Adobe RoboHelp 2019" />
   <link rel="stylesheet" href="../../../assets/css/default.css" type="text/css" />
   <meta name="rh-authors" content="Mark Alexander" />
-  <meta name="topic-comment" content="Page qui explique l&#39;action Dessiner une valeur" />
-  <meta name="rh-index-keywords" content="DnD ™ - Dessiner de la valeur" />
-  <meta name="search-keywords" content="Dessiner une valeur" />
+  <meta name="topic-comment" content="Page that explains the Draw Value action" />
+  <meta name="rh-index-keywords" content="DnD™ Action - Draw Value" />
+  <meta name="search-keywords" content="Draw Value" />
 </head>
-<body><!--<div class="body-scroll" style="top: 150px;">--><h1><img alt="Draw Value Icon" class="icon" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Drawing/i_Drawing_Draw_Value.png" /> Dessiner une valeur</h1><p> Avec cette action, vous pouvez dessiner une légende de chaîne et / ou une variable ou une valeur à l&#39;écran. L&#39;argument caption est une chaîne que vous souhaitez ajouter avant la valeur, et peut être laissé vide si nécessaire, mais si vous souhaitez inclure du texte, il doit être entouré de guillemets, et la valeur peut être une variable, une valeur fixe ou autre string - auquel cas il doit également être mis entre guillemets - mais il ne peut pas être laissé vide. Vous indiquez ensuite la position où la chaîne doit être dessinée, soit en tant que position absolue, soit en tant que position par rapport à l&#39;occurrence dessinant le texte. Notez que l&#39;apparence du texte une fois dessiné dépendra de la police utilisée, de la couleur utilisée et de l&#39;alignement. Toutes ces choses peuvent être modifiées avant de dessiner, comme le montre l&#39;exemple ci-dessous.</p><p class="note"> <b>REMARQUE</b>: cette action est uniquement destinée à être utilisée dans les divers <a href="../../../The_Asset_Editors/Object_Properties/Draw_Events.htm">événements de tirage au sort</a> et ne tirera rien si elle est utilisée ailleurs.</p><p></p><p></p><h4> Syntaxe de l&#39;action:</h4><p><img alt="Draw Value Action" class="center" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Drawing/a_Drawing_Draw_Value.png" /></p><h4> Arguments:</h4><table><tbody><tr><th> Argument</th><th> Description</th></tr><tr><td> <span class="notranslate">Caption</span></td><td> La légende à dessiner (une chaîne), peut être laissée vide</td></tr><tr><td> <span class="notranslate">Value</span></td><td> La valeur à dessiner (réelle, variable ou chaîne)</td></tr><tr><td> <span class="notranslate">x</span></td><td> La position x à laquelle dessiner</td></tr><tr><td> <span class="notranslate">y</span></td><td> La position y à laquelle dessiner</td></tr></tbody></table><p></p><h4> Exemple:</h4><p><img alt="Draw Value Example" class="center" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Drawing/e_Drawing_Draw_Value.png" /> Le code de bloc d&#39;action ci-dessus définit une police, la couleur de la police, puis aligne le texte à dessiner à partir du centre avant de dessiner réellement le &quot;<span class="inline">level_num</span> &quot;valeur avec la légende&quot; Niveau: &quot;. </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> Retour: <a href="Drawing_Actions.htm">Actions de dessin</a></div><div style="float:right"> Suivant: <a href="Draw_Transformed_Value.htm">Dessiner une valeur transformée</a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
+<body>
+  <!--<div class="body-scroll" style="top: 150px;">-->
+  <h1><img alt="Draw Value Icon" class="icon" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Drawing/i_Drawing_Draw_Value.png"> Valeur de tirage au sort</h1>
+  <p>Avec cette action, vous pouvez dessiner une légende de chaîne et/ou une variable ou une valeur à l'écran. L'argument de la légende est une chaîne que vous souhaitez ajouter avant la valeur, et peut être laissé vide si nécessaire, mais si vous souhaitez inclure du texte, il doit être entouré de guillemets.
+    entre guillemets, et la valeur peut être une variable, une valeur fixe ou une autre chaîne - dans ce cas, elle doit également être placée entre guillemets - mais elle ne peut pas être laissée vide. Vous indiquez ensuite la position où la chaîne de caractères doit être dessinée, soit en tant que position absolue
+    ou une position relative à l'instance qui dessine le texte. Notez que l'aspect du texte une fois dessiné dépendra de la police utilisée, de la couleur utilisée et de l'alignement. Tous ces éléments peuvent être modifiés avant le dessin, comme le montre l'exemple ci-dessous.</p>
+  <p class="note"><b>REMARQUE</b>: Cette action est uniquement destinée à être utilisée dans les différents <a href="../../../The_Asset_Editors/Object_Properties/Draw_Events.htm">événements de tirage au sort</a>, et ne tirera rien si elle est utilisée ailleurs.</p>
+  <p> </p>
+  <p> </p>
+  <h4>Syntaxe de l'action :</h4>
+  <p><img alt="Draw Value Action" class="center" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Drawing/a_Drawing_Draw_Value.png" /></p>
+  <h4>Arguments :</h4>
+  <table>
+    <tbody>
+      <tr>
+        <th>Arguments</th>
+        <th>Description</th>
+      </tr>
+      <tr>
+        <td>Légende</td>
+        <td>La légende à dessiner (une chaîne de caractères), peut être laissée vide.</td>
+      </tr>
+      <tr>
+        <td>Valeur</td>
+        <td>La valeur à dessiner (réel, variable ou chaîne)</td>
+      </tr>
+      <tr>
+        <td>x</td>
+        <td>La position x à dessiner</td>
+      </tr>
+      <tr>
+        <td>y</td>
+        <td>La position y à dessiner</td>
+      </tr>
+    </tbody>
+  </table>
+  <p> </p>
+  <h4>Exemple :</h4>
+  <p><img alt="Draw Value Example" class="center" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Drawing/e_Drawing_Draw_Value.png">Le code du bloc d'action ci-dessus définit une police, la couleur de la police et aligne ensuite le texte pour qu'il soit dessiné à partir du centre avant de dessiner réellement la valeur " " avec la légende " Niveau : ".
+    avant d'afficher la valeur &quot;<span class="inline">level_num</span>&quot; et la légende &quot; Niveau : &quot;.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <div class="footer">
+    <div class="buttons">
+      <div class="clear">
+        <div style="float:left">Retour : <a href="Drawing_Actions.htm">Actions de dessin</a></div>
+        <div style="float:right">Suivant : <a href="Draw_Transformed_Value.htm">Dessiner une valeur transformée</a></div>
+      </div>
+    </div>
+    <h5><span data-keyref="Copyright Notice">Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
   </div>
   <!-- KEYWORDS
 Action - Draw Value

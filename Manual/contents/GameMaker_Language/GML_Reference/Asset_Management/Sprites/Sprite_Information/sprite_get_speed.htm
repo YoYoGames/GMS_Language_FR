@@ -7,11 +7,57 @@
   <meta name="generator" content="Adobe RoboHelp 2019" />
   <link rel="stylesheet" href="../../../../../assets/css/default.css" type="text/css" />
   <meta name="rh-authors" content="Mark Alexander" />
-  <meta name="topic-comment" content="Page expliquant la fonction sprite_get_speed" />
+  <meta name="topic-comment" content="Page explaining the function sprite_get_speed" />
   <meta name="rh-index-keywords" content="sprite_get_speed" />
   <meta name="search-keywords" content="sprite_get_speed" />
 </head>
-<body><!--<div class="body-scroll" style="top: 150px;">--><h1>sprite_get_speed</h1><p> Cette fonction peut être utilisée pour récupérer la vitesse de sprite telle que définie pour la ressource de sprite dans l&#39; <a href="../../../../../The_Asset_Editors/Sprites.htm">éditeur de</a> sprite. La valeur renvoyée peut ensuite être utilisée, par exemple, pour calculer le nombre d&#39;images pouvant être dessinées pour différents <a href="../Sprite_Instance_Variables/image_speed.htm"><tt>image_speed</tt></a>. Notez que la valeur de retour sera très différente selon le <i>type</i> de vitesse qui a été appliqué dans l&#39;éditeur de sprite, soit <i>images par seconde</i>, soit <i>images par image de jeu</i>. Les deux exemples suivants illustrent ceci:</p><ul class="colour"><li> Si vous avez un sprite qui dessine 1 image par <i>seconde</i> et définissez la vitesse de l&#39;image à 0,5, il dessinera à 0,5 image par seconde. Si la fréquence d&#39;images de votre jeu est de 60 images par seconde, le sprite dessinera 1 image pour 120 images de jeu.</li><li> Si vous avez un sprite qui dessine 1 image par image de <i>jeu</i> et définissez la vitesse d&#39;image sur 0,5, il dessinera 0,5 image par image de jeu. Si la fréquence d&#39;images de votre jeu est de 60 images par seconde, alors le sprite dessinera 30 images pour 60 images de jeu.</li></ul><p> Vous pouvez savoir quel type de vitesse d&#39;animation a été utilisé lors de la définition du sprite à l&#39;aide de la fonction <a href="sprite_get_speed_type.htm"><tt>sprite_get_speed_type()</tt></a>, et vous pouvez définir la vitesse <i>et le</i> type d&#39;animation à l&#39;aide de la fonction <a href="../Sprite_Manipulation/sprite_set_speed.htm"><tt>sprite_set_speed()</tt></a>.</p><p></p><h4> Syntaxe:</h4><p class="code">sprite_get_speed(index)</p><table><tbody><tr><th> Argument</th><th> Description</th></tr><tr><td> <span class="notranslate">index</span></td><td> L&#39;index du sprite pour obtenir la vitesse de</td></tr></tbody></table><p></p><h4> Retour:</h4><p class="code">Real</p><p></p><h4> Exemple:</h4><p class="code">s_speed = sprite_get_speed(sprite_index);<br/> s_type = sprite_get_speed_type(sprite_index);</p><p> Le code ci-dessus obtient la vitesse du sprite et le type d&#39;animation du sprite et les stocke dans des variables d&#39;instance pour une utilisation future. </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> Retour: <a href="Sprite_Information.htm">Informations sur les sprites</a></div><div style="float:right"> Suivant:<a href="sprite_get_speed_type.htm">sprite_get_speed_type</a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
+<body>
+  <!--<div class="body-scroll" style="top: 150px;">-->
+  <h1>sprite_get_speed</h1>
+  <p>Cette fonction peut être utilisée pour récupérer la vitesse du sprite telle que définie pour la ressource sprite dans l'<a href="../../../../../The_Asset_Editors/Sprites.htm">éditeur de sprites.</a> La valeur renvoyée peut alors être utilisée, par exemple, pour calculer le nombre d'images pouvant être dessinées pour différents types de sprites.
+    combien d'images peuvent être dessinées pour différentes <a href="../Sprite_Instance_Variables/image_speed.htm"><tt>image_speed</tt></a>. Notez que la valeur de retour sera très différente en fonction du <i>type</i> de vitesse
+    qui a été appliquée dans l'éditeur de Sprite, soit <i>Frames Per Second</i>, soit <i>Frames Per Game Frame</i>. Les deux exemples suivants illustrent cela :</p>
+  <ul class="colour">
+    <li>Si vous avez un sprite qui dessine 1 image par <i>seconde</i> et que vous réglez la vitesse de l'image sur 0,5, il sera dessiné à 0,5 image par seconde. Si la fréquence d'images de votre jeu est de 60 images par seconde, le sprite dessinera une image toutes les 120 images du jeu.
+      images du jeu.</li>
+    <li>Si vous avez un sprite qui dessine 1 image par <i>image du jeu</i> et que vous réglez la vitesse de l'image sur 0,5, il dessinera 0,5 image par image du jeu. Si la fréquence d'images de votre jeu est de 60 images par seconde, le sprite affichera 30 images pour 60 images de jeu.
+      toutes les 60 images du jeu.</li>
+  </ul>
+  <p>Vous pouvez connaître le type de vitesse d'animation utilisé lors de la définition du sprite à l'aide de la fonction <a href="sprite_get_speed_type.htm"><tt>sprite_get_speed_type()</tt></a>et vous pouvez définir la vitesse <i>et le</i> type d'animation
+    à l'aide de la fonction <a href="../Sprite_Manipulation/sprite_set_speed.htm"><tt>sprite_set_speed()</tt></a>.</p>
+  <p> </p>
+  <h4>Syntaxe :</h4>
+  <p class="code">sprite_get_speed(index)</p>
+  <table>
+    <tbody>
+      <tr>
+        <th>Arguments</th>
+        <th>Description</th>
+      </tr>
+      <tr>
+        <td>indice</td>
+        <td>L'index du sprite dont on veut obtenir la vitesse</td>
+      </tr>
+    </tbody>
+  </table>
+  <p> </p>
+  <h4>Les retours :</h4>
+  <p class="code">Real</p>
+  <p> </p>
+  <h4>Exemple :</h4>
+  <p class="code">s_speed = sprite_get_speed(sprite_index) ;<br> s_type = sprite_get_speed_type(sprite_index) ;</p>
+  <p>Le code ci-dessus récupère la vitesse du sprite et le type d'animation du sprite et les stocke dans des variables d'instance pour une utilisation ultérieure.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <div class="footer">
+    <div class="buttons">
+      <div class="clear">
+        <div style="float:left">Retour : <a href="Sprite_Information.htm">Informations sur le Sprite</a></div>
+        <div style="float:right">Suivant : <a href="sprite_get_speed_type.htm">sprite_get_speed_type</a></div>
+      </div>
+    </div>
+    <h5><span data-keyref="Copyright Notice">Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
   </div>
   <!-- KEYWORDS
 sprite_get_speed

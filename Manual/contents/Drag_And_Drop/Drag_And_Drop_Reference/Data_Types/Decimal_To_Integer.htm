@@ -3,15 +3,69 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>Décimal en entier</title>
+  <title>De décimal à entier</title>
   <meta name="generator" content="Adobe RoboHelp 2019" />
   <link rel="stylesheet" href="../../../assets/css/default.css" type="text/css" />
   <meta name="rh-authors" content="Mark Alexander" />
-  <meta name="topic-comment" content="Page qui explique l&#39;action Decimal To Integer" />
-  <meta name="rh-index-keywords" content="DnD ™ - Décimal à entier" />
-  <meta name="search-keywords" content="Décimal en entier" />
+  <meta name="topic-comment" content="Page that explains the Decimal To Integer action" />
+  <meta name="rh-index-keywords" content="DnD™ Action - Decimal To Integer" />
+  <meta name="search-keywords" content="Decimal To Integer" />
 </head>
-<body><!--<div class="body-scroll" style="top: 150px;">--><h1><img alt="Decimal To Integer Icon" class="icon" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Data_Types/i_Types_Decimal_To_Integer.png" /> Décimal en entier</h1><p> Cette action prendra un nombre décimal et le convertira en un entier. Vous donnez la valeur à convertir, puis sélectionnez le type d&#39;arrondi à effectuer pour le transformer en une valeur entière. Les types d&#39;arrondis disponibles sont:<b></b></p><ul class="colour"><li> <b>Round:</b> Cela prend un nombre décimal et arrondit vers le haut <i>ou</i> vers le bas le plus proche nombre entier. Dans le cas particulier où le nombre fourni est exactement un demi-entier (par exemple, 1,5, 17,5, -2,5, etc...) le nombre sera arrondi à la <b>valeur paire</b> la plus proche, par exemple, 2,5 serait arrondi à 2, tandis que 3,5 serait arrondi à 4. Ce type d&#39;arrondi est appelé <i>arrondi des banquiers</i> et sur un grand nombre d&#39;itérations ou lors de l&#39;utilisation de calculs en virgule flottante, il donne un arrondi statistiquement meilleur que le plus traditionnel &quot;arrondi supérieur si supérieur à 0,5 et arrondi inférieur sinon &quot; approcher.</li><li> <b>Ceil:</b> Cela prendra une valeur décimale et arrondir au nombre entier le plus proche. Contrairement à round (ci-dessus), cela ne prend pas en compte la partie décimale de la valeur, donc un nombre comme 5,0000001 serait toujours arrondi à 6. Il convient de noter que si vous utilisez l&#39;action <a href="../Random/Get_Random_Number.htm">aléatoire Get Random Number</a> pour générer un nombre aléatoire décimale, puis en appelant cette action pour l&#39;arrondir, vous <i>pouvez alors</i> obtenir des résultats inattendus. L&#39;action aléatoire pourrait potentiellement renvoyer 0, et utiliser &quot;Ceil&quot; sur cela ne donnera pas 1 mais 0, donc si vous obtenez une décimale aléatoire de 0 à 9 et utilisez cette fonction, vous pouvez vous attendre à obtenir des entiers de 1 à 10, mais en En réalité, vous pouvez obtenir des nombres entiers de 0 à 10. C&#39;est une possibilité éloignée mais qui doit être prise en compte lors de l&#39;utilisation de cette action.</li><li> <b>Etage:</b> Cela prendra une valeur décimale et arrondir <i>vers</i> le <i>bas</i> à la plus proche valeur entière. Contrairement à round (ci-dessus), cela ne prend pas en compte la partie décimale de la valeur, donc un nombre comme 5.9999999 serait toujours réduit à 5.</li></ul><p> Une fois que vous avez sélectionné le type d&#39;arrondi, vous devez fournir le nombre à arrondir (cela peut être une variable), puis donner une variable cible à laquelle renvoyer la nouvelle valeur entière (qui peut être marquée comme une variable locale temporaire).</p><p></p><h4> Syntaxe de l&#39;action:</h4><p><img alt="Decimal To Integer Action" class="center" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Data_Types/a_Types_Decimal_To_integer.png" /></p><h4> Arguments:</h4><table><tbody><tr><th> Argument</th><th> Description</th></tr><tr><td> <span class="notranslate">Rounding</span></td><td> Le type d&#39;arrondi à utiliser pour obtenir l&#39;entier (voir description ci-dessus)</td></tr><tr><td> <span class="notranslate">Number</span></td><td> Le nombre décimal à arrondir à un entier</td></tr><tr><td> <span class="notranslate">Target</span></td><td> La variable cible pour stocker l&#39;entier renvoyé</td></tr></tbody></table><p></p><h4> Exemple:</h4><p><img alt="Decimal To Integer Example" class="center" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Data_Types/e_Types_Decimal_To_Integer.png" /> Le code de bloc d&#39;action ci-dessus prend une valeur décimale et la convertit en entier, en stockant la valeur renvoyée dans une variable locale temporaire. Cette valeur est ensuite transformée en une chaîne et dessinée à l&#39;écran. </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> Retour: <a href="Data_Type_Actions.htm">Actions de type de données</a></div><div style="float:right"> Suivant: <a href="String_To_Number.htm">Chaîne en nombre</a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
+<body>
+  <!--<div class="body-scroll" style="top: 150px;">-->
+  <h1><img alt="Decimal To Integer Icon" class="icon" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Data_Types/i_Types_Decimal_To_Integer.png"> Decimal To Integer</h1>
+  <p>Cette action va prendre un nombre décimal et le convertir en un nombre entier. Vous donnez la valeur à convertir, puis vous sélectionnez le type d'arrondi qui doit être effectué pour la transformer en valeur entière. Les types d'arrondis disponibles sont les suivants :<b></b></p>
+  <ul class="colour">
+    <li><b>Arrondir</b>: Cette fonction prend un nombre décimal et l'arrondit à l'entier supérieur <i>ou</i> inférieur le plus proche. Dans le cas particulier où le nombre fourni est exactement la moitié d'un nombre entier (par exemple, 1,5, 17,5, -2,5, etc...), le nombre sera arrondi à la valeur paire la plus proche.
+      Par exemple, 2,5 sera arrondi à 2, tandis que 3,5 sera arrondi à 4. Ce type d'arrondi s'appelle l'<i>arrondi des banquiers</i> et, sur un grand nombre d'itérations ou lors de l'utilisation de mathématiques en virgule flottante, il donne un arrondi statistiquement meilleur que l'arrondi plus traditionnel en virgule flottante.
+      statistiquement meilleur que l'approche plus traditionnelle consistant à &quot;arrondir à la hausse si la valeur est supérieure à 0,5 et à la baisse sinon&quot;.</li>
+    <li><b>Ceil</b>: Cette fonction prend une valeur décimale et l'arrondit <i>au</i> nombre entier le plus proche. Contrairement à round (ci-dessus), cette fonction ne prend pas en compte la partie décimale de la valeur. Ainsi, un nombre comme 5.0000001 sera arrondi à 6. Il est intéressant de
+      Il convient de noter que si vous utilisez l'action aléatoire <a href="../Random/Get_Random_Number.htm">Obtenir un nombre aléatoire</a> pour générer une valeur décimale aléatoire et que vous appelez ensuite cette action pour l'arrondir, vous <i>pouvez</i> obtenir des résultats inattendus. L'action aléatoire
+      peut potentiellement renvoyer 0, et l'utilisation de &quot;Ceil&quot; sur cette action ne donnera pas 1 mais 0, donc si vous obtenez une valeur décimale aléatoire de 0 à 9 et que vous utilisez cette fonction, vous pouvez vous attendre à obtenir des entiers de 1 à 10, mais en réalité vous pourriez obtenir des entiers de
+      0 à 10. Il s'agit d'une possibilité lointaine, mais il faut en tenir compte lors de l'utilisation de cette action.</li>
+    <li><b>Floor</b>: Cette fonction prend une valeur décimale et l'arrondit <i>à</i> la valeur entière la plus proche. Contrairement à l'arrondi (ci-dessus), cette fonction ne prend pas en compte la partie décimale de la valeur, de sorte qu'un nombre comme 5.9999999 sera toujours arrondi à la valeur inférieure.
+      5.</li>
+  </ul>
+  <p>Une fois que vous avez sélectionné le type d'arrondi, vous devez fournir le nombre à arrondir (il peut s'agir d'une variable), puis donner une variable cible à laquelle renvoyer la nouvelle valeur entière (qui peut être marquée comme une variable locale temporaire).</p>
+  <p> </p>
+  <h4>Syntaxe de l'action :</h4>
+  <p><img alt="Decimal To Integer Action" class="center" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Data_Types/a_Types_Decimal_To_integer.png" /></p>
+  <h4>Arguments :</h4>
+  <table>
+    <tbody>
+      <tr>
+        <th>Arguments</th>
+        <th>Description</th>
+      </tr>
+      <tr>
+        <td>Arrondir</td>
+        <td>Le type d'arrondi à utiliser pour obtenir le nombre entier (voir la description ci-dessus).</td>
+      </tr>
+      <tr>
+        <td>Numéro</td>
+        <td>Le nombre décimal à arrondir à un nombre entier</td>
+      </tr>
+      <tr>
+        <td>Cible</td>
+        <td>La variable cible pour stocker l'entier retourné</td>
+      </tr>
+    </tbody>
+  </table>
+  <p> </p>
+  <h4>Exemple :</h4>
+  <p><img alt="Decimal To Integer Example" class="center" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Data_Types/e_Types_Decimal_To_Integer.png">Le code du bloc d'action ci-dessus prend une valeur décimale et la convertit en un nombre entier,
+    stockant la valeur retournée dans une variable locale temporaire. Cette valeur est ensuite transformée en une chaîne de caractères et affichée à l'écran.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <div class="footer">
+    <div class="buttons">
+      <div class="clear">
+        <div style="float:left">Retour : <a href="Data_Type_Actions.htm">Actions sur les types de données</a></div>
+        <div style="float:right">Suivant : <a href="String_To_Number.htm">De la chaîne au nombre</a></div>
+      </div>
+    </div>
+    <h5><span data-keyref="Copyright Notice">Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
   </div>
   <!-- KEYWORDS
 Action - Decimal To Integer

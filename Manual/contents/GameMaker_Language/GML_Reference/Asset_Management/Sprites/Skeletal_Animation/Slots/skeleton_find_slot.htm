@@ -7,11 +7,57 @@
   <meta name="generator" content="Adobe RoboHelp 2019" />
   <link rel="stylesheet" href="../../../../../../assets/css/default.css" type="text/css" />
   <meta name="rh-authors" content="Mark Alexander" />
-  <meta name="topic-comment" content="Page expliquant la fonction skeleton_find_slot" />
+  <meta name="topic-comment" content="Page explaining the function skeleton_find_slot" />
   <meta name="rh-index-keywords" content="skeleton_find_slot" />
   <meta name="search-keywords" content="skeleton_find_slot" />
 </head>
-<body><!--<div class="body-scroll" style="top: 150px;">--><h1>skeleton_find_slot</h1><p> Avec cette fonction, vous pouvez trouver les emplacements à une position d&#39;espace de pièce spécifiée dans le sprite Spine associé à l&#39;instance actuelle. Vous créez une <a href="../../../../Data_Structures/DS_Lists/DS_Lists.htm">liste DS</a> et fournissez son ID avec une position x / y à vérifier et la liste sera remplie avec une chaîne de nom pour chacun des emplacements de pièce jointe disponibles pour le sprite (y compris les modifications de pièce jointe). Notez que la liste est toujours triée par ordre décroissant en commençant par l&#39;emplacement le plus haut.</p><p></p><h4> Syntaxe:</h4><p class="code">skeleton_find_slot(x, y, list);</p><table><tbody><tr><th> Argument</th><th> Description</th></tr><tr><td> <span class="notranslate">x</span></td><td> La position x dans la pièce à vérifier.</td></tr><tr><td> <span class="notranslate">y</span></td><td> La position y dans la pièce à vérifier.</td></tr><tr><td> <span class="notranslate">list</span></td><td> ID de la liste DS à remplir avec les cartes DS.</td></tr></tbody></table><p></p><h4> Retour:</h4><p class="code">N/A</p><p></p><h4> Exemple:</h4><p class="code">slot_list = ds_list_create();<br/> skeleton_find_slot(mouse_x, mouse_y, slot_list);</p><p> Le code ci-dessus crée une liste DS, puis la remplit avec les noms d&#39;emplacement trouvés à la position de la souris dans la pièce. </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> Retour: <a href="Slots.htm">Slots</a></div><div style="float:right"> Suivant:<a href="skeleton_slot_colour_set.htm">skeleton_slot_colour_set</a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
+<body>
+  <!--<div class="body-scroll" style="top: 150px;">-->
+  <h1>skeleton_find_slot</h1>
+  <p>Avec cette fonction, vous pouvez trouver les slots qui se trouvent à une position spécifiée de l'espace de la pièce dans le sprite Spine associé à l'instance actuelle. Vous créez une <a href="../../../../Data_Structures/DS_Lists/DS_Lists.htm">liste de DS</a> et fournissez son ID ainsi qu'une position x/y à vérifier.
+    avec une position x/y à vérifier et la liste sera remplie avec une chaîne de noms pour chacun des slots d'attachement disponibles pour le sprite (y compris toute modification d'attachement). Notez que la liste est toujours triée dans l'ordre décroissant en partant du
+    l'emplacement le plus élevé.</p>
+  <p> </p>
+  <h4>Syntaxe :</h4>
+  <p class="code">squelette_find_slot(x, y, liste) ;</p>
+  <table>
+    <tbody>
+      <tr>
+        <th>Arguments</th>
+        <th>Description</th>
+      </tr>
+      <tr>
+        <td>x</td>
+        <td>La position x dans la pièce à vérifier.</td>
+      </tr>
+      <tr>
+        <td>y</td>
+        <td>La position y dans la pièce à vérifier.</td>
+      </tr>
+      <tr>
+        <td>liste</td>
+        <td>L'ID de la liste DS à remplir avec les cartes DS.</td>
+      </tr>
+    </tbody>
+  </table>
+  <p> </p>
+  <h4>Les retours :</h4>
+  <p class="code">N/A</p>
+  <p> </p>
+  <h4>Exemple :</h4>
+  <p class="code">slot_list = ds_list_create() ;<br> skeleton_find_slot(mouse_x, mouse_y, slot_list) ;</p>
+  <p>Le code ci-dessus crée une liste de DS et la remplit ensuite avec les noms des emplacements trouvés à la position de la souris dans la pièce.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <div class="footer">
+    <div class="buttons">
+      <div class="clear">
+        <div style="float:left">Retour : <a href="Slots.htm">Slots</a></div>
+        <div style="float:right">Suivant : <a href="skeleton_slot_colour_set.htm">skeleton_slot_colour_set</a></div>
+      </div>
+    </div>
+    <h5><span data-keyref="Copyright Notice">Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
   </div>
   <!-- KEYWORDS
 skeleton_find_slot

@@ -2,22 +2,62 @@
 
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml"><head>
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <title>ds_map_is_list</title>
-  <meta name="generator" content="Adobe RoboHelp 2019"/>
-  <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css"/>
-  <meta name="rh-authors" content="Mark Alexander"/>
-  <meta name="topic-comment" content="Page de référence pour ds_map_is_list"/>
-  <meta name="rh-index-keywords" content="ds_map_is_list"/>
-  <meta name="search-keywords" content="ds_map_is_list"/>
+  <meta name="generator" content="Adobe RoboHelp 2019" />
+  <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
+  <meta name="rh-authors" content="Mark Alexander" />
+  <meta name="topic-comment" content="Reference page for ds_map_is_list" />
+  <meta name="rh-index-keywords" content="ds_map_is_list" />
+  <meta name="search-keywords" content="ds_map_is_list" />
 </head>
 
-<body><!--<div class="body-scroll" style="top: 150px;">--><h1>ds_map_is_list</h1><p> Avec cette fonction, vous pouvez vérifier si une <a href="../DS_Lists/DS_Lists.htm">liste DS</a> est stockée dans la clé de carte donnée. Si la clé donnée contient un ID de liste DS, la fonction retournera <tt>true</tt> sinon il reviendra <tt>false</tt>.</p><p></p><h4> Syntaxe:</h4><p class="code">ds_map_is_list(id, key)</p><table><tbody><tr><th> Argument</th><th> Description</th></tr><tr><td> <span class="notranslate">id</span></td><td> L&#39;identifiant du ds_map à utiliser.</td></tr><tr><td> <span class="notranslate">key</span></td><td> La clé à vérifier.</td></tr></tbody></table><p></p><h4> Retour:</h4><p class="code">Boolean</p><p></p><h4> Exemple:</h4><p class="code">var size = ds_map_size(inventory) ;<br/> var key = ds_map_find_first(inventory);<br/> for (var i = 0; i &lt; size; i++;)<br/>     {
-    <br/>     if ds_map_is_list(inventory, key)<br/>         {
-    <br/>         ds_list_destroy(key);
-    <br/>         }
-    <br/>     key = ds_map_find_next(inventory);<br/>     }<br/> ds_map_destroy(inventory);
-  </p><p> Le code ci-dessus parcourt une carte DS et vérifie si l&#39;une des clés qu&#39;il contient correspond à une liste DS. Si tel est le cas, la liste DS est détruite et, à la fin de la boucle, la carte DS est également détruite. </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> Retour: <a href="DS_Maps.htm">DS Maps</a></div><div style="float:right"> Suivant: <a href="ds_map_is_map.htm"><span class="footer"><span class="buttons"><span class="clear"><span style="float:right;">ds_map_is_map</span></span></span></span></a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
+<body>
+  <!--<div class="body-scroll" style="top: 150px;">-->
+  <h1>ds_map_is_list</h1>
+  <p>Avec cette fonction, vous pouvez vérifier si une <a href="../DS_Lists/DS_Lists.htm">liste de DS</a> est stockée dans la clé de carte donnée. Si la clé donnée contient un ID de liste de DS, alors la fonction renverra <tt>true</tt>, sinon elle renverra <tt>false</tt>.</p>
+  <p> </p>
+  <h4>Syntaxe :</h4>
+  <p class="code">ds_map_is_list(id, key)</p>
+  <table>
+    <tbody>
+      <tr>
+        <th>Arguments</th>
+        <th>Description</th>
+      </tr>
+      <tr>
+        <td>id</td>
+        <td>L'id de la ds_map à utiliser.</td>
+      </tr>
+      <tr>
+        <td>clé</td>
+        <td>La clé pour vérifier.</td>
+      </tr>
+    </tbody>
+  </table>
+  <p> </p>
+  <h4>Les retours :</h4>
+  <p class="code">Booléen</p>
+  <p> </p>
+  <h4>Exemple :</h4>
+  <p class="code">var size = ds_map_size(inventory) ;<br> var key = ds_map_find_first(inventory) ;<br> for (var i = 0 ; i &lt; size ; i++ ;)<br> {
+    <br> if ds_map_is_list(inventory, key)<br> {
+    <br> ds_list_destroy(key) ;
+    <br> }
+    <br> key = ds_map_find_next(inventory) ;<br> } <br> ds_map_destroy(inventory) ;
+  </p>
+  <p>Le code ci-dessus boucle sur une carte DS et vérifie si l'une des clés qu'elle contient correspond à une liste DS. Si c'est le cas, alors la liste DS est détruite, et à la fin de la boucle, la carte DS est également détruite.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <div class="footer">
+    <div class="buttons">
+      <div class="clear">
+        <div style="float:left">Retour : <a href="DS_Maps.htm">Cartes DS</a></div>
+        <div style="float:right">Suivant : <a href="ds_map_is_map.htm"><span class="footer"><span class="buttons"><span class="clear"><span style="float:right;">ds_map_is_map</span></span> </span> </span></a></div>
+      </div>
+    </div>
+    <h5><span data-keyref="Copyright Notice">Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
   </div>
   <!-- KEYWORDS
 ds_map_is_list

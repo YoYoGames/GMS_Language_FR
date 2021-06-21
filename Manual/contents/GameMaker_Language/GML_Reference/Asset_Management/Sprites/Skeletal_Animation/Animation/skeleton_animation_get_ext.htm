@@ -3,17 +3,55 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>skeleton_animation_get_ext</title>
+  <title>animation_squelette_get_ext</title>
   <meta name="generator" content="Adobe RoboHelp 2019" />
   <link rel="stylesheet" href="../../../../../../assets/css/default.css" type="text/css" />
   <meta name="rh-authors" content="Mark Alexander" />
-  <meta name="topic-comment" content="Page expliquant la fonction skeleton_animation_get_ext" />
+  <meta name="topic-comment" content="Page explaining the function skeleton_animation_get_ext" />
   <meta name="rh-index-keywords" content="skeleton_animation_get_ext" />
   <meta name="search-keywords" content="skeleton_animation_get_ext" />
 </head>
-<body><!--<div class="body-scroll" style="top: 150px;">--><h1>skeleton_animation_get_ext</h1><p> Un seul sprite d&#39;animation squelettique peut avoir différents ensembles d&#39;animations, et ces ensembles peuvent se voir attribuer différentes pistes afin que vous puissiez «mélanger et assortir» des ensembles d&#39;animations. Cette fonction renverra le nom du jeu d&#39;animation actuellement utilisé par le numéro de piste donné (tel que défini par la fonction <a href="skeleton_animation_set_ext.htm"><tt>skeleton_animation_set_ext</tt></a> ).</p><p></p><h4> Syntaxe:</h4><p class="code">skeleton_animation_get_ext(track);</p><table><tbody><tr><th> Argument</th><th> Description</th></tr><tr><td> <span class="notranslate">track</span></td><td> Numéro de piste pour lequel obtenir le nom du jeu d&#39;animations.</td></tr></tbody></table><p></p><p></p><h4> Retour:</h4><p class="code">String</p><p></p><h4> Exemple:</h4><p class="code">if skeleton_animation_get_ext(1) != &quot;bodyfight&quot;<br/>     {
-    <br/>     skeleton_animation_set_ext(&quot;bodyfight&quot;, 1);<br/>     }
-  </p><p> Le code ci-dessus changera le jeu d&#39;animations utilisé par la piste 1 en &quot;bodyfight&quot; si ce n&#39;est déjà fait. </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> Retour: <a href="Animation.htm">Animation</a></div><div style="float:right"> Suivant:<a href="skeleton_animation_set_ext.htm">skeleton_animation_set_ext</a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
+<body>
+  <!--<div class="body-scroll" style="top: 150px;">-->
+  <h1>animation_squelette_get_ext</h1>
+  <p>Un seul sprite d'animation squelettique peut avoir plusieurs jeux d'animation, et ces jeux peuvent être affectés à différentes pistes afin que vous puissiez &quot;mélanger et assortir&quot; les jeux d'animation. Cette fonction renvoie le nom du jeu d'animation actuellement utilisé par le numéro de piste
+    numéro de piste donné (tel que défini par la fonction <a href="skeleton_animation_set_ext.htm"><tt>skeleton_animation_set_ext</tt></a>).</p>
+  <p> </p>
+  <h4>Syntaxe :</h4>
+  <p class="code">skeleton_animation_get_ext(piste) ;</p>
+  <table>
+    <tbody>
+      <tr>
+        <th>Arguments</th>
+        <th>Description</th>
+      </tr>
+      <tr>
+        <td>piste</td>
+        <td>Le numéro de la piste pour obtenir le nom du jeu d'animation.</td>
+      </tr>
+    </tbody>
+  </table>
+  <p> </p>
+  <p> </p>
+  <h4>Les retours :</h4>
+  <p class="code">Chaîne de caractères</p>
+  <p> </p>
+  <h4>Exemple :</h4>
+  <p class="code">if skeleton_animation_get_ext(1) != &quot;bodyfight&quot;<br> {
+    <br> skeleton_animation_set_ext(&quot;bodyfight&quot;, 1) ;<br> }
+  </p>
+  <p>Le code ci-dessus changera le jeu d'animation utilisé par la piste 1 en &quot;bodyfight&quot; s'il ne l'est pas déjà.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <div class="footer">
+    <div class="buttons">
+      <div class="clear">
+        <div style="float:left">Retour : <a href="Animation.htm">Animation</a></div>
+        <div style="float:right">Suivant : <a href="skeleton_animation_set_ext.htm">skeleton_animation_set_ext</a></div>
+      </div>
+    </div>
+    <h5><span data-keyref="Copyright Notice">Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
   </div>
   <!-- KEYWORDS
 skeleton_animation_get_ext

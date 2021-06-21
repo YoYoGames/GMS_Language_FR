@@ -3,15 +3,65 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>object_set_persistent</title>
+  <title>objet_set_persistant</title>
   <meta name="generator" content="Adobe RoboHelp 2019" />
   <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
   <meta name="rh-authors" content="Mark Alexander" />
-  <meta name="topic-comment" content="Page décrivant la fonction object_set_persistent" />
+  <meta name="topic-comment" content="Page outlining the function object_set_persistent" />
   <meta name="rh-index-keywords" content="object_set_persistent" />
   <meta name="search-keywords" content="object_set_persistent" />
 </head>
-<body><!--<div class="body-scroll" style="top: 150px;">--><h1>object_set_persistent</h1><p> Avec cette fonction, vous pouvez définir la persistance d&#39;un objet spécifique. Un objet persistant est &quot;transporté&quot; d&#39;une pièce à l&#39;autre et conserve ses propriétés à tout moment (pour plus d&#39;informations sur la persistance, voir la section sur l&#39; <a href="../../../../The_Asset_Editors/Objects.htm">éditeur d&#39;objets</a> ). La définition de la persistance de l&#39;objet signifie que toutes les instances de cet objet créées <i>après la modification de la persistance</i> seront créées de manière persistante, tandis que les instances qui se trouvent déjà dans la salle peuvent ne pas être affectées.</p><p> Lorsque vous créez une instance avec la persistance activée dans une pièce, un calque ou une profondeur lui sera attribué (en fonction de la fonction que vous avez utilisée pour créer l&#39;instance de l&#39;objet). Lorsque la pièce est modifiée et si la pièce suivante n&#39;a <i>pas de</i> calque portant le même nom ou la même profondeur que celui attribué, un nouveau calque est créé pour l&#39;instance qui persiste dans les pièces. Si vous avez donné un calque nommé lors de la création de l&#39;instance, le nouveau calque sera également nommé de la même manière que le calque d&#39;origine, tandis que si vous attribuez une profondeur à l&#39;instance, le nouveau calque sera nommé &quot;<tt>_layer_XXX</tt> &quot;, où&quot; XXX &quot;est une valeur hexadécimale utilisée pour donner au calque un nom unique. Ces calques seront supprimés de la pièce à l&#39;extrémité de la pièce. Une autre chose à noter concernant les calques et les instances persistantes est que si vous avez attribué à l&#39;instance un nom lors de la création, et il existe un autre calque dans les pièces suivantes portant le même nom, l&#39;instance persistante sera affectée au calque portant le même nom, <i>quelle que soit la profondeur du calque</i>. Enfin, si une occurrence persistante se déplace vers une pièce avec un calque à la même profondeur que celle sur laquelle l&#39;instance a été créée, il <i>ne</i> sera pas affecté à ce calque, mais un nouveau calque sera créé à la même profondeur (selon la convention de dénomination expliquée précédemment).</p><p> Veuillez noter qu&#39;il ne s&#39;agit pas d&#39;une fonction d&#39;instance! Vous pouvez définir l&#39;indicateur persistant d&#39;instances individuelles à l&#39;aide du <a href="../Instances/Instance_Variables/persistent.htm"><tt>persistent</tt></a> variable et donc dix instances, toutes marquées comme persistantes même si l&#39;objet en question a l&#39;indicateur défini sur false dans l&#39;EDI, et même si vous changez l&#39;indicateur persistant de l&#39;objet sur true à l&#39;aide de cette fonction, toutes les instances qui se trouvent actuellement dans la salle resteront telles qu&#39;elles étaient, et seules les instances créées après l&#39;appel de la fonction commenceront par persistent marquées comme true.</p><p></p><h4> Syntaxe:</h4><p class="code">object_set_persistent(index, pers);</p><table><tbody><tr><th> Argument</th><th> Description</th></tr><tr><td> <span class="notranslate">index</span></td><td> L&#39;index de l&#39;objet à modifier.</td></tr><tr><td> <span class="notranslate">pers</span></td><td> Si l&#39;objet doit être marqué comme persistant (<tt>true</tt> ) ou non (<tt>false</tt> ).</td></tr></tbody></table><p></p><h4> Retour:</h4><p class="code">N/A</p><p></p><h4> Exemple:</h4><p class="code">if (room == rm_final)<br/>     {<br/>     object_set_persistent(obj_Player, false);<br/>     }<br/> instance_create_layer(32, 32, &quot;Instances&quot;, obj_Player);</p><p> Le code ci-dessus vérifie pour voir dans quelle pièce se trouve actuellement l&#39;instance et si elle se trouve dans le &quot;rm_final&quot; spécifié, il définit la persistance de l&#39;objet &quot;obj_Player&quot; sur false puis crée l&#39;instance. </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> Retour: <a href="Objects.htm">Objets</a></div><div style="float:right"> Suivant:<a href="object_set_solid.htm">object_set_solid</a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
+<body>
+  <!--<div class="body-scroll" style="top: 150px;">-->
+  <h1>objet_set_persistant</h1>
+  <p>Cette fonction vous permet de définir la persistance d'un objet spécifique. Un objet persistant est &quot;reporté&quot; d'une pièce à l'autre et conserve ses propriétés à tout moment (pour plus d'informations sur la persistance, voir la section sur l'<a href="../../../../The_Asset_Editors/Objects.htm">éditeur d'</a>objets <a href="../../../../The_Asset_Editors/Objects.htm">).</a>
+    Le fait de définir la persistance de l'objet signifie que toutes les instances de cet objet qui sont créées <i>après la modification de la persistance</i> seront créées de manière persistante, tandis que les instances qui sont déjà dans la salle peuvent ne pas être affectées.</p>
+  <p>Lorsque vous créez une instance avec la persistance activée dans une room, une couche ou une profondeur lui est attribuée (en fonction de la fonction utilisée pour créer l'instance de l'objet). Lorsque la pièce est changée, et si la pièce suivante <i>ne</i> possède <i>pas</i> 
+    un calque avec le même nom ou la même profondeur que celui attribué, alors un nouveau calque sera créé pour l'instance qui persiste à travers les pièces. Si vous avez donné un nom de couche lors de la création de l'instance, alors la nouvelle couche sera également nommée de la même façon que la couche originale.
+    que la couche originale, alors que si vous avez assigné une profondeur à l'instance, la nouvelle couche sera nommée &quot; _layer_XXX<tt>&quot;,</tt> où &quot;XXX&quot; est une valeur hexadécimale utilisée pour donner un nom unique à la couche. Ces couches seront supprimées de la pièce
+    à la fin de la pièce. Une autre chose à noter à propos des couches et des instances persistantes est que si vous avez assigné à l'instance une couche nommée à la création, et qu'il y a une autre couche dans les salles suivantes avec le même nom, alors l'instance persistée sera
+    assignée à la couche portant le même nom, <i>quelle que soit la profondeur de la couche</i>. Enfin, si une instance persistante se déplace dans une pièce dont la couche a la même profondeur que celle où elle a été créée, elle <i>ne</i> sera <i>pas</i> affectée à cette couche, mais une nouvelle couche sera créée à la même profondeur.
+    mais une nouvelle couche sera créée à la même profondeur (en suivant la convention d'appellation expliquée précédemment).</p>
+  <p>Veuillez noter qu'il ne s'agit pas d'une fonction d'instance ! Vous pouvez définir l'indicateur de persistance des instances individuelles à l'aide de la variable <a href="../Instances/Instance_Variables/persistent.htm"><tt>persistent</tt></a> et ainsi avoir dix instances toutes marquées comme persistantes
+    même si l'objet en question a l'indicateur défini sur false dans l'IDE, et même si vous changez l'indicateur persistant de l'objet en true à l'aide de cette fonction, toutes les instances qui se trouvent actuellement dans la room resteront telles qu'elles étaient, et seules les instances créées
+    créées après l'appel de la fonction commenceront avec l'indicateur persistent à true.</p>
+  <p> </p>
+  <h4>Syntaxe :</h4>
+  <p class="code">objet_set_persistant(index, pers) ;</p>
+  <table>
+    <tbody>
+      <tr>
+        <th>Arguments</th>
+        <th>Description</th>
+      </tr>
+      <tr>
+        <td>indice</td>
+        <td>L'indice de l'objet à modifier.</td>
+      </tr>
+      <tr>
+        <td>pers</td>
+        <td>Indique si l'objet doit être marqué comme persistant<tt>(true</tt>) ou non<tt>(false</tt>).</td>
+      </tr>
+    </tbody>
+  </table>
+  <p> </p>
+  <h4>Les retours :</h4>
+  <p class="code">N/A</p>
+  <p> </p>
+  <h4>Exemple :</h4>
+  <p class="code">if (room == rm_final)<br> {<br> object_set_persistent(obj_Player, false) ;<br> } <br> instance_create_layer(32, 32, &quot;Instances&quot;, obj_Player) ;</p>
+  <p>Le code ci-dessus vérifie dans quelle salle l'instance se trouve actuellement et si elle se trouve dans la salle spécifiée &quot;rm_final&quot;, il définit la persistance de l'objet &quot;obj_Player&quot; à false et crée ensuite l'instance.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <div class="footer">
+    <div class="buttons">
+      <div class="clear">
+        <div style="float:left">Retour : <a href="Objects.htm">Objets</a></div>
+        <div style="float:right">Suivant : <a href="object_set_solid.htm">object_set_solid</a></div>
+      </div>
+    </div>
+    <h5><span data-keyref="Copyright Notice">Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
   </div>
   <!-- KEYWORDS
 object_set_persistent

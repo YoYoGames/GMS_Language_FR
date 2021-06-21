@@ -2,19 +2,61 @@
 
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml"><head>
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <title>string_pos</title>
-  <meta name="generator" content="Adobe RoboHelp 2019"/>
-  <link rel="stylesheet" href="../../../assets/css/default.css" type="text/css"/>
-  <meta name="rh-authors" content="Mark Alexander"/>
-  <meta name="topic-comment" content="Page de référence pour string_pos"/>
-  <meta name="rh-index-keywords" content="string_pos"/>
-  <meta name="search-keywords" content="string_pos"/>
+  <meta name="generator" content="Adobe RoboHelp 2019" />
+  <link rel="stylesheet" href="../../../assets/css/default.css" type="text/css" />
+  <meta name="rh-authors" content="Mark Alexander" />
+  <meta name="topic-comment" content="Reference page for string_pos" />
+  <meta name="rh-index-keywords" content="string_pos" />
+  <meta name="search-keywords" content="string_pos" />
 </head>
 
-<body><!--<div class="body-scroll" style="top: 150px;">--><h1>string_pos</h1><p> Cette fonction renverra la position du caractère d&#39;une instance d&#39;une sous-chaîne dans une chaîne, en recherchant à partir du début de la chaîne (pour rechercher à partir de la fin, utilisez la fonction <a href="string_last_pos.htm"><tt>string_last_pos()</tt></a> ). La fonction renverra 0 si elle n&#39;est pas du tout trouvée, ou la position du premier caractère de la sous-chaîne si elle est trouvée. Gardez à l&#39;esprit que pour les chaînes de support héritées, les chaînes sont indexées à partir de 1, donc 1 est la première position dans la chaîne, et non 0 comme vous pouvez vous y attendre. Une utilisation pour cela est de filtrer les mots qui peuvent être considérés comme offensants, ou pour trouver le bon endroit pour insérer du texte dans une autre chaîne.</p><p></p><h4> Syntaxe:</h4><p class="code">string_pos(substr, str);</p><table><tbody><tr><th> Argument</th><th> Description</th></tr><tr><td> <span class="notranslate">substr</span></td><td> La sous-chaîne à rechercher dans la chaîne.</td></tr><tr><td> <span class="notranslate">str</span></td><td> La chaîne.</td></tr></tbody></table><p></p><h4> Retour:</h4><p class="code">Integer</p><p></p><h4> Exemple:</h4><p class="code">if (string_pos(&quot;,&quot;, text) != 0)<br/>    {
-    <br/>    string_insert(name, text, string_pos(&quot;,&quot;, text));<br/>    }
-  </p><p> Le code ci-dessus recherche une virgule dans la chaîne stockée dans la variable &quot;texte&quot;, et s&#39;il en trouve une, il insère la sous-chaîne &quot;nom&quot; à cette position. </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> Retour: <a href="Strings.htm">Cordes</a></div><div style="float:right"> Suivant:<a href="string_pos_ext.htm">string_pos_ext</a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
+<body>
+  <!--<div class="body-scroll" style="top: 150px;">-->
+  <h1>string_pos</h1>
+  <p>Cette fonction renvoie la position du caractère d'une instance d'une sous-chaîne dans une chaîne, en partant du début de la chaîne (pour rechercher à partir de la fin, utilisez la fonction <a href="string_last_pos.htm"><tt>string_last_pos()</tt></a>). La fonction
+    renvoie 0 si elle n'est pas trouvée du tout, ou la position du premier caractère de la sous-chaîne si elle est trouvée. Gardez à l'esprit que les chaînes de caractères sont indexées à partir de 1, ce qui signifie que 1 est la première position dans la chaîne de caractères, et non 0 comme vous pourriez vous y attendre.
+    s'attendre. Cette fonction peut être utilisée pour filtrer les mots qui peuvent être considérés comme offensants, ou pour trouver le bon endroit où insérer un texte dans une autre chaîne.</p>
+  <p> </p>
+  <h4>Syntaxe :</h4>
+  <p class="code">string_pos(substr, str) ;</p>
+  <table>
+    <tbody>
+      <tr>
+        <th>Arguments</th>
+        <th>Description</th>
+      </tr>
+      <tr>
+        <td>substrat</td>
+        <td>La sous-chaîne à rechercher dans la chaîne.</td>
+      </tr>
+      <tr>
+        <td>str</td>
+        <td>La ficelle.</td>
+      </tr>
+    </tbody>
+  </table>
+  <p> </p>
+  <h4>Les retours :</h4>
+  <p class="code">Entier</p>
+  <p> </p>
+  <h4>Exemple :</h4>
+  <p class="code">if (string_pos(&quot;,&quot;, text) != 0)<br> {
+    <br> string_insert(nom, texte, string_pos(&quot;,&quot;, texte)) ;<br> }
+  </p>
+  <p>Le code ci-dessus recherche une virgule dans la chaîne stockée dans la variable &quot;text&quot;, et s'il en trouve une, il insère la sous-chaîne &quot;name&quot; à cette position.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <div class="footer">
+    <div class="buttons">
+      <div class="clear">
+        <div style="float:left">Retour : <a href="Strings.htm">Cordes</a></div>
+        <div style="float:right">Suivant : <a href="string_pos_ext.htm">string_pos_ext</a></div>
+      </div>
+    </div>
+    <h5><span data-keyref="Copyright Notice">Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
   </div>
   <!-- KEYWORDS
 string_pos

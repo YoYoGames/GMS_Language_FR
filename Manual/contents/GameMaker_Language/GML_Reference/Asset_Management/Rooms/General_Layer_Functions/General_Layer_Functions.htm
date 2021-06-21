@@ -3,15 +3,92 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>Fonctions générales des couches</title>
+  <title>Fonctions de la couche générale</title>
   <meta name="generator" content="Adobe RoboHelp 2019" />
   <link rel="stylesheet" href="../../../../../assets/css/default.css" type="text/css" />
   <meta name="rh-authors" content="Mark Alexander" />
-  <meta name="topic-comment" content="Page décrivant les différentes fonctions et variables associées aux calques en général" />
+  <meta name="topic-comment" content="Page outlining the different functions and variables associated with Layers in general" />
   <meta name="rh-index-keywords" content="" />
-  <meta name="search-keywords" content="fonctions de calque" />
+  <meta name="search-keywords" content="layer functions" />
 </head>
-<body><!--<div class="body-scroll" style="top: 150px;">--><h1> Fonctions générales des couches</h1><p> L&#39; <a href="../../../../../The_Asset_Editors/Rooms.htm">éditeur de salle</a> <span class="notranslate">GameMaker Studio 2</span> vous permet d&#39;ajouter des <i>couches</i> de différents éléments à votre salle. Il peut s&#39;agir de cartes de tuiles (utilisant des ensembles de tuiles), d&#39;arrière-plans, de sprites ou de séquences et d&#39;instances, mais notez que contrairement à l&#39;éditeur de salle, vous n&#39;êtes <i>pas</i> limité à un seul type d&#39;actif par couche et pouvez ajouter plusieurs types d&#39;actifs à la même couche. - par exemple, vous pouvez avoir un arrière-plan et une carte de tuiles sur le même calque. Notez que chaque élément ajouté à un calque est considéré comme un <strong>élément</strong> de ce calque.</p><p> Cette section décrit les fonctions générales utilisées lors de l&#39;utilisation des couches de pièce, ainsi que quelques fonctions spécifiques à l&#39;utilisation d&#39;éléments de <strong><a href="../../../../../The_Asset_Editors/Room_Properties/Layer_Properties.htm">couche d&#39;instance:</a></strong> </p><p></p><ul class="colour"><li><a href="layer_exists.htm">layer_exists</a></li><li><a href="layer_get_id.htm">layer_get_id</a></li><li><a href="layer_depth.htm">layer_get_depth</a></li><li><a href="layer_get_id_at_depth.htm">layer_get_id_at_depth</a></li><li><a href="layer_get_name.htm">layer_get_name</a></li><li><a href="layer_get_all.htm">layer_get_all</a></li><li><a href="layer_get_all_elements.htm">layer_get_all_elements</a></li><li><a href="layer_get_element_layer.htm">layer_get_element_layer</a></li><li><a href="layer_get_element_type.htm">layer_get_element_type</a></li><li><a href="layer_get_x.htm">layer_get_x</a></li><li><a href="layer_get_y.htm">layer_get_y</a></li><li><a href="layer_get_hspeed.htm">layer_get_hspeed</a></li><li><a href="layer_get_vspeed.htm">layer_get_vspeed</a></li><li><a href="layer_create.htm">layer_create</a></li><li><a href="layer_destroy.htm">layer_destroy</a></li><li><a href="layer_x.htm">layer_x</a></li><li><a href="layer_y.htm">layer_y</a></li><li><a href="layer_hspeed.htm">layer_hspeed</a></li><li><a href="layer_vspeed.htm">layer_vspeed</a></li><li><a href="layer_add_instance.htm">layer_add_instance</a></li><li><a href="layer_has_instance.htm">layer_has_instance</a></li><li><a href="layer_instance_get_instance.htm">layer_instance_get_instance</a></li><li><a href="layer_destroy_instances.htm">layer_destroy_instances</a></li><li><a href="layer_element_move.htm">layer_element_move</a></li><li><a href="layer_set_visible.htm">layer_set_visible</a></li><li><a href="layer_get_visible.htm">layer_get_visible</a></li><li><a href="layer_depth.htm">layer_depth</a></li><li><a href="layer_force_draw_depth.htm">layer_force_draw_depth</a></li><li><a href="layer_is_draw_depth_forced.htm">layer_is_draw_depth_forced</a></li><li><a href="layer_get_forced_depth.htm">layer_get_forced_depth</a></li><li><a href="layer_script_begin.htm">layer_script_begin</a></li><li><a href="layer_script_end.htm">layer_script_end</a></li><li><a href="layer_shader.htm">layer_ <span class="notranslate">shader</span></a></li><li><a href="layer_get_script_begin.htm">layer_get_script_begin</a></li><li><a href="layer_get_script_end.htm">layer_get_script_end</a></li><li> <a href="layer_get_shader.htm">layer_get_ <span class="notranslate">shader</span></a></li></ul><p></p><p> Nous avons également quelques fonctions supplémentaires liées au ciblage des couches dans une pièce différente. Il se peut que vous souhaitiez modifier quelque chose dans une pièce qui n&#39;est pas la pièce actuelle, ou que vous souhaitiez peut-être générer des salles de manière procédurale, ou un certain nombre de choses. Pour activer cela, nous utilisons les fonctions suivantes: </p><p></p><ul class="colour"><li><a href="layer_set_target_room.htm">layer_set_target_room</a></li><li><a href="layer_get_target_room.htm">layer_get_target_room</a></li><li><a href="layer_reset_target_room.htm">layer_reset_target_room</a></li></ul><p></p><p> Ce que vous faites ici est de définir la pièce cible à l&#39;aide de la fonction appropriée, puis d&#39;appeler les fonctions de couche sont normales. Ces fonctions de calque s&#39;appliqueront désormais <i>uniquement</i> à la pièce cible et non à la pièce actuelle. Lorsque vous avez terminé, vous appelez la fonction de réinitialisation pour renvoyer à nouveau la portée du code dans la pièce actuelle.</p><p class="note"> <b>ATTENTION!</b> Lorsque vous ciblez une autre pièce, vous pouvez utiliser toutes les fonctions de couche normales, <b>sauf que</b> vous ne pouvez pas créer d&#39;instances à l&#39;aide de <span style="font-size:1px;"><a href="../../Instances/instance_create_layer.htm"><tt style="font-size: 14px">instance_create_layer ()</tt></a></span> ou <span style="font-size:1px;"><a href="../../Instances/instance_create_depth.htm"><tt style="font-size: 14px">instance_create_depth ()</tt></a></span>, et la fonction de couche <a href="layer_add_instance.htm"><span style="font-size:1px;"><tt style="font-size: 14px">layer_add_instance () ne</tt></span></a> sera pas non plus disponible.</p><p> Enfin, et ceci est exclusivement destiné à être utilisé avec des <i>instances</i> sur des couches (bien que la couche elle-même puisse avoir d&#39;autres éléments, ils ne seront pas affectés par les fonctions suivantes), vous avez quelques fonctions qui peuvent être utilisées pour désactiver ou réactiver toutes les instances:</p><p></p><ul class="colour"><li><a href="../../Instances/Deactivating_Instances/instance_deactivate_layer.htm">instance_deactivate_layer</a></li><li><a href="../../Instances/Deactivating_Instances/instance_activate_layer.htm">instance_activate_layer</a></li></ul><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> Retour: <a href="../Rooms.htm">Chambres</a></div><div style="float:right"> Suivant: <a href="../Tile_Map_Layers/Tile_Map_Layers.htm">Couches de carte de tuile</a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
+<body>
+  <!--<div class="body-scroll" style="top: 150px;">-->
+  <h1>Fonctions de la couche générale</h1>
+  <p>L'<a href="../../../../../The_Asset_Editors/Rooms.htm">éditeur de salles de</a> <span class="notranslate">GameMaker Studio 2</span> vous permet d'ajouter des <i>couches</i> de différents éléments à votre salle. Il peut s'agir de cartes de tuiles (à l'aide de jeux de tuiles), d'arrière-plans, de sprites ou de séquences, et d'instances,
+    mais notez que, contrairement à l'éditeur de salle, vous <i>n'</i> êtes <i>pas</i> limité à un seul type d'actif par couche, et que vous pouvez ajouter plusieurs types d'actifs à la même couche - par exemple, vous pouvez avoir un arrière-plan et une carte de tuiles sur la même couche. Notez que chaque ressource
+    ajoutée à une couche est considérée comme un <strong>élément</strong> de cette couche.</p>
+  <p>Cette section présente les fonctions générales utilisées lors du travail avec des couches d'instance, ainsi que quelques fonctions spécifiques au travail avec des <strong><a href="../../../../../The_Asset_Editors/Room_Properties/Layer_Properties.htm">couche d'instance</a> </strong>éléments :</p>
+  <p> </p>
+  <ul class="colour">
+    <li><a href="layer_exists.htm">couche_existe</a></li>
+    <li><a href="layer_get_id.htm">couche_get_id</a></li>
+    <li><a href="layer_depth.htm">couche_get_depth</a></li>
+    <li><a href="layer_get_id_at_depth.htm">couche_get_id_at_depth</a></li>
+    <li><a href="layer_get_name.htm">couche_get_name</a></li>
+    <li><a href="layer_get_all.htm">couche_get_all</a></li>
+    <li><a href="layer_get_all_elements.htm">couche_get_tout_élément</a></li>
+    <li><a href="layer_get_element_layer.htm">couche_get_élément_couche</a></li>
+    <li><a href="layer_get_element_type.htm">couche_get_élément_type</a></li>
+    <li><a href="layer_get_x.htm">couche_get_x</a></li>
+    <li><a href="layer_get_y.htm">couche_get_y</a></li>
+    <li><a href="layer_get_hspeed.htm">couche_get_hspeed</a></li>
+    <li><a href="layer_get_vspeed.htm">couche_get_vspeed</a></li>
+    <li><a href="layer_create.htm">couche_créer</a></li>
+    <li><a href="layer_destroy.htm">couche_destruction</a></li>
+    <li><a href="layer_x.htm">couche_x</a></li>
+    <li><a href="layer_y.htm">couche_y</a></li>
+    <li><a href="layer_hspeed.htm">vitesse de la couche</a></li>
+    <li><a href="layer_vspeed.htm">couche_vitesse</a></li>
+    <li><a href="layer_add_instance.htm">couche_add_instance</a></li>
+    <li><a href="layer_has_instance.htm">couche_a_instance</a></li>
+    <li><a href="layer_instance_get_instance.htm">couche_instance_get_instance</a></li>
+    <li><a href="layer_destroy_instances.htm">couche_destroy_instances</a></li>
+    <li><a href="layer_element_move.htm">couche_élément_mouvement</a></li>
+    <li><a href="layer_set_visible.htm">layer_set_visible</a></li>
+    <li><a href="layer_get_visible.htm">couche_get_visible</a></li>
+    <li><a href="layer_depth.htm">profondeur de la couche</a></li>
+    <li><a href="layer_force_draw_depth.htm">couche_force_draw_depth</a></li>
+    <li><a href="layer_is_draw_depth_forced.htm">couche_est_draw_depth_forced</a></li>
+    <li><a href="layer_get_forced_depth.htm">couche_get_forced_depth</a></li>
+    <li><a href="layer_script_begin.htm">layer_script_begin</a></li>
+    <li><a href="layer_script_end.htm">fin_script_couche</a></li>
+    <li><a href="layer_shader.htm">layer_shader</a></li>
+    <li><a href="layer_get_script_begin.htm">couche_get_script_begin</a></li>
+    <li><a href="layer_get_script_end.htm">couche_get_script_end</a></li>
+    <li><a href="layer_get_shader.htm">couche_get_shader</a></li>
+  </ul>
+  <p> </p>
+  <p>Nous avons également quelques fonctions supplémentaires concernant le ciblage des couches dans une autre pièce. Il se peut que vous souhaitiez modifier quelque chose dans une pièce qui n'est pas la pièce actuelle, ou que vous souhaitiez générer des pièces de manière procédurale, ou un certain nombre d'autres choses.
+    Pour ce faire, nous utilisons les fonctions suivantes :</p>
+  <p> </p>
+  <ul class="colour">
+    <li><a href="layer_set_target_room.htm">layer_set_target_room</a></li>
+    <li><a href="layer_get_target_room.htm">layer_get_target_room</a></li>
+    <li><a href="layer_reset_target_room.htm">layer_reset_target_room</a></li>
+  </ul>
+  <p> </p>
+  <p>Ce que vous faites ici, c'est définir la pièce cible à l'aide de la fonction appropriée, puis appeler les fonctions de couche comme d'habitude. Ces fonctions de couche s'appliqueront désormais <i>uniquement</i> à la pièce cible et non à la pièce actuelle. Lorsque vous avez terminé, vous pouvez appeler la fonction
+    reset pour ramener la portée du code à la pièce actuelle.</p>
+  <p class="note"><b>ATTENTION !</b> Lorsque vous ciblez une autre pièce, vous pouvez utiliser toutes les fonctions normales des couches <b>, sauf que</b> vous ne pouvez pas créer d'instance en utilisant <span style="font-size:1px;"><a href="../../Instances/instance_create_layer.htm"><tt style="font-size: 14px">instance_create_layer()</tt></a></span>    ou <span style="font-size:1px;"><a href="../../Instances/instance_create_depth.htm"><tt style="font-size: 14px">instance_create_depth()</tt></a></span>et la fonction layer <a href="layer_add_instance.htm"><span style="font-size:1px;"><tt style="font-size: 14px">layer_add_instance()</tt></span></a> sera
+    disponible.</p>
+  <p>Enfin, et ceci est exclusivement destiné à être utilisé avec des <i>instances</i> sur des couches (bien que la couche elle-même puisse avoir d'autres éléments, ils ne seront pas affectés par les fonctions suivantes), vous disposez d'un couple de fonctions qui peuvent être utilisées pour désactiver ou réactiver
+    toutes les instances :</p>
+  <p> </p>
+  <ul class="colour">
+    <li><a href="../../Instances/Deactivating_Instances/instance_deactivate_layer.htm">instance_désactiver_couche</a></li>
+    <li><a href="../../Instances/Deactivating_Instances/instance_activate_layer.htm">instance_activate_layer</a></li>
+  </ul>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <div class="footer">
+    <div class="buttons">
+      <div class="clear">
+        <div style="float:left">Retour : <a href="../Rooms.htm">Pièces</a></div>
+        <div style="float:right">Suivant : <a href="../Tile_Map_Layers/Tile_Map_Layers.htm">Les couches de la carte en tuiles</a></div>
+      </div>
+    </div>
+    <h5><span data-keyref="Copyright Notice">Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
   </div>
   <!-- KEYWORDS
 General Layer Functions

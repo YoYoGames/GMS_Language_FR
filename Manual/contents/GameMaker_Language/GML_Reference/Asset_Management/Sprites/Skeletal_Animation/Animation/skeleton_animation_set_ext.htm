@@ -3,20 +3,64 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>skeleton_animation_set_ext</title>
+  <title>squelette_animation_set_ext</title>
   <meta name="generator" content="Adobe RoboHelp 2019" />
   <link rel="stylesheet" href="../../../../../../assets/css/default.css" type="text/css" />
   <meta name="rh-authors" content="Mark Alexander" />
-  <meta name="topic-comment" content="Page expliquant la fonction skeleton_animation_set_ext" />
+  <meta name="topic-comment" content="Page explaining the function skeleton_animation_set_ext" />
   <meta name="rh-index-keywords" content="skeleton_animation_set_ext" />
   <meta name="search-keywords" content="skeleton_animation_set_ext" />
 </head>
-<body><!--<div class="body-scroll" style="top: 150px;">--><h1>skeleton_animation_set_ext</h1><p> Lorsque vous définissez un jeu d&#39;animations pour votre image-objet d&#39;animation squelettique, la <i>piste 0</i> lui est affectée en interne. Cependant, vous pouvez attribuer d&#39;autres ensembles à d&#39;autres pistes (1 et plus) et ainsi faire jouer à votre sprite deux (ou plus) animations en même temps. Notez que le sprite doit avoir été conçu dans votre programme d&#39;animation avec cela à l&#39;esprit, de sorte que l&#39;animation &quot;de base&quot; de la piste 0 n&#39;a que des <span class="notranslate">keyframes</span> pour certains os, tandis que les pistes suivantes ont des <span class="notranslate">keyframes</span> pour les autres. Par exemple, si vous avez une animation &quot;marche&quot; et que ses <span class="notranslate">keyframes</span> n&#39;affectent que les jambes du sprite, vous pouvez alors avoir un ensemble d&#39;animations de tête et d&#39;animations de bras que vous pouvez définir dans les pistes 1 et 2 respectivement, vous permettant d&#39;avoir un mouvement de base et adaptez-le en temps réel pendant le jeu.</p><p></p><h4> Syntaxe:</h4><p class="code">skeleton_animation_set_ext(animname, track);</p><table><tbody><tr><th> Argument</th><th> Description</th></tr><tr><td> <span class="notranslate">animname</span></td><td> Le nom (une chaîne) du jeu d&#39;animations à utiliser.</td></tr><tr><td> <span class="notranslate">track</span></td><td> La piste pour le jeu d&#39;animation à utiliser.</td></tr></tbody></table><p></p><p></p><h4> Retour:</h4><p class="code">N/A</p><p></p><h4> Exemple:</h4><p class="code">if mouse_check_button(mb_left)<br/>     {
-    <br/>     skeleton_animation_set_ext(&quot;bodyfight&quot;, 1);<br/>     }
-    <br/> else
-    <br/>     {
-    <br/>     skeleton_animation_set_ext(&quot;bodywalk&quot;, 1);<br/>     }
-  </p><p> Le code ci-dessus changera le jeu d&#39;animation utilisé par la piste 1 en jeu &quot;bodyfight&quot; ou &quot;bodywalk&quot; réglé lorsque le bouton gauche de la souris est enfoncé. </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> Retour: <a href="Animation.htm">Animation</a></div><div style="float:right"> Suivant:<a href="skeleton_animation_get_duration.htm">skeleton_animation_get_duration</a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
+<body>
+  <!--<div class="body-scroll" style="top: 150px;">-->
+  <h1>squelette_animation_set_ext</h1>
+  <p>Lorsque vous définissez un jeu d'animation pour votre sprite d'animation squelettique, la <i>piste 0</i> lui est attribuée en interne. Cependant, vous pouvez affecter d'autres jeux à d'autres pistes (1 et plus) et ainsi faire jouer à votre sprite deux (ou plus) animations en même temps.
+    (ou plus) animations en même temps. Notez que le sprite doit avoir été conçu dans votre programme d'animation en gardant cela à l'esprit, de sorte que l'animation &quot;de base&quot; de la piste 0 n'ait des images-clés que <span class="notranslate">pour</span> certains os, tandis que les pistes suivantes ont des images-clés
+    pour les autres. Par exemple, si vous avez une animation de &quot;marche&quot; et que ses images clés <span class="notranslate">n'</span> affectent <span class="notranslate">que</span> les jambes du sprite, vous pouvez alors avoir un ensemble d'animations de tête et de bras que vous pouvez placer dans les pistes 1 et 2 respectivement, ce qui vous permet de disposer d'un mouvement de base et de l'adapter à vos besoins.
+    d'avoir un mouvement de base et de l'adapter en temps réel pendant le déroulement du jeu.</p>
+  <p> </p>
+  <h4>Syntaxe :</h4>
+  <p class="code">skeleton_animation_set_ext(animname, track) ;</p>
+  <table>
+    <tbody>
+      <tr>
+        <th>Arguments</th>
+        <th>Description</th>
+      </tr>
+      <tr>
+        <td>nom de l'animateur</td>
+        <td>Le nom (une chaîne) du jeu d'animation à utiliser.</td>
+      </tr>
+      <tr>
+        <td>piste</td>
+        <td>La piste du jeu d'animation à utiliser.</td>
+      </tr>
+    </tbody>
+  </table>
+  <p> </p>
+  <p> </p>
+  <h4>Les retours :</h4>
+  <p class="code">N/A</p>
+  <p> </p>
+  <h4>Exemple :</h4>
+  <p class="code">if mouse_check_button(mb_left)<br> {
+    <br> skeleton_animation_set_ext(&quot;bodyfight&quot;, 1) ;<br> }
+    <br> else
+    <br> {
+    <br> skeleton_animation_set_ext(&quot;bodywalk&quot;, 1) ;<br> }
+  </p>
+  <p>Le code ci-dessus changera le jeu d'animation utilisé par la piste 1 en jeu &quot;bodyfight&quot; ou &quot;bodywalk&quot; lorsque le bouton gauche de la souris est pressé.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <div class="footer">
+    <div class="buttons">
+      <div class="clear">
+        <div style="float:left">Retour : <a href="Animation.htm">Animation</a></div>
+        <div style="float:right">Suivant : <a href="skeleton_animation_get_duration.htm">skeleton_animation_get_duration</a></div>
+      </div>
+    </div>
+    <h5><span data-keyref="Copyright Notice">Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
   </div>
   <!-- KEYWORDS
 skeleton_animation_set_ext

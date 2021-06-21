@@ -3,15 +3,62 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>network_send_raw</title>
+  <title>réseau_send_raw</title>
   <meta name="generator" content="Adobe RoboHelp 2019" />
   <link rel="stylesheet" href="../../../assets/css/default.css" type="text/css" />
   <meta name="rh-authors" content="Mark Alexander" />
-  <meta name="topic-comment" content="Page de référence pour network_send_raw" />
+  <meta name="topic-comment" content="Reference page for network_send_raw" />
   <meta name="rh-index-keywords" content="network_send_raw" />
   <meta name="search-keywords" content="network_send_raw" />
 </head>
-<body><!--<div class="body-scroll" style="top: 150px;">--><h1>network_send_raw</h1><p> Avec cette fonction, vous pouvez envoyer un paquet de données &quot;brutes&quot; via le réseau. La fonction prend l&#39; <i>identifiant</i> du socket pour se connecter, puis vous devez fournir l&#39; <i>identifiant</i> du tampon qui contient les données à envoyer (pour plus d&#39;informations sur les tampons, voir <a href="../Buffers/Buffers.htm">Référence - Tampons</a> ) et enfin la taille (en octets) du paquet de données. Les données envoyées ne sont en aucun cas formatées par <span class="notranslate">GameMaker Studio 2</span> et les appareils récepteurs les recevront sous forme de flux, ce qui signifie que vous devrez les gérer vous-même. La fonction renverra le nombre d&#39;octets de données envoyés, ou un nombre inférieur à 0 si l&#39;envoi a échoué.</p><p></p><h4> Syntaxe:</h4><p class="code">network_send_raw(socket, buffer, size);</p><table><tbody><tr><th> Argument</th><th> Description</th></tr><tr><td> <span class="notranslate">socket</span></td><td> L&#39;identifiant du socket à utiliser.</td></tr><tr><td> <span class="notranslate">buffer</span></td><td> L&#39;identifiant du tampon à partir duquel obtenir les données.</td></tr><tr><td> <span class="notranslate">size</span></td><td> La taille (en octets) des données.</td></tr></tbody></table><p></p><h4> Retour:</h4><p class="code">Real</p><p></p><h4> Exemple:</h4><p class="code">buff = buffer_load(&quot;player_save.dat&quot;);<br/> network_send_raw(sock, buff, buffer_get_size(buff));</p><p> Les informations ci-dessus chargent des données de tampon précédemment enregistrées dans la mémoire et renvoient l&#39;ID de tampon à stocker dans la variable &quot;buff&quot;. Ce tampon complet est ensuite envoyé sous forme de paquet de données brutes sur le réseau en utilisant le socket identifié par la variable «sock». </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> Retour: <a href="Networking.htm">Réseautage</a></div><div style="float:right"> Suivant:<a href="network_send_udp.htm">network_send_udp</a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
+<body>
+  <!--<div class="body-scroll" style="top: 150px;">-->
+  <h1>réseau_send_raw</h1>
+  <p>Avec cette fonction, vous pouvez envoyer un paquet de données &quot;brut&quot; à travers le réseau. La fonction prend l'<i>identifiant de la socket</i> à laquelle se connecter, puis vous devez fournir l'<i>identifiant du tampon</i> qui contient les données à envoyer (pour plus d'informations sur les tampons
+    voir <a href="../Buffers/Buffers.htm">Référence - Tampons</a>) et enfin la taille (en octets) du paquet de données. Les données envoyées ne sont en aucun cas formatées par <span class="notranslate">GameMaker Studio 2</span> et les appareils récepteurs recevront les données sous forme de flux.
+    ce qui signifie que vous devrez les gérer vous-même. La fonction renvoie le nombre d'octets de données envoyés, ou un nombre inférieur à 0 si l'envoi a échoué.</p>
+  <p> </p>
+  <h4>Syntaxe :</h4>
+  <p class="code">réseau_send_raw(socket, buffer, size) ;</p>
+  <table>
+    <tbody>
+      <tr>
+        <th>Arguments</th>
+        <th>Description</th>
+      </tr>
+      <tr>
+        <td>prise de courant</td>
+        <td>L'identifiant du socket à utiliser.</td>
+      </tr>
+      <tr>
+        <td>tampon</td>
+        <td>L'identifiant du tampon à partir duquel les données sont récupérées.</td>
+      </tr>
+      <tr>
+        <td>taille</td>
+        <td>La taille (en octets) des données.</td>
+      </tr>
+    </tbody>
+  </table>
+  <p> </p>
+  <h4>Les retours :</h4>
+  <p class="code">Real</p>
+  <p> </p>
+  <h4>Exemple :</h4>
+  <p class="code">buff = buffer_load(&quot;player_save.dat&quot;) ;<br> network_send_raw(sock, buff, buffer_get_size(buff)) ;</p>
+  <p>Les informations ci-dessus chargent un tampon de données précédemment enregistré en mémoire et renvoient l'identifiant du tampon à stocker dans la variable &quot;buff&quot;. Ce tampon complet est ensuite envoyé comme un paquet de données brutes sur le réseau en utilisant le socket identifié par la variable
+    variable &quot;sock&quot;.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <div class="footer">
+    <div class="buttons">
+      <div class="clear">
+        <div style="float:left">Retour : <a href="Networking.htm">Mise en réseau</a></div>
+        <div style="float:right">Suivant : <a href="network_send_udp.htm">réseau_send_udp</a></div>
+      </div>
+    </div>
+    <h5><span data-keyref="Copyright Notice">Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
   </div>
   <!-- KEYWORDS
 network_send_raw

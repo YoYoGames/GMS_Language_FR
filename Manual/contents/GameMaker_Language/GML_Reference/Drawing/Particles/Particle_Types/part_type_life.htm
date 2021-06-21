@@ -3,15 +3,60 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>part_type_life</title>
+  <title>partie_type_vie</title>
   <meta name="generator" content="Adobe RoboHelp 2019" />
   <link rel="stylesheet" href="../../../../../assets/css/default.css" type="text/css" />
   <meta name="rh-authors" content="Mark Alexander" />
-  <meta name="topic-comment" content="Page de référence pour part_type_life" />
+  <meta name="topic-comment" content="Reference page for part_type_life" />
   <meta name="rh-index-keywords" content="part_type_life" />
   <meta name="search-keywords" content="part_type_life" />
 </head>
-<body><!--<div class="body-scroll" style="top: 150px;">--><h1>part_type_life</h1><p> C&#39;est la fonction qui régit la durée pendant laquelle chaque particule individuelle du type indiqué reste à l&#39;écran. Comme pour les autres fonctions de particules, vous fournissez une valeur minimale et une valeur maximale (en étapes) et la durée de vie de chaque particule sera un nombre aléatoire d&#39;étapes dans la plage spécifiée. Pour que toutes les particules aient la même durée de vie, définissez les deux valeurs pour qu&#39;elles soient identiques.</p><p></p><h4> Syntaxe:</h4><p class="code">part_type_life(ind, life_min, life_max);</p><table><tbody><tr><th> Argument</th><th> Description</th></tr><tr><td> <span class="notranslate">ind</span></td><td> L&#39;indice du type de particule à modifier.</td></tr><tr><td> <span class="notranslate">life_min</span></td><td> La durée de vie minimale des particules.</td></tr><tr><td> <span class="notranslate">life_max</span></td><td> La durée de vie maximale des particules.</td></tr></tbody></table><p></p><h4> Retour:</h4><p class="code">N/A</p><p></p><h4> Exemple:</h4><p class="code">part_type_life(part_Flare, room_speed, room_speed * 2);</p><p> Le code ci-dessus définira toutes les particules créées du type de particule indexé dans la variable &quot;part_Flare&quot; pour avoir une durée de vie comprise entre 1 et 2 secondes, en fonction de la vitesse de la pièce actuelle. </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> Retour: <a href="Particle_Types.htm">Types de particules</a></div><div style="float:right"> Suivant:<a href="part_type_step.htm">part_type_step</a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
+<body>
+  <!--<div class="body-scroll" style="top: 150px;">-->
+  <h1>partie_type_vie</h1>
+  <p>Il s'agit de la fonction qui régit la durée pendant laquelle chaque particule individuelle du type indiqué reste à l'écran. Comme pour les autres fonctions de particules, vous fournissez une valeur minimale et maximale (en pas) et la durée de vie de chaque particule sera un nombre aléatoire de pas dans la plage spécifiée.
+    de pas dans la plage spécifiée. Pour que toutes les particules aient la même durée de vie, définissez les deux valeurs pour qu'elles soient identiques.</p>
+  <p> </p>
+  <h4>Syntaxe :</h4>
+  <p class="code">part_type_life(ind, life_min, life_max) ;</p>
+  <table>
+    <tbody>
+      <tr>
+        <th>Arguments</th>
+        <th>Description</th>
+      </tr>
+      <tr>
+        <td>ind</td>
+        <td>L'indice du type de particule à modifier.</td>
+      </tr>
+      <tr>
+        <td>vie_min</td>
+        <td>La durée de vie minimale des particules.</td>
+      </tr>
+      <tr>
+        <td>vie_max</td>
+        <td>La durée de vie maximale des particules.</td>
+      </tr>
+    </tbody>
+  </table>
+  <p> </p>
+  <h4>Les retours :</h4>
+  <p class="code">N/A</p>
+  <p> </p>
+  <h4>Exemple :</h4>
+  <p class="code">part_type_life(part_Flare, room_speed, room_speed * 2) ;</p>
+  <p>Le code ci-dessus fera en sorte que toutes les particules créées du type de particule indexé dans la variable &quot;part_Flare&quot; aient une durée de vie comprise entre 1 et 2 secondes, en fonction de la vitesse actuelle de la pièce.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <div class="footer">
+    <div class="buttons">
+      <div class="clear">
+        <div style="float:left">Retour : <a href="Particle_Types.htm">Types de particules</a></div>
+        <div style="float:right">Suivant : <a href="part_type_step.htm">part_type_step</a></div>
+      </div>
+    </div>
+    <h5><span data-keyref="Copyright Notice">Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
   </div>
   <!-- KEYWORDS
 part_type_life

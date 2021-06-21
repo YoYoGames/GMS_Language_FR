@@ -7,16 +7,41 @@
   <meta name="generator" content="Adobe RoboHelp 2019" />
   <link rel="stylesheet" href="../../../assets/css/default.css" type="text/css" />
   <meta name="rh-authors" content="Mark Alexander" />
-  <meta name="topic-comment" content="Page de référence pour uwp_is_constrained" />
+  <meta name="topic-comment" content="Reference page for uwp_is_constrained" />
   <meta name="rh-index-keywords" content="uwp_is_constrained" />
   <meta name="search-keywords" content="uwp_is_constrained" />
 </head>
-<body><!--<div class="body-scroll" style="top: 150px;">--><h1>uwp_is_constrained</h1><p> Cette fonction retournera <tt>true</tt> si le jeu s&#39;exécute dans un mode de ressources limitées ou <tt>false</tt> s&#39;il fonctionne normalement. Le mode de ressources limitées peut être activé lorsque le jeu n&#39;a pas le focus, et dans ce mode, le jeu a réduit les ressources GPU. La réponse à cela devrait normalement être de mettre le jeu en pause (car l&#39;utilisateur n&#39;a plus le contrôle). En outre, la désactivation de tout effet particulièrement pénible peut être une bonne idée si un ralentissement est observé dans ce mode. Notez que contrairement au <a href="uwp_is_suspending.htm"><tt>uwp_is_suspending()</tt></a> fonction, cette fonction retournera <tt>true</tt> en continu tant que le jeu est en mode contraint (et pas une seule fois lors de sa première apparition).</p><p></p><h4> Syntaxe:</h4><p class="code">uwp_is_constrained();</p><p></p><h4> Retour:</h4><p class="code">Boolean</p><p></p><h4> Exemple:</h4><p class="code">if xboxliveis_constrained()<br/>     {
-    <br/>     if !instance_exists(obj_PauseMenu)<br/>         {
-    <br/>         instance_create(0,0,obj_PauseMenu);
-    <br/>         }
-    <br/>     }
-  </p><p> Le code ci-dessus vérifie si l&#39;application est contrainte et si c&#39;est le cas, il crée une instance d&#39;un objet (utilisé pour mettre le jeu en pause). </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> Retour: <a href="UWP_And_XBox_Live.htm">UWP et XBox Live</a></div><div style="float:right"> Suivant:<a href="uwp_was_terminated.htm">uwp_was_terminated</a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
+<body>
+  <!--<div class="body-scroll" style="top: 150px;">-->
+  <h1>uwp_is_constrained</h1>
+  <p>Cette fonction renvoie <tt>true (vrai)</tt> si le jeu fonctionne dans un mode restreint en ressources ou <tt>false (faux)</tt> s'il fonctionne normalement. Le mode restreint en ressources peut être activé lorsque le jeu n'a pas le focus, et dans ce mode, le jeu a des ressources réduites pour le GPU.
+    ressources du GPU. La réponse à cette situation devrait normalement être de mettre le jeu en pause (puisque l'utilisateur n'a plus le contrôle). De même, la désactivation de tout effet particulièrement éprouvant peut être une bonne idée si un ralentissement est observé dans ce mode. Notez que contrairement à la fonction <a href="uwp_is_suspending.htm"><tt>uwp_is_suspending()</tt></a>    cette fonction retournera <tt>vrai</tt> continuellement tant que le jeu est en mode contraint (et pas seulement une fois quand cela se produit pour la première fois).</p>
+  <p> </p>
+  <h4>Syntaxe :</h4>
+  <p class="code">uwp_is_constrained() ;</p>
+  <p> </p>
+  <h4>Les retours :</h4>
+  <p class="code">Booléen</p>
+  <p> </p>
+  <h4>Exemple :</h4>
+  <p class="code">if xboxliveis_constrained()<br> {
+    <br> if !instance_exists(obj_PauseMenu)<br> {
+    <br> instance_create(0,0,obj_PauseMenu) ;
+    <br> }
+    <br> }
+  </p>
+  <p>Le code ci-dessus vérifie si l'application est contrainte et si elle l'est, il crée une instance d'un objet (utilisé pour mettre le jeu en pause).</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <div class="footer">
+    <div class="buttons">
+      <div class="clear">
+        <div style="float:left">Retour : <a href="UWP_And_XBox_Live.htm">UWP et XBox Live</a></div>
+        <div style="float:right">Suivant : <a href="uwp_was_terminated.htm">uwp_was_terminated</a></div>
+      </div>
+    </div>
+    <h5><span data-keyref="Copyright Notice">Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
   </div>
   <!-- KEYWORDS
 uwp_is_constrained

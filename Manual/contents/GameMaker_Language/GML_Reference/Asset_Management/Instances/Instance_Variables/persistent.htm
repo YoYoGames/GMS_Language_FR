@@ -3,17 +3,51 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>persistent</title>
+  <title>persistant</title>
   <meta name="generator" content="Adobe RoboHelp 2019" />
   <link rel="stylesheet" href="../../../../../assets/css/default.css" type="text/css" />
   <meta name="rh-authors" content="Mark Alexander" />
-  <meta name="topic-comment" content="Page décrivant la variable persistante" />
+  <meta name="topic-comment" content="Page outlining the variable persistent" />
   <meta name="rh-index-keywords" content="persistent" />
   <meta name="search-keywords" content="persistent" />
 </head>
-<body><!--<div class="body-scroll" style="top: 150px;">--><h1>persistent</h1><p> Cette variable peut être lue pour savoir si l&#39;instance est marquée comme <tt>persistent</tt> ou pas, ou il peut être utilisé pour définir la persistance sur <tt>true</tt> (persistant) ou <tt>false</tt> (non persistant) pour l&#39;instance. Une instance persistante est une instance qui sera &quot;reportée&quot; d&#39;une pièce à l&#39;autre, ce qui signifie (par exemple) qu&#39;elle ne doit être créée qu&#39;une seule fois au début du jeu et qu&#39;elle sera présente dans toutes les autres pièces. Des précautions doivent être prises avec la persistance car il est facile de perdre la trace des instances persistantes qui peuvent conduire à des problèmes plus tard dans le développement du jeu.</p><p> Lorsque vous créez une instance avec la persistance activée dans une salle, cette variable sera définie sur <tt>true</tt> et il se verra attribuer un calque ou une profondeur (selon la fonction que vous avez utilisée pour créer l&#39;instance de l&#39;objet). Lorsque la pièce est modifiée et si la pièce suivante n&#39;a <i>pas de</i> calque portant le même nom ou la même profondeur que celui attribué, un nouveau calque est créé pour l&#39;instance qui persiste dans les pièces. Si vous avez donné un calque nommé lors de la création de l&#39;instance, le nouveau calque sera également nommé de la même manière que le calque d&#39;origine, tandis que si vous attribuez une profondeur à l&#39;instance, le nouveau calque sera nommé &quot;<tt>_layer_XXX</tt> &quot;, où&quot; XXX &quot;est une valeur hexadécimale utilisée pour donner au calque un nom unique. Ces calques seront supprimés de la pièce à l&#39;extrémité de la pièce. Une autre chose à noter concernant les calques et les instances persistantes est que si vous avez attribué à l&#39;instance un nom lors de la création, et il existe un autre calque dans les pièces suivantes portant le même nom, l&#39;instance persistante sera affectée au calque portant le même nom, <i>quelle que soit la profondeur du calque</i>. Enfin, si une occurrence persistante se déplace vers une pièce avec un calque à la même profondeur que celle sur laquelle l&#39;instance a été créée, il <i>ne</i> sera pas affecté à ce calque, mais un nouveau calque sera créé à la même profondeur (selon la convention de dénomination expliquée précédemment).</p><p> Un objet persistant aura toujours ses <b>événements Game Start</b>, <b>Game End</b>, <b>Room Start</b> et <b>Room End</b> déclenchés, cependant si vous redémarrez le jeu (avec, par exemple, le <tt>game_restart()</tt> fonction) tous les objets persistants seront supprimés et n&#39;existeront que lorsqu&#39;ils seront créés à nouveau par le jeu. Notez également que si vous désactivez un objet persistant, il ne passera plus d&#39;une pièce à une autre à moins d&#39;être réactivé avant le déclenchement de l&#39;événement de fin de pièce.</p><p></p><h4> Syntaxe:</h4><p class="code">persistent;</p><p></p><h4> Retour:</h4><p class="code">Boolean</p><p></p><h4> Exemple:</h4><p class="code">if !persistent<br/>     {
-    <br/>     persistent = true;<br/>     }
-  </p><p> Le code ci-dessus vérifiera l&#39;instance pour voir si la persistance est marquée comme <tt>false</tt> et si l&#39;instance n&#39;est PAS persistante, l&#39;indicateur de persistance est défini sur <tt>true</tt>. </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> Retour: <a href="Instance_Variables.htm">Variables d&#39;instance</a></div><div style="float:right"> Suivant:<a href="depth.htm">depth</a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
+<body>
+  <!--<div class="body-scroll" style="top: 150px;">-->
+  <h1>persistant</h1>
+  <p>Cette variable peut être lue pour savoir si l'instance est marquée comme <tt>persistante</tt> ou non, ou elle peut être utilisée pour définir la persistance à <tt>true</tt> (persistant) ou <tt>false</tt> (non persistant) pour l'instance. Une instance persistante est une instance qui sera
+    Une instance persistante est une instance qui sera &quot;reportée&quot; de salle en salle, ce qui signifie (par exemple) qu'elle ne doit être créée qu'une seule fois au début du jeu et qu'elle sera présente dans toutes les salles suivantes. Il convient de faire attention à la persistance, car il est facile de perdre la trace des instances persistantes.
+    ce qui peut entraîner des problèmes plus tard dans le développement du jeu.</p>
+  <p>Lorsque vous créez une instance avec la persistance activée dans une room, cette variable sera mise à <tt>true</tt> et une couche ou une profondeur lui sera attribuée (selon la fonction que vous avez utilisée pour créer l'instance de l'objet). Lorsque la room est modifiée,
+    et si la pièce suivante <i>n'a pas</i> de couche avec le même nom ou la même profondeur que celle qui a été assignée, alors une nouvelle couche sera créée pour l'instance qui persiste à travers les pièces. Si vous avez donné un nom de couche lors de la création de l'instance,
+    alors la nouvelle couche sera également nommée de la même manière que la couche originale, tandis que si vous avez assigné une profondeur à l'instance, alors la nouvelle couche sera nommée &quot; _layer_XXX<tt>&quot;,</tt> où &quot;XXX&quot; est une valeur hexagonale utilisée pour donner à la couche un nom unique.
+    unique. Ces couches seront supprimées de la pièce à la fin de la pièce. Une autre chose à noter à propos des couches et des instances persistantes est que si vous avez assigné à l'instance une couche nommée lors de la création, et qu'il y a une autre couche dans les salles suivantes avec le même nom, alors l'instance persistée sera supprimée.
+    même nom, alors l'instance persistante sera assignée à la couche avec le même nom <i>indépendamment de la profondeur de la couche</i>. Enfin, si une instance persistante se déplace vers une pièce dont la couche a la même profondeur que celle sur laquelle l'instance a été créée, elle ne sera pas assignée à cette couche.
+   <i>ne</i> sera <i>pas</i> assignée à cette couche, mais une nouvelle couche sera créée à la même profondeur (suivant la convention d'appellation expliquée précédemment).</p>
+  <p>Les événements <b>Game Start</b>, <b>Game End</b>, <b>Room Start</b> et <b>Room End</b> d'un objet persistant seront toujours déclenchés, mais si vous redémarrez le jeu (avec, par exemple, la fonction <tt>game_restart()</tt> ), tous les objets persistants seront supprimés et n'existeront que lorsqu'ils seront recréés par le jeu.
+    seront supprimés et n'existeront que lorsqu'ils seront recréés par le jeu. Notez également que si vous désactivez un objet persistant, il ne pourra plus passer d'une salle à l'autre, à moins qu'il ne soit réactivé avant le déclenchement de l'événement Room End.</p>
+  <p> </p>
+  <h4>Syntaxe :</h4>
+  <p class="code">persistants ;</p>
+  <p> </p>
+  <h4>Les retours :</h4>
+  <p class="code">Booléen</p>
+  <p> </p>
+  <h4>Exemple :</h4>
+  <p class="code">if !persistent<br> {
+    <br> persistant = true ;<br> }
+  </p>
+  <p>Le code ci-dessus va vérifier l'instance pour voir si la persistance est marquée comme <tt>fausse</tt> et si l'instance n'est PAS persistante, le drapeau de persistance est mis à <tt>true</tt>.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <div class="footer">
+    <div class="buttons">
+      <div class="clear">
+        <div style="float:left">Retour : <a href="Instance_Variables.htm">Variables d'instance</a></div>
+        <div style="float:right">Suivant : <a href="depth.htm">profondeur</a></div>
+      </div>
+    </div>
+    <h5><span data-keyref="Copyright Notice">Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
   </div>
   <!-- KEYWORDS
 persistent

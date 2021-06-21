@@ -2,23 +2,59 @@
 
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml"><head>
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <title>ds_grid_width</title>
-  <meta name="generator" content="Adobe RoboHelp 2019"/>
-  <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css"/>
-  <meta name="rh-authors" content="Mark Alexander"/>
-  <meta name="topic-comment" content="Page de référence pour ds_grid_width"/>
-  <meta name="rh-index-keywords" content="ds_grid_width"/>
-  <meta name="search-keywords" content="ds_grid_width"/>
+  <meta name="generator" content="Adobe RoboHelp 2019" />
+  <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
+  <meta name="rh-authors" content="Mark Alexander" />
+  <meta name="topic-comment" content="Reference page for ds_grid_width" />
+  <meta name="rh-index-keywords" content="ds_grid_width" />
+  <meta name="search-keywords" content="ds_grid_width" />
 </head>
 
-<body><!--<div class="body-scroll" style="top: 150px;">--><h1>ds_grid_width</h1><p> Cette fonction retournera la largeur de la grille donnée. Cette valeur est le nombre de cellules de la grille le long de l&#39;axe des x et est toujours un entier, comme indiqué dans l&#39;image ci-dessous:</p><p><img alt="DS grid width" class="center" src="../../../../assets/Images/Scripting_Reference/GML/Reference/Data_Structures/ds_grid_width.png"/></p><h4> Syntaxe:</h4><p class="code">ds_grid_width(index);</p><table><tbody><tr><th> Argument</th><th> Description</th></tr><tr><td> <span class="notranslate">index</span></td><td> Cet index de la grille pour trouver la largeur de.</td></tr></tbody></table><p></p><h4> Retour:</h4><p class="code">Real</p><p></p><h4> Exemple:</h4><p class="code">for (var i = 0; i &lt; ds_grid_width(grid); ++i;)<br/>    {
-    <br/>    for (var j = 0; j &lt; ds_grid_height(grid); ++j;)<br/>       {
-    <br/>       if (ds_grid_get(grid, i, j) == 1)<br/>          {
-    <br/>          instance_create_layer(i * 32, j * 32, &quot;Walls&quot;, obj_Wall);<br/>          }
-    <br/>       }
-    <br/>    }
-  </p><p> Le code ci-dessus va parcourir la grille DS indexée dans la variable &quot;grid&quot; et si la valeur trouvée dans une cellule spécifique est égale à 1, il créera alors une instance de &quot;obj_Wall&quot; à la position appropriée dans la pièce. </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> Retour: <a href="DS_Grids.htm">DS Grids</a></div><div style="float:right"> Suivant:<a href="ds_grid_height.htm">ds_grid_height</a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
+<body>
+  <!--<div class="body-scroll" style="top: 150px;">-->
+  <h1>ds_grid_width</h1>
+  <p>Cette fonction renvoie la largeur de la grille donnée. Cette valeur est le nombre de cellules de la grille le long de l'axe des x et est toujours un nombre entier, comme le montre l'image ci-dessous :</p>
+  <p><img alt="DS grid width" class="center" src="../../../../assets/Images/Scripting_Reference/GML/Reference/Data_Structures/ds_grid_width.png" /></p>
+  <h4>Syntaxe :</h4>
+  <p class="code">ds_grid_width(index) ;</p>
+  <table>
+    <tbody>
+      <tr>
+        <th>Arguments</th>
+        <th>Description</th>
+      </tr>
+      <tr>
+        <td>indice</td>
+        <td>Cet indice de la grille dont il faut trouver la largeur.</td>
+      </tr>
+    </tbody>
+  </table>
+  <p> </p>
+  <h4>Les retours :</h4>
+  <p class="code">Real</p>
+  <p> </p>
+  <h4>Exemple :</h4>
+  <p class="code">for (var i = 0 ; i &lt; ds_grid_width(grid) ; ++i ;) <br> {
+    <br> for (var j = 0 ; j &lt; ds_grid_height(grid) ; ++j ;) <br> {
+    <br> if (ds_grid_get(grid, i, j) == 1)<br> {
+    <br> instance_create_layer(i * 32, j * 32, &quot;Walls&quot;, obj_Wall) ;<br> }
+    <br> }
+    <br> }
+  </p>
+  <p>Le code ci-dessus va parcourir la grille DS indexée dans la variable &quot;grid&quot; et si la valeur trouvée dans une cellule spécifique est égale à 1, il va alors créer une instance de &quot;obj_Wall&quot; à la position appropriée dans la pièce.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <div class="footer">
+    <div class="buttons">
+      <div class="clear">
+        <div style="float:left">Retour : <a href="DS_Grids.htm">Grilles DS</a></div>
+        <div style="float:right">Suivant : <a href="ds_grid_height.htm">ds_grid_height</a></div>
+      </div>
+    </div>
+    <h5><span data-keyref="Copyright Notice">Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
   </div>
   <!-- KEYWORDS
 ds_grid_width

@@ -7,14 +7,59 @@
   <meta name="generator" content="Adobe RoboHelp 2019" />
   <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
   <meta name="rh-authors" content="Mark Alexander" />
-  <meta name="topic-comment" content="Référence pour surface_depth_disable" />
+  <meta name="topic-comment" content="Reference for surface_depth_disable" />
   <meta name="rh-index-keywords" content="surface_depth_disable" />
   <meta name="search-keywords" content="surface_depth_disable" />
 </head>
-<body><!--<div class="body-scroll" style="top: 150px;">--><h1>surface_depth_disable</h1><p> Cette fonction désactive la génération automatique du tampon de profondeur pour <i>toutes les</i> surfaces créées après sa désactivation. Normalement, toutes les surfaces ont des tampons de profondeur, donc si vous leur dessinez des objets 3D, il les triera correctement par profondeur afin de maintenir la parité fonctionnelle entre le rendu sur les surfaces et le rendu vers le tampon arrière, cependant l&#39;allocation de tampons de profondeur double essentiellement la quantité de mémoire. requis pour les surfaces, ce qui pourrait être une surcharge excessive et inutile, surtout si votre jeu est très gourmand en mémoire, et pour les jeux 2D, ils ne sont généralement pas nécessaires.</p><p> Pour utiliser cette fonction, vous l&#39;appelez <i>avant de</i> créer une surface, puis vous pouvez la réactiver après (si nécessaire). Toutes les surfaces créées lorsque le tampon de profondeur est désactivé n&#39;utiliseront plus de tampon de profondeur lorsqu&#39;elles sont dessinées, ce qui fait que les objets dessinés sur la surface ont la parité de profondeur. Les images ci-dessous illustrent cela dans la pratique:</p><p><img alt="Surface depth buffer example" class="center" src="../../../../assets/Images/Scripting_Reference/GML/Reference/Drawing/Surface_Depth_Buffer.png" /> Dans l&#39;image ci-dessus, nous dessinons un rectangle et un triangle à l&#39;aide d&#39;un tampon de sommets en 3D. Les coordonnées du triangle rouge le placent derrière le rectangle vert, mais le code pour dessiner le triangle est appelé <i>après</i> le code du rectangle, et lorsque le tampon de profondeur est activé, le triangle est toujours dessiné derrière le rectangle car la profondeur 3D est être respecté. Cependant, lorsque nous désactivons le tampon de profondeur pour la surface, seul l&#39;ordre du code est respecté et ainsi le triangle est dessiné sur le rectangle.</p><p class="note"> <b>REMARQUE</b>: pour conserver correctement la profondeur en 3D lors de l&#39;utilisation de surfaces, vous devez non seulement activer le tampon de profondeur, mais également activer l&#39;écriture z et le test z. Voir les fonctions <a href="../GPU_Control/gpu_get_ztestenable.htm"><tt><span style="font-size:14px;">gpu_set_ztestenable()</span></tt></a> et <a href="../GPU_Control/gpu_get_zwriteenable.htm"><tt><span style="font-size:14px;">gpu_set_zwriteenable()</span></tt></a> pour plus d&#39;informations.</p><p class="note"> <b>REMARQUE</b>: Si votre jeu est 100% 2D ou que vous savez que vous n&#39;avez pas besoin d&#39;un tampon de profondeur de surface, alors il devrait être bon d&#39;appeler simplement cette fonction une fois au début du jeu pour désactiver le tampon.</p><p></p><h4> Syntaxe:</h4><p class="code">surface_depth_disable(disable);</p><table><tbody><tr><th> Argument</th><th> Description</th></tr><tr><td> <span class="notranslate">disable</span></td><td> Si défini sur <tt>true</tt> le tampon de profondeur sera désactivé pour les surfaces créées.</td></tr></tbody></table><p></p><h4> Retour:</h4><p class="code">N/A</p><p></p><h4> Exemple:</h4><p class="code">var _depth_setting = surface_get_depth_disable();<br/> surface_depth_disable(false);
-    <br/> surface_with_depth = surface_create(room_width, room_height);<br/> surface_depth_disable(true);
-    <br/> surface_without_depth = surface_create(room_width, room_height);<br/> surface_depth_disable(_depth_setting);
-  </p><p> Le code ci-dessus stocke le paramètre de mémoire tampon de profondeur actuel dans une variable, puis crée deux surfaces, une avec la mémoire tampon de profondeur activée et une sans, avant de restaurer à nouveau le paramètre d&#39;origine. </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> Retour: <a href="Surfaces.htm">Surfaces</a></div><div style="float:right"> Suivant:<a href="surface_get_height.htm">surface_get_height</a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
+<body>
+  <!--<div class="body-scroll" style="top: 150px;">-->
+  <h1>surface_depth_disable</h1>
+  <p>Cette fonction désactive la génération automatique de tampons de profondeur pour <i>toutes les</i> surfaces qui sont créées après qu'elle ait été désactivée. Normalement, toutes les surfaces ont des tampons de profondeur, de sorte que si vous dessinez des objets 3D sur celles-ci, ils seront triés correctement par profondeur afin de maintenir la parité fonctionnelle entre le rendu sur les surfaces et le rendu sur le tampon arrière.
+    Cependant, l'allocation de tampons de profondeur double essentiellement la quantité de mémoire requise pour les surfaces, ce qui peut constituer une surcharge excessive et inutile, en particulier si votre jeu est très gourmand en mémoire.
+    surtout si votre jeu est très gourmand en mémoire, et pour les jeux 2D, ils ne sont généralement pas nécessaires.</p>
+  <p>Pour utiliser cette fonction, vous devez l'appeler <i>avant de</i> créer une surface, puis vous pouvez l'activer à nouveau après (si nécessaire). Toutes les surfaces créées lorsque le tampon de profondeur est désactivé n'utiliseront plus de tampon de profondeur lorsqu'elles seront dessinées.
+    les objets dessinés sur la surface ont une parité de profondeur. Les images ci-dessous illustrent cela en pratique :</p>
+  <p><img alt="Surface depth buffer example" class="center" src="../../../../assets/Images/Scripting_Reference/GML/Reference/Drawing/Surface_Depth_Buffer.png">Dans l'image ci-dessus, nous dessinons un rectangle et un triangle en utilisant un tampon de sommets en 3D. Les coordonnées de
+    pour le triangle rouge le place derrière le rectangle vert, mais le code pour dessiner le triangle est appelé <i>après le</i> code pour le rectangle, et lorsque le tampon de profondeur est activé, le triangle est toujours dessiné derrière le rectangle car la profondeur 3D est respectée.
+    car la profondeur 3D est respectée. Cependant, lorsque nous désactivons le tampon de profondeur pour la surface, seul l'ordre du code est respecté et le triangle est donc dessiné au-dessus du rectangle.</p>
+  <p class="note"><b>REMARQUE</b>: Pour préserver correctement la profondeur en 3D lors de l'utilisation de surfaces, vous devez non seulement activer le tampon de profondeur, mais aussi activer l'écriture et le test de l'axe des z. Voir les fonctions <a href="../GPU_Control/gpu_get_ztestenable.htm"><tt><span style="font-size:14px;">gpu_set_ztestenable()</span></tt></a>    et <a href="../GPU_Control/gpu_get_zwriteenable.htm"><tt><span style="font-size:14px;">gpu_set_zwriteenable()</span></tt></a> pour plus d'informations.</p>
+  <p class="note"><b>REMARQUE</b>: si votre jeu est 100 % 2D ou si vous savez que vous n'avez pas besoin d'un tampon de profondeur de surface, vous pouvez simplement appeler cette fonction une fois au début du jeu pour désactiver le tampon.</p>
+  <p> </p>
+  <h4>Syntaxe :</h4>
+  <p class="code">surface_depth_disable(disable) ;</p>
+  <table>
+    <tbody>
+      <tr>
+        <th>Arguments</th>
+        <th>Description</th>
+      </tr>
+      <tr>
+        <td>désactiver</td>
+        <td>S'il est défini à <tt>true</tt>, le tampon de profondeur sera désactivé pour les surfaces créées.</td>
+      </tr>
+    </tbody>
+  </table>
+  <p> </p>
+  <h4>Les retours :</h4>
+  <p class="code">N/A</p>
+  <p> </p>
+  <h4>Exemple :</h4>
+  <p class="code">var _depth_setting = surface_get_depth_disable() ;<br> surface_depth_disable(false) ;
+    <br> surface_with_depth = surface_create(room_width, room_height) ;<br> surface_depth_disable(true) ;
+    <br> surface_without_depth = surface_create(room_width, room_height) ;<br> surface_depth_disable(_depth_setting) ;
+  </p>
+  <p>Le code ci-dessus stocke le paramètre actuel de la mémoire tampon de profondeur dans une variable, puis crée deux surfaces, l'une avec la mémoire tampon de profondeur activée et l'autre sans, avant de restaurer à nouveau le paramètre original.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <div class="footer">
+    <div class="buttons">
+      <div class="clear">
+        <div style="float:left">Retour : <a href="Surfaces.htm">Surfaces</a></div>
+        <div style="float:right">Suivant : <a href="surface_get_height.htm">surface_get_height</a></div>
+      </div>
+    </div>
+    <h5><span data-keyref="Copyright Notice">Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
   </div>
   <!-- KEYWORDS
 surface_depth_disable

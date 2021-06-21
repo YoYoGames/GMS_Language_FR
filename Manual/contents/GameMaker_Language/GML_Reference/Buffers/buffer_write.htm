@@ -7,11 +7,119 @@
   <meta name="generator" content="Adobe RoboHelp 2019" />
   <link rel="stylesheet" href="../../../assets/css/default.css" type="text/css" />
   <meta name="rh-authors" content="Mark Alexander" />
-  <meta name="topic-comment" content="Page de référence pour buffer_write" />
+  <meta name="topic-comment" content="Reference page for buffer_write" />
   <meta name="rh-index-keywords" content="buffer_write,buffer_u8,buffer_s8,buffer_u16,buffer_s16,buffer_u32,buffer_s32,buffer_u64,buffer_f16,buffer_f32,buffer_f64,buffer_bool,buffer_string,buffer_text" />
   <meta name="search-keywords" content="buffer_write,buffer_u8,buffer_s8,buffer_u16,buffer_s16,buffer_u32,buffer_s32,buffer_u64,buffer_f16,buffer_f32,buffer_f64,buffer_bool,buffer_string,buffer_text" />
 </head>
-<body><!--<div class="body-scroll" style="top: 150px;">--><h1>buffer_write</h1><p> Cette fonction peut être utilisée pour écrire des données dans un tampon créé précédemment. Les données que vous écrivez doivent être en accord avec l&#39;argument &quot;type&quot; de cette fonction, ce qui signifie que vous ne pouvez pas essayer d&#39;écrire une chaîne sous forme d&#39;entier 16 bits non signé, par exemple. Les constantes suivantes peuvent être utilisées pour définir le type de données:</p><p></p><table><tbody><tr><th> Constant</th><th> Description</th></tr><tr><td> <span class="notranslate">buffer_u8</span></td><td> Un entier 8 bits non signé. Il s&#39;agit d&#39;une valeur positive comprise entre 0 et 255.</td></tr><tr><td> <span class="notranslate">buffer_s8</span></td><td> Un entier signé de 8 bits. Cela peut être une valeur positive ou négative de -128 à 127 (0 est classé comme positif).</td></tr><tr><td> <span class="notranslate">buffer_u16</span></td><td> Un entier 16 bits non signé. Il s&#39;agit d&#39;une valeur positive comprise entre 0 et 65 535.</td></tr><tr><td> <span class="notranslate">buffer_s16</span></td><td> Un entier 16 bits signé. Cela peut être une valeur positive ou négative de -32 768 à 32 767 (0 est considéré comme positif).</td></tr><tr><td> <span class="notranslate">buffer_u32</span></td><td> Un entier 32 bits non signé. Il s&#39;agit d&#39;une valeur positive comprise entre 0 et 4 294 967 295.</td></tr><tr><td> <span class="notranslate">buffer_s32</span></td><td> Un entier 32 bits signé. Cela peut être une valeur positive ou négative de -2 147 483 648 à 2 147 483 647 (0 est considéré comme positif).</td></tr><tr><td> <span class="notranslate">buffer_u64</span></td><td> Un entier 64 bits non signé.</td></tr><tr><td> <span class="notranslate">buffer_f16</span></td><td> Un flotteur 16 bits. Il peut s&#39;agir d&#39;une valeur positive ou négative dans la même plage qu&#39;un entier signé 16 bits.</td></tr><tr><td> <span class="notranslate">buffer_f32</span></td><td> Un flotteur 32 bits. Il peut s&#39;agir d&#39;une valeur positive ou négative dans la même plage qu&#39;un entier signé de 32 bits.</td></tr><tr><td> <span class="notranslate">buffer_f64</span></td><td> Un flotteur 64 bits.</td></tr><tr><td> <span class="notranslate">buffer_bool</span></td><td> Une valeur booléenne. Ne peut être que 1 ou 0 (<tt>true</tt> ou <tt>false</tt> )</td></tr><tr><td> <span class="notranslate">buffer_string</span></td><td> Une chaîne de toute taille, finalisée avec un caractère de fin nul.</td></tr><tr><td> <span class="notranslate">buffer_text</span></td><td> Une chaîne de n&#39;importe quelle taille, sans le dernier caractère de fin nul.</td></tr></tbody></table><p></p><p> La fonction renverra 0 si elle réussit ou -1 si elle échoue.</p><p></p><h4> Syntaxe:</h4><p class="code">buffer_write(buffer, type, value)</p><table><tbody><tr><th> Argument</th><th> Description</th></tr><tr><td> <span class="notranslate">buffer</span></td><td> L&#39;index du tampon dans lequel écrire.</td></tr><tr><td> <span class="notranslate">type</span></td><td> Le type de données à écrire dans le tampon (voir la liste des constantes ci-dessus).</td></tr><tr><td> <span class="notranslate">value</span></td><td> Les données à écrire.</td></tr></tbody></table><p></p><h4> Retour:</h4><p class="code">0 if success, or -1 if it fails</p><p></p><h4> Exemple:</h4><p class="code">buffer_seek(buff, buffer_seek_start, 0);<br/> buffer_write(buff, buffer_s16, 0);<br/> buffer_write(buff, buffer_s16, x);<br/> buffer_write(buff, buffer_s16, y);</p><p> Le code ci-dessus trouve le début du tampon avec l&#39;ID stocké dans la variable &quot;buff&quot; et y écrit une série de valeurs entières 16 bits signées. </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> Retour: <a href="Buffers.htm">Tampons</a></div><div style="float:right"> Suivant:<a href="buffer_fill.htm">buffer_fill</a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
+<body>
+  <!--<div class="body-scroll" style="top: 150px;">-->
+  <h1>buffer_write</h1>
+  <p>Cette fonction peut être utilisée pour écrire des données dans un tampon préalablement créé. Les données que vous écrivez doivent être en accord avec l'argument &quot;type&quot; de cette fonction, ce qui signifie que vous ne pouvez pas essayer d'écrire une chaîne de caractères comme un entier 16bit non signé, par exemple.
+    Les constantes suivantes peuvent être utilisées pour définir le type de données :</p>
+  <p> </p>
+  <table>
+    <tbody>
+      <tr>
+        <th>Constant</th>
+        <th>Description</th>
+      </tr>
+      <tr>
+        <td>tampon_u8</td>
+        <td>Un nombre entier non signé de 8 bits. Il s'agit d'une valeur positive comprise entre 0 et 255.</td>
+      </tr>
+      <tr>
+        <td>tampon_s8</td>
+        <td>Un nombre entier signé de 8 bits. Il peut s'agir d'une valeur positive ou négative comprise entre -128 et 127 (0 est considéré comme positif).</td>
+      </tr>
+      <tr>
+        <td>tampon_u16</td>
+        <td>Un nombre entier non signé de 16 bits. Il s'agit d'une valeur positive comprise entre 0 et 65 535.</td>
+      </tr>
+      <tr>
+        <td>tampon_s16</td>
+        <td>Un nombre entier signé de 16 bits. Il peut s'agir d'une valeur positive ou négative comprise entre -32 768 et 32 767 (0 est considéré comme positif).</td>
+      </tr>
+      <tr>
+        <td>tampon_u32</td>
+        <td>Un nombre entier non signé de 32 bits. Il s'agit d'une valeur positive comprise entre 0 et 4 294 967 295.</td>
+      </tr>
+      <tr>
+        <td>tampon_s32</td>
+        <td>Un nombre entier signé de 32 bits. Il peut s'agir d'une valeur positive ou négative comprise entre -2 147 483 648 et 2 147 483 647 (0 étant considéré comme positif).</td>
+      </tr>
+      <tr>
+        <td>tampon_u64</td>
+        <td>Un nombre entier non signé de 64 bits.</td>
+      </tr>
+      <tr>
+        <td>tampon_f16</td>
+        <td>Un flottant de 16 bits. Il peut s'agir d'une valeur positive ou négative dans la même plage qu'un entier signé de 16 bits.</td>
+      </tr>
+      <tr>
+        <td>tampon_f32</td>
+        <td>Un flottant de 32 bits. Il peut s'agir d'une valeur positive ou négative dans la même plage qu'un nombre entier signé de 32 bits.</td>
+      </tr>
+      <tr>
+        <td>tampon_f64</td>
+        <td>Un flotteur 64 bits.</td>
+      </tr>
+      <tr>
+        <td>tampon_bool</td>
+        <td>Une valeur booléenne. Elle ne peut être que 1 ou 0<tt>(vrai</tt> ou <tt>faux</tt>).</td>
+      </tr>
+      <tr>
+        <td>chaîne_tampon</td>
+        <td>Une chaîne de caractères de n'importe quelle taille, finalisée par un caractère de terminaison nul.</td>
+      </tr>
+      <tr>
+        <td>Texte tampon</td>
+        <td>Une chaîne de caractères de n'importe quelle taille, sans le caractère final nul.</td>
+      </tr>
+    </tbody>
+  </table>
+  <p> </p>
+  <p>La fonction renvoie 0 si elle réussit ou -1 si elle échoue.</p>
+  <p> </p>
+  <h4>Syntaxe :</h4>
+  <p class="code">buffer_write(buffer, type, valeur)</p>
+  <table>
+    <tbody>
+      <tr>
+        <th>Arguments</th>
+        <th>Description</th>
+      </tr>
+      <tr>
+        <td>tampon</td>
+        <td>L'index du tampon dans lequel écrire.</td>
+      </tr>
+      <tr>
+        <td>type</td>
+        <td>Le type de données qui doit être écrit dans le tampon (voir la liste des constantes ci-dessus).</td>
+      </tr>
+      <tr>
+        <td>valeur</td>
+        <td>Les données à écrire.</td>
+      </tr>
+    </tbody>
+  </table>
+  <p> </p>
+  <h4>Les retours :</h4>
+  <p class="code">0 en cas de succès, ou -1 en cas d'échec</p>
+  <p> </p>
+  <h4>Exemple :</h4>
+  <p class="code">buffer_seek(buff, buffer_seek_start, 0) ;<br> buffer_write(buff, buffer_s16, 0) ;<br> buffer_write(buff, buffer_s16, x) ;<br> buffer_write(buff, buffer_s16, y) ;</p>
+  <p>Le code ci-dessus trouve le début du tampon avec l'identifiant stocké dans la variable &quot;buff&quot; et y écrit une série de valeurs entières signées de 16 bits.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <div class="footer">
+    <div class="buttons">
+      <div class="clear">
+        <div style="float:left">Retour : <a href="Buffers.htm">Tampons</a></div>
+        <div style="float:right">Suivant : <a href="buffer_fill.htm">buffer_fill</a></div>
+      </div>
+    </div>
+    <h5><span data-keyref="Copyright Notice">Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
   </div>
   <!-- KEYWORDS
 buffer_write

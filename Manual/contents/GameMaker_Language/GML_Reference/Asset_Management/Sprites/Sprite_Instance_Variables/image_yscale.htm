@@ -7,17 +7,43 @@
   <meta name="generator" content="Adobe RoboHelp 2019" />
   <link rel="stylesheet" href="../../../../../assets/css/default.css" type="text/css" />
   <meta name="rh-authors" content="Mark Alexander" />
-  <meta name="topic-comment" content="Page expliquant la variable image_yscale" />
+  <meta name="topic-comment" content="Page explaining the variable image_yscale" />
   <meta name="rh-index-keywords" content="image_yscale" />
   <meta name="search-keywords" content="image_yscale" />
 </head>
-<body><!--<div class="body-scroll" style="top: 150px;">--><h1>image_yscale</h1><p> Cette valeur définit la mise à l&#39;échelle verticale (le long de l&#39;axe y) appliquée à l&#39;image-objet qui a été affectée à l&#39;instance actuelle. Une échelle de 1 indique aucune mise à l&#39;échelle (1: 1), des valeurs plus petites seront réduites (0,5, par exemple, la moitié de la hauteur de l&#39;image-objet), des valeurs plus grandes seront mises à l&#39;échelle et des valeurs négatives refléteront l&#39;image-objet <i>et la</i> mettront à l&#39;échelle à moins que le la valeur utilisée est exactement -1 (auquel cas le sprite est simplement mis en miroir le long de l&#39;axe y sans mise à l&#39;échelle).<br/><img alt="image_yscale Example" class="center" src="../../../../../assets/Images/Scripting_Reference/GML/Reference/Sprites/yscale_image.png" /></p><p></p><h4> Syntaxe:</h4><p class="code">image_yscale;</p><p></p><h4> Retour:</h4><p class="code">Real (single precision floating point value)</p><p></p><h4> Exemple:</h4><p class="code">if image_xscale &lt; 5<br/>     {
-    <br/>     image_xscale += 0.2;<br/>     image_yscale = image_xscale;<br/>     }
-    <br/> else
-    <br/>     {
-    <br/>     instance_create_layer(x, y, &quot;Effects&quot;, obj_Explosion);<br/>     instance_destroy();
-    <br/>     }
-  </p><p> Le code ci-dessus met à l&#39;échelle le sprite, puis une fois qu&#39;il est redimensionné à 5 fois sa taille d&#39;origine, une nouvelle instance d&#39;un autre objet est créée et l&#39;instance détruite. </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> Retour: <a href="Sprite_Instance_Variables.htm">Variables d&#39;instance de sprite</a></div><div style="float:right"> Suivant:<a href="mask_index.htm">mask_index</a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
+<body>
+  <!--<div class="body-scroll" style="top: 150px;">-->
+  <h1>image_yscale</h1>
+  <p>Cette valeur définit la mise à l'échelle verticale (selon l'axe des y) appliquée au sprite qui a été affecté à l'instance actuelle. Une échelle de 1 indique qu'il n'y a pas de mise à l'échelle (1:1), des valeurs plus petites réduiront l'échelle (0.5, par exemple, réduira de moitié la hauteur du sprite),
+    des valeurs plus grandes augmenteront l'échelle et des valeurs négatives reflèteront le sprite <i>et</i> le mettront à l'échelle, sauf si la valeur utilisée est exactement -1 (dans ce cas, le sprite est simplement reflété le long de l'axe des y, sans mise à l'échelle).<br>
+    <img alt="image_yscale Example" class="center" src="../../../../../assets/Images/Scripting_Reference/GML/Reference/Sprites/yscale_image.png"></p>
+  <p> </p>
+  <h4>Syntaxe :</h4>
+  <p class="code">image_yscale ;</p>
+  <p> </p>
+  <h4>Les retours :</h4>
+  <p class="code">Réel (valeur à virgule flottante de précision simple)</p>
+  <p> </p>
+  <h4>Exemple :</h4>
+  <p class="code">if image_xscale &lt; 5<br> {
+    <br> image_xscale += 0.2 ;<br> image_yscale = image_xscale ;<br> }
+    <br> else
+    <br> {
+    <br> instance_create_layer(x, y, &quot;Effects&quot;, obj_Explosion) ;<br> instance_destroy() ;
+    <br> }
+  </p>
+  <p>Le code ci-dessus met à l'échelle le sprite et une fois qu'il a atteint 5 fois sa taille d'origine, une nouvelle instance d'un autre objet est créée et l'instance est détruite.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <div class="footer">
+    <div class="buttons">
+      <div class="clear">
+        <div style="float:left">Retour : <a href="Sprite_Instance_Variables.htm">Variables d'instance de sprite</a></div>
+        <div style="float:right">Suivant : <a href="mask_index.htm">mask_index</a></div>
+      </div>
+    </div>
+    <h5><span data-keyref="Copyright Notice">Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
   </div>
   <!-- KEYWORDS
 image_yscale

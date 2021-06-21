@@ -7,11 +7,56 @@
   <meta name="generator" content="Adobe RoboHelp 2019" />
   <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
   <meta name="rh-authors" content="Mark Alexander" />
-  <meta name="topic-comment" content="Cette page décrit la fonction move_wrap" />
+  <meta name="topic-comment" content="This page outlines the function move_wrap" />
   <meta name="rh-index-keywords" content="move_wrap" />
   <meta name="search-keywords" content="move_wrap" />
 </head>
-<body><!--<div class="body-scroll" style="top: 150px;">--><h1>move_wrap</h1><p> Cette fonction &quot;enveloppera&quot; automatiquement une instance qui a quitté la pièce sur l&#39;axe horizontal ou vertical (ou les deux). Vous pouvez spécifier une marge à l&#39;extérieur des bords de la pièce pour que cela se produise, et lorsque l&#39;instance a voyagé en dehors de cette marge, <span class="notranslate">GameMaker Studio 2</span> l&#39;enroulera automatiquement dans la pièce de l&#39;autre côté. Notez que l&#39;instance doit avoir une vitesse pour que l&#39;enroulement fonctionne, car la direction de l&#39;enroulement est basée sur la direction du mouvement.</p><p></p><h4> Syntaxe:</h4><p class="code">move_wrap(hor, vert, margin);</p><table><tbody><tr><th> Argument</th><th> Description</th></tr><tr><td> <span class="notranslate">hor</span></td><td> Que ce soit pour envelopper horizontalement (vrai) ou non (faux).</td></tr><tr><td> <span class="notranslate">vert</span></td><td> S&#39;il faut envelopper verticalement (vrai) ou non (faux).</td></tr><tr><td> <span class="notranslate">margin</span></td><td> À quelle distance de la pièce, en pixels, l&#39;objet doit se trouver pour lancer l&#39;habillage.</td></tr></tbody></table><p></p><h4> Retour:</h4><p class="code">N/A</p><p></p><h4> Exemple:</h4><p class="code">move_wrap(true, false, sprite_width);</p><p> Cela permettra à l&#39;instance de s&#39;enrouler horizontalement mais pas verticalement, lorsqu&#39;elle se trouve au-dessus de sa propre largeur de sprite en dehors de la pièce. </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> Retour: <a href="Movement.htm">Mouvement</a></div><div style="float:right"> Suivant:<a href="place_snapped.htm">place_snapped</a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
+<body>
+  <!--<div class="body-scroll" style="top: 150px;">-->
+  <h1>move_wrap</h1>
+  <p>Cette fonction va automatiquement &quot;envelopper&quot; une instance qui a quitté la room sur l'axe horizontal ou vertical (ou les deux). Vous pouvez spécifier une marge en dehors des bords de la room pour que cela se produise.
+    de cette marge, <span class="notranslate">GameMaker Studio 2</span> la ramènera automatiquement dans la pièce de l'autre côté. Notez que l'instance doit avoir une vitesse pour que l'enveloppement fonctionne, car la direction de l'enveloppement est basée sur la direction du mouvement.</p>
+  <p> </p>
+  <h4>Syntaxe :</h4>
+  <p class="code">move_wrap(hor, vert, margin) ;</p>
+  <table>
+    <tbody>
+      <tr>
+        <th>Arguments</th>
+        <th>Description</th>
+      </tr>
+      <tr>
+        <td>hor</td>
+        <td>Si l'on veut envelopper horizontalement (true) ou non (false).</td>
+      </tr>
+      <tr>
+        <td>vert</td>
+        <td>Si l'on veut envelopper verticalement (true) ou non (false).</td>
+      </tr>
+      <tr>
+        <td>marge</td>
+        <td>A quelle distance de la pièce, en pixels, l'objet doit se trouver pour déclencher l'emballage.</td>
+      </tr>
+    </tbody>
+  </table>
+  <p> </p>
+  <h4>Les retours :</h4>
+  <p class="code">N/A</p>
+  <p> </p>
+  <h4>Exemple :</h4>
+  <p class="code">move_wrap(true, false, sprite_width) ;</p>
+  <p>Ceci fera en sorte que l'instance s'enroule horizontalement mais pas verticalement, lorsqu'elle dépasse la largeur de son propre sprite en dehors de la pièce.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <div class="footer">
+    <div class="buttons">
+      <div class="clear">
+        <div style="float:left">Retour : <a href="Movement.htm">Mouvement</a></div>
+        <div style="float:right">Suivant : <a href="place_snapped.htm">place_snapped</a></div>
+      </div>
+    </div>
+    <h5><span data-keyref="Copyright Notice">Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
   </div>
   <!-- KEYWORDS
 move_wrap

@@ -7,12 +7,69 @@
   <meta name="generator" content="Adobe RoboHelp 2019" />
   <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
   <meta name="rh-authors" content="Mark Alexander" />
-  <meta name="topic-comment" content="Référence de la fonction gpu_set_fog" />
+  <meta name="topic-comment" content="Reference for the function gpu_set_fog" />
   <meta name="rh-index-keywords" content="gpu_set_fog" />
   <meta name="search-keywords" content="gpu_set_fog" />
 </head>
-<body><!--<div class="body-scroll" style="top: 150px;">--><h1>gpu_set_fog</h1><p> Cette fonction peut être utilisée pour activer ou désactiver le dessin de brouillard. Le brouillard peut être utilisé dans les jeux 3D pour rendre les instances éloignées floues ou même disparaître, ce qui aide à créer une atmosphère et à masquer le fait que vous ne dessinez pas des instances éloignées. Vous définissez s&#39;il est activé (<tt>true</tt> ) ou désactivé (<tt>false</tt> ), la couleur que le brouillard doit utiliser pour le mélange, ainsi que les distances de dessin de début et de fin. Notez que le début du brouillard indique le rayon par rapport à la caméra de vue où le brouillard commence, et la fin du brouillard indique à quel rayon (également relatif) les instances seront complètement invisibles.</p><p> La fonction peut prendre quatre arguments individuels (donnés ci-dessus) ou un tableau avec la structure suivante (l&#39;exemple de code ci-dessous montre cette méthode):</p><ul class="colour"><li> [0] = bascule activée (une valeur booléenne, soit <tt>true</tt> ou <tt>false</tt> ), défaut <tt>false</tt></li><li> [1] = couleur (réel), par défaut <tt>c_black</tt></li><li> [2] = distance de départ (réelle), par défaut 0</li><li> [3] = distance finale (réelle), par défaut 1</li></ul><p></p><h4> Syntaxe:</h4><p class="code">gpu_set_fog(enable, colour, start, end);</p><table><tbody><tr><th> Argument</th><th> Description</th></tr><tr><td> <span class="notranslate">enable</span></td><td> Activer ou désactiver le brouillard</td></tr><tr><td> <span class="notranslate">colour</span></td><td> La couleur du brouillard</td></tr><tr><td> <span class="notranslate">start</span></td><td> La distance à partir de laquelle commencer à appliquer le brouillard</td></tr><tr><td> <span class="notranslate">end</span></td><td> La distance pour mettre fin au brouillard</td></tr></tbody></table><p></p><h4> Retour:</h4><p class="code">N/A</p><p></p><h4> Exemple:</h4><p class="code">var fog_a = gpu_get_fog();<br/> fog_a[1] = c_red;<br/> gpu_set_fog(fog_a);
-  </p><p> Le code ci-dessus obtient les paramètres de brouillard actuels, puis définit l&#39;élément de couleur du tableau sur <tt>c_red</tt> avant de régler à nouveau le brouillard en utilisant la matrice modifiée. </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> Retour: <a href="GPU_Control.htm">Contrôle GPU</a></div><div style="float:right"> Suivant:<a href="gpu_set_cullmode.htm">gpu_set_cullmode</a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
+<body>
+  <!--<div class="body-scroll" style="top: 150px;">-->
+  <h1>gpu_set_fog</h1>
+  <p>Cette fonction peut être utilisée pour activer ou désactiver le dessin du brouillard. Le brouillard peut être utilisé dans les jeux 3D pour rendre les instances éloignées floues ou même disparaître, ce qui permet de créer une atmosphère et de masquer le fait que vous ne dessinez pas les instances éloignées.
+    qui sont éloignées. Vous définissez s'il est activé<tt>(true</tt>) ou désactivé<tt>(false</tt>), la couleur que le brouillard doit utiliser pour le mélange, ainsi que les distances de dessin de début et de fin. Notez que le début du brouillard indique le rayon relatif à la caméra où le brouillard commence.
+    où le brouillard commence, et la fin du brouillard indique à quel rayon (également relatif) les instances seront complètement invisibles.</p>
+  <p>La fonction peut prendre quatre arguments individuels (donnés ci-dessus) ou un tableau avec la structure suivante (l'exemple de code ci-dessous montre cette méthode) :</p>
+  <ul class="colour">
+    <li>0] = activation de l'interrupteur à bascule (un booléen, soit <tt>vrai</tt> ou <tt>faux</tt>), par défaut <tt>faux</tt>.</li>
+    <li>[1] = couleur (réelle), par défaut <tt>c_black</tt></li>
+    <li>[2] = distance de départ (réelle), par défaut 0</li>
+    <li>[3] = distance finale (réelle), par défaut 1</li>
+  </ul>
+  <p> </p>
+  <h4>Syntaxe :</h4>
+  <p class="code">gpu_set_fog(enable, colour, start, end) ;</p>
+  <table>
+    <tbody>
+      <tr>
+        <th>Arguments</th>
+        <th>Description</th>
+      </tr>
+      <tr>
+        <td>activer</td>
+        <td>Activer ou désactiver le brouillard</td>
+      </tr>
+      <tr>
+        <td>couleur</td>
+        <td>La couleur du brouillard</td>
+      </tr>
+      <tr>
+        <td>commencer</td>
+        <td>La distance à partir de laquelle commencer à appliquer le brouillard</td>
+      </tr>
+      <tr>
+        <td>fin</td>
+        <td>La distance pour mettre fin au brouillard</td>
+      </tr>
+    </tbody>
+  </table>
+  <p> </p>
+  <h4>Les retours :</h4>
+  <p class="code">N/A</p>
+  <p> </p>
+  <h4>Exemple :</h4>
+  <p class="code">var fog_a = gpu_get_fog() ;<br> fog_a[1] = c_red ;<br> gpu_set_fog(fog_a) ;
+  </p>
+  <p>Le code ci-dessus récupère les paramètres actuels du brouillard et définit ensuite l'élément couleur du tableau à <tt>c_red</tt> avant de définir à nouveau le brouillard en utilisant le tableau modifié.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <div class="footer">
+    <div class="buttons">
+      <div class="clear">
+        <div style="float:left">Retour : <a href="GPU_Control.htm">Contrôle du GPU</a></div>
+        <div style="float:right">Suivant : <a href="gpu_set_cullmode.htm">gpu_set_cullmode</a></div>
+      </div>
+    </div>
+    <h5><span data-keyref="Copyright Notice">Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
   </div>
   <!-- KEYWORDS
 gpu_set_fog

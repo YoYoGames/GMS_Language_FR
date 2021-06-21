@@ -3,17 +3,54 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>game_load_buffer</title>
+  <title>tampon de chargement de jeu</title>
   <meta name="generator" content="Adobe RoboHelp 2019" />
   <link rel="stylesheet" href="../../../assets/css/default.css" type="text/css" />
   <meta name="rh-authors" content="Mark Alexander" />
-  <meta name="topic-comment" content="Cette page décrit la fonction game_load_buffer" />
+  <meta name="topic-comment" content="This page outlines the function game_load_buffer" />
   <meta name="rh-index-keywords" content="game_load_buffer" />
   <meta name="search-keywords" content="game_load_buffer" />
 </head>
-<body><!--<div class="body-scroll" style="top: 150px;">--><h1>game_load_buffer</h1><p> Avec cette fonction, vous pouvez charger un état de jeu qui a été sauvegardé précédemment. Le jeu est chargé à partir d&#39;un tampon de &quot;croissance&quot; créé précédemment (voir <a href="../Buffers/Buffers.htm">Tampons</a> ) et le tampon doit avoir un état de jeu enregistré en utilisant <a href="game_save_buffer.htm"><tt>game_save_buffer()</tt></a> fonction.</p><p></p><h4> Syntaxe:</h4><p class="code">game_load_buffer(buffer);</p><table><tbody><tr><th> Argument</th><th> Description</th></tr><tr><td> <span class="notranslate">buffer</span></td><td> L&#39;identifiant du tampon à partir duquel charger.</td></tr></tbody></table><p></p><h4> Retour:</h4><p class="code">N/A</p><p></p><h4> Exemple:</h4><p class="code">if keyboard_check_pressed(ord(&quot;L&quot;))<br/>     {
-    <br/>     if global.Checkpoint game_load_buffer(save_buff);<br/>     }
-  </p><p> Le code ci-dessus chargera un état de jeu précédemment sauvegardé à partir du tampon indexé dans la variable &quot;save_buff&quot;, uniquement si la variable globale est <tt>true</tt>, lorsque le joueur appuie sur la touche &quot;L&quot;. </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> Retour: <a href="General_Game_Control.htm">Contrôle général du jeu</a></div><div style="float:right"> Suivant:<a href="game_save.htm">game_save</a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
+<body>
+  <!--<div class="body-scroll" style="top: 150px;">-->
+  <h1>tampon de chargement de jeu</h1>
+  <p>Avec cette fonction, vous pouvez charger un état de jeu qui a été sauvegardé précédemment. Le jeu est chargé à partir d'un tampon &quot;grow&quot; précédemment créé (voir Buffers) <a href="../Buffers/Buffers.htm">et</a> le tampon doit avoir un état de jeu sauvegardé.
+    en utilisant la fonction <a href="game_save_buffer.htm"><tt>game_save_buffer()</tt></a> fonction.</p>
+  <p> </p>
+  <h4>Syntaxe :</h4>
+  <p class="code">game_load_buffer(buffer) ;</p>
+  <table>
+    <tbody>
+      <tr>
+        <th>Arguments</th>
+        <th>Description</th>
+      </tr>
+      <tr>
+        <td>tampon</td>
+        <td>L'identifiant du tampon à charger.</td>
+      </tr>
+    </tbody>
+  </table>
+  <p> </p>
+  <h4>Les retours :</h4>
+  <p class="code">N/A</p>
+  <p> </p>
+  <h4>Exemple :</h4>
+  <p class="code">if keyboard_check_pressed(ord(&quot;L&quot;))<br> {
+    <br> if global.Checkpoint game_load_buffer(save_buff) ;<br> }
+  </p>
+  <p>Le code ci-dessus chargera un état de jeu précédemment sauvegardé à partir du tampon indexé dans la variable &quot;save_buff&quot;, uniquement si la variable globale est vraie, lorsque <tt>le</tt> joueur appuie sur la touche &quot;L&quot;.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <div class="footer">
+    <div class="buttons">
+      <div class="clear">
+        <div style="float:left">Retour : <a href="General_Game_Control.htm">Contrôle général du jeu</a></div>
+        <div style="float:right">Suivant : <a href="game_save.htm">game_save</a></div>
+      </div>
+    </div>
+    <h5><span data-keyref="Copyright Notice">Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
   </div>
   <!-- KEYWORDS
 game_load_buffer

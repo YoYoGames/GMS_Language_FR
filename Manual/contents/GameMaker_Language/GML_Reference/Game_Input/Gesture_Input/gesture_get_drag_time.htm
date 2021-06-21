@@ -2,20 +2,48 @@
 
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml"><head>
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-  <title>gesture_get_drag_time</title>
-  <meta name="generator" content="Adobe RoboHelp 2019"/>
-  <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css"/>
-  <meta name="rh-authors" content="Mark Alexander"/>
-  <meta name="topic-comment" content="Page de référence pour gesture_get_drag_time"/>
-  <meta name="rh-index-keywords" content="gesture_get_drag_time"/>
-  <meta name="search-keywords" content="gesture_get_drag_time"/>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>Heure du geste_get_drag</title>
+  <meta name="generator" content="Adobe RoboHelp 2019" />
+  <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
+  <meta name="rh-authors" content="Mark Alexander" />
+  <meta name="topic-comment" content="Reference page for gesture_get_drag_time" />
+  <meta name="rh-index-keywords" content="gesture_get_drag_time" />
+  <meta name="search-keywords" content="gesture_get_drag_time" />
 </head>
 
-<body><!--<div class="body-scroll" style="top: 150px;">--><h1>gesture_get_drag_time</h1><p> Cette fonction est utilisée pour obtenir le temps nécessaire pour qu&#39;un <a href="../../../../The_Asset_Editors/Object_Properties/Gesture_Events.htm">événement de mouvement de démarrage par glisser</a> soit déclenché par une pression ou un clic. Ce temps affectera également la façon dont l&#39; <b>événement Tap</b> est déclenché par un toucher / clic et le relâchement avant la fin de ce temps sera considéré comme un Tap. Le temps est mesuré en secondes et a une valeur par défaut de 0,16.</p><p></p><h4> <b>Syntaxe:</b></h4><p class="code">gesture_get_drag_time();</p><p></p><h4> Retour:</h4><p class="code">Real (time in seconds)</p><p></p><h4> Exemple:</h4><p class="code">if gesture_get_drag_time() != 0.16<br/>     {
-    <br/>     gesture_drag_time(0.16);
-    <br/>     }
-  </p><p> Le code ci-dessus vérifie si le temps de glissement pour les gestes est défini sur 0,16 seconde et s&#39;il ne l&#39;est pas, il le définit sur cette valeur. </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> Retour: <a href="Gesture_Input.htm">Entrée gestuelle</a></div><div style="float:right"> Suivant:<a href="gesture_get_drag_distance.htm">gesture_get_drag_distance</a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
+<body>
+
+
+
+  <!--<div class="body-scroll" style="top: 150px;">-->
+  <h1>Heure du geste_get_drag</h1>
+  <p>Cette fonction est utilisée pour obtenir le temps qu'il faut pour qu'un événement <a href="../../../../The_Asset_Editors/Object_Properties/Gesture_Events.htm">Geste de démarrage par glissement</a> soit déclenché par un toucher ou un clic. Ce temps affecte également le déclenchement de l'<b>événement Tap</b>.
+    l'événement Tap est déclenché, car un toucher/clic et un relâchement avant la fin de ce temps seront considérés comme un Tap. Le temps est mesuré en secondes et sa valeur par défaut est de 0,16.</p>
+  <p> </p>
+  <h4><b>Syntaxe :</b></h4>
+  <p class="code">gesture_get_drag_time() ;</p>
+  <p> </p>
+  <h4>Les retours :</h4>
+  <p class="code">Real (temps en secondes)</p>
+  <p> </p>
+  <h4>Exemple :</h4>
+  <p class="code">if gesture_get_drag_time() !.= 0.16<br> {
+    <br> gesture_drag_time(0.16) ;
+    <br> }
+  </p>
+  <p>Le code ci-dessus vérifie si le temps de déplacement pour les gestes est fixé à 0,16 seconde et, si ce n'est pas le cas, il le fixe à cette valeur.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <div class="footer">
+    <div class="buttons">
+      <div class="clear">
+        <div style="float:left">Retour : <a href="Gesture_Input.htm">Saisie gestuelle</a></div>
+        <div style="float:right">Suivant : <a href="gesture_get_drag_distance.htm">gesture_get_drag_distance</a></div>
+      </div>
+    </div>
+    <h5><span data-keyref="Copyright Notice">Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
   </div>
   <!-- KEYWORDS
 gesture_get_drag_time

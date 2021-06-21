@@ -3,17 +3,122 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>part_type_shape</title>
+  <title>forme_type_partie</title>
   <meta name="generator" content="Adobe RoboHelp 2019" />
   <link rel="stylesheet" href="../../../../../assets/css/default.css" type="text/css" />
   <meta name="rh-authors" content="Mark Alexander" />
-  <meta name="topic-comment" content="Page de référence pour part_type_shape" />
+  <meta name="topic-comment" content="Reference page for part_type_shape" />
   <meta name="rh-index-keywords" content="part_type_shape,pt_shape_pixel,pt_shape_disk,pt_shape_square,pt_shape_line,pt_shape_star,pt_shape_circle,pt_shape_ring,pt_shape_sphere,pt_shape_flare,pt_shape_spark,pt_shape_explosion,pt_shape_cloud,pt_shape_smoke,pt_shape_snow" />
-  <meta name="search-keywords" content="part_type_shape,pt_shape_pixel,pt_shape_disk,pt_shape_square,pt_shape_line,pt_shape_star,pt_shape_circle,pt_shape_ring,pt_shape_sphere,pt_shape_flare,pt_shape_spark,pt_shape_explosion,pt_shape_cloud,pt_shape_smoke,pt_shape_snow"
-  />
+  <meta name="search-keywords" content="part_type_shape,pt_shape_pixel,pt_shape_disk,pt_shape_square,pt_shape_line,pt_shape_star,pt_shape_circle,pt_shape_ring,pt_shape_sphere,pt_shape_flare,pt_shape_spark,pt_shape_explosion,pt_shape_cloud,pt_shape_smoke,pt_shape_snow" />
 </head>
-<body><!--<div class="body-scroll" style="top: 150px;">--><h1>part_type_shape</h1><p> Avec cette fonction, vous pouvez définir la forme de sprite à utiliser pour le type de particule, les constantes suivantes étant acceptables:</p><p></p><table><tbody><tr><th> Constant</th><th> Description</th></tr><tr><td> <span class="notranslate">pt_shape_pixel</span></td><td> Un pixel 1x1. (Ce sont les paramètres par défauts.)</td></tr><tr><td> <span class="notranslate">pt_shape_disk</span></td><td> Un cercle plein.</td></tr><tr><td> <span class="notranslate">pt_shape_square</span></td><td> Un carré plein.</td></tr><tr><td> <span class="notranslate">pt_shape_line</span></td><td> Une ligne horizontale de 8 pixels de large.</td></tr><tr><td> <span class="notranslate">pt_shape_star</span></td><td> Une étoile remplie à cinq branches.</td></tr><tr><td> <span class="notranslate">pt_shape_circle</span></td><td> Un cercle entouré de 3 pixels.</td></tr><tr><td> <span class="notranslate">pt_shape_ring</span></td><td> Un cercle avec une lueur intérieure (ressemble à une bulle).</td></tr><tr><td> <span class="notranslate">pt_shape_sphere</span></td><td> Un cercle avec une lueur vers l&#39;extérieur «solide au milieu, brillant vers l&#39;extérieur.</td></tr><tr><td> <span class="notranslate">pt_shape_flare</span></td><td> Un point durement brillant (qui ressemble à une vraie étoile dans la nuit).</td></tr><tr><td> <span class="notranslate">pt_shape_spark</span></td><td> Un effet d&#39;étincelle &#39;comme une étoile avec plusieurs points qui disparaissent.</td></tr><tr><td> <span class="notranslate">pt_shape_explosion</span></td><td> Un nuage de fumée carré »nécessite plusieurs couleurs pour ressembler à une explosion.</td></tr><tr><td> <span class="notranslate">pt_shape_cloud</span></td><td> Un nuage mince nécessite une mise à l&#39;échelle et plusieurs particules pour ressembler à un nuage.</td></tr><tr><td> <span class="notranslate">pt_shape_smoke</span></td><td> Une version douce de l&#39;effet d&#39;explosion. Utilisez plusieurs pour créer un nuage de fumée.</td></tr><tr><td> <span class="notranslate">pt_shape_snow</span></td><td> Une forme générique de flocon de neige.</td></tr></tbody></table><p><img alt="Particle Shapes" class="center" src="../../../../../assets/Images/Scripting_Reference/GML/Reference/Drawing/Particle_Sprites.png" /></p><p></p><h4> Syntaxe:</h4><p class="code">part_type_shape(ind, shape);</p><table><tbody><tr><th> Argument</th><th> Description</th></tr><tr><td> <span class="notranslate">ind</span></td><td> L&#39;indice du type de particule à définir.</td></tr><tr><td> <span class="notranslate">shape</span></td><td> La forme à choisir.</td></tr></tbody></table><p></p><h4> Retour:</h4><p class="code">N/A</p><p></p><h4> Exemple:</h4><p class="code">global.p1 = part_type_create();<br/> part_type_shape(global.p1, pt_shape_square);<br/> part_type_size(global.p1, 1, 3, 0, 0);<br/> part_type_scale(global.p1, 1, 1);<br/> part_type_colour1(global.p1, c_white);<br/> part_type_alpha2(global.p1, 1, 0);<br/>    part_type_speed(global.p1, 2, 4, 0, 0);<br/> part_type_direction(global.p1, 0, 180, 0, 0);<br/> part_type_gravity(global.p1, 0.20, 270);<br/> part_type_orientation(global.p1, 0, 0, 0, 0, 1);<br/> part_type_blend(global.p1, 1);<br/> part_type_life(global.p1,
-    15, 60);</p><p> Le code ci-dessus définit le type de particule indexé dans la variable globale &quot;p1&quot; sur la forme d&#39;un carré, puis définit diverses autres propriétés de particule. </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> Retour: <a href="Particle_Types.htm">Types de particules</a></div><div style="float:right"> Suivant:<a href="part_type_sprite.htm">part_type_sprite</a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
+<body>
+  <!--<div class="body-scroll" style="top: 150px;">-->
+  <h1>forme_type_partie</h1>
+  <p>Avec cette fonction, vous pouvez définir la forme du sprite à utiliser pour le type de particule, les constantes suivantes étant acceptables :</p>
+  <p> </p>
+  <table>
+    <tbody>
+      <tr>
+        <th>Constant</th>
+        <th>Description</th>
+      </tr>
+      <tr>
+        <td>pt_shape_pixel</td>
+        <td>Un pixel 1x1. (Il s'agit du paramètre par défaut).</td>
+      </tr>
+      <tr>
+        <td>pt_shape_disk</td>
+        <td>Un cercle rempli.</td>
+      </tr>
+      <tr>
+        <td>pt_shape_square</td>
+        <td>Un carré rempli.</td>
+      </tr>
+      <tr>
+        <td>pt_shape_line</td>
+        <td>Une ligne horizontale de 8px de large.</td>
+      </tr>
+      <tr>
+        <td>pt_shape_star</td>
+        <td>Une étoile remplie à cinq branches.</td>
+      </tr>
+      <tr>
+        <td>pt_shape_circle</td>
+        <td>Un cercle de 3px de large.</td>
+      </tr>
+      <tr>
+        <td>pt_shape_ring</td>
+        <td>Un cercle avec une lueur vers l'intérieur (ressemble à une bulle).</td>
+      </tr>
+      <tr>
+        <td>pt_sphere_shape</td>
+        <td>Un cercle avec une lueur vers l'extérieur ' solide au milieu, rayonnant vers l'extérieur.</td>
+      </tr>
+      <tr>
+        <td>pt_shape_flare</td>
+        <td>Un point fortement lumineux (ressemble à une véritable étoile dans la nuit).</td>
+      </tr>
+      <tr>
+        <td>pt_shape_spark</td>
+        <td>Un effet d'étincelle ' comme une étoile avec plusieurs points qui s'éteignent.</td>
+      </tr>
+      <tr>
+        <td>pt_shape_explosion</td>
+        <td>Un nuage de fumée de forme carrée ' nécessite plusieurs couleurs pour ressembler à une explosion.</td>
+      </tr>
+      <tr>
+        <td>pt_shape_cloud</td>
+        <td>Un nuage mince, nécessite une mise à l'échelle et des particules multiples pour ressembler à un nuage.</td>
+      </tr>
+      <tr>
+        <td>pt_shape_smoke</td>
+        <td>Une version lisse de l'effet d'explosion. Utilisez-en plusieurs pour créer un nuage de fumée.</td>
+      </tr>
+      <tr>
+        <td>pt_shape_snow</td>
+        <td>Une forme générique de flocon de neige.</td>
+      </tr>
+    </tbody>
+  </table>
+  <p><img alt="Particle Shapes" class="center" src="../../../../../assets/Images/Scripting_Reference/GML/Reference/Drawing/Particle_Sprites.png" /></p>
+  <p> </p>
+  <h4>Syntaxe :</h4>
+  <p class="code">part_type_shape(ind, shape) ;</p>
+  <table>
+    <tbody>
+      <tr>
+        <th>Arguments</th>
+        <th>Description</th>
+      </tr>
+      <tr>
+        <td>ind</td>
+        <td>L'indice du type de particule à définir.</td>
+      </tr>
+      <tr>
+        <td>forme</td>
+        <td>La forme à choisir.</td>
+      </tr>
+    </tbody>
+  </table>
+  <p> </p>
+  <h4>Les retours :</h4>
+  <p class="code">N/A</p>
+  <p> </p>
+  <h4>Exemple :</h4>
+  <p class="code">global.p1 = part_type_create() ;<br> part_type_shape(global.p1, pt_shape_square) ;<br> part_type_size(global.p1, 1, 3, 0, 0) ;<br> part_type_scale(global.p1, 1, 1) ;<br> part_type_colour1(global.p1, c_white) ;<br> part_type_alpha2(global.p1, 1, 0) ;<br> part_type_speed(global.p1, 2, 4, 0, 0) ;<br> part_type_direction(global.p1, 0, 180, 0, 0) ;<br> part_type_gravity(global.p1, 0.20, 270) ;<br> part_type_orientation(global.p1, 0, 0, 0, 0, 1) ;<br> part_type_blend(global.p1, 1) ;<br> part_type_life(global.p1,
+    15, 60) ;</p>
+  <p>Le code ci-dessus définit le type de particule indexé dans la variable globale &quot;p1&quot; à la forme d'un carré, puis définit diverses autres propriétés de la particule.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <div class="footer">
+    <div class="buttons">
+      <div class="clear">
+        <div style="float:left">Retour : <a href="Particle_Types.htm">Types de particules</a></div>
+        <div style="float:right">Suivant : <a href="part_type_sprite.htm">part_type_sprite</a></div>
+      </div>
+    </div>
+    <h5><span data-keyref="Copyright Notice">Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
   </div>
   <!-- KEYWORDS
 part_type_shape

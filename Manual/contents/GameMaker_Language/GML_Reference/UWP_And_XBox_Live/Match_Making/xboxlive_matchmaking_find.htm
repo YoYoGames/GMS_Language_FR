@@ -7,11 +7,73 @@
   <meta name="generator" content="Adobe RoboHelp 2019" />
   <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
   <meta name="rh-authors" content="Mark Alexander" />
-  <meta name="topic-comment" content="Page de référence pour xboxlive_matchmaking_find" />
+  <meta name="topic-comment" content="Reference page for xboxlive_matchmaking_find" />
   <meta name="rh-index-keywords" content="xboxlive_matchmaking_find" />
   <meta name="search-keywords" content="xboxlive_matchmaking_find" />
 </head>
-<body><!--<div class="body-scroll" style="top: 150px;">--><h1>xboxlive_matchmaking_find</h1><p> Cette fonction recherchera une session multi-joueurs à l&#39;aide du modèle de session, de la trémie de matchmaking et du modèle Secure Device Association, que vous auriez dû créer au préalable dans le tableau de bord XDP. L&#39;ID utilisateur que vous pouvez récupérer pour une manette de jeu particulière en appelant le <a href="../Users_And_Accounts/xboxlive_user_for_pad.htm"><tt>xboxlive_user_for_pad()</tt></a> fonction. La fonction renverra une valeur d&#39;ID de demande unique, qui peut ensuite être utilisée pour identifier l&#39; <a href="../../../../The_Asset_Editors/Object_Properties/Async_Events/Social.htm">événement social asynchrone</a> correct pour cette fonction. Cet événement sera déclenché lorsque la session aura été créée et contiendra une DS Map dans la variable <a href="../../../GML_Overview/Variables/Builtin_Global_Variables/async_load.htm"><tt>async_load</tt></a> avec les paires clé / valeur suivantes:</p><ul class="colour"><li> &quot;requestid&quot; - contient l&#39;ID de demande tel que renvoyé par la fonction appelante</li><li> &quot;status&quot; - contient la chaîne &quot;session_created&quot; pour vous informer du type d&#39;événement qui a été déclenché.</li><li> &quot;num_results&quot; - contient 1 ou plus si une session a été trouvée, sinon contient 0.</li><li> &quot;sessionid <i>&lt;index&gt;</i> &quot; - contient l&#39;ID de session, ou -1 en cas d&#39;échec ( <i>&lt;index / gt;</i> est une valeur de 0 à &quot;num_results&quot; - 1).</li><li> &quot;sessionOwner <i>&lt;index&gt;</i> &quot; - contient l&#39;ID de l&#39;hôte de session si une session a été trouvée ( <i>&lt;index&gt;</i> est une valeur de 0 à &quot;num_results&quot; - 1).</li><li> &quot;erreur&quot; - contient 0 en cas de succès, ou -1 en cas d&#39;échec</li></ul><p></p><h4> Syntaxe:</h4><p class="code">xboxlive_matchmaking_find(user_id, template, hopper, sdatemplate, [matchattributes]);</p><table><tbody><tr><th> Argument</th><th> Description</th></tr><tr><td> <span class="notranslate">user_id</span></td><td> Le pointeur d&#39;ID utilisateur à utiliser</td></tr><tr><td> <span class="notranslate">template</span></td><td> Le nom du modèle de session</td></tr><tr><td> <span class="notranslate">hopper</span></td><td> Le nom de la trémie de matchmaking</td></tr><tr><td> <span class="notranslate">sdatemplate</span></td><td> Le nom du modèle d&#39;association d&#39;appareils sécurisés</td></tr><tr><td> <span class="notranslate">matchattributes</span></td><td> [OPTIONNEL]</td></tr></tbody></table><p></p><h4> Retour:</h4><p class="code">Request ID (integer)</p><p></p><h4> Exemple:</h4><p class="code">var userID = xboxone_user_for_pad(global.PadIndex);<br/> result = xboxone_matchmaking_find(userID, &quot;MatchTicketSession&quot;, &quot;MatchTicketHopper&quot;, &quot;PeerServerTraffic&quot;);</p><p> Ce qui précède récupérera l&#39;ID utilisateur de l&#39;utilisateur sur la manette de jeu donnée, puis essaiera de trouver une session de matchmaking pour eux. </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> Retour: <a href="Match_Making.htm">Match Making</a></div><div style="float:right"> Suivant:<a href="xboxlive_matchmaking_session_get_users.htm">xboxlive_matchmaking_session_get_users</a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
+<body>
+  <!--<div class="body-scroll" style="top: 150px;">-->
+  <h1>xboxlive_matchmaking_find</h1>
+  <p>Cette fonction va rechercher une session multi-joueurs à l'aide du modèle de session, de la trémie de matchmaking et du modèle d'association de dispositifs sécurisés, que vous devriez avoir créés au préalable dans le tableau de bord XDP. L'ID utilisateur que vous pouvez récupérer pour une
+    pad de jeu particulier en appelant la <a href="../Users_And_Accounts/xboxlive_user_for_pad.htm"><tt>xboxlive_user_for_pad()</tt></a> . La fonction renverra une valeur unique d'ID de demande, qui peut ensuite être utilisée pour identifier l'<a href="../../../../The_Asset_Editors/Object_Properties/Async_Events/Social.htm">événement asynchrone social</a> correct pour cette fonction. Cet événement sera déclenché lorsque la session aura été créée et contiendra une carte DS dans la variable <a href="../../../GML_Overview/Variables/Builtin_Global_Variables/async_load.htm"><tt>async_load</tt></a> avec les paires clé/valeur suivantes
+    paires clé/valeur suivantes :</p>
+  <ul class="colour">
+    <li>&quot;requestid&quot; - contient l'ID de la demande tel que renvoyé par la fonction appelante.</li>
+    <li>&quot;status&quot; - contient la chaîne &quot;session_created&quot; pour vous informer du type d'événement qui a été déclenché.</li>
+    <li>&quot;num_results&quot; - contient 1 ou plus si une session a été trouvée, sinon contient 0.</li>
+    <li>&quot;sessionid&lt;index&gt;<i>&quot; -</i> contient l'ID de la session, ou -1 en cas d'échec (&lt;index/gt ; est une<i> valeur de 0</i> à &quot;num_results&quot; - 1).</li>
+    <li>&quot;sessionOwner&lt;index&gt;<i>&quot; -</i> contient l'ID de l'hôte de la session si une session a été trouvée (&lt;index&gt; est une<i> valeur de 0 à</i> &quot;num_results&quot; - 1).</li>
+    <li>&quot;error&quot; - contient 0 en cas de succès, ou -1 en cas d'échec</li>
+  </ul>
+  <p> </p>
+  <h4>Syntaxe :</h4>
+  <p class="code">xboxlive_matchmaking_find(user_id, template, hopper, sdatemplate, [matchattributes]) ;</p>
+  <table>
+    <tbody>
+      <tr>
+        <th>Arguments</th>
+        <th>Description</th>
+      </tr>
+      <tr>
+        <td>nom d'utilisateur</td>
+        <td>Le pointeur d'identification de l'utilisateur à utiliser</td>
+      </tr>
+      <tr>
+        <td>modèle</td>
+        <td>Le nom du modèle de session</td>
+      </tr>
+      <tr>
+        <td>Trémie</td>
+        <td>Le nom de la trémie d'allumage</td>
+      </tr>
+      <tr>
+        <td>sdatemplate</td>
+        <td>Le nom du modèle d'association de dispositifs sécurisés</td>
+      </tr>
+      <tr>
+        <td>matchattributes</td>
+        <td>[OPTIONNEL]</td>
+      </tr>
+    </tbody>
+  </table>
+  <p> </p>
+  <h4>Les retours :</h4>
+  <p class="code">ID de la demande (nombre entier)</p>
+  <p> </p>
+  <h4>Exemple :</h4>
+  <p class="code">var userID = xboxone_user_for_pad(global.PadIndex) ;<br> result = xboxone_matchmaking_find(userID, &quot;MatchTicketSession&quot;, &quot;MatchTicketHopper&quot;, &quot;PeerServerTraffic&quot;) ;</p>
+  <p>L'exemple ci-dessus récupère l'ID de l'utilisateur sur la manette de jeu donnée et essaie ensuite de trouver une session de jumelage pour lui.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <div class="footer">
+    <div class="buttons">
+      <div class="clear">
+        <div style="float:left">Retour : <a href="Match_Making.htm">Match Making</a></div>
+        <div style="float:right">Suivant : <a href="xboxlive_matchmaking_session_get_users.htm">xboxlive_matchmaking_session_get_users</a></div>
+      </div>
+    </div>
+    <h5><span data-keyref="Copyright Notice">Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
   </div>
   <!-- KEYWORDS
 xboxlive_matchmaking_find

@@ -7,11 +7,57 @@
   <meta name="generator" content="Adobe RoboHelp 2019" />
   <link rel="stylesheet" href="../../../../../assets/css/default.css" type="text/css" />
   <meta name="rh-authors" content="Mark Alexander" />
-  <meta name="topic-comment" content="Page expliquant la fonction audio_free_play_queue" />
+  <meta name="topic-comment" content="Page explaining the function audio_free_play_queue" />
   <meta name="rh-index-keywords" content="audio_free_play_queue" />
   <meta name="search-keywords" content="audio_free_play_queue" />
 </head>
-<body><!--<div class="body-scroll" style="top: 150px;">--><h1>audio_free_play_queue</h1><p> Cette fonction permet de libérer la mémoire associée à la file d&#39;attente audio donnée. L&#39;index de la file d&#39;attente est la valeur renvoyée lorsque vous avez créé la file d&#39;attente à l&#39;aide de la fonction <a href="audio_create_play_queue.htm"><tt>audio_create_play_queue()</tt></a>, et cette fonction doit être appelée lorsque la file d&#39;attente n&#39;est plus nécessaire pour éviter les fuites de mémoire. La libération de la file d&#39;attente arrêtera tout son en cours de lecture et vous ne pourrez pas supprimer la mémoire tampon à partir de laquelle un son est diffusé tant que la file d&#39;attente à laquelle il est affecté n&#39;a pas été libérée. Cette fonction déclenchera un <a href="../../../../../The_Asset_Editors/Object_Properties/Async_Events/Audio_Playback.htm">événement asynchrone de lecture audio</a>, et dans ce cas, une <a href="../../../Data_Structures/DS_Maps/DS_Maps.htm">carte DS</a> spéciale sera créée dans la variable <a href="../../../../GML_Overview/Variables/Builtin_Global_Variables/async_load.htm"><tt>async_load</tt></a> avec les paires clé / valeur suivantes:</p><ul class="colour"><li> &quot; <strong>queue_id</strong> &quot; - la file d&#39;attente qui a fini de lire les données</li><li> &quot; <strong>buffer_id</strong> &quot; - le tampon qui n&#39;est plus lu à partir de</li><li> &quot; <strong>queue_shutdown</strong> &quot; - il est mis à 0 pendant la lecture normale et à 1 lorsque l&#39;événement est reçu car vous avez libéré la file d&#39;attente avec cette fonction. Lorsqu&#39;il est défini sur 1, vous ne souhaitez pas mettre d&#39;autres données en file d&#39;attente.</li></ul><p></p><h4> Syntaxe:</h4><p class="code">audio_free_play_queue(queueIndex);</p><table><tbody><tr><th> Argument</th><th> Description</th></tr><tr><td> <span class="notranslate">queueIndex</span></td><td> L&#39;index de la file d&#39;attente à libérer.</td></tr></tbody></table><p></p><h4> Retour:</h4><p class="code">N/A</p><p></p><h4> Exemple:</h4><p class="code">var q_id = async_load[? &quot;queue_id&quot;];<br/> if (q_id == audio_queue)<br/>     {<br/>     audio_free_play_queue(audio_queue);<br/>     buffer_delete(audio_buffer);<br/>     }</p><p> Le code ci-dessus ira dans l&#39; <a href="../../../../../The_Asset_Editors/Object_Properties/Async_Events/Audio_Playback.htm">événement de lecture audio</a> asynchrone et vérifie si l&#39;audio qui a fini de jouer provient de &quot;audio_queue&quot; et si c&#39;est le cas, il libère la file d&#39;attente et le tampon qui lui est associé. </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> Arrière: <a href="../Audio.htm">Tampons audio</a></div><div style="float:right"> Suivant:<a href="audio_queue_sound.htm">audio_queue_sound</a></div><div style="float:right"></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
+<body>
+  <!--<div class="body-scroll" style="top: 150px;">-->
+  <h1>audio_free_play_queue</h1>
+  <p>Cette fonction est utilisée pour libérer la mémoire associée à la file d'attente audio donnée. L'index de la file est la valeur renvoyée lorsque vous avez créé la file à l'aide de la fonction <a href="audio_create_play_queue.htm"><tt>audio_create_play_queue()</tt></a>et
+    cette fonction doit être appelée lorsque la file d'attente n'est plus nécessaire afin d'éviter les fuites de mémoire. Libérer la file d'attente arrêtera tout son en cours de lecture, et vous ne pouvez pas supprimer le tampon à partir duquel un son est diffusé tant que la file d'attente à laquelle il est assigné n'a pas été libérée.
+    que la file d'attente à laquelle il est affecté n'ait été libérée. Cette fonction déclenche un <a href="../../../../../The_Asset_Editors/Object_Properties/Async_Events/Audio_Playback.htm">événement asynchrone de lecture audio</a> et, dans cet événement, une <a href="../../../Data_Structures/DS_Maps/DS_Maps.htm">carte DS</a> spéciale est créée dans la variable
+    sera créée dans la variable <a href="../../../../GML_Overview/Variables/Builtin_Global_Variables/async_load.htm"><tt>async_load</tt></a> avec les paires clé/valeur suivantes :</p>
+  <ul class="colour">
+    <li>&quot;queue_id<strong>&quot; -</strong> la file d'attente qui a terminé la lecture des données.</li>
+    <li>&quot;<strong>buffer_id&quot; -</strong> le tampon qui n'est plus lu.</li>
+    <li>&quot;queue_shutdown<strong>&quot; -</strong> ce paramètre est défini à 0 pendant la lecture normale et à 1 lorsque l'événement est reçu parce que vous avez libéré la file d'attente avec cette fonction. Lorsque cette valeur est 1, vous ne voulez pas mettre en file d'attente d'autres données.</li>
+  </ul>
+  <p> </p>
+  <h4>Syntaxe :</h4>
+  <p class="code">audio_free_play_queue(queueIndex) ;</p>
+  <table>
+    <tbody>
+      <tr>
+        <th>Arguments</th>
+        <th>Description</th>
+      </tr>
+      <tr>
+        <td>queueIndex</td>
+        <td>L'index de la file d'attente à libérer.</td>
+      </tr>
+    </tbody>
+  </table>
+  <p> </p>
+  <h4>Les retours :</h4>
+  <p class="code">N/A</p>
+  <p> </p>
+  <h4>Exemple :</h4>
+  <p class="code">var q_id = async_load[ ? &quot;queue_id&quot;] ;<br> if (q_id == audio_queue)<br> {<br> audio_free_play_queue(audio_queue) ;<br> buffer_delete(audio_buffer) ;<br> }</p>
+  <p>Le code ci-dessus se place dans l'événement de <a href="../../../../../The_Asset_Editors/Object_Properties/Async_Events/Audio_Playback.htm">lecture audio</a> asynchrone et vérifie si l'audio qui a fini de jouer provient de la &quot;file d'attente audio&quot;.
+    et si c'est le cas, il libère la file d'attente et le tampon qui lui est associé.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <div class="footer">
+    <div class="buttons">
+      <div class="clear">
+        <div style="float:left">Retour : <a href="../Audio.htm">Tampons audio</a></div>
+        <div style="float:right">Suivant : <a href="audio_queue_sound.htm">audio_queue_sound</a></div>
+        <div style="float:right"> </div>
+      </div>
+    </div>
+    <h5><span data-keyref="Copyright Notice">Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
   </div>
   <!-- KEYWORDS
 audio_free_play_queue

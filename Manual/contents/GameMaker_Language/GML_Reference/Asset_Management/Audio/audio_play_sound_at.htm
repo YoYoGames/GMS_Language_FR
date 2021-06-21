@@ -7,13 +7,92 @@
   <meta name="generator" content="Adobe RoboHelp 2019" />
   <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
   <meta name="rh-authors" content="Mark Alexander" />
-  <meta name="topic-comment" content="Page expliquant la fonction audio_play_sound_at" />
+  <meta name="topic-comment" content="Page explaining the function audio_play_sound_at" />
   <meta name="rh-index-keywords" content="audio_play_sound_at" />
   <meta name="search-keywords" content="audio_play_sound_at" />
 </head>
-<body><!--<div class="body-scroll" style="top: 150px;">--><h1>audio_play_sound_at</h1><p> Avec cette fonction, vous pouvez lire n&#39;importe quelle ressource sonore à une position donnée dans l&#39;espace audio. Vous fournissez l&#39;index sonore, puis vous lui attribuez une position dans l&#39;espace 3D. La position de l&#39;auditeur par défaut est (0, 0, 0), cela signifie que si l&#39;auditeur n&#39;a pas été déplacé et que vous voulez que le son vienne de la gauche (par exemple), vous devez définir la position x sur une valeur négative (pour plus d&#39;informations sur le réglage de la position de l&#39;auditeur voir <a href="Audio_Listeners/audio_listener_position.htm"><tt>audio_listener_position()</tt></a> ).</p><p> Vous pouvez également définir une distance d&#39;atténuation (0 rendra le son silencieux, la valeur par défaut est 100) qui fera disparaître le son à mesure qu&#39;il s&#39;éloigne de la position de l&#39;auditeur. La façon dont le fondu lui-même est entendu dépendra de la référence d&#39;atténuation (qui est la distance sous laquelle le volume de la source chuterait normalement de moitié) et du facteur d&#39;atténuation (qui affecte le son au-delà de la distance de référence d&#39;atténuation uniquement). Le facteur par défaut est normalement 1, et l&#39;effet des différentes valeurs d&#39;atténuation dépendra du modèle choisi (pour un guide complet des différents modèles d&#39;atténuation et de la façon dont ces valeurs sont utilisées, veuillez consulter la fonction <a href="audio_falloff_set_model.htm"><tt>audio_falloff_set_model()</tt></a> ).</p><p> Les deux derniers arguments sont pour définir le son soit en boucle ou non et, enfin, pour attribuer une priorité au son. Cette priorité est ensuite utilisée pour déterminer comment les sons sont traités lorsque le nombre de sons joués dépasse la limite fixée par la fonction <a href="audio_channel_num.htm"><tt>audio_channel_num()</tt></a>. Les sons de priorité inférieure seront arrêtés au profit des sons de priorité plus élevée, et la valeur de priorité peut être n&#39;importe quel nombre réel (la valeur réelle est arbitraire, et peut être de 0 à 1 ou de 0 à 100, car <span class="notranslate">GameMaker Studio 2</span> donnera la même priorité. ). Notez que lorsqu&#39;il s&#39;agit de priorité, <i>plus</i> le nombre est <i>élevé, plus</i> la priorité est élevée, de sorte qu&#39;un son de priorité 100 sera privilégié par rapport à un son de priorité 1.</p><p> Cette fonction renverra un numéro d&#39;index unique pour le son en cours de lecture qui peut ensuite être stocké dans une variable afin que vous puissiez ensuite le mettre en pause ou l&#39;arrêter avec les fonctions appropriées. Cela signifie que si plusieurs instances du même son sont lues à un moment donné, vous pouvez cibler une seule instance de ce son à utiliser avec les fonctions audio.</p><p></p><h4> Syntaxe:</h4><p class="code">audio_play_sound_at(index, x, y, z, falloff_ref, falloff_max, falloff_factor, loop, priority);</p><table><tbody><tr><th> Argument</th><th> Description</th></tr><tr><td> <span class="notranslate">index</span></td><td> L&#39;index du son à jouer.</td></tr><tr><td> <span class="notranslate">x</span></td><td> La position x.</td></tr><tr><td> <span class="notranslate">y</span></td><td> La position y.</td></tr><tr><td> <span class="notranslate">z</span></td><td> La position z.</td></tr><tr><td> <span class="notranslate">falloff_ref</span></td><td> La référence d&#39;atténuation par rapport à l&#39;auditeur (pince).</td></tr><tr><td> <span class="notranslate">falloff_max</span></td><td> La distance d&#39;atténuation maximale par rapport à l&#39;auditeur.</td></tr><tr><td> <span class="notranslate">falloff_factor</span></td><td> Le facteur d&#39;atténuation (par défaut 1).</td></tr><tr><td> <span class="notranslate">loop</span></td><td> Marque le son comme en boucle ou non.</td></tr><tr><td> <span class="notranslate">priority</span></td><td> Définissez la priorité du canal pour le son.</td></tr></tbody></table><p></p><h4> Retour:</h4><p class="code">Index (sound ID)</p><p></p><h4> Exemple:</h4><p class="code">if global.SFX<br/>    {
-    <br/>    audio_play_sound_at(snd_Waterfall, x, y, 0, 100, 300, 1, true, 1);<br/>    }
-  </p><p> Le code ci-dessus vérifie la variable globale &quot;SFX&quot; et si elle renvoie <tt>true</tt> puis le son indexé dans la variable &quot;snd_Waterfall&quot; sera bouclé à sa position de pièce, avec une référence d&#39;atténuation de 100, une distance d&#39;atténuation de 300, un facteur d&#39;atténuation de 1 et une priorité faible. </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> Retour: <a href="Audio.htm">Audio</a></div><div style="float:right"> Suivant:<a href="audio_pause_sound.htm">audio_pause_sound</a></div><div style="float:right"></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
+<body>
+  <!--<div class="body-scroll" style="top: 150px;">-->
+  <h1>audio_play_sound_at</h1>
+  <p>Cette fonction permet de lire n'importe quelle ressource sonore à une position donnée dans l'espace audio. Vous fournissez l'index du son, puis vous lui attribuez une position dans l'espace 3D. La position par défaut de l'écouteur est (0, 0, 0).
+    n'a pas été déplacé et que vous souhaitez que le son provienne de la gauche (par exemple), vous devez définir la position x sur une valeur négative (pour plus d'informations sur la définition de la position de l'auditeur, voir <a href="Audio_Listeners/audio_listener_position.htm"><tt>audio_listener_position()</tt></a>).</p>
+  <p>Vous pouvez également définir une distance de décroissance (0 rendra le son silencieux, la valeur par défaut est 100) qui fera décroître le son à mesure qu'il s'éloigne de la position de l'auditeur. La façon dont le fondu est entendu dépend de la référence du fondu (qui est la distance sous laquelle le volume de la source devrait normalement diminuer de moitié).
+    sous laquelle le volume de la source devrait normalement diminuer de moitié) et du facteur d'atténuation (qui affecte le son uniquement au-delà de la distance de référence d'atténuation). Le facteur par défaut est normalement de 1, et l'effet des différentes valeurs de falloff dépendra du modèle choisi (pour un modèle complet, le facteur par défaut est de 1).
+    du modèle choisi (pour un guide complet des différents modèles de falloff et de l'utilisation de ces valeurs, veuillez consulter la fonction <a href="audio_falloff_set_model.htm"><tt>audio_falloff_set_model()</tt></a>).</p>
+  <p>Les deux derniers arguments servent à définir si le son doit être mis en boucle ou non et, enfin, à attribuer une priorité au son. Cette priorité est ensuite utilisée pour déterminer comment les sons sont traités lorsque le nombre de sons joués dépasse la limite fixée par la fonction
+    <a href="audio_channel_num.htm"><tt>audio_channel_num()</tt></a>. Les sons de priorité inférieure seront arrêtés en faveur des sons de priorité supérieure. La valeur de la priorité peut être un nombre réel quelconque (la valeur réelle est arbitraire et peut aller de 0 à 1 ou de 0
+    à 100, car <span class="notranslate">GameMaker Studio 2</span> leur accordera la même priorité). Notez que lorsqu'il s'agit de priorité, plus le nombre est <i>élevé</i>, plus la priorité est <i>élevée</i>, de sorte qu'un son de priorité 100 sera favorisé par rapport à un son de priorité 1.</p>
+  <p>Cette fonction renvoie un numéro d'index unique pour le son en cours de lecture, qui peut ensuite être stocké dans une variable afin que vous puissiez le mettre en pause ou l'arrêter avec les fonctions appropriées. Cela signifie que si vous avez plusieurs instances du même son en cours de lecture, vous pouvez
+    à un moment donné, vous pouvez cibler une seule instance de ce son à traiter à l'aide des fonctions audio.</p>
+  <p> </p>
+  <h4>Syntaxe :</h4>
+  <p class="code">audio_play_sound_at(index, x, y, z, falloff_ref, falloff_max, falloff_factor, loop, priority) ;</p>
+  <table>
+    <tbody>
+      <tr>
+        <th>Arguments</th>
+        <th>Description</th>
+      </tr>
+      <tr>
+        <td>indice</td>
+        <td>L'index du son à jouer.</td>
+      </tr>
+      <tr>
+        <td>x</td>
+        <td>La position x.</td>
+      </tr>
+      <tr>
+        <td>y</td>
+        <td>La position y.</td>
+      </tr>
+      <tr>
+        <td>z</td>
+        <td>La position z.</td>
+      </tr>
+      <tr>
+        <td>falloff_ref</td>
+        <td>La référence du falloff par rapport à l'auditeur (clamp).</td>
+      </tr>
+      <tr>
+        <td>falloff_max</td>
+        <td>La distance maximale de falloff par rapport à l'auditeur.</td>
+      </tr>
+      <tr>
+        <td>Facteur de falloff</td>
+        <td>Le facteur de falloff (par défaut 1).</td>
+      </tr>
+      <tr>
+        <td>boucle</td>
+        <td>Indique que le son est en boucle ou non.</td>
+      </tr>
+      <tr>
+        <td>priorité</td>
+        <td>Définissez la priorité du canal pour le son.</td>
+      </tr>
+    </tbody>
+  </table>
+  <p> </p>
+  <h4>Les retours :</h4>
+  <p class="code">Index (ID sonore)</p>
+  <p> </p>
+  <h4>Exemple :</h4>
+  <p class="code">if global.SFX<br> {
+    <br> audio_play_sound_at(snd_Waterfall, x, y, 0, 100, 300, 1, true, 1) ;<br> }
+  </p>
+  <p>Le code ci-dessus vérifie la variable globale &quot;SFX&quot; et s'il retourne vrai alors <tt>le</tt> son indexé dans la variable &quot;snd_Waterfall&quot; sera mis en boucle à sa position dans la pièce, avec une référence de chute de 100, une distance de chute de 300,
+    un facteur de falloff de 1 et une priorité faible.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <div class="footer">
+    <div class="buttons">
+      <div class="clear">
+        <div style="float:left">Retour : <a href="Audio.htm">Audio</a></div>
+        <div style="float:right">Suivant : <a href="audio_pause_sound.htm">audio_pause_sound</a></div>
+        <div style="float:right"> </div>
+      </div>
+    </div>
+    <h5><span data-keyref="Copyright Notice">Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
   </div>
   <!-- KEYWORDS
 audio_play_sound_at

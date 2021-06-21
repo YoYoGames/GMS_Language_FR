@@ -7,13 +7,82 @@
   <meta name="generator" content="Adobe RoboHelp 2019" />
   <link rel="stylesheet" href="../../../../../assets/css/default.css" type="text/css" />
   <meta name="rh-authors" content="Mark Alexander" />
-  <meta name="topic-comment" content="Page expliquant la fonction sprite_add_from_surface" />
+  <meta name="topic-comment" content="Page explaining the function sprite_add_from_surface" />
   <meta name="rh-index-keywords" content="sprite_add_from_surface" />
   <meta name="search-keywords" content="sprite_add_from_surface" />
 </head>
-<body><!--<div class="body-scroll" style="top: 150px;">--><h1>sprite_add_from_surface</h1><p> Cette fonction fonctionne exactement de la même manière que <a href="sprite_create_from_surface.htm"><tt>sprite_create_from_surface()</tt></a> seulement au lieu de créer une nouvelle image-objet à partir de la zone de la surface indexée que vous sélectionnez, elle ajoute la zone définie de la surface en tant que nouvelle sous-image à une image-objet précédemment créée (cela signifie que vous ne pouvez pas l&#39;ajouter directement à une image-objet à partir de l&#39;arborescence des ressources, mais plutôt uniquement celle créée précédemment à partir d&#39;une surface, ou celle qui a été dupliquée à partir d&#39;un sprite de ressource en utilisant <a href="sprite_duplicate.htm"><tt>sprite_duplicate()</tt></a> ).</p><p> Il convient de noter que la mémoire utilisée lors de l&#39;ajout d&#39;un sprite de cette manière sera plus grande que prévu. En effet, <span class="notranslate">GameMaker Studio 2</span> stockera le sprite en tant que page de texture <i>et</i> il sera également stocké dans la mémoire du GPU, de sorte que la mémoire totale sera plus grande que ce à quoi on pourrait s&#39;attendre pour un fichier image du même sprite.</p><p></p><h4> Syntaxe:</h4><p class="code">sprite_add_from_surface(index, surface, x, y, w, h, removeback, smooth);</p><table><tbody><tr><th> Argument</th><th> Description</th></tr><tr><td> <span class="notranslate">index</span></td><td> L&#39;index du sprite auquel ajouter la nouvelle image.</td></tr><tr><td> <span class="notranslate">surface</span></td><td> L&#39;indice de la surface à partir de laquelle obtenir l&#39;image.</td></tr><tr><td> <span class="notranslate">x</span></td><td> La position x à partir de laquelle copier.</td></tr><tr><td> <span class="notranslate">y</span></td><td> La position y à partir de laquelle copier.</td></tr><tr><td> <span class="notranslate">w</span></td><td> La largeur de la zone à copier (à partir de la position x).</td></tr><tr><td> <span class="notranslate">h</span></td><td> La hauteur de la zone à copier (à partir de la position y).</td></tr><tr><td> <span class="notranslate">removeback</span></td><td> Indique s&#39;il faut rendre transparents tous les pixels avec la couleur d&#39;arrière-plan (pixel en bas à gauche).</td></tr><tr><td> <span class="notranslate">smooth</span></td><td> Indique s&#39;il faut lisser les bords.</td></tr></tbody></table><p></p><h4> Retour:</h4><p class="code">N/A</p><p></p><h4> Exemple:</h4><p class="code">spr_custom = sprite_create_from_surface(surf, 0, 0, 32, 32, true, true, 16, 16);<br/> var i;<br/> for (i = 1; i &lt; 8; i +=1)<br/>     {
-    <br/>     sprite_add_from_surface(spr_Custom, surf, i, 0, 32, 32, true, true, 16, 16);<br/>     }
-  </p><p> Le code ci-dessus crée un sprite à partir de la surface indexée dans la variable &quot;surf&quot;, affectant son index à la variable &quot;spr_Custom&quot;, puis utilise un <tt>for</tt> boucle pour se déplacer sur la surface et capturer diverses sections qui sont ajoutées dans le sprite en tant que sous-images. </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> Retour: <a href="Sprite_Manipulation.htm">Manipulation des sprites</a></div><div style="float:right"> Suivant:<a href="sprite_collision_mask.htm">sprite_collision_mask</a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
+<body>
+  <!--<div class="body-scroll" style="top: 150px;">-->
+  <h1>sprite_add_from_surface</h1>
+  <p>Cette fonction fonctionne exactement de la même manière que <a href="sprite_create_from_surface.htm"><tt>sprite_create_from_surface()</tt></a> sauf qu'au lieu de créer un nouveau sprite à partir de la zone de la surface indexée que vous sélectionnez, elle
+    ajoute la zone définie de la surface en tant que nouvelle sous-image à un sprite précédemment créé (cela signifie que vous ne pouvez pas l'ajouter directement à un sprite de l'arborescence des ressources, mais uniquement à un sprite précédemment créé à partir d'une surface, ou à un sprite qui a été dupliqué
+    à partir d'un sprite de ressource en utilisant <a href="sprite_duplicate.htm"><tt>sprite_duplicate()</tt></a>).</p>
+  <p>Il convient de noter que la mémoire utilisée lors de l'ajout d'un sprite de cette manière sera plus importante que vous ne le pensez. En effet, <span class="notranslate">GameMaker Studio 2</span> stockera le sprite en tant que page de texture <i>et</i> il sera également stocké dans la mémoire du GPU.
+    sera également stocké dans la mémoire du GPU. La mémoire totale sera donc plus importante que celle d'un fichier image du même sprite.</p>
+  <p> </p>
+  <h4>Syntaxe :</h4>
+  <p class="code">sprite_add_from_surface(index, surface, x, y, w, h, removeback, smooth) ;</p>
+  <table>
+    <tbody>
+      <tr>
+        <th>Arguments</th>
+        <th>Description</th>
+      </tr>
+      <tr>
+        <td>indice</td>
+        <td>L'index du sprite auquel ajouter la nouvelle image.</td>
+      </tr>
+      <tr>
+        <td>surface</td>
+        <td>L'indice de la surface à partir de laquelle l'image est obtenue.</td>
+      </tr>
+      <tr>
+        <td>x</td>
+        <td>La position x à partir de laquelle copier.</td>
+      </tr>
+      <tr>
+        <td>y</td>
+        <td>La position y à partir de laquelle la copie doit être effectuée.</td>
+      </tr>
+      <tr>
+        <td>w</td>
+        <td>La largeur de la zone à copier (à partir de la position x).</td>
+      </tr>
+      <tr>
+        <td>h</td>
+        <td>La hauteur de la zone à copier (à partir de la position y).</td>
+      </tr>
+      <tr>
+        <td>retirer</td>
+        <td>Indique s'il faut rendre transparents tous les pixels ayant la couleur de fond (pixel inférieur gauche).</td>
+      </tr>
+      <tr>
+        <td>lisse</td>
+        <td>Indique s'il faut lisser les bords.</td>
+      </tr>
+    </tbody>
+  </table>
+  <p> </p>
+  <h4>Les retours :</h4>
+  <p class="code">N/A</p>
+  <p> </p>
+  <h4>Exemple :</h4>
+  <p class="code">spr_custom = sprite_create_from_surface(surf, 0, 0, 32, 32, true, true, 16, 16) ;<br> var i ;<br> for (i = 1 ; i &lt; 8 ; i +=1)<br> {
+    <br> sprite_add_from_surface(spr_Custom, surf, i, 0, 32, 32, true, true, 16, 16) ;<br> }
+  </p>
+  <p>Le code ci-dessus crée un sprite à partir de la surface indexée dans la variable &quot;surf&quot;, en affectant son index à la variable &quot;spr_Custom&quot;, puis utilise une boucle for pour se déplacer <tt>sur la</tt> surface et capturer différentes sections qui sont ajoutées dans le sprite en tant que sous-images.
+    diverses sections qui sont ajoutées au sprite en tant que sous-images.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <div class="footer">
+    <div class="buttons">
+      <div class="clear">
+        <div style="float:left">Retour : <a href="Sprite_Manipulation.htm">Manipulation des sprites</a></div>
+        <div style="float:right">Suivant : <a href="sprite_collision_mask.htm">sprite_collision_mask</a></div>
+      </div>
+    </div>
+    <h5><span data-keyref="Copyright Notice">Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
   </div>
   <!-- KEYWORDS
 sprite_add_from_surface

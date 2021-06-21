@@ -7,12 +7,76 @@
   <meta name="generator" content="Adobe RoboHelp 2019" />
   <link rel="stylesheet" href="../../../../../assets/css/default.css" type="text/css" />
   <meta name="rh-authors" content="Mark Alexander" />
-  <meta name="topic-comment" content="Page expliquant la fonction sprite_set_speed" />
+  <meta name="topic-comment" content="Page explaining the function sprite_set_speed" />
   <meta name="rh-index-keywords" content="sprite_set_speed" />
   <meta name="search-keywords" content="sprite_set_speed,spritespeed_framespergameframe,spritespeed_framespersecond" />
 </head>
-<body><!--<div class="body-scroll" style="top: 150px;">--><h1>sprite_set_speed</h1><p> Cette fonction peut être utilisée pour définir la vitesse et le type d&#39;animation de base comme pour la ressource de sprite. Ceci est normalement défini dans l&#39; <a href="../../../../../The_Asset_Editors/Sprites.htm">éditeur de</a> sprite, mais il peut y avoir des moments où vous devez le définir manuellement pour une ressource de sprite donnée. Vous devez fournir l&#39;index du sprite à définir, la vitesse d&#39;animation et le type de vitesse d&#39;animation à appliquer. Le type de vitesse d&#39;animation peut être l&#39;une des constantes suivantes:<br/></p><table><tbody><tr><th> Constant</th><th> Description</th></tr><tr><td><span class="notranslate"><span class="inline">spritespeed_framespersecond</span></span></td><td> Le sprite a été défini avec une animation en <i>images par seconde</i>.</td></tr><tr><td><span class="notranslate"><span class="inline">spritespeed_framespergameframe</span></span></td><td> Le sprite a été défini avec une animation en <i>images par image de jeu</i>.</td></tr></tbody></table><p><br/> La sélection du type de vitesse à utiliser pour calculer les animations est très importante car il existe une énorme différence entre les deux options. Les deux exemples suivants illustrent cette différence:</p><ul class="colour"><li> Si vous avez un sprite qui dessine 1 image par <i>seconde</i> et définissez la vitesse de l&#39;image à 0,5, il dessinera à 0,5 image par seconde. Si la fréquence d&#39;images de votre jeu est de 60 images par seconde, le sprite dessinera 1 image pour 120 images de jeu.</li><li> Si vous avez un sprite qui dessine 1 image par image de <i>jeu</i> et définissez la vitesse d&#39;image sur 0,5, il dessinera 0,5 image par image de jeu. Si la fréquence d&#39;images de votre jeu est de 60 images par seconde, alors le sprite dessinera 30 images pour 60 images de jeu.</li></ul><p> Vous pouvez savoir quelle était la valeur de vitesse utilisée pour l&#39;animation de sprite en utilisant la fonction <a href="../Sprite_Information/sprite_get_speed.htm"><tt>sprite_get_speed()</tt></a>, et vous pouvez obtenir le type de vitesse d&#39;animation en utilisant <a
-      href="../Sprite_Information/sprite_get_speed_type.htm"><tt>sprite_get_speed_type()</tt></a>.</p><p class="note"> <b>IMPORTANT!</b> Cette fonction affectera la <b>ressource de</b> sprite donc toutes les modifications que vous apportez avec cette fonction affecteront <b>toutes les</b> instances qui utilisent le sprite et toutes les instances futures aussi.</p><p></p><h4> Syntaxe:</h4><p class="code">sprite_set_speed(index, speed, type)</p><table><tbody><tr><th> Argument</th><th> Description</th></tr><tr><td> <span class="notranslate">index</span></td><td> L&#39;index du sprite pour obtenir le type d&#39;animation de</td></tr></tbody></table><p></p><h4> Retour:</h4><p class="code">Constant (see above)</p><p></p><h4> Exemple:</h4><p class="code">sprite_set_speed(sprite_index, 10, spritespeed_framespersecond);</p><p> Le code ci-dessus définit la vitesse d&#39;animation de base pour le sprite affecté à l&#39;instance à 10 images par seconde. </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> Retour: <a href="Sprite_Manipulation.htm">Manipulation des sprites</a></div><div style="float:right"> Suivant:<a href="sprite_delete.htm">sprite_delete</a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
+<body>
+  <!--<div class="body-scroll" style="top: 150px;">-->
+  <h1>sprite_set_speed</h1>
+  <p>Cette fonction peut être utilisée pour définir la vitesse et le type d'animation de base pour la ressource sprite. Ces paramètres sont normalement définis dans l'<a href="../../../../../The_Asset_Editors/Sprites.htm">éditeur de sprites</a>, mais il peut arriver que vous deviez les définir manuellement pour une ressource sprite donnée.
+    de les définir manuellement pour une ressource sprite donnée. Vous devez fournir l'index du sprite à définir, la vitesse d'animation et le type de vitesse d'animation à appliquer. Le type de vitesse d'animation peut être l'une des constantes suivantes :<br>
+  </p>
+  <table>
+    <tbody>
+      <tr>
+        <th>Constant</th>
+        <th>Description</th>
+      </tr>
+      <tr>
+        <td><span class="inline">spritespeed_framespersecond</span></td>
+        <td>Le sprite a été défini avec une animation en <i>images par seconde</i>.</td>
+      </tr>
+      <tr>
+        <td><span class="inline">spritespeed_framespergameframe</span></td>
+        <td>Le sprite a été défini avec une animation en <i>frames par frame de jeu</i>.</td>
+      </tr>
+    </tbody>
+  </table>
+  <p><br> La sélection du type de vitesse à utiliser pour calculer les animations est très importante car il existe une énorme différence entre les deux options. Les deux exemples suivants illustrent cette différence :</p>
+  <ul class="colour">
+    <li>Si vous avez un sprite qui dessine 1 image par <i>seconde</i> et que vous réglez la vitesse de l'image sur 0,5, il sera dessiné à 0,5 image par seconde. Si la fréquence d'images de votre jeu est de 60 images par seconde, le sprite dessinera une image toutes les 120 images du jeu.
+      images du jeu.</li>
+    <li>Si vous avez un sprite qui dessine 1 image par <i>image du jeu</i> et que vous réglez la vitesse de l'image sur 0,5, il dessinera 0,5 image par image du jeu. Si la fréquence d'images de votre jeu est de 60 images par seconde, le sprite affichera 30 images pour 60 images de jeu.
+      toutes les 60 images du jeu.</li>
+  </ul>
+  <p>Vous pouvez trouver la valeur de la vitesse utilisée pour l'animation du sprite en utilisant la fonction <a href="../Sprite_Information/sprite_get_speed.htm"><tt>sprite_get_speed()</tt></a>et vous pouvez obtenir le type de vitesse d'animation à l'aide de la fonction 
+    <a href="../Sprite_Information/sprite_get_speed_type.htm"><tt>sprite_get_speed_type()</tt></a>.</p>
+  <p class="note"><b>IMPORTANT !</b> Cette fonction affectera la <b>ressource</b> sprite, donc tout changement effectué avec cette fonction affectera <b>toutes les</b> instances qui utilisent le sprite et toutes les instances futures également.
+    instances futures.</p>
+  <p> </p>
+  <h4>Syntaxe :</h4>
+  <p class="code">sprite_set_speed(index, vitesse, type)</p>
+  <table>
+    <tbody>
+      <tr>
+        <th>Arguments</th>
+        <th>Description</th>
+      </tr>
+      <tr>
+        <td>indice</td>
+        <td>L'index du sprite dont on veut obtenir le type d'animation</td>
+      </tr>
+    </tbody>
+  </table>
+  <p> </p>
+  <h4>Les retours :</h4>
+  <p class="code">Constant (voir ci-dessus)</p>
+  <p> </p>
+  <h4>Exemple :</h4>
+  <p class="code">sprite_set_speed(sprite_index, 10, spritespeed_framesperseconde) ;</p>
+  <p>Le code ci-dessus définit la vitesse d'animation de base du sprite affecté à l'instance à 10 images par seconde.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <div class="footer">
+    <div class="buttons">
+      <div class="clear">
+        <div style="float:left">Retour : <a href="Sprite_Manipulation.htm">Manipulation des sprites</a></div>
+        <div style="float:right">Suivant : <a href="sprite_delete.htm">sprite_delete</a></div>
+      </div>
+    </div>
+    <h5><span data-keyref="Copyright Notice">Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
   </div>
   <!-- KEYWORDS
 sprite_set_speed

@@ -7,14 +7,52 @@
   <meta name="generator" content="Adobe RoboHelp 2019" />
   <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
   <meta name="rh-authors" content="Mark Alexander" />
-  <meta name="topic-comment" content="Page de référence pour physics_particle_set_density" />
+  <meta name="topic-comment" content="Reference page for physics_particle_set_density" />
   <meta name="rh-index-keywords" content="physics_particle_set_density" />
   <meta name="search-keywords" content="physics_particle_set_density" />
 </head>
-<body><!--<div class="body-scroll" style="top: 150px;">--><h1>physics_particle_set_density</h1><p> Avec cette fonction, vous pouvez définir la densité des particules dans une simulation physique. Le réglage de la densité de la particule aura un impact direct sur la quantité d&#39;inertie dont elle dispose ainsi que sur la façon dont elle réagit aux collisions, donc si vous créez une petite particule avec une densité élevée, elle aura une très grande masse, mais si vous définissez un grosse particule de faible densité, elle aura une masse beaucoup plus petite. Cette fonction a <i>une</i> portée globale, en ce sens qu&#39;elle modifiera la densité non seulement pour les nouvelles particules créées après le changement, mais aussi pour celles déjà présentes dans la simulation.</p><p></p><h4> Syntaxe:</h4><p class="code">physics_particle_set_density(density)</p><table><tbody><tr><th> Argument</th><th> Description</th></tr><tr><td> <span class="notranslate">density</span></td><td> La densité de la fixation de particules.</td></tr></tbody></table><p></p><h4> Retour:</h4><p class="code">N/A</p><p></p><h4> Exemple:</h4><p class="code">physics_particle_set_radius(15);<br/> physics_particle_set_density(0.5);
-    <br/> physics_particle_set_damping(1);
-    <br/> physics_particle_set_gravity_scale(1);
-  </p><p> Le code ci-dessus définira les propriétés de base de toutes les particules de la simulation. </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> Retour: <a href="Soft_Body_Particles.htm">Particules corporelles molles</a></div><div style="float:right"> Suivant:<a href="physics_particle_set_damping.htm">physics_particle_set_damping</a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
+<body>
+  <!--<div class="body-scroll" style="top: 150px;">-->
+  <h1>physics_particle_set_density</h1>
+  <p>Cette fonction vous permet de définir la densité des particules dans une simulation physique. La définition de la densité de la particule aura un impact direct sur son inertie et sur sa réaction aux collisions.
+    une densité élevée, elle aura une masse très importante, mais si vous définissez une grande particule avec une faible densité, elle aura une masse beaucoup plus faible. Cette fonction a une portée <i>globale</i>, en ce sens qu'elle modifie la densité non seulement pour les nouvelles particules créées après la modification, mais aussi pour celles déjà existantes.
+    la modification, mais aussi pour celles déjà présentes dans la simulation.</p>
+  <p> </p>
+  <h4>Syntaxe :</h4>
+  <p class="code">physics_particle_set_density(density)</p>
+  <table>
+    <tbody>
+      <tr>
+        <th>Arguments</th>
+        <th>Description</th>
+      </tr>
+      <tr>
+        <td>densité</td>
+        <td>La densité de la fixation de la particule.</td>
+      </tr>
+    </tbody>
+  </table>
+  <p> </p>
+  <h4>Les retours :</h4>
+  <p class="code">N/A</p>
+  <p> </p>
+  <h4>Exemple :</h4>
+  <p class="code">physics_particle_set_radius(15) ;<br> physics_particle_set_density(0.5) ;
+    <br> physics_particle_set_damping(1) ;
+    <br> physics_particle_set_gravity_scale(1) ;
+  </p>
+  <p>Le code ci-dessus définira les propriétés de base pour toutes les particules de la simulation.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <div class="footer">
+    <div class="buttons">
+      <div class="clear">
+        <div style="float:left">Retour : <a href="Soft_Body_Particles.htm">Particules molles du corps</a></div>
+        <div style="float:right">Suivant : <a href="physics_particle_set_damping.htm">physics_particle_set_damping</a></div>
+      </div>
+    </div>
+    <h5><span data-keyref="Copyright Notice">Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
   </div>
   <!-- KEYWORDS
 physics_particle_set_density

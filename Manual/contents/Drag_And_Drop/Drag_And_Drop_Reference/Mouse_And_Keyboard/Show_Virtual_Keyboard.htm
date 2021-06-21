@@ -7,11 +7,234 @@
   <meta name="generator" content="Adobe RoboHelp 2019" />
   <link rel="stylesheet" href="../../../assets/css/default.css" type="text/css" />
   <meta name="rh-authors" content="Mark Alexander" />
-  <meta name="topic-comment" content="Page qui explique l&#39;action Afficher le clavier virtuel" />
-  <meta name="rh-index-keywords" content="DnD ™ - Afficher le clavier virtuel" />
-  <meta name="search-keywords" content="Afficher le clavier virtuel" />
+  <meta name="topic-comment" content="Page that explains the Show Virtual Keyboard action" />
+  <meta name="rh-index-keywords" content="DnD™ Action - Show Virtual Keyboard" />
+  <meta name="search-keywords" content="Show Virtual Keyboard" />
 </head>
-<body><!--<div class="body-scroll" style="top: 150px;">--><h1><img alt="Show Virtual Keyboard Icon" class="icon" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Mouse_And_Keyboard/i_VirtualKeyboard_Show.png" /> Afficher le clavier virtuel</h1><p> Cette action peut être utilisée pour afficher le clavier virtuel sur l&#39;appareil exécutant le jeu. Lorsque vous appelez cette action, il vous sera demandé de fournir l&#39;une des constantes suivantes pour chacun des trois premiers arguments:</p><ul class="colour"><li> <b>Type de clavier</b>: Cette constante est utilisée pour définir quel jeu de touches sera disponible sur le clavier virtuel. Les types de clavier disponibles sont:<table><tbody><tr><th> Type de clavier</th><th> Description</th></tr><tr><td><span class="inline">kbv_type_default</span></td><td> Le type de clavier par défaut pour le système actuel.</td></tr><tr><td><span class="inline">kbv_type_ascii</span></td><td> Un clavier ASCII uniquement.</td></tr><tr><td><span class="inline">kbv_type_url</span></td><td> Un clavier normal optimisé pour la saisie d&#39;URL. Comprend généralement un &quot;.com&quot; ou d&#39;autres clés de domaine, ainsi que &quot;/&quot; et &quot;.&quot; clés.</td></tr><tr><td><span class="inline">kbv_type_email</span></td><td> Un clavier normal optimisé pour la saisie des e-mails. Comprend généralement &quot;@&quot; et &quot;.&quot; personnages.</td></tr><tr><td><span class="inline">kbv_type_numbers</span></td><td> Un clavier composé uniquement de chiffres, généralement affiché sous forme de pavé numérique.</td></tr><tr><td><span class="inline">kbv_type_phone</span></td><td> Un clavier de téléphone. Généralement des chiffres uniquement avec les touches &quot;*&quot; et &quot;#&quot;.</td></tr><tr><td><span class="inline">kbv_type_phone_name</span></td><td> Un clavier optimisé pour saisir à la fois un numéro de téléphone et un nom. Généralement similaire à un clavier ASCII, mais avec une sélection de caractères spéciaux limitée.</td></tr></tbody></table></li><li> <b>Type de retour</b>: Cette constante est utilisée pour définir ce qui est affiché sur la touche retour / action du clavier virtuel. Les types de retour disponibles sont:<table><tbody><tr><th> Type de retour</th><th> Description</th></tr><tr><td><span class="inline">kbv_returnkey_default</span></td><td> Titre de la clé de retour par défaut pour le système actuel.</td></tr><tr><td><span class="inline">kbv_returnkey_go</span></td><td> Définit le titre de la clé de retour sur &quot;Go&quot;.</td></tr><tr><td><span class="inline">kbv_returnkey_google</span></td><td> Définit le titre de la clé de retour sur &quot;Google&quot; ou sur une icône de recherche générique dans certains cas.</td></tr><tr><td><span class="inline">kbv_returnkey_join</span></td><td> Définit le titre de la clé de retour sur &quot;Go&quot;.</td></tr><tr><td><span class="inline">kbv_returnkey_next</span></td><td> Définit le titre de la clé de retour sur &quot;Suivant&quot;.</td></tr><tr><td><span class="inline">kbv_returnkey_route</span></td><td> Définit le titre de la touche de retour sur &quot;Route&quot;.</td></tr><tr><td><span class="inline">kbv_returnkey_search</span></td><td> Définit le titre de la clé de retour sur &quot;Rechercher&quot; ou sur une icône de recherche générique dans certains cas.</td></tr><tr><td><span class="inline">kbv_returnkey_send</span></td><td> Définit le titre de la touche de retour sur «Envoyer».</td></tr><tr><td><span class="inline">kbv_returnkey_yahoo</span></td><td> Définit le titre de la clé de retour sur &quot;Yahoo&quot; ou sur une icône de recherche générique dans certains cas.</td></tr><tr><td><span class="inline">kbv_returnkey_done</span></td><td> Définit le titre de la clé de retour sur &quot;Terminé&quot;.</td></tr><tr><td><span class="inline">kbv_returnkey_continue</span></td><td> Définit le titre de la clé de retour sur &quot;Continuer&quot;.</td></tr><tr><td><span class="inline">kbv_returnkey_emergency</span></td><td> Définit le titre de la touche de retour sur &quot;Appel d&#39;urgence&quot;.</td></tr></tbody></table></li><li> <b>Type d&#39;autocapitalisation</b>: Cette constante est utilisée pour déterminer comment les mots saisis via le clavier virtuel doivent être autocapitalisés. Les types d&#39;autocapitalisation disponibles sont:<table><tbody><tr><th> Type d&#39;autocapitalisation</th><th> Description</th></tr><tr><td><span class="inline">kbv_autocapitalize_none</span></td><td> L&#39;autocapitalisation est désactivée.</td></tr><tr><td><span class="inline">kbv_autocapitalize_words</span></td><td> Les mots seront automatiquement mis en majuscules.</td></tr><tr><td><span class="inline">kbv_autocapitalize_sentences</span></td><td> Les phrases seront automatiquement mises en majuscules.</td></tr><tr><td><span class="inline">kbv_autocapitalize_characters</span></td><td> Tous les caractères seront en majuscules.</td></tr></tbody></table></li></ul><p> Le dernier argument consiste à activer / désactiver le texte prédictif, et ce serait défini sur <tt>true</tt> pour le permettre, et <tt>false</tt> sinon, mais notez que ce n&#39;est pas parce qu&#39;il est autorisé qu&#39;il sera utilisé car cela dépendra des préférences de l&#39;utilisateur sur l&#39;appareil. En mode de texte prédictif, le clavier virtuel ne génère pas d&#39;événements de pression de touche <span class="notranslate">GameMaker Studio 2</span> Au lieu de cela, il ne mettra à jour que le <i>dernier</i> caractère appuyé et les variables de chaîne du clavier. Cela est dû à l&#39;incapacité de détecter si un changement dans le champ de texte interne utilisé pour détecter les pressions sur les touches provenait d&#39;une touche réelle du clavier virtuel ou d&#39;une suggestion de texte. Dans ces cas, vous voudrez lire le <tt>keyboard_string</tt> par opposition à la lecture de tout type d&#39;entrée de clé brute.</p><p> Il est également important de noter que l&#39;utilisateur obtiendra différents claviers avec des capacités différentes selon le système d&#39;exploitation de la plate-forme, avec les mises en garde suivantes pour une utilisation par cible:</p><ul class="colour"><li> <b>UWP</b>: l&#39;implémentation UWP ne prend pas en charge <tt>return_key_type</tt>, <tt>autocapitalization_type</tt> ou <tt>predictive_text_enabled</tt>. Passer ces paramètres dans une fonction ne causera aucune erreur, ils n&#39;auront tout simplement aucun effet sur le clavier.</li><li> <b><span class="notranslate">Android</span> / <span class="notranslate">Amazon Fire</span></b>: sur <span class="notranslate">Android</span>, le type de clavier <tt>kbv_type_phone_name</tt> n&#39;est pas pris en charge et affichera un clavier ASCII à la place, et le type de touche de retour ne peut être <tt>kbv_returnkey_go</tt>, <tt>kbv_returnkey_search</tt>, <tt>kbv_returnkey_next</tt>, <tt>kbv_returnkey_send</tt> ou <tt>kbv_returnkey_done</tt>. Si d&#39;autres types de clés de retour sont utilisés sur cette plate-forme, le système utilisera par défaut les clés de retour de remplacement répertoriées ci-dessous:<table><tbody><tr><th> Clé de retour indisponible</th><th> Clé de remplacement </th></tr><tr><td><span class="inline">kbv_returnkey_google</span><br/> <span class="inline">kbv_returnkey_yahoo</span></td><td><span class="inline">kbv_returnkey_search</span></td></tr><tr><td><span class="inline">kbv_returnkey_join</span><br/> <span class="inline">kbv_returnkey_route</span><br/> <span class="inline">kbv_returnkey_emergency</span></td><td><span class="inline">kbv_returnkey_go</span></td></tr><tr><td><span class="inline">kbv_returnkey_continue</span></td><td><span class="inline">kbv_returnkey_next</span></td></tr></tbody></table></li><br/><li> <b><span class="notranslate">Android</span> TV / FireTV</b>: les types de touches de retour personnalisées <i>ne</i> sont pas pris en charge sur les claviers ASCII - la touche de retour par défaut sera toujours affichée.</li><li> <b><span class="notranslate">tvOS</span></b>: le texte prédictif et la mise en majuscule automatique ne sont pas pris en charge sur <span class="notranslate">tvOS</span>, et la hauteur du clavier est renvoyée par les événements système et la fonction <a href="../../../GameMaker_Language/GML_Reference/Game_Input/Virtual_Keys_And_Keyboards/keyboard_virtual_height.htm"><tt>keyboard_virtual_height()</tt></a> sera par défaut à la hauteur de l&#39;écran car elle couvre tout l&#39;écran et en raison de la désactivation des fonctions de dimension droite du clavier sur <span class="notranslate">tvOS</span>. Notez également que les événements de clavier physique (Bluetooth) ne seront pas diffusés tant que le clavier virtuel n&#39;a pas été ouvert.</li></ul><p> L&#39;appel de cette fonction générera un <a href="../../../The_Asset_Editors/Object_Properties/Async_Events.htm">événement asynchrone système</a>, dans lequel le <tt><a href="../../../GameMaker_Language/GML_Overview/Variables/Builtin_Global_Variables/async_load.htm">async_load</a> </tt> <a href="../../../GameMaker_Language/GML_Reference/Data_Structures/DS_Maps/DS_Maps.htm">La carte DS</a> sera remplie avec les paires clé / valeur suivantes:</p><ul class="colour"><li> &quot; <b>event_type</b> &quot; - ce sera &quot;l&#39; <b>état du clavier virtuel</b> &quot; lorsqu&#39;il est déclenché par des actions du clavier virtuel.</li><li> &quot; <b>screen_height</b> &quot; - la hauteur du clavier virtuel (en pixels). Ce sera 0 si le clavier est invisible.</li><li> &quot; <b>keyboard_status</b> &quot; - l&#39;état actuel du clavier, renvoyé par l&#39;une des chaînes suivantes:<ul class="colour"><li> &quot;cache&quot;</li><li> &quot;caché&quot;</li><li> &quot;montrant&quot;</li><li> &quot;visible&quot;</li></ul></li></ul><p></p><h4> Syntaxe de l&#39;action:</h4><p><img alt="Show Virtual Keyboard Action" class="center" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Mouse_And_Keyboard/a_VirtualKeyboard_Show.png" /></p><h4> Arguments:</h4><p></p><table><tbody><tr><th> Argument</th><th> Description</th></tr><tr><td> <span class="notranslate">keyboard_type</span></td><td> Détermine le jeu de touches disponible sur le clavier virtuel.</td></tr><tr><td> <span class="notranslate">return_key_type</span></td><td> Détermine ce qui est affiché sur la touche retour / action du clavier virtuel.</td></tr><tr><td> <span class="notranslate">autocapitalization_type</span></td><td> Détermine comment / si les mots saisis via le clavier virtuel seront autocapitalisés.</td></tr><tr><td> <span class="notranslate">predictive_text_enabled</span></td><td> Mis à <tt>true</tt> /<tt>false</tt> pour activer / désactiver la saisie de texte prédictive.</td></tr></tbody></table><p></p><h4> Exemple:</h4><p><img alt="Show Virtual Keyboard Example" class="center" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Mouse_And_Keyboard/a_VirtualKeyboard_Show.png" /> Le code de bloc d&#39;action ci-dessus vérifie une action de souris enfoncée, et si une action est détectée, une vérification est effectuée pour voir si le clavier virtuel du système d&#39;exploitation est affiché. Si ce n&#39;est pas le cas, il est configuré pour afficher - à l&#39;aide d&#39;un type de pavé numérique - et s&#39;il est déjà affiché, il est masqué. </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> Retour: <a href="Mouse_And_Keyboard_Actions.htm">Actions de la souris et du clavier</a></div><div style="float:right"> Suivant: <a href="Hide_Virtual_Keyboard.htm">Masquer le clavier virtuel</a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
+<body>
+  <!--<div class="body-scroll" style="top: 150px;">-->
+  <h1><img alt="Show Virtual Keyboard Icon" class="icon" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Mouse_And_Keyboard/i_VirtualKeyboard_Show.png"> Afficher le clavier virtuel</h1>
+  <p>Cette action peut être utilisée pour afficher le clavier virtuel sur le périphérique exécutant le jeu. Lorsque vous appelez cette action, il vous sera demandé de fournir l'une des constantes suivantes pour chacun des trois premiers arguments :</p>
+  <ul class="colour">
+    <li><b>Type de clavier</b>: Cette constante est utilisée pour définir le jeu de touches qui sera disponible sur le clavier virtuel. Les types de clavier disponibles sont les suivants :
+      <table>
+        <tbody>
+          <tr>
+            <th>Type de clavier</th>
+            <th>Description</th>
+          </tr>
+          <tr>
+            <td><span class="inline">kbv_type_default</span></td>
+            <td>Le type de clavier par défaut pour le système actuel.</td>
+          </tr>
+          <tr>
+            <td><span class="inline">kbv_type_ascii</span></td>
+            <td>Un clavier uniquement ASCII.</td>
+          </tr>
+          <tr>
+            <td><span class="inline">kbv_type_url</span></td>
+            <td>Un clavier normal optimisé pour la saisie d'URL. Il comporte généralement un &quot;.com&quot; ou d'autres touches de domaine, ainsi que des touches &quot;/&quot; et &quot;.&quot;.</td>
+          </tr>
+          <tr>
+            <td><span class="inline">kbv_type_email</span></td>
+            <td>Un clavier normal optimisé pour la saisie d'e-mails. Comporte généralement les caractères &quot;@&quot; et &quot;.&quot;.</td>
+          </tr>
+          <tr>
+            <td><span class="inline">kbv_type_numbers</span></td>
+            <td>Un clavier uniquement numérique, généralement représenté par un pavé numérique.</td>
+          </tr>
+          <tr>
+            <td><span class="inline">kbv_type_phone</span></td>
+            <td>Un clavier de pavé téléphonique. Généralement composé de chiffres uniquement avec les touches &quot;*&quot; et &quot;#&quot;.</td>
+          </tr>
+          <tr>
+            <td><span class="inline">kbv_type_phone_name</span></td>
+            <td>Un clavier optimisé pour la saisie d'un numéro de téléphone et d'un nom. Généralement similaire à un clavier ASCII, mais avec une sélection limitée de caractères spéciaux.</td>
+          </tr>
+        </tbody>
+      </table>
+    </li>
+    <li><b>Type de retour</b>: Cette constante est utilisée pour définir ce qui est affiché sur la touche retour/action du clavier virtuel. Les types de retour disponibles sont les suivants :
+      <table>
+        <tbody>
+          <tr>
+            <th>Type de retour</th>
+            <th>Description</th>
+          </tr>
+          <tr>
+            <td><span class="inline">kbv_returnkey_default</span></td>
+            <td>Le titre de la touche de retour par défaut pour le système actuel.</td>
+          </tr>
+          <tr>
+            <td><span class="inline">kbv_returnkey_go</span></td>
+            <td>Définit le titre de la touche de retour à &quot;Go&quot;.</td>
+          </tr>
+          <tr>
+            <td><span class="inline">kbv_returnkey_google</span></td>
+            <td>Définit le titre de la touche de retour à &quot;Google&quot;, ou à une icône de recherche générique dans certains cas.</td>
+          </tr>
+          <tr>
+            <td><span class="inline">kbv_returnkey_join</span></td>
+            <td>Définit le titre de la touche de retour à &quot;Aller&quot;.</td>
+          </tr>
+          <tr>
+            <td><span class="inline">kbv_returnkey_next</span></td>
+            <td>Définit le titre de la touche de retour à &quot;Suivant&quot;.</td>
+          </tr>
+          <tr>
+            <td><span class="inline">kbv_returnkey_route</span></td>
+            <td>La touche de retour s'intitule &quot;Itinéraire&quot;.</td>
+          </tr>
+          <tr>
+            <td><span class="inline">kbv_returnkey_search</span></td>
+            <td>Définit le titre de la touche de retour à &quot;Rechercher&quot;, ou à une icône de recherche générique dans certains cas.</td>
+          </tr>
+          <tr>
+            <td><span class="inline">kbv_returnkey_send</span></td>
+            <td>Définit le titre de la touche de retour à &quot;Envoyer&quot;.</td>
+          </tr>
+          <tr>
+            <td><span class="inline">kbv_returnkey_yahoo</span></td>
+            <td>Définit le titre de la touche de retour à &quot;Yahoo&quot;, ou à une icône de recherche générique dans certains cas.</td>
+          </tr>
+          <tr>
+            <td><span class="inline">kbv_returnkey_done</span></td>
+            <td>Définit le titre de la touche de retour à &quot;Done&quot;.</td>
+          </tr>
+          <tr>
+            <td><span class="inline">kbv_returnkey_continue</span></td>
+            <td>La touche de retour s'affiche sous le titre &quot;Continuer&quot;.</td>
+          </tr>
+          <tr>
+            <td><span class="inline">kbv_returnkey_emergency</span></td>
+            <td>Définit le titre de la touche de retour à &quot;Appel d'urgence&quot;.</td>
+          </tr>
+        </tbody>
+      </table>
+    </li>
+    <li><b>Type de capitalisation automatique</b>: Cette constante est utilisée pour déterminer comment les mots tapés via le clavier virtuel doivent être capitalisés automatiquement. Les types de capitalisation automatique disponibles sont :
+      <table>
+        <tbody>
+          <tr>
+            <th>Type de capitalisation automatique</th>
+            <th>Description</th>
+          </tr>
+          <tr>
+            <td><span class="inline">kbv_autocapitalize_none</span></td>
+            <td>La capitalisation automatique est désactivée.</td>
+          </tr>
+          <tr>
+            <td><span class="inline">kbv_autocapitalize_words</span></td>
+            <td>Les mots seront mis en majuscules automatiquement.</td>
+          </tr>
+          <tr>
+            <td><span class="inline">kbv_autocapitalize_sentences</span></td>
+            <td>Les phrases seront mises en majuscules automatiquement.</td>
+          </tr>
+          <tr>
+            <td><span class="inline">kbv_autocapitalize_characters</span></td>
+            <td>Tous les caractères seront mis en majuscules.</td>
+          </tr>
+        </tbody>
+      </table>
+    </li>
+  </ul>
+  <p>Le dernier argument permet d'activer/désactiver le texte prédictif. Il doit être défini sur <tt>true (vrai)</tt> pour l'autoriser et sur <tt>false (faux)</tt> dans le cas contraire, mais notez que ce n'est pas parce qu'il est autorisé qu'il sera utilisé, car cela dépendra des préférences de l'utilisateur du périphérique.
+    de l'utilisateur de l'appareil. En mode texte prédictif, le clavier virtuel ne génère pas d'événements de pression de touche normaux dans <span class="notranslate">GameMaker Studio 2</span>. Au lieu de cela, il mettra uniquement à jour le <i>dernier</i> caractère pressé et les variables de la chaîne de caractères du clavier. Cela est dû à
+    l'incapacité de détecter si un changement dans le champ de texte interne utilisé pour détecter les pressions de touche provient d'une touche réelle du clavier virtuel ou d'une suggestion de texte. Dans ce cas, il est préférable de lire l'entrée <tt>keyboard_string</tt> plutôt que de
+    plutôt que de lire n'importe quel type d'entrée de touche brute.</p>
+  <p>Il est également important de noter que l'utilisateur obtiendra des claviers différents avec des capacités différentes selon le système d'exploitation de la plate-forme, avec les réserves suivantes pour une utilisation par cible :</p>
+  <ul class="colour">
+    <li><b>UWP</b>: L'implémentation UWP ne prend pas en charge les paramètres <tt>return_key_type</tt>, <tt>autocapitalization_type</tt> et <tt>predictive_text_enabled</tt>. Le passage de ces paramètres dans une fonction ne causera aucune erreur, ils n'auront simplement aucun effet sur le clavier.
+      effet sur le clavier.</li>
+    <li><b><span class="notranslate">Android</span> / <span class="notranslate">Amazon Fire</span></b>: Sur <span class="notranslate">Android</span>, le type de clavier <tt>kbv_type_phone_name</tt> n'est pas pris en charge et affichera un clavier ASCII à la place, et le type de touche de retour ne peut être que <tt>kbv_returnkey_go</tt>, <tt>kbv_returnkey_search</tt>, <tt>kbv_returnkey_next</tt>,
+     <tt>kbv_returnkey_send</tt> ou <tt>kbv_returnkey_done</tt>. Si d'autres types de clés de retour sont utilisés sur cette plate-forme, le système utilisera par défaut les clés de retour de remplacement énumérées ci-dessous :
+      <table>
+        <tbody>
+          <tr>
+            <th>Clé de retour non disponible</th>
+            <th>Clé de remplacement</th>
+          </tr>
+          <tr>
+            <td><span class="inline">kbv_returnkey_google</span><br>
+              <span class="inline">kbv_returnkey_yahoo</span></td>
+            <td><span class="inline">kbv_returnkey_search</span></td>
+          </tr>
+          <tr>
+            <td><span class="inline">kbv_returnkey_join</span><br>
+              <span class="inline">kbv_returnkey_route</span><br>
+              <span class="inline">kbv_returnkey_emergency</span></td>
+            <td><span class="inline">kbv_returnkey_go</span></td>
+          </tr>
+          <tr>
+            <td><span class="inline">kbv_returnkey_continue</span></td>
+            <td><span class="inline">kbv_returnkey_next</span></td>
+          </tr>
+        </tbody>
+      </table>
+    </li>
+    <br />
+    <li><b><span class="notranslate">AndroidTV</span></b>/ FireTV: Les types de touches de retour personnalisés <i>ne</i> sont <i>pas</i> pris en charge sur les claviers ASCII - la touche de retour par défaut sera toujours affichée.</li>
+    <li><b><span class="notranslate">tvOS</span></b>: Le texte prédictif et la capitalisation automatique ne sont pas pris en charge sur <span class="notranslate">tvOS</span>, et la hauteur du clavier renvoyée par les événements système et la fonction. <a href="../../../GameMaker_Language/GML_Reference/Game_Input/Virtual_Keys_And_Keyboards/keyboard_virtual_height.htm"><tt>keyboard_virtual_height()</tt></a>      correspondra par défaut à la hauteur de l'écran, étant donné qu'il s'étend sur tout l'écran et que les fonctions de dimensionnement du clavier sont désactivées sur <span class="notranslate">tvOS</span>. Notez également que les événements liés au clavier physique (Bluetooth) ne seront pas diffusés si le clavier virtuel n'a pas été ouvert.
+      été ouvert.</li>
+  </ul>
+  <p>L'appel de cette fonction génère un <a href="../../../The_Asset_Editors/Object_Properties/Async_Events.htm">événement asynchrone du système</a>, dans lequel la carte DS est remplie avec les paires clé/valeur suivantes <tt><a href="../../../GameMaker_Language/GML_Overview/Variables/Builtin_Global_Variables/async_load.htm">async_load</a> </tt>   <a href="../../../GameMaker_Language/GML_Reference/Data_Structures/DS_Maps/DS_Maps.htm">DS map</a> sera remplie avec les paires clé/valeur suivantes :</p>
+  <ul class="colour">
+    <li>&quot;event_type<b>&quot; -</b> il s'agira de &quot;l'<b>état du clavier</b> virtuel<b>&quot; lorsqu'il sera déclenché</b> par des actions du clavier virtuel.</li>
+    <li>&quot;<b>screen_height &quot; -</b> la hauteur du clavier virtuel (en pixels). Elle sera de 0 si le clavier est invisible.</li>
+    <li>&quot;<b>keyboard_status &quot; -</b> l'état actuel du clavier, renvoyé comme l'une des chaînes suivantes :
+      <ul class="colour">
+        <li>&quot;hiding&quot; (caché)</li>
+        <li>&quot;caché&quot;</li>
+        <li>&quot;visible&quot;</li>
+        <li>&quot;visible&quot;</li>
+      </ul>
+    </li>
+  </ul>
+  <p> </p>
+  <h4>Syntaxe de l'action :</h4>
+  <p><img alt="Show Virtual Keyboard Action" class="center" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Mouse_And_Keyboard/a_VirtualKeyboard_Show.png" /></p>
+  <h4>Arguments :</h4>
+  <p> </p>
+  <table>
+    <tbody>
+      <tr>
+        <th>Arguments</th>
+        <th>Description</th>
+      </tr>
+      <tr>
+        <td>Type de clavier</td>
+        <td>Détermine le jeu de touches disponible sur le clavier virtuel.</td>
+      </tr>
+      <tr>
+        <td>Type de clé de retour</td>
+        <td>Détermine ce qui est affiché sur la touche retour/action du clavier virtuel.</td>
+      </tr>
+      <tr>
+        <td>Type d'autocapitalisation</td>
+        <td>Détermine comment/si les mots tapés via le clavier virtuel seront autocapitalisés.</td>
+      </tr>
+      <tr>
+        <td>texte_prédictif_activé</td>
+        <td>Définissez cette option sur <tt>true/false</tt> pour activer/désactiver la saisie de texte prédictive.</td>
+      </tr>
+    </tbody>
+  </table>
+  <p> </p>
+  <h4>Exemple :</h4>
+  <p><img alt="Show Virtual Keyboard Example" class="center" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Mouse_And_Keyboard/a_VirtualKeyboard_Show.png">Le code du bloc d'action ci-dessus vérifie qu'il n'y a pas d'action de la souris vers le bas.
+    détectée, une vérification est effectuée pour voir si le clavier virtuel du système d'exploitation est affiché. S'il ne l'est pas, il est configuré pour être affiché - en utilisant un clavier numérique - et s'il est déjà affiché, il est masqué.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <div class="footer">
+    <div class="buttons">
+      <div class="clear">
+        <div style="float:left">Retour : <a href="Mouse_And_Keyboard_Actions.htm">Actions de la souris et du clavier</a></div>
+        <div style="float:right">Suivant : <a href="Hide_Virtual_Keyboard.htm">Masquer le clavier virtuel</a></div>
+      </div>
+    </div>
+    <h5><span data-keyref="Copyright Notice">Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
   </div>
   <!-- KEYWORDS
 Action - Show Virtual Keyboard

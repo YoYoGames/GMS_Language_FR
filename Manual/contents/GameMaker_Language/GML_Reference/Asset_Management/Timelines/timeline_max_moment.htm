@@ -3,17 +3,54 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>timeline_max_moment</title>
+  <title>délai_maximum_moment</title>
   <meta name="generator" content="Adobe RoboHelp 2019" />
   <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
   <meta name="rh-authors" content="Mark Alexander" />
-  <meta name="topic-comment" content="Page décrivant la fonction timeline_max_moment" />
+  <meta name="topic-comment" content="Page outlining the function timeline_max_moment" />
   <meta name="rh-index-keywords" content="timeline_max_moment" />
   <meta name="search-keywords" content="timeline_max_moment" />
 </head>
-<body><!--<div class="body-scroll" style="top: 150px;">--><h1>timeline_max_moment</h1><p> Cette fonction renverra la valeur du moment où la chronologie effectue son action finale. Donc, si vous avez une chronologie avec 8 actions différentes placées à 20 minutes d&#39;intervalle, cette fonction renverrait la valeur de moment de la dernière action de cette chronologie, qui serait 160. Cette fonction est un bon moyen de tester si une chronologie a passé le dernier moment actif lors de l&#39;exécution, car la position de la chronologie continuera d&#39;augmenter à chaque étape du jeu, qu&#39;il y ait d&#39;autres actions ou non.</p><p></p><h4> Syntaxe:</h4><p class="code">timeline_max_moment(ind);</p><table><tbody><tr><th> Argument</th><th> Description</th></tr><tr><td> <span class="notranslate">ind</span></td><td> L&#39;index de la chronologie pour obtenir le dernier moment.</td></tr></tbody></table><p></p><h4> Retour:</h4><p class="code">N/A</p><p></p><h4> Exemple:</h4><p class="code">if timeline_position &gt; timeline_max_moment(timeline_index)<br/>     {
-    <br/>     timeline_running = false;<br/>     }
-  </p><p> Le code ci-dessus vérifiera la position actuelle de la chronologie par rapport au moment actif maximum, et si elle est supérieure, la chronologie sera arrêtée. </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> Retour: <a href="Timelines.htm">Chronologies</a></div><div style="float:right"> Suivant:<a href="timeline_index.htm">timeline_index</a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
+<body>
+  <!--<div class="body-scroll" style="top: 150px;">-->
+  <h1>délai_maximum_moment</h1>
+  <p>Cette fonction renvoie la valeur du moment où la timeline effectue sa dernière action. Ainsi, si vous avez une ligne de temps avec 8 actions différentes placées à 20 moments d'intervalle, cette fonction renverra la valeur du moment de la dernière action dans cette ligne de temps,
+    qui serait de 160. Cette fonction est un bon moyen de tester si une ligne de temps a dépassé le dernier moment actif lors de son exécution, puisque la position de la ligne de temps continuera à s'incrémenter à chaque étape du jeu, qu'il y ait d'autres actions ou non.</p>
+  <p> </p>
+  <h4>Syntaxe :</h4>
+  <p class="code">timeline_max_moment(ind) ;</p>
+  <table>
+    <tbody>
+      <tr>
+        <th>Arguments</th>
+        <th>Description</th>
+      </tr>
+      <tr>
+        <td>ind</td>
+        <td>L'index de la ligne de temps pour obtenir le dernier moment.</td>
+      </tr>
+    </tbody>
+  </table>
+  <p> </p>
+  <h4>Les retours :</h4>
+  <p class="code">N/A</p>
+  <p> </p>
+  <h4>Exemple :</h4>
+  <p class="code">si timeline_position &gt; timeline_max_moment(timeline_index)<br> {
+    <br> timeline_running = false ;<br> }
+  </p>
+  <p>Le code ci-dessus vérifiera la position actuelle de la timeline par rapport au moment actif maximum, et si elle est supérieure, la timeline sera arrêtée.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <div class="footer">
+    <div class="buttons">
+      <div class="clear">
+        <div style="float:left">Retour : <a href="Timelines.htm">Lignes du temps</a></div>
+        <div style="float:right">Suivant : <a href="timeline_index.htm">timeline_index</a></div>
+      </div>
+    </div>
+    <h5><span data-keyref="Copyright Notice">Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
   </div>
   <!-- KEYWORDS
 timeline_max_moment

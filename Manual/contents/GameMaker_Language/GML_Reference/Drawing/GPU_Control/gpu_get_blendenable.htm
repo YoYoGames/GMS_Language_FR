@@ -7,14 +7,38 @@
   <meta name="generator" content="Adobe RoboHelp 2019" />
   <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
   <meta name="rh-authors" content="Mark Alexander" />
-  <meta name="topic-comment" content="Référence pour la fonction gpu_get_blendenable" />
+  <meta name="topic-comment" content="Reference for the function gpu_get_blendenable" />
   <meta name="rh-index-keywords" content="gpu_get_blendenable" />
   <meta name="search-keywords" content="gpu_get_blendenable" />
 </head>
-<body><!--<div class="body-scroll" style="top: 150px;">--><h1>gpu_get_blendenable</h1><p> Cette fonction peut être utilisée pour récupérer l&#39;état de fusion alpha. S&#39;il revient <tt>true</tt> alors l&#39;alpha-blending est activé, et s&#39;il retourne <tt>false</tt> il est désactivé. Par défaut, il est activé et donc la fonction retournera <tt>true</tt></p><p></p><h4> Syntaxe:</h4><p class="code">gpu_get_blendenable();</p><p></p><h4> Retour:</h4><p class="code">Boolean</p><p></p><h4> Exemple:</h4><p class="code">if gpu_get_blendenable() == false<br/>     {
-    <br/>     gpu_set_blendenable(true);
-    <br/>     }
-  </p><p> Le code ci-dessus vérifie l&#39;état du mélange alpha et s&#39;il est désactivé, il est à nouveau activé. </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> Retour: <a href="GPU_Control.htm">Contrôle GPU</a></div><div style="float:right"> Suivant:<a href="gpu_get_ztestenable.htm">gpu_get_ztestenable</a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
+<body>
+  <!--<div class="body-scroll" style="top: 150px;">-->
+  <h1>gpu_get_blendenable</h1>
+  <p>Cette fonction peut être utilisée pour récupérer l'état de l'alpha-blending. Si elle renvoie <tt>true</tt>, alors l'alpha-blending est activé, et si elle renvoie <tt>false</tt>, il est désactivé. Par défaut, il est activé et la fonction renvoie donc <tt>true</tt>.</p>
+  <p> </p>
+  <h4>Syntaxe :</h4>
+  <p class="code">gpu_get_blendenable() ;</p>
+  <p> </p>
+  <h4>Les retours :</h4>
+  <p class="code">Booléen</p>
+  <p> </p>
+  <h4>Exemple :</h4>
+  <p class="code">if gpu_get_blendenable() == false<br> {
+    <br> gpu_set_blendenable(true) ;
+    <br> }
+  </p>
+  <p>Le code ci-dessus vérifie l'état du mélange alpha et s'il est désactivé, il est réactivé.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <div class="footer">
+    <div class="buttons">
+      <div class="clear">
+        <div style="float:left">Retour : <a href="GPU_Control.htm">Contrôle du GPU</a></div>
+        <div style="float:right">Suivant : <a href="gpu_get_ztestenable.htm">gpu_get_ztestenable</a></div>
+      </div>
+    </div>
+    <h5><span data-keyref="Copyright Notice">Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
   </div>
   <!-- KEYWORDS
 gpu_get_blendenable

@@ -7,11 +7,72 @@
   <meta name="generator" content="Adobe RoboHelp 2019" />
   <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
   <meta name="rh-authors" content="Mark Alexander" />
-  <meta name="topic-comment" content="Page décrivant la fonction font_replace_sprite_ext" />
+  <meta name="topic-comment" content="Page outlining the function font_replace_sprite_ext" />
   <meta name="rh-index-keywords" content="font_replace_sprite_ext" />
   <meta name="search-keywords" content="font_replace_sprite_ext" />
 </head>
-<body><!--<div class="body-scroll" style="top: 150px;">--><h1>font_replace_sprite_ext</h1><p> Cette fonction remplacera une police de sprite que vous avez créée précédemment à l&#39;aide de la fonction <a href="font_add_sprite_ext.htm"><tt>font_add_sprite_ext()</tt></a>. Il utilise une &quot;bande de sprite&quot;, où chaque sous-image est un symbole ou une lettre individuelle, et les images sont mappées en lettres sur la base de l&#39;argument &quot;string_map&quot; de la fonction. Cet argument est une chaîne que vous pouvez utiliser pour indiquer à <span class="notranslate">GameMaker Studio 2</span> ordre des sous-images de la police de sprite et il les mappera automatiquement lors de l&#39;écriture de texte. Ainsi, par exemple, si vous avez un string-map de &quot;AaBbCcDdEeFfGgHh&quot;, votre police de sprite <i>doit</i> avoir les sous-images ordonnées de cette manière.</p><p> Vous pouvez également définir l&#39;espacement de la police pour qu&#39;il soit proportionnel (<tt>true</tt> ) ou non (<tt>false</tt> ), où une police proportionnelle est espacée en fonction de la largeur réelle des lettres (la lettre «i» prend donc moins de place que la lettre «w», par exemple) tandis qu&#39;une police non proportionnelle sera espacée en fonction du sous- largeur de l&#39;image, comme une police à espacement fixe. Enfin, vous pouvez définir l&#39;espace à laisser entre chaque lettre lors de l&#39;écriture, et cela peut être n&#39;importe quelle valeur entière, 0 étant sans espace (les lettres &quot;toucheront&quot; si elles sont proportionnelles). La fonction renvoie une <i>valeur d&#39;index</i> qui doit être stockée dans une variable car elle sera nécessaire dans tous les autres codes faisant référence à cette police.</p><p> Si la fonction échoue, elle échouera silencieusement sans remplacer la police de sprite donnée.</p><p class="note"> <b>REMARQUE:</b> Cette fonction nécessite que vous ayez préalablement ajouté une police de sprite à l&#39;aide de <span style="font-size:1px;"><a href="font_add_sprite.htm"><tt style="font-size: 14px">font_add_sprite ()</tt></a></span>, car elle la remplacera et ne peut pas être utilisée sur les polices incluses dans les ressources du jeu.</p><p></p><h4> Syntaxe:</h4><p class="code">font_replace_sprite_ext(font, spr, string_map, prop, sep);</p><table><tbody><tr><th> Argument</th><th> Description</th></tr><tr><td> <span class="notranslate">font</span></td><td> La police à remplacer.</td></tr><tr><td> <span class="notranslate">spr</span></td><td> Le sprite sur lequel ajouter une police.</td></tr><tr><td> <span class="notranslate">string_map</span></td><td> Chaîne à partir de laquelle l&#39;ordre des sous-images des sprites est pris.</td></tr><tr><td> <span class="notranslate">prop</span></td><td> Définir comme police proportionnelle ou non.</td></tr><tr><td> <span class="notranslate">sep</span></td><td> L&#39;espace à laisser entre chaque lettre.</td></tr></tbody></table><p></p><h4> Retour:</h4><p class="code">N/A</p><p></p><h4> Exemple:</h4><p></p><p class="code">font_replace_sprite_ext(global.Font, spr_CalcFont, &quot;0123456789+-*/=&quot;, true, 2);</p><p> Le code ci-dessus remplacera un actif de police de sprite qui est indexé dans la variable &quot;global.Font&quot; par des images de sprite indexées dans la variable &quot;spr_CalcFont&quot;. </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> Retour: <a href="Fonts.htm">Polices</a></div><div style="float:right"> Suivant:<a href="font_delete.htm">font_delete</a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
+<body>
+  <!--<div class="body-scroll" style="top: 150px;">-->
+  <h1>font_replace_sprite_ext</h1>
+  <p>Cette fonction remplacera une police sprite que vous avez créée précédemment à l'aide de la fonction <a href="font_add_sprite_ext.htm"><tt>font_add_sprite_ext()</tt></a>. Elle utilise une &quot;bande de sprites&quot;, où chaque sous-image est un symbole ou une lettre individuelle,
+    et les images sont mises en correspondance avec les lettres en fonction de l'argument &quot;string_map&quot; de la fonction. Cet argument est une chaîne de caractères que vous pouvez utiliser pour indiquer à <span class="notranslate">GameMaker Studio 2</span> l'ordre dans lequel les sous-images de la police sprite sont placées.
+    lors de l'écriture du texte. Ainsi, par exemple, si vous avez un mappage de chaîne de &quot;AaBbCcDdEeFfGgHh&quot;, votre police sprite doit avoir <i>les</i> sous-images ordonnées de cette façon.</p>
+  <p>Vous pouvez également définir l'espacement de la police pour qu'elle soit proportionnelle<tt>(true</tt>) ou non<tt>(false</tt>), où une police proportionnelle est espacée sur la base de la largeur réelle des lettres (ainsi, la lettre &quot;i&quot; prend moins de place que la lettre &quot;w&quot;,
+    par exemple), tandis qu'une police non proportionnelle sera espacée en fonction de la largeur de la sous-image, comme une police monospace. Enfin, vous pouvez définir l'espace à laisser entre chaque lettre lors de l'écriture, et il peut s'agir de n'importe quelle valeur entière, 0 correspondant à l'absence d'espace (les lettres se "toucheront" si elles sont proportionnelles).
+    lettres se &quot;toucheront&quot; si elles sont proportionnelles). La fonction renvoie une valeur d'<i>index</i> qui doit être stockée dans une variable car elle sera nécessaire dans tous les codes ultérieurs faisant référence à cette police.</p>
+  <p>Si la fonction échoue, elle échouera en silence sans remplacer la police de sprites donnée.</p>
+  <p class="note"><b>NOTE : </b>Cette fonction nécessite que vous ayez préalablement ajouté une police sprite en utilisant la fonction <span style="font-size:1px;"><a href="font_add_sprite.htm"><tt style="font-size: 14px">font_add_sprite()</tt></a></span>car elle la remplacera et ne pourra pas être utilisée
+    sur les polices qui sont incluses dans les ressources du jeu.</p>
+  <p> </p>
+  <h4>Syntaxe :</h4>
+  <p class="code">font_replace_sprite_ext(font, spr, string_map, prop, sep) ;</p>
+  <table>
+    <tbody>
+      <tr>
+        <th>Arguments</th>
+        <th>Description</th>
+      </tr>
+      <tr>
+        <td>police</td>
+        <td>La police à remplacer.</td>
+      </tr>
+      <tr>
+        <td>spr</td>
+        <td>Le sprite sur lequel ajouter une police.</td>
+      </tr>
+      <tr>
+        <td>carte_chaîne</td>
+        <td>Chaîne à partir de laquelle l'ordre de la sous-image du sprite est pris.</td>
+      </tr>
+      <tr>
+        <td>accessoire</td>
+        <td>Définir comme police proportionnelle ou non.</td>
+      </tr>
+      <tr>
+        <td>sep</td>
+        <td>L'espace à laisser entre chaque lettre.</td>
+      </tr>
+    </tbody>
+  </table>
+  <p> </p>
+  <h4>Les retours :</h4>
+  <p class="code">N/A</p>
+  <p> </p>
+  <h4>Exemple :</h4>
+  <p> </p>
+  <p class="code">font_replace_sprite_ext(global.Font, spr_CalcFont, &quot;0123456789+-*/=&quot;, true, 2) ;</p>
+  <p>Le code ci-dessus remplacera une police sprite indexée dans la variable &quot;global.Font&quot; par des images sprites indexées dans la variable &quot;spr_CalcFont&quot;.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <div class="footer">
+    <div class="buttons">
+      <div class="clear">
+        <div style="float:left">Retour : <a href="Fonts.htm">Polices de caractères</a></div>
+        <div style="float:right">Suivant : <a href="font_delete.htm">font_delete</a></div>
+      </div>
+    </div>
+    <h5><span data-keyref="Copyright Notice">Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
   </div>
   <!-- KEYWORDS
 font_replace_sprite_ext

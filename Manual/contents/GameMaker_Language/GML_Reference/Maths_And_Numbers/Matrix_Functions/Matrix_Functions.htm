@@ -2,17 +2,67 @@
 
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml"><head>
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-  <title>Fonctions de matrice</title>
-  <meta name="generator" content="Adobe RoboHelp 2019"/>
-  <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css"/>
-  <meta name="rh-authors" content="Mark Alexander"/>
-  <meta name="topic-comment" content="Section de référence pour les fonctions Matrix"/>
-  <meta name="rh-index-keywords" content=""/>
-  <meta name="search-keywords" content="Fonctions de matrice,matrix,matrices"/>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>Fonctions matricielles</title>
+  <meta name="generator" content="Adobe RoboHelp 2019" />
+  <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
+  <meta name="rh-authors" content="Mark Alexander" />
+  <meta name="topic-comment" content="Reference section for Matrix functions" />
+  <meta name="rh-index-keywords" content="" />
+  <meta name="search-keywords" content="Matrix Functions,matrix,matrices" />
 </head>
 
-<body><!--<div class="body-scroll" style="top: 150px;">--><h1> Fonctions de matrice</h1><p> Une matrice est une collection de nombres organisés en un nombre fixe de lignes et de colonnes. Habituellement, les nombres sont des nombres réels, mais cela ne doit pas toujours être le cas. L&#39;image suivante montre en général comment une matrice est construite avec quatre lignes et quatre colonnes:</p><p><img alt="Matrix example image" class="center" height="178" src="../../../../assets/Images/Scripting_Reference/GML/Reference/Maths/Matrix_Example.png" width="309"/> La ligne du haut est la ligne 1, la colonne la plus à gauche est la colonne 1, et cette matrice est une matrice 4x4 car elle comporte quatre lignes et quatre colonnes (d&#39;autres matrices de taille peuvent être construites). Dans la description des matrices, le format est toujours des lignes / colonnes, et chaque nombre qui compose une matrice est appelé un <i>élément</i> de la matrice. Les éléments d&#39;une matrice ont des emplacements spécifiques, décrits par leur position de ligne et de colonne où le coin supérieur gauche de la matrice est la ligne 1 colonne 1. Dans l&#39;exemple de matrice ci-dessus, l&#39;élément à la ligne 1 col 1 est la valeur &quot;1&quot;. L&#39;élément de la ligne 2, colonne 3, est la valeur «4,8».</p><p> Les matrices sont très importantes pour beaucoup de choses mais sont surtout utilisées dans le traitement de l&#39;espace 3D, par exemple elles peuvent être utilisées pour régler la vue de la caméra ou pour traduire ou transformer un modèle. Les fonctions suivantes existent pour traiter les matrices dans <span class="notranslate">GameMaker Studio 2</span>: </p><p></p><ul class="colour"><li><a href="matrix_get.htm">matrix_get</a></li><li><a href="matrix_set.htm">matrix_set</a></li><li><a href="matrix_build.htm">matrix_build</a></li><li><a href="matrix_multiply.htm">matrix_multiply</a></li><li><a href="matrix_build_identity.htm">matrix_build_identity</a></li><li><a href="matrix_build_lookat.htm">matrix_build_lookat</a></li><li><a href="matrix_build_projection_ortho.htm">matrix_build_projection_ortho</a></li><li><a href="matrix_build_projection_perspective.htm">matrix_build_projection_perspective</a></li><li><a href="matrix_build_projection_perspective_fov.htm">matrix_build_projection_perspective_fov</a></li><li><a href="matrix_transform_vertex.htm">matrix_transform_vertex</a></li><li><a href="../../Variable_Functions/is_matrix.htm">is_matrix</a></li></ul><p></p><p> Les fonctions suivantes sont destinées à l&#39;utilisation d&#39;une <strong>pile de</strong> matrices, qui est similaire à une <a href="../../Data_Structures/DS_Stacks/DS_Stacks.htm">pile DS</a>, mais conçue pour être utilisée uniquement avec des matrices. C&#39;est un moyen pratique d&#39;appliquer plusieurs opérations matricielles (comme des transformations) l&#39;une après l&#39;autre lors de la création d&#39;une scène 3D. </p><p></p><ul class="colour"><li><a href="matrix_stack_is_empty.htm">matrix_stack_is_empty</a></li><li><a href="matrix_stack_clear.htm">matrix_stack_clear</a></li><li><a href="matrix_stack_set.htm">matrix_stack_set</a></li><li><a href="matrix_stack_push.htm">matrix_stack_push</a></li><li><a href="matrix_stack_pop.htm">matrix_stack_pop</a></li><li><a href="matrix_stack_top.htm">matrix_stack_top</a></li></ul><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> Retour: <a href="../Maths_And_Numbers.htm">Maths et nombres</a></div><div style="float:right"> Suivant: <a href="../Date_And_Time/Date_And_Time.htm">Date et heure</a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
+<body>
+
+
+
+
+  <!--<div class="body-scroll" style="top: 150px;">-->
+  <h1>Fonctions matricielles</h1>
+  <p>Une matrice est un ensemble de nombres disposés en un nombre fixe de lignes et de colonnes. En général, les nombres sont des nombres réels, mais ce n'est pas toujours le cas. L'image suivante montre en général comment une matrice est construite avec quatre lignes
+    et quatre colonnes :</p>
+  <p><img alt="Matrix example image" class="center" height="178" src="../../../../assets/Images/Scripting_Reference/GML/Reference/Maths/Matrix_Example.png" width="309">La ligne supérieure est la ligne 1, la colonne la plus à gauche est la colonne 1, et cette matrice est une matrice 4x4
+    car elle comporte quatre lignes et quatre colonnes (il est possible de construire des matrices d'une autre taille). Dans la description des matrices, le format est toujours lignes / colonnes, et chaque nombre qui compose une matrice est appelé un <i>élément</i> de la matrice. Les éléments d'une matrice
+    ont des emplacements spécifiques, décrits par leur position en ligne et en colonne, le coin supérieur gauche de la matrice étant la ligne 1, colonne 1. Dans l'exemple de matrice ci-dessus, l'élément de la ligne 1 col 1 est la valeur &quot;1&quot;. L'élément de la ligne 2 colonne 3 est la valeur
+    valeur &quot;4.8&quot;.</p>
+  <p>Les matrices sont très importantes pour de nombreuses choses, mais elles sont surtout utilisées pour traiter l'espace 3D, par exemple pour définir la vue de la caméra ou pour translater ou transformer un modèle. Les fonctions suivantes permettent de traiter les matrices dans <span class="notranslate">GameMaker Studio 2</span>:</p>
+  <p> </p>
+  <ul class="colour">
+    <li><a href="matrix_get.htm">matrix_get</a></li>
+    <li><a href="matrix_set.htm">matrice_set</a></li>
+    <li><a href="matrix_build.htm">matrix_build</a></li>
+    <li><a href="matrix_multiply.htm">matrice_multiplier</a></li>
+    <li><a href="matrix_build_identity.htm">matrice_construction_identité</a></li>
+    <li><a href="matrix_build_lookat.htm">matrix_build_lookat</a></li>
+    <li><a href="matrix_build_projection_ortho.htm">matrice_construction_projection_ortho</a></li>
+    <li><a href="matrix_build_projection_perspective.htm">matrice_construction_projection_perspective</a></li>
+    <li><a href="matrix_build_projection_perspective_fov.htm">construction_matrice_projection_perspective_fov</a></li>
+    <li><a href="matrix_transform_vertex.htm">matrice_transformation_vertex</a></li>
+    <li><a href="../../Variable_Functions/is_matrix.htm">is_matrix</a></li>
+  </ul>
+  <p> </p>
+  <p>Les fonctions suivantes permettent d'utiliser une <strong>pile</strong> matricielle, qui est similaire à une <a href="../../Data_Structures/DS_Stacks/DS_Stacks.htm">pile DS</a>, mais conçue pour être utilisée uniquement avec des matrices. C'est un moyen pratique d'appliquer plusieurs opérations matricielles (comme les transformations) l'une après l'autre lors de la création d'une scène 3D.
+    (comme les transformations) l'une après l'autre lors de la création d'une scène 3D.</p>
+  <p> </p>
+  <ul class="colour">
+    <li><a href="matrix_stack_is_empty.htm">matrix_stack_is_empty</a></li>
+    <li><a href="matrix_stack_clear.htm">matrix_stack_clear</a></li>
+    <li><a href="matrix_stack_set.htm">ensemble_de_pile_matrice</a></li>
+    <li><a href="matrix_stack_push.htm">matrix_stack_push</a></li>
+    <li><a href="matrix_stack_pop.htm">matrix_stack_pop</a></li>
+    <li><a href="matrix_stack_top.htm">matrix_stack_top</a></li>
+  </ul>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <div class="footer">
+    <div class="buttons">
+      <div class="clear">
+        <div style="float:left">Retour : <a href="../Maths_And_Numbers.htm">Maths et chiffres</a></div>
+        <div style="float:right">Suivant : <a href="../Date_And_Time/Date_And_Time.htm">Date et heure</a></div>
+      </div>
+    </div>
+    <h5><span data-keyref="Copyright Notice">Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
   </div>
   <!-- KEYWORDS
 Matrix Functions

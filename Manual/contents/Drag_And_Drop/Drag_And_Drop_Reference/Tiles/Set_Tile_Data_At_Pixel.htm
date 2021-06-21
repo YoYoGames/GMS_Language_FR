@@ -1,17 +1,67 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>Définir les données de mosaïque sur le pixel</title>
-  <meta name="generator" content="Adobe RoboHelp 2019" />
+  <title>Définir les données de la tuile au niveau du pixel</title>
+  <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../assets/css/default.css" type="text/css" />
   <meta name="rh-authors" content="Mark Alexander" />
-  <meta name="topic-comment" content="Page qui explique l&#39;action Définir les données de mosaïque sur le pixel" />
-  <meta name="rh-index-keywords" content="DnD ™ - Définir les données de mosaïque sur le pixel" />
-  <meta name="search-keywords" content="Définir les données de mosaïque sur le pixel" />
+  <meta name="topic-comment" content="Page that explains the Set Tile Data At Pixel action" />
+  <meta name="rh-index-keywords" content="DnD™ Action - Set Tile Data At Pixel" />
+  <meta name="search-keywords" content="Set Tile Data At Pixel" />
 </head>
-<body><!--<div class="body-scroll" style="top: 150px;">--><h1><img alt="Set Tile Data At Pixel Icon" class="icon" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Tiles/i_Tiles_Set_Tile_Data_At_Pixel.png" /> Définir les données de mosaïque sur le pixel</h1><p> Avec cette action, vous pouvez définir les données de tuile pour une cellule de tuile trouvée à une position spécifique sur une couche de <a class="glossterm" data-glossterm="carte de tuiles" href="#">carte de tuile.</a> Les données de mosaïque sont simplement une valeur qui reflète l&#39;index de la mosaïque avec les valeurs de retournement, de miroir et de rotation, ainsi que tous les masques de mosaïque personnalisés que vous avez utilisés. Avec cette action, vous fournissez d&#39;abord le calque à cibler en utilisant le nom du calque (une chaîne) tel que défini dans l&#39;éditeur de pièce, puis les axes x et y dans la pièce pour lesquels définir les données de mosaïque. Notez que les données de tuile seront définies pour la &quot;cellule&quot; de tuile map dans laquelle la position donnée atterrit. Par exemple, si les tuiles de votre jeu de tuiles mesurent 16x16, le calque de la carte de tuiles contiendra les tuiles dans des cellules de 16x16 pixels, donc si vous utilisez cette action pour cibler la position de la pièce (8, 8), vous changerez la tuile cellule (0, 0) de la carte de tuiles.<b></b></p><p class="note"> <b>REMARQUE</b>: le calque sélectionné <i>doit</i> avoir été défini comme un calque de mosaïque dans l&#39;éditeur de salle, sinon vous risquez d&#39;obtenir des erreurs.</p><p> Le dernier argument de l&#39;action est la donnée de la tuile elle-même. Vous récupérez normalement les données de mosaïque pour la cellule de carte de mosaïque à l&#39;aide de l&#39;action <a href="Set_Tile_Data_At_Pixel.htm">Obtenir les données de mosaïque au pixel</a>, puis vous les manipulez à l&#39;aide de l&#39;action <a href="Set_Tile_Data_Transform.htm">Définir la transformation des données de mosaïque</a> avant de la redéfinir avec cette action. Pour plus d&#39;informations sur les données de mosaïque, veuillez consulter la <span class="notranslate">GML</span> sur les <a href="../../../GameMaker_Language/GML_Reference/Asset_Management/Rooms/Tile_Map_Layers/Tile_Map_Layers.htm">fonctions de</a> mappage de mosaïques.</p><p></p><h4> Syntaxe de l&#39;action:</h4><p><img alt="Set Tile Data At Pixel Action" class="center" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Tiles/a_Tiles_Set_Tile_Data_At_Pixel.png" /></p><h4> Arguments:</h4><table><tbody><tr><th> Argument</th><th> Description</th></tr><tr><td> <span class="notranslate">Layer</span></td><td> La couche avec la carte de tuiles à cibler</td></tr><tr><td> <span class="notranslate">X</span></td><td> La position le long de l&#39;axe horizontal (X) pour définir les données de mosaïque pour</td></tr><tr><td> <span class="notranslate">Y</span></td><td> La position le long de l&#39;axe vertical (Y) pour définir les données de mosaïque</td></tr><tr><td> <span class="notranslate">Data</span></td><td> Les données de mosaïque à utiliser pour définir la cellule à la position</td></tr></tbody></table><p></p><h4> Exemple:</h4><p><img alt="Set Tile Data At Pixel Example" class="center" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Tiles/e_Tiles_Set_Tile_Data_At_Pixel.png" /> Le code de bloc d&#39;action ci-dessus teste un clic de souris et quand on est reçu, il récupère les données de tuile pour la cellule qui coïncide avec la position de la souris. Ces données sont ensuite modifiées et renvoyées à la couche de carte de tuiles, faisant pivoter la tuile dans cette cellule. </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> Retour: <a href="Tile_Actions.htm">Actions de tuile</a></div><div style="float:right"> Suivant: <a href="Get_Tile_Data_At_Pixel.htm">Obtenez des données de mosaïque au pixel</a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
+<body>
+  <!--<div class="body-scroll" style="top: 150px;">-->
+  <h1><img alt="Set Tile Data At Pixel Icon" class="icon" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Tiles/i_Tiles_Set_Tile_Data_At_Pixel.png"> Définir les données de la tuile au pixel</h1>
+  <p>Avec cette action, vous pouvez définir les données de tuile pour une cellule de tuile trouvée à une position spécifique sur une couche de <a class="glossterm" data-glossterm="carte des tuiles" href="#">carte de tuile</a>. Les données de la tuile sont simplement une valeur qui reflète l'index de la tuile avec les valeurs d'inversion, de miroir et de rotation ainsi que les masques de tuiles personnalisés que vous avez utilisés.
+    ainsi que les valeurs d'inversion, de miroir et de rotation, ainsi que les masques de tuiles personnalisés que vous avez utilisés. Avec cette action, vous fournissez d'abord le calque à cibler en utilisant le nom du calque (une chaîne) tel que défini dans l'éditeur de pièce, puis les axes x et y dans la pièce
+    pour lesquels vous souhaitez définir les données des tuiles. Notez que les données des tuiles seront définies pour la &quot;cellule&quot; de la carte des tuiles dans laquelle se trouve la position donnée. Par exemple, si les tuiles de votre jeu de tuiles sont de 16x16, alors la couche de la carte des tuiles contiendra des tuiles dans des cellules de 16x16 pixels, donc
+    si vous utilisez cette action pour cibler la position de la pièce (8, 8), vous modifierez la tuile dans la cellule (0, 0) de la carte des tuiles.<b></b></p>
+  <p class="note"><b>REMARQUE</b>: La couche sélectionnée <i>doit</i> avoir été définie comme une couche de carte de tuile dans l'éditeur de pièce, sinon vous pouvez obtenir des erreurs.</p>
+  <p>Le dernier argument de l'action est la donnée de la tuile elle-même. Normalement, vous récupérez les données de tuiles pour la cellule de carte de tuiles à l'aide de l'action <a href="Set_Tile_Data_At_Pixel.htm">Obtenir les données de tuiles au pixel</a>, puis vous les manipulez à l'aide de l'action <a href="Set_Tile_Data_Transform.htm">Définir la transformation des données de tuiles</a> avant de les définir à nouveau avec cette action. Pour plus d'informations sur les données de tuiles, veuillez consulter la section <span class="notranslate">GML</span> sur les <a href="../../../GameMaker_Language/GML_Reference/Asset_Management/Rooms/Tile_Map_Layers/Tile_Map_Layers.htm">fonctions de carte de tuiles</a>.</p>
+  <p> </p>
+  <h4>Syntaxe de l'action :</h4>
+  <p><img alt="Set Tile Data At Pixel Action" class="center" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Tiles/a_Tiles_Set_Tile_Data_At_Pixel.png" /></p>
+  <h4>Arguments :</h4>
+  <table>
+    <tbody>
+      <tr>
+        <th>Arguments</th>
+        <th>Description</th>
+      </tr>
+      <tr>
+        <td>Couche</td>
+        <td>La couche avec la carte des tuiles à cibler</td>
+      </tr>
+      <tr>
+        <td>X</td>
+        <td>La position le long de l'axe horizontal (X) pour définir les données de la tuile pour</td>
+      </tr>
+      <tr>
+        <td>Y</td>
+        <td>La position le long de l'axe vertical (Y) pour définir les données de la tuile.</td>
+      </tr>
+      <tr>
+        <td>Données</td>
+        <td>Les données de la tuile à utiliser pour définir la cellule à la position.</td>
+      </tr>
+    </tbody>
+  </table>
+  <p> </p>
+  <h4>Exemple :</h4>
+  <p><img alt="Set Tile Data At Pixel Example" class="center" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Tiles/e_Tiles_Set_Tile_Data_At_Pixel.png">Le code du bloc d'action ci-dessus teste un clic de souris et, lorsqu'il en reçoit un
+    il récupère les données de la tuile pour la cellule qui coïncide avec la position de la souris. Ces données sont ensuite modifiées et renvoyées à la couche de carte des tuiles, faisant pivoter la tuile dans cette cellule.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <div class="footer">
+    <div class="buttons">
+      <div class="clear">
+        <div style="float:left">Retour : <a href="Tile_Actions.htm">Actions sur les tuiles</a></div>
+        <div style="float:right">Suivant : <a href="Get_Tile_Data_At_Pixel.htm">Obtenir les données de la tuile au pixel</a></div>
+      </div>
+    </div>
+    <h5><span data-keyref="Copyright Notice">Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
   </div>
   <!-- KEYWORDS
 Action - Set Tile Data At Pixel
@@ -19,5 +69,5 @@ Action - Set Tile Data At Pixel
   <!-- TAGS
 action_tile_set_data_at_pixel
 -->
-</body>
-</html>
+
+</body></html>

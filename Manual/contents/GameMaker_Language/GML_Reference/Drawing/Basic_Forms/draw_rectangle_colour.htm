@@ -3,15 +3,87 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>draw_rectangle_colour</title>
+  <title>dessiner_rectangle_couleur</title>
   <meta name="generator" content="Adobe RoboHelp 2019" />
   <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
   <meta name="rh-authors" content="Mark Alexander" />
-  <meta name="topic-comment" content="Référence pour la fonction draw_rectangle_colour" />
+  <meta name="topic-comment" content="Reference for the function draw_rectangle_colour" />
   <meta name="rh-index-keywords" content="draw_rectangle_colour,draw_rectangle_color" />
   <meta name="search-keywords" content="draw_rectangle_colour,draw_rectangle_color" />
 </head>
-<body><!--<div class="body-scroll" style="top: 150px;">--><h1>draw_rectangle_colour</h1><p> Avec cette fonction, vous pouvez dessiner le contour d&#39;un rectangle ou un rectangle rempli en définissant une zone où la position (x1, y1) est le coin supérieur gauche et la position (x2, y2) est le coin inférieur droit. S&#39;il est rempli, vous pouvez définir les couleurs individuelles pour chaque point d&#39;angle et si ces couleurs ne sont pas les mêmes, vous obtiendrez un effet de dégradé de l&#39;une à l&#39;autre (les paramètres de couleur remplaceront la couleur de base définie avec la fonction <a href="../Colour_And_Alpha/draw_set_colour.htm"><tt>draw_set_colour()</tt></a> ). Veuillez noter que le rectangle dessiné peut nécessiter des valeurs différentes (+/- 1 sur le x, y, ou la largeur ou la hauteur) pour être dessiné avec les dimensions souhaitées en raison des différences entre les différentes plates-formes prises en charge.</p><p class="note"> <b>REMARQUE</b>: Si vous souhaitez dessiner une forme à l&#39;aide d&#39;un <span class="notranslate">shader</span>, sachez que la plupart des <span class="notranslate">shaders</span> attendent les entrées suivantes: sommet, texture, couleur. Cependant, lors de l&#39;utilisation de cette fonction, seules les données de sommet et de couleur sont transmises, et le <span class="notranslate">shader</span> peut ne rien dessiner (ou dessiner quelque chose mais pas correctement). Si vous devez dessiner des formes de cette manière, le <span class="notranslate">shader</span> doit être personnalisé dans cet esprit.</p><p></p><h4> Syntaxe:</h4><p class="code">draw_rectangle_colour(x1, y1, x2, y2, col1, col2, col3, col4, outline);</p><table><tbody><tr><th> Argument</th><th> Description</th></tr><tr><td> <span class="notranslate">x1</span></td><td> La coordonnée x de la gauche du rectangle.</td></tr><tr><td> <span class="notranslate">y1</span></td><td> La coordonnée y du haut du rectangle.</td></tr><tr><td> <span class="notranslate">x2</span></td><td> La coordonnée x de la droite du rectangle.</td></tr><tr><td> <span class="notranslate">y2</span></td><td> La coordonnée y du bas du rectangle.</td></tr><tr><td> <span class="notranslate">col1</span></td><td> La couleur du coin supérieur gauche.</td></tr><tr><td> <span class="notranslate">col2</span></td><td> La couleur du coin supérieur droit.</td></tr><tr><td> <span class="notranslate">col3</span></td><td> La couleur du coin inférieur droit.</td></tr><tr><td> <span class="notranslate">col4</span></td><td> La couleur du coin inférieur gauche.</td></tr><tr><td> <span class="notranslate">outline</span></td><td> Si le rectangle est un contour (vrai) ou rempli (faux).</td></tr></tbody></table><p></p><h4> Retour:</h4><p class="code">N/A</p><p></p><h4> Exemple:</h4><p class="code">draw_rectangle_colour(50, 50, 200, 200, c_black, c_white, c_black, c_white, false);</p><p> Cela dessinerait un carré rempli avec un dégradé noir / blanc lisse entre les coins. </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> Retour: <a href="Basic_Forms.htm">Formulaires de base</a></div><div style="float:right"> Suivant:<a href="draw_roundrect.htm">draw_roundrect</a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
+<body>
+  <!--<div class="body-scroll" style="top: 150px;">-->
+  <h1>dessiner_rectangle_couleur</h1>
+  <p>Avec cette fonction, vous pouvez dessiner le contour d'un rectangle ou un rectangle rempli en définissant une zone dont la position (x1,y1) est le coin supérieur gauche et la position (x2,y2) le coin inférieur droit. S'il est rempli, vous pouvez définir les
+    pour chaque point d'angle et si ces couleurs ne sont pas les mêmes, vous obtiendrez un effet de gradient de l'un à l'autre (les paramètres de couleur remplaceront la couleur de base définie avec la fonction <a href="../Colour_And_Alpha/draw_set_colour.htm"><tt>draw_set_colour()</tt></a>).
+    Veuillez noter que le rectangle dessiné peut nécessiter des valeurs différentes (+/-1 sur les x, y, ou la largeur ou la hauteur) pour être dessiné avec les dimensions souhaitées en raison des différences entre les diverses plateformes prises en charge.</p>
+  <p class="note"><b>NOTE</b>: Si vous souhaitez dessiner une forme à l'aide d'un <span class="notranslate">shader</span>, sachez que la plupart des <span class="notranslate">shaders</span> attendent les entrées suivantes : vertex, texture, couleur. Cependant, en utilisant cette fonction, seules les données de vertex et de couleur sont transmises, et donc le shader peut ne rien dessiner (ou dessiner quelque chose mais pas correctement).
+   <span class="notranslate">shader</span> peut ne rien dessiner (ou dessiner quelque chose mais pas correctement). Si vous avez besoin de dessiner des formes de cette manière, le <span class="notranslate">shader</span> doit être personnalisé en conséquence.</p>
+  <p> </p>
+  <h4>Syntaxe :</h4>
+  <p class="code">draw_rectangle_colour(x1, y1, x2, y2, col1, col2, col3, col4, outline) ;</p>
+  <table>
+    <tbody>
+      <tr>
+        <th>Arguments</th>
+        <th>Description</th>
+      </tr>
+      <tr>
+        <td>x1</td>
+        <td>La coordonnée x de la partie gauche du rectangle.</td>
+      </tr>
+      <tr>
+        <td>y1</td>
+        <td>La coordonnée y du haut du rectangle.</td>
+      </tr>
+      <tr>
+        <td>x2</td>
+        <td>La coordonnée x de la droite du rectangle.</td>
+      </tr>
+      <tr>
+        <td>y2</td>
+        <td>La coordonnée y du bas du rectangle.</td>
+      </tr>
+      <tr>
+        <td>col1</td>
+        <td>La couleur du coin supérieur gauche.</td>
+      </tr>
+      <tr>
+        <td>col2</td>
+        <td>La couleur du coin supérieur droit.</td>
+      </tr>
+      <tr>
+        <td>col3</td>
+        <td>La couleur du coin inférieur droit.</td>
+      </tr>
+      <tr>
+        <td>col4</td>
+        <td>La couleur du coin inférieur gauche.</td>
+      </tr>
+      <tr>
+        <td>aperçu</td>
+        <td>Indique si le rectangle est un contour (true) ou rempli (false).</td>
+      </tr>
+    </tbody>
+  </table>
+  <p> </p>
+  <h4>Les retours :</h4>
+  <p class="code">N/A</p>
+  <p> </p>
+  <h4>Exemple :</h4>
+  <p class="code">draw_rectangle_colour(50, 50, 200, 200, c_black, c_white, c_black, c_white, false) ;</p>
+  <p>Cela dessine un carré rempli avec un dégradé noir/blanc entre les coins.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <div class="footer">
+    <div class="buttons">
+      <div class="clear">
+        <div style="float:left">Retour : <a href="Basic_Forms.htm">Formes de base</a></div>
+        <div style="float:right">Suivant : <a href="draw_roundrect.htm">draw_roundrect</a></div>
+      </div>
+    </div>
+    <h5><span data-keyref="Copyright Notice">Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
   </div>
   <!-- KEYWORDS
 draw_rectangle_colour

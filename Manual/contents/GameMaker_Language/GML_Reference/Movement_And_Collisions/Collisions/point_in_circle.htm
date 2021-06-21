@@ -7,16 +7,69 @@
   <meta name="generator" content="Adobe RoboHelp 2019" />
   <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
   <meta name="rh-authors" content="Mark Alexander" />
-  <meta name="topic-comment" content="Page qui donne un aperçu de la fonction point_in_circle" />
+  <meta name="topic-comment" content="Page that gives an overview of the funtion point_in_circle" />
   <meta name="rh-index-keywords" content="point_in_circle" />
   <meta name="search-keywords" content="point_in_circle" />
 </head>
-<body><!--<div class="body-scroll" style="top: 150px;">--><h1>point_in_circle</h1><p> Lorsque vous utilisez cette fonction, vous définissez une zone circulaire et <span class="notranslate">GameMaker Studio 2</span> déterminera si le point donné se situe dans ses limites ou non. Si le point tombe dans le cercle défini, la fonction retournera <tt>true</tt> sinon la fonction retournera <tt>false</tt>.</p><p></p><h4> Syntaxe:</h4><p class="code">point_in_circle(px, py, x1, y1, rad);</p><table><tbody><tr><th> Argument</th><th> Description</th></tr><tr><td> <span class="notranslate">px</span></td><td> La coordonnée x du point à vérifier.</td></tr><tr><td> <span class="notranslate">py</span></td><td> La coordonnée y du point à vérifier.</td></tr><tr><td> <span class="notranslate">x1</span></td><td> La coordonnée x du centre du cercle.</td></tr><tr><td> <span class="notranslate">y1</span></td><td> La coordonnée y du centre du cercle.</td></tr><tr><td> <span class="notranslate">rad</span></td><td> Le rayon du cercle.</td></tr></tbody></table><p></p><h4> Retour:</h4><p class="code">Boolean</p><p></p><h4> Exemple:</h4><p class="code">if point_in_circle(mouse_x, mouse_y, x, y, 16)<br/>    {
-    <br/>    over = true;<br/>    }
-    <br/> else
-    <br/>    {
-    <br/>    over = false;<br/>    }
-  </p><p> Le code ci-dessus utilise le <tt>point_in_circle</tt> pour vérifier si la position de la souris se situe dans la zone circulaire définie, en définissant la variable &quot;over&quot; sur <tt>true</tt> si c&#39;est le cas, ou <tt>false</tt> autrement. </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> Retour: <a href="Collisions.htm">Collisions</a></div><div style="float:right"> Suivant:<a href="rectangle_in_rectangle.htm">rectangle_in_rectangle</a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
+<body>
+  <!--<div class="body-scroll" style="top: 150px;">-->
+  <h1>point_in_circle</h1>
+  <p>En utilisant cette fonction, vous définissez une zone circulaire et <span class="notranslate">GameMaker Studio 2</span> déterminera si le point donné se trouve dans ses limites ou non. Si le point se trouve à l'intérieur du cercle défini, la fonction renvoie <tt>true (vrai)</tt>.
+    retournera <tt>false</tt>.</p>
+  <p> </p>
+  <h4>Syntaxe :</h4>
+  <p class="code">point_in_circle(px, py, x1, y1, rad) ;</p>
+  <table>
+    <tbody>
+      <tr>
+        <th>Arguments</th>
+        <th>Description</th>
+      </tr>
+      <tr>
+        <td>px</td>
+        <td>La coordonnée x du point à vérifier.</td>
+      </tr>
+      <tr>
+        <td>py</td>
+        <td>La coordonnée y du point à vérifier.</td>
+      </tr>
+      <tr>
+        <td>x1</td>
+        <td>La coordonnée x du centre du cercle.</td>
+      </tr>
+      <tr>
+        <td>y1</td>
+        <td>La coordonnée y du centre du cercle.</td>
+      </tr>
+      <tr>
+        <td>rad</td>
+        <td>Le rayon du cercle.</td>
+      </tr>
+    </tbody>
+  </table>
+  <p> </p>
+  <h4>Les retours :</h4>
+  <p class="code">Booléen</p>
+  <p> </p>
+  <h4>Exemple :</h4>
+  <p class="code">if point_in_circle(mouse_x, mouse_y, x, y, 16)<br> {
+    <br> over = true ;<br> }
+    <br> else
+    <br> {
+    <br> over = false ;<br> }
+  </p>
+  <p>Le code ci-dessus utilise la fonction <tt>point_in_circle</tt> pour vérifier si la position de la souris se trouve dans la zone circulaire définie, en donnant à la variable &quot;over&quot; la valeur true si c'est le cas, ou false <tt>sinon</tt>.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <div class="footer">
+    <div class="buttons">
+      <div class="clear">
+        <div style="float:left">Retour : <a href="Collisions.htm">Collisions</a></div>
+        <div style="float:right">Suivant : <a href="rectangle_in_rectangle.htm">rectangle_dans_rectangle</a></div>
+      </div>
+    </div>
+    <h5><span data-keyref="Copyright Notice">Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
   </div>
   <!-- KEYWORDS
 point_in_circle

@@ -7,11 +7,52 @@
   <meta name="generator" content="Adobe RoboHelp 2019" />
   <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
   <meta name="rh-authors" content="Mark Alexander" />
-  <meta name="topic-comment" content="Référence pour surface_set_target_ext" />
+  <meta name="topic-comment" content="Reference for surface_set_target_ext" />
   <meta name="rh-index-keywords" content="surface_set_target_ext" />
   <meta name="search-keywords" content="surface_set_target_ext" />
 </head>
-<body><!--<div class="body-scroll" style="top: 150px;">--><h1>surface_set_target_ext</h1><p> Cette fonction est à utiliser avec les <a href="../../Asset_Management/Shaders/Shaders.htm">fonctions <span class="notranslate">Shader</span></a> et définit le MRT (0 - 3) pour les <span class="notranslate">shaders</span> niveau natif (DX9, DX11, OpenGL).</p><p class="note"> <b>REMARQUE</b>: lorsque vous travaillez avec des surfaces, il est possible qu&#39;elles cessent d&#39;exister à tout moment car elles sont stockées dans la mémoire de texture. Vous devez <b>TOUJOURS</b> vérifier qu&#39;une surface existe en utilisant <span style="font-size:1px;"><a href="surface_exists.htm"><tt style="font-size: 14px">surface_exists ()</tt></a></span> avant de les référencer directement.</p><p></p><h4> Syntaxe:</h4><p class="code">surface_set_target_ext(index, surface_id);</p><table><tbody><tr><th> Argument</th><th> Description</th></tr><tr><td> <span class="notranslate">index</span></td><td> Index cible de rendu à utiliser (de 0 à 3).</td></tr><tr><td> <span class="notranslate">surface_id</span></td><td> L&#39;ID de la surface à utiliser.</td></tr></tbody></table><p></p><h4> Retour:</h4><p class="code">Boolean</p><p></p><h4> Exemple:</h4><p class="code">surface_set_target_ext(0, surf);</p><p> Le code ci-dessus définira la cible de rendu 0 sur l&#39;ID de surface indexé dans la variable &quot;surf&quot;. </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> Retour: <a href="Surfaces.htm">Surfaces</a></div><div style="float:right"> Suivant:<a href="surface_get_target.htm">surface_get_target</a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
+<body>
+  <!--<div class="body-scroll" style="top: 150px;">-->
+  <h1>surface_set_target_ext</h1>
+  <p>Cette fonction est à utiliser avec les <a href="../../Asset_Management/Shaders/Shaders.htm">fonctions de<span class="notranslate">shaders</span></a> et définit le MRT (0 - 3) pour les <span class="notranslate">shaders de</span> niveau natif (DX9, DX11, OpenGL).</p>
+  <p class="note"><b>REMARQUE</b>: Lorsque vous travaillez avec des surfaces, il est possible qu'elles cessent d'exister à tout moment, car elles sont stockées dans la mémoire des textures. Vous devez <b>TOUJOURS</b> vérifier qu'une surface existe en utilisant <span style="font-size:1px;"><a href="surface_exists.htm"><tt style="font-size: 14px">surface_exists()</tt></a></span>    avant d'y faire référence directement.</p>
+  <p> </p>
+  <h4>Syntaxe :</h4>
+  <p class="code">surface_set_target_ext(index, surface_id) ;</p>
+  <table>
+    <tbody>
+      <tr>
+        <th>Arguments</th>
+        <th>Description</th>
+      </tr>
+      <tr>
+        <td>indice</td>
+        <td>L'index de la cible de rendu à utiliser (de 0 à 3).</td>
+      </tr>
+      <tr>
+        <td>surface_id</td>
+        <td>L'ID de la surface à utiliser.</td>
+      </tr>
+    </tbody>
+  </table>
+  <p> </p>
+  <h4>Les retours :</h4>
+  <p class="code">Booléen</p>
+  <p> </p>
+  <h4>Exemple :</h4>
+  <p class="code">surface_set_target_ext(0, surf) ;</p>
+  <p>Le code ci-dessus va définir la cible de rendu 0 à l'ID de la surface indexée dans la variable &quot;surf&quot;.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <div class="footer">
+    <div class="buttons">
+      <div class="clear">
+        <div style="float:left">Retour : <a href="Surfaces.htm">Surfaces</a></div>
+        <div style="float:right">Suivant : <a href="surface_get_target.htm">surface_get_target</a></div>
+      </div>
+    </div>
+    <h5><span data-keyref="Copyright Notice">Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
   </div>
   <!-- KEYWORDS
 surface_set_target_ext

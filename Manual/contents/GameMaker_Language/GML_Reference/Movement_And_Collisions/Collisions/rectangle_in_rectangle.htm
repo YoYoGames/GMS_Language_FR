@@ -3,17 +3,82 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>rectangle_in_rectangle</title>
+  <title>rectangle_dans_rectangle</title>
   <meta name="generator" content="Adobe RoboHelp 2019" />
   <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
   <meta name="rh-authors" content="Mark Alexander" />
-  <meta name="topic-comment" content="Page qui donne un aperçu de la fonction rectangle_in_rectangle" />
+  <meta name="topic-comment" content="Page that gives an overview of the funtion rectangle_in_rectangle" />
   <meta name="rh-index-keywords" content="rectangle_in_rectangle" />
   <meta name="search-keywords" content="rectangle_in_rectangle" />
 </head>
-<body><!--<div class="body-scroll" style="top: 150px;">--><h1>rectangle_in_rectangle</h1><p> Cette fonction vérifie deux zones rectangulaires que vous définissez pour voir si le rectangle source n&#39;est pas en collision, complètement dans les limites des rectangles de destination, ou s&#39;ils se touchent simplement. S&#39;ils ne touchent pas du tout, la fonction retournera 0, si la source est complètement dans la destination, elle retournera 1, et si elles se chevauchent simplement, elle retournera 2. L&#39;image ci-dessous illustre ceci:</p><p><img alt="Rectangle rectangle collision example" class="center" src="../../../../assets/Images/Scripting_Reference/GML/Reference/Movement_Collisions/rectangle_in_rectangle.png" /></p><h4> Syntaxe:</h4><p class="code">rectangle_in_rectangle(sx1, sy1, sx2, sy2, dx1, dy1, dx2, dy2);</p><table><tbody><tr><th> Argument</th><th> Description</th></tr><tr><td> <span class="notranslate">sx1</span></td><td> Coordonnée x du côté gauche du rectangle source.</td></tr><tr><td> <span class="notranslate">sy1</span></td><td> Coordonnée y du côté supérieur du rectangle source.</td></tr><tr><td> <span class="notranslate">sx2</span></td><td> Coordonnée x du côté droit du rectangle source.</td></tr><tr><td> <span class="notranslate">sy2</span></td><td> Coordonnée y du côté inférieur du rectangle source.</td></tr><tr><td> <span class="notranslate">dx1</span></td><td> Coordonnée x du côté gauche du rectangle de destination à vérifier.</td></tr><tr><td> <span class="notranslate">dy1</span></td><td> Coordonnée y du côté supérieur du rectangle de destination à vérifier.</td></tr><tr><td> <span class="notranslate">dx2</span></td><td> Coordonnée x du côté droit du rectangle de destination à vérifier.</td></tr><tr><td> <span class="notranslate">dy2</span></td><td> Coordonnée y du côté inférieur du rectangle de destination à vérifier.</td></tr></tbody></table><p></p><h4> Retour:</h4><p class="code">Real</p><p></p><h4> Exemple:</h4><p class="code">switch(rectangle_in_rectangle(x - 50, y - 50, x + 50, y + 50, mouse_x - 50, mouse_y - 50, mouse_x + 50, mouse_y + 50))<br/>    {
-    <br/>    case 0: image_blend = c_yellow; break;<br/>    case 1: image_blend = c_red; break;<br/>    case 2: image_blend = c_orange; break;<br/>    }
-  </p><p> Le code ci-dessus vérifie la collision de deux zones rectangulaires et définit l&#39;instance <tt>image_blend</tt> basé sur la valeur de retour. </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> Retour: <a href="Collisions.htm">Collisions</a></div><div style="float:right"> Suivant:<a href="rectangle_in_triangle.htm">rectangle_in_triangle</a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
+<body>
+  <!--<div class="body-scroll" style="top: 150px;">-->
+  <h1>rectangle_dans_rectangle</h1>
+  <p>Cette fonction vérifie deux zones rectangulaires que vous définissez pour voir si le rectangle source n'est pas en collision, s'il est complètement dans les limites du rectangle de destination ou s'ils se touchent simplement. S'ils ne se touchent pas du tout, la fonction
+    renverra 0, si le rectangle source est complètement dans les limites du rectangle de destination, elle renverra 1, et s'ils se chevauchent simplement, elle renverra 2. L'image ci-dessous illustre cela :</p>
+  <p><img alt="Rectangle rectangle collision example" class="center" src="../../../../assets/Images/Scripting_Reference/GML/Reference/Movement_Collisions/rectangle_in_rectangle.png" /></p>
+  <h4>Syntaxe :</h4>
+  <p class="code">rectangle_dans_rectangle(sx1, sy1, sx2, sy2, dx1, dy1, dx2, dy2) ;</p>
+  <table>
+    <tbody>
+      <tr>
+        <th>Arguments</th>
+        <th>Description</th>
+      </tr>
+      <tr>
+        <td>sx1</td>
+        <td>La coordonnée x du côté gauche du rectangle source.</td>
+      </tr>
+      <tr>
+        <td>sy1</td>
+        <td>La coordonnée y du côté supérieur du rectangle source.</td>
+      </tr>
+      <tr>
+        <td>sx2</td>
+        <td>La coordonnée x du côté droit du rectangle source.</td>
+      </tr>
+      <tr>
+        <td>sy2</td>
+        <td>La coordonnée y du côté inférieur du rectangle source.</td>
+      </tr>
+      <tr>
+        <td>dx1</td>
+        <td>La coordonnée x du côté gauche du rectangle de destination à vérifier.</td>
+      </tr>
+      <tr>
+        <td>dy1</td>
+        <td>La coordonnée y du côté supérieur du rectangle de destination à vérifier.</td>
+      </tr>
+      <tr>
+        <td>dx2</td>
+        <td>La coordonnée x du côté droit du rectangle de destination à vérifier.</td>
+      </tr>
+      <tr>
+        <td>dy2</td>
+        <td>La coordonnée y du côté inférieur du rectangle de destination à vérifier.</td>
+      </tr>
+    </tbody>
+  </table>
+  <p> </p>
+  <h4>Les retours :</h4>
+  <p class="code">Real</p>
+  <p> </p>
+  <h4>Exemple :</h4>
+  <p class="code">switch(rectangle_in_rectangle(x - 50, y - 50, x + 50, y + 50, mouse_x - 50, mouse_y - 50, mouse_x + 50, mouse_y + 50))<br> {
+    <br> case 0 : image_blend = c_yellow ; break ;<br> case 1 : image_blend = c_red ; break ;<br> case 2 : image_blend = c_orange ; break ;<br> }
+  </p>
+  <p>Le code ci-dessus vérifie la collision entre deux zones rectangulaires, et définit l'instance <tt>image_blend</tt> en fonction de la valeur de retour.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <div class="footer">
+    <div class="buttons">
+      <div class="clear">
+        <div style="float:left">Retour : <a href="Collisions.htm">Collisions</a></div>
+        <div style="float:right">Suivant : <a href="rectangle_in_triangle.htm">rectangle_dans_triangle</a></div>
+      </div>
+    </div>
+    <h5><span data-keyref="Copyright Notice">Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
   </div>
   <!-- KEYWORDS
 rectangle_in_rectangle

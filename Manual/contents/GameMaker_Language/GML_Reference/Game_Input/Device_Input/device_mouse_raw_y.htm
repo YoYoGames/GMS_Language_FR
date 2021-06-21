@@ -2,19 +2,57 @@
 
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml"><head>
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-  <title>device_mouse_raw_y</title>
-  <meta name="generator" content="Adobe RoboHelp 2019"/>
-  <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css"/>
-  <meta name="rh-authors" content="Mark Alexander"/>
-  <meta name="topic-comment" content="Page de référence pour device_mouse_raw_y"/>
-  <meta name="rh-index-keywords" content="device_mouse_raw_y"/>
-  <meta name="search-keywords" content="device_mouse_raw_y"/>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>dispositif_mouse_raw_y</title>
+  <meta name="generator" content="Adobe RoboHelp 2019" />
+  <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
+  <meta name="rh-authors" content="Mark Alexander" />
+  <meta name="topic-comment" content="Reference page for device_mouse_raw_y" />
+  <meta name="rh-index-keywords" content="device_mouse_raw_y" />
+  <meta name="search-keywords" content="device_mouse_raw_y" />
 </head>
 
-<body><!--<div class="body-scroll" style="top: 150px;">--><h1>device_mouse_raw_y</h1><p> Cette fonction renvoie la position y brute du toucher sur un appareil. Cela signifie qu&#39;il renvoie la définition de périphérique réelle de la position y qui est touchée, <i>pas</i> celle de <span class="notranslate">GameMaker Studio 2</span>, et en tant que telle, ignorera des éléments tels que la position de la vue et la mise à l&#39;échelle. Notez que le nombre maximal de touches de périphérique pouvant être détectées dépendra beaucoup de l&#39;appareil utilisé et du système d&#39;exploitation qu&#39;il exécute.</p><p class="note"> <b>REMARQUE</b>: Cette fonction dépend beaucoup de l&#39;appareil et vous devez d&#39;abord expérimenter avec le module et l&#39;appareil cible souhaités pour voir exactement ce qui est renvoyé.</p><p></p><h4> Syntaxe:</h4><p class="code">device_mouse_raw_y(device);</p><table><tbody><tr><th> Argument</th><th> Description</th></tr><tr><td> <span class="notranslate">device</span></td><td> Le périphérique (de 0 à <i>n</i> ) qui est vérifié.</td></tr></tbody></table><p></p><h4> Retour:</h4><p class="code">Real</p><p></p><h4> Exemple:</h4><p class="code">if device_mouse_check_button(0, mb_left) &amp;&amp; device_mouse_check_button(1, mb_left)<br/>    {
-    <br/>    x_av = mean(device_mouse_raw_x(0), device_mouse_raw_x(1));<br/>    y_av = mean(device_mouse_raw_y(0), device_mouse_raw_y(1));<br/>    }
-  </p><p> Le code ci-dessus vérifie si device1 et device2 sont pressés, et s&#39;ils le sont, il calcule la position moyenne des coordonnées x / y entre chaque point de presse. </p><p></p><p></p><p></p><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> Retour: <a href="Device_Input.htm">Entrée de périphérique</a></div><div style="float:right"> Suivant:<a href="device_mouse_x_to_gui.htm">device_mouse_x_to_gui</a></div></div></div><h5> <span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
+<body>
+  <!--<div class="body-scroll" style="top: 150px;">-->
+  <h1>dispositif_mouse_raw_y</h1>
+  <p>Cette fonction renvoie la position y brute du toucher sur un périphérique. Cela signifie qu'elle renvoie la définition réelle de l'appareil de la position y qui est touchée, et <i>non</i> celle de <span class="notranslate">GameMaker Studio 2</span>, et en tant que telle, elle ignorera des éléments comme la position de la vue et la mise à l'échelle.
+    la position de la vue et la mise à l'échelle. Notez que le nombre maximum de touchers de l'appareil pouvant être détectés dépend beaucoup de l'appareil utilisé et du système d'exploitation qu'il exécute.</p>
+  <p class="note"><b>REMARQUE</b>: Cette fonction est très dépendante du périphérique et vous devez d'abord expérimenter avec le module cible et le périphérique souhaités pour voir ce qui est retourné exactement.</p>
+  <p> </p>
+  <h4>Syntaxe :</h4>
+  <p class="code">device_mouse_raw_y(device) ;</p>
+  <table>
+    <tbody>
+      <tr>
+        <th>Arguments</th>
+        <th>Description</th>
+      </tr>
+      <tr>
+        <td>dispositif</td>
+        <td>Le dispositif (de 0 à <i>n</i>) qui est contrôlé.</td>
+      </tr>
+    </tbody>
+  </table>
+  <p> </p>
+  <h4>Les retours :</h4>
+  <p class="code">Real</p>
+  <p> </p>
+  <h4>Exemple :</h4>
+  <p class="code">if device_mouse_check_button(0, mb_left) &amp;&amp; device_mouse_check_button(1, mb_left)<br> {
+    <br> x_av = mean(device_mouse_raw_x(0), device_mouse_raw_x(1)) ;<br> y_av = mean(device_mouse_raw_y(0), device_mouse_raw_y(1)) ;<br> }
+  </p>
+  <p>Le code ci-dessus vérifie si les dispositifs 1 et 2 sont pressés, et si c'est le cas, il calcule la position moyenne des coordonnées x/y entre chaque point de pression.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <div class="footer">
+    <div class="buttons">
+      <div class="clear">
+        <div style="float:left">Retour : <a href="Device_Input.htm">Entrée du dispositif</a></div>
+        <div style="float:right">Suivant : <a href="device_mouse_x_to_gui.htm">device_mouse_x_to_gui</a></div>
+      </div>
+    </div>
+    <h5><span data-keyref="Copyright Notice">Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
   </div>
   <!-- KEYWORDS
 device_mouse_raw_y
