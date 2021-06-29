@@ -1,4 +1,46 @@
-tilemap_clear En utilisant cette fonction, vous pouvez effacer / définir toutes les tuiles sur une tuile-map donnée. Vous donnez l'ID d'élément de carte de tuiles (que vous obtenez lorsque vous créez un élément de carte de tuiles à l'aide de layer_tilemap_create() ou lorsque vous utilisez la fonction layer_tilemap_get_id() ), puis fournissez les données de mosaïque avec lesquelles vous souhaitez effacer la couche. Une valeur par défaut de 0 effacera toutes les tuiles du calque (rendant essentiellement toutes les tuiles "vides"), tandis que vous pouvez utiliser le tile_* fonctions pour créer vos propres données de mosaïque pour effacer la carte de mosaïques avec. Syntaxe:tilemap_clear(tilemap_element_id, tiledata) Argument Description tilemap_element_id La valeur d'identifiant unique de l'élément de mosaïque à modifier tiledata Les données de tuile à utiliser pour effacer le calque Retour:N/A Exemple:var layer_id = layer_get_id("Forest"); var tile_id = layer_tilemap_get_id(layer_id); tilemap_clear(tile_id, 0); Le code ci-dessus obtient la valeur d'ID d'une carte de tuiles créée dans l'éditeur de salle, puis l'efface à l'aide de tuiles «vides».  Retour: Couches de carte de mosaïque Suivant:tilemap_x © Copyright YoYo Games Ltd. 2021 Tous droits réservés
+
+  
+  tilemap_clear
+  En utilisant cette fonction, vous pouvez effacer/régler toutes les tuiles d'une carte de tuiles donnée. Vous donnez l'ID de l'élément de carte de tuiles (que vous obtenez lorsque vous créez un élément de carte de tuiles en utilisant layer_tilemap_create() ou lorsque vous utilisez
+    la fonction layer_tilemap_get_id()), puis vous fournissez les données des tuiles avec lesquelles vous souhaitez effacer la couche. Une valeur par défaut de 0 effacera toutes les tuiles de la couche (essentiellement en rendant toutes les tuiles "vides"),
+    Vous pouvez utiliser les fonctions dédiées de tile_* pour créer vos propres données de tuiles afin de vider la carte des tuiles.
+   
+  Syntaxe :
+  tilemap_clear(tilemap_element_id, tiledata)
+  
+    
+      
+        Arguments
+        Description
+      
+      
+        tilemap_element_id
+        La valeur d'identification unique de l'élément de la carte des tuiles à modifier.
+      
+      
+        données en mosaïque
+        Les données de la tuile à utiliser pour effacer la couche
+      
+    
+  
+   
+  Les retours :
+  N/A
+   
+  Exemple :
+  var layer_id = layer_get_id("Forest") ; var tile_id = layer_tilemap_get_id(layer_id) ; tilemap_clear(tile_id, 0) ;
+  Le code ci-dessus récupère la valeur ID d'une carte de tuiles créée dans l'éditeur de salle, puis la nettoie en utilisant des tuiles "vides".
+   
+   
+   
+  
+    
+      
+        Retour : Carrelage des couches de la carte
+        Suivant : tilemap_x
+      
+    
+    Copyright YoYo Games Ltd. 2021 Tous droits réservés
   
   
   

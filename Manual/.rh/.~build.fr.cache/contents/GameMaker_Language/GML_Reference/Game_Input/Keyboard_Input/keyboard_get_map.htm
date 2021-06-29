@@ -1,6 +1,42 @@
-keyboard_get_map Parfois, vous souhaiterez peut-être obtenir le code ascii pour une clé mappée (pour voir si elle est déjà mappée, par exemple), ce que cette fonction renvoie. La fonction prendra une valeur de code clé telle que renvoyée par la fonction ord() (uniquement les lettres majuscules de A à Z ou les chiffres de 0 à 9), ou l'un des vk_* constantes répertoriées sur la page principale de saisie au clavier. Syntaxe:keyboard_get_map(key); Argument Description key Il s'agit de la clé à partir de laquelle vous souhaitez obtenir la valeur mappée Retour:Real Exemple:if keyboard_get_map(ord("A")) = ord("A")    {
-        keyboard_set_map(ord("A"), keyboard_lastkey);    }
-   L'exemple de code ci-dessus vérifiera d'abord et verra si "A" a été mappé à une autre touche, et s'il ne l'a pas fait, il le mappera à la dernière touche sur laquelle l'utilisateur a appuyé.  Retour: Entrée clavier Suivant:keyboard_unset_map © Copyright YoYo Games Ltd. 2021 Tous droits réservés
+
+  
+  clavier_get_map
+  Parfois, vous pouvez souhaiter obtenir le code ascii d'une clé mappée (pour voir si elle est déjà mappée, par exemple), ce que cette fonction retourne. La fonction prendra une valeur de code de touche telle que retournée par la fonction ord()    (uniquement les lettres majuscules de A à Z ou les chiffres de 0 à 9), ou l'une des constantes vk_* listées sur la page principale de saisie du clavier.
+   
+  Syntaxe :
+  keyboard_get_map(key) ;
+  
+    
+      
+        Arguments
+        Description
+      
+      
+        clé
+        Il s'agit de la clé dont vous souhaitez obtenir la valeur mappée.
+      
+    
+  
+   
+  Les retours :
+  Real
+   
+  Exemple :
+  if keyboard_get_map(ord("A")) = ord("A") {
+     keyboard_set_map(ord("A"), keyboard_lastkey) ; }
+  
+  L'exemple de code ci-dessus vérifie d'abord si le "A" a été associé à une autre touche, et si ce n'est pas le cas, il l'associe à la dernière touche sur laquelle l'utilisateur a appuyé.
+   
+   
+   
+  
+    
+      
+        Retour : Entrée du clavier
+        Suivant : keyboard_unset_map
+      
+    
+    Copyright YoYo Games Ltd. 2021 Tous droits réservés
   
   
   

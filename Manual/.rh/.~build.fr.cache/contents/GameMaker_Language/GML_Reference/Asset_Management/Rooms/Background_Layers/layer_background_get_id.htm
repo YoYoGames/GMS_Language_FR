@@ -1,4 +1,42 @@
-layer_background_get_id Cette fonction peut être utilisée pour récupérer la valeur d'identifiant unique de l'élément d'arrière-plan sur un calque. Vous fournissez l'ID de couche (que vous obtenez lorsque vous utilisez le nom de la couche avec layer_get_id() ) et la fonction renverra la valeur ID associée à l'élément d'arrière-plan sur le calque. Notez que cette fonction est spécialement conçue pour être utilisée avec des arrière-plans qui ont été ajoutés dans l'EDI, comme si vous ajoutiez un arrière-plan à un calque via du code à l'aide de la fonction layer_background_create(), puis il renverra l'ID unique de l'élément d'arrière-plan ajouté. Syntaxe:layer_background_get_id(layer_id) Argument Description layer_id La valeur d'ID unique du calque à cibler Retour:Background element ID value (Real) Exemple:var lay_id = layer_get_id("Background_trees"); var back_id = layer_background_get_id(lay_id); layer_background_sprite(back_id, bck_Trees_Winter); Le code ci-dessus obtiendra l'ID de la couche nommée "Background_trees", puis l'utilisera pour obtenir l'ID de l'élément d'arrière-plan sur cette couche. Cet identifiant est ensuite utilisé pour changer l'élément sprite.  Retour: Calques d'arrière-plan Suivant:layer_background_exists © Copyright YoYo Games Ltd. 2021 Tous droits réservés
+
+  
+  layer_background_get_id
+  Cette fonction peut être utilisée pour récupérer la valeur d'identification unique de l'élément d'arrière-plan sur une couche. Vous fournissez l'ID de la couche (que vous obtenez lorsque vous utilisez le nom de la couche avec la fonction layer_get_id())
+    et la fonction renvoie la valeur d'identification associée à l'élément d'arrière-plan sur la couche. Notez que cette fonction est spécifiquement conçue pour être utilisée avec des arrière-plans qui ont été ajoutés dans l'IDE, car si vous ajoutez un arrière-plan à un calque par le biais de la fonction
+    code en utilisant la fonction layer_background_create()la fonction renverra l'ID unique de l'élément d'arrière-plan ajouté.
+   
+  Syntaxe :
+  layer_background_get_id(layer_id)
+  
+    
+      
+        Arguments
+        Description
+      
+      
+        identifiant de la couche
+        La valeur d'identification unique de la couche à cibler
+      
+    
+  
+   
+  Les retours :
+  Valeur d'identification de l'élément de fond (réel)
+   
+  Exemple :
+  var lay_id = layer_get_id("Background_trees") ; var back_id = layer_background_get_id(lay_id) ; layer_background_sprite(back_id, bck_Trees_Winter) ;
+  Le code ci-dessus récupère l'ID du calque nommé "Background_trees" et l'utilise ensuite pour obtenir l'ID de l'élément d'arrière-plan sur ce calque. Cet ID est ensuite utilisé pour changer le sprite de l'élément.
+   
+   
+   
+  
+    
+      
+        Retour : Calques d'arrière-plan
+        Suivant : layer_background_exists
+      
+    
+    Copyright YoYo Games Ltd. 2021 Tous droits réservés
   
   
   

@@ -1,4 +1,61 @@
- La Keyframe données d'images clés Lorsque vous définissez une structure d' keyframe pour une piste, vous devez également définir les données qui lui seront associées. Celui-ci est composé de différents canaux et chaque canal peut recevoir un type de données spécifique en fonction du type de piste pour lequel vous définissez les données d' keyframe Ces propriétés sont:channel: Il s'agit du canal auquel les keyframe doivent être appliquées. Il s'agit d'une valeur entière positive commençant à 0, et il convient de noter que lors de la création de pistes de paramètres pour les keyframes «position» ou «échelle», vous devez utiliser des valeurs de canal très spécifiques. Ce sont: le canal 0 est la position X ou l'échelle X, le canal 1 est la position Y ou l'échelle Y.spriteIndex: L'index de la ressource de sprite à utiliser pour la piste. Cette propriété n'est disponible que pour les pistes du type seqtracktype_graphic et vous pouvez l'obtenir ou le définir.soundIndex: L'index de l'élément audio à utiliser pour la piste. Cette propriété n'est disponible que pour les pistes du type seqtracktype_audio et vous pouvez l'obtenir ou le définir.playbackMode: Le mode de lecture du son. Cette propriété n'est disponible que pour les pistes du type seqtracktype_audio et vous pouvez l'obtenir ou le définir. La propriété doit être l'une des constantes suivantes: Constant Description Évaluer seqaudiokey_loop Le son bouclera lors de la lecture. 0 seqaudiokey_oneshot Le son ne jouera qu'une seule fois puis s'arrêtera. 1 curve: Cette propriété nécessite une structure de courbe d'animation (voir ici pour plus d'informations) et n'est disponible que pour les pistes de type seqtracktype_real. Si aucune structure de courbe n'est utilisée, la valeur de cette propriété sera -1.value: Cette propriété est simplement une valeur associée au keyframe, et n'est disponible que pour les pistes du type seqtracktype_real quand non curve struct est fourni.colour: Cette propriété renvoie (ou requiert, si elle est définie) un tableau pour la valeur de couleur de l' keyframe au format [A, R, V, B]. Ceci n'est disponible que pour les pistes du type seqtracktype_colour. Notez que les valeurs de chaque composant doivent être exprimées entre 0 et 1, où 0 correspond à la valeur HEX # 00 et 1 correspond à la valeur HEX #FF (0 à 255 comme indiqué dans le sélecteur de couleur pour les pistes de couleur dans les séquences Éditeur).sequence: Cette propriété renverra (ou nécessite, si elle est définie) une structure d'objet de séquence et n'est disponible que pour les pistes de type seqtracktype_sequence.objectIndex: Cette propriété renverra (ou nécessite, si elle est définie) un index d'objet et n'est disponible que pour les pistes de type seqtracktype_instance.events: Cette propriété permet d'accéder aux événements et aux messages de diffusion associés à la structure de données d' keyframe Vous pouvez obtenir ou définir cette propriété, et lors de son obtention, un tableau de chaînes est renvoyé, et lors de sa définition, un tableau de chaînes doit être spécifié. Pour plus d'informations sur les événements, veuillez consulter la section Événements et moments de séquence. Cette propriété n'est disponible que pour les pistes du type seqtracktype_message.event: Cette propriété renverra (ou peut être définie sur) lemethod associé à la structure de données d' keyframe Si aucune méthode n'a été spécifiée ou si vous souhaitez supprimer la méthode, la propriété doit être -1. Cette propriété n'est disponible que pour les pistes du type seqtracktype_moment.  Retour: Séquences Suivant: La structure de l'objet de séquence © Copyright YoYo Games Ltd. 2021 Tous droits réservés
+
+  
+  La structure de données des images clés 
+  Lorsque vous définissez une structure d'image clé pour une piste, vous devez également définir les données qui lui seront associées. Celles-ci sont composées de différents canaux, et chaque canal peut recevoir un type de données spécifique en fonction du type de piste pour lequel vous définissez les données d'image clé.
+    type de données spécifique en fonction du type de piste pour lequel vous définissez les données d'image clé. Ces propriétés sont les suivantes :
+  
+    canal: Il s'agit du canal auquel les données de l'image clé doivent être appliquées. Il s'agit d'une valeur entière positive commençant à 0. Il convient de noter que lorsque vous créez des pistes de paramètres pour des images clés de "position" ou d'"échelle",
+      vous devez utiliser des valeurs de canal très spécifiques. Celles-ci sont les suivantes : le canal 0 correspond à la position X ou à l'échelle X, le canal 1 correspond à la position Y ou à l'échelle Y.
+    spriteIndex: L'index de l'actif sprite à utiliser pour la piste. Cette propriété est uniquement disponible pour les pistes de type seqtracktype_graphic et vous pouvez l'obtenir ou la définir.
+    soundIndex: L'index de l'actif audio à utiliser pour la piste. Cette propriété est uniquement disponible pour les pistes de type seqtracktype_audio et vous pouvez l'obtenir ou la définir.
+    playbackMode: Le mode de lecture du son. Cette propriété est uniquement disponible pour les pistes de type seqtracktype_audio et vous pouvez l'obtenir ou la définir. La propriété doit être l'une des constantes suivantes :
+  
+  
+    
+      
+        Constant
+        Description
+        Valeur
+      
+      
+        seqaudiokey_loop
+        Le son est joué en boucle.
+        0
+      
+      
+        seqaudiokey_oneshot
+        Le son ne sera joué qu'une fois puis s'arrêtera.
+        1
+      
+    
+  
+   
+  
+    curve: Cette propriété nécessite une structure de courbe d'animation (voir ici pour plus d'informations) et n'est disponible que pour les pistes de type seqtracktype_real. Si aucune structure de courbe
+      n'est utilisée, la valeur de cette propriété sera -1.
+    valeur: Cette propriété est simplement une valeur associée au canal de données d'image clé, et n'est disponible que pour les pistes de type seqtracktype_real lorsqu'aucune courbe struct
+      n'est fournie.
+    colour: cette propriété renvoie (ou exige, si elle est définie) un tableau pour la valeur de couleur de l'image clé au format [A, R, G, B]. Cette propriété n'est disponible que pour les pistes de type seqtracktype_colour.
+      Notez que les valeurs de chaque composant doivent être exprimées entre 0 et 1, où 0 correspond à la valeur HEX #00 et 1 correspond à la valeur HEX #FF (0 - 255 comme indiqué dans le sélecteur de couleur pour les pistes en couleur dans l'éditeur de séquences).
+    séquence: Cette propriété renvoie (ou exige, si elle est définie) une structure d'objet de séquence et n'est disponible que pour les pistes du type seqtracktype_sequence.
+    objectIndex: Cette propriété renvoie (ou requiert, si elle est définie) un index d'objet et n'est disponible que pour les pistes de type seqtracktype_instance.
+    événements: Cette propriété permet d'accéder aux événements et aux messages de diffusion associés à la structure de données des images clés. Vous pouvez obtenir ou configurer cette propriété.
+      tableau de chaînes est renvoyé, et lorsqu'elle est définie, un tableau de chaînes doit être spécifié. Pour plus d'informations sur les événements, veuillez consulter la section Événements et moments de la séquence. Cette propriété
+      propriété n'est disponible que pour les pistes de type seqtracktype_message.
+    événement: Cette propriété renverra (ou peut être définie sur) la méthode associée à la structure de données d'image clé. Si aucune méthode n'a été spécifiée ou si vous souhaitez supprimer la méthode, la propriété doit être -1.
+      Cette propriété est uniquement disponible pour les pistes de type seqtracktype_moment.
+  
+   
+   
+   
+  
+    
+      
+        Retour : Séquences
+        Suivant : La structure de l'objet séquence
+      
+    
+    Copyright YoYo Games Ltd. 2021 Tous droits réservés
   
   
   

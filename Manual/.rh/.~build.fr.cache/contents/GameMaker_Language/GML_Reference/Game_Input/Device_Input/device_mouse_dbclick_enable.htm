@@ -1,7 +1,45 @@
-device_mouse_dbclick_enable Cette fonction peut être utilisée pour configurer l'appareil pour qu'il détecte une double pression sur le mb_left (bouton gauche de la souris) comme mb_right (bouton droit de la souris) appuyez ou non. Par défaut, il est défini sur true, ce qui signifie que chaque fois que l'utilisateur touche l'écran de l'appareil deux fois rapidement et consécutivement, la valeur de retour est la même que si le bouton droit de la souris avait été cliqué. Lorsqu'il est activé, le premier tap sera détecté comme mb_left, et le second comme mb_right, assurez-vous donc que tout code que vous utilisez en tient compte. Syntaxe:device_mouse_dbclick_enable(bool); Argument Description bool Activez la détection du double-clic (true ) ou désactivé (false ). Retour:Boolean Exemple:if os_type == os_windows || os_type == os_mac    {
-        device_mouse_dbclick_enable(false);
-        }
-   Le code ci-dessus vérifie si l'appareil exécutant le jeu est un Windows ou un Mac et s'il s'agit de l'un d'entre eux, il désactive la fonction de double pression.  Retour: Entrée de périphérique Suivant:device_mouse_x © Copyright YoYo Games Ltd. 2021 Tous droits réservés
+
+  
+  dispositif_mouse_dbclick_enable
+  Cette fonction peut être utilisée pour configurer le dispositif afin qu'il détecte un double tapotement du mb_left (bouton gauche de la souris) comme un tapotement du mb_right (bouton droit de la souris) ou non. Par défaut, cette fonction est réglée sur true (vrai), ce qui signifie que chaque fois que l'utilisateur touche l'écran du périphérique
+    deux fois rapidement et consécutivement, la valeur de retour est la même que si le bouton droit de la souris avait été cliqué. Lorsque cette option est activée, le premier tapotement sera détecté comme mb_left, et le second comme mb_right.
+    que le code que vous utilisez en tienne compte.
+   
+  Syntaxe :
+  device_mouse_dbclick_enable(bool) ;
+  
+    
+      
+        Arguments
+        Description
+      
+      
+        bool
+        Active(true) ou désactive(false) la détection du double-clic.
+      
+    
+  
+   
+  Les retours :
+  Booléen
+   
+  Exemple :
+  if os_type == os_windows || os_type == os_mac {
+     device_mouse_dbclick_enable(false) ;
+     }
+  
+  Le code ci-dessus vérifie si l'appareil qui exécute le jeu est un PC Windows ou un Mac et s'il s'agit de l'un ou l'autre, il désactive la fonction de double-clic.
+   
+   
+   
+  
+    
+      
+        Retour : Entrée du dispositif
+        Suivant : device_mouse_x
+      
+    
+    Copyright YoYo Games Ltd. 2021 Tous droits réservés
   
   
   

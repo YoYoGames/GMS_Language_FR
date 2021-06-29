@@ -1,4 +1,45 @@
- Définir Sprite Ce bloc d'action définit le sprite_index de l'instance vers une autre image-objet à partir du navigateur d'actifs. Vous sélectionnez l'image-objet à modifier, puis vous donnez l'image (cadre d'animation) à afficher. Notez que si vous ne souhaitez pas que l'image-objet s'anime après avoir défini l'image, vous devrez utiliser l' action Définir la vitesse d'animation et la définir sur 0, ou si vous souhaitez que l'image-objet continue de s'animer, définissez la valeur pour utiliser le image_index variable variable intégrée à la place. La modification du sprite modifiera également le masque de collision de l'instance, sauf si vous avez également spécifié un mask_index dans l' éditeur d'objets. Veuillez noter que pour que les modifications apportées à cette action soient visibles, l'instance doit avoir soit aucun événement de dessin (et donc GameMaker Studio 2 dessine par défaut le sprite) soit être dessinée à l'aide de l'action Draw Self. Syntaxe de l'action: Arguments: Argument Description Sprite Le nouveau sprite à utiliser (-1 si vous souhaitez supprimer le sprite). Frame L'image d'animation à afficher initialement (si aucune image supplémentaire n'est utilisée, utilisez 0). Exemple: Le code de bloc d'action ci-dessus définit un nouveau sprite ainsi qu'un certain nombre d'autres propriétés pour la façon dont ce sprite doit être affiché.  Retour: Actions d'instance Suivant: Définir la rotation d'instance © Copyright YoYo Games Ltd. 2021 Tous droits réservés
+
+  
+   Set Sprite
+  Ce bloc d'action définit le sprite_index de l'instance à un autre sprite du navigateur d'actifs. Vous sélectionnez le sprite à modifier, puis vous indiquez l'image (cadre d'animation) à afficher. Notez que si vous ne souhaitez pas que le sprite s'anime après avoir
+    après avoir défini le cadre, vous devrez utiliser l'action Set Animation Speed et la définir à 0, ou si vous souhaitez que le sprite continue à s'animer, définissez la valeur pour utiliser la variable intégrée image_index 
+    à la place.
+  La modification du sprite changera également le masque de collision de l'instance, à moins que vous n'ayez également spécifié un mask_index distinct dans l'éditeur d'objets. Veuillez noter que pour que les modifications de cette action
+    soient visibles, l'instance ne doit pas avoir d'événement de dessin (et GameMaker Studio 2 dessinera donc le sprite par défaut) ou doit être dessinée à l'aide de l'action Draw Self.
+   
+  Syntaxe de l'action :
+  
+  Arguments :
+  
+    
+      
+        Arguments
+        Description
+      
+      
+        Sprite
+        Le nouveau sprite à utiliser (-1 si vous voulez supprimer le sprite).
+      
+      
+        Cadre
+        Le cadre d'animation à afficher initialement (si aucun cadre supplémentaire n'est utilisé, utilisez 0).
+      
+    
+  
+   
+  Exemple :
+  Le code du bloc d'action ci-dessus définit un nouveau sprite ainsi qu'un certain nombre d'autres propriétés pour l'affichage de ce sprite.
+   
+   
+   
+  
+    
+      
+        Retour : Actions de l'instance
+        Suivant : Définir la rotation de l'instance
+      
+    
+    Copyright YoYo Games Ltd. 2021 Tous droits réservés
   
   
   

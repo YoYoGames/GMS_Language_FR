@@ -1,4 +1,185 @@
-font_replace Cette fonction peut être utilisée pour remplacer une police dans votre jeu à partir des polices installées sur le système sur lequel elle s'exécute. Notez que la police en cours de remplacement ne peut pas être une police du navigateur d'actifs et doit être une police qui a été ajoutée précédemment à l'aide de la fonctionfont_add(). Lorsque vous remplacez une police de cette manière, vous pouvez définir la taille de la police (en points), ainsi que si la police doit être en gras ou en italique, et vous pouvez également définir la plage de caractères à inclure. Si la fonction échoue, elle échouera silencieusement et la police donnée ne sera pas remplacée. Pour le module cible HTML5, cette fonction ne peut être utilisée que pour remplacer les polices Web et ne fonctionnera que si WebGL n'est pas activé - si WebGL est activé, vous devez utiliser une ressource de police générale (par exemple: en utilisant draw_set_font() avec une police du navigateur de ressources) ou des polices bitmap (voir font_add_sprite() ). IMPORTANT! Lorsque vous ciblez HTML5, l'italique et le texte en gras ne sont pris en charge que si l'élément de police ou la police Web elle-même contient ces caractères. Ils ne seront pas synthétisés à partir de la police de base. Le tableau suivant montre les polices qui sont standard dans tous les navigateurs et qui devraient être disponibles pour une utilisation sans problème. Toute autre police peut exister ou non sur l'ordinateur ou le périphérique exécutant votre jeu, l'utilisation de cette fonction doit donc être limitée à ces polices standard: Nom de la police Windows Nom de la police Mac Famille de polices Arial Arial / Helvetica sans empattement Noir arial Arial Black / Gadget sans empattement Comic Sans MS Comic Sans MS cursive Courier Nouveau Courier Nouveau monospace Géorgie Géorgie empattement Impacter Impact / charbon sans empattement Console Lucida Monaco monospace Lucida Sans Unicode Lucida Grande sans empattement Palatino Linotype / Book Antiqua Palatin empattement Tahoma Genève sans empattement Times New Roman Times New Roman / Times empattement Trébuchet MS Trébuchet MS sans empattement Verdana Verdana / Genève sans empattement Géorgie Géorgie empattement symbole symbole N / A Webdings Webdings N / A Wingdings Symboles Zapf N / A MS Sans Serif Genève sans empattement MS Serif New York sans empattement Sur toutes les autres cibles (non Web), vous pouvez utiliser cette fonction pour remplacer une police d'un fichier. Le fichier doit être inclus dans l'ensemble de jeu à l'aide de la fonctionnalité Fichiers inclus GameMaker Studio 2 et doit être *.ttf format de fichier de police, utile pour ajouter des polices non standard telles que les polices asiatiques ou arabes. AVERTISSEMENT!: Si vous incluez une police au format *.ttf avec un jeu, elle doit être licenciée pour être distribuée avec le jeu. Lors du chargement d'une police à partir d'un fichier de cette manière, la taille de la police est en pixels et les première et dernière valeurs sont ignorées, ce qui signifie que tous les glyphes de la police seront ajoutés. Les polices ajoutées de cette manière sont affectées à leur propre page de texture, il faut donc faire attention lors de l'utilisation de cette fonction car elle incrémentera le nombre de permutations de texture lors du dessin. Il convient également de noter que les polices peuvent apparaître légèrement plus grandes lorsqu'elles sont dessinées, car les glyphes peuvent avoir des parties qui sont dessinées en dehors de la zone de délimitation définie pour la police. Vous devez également savoir qu'il existe une limitation d'environ 200 glyphes qui peuvent être rendus dans une seule image pour une police particulière. REMARQUE: lorsque vous chargez une police dans GameMaker Studio 2: Studio, vous devez vous rappeler de la supprimer à nouveau (avec font_delete () ) lorsqu'elle n'est plus nécessaire, sinon il y a un risque de fuite de mémoire qui ralentira et finira par planter votre jeu. Syntaxe:font_replace(ind, name, size, bold, italic, first, last); Argument Description ind L'index de la police (précédemment ajoutée) à remplacer. name Le nom de la police à utiliser (par exemple 'Arial'), ou le chemin du fichier si la police est incluse *.ttf déposer. size La taille de la police - points pour les polices Web, pixels pour *.ttf polices. bold Si la police est en gras (vrai) ou non (faux). italics Si la police est en italique (vrai) ou non (faux). first Le premier caractère à inclure (si vous n'êtes pas sûr, optez pour 32). last Le dernier caractère à inclure (si vous n'êtes pas sûr, choisissez 128). Retour:Real Exemple:font_replace(myfont, "Arial", 24, true, true, 32, 128); Cela remplacera la police indexée dans la variable "myfont" par une nouvelle police de 24pt, utilisant "Arial" et qui est en gras et en italique. La gamme de polices comprend des lettres majuscules et minuscules, des chiffres et tous les signes de ponctuation courants.  Retour: Polices Suivant:font_replace_sprite © Copyright YoYo Games Ltd. 2021 Tous droits réservés
+
+  
+  font_replace
+  Cette fonction peut être utilisée pour remplacer une police dans votre jeu à partir des polices installées sur le système sur lequel il fonctionne. Notez que la police remplacée ne peut pas être une police du navigateur d'actifs et qu'elle doit être une police ajoutée auparavant.
+    à l'aide de la fonction font_add().
+  Lorsque vous remplacez une police de cette manière, vous pouvez définir la taille de la police (en points), ainsi que si la police doit être en gras ou en italique, et vous pouvez également définir la gamme de caractères à inclure. Si la fonction échoue, elle échouera silencieusement
+    silencieusement et la police donnée ne sera pas remplacée.
+  Pour le module cible HTML5, cette fonction ne peut être utilisée que pour remplacer les polices Web, et ne fonctionnera que si WebGL n' est pas activé - si WebGL est activé, vous devez utiliser une ressource de police générale (c'est-à-dire utiliser draw_set_font()    avec une police du navigateur de ressources) ou des polices bitmap (cf. font_add_sprite()).
+  IMPORTANT ! En HTML5, le texte en italique et en gras n'est pris en charge que si la ressource de police ou la police Web elle-même contient ces caractères. Ils ne seront pas synthétisés à partir de la police de base.
+  Le tableau suivant présente les polices standard de tous les navigateurs, qui devraient pouvoir être utilisées sans problème. Toute autre police peut ou non exister sur l'ordinateur ou le périphérique qui exécute votre jeu.
+    doit être limitée à ces polices standard :
+   
+  
+    
+      
+        Nom de la policeWindows 
+        Nom de la police Mac
+        Famille de polices
+      
+      
+        Arial
+        Arial / Helvetica
+        sans-sérif
+      
+      
+        Arial Noir
+        Arial Noir / Gadget
+        sans-sérif
+      
+      
+        Comic Sans MS
+        Comic Sans MS
+        cursive
+      
+      
+        Courier New
+        Courier New
+        monospaced
+      
+      
+        Géorgie
+        Géorgie
+        empattement
+      
+      
+        Impact
+        Impact / Charbon de bois
+        sans-sérif
+      
+      
+        Console Lucida
+        Monaco
+        monospaced
+      
+      
+        Lucida Sans Unicode
+        Lucida Grande
+        sans-sérif
+      
+      
+        Palatino Linotype / Book Antiqua
+        Palatino
+        empattement
+      
+      
+        Tahoma
+        Genève
+        sans-sérif
+      
+      
+        Times New Roman
+        Times New Roman / Times
+        empattement
+      
+      
+        Trébuchet MS
+        Trébuchet MS
+        sans-sérif
+      
+      
+        Verdana
+        Verdana / Genève
+        sans-sérif
+      
+      
+        Géorgie
+        Géorgie
+        empattement
+      
+      
+        Symbole
+        Symbole
+        N/A
+      
+      
+        Webdings
+        Webdings
+        N/A
+      
+      
+        Wingdings
+        Zapf Dingbats
+        N/A
+      
+      
+        MS Sans Serif
+        Genève
+        sans-sérif
+      
+      
+        MS Serif
+        New York
+        sans-sérif
+      
+    
+  
+  
+     Sur toutes les autres cibles (non Web), vous pouvez utiliser cette fonction pour remplacer une police à partir d'un fichier. Le fichier doit être inclus dans le paquet de jeu à l'aide de la fonctionnalité Included Files de GameMaker
+    Studio 2, et doit être un fichier de police au format *.ttf ou *.otf, utile pour ajouter des polices non standard comme les polices asiatiques ou arabes.
+  ATTENTION ! Si vous incluez un tel fichier de police avec un jeu, il doit faire l'objet d'une licence pour sa distribution avec le jeu.
+  Lorsque vous chargez une police à partir d'un fichier de cette manière, la taille de la police est exprimée en pixels et les premières et dernières valeurs sont ignorées, ce qui signifie que tous les glyphes de la police seront ajoutés. Les polices ajoutées de cette manière sont affectées à leur propre page de texture
+    il faut donc faire attention lorsque l'on utilise cette fonction, car elle incrémente le nombre de changements de texture lors du dessin. Il convient également de noter que les polices peuvent apparaître légèrement plus grandes lorsqu'elles sont dessinées, car les glyphes peuvent avoir des parties qui sont dessinées en dehors de la
+    boîte de délimitation définie pour la police. Vous devez également savoir qu'il y a une limitation d'environ 200 glyphes qui peuvent être rendus dans une seule image pour une police particulière.
+  REMARQUE : Lorsque vous chargez une police dans GameMaker Studio 2: Studio, vous devez vous souvenir de la supprimer (avec la touche font_delete()) lorsqu'elle n'est plus nécessaire, sinon
+    il y a un risque de fuite de mémoire qui ralentira et finira par faire planter votre jeu.
+   
+  Syntaxe :
+  font_replace(ind, name, size, bold, italic, first, last) ;
+  
+    
+      
+        Arguments
+        Description
+      
+      
+        ind
+        L'index de la police (précédemment ajoutée) à remplacer.
+      
+      
+        nom
+        Le nom de la police à utiliser (par exemple 'Arial'), ou le chemin d'accès au fichier si la police est un  fichier *.ttf ou *.otf inclus dans . 
+      
+      
+        taille
+        La taille de la police - points pour les polices Web, pixels pour les polices de fichier.
+      
+      
+        en gras
+        Indique si la police est en gras (true) ou non (false).
+      
+      
+        italiques
+        Indique si la police est en italique (true) ou non (false).
+      
+      
+        premièrement
+        Le premier caractère à inclure (si vous n'êtes pas sûr, choisissez 32).
+      
+      
+        dernier
+        Le dernier caractère à inclure (si vous n'êtes pas sûr, choisissez 128).
+      
+    
+  
+   
+  Les retours :
+  Real
+   
+  Exemple :
+  font_replace(myfont, "Arial", 24, true, true, 32, 128) ;
+  Cela remplacera la police indexée dans la variable "myfont" par une nouvelle police de taille 24pt, utilisant "Arial" et qui est en gras et en italique. La gamme de polices comprend les lettres majuscules et minuscules, les chiffres et toute la ponctuation courante.
+   
+   
+   
+  
+    
+      
+        Retour : Polices de caractères
+        Suivant : font_replace_sprite
+      
+    
+    Copyright YoYo Games Ltd. 2021 Tous droits réservés
   
   
   

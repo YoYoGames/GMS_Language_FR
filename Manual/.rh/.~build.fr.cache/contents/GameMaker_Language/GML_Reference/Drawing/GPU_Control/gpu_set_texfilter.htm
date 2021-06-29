@@ -1,11 +1,51 @@
-gpu_set_texfilter Cette fonction peut être utilisée pour définir le filtrage de texture (interpolation linéaire) de toutes les images dessinées sur l'écran de jeu. Lorsque cela est activé (true ) toutes les textures seront lissées lors du dessin (cela inclut les sprites car ils sont également considérés comme des textures), ce qui signifie que lorsqu'ils sont mis à l'échelle ou déplacés s'il n'y a pas un rapport de pixels de 1: 1, il y aura un "maculage" sur divers pixels qui peut faire les images apparaissent floues en fonction du style artistique utilisé. Si cela est désactivé (false ) alors les images seront dessinées sur la base du pixel le plus proche lorsqu'elles sont mises à l'échelle ou en mouvement, ce qui peut conduire à des images "en blocs". La valeur par défaut est false, et cela peut également être modifié dans les options de jeu globales pour les plates-formes cibles individuelles. REMARQUE: ce paramètre remplacera toute interpolation d'étape de texture définie pour les shaders utilisant la fonction gpu_set_texfilter_ext(). REMARQUE: sur la cible HTML5, cette fonction ne fonctionnera qu'avec WebGL activé. Syntaxe:gpu_set_texfilter(enable); Argument Description enable Activer ou désactiver le filtrage des textures (true /false ) Retour:N/A Exemple:if gpu_get_texfilter()     {
-         gpu_set_texfilter(false);
-         }
+
+  
+  gpu_set_texfilter
+  Cette fonction peut être utilisée pour définir le filtrage des textures (interpolation linéaire) de toutes les images dessinées sur l'écran du jeu. Lorsque cette fonction est activée(true), toutes les textures seront lissées lorsqu'elles seront dessinées (ceci inclut les sprites car ils sont aussi considérés comme des textures),
+    ce qui signifie qu'en cas de mise à l'échelle ou de déplacement, s'il n'y a pas un rapport de pixel 1:1, il y aura une "tache" sur les différents pixels, ce qui peut faire apparaître les images floues selon le style artistique utilisé. Si cette option est désactivée(false), les images
+    seront dessinées sur la base du pixel le plus proche lorsqu'elles seront mises à l'échelle ou déplacées, ce qui peut donner des images "en bloc". La valeur par défaut est false, et ceci peut également être modifié dans les options globales du jeu pour les plateformes cibles individuelles.
+  REMARQUE: Ce paramètre remplacera toute interpolation d'étage de texture définie pour les shaders utilisant la fonction gpu_set_texfilter_ext().
+  REMARQUE: sur la cible HTML5, cette fonction ne fonctionnera que si WebGL est activé.
+   
+  Syntaxe :
+  gpu_set_texfilter(enable) ;
+  
+    
+      
+        Arguments
+        Description
+      
+      
+        activer
+        Activer ou désactiver le filtrage des textures(true / false)
+      
+    
+  
+   
+  Les retours :
+  N/A
+   
+  Exemple :
+  if gpu_get_texfilter() {
+     gpu_set_texfilter(false) ;
+     }
      else
-         {
-         gpu_set_texfilter(true);
-         }
-   Le code ci-dessus vérifie si le filtrage de texture est activé ou désactivé et le règle en conséquence.  Retour: Contrôle GPU Suivant:gpu_set_texfilter_ext © Copyright YoYo Games Ltd. 2021 Tous droits réservés
+     {
+     gpu_set_texfilter(true) ;
+     }
+  
+  Le code ci-dessus vérifie si le filtrage des textures est activé ou non et l'active en conséquence.
+   
+   
+   
+  
+    
+      
+        Retour : Contrôle du GPU
+        Suivant : gpu_set_texfilter_ext
+      
+    
+    Copyright YoYo Games Ltd. 2021 Tous droits réservés
   
   
   

@@ -1,7 +1,54 @@
-timeline_moment_add_script Avec cette fonction, vous pouvez ajouter dynamiquement une fonction de script aux Timelines à n'importe quel «moment» donné dans cette ligne de temps, où un «moment» est l'équivalent d'un tick (ou pas) de jeu. De cette façon, vous pouvez créer une nouvelle chronologie en utilisant le timeline_add() fonction et ajoutez différents comportements à tout moment, ou modifiez simplement une ressource chronologique créée précédemment avec de nouveaux comportements. Notez que la fonction ne peut pas nécessiter d'arguments supplémentaires lors de l'utilisation de cette fonction, et si vous l'utilisez pour modifier un élément de la chronologie présent dans le navigateur de ressources, toutes les instances qui utilisent cette chronologie seront affectées et la modification durera jusqu'à la fin de le jeu (appeler game_restart() ne réinitialisera pas non plus la modification). Syntaxe:timeline_moment_add_script(ind, step, script); Argument Description ind L'index de la chronologie à laquelle ajouter un moment. step Le moment (étape) auquel ajouter. script L'index de la fonction de script à ajouter dans l'instant. Retour:N/A Exemple:global.tl = timeline_add(); var i = room_speed * 60; repeat(3)
-         {
-         timeline_moment_add_script(global.tl, i, choose(Attack_1, Attack_2, Attack_3);     i += room_speed * 60;     }
-   Le code ci-dessus créera une nouvelle ligne de temps et stockera son index dans la variable "global.tl". Il ajoutera ensuite trois scripts à la chronologie, choisis au hasard, à une minute d'intervalle.  Retour: Chronologies Suivant:timeline_moment_clear © Copyright YoYo Games Ltd. 2021 Tous droits réservés
+
+  
+  timeline_moment_add_script
+  Avec cette fonction, vous pouvez ajouter dynamiquement une fonction de script aux lignes de temps à n'importe quel "moment" de cette ligne de temps, où un "moment" est l'équivalent d'un tick (ou d'une étape) de jeu.
+    étape). De cette façon, vous pouvez créer une nouvelle ligne de temps en utilisant la fonction timeline_add() et ajouter des comportements différents à tout moment, ou simplement modifier une ressource de ligne de temps précédemment créée avec de nouveaux comportements. Notez
+    que la fonction ne peut pas exiger d'arguments supplémentaires lors de son utilisation, et que si vous l'utilisez pour modifier une ressource ligne de temps présente dans le navigateur d'actifs, alors toutes les instances qui utilisent cette ligne de temps seront affectées, et le changement durera jusqu'à la
+    jusqu'à la fin du jeu (l'appel à game_restart() ne réinitialisera pas non plus le changement).
+   
+  Syntaxe :
+  timeline_moment_add_script(ind, step, script) ;
+  
+    
+      
+        Arguments
+        Description
+      
+      
+        ind
+        L'index de la ligne du temps à laquelle ajouter un moment.
+      
+      
+        étape
+        Le moment (l'étape) à ajouter.
+      
+      
+        script
+        L'index de la fonction de script à ajouter dans le moment.
+      
+    
+  
+   
+  Les retours :
+  N/A
+   
+  Exemple :
+  global.tl = timeline_add() ; var i = room_speed * 60 ; repeat(3)
+     {
+     timeline_moment_add_script(global.tl, i, choose(Attack_1, Attack_2, Attack_3) ; i += room_speed * 60 ; }
+  
+  Le code ci-dessus va créer une nouvelle ligne de temps et stocker son index dans la variable "global.tl". Il ajoutera ensuite trois scripts à la ligne de temps, choisis au hasard, à intervalles d'une minute.
+   
+   
+   
+  
+    
+      
+        Retour : Lignes du temps
+        Suivant : timeline_moment_clear
+      
+    
+    Copyright YoYo Games Ltd. 2021 Tous droits réservés
   
   
   

@@ -1,8 +1,47 @@
- Fonctions d' Runtime La définition générale d'une fonction est quelque chose comme ceci: Une fonction a une entrée et une sortie, et la sortie est liée d'une manière ou d'une autre à l'entrée. Dans GameMaker Studio 2 cela se traduit par deux choses différentes, mais elles fonctionnent toutes les deux de la même manière: Fonctions d' Runtime - Une runtime est une fonction fournie dans le cadre du GameMaker Language ( GML ). Celles-ci sont intégrées au langage et peuvent être utilisées pour faire bouger les choses dans vos jeux et un grand nombre de runtime GML sont à votre disposition, qui sont toutes expliquées dans la section Référence du langage du manuel. Fonctions de script et méthodes - Fonctions de script et M ODE variables sont des fonctions que vous avez créés vous - même en utilisant les éléments de base de la GameMaker Language ( GML ), et ceux - ci peuvent inclure runtime des fonctions dans le cadre de leur code. Dans les deux cas ci-dessus, une fonction a la forme d'un nom de fonction, suivi de l' argument d' entrée s entre crochets () et séparés par des virgules (si la fonction n'a pas d'arguments d'entrée, seuls des crochets sont utilisés). Cette page se concentre sur les fonctions d' runtime (c'est-à-dire celles qui sont intégrées à GameMaker pour former le GameMaker Language ), mais les règles générales indiquées ci-dessous suivent pour tous les types de fonctions. Voici un aperçu de la structure d'une fonction:<function>(<arg0>, <arg1> ,... <argN>); Certaines fonctions peuvent renvoyer des valeurs et peuvent être utilisées dans l' expression s, tandis que d'autres exécutent simplement des commandes, comme illustré dans les deux exemples de fonctions d' runtime// Destroy the calling instance // This requires no arguments and returns nothing instance_destroy();
+
+  
+  Fonctions d'exécution 
+  La définition générale d'une fonction est la suivante :
+  Une fonction a une entrée et une sortie, et la sortie est liée d'une manière ou d'une autre à l'entrée.
+  Dans GameMaker Studio 2, cela se traduit par deux choses différentes, mais elles fonctionnent de la même manière :
+  
+    Fonctions d'exécution - Une runtime est une fonction qui est fournie en tant que partie de l'application Langage GameMaker(GML). Elles sont intégrées au langage et peuvent être utilisées pour faire bouger les choses dans vos jeux. Il existe un grand nombre de fonctions d'exécution GML
+     à votre disposition, toutes expliquées dans la section Référence du langage du manuel.
+    Fonctions et méthodes de script - Script fonctions et MVariables de méthode sont des fonctions que vous avez créées vous-même à l'aide des éléments de base de la
+      blocs de base du Langage GameMaker(GML), et celles-ci peuvent inclure des fonctions d'exécution dans leur code.
+  
+  Dans les deux cas ci-dessus, une fonction se présente sous la forme d'un nom de fonction, suivi des arguments d' entrée entre parenthèses () et séparés par des virgules.
+    par des virgules (si la fonction n'a pas d'arguments d'entrée, seules les parenthèses sont utilisées). Cette page se concentre sur les fonctions d 'exécution (c'est-à-dire celles qui sont intégrées à GameMaker pour former le langage GameMaker), mais les règles générales présentées ci-dessous s'appliquent à tous les types de fonctions.
+    ci-dessous s'appliquent à tous les types de fonctions.
+  Voici un aperçu de la structure d'une fonction :
+  <fonction>(<arg0>, <arg1>,... <argN>) ;
+  Certaines fonctions peuvent renvoyer des valeurs et être utilisées dans desexpressions, tandis que d'autres exécutent simplement des commandes, comme l'illustrent les deux exemples de fonctions d'exécution suivants
+    suivantes :
+  // Détruit l'instance appelante // Ceci ne requiert aucun argument et ne renvoie rien instance_destroy() ;
     
-     // Get the distance from the current instance position to the mouse position // This takes four arguments and returns a real value dist = point_distance(x, y, mouse_x, mouse_y); REMARQUE: Partout où le manuel a "N / A" comme valeur de retour pour une fonction, cela signifie que la fonction n'est pas censée renvoyer une valeur dans le cadre de son opération. Si vous essayez de vérifier une valeur de retour à partir de ces fonctions, vous obtiendrez la valeur undefined. Parfois, la valeur de retour d'une fonction peut être une valeur que vous souhaitez utiliser dans une affectation, mais vous devez noter qu'il est impossible d'utiliser une fonction directement comme côté gauche d'une affectation. Par exemple, le code suivant pour définir la vitesse sur une instance vous donnerait une erreur:instance_nearest(x, y, obj).speed = 0; La valeur de retour de l'expression dans cet exemple de code est un nombre entier (la valeur d'ID unique pour l'instance la plus proche) et doit donc être placée entre crochets pour être utilisée de cette manière et adresser correctement l'instance requise (voir Adressage des variables dans un autre Instances pour plus d'informations). Le code ci-dessus serait correctement écrit comme suit:(instance_nearest(x, y, obj)).speed = 0;
-     //or more correctly still
-     var inst = instance_nearest(x, y, obj); inst.speed = 0; La section Référence du langage du manuel répertorie toutes les runtime disponibles et donne des exemples de la façon dont elles peuvent être utilisées ainsi que d'autres informations importantes sur ce qu'elles peuvent renvoyer ou sur les événements qu'elles peuvent déclencher, etc. des informations sur les fonctions et méthodes de script définies par l'utilisateur, voir la section sur les fonctions de script et la section sur les variables de méthode.  Retour: Présentation de GML Suivant: Code de commentaire © Copyright YoYo Games Ltd. 2021 Tous droits réservés
+     // Obtention de la distance entre la position actuelle de l'instance et la position de la souris // Cette opération prend quatre arguments et renvoie une valeur réelle dist = point_distance(x, y, mouse_x, mouse_y) ;
+  REMARQUE: si le manuel indique "N/A" comme valeur de retour d'une fonction, cela signifie que la fonction n'est pas censée renvoyer de valeur dans le cadre de son fonctionnement. Si vous essayez de vérifier la valeur de retour de ces fonctions, vous obtenez la valeur suivante
+    vous obtiendrez la valeur undefined. 
+  Parfois, la valeur de retour d'une fonction peut être une valeur que vous souhaitez utiliser dans une affectation, mais vous devez savoir qu'il est impossible d'utiliser une fonction directement comme partie gauche d'une affectation.
+    d'une affectation. Par exemple, le code suivant pour définir la vitesse d'une instance vous donnerait une erreur :
+  instance_nearest(x, y, obj).speed = 0 ;
+  La valeur de retour de l'expression dans cet exemple de code est un nombre entier (la valeur d'identification unique de l'instance la plus proche). Elle doit donc être mise entre parenthèses pour être utilisée de cette manière et adresser correctement l'instance requise (voir Adressage des variables dans d'autres instances pour plus d'informations). Le code ci-dessus serait correctement écrit comme suit
+  (instance_nearest(x, y, obj)).speed = 0 ;
+     /ou plus correctement encore
+     var inst = instance_nearest(x, y, obj) ; inst.speed = 0 ;
+  La section Référence du langage du manuel répertorie toutes les fonctions d'exécution à votre disposition et donne des exemples de leur utilisation ainsi que d'autres informations importantes sur ce qu'elles peuvent retourner
+    ou les événements qu'elles peuvent déclencher, etc... Pour plus d'informations sur les fonctions et méthodes de script définies par l'utilisateur, consultez la section sur les fonctions de script et la section sur les variables de méthode.
+   
+   
+   
+  
+    
+      
+        Retour : Aperçu duGML
+        Suivant : Commenter le code
+      
+    
+    Copyright YoYo Games Ltd. 2021 Tous droits réservés
   
   
   

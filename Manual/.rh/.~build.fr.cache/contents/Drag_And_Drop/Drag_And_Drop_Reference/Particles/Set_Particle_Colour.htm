@@ -1,4 +1,54 @@
- Définir la couleur des particules Cette action définira la ou les couleurs à utiliser lors de la création de votre sprite et pendant sa durée de vie. Vous spécifiez d'abord la valeur de l'ID du type de particule (qui doit être identique à la valeur renvoyée lorsque vous avez créé la particule à l'aide de l' action Créer un type de particule ), puis vous pouvez définir les couleurs à utiliser. Vous pouvez choisir trois couleurs à utiliser, et l'image-objet se fondra entre elles pendant toute la durée de vie de la particule. Par exemple, si une particule a des couleurs rouge, verte et jaune et une durée de vie de 60 images de jeu, alors lorsqu'elle est créée (image 0), elle sera teintée de rouge, puis elle se fanera vers le vert à la moitié de sa vie ( image 30), avant de passer au jaune à la fin de sa durée de vie (image 60). Si vous utilisez un sprite personnalisé au lieu d'une forme de particule, toute couleur autre que le blanc se fondra avec le sprite utilisé. REMARQUE: le composant alpha de la couleur n'est pas utilisé, uniquement les composants RVB du sélecteur de couleur. Pour définir l'alpha, utilisez l'action Définir l'alpha particule. Syntaxe de l'action: Arguments: Argument Description Type ID La valeur d'ID unique du type de particule pour définir la couleur de Start La couleur initiale à utiliser Middle La couleur intermédiaire à utiliser End La couleur finale à utiliser Exemple: Le code de bloc d'action ci-dessus créera un nouveau type de particule et attribuera sa valeur d'identifiant unique à une variable globale. Il procède ensuite à la définition de toutes les propriétés du type de particule.  Retour: Actions de particules Suivant: Définir l'alpha des particules © Copyright YoYo Games Ltd. 2021 Tous droits réservés
+
+  
+   Set Particle Colour
+  Cette action définira la ou les couleurs à utiliser lors de la création de votre sprite et pendant sa durée de vie. Vous devez d'abord spécifier la valeur de l'ID du type de particule (qui doit être la même que la valeur renvoyée lorsque vous avez créé la particule à l'aide de l'action Créer un type de particule ), puis vous pouvez définir les couleurs à utiliser.
+  Vous pouvez choisir trois couleurs à utiliser, et le sprite se fondra entre elles pendant la durée de vie de la particule. Par exemple, si une particule a des couleurs rouge, verte et jaune, et une durée de vie de 60 images de jeu, alors lorsqu'elle est créée (image 0) elle sera
+    rouge, puis elle s'estompera vers le vert à la moitié de sa durée de vie (image 30), avant de s'estomper vers le jaune à la fin de sa vie (image 60). Si vous utilisez un sprite personnalisé au lieu d'une forme de particule, toute couleur autre que le blanc se confondra avec le sprite utilisé.
+    avec le sprite utilisé.
+  REMARQUE: la composante alpha de la couleur n' est pas utilisée, seules les composantes RVB du sélecteur de couleur le sont. Pour définir l'alpha, utilisez l'action Set Particle Alpha.
+   
+  Syntaxe de l'action :
+  
+  Arguments :
+  
+    
+      
+        Arguments
+        Description
+      
+      
+        Type
+        La valeur d'identification unique du type de particule dont la couleur doit être définie.
+      
+      
+        Début
+        La couleur initiale à utiliser
+      
+      
+        Moyen
+        La couleur intermédiaire à utiliser
+      
+      
+        Fin
+        La couleur finale à utiliser
+      
+    
+  
+   
+  Exemple :
+  Le code du bloc d'action ci-dessus créera un nouveau type de particule et affectera sa valeur d'identification unique à une variable globale.
+    unique à une variable globale. Il définit ensuite toutes les propriétés du type de particule.
+   
+   
+   
+  
+    
+      
+        Retour : Actions des particules
+        Suivant : Définir l'alpha des particules
+      
+    
+    Copyright YoYo Games Ltd. 2021 Tous droits réservés
   
   
   

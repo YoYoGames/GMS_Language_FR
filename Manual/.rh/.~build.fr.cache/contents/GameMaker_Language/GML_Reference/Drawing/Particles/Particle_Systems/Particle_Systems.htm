@@ -1,4 +1,59 @@
- Systèmes de particules Avant de pouvoir créer des particules, vous devez créer un système de particules. Il s'agit d'un "conteneur" dans lequel vous placez vos particules et vos émetteurs (si vous en avez besoin) prêts à l'emploi, et vous pouvez mettre autant ou aussi peu de particules dans un système que vous le jugez nécessaire, et vous pouvez avoir autant de systèmes que possible. vous pensez nécessaire aussi. Cependant, il est toujours préférable de garder ce nombre aussi petit que possible car chaque système, émetteur et particule prend de la mémoire et en avoir trop peut ralentir votre jeu ou causer des problèmes. Par exemple, si vous avez besoin que certains effets apparaissent au-dessus des instances et que d'autres effets apparaissent sous les instances, vous devez créer deux systèmes et définir leurs profondeurs pour obtenir l'effet souhaité, toutes les particules ajoutées à chaque système étant dessinées à la profondeur. vous spécifiez. Puisqu'un système de particules est une ressource créée dynamiquement, vous devez le créer et stocker l'index retourné dans une variable pour référencer le système dans tous les autres appels de fonction, et il est très important que vous détruisiez également le système lorsqu'il n'est plus nécessaire ou sinon, vous aurez une fuite de mémoire qui ralentira et finira par planter votre jeu. Il est également intéressant de noter que les systèmes de particules vivront éternellement après leur création, même si l'index n'est plus stocké. Ainsi, même si vous changez de pièce ou redémarrez le jeu, les systèmes et les particules resteront et seront visibles dans toutes les autres pièces, vous feriez donc mieux de les détruire une fois que vous n'en aurez plus besoin. Les fonctions de base pour la configuration d'un système de particules sont répertoriées ci-dessous: part_system_existspart_system_createpart_system_create_layerpart_system_get_layerpart_system_layerpart_system_depthpart_system_positionpart_system_clearpart_system_destroypart_particles_clearpart_particles_count Une fois que les particules sont ajoutées à un système de particules, puis éclatées ou diffusées dans la pièce, elles sont normalement automatiquement mises à jour à chaque étape et dessinées en fonction des paramètres que vous avez utilisés pour les définir. Cependant, il peut parfois être nécessaire de contrôler quand et comment le système est mis à jour ainsi que la façon dont le système doit être dessiné, et pour cela GameMaker Studio 2 fournit les fonctions suivantes: part_system_automatic_updatepart_system_automatic_drawpart_system_updatepart_system_drawitpart_system_draw_order Vous pouvez utiliser des émetteurs de particules pour éclater ou diffuser des particules à partir d'une zone, mais dans de nombreux cas, ils ne sont pas nécessaires et il est en fait préférable de simplement créer les particules directement à l'aide des fonctions suivantes:part_particles_createpart_particles_create_colour Retour: Particules Suivant: Types de particules © Copyright YoYo Games Ltd. 2021 Tous droits réservés
+
+  
+  Systèmes à particules
+  Avant de pouvoir créer des particules, vous devez créer un système de particules. Il s'agit d'un "conteneur" où vous placez vos particules et émetteurs (si vous en avez besoin) prêts à être utilisés, et vous pouvez mettre autant ou aussi peu de particules dans un système que vous le jugez nécessaire.
+    que vous le jugez nécessaire, et vous pouvez avoir autant de systèmes que vous le jugez nécessaire aussi. Cependant, il est toujours préférable de garder ce nombre aussi bas que possible, car chaque système, émetteur et particule prend de la mémoire et en avoir trop peut ralentir votre jeu ou causer des problèmes.
+    peut ralentir votre jeu ou causer des problèmes. Par exemple, si vous avez besoin que certains effets apparaissent au-dessus des instances, et d'autres sous les instances, vous créerez deux systèmes et réglerez leur profondeur pour obtenir l'effet désiré, et toutes les particules
+    qui sont ajoutées à chaque système sont dessinées à la profondeur que vous spécifiez.
+  Puisqu'un système de particules est une ressource créée dynamiquement, vous devez le créer et stocker l'index retourné dans une variable pour référencer le système dans tous les appels de fonction ultérieurs, et il est très important que vous détruisiez également le système lorsqu'il n'est plus nécessaire, sinon vous aurez une fuite de mémoire qui ralentira votre jeu et finira par le faire planter.
+    Il est également très important de détruire le système lorsqu'il n'est plus nécessaire, sinon vous aurez une fuite de mémoire qui ralentira et finira par faire planter votre jeu. Il est également important de noter que les systèmes de particules vivent éternellement après leur création, même si l'index n'est plus stocké. Ainsi, même si vous changez de
+    pièce ou redémarrez le jeu, les systèmes et les particules resteront, et seront visibles, dans toutes les autres pièces ; vous devez donc vous assurer de les détruire dès que vous n'en avez plus besoin.
+  Les fonctions de base pour la configuration d'un système de particules sont énumérées ci-dessous :
+   
+  
+    partie_système_existe
+    partie_system_create
+    partie_système_créer_couche
+    partie_system_get_layer
+    couche_système_partiel
+    profondeur_système_partiel
+    partie_system_position
+    part_system_clear
+    partie_système_destruction
+    part_particles_clear
+    partie_particules_count
+  
+   
+  Une fois que les particules sont ajoutées à un système de particules, puis éclatées ou diffusées dans la pièce, elles sont normalement mises à jour automatiquement à chaque étape et dessinées en fonction des paramètres que vous avez utilisés pour les définir. Cependant, il peut parfois être nécessaire de contrôler
+    quand et comment le système est mis à jour, ainsi que la manière dont il doit être dessiné. GameMaker Studio 2 propose à cet effet les fonctions suivantes :
+   
+  
+    mise à jour automatique du système partiel
+    système_de_pièce_dessin_automatique
+    partie_système_mise à jour
+    partie_system_drawit
+    ordre de tirage des pièces
+  
+   
+  Vous pouvez utiliser des émetteurs de particules pour faire jaillir des particules d'une zone, mais dans de nombreux cas, ces émetteurs ne sont pas nécessaires et il est préférable de créer les particules directement à l'aide des fonctions suivantes
+    directement en utilisant les fonctions suivantes :
+   
+  
+    partie_particules_créer
+    partie_particules_créer_couleur
+  
+   
+   
+   
+   
+  
+    
+      
+        Retour : Particules
+        Suivant : Types de particules
+      
+    
+    Copyright YoYo Games Ltd. 2021 Tous droits réservés
   
   
   

@@ -1,6 +1,47 @@
-part_emitter_exists Avec cette fonction, vous pouvez vérifier si l'émetteur de particules indiqué existe dans le système donné ou non. Notez que si la variable vérifiée est une variable non initialisée (à laquelle un émetteur de particules aurait autrement son index assigné), cela générera une erreur. Syntaxe:part_emitter_exists(ps, ind); Argument Description ps Le système de particules pour rechercher un émetteur. ind L'index de l'émetteur à rechercher. Retour:Boolean Exemple:if part_emitter_exists(sname, p_emit1)     {
-         part_emitter_burst(sname, p_emit1, part_1, 30);     }
-   Le code ci-dessus vérifiera l'émetteur indexé dans la variable «permit» et s'il existe, il en fera éclater 30 particules.  Retour: Émetteurs de particules Suivant:part_emitter_create © Copyright YoYo Games Ltd. 2021 Tous droits réservés
+
+  
+  partie_émetteur_existe
+  Avec cette fonction, vous pouvez vérifier si l'émetteur de particules indexé existe ou non dans le système donné. Notez que si la variable vérifiée est une variable non initialisée (à laquelle un émetteur de particules aurait autrement été assigné)
+    cela entraînera une erreur.
+   
+  Syntaxe :
+  partie_émetteur_existe(ps, ind) ;
+  
+    
+      
+        Arguments
+        Description
+      
+      
+        ps
+        Le système de particules à vérifier pour un émetteur.
+      
+      
+        ind
+        L'index de l'émetteur à rechercher.
+      
+    
+  
+   
+  Les retours :
+  Booléen
+   
+  Exemple :
+  if part_emitter_exists(sname, p_emit1) {
+     part_emitter_burst(sname, p_emit1, part_1, 30) ; }
+  
+  Le code ci-dessus va rechercher l'émetteur indexé dans la variable "permit" et s'il existe, il va éclater 30 particules à partir de celui-ci.
+   
+   
+   
+  
+    
+      
+        Retour : Émetteurs de particules
+        Suivant : part_emitter_create
+      
+    
+    Copyright YoYo Games Ltd. 2021 Tous droits réservés
   
   
   

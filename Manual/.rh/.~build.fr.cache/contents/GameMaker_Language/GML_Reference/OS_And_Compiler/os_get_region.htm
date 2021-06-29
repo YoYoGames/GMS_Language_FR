@@ -1,21 +1,47 @@
-os_get_region Cette fonction renvoie une chaîne avec le code régional de deux ou trois lettres pour le système d'exploitation qui exécute le jeu, tel que défini par la norme ISO3166-1. Si l'information n'est pas disponible, elle contiendra simplement une chaîne vide "". REMARQUE: il ne s'agit pas du code régional d'emplacement renvoyé, mais du code de langue régionale du système d'exploitation. Syntaxe:os_get_region() Retour:String Exemple:switch (os_get_language())    {
-        case "zh":       var region = os_get_region();       if (region == "HK" || region == "MO" || region == "TW")          {
-              ini_open("chinese_traditional.ini");
-              }
-           else
-              {
-              ini_open("chinese_simplified.ini");
-              }
-        break;
-        case "fr":       ini_open("french.ini");
-        break;
-        case "it":       ini_open("italian.ini");
-        break;
-        default:
-           ini_open("english.ini");
-        break;
-        }
-   Le code ci-dessus vérifie la langue du système d'exploitation et s'il s'agit du chinois, il vérifie ensuite la région du système d'exploitation, ouvrant un autre *.ini fichier en fonction des valeurs renvoyées.  Retour: OS et compilateur Suivant:os_get_info © Copyright YoYo Games Ltd. 2021 Tous droits réservés
+
+  
+  os_get_region
+  Cette fonction renvoie une chaîne contenant le code régional à deux ou trois lettres du système d'exploitation qui exécute le jeu, tel qu'il est défini par la norme ISO3166-1. Si cette information n'est pas disponible
+    elle contiendra simplement une chaîne vide "".
+  REMARQUE: Ce n'est pas le code régional de l'emplacement qui est renvoyé, mais le code de la langue régionale du système d'exploitation.
+   
+  Syntaxe :
+  os_get_region()
+   
+  Les retours :
+  Chaîne de caractères
+   
+  Exemple :
+  switch (os_get_language()) {
+     case "zh" : var region = os_get_region() ; if (region == "HK" || region == "MO" || region == "TW") {
+     ini_open("chinese_traditional.ini") ;
+     }
+     else
+     {
+     ini_open("chinese_simplified.ini") ;
+     }
+     break ;
+     case "fr" : ini_open("french.ini") ;
+     break ;
+     case "it" : ini_open("italian.ini") ;
+     pause ;
+     par défaut :
+     ini_open("english.ini") ;
+     pause ;
+     }
+  
+  Le code ci-dessus vérifie la langue du système d'exploitation et s'il s'agit du chinois, il vérifie ensuite la région du système d'exploitation, ouvrant un fichier *.ini différent en fonction des valeurs retournées.
+   
+   
+   
+  
+    
+      
+        Retour : Système d'exploitation et compilateur
+        Suivant : os_get_info
+      
+    
+    Copyright YoYo Games Ltd. 2021 Tous droits réservés
   
   
   

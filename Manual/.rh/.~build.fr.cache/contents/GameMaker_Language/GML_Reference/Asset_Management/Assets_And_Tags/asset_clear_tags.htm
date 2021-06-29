@@ -1,4 +1,105 @@
-asset_clear_tags Avec cette fonction, vous pouvez effacer toutes les balises présentes sur n'importe quel actif à partir du navigateur d'actifs. Vous fournissez soit le nom de l'actif (sous forme de chaîne), soit son index d'actif, et si vous fournissez une valeur d'index d'actif, vous devrez alors fournir l'argument de type d'actif facultatif (une constante), car les actifs de types différents peuvent avoir le même index, même s'ils ne peuvent pas porter le même nom. Les types d'actifs disponibles sont répertoriés dans le tableau ci-dessous: Constant Description asset_object Le nom donné fait référence à un objet. asset_sprite Le nom donné fait référence à un sprite. asset_sound Le prénom fait référence à un son. asset_room Le prénom fait référence à unroom. asset_tiles Le nom donné fait référence à un jeu de tuiles. asset_path Le nom donné fait référence à un chemin. asset_script Le prénom fait référence à unscript. asset_font Le prénom fait référence à une police. asset_timeline Le prénom fait référence à une chronologie. asset_ shader Le prénom fait référence à un shader. asset_animationcurve Le nom donné fait référence à une courbe d'animation. asset_sequence Le prénom fait référence à une séquence. Si la fonction réussit à effacer les balises, elle retournera true sinon il reviendra false. Syntaxe:asset_clear_tags(name,[asset_type]); Argument Description name_or_index Le nom de l'actif (une chaîne) ou sa valeur d'index (un entier). [asset_type] OPTIONNEL! Type d'actif à partir duquel effacer les balises, utilisé uniquement lors de la fourniture d'un index pour le premier argument. Retour:Boolean Exemple:asset_clear_tags(obj_Enemy_Parent, asset_object); Le code ci-dessus effacera toutes les balises de l'actif objet donné.  Retour: Actifs et balises Suivant:asset_get_index © Copyright YoYo Games Ltd. 2021 Tous droits réservés
+
+  
+  balises_claires_de_l'actif
+  Cette fonction permet d'effacer toutes les balises présentes sur un poste à partir du navigateur de postes. Vous fournissez soit le nom du poste (sous forme de chaîne), soit son index de poste. Si vous fournissez une valeur d'index de poste, vous devrez fournir l'argument facultatif de type de poste (une constante), car des postes de types différents peuvent avoir le même index, même s'ils ne peuvent pas avoir le même nom.
+    (une constante), car des actifs de types différents peuvent avoir le même index, même s'ils ne peuvent pas avoir le même nom. Les types d'actifs disponibles sont répertoriés dans le tableau ci-dessous :
+   
+  
+    
+      
+        Constant
+        Description
+      
+      
+        objet_actif
+        Le nom donné fait référence à un objet.
+      
+      
+        actif_sprite
+        Le nom donné fait référence à un sprite.
+      
+      
+        actif_son
+        Le prénom fait référence à un son.
+      
+      
+        salle des actifs
+        Le prénom fait référence à une pièce.
+      
+      
+        piliers_de_l'actif
+        Le nom donné fait référence à un ensemble de carreaux.
+      
+      
+        chemin_de_l'actif
+        Le nom donné fait référence à un chemin.
+      
+      
+        script_de_l'actif
+        Le nom donné fait référence à un script.
+      
+      
+        asset_font
+        Le nom donné fait référence à une police de caractères.
+      
+      
+        chronologie des actifs
+        Le prénom fait référence à une ligne de temps.
+      
+      
+        asset_shader
+        Le nom donné fait référence à un shader.
+      
+      
+        courbe d'animation de l'actif
+        Le nom donné fait référence à une courbe d'animation.
+      
+      
+        séquence_d'actifs
+        Le nom donné fait référence à une Séquence.
+      
+    
+  
+   
+  Si la fonction réussit à effacer les balises, elle renvoie true, sinon elle renvoie false.
+   
+   
+  Syntaxe :
+  asset_clear_tags(name, [asset_type]) ;
+  
+    
+      
+        Arguments
+        Description
+      
+      
+        nom_ou_index
+        Le nom du poste (une chaîne de caractères) ou sa valeur d'index (un nombre entier).
+      
+      
+        [type d'actif]
+        FACULTATIF ! Le type de bien pour lequel il faut effacer les étiquettes, utilisé uniquement lorsqu'un index est fourni pour le premier argument.
+      
+    
+  
+   
+  Les retours :
+  Booléen
+   
+  Exemple :
+  asset_clear_tags(obj_Enemy_Parent, asset_object) ;
+  Le code ci-dessus effacera toutes les balises de l'objet donné.
+   
+   
+   
+  
+    
+      
+        Retour : Actifs et étiquettes
+        Suivant : asset_get_index
+      
+    
+    Copyright YoYo Games Ltd. 2021 Tous droits réservés
   
   
   

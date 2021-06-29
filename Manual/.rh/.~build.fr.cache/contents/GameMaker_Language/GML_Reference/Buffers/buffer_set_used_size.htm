@@ -1,0 +1,47 @@
+
+  
+  buffer_set_used_size
+  Cette fonction est principalement utilisée dans les extensions, et vous permet de définir la taille "utilisée" du tampon donné, qui est le nombre d'octets qui y ont été écrits.
+  Lorsque vous écrivez des données dans un tampon à partir d'une extension, GameMaker ne sait pas quelle proportion du tampon a été remplie par le code de l'extension et n'est pas en mesure de lire ces données. Cette fonction peut être appelée par l'extension pour indiquer au moteur combien d'octets de données ont été écrits dans le tampon.
+    ont été écrits dans le tampon, afin que le moteur puisse lire ces données.
+   
+  Syntaxe :
+  buffer_set_used_size(buffer, size) ;
+  
+    
+      
+        Arguments
+        Description
+      
+      
+        tampon
+        L'index du tampon à utiliser.
+      
+      
+        taille
+        Le nombre d'octets à définir comme la taille "utilisée".
+      
+    
+  
+   
+  Les retours :
+  N/A
+   
+  Exemple :
+  buffer_write(_bufferAddress, buffer_u8, 1) ; buffer_write(_bufferAddress, buffer_u8, 2) ; buffer_write(_bufferAddress, buffer_u16, 400) ;
+     buffer_set_used_size(_bufferAddress, 4) ;
+  Les fonctions ci-dessus seraient appelées dans une extension pour écrire des données dans un tampon GameMaker (via son adresse mémoire), puis pour définir le nombre d'octets qui ont été écrits dans ce tampon afin que le moteur puisse lire ces données.
+   
+   
+  
+    
+      
+        Retour : Tampons
+        Suivant : buffer_exists
+      
+    
+    Copyright YoYo Games Ltd. 2021 Tous droits réservés
+  
+  
+  
+

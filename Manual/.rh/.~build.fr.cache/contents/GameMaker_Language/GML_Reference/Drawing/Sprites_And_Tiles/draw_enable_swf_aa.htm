@@ -1,8 +1,45 @@
-draw_enable_swf_aa Avec cette fonction, vous pouvez activer ou désactiver l'anti-aliasing (AA) pour les sprites vectoriels au format SWF. AA lisse simplement les bords des images vectorielles pour leur donner un aspect plus agréable. La quantité d'AA utilisée dépendra de la valeur définie à l'aide de la fonction draw_set_swf_aa_level(). Par défaut, cela est désactivé. Syntaxe:draw_enable_swf_aa(enable); Argument Description enable Permettre (true ) ou désactiver (false ) AA pour tous les sprites SWF. Retour:N/A Exemple:if draw_get_swf_aa_level() == 0     {
-         draw_enable_swf_aa(true);
-         draw_set_swf_aa_level(0.5);
-         }
-   Le code ci-dessus vérifiera la valeur AA pour les sprites au format SWF, et si elle est égale à 0, il active AA et définit la valeur sur 0,5.  Face arrière: Sprites et tuiles Suivant:draw_set_swf_aa_level © Copyright YoYo Games Ltd. 2021 Tous droits réservés
+
+  
+  draw_enable_swf_aa
+  Cette fonction vous permet d'activer ou de désactiver l'anticrénelage (AA) pour les sprites vectoriels au format SWF. L'AA lisse simplement les bords des images vectorielles pour leur donner un aspect plus agréable. La quantité de AA utilisée dépendra de la valeur définie à l'aide de la fonction draw_set_swf_aa_level().
+    Par défaut, cette fonction est désactivée.
+   
+  Syntaxe :
+  draw_enable_swf_aa(enable) ;
+  
+    
+      
+        Arguments
+        Description
+      
+      
+        activer
+        Active(true) ou désactive(false) l'AA pour tous les sprites SWF.
+      
+    
+  
+   
+  Les retours :
+  N/A
+   
+  Exemple :
+  si draw_get_swf_aa_level() == 0 {
+     draw_enable_swf_aa(true) ;
+     draw_set_swf_aa_level(0.5) ;
+     }
+  
+  Le code ci-dessus vérifie la valeur AA pour les sprites au format SWF, et si elle est égale à 0, il active AA et fixe la valeur à 0,5.
+   
+   
+   
+  
+    
+      
+        Retour : Sprites et tuiles
+        Suivant : draw_set_swf_aa_level
+      
+    
+    Copyright YoYo Games Ltd. 2021 Tous droits réservés
   
   
   

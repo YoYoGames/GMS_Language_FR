@@ -1,4 +1,85 @@
-dot_product_3d Le produit scalaire est une valeur exprimant la relation angulaire entre deux vecteurs et se trouve en prenant deux vecteurs, en les multipliant ensemble puis en ajoutant les résultats. Le nom «produit scalaire» est dérivé du point centré «·» qui est souvent utilisé pour désigner cette opération (le nom alternatif «produit scalaire» met l'accent sur la nature scalaire plutôt que vectorielle du résultat). La formule mathématique réelle peut être écrite comme ceci: En 2D, le produit scalaire des vecteurs a[x1,y1] et b[x2,y2] est x1x2 + y1y2, donc en 3D, le produit scalaire des vecteurs a[x1,y1,z1] et b[x1,y1,z1] est x1x2 + y1y2 + z1z2. Ainsi, le dot_product_3d dans GameMaker Studio 2 est calculé comme suit:a · b = (x1*x2) + (y1*y2) + (z1*z2); La chose curieuse à propos du produit scalaire est la relation qu'il a avec l'angle formé par les vecteurs d'entrée qui peut être exprimé comme:a · b = (length of a) * (length of b) * cos(angle) C'est-à-dire que le produit scalaire de deux vecteurs sera égal au cosinus de l'angle entre ces vecteurs, multiplié par les longueurs de chacun d'eux. Voici une image pour illustrer: REMARQUE: pour plus d'informations sur les vecteurs, cliquez ici. Il y a quelques choses que nous pouvons maintenant énoncer à partir de deux vecteurs quelconques en relation avec le résultat de leur produit scalaire: Si a et b sont perpendiculaires (à 90 degrés l'un par rapport à l'autre), le résultat du produit scalaire sera nul, car cos(ang) sera nul Si l'angle entre a et b est inférieur à 90 degrés, le produit scalaire sera positif (supérieur à zéro), comme cos(ang) sera positif Si l'angle entre a et b est supérieur à 90 degrés, le produit scalaire sera négatif (inférieur à zéro), comme cos(ang) sera négatif Alors qu'est-ce que cela signifie pour ceux d'entre nous qui créent des jeux? Eh bien, cette relation mathématique peut être utilisée dans de nombreuses circonstances, mais la meilleure façon de la voir est de construire un scénario réel et de voir par vous-même ce qui se passe. L'un des moyens les plus simples de le faire est de générer un simple test de «hauteur» pour un ennemi dans, par exemple, un jeu de plateforme afin que l'ennemi «voie» le joueur s'il est au-dessus du plan formé par le vecteur normal ennemi et le troisième étage. Fondamentalement, nous obtenons le vecteur normal de l'ennemi perpendiculairement au sol, puis nous transmettons le vecteur du joueur à l'ennemi. Nous obtiendrons alors le dot_product de ces vecteurs, et si le résultat est positif, le joueur est "au-dessus" du plan d'étage ennemi et s'il est négatif, il est en dessous. Le code réel pour que cela fonctionne est fourni dans l'exemple ci-dessous. Syntaxe:dot_product_3d(x1, y1, z1, x2, y2, z2) Argument Description x1 La coordonnée x du premier vecteur. y1 La coordonnée y du premier vecteur. z1 La coordonnée z du premier vecteur. x2 La coordonnée x du deuxième vecteur. y2 La coordonnée y du deuxième vecteur. z2 La coordonnée z du deuxième vecteur. Retour:Real Exemple:var x1, y1, x2, y2; x1 = 0; y1 = 1; z1 = 0; x2 = o_Player.x - x; y2 = o_Player.y - y; z2 = o_Player.z - z; if dot_product_3d(x1, y1, z1, x2, y2, z2) > 0 above=true else above=false; Le code ci-dessus crée un vecteur normal le long de l'axe des instances y (haut), puis obtient le vecteur de l'objet joueur "o_Player" pour lui-même. Enfin, il calcule le produit scalaire de ces deux vecteurs et s'il est supérieur à tan 0, il définit la variable "above" sur true, et s'il est inférieur ou égal à 0, il le met à "false".  Retour: Angles et distance Suivant:dot_product_normalised © Copyright YoYo Games Ltd. 2021 Tous droits réservés
+
+
+
+
+  
+  point_produit_3d
+  Le produit scalaire est une valeur exprimant la relation angulaire entre deux vecteurs. On le trouve en prenant deux vecteurs, en les multipliant et en additionnant les résultats. Le nom "produit scalaire" est dérivé du point centré "-" qui est souvent utilisé pour désigner cette opération.
+    centré qui est souvent utilisé pour désigner cette opération (l'appellation alternative "produit scalaire" souligne la nature scalaire plutôt que vectorielle du résultat).
+  La formule mathématique réelle peut être écrite comme suit :
+  
+  En 2D, le produit scalaire des vecteurs a[x1,y1] et b[x2,y2] est x1x2 + y1y2, alors en 3D, le produit scalaire des vecteurs a[x1,y1,z1] et b[x1,y1,z1] est x1x2 + y1y2 + z1z2. Ainsi, le dot_product_3d dans GameMaker Studio 2 est calculé comme suit :
+  a - b = (x1*x2) + (y1*y2) + (z1*z2) ;
+  Ce qui est curieux avec le produit scalaire, c'est la relation qu'il a avec l'angle formé par les vecteurs d'entrée qui peut être exprimé comme suit :
+  a - b = (longueur de a) * (longueur de b) * cos(angle)
+  C'est-à-dire que le produit scalaire de deux vecteurs sera égal au cosinus de l'angle entre ces vecteurs, multiplié par la longueur de chacun d'eux. Voici une image pour l'illustrer :
+  
+  NOTE: Pour plus d'informations sur les vecteurs, voir ici.
+  Il y a quelques éléments que nous pouvons maintenant affirmer à partir de deux vecteurs quelconques en relation avec le résultat de leur produit scalaire :
+  
+    Si a et b sont perpendiculaires (à 90 degrés l'un par rapport à l'autre), le résultat du produit scalaire sera égal à zéro, car cos(ang) sera égal à zéro.
+    Si l'angle entre a et b est inférieur à 90 degrés, le produit scalaire sera positif (supérieur à zéro), car cos(ang) sera positif.
+    Si l'angle entre a et b est supérieur à 90 degrés, le produit scalaire sera négatif (inférieur à zéro), car cos(ang) sera négatif.
+  
+  Qu'est-ce que cela signifie pour ceux d'entre nous qui créent des jeux ? Eh bien, cette relation mathématique peut être utilisée dans de nombreuses circonstances, mais la meilleure façon de s'en rendre compte est de construire un scénario réel et de voir par vous-même ce qui se passe. L'une des façons les plus simples
+    L'une des façons les plus simples de le faire est de générer un simple contrôle de "hauteur" pour un ennemi dans un jeu de plates-formes, par exemple, afin que l'ennemi "voie" le joueur s'il se trouve au-dessus du plan formé par le vecteur normal de l'ennemi et le sol 3D.
+  En gros, nous obtenons le vecteur normal de l'ennemi perpendiculaire au sol et ensuite nous
+    le vecteur du joueur par rapport à l'ennemi. Nous obtiendrons ensuite le produit scalaire de ces vecteurs, et si le résultat est positif, le joueur est "au-dessus" du plan de l'ennemi et s'il est négatif, il est en dessous. Le code réel pour que cela fonctionne
+    est fourni dans l'exemple ci-dessous.
+   
+  Syntaxe :
+  dot_product_3d(x1, y1, z1, x2, y2, z2)
+  
+    
+      
+        Arguments
+        Description
+      
+      
+        x1
+        La coordonnée x du premier vecteur.
+      
+      
+        y1
+        La coordonnée y du premier vecteur.
+      
+      
+        z1
+        La coordonnée z du premier vecteur.
+      
+      
+        x2
+        La coordonnée x du deuxième vecteur.
+      
+      
+        y2
+        La coordonnée y du deuxième vecteur.
+      
+      
+        z2
+        La coordonnée z du deuxième vecteur.
+      
+    
+  
+   
+  Les retours :
+  Real
+   
+  Exemple :
+  var x1, y1, x2, y2 ; x1 = 0 ; y1 = 1 ; z1 = 0 ; x2 = o_Player.x - x ; y2 = o_Player.y - y ; z2 = o_Player.z - z ; si dot_product_3d(x1, y1, z1, x2, y2, z2) > 0 above=true else above=false ;
+  Le code ci-dessus crée un vecteur normal le long de l'axe y (haut) de l'instance, puis ramène le vecteur de l'objet joueur "o_Player" à lui-même. Enfin, il calcule le produit scalaire de ces deux vecteurs et s'il est supérieur à 0, il met la variable "above" à true.
+    "above" à true, et si elle est inférieure ou égale à 0, elle la met à "false".
+   
+   
+   
+  
+    
+      
+        Retour : Angles et distances
+        Suivant : dot_product_normalised
+      
+    
+    Copyright YoYo Games Ltd. 2021 Tous droits réservés
   
   
   

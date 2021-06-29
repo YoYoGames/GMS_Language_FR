@@ -1,4 +1,41 @@
- Si le fichier existe Avec cette action, vous pouvez vérifier si un fichier avec le nom donné existe. Vous sélectionnez le fichier à vérifier (comme une piqûre et avec l'extension) et la fonction reviendra true s'il existe, et false si ça ne fait pas. Notez que cela reviendra true si le fichier existe dans l'ensemble du jeu en tant que fichier inclus ou si le fichier a été enregistré pendant que le jeu était en cours d'exécution (voir la section sur le système de fichiers pour plus d'informations). Notez que pour ajouter des actions dans le bloc "if", elles doivent être déposées sur le côté de l'action, comme indiqué dans l'image ci-dessous: Syntaxe de l'action: Arguments: Argument Description Type Le type de données à lire, soit un string (entre guillemets ""), ou un real number Exemple: Le code de bloc d'action ci-dessus créera une variable pour contenir les données de tampon, puis vérifiera si un fichier de sauvegarde de tampon a été créé précédemment. Si le fichier existe, il est chargé dans la variable de tampon que nous avons créée, mais s'il n'existe pas, il est créé, écrit puis sauvegardé, prêt à être chargé la prochaine fois.  Retour: Actions sur les fichiers Suivant: Load Buffer © Copyright YoYo Games Ltd. 2021 Tous droits réservés
+
+  
+   Si le fichier existe
+  Avec cette action, vous pouvez vérifier si un fichier portant le nom donné existe. Vous sélectionnez le fichier à vérifier (sous forme de chaîne et en incluant l'extension) et la fonction renverra vrai s'il existe, et faux s'il n'existe pas. Notez que
+    cette fonction renverra vrai si le fichier existe dans le paquet de jeu en tant que fichier inclus ou si le fichier a été sauvegardé pendant que le jeu était en cours d'exécution (voir la section sur le système de fichiers pour plus d'informations).
+  Notez que pour ajouter des actions dans le bloc "if", elles doivent être déposées sur le côté de l'action, comme le montre l'image ci-dessous :
+  
+   
+  Syntaxe de l'action :
+  
+  Arguments :
+  
+    
+      
+        Arguments
+        Description
+      
+      
+        Type
+        Le type de données à lire, soit une chaîne de caractères (entre guillemets ""), soit un nombreréel.
+      
+    
+  
+   
+  Exemple :
+  Le code du bloc d'action ci-dessus crée une variable pour contenir les données de la mémoire tampon, puis vérifie si un fichier de sauvegarde de la mémoire tampon a été créé précédemment.
+    un fichier de sauvegarde de la mémoire tampon a été créé précédemment. Si le fichier existe, il est chargé dans la variable de la mémoire tampon que nous avons créée, mais s'il n'existe pas, il est créé, écrit puis sauvegardé, prêt à être chargé la prochaine fois.
+   
+   
+   
+  
+    
+      
+        Retour : Actions sur les fichiers
+        Suivant : Tampon de chargement
+      
+    
+    Copyright YoYo Games Ltd. 2021 Tous droits réservés
   
   
   

@@ -1,5 +1,46 @@
-ini_open Cela ouvre un ini_file pour la lecture et / l'écriture. Si le ini_file n'existe pas à l'emplacement que vous vérifiez, GameMaker Studio 2 peut en créer un, mais uniquement si vous y écrivez des données. Si vous n'avez lu que les informations du fichier ini, les valeurs par défaut de la fonction de lecture seront renvoyées, mais le fichier ini ne sera pas réellement créé. Veuillez noter que vous ne pouvez ouvrir qu'un seul fichier ini à la fois et n'oubliez pas d'utiliser ini_close() une fois que vous avez fini de lire / écrire à partir du fichier.ini car les informations ne sont pas réellement stockées sur le disque jusque-là (elles sont également stockées en mémoire jusqu'à ce que le fichier soit fermé). ATTENTION! Cette fonction peut ne pas fonctionner comme prévu en raison du GameMaker Studio 2! Veuillez consulter la section sur le système de fichiers pour plus d'informations. Syntaxe:ini_open(name); Argument Description name Le nom de fichier du fichier.ini. Retour:N/A Exemple:ini_open("Settings/savedata.ini"); score = ini_read_real("save1", "score", 0); ini_close();
-   Cela ouvrira 'savedata.ini' et lira la valeur du score dans la section "save1" avec la clé "score" dedans, puis refermera le.ini. S'il n'y a aucune valeur sous "save1", "score" ou s'il n'y a pas de fichier "savedata.ini" présent, le score sera mis à 0 (la valeur par défaut). Notez que le fichier ini a été placé dans le sous-répertoire "Paramètres", qui est le dossier qui contient le fichier ini dans les fichiers inclus de Asset Browser.  Retour: Fichiers Ini Suivant:ini_close © Copyright YoYo Games Ltd. 2021 Tous droits réservés
+
+  
+  ini_open
+  Cette opération ouvre un fichier ini_file pour la lecture et l'écriture. Si le fichier ini_file n'existe pas à l'emplacement que vous vérifiez, GameMaker Studio 2 peut en créer un, mais uniquement si vous y écrivez des données. Si vous n'avez fait que lire les informations du fichier ini, alors les
+    valeurs par défaut de la fonction de lecture seront renvoyées, mais le fichier ini ne sera pas réellement créé.
+  Veuillez noter que vous ne pouvez avoir qu'un seul fichier ini ouvert à la fois et n'oubliez pas d'utiliser la commande ini_close() une fois que vous avez fini de lire/écrire dans le fichier .ini, car les informations ne sont pas réellement stockées sur le disque avant ce moment (elles sont également stockées en mémoire jusqu'à la fermeture du fichier).
+    sur le disque (elles sont également stockées en mémoire jusqu'à ce que le fichier soit fermé).
+  AVERTISSEMENT ! Il se peut que cette fonction ne fonctionne pas comme vous l'attendez, car GameMaker Studio 2 est en sandbox ! Veuillez consulter la section sur le système de fichiers pour plus d'informations.
+   
+  Syntaxe :
+  ini_open(nom) ;
+  
+    
+      
+        Arguments
+        Description
+      
+      
+        nom
+        Le nom de fichier du fichier .ini.
+      
+    
+  
+   
+  Les retours :
+  N/A
+   
+  Exemple :
+  ini_open("Settings/savedata.ini") ; score = ini_read_real("save1", "score", 0) ; ini_close() ;
+  
+  Cela ouvrira 'savedata.ini' et lira la valeur du score dans la section "save1" avec la clé "score", puis refermera le .ini. S'il n'y a pas de valeur sous "save1", "score" ou si le fichier "savedata.ini" n'existe pas
+    n'est présent, score sera mis à 0 (la valeur par défaut). Notez que le fichier ini a été placé dans le sous-répertoire "Settings", qui est le dossier qui contient le fichier ini dans les fichiers inclus dans l'Asset Browser.
+   
+   
+   
+  
+    
+      
+        Retour : Dossiers Ini
+        Suivant : ini_close
+      
+    
+    Copyright YoYo Games Ltd. 2021 Tous droits réservés
   
   
   

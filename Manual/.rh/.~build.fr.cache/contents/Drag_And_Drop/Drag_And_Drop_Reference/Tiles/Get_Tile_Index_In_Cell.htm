@@ -1,4 +1,55 @@
- Obtenir l'index des tuiles dans la cellule Avec cette action, vous pouvez obtenir un index de tuiles sur une couche donnée. Le calque est spécifié à partir du nom du calque donné (une chaîne, comme utilisé pour nommer le calque dans l'éditeur de pièce), puis vous donnez la ligne et la colonne de la cellule dans le calque à partir de laquelle obtenir l'index de la tuile. Enfin, vous fournissez la variable cible dans laquelle stocker l'index de tuile retourné, où 0 signifie aucune tuile et un entier positif est l'index de la tuile. Notez que la variable cible peut être marquée comme une variable temporaire (locale) qui peut être utilisée jusqu'à la fin de l'événement. Syntaxe de l'action: Arguments: Argument Description Layer La couche à partir de laquelle obtenir la tuile Column La colonne (de gauche à droite) de la cellule Row La ligne (de haut en bas) de la cellule Target La variable cible pour la valeur de retour Exemple: Le code de bloc d'action ci-dessus crée une boucle pour parcourir la ligne supérieure de la couche de pièce donnée, et comme il le fait, il vérifie si la tuile indexée dans la cellule de la colonne est définie sur 0. Si ce n'est pas l'index de tuile pour cette cellule est mis à 0 et la variable temporaire (locale) est incrémentée avant que la boucle ne fasse un autre ensemble de vérifications.  Retour: Actions de tuile Suivant: Set Tile Set © Copyright YoYo Games Ltd. 2021 Tous droits réservés
+
+  
+   Obtenir l'indice de la tuile dans la cellule
+  Avec cette action, vous pouvez obtenir l'index d'une tuile sur une couche donnée. La couche est spécifiée à partir du nom de couche donné (une chaîne de caractères, telle qu'elle est utilisée pour nommer la couche dans l'éditeur de pièce), puis vous donnez la ligne et la colonne de la cellule dans la couche pour obtenir l'index de la tuile
+    de la tuile. Enfin, vous fournissez la variable cible pour stocker l'indice de tuile retourné, où 0 est l'absence de tuile, et un nombre entier positif est l'indice de la tuile. Notez que la variable cible peut être marquée comme une variable temporaire (locale) qui peut être utilisée
+    jusqu'à la fin de l'événement.
+   
+  Syntaxe de l'action :
+  
+  Arguments :
+  
+    
+      
+        
+          Arguments
+          Description
+        
+        
+          Couche
+          La couche à partir de laquelle obtenir la tuile
+        
+        
+          Colonne
+          La colonne (de gauche à droite) de la cellule
+        
+        
+          Rangée
+          La ligne (de haut en bas) de la cellule
+        
+        
+          Cible
+          La variable cible pour la valeur de retour
+        
+      
+    
+  
+   
+  Exemple :
+  Le code du bloc d'action ci-dessus crée une boucle pour parcourir la ligne supérieure de la couche de la pièce donnée.
+    la ligne supérieure de la couche de la pièce donnée et, ce faisant, vérifie si la tuile indexée à la cellule de la colonne est définie sur 0. Si ce n'est pas le cas, l'index de la tuile pour cette cellule est défini sur 0 et la variable temporaire (locale) est incrémentée avant que la boucle n'effectue une autre série de vérifications.
+    effectue une autre série de vérifications.
+   
+   
+   
+  
+    
+      
+        Retour : Actions sur les tuiles
+        Suivant : Set Tile Set
+      
+    
+    Copyright YoYo Games Ltd. 2021 Tous droits réservés
   
   
   

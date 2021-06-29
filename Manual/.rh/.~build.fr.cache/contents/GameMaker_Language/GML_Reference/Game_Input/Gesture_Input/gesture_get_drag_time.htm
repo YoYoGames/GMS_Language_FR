@@ -1,7 +1,35 @@
-gesture_get_drag_time Cette fonction est utilisée pour obtenir le temps nécessaire pour qu'un événement de mouvement de démarrage par glisser soit déclenché par une pression ou un clic. Ce temps affectera également la façon dont l' événement Tap est déclenché par un toucher / clic et le relâchement avant la fin de ce temps sera considéré comme un Tap. Le temps est mesuré en secondes et a une valeur par défaut de 0,16. Syntaxe:gesture_get_drag_time(); Retour:Real (time in seconds) Exemple:if gesture_get_drag_time() != 0.16     {
-         gesture_drag_time(0.16);
-         }
-   Le code ci-dessus vérifie si le temps de glissement pour les gestes est défini sur 0,16 seconde et s'il ne l'est pas, il le définit sur cette valeur.  Retour: Entrée gestuelle Suivant:gesture_get_drag_distance © Copyright YoYo Games Ltd. 2021 Tous droits réservés
+
+
+
+
+  
+  Heure du geste_get_drag
+  Cette fonction est utilisée pour obtenir le temps qu'il faut pour qu'un événement Geste de démarrage par glissement soit déclenché par un toucher ou un clic. Ce temps affecte également le déclenchement de l'événement Tap.
+    l'événement Tap est déclenché, car un toucher/clic et un relâchement avant la fin de ce temps seront considérés comme un Tap. Le temps est mesuré en secondes et sa valeur par défaut est de 0,16.
+   
+  Syntaxe :
+  gesture_get_drag_time() ;
+   
+  Les retours :
+  Real (temps en secondes)
+   
+  Exemple :
+  if gesture_get_drag_time() !.= 0.16 {
+     gesture_drag_time(0.16) ;
+     }
+  
+  Le code ci-dessus vérifie si le temps de déplacement pour les gestes est fixé à 0,16 seconde et, si ce n'est pas le cas, il le fixe à cette valeur.
+   
+   
+   
+  
+    
+      
+        Retour : Saisie gestuelle
+        Suivant : gesture_get_drag_distance
+      
+    
+    Copyright YoYo Games Ltd. 2021 Tous droits réservés
   
   
   

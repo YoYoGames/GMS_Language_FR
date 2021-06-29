@@ -1,4 +1,110 @@
- Steam Cette section est destinée aux utilisateurs qui ont eu accès à l' Steam pour publier votre jeu sur cette plate-forme et qui souhaitent utiliser les possibilités que le Steam Workshop et la Communauté vous offrent pour ajouter et générer du contenu utilisateur dans vos projets. La forme la plus simple de contenu généré par l'utilisateur est la possibilité pour l'utilisateur de prendre et de partager des captures d'écran, ce qui est facilité par les deux fonctions suivantes: steam _is_screenshot_requested steam _send_screenshot Le reste de la fonction de cette page est lié à l'utilisation de Steam Worksop et certains d'entre eux nécessitent l' ID d'application Steam pour votre projet ainsi qu'un ID utilisateur pour la personne qui joue au jeu ou son nom d'utilisateur, qui peut être trouvé en utilisant le fonctions suivantes: steam _get_app_id steam _get_user_account_id steam _get_user_persona_name Avant d'utiliser l'une des fonctions intégrées de l' Steam UGC ( U ser G enerated C ontent), vous devez avoir configuré votre jeu correctement à partir du Steam et vous devez avoir lu la documentation requise disponible ici: Partage du contenu généré par l'utilisateur REMARQUE: vous devez faire accepter votre jeu sur la Steam et avoir accès aux zones développeur de la documentation de l'API Steam Tous les éléments UGC abonnés seront téléchargés Steam, et vous devriez avoir du code dans l' événement asynchrone Steam pour attraper cela et stocker l'ID de l'UGC qui a été téléchargé pour une utilisation dans les autres fonctions UGC. IMPORTANT! Steam identifiants Steam UGC peuvent être des nombres énormes supérieurs à 600 000 000. Cela signifie que parfois vous devrez peut-être les stocker sous forme de chaîne plutôt que d'essayer de les stocker en tant que valeur réelle, en particulier si vous travaillez avec des tampons ou essayez d'écrire la valeur dans un fichier texte (car cela le convertira en un format standard simplifié comme "6.6624e + 003" qui entraînera des problèmes de lecture). Le flux de travail normal pour intégrer l'UGC dans votre jeu serait le suivant: L'utilisateur s'abonnerait à un élément (soit à partir de votre jeu en utilisant steam_ugc_subscribe_item() ou depuis le client / navigateur. Votre jeu «écoutera» les nouveaux abonnements avec le code approprié dans l' Steam Async. Lorsque vous obtenez un événement asynchrone d'abonnement, vous devez alors vérifier si l'élément est installé (c'est-à-dire: téléchargé) avec steam_ugc_get_item_install_info(). Si l'élément n'est pas installé, vous aurez besoin d'une vérification à l'aide de steam_ugc_get_item_update_info() pour suivre la progression du téléchargement. Les sections suivantes expliquent toutes les fonctions requises pour faire fonctionner UGC dans GameMaker Studio 2: Création et modification de contenu Les fonctions suivantes sont essentiellement des fonctions «wrapper» pour celles fournies dans l' Steam pour créer et télécharger du contenu sur leurs serveurs. En tant que tel, nous vous recommandons de lire la Steam liée avant de les utiliser pour mieux comprendre leur fonctionnement: création et téléchargement de contenu. steam _ugc_create_item steam _ugc_start_item_update steam _ugc_set_item_title steam _ugc_set_item_description steam _ugc_set_item_visibility steam _ugc_set_item_tags steam _ugc_set_item_content steam _ugc_set_item_preview steam _ugc_submit_item_update steam _ugc_get_item_update_progress Consommer du contenu Une fois que votre contenu utilisateur a été créé et que l'atelier l'a téléchargé, les gens peuvent s'y abonner via l' Steam ou via le portail Web. Cependant, GameMaker Studio 2 comprend également les fonctions suivantes pour utiliser l' Steam pour créer et annuler des abonnements ainsi que pour obtenir des informations sur ce à quoi l'utilisateur est actuellement abonné: steam _ugc_subscribe_item steam _ugc_unsubscribe_item steam _ugc_num_subscribed_items steam _ugc_get_subscribed_items steam _ugc_get_item_install_info steam _ugc_get_item_update_info steam _ugc_request_item_details Interroger du contenu Il existe également un grand nombre de fonctions disponibles pour interroger l' Steam sur les éléments UGC disponibles: steam _ugc_create_query_user steam _ugc_create_query_user_ex steam _ugc_create_query_all steam _ugc_create_query_all_ex steam _ugc_query_set_cloud_filename_filter steam _ugc_query_set_match_any_tag steam _ugc_query_set_search_text steam _ugc_query_set_ranked_by_trend_days steam _ugc_query_add_required_tag steam _ugc_query_add_excluded_tag steam _ugc_query_set_return_long_description steam _ugc_query_set_return_total_only steam _ugc_query_set_allow_cached_response steam _ugc_send_query Vous pouvez obtenir un aperçu de n'importe quel élément UGC de l'atelier en utilisant la fonction steam_ugc_send_query() pour obtenir le descripteur de fichier d'aperçu de l'image, puis en appelant la fonction suivante: steam _ugc_download  Retour: Steam Suivant: API Steam générale © Copyright YoYo Games Ltd. 2021 Tous droits réservés
+
+  
+  Vapeur
+  Cette section est destinée aux utilisateurs qui ont reçu un accès à l'API Steam pour publier leur jeu sur cette plateforme et qui souhaitent utiliser les possibilités offertes par l'atelier et la communauté Steam pour ajouter et générer du contenu utilisateur dans leurs projets.
+    projets. La forme la plus simple de contenu généré par l'utilisateur est la possibilité pour l'utilisateur de prendre et de partager des captures d'écran, ce qui est facilité par les deux fonctions suivantes :
+   
+  
+    steam_is_screenshot_requested
+    steam_send_screenshot
+  
+   
+  Le reste des fonctions de cette page sont liées à l'utilisation du Steam Worksop et certaines d'entre elles requièrent le Steam App ID de votre projet ainsi qu'un User ID pour la personne jouant le jeu ou son nom d'utilisateur.
+    nom d'utilisateur, qui peuvent être trouvés en utilisant les fonctions suivantes :
+   
+  
+    steam_get_app_id
+    steam_get_user_account_id
+    steam_get_user_persona_name
+  
+   
+  Avant d'utiliser l'une des fonctions intégrées de l'API Steam UGC(User Generated Content), vous devez configurer correctement votre jeu à partir du tableau de bord Steam et lire la documentation requise.
+    documentation requise que vous trouverez ici :
+  
+    Partage du contenu généré par les utilisateurs
+  
+  REMARQUE: votre jeu doit être accepté dans la boutique en ligne Steam et vous devez avoir accès aux zones réservées aux développeurs dans la documentation de l'API Steam.
+  Tous les éléments UGC souscrits seront téléchargés automatiquement par le client Steam, et vous devez avoir du code dans l'événement asynchroneSteam pour attraper cela et stocker l'ID de l'UGC qui a été téléchargé pour l'utiliser dans d'autres fonctions UGC.
+    ID de l'UGC qui a été téléchargé pour être utilisé dans les autres fonctions UGC.
+  IMPORTANT ! Les identifiants UGC de Steam peuvent être des nombres énormes, supérieurs à 600 000 000. Cela signifie que vous devrez parfois les stocker sous forme de chaîne plutôt que d'essayer de les stocker comme une valeur réelle, en particulier si vous travaillez avec des buffers ou si vous essayez d'écrire la valeur vers
+    un fichier texte (car cela la convertira dans un format standard simplifié comme "6.6624e+003", ce qui posera des problèmes lors de la relecture).
+  Le flux de travail normal pour intégrer du CGU dans votre jeu est le suivant :
+  
+    L'utilisateur s'abonne à un élément (soit à partir de votre jeu en utilisant steam_ugc_subscribe_item() ou depuis le client/navigateur.
+    Votre jeu "écouterait" les nouveaux abonnements avec le code approprié dans l'événement asynchrone Steam.
+    Lorsque vous obtenez un événement asynchrone d'abonnement, vous vérifiez alors si l'élément est installé (c'est-à-dire téléchargé) avec steam_ugc_get_item_install_info().
+    Si l'élément n' est pas installé, vous aurez besoin d'une vérification à l'aide de steam_ugc_get_item_update_info() pour suivre la progression du téléchargement.
+  
+  Les sections suivantes expliquent toutes les fonctions requises pour faire fonctionner l'UGC dans GameMaker Studio 2:
+   
+  Création et édition de contenu
+  Les fonctions suivantes sont essentiellement des fonctions "enveloppantes" pour celles fournies dans l'API Steam pour créer et télécharger du contenu sur leurs serveurs. En tant que tel, nous vous recommandons de lire la documentation Steam avant de les utiliser.
+    afin de mieux comprendre leur fonctionnement : Création et téléchargement de contenu.
+   
+  
+    steam_ugc_create_item
+    steam_ugc_start_item_update
+    steam_ugc_set_item_title
+    steam_ugc_set_item_description
+    steam_ugc_set_item_visibility
+    steam_ugc_set_item_tags
+    steam_ugc_set_item_content
+    steam_ugc_set_item_preview
+    steam_ugc_submit_item_update
+    steam_ugc_get_item_update_progress
+  
+   
+   
+  Consommer du contenu
+  Une fois que votre contenu utilisateur a été créé et que l'atelier le met à disposition pour le télécharger, les gens peuvent s'y abonner via l'application Steam ou le portail Web. Cependant, GameMaker Studio 2 comprend également les fonctions suivantes pour utiliser l'API Steam
+    pour créer et annuler des abonnements, ainsi que pour obtenir des informations sur ce à quoi l'utilisateur est abonné actuellement :
+   
+  
+    steam_ugc_subscribe_item
+    steam_ugc_unsubscribe_item
+    steam_ugc_num_subscribed_items
+    steam_ugc_get_subscribed_items
+    steam_ugc_get_item_install_info
+    steam_ugc_get_item_update_info
+    steam_ugc_request_item_details
+  
+   
+   
+  Recherche de contenu
+  Il existe également un grand nombre de fonctions permettant d'interroger l'API Steam sur les éléments de CGU disponibles :
+   
+  
+    steam_ugc_create_query_user
+    steam_ugc_create_query_user_ex
+    steam_ugc_create_query_all
+    steam_ugc_create_query_all_ex
+    steam_ugc_query_set_cloud_filename_filter
+    steam_ugc_query_set_match_any_tag
+    steam_ugc_query_set_search_text
+    steam_ugc_query_set_ranked_by_trend_days
+    steam_ugc_query_add_required_tag
+    steam_ugc_query_add_excluded_tag
+    steam_ugc_query_set_return_long_description
+    steam_ugc_query_set_return_total_only
+    steam_ugc_query_set_allow_cached_response
+    steam_ugc_send_query
+  
+   
+  Vous pouvez obtenir une image de prévisualisation de n'importe quel élément UGC de l'atelier en utilisant la fonction steam_ugc_send_query () pour obtenir le gestionnaire de fichier de prévisualisation de l'image, puis en appelant la fonction suivante :
+  
+    steam_ugc_download
+  
+   
+   
+   
+  
+    
+      
+        Retour : Vapeur
+        Suivant : API générale de Steam
+      
+    
+    Copyright YoYo Games Ltd. 2021 Tous droits réservés
   
   
   

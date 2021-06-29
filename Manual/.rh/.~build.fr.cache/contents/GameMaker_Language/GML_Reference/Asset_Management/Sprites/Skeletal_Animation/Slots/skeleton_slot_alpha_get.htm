@@ -1,10 +1,47 @@
-skeleton_slot_alpha_get Avec cette fonction, vous pouvez obtenir une valeur alpha de l'emplacement de pièce jointe. Vous fournissez le nom de l'emplacement (une chaîne) et la fonction renverra une valeur réelle pour l'alpha entre 0 et 1. Syntaxe:skeleton_slot_alpha_get(slot); Argument Description slot Le nom de l'emplacement à vérifier, une chaîne Retour:Integer Exemple:slot_list = ds_list_create(); skeleton_find_slot(mouse_x, mouse_y, slot_list); if !ds_list_empty(slot_list) {
-     for (var i = 0; i < ds_list_size(slot_list); ++i;)     {
-         if skeleton_slot_alpha_get(slot_list[| i]) != 1         {
-             skeleton_slot_colour_set(slot_list[| i], c_white, 1);         }
-         }
+
+  
+  squelette_slot_alpha_get
+  Cette fonction vous permet d'obtenir la valeur alpha d'un slot d'attachement. Vous fournissez le nom du slot (une chaîne de caractères) et la fonction renvoie une valeur réelle pour l'alpha entre 0 et 1.
+   
+  Syntaxe :
+  skeleton_slot_alpha_get(slot) ;
+  
+    
+      
+        Arguments
+        Description
+      
+      
+        fente
+        Le nom du slot à vérifier, une chaîne de caractères
+      
+    
+  
+   
+  Les retours :
+  Entier
+   
+  Exemple :
+  slot_list = ds_list_create() ; skeleton_find_slot(mouse_x, mouse_y, slot_list) ; if !ds_list_empty(slot_list) {
+     for (var i = 0 ; i < ds_list_size(slot_list) ; ++i ;)  {
+     if skeleton_slot_alpha_get(slot_list[| i]) != 1 {
+     skeleton_slot_colour_set(slot_list[| i], c_white, 1) ; }
      }
-   Le code ci-dessus crée une liste DS, puis la remplit avec les noms d'emplacement trouvés à la position de la souris dans la pièce. Il parcourt ensuite la liste des emplacements et réinitialise la couleur des emplacements trouvés en blanc avec un alpha de 1 si l'alpha n'est pas déjà 1.  Retour: Slots Suivant:skeleton_get_minmax © Copyright YoYo Games Ltd. 2021 Tous droits réservés
+     }
+  
+  Le code ci-dessus crée une liste de DS et la remplit avec les noms des emplacements trouvés à la position de la souris dans la pièce. Il boucle ensuite sur la liste des emplacements et réinitialise la couleur des emplacements trouvés en blanc avec un alpha de 1 si l'alpha n'est pas déjà 1.
+    n'est pas déjà 1.
+   
+   
+   
+  
+    
+      
+        Retour : Slots
+        Suivant : skeleton_get_minmax
+      
+    
+    Copyright YoYo Games Ltd. 2021 Tous droits réservés
   
   
   

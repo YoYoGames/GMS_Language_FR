@@ -1,4 +1,51 @@
- Obtenez des données de mosaïque sur le Pixel Avec cette action, vous pouvez obtenir les données de tuile pour une cellule de tuile sur une couche de tuile-map à partir d'une position. Les données de mosaïque sont simplement une valeur qui reflète l'index de la mosaïque avec les valeurs de retournement, de miroir et de rotation, ainsi que tous les masques de mosaïque personnalisés que vous avez utilisés. Avec cette action, vous fournissez d'abord le calque à cibler en utilisant le nom du calque (une chaîne) tel que défini dans l'éditeur de pièce, puis les axes x et y dans la pièce pour lesquels obtenir les données de tuile. La valeur des données de tuile renvoyée coïncidera avec la cellule de tuile-map qui se trouve à ce point. Par exemple, si vos tuiles de jeu de tuiles mesurent 16x16, la couche de tuiles-map contiendra les tuiles dans des cellules de 16x16 pixels, donc si vous utilisez cette action pour cibler la position de la pièce (8, 8), vous obtiendrez la tuile -données pour la cellule (0, 0) de la tuile-map. REMARQUE: le calque sélectionné doit avoir été défini comme un calque de mosaïque dans l'éditeur de salle, sinon vous risquez d'obtenir des erreurs. La valeur retournée sera alors stockée dans la variable cible qui peut avoir été créée précédemment ou peut être une nouvelle temporaire (si vous cochez la case "Temp"). Pour plus d'informations sur les données de mosaïque, veuillez consulter la GML sur les fonctions de mappage de mosaïques. Syntaxe de l'action: Arguments: Argument Description Layer La couche avec la tuile-map à cibler X La position le long de l'axe horizontal (X) pour définir les données de mosaïque pour Y La position le long de l'axe vertical (Y) pour définir les données de mosaïque Exemple: Le code de bloc d'action ci-dessus teste un clic de souris et quand on est reçu, il récupère les données de tuile pour la cellule qui coïncide avec la position de la souris. Ces données sont ensuite modifiées et renvoyées à la couche tuile-map, faisant pivoter la tuile dans cette cellule.  Retour: Actions de tuile Suivant: Définir les données de mosaïque dans la cellule © Copyright YoYo Games Ltd. 2021 Tous droits réservés
+
+  
+   Obtenir les données de la tuile au pixel
+  Cette action vous permet d'obtenir les données d'une cellule de tuile sur une couche de carte de tuiles à partir d'une position. Les données de la tuile sont simplement une valeur qui reflète l'index de la tuile avec les valeurs d'inversion, de miroir et de rotation, ainsi que tout masque de tuile personnalisé que vous avez utilisé.
+    que vous avez utilisés. Avec cette action, vous fournissez d'abord le calque à cibler en utilisant le nom du calque (une chaîne) tel que défini dans l'éditeur de pièce, puis les axes x et y de la pièce pour lesquels vous souhaitez obtenir les données des tuiles. La valeur des données de tuiles renvoyée coïncidera avec
+    la cellule de la carte des tuiles qui se trouve à cet endroit. Par exemple, si les tuiles de votre jeu de tuiles sont 16x16, alors la couche de la carte des tuiles contiendra des tuiles dans des cellules de 16x16 pixels, donc si vous utilisez cette action pour cibler la position de la pièce (8, 8), vous obtiendrez
+    les données des tuiles pour la cellule (0, 0) de la carte des tuiles.
+  REMARQUE: La couche sélectionnée doit avoir été définie comme une couche de carte de tuile dans l'éditeur de pièce, sinon vous pouvez obtenir des erreurs.
+  La valeur retournée sera alors stockée dans la variable cible qui peut avoir été créée précédemment ou être une nouvelle variable temporaire (si vous cochez la case "Temp"). Pour plus d'informations sur les données de tuiles, veuillez consulter la section GML sur les fonctions de carte de tuiles.
+   
+  Syntaxe de l'action :
+  
+  Arguments :
+  
+    
+      
+        Arguments
+        Description
+      
+      
+        Couche
+        La couche avec la carte de tuiles à cibler
+      
+      
+        X
+        La position le long de l'axe horizontal (X) pour définir les données de la tuile pour
+      
+      
+        Y
+        La position le long de l'axe vertical (Y) pour définir les données de la tuile.
+      
+    
+  
+   
+  Exemple :
+  Le code du bloc d'action ci-dessus teste la présence d'un clic de souris et, lorsque celui-ci est reçu
+    il récupère les données de la tuile pour la cellule qui coïncide avec la position de la souris. Ces données sont ensuite modifiées et renvoyées au calque de la carte des tuiles, faisant pivoter la tuile dans cette cellule.
+   
+   
+   
+  
+    
+      
+        Retour : Actions sur les tuiles
+        Suivant : Définir les données de la tuile dans la cellule
+      
+    
+    Copyright YoYo Games Ltd. 2021 Tous droits réservés
   
   
   

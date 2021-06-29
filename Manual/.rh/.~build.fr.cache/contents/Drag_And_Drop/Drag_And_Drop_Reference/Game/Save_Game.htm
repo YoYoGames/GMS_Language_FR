@@ -1,4 +1,40 @@
- Sauvegarder la partie Cette action effectuera une sauvegarde de base du jeu dans un fichier donné. Vous donnez un nom de fichier (sous forme de chaîne et avec l'extension) et l'action effectuera une sauvegarde limitée hors de l'état actuel du jeu. Il est important de comprendre que l'action est conçu pour prendre un « instantané » de l'état actuel du jeu et pour une utilisation plus comme un système de point de contrôle d'un système universel d' économie, car il ne qu'enregistrer les ressources dynamiques (comme des structures de données ou Particules ). En tant que telle, l'action doit être utilisée très soigneusement afin de ne pas obtenir d'erreurs ou de fuites de mémoire. Pour une approche plus complète de la sauvegarde de vos données de jeu, consultez les Actions sur les fichiers. Syntaxe de l'action: Arguments: Argument Description Filename Le nom - sous forme de chaîne et avec l'extension - pour donner le fichier en cours d'enregistrement (si le fichier existe déjà, il sera écrasé) Exemple: Le code de bloc d'action ci-dessus vérifiera une collision avec une autre instance et s'il en trouve une, il vérifie une variable d'instance. Si la variable retourne true puis le jeu est sauvegardé et la variable définie sur false.  Retour: Actions de jeu Suivant: Charger le jeu © Copyright YoYo Games Ltd. 2021 Tous droits réservés
+
+  
+   Sauvegarde du jeu
+  Cette action effectuera une sauvegarde de base du jeu dans un fichier donné. Vous donnez un nom de fichier (sous forme de chaîne et incluant l'extension) et l'action effectuera une sauvegarde limitée de l'état actuel du jeu. Il est important de comprendre que cette action est
+    conçue pour prendre un "instantané" de l'état actuel du jeu et est plus utilisée comme un système de point de contrôle que comme un système de sauvegarde universel, puisqu'elle ne sauvegarde aucune des ressources dynamiques (comme les structures de données ou les particules ) . En tant que telle, cette action doit être utilisée avec précaution afin d'éviter les erreurs ou les fuites de mémoire. Pour une approche plus complète de la sauvegarde de vos données de jeu, consultez les actions de fichier.
+   
+  Syntaxe de l'action :
+  
+  Arguments :
+   
+  
+    
+      
+        Arguments
+        Description
+      
+      
+        Nom de fichier
+        Le nom - sous forme de chaîne et avec l'extension - à donner au fichier à sauvegarder (si le fichier existe déjà, il sera écrasé).
+      
+    
+  
+   
+  Exemple :
+  Le code du bloc d'action ci-dessus vérifie s'il y a une collision avec une autre instance et, s'il y en a une, il vérifie une variable d'instance.
+    une variable d'instance. Si la variable renvoie vrai, le jeu est sauvegardé et la variable est mise à faux.
+   
+   
+   
+  
+    
+      
+        Retour : Actions de jeu
+        Suivant : Chargement du jeu
+      
+    
+    Copyright YoYo Games Ltd. 2021 Tous droits réservés
   
   
   

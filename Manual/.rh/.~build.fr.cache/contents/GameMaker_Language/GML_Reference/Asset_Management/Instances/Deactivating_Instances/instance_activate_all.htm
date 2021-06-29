@@ -1,5 +1,30 @@
-instance_activate_all Avec cette fonction, vous pouvez dire à GameMaker Studio 2 d'activer toutes les instances qui ont été précédemment désactivées dans une pièce. Notez que l'activation n'est pas instantanée et qu'une instance ainsi activée ne sera considérée comme active qu'à la fin de l'événement au cours duquel la fonction a été appelée. Syntaxe:instance_activate_all(); Retour:N/A Exemple:instance_activate_all(); var _vx = camera_get_view_x(view_camera[0]); var _vy = camera_get_view_y(view_camera[0]); var _vw = camera_get_view_width(view_camera[0]); var _vh = camera_get_view_height(view_camera[0]); instance_deactivate_region(_vx
-    - 64, _vy - 64, _vw + 128, _vh + 128, false, false); Le code ci-dessus active toutes les instances dans la pièce, puis désactive celles qui sont à 64 pixels en dehors des limites de la vue actuelle de la caméra.  Retour: Désactivation d'instances Suivant:instance_activate_object © Copyright YoYo Games Ltd. 2021 Tous droits réservés
+
+  
+  instance_activate_all
+  Cette fonction permet d'indiquer à GameMaker Studio 2 d'activer toutes les instances qui ont été précédemment désactivées dans une pièce. Notez que l'activation n'est pas instantanée, et qu'une instance qui a été activée de cette manière ne sera pas considérée comme active avant la fin de l'événement dans lequel la fonction a été appelée.
+    considérée comme active jusqu'à la fin de l'événement dans lequel la fonction a été appelée.
+   
+  Syntaxe :
+  instance_activate_all() ;
+   
+  Les retours :
+  N/A
+   
+  Exemple :
+  instance_activate_all() ; var _vx = camera_get_view_x(view_camera[0]) ; var _vy = camera_get_view_y(view_camera[0]) ; var _vw = camera_get_view_width(view_camera[0]) ; var _vh = camera_get_view_height(view_camera[0]) ; instance_deactivate_region(_vx
+    - 64, _vy - 64, _vw + 128, _vh + 128, false, false) ;
+  Le code ci-dessus active toutes les instances situées dans la pièce, puis désactive celles qui se trouvent à 64px en dehors des limites de la vue actuelle de la caméra.
+   
+   
+   
+  
+    
+      
+        Retour : Désactiver les instances
+        Suivant : instance_activate_object
+      
+    
+    Copyright YoYo Games Ltd. 2021 Tous droits réservés
   
   
   

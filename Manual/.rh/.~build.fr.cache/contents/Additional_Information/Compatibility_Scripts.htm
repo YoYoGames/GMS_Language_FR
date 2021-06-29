@@ -1,4 +1,41 @@
- Scripts de compatibilité Pour les utilisateurs provenant de versions précédentes de GameMaker, il peut être un peu déroutant d'utiliser GameMaker Studio 2 au début, car un certain nombre de modifications ont été apportées à la façon dont les actifs du projet, l'édition et le codage sont gérés. Ces modifications signifient que ni l' EDI ni le GameMaker Language ( GML ) ne prennent en charge les éléments répertoriés ci-dessous. Cependant, cela ne signifie pas que vous ne pouvez pas importer des jeux créés avec des versions précédentes dans GameMaker Studio 2, comme vous le pouvez. GameMaker Studio 2 convertira automatiquement toutes les fonctions héritées en scripts de compatibilité, qui sont des scripts contenant des fonctions qui convertissent les méthodes héritées en méthodes mises à jour. Ce qui se passe, c'est que GameMaker Studio 2 analysera votre projet pour toutes les fonctions et variables obsolètes que vous avez utilisées, puis créera une série de scripts en utilisant ces noms de fonction. Ces scripts contiennent soit le nouvel équivalent GameMaker _language / GML _Overview / Runtime _Functions.htm "> runtime fonction ou une courte fonction de script qui exécute la même action que la fonction obsolète. Lorsque vous importez pour la première fois un GameMaker Studio 2, un rapport de compatibilité similaire à celui-ci s'affiche: Le corps principal du rapport montre quels objets et scripts ont été affectés et où, tandis qu'à la fin, vous pouvez trouver une liste des scripts qui ont été créés pour votre projet. Vous pouvez cliquer sur le bouton central de la souris ou appuyez sur sur l'un des scripts répertoriés dans le rapport pour l'ouvrir et voir ce qui a été fait. Notez que si vous voyez des scripts créés avec une double barre inférieure avant leur nom (par exemple: __global_object_depths ), alors ce sont des scripts qui ont été créés par l'EDI pour aider à la compatibilité et ne sont pas des scripts qui ont été convertis à partir de fonctions obsolètes, ils ne doivent donc pas être falsifiés car ils sont nécessaires pour que les autres scripts de compatibilité fonctionnent. Lorsque vous avez terminé de réviser le rapport de compatibilité, vous pouvez fermer l'espace de travail, mais si vous avez besoin de réviser quoi que ce soit dans le rapport, vous pouvez le retrouver en accédant à la section Notes du navigateur d'actifs. Notez que vous pouvez continuer à utiliser ces scripts de compatibilité comme vous auriez utilisé les fonctions de la version héritée de GameMaker, cependant, en raison de leur fonctionnement, cela aura un impact sur les performances. Nous vous recommandons de mettre à jour les projets pour utiliser directement les nouvelles méthodes et de supprimer les scripts de compatibilité si vous le pouvez, car cela améliorera les performances et vous donnera également un aperçu du fonctionnement de GameMaker Studio 2 et du GameMaker Language par rapport aux produits hérités. Notez également que certaines fonctions ont été introduites dans le GameMaker Language pour assurer la compatibilité avec les projets plus anciens et qui apparaîtront dans ces scripts de compatibilité. Cependant, ces fonctions ne doivent jamais être utilisées dans vos propres projets. Vous pouvez trouver une liste de ces fonctions dans la section suivante du manuel: Fonctions de compatibilité Vous pouvez également trouver une liste complète de toutes les fonctions obsolètes pour lesquelles des scripts de compatibilité équivalents ont été créés à partir de la page suivante: Fonctions obsolètes  Retour: Informations complémentaires Suivant: Fonctions obsolètes © Copyright YoYo Games Ltd. 2021 Tous droits réservés
+
+  
+  Scripts de compatibilité
+  Pour les utilisateurs qui viennent des versions précédentes de GameMaker, l'utilisation de GameMaker Studio 2 peut être un peu déroutante au début, car un certain nombre de changements ont été apportés à la manière dont les ressources, l'édition et le codage des projets sont gérés. Ces changements signifient
+    que ni l'IDE ni le langage GameMaker (GML ) ne prennent en charge les éléments énumérés ci-dessous. Toutefois, cela ne signifie pas que vous
+    ne pouvez pas importer dans GameMaker Studio 2 des jeux réalisés avec des versions antérieures, car vous le pouvez. GameMaker Studio 2 convertit automatiquement toutes les fonctions héritées en scripts de compatibilité, c'est-à-dire des scripts contenant des fonctions qui convertissent les méthodes héritées en méthodes mises à jour.
+    les méthodes héritées en méthodes mises à jour.
+   GameMaker Studio 2 analysera votre projet à la recherche de toutes les fonctions et variables obsolètes que vous avez utilisées, puis créera une série de scripts utilisant ces noms de fonctions. Ces scripts contiendront soit la nouvelle fonction d'exécution équivalente
+    équivalente ou une courte fonction de script qui effectue la même action que la fonction obsolète.
+  Lorsque vous importez un projet GameMaker Studio 2 pour la première fois, un rapport de compatibilité semblable à celui-ci s'affiche :
+  Le corps principal du rapport montre quels objets et scripts ont été affectés et à quel endroit, tandis qu'à la fin
+    vous pouvez trouver une liste des scripts qui ont été créés pour votre projet. Vous pouvez cliquer sur le bouton central de la souris  ou appuyer sur  sur l'un des scripts listés dans le rapport pour l'ouvrir et voir ce qui a été fait.
+  Notez que si vous voyez des scripts créés avec une double barre sous leur nom (par exemple : __global_object_depths), il s'agit de scripts qui ont été créés par l'IDE pour faciliter la compatibilité et non de scripts
+    qui ont été convertis à partir de fonctions obsolètes. Ils ne doivent donc pas être modifiés car ils sont nécessaires au fonctionnement des autres scripts de compatibilité.
+  Lorsque vous avez fini de réviser le rapport de compatibilité, vous pouvez fermer l'espace de travail, mais si vous avez besoin de réviser quoi que ce soit dans le rapport, vous pouvez le retrouver en allant dans la section Notes du
+   Navigateur d'actifs.
+  Notez que vous pouvez continuer à utiliser ces scripts de compatibilité comme vous l'auriez fait avec les fonctions de l'ancienne version de GameMaker. Cependant, en raison de leur mode de fonctionnement, cela aura un impact sur les performances. Nous vous recommandons de
+    de mettre à jour les projets afin d'utiliser directement les nouvelles méthodes et de supprimer les scripts de compatibilité si vous le pouvez, car cela améliorera les performances et vous donnera un aperçu du fonctionnement de GameMaker Studio 2 et du langage GameMaker par rapport aux anciens produits.
+  Notez également que certaines fonctions ont été introduites dans le langage GameMaker pour assurer la compatibilité avec les anciens projets et qu'elles apparaîtront dans ces scripts de compatibilité. Cependant, ces fonctions ne doivent jamais être utilisées dans vos propres projets.
+    Vous trouverez une liste de ces fonctions dans la section suivante du manuel :
+  
+    Fonctions de compatibilité
+  
+  Vous pouvez également trouver une liste complète de toutes les fonctions obsolètes pour lesquelles des scripts de compatibilité équivalents ont été créés à la page suivante :
+  
+    Fonctions obsolètes
+  
+   
+   
+   
+  
+    
+      
+        Retour : Informations complémentaires
+        Suivant : Fonctions obsolètes
+      
+    
+    Copyright YoYo Games Ltd. 2021 Tous droits réservés
   
   
   

@@ -1,4 +1,43 @@
-ds_grid_shuffle Cette fonction peut être utilisée pour randomiser les positions de toutes les valeurs dans toutes les cellules d'une grille. REMARQUE: Cette fonction mélange les cellules de la grille aux mêmes positions chaque fois que le jeu est réexécuté car GameMaker Studio 2 génère la même graine aléatoire initiale à chaque fois pour rendre le code de débogage beaucoup plus facile. Pour éviter ce comportement, utilisez randomise() au début de votre partie. Cela n'est vrai que lors du test et du débogage du jeu, car le package exécutable final ne montrera pas ce comportement et sera aléatoire à chaque lecture. Syntaxe:ds_grid_shuffle(index); Argument Description index L'index de la grille à mélanger. Retour:N/A Exemple:ds_grid_shuffle(grid) Cela prendrait toutes les valeurs de la grille DS indexées dans la variable «grille» et les mélangerait pour obtenir un ordre différent.  Retour: DS Grids Suivant:ds_grid_sort © Copyright YoYo Games Ltd. 2021 Tous droits réservés
+
+  
+  ds_grid_shuffle
+  Cette fonction peut être utilisée pour rendre aléatoire la position de toutes les valeurs dans toutes les cellules d'une grille.
+  REMARQUE : cette fonction mélangera les cellules de la grille aux mêmes positions à chaque nouvelle exécution du jeu, car GameMaker Studio 2 génère à chaque fois la même graine aléatoire initiale afin de faciliter le débogage du code. Pour éviter ce
+    ce comportement, utilisez randomise() au début de votre jeu. Ceci n'est vrai que lorsque vous testez et déboguez le jeu, car l'exécutable final ne présentera pas ce comportement et sera plus facile à utiliser.
+    final ne présentera pas ce comportement et sera aléatoire à chaque jeu.
+   
+  Syntaxe :
+  ds_grid_shuffle(index) ;
+  
+    
+      
+        Arguments
+        Description
+      
+      
+        indice
+        L'index de la grille à mélanger.
+      
+    
+  
+   
+  Les retours :
+  N/A
+   
+  Exemple :
+  ds_grid_shuffle(grille)
+  Cela prendrait toutes les valeurs de la grille DS indexées dans la variable "grid" et les mélangerait pour obtenir un ordre différent.
+   
+   
+   
+  
+    
+      
+        Retour : Grilles DS
+        Suivant : ds_grid_sort
+      
+    
+    Copyright YoYo Games Ltd. 2021 Tous droits réservés
   
   
   

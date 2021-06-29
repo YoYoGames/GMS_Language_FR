@@ -1,4 +1,73 @@
-draw_sprite_tiled_ext Cette fonction prendra un sprite puis le tuera à plusieurs reprises sur toute la vue (ou la pièce si aucune vue n'est définie), en commençant par les coordonnées que vous donnez dans la fonction et avec chaque tuile mise à l'échelle, couleur mélangée et avec l'alpha que vous définissez (ces propriétés sont les mêmes que celles utilisées dans draw_sprite_ext() ). Cette fonction est réservée aux projections 2D (orthographiques) et ne fonctionnera pas correctement lorsqu'une projection de caméra 3D est utilisée. REMARQUE: La fusion des couleurs n'est recommandée pour la cible HTML5 que lorsque WebGL est activé, bien que vous puissiez toujours définir la couleur de fusion si elle n'est pas activée et elle mélangera l'image-objet comme d'habitude. Cependant, tout mélange de cette manière crée un sprite en double qui est ensuite stocké dans le cache et utilisé lorsque cela est nécessaire. Ceci est loin d'être optimal et si vous utilisez plusieurs changements de couleur, cela ralentira les performances de vos jeux à moins que vous n'activiez WebGL. si vous ne souhaitez pas utiliser WebGL, vous pouvez définir la taille du cache de polices pour essayer de limiter cela si nécessaire en utilisant la fonction sprite_set_cache_size(). Syntaxe:draw_sprite_tiled_ext(sprite, subimg, x, y, xscale, yscale, colour, alpha); Argument Description sprite L'index du sprite à dessiner. subimg Le subimg (frame) du sprite à dessiner (image_index ou -1 en corrélation avec l'image courante de l'animation dans l'objet). x La coordonnée x de l'endroit où dessiner le sprite. y La coordonnée y de l'endroit où dessiner le sprite. xscale La mise à l'échelle horizontale du sprite. Un multiplicateur '1 = mise à l'échelle normale, 0,5 est la moitié, etc. yscale La mise à l'échelle verticale du sprite. Un multiplicateur '1 = mise à l'échelle normale, 0,5 est la moitié, etc. colour La couleur avec laquelle mélanger le sprite. c_white est de l'afficher normalement. alpha L'alpha du sprite (de 0 à 1 où 0 est transparent et 1 opaque). Retour:N/A Exemple:draw_sprite_tiled_ext(sprite_index, image_index, x, y, 2, 2, c_red, 0.5); Cela dessinera les instances assignées au sprite (sprite_index) et son image d'animation actuelle (image_index) à la position x et y des instances, mais redimensionnées à deux fois la taille normale, mélangées en rouge et avec la moitié de l'alpha normal. Le sprite sera carrelé horizontalement et verticalement dans la vue.  Face arrière: Sprites et tuiles Suivant:draw_enable_swf_aa © Copyright YoYo Games Ltd. 2021 Tous droits réservés
+
+  
+  draw_sprite_tiled_ext
+  Cette fonction va prendre un sprite et l'afficher de façon répétée dans toute la vue (ou la pièce si aucune vue n'est définie), en partant des coordonnées que vous donnez dans la fonction et avec chaque tuile mise à l'échelle, mélangée à la couleur et avec l'alpha que vous avez défini.
+    (ces propriétés sont les mêmes que celles utilisées dans la fonction draw_sprite_ext()). Cette fonction est destinée aux projections 2D (orthographiques) uniquement, et ne fonctionnera pas correctement si une projection de caméra 3D est utilisée.
+  REMARQUE: le mélange des couleurs n'est recommandé pour la cible HTML5 que lorsque WebGL est activé, bien que vous puissiez toujours définir la couleur de mélange si elle n'est pas activée et le sprite sera mélangé normalement. Cependant, tout mélange de cette manière crée un sprite dupliqué qui est ensuite stocké dans la base de données.
+    sprite qui est ensuite stocké dans le cache et utilisé au besoin. C'est loin d'être optimal et si vous utilisez plusieurs changements de couleur, cela ralentira les performances de votre jeu, à moins que vous n'activiez WebGL. Si vous ne souhaitez pas utiliser WebGL, vous pouvez définir la taille du cache des polices pour essayer de limiter les effets de la taille de la police.
+    la taille du cache des polices pour essayer de limiter ce phénomène si nécessaire en utilisant la fonction sprite_set_cache_size().
+   
+  Syntaxe :
+  draw_sprite_tiled_ext(sprite, subimg, x, y, xscale, yscale, colour, alpha) ;
+  
+    
+      
+        Arguments
+        Description
+      
+      
+        sprite
+        L'index du sprite à dessiner.
+      
+      
+        sous-image
+        La sous-image (frame) du sprite à dessiner (image_index ou -1 correspondent à la frame d'animation actuelle de l'objet).
+      
+      
+        x
+        La coordonnée x de l'endroit où dessiner le sprite.
+      
+      
+        y
+        La coordonnée y de l'endroit où dessiner le sprite.
+      
+      
+        xscale
+        La mise à l'échelle horizontale du sprite. Un multiplicateur ' 1 = mise à l'échelle normale, 0.5 est la moitié, etc.
+      
+      
+        yscale
+        La mise à l'échelle verticale du sprite. Un multiplicateur ' 1 = mise à l'échelle normale, 0.5 est la moitié, etc.
+      
+      
+        couleur
+        La couleur avec laquelle le sprite doit être mélangé. c_white permet de l'afficher normalement.
+      
+      
+        alpha
+        L'alpha du sprite (de 0 à 1 où 0 est transparent et 1 opaque).
+      
+    
+  
+   
+  Les retours :
+  N/A
+   
+  Exemple :
+  draw_sprite_tiled_ext(sprite_index, image_index, x, y, 2, 2, c_red, 0.5) ;
+  Ceci dessinera le sprite assigné à l'instance (sprite_index) et son image d'animation actuelle (image_index) à la position x et y de l'instance, mais mis à l'échelle à deux fois la taille normale, mélangé en rouge et avec la moitié de l'alpha normal. Le sprite sera empilé
+    horizontalement et verticalement dans la vue.
+   
+   
+   
+  
+    
+      
+        Retour : Sprites et tuiles
+        Suivant : draw_enable_swf_aa
+      
+    
+    Copyright YoYo Games Ltd. 2021 Tous droits réservés
   
   
   

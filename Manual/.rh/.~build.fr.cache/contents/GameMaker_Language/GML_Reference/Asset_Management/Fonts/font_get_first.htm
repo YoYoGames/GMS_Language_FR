@@ -1,4 +1,45 @@
- font_get_first (obsolète) Lors de la définition d'une police dans GameMaker Studio 2, vous pouvez définir une plage de caractères à inclure. En effet, la police elle-même n'est pas réellement incluse avec votre jeu (pour des raisons juridiques) mais une image de la police est incluse sur une page de texture et c'est ce que votre jeu utilisera (comme tout autre élément graphique). Cela signifie que vous souhaiterez réduire au minimum le nombre de caractères que vous utilisez et ne spécifier que la plage de caractères dont votre jeu aura besoin afin de garder la mémoire de texture aussi optimisée que possible. Cette fonction peut être utilisée pour trouver le caractère de départ (en tant que valeur ASCII) qui a été utilisé lorsque votre ressource de police a été ajoutée à votre jeu. REMARQUE: en raison des changements dans la façon dont les polices sont gérées, cette fonction renverra toujours 32, car GameMaker Studio 2 applique le caractère espace (32) dans la police et n'autorise pas non plus les caractères avec des codes inférieurs à 32. De nouvelles fonctions pour effectuer des tâches similaires seront ajoutées dans une future mise à jour. Syntaxe:font_get_first(ind); Argument Description ind Index de la police à vérifier. Retour:Real Exemple:num = font_get_first(fnt_Main); Le code ci-dessus stockera la valeur ASCII de la première lettre de la plage de polices pour la police indexée dans "fnt_Main".  Retour: Polices Suivant:font_get_last © Copyright YoYo Games Ltd. 2021 Tous droits réservés
+
+  
+  font_get_first (obsolète)
+  Lorsque vous définissez une police dans GameMaker Studio 2, vous pouvez définir une plage de caractères à inclure. En effet, la police elle-même n'est pas incluse dans votre jeu (pour des raisons juridiques), mais une image de la police est incluse dans une page de texture.
+    la police est incluse dans une page de texture et c'est ce que votre jeu utilisera (comme tout autre élément graphique). Cela signifie que vous devrez limiter au maximum le nombre de caractères utilisés et ne spécifier que la gamme de caractères dont votre jeu aura besoin, afin de ne pas nuire à la qualité du jeu.
+    dont votre jeu aura besoin, afin d'optimiser au maximum la mémoire des textures. Cette fonction peut être utilisée pour trouver le caractère de départ (sous forme de valeur ASCII) qui a été utilisé lorsque votre police a été ajoutée à votre jeu.
+  REMARQUE : en raison de changements dans la façon dont les polices sont gérées, cette fonction renverra toujours 32, car GameMaker Studio 2 impose le caractère espace (32) dans la police et n'autorise pas non plus les caractères dont le code est inférieur à 32.
+    n'autorise pas non plus les caractères dont le code est inférieur à 32. De nouvelles fonctions pour effectuer des tâches similaires seront ajoutées dans une future mise à jour.
+   
+  Syntaxe :
+  font_get_first(ind) ;
+   
+  
+    
+      
+        Arguments
+        Description
+      
+      
+        ind
+        Index de la police à vérifier.
+      
+    
+  
+   
+  Les retours :
+  Real
+   
+  Exemple :
+  num = font_get_first(fnt_Main) ;
+  Le code ci-dessus stockera la valeur ASCII de la première lettre de la gamme de polices pour la police indexée dans "fnt_Main".
+   
+   
+   
+  
+    
+      
+        Retour : Polices de caractères
+        Suivant : font_get_last
+      
+    
+    Copyright YoYo Games Ltd. 2021 Tous droits réservés
   
   
   

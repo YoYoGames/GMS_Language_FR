@@ -1,6 +1,46 @@
-os_is_network_connected Avec cette fonction, vous pouvez vérifier et voir si votre appareil dispose actuellement d'une connexion Internet et il reviendra true si c'est le cas, ou false si ce n'est pas le cas, et selon le système d'exploitation, il peut tenter d'établir une connexion avant de renvoyer une valeur. La fonction a un argument facultatif pour l'activer / la désactiver en essayant d'établir une connexion lorsqu'elle est appelée, et cette option n'est actuellement que pour la cible Nintendo Switch Lorsqu'il est réglé sur true la fonction tentera d'établir une connexion, et lorsqu'elle est définie sur false il se limitera simplement à vérifier la connexion. Notez que toute tentative de connexion peut entraîner le blocage du système d'exploitation Switch REMARQUE: Cette fonction vérifie l'API interne du périphérique qui contrôle les connexions et peut donc renvoyer true s'il existe une connexion Bluetooth, une connexion Wi-Fi ou même simplement une connexion réseau normale permettant l'accès à Internet. Syntaxe:os_is_network_connected(attempt_connection); Argument Description attempt_connection OPTIONNEL! Pour Nintendo Switch Target uniquement. Mis à true pour tenter une connexion au niveau du système d'exploitation lors de l'appel. Retour:Boolean Exemple:if os_is_network_connected()    {
-        global.connected = true;    }
-   Le code ci-dessus vérifie si l'appareil est connecté à Internet et si c'est le cas, il définit une variable globale.  Retour: OS et compilateur Suivant:os_get_config © Copyright YoYo Games Ltd. 2021 Tous droits réservés
+
+  
+  os_is_network_connected (réseau connecté)
+  Avec cette fonction, vous pouvez vérifier si votre appareil dispose actuellement d'une connexion Internet et elle renverra true si c'est le cas, ou false si ce n'est pas le cas, et selon le système d'exploitation, elle peut tenter d'établir une connexion avant de renvoyer
+    une valeur.
+  La fonction a un argument optionnel pour activer/désactiver la tentative d'établir une connexion lorsqu'elle est appelée, et cette option est actuellement seulement pour la cible Nintendo Switch. Lorsqu'elle est réglée sur true, la fonction tentera de
+    d'établir une connexion, et lorsqu'elle est définie sur false, elle se limitera simplement à vérifier la connexion. Notez que la tentative d'établir une connexion peut provoquer un blocage du système d'exploitation de la Switch pendant quelques secondes. 
+  REMARQUE : cette fonction vérifie l'API interne du périphérique qui contrôle les connexions et peut donc renvoyer vrai s'il existe une connexion Bluetooth, une connexion Wi-Fi ou même simplement une connexion réseau normale qui permet l'accès à Internet.
+   
+  Syntaxe :
+  os_is_network_connected(attempt_connection) ;
+  
+    
+      
+        Arguments
+        Description
+      
+      
+        tentative_de_connexion
+        OPTIONNEL ! Pour la cible Nintendo Switch uniquement. Défini à true pour tenter une connexion au niveau du système d'exploitation lorsqu'il est appelé.
+      
+    
+  
+   
+  Les retours :
+  Booléen
+   
+  Exemple :
+  if os_is_network_connected() {
+     global.connected = true ; }
+  
+  Le code ci-dessus vérifie si l'appareil a une connexion à l'Internet et si c'est le cas, il définit une variable globale.
+   
+   
+   
+  
+    
+      
+        Retour : Système d'exploitation et compilateur
+        Suivant : os_get_config
+      
+    
+    Copyright YoYo Games Ltd. 2021 Tous droits réservés
   
   
   

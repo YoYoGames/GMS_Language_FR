@@ -1,11 +1,35 @@
-gpu_get_texrepeat Avec cette fonction, vous pouvez vérifier si la répétition de texture est activée (renvoie true ) ou non (retourne false ). Pour plus d'informations sur la répétition de texture, consultez la fonction gpu_set_texrepeat(). Syntaxe:gpu_get_texrepeat(); Retour:Boolean Exemple:if gpu_get_texrepeat()     {
-         gpu_set_texrepeat(false);
-         }
+
+  
+  gpu_get_texrepeat
+  Cette fonction permet de vérifier si la répétition de la texture est activée (renvoie true) ou non (renvoie false). Pour plus d'informations sur la répétition des textures, voir la fonction gpu_set_texrepeat().
+   
+  Syntaxe :
+  gpu_get_texrepeat() ;
+   
+  Les retours :
+  Booléen
+   
+  Exemple :
+  if gpu_get_texrepeat() {
+     gpu_set_texrepeat(false) ;
+     }
      else
-         {
-         gpu_set_texrepeat(true);
-         }
-   Le code ci-dessus vérifie si la répétition de texture est activée ou désactivée et la modifie en conséquence.  Retour: Contrôle GPU Suivant:gpu_get_texrepeat_ext © Copyright YoYo Games Ltd. 2021 Tous droits réservés
+     {
+     gpu_set_texrepeat(true) ;
+     }
+  
+  Le code ci-dessus vérifie si la répétition de la texture est activée ou non et l'active en conséquence.
+   
+   
+   
+  
+    
+      
+        Retour : Contrôle du GPU
+        Suivant : gpu_get_texrepeat_ext
+      
+    
+    Copyright YoYo Games Ltd. 2021 Tous droits réservés
   
   
   

@@ -1,0 +1,71 @@
+
+  
+  Variables statiques
+  Une caractéristique intéressante des fonctions de script et des variables de méthode est qu'elles peuvent avoir des variables statiques. Une variable statique est une variable qui est définie la première fois
+    que la fonction est appelée et qui conservera sa valeur à partir de ce moment-là. Pour créer une variable statique, vous devez la définir à l'aide du mot-clé static, comme le montre cet exemple simple :
+  counter = function() {
+     static num = 0 ; return num++ ; }
+  
+  Dans l'exemple ci-dessus, la variable num est une variable statique, et sera donc définie comme 0 la première fois que la fonction sera appelée, mais chaque fois que la fonction sera appelée par la suite, l'initialisation de la variable sera ignorée.
+    ignorée. Donc, si vous appelez ensuite cette fonction comme ceci :
+  for (var i = 0 ; i < 10 ; ++i ;) {
+     show_debug_message(counter()) ; }
+  
+  La sortie sera :
+  0 1
+     2
+     3
+     4
+     5
+     6
+     7
+     8
+     9
+  
+  Si vous n'aviez pas utilisé le mot-clé static ici, la sortie serait simplement 0 à chaque itération de la boucle, puisque la variable num sera définie comme 0 à chaque fois que la fonction sera appelée avant de revenir.
+    la fonction est appelée avant d'être retournée. Notez qu'une variable statique ne peut être modifiée qu'à l'intérieur de la fonction d'origine, et que la retourner vous donnera simplement une copie de sa valeur - essentiellement la variable statique partagée ne peut être modifiée que par la fonction
+    qui la contient.
+  Une variable statique est toujours initialisée au début de la fonction, donc peu importe où vous définissez une variable statique dans la fonction, elle sera toujours disponible pour être lue et modifiée tout au long de la fonction (même si elle est utilisée avant d'être définie).
+    Voir l'exemple suivant :
+  function add_health() {
+     ma_santé++ ; show_debug_message(ma_santé) ; static ma_santé = 1 ; }
+  
+  Ici, la variable statique " my_health" est modifiée et imprimée dans la sortie du compilateur avant d'être initialisée. Bien que cela semble erroné, c'est tout à fait normal car les variables statiques sont initialisées avant l'exécution de tout code de fonction.
+    code de fonction est exécuté. Notez que s'il y a plusieurs variables statiques dans une fonction, l'ordre dans lequel elles ont été définies sera conservé lorsqu'elles seront initialisées au début.
+  Vous pouvez également utiliser le mot-clé static à l'intérieur d'une fonction pour créer une fonction statique, ce qui - comme pour les variables - signifie simplement que la fonction ne sera définie qu'une seule fois, c'est-à-dire la première fois que la fonction
+    est appelée, par exemple :
+  function(_x, _y) Vector2 constructor {
+     x = _x ; y = _y ;
+     static Add = function( _other ) { x += _other.x ; y += _other.y ; }  }
+  
+  Dans l'exemple ci-dessus, la fonction constructeur Vector2 peut être utilisée pour créer une structure, et la structure aura quelques variables, dont l'une est la variable de méthode Add. Puisque
+    cette variable a été définie comme statique, la fonction qu'elle contient ne sera initialisée qu'une seule fois , la première fois que la fonction Vector2 sera appelée, et toutes les autres structures créées avec ce constructeur feront référence à la fonction créée initialement, au lieu de créer une nouvelle fonction pour chaque structure.
+    la fonction Add qui a été créée initialement, au lieu de créer une nouvelle fonction pour chaque structure (pour plus d'informations sur les structures et le mot-clé constructor, voir ici).
+  Lorsque l'on utilise l'héritage avec des constructeurs, toutes les variables statiques du constructeur enfant ne seront initialisées qu'une fois que le constructeur parent aura été exécuté, de sorte que les variables statiques du constructeur enfant ne remplaceront pas les variables statiques du parent.
+    du parent. Voir l'exemple suivant :
+  function Parent() constructor {
+     show_debug_message(value) ; static value = 10 ; }
+    
+     function Child() : Parent() constructor {
+     show_debug_message(value) ; static value = 20 ; }
+    
+     var _child = new Child() ;
+  L'appel du constructeur Child() imprime ceci dans le journal de sortie :
+  10 20
+  
+  La première valeur provient du constructeur parent, et la seconde du constructeur enfant. Cela montre que la valeur de la variable statique de l'enfant n'a pas été initialisée avant que le constructeur parent ne soit terminé, et que dans chaque constructeur
+    la variable statique a été initialisée avant l'appel show_debug_message().
+   
+   
+  
+    
+      
+        Retour : Aperçu duGML
+        Suivant : Structs
+      
+    
+    Copyright YoYo Games Ltd. 2021 Tous droits réservés
+  
+  
+  
+

@@ -1,4 +1,29 @@
-file_find_close Doit être appelé après la gestion des fichiers ouverts à l'aide de file_find_first() et file_find_next() fonctions pour libérer de la mémoire. Les fonctions de recherche de fichiers ouvrent des poignées dans le répertoire de fichiers et celles-ci occupent une quantité minimale de mémoire, qui (au fil du temps) monte. Par conséquent, vous devez toujours appeler cette fonction après avoir trouvé les fichiers dont vous avez besoin pour «fermer» ces poignées. Syntaxe:file_find_close(); RetourN/A Exemple:file_find_close(); Cela fermera et libérera la mémoire associée aux poignées de la fonction de recherche de fichiers.  Retour: Système de fichiers Suivant:file_attributes © Copyright YoYo Games Ltd. 2021 Tous droits réservés
+
+  
+  fichier_trouvé_fermé
+  Doit être appelé après avoir traité les fichiers ouverts avec file_find_first() et file_find_next() pour libérer la mémoire. Les fonctions de recherche de fichiers ouvrent des handles dans le répertoire des fichiers
+    et ceux-ci occupent une quantité minimale de mémoire, qui s'accumule (avec le temps). Par conséquent, vous devez toujours appeler cette fonction après avoir trouvé les fichiers dont vous avez besoin pour "fermer" ces handles.
+   
+  Syntaxe :
+  file_find_close() ;
+   
+  Renvoie à
+  N/A
+   
+  Exemple :
+  file_find_close() ;
+  Ceci fermera et libérera la mémoire associée aux poignées de la fonction de recherche de fichiers.
+   
+   
+   
+  
+    
+      
+        Retour : Système de fichiers
+        Suivant : file_attributes
+      
+    
+    Copyright YoYo Games Ltd. 2021 Tous droits réservés
   
   
   

@@ -1,4 +1,32 @@
-layer Cette variable intégrée est créée pour chaque instance dans une pièce et contient la valeur d'ID de couche de la couche à laquelle l'instance est affectée. Cette valeur peut ensuite être utilisée dans d'autres fonctions comme layer_get_depth() ou il peut être modifié pour déplacer l'instance vers un autre calque, mais notez que si le calque attribué n'existe pas dans la salle actuelle, vous obtiendrez une erreur qui forcera votre jeu à se fermer. Lors de l'affectation d'une couche, vous devez fournir l' ID de couche unique renvoyé par la fonction layer_get_id() (lors de l'utilisation de couches de pièces nommées), ou comme renvoyé par la fonction layer_create() (lorsque vous créez vos propres calques au moment de l'exécution). IMPORTANT! si vous avez créé l'instance à l'aide de la fonction instance_create_depth (), ou si vous avez modifié manuellement la variable de profondeur, la couche affectée à l'instance devient une couche «gérée», qui est une GameMaker Studio 2 contrôle et gère automatiquement. Dans ces cas, le layer variable renverra -1. Syntaxe:layer; Retour:Real (integer - resource index value) Exemple:layer = layer_create(-1000); Le code ci-dessus créera un nouveau calque avec une profondeur de -1000, puis définira l'instance layer à l'ID de couche renvoyé, en déplaçant l'instance du calque sur lequel elle se trouve actuellement vers le nouveau calque en cours de création.  Retour: Variables d'instance Suivant:alarm © Copyright YoYo Games Ltd. 2021 Tous droits réservés
+
+  
+  couche
+  Cette variable intégrée est créée pour chaque instance d'une room et contient la valeur de l'ID de la couche à laquelle l'instance est assignée. Cette valeur peut ensuite être utilisée dans d'autres fonctions telles que couche_get_depth() ou
+    elle peut être modifiée pour déplacer l'instance vers un autre layer, mais notez que si le layer assigné n'existe pas dans la room actuelle, vous obtiendrez une erreur qui forcera votre jeu à se fermer. Lorsque vous assignez une couche, vous devez fournir l'unique
+   ID de la couche tel que renvoyé par la fonction layer_get_id() (lors de l'utilisation de couches de pièces nommées), ou tel que renvoyé par la fonction layer_create() (lorsque
+    vous créez vos propres couches au moment de l'exécution).
+  IMPORTANT ! Si vous avez créé l'instance à l'aide de la fonction instance_create_depth() ou que vous avez modifié manuellement la variable profondeur    la couche affectée à l'instance devient une couche "gérée", c'est-à-dire une couche que GameMaker Studio 2 contrôle et gère automatiquement. Dans ce cas, la variable layer retournera -1.
+   
+  Syntaxe :
+  couche ;
+   
+  Les retours :
+  Real (nombre entier - valeur de l'index de la ressource)
+   
+  Exemple :
+  couche = layer_create(-1000) ;
+  Le code ci-dessus créera un nouveau calque avec une profondeur de -1000 et définira ensuite la variable de calque de l'instance avec l'ID du calque retourné, déplaçant l'instance du calque sur lequel elle se trouve actuellement vers le nouveau calque créé.
+   
+   
+   
+  
+    
+      
+        Retour : Variables d'instance
+        Suivant : alarme
+      
+    
+    Copyright YoYo Games Ltd. 2021 Tous droits réservés
   
   
   

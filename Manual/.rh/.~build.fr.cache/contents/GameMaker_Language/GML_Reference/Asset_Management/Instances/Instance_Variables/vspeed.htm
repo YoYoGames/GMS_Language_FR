@@ -1,4 +1,32 @@
-vspeed vspeed est l'une des propriétés "intégrées" de toutes les instances et définit la vitesse de déplacement vertical (le long de l'axe y) de l'instance en pixels par pas. Donc, un vspeed de 3 signifie 3 pixels de mouvement vers le bas (+ y) à chaque pas, et un vspeed de -3 signifierait 3 pixels de mouvement vers le haut (-y) à chaque pas. Notez que si vous définissez le speed et / ou direction variables puis les vspeed La valeur sera mise à jour automatiquement pour refléter ces changements, et de même, en changeant le vspeed la valeur affectera également le speed et direction valeurs. Notez également quegravity,gravity_direction etfriction peuvent tous modifier la valeur de cette variable lorsqu'ils sont utilisés dans vos jeux. Syntaxe:vspeed; Retour:Real (single precision floating point value) Exemple:if keyboard_check(vk_up) vspeed = -5; if keyboard_check(vk_down) vspeed = 5; Le code ci-dessus changera la vitesse verticale en fonction des touches enfoncées.  Retour: Variables d'instance Suivant:speed © Copyright YoYo Games Ltd. 2021 Tous droits réservés
+
+  
+  vspeed
+  vspeed est une des propriétés "intégrées" que toutes les instances possèdent et qui définit la vitesse de mouvement vertical (le long de l'axe des y) de l'instance en pixels par pas. Ainsi, une vspeed de 3 signifie un mouvement de 3 pixels vers le bas (+y) à chaque pas.
+    (+y) à chaque pas, et une vspeed de -3 signifie un mouvement de 3 pixels vers le haut (-y) à chaque pas.
+  Notez que si vous définissez les variables speed et/ou direction, la valeur vspeed sera automatiquement mise à jour pour refléter ces changements.
+    refléter ces changements, et de même, la modification de la valeur vspeed affectera également les valeurs speed et direction. Notez également que gravity,
+    gravity_direction et friction peuvent tous modifier la valeur de cette variable lorsqu'ils sont utilisés dans vos jeux.
+   
+  Syntaxe :
+  vspeed ;
+   
+  Les retours :
+  Réel (valeur à virgule flottante de précision simple)
+   
+  Exemple :
+  if keyboard_check(vk_up) vspeed = -5 ; if keyboard_check(vk_down) vspeed = 5 ;
+  Le code ci-dessus changera la vitesse verticale en fonction des touches pressées.
+   
+   
+   
+  
+    
+      
+        Retour : Variables d'instance
+        Suivant : vitesse
+      
+    
+    Copyright YoYo Games Ltd. 2021 Tous droits réservés
   
   
   

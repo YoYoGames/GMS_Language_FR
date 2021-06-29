@@ -1,13 +1,58 @@
-skeleton_slot_data_instance Avec cette fonction, vous pouvez remplir une liste DS (pré-créée) avec des données pour chacun des emplacements de pièce jointe disponibles pour le sprite Spine associé à l'instance actuelle (y compris toutes les modifications de pièce jointe). Ces données sont renvoyées dans le forum d'une carte DS qui contient les paires clé / valeur suivantes: "nom": le nom de l'emplacement. "bone": Le nom de l'os. "pièce jointe": le nom de la pièce jointe si elle est utilisée ou "(aucune)" si aucune pièce n'est attribuée. Les valeurs de chaque clé seront des chaînes et peuvent ensuite être utilisées dans les autres fonctions de rattachement squelette pour ces types de sprite. Notez que le DS Map créés ne sont pas détruits, vous devrez donc parcourir la liste DS et détruire vous-même chacune des cartes créées. Syntaxe:skeleton_slot_data_instance(list); Argument Description list ID de la liste DS à remplir avec les cartes DS. Retour:N/A Exemple:var list = ds_list_create(); var open = true; slot_name = ""; skeleton_slot_data_instance(list);
-     for (var i = 0; i < ds_list_size(list); i++;)     {
-         var map = list[| i];     if open         {
-             if map[? "attachment"] == "(none)"             {
-                 open = false;             slot_name = map[? "name"];             }
-             }
-         ds_map_destroy(map);
-         }
-     ds_list_destroy(list);
-   Le code ci-dessus crée une liste DS, puis la remplit avec les données d'emplacement pour l'image-objet d'instance. Ces données sont ensuite analysées pour extraire les cartes DS individuelles avec les données de slot. Ceci est ensuite vérifié pour voir s'il y a un emplacement vide, et si tel est le cas, la variable "nom_emplacement" reçoit le nom de l'emplacement vide avant que la carte DS ne soit détruite. Enfin, nous détruisons la liste DS car elle n'est plus nécessaire.  Retour: Slots Suivant:skeleton_find_slot © Copyright YoYo Games Ltd. 2021 Tous droits réservés
+
+  
+  données_instance_slot_squelette
+  Avec cette fonction, vous pouvez remplir une liste DS (pré-créée) avec des données pour chacun des emplacements d'attachement disponibles pour le sprite Spine associé à l'instance courante (y compris toute
+    modifications de l'attachement). Ces données sont retournées dans le forum d'une carte DS qui contient les paires clé/valeur suivantes :
+  
+    "name" : Le nom de l'emplacement.
+    "bone" : Le nom de l'os.
+    "attachment" : Le nom de la pièce jointe s'il y en a une ou "(none)" s'il n'y en a pas.
+  
+  Les valeurs de chaque clé seront des chaînes de caractères et pourront ensuite être utilisées dans les autres fonctions d'attachement du squelette pour ces types de sprites. Notez que les cartes DS créées ne sont pas détruites. Vous devrez donc parcourir en boucle la liste DS et détruire vous-même chacune des cartes créées.
+    chacune des cartes créées vous-même.
+   
+  Syntaxe :
+  skeleton_slot_data_instance(list) ;
+  
+    
+      
+        Arguments
+        Description
+      
+      
+        liste
+        L'ID de la liste DS à remplir avec les cartes DS.
+      
+    
+  
+   
+  Les retours :
+  N/A
+   
+  Exemple :
+  var list = ds_list_create() ; var open = true ; slot_name = "" ; skeleton_slot_data_instance(list) ;
+     for (var i = 0 ; i < ds_list_size(list) ; i++ ;)  {
+     var map = list[| i] ; if open {
+     if map[ ? "attachment"] == "(none)" {
+     open = false ; slot_name = map[ ? "name"] ; }
+     }
+     ds_map_destroy(map) ;
+     }
+     ds_list_destroy(list) ;
+  
+  Le code ci-dessus crée une liste de DS et la remplit ensuite avec les données de slot pour le sprite d'instance. Ces données sont ensuite analysées pour extraire les cartes DS individuelles avec les données de slot. On vérifie ensuite s'il existe un slot vide, et si c'est le cas, la variable
+    "slot_name" se voit attribuer le nom du slot vide avant que la carte DS ne soit détruite. Enfin, nous détruisons la liste des DS car elle n'est plus nécessaire.
+   
+   
+   
+  
+    
+      
+        Retour : Slots
+        Suivant : skeleton_find_slot
+      
+    
+    Copyright YoYo Games Ltd. 2021 Tous droits réservés
   
   
   

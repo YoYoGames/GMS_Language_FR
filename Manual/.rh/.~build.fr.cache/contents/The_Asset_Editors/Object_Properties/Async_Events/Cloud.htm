@@ -1,4 +1,71 @@
- Nuage L'événement Cloud est déclenché par le rappel de l'un des cloud_*() fonctions, comme cloud_synchronise(). Il génère en fait une carte DS qui est exclusive à cet événement et est stockée dans la variable spéciale  async_load (veuillez consulter les fonctions individuelles pour des exemples de code qui expliquent l'utilisation de cet événement plus en détail). Cette carte DS a la structure suivante: "status ": Ceci contient le code d'état, où une valeur négative indique une erreur, dont une description sera contenue dans" errorString ". Une valeur de 0 (ou une valeur positive) indique un succès (voir ci-dessous pour les valeurs exactes), et le "resultString" contiendra les données retournées ou un message de réussite. "id ": L'identifiant qui a été renvoyé par la fonction appelée. Si vous lancez une série de requêtes cloud_, vous devez savoir à laquelle vous obtenez la réponse. Vous utiliserez donc cette valeur pour la comparer à la valeur que vous avez stockée lorsque vous avez initialement envoyé la demande pour trouver la bonne. "description ": La description du dernier fichier téléchargé. "resultString ": Cela contient une chaîne qui est le blob de données renvoyé par le cloud. "errorString ": renvoie une chaîne d'erreur pour toute erreur. La signification exacte de l'entrée de carte "état" renvoyée est expliquée dans le tableau suivant: Valeur du statut errorString / resultString Description -1 errorString = "Non connecté à <SERVICE>" You have not successfully logged in to the given Cloud Service 0 resultString = données récupérées New game data downloaded from the cloud (following a cloud_synchronise() call) 1 resultString = "Déjà synchronisé" No new data since you last called cloud_synchronise 2 resultString = "ConflictDeferral" A conflict was encountered, but the gamer chose to ignore it 3 resultString = "GameUploadSuccess" data from cloud_string_save() or cloud_file_save() was successfully uploaded to the cloud -n errorString = Description de l'erreur Any other negative number means a synchronisation failure  Retour: Événements asynchrones Suivant: Dialogue © Copyright YoYo Games Ltd. 2021 Tous droits réservés
+
+  
+  Nuage
+  L'événement Cloud est celui qui est déclenché par le rappel d'une des cloud_*() fonctions,
+    comme cloud_synchronise(). Il génère en fait une carte DS qui est exclusive à cet événement et qui est stockée dans
+    la variable spéciale  async_load  (voir les fonctions individuelles pour des exemples de code expliquant l'utilisation de cet événement de manière plus détaillée).
+    événement de manière plus détaillée). Cette carte DS a la structure suivante :
+  
+    "status" : Il s'agit du code d'état, où une valeur négative indique une erreur, dont la description sera contenue dans le "errorString". Une valeur de 0 (ou une valeur positive) indique un succès (voir ci-dessous pour les
+      valeurs exactes), et le "resultString" contiendra les données retournées ou un message de succès.
+    "id" : L'identifiant qui a été renvoyé par la fonction appelée. Si vous envoyez une série de requêtes cloud_, vous devez savoir à laquelle vous recevez une réponse.
+      la valeur que vous avez stockée lors de l'envoi initial de la demande pour trouver la bonne.
+    "description" : La description du dernier fichier téléchargé.
+    "resultString" : Ceci contient une chaîne de caractères qui est le blob de données renvoyé par le nuage.
+    "errorString" : renvoie une chaîne d'erreur pour toute erreur.
+  
+  La signification exacte de l'entrée de carte "status" retournée est expliquée dans le tableau suivant :
+   
+  
+    
+      
+        Valeur du statut
+        errorString / resultString
+        Description
+      
+      
+        -1
+        errorString = "Non connecté à <SERVICE>"
+        Vous n'avez pas réussi à vous connecter au service en nuage en question.
+      
+      
+        0
+        resultString = données récupérées
+        Nouvelles données de jeu téléchargées depuis le cloud (suite à un appel à cloud_synchronise() )
+      
+      
+        1
+        resultString = "AlreadySynchronized" (déjà synchronisé)
+        Aucune nouvelle donnée depuis la dernière fois que vous avez appelé cloud_synchronise
+      
+      
+        2
+        resultString = "ConflictDeferral" (renvoi de conflit)
+        Un conflit a été rencontré, mais le joueur a choisi de l'ignorer.
+      
+      
+        3
+        resultString = "GameUploadSuccess" (succès)
+        les données de cloud_string_save() ou cloud_file_save() ont été téléchargées avec succès vers le cloud.
+      
+      
+        -n
+        errorString = Description de l'erreur
+        Tout autre nombre négatif signifie un échec de la synchronisation
+      
+    
+  
+   
+   
+   
+  
+    
+      
+        Retour : Événements asynchrones
+        Suivant : Dialogue
+      
+    
+    Copyright YoYo Games Ltd. 2021 Tous droits réservés
   
   
   

@@ -1,4 +1,64 @@
-font_replace_sprite Avec cette fonction, vous pouvez utiliser une «bande de sprite» pour remplacer un actif de police de sprite précédemment créé, où chaque sous-image serait un symbole ou une lettre individuelle. L'index est le numéro de carte UTF8 pour le premier caractère à utiliser et les plages à utiliser sont les mêmes que vous le feriez pour une police normale, commençant par "!" mais rappelez-vous que vous ne devez inclure que ce dont vous avez besoin et que vous devez utiliser le ord() pour obtenir la valeur UTF8 correcte de la lettre de départ. Vous pouvez également définir l'espacement de la police pour qu'il soit proportionnel (true ) ou non (false ), où une police proportionnelle est espacée en fonction de la largeur réelle des lettres (la lettre «i» prend donc moins de place que la lettre «w», par exemple) tandis qu'une police non proportionnelle sera espacée en fonction du sous- largeur de l'image, comme une police à espacement fixe. Enfin, vous pouvez définir l'espace à laisser entre chaque lettre lors de l'écriture, et cela peut être n'importe quelle valeur entière, 0 étant sans espace (les lettres "toucheront" si elles sont proportionnelles). Si la fonction échoue, elle échouera silencieusement sans remplacer la police de sprite donnée. Il est également intéressant de noter qu'il ne peut y avoir d' espaces dans la table de caractères, de sorte que si vous, par exemple, utilisez '.' et '0' mais pas '/', vous devez quand même inclure '/' ou laisser une sous-image vide entre les deux caractères utilisés. L'image ci-dessous montre une disposition de police de sprite typique: Syntaxe:font_replace_sprite(ind, spr, first, prop, sep); Argument Description ind L'index de la police qui doit être remplacée (c'est-à-dire que toutes les références à cette ressource après cette fonction feront référence à la nouvelle police, pas à l'original). spr Le sprite sur lequel ajouter une police. first L'index du premier caractère disponible. prop Si l'espace blanc autour de chaque lettre doit être supprimé (s'il est faux, la police créée sera monospace, sinon ce sera comme la plupart des polices régulières). sep L'espace entre chaque lettre, 0 signifiant la droite d'une lettre touche juste la gauche de la suivante. Retour:N/A Exemple:font_replace_sprite(global.Font, working_directory + "Sprites\spr_Font.png", ord("!"), true, 2); Le code ci-dessus remplacera la ressource de police indexée dans la variable globale "Police" par une nouvelle ressource de police à partir d'un fichier image externe.  Retour: Polices Suivant:font_replace_sprite_ext © Copyright YoYo Games Ltd. 2021 Tous droits réservés
+
+  
+  font_replace_sprite
+  Avec cette fonction, vous pouvez utiliser une "bande de sprites" pour remplacer une ressource de police de sprites précédemment créée, où chaque sous-image serait un symbole ou une lettre individuelle. L'index est le numéro de carte UTF8 pour le premier caractère à utiliser et les intervalles
+    à utiliser sont les mêmes que pour une police normale, en commençant par " !", mais n'oubliez pas que vous ne devez inclure que ce dont vous avez besoin et que vous devez utiliser la fonction ord() pour obtenir la valeur
+    UTF8 correcte pour la lettre de départ.
+  Vous pouvez également définir l'espacement de la police pour qu'elle soit proportionnelle(true) ou non(false), où une police proportionnelle est espacée sur la base de la largeur réelle des lettres (ainsi, la lettre "i" prend moins de place que la lettre "w",
+    par exemple), tandis qu'une police non proportionnelle sera espacée en fonction de la largeur de la sous-image, comme une police monospace. Enfin, vous pouvez définir l'espace à laisser entre chaque lettre lors de l'écriture, et il peut s'agir de n'importe quelle valeur entière, 0 correspondant à l'absence d'espace (les lettres se "toucheront" si elles sont proportionnelles).
+    lettres se "toucheront" si elles sont proportionnelles). 
+  Si la fonction échoue, elle échouera en silence sans remplacer la police de sprites donnée.
+  Il convient également de noter qu'il ne peut y avoir d'espace dans la carte de caractères, de sorte que si vous utilisez, par exemple, '.' et '0' mais pas '/', vous devez soit inclure '/' de toute façon, soit laisser un sous-image vide entre les deux caractères utilisés.
+    deux caractères utilisés. L'image ci-dessous montre une disposition typique de police sprite :
+   
+  Syntaxe :
+  font_replace_sprite(ind, spr, first, prop, sep) ;
+  
+    
+      
+        Arguments
+        Description
+      
+      
+        ind
+        L'index de la police qui doit être remplacée (c'est-à-dire que toutes les références à cette ressource après cette fonction feront référence à la nouvelle police, et non à l'originale).
+      
+      
+        spr
+        Le sprite sur lequel ajouter une police.
+      
+      
+        premièrement
+        L'index du premier caractère disponible.
+      
+      
+        accessoire
+        Si l'espace blanc autour de chaque lettre doit être supprimé (si false, la police créée sera monospaced, sinon elle sera comme la plupart des polices régulières).
+      
+      
+        sep
+        L'espace entre chaque lettre, 0 signifiant que la droite d'une lettre touche juste la gauche de la suivante.
+      
+    
+  
+   
+  Les retours :
+  N/A
+   
+  Exemple :
+  font_replace_sprite(global.Font, working_directory + "Sprites\spr_Font.png", ord(" !"), true, 2) ;
+  Le code ci-dessus va remplacer la police indexée dans la variable globale "Font" par une nouvelle police provenant d'un fichier image externe.
+   
+   
+   
+  
+    
+      
+        Retour : Polices de caractères
+        Suivant : font_replace_sprite_ext
+      
+    
+    Copyright YoYo Games Ltd. 2021 Tous droits réservés
   
   
   

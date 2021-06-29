@@ -1,6 +1,52 @@
-ini_write_real Vous pouvez utiliser cette fonction pour écrire une valeur (numérique) dans un fichier de données ini. Les fichiers Ini sont divisés en sections, puis chaque section est ensuite divisée en paires clé - valeur. Ainsi, un fichier ini typique ressemblerait à ceci: Syntaxe:ini_write_real(section, key, value); Argument Description section La section du.ini sur laquelle écrire. key La clé dans la section appropriée du.ini à écrire. value La valeur réelle à écrire vers la destination appropriée. Retour:N/A Exemple:score = 1000; ini_open("savedata.ini");
-     ini_write_real("save1", "Score", score ); score2 = ini_read_real("save1", "Score", 0 ); ini_close();
-   Cela définira le score à 1000, puis ouvrira "savedata.ini" et écrira cette valeur dans "save1"> "Score". Ensuite, il définira score2 à la valeur réelle sous "save1"> "score" dedans, 1000, et fermera à nouveau le.ini. S'il n'avait pas trouvé cette valeur, score2 aurait fini par être défini sur 0.  Retour: Fichiers Ini Suivant:ini_write_string © Copyright YoYo Games Ltd. 2021 Tous droits réservés
+
+  
+  ini_write_real
+  Vous pouvez utiliser cette fonction pour écrire une valeur (numérique) dans un fichier de données ini. Les fichiers ini sont divisés en sections, puis chaque section est ensuite divisée en paires clé-valeur. Ainsi, un fichier ini typique ressemblerait à quelque chose comme ceci :
+  
+   
+  Syntaxe :
+  ini_write_real(section, clé, valeur) ;
+  
+    
+      
+        Arguments
+        Description
+      
+      
+        section
+        La section du fichier .ini dans laquelle il faut écrire.
+      
+      
+        clé
+        La clé dans la section pertinente du .ini pour écrire.
+      
+      
+        valeur
+        La valeur réelle à écrire à la destination pertinente.
+      
+    
+  
+   
+  Les retours :
+  N/A
+   
+  Exemple :
+  score = 1000 ; ini_open("savedata.ini") ;
+     ini_write_real("save1", "Score", score ) ; score2 = ini_read_real("save1", "Score", 0 ) ; ini_close() ;
+  
+  Cela va définir le score à 1000, puis ouvrir "savedata.ini" et écrire cette valeur dans "save1" > "Score". Ensuite, le score2 sera fixé à la valeur réelle sous "save1" > "score", soit 1000, et le fichier .ini sera refermé.
+    à nouveau. S'il n'avait pas trouvé cette valeur, le score2 aurait été fixé à 0.
+   
+   
+   
+  
+    
+      
+        Retour : Dossiers Ini
+        Suivant : ini_write_string
+      
+    
+    Copyright YoYo Games Ltd. 2021 Tous droits réservés
   
   
   

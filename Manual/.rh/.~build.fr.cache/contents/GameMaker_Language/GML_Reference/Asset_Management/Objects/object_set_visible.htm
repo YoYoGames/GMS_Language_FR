@@ -1,4 +1,48 @@
-object_set_visible Avec cette fonction, vous pouvez marquer un objet spécifique comme étant visible ou non (pour plus d'informations sur l'indicateur "visible", voir la section sur l' éditeur d'objets ). Cela signifie que toutes les instances de cet objet créées après la modification de visible seront créées avec ce nouvel état, tandis que les instances qui se trouvent déjà dans la salle peuvent ne pas être affectées. Veuillez noter qu'il ne s'agit pas d'une fonction d'instance! Vous pouvez définir l'indicateur visible d'instances individuelles à l'aide de la visible variable et ainsi avoir dix instances toutes marquées comme visibles même si l'objet en question a l'indicateur défini sur false dans l'EDI, et même si vous changez l'indicateur visible de l'objet en true à l'aide de cette fonction, toutes les instances qui se trouvent actuellement dans la salle restera tel quel, et seules les instances créées après l'appel de la fonction commenceront par visible marqué comme vrai. Syntaxe:object_set_visible( index, vis ); Argument Description index L'index de l'objet à modifier. vis La nouvelle visibilité de l'objet (vrai = visible, faux = invisible). Retour:N/A Exemple:if !object_get_visible(obj_Block)     {     object_set_visible(obj_Block, true);     } Le code ci-dessus vérifie l'indicateur visible de l'objet "obj_Block" et s'il est faux, il est modifié pour être marqué comme vrai.  Retour: Objets Suivant:object_index © Copyright YoYo Games Ltd. 2021 Tous droits réservés
+
+  
+  objet_set_visible
+  Cette fonction permet de marquer un objet spécifique comme étant visible ou non (pour plus d'informations sur le drapeau "visible", voir la section sur l'éditeur d'objets ). Cela signifie que toutes les instances
+    de cet objet qui sont créées après que "visible" a été modifié seront créées avec ce nouvel état, tandis que les instances qui sont déjà dans la pièce peuvent ne pas être affectées.
+  Veuillez noter qu'il ne s'agit pas d'une fonction d'instance ! Vous pouvez définir l'indicateur de visibilité des instances individuelles à l'aide de la variable visible et ainsi avoir dix instances toutes marquées comme visibles même si
+    même si l'objet en question a le drapeau à false dans l'IDE, et même si vous changez le drapeau visible de l'objet à true en utilisant cette fonction, toutes les instances qui sont actuellement dans la pièce resteront comme elles étaient, et seulement les instances créées après l'appel de la fonction commenceront avec le drapeau visible à true.
+    l'appel de la fonction commenceront avec l'indicateur visible à true.
+   
+  Syntaxe :
+  objet_set_visible( index, vis ) ;
+  
+    
+      
+        Arguments
+        Description
+      
+      
+        indice
+        L'indice de l'objet à modifier.
+      
+      
+        vis
+        La nouvelle visibilité de l'objet (true=visible, false=invisible).
+      
+    
+  
+   
+  Les retours :
+  N/A
+   
+  Exemple :
+  if !object_get_visible(obj_Block) { object_set_visible(obj_Block, true) ; }
+  Le code ci-dessus vérifie le drapeau visible de l'objet "obj_Block" et s'il est faux, il est changé en drapeau vrai.
+   
+   
+   
+  
+    
+      
+        Retour : Objets
+        Suivant : object_index
+      
+    
+    Copyright YoYo Games Ltd. 2021 Tous droits réservés
   
   
   

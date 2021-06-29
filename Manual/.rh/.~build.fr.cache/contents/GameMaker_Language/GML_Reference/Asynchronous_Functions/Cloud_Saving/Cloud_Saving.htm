@@ -1,4 +1,31 @@
- Économie dans le cloud Lors de la création de jeux, il est souvent nécessaire de stocker des informations sur l'état du jeu dans un fichier d'un certain type, mais stocker ces informations sur l'appareil n'est pas toujours la meilleure option car, si le joueur supprimait le jeu puis le réinstalle, cela des informations peuvent être perdues. Pour éviter cela, vous pouvez utiliser différents services cloud, qui offrent un stockage de données sur Internet pour la récupération et la modification à tout moment. Notez que cette fonction est limitée à un seul "blob" de données par jeu, donc chaque fois que vous envoyez une nouvelle sauvegarde au service cloud, qu'il s'agisse d'une chaîne ou d'un fichier, elle écrasera toutes les données précédemment stockées. REMARQUE: actuellement, seule la Android utilise ces fonctions et vous devez cocher la case Activer Google Cloud Saving dans la section Social des options de jeu Android. Cela vous invitera à télécharger l' extension Google Services, qui est requise pour que l'enregistrement dans le cloud sur Android fonctionne. Pour plus d'informations sur Cloud Saving, veuillez consulter l'article suivant du service d'assistance: Android Cloud Saving GameMaker Studio 2 prend en charge cela avec quelques fonctions simples qui fonctionnent en conjonction avec l' événement Asynchronous Cloud. Ces fonctions sont expliquées dans les pages suivantes: cloud_synchronisecloud_string_savecloud_file_save Retour: Fonctions asynchrones Suivant: Notifications push © Copyright YoYo Games Ltd. 2021 Tous droits réservés
+
+  
+  Sauvegarde des nuages
+  Lors de la création de jeux, il est souvent nécessaire de stocker des informations sur l'état du jeu dans un fichier quelconque, mais stocker ces informations sur l'appareil n'est pas toujours la meilleure option car, si le joueur supprime le jeu et le réinstalle ensuite, ces informations peuvent être perdues.
+    peuvent être perdues. Pour éviter cela, vous pouvez utiliser différents services en nuage, qui permettent de stocker des données sur Internet afin de les récupérer et de les modifier à tout moment. Vous devez noter que cette fonction est limitée à un seul "blob" de données par jeu.
+    Vous devez noter que cette fonction est limitée à un seul "blob" de données par jeu, de sorte que chaque fois que vous envoyez une nouvelle sauvegarde au service en nuage, qu'il s'agisse d'une chaîne ou d'un fichier, elle écrasera toutes les données précédemment stockées.
+  REMARQUE : Actuellement, seule la cible Android cible utilise ces fonctions, et vous devez cocher la case Activer la sauvegarde dans le nuage de Google dans la section Sociale 
+    des options du jeu Android. Cela vous invitera à télécharger l'extension Google Services,
+    qui est nécessaire au fonctionnement de la sauvegarde dans le nuage sur Android. Pour plus d'informations sur la sauvegarde dans le nuage, veuillez consulter l'article suivant du service d'assistance : AndroidCloud Saving
+  GameMaker Studio 2 prend en charge cette fonction grâce à quelques fonctions simples qui fonctionnent conjointement avec l'événement Asynchronous Cloud. Ces fonctions
+    sont expliquées dans les pages suivantes :
+   
+  
+    cloud_synchroniser
+    cloud_string_save
+    Sauvegarde du fichier dans le nuage
+  
+   
+   
+   
+  
+    
+      
+        Retour : Fonctions asynchrones
+        Suivant : Notifications push
+      
+    
+    Copyright YoYo Games Ltd. 2021 Tous droits réservés
   
   
   

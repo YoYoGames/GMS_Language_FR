@@ -1,9 +1,47 @@
-tilemap_get_frame Étant donné que les tuiles peuvent être animées, il peut parfois être utile de savoir quelle image est actuellement dessinée et de réagir en conséquence, donc avec cette fonction, vous pouvez récupérer l'index de l'image actuelle pour une carte de tuiles donnée. Vous donnez l'ID d'élément de carte de tuiles (que vous obtenez lorsque vous créez un élément de carte de tuiles à l'aide de layer_tilemap_create() ou lorsque vous utilisez la fonction layer_tilemap_get_id() ), et la fonction renverra l'index de l'image. Syntaxe:tilemap_get_frame(tilemap_element_id) Argument Description tilemap_element_id La valeur d'ID unique de l'élément de mappage de tuiles pour obtenir l'index d'image de Retour:Real (between 0 (inclusive) and the maximum number of frames of animation (exclusive)) Exemple:var lay_id = layer_get_id("Tiles_Traps"); var map_id = layer_tilemap_get_id(lay_id); if tilemap_get_frame(map_id) >= 2 && tilemap_get_frame(map_id) < 4     {
-         global.activate = true;     }
+
+  
+  tilemap_get_frame
+  Puisque les tuiles peuvent être animées, il peut parfois être utile de savoir quel cadre est actuellement dessiné et de réagir en conséquence, donc avec cette fonction vous pouvez récupérer l'index du cadre actuel pour une carte de tuiles donnée. Vous donnez l'ID de l'élément de la carte de tuiles (que vous obtenez lorsque vous créez une carte de tuiles).
+    que vous obtenez lorsque vous créez un élément de carte de tuiles à l'aide de la fonction layer_tilemap_create() ou lorsque vous utilisez la fonction layer_tilemap_get_id()), et la fonction renvoie
+    l'indice de l'image.
+   
+  Syntaxe :
+  tilemap_get_frame(tilemap_element_id)
+  
+    
+      
+        Arguments
+        Description
+      
+      
+        tilemap_element_id
+        La valeur d'identification unique de l'élément de la carte des tuiles pour obtenir l'indice de trame de
+      
+    
+  
+   
+  Les retours :
+  Réel (entre 0 (inclus) et le nombre maximum d'images d'animation (exclusif))
+   
+  Exemple :
+  var lay_id = layer_get_id("Tiles_Traps") ; var map_id = layer_tilemap_get_id(lay_id) ; if tilemap_get_frame(map_id) >= 2 && tilemap_get_frame(map_id) < 4 {
+     global.activate = true ; }
      else
-         {
-         global.activate = false;     }
-   Le code ci-dessus vérifie l'image d'animation actuelle pour la carte de tuiles donnée sur la couche donnée et définit une variable globale basée sur la valeur de retour.  Retour: Couches de carte de mosaïque Suivant:tilemap_get_tile_width © Copyright YoYo Games Ltd. 2021 Tous droits réservés
+     {
+     global.activate = false ; }
+  
+  Le code ci-dessus vérifie le cadre d'animation actuel pour la carte de tuiles donnée sur la couche donnée, et définit une variable globale en fonction de la valeur de retour.
+   
+   
+   
+  
+    
+      
+        Retour : Carrelage des couches de la carte
+        Suivant : tilemap_get_tile_width
+      
+    
+    Copyright YoYo Games Ltd. 2021 Tous droits réservés
   
   
   

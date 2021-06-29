@@ -1,7 +1,46 @@
-ds_list_shuffle Avec cette fonction, vous pouvez mélanger une liste, qui réorganisera toutes les valeurs des composants dans des positions aléatoires à partir de celles dans lesquelles elles ont été initialement ajoutées à la liste. REMARQUE: Cette fonction mélange les éléments de la liste aux mêmes positions chaque fois que le jeu est réexécuté car GameMaker Studio 2 génère la même graine aléatoire initiale à chaque fois pour rendre le code de débogage beaucoup plus facile. Pour éviter ce comportement, utilisez randomise () au début de votre partie. Cela n'est vrai que lors du test et du débogage du jeu, car le package exécutable final ne montrera pas ce comportement et sera aléatoire à chaque lecture. Syntaxe:ds_list_shuffle(id); Argument Description id L'identifiant de la liste à mélanger. Retour:N/A Exemple:if restart     {
-         ds_list_shuffle(card_list);
-         }
-   Le code ci-dessus mélangera la liste indexée dans la variable "card_list" si la variable "restart" est marquée comme true.  Retour: Listes DS Suivant:ds_list_sort © Copyright YoYo Games Ltd. 2021 Tous droits réservés
+
+  
+  ds_list_shuffle
+  Cette fonction vous permet de mélanger une liste, ce qui réorganisera toutes les valeurs des composants dans des positions aléatoires par rapport à celles dans lesquelles ils ont été ajoutés à l'origine à la liste.
+  REMARQUE: cette fonction mélangera les éléments de la liste aux mêmes positions à chaque nouvelle exécution du jeu, car GameMaker Studio 2 génère à chaque fois la même graine aléatoire initiale afin de faciliter le débogage du code. Pour éviter ce
+    ce comportement, utilisez randomise() au début de votre jeu. Ceci n'est vrai que lorsque vous testez et déboguez le jeu,
+    car l'exécutable final ne présentera pas ce comportement et sera aléatoire à chaque jeu.
+   
+  Syntaxe :
+  ds_list_shuffle(id) ;
+  
+    
+      
+        Arguments
+        Description
+      
+      
+        id
+        L'identifiant de la liste à mélanger.
+      
+    
+  
+   
+  Les retours :
+  N/A
+   
+  Exemple :
+  if restart {
+     ds_list_shuffle(card_list) ;
+     }
+  
+  Le code ci-dessus va mélanger la liste indexée dans la variable "card_list" si la variable "restart" est marquée comme vraie.
+   
+   
+   
+  
+    
+      
+        Retour : Listes de DS
+        Suivant : ds_list_sort
+      
+    
+    Copyright YoYo Games Ltd. 2021 Tous droits réservés
   
   
   

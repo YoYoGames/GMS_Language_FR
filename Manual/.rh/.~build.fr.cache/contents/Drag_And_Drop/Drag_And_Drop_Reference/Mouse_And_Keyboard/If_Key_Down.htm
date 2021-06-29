@@ -1,4 +1,47 @@
- Si touche enfoncée Avec cette action, vous pouvez interroger le clavier pour voir si une touche est actuellement maintenue enfoncée. L'action reviendra true chaque pas pendant lequel la touche du clavier est maintenue enfoncée, ou false sinon, bien que si vous cliquez sur le not modificateur vous pouvez alors vérifier si la touche n'est pas d'aide, c'est-à-dire: l'action retournera true alors qu'aucune touche n'est enfoncée et false s'il y a. Si vous n'avez besoin de vérifier qu'une seule touche, utilisez l'action Si la touche est enfoncée. Notez que pour ajouter des actions dans le bloc "if", elles doivent être déposées sur le côté de l'action, comme indiqué dans l'image ci-dessous: Toutes les actions déposées ailleurs seront exécutées après le bloc «si». Syntaxe de l'action: Arguments: Argument Description Key Le nom de la touche du clavier à vérifier. Not Annuler le chèque (vrai devient faux et vice versa) Exemple: Le code de bloc d'action ci-dessus interroge l'état du clavier à chaque étape et si une touche est maintenue enfoncée, il vérifie la touche initiale enfoncée. Si le chèque est true lors de la pression initiale vers le bas, un son est joué, puis, tandis que la touche est maintenue enfoncée, le mélange de sprite passe au rouge. Si la touche n'est pas maintenue enfoncée, une vérification est effectuée sur le relâchement de la touche pour réinitialiser la couleur de fusion au blanc.  Retour: Actions de la souris et du clavier Suivant: Si le clavier est sorti © Copyright YoYo Games Ltd. 2021 Tous droits réservés
+
+  
+   Si la touche est enfoncée
+  Avec cette action, vous pouvez interroger le clavier pour voir si une touche est actuellement maintenue enfoncée. L'action retournera vrai à chaque étape où la touche du clavier est maintenue enfoncée, ou faux sinon, bien que si vous cliquez sur le modificateur not, vous pouvez alors vérifier si la touche n'est pas maintenue enfoncée, c'est-à-dire que l'action retournera vrai si aucune touche n'est enfoncée et faux si elle l'est. Si vous n'avez besoin de vérifier qu'une seule pression sur une touche, utilisez l'action If Key Pressed.
+  Notez que pour ajouter des actions dans le bloc "if", elles doivent être déposées sur le côté de l'action, comme le montre l'image ci-dessous :
+  Toute action déposée ailleurs sera exécutée après le bloc "if".
+    après le bloc "if".
+   
+  Syntaxe de l'action :
+  
+  Arguments :
+   
+  
+    
+      
+        Arguments
+        Description
+      
+      
+        Clé
+        Le nom de la touche du clavier à vérifier.
+      
+      
+        Non
+        Négation de la vérification (vrai devient faux et vice versa)
+      
+    
+  
+   
+  Exemple :
+  Le code du bloc d'action ci-dessus interroge l'état du clavier à chaque étape et si une touche est maintenue enfoncée, il vérifie l'appui initial sur la touche.
+    maintenue enfoncée, il vérifie l'appui initial sur la touche. Si la vérification est vraie lors de l'appui initial sur la touche, un son est joué, puis, tant que la touche est maintenue enfoncée, le mélange du sprite passe au rouge. Si la touche n'est pas maintenue enfoncée, une vérification est effectuée au moment du relâchement de la touche pour réinitialiser le sprite.
+    contrôle est effectué lors du relâchement de la touche pour réinitialiser la couleur de mélange en blanc.
+   
+   
+   
+  
+    
+      
+        Retour : Actions de la souris et du clavier
+        Suivant : Si le clavier est libéré
+      
+    
+    Copyright YoYo Games Ltd. 2021 Tous droits réservés
   
   
   

@@ -1,4 +1,54 @@
- Polices GameMaker Studio 2 dispose d'un certain nombre de fonctions qui peuvent être utilisées pour obtenir des informations sur les ressources de polices incluses, ainsi que d'un autre ensemble de fonctions qui peuvent être utilisées pour modifier, ajouter ou supprimer des polices de votre jeu au moment de l'exécution. En particulier la fonction font_add() peut être utilisé pour ajouter des polices non standard, comme les polices de glyphes asiatiques, dans *.ttf format. Il est à noter que si vous ajoutez une police à votre jeu qui n'a pas les glyphes requis par le texte que vous souhaitez écrire, alors le caractère Unicode 9647 (▯) est utilisé pour remplacer ces glyphes manquants lors du rendu dans le événement de tirage au sort. Donc, si votre police n'a pas, par exemple, le symbole º, alors écrire 90 ° produira en fait 90 °. Les fonctions suivantes peuvent être utilisées pour obtenir des informations sur les ressources de polices: font_get_namefont_get_fontnamefont_get_firstfont_get_lastfont_get_italicfont_get_boldfont_get_sizefont_get_texturefont_get_uvs Les fonctions suivantes peuvent être utilisées pour changer et manipuler les polices pendant une partie: font_existsfont_set_cache_sizefont_add_enable_aafont_add_get_enable_aafont_addfont_add_spritefont_add_sprite_extfont_replacefont_replace_spritefont_replace_sprite_extfont_deletefont_texture_page_size Retour: Asset Management Suivant: Chronologies © Copyright YoYo Games Ltd. 2021 Tous droits réservés
+
+  
+  Polices de caractères
+  GameMaker Studio 2 possède un certain nombre de fonctions qui peuvent être utilisées pour obtenir des informations sur les polices incluses, ainsi qu'un autre ensemble de fonctions qui peuvent être utilisées pour modifier, ajouter ou supprimer les polices de votre jeu au moment de l'exécution. En particulier, la fonction
+   font_add() peut être utilisée pour ajouter des polices non standard, comme les polices de glyphes asiatiques, à partir d'un fichier *.ttf ou *.otf.
+  Il convient de noter que si vous ajoutez à votre jeu une police qui ne possède pas les glyphes requis par le texte que vous souhaitez écrire, le caractère Unicode 9647 (▯) est utilisé pour remplacer ces glyphes manquants lors du rendu dans l'événement draw. Donc
+    si votre police ne possède pas, par exemple, le symbole º, l'écriture de 90º produira en fait 90▯.
+   
+  Les fonctions suivantes peuvent être utilisées pour obtenir des informations sur les ressources de polices :
+   
+  
+    font_get_name
+    font_get_fontname
+    font_get_first
+    font_get_last
+    font_get_italic
+    font_get_bold
+    police_get_size
+    font_get_texture
+    font_get_uvs
+    font_get_info
+  
+   
+  Les fonctions suivantes peuvent être utilisées pour changer et manipuler les polices pendant un jeu :
+   
+  
+    font_exists
+    font_set_cache_size
+    font_add_enable_aa
+    font_add_get_enable_aa
+    font_add
+    font_add_sprite
+    font_add_sprite_ext
+    font_replace
+    font_replace_sprite
+    font_replace_sprite_ext
+    font_delete
+    taille_texture_page
+  
+   
+   
+   
+   
+  
+    
+      
+        Retour : Gestion des actifs
+        Suivant : Lignes du temps
+      
+    
+    Copyright YoYo Games Ltd. 2021 Tous droits réservés
   
   
   

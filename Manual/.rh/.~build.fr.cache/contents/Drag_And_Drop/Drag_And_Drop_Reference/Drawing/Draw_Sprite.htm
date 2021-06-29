@@ -1,4 +1,55 @@
- Dessiner Sprite Cette action dessinera un sprite quelque part dans la pièce. Vous spécifiez le sprite, la position (soit une position absolue dans la pièce, soit une position relative par rapport à l'occurrence faisant le dessin) et le cadre d'animation du sprite, s'il a plusieurs cadres (notez que les cadres d'image sont numérotés de 0 vers le haut ). Si vous avez un sprite animé et que vous souhaitez qu'il dessine les images comme s'il était affecté à l'objet, utilisez -1 pour l'index d'image ou la variable d'instance intégrée image_index, mais notez que si l'occurrence n'a pas de sprite assigné, elle ne s'animera pas, et si le sprite assigné a un nombre d'images différent de celui en cours de dessin, alors le sprite sera dessiné avec des images supplémentaires ou des images manquées. IMPORTANT: cette action ne dessine pas le sprite transformé, même si vous avez modifié le mélange ou l'échelle de l'image. Pour cela, consultez l'action Dessiner un sprite transformé. REMARQUE: cette action est uniquement destinée à être utilisée dans les divers événements de tirage au sort et ne tirera rien si elle est utilisée ailleurs. Syntaxe de l'action: Arguments: Argument Description Sprite Le sprite à dessiner x La position x à laquelle dessiner y La position y à laquelle dessiner Frame Index L'index d'image à dessiner Exemple: Le code de bloc d'action ci-dessus dessine un sprite "shadow" à la même position relative que l'instance, puis dessine le sprite d'instance par-dessus.  Retour: Actions de dessin Suivant: Dessiner un sprite transformé © Copyright YoYo Games Ltd. 2021 Tous droits réservés
+
+  
+   Dessiner un sprite
+  Cette action va dessiner un sprite quelque part dans la room. Vous spécifiez le sprite, la position (soit une position absolue dans la room, soit une position relative à l'instance effectuant le dessin) et le cadre d'animation du sprite, s'il a plusieurs cadres (notez que les cadres d'image sont numérotés de 0 à 5).
+    cadres (notez que les cadres d'image sont numérotés à partir de 0). Si vous avez un sprite animé et que vous voulez qu'il dessine les frames comme s'il était assigné à l'objet, alors utilisez -1 pour l'index de frame ou la variable d'instance image_index,
+    Mais notez que si l'instance n'a pas de sprite assigné, elle ne s'animera pas, et si le sprite assigné a un nombre de frames différent de celui qui est dessiné, le sprite sera dessiné avec des frames supplémentaires ou des frames manquées.
+  IMPORTANT : Cette action ne dessinera pas le sprite transformé, même si vous avez modifié le mélange ou l'échelle de l'image. Pour cela, voir l'action Draw Sprite Transformed.
+  NOTE: Cette action est uniquement destinée à être utilisée dans les différents événements de tirage au sort, et ne tirera rien si elle est utilisée ailleurs.
+   
+   
+  Syntaxe de l'action :
+  
+  Arguments :
+  
+    
+      
+        Arguments
+        Description
+      
+      
+        Sprite
+        Le sprite à dessiner
+      
+      
+        x
+        La position x à dessiner
+      
+      
+        y
+        La position y à dessiner
+      
+      
+        Index des cadres
+        L'index du cadre à dessiner
+      
+    
+  
+   
+  Exemple :
+  Le code du bloc d'action ci-dessus dessine un sprite "ombre" à la même position relative que l'instance.
+    instance, puis dessine le sprite de l'instance par-dessus.
+   
+   
+   
+  
+    
+      
+        Retour : Actions de dessin
+        Suivant : Dessiner un sprite transformé
+      
+    
+    Copyright YoYo Games Ltd. 2021 Tous droits réservés
   
   
   

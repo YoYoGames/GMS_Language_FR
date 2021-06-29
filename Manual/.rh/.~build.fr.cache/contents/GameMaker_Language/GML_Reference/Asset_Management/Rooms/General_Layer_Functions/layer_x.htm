@@ -1,6 +1,47 @@
-layer_x Vous pouvez utiliser cette fonction pour définir la position x du calque dans la pièce actuellement délimitée. Vous fournissez l'ID de couche (que vous obtenez lorsque vous créez la couche en utilisant layer_create() ) ou le nom du calque (sous forme de chaîne - cela aura un impact sur les performances) et la fonction déplacera le calque du nombre de pixels donné le long de l'axe horizontal de la pièce. Syntaxe:layer_x(layer_id, x) Argument Description layer_id La valeur d'ID unique du calque pour définir la position x de x La position x dans la pièce pour définir le calque Retour:N/A Exemple:var lay_id = layer_get_id("Sprites"); if layer_get_x(lay_id) != 0 || layer_get_y(lay_id) != 0     {
-         layer_x(lay_id, 0);     layer_y(lay_id, 0);     }
-   Le code ci-dessus vérifie la position de couche donnée et si elle n'est pas définie sur (0, 0), elle est définie sur cette position.  Retour: Fonctions générales des calques Suivant:layer_y © Copyright YoYo Games Ltd. 2021 Tous droits réservés
+
+  
+  couche_x
+  Vous pouvez utiliser cette fonction pour définir la position x du calque dans la pièce actuellement délimitée. Vous fournissez l'ID de la couche (que vous obtenez lorsque vous créez la couche en utilisant la fonction layer_create()) ou le nom de la couche (sous forme de chaîne
+    - cela aura un impact sur les performances) et la fonction déplacera le calque du nombre de pixels donné le long de l'axe horizontal de la pièce.
+   
+  Syntaxe :
+  layer_x(layer_id, x)
+  
+    
+      
+        Arguments
+        Description
+      
+      
+        identifiant de la couche
+        La valeur d'identification unique de la couche pour définir la position x de la couche.
+      
+      
+        x
+        La position x dans la pièce pour définir la couche.
+      
+    
+  
+   
+  Les retours :
+  N/A
+   
+  Exemple :
+  var lay_id = layer_get_id("Sprites") ; if layer_get_x(lay_id) != 0 || layer_get_y(lay_id) != 0 {
+     layer_x(lay_id, 0) ; layer_y(lay_id, 0) ; }
+  
+  Le code ci-dessus vérifie la position de la couche donnée et si elle n'est pas définie à (0, 0), alors elle est définie à cette position.
+   
+   
+   
+  
+    
+      
+        Retour : Fonctions générales des couches
+        Suivant : layer_y
+      
+    
+    Copyright YoYo Games Ltd. 2021 Tous droits réservés
   
   
   

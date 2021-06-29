@@ -1,6 +1,64 @@
-skeleton_bone_state_set Votre animation squelettique est composée d'un certain nombre de "structures", que vous aurez défini et donné des noms dans votre programme d'animation, et cette fonction peut être utilisée pour définir certaines données pour l'os nommé à tout moment. Notez que ces données définiront la pose actuelle du squelette, en fonction de l'ensemble d'animations utilisé, et que la fonction nécessite une carte DS créée précédemment, qui doit avoir les clés suivantes et leurs valeurs requises: "x": la position x locale de l'os par rapport à l'os parent. "y": la position y locale de l'os par rapport à l'os parent. "angle": La rotation locale de l'os par rapport à l'os parent. "xscale": l'échelle horizontale locale de l'os. "yscale": l'échelle verticale locale de l'os. "parent": le nom (une chaîne) de l'os parent. Cette fonction est fournie pour que vous puissiez "intercepter" les données d'animation et les modifier avant qu'elles ne soient dessinées à l'écran, et en tant que telle, vous voudriez l'utiliser dans l' événement Autre - Mise à jour de l'animation, puisque cet événement est déclenché juste avant le dessin Événements. Notez que vous pouvez utiliser la même carte que vous avez remplie en utilisant le skeleton_bone_state_get() fonction, même si elle contient les clés et valeurs "Monde" supplémentaires. Comme ils se réfèrent à des valeurs en lecture seule, les définir avec cette fonction n'aura aucun effet. Syntaxe:skeleton_bone_state_set(bone, map); Argument Description bone Le nom (sous forme de chaîne) de l'os. map La carte DS (créée précédemment) qui stocke les données d'os. Retour:N/A Exemple:var map = ds_map_create(); skeleton_bone_state_get("head", map); var xx = ds_map_find_value(map, "worldX"); var yy = ds_map_find_value(map, "worldY"); var deltax = mouse_x - (x + xx); var deltay
-    = mouse_y - (y + yy); var angle = -radtodeg(arctan2(deltay, deltax)); ds_map_replace(map, "angle", angle); skeleton_bone_state_set("head", map); ds_map_destroy(map);
-   Le code ci-dessus crée une carte DS, puis la remplit avec les données de l'os nommé "tête". Il extrait ensuite la position mondiale de l'os et utilise ces données pour définir «l'angle» de l'os afin de suivre la position de la souris dans le jeu.  Retour: Os Suivant:skeleton_bone_list © Copyright YoYo Games Ltd. 2021 Tous droits réservés
+
+  
+  état du squelette_bone_set
+  Votre animation squelettique est composée d'un certain nombre d'"os", que vous aurez définis et auxquels vous aurez donné un nom dans votre programme d'animation. Cette fonction peut être utilisée pour définir certaines données pour l'os nommé à tout moment. Notez que ces données
+    la pose actuelle du squelette, en fonction du jeu d'animation utilisé, et la fonction nécessite une carte DS précédemment créée, qui doit comporter les clés suivantes et leurs
+    valeurs requises :
+  
+    "x" : La position x locale de l'os par rapport à l'os parent.
+      
+    "y" : La position locale y de l'os par rapport à l'os parent.
+      
+    "angle" : La rotation locale de l'os par rapport à l'os parent.
+      
+    "xscale" : L'échelle horizontale locale de l'os.
+      
+    "yscale" : L'échelle verticale locale de l'os.
+      
+    "parent" : Le nom (une chaîne de caractères) de l'os parent.
+  
+  Cette fonction est fournie pour que vous puissiez "intercepter" les données d'animation et les modifier avant qu'elles ne soient dessinées à l'écran. En tant que telle, vous voudrez l'utiliser dans l'événement Other - Animation Update, puisque cet événement est déclenché juste avant les événements Draw.
+  Notez que vous pouvez utiliser la même carte que vous avez remplie à l'aide de la fonction skeleton_bone_state_get() même si elle contient les clés et valeurs supplémentaires "World". Puisque ces dernières font référence à des valeurs en lecture seule, les définir avec cette fonction n'aura aucun effet.
+   
+  Syntaxe :
+  skeleton_bone_state_set(bone, map) ;
+  
+    
+      
+        Arguments
+        Description
+      
+      
+        os
+        Le nom (sous forme de chaîne) de l'os.
+      
+      
+        carte
+        La carte DS (précédemment créée) qui stocke les données relatives aux os.
+      
+    
+  
+   
+  Les retours :
+  N/A
+   
+  Exemple :
+  var map = ds_map_create() ; skeleton_bone_state_get("head", map) ; var xx = ds_map_find_value(map, "worldX") ; var yy = ds_map_find_value(map, "worldY") ; var deltax = mouse_x - (x + xx) ; var deltay
+    = mouse_y - (y + yy) ; var angle = -radtodeg(arctan2(deltay, deltax)) ; ds_map_replace(map, "angle", angle) ; skeleton_bone_state_set("head", map) ; ds_map_destroy(map) ;
+  
+  Le code ci-dessus crée une carte DS et la remplit avec les données de l'os nommé "head". Il extrait ensuite la position mondiale de l'os et utilise ces données pour définir l'"angle" de l'os afin de suivre la position de la souris dans le jeu.
+    jeu.
+   
+   
+   
+  
+    
+      
+        Dos : Bones
+        Suivant : skeleton_bone_list
+      
+    
+    Copyright YoYo Games Ltd. 2021 Tous droits réservés
   
   
   

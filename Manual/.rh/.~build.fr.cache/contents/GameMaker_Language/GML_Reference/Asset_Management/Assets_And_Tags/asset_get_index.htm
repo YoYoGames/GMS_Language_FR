@@ -1,6 +1,44 @@
-asset_get_index Vous pouvez utiliser cette fonction pour obtenir l'index d'identification unique d'un élément de jeu à partir de son nom. Si l'actif n'est pas trouvé, la fonction renverra une valeur de -1, sinon elle renverra l'ID d'index unique pour l'actif en cours de vérification. Cet identifiant peut ensuite être utilisé dans d'autres fonctions comme vous le feriez pour toute autre valeur d'index, comme le sprite_index ou la path_index, par exemple. Veuillez noter que bien que cette fonction puisse être utilisée pour référencer des actifs à partir de chaînes (voir l'exemple ci-dessous), vous devez toujours vous assurer que l'actif existe avant de l'utiliser, sinon vous risquez d'obtenir des erreurs qui planteront votre jeu. Syntaxe:asset_get_index(name); Argument Description name Le nom de l'élément de jeu pour obtenir l'index (une chaîne). Retour:Asset Index (Integer) Exemple:var obj = asset_get_index("obj_Enemy_" + string(global.Level)); if obj > -1     {
-         instance_create_layer(random(room_width), random(room_height), obj, "Enemy_Layer");     }
-   Le code ci-dessus obtiendra un index d'objet à partir d'une chaîne, et si cet index existe, créera une instance de l'objet dans le jeu.  Retour: Actifs et balises Suivant:asset_get_type © Copyright YoYo Games Ltd. 2021 Tous droits réservés
+
+  
+  actif_get_index
+  Vous pouvez utiliser cette fonction pour obtenir l'indice d'identification unique d'une ressource de jeu à partir de son nom. Si la ressource n'est pas trouvée, la fonction renvoie la valeur -1, sinon elle renvoie l'identifiant d'index unique de la ressource vérifiée. Cet identifiant peut alors
+    être utilisé dans d'autres fonctions comme vous le feriez avec n'importe quelle autre valeur d'index, comme la fonction sprite_index ou le path_index,
+    par exemple. Veuillez noter que, bien que cette fonction puisse être utilisée pour référencer des ressources à partir de chaînes (voir l'exemple ci-dessous), vous devez toujours vous assurer que la ressource existe avant de l'utiliser, sinon vous risquez d'obtenir des erreurs qui feront planter votre jeu.
+   
+  Syntaxe :
+  asset_get_index(name) ;
+  
+    
+      
+        Arguments
+        Description
+      
+      
+        nom
+        Le nom de la ressource du jeu dont on veut obtenir l'index (une chaîne de caractères).
+      
+    
+  
+   
+  Les retours :
+  Indice de l'actif (nombre entier)
+   
+  Exemple :
+  var obj = asset_get_index("obj_Enemy_" + string(global.Level)) ; if obj > -1 {
+     instance_create_layer(random(room_width), random(room_height), obj, "Enemy_Layer") ; }
+  
+  Le code ci-dessus récupère un index d'objet à partir d'une chaîne de caractères, et si cet index existe, il crée une instance de l'objet dans le jeu.
+   
+   
+   
+  
+    
+      
+        Retour : Actifs et étiquettes
+        Suivant : asset_get_type
+      
+    
+    Copyright YoYo Games Ltd. 2021 Tous droits réservés
   
   
   

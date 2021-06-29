@@ -1,4 +1,41 @@
-physics_apply_angular_impulse Cette fonction donnera une impulsion angulaire à une instance activée par la physique. Cette impulsion définira la rotation angulaire de la quantité donnée, ignorant le couple actuel, définissant essentiellement la quantité de «rotation» d'un appareil. Si vous souhaitez appliquer une force angulaire à une instance en utilisant le couple, vous devez utiliser la fonction physics_apply_torque(). Syntaxe:physics_apply_angular_impulse(impulse) Argument Description impulse L'impulsion (en Newton mètres) à appliquer Retour:N/A Exemple:if keyboard_check(vk_up)     {     physics_apply_angular_impulse(10);     } Le code ci-dessus donnera au luminaire activé par la physique une impulsion angulaire si une touche est enfoncée.  Retour: Forces Suivant:physics_apply_force © Copyright YoYo Games Ltd. 2021 Tous droits réservés
+
+  
+  physique_application_impulsion_angulaire
+  Cette fonction donne une impulsion angulaire à une instance activée par la physique. Cette impulsion déterminera la rotation angulaire de la quantité donnée, en ignorant le couple actuel, et déterminera essentiellement la quantité de "rotation" d'un objet. Si vous souhaitez
+    appliquer une force angulaire à une instance en utilisant le couple, alors vous devez utiliser la fonction physics_apply_torque().
+   
+  Syntaxe :
+  physics_apply_angular_impulse(impulse)
+  
+    
+      
+        Arguments
+        Description
+      
+      
+        impulsion
+        L'impulsion (en Newton mètres) à appliquer
+      
+    
+  
+   
+  Les retours :
+  N/A
+   
+  Exemple :
+  if keyboard_check(vk_up) { physics_apply_angular_impulse(10) ; }
+  Le code ci-dessus donnera une impulsion angulaire à l'appareil activé par la physique si une touche est pressée.
+   
+   
+   
+  
+    
+      
+        Retour : Forces
+        Suivant : physics_apply_force
+      
+    
+    Copyright YoYo Games Ltd. 2021 Tous droits réservés
   
   
   

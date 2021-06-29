@@ -1,5 +1,42 @@
-room_instance_clear Cette fonction effacera une salle de toutes les instances (aucun événement de destruction ne sera appelé pour les instances qui sont supprimées). Notez que l'appel de cette fonction sur un actif de salle créé dans le navigateur d'actifs effacera définitivement la salle des instances, et même l'appel game_restart() ne ramènera pas la salle à son état d'origine (le seul fait de terminer le jeu et de l'ouvrir à nouveau recommencera avec la salle dans son état d'origine). Syntaxe:room_instance_clear(index); Argument Description index L'index de la salle dans laquelle effacer toutes les instances. Retour:N/A Exemple:global.rm = room_add(); room_assign(rm_Base, global.rm); room_instance_clear(global.rm);
-   Le code ci-dessus ajoutera une nouvelle salle au jeu et y copiera ensuite le contenu de la salle indexée comme "rm_Base". Il effacera alors toutes les instances de cette nouvelle salle.  Retour: Chambres Suivant:room_set_height © Copyright YoYo Games Ltd. 2021 Tous droits réservés
+
+  
+  room_instance_clear
+  Cette fonction permet de vider une room de toutes ses instances (aucun événement de destruction ne sera appelé pour les instances supprimées). Notez que l'appel de cette fonction sur un asset de room créé dans le navigateur d'assets videra définitivement la room de ses instances,
+    et même l'appel à game_restart() ne ramènera pas la room à son état d'origine (seule la fin du jeu et sa réouverture permettront à la room de retrouver son état d'origine).
+   
+  Syntaxe :
+  room_instance_clear(index) ;
+  
+    
+      
+        Arguments
+        Description
+      
+      
+        indice
+        L'index de la pièce dans laquelle il faut effacer toutes les instances.
+      
+    
+  
+   
+  Les retours :
+  N/A
+   
+  Exemple :
+  global.rm = room_add() ; room_assign(rm_Base, global.rm) ; room_instance_clear(global.rm) ;
+  
+  Le code ci-dessus ajoutera une nouvelle room au jeu, puis y copiera le contenu de la room indexée comme "rm_Base". Il effacera ensuite toutes les instances de cette nouvelle room.
+   
+   
+   
+  
+    
+      
+        Retour : Pièces
+        Suivant : room_set_height
+      
+    
+    Copyright YoYo Games Ltd. 2021 Tous droits réservés
   
   
   

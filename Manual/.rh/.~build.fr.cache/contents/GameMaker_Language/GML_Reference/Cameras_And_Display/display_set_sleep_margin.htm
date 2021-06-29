@@ -1,10 +1,98 @@
-display_set_sleep_margin Cette fonction peut être utilisée pour définir la valeur de la marge de sommeil utilisée pour la synchronisation du rendu de votre jeu et nécessite une valeur en millisecondes. Les valeurs par défaut sont les suivantes: Plate-forme Millisecondes Windows dix macOS dix Ubuntu dix HTML5 dix Android 4 iOS 4 Windows UWP dix Xbox dix PS4 dix Switch Nintendo dix Notez que même si la méthode de synchronisation est définie pour utiliser la synchronisation vsync, la marge de sommeil aura un effet sur le rendu du jeu, et vous devez donc faire attention lorsque vous définissez cette valeur. Pour plus d'informations sur la durée d'affichage, veuillez consulter display_set_timing_method(). REMARQUE: en plus de la marge de veille, vous pouvez contrôler davantage vos performances et votre consommation d'énergie sous Windows en ajustant la résolution du planificateur de threads runtime de l'exécution. Syntaxe:display_set_sleep_margin(milliseconds); Argument Description milliseconds Le nombre de millisecondes pour la marge de sommeil Retour:N/A Exemple:if display_get_timing_method() != tm_sleep {
-     display_set_timing_method(tm_sleep);
-     if display_get_sleep_margin() != 20     {
-         display_set_sleep_margin(20);
-         }
+
+  
+  display_set_sleep_margin
+  Cette fonction peut être utilisée pour définir la valeur de la marge de sommeil utilisée pour le timing de rendu de votre jeu, et nécessite une valeur en millisecondes. Les valeurs par défaut sont les suivantes :
+   
+  
+    
+      
+        Plate-forme
+        Millisecondes
+      
+      
+        Windows
+        10
+      
+      
+        macOS
+        10
+      
+      
+        Ubuntu
+        10
+      
+      
+        HTML5
+        10
+      
+      
+        Android
+        4
+      
+      
+        iOS
+        4
+      
+      
+        Windows UWP
+        10
+      
+      
+        Xbox
+        10
+      
+      
+        PS4
+        10
+      
+      
+        Nintendo Switch
+        10
+      
+    
+  
+   
+  Notez que même si la méthode de synchronisation est définie pour utiliser la synchronisation vsync, la marge de sommeil aura un certain effet sur le rendu du jeu, et vous devez donc faire attention lorsque vous définissez cette valeur. Pour plus d'informations sur la synchronisation de l'affichage, veuillez consulter display_set_timing_method().
+  REMARQUE: en plus de la marge de veille, vous pouvez contrôler davantage vos performances et votre consommation d'énergie sous Windows en ajustant la résolution du planificateur de threads au moment de l'exécution .
+   
+  Syntaxe :
+  display_set_sleep_margin(millisecondes) ;
+  
+    
+      
+        Arguments
+        Description
+      
+      
+        millisecondes
+        Le nombre de millisecondes pour la marge de sommeil
+      
+    
+  
+   
+  Les retours :
+  N/A
+   
+  Exemple :
+  if display_get_timing_method() != tm_sleep {
+     display_set_timing_method(tm_sleep) ;
+     if display_get_sleep_margin() != 20 {
+     display_set_sleep_margin(20) ;
      }
-   Le code ci-dessus vérifiera la méthode de chronométrage, puis s'il n'est pas défini sur tm_sleep il sera réglé sur cela et la marge de sommeil réglée sur 20. Caméras et affichage Retour: Suivant:screen_save © Copyright YoYo Games Ltd. 2021 Tous droits réservés
+     }
+  
+  Le code ci-dessus vérifiera la méthode de synchronisation et si elle n'est pas définie sur tm_sleep , elle sera définie sur cette méthode et la marge de sommeil sera définie sur 20.
+   
+   
+   
+  
+    
+      Caméras et écrans
+        Retour : 
+        Suivant : screen_save
+      
+    
+    Copyright YoYo Games Ltd. 2021 Tous droits réservés
   
   
   

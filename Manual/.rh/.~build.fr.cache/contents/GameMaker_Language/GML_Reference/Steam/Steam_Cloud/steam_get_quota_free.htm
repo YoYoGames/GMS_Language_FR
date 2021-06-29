@@ -1,6 +1,30 @@
- steam _get_quota_free Avec cette fonction, vous pouvez savoir combien d'espace libre reste à l'utilisateur du Steam Cloud. La valeur renvoyée est en octets. Syntaxe:steam_get_quota_free(); Retour:Real Exemple:if steam_is_cloud_enabled_for_app()     {
-         quota = steam_get_quota_free();     }
-   Le code ci-dessus vérifie si le steam est activé pour le jeu et si c'est le cas, il obtient la taille de l'espace de stockage gratuit et le stocke dans une variable.  Retour: Steam Cloud Suivant: steam _file_exists © Copyright YoYo Games Ltd. 2021 Tous droits réservés
+
+  
+  steam_get_quota_free
+  Cette fonction vous permet de savoir combien d'espace libre il reste pour l'utilisateur du quota Steam Cloud. La valeur retournée est en octets.
+   
+  Syntaxe :
+  steam_get_quota_free() ;
+   
+  Les retours :
+  Real
+   
+  Exemple :
+  if steam_is_cloud_enabled_for_app() {
+     quota = steam_get_quota_free() ; }
+  
+  Le code ci-dessus vérifie si le nuage de vapeur est activé pour le jeu et si oui, il obtient la taille de l'espace de stockage libre et la stocke dans une variable.
+   
+   
+   
+  
+    
+      
+        Retour : Nuage devapeur
+        Suivant : steam_file_exists
+      
+    
+    Copyright YoYo Games Ltd. 2021 Tous droits réservés
   
   
   

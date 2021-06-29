@@ -1,4 +1,49 @@
-physics_fixture_set_collision_group Une fois que vous avez créé votre appareil, vous pouvez le définir comme faisant partie d'un groupe de collision. Cela signifie que vous pouvez dire aux instances avec cet appareil de toujours entrer en collision ou de ne jamais entrer en collision avec d'autres instances auxquelles des appareils sont liés avec le même groupe de collision. Les valeurs qui peuvent être attribuées sont basées sur des nombres positifs ou négatifs, 0 étant la valeur par défaut (ce qui signifie que l'instance avec ce paramètre de fixation est ignorée sauf si un événement de collision est créé pour elle). Voici une image pour aider à expliquer: Comme vous pouvez le voir, la définition de groupes de collision peut être très utile pour créer des corps physiques complexes qui interagissent avec le monde physique qui les entoure, mais pas les uns avec les autres. Cependant, il convient de noter qu'en raison de la complexité du calcul des collisions basées sur des groupes comme celui-ci, il est recommandé d'essayer de limiter au minimum le nombre de groupes utilisés dans une même pièce. Syntaxe:physics_fixture_set_collision_group(fixture, group) Argument Description fixture le luminaire qui doit être lié group le groupe auquel cet appareil est assigné (soit une valeur positive, 0, soit une valeur négative) Retour:N/A Exemple:physics_fixture_set_collision_group(fix_Wheel, -1); Le code ci-dessus définira le projecteur indexé dans la variable "fix_Wheel" pour faire partie du groupe "-1".  Retour: Fixtures Suivant:physics_fixture_delete © Copyright YoYo Games Ltd. 2021 Tous droits réservés
+
+  
+  physics_fixture_set_collision_group
+  Une fois que vous avez créé votre dispositif, vous pouvez le définir comme faisant partie d'un groupe de collision. Cela signifie que vous pouvez dire aux instances avec ce fixture de toujours entrer en collision ou de ne jamais entrer en collision avec d'autres instances qui ont des fixtures liées à elles avec le même groupe de collision.
+    le même groupe de collision. Les valeurs qui peuvent être attribuées sont basées sur des nombres positifs ou négatifs, 0 étant la valeur par défaut (ce qui signifie que l'instance avec ce paramètre de fixation est ignorée, sauf si un événement de collision est créé pour elle). Voici une
+    image pour vous aider à comprendre :
+  Comme vous pouvez le constater, la définition de groupes de collision peut s'avérer très utile pour créer des corps physiques complexes qui interagissent avec le monde physique qui les entoure, mais pas entre eux.
+    corps physiques complexes qui interagissent avec le monde physique qui les entoure, mais pas entre eux. Cependant, il convient de noter qu'en raison de la complexité du calcul des collisions basé sur des groupes de ce type, il est recommandé de limiter au maximum le nombre de groupes utilisés dans une pièce.
+    de groupes utilisés dans une même pièce à un minimum absolu.
+   
+  Syntaxe :
+  physics_fixture_set_collision_group(fixture, group)
+  
+    
+      
+        Arguments
+        Description
+      
+      
+        L'appareil
+        l'appareil qui doit être lié
+      
+      
+        groupe
+        le groupe auquel le projecteur est affecté (valeur positive, 0, ou négative).
+      
+    
+  
+   
+  Les retours :
+  N/A
+   
+  Exemple :
+  physics_fixture_set_collision_group(fix_Wheel, -1) ;
+  Le code ci-dessus fera en sorte que le dispositif indexé dans la variable "fix_Wheel" fasse partie du groupe "-1".
+   
+   
+   
+  
+    
+      
+        Retour : Fixtures
+        Suivant : physics_fixture_delete
+      
+    
+    Copyright YoYo Games Ltd. 2021 Tous droits réservés
   
   
   

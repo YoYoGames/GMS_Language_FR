@@ -1,7 +1,31 @@
-window_get_caption Cette fonction renvoie la légende de la fenêtre (c'est le texte qui apparaît en haut de la fenêtre, à côté de son icône) et par défaut cela montre la légende de la pièce dans laquelle vous vous trouvez actuellement. Syntaxe:window_get_caption(); Retour:String Exemple:if window_get_caption() != ""     {
-         window_set_caption("");
-         }
-   Le code ci-dessus vérifiera la légende de Windows pour voir si elle contient du texte ou non, et si elle le fait, elle la définit sur une chaîne vide afin qu'aucune légende ne soit affichée.  Retour: La fenêtre de jeu Suivant:window_get_colour © Copyright YoYo Games Ltd. 2021 Tous droits réservés
+
+  
+  fenêtre_get_caption
+  Cette fonction renvoie le titre de la fenêtre (il s'agit du texte qui apparaît en haut de la fenêtre, à côté de son icône). Par défaut, il s'agit du titre de la pièce dans laquelle vous vous trouvez.
+   
+  Syntaxe :
+  window_get_caption() ;
+   
+  Les retours :
+  Chaîne de caractères
+   
+  Exemple :
+  if window_get_caption() != "" {
+     window_set_caption("") ;
+     }
+  
+  Le code ci-dessus vérifie la légende de la fenêtre pour voir si elle contient du texte ou non, et si c'est le cas, il lui donne la valeur d'une chaîne vide afin qu'aucune légende ne soit affichée.
+   
+   
+   
+  
+    
+      
+        Retour : La fenêtre de jeu
+        Suivant : window_get_colour
+      
+    
+    Copyright YoYo Games Ltd. 2021 Tous droits réservés
   
   
   

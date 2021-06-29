@@ -1,4 +1,28 @@
- La Keyframe Chaque piste (telle que définie sur la page couvrant les structures de piste ) se verra attribuer une ou plusieurs structures d' keyframe (que vous pouvez obtenir à partir du keyframes propriété de la structure de piste), et chacun aura les propriétés suivantes:frame: La position (en images) le long de la chronologie de l' keyframe. La valeur par défaut est 0.length: La longueur de l' keyframe. La valeur par défaut est 1, et lorsqu'elle est définie sur des valeurs plus élevées, la propriété de piste à laquelle l' keyframe fait référence sera conservée à la valeur initiale pendant la durée de la longueur indiquée. Notez que le stretch la propriété le remplacera si elle est définie sur true.stretch: Si cette propriété est définie sur true puis l' keyframe s'étend soit à l' keyframe suivante de la piste, soit à la fin de la piste s'il s'agit de la dernière keyframe. Vous pouvez obtenir ou définir cette valeur, et la valeur par défaut est false.channels: Cette propriété permet d'accéder à la liste des structures de données d' keyframe pour les canaux de la piste. Lors de l'obtention de cette propriété, un tableau de keyframe est renvoyé, et lors de la définition de cette propriété, un tableau de structures de données d' keyframe  Retour: Séquences Suivant: La Keyframe données d'images clés © Copyright YoYo Games Ltd. 2021 Tous droits réservés
+
+  
+  La structure des images clés 
+  Chaque piste (telle que définie sur la page couvrant les structures de piste) aura une ou plusieurs structures d' image clé qui lui seront attribuées (que vous pouvez obtenir à partir de la propriété images-clés propriété
+    de la structure de piste), et chacune d'entre elles aura les propriétés suivantes :
+  
+    frame: La position (en images) sur la ligne de temps pour l'image clé. La valeur par défaut est 0.
+    longueur: La longueur de l'image-clé. La valeur par défaut est 1, et lorsqu'elle est définie sur des valeurs plus grandes, la propriété de la piste à laquelle l'image clé fait référence sera maintenue à la valeur initiale pour la durée de la longueur donnée. Notez que la propriété stretch 
+      remplacera cette valeur si elle est définie sur true.
+    stretch: Si cette propriété est définie sur true, l'image clé s'étire jusqu'à l'image clé suivante de la piste ou jusqu'à la fin de la piste s'il s'agit de la dernière image clé . Vous pouvez obtenir ou définir cette valeur, et
+      la valeur par défaut est false.
+    canaux: Cette propriété permet d'accéder à la liste des structures de données d'images clés pour les canaux de la piste. Lorsque vous obtenez cette propriété, un tableau de
+      données d'images clés est retourné, et lorsque vous définissez cette propriété, un tableau de structures de données d'images clés doit être spécifié . 
+  
+   
+   
+   
+  
+    
+      
+        Retour : Séquences
+        Suivant : La structure de données des images clés
+      
+    
+    Copyright YoYo Games Ltd. 2021 Tous droits réservés
   
   
   

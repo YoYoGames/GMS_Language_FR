@@ -1,6 +1,83 @@
-file_find_first Cette fonction retournera le nom du premier fichier qui satisfait le masque et les attributs. Si aucun fichier de ce type n'existe, une chaîne vide est renvoyée. Le masque peut contenir un chemin et peut contenir des caractères génériques, par exemple 'C: \ temp \ *. Doc'. Les attributs donnent les fichiers supplémentaires que vous souhaitez voir, de sorte que les fichiers normaux sont toujours renvoyés lorsqu'ils satisfont au masque. Vous pouvez ajouter les constantes suivantes pour voir le type de fichiers souhaité (si vous ne souhaitez ajouter aucun attribut, utilisez 0): Constant Description fa_readonly Fichiers en lecture seule fa_hidden Fichiers cachés fa_sysfile Fichiers système fa_volumeid Fichiers d'ID de volume fa_directory Répertoires fa_archive Fichiers archivés ATTENTION! Cette fonction peut ne pas fonctionner comme prévu en raison du GameMaker Studio 2! Veuillez consulter la section sur le système de fichiers pour plus d'informations. REMARQUE: cette fonction ne fonctionnera pas du tout sur la cible HTML5 et les indicateurs de filtre ne fonctionneront que sous Windows (utilisez 0 pour toutes les autres plates-formes). Syntaxe:file_find_first(mask, attr); Argument Description mask Le masque à utiliser pour la recherche. attr L'attribut de fichier spécifique à rechercher. Retour:String Exemple:if directory_exists("\User Content")     {
-         file = file_find_first("/User Content/*.doc", fa_readonly);     }
-   Cela vérifiera si le répertoire spécifié existe, puis, si c'est le cas, allez-y et retournez le premier "lecture seule "doc fichier trouvé.  Retour: Système de fichiers Suivant:file_find_next © Copyright YoYo Games Ltd. 2021 Tous droits réservés
+
+  
+  fichier_trouvé_premier
+  Cette fonction renvoie le nom du premier fichier qui satisfait au masque et aux attributs. Si un tel fichier n'existe pas, une chaîne vide est renvoyée. Le masque peut contenir un chemin et des caractères génériques, par exemple 'C:\temp\*.doc'. L'attribut
+    donnent les fichiers supplémentaires que vous souhaitez voir, de sorte que les fichiers normaux sont toujours renvoyés lorsqu'ils correspondent au masque. Vous pouvez additionner les constantes suivantes pour voir le type de fichiers que vous souhaitez (si vous ne souhaitez pas ajouter d'attributs, utilisez 0) :
+   
+  
+    
+      
+        Constant
+        Description
+      
+      
+        fa_readonly
+        Fichiers en lecture seule
+      
+      
+        fa_hidden
+        Fichiers cachés
+      
+      
+        fa_sysfile
+        Fichiers système
+      
+      
+        fa_volumeid
+        Fichiers d'identification des volumes
+      
+      
+        fa_directory
+        Annuaires
+      
+      
+        fa_archive
+        Dossiers archivés
+      
+    
+  
+   
+  AVERTISSEMENT ! Il se peut que cette fonction ne fonctionne pas comme vous l'attendez, car GameMaker Studio 2 est en sandbox ! Veuillez consulter la section sur le système de fichiers pour plus d'informations.
+  REMARQUE: Cette fonction ne fonctionnera pas du tout sur la cible HTML5, et les drapeaux de filtre ne fonctionneront que sur Windows (utilisez 0 pour toutes les autres plateformes).
+   
+  Syntaxe :
+  file_find_first(mask, attr) ;
+  
+    
+      
+        Arguments
+        Description
+      
+      
+        masque
+        Le masque à utiliser pour la recherche.
+      
+      
+        attr
+        L'attribut spécifique du fichier à rechercher.
+      
+    
+  
+   
+  Les retours :
+  Chaîne de caractères
+   
+  Exemple :
+  if directory_exists("\Contenu utilisateur") {
+     file = file_find_first("/User Content/*.doc", fa_readonly) ; }
+  
+  Elle vérifiera si le répertoire spécifié existe et, si c'est le cas, elle s'y rendra et renverra le premier fichier doc "en lecture seule" trouvé.
+   
+   
+   
+  
+    
+      
+        Retour : Système de fichiers
+        Suivant : file_find_next
+      
+    
+    Copyright YoYo Games Ltd. 2021 Tous droits réservés
   
   
   

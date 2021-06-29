@@ -1,7 +1,45 @@
-directory_destroy Cette fonction supprimera un répertoire avec le nom donné dans la zone de sauvegarde. REMARQUE: cette fonction ne fonctionnera pas sur HTML5 car vous ne pouvez pas créer ou supprimer de répertoires dans le stockage local du navigateur. ATTENTION! Cette fonction peut ne pas fonctionner comme prévu en raison du GameMaker Studio 2! Veuillez consulter la section sur le système de fichiers pour plus d'informations. Syntaxe:directory_destroy(dname) Argument Description dname Le nom du répertoire à supprimer. Retour:N/A Exemple:if directory_exists("DLC")    {
-        directory_destroy("DLC");
-        }
-   Cela vérifiera si le répertoire spécifié existe dans le dossier de données local et, si tel est le cas, il est supprimé.  Retour: Répertoires de fichiers Suivant:temp_directory © Copyright YoYo Games Ltd. 2021 Tous droits réservés
+
+  
+  répertoire_destruction
+  Cette fonction supprime un répertoire portant le nom donné dans la zone de sauvegarde.
+  REMARQUE: Cette fonction ne fonctionnera pas sur HTML5 car vous ne pouvez pas créer ou supprimer des répertoires dans le stockage local du navigateur.
+  AVERTISSEMENT ! Il se peut que cette fonction ne fonctionne pas comme vous l'attendez, car GameMaker Studio 2 est en sandbox ! Veuillez consulter la section sur le système de fichiers pour plus d'informations.
+   
+  Syntaxe :
+  directory_destroy(dname)
+  
+    
+      
+        Arguments
+        Description
+      
+      
+        dname
+        Le nom du répertoire à supprimer.
+      
+    
+  
+   
+  Les retours :
+  N/A
+   
+  Exemple :
+  if directory_exists("DLC") {
+     directory_destroy("DLC") ;
+     }
+  
+  Ceci vérifiera si le répertoire spécifié existe dans le dossier de données local et, si c'est le cas, il sera supprimé.
+   
+   
+   
+  
+    
+      
+        Retour : Répertoires de fichiers
+        Suivant : temp_directory
+      
+    
+    Copyright YoYo Games Ltd. 2021 Tous droits réservés
   
   
   

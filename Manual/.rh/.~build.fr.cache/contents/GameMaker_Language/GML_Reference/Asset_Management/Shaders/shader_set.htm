@@ -1,6 +1,43 @@
- shader _set Avec cette fonction, vous pouvez définir la cible de dessin sur le shader donné et tout autre dessin sera fait à l'aide de celui-ci. Vous pouvez mettre fin à l' shader avec la fonction shader_reset(). REMARQUE: vous ne pouvez définir un shader dans l' événement Draw d'une instance. Syntaxe:shader_set(shader); Argument Description shader L'index du shader à utiliser. Retour:N/A Exemple:shader_set(shader_Glass); draw_self();
-     shader_reset();
-   Le code ci-dessus définira un shader top à utiliser pour le dessin, puis dessinera le sprite actuel utilisé pour l'instance qui l'utilise.  Retour: Shaders Suivant: shader _set_uniform_f © Copyright YoYo Games Ltd. 2021 Tous droits réservés
+
+  
+  shader_set
+  Avec cette fonction, vous pouvez définir la cible de dessin au shader donné et tous les dessins ultérieurs seront effectués en utilisant ce shader. Vous pouvez mettre fin à l'utilisation du shader avec la fonction shader_reset().
+  REMARQUE: Vous ne pouvez définir un shader que dans l'événement Draw d'une instance.
+   
+  Syntaxe :
+  shader_set(shader) ;
+  
+    
+      
+        Arguments
+        Description
+      
+      
+        nuanceur
+        L'index du shader à utiliser.
+      
+    
+  
+   
+  Les retours :
+  N/A
+   
+  Exemple :
+  shader_set(shader_Glass) ; draw_self() ;
+     shader_reset() ;
+  
+  Le code ci-dessus va définir un shader top à utiliser pour le dessin, puis dessiner le sprite courant utilisé pour l'instance qui l'utilise.
+   
+   
+   
+  
+    
+      
+        Retour : Shaders
+        Suivant : shader_set_uniform_f
+      
+    
+    Copyright YoYo Games Ltd. 2021 Tous droits réservés
   
   
   

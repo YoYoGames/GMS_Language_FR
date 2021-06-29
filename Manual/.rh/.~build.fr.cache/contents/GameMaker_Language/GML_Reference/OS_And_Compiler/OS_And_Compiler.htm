@@ -1,4 +1,68 @@
- OS et compilateur Lors de la création de jeux multiplateformes, il est souvent d'une importance vitale que vous obteniez les détails du système d'exploitation utilisé par l'appareil exécutant votre jeu. Des éléments tels que la langue, la version ou l'état du réseau peuvent tous être utilisés pour adapter votre jeu au système qui l'exécute et rendre l'expérience de l'utilisateur final la meilleure possible, ainsi GameMaker Studio 2 dispose d'un certain nombre de fonctions spéciales qui peuvent être utilisées pour obtenir les informations nécessaires. Vous pouvez utiliser les fonctions et variables suivantes pour obtenir certains détails sur le système d'exploitation ou le navigateur qui exécute votre jeu: os_browseros_deviceos_typeos_versionos_is_pausedos_is_network_connectedos_get_configos_get_languageos_get_regionos_get_infoos_powersave_enableos_lock_orientationos_check_permissionos_request_permission Certaines fonctions sont pré-compilées lorsque vous exécutez votre jeu (c'est-à-dire: elles sont utilisées pour définir comment le jeu final sera compilé), et certaines sont également à utiliser lorsque le jeu a été compilé pour obtenir des détails spécifiques sur l'environnement d' runtime Vous trouverez ici la liste complète de ces fonctions:GM_build_dateGM_version _Version d' runtime GM_ gml_release_modegml_pragmaparameter_countparameter_stringenvironment_get_variable Sous Windows, la résolution du Windows est définie sur 1 ms par défaut lorsque votre jeu s'exécute. Les fonctions suivantes sont disponibles pour récupérer et modifier la résolution du planificateur de thread Windows runtime de l'exécution: scheduler_resolution_get scheduler_resolution_set Enfin, lorsque vous travaillez avec des extensions, vous devrez peut-être être en mesure de définir et d'appeler des fonctions externes lors de l' runtime, et vous utiliserez donc ce qui suit: REMARQUE: il s'agit de fonctions héritées et vous devez définir toutes les fonctions d'extension dans l'éditeur d'extension lui-même. REMARQUE: ces fonctions sont Windows -formes cibles macOS external_defineexternal_callexternal_free Retour: Référence GML Suivant: Débogage © Copyright YoYo Games Ltd. 2021 Tous droits réservés
+
+  
+  Système d'exploitation et compilateur
+  Lorsque vous créez des jeux multiplateformes, il est souvent vital d'obtenir les détails du système d'exploitation utilisé par l'appareil qui exécute votre jeu. Des éléments tels que la langue, la version ou l'état du réseau peuvent tous être utilisés pour adapter votre jeu au système qui l'exécute et rendre l'expérience de l'utilisateur final la meilleure possible.
+   GameMaker Studio 2 dispose donc d'un certain nombre de fonctions spéciales qui peuvent être utilisées pour obtenir les informations nécessaires.
+  Les fonctions et variables suivantes vous permettent d'obtenir certains détails sur le système d'exploitation ou le navigateur qui exécute votre jeu :
+   
+  
+    os_browser
+    os_device
+    os_type
+    os_version
+    os_is_paused
+    os_is_network_connected (réseau connecté)
+    os_get_config
+    os_get_language
+    os_get_region
+    os_get_info
+    os_powersave_enable
+    os_lock_orientation
+    os_check_permission
+    os_request_permission
+  
+   
+  Certaines fonctions sont précompilées lorsque vous exécutez votre jeu (c'est-à-dire qu'elles sont utilisées pour définir comment le jeu final sera compilé), et d'autres sont également à utiliser lorsque le jeu a été compilé pour obtenir des détails spécifiques sur l'environnement d 'exécution. Ici
+    vous pouvez trouver la liste complète de ces fonctions :
+   
+  
+    GM_build_date
+    GM_version
+    GM_runtime_version
+    gml_release_mode
+    gml_pragma
+    nombre de paramètres
+    chaîne_de_paramètre
+    environnement_get_variable
+  
+   
+  Sous Windows, la résolution du planificateur de threads de Windows est fixée à 1 ms par défaut lorsque votre jeu s'exécute. Les fonctions suivantes sont disponibles pour récupérer et modifier la résolution du planificateur de threads de Windows au moment de l'exécution:
+   
+  
+    scheduler_resolution_get
+    scheduler_resolution_set
+  
+   
+  Enfin, lorsque vous travaillez avec des extensions, vous pouvez avoir besoin de définir et d'appeler des fonctions externes au moment de l'exécution, et donc utiliser ce qui suit :
+  REMARQUE: Il s'agit de fonctions héritées et vous devez définir toute fonction d'extension dans l'éditeur d'extension lui-même.
+  REMARQUE: Ces fonctions sont destinées aux Windows et macOS uniquement.
+   
+  
+    external_define
+    appel_externe
+    externe_libre
+  
+   
+   
+   
+  
+    
+      
+        Retour : RéférenceGML
+        Suivant : Déboguer
+      
+    
+    Copyright YoYo Games Ltd. 2021 Tous droits réservés
   
   
   

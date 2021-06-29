@@ -1,4 +1,43 @@
-object_get_persistent Cette fonction vous dira si l'objet que vous vérifiez a été marqué comme "persistant" ou non. Un objet persistant est un objet qui fera en sorte que toutes les instances de celui-ci soient transmises d'une pièce à l'autre à moins qu'elles ne soient explicitement détruites. Veuillez noter qu'il ne s'agit pas d'une fonction d'instance! Ainsi, vous pouvez avoir un objet persistant et une instance non persistante du même objet et vice-versa. Vous pouvez définir un indicateur persistant d'instances individuelles à l'aide de la persistent variable d'instance. Syntaxe:object_get_persistent(obj); Argument Description obj L'index de l'objet à vérifier. Retour:Boolean Exemple:if (!persistent) && (object_get_persistent(object_index))     {     persistent = true;     } Le code ci-dessus vérifiera l'instance qui l'exécute pour voir si elle est persistante ou non et vérifiera l'index d'objet de l'instance pour voir si elle est marquée comme persistante ou non. Si l'instance n'est pas encore persistante, l'index d'objet est marqué comme persistant, il définira "persistent" sur true pour cette instance.  Retour: Objets Suivant:object_get_solid © Copyright YoYo Games Ltd. 2021 Tous droits réservés
+
+  
+  objet_get_persistant
+  Cette fonction vous dira si l'objet que vous vérifiez a été marqué comme "persistant" ou non. Un objet persistant est un objet dont les instances seront transportées d'une pièce à l'autre, à moins qu'elles ne soient explicitement détruites.
+    Veuillez noter qu'il ne s'agit pas d'une fonction d'instance ! Ainsi, vous pouvez avoir un objet persistant et une instance non persistante du même objet et vice-versa. Vous pouvez définir l'indicateur de persistance d'une instance individuelle à l'aide de la fonction persistant instance
+    à l'aide de la variable instance.
+   
+  Syntaxe :
+  objet_get_persistant(obj) ;
+  
+    
+      
+        Arguments
+        Description
+      
+      
+        obj.
+        L'index de l'objet à vérifier.
+      
+    
+  
+   
+  Les retours :
+  Booléen
+   
+  Exemple :
+  if (!persistent) && (object_get_persistent(object_index)) { persistent = true ; }
+  Le code ci-dessus va vérifier l'instance en cours d'exécution pour voir si elle est persistante ou non, ainsi que l'index de l'objet de l'instance pour voir si elle est marquée comme persistante ou non. Si l'instance n' est pas persistante mais que l'index de l'objet est marqué comme
+    comme persistante, il définira "persistent" à true pour cette instance.
+   
+   
+   
+  
+    
+      
+        Retour : Objets
+        Suivant : object_get_solid
+      
+    
+    Copyright YoYo Games Ltd. 2021 Tous droits réservés
   
   
   

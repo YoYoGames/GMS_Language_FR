@@ -1,4 +1,43 @@
- Obtenez la tonalité audio Cette action récupérera la hauteur de la ressource sonore que vous fournissez. La valeur de retour sera un multiplicateur de la hauteur réelle enregistrée de l'échantillon, où une valeur de 1 ne signifie aucun changement. Pour plus d'informations sur la hauteur, consultez l'action Définir la hauteur audio. Syntaxe de l'action: Arguments: Argument Description Sound La ressource sonore pour obtenir la hauteur de Target La variable cible pour stocker le pas retourné Exemple: Le code de bloc d'action ci-dessus obtient d'abord la hauteur du son donné et le stocke dans une variable locale temporaire. Il vérifie ensuite si une touche est enfoncée, et si une est détectée, la valeur de la hauteur est vérifiée pour voir si elle est inférieure à 2. Si c'est le cas, alors le son est arrêté, la variable de hauteur a 0,1 ajouté, et puis cette variable est utilisée pour régler à nouveau la hauteur du son avant qu'il ne soit joué.  Retour: Actions audio Suivant: Régler le volume audio © Copyright YoYo Games Ltd. 2021 Tous droits réservés
+
+  
+   Obtenir la hauteur du son
+  Cette action récupère la hauteur de la ressource sonore que vous fournissez. La valeur de retour sera un multiplicateur pour la hauteur réelle enregistrée de l'échantillon, où une valeur de 1 ne représente aucun changement. Pour plus d'informations sur le pitch, voir l'action Set Audio Pitch.
+   
+  Syntaxe de l'action :
+  
+  Arguments :
+  
+    
+      
+        Arguments
+        Description
+      
+      
+        Son
+        La ressource sonore pour obtenir la hauteur de
+      
+      
+        Cible
+        La variable cible pour stocker le pas retourné
+      
+    
+  
+   
+  Exemple :
+  Le code du bloc d'action ci-dessus commence par obtenir la hauteur du son donné et la stocke dans une variable locale temporaire.
+    locale temporaire. Il vérifie ensuite si une touche a été enfoncée et, si c'est le cas, la valeur de la hauteur est vérifiée pour voir si elle est inférieure à 2. Si c'est le cas, le son est arrêté, la variable hauteur est augmentée de 0,1 et cette variable est utilisée pour définir à nouveau la hauteur du son avant qu'il ne soit joué.
+    la hauteur du son avant qu'il ne soit joué.
+   
+   
+   
+  
+    
+      
+        Retour : Actions audio
+        Suivant : Régler le volume audio
+      
+    
+    Copyright YoYo Games Ltd. 2021 Tous droits réservés
   
   
   

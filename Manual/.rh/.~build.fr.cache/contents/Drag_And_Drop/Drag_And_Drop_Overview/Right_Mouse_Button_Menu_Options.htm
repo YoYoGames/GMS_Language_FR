@@ -1,4 +1,65 @@
- Options du menu du bouton droit de la souris Lorsque vous travaillez sur votre DnD™, vous pouvez cliquer sur le bouton droit de la souris sur l'action, sur l'espace de travail ou sur le texte de la liste restreinte à gauche pour ouvrir le menu du bouton droit de la souris: Ce menu propose les options suivantes: Couper / Copier / Coller: Cela vous permettra de couper, copier ou coller toute action sélectionnée dans l'espace de travail. Notez que vous pouvez utiliser + en dehors des actions et faites glisser, ou utilisez / + sur des actions individuelles, pour en sélectionner plusieurs et appliquer la commande à toutes. Commentaire / Supprimer le commentaire: Cette option vous permet d'ajouter et de supprimer des commentaires de vos DnD de code DnD™. Lorsque vous sélectionnez Commentaire, l'éditeur de texte s'ouvre à droite du DnD™ sélectionné, et vous pouvez y ajouter le texte dont vous avez besoin, qu'il s'agisse d'un rappel pour changer quelque chose, ou d'un commentaire utile pour un didacticiel, ou même des instructions pour vos coéquipiers: Une fois que vous avez ajouté le commentaire, vous pouvez cliquer dessus et le faire glisser pour le positionner verticalement et horizontalement - bien que seulement à droite du nœud parent - et DnD nœud DnD™ réduira également le commentaire et affichera un résumé de son contenu (auquel cas il ne peut pas être repositionné). Si le commentaire n'est plus requis, vous pouvez supprimer tout le texte du commentaire ou utiliser l' option Supprimer le commentaire du menu. Notez que lorsque vous copiez un nœud, le commentaire sera copié avec lui, et si vous convertissez le nœud de DnD™ en GML, le commentaire sera conservé et ajouté au GML qui est créé, comme illustré dans l'image ci-dessous: Comme mentionné ci-dessus, un commentaire ne peut être appliqué qu'à un seul nœud, mais vous pouvez l'étendre pour couvrir plusieurs nœuds en ajoutant simplement des sauts de ligne pour l'étendre - bien que cela puisse vous obliger à repositionner le commentaire pour éviter les chevauchements avec les nœuds: Une fois qu'un commentaire a été ajouté, vous pouvez sélectionner à nouveau l'option "Commentaire " dans le menu RMB ou vous pouvez double-cliquer dessus pour activer l'édition. Désactiver / Activer: ces commandes peuvent être utilisées pour désactiver ou activer l'action (ou les actions) sélectionnée. Lorsqu'une action est désactivée, elle est toujours visible dans l'espace de travail mais elle ne s'exécutera pas lorsque vous compilerez le jeu. De cette façon, vous pouvez ajouter / supprimer des actions de test et de débogage. L'image ci-dessous montre du DnD™ avec des actions désactivées: Vous pouvez voir que les actions "Si Score" et "Aller à la pièce suivante" ont été désactivées - elles ont été grisées, visuellement - et seront donc ignorées lorsque le jeu sera testé ou compilé. Toggle Breakpoint: Cette commande active ou désactive un point d'arrêt pour l'action sélectionnée. Un point d'arrêt est simplement un point dans le DnD™ où le débogueur doit s'arrêter lorsque le jeu est exécuté en mode débogage. Une action avec un point d'arrêt qui lui est assigné sera mise en évidence, comme indiqué dans l'image ci-dessous (l'action «Si la santé» a été définie comme point d'arrêt): Supprimer tous les points d'arrêt: Avec cette commande, vous pouvez supprimer tous les points d'arrêt du DnD™. Réduire tout / Développer tout: les DnD™ peuvent être réduites ou développées, où une action réduite affichera simplement le nom de l'action mais aucune des valeurs internes maximisant ainsi l'espace disponible pour l'espace de travail. Par exemple: Comme vous pouvez le voir, les actions prennent beaucoup moins de place et vous pouvez toujours voir ce qu'elles font à partir de la courte description donnée à droite. Vous pouvez sélectionner l'option «Tout développer» pour annuler cette opération pour chaque nœud de l'espace de travail. Réinitialiser la mise en page: Cela réinitialisera l' DnD de travail DnD™, définira le niveau de zoom sur 100%, se concentrant sur l'action actuellement sélectionnée et développant toutes les actions réduites (et toutes). Aperçu en direct: lorsque vous sélectionnez cette option, vous activez ou désactivez la fenêtre d'aperçu du code DnD™ vers GML ( GameMaker Language Ceci est expliqué plus en détail sur la page Modification du DnD™ en. Convertir en GML: Cela convertira toutes vos actions de l'événement en GameMaker Language GML (GameMaker Language). Soyez très prudent car vous ne pouvez pas reconvertir GML en DnD™ à partir desquelles il a été créé. Vous pouvez reconvertir l'événement en un DnD™ à partir du code, mais tout code sera simplement enveloppé dans une action Exécuter le code. Ceci est expliqué plus en détail sur la page Modification du DnD™ en. Fenêtre: Cette section ouvre le sous-menu suivant: Les éléments de menu disponibles ici sont: Aller à l'objet: cela fera un panoramique de l'espace de travail vers l'objet qui appelle l'événement Ouvrir l'événement hérité: cette option n'est disponible que si l'objet en cours de modification est un enfant d'un objet parent et ouvre l'événement en cours de modification de l'objet parent et effectue un panoramique de l'espace de travail vers celui-ci. Volet unique / 2 colonnes / 3 colonnes: ces options peuvent être utilisées pour diviser l'espace de travail actuel en 1, 2 ou 3 "volets" différents. Chaque volet est un espace de travail distinct sur lequel des scripts ou des événements peuvent être glissés afin que vous puissiez modifier et comparer 2 DnD™ ou plus à la fois. L'image ci-dessous montre deux scripts dans une fenêtre affichée dans leur propre volet d'espace de travail: Les deux options suivantes ne sont disponibles que lorsque le menu RMB est ouvert sur un DnD™: Panoramique: lorsque vous sélectionnez cette option sur n'importe quel nœud, l'espace de travail effectue un panoramique pour faire sonner ce nœud au centre. Afficher l'aide...: sélectionnez cette option pour ouvrir le manuel dans un nouvel espace de travail sur la page correspondant au nœud sélectionné. Vous pouvez également obtenir les mêmes résultats en utilisant sur le nœud.  Retour: Index Suivant: Construire un code de bloc d'action © Copyright YoYo Games Ltd. 2021 Tous droits réservés
+
+  
+  Options du menu du bouton droit de la souris
+  Lorsque vous travaillez sur votre code DnD™, vous pouvez cliquer avec le bouton droit de la souris  sur l'action, sur l'espace de travail ou sur le texte dans la liste restreinte à gauche
+    pour ouvrir le menu du bouton droit de la souris :
+  Ce menu comporte les options suivantes :
+  
+    Couper / Copier / Coller: Ceci vous permettra de couper, copier ou coller toute action sélectionnée dans l'espace de travail. Notez que vous pouvez utiliser  +  en dehors des actions et les faire glisser, ou utiliser  /  +  sur des actions individuelles,
+      pour en sélectionner plusieurs et appliquer la commande à chacune d'entre elles.
+    Commentaire / Supprimer le commentaire: Cette option vous permet d'ajouter et de supprimer des commentaires de vos blocs de code DnD™. Lorsque vous sélectionnez Commentaire, un éditeur de texte s'ouvre à droite du bloc DnD™sélectionné, et vous pouvez y
+      ajouter tout texte dont vous avez besoin, qu'il s'agisse d'un rappel pour modifier quelque chose, ou d'un commentaire utile pour un tutoriel, ou même d'instructions pour vos coéquipiers :
+      Une fois que vous avez ajouté le commentaire, vous pouvez cliquer dessus et le faire glisser pour le positionner verticalement et horizontalement - bien que
+      uniquement à droite du nœud parent - et le fait de réduire le nœud DnD™réduira également le commentaire et affichera un résumé de son contenu (auquel cas il ne pourra pas être repositionné). Si le commentaire n'est plus nécessaire, vous pouvez soit supprimer tout le texte du commentaire, soit utiliser la fonction d'effacement des commentaires.
+      le texte du commentaire, soit utiliser l'option Supprimer le commentaire du menu. Notez que lorsque vous copiez un nœud, le commentaire sera copié avec lui, et si vous convertissez le nœud de DnD™en GML, alors le commentaire sera préservé
+      et ajouté au GML qui est créé, comme illustré dans l'image ci-dessous : 
+       Comme mentionné ci-dessus, un commentaire ne peut être appliqué qu'à un seul nœud, mais vous pouvez l'étendre à plusieurs nœuds en ajoutant simplement des sauts de ligne.
+      plusieurs nœuds en ajoutant simplement des sauts de ligne pour l'étendre - bien que cela puisse vous obliger à repositionner le commentaire pour éviter les chevauchements avec les nœuds suivants :
+      Une fois qu'un commentaire a été ajouté, vous pouvez sélectionner l'option "Commentaire " à nouveau dans le menu RMB ou dans le menu de la barre d'outils.
+      dans le menu RMB ou vous pouvez double-cliquer sur  pour activer l'édition.
+    Désactiver / Activer: Ces commandes peuvent être utilisées pour désactiver ou activer l'action (ou les actions) sélectionnée(s). Lorsqu'une action est désactivée, elle est toujours visible dans l'espace de travail, mais elle ne sera pas exécutée lorsque vous compilerez le jeu. De cette
+      Ainsi, vous pouvez ajouter/supprimer des actions pour les tests et le débogage. L'image ci-dessous montre un peu de code DnD™avec des actions désactivées :
+      Vous pouvez voir que les actions "If Score" et "Go To Next Room" ont été désactivées -.
+      elles ont été grisées, visuellement - et donc elles seront sautées lorsque le jeu sera testé ou compilé.
+    Toggle Breakpoint: Cette commande permet d'activer ou de désactiver un point d'arrêt pour l'action sélectionnée. Un point d'arrêt est simplement un point dans le code DnD™où le débogueur doit s'arrêter lorsque le jeu
+      est exécuté en mode débogage. Une action à laquelle est assigné un point d'arrêt sera mise en surbrillance, comme le montre l'image ci-dessous (l'action "If Health" a été définie comme point d'arrêt) :
+      
+    Supprimer tous les points d'arrêt: Avec cette commande, vous pouvez supprimer tous les points d'arrêt du code DnD™.
+    Réduire tout / Développer tout: Les actions DnD™peuvent être soit réduites soit développées, où une action réduite affichera simplement le nom de l'action mais aucune des valeurs internes, maximisant ainsi l'espace disponible.
+      pour l'espace de travail. Par exemple :
+      Comme vous pouvez le voir, les actions prennent beaucoup moins de place, et vous pouvez toujours voir ce qu'elles font grâce à la courte description donnée à droite.
+      description donnée à droite. Vous pouvez sélectionner l'option "Expand All" pour annuler cette opération pour chaque nœud de l'espace de travail.
+    Réinitialiser la mise en page: Cela réinitialisera l'espace de travail DnD™, en fixant le niveau de zoom à 100 %, en se concentrant sur l'action actuellement sélectionnée et en développant également toutes les actions réduites (et toutes les actions réduites).
+    Aperçu en direct: Lorsque vous sélectionnez cette option, vous activez ou désactivez la fenêtre d'aperçu du code de DnD™en GML(GameMaker Language). Ceci est expliqué plus en détail sur la page Changer DnD™ en code.
+    Convertir en GML: cela convertira toutes vos actions dans l'événement en cours en code GML(GameMaker Language). Soyez très prudent avec cette opération car vous ne pouvez pas reconvertir le  GML en actions DnD™ à partir desquelles il a été créé. Vous pouvez convertir
+      l'événement en un événement DnD™à partir de code, mais tout code sera simplement enveloppé dans une action Execute Code. Ceci est expliqué plus en détail sur la page Changer DnD™ en code.
+    Fenêtre: Cette section ouvre le sous-menu suivant :
+      Les éléments de menu disponibles ici sont :
+      
+        Aller à l'objet: Cette option permet de déplacer l'espace de travail vers l'objet qui appelle l'événement.
+        Ouvrir un événement hérité: Cette option n'est disponible que si l'objet en cours d'édition est l'enfant d'un objet parent. Elle ouvre l'événement en cours d'édition de l'objet parent et dirige l'espace de travail vers celui-ci.
+        Volet unique / 2 colonnes / 3 colonnes: Ces options peuvent être utilisées pour diviser l'espace de travail actuel en 1, 2 ou 3 "volets" différents. Chaque volet est un espace de travail distinct sur lequel vous pouvez faire glisser des scripts ou des événements.
+          ou des événements glissés sur eux afin que vous puissiez éditer et comparer 2 ou plusieurs blocs de code DnD™à la fois. L'image ci-dessous montre deux scripts dans une fenêtre affichés dans leur propre volet d'espace de travail :
+          
+      
+    
+  
+  Les deux options suivantes sont uniquement disponibles lorsque le menu RMB est ouvert sur un nœud DnD™:
+  
+    Panoramique: Lorsque vous sélectionnez cette option sur n'importe quel nœud, l'espace de travail effectuera un panoramique pour faire correspondre ce nœud au centre.
+    Afficher l'aide... : Cette option ouvre le manuel dans un nouvel espace de travail sur la page correspondant au nœud sélectionné. Vous pouvez également obtenir les mêmes résultats en utilisant  sur le nœud.
+  
+   
+   
+   
+  
+    
+      
+        Retour : Index
+        Suivant : Construction du code du bloc d'action
+      
+    
+    Copyright YoYo Games Ltd. 2021 Tous droits réservés
   
   
   

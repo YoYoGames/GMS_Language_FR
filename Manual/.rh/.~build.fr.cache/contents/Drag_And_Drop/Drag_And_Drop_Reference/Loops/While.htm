@@ -1,4 +1,53 @@
- Tandis que L' action While est utilisée pour effectuer des boucles qui ne se terminent que lorsqu'une condition spécifique est renvoyée true. Par exemple, vous pouvez utiliser une variable et la définir sur false puis exécutez la boucle While et demandez-lui de vérifier cette variable, puis à un moment donné de la boucle, vous définissez la variable sur true et la boucle se terminera. Notez que quel que soit l'endroit où vous définissez la condition dans la boucle while, toutes les actions de la boucle seront exécutées jusqu'à la fin avant que le reste du script ou de l'événement se poursuive, la modification de la condition ne sort pas instantanément de la boucle. Lorsque vous ajoutez une action While dans votre code, vous devez fournir la variable à vérifier, le type de vérification à effectuer (inférieur à, supérieur à, égal, etc.) et la valeur par rapport à laquelle vérifier la variable (vous peut également marquer de ne pas avoir la vérification de la boucle While pour voir si la condition n'est pas vraie). Vous ajoutez ensuite les actions à effectuer dans la boucle While, de la même manière que vous ajouteriez une action à un "si", c'est-à-dire en le déposant sur le côté de l'action plutôt qu'en dessous: Toutes les actions ajoutées sur le côté seront incluses dans le While et seront exécutées avant que l'événement ou le script ne se poursuive avec les actions ajoutées sous (comme indiqué dans l'exemple ci-dessous). Notez que vous pouvez mettre fin prématurément à n'importe quelle boucle si vous appelez l'action Break. Syntaxe de l'action: Arguments: Argument Description Variable La variable à utiliser dans le chèque Is Le type d'évaluation à effectuer (inférieur à, supérieur, égal à, supérieur ou égal à et inférieur ou égal à) Value La valeur par rapport à laquelle vérifier la variable Exemple: Le code de bloc d'action ci-dessus crée une variable locale temporaire et la définit sur false. Cette variable est ensuite vérifiée dans l'action de boucle While et tant qu'elle renvoie false, la boucle s'exécute. Dans la boucle, nous obtenons deux variables locales temporaires pour une position x / y aléatoire dans la pièce, puis nous vérifions cette position pour une collision. Si aucune collision n'est trouvée, la variable initiale est définie sur true, mettant fin à la boucle. Une fois la boucle terminée, une nouvelle instance est créée à la position aléatoire que nous avons découverte sans collision.  Retour: Actions de boucle Suivant: Pour © Copyright YoYo Games Ltd. 2021 Tous droits réservés
+
+  
+   Alors que
+  L'action While est utilisée pour exécuter des boucles qui ne se terminent que lorsqu'une condition spécifique renvoie la vérité. Par exemple, vous pouvez utiliser une variable et lui attribuer la valeur false, puis exécuter la boucle While et lui faire vérifier cette variable.
+    Puis, à un moment donné dans la boucle, vous donnez à la variable la valeur true et la boucle se termine. Notez que, quel que soit l'endroit où vous définissez la condition dans la boucle while, toutes les actions de la boucle seront exécutées jusqu'à la fin avant que le reste du script ou de l'événement ne se poursuive.
+    ou l'événement ne se poursuive, le fait de changer la condition ne permet pas de sortir instantanément de la boucle.
+  Lorsque vous ajoutez une action While dans votre code, vous devez fournir la variable à vérifier, le type de vérification à effectuer (inférieur à, supérieur à, égal à, etc...) et la valeur à comparer à la variable (vous pouvez également choisir de ne pas faire vérifier par la boucle While
+    vérifie si la condition n'est pas vraie). Vous ajoutez ensuite les actions à exécuter dans la boucle While, de la même manière que vous ajouteriez une action à un "if", c'est-à-dire en la plaçant à côté de l'action plutôt qu'en dessous :
+  Toutes les actions ajoutées au côté seront incluses dans le While et seront exécutées avant que l'événement ou le script
+    ne continue avec les actions ajoutées en dessous (comme le montre l'exemple ci-dessous). Notez que vous pouvez mettre fin à toute boucle prématurément si vous appelez l'action Break.
+   
+  Syntaxe de l'action :
+  
+  Arguments :
+  
+    
+      
+        Arguments
+        Description
+      
+      
+        Variable
+        La variable à utiliser dans le contrôle
+      
+      
+        Est
+        Le type d'évaluation à effectuer (inférieur à, supérieur à, égal à, supérieur ou égal à et inférieur ou égal à)
+      
+      
+        Valeur
+        La valeur pour vérifier la variable par rapport à
+      
+    
+  
+   
+  Exemple :
+  Le code du bloc d'action ci-dessus crée une variable locale temporaire et lui attribue la valeur false. Cette variable est
+    ensuite vérifiée dans l'action de la boucle While et si elle renvoie false, la boucle s'exécute. Dans la boucle, nous obtenons deux variables locales temporaires pour une position x/y aléatoire dans la pièce, puis nous vérifions que cette position ne présente pas de collision. Si aucune collision n'est trouvée, la variable initiale
+    est mise à true, ce qui met fin à la boucle. Une fois la boucle terminée, une nouvelle instance est créée à la position aléatoire où nous avons découvert qu'il n'y avait pas de collision.
+   
+   
+   
+  
+    
+      
+        Retour : Actions en boucle
+        Suivant : Pour
+      
+    
+    Copyright YoYo Games Ltd. 2021 Tous droits réservés
   
   
   

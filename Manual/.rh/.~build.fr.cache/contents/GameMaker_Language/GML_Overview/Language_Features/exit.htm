@@ -1,9 +1,36 @@
-exit Le exit l'instruction a la syntaxe suivante:exit;exit termine simplement l'exécution de la fonction de script courante,method, ouevent. Notez qu'il y a une légère différence d'utilisation ici en fonction de la portée: si tu utilises exit dans une fonction ou une méthode de script, il quittera simplement la fonction et retournera au code qui a appelé la fonction si tu utilises exit dans un bloc de code à partir d'un objet, il quittera l'événement entier même s'il y a plusieurs blocs de code séparés après exit a été appelé. Lorsqu'il est utilisé dans un événement, exit est généralement utilisé pour éviter qu'une instance exécute du code supplémentaire lorsqu'une condition spécifique a été remplie (ou non). Le code ci-dessous présente un exemple de la façon dont il serait utilisé, dans ce cas dans un événement de collision, bien qu'il puisse être utilisé dans tous les cas.if (!visible)     {
-         exit;
-         }
-     while (place_meeting(x, y))     {
-         x -= lengthdir_x(1, direction - 180);     y -= lengthdir_y(1, direction - 180);     }
-   Le code ci-dessus vérifie une variable et si elle se résout en true, puis il quitte le bloc de code, sinon il continue et exécute le reste du code. REMARQUE: cela ne met pas fin à l'exécution du jeu. Pour cela, vous devez utiliser la fonction game_end ().  Retour: Caractéristiques linguistiques Suivant:with © Copyright YoYo Games Ltd. 2021 Tous droits réservés
+
+  
+  quitter
+  L'instruction exit a la syntaxe suivante :
+  sortie ;
+  exit met simplement fin à l'exécution de la fonction, de la méthode ou de l'événement du script en cours. Notez qu'il y a
+    qu'il existe une légère différence d'utilisation en fonction de la portée :
+  
+    Si vous utilisez exit dans une fonction ou une méthode de script, il quittera simplement la fonction et retournera au code qui a appelé la fonction.
+    Si vous utilisez exit dans un bloc de code à l'intérieur de l'événement d'un objet, l'événement entier sera abandonné, même s'il existe plusieurs blocs de code distincts après l'appel de exit.
+    Si vous utilisez exit dans un événement parent et appelez cet événement en utilisant event_inherited() dans un objet enfant, seul l'événement parent se terminera et l'événement de l'enfant (qui a appelé event_inherited()) continuera.
+      l'événement de l'enfant (qui a appelé event_inherited()) continuera.
+  
+  Lorsqu'il est utilisé dans un événement, exit est généralement utilisé pour éviter qu'une instance n'exécute d'autres codes lorsqu'une condition spécifique a été remplie (ou non). Le code ci-dessous donne un exemple de la façon dont il peut être utilisé, dans ce cas dans un événement de collision,
+    bien qu'il puisse être utilisé dans n'importe quel événement.
+  if (!visible) {
+     exit ;
+     }
+    
+     other.hp -= attack ; other.coins -= 4 ; coins += 4 ;
+  Le code ci-dessus vérifie si l'instance actuelle n'est pas visible, dans ce cas il sort du bloc de code, sinon il continue et exécute le reste du code.
+  NOTE: Elle ne met pas fin à l'exécution du jeu. Pour cela, vous devez utiliser la fonction game_end().
+   
+   
+   
+  
+    
+      
+        Retour : Caractéristiques de la langue
+        Suivant : avec
+      
+    
+    Copyright YoYo Games Ltd. 2021 Tous droits réservés
   
   
   

@@ -1,4 +1,26 @@
- Dialogue L'événement asynchrone Dialog n'est déclenché que lorsqu'il reçoit un rappel de l'une des fonctions spéciales de dialogue asynchrone, comme get_login_async() (veuillez consulter cette fonction pour un exemple de code étendu de la façon dont cet événement est utilisé). Ces événements sont ceux qui demandent un type d'entrée utilisateur, qui peut être un nom, des informations de connexion, un numéro ou une couleur, etc. Comme la plupart des appareils n'aiment pas rester en boucle en attendant une réponse, ils doivent être asynchrone et GameMaker Studio 2 continuera à fonctionner en arrière-plan pendant que ces fonctions ont un dialogue ouvert et jusqu'à ce qu'elles obtiennent l'entrée utilisateur requise qui déclenche cet événement. Cela signifie que si la boîte de dialogue est ouverte pendant qu'un jeu est en cours, vous devez prendre des mesures pour mettre le jeu en pause jusqu'à ce que le rappel de la boîte de dialogue ait été reçu. Encore une fois, une carte DS est renvoyée avec l'ID contenu dans la variable spéciale async_load. Les valeurs contenues dans cette carte dépendront de la fonction utilisée, et vous devriez consulter les entrées individuelles pour chaque fonction dans ce manuel pour plus de détails.  Retour: Événements asynchrones Suivant: HTTP © Copyright YoYo Games Ltd. 2021 Tous droits réservés
+
+  
+  Dialogue
+  L'événement asynchrone Dialog n'est déclenché que lorsqu'il reçoit un rappel de l'une des fonctions de dialogue asynchrone spéciales, telles que
+   fonctions spéciales de dialogue asynchrone, comme get_login_async() (veuillez
+    voir cette fonction pour un exemple de code étendu de l'utilisation de cet événement).
+  Ces événements sont ceux qui demandent un certain type d'entrée de la part de l'utilisateur, qui peut être un nom, des informations de connexion, un nombre ou une couleur etc... Comme la plupart des appareils n'aiment pas rester en boucle dans l'attente d'une réponse, ils doivent être asynchrones . 
+    continuera à fonctionner en arrière-plan pendant que ces fonctions ont un dialogue ouvert et jusqu'à ce qu'elles obtiennent l'entrée requise de l'utilisateur qui déclenche cet événement. Cela signifie que si la boîte de dialogue est ouverte alors qu'un jeu est en cours, vous devez prendre des mesures pour mettre le jeu en pause jusqu'à ce que le rappel de la boîte de dialogue ait été effectué.
+    jeu jusqu'à ce que le rappel du dialogue ait été reçu.
+  Là encore, une carte DS est renvoyée avec l'identifiant contenu dans la variable spéciale async_load.
+    Les valeurs contenues dans cette carte dépendent de la fonction utilisée et vous devez consulter les entrées individuelles de chaque fonction dans ce manuel pour plus de détails.
+  NOTE : Les fonctions de dialogue asynchrone sont  réservées à un usage de débogage et de testet ne doivent pas être utilisées dans les jeux publiés. Dans ce cas, vous devez créer une interface utilisateur personnalisée pour recevoir les entrées des joueurs, de manière à avoir un contrôle total sur l'apparence et le comportement des boîtes de dialogue.
+   
+   
+   
+  
+    
+      
+        Retour : Événements asynchrones
+        Suivant : HTTP
+      
+    
+    Copyright YoYo Games Ltd. 2021 Tous droits réservés
   
   
   

@@ -1,7 +1,132 @@
-effect_create_above Avec cette fonction, vous pouvez créer un effet simple au-dessus de toutes les instances de votre pièce (il est en fait créé à une profondeur de -100000). Si l'effet est autre chose ef_rain ou ef_snow alors vous pouvez définir une position x / y pour créer l'effet, et la taille peut être une valeur de 0, 1 ou 2, où 0 est petit, 1 est moyen et 2 est grand. Il est à noter que ces effets peuvent avoir leur dessin activé et désactivé, ainsi que leur dessin mis en pause, en utilisant les fonctions part_system_automatic_draw() et part_system_automatic_update() avec la valeur appropriée pour l'indice du système de particules (où 0 est pour les effets ci-dessous et 1 pour les effets ci-dessus). Les constantes disponibles pour les différents types de particules sont: Constant Exemple Description ef_cloud An effect that creates random cloud particles of varying sizes ef_ellipse An effect that creates expanding ellipses ef_explosion An effect that creates expanding fading explosions ef_firework An effect that creates multiple small particles to generate a firework explosion ef_flare An effect that generates a brilliant point that flares up and fades out ef_rain An effect that generates rain particles coming down from the top of the screen ef_ring An effect that generates expanding and fading circles ef_smoke An effect that generates little puffs of smoke ef_smokeup An effect that creates a smoke plume that rises up the screen ef_snow An effect that generates multiple snow particles falling down the screen ef_spark An effect that generates a small spark ef_star An effect that generates star particles Syntaxe:effect_create_above(kind, x, y, size, colour); Argument Description kind Le type d'effet (utilisez l'une des constantes répertoriées ci -dessus). x Le positionnement x de l'effet le cas échéant. y Le positionnement y de l'effet le cas échéant. size La taille de l'effet. colour La couleur de l'effet. Retour:N/A Exemple:if health <= 0     {
-         effect_create_above(ef_explosion, x, y, 1, c_yellow);     instance_destroy();
-         }
-   Le code ci-dessus créera une explosion moyenne, jaune, au-dessus de l'instance et la détruira si la variable «santé» est inférieure ou égale à 0.  Retour: Particules Suivant:effect_clear © Copyright YoYo Games Ltd. 2021 Tous droits réservés
+
+  
+  effet_créer_supérieur
+  Avec cette fonction, vous pouvez créer un effet simple au-dessus de toutes les instances de votre pièce (il est en fait créé à une profondeur de -100000). Si l'effet est autre que ef_rain ou ef_snow, vous pouvez définir une position x/y pour créer l'effet.
+    et la taille peut être une valeur de 0, 1 ou 2, où 0 est petit, 1 est moyen et 2 est grand.
+  Il est intéressant de noter que ces effets peuvent être activés et désactivés, et que leur dessin peut être mis en pause, en utilisant les fonctions part_system_automatic_draw() et
+    part_system_automatic_update() avec la valeur appropriée pour l'indice du système de particules (où 0 correspond aux effets inférieurs et 1 aux effets supérieurs).
+  Les constantes disponibles pour les différents types de particules sont les suivantes :
+  
+    
+      
+        Constant
+        Exemple
+        Description
+      
+      
+        ef_cloud
+        
+        Un effet qui crée des particules de nuage aléatoires de différentes tailles.
+      
+      
+        ef_ellipse
+        
+        Un effet qui crée des ellipses en expansion
+      
+      
+        ef_explosion
+        
+        Un effet qui crée des explosions en expansion qui s'estompent
+      
+      
+        ef_firework
+        
+        Un effet qui crée de multiples petites particules pour générer une explosion de feu d'artifice.
+      
+      
+        ef_flare
+        
+        Un effet qui génère un point brillant qui s'allume et s'éteint.
+      
+      
+        ef_rain
+        
+        Un effet qui génère des particules de pluie descendant du haut de l'écran.
+      
+      
+        ef_ring
+        
+        Un effet qui génère des cercles en expansion et en décroissance
+      
+      
+        ef_smoke
+        
+        Un effet qui génère de petites bouffées de fumée.
+      
+      
+        ef_smokeup
+        
+        Un effet qui crée un panache de fumée qui monte à l'écran.
+      
+      
+        ef_snow
+        
+        Un effet qui génère de multiples particules de neige tombant sur l'écran.
+      
+      
+        ef_spark
+        
+        Un effet qui génère une petite étincelle
+      
+      
+        ef_star
+        
+        Un effet qui génère des particules d'étoiles
+      
+    
+  
+   
+  Syntaxe :
+  effet_create_above(kind, x, y, size, colour) ;
+  
+    
+      
+        Arguments
+        Description
+      
+      
+        genre
+        Le type d'effet (utilisez l'une des constantes énumérées ci-dessus).
+      
+      
+        x
+        Le positionnement x de l'effet, le cas échéant.
+      
+      
+        y
+        Le positionnement y de l'effet, le cas échéant.
+      
+      
+        taille
+        L'ampleur de l'effet.
+      
+      
+        couleur
+        La couleur de l'effet.
+      
+    
+  
+   
+  Les retours :
+  N/A
+   
+  Exemple :
+  if health <= 0 {
+     effect_create_above(ef_explosion, x, y, 1, c_yellow) ; instance_destroy() ;
+     }
+  
+  Le code ci-dessus créera une explosion moyenne, jaune, au-dessus de l'instance et la détruira si la variable "health" est inférieure ou égale à 0.
+   
+   
+   
+  
+    
+      
+        Retour : Particules
+        Suivant : effect_clear
+      
+    
+    Copyright YoYo Games Ltd. 2021 Tous droits réservés
   
   
   

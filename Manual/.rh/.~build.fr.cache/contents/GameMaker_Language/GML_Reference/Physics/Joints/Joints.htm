@@ -1,4 +1,48 @@
- Les articulations Dans le GameMaker Studio 2, les articulations sont utilisées pour contraindre les instances au monde ou entre elles. Les exemples typiques de jeux incluent les ragdolls, les teeters et les poulies, mais les articulations peuvent être combinées de différentes manières pour créer des mouvements intéressants ou ajouter du réalisme à votre monde de jeu. REMARQUE: Il n'est pas nécessaire de supprimer une liaison lorsque vous détruisez une instance jointe à une autre instance, ni de la supprimer à la fin d'une salle. Sauf dans des cas très spécifiques (voir le joint d'engrenage ) car cela est traité automatiquement par GameMaker Studio. Les pages suivantes expliquent les liaisons disponibles et comment elles peuvent être créées: physics_joint_distance_createphysics_joint_revolute_createphysics_joint_prismatic_createphysics_joint_pulley_createphysics_joint_gear_createphysics_joint_rope_createphysics_joint_wheel_createphysics_joint_weld_createphysics_joint_friction_createphysics_joint_delete Une fois qu'une articulation a été créée, il peut souvent être nécessaire de connaître ses propriétés afin de les modifier à des moments précis de votre jeu. Les fonctions suivantes (avec leurs constantes internes correspondantes) sont disponibles pour tester et modifier les valeurs des articulations: physics_joint_enable_motorphysics_joint_get_valuephysics_joint_set_value De plus, vous pouvez utiliser un certain nombre de constantes à partir des fonctions de GameMaker Studio 2 pour obtenir (ou définir) différentes propriétés de certaines articulations. Ces constantes se trouvent toutes dans la section suivante: Constantes articulaires de physique  Retour: Physique Un article: Particules corporelles molles © Copyright YoYo Games Ltd. 2021 Tous droits réservés
+
+  
+  Articulations
+  Dans le monde physique de GameMaker Studio 2, les articulations sont utilisées pour contraindre les instances au monde ou entre elles. Les exemples typiques dans les jeux sont les poupées de chiffon, les balanciers et les poulies, mais les articulations peuvent être combinées de nombreuses manières différentes pour créer des mouvements intéressants ou ajouter du réalisme à votre univers de jeu.
+    mouvements intéressants ou ajouter du réalisme à votre univers de jeu.
+  NOTE: Un joint n'a pas besoin d'être supprimé lorsque vous détruisez une instance jointe à une autre instance, ni à la fin d'une room. Sauf dans des cas très spécifiques (voir le joint d'engrenage)
+    car cela est traité automatiquement par GameMaker Studio.
+  Les pages suivantes expliquent les joints disponibles et la façon dont ils peuvent être créés :
+   
+  
+    physique_joint_distance_créer
+    physics_joint_revolute_create
+    physique_joint_prismatique_créer
+    physique_joint_poulies_créer
+    physics_joint_gear_create
+    physics_joint_rope_create
+    physique_joint_roue_créer
+    physique_joint_soudure_créer
+    physique_joint_friction_créer
+    physics_joint_delete
+  
+   
+  Une fois qu'une articulation a été créée, il peut souvent être nécessaire de connaître ses propriétés afin de les modifier à des moments précis de votre jeu. Les fonctions suivantes (avec leurs constantes internes correspondantes) sont disponibles pour tester et modifier les valeurs des articulations :
+   
+  
+    physics_joint_enable_motor
+    physics_joint_get_value
+    physics_joint_set_value
+  
+   
+  En outre, vous pouvez utiliser un certain nombre de constantes dans les fonctions de GameMaker Studio 2 pour obtenir (ou définir) différentes propriétés de certaines articulations. Ces constantes se trouvent toutes dans la section suivante :
+  
+    Constantes communes de la physique
+  
+   
+   
+   
+  
+    
+      
+        Retour : Physique
+        Suivant : Particules molles du corps
+      
+    
+    Copyright YoYo Games Ltd. 2021 Tous droits réservés
   
   
   

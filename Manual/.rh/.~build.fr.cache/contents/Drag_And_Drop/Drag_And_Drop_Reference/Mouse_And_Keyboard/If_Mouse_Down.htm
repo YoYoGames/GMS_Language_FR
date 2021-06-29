@@ -1,4 +1,48 @@
- Si la souris est enfoncée Avec cette action, vous pouvez interroger la souris pour voir si le bouton sélectionné est actuellement maintenu enfoncé. L'action reviendra true chaque étape pendant laquelle le bouton est maintenu enfoncé, ou false sinon, bien que si vous cliquez sur le not modificateur vous pouvez alors vérifier si le bouton n'est pas maintenu, c'est à dire: l'action reviendra true alors qu'aucun bouton n'est enfoncé et false s'il y a. Si vous n'avez besoin de vérifier qu'un seul bouton, utilisez l'action Si la souris est enfoncée. Notez que pour ajouter des actions dans le bloc "if", elles doivent être déposées sur le côté de l'action, comme indiqué dans l'image ci-dessous: Ces actions seront désormais exécutées si le "si" est évalué à true, tandis que toutes les actions déposées ailleurs seront exécutées après le bloc "if". Syntaxe de l'action: Arguments: Argument Description Mouse Button Le nom du bouton de la souris à vérifier (gauche, milieu, droite). Not Annuler le chèque (vrai devient faux et vice versa) Exemple: Le code de bloc d'action ci-dessus interroge l'état du bouton de la souris à chaque étape et s'il est maintenu enfoncé, il vérifie la pression initiale de la souris. Si le chèque est true lors de la pression initiale vers le bas, la vitesse de l'instance est définie, puis, pendant que le bouton est enfoncé, le mélange de sprite passe au rouge. Si la souris n'est pas maintenue enfoncée, une vérification est effectuée au relâchement de la souris pour réinitialiser la couleur de fusion au blanc et régler la vitesse sur 0.  Retour: Actions de la souris et du clavier Suivant: Si la souris est sortie © Copyright YoYo Games Ltd. 2021 Tous droits réservés
+
+  
+   Si la souris descend
+  Avec cette action, vous pouvez interroger la souris pour savoir si le bouton sélectionné est actuellement maintenu enfoncé. L'action retournera vrai à chaque étape où le bouton est maintenu enfoncé, ou faux sinon, bien que si vous cliquez sur le modificateur not, vous pouvez alors vérifier si le bouton n'est pas maintenu enfoncé, c'est-à-dire que l'action retournera vrai si aucun bouton n'est enfoncé et faux s'il l'est. Si vous n'avez besoin de vérifier qu'un seul bouton est enfoncé, utilisez l'action
+   Si la souris est pressée.
+  Notez que pour ajouter des actions dans le bloc "if", elles doivent être déposées sur le côté de l'action, comme le montre l'image ci-dessous :
+  Ces actions seront maintenant exécutées si le "if" vaut true,
+    tandis que toute action déposée ailleurs sera exécutée après le bloc "if".
+   
+  Syntaxe de l'action :
+  
+  Arguments :
+   
+  
+    
+      
+        Arguments
+        Description
+      
+      
+        Bouton de la souris
+        Le nom du bouton de la souris à vérifier (gauche, milieu, droite).
+      
+      
+        Non
+        Négation de la vérification (vrai devient faux et vice versa)
+      
+    
+  
+   
+  Exemple :
+  Le code du bloc d'action ci-dessus interroge l'état du bouton de la souris à chaque étape et, s'il est maintenu enfoncé, il vérifie la pression initiale de la souris.
+    maintenu enfoncé, il vérifie la pression initiale sur la souris. Si la vérification est vraie lors de l'appui initial sur le bouton, la vitesse de l'instance est définie, puis, tant que le bouton est enfoncé, le mélange du sprite passe au rouge. Si la souris n'est pas maintenue enfoncée, une vérification est effectuée au moment du relâchement de la souris pour déterminer si le mélange du sprite est rouge.
+    est effectuée au moment du relâchement de la souris pour réinitialiser la couleur de mélange en blanc et définir la vitesse à 0.
+   
+   
+   
+  
+    
+      
+        Retour : Actions de la souris et du clavier
+        Suivant : Si la souris est libérée 
+      
+    
+    Copyright YoYo Games Ltd. 2021 Tous droits réservés
   
   
   

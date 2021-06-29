@@ -1,9 +1,152 @@
-vertex_format_add_custom Cette fonction vous permet d'utiliser un type de données personnalisé pour des attributs de format de sommet spécifiques dans le cadre du nouveau format de sommet en cours de création. Les valeurs disponibles à utiliser sont définies par la constante de type de données que vous choisissez, répertoriée ci-dessous: Constant Description vertex_type_float1 Une seule valeur à virgule flottante vertex_type_float2 Deux valeurs à virgule flottante vertex_type_float3 Trois valeurs à virgule flottante vertex_type_float4 Quatre valeurs à virgule flottante vertex_type_colour Quatre valeurs de composant (r, g, b, a) vertex_type_ubyte4 Quatre valeurs d'octet non signées (de 0 à 255) L'utilisation de ces constantes doit également être définie afin que les valeurs puissent être "liées" correctement dans le shader cours de création. Cela est nécessaire car DX et OpenGL ont des exigences différentes, donc si vous ne les liez pas correctement, ils ne passeront pas directement dans le shader. Les constantes d'utilisation disponibles que vous pouvez choisir sont répertoriées ci-dessous et celles que vous utilisez dépendront des spécificités du shader cours de création: Constant Description vertex_usage_position valeurs de position (x, y, z) vertex_usage_colour valeurs de couleur (r, g, b, a) vertex_usage_normal valeurs normales de sommet (nx, ny, nz) vertex_usage_textcoord Coordonnées UV (u, v) vertex_usage_blendweight le poids de fusion de la matrice d'entrée (pour une animation squelettique, par exemple) vertex_usage_blendindices les indices des matrices à utiliser (pour l'animation squelettique par exemple) vertex_usage_depth valeur du tampon de profondeur de sommet vertex_usage_tangent valeurs tangentes vertex_usage_binormal valeurs binormales vertex_usage_fog valeurs de brouillard vertex_usage_sample index d'échantillonneur Il y a quelques points importants à noter lors de l'utilisation de formats personnalisés comme ceux-ci: Le vertex_format_add_custom() la fonction ne prend en charge que vertex_usage_position, vertex_usage_colour, vertex_usage_normal et vertex_usage_textcoord lors de l'utilisation de shaders GLSL. Ceux-ci correspondront aux attributs shader in_Position, in_Colour[0 - ...], in_Normal respectivement (tout ce qui n'est pas l'un de ces trois attributs - par exemple: les coordonnées de texture - peut être mappé à n'importe quel attribut que vous définissez). En général, vous devez utiliser vertex_usage_textcoord pour tous les paramètres supplémentaires lorsque cela est possible, comme des types comme vertex_usage_blendweight et vertex_usage_tangent sont presque obsolètes dans la plupart des shader et ne seront probablement pas convertis correctement. Utilisez plutôt vec, vec2, vec3 ou vec4 les types vertex_usage_textcoord et tout devrait bien fonctionner. GLSL ES ne prend pas en charge les attributs entiers, donc en passant ivec4 ne fonctionne pas (ce type est généralement utilisé lors de la transmission vertex_usage_blendindices ). Ce que vous devez faire est de transmettre les coordonnées de la texture, puis dans le shader, de les convertir en ivec4 comme ça:attribute vec3 in_Position; attribute vec4 in_BlendIndices; attribute vec4 in_BlendWeights;
-     varying vec4 v_vColour; varying mat4 v_mat;
+
+  
+  format de vertex_add_custom
+  Cette fonction vous permet d'utiliser un type de données personnalisé pour des attributs spécifiques du format des sommets dans le cadre de la création du nouveau format des sommets. Les valeurs disponibles à utiliser sont définies par la constante de type de données que vous choisissez, listée ci-dessous :
+   
+  
+    
+      
+        Constant
+        Description
+      
+      
+        vertex_type_float1
+        Une seule valeur à virgule flottante
+      
+      
+        type de sommet_float2
+        Deux valeurs à virgule flottante
+      
+      
+        vertex_type_float3
+        Trois valeurs à virgule flottante
+      
+      
+        vertex_type_float4
+        Quatre valeurs à virgule flottante
+      
+      
+        type_de_verre_couleur
+        Valeurs de quatre composants (r, g, b, a)
+      
+      
+        type de sommet_ubyte4
+        Valeurs d'octets non signées à quatre composantes (de 0 à 255)
+      
+    
+  
+   L'utilisation qui sera faite de ces constantes doit également être définie afin que les valeurs puissent être "liées" correctement dans le shader en cours de création. Ceci est nécessaire du fait que DX et OpenGL ont des exigences différentes.
+    donc si vous ne les liez pas correctement, elles n'apparaîtront pas correctement dans le shader. Les constantes d'utilisation disponibles que vous pouvez choisir sont listées ci-dessous et celles que vous utiliserez dépendront des spécificités du shader en cours de création :
+   
+  
+    
+      
+        Constant
+        Description
+      
+      
+        Position de l'utilisation des sommets
+        valeurs de position (x, y, z)
+      
+      
+        couleur d'utilisation des vertex
+        valeurs des couleurs (r, g, b, a)
+      
+      
+        vertex_usage_normal
+        valeurs normales des sommets (nx, ny, nz)
+      
+      
+        vertex_usage_textcoord
+        Coordonnées UV (u, v)
+      
+      
+        poids de mélange des sommets
+        le blendweight de la matrice d'entrée (pour l'animation du squelette, par exemple)
+      
+      
+        Indices de mélange des vertex utilisés
+        les indices des matrices à utiliser (pour l'animation du squelette, par exemple)
+      
+      
+        profondeur d'utilisation des sommets
+        valeur du tampon de profondeur des sommets
+      
+      
+        utilisation_du_verre_tangente
+        valeurs tangentes
+      
+      
+        vertex_usage_binormal
+        valeurs binormales
+      
+      
+        brouillard d'utilisation des vertex
+        valeurs de brouillard
+      
+      
+        Exemple d'utilisation des sommets
+        index des échantillonneurs
+      
+    
+  
+   Il y a quelques points importants à noter lorsque vous utilisez des formats personnalisés comme ceux-ci :
+  
+    La fonction vertex_format_add_custom() ne prend en charge les attributs vertex_usage_position, vertex_usage_colour, vertex_usage_normal et vertex_usage_textcoord que lorsqu'elle utilise des shaders GLSL. Ces attributs correspondent aux attributs du shader 
+     in_Position, in_Colour[0 - ...], in_Normal respectivement (tout ce qui n'est pas l'un de ces trois attributs - par exemple les coordonnées de texture - peut être mappé sur n'importe quel attribut que vous définissez).
+    En général, vous devriez utiliser vertex_usage_textcoord pour tous les paramètres supplémentaires lorsque cela est possible, car des types comme vertex_usage_blendweight et vertex_usage_tangent sont presque dépréciés dans la plupart des langages de shader, et ne seront probablement pas convertis correctement.
+      convertir correctement. Utilisez plutôt les types vec, vec2, vec3 ou vec4 vertex_usage_textcoord et tout devrait fonctionner correctement.
+    GLSL ES ne prend pas en charge les attributs entiers, donc passer des ivec4 ne fonctionne pas (ce type est généralement utilisé pour passer des vertex_usage_blendindices). Ce que vous devez faire, c'est passer des coordonnées de texture et ensuite, dans le shader
+     shader, les convertir en ivec4 comme ceci :
+  
+   
+  attribut vec3 in_Position ; attribut vec4 in_BlendIndices ; attribut vec4 in_BlendWeights ;
+     variable vec4 v_vColour ; variable mat4 v_mat ;
      void main() {
-         gl_Position = gm_Matrices[MATRIX_WORLD_VIEW_PROJECTION] * vec4( in_Position.xyz, 1.0);     v_vColour = in_BlendWeights;      ivec4 t = ivec4(in_BlendIndices);      v_mat = gm_Matrices[ t.x ]; }
-   Les poids de mélange sont généralement stockés dans un tableau, puis accédés à l'aide d'indices de fusion, mais vous pouvez voir ici qu'au lieu de définir in_BlendIndices comme un ivec4 attribut, c'est un vec4, puis cast en un ivec4 dans le code. Ceci est ensuite utilisé pour indexer le tableau créé à l'aide du gm_Matrix (vous ne pouvez accéder à un tableau qu'en utilisant un INT value - pas un flottant). Syntaxe:vertex_format_add_custom(type, usage); Argument Description type Le type de données que ces données de sommet personnalisées contiendront (voir les constantes de type répertoriées ci-dessous). usage L'utilisation que les données vont obtenir (voir les constantes d'utilisation répertoriées ci-dessous). Retour:N/A Exemple:vertex_format_begin(); vertex_format_add_textcoord();
-     vertex_format_add_custom(vertex_type_float3, vertex_usage_position); my_format = vertex_format_end(); Le code ci-dessus créera un nouveau format de sommet avec juste une texture et 3 valeurs de virgule flottante personnalisées pour la position. Il stocke alors l'identifiant du format dans la variable "mon_format".  Retour: Primitives et formats de sommets Suivant:vertex_format_end © Copyright YoYo Games Ltd. 2021 Tous droits réservés
+     gl_Position = gm_Matrices[MATRIX_WORLD_VIEW_PROJECTION] * vec4( in_Position.xyz, 1.0) ; v_vColour = in_BlendWeights ; ivec4 t = ivec4(in_BlendIndices) ; v_mat = gm_Matrices[ t.x ] ; }
+  
+  
+    Les poids des mélanges sont généralement stockés dans un tableau et on y accède en utilisant les indices de mélange, mais vous pouvez voir ici qu'au lieu de définir in_BlendIndices comme un attribut ivec4, c'est un vec4 , qui est ensuite converti en ivec4 dans le code.
+      dans le code. Il est ensuite utilisé pour indexer le tableau créé à l'aide de gm_Matrix (vous ne pouvez accéder à un tableau qu'à l'aide d'une valeur INT, et non d'un flottant).
+    
+  
+  Syntaxe :
+  vertex_format_add_custom(type, usage) ;
+  
+    
+      
+        Arguments
+        Description
+      
+      
+        type
+        Le type de données que ces données de sommet personnalisées vont contenir (voir la constantes de type énumérés ci-dessous).
+      
+      
+        utilisation
+        L'utilisation que l'on fera des données (voir les constantes d'utilisation liste ci-dessous).
+      
+    
+  
+   
+  Les retours :
+  N/A
+   
+  Exemple :
+  vertex_format_begin() ; vertex_format_add_textcoord() ;
+     vertex_format_add_custom(vertex_type_float3, vertex_usage_position) ; my_format = vertex_format_end() ;
+  Le code ci-dessus va créer un nouveau format de vertex avec seulement la texture et 3 valeurs personnalisées à virgule flottante pour la position. Il stocke ensuite l'identifiant du format dans la variable "my_format".
+   
+   
+   
+  
+    
+      
+        Retour : Primitives et formats de sommets
+        Suivant : vertex_format_end
+      
+    
+    Copyright YoYo Games Ltd. 2021 Tous droits réservés
   
   
   

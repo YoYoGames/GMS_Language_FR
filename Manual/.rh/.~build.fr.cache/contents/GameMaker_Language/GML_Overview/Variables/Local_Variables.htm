@@ -1,14 +1,53 @@
- Variables locales Une variable locale est une variable que nous créons uniquement pour un événement ou une fonction spécifique, puis que nous rejetons lorsque l'événement ou la fonction est terminé. Si elle est créée dans une fonction personnalisée, la variable locale est uniquement disponible pour la fonction, puis supprimée lorsque la fonction est terminée. Pourquoi en aurions-nous besoin? Eh bien, les variables prennent de la place en mémoire et il se peut que nous ne les utilisions que pour une seule opération ou fonction, auquel cas nous n'avons besoin de les avoir en mémoire que pendant le court laps de temps pendant lequel elles sont utilisées. Cela permet de garder votre base de code propre et ordonnée et d'optimiser l'espace mémoire pour les choses qui en ont vraiment besoin. Pour déclarer une variable locale, nous utilisons le var opérateur comme ceci:var _i, _num, _str; _i = 0; _num = 24.5; _str = "Hello World";
-     // or
-     var _i = 0, _num = 24.5, _str = "Hello World";
-     // or
-     var _i = 0; var _num = 24.5; var _str = "Hello World"; Toutes les variables ainsi créées seront "oubliées" (c'est-à-dire supprimées de la mémoire) à la fin de l'événement (ou de la fonction) dans lequel elles ont été créées. Vous devez faire attention à ce que le nom que vous donnez var les variables déclarées ne coïncident pas avec une autre variable d'instance dans l'objet exécutant le code, et assurez-vous également que vous n'avez pas l'intention d'utiliser la valeur stockée dans cette variable en dehors de l'événement ou de la fonction dans laquelle vous la déclarez (dans les exemples ci-dessus, tout le var les variables déclarées ont été définies avec le trait de soulignement "_" précédant le nom de la variable, mais cela n'est pas obligatoire et est fait simplement pour rendre plus évident dans le code que nous avons affaire à une variable locale). Cela dit, si vous vous trouvez dans une situation où vous pensez qu'une variable locale devrait être la même qu'une variable d'instance, alors vous pouvez utiliser le self mot-clé pour identifier la variable d'instance comme distincte, par exemple:var hp = 10; with (obj_Enemy) {
-     self.hp -= hp; }
-   Les variables locales sont beaucoup utilisées dans les programmes, en particulier dans les boucles de comptage itération s, ou lorsque vous utilisez une valeur plusieurs fois en une seule opération qui ne va pas se répéter à nouveau. Voici quelques exemples supplémentaires:var _i = 0; repeat (10)     {
-         inventory[_i] = 0;     _i += 1;     }
-   Le code ci-dessus crée une variable locale appelée "_i "et le définit sur 0, tous sur la même ligne. Notez que dans les versions précédentes de GameMaker vous deviez d'abord déclarer vos variables locales, puis leur attribuer des valeurs, mais dans cette version, vous pouvez les déclarer et leur attribuer une valeur en même temps. Le code ci-dessus utilise ensuite cette variable pour initialiser un tableau. En tant que variable "_i "ne sera pas utilisé pour d'autres fonctions de l'instance autre que celle-ci, il peut avoir une portée locale. Voici un autre exemple:var _x, _y; _x = x - 32 + irandom(64); _y = y - 32 + irandom(64); instance_create_layer(_x, _y, "Effects", obj_blood); Ici, nous avons utilisé les variables locales "_x " et "_y "pour stocker des coordonnées aléatoires que nous utilisons ensuite pour créer une instance. Dans cet exemple, vous pouvez voir qu'il n'est pas strictement nécessaire que nous utilisions ces variables, mais pour des raisons de lisibilité et de facilité d'utilisation, nous le faisons. C'est BEAUCOUP plus clair et évident ce que nous faisons là-bas que si nous utilisions ce code:instance_create_layer(x - 32 + irandom(64), y - 32 + irandom(64), "Effects", obj_guts); Une autre chose à propos de var les variables locales déclarées doivent être notées... Comme elles sont uniques à l'événement ou à la fonction qui les exécute, elles peuvent également être utilisées dans toutes les autres instances via le code! Cela signifie que nous pouvons utiliser ces variables pour définir et modifier des éléments dans d'autres instances en utilisant le "with() "(voir la section sur la portée des variables pour plus d'informations). Le code lui-même ressemblerait à ceci:var num = instance_number(obj_Enemy); with (obj_Enemy)     {
-         if num>10 instance_destroy();     }
-   Le code ci-dessus fonctionne car le var La variable déclarée est locale à l' événement (ou à la fonction) dans laquelle elle est contenue, pas à l'instance, ni au monde du jeu, et peut donc être utilisée dans n'importe quelle fonction de n'importe quel objet tant qu'elle est dans le même bloc de code.  Retour: Portée des variables et des variables Suivant: Variables d'instance © Copyright YoYo Games Ltd. 2021 Tous droits réservés
+
+  
+  Variables locales
+  Une variable locale est une variable que nous créons uniquement pour un événement ou une fonction spécifique et que nous abandonnons une fois l'événement ou la fonction terminé. Si elle est créée dans une fonction personnalisée, alors la variable locale
+    n'est disponible que pour la fonction et est ensuite supprimée lorsque la fonction est terminée. Pourquoi en avons-nous besoin ? Les variables occupent de l'espace en mémoire et il se peut que nous ne les utilisions que pour une seule opération ou fonction.
+    dans ce cas, nous n'avons besoin de les avoir en mémoire que pendant le court laps de temps où elles sont utilisées. Cela permet de garder votre base de code propre et ordonnée, et d'optimiser l'espace mémoire pour les choses qui en ont vraiment besoin. Pour déclarer une variable locale, nous utilisons l'opérateur var.
+    comme ceci :
+  var _i, _num, _str ; _i = 0 ; _num = 24.5 ; _str = "Hello World" ;
+     // ou
+     var _i = 0, _num = 24.5, _str = "Hello World" ;
+     // ou
+     var _i = 0 ; var _num = 24.5 ; var _str = "Hello World" ;
+  Toutes les variables créées de cette manière seront "oubliées" (c'est-à-dire retirées de la mémoire) à la fin de l'événement (ou de la fonction) dans lequel elles ont été créées. Vous devez faire attention à ce que le nom que vous donnez à toutes les variables déclarées ne coïncide pas avec une autre variable d'instance dans l'objet qui exécute le code.
+    ne coïncide pas avec une autre variable d'instance au sein de l'objet qui exécute le code, et assurez-vous également que vous n'avez pas l'intention d'utiliser la valeur stockée dans cette variable en dehors de l'événement ou de la fonction dans laquelle vous la déclarez (dans les exemples ci-dessus, toutes les variables déclarées var ont été définies avec un nom d'instance).
+    Dans les exemples ci-dessus, toutes les variables déclarées var ont été définies avec le trait de soulignement "_" précédant le nom de la variable, mais cela n'est pas obligatoire et est fait simplement pour rendre plus évident dans le code que nous avons affaire à une variable locale). Cela dit,
+    si vous vous trouvez dans une situation où vous pensez qu'une variable locale doit être la même qu'une variable d'instance, vous pouvez utiliser le mot-clé self pour identifier la variable d'instance comme étant distincte, par exemple: : .
+    comme étant distincte, par exemple :
+  var hp = 10 ; with (obj_Enemy) {
+     self.hp -= hp ; }
+  
+  Les variables locales sont très utilisées dans les programmes, notamment dans les boucles pour compter les itérations, ou lorsqu'une valeur est utilisée plusieurs fois dans une opération qui ne sera pas répétée.
+    qui ne sera pas répétée. Voici quelques autres exemples :
+  var _i = 0 ; repeat (10) {
+     inventaire[_i] = 0 ; _i += 1 ; }
+  
+  Le code ci-dessus crée une variable locale appelée "_i" et lui attribue la valeur 0, le tout dans la même ligne. Notez que dans les versions précédentes de GameMaker vous deviez d'abord déclarer vos variables locales, puis leur attribuer une valeur.
+    Dans cette version, vous pouvez les déclarer et leur attribuer une valeur en même temps. Le code ci-dessus utilise ensuite cette variable pour initialiser un tableau. Comme la variable "_i"
+    ne sera pas utilisée pour d'autres fonctions dans l'instance, elle peut avoir une portée locale. Voici un autre exemple :
+  var _x, _y ; _x = x - 32 + irandom(64) ; _y = y - 32 + irandom(64) ; instance_create_layer(_x, _y, "Effects", obj_blood) ;
+  Ici, nous avons utilisé les variables locales "_x" et "_y" pour stocker des coordonnées aléatoires que nous utilisons ensuite pour créer une instance. Dans cet exemple, vous pouvez voir qu'il n'est pas strictement nécessaire d'utiliser ces variables.
+    nécessaire d'utiliser ces variables, mais pour des raisons de lisibilité et de facilité d'utilisation, nous le faisons. Ce que nous faisons ici est BEAUCOUP plus clair et évident que si nous utilisions ce code :
+  instance_create_layer(x - 32 + irandom(64), y - 32 + irandom(64), "Effects", obj_guts) ;
+  Une autre chose à propos des variables locales déclarées var doit être notée... Puisqu'elles sont uniques à l'événement ou à la fonction qui les exécute, elles peuvent être utilisées dans n'importe quelle autre instance du code également ! Cela signifie que nous pouvons utiliser ces variables pour définir et modifier des choses dans d'autres instances en utilisant la fonction "  ".
+    et changer des choses dans d'autres instances en utilisant la construction "with()" (voir la section sur la portée des variables pour plus d' informations). Le code réel lui-même ressemblerait à quelque chose
+    comme ceci :
+  var num = instance_number(obj_Enemy) ; with (obj_Enemy) {
+     if num>10 instance_destroy() ; }
+  
+  Le code ci-dessus fonctionne parce que la variable déclarée var est locale à l'événement (ou à la fonction) dans lequel elle est contenue, pas à l'instance, ni au monde du jeu, et peut donc être utilisée dans n'importe quelle fonction de n'importe quel objet tant qu'elle se trouve dans le même bloc de code.
+   
+   
+   
+  
+    
+      
+        Retour : Variables et champ d'application des variables
+        Suivant : Variables d'instance
+      
+    
+    Copyright YoYo Games Ltd. 2021 Tous droits réservés
   
   
   

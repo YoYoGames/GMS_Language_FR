@@ -1,4 +1,42 @@
- Ouvrir le fichier Ini Avec cette action, vous pouvez ouvrir un fichier Ini pour la lecture et / ou l'écriture. Si le fichier Ini n'existe pas à l'emplacement que vous vérifiez, GameMaker Studio 2 peut en créer un, mais uniquement si vous y écrivez des données. Si vous n'avez lu que les informations du fichier Ini, les valeurs par défaut de la fonction de lecture seront renvoyées, mais le fichier Ini ne sera pas réellement créé. Veuillez noter que vous ne pouvez ouvrir qu'un seul fichier Ini à la fois et n'oubliez pas d'utiliser Close Ini File une fois que vous avez fini de lire / écrire à partir du fichier Ini car les informations ne sont pas réellement stockées sur le disque jusque-là (elles sont stockées mémoire jusqu'à ce que le fichier soit fermé). Syntaxe de l'action: Arguments: Argument Description Filename Le nom - sous forme de chaîne et avec le .ini extension - du fichier à ouvrir Exemple: Le code de bloc d'action ci-dessus ouvrira un fichier ini pour utilisation, puis obtiendra la valeur associée à la clé "nom" sous l'en-tête "player". Si le nom renvoyé correspond à la valeur de nom par défaut (c'est-à-dire: le fichier, la section ou la clé n'existe pas ), alors le fichier a une variable globale écrite avant d'être fermé (et d'écrire les nouvelles données sur le disque).  Retour: Actions sur les fichiers Suivant: Fermer le fichier Ini © Copyright YoYo Games Ltd. 2021 Tous droits réservés
+
+  
+   Ouvrir un fichier Ini
+  Cette action vous permet d'ouvrir un fichier Ini en lecture et/ou en écriture. Si le fichier Ini n'existe pas à l'endroit que vous vérifiez, GameMaker Studio 2 peut en créer un, mais uniquement si vous y écrivez des données. Si vous n'avez fait que lire les informations du
+    le fichier Ini, les valeurs par défaut de la fonction de lecture seront renvoyées, mais le fichier Ini ne sera pas réellement créé.
+  Veuillez noter que vous ne pouvez avoir qu'un seul fichier Ini ouvert à la fois et n'oubliez pas d'utiliser l'option Fermer le fichier Ini une fois que vous avez fini de lire/écrire dans le fichier Ini, car les informations ne sont pas réellement stockées sur le disque (elles sont stockées en mémoire jusqu'à la fermeture du fichier).
+    (elles sont stockées en mémoire jusqu'à ce que le fichier soit fermé).
+   
+  Syntaxe de l'action :
+  
+  Arguments :
+  
+    
+      
+        Arguments
+        Description
+      
+      
+        Nom de fichier
+        Le nom - sous forme de chaîne et avec l'extension .ini - du fichier à ouvrir.
+      
+    
+  
+   
+  Exemple :
+  Le code du bloc d'action ci-dessus ouvrira un fichier ini à utiliser, puis obtiendra la valeur associée à la clé "name" sous l'en-tête "player".
+    la clé "name" sous l'en-tête "player". Si le nom renvoyé correspond à la valeur du nom par défaut (c'est-à-dire que le fichier, la section ou la clé n' existe pas ), une variable globale est écrite dans le fichier avant d'être fermée (et d'écrire les nouvelles données sur le disque).
+    les nouvelles données sur le disque).
+   
+   
+   
+  
+    
+      
+        Retour : Actions sur les fichiers
+        Suivant : Fermer le fichier Ini
+      
+    
+    Copyright YoYo Games Ltd. 2021 Tous droits réservés
   
   
   

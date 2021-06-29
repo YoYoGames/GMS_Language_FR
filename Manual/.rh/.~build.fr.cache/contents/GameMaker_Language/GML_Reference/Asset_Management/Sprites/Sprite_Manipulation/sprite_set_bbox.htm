@@ -1,7 +1,61 @@
-sprite_set_bbox Cette fonction peut être utilisée pour définir les valeurs de la boîte englobante pour un sprite. Vous fournissez l'index de sprite à utiliser, puis les valeurs gauche, supérieure, droite et inférieure pour les positions de la zone de délimitation. Les positions sont des valeurs absolues, où la position (0, 0) correspond au coin supérieur gauche du sprite, quel que soit le décalage du sprite, les pixels "vides" que le sprite peut avoir, ou où il est dessiné dans le sprite salle. REMARQUE: Cette fonction affecte la ressource de sprite afin que toutes les autres instances avec cette image-objet aient le même cadre de délimitation. Syntaxe:sprite_set_bbox(ind, left, top, right, bottom); Argument Description ind L'index de l'image-objet sur lequel définir le cadre de sélection. left Le côté gauche du cadre de sélection top Le haut de la boîte englobante. right Le côté droit de la boîte englobante bottom Le bas de la boîte englobante. RetourN/A Exemple:if sprite_get_bbox_mode(sprite_index) == 2     {
-         left = irandom(sprite_width / 2);     right = irandom((sprite_width / 2) + irandom(sprite_width / 2));     top = irandom(sprite_height / 2);     bottom = irandom((sprite_height / 2) + irandom(sprite_height / 2));     sprite_set_bbox(sprite_index,
-    left, top, right, bottom);     }
-   Le code ci-dessus vérifiera le mode de la boîte englobante du sprite assigné au sprite_index, et s'il est défini sur manual alors sa boîte englobante sera modifiée.  Retour: Manipulation des sprites Suivant:sprite_set_speed © Copyright YoYo Games Ltd. 2021 Tous droits réservés
+
+  
+  sprite_set_bbox
+  Cette fonction peut être utilisée pour définir les valeurs du bounding box d'un sprite. Vous fournissez l'index du sprite à utiliser, puis les valeurs gauche, haut, droite et bas pour les positions du rectangle de délimitation. Les positions sont des valeurs absolues, où la position (0, 0) correspond au coin supérieur gauche du sprite.
+    correspond au coin supérieur gauche du sprite, indépendamment du décalage du sprite, de tout pixel "vide" que le sprite peut avoir, ou de l'endroit où il est dessiné dans la pièce.
+  REMARQUE : cette fonction affecte l'actif du sprite de sorte que toutes les autres instances de ce sprite auront la même boîte de délimitation.
+   
+  Syntaxe :
+  sprite_set_bbox(ind, left, top, right, bottom) ;
+  
+    
+      
+        Arguments
+        Description
+      
+      
+        ind
+        L'index du sprite sur lequel définir la boîte de délimitation.
+      
+      
+        gauche
+        Le côté gauche de la boîte de délimitation
+      
+      
+        top
+        Le haut de la boîte de délimitation.
+      
+      
+        droite
+        Le côté droit de la boîte de délimitation
+      
+      
+        fond
+        Le bas de la boîte de délimitation.
+      
+    
+  
+   
+  Renvoie à
+  N/A
+   
+  Exemple :
+  if sprite_get_bbox_mode(sprite_index) == 2 {
+     left = irandom(sprite_width / 2) ; right = irandom((sprite_width / 2) + irandom(sprite_width / 2)) ; top = irandom(sprite_height / 2) ; bottom = irandom((sprite_height / 2) + irandom(sprite_height / 2)) ; sprite_set_bbox(sprite_index,
+    left, top, right, bottom) ; }
+  
+  Le code ci-dessus vérifie le mode de délimitation du sprite affecté à l'indice sprite_index, et s'il est défini comme manuel, sa délimitation sera modifiée.
+   
+   
+   
+  
+    
+      
+        Retour : Manipulation des sprites
+        Suivant : sprite_set_speed
+      
+    
+    Copyright YoYo Games Ltd. 2021 Tous droits réservés
   
   
   

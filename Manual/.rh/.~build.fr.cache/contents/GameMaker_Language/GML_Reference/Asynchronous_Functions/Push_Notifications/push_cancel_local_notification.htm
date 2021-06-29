@@ -1,10 +1,48 @@
-push_cancel_local_notification Cette fonction annule la notification push donnée. Vous pouvez obtenir l'ID pour l'annulation de la notification à l'aide des fonctions push_get_first_local_notification() et push_get_next_local_notification() et la fonction retournera true en cas de succès ou false sinon (par exemple si la notification n'existe pas ou a déjà été déclenchée). REMARQUE: cette fonction est limitée aux modules cibles iOS et Android Syntaxe:push_cancel_local_notification(ID); Argument Description ID L'ID de la notification à annuler. Retour:Real Exemple:var map = ds_map_create(); var ntf = push_get_first_local_notification(map); while(ntf >= 0)     {
-         var data = ds_map_find_value(map, "data");     if data == "Daily_Reward"         {
-             push_cancel_local_notification(ntf);
-             }
-         ntf = push_get_next_local_notification(map);     }
-     ds_map_destroy(map);
-   Le code ci-dessus crée un DS Map puis demande des données pour la première notification disponible dans la file d'attente. Si une notification existe, la carte est remplie et le code vérifie alors la clé "données" pour une chaîne spécifique. Si la chaîne est trouvée, la notification est annulée et passe à la vérification de la notification suivante jusqu'à ce que tous les éléments de la file d'attente aient été vérifiés.  Retour: Notifications push Suivant:push_local_notification © Copyright YoYo Games Ltd. 2021 Tous droits réservés
+
+  
+  push_cancel_local_notification
+  Cette fonction annule la notification push donnée. Vous pouvez obtenir l'ID de la notification à annuler en utilisant les fonctions push_get_first_local_notification() et push_get_next_local_notification()    et la fonction renvoie true en cas de succès ou false dans le cas contraire (par exemple si la notification n'existe pas ou a déjà été déclenchée).
+  NOTE: Cette fonction est limitée aux iOS et Android modules cibles.
+   
+  Syntaxe :
+  push_cancel_local_notification(ID) ;
+  
+    
+      
+        Arguments
+        Description
+      
+      
+        ID
+        L'ID de la notification à annuler.
+      
+    
+  
+   
+  Les retours :
+  Real
+   
+  Exemple :
+  var map = ds_map_create() ; var ntf = push_get_first_local_notification(map) ; while(ntf >= 0) {
+     var data = ds_map_find_value(map, "data") ; if data == "Daily_Reward" {
+     push_cancel_local_notification(ntf) ;
+     }
+     ntf = push_get_next_local_notification(map) ; }
+     ds_map_destroy(map) ;
+  
+  Le code ci-dessus crée une carte DS et demande ensuite des données pour la première notification disponible dans la file d'attente. Si une notification existe, la carte est remplie et le code vérifie ensuite la clé "data" pour une chaîne spécifique. Si la chaîne
+    est trouvée, la notification est annulée et passe à la notification suivante jusqu'à ce que toutes les notifications de la file d'attente aient été vérifiées.
+   
+   
+   
+  
+    
+      
+        Retour : Notifications push
+        Suivant : push_local_notification
+      
+    
+    Copyright YoYo Games Ltd. 2021 Tous droits réservés
   
   
   

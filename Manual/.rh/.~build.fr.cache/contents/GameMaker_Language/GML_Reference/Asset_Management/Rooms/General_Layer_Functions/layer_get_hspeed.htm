@@ -1,6 +1,43 @@
-layer_get_hspeed Vous pouvez utiliser cette fonction pour récupérer la vitesse horizontale (en pixels par image de jeu) du calque dans la salle actuellement délimitée. Vous fournissez l'ID de couche (que vous obtenez lorsque vous créez la couche en utilisant layer_create() ) ou le nom du calque (sous forme de chaîne - cela aura un impact sur les performances) et la fonction renvoie un nombre réel pour la vitesse horizontale, où une valeur positive est à droite et une valeur négative à gauche. La valeur par défaut est 0 (sauf si défini dans l'éditeur de salle). Syntaxe:layer_get_hspeed(layer_id) Argument Description layer_id La valeur d'identifiant unique du calque pour obtenir la vitesse horizontale à partir de Retour:N/A Exemple:var lay_id = layer_get_id("Sprites"); if layer_get_hspeed(lay_id) != 0 || layer_get_vspeed(lay_id) != 0     {
-         layer_hspeed(lay_id, 0);     layer_vspeed(lay_id, 0);     }
-   Le code ci-dessus vérifie les vitesses horizontale et verticale de la couche donnée et si elles ne sont pas toutes les deux définies sur 0, il les définit sur 0.  Retour: Fonctions générales des calques Suivant:layer_get_vspeed © Copyright YoYo Games Ltd. 2021 Tous droits réservés
+
+  
+  couche_get_hspeed
+  Vous pouvez utiliser cette fonction pour récupérer la vitesse horizontale (en pixels par image de jeu) de la couche dans la pièce actuellement analysée. Vous fournissez l'ID de la couche (que vous obtenez lorsque vous créez la couche à l'aide de la fonction layer_create())
+    ou le nom du calque (sous forme de chaîne - cela aura un impact sur les performances) et la fonction renvoie un nombre réel pour la vitesse horizontale, où une valeur positive est à droite et une valeur négative à gauche. La valeur par défaut est 0 (sauf si elle est définie dans l'éditeur de pièce).
+   
+  Syntaxe :
+  layer_get_hspeed(layer_id)
+  
+    
+      
+        Arguments
+        Description
+      
+      
+        identifiant de la couche
+        La valeur d'identification unique de la couche dont on veut obtenir la vitesse horizontale.
+      
+    
+  
+   
+  Les retours :
+  N/A
+   
+  Exemple :
+  var lay_id = layer_get_id("Sprites") ; if layer_get_hspeed(lay_id) != 0 || layer_get_vspeed(lay_id) != 0 {
+     layer_hspeed(lay_id, 0) ; layer_vspeed(lay_id, 0) ; }
+  
+  Le code ci-dessus vérifie les vitesses horizontale et verticale de la couche donnée et si elles ne sont pas toutes deux à 0, il les met à 0.
+   
+   
+   
+  
+    
+      
+        Retour : Fonctions générales des couches
+        Suivant : layer_get_vspeed
+      
+    
+    Copyright YoYo Games Ltd. 2021 Tous droits réservés
   
   
   

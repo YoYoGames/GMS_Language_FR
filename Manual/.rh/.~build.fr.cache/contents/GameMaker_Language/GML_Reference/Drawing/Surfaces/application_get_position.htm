@@ -1,4 +1,32 @@
-application_get_position Lorsque vous avez coché "Conserver le rapport hauteur / largeur" dans les Options de jeu pour une plate-forme cible, GameMaker Studio 2 définit automatiquement la position de dessin pour la surface de l'application afin qu'elle s'affiche correctement centrée et mise à l'échelle sur l'écran donné. Cependant, si vous manipulez cette surface et que vous souhaitez la dessiner vous-même, cette fonction vous donne un moyen facile de trouver exactement où dans l'affichage ou la fenêtre où la surface a été dessinée afin que vous puissiez ensuite la dessiner vous-même, ou aligner l'interface graphique. images ou post dessinez des images dessus. La fonction retournera un tableau avec quatre touches, où les touches 0 et 1 sont les positions x et y du coin supérieur gauche de la surface, et les touches 2 et 3 sont les x et y du coin inférieur droit de la surface, toutes par rapport à la taille de l'affichage ou de la fenêtre. Syntaxe:application_get_position(); Retour:Array Exemple:var a = application_get_position(); xx = a[0]; yy = a[1]; ww = a[2] - a[0]; hh = a[3] - a[1]; Le code ci-dessus obtiendra la position de la surface de l'application, ainsi que la largeur et la hauteur absolues par rapport à la fenêtre d'affichage, et les stockera dans quatre variables pour une utilisation future.  Retour: Surfaces Suivant:application_surface_draw_enable © Copyright YoYo Games Ltd. 2021 Tous droits réservés
+
+  
+  application_get_position
+  Lorsque l'option " Maintenir le rapport hauteur/largeur " est cochée dans les options de jeu d'une plate-forme cible, GameMaker Studio 2 définit automatiquement la position d'affichage de la surface de l'application afin qu'elle soit correctement centrée et mise à l'échelle sur l'écran donné.
+    l'écran donné. Toutefois, si vous manipulez cette surface et souhaitez la dessiner vous-même, cette fonction vous permet de trouver facilement l 'endroit exact de l'affichage ou de la fenêtre où la surface a été dessinée, afin que vous puissiez ensuite
+    la dessiner vous-même, ou aligner les images de l'interface graphique ou les images de post-découpe sur celle-ci.
+  La fonction renvoie un tableau de quatre clés, où les clés 0 et 1 sont les positions x et y du coin supérieur gauche de la surface, et les clés 2 et 3 sont les positions x et y du coin inférieur droit de la surface, toutes relatives à la taille de l'écran ou de la fenêtre.
+    la surface, le tout par rapport à la taille de l'écran ou de la fenêtre.
+   
+  Syntaxe :
+  application_get_position() ;
+   
+  Les retours :
+  Array
+   
+  Exemple :
+  var a = application_get_position() ; xx = a[0] ; yy = a[1] ; ww = a[2] - a[0] ; hh = a[3] - a[1] ;
+  Le code ci-dessus récupère la position de la surface de l'application, ainsi que la largeur et la hauteur absolues par rapport à la fenêtre d'affichage, et les stocke dans quatre variables pour une utilisation ultérieure.
+   
+   
+   
+  
+    
+      
+        Retour : Surfaces
+        Suivant : application_surface_draw_enable
+      
+    
+    Copyright YoYo Games Ltd. 2021 Tous droits réservés
   
   
   

@@ -1,4 +1,47 @@
- Packages d'actifs locaux Dans le menu Outils, vous avez deux options pour créer et importer des packages d'actifs locaux. Un package d'actifs locaux est un groupe de ressources enregistrées à l'aide de *.yymp format de fichier qui peut être facilement installé dans des projets existants. Cela signifie que vous pouvez créer votre propre bibliothèque de packages pour les ressources couramment utilisées, telles que les bibliothèques de scripts, les intros d'écran de démarrage, les systèmes de menus, etc. sans avoir à utiliser le YoYo Games Marketplace. Créer un package d'actifs Pour créer un package d'actifs, vous devez d'abord avoir créé les ressources que vous souhaitez enregistrer dans un projet, puis dans le menu Outils, sélectionnez l'option Créer un package local. Cela ouvrira la fenêtre suivante: Dans cette fenêtre, vous pouvez fournir un nom d'éditeur facultatif et un nom d'affichage et un ID de package requis. L'ID du package sera utilisé pour générer le nom de fichier avec lequel le package sera enregistré et sera automatiquement ajouté avec le *.yymp extension de fichier lors de la création. Vous pouvez également définir le numéro de version du package et choisir de le signer ou non (ce paramètre est désactivé par défaut). La signature d'un package nécessite que vous ayez créé un certificat de signature (vous pouvez le faire à partir des préférences de Marketplace ), et signifie que tout élément qui a été signé ne pourra pas être importé s'il a été falsifié après sa création. Une fois que vous avez rempli les détails du package, vous pouvez alors continuer et sélectionner les actifs que vous souhaitez inclure dans la section "Projet " sur la droite (en utilisant le bouton gauche de la souris ou une combinaison de / et avec le bouton gauche de la souris). Les ressources sélectionnées peuvent être déplacées vers la vue "Ensemble d'actifs " à l'aide des boutons Ajouter ou Ajouter tout et peuvent être supprimées à nouveau à l'aide des boutons Supprimer et Tout supprimer. Une fois que vous êtes satisfait de la sélection des ressources et que vous avez rempli les détails requis, cliquez sur le bouton OK pour ouvrir un explorateur de fichiers dans lequel vous pouvez choisir l'emplacement où enregistrer le package. Une fois sélectionné, le package sera créé et une fenêtre de confirmation sera affichée, avec une option pour ouvrir l'emplacement du package dans l'explorateur de fichiers du système d'exploitation. Importation d'un package d'actifs Il existe deux façons d'importer un package d'actifs locaux: la première consiste simplement à faire glisser le *.yymp fichier d'une fenêtre d'explorateur sur l'IDE GameMaker Studio 2 la seconde consiste à sélectionner l' option "Importer le package local " dans le menu Outils. Lorsque vous utilisez le menu Outils, une fenêtre d'explorateur s'ouvre et vous pouvez naviguer jusqu'à l'emplacement du package, puis le sélectionner pour l'importation. Dans les deux cas, la fenêtre suivante GameMaker Studio 2: Sur la gauche se trouvent le contenu du package et sur la droite les parties que vous souhaitez importer. Vous pouvez sélectionner une ou plusieurs ressources du package (en utilisant le bouton gauche de la souris ou une combinaison de / et avec le bouton gauche de la souris) puis utilisez le bouton Ajouter pour les ajouter à l' importation, ou utilisez le bouton Ajouter tout pour ajouter tout pour l' importation. Lorsque tout est prêt, vous pouvez cliquer sur le bouton Importer pour ajouter les ressources sélectionnées à votre projet. Notez que vous avez également la possibilité d' importer toutes les ressources dans un nouveau projet, ce qui créera un nouveau projet pour vous (et vous invitera à donner un emplacement pour l'enregistrer), puis y ajoutera les ressources du package. Veuillez noter que les packages d'actifs créés à l'aide d'une version antérieure à GameMaker Studio 2 nécessiteront une conversion car le format de fichier de projet a changé avec la mise à jour 2.3. Cela signifie qu'il peut être préférable d'importer le projet entier et de tout convertir, puis de l'exporter en tant que nouveau package vers un nouvel emplacement si les actifs sont importés fréquemment dans d'autres projets.  Retour: Outils IDE supplémentaires Suivant: Générateur d'images de projet © Copyright YoYo Games Ltd. 2021 Tous droits réservés
+
+  
+  Paquets d'actifs locaux
+  Dans le menu Outils, vous disposez de deux options pour créer et importer des ensembles d'actifs locaux. Un paquetage de ressources locales est un groupe de ressources enregistrées au format de fichier *.yymp qui peut être facilement installé dans des projets existants. Cela signifie que vous pouvez créer votre propre bibliothèque de paquets pour les ressources les plus utilisées, comme les bibliothèques de scripts, les intros de l'écran d'accueil, les systèmes de menus, etc... sans avoir à utiliser
+    les jeux YoYo Marketplace.
+   
+  Création d'un paquet d'actifs
+  Pour créer un package d'actifs, vous devez d'abord avoir créé les ressources que vous souhaitez sauvegarder dans un projet, puis dans le menu Outils, sélectionnez l'option Créer un package local.
+    La fenêtre suivante s'ouvre alors :
+  Dans cette fenêtre, vous pouvez fournir un nom d'éditeur facultatif, un nom d'affichage et un ID de paquet obligatoires.
+   ID du paquet. L'ID du paquet sera utilisé pour générer le nom de fichier avec lequel le paquet sera sauvegardé, et sera automatiquement complété par l'extension de fichier *.yymp lors de la création. Vous pouvez également définir le
+   numéro de version du paquet, et choisir de le signer ou non (cette option est désactivée par défaut). Pour signer un paquet, vous devez avoir créé un certificat de signature (vous pouvez le faire dans les
+    vous pouvez le faire à partir des préférences du marché), et signifie que toute ressource qui a été signée ne pourra pas être importée si elle a été altérée après sa création.
+    création.
+  Une fois que vous avez rempli les détails du package, vous pouvez sélectionner les ressources que vous souhaitez inclure dans la section "Projet " sur la droite (en utilisant le bouton gauche de la souris  ou une combinaison de  /  et  avec le bouton gauche de la souris). Les ressources sélectionnées peuvent être déplacées vers la vue " AssetPackage ", en utilisant les boutons " Add " ou " Add All ".
+    Les ressources sélectionnées peuvent être déplacées vers la vue " Asset Package ", en utilisant les boutons Add ou Add All et peuvent être retirées à nouveau en utilisant les boutons Remove et Remove All.
+  Une fois que vous êtes satisfait de la sélection des ressources et que vous avez rempli les détails requis, cliquez sur le bouton Ok pour ouvrir un explorateur de fichiers où vous pouvez choisir l'emplacement où enregistrer le paquet. Une fois sélectionné, le paquet sera créé
+    et une fenêtre de confirmation s'affichera, avec une option pour ouvrir l'emplacement du paquet dans l'explorateur de fichiers du système d'exploitation.
+   
+  Importation d'un ensemble d'actifs
+  Il existe deux façons d'importer un Local Asset Package :
+  
+    la première consiste simplement à faire glisser le fichier *.yymp d'une fenêtre d'explorateur sur l'IDE GameMaker Studio 2 
+    la seconde consiste à sélectionner l'option "Importer un paquet local" dans le menu Outils .
+  
+  Si vous utilisez le menu Outils, une fenêtre d'exploration s'ouvrira et vous pourrez naviguer jusqu'à l'emplacement du paquet puis le sélectionner pour l'importer. Dans les deux cas, la fenêtre suivante s'ouvrira dans GameMaker Studio 2:
+  A gauche se trouve le contenu du paquet et à droite les parties de celui-ci que vous voulez importer. Vous pouvez sélectionner une
+    ou plusieurs ressources du paquet (en utilisant le bouton gauche de la souris  ou une combinaison de  /  et  avec le bouton gauche de la souris) et ensuite utiliser le bouton Ajouter pour les ajouter pour l'importation, ou utiliser l'option Ajouter tout.
+    ), puis utiliser le bouton Ajouter pour les ajouter en vue de leur importation, ou utiliser le bouton Ajouter tout pour tout ajouter en vue de leur importation.
+  Lorsque tout est prêt, vous pouvez alors cliquer sur le bouton Importer pour ajouter les ressources sélectionnées à votre projet. Notez que vous avez également la possibilité d'Importer toutes les ressources dans un nouveau projet, ce qui créera un nouveau projet pour vous (et vous demandera de donner un emplacement pour l'enregistrer) et ajoutera les ressources du paquet à celui-ci.
+    projet pour vous (et vous demandera d'indiquer un emplacement pour l'enregistrer), puis ajoutera les ressources du paquet à celui-ci.
+  Veuillez noter que les ensembles de ressources créés à l'aide d'une version antérieure à GameMaker Studio 2.3 devront être convertis, car le format de fichier du projet a changé avec la mise à jour 2.3. Cela signifie qu'il peut être préférable d'importer l'ensemble du projet et de tout convertir
+    puis de l'exporter en tant que nouveau package vers un nouvel emplacement si les ressources sont fréquemment importées dans d'autres projets.
+   
+   
+   
+  
+    
+      
+        Retour : Outils IDE supplémentaires
+        Suivant : Générateur d'images de projet
+      
+    
+    Copyright YoYo Games Ltd. 2021 Tous droits réservés
   
   
   

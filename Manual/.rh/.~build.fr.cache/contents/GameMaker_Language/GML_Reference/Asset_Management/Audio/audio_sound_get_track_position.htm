@@ -1,6 +1,43 @@
-audio_sound_get_track_position Cette fonction obtiendra la position (en secondes) dans le fichier son pour la lecture du son. Le son ne peut être qu'une seule instance d'un son (l'index des sons individuels en cours de lecture peut être stocké dans une variable lors de l'utilisation du audio_play_sound() ou audio_play_sound_at() les fonctions). Syntaxe:audio_sound_get_track_position(index); Argument Description index L'indice du son pour obtenir la position de lecture. Retour:Real Exemple:if audio_sound_get_track_position(global.Music) != 0    {
-        audio_sound_set_track_position(global.Music, 0);    }
-   Le code ci-dessus vérifie une piste pour obtenir sa position de départ et si ce n'est pas 0 seconde, il la définit sur 0 seconde.  Retour: Audio Suivant:audio_sound_set_listener_mask © Copyright YoYo Games Ltd. 2021 Tous droits réservés
+
+  
+  audio_sound_get_track_position
+  Cette fonction permet d'obtenir la position (en secondes) dans le fichier son pour le son à lire. Le son ne peut être qu'une seule instance d'un son (l'index des sons individuels joués peut être stocké dans une variable lors de l'utilisation des fonctions audio_play_sound() ou  audio_play_sound_at() ).
+   
+  Syntaxe :
+  audio_sound_get_track_position(index) ;
+  
+    
+      
+        Arguments
+        Description
+      
+      
+        indice
+        L'index du son pour obtenir la position de lecture.
+      
+    
+  
+   
+  Les retours :
+  Real
+   
+  Exemple :
+  if audio_sound_get_track_position(global.Music) != 0 {
+     audio_sound_set_track_position(global.Music, 0) ; }
+  
+  Le code ci-dessus vérifie une piste pour obtenir sa position de départ et si elle n'est pas de 0 seconde, il la met à 0 seconde.
+   
+   
+   
+  
+    
+      
+        Retour : Audio
+        Suivant : audio_sound_set_listener_mask
+         
+      
+    
+    Copyright YoYo Games Ltd. 2021 Tous droits réservés
   
   
   

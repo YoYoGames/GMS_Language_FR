@@ -1,4 +1,82 @@
- Primitives et formats de sommets Une primitive est un type de dessin réalisé à l'aide de points pour définir ce qui est affiché à l'écran. Ils peuvent être constitués de points uniques, de lignes ou de triangles et peuvent être colorés, avoir un mélange alpha et même recevoir une texture, ce qui signifie qu'ils peuvent être utilisés pour créer des effets très excitants dans un jeu 2D! Par exemple, vous pouvez créer un rectangle en utilisant plusieurs primitives de triangle, puis le texturer avec un sprite drapeau et dans l'événement de dessin d'une instance, avoir ce drapeau "vague" dans le vent et déformer le sprite que vous avez utilisé en modifiant simplement les points qui forment le primitif. ATTENTION! Ces fonctions ne fonctionnent pas avec le module HTML5 sauf si vous avez activé OpenGL dans les options de jeu. Vous trouverez des informations sur les primitives de dessin dans les pages suivantes: draw_primitive_begindraw_primitive_begin_texturedraw_primitive_enddraw_vertexdraw_vertex_colourdraw_vertex_texturedraw_vertex_texture_colour GameMaker Studio 2 vous permet de définir vos propres formats de sommets à partir desquels vous pouvez créer vos propres primitives personnalisées. Cela peut considérablement accélérer les shader ou peut être utilisé pour étendre leurs capacités et créer des effets surprenants. Vous pouvez trouver des informations à ce sujet dans les sections suivantes: vertex_format_beginvertex_format_add_colourvertex_format_add_positionvertex_format_add_position_3dvertex_format_add_texcoordvertex_format_add_normalvertex_format_add_customvertex_format_endvertex_format_delete Une fois que vous avez créé votre format de sommet (voir la section ci-dessus), vous pouvez ensuite l'utiliser pour créer les primitives que vous souhaitez dessiner à l'aide des fonctions de tampon veretx suivantes: vertex_create_buffervertex_create_buffer_extvertex_create_buffer_from_buffervertex_create_buffer_from_buffer_extvertex_get_buffer_sizevertex_get_numbervertex_delete_buffervertex_beginvertex_colourvertex_normalvertex_positionvertex_position_3dvertex_argbvertex_texcoordvertex_float1vertex_float2vertex_float3vertex_float4vertex_ubyte4vertex_endvertex_freezevertex_submitIMPORTANT! Les primitives que vous créez doivent suivre le format que vous avez défini à l'aide des fonctions de format de sommet, donc si vous avez défini un format de sommet avec uniquement des données de position, il est inutile de construire votre primitive avec des données de couleur. Vous devez noter que l'ordre dans lequel vous ajoutez des propriétés à la primitive que vous construisez est défini par l'ordre dans lequel vous avez ajouté ces propriétés lors de la création du format de sommet, donc si vous avez défini le format vectoriel avec la position, la couleur et la texture de l'ordre coordonnée, vous devez ajouter ces propriétés à la primitive en cours de construction dans le même ordre, sinon vous obtiendrez des erreurs. Pour une vue d'ensemble de la création de primitives à l'aide des fonctions de sommet, voir: Guide des primitives et de la construction de sommets  Retour: Dessin Suivant: Surfaces © Copyright YoYo Games Ltd. 2021 Tous droits réservés
+
+  
+  Primitives et formats de sommets
+  Une primitive est un type de dessin réalisé à l'aide de points pour définir ce qui est affiché à l'écran. Elles peuvent être composées de points, de lignes ou de triangles et peuvent être colorées, avoir un mélange alpha et même une texture, ce qui signifie qu'elles peuvent être utilisées pour créer des effets très intéressants dans un jeu 2D !
+    pour créer des effets très intéressants dans un jeu en 2D ! Par exemple, vous pouvez créer un rectangle à l'aide de plusieurs primitives triangulaires, puis le texturer avec un sprite de drapeau et, dans l'événement de dessin d'une instance, faire "onduler" ce drapeau dans le vent et
+    déformer le sprite que vous avez utilisé en modifiant simplement les points qui forment la primitive.
+  ATTENTION ! Ces fonctions ne fonctionnent pas avec le module HTML5 à moins que vous n'ayez activé OpenGL dans les options du jeu.
+  Vous trouverez des informations sur les primitives de dessin dans les pages suivantes :
+   
+  
+    draw_primitive_begin
+    draw_primitive_begin_texture
+    draw_primitive_end
+    dessiner_vertex
+    dessiner_vertex_couleur
+    dessiner_texture_vertex
+    dessiner_vertex_texture_couleur
+  
+   
+  GameMaker Studio 2 vous permet de définir vos propres formats de sommets à partir desquels vous pouvez créer vos propres primitives personnalisées. Cela peut accélérer considérablement les opérations des shaders ou être utilisé pour étendre leurs capacités et créer des effets surprenants.
+    surprenants. Vous trouverez des informations à ce sujet dans les sections suivantes :
+   
+  
+    format_de_verre_début
+    format de vertex_add_colour
+    format_de_verre_add_position
+    format_vertex_add_position_3d
+    format_de_verre_add_texcoord
+    format_de_verre_add_normal
+    format de vertex_add_custom
+    Fin du formatage des sommets
+    format_vertextes_suppression
+  
+   
+  Une fois que vous avez créé votre format de vertex (voir la section ci-dessus), vous pouvez l'utiliser pour construire les primitives que vous souhaitez dessiner en utilisant les fonctions de tampon veretx suivantes :
+   
+  
+    tampon de création de vertex
+    création_de_tampon_de_vertueux
+    Création de tampon de sommet à partir d'un tampon
+    Création de tampon de sommet à partir d'un tampon externe
+    taille_du_buffer_des_verrex
+    vertex_get_number
+    tampon_suppression_dex
+    Début du sommet
+    vertex_colour
+    vertex_normal
+    vertex_position
+    vertex_position_3d
+    vertex_argb
+    vertex_texcoord
+    vertex_float1
+    vertex_float2
+    vertex_float3
+    vertex_float4
+    vertex_ubyte4
+    vertex_end
+    vertex_freeze
+    soumettre le vertex_submit
+  
+   
+  IMPORTANT ! Les primitives que vous construisez doivent suivre le format que vous avez défini à l'aide des fonctions de format de sommet, donc si vous avez défini un format de sommet avec uniquement des données positionnelles, il est inutile de construire votre primitive avec des
+    données de couleur. Vous devez noter que l'ordre dans lequel vous ajoutez les propriétés à la primitive que vous construisez est défini par l'ordre dans lequel vous avez ajouté ces propriétés lors de la création du format de sommet.
+    ordre position, couleur et coordonnée de texture, vous devez ajouter ces propriétés à la primitive en cours de construction dans le même ordre, sinon vous obtiendrez des erreurs.
+  Pour un aperçu de la manière de construire des primitives à l'aide des fonctions de sommet, voir :
+  
+    Guide des primitives et de la construction de sommets
+  
+   
+   
+   
+  
+    
+      
+        Retour : Dessin
+        Suivant : Surfaces
+      
+    
+    Copyright YoYo Games Ltd. 2021 Tous droits réservés
   
   
   

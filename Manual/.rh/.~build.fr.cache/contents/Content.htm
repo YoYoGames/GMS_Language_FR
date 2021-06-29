@@ -1,4 +1,198 @@
- Bienvenue dans le manuel d'utilisation de GameMaker Studio 2 Ce document est divisé en trois parties dans le but de vous familiariser avec l'interface et le fonctionnement de base de GameMaker Studio 2 et la programmation générale avant de passer à une utilisation plus avancée et aux fonctions disponibles via notre système propriétaire. GameMaker langage de script GML ou notre outil de script visuel Drag and Drop™. Pour vous faciliter la tâche, nous avons créé un guide de démarrage rapide pratique, et même si vous êtes familiarisé avec d'autres outils de création de jeux, nous vous recommandons de commencer par là pour avoir un aperçu du fonctionnement de GameMaker Studio 2. Vous trouverez que GameMaker Studio 2 est facile et intuitif à utiliser et que, quel que soit votre niveau de compétence, vous allez bientôt créer les jeux dont vous avez toujours rêvé. REMARQUE: en raison de la nature modulaire de GameMaker Studio 2, certains éléments ne sont pas inclus dans ce manuel de l'utilisateur, en particulier les aspects de la configuration et de la connexion des différents périphériques qui peuvent être pris en charge. Pour obtenir des informations à jour, des conseils de dépannage et des conseils relatifs aux différentes plates-formes cibles, veuillez consulter le Centre d'aide de YoYo Games. Commencer Cette section est le premier arrêt obligatoire pour utiliser GameMaker Studio 2 et se familiariser avec le contenu de l'EDI et son fonctionnement. Vous constaterez que GameMaker Studio 2 est intuitif et simple à utiliser, et même si vous n'avez jamais utilisé d'outils comme celui-ci auparavant, vous ne devriez pas avoir de problèmes pour démarrer et créer des jeux après avoir lu l' introduction et terminé le démarrage rapide. Guide (ci-dessous). Une fois que vous avez maîtrisé les bases, vous pouvez ensuite passer à un examen plus approfondi des composants de GameMaker Studio 2 dans la section Référence de l'IDE ci-dessous. Introduction à GMS2 introduction La page de démarrage Espaces de travail Le navigateur d'actifs Compiler Débogage La fenêtre de sortie Le Marketplace Notre base de connaissances Nos liens sociaux Guide de démarrage rapide Créer un jeu avec GameMaker Studio Qu'est-ce que la programmation? Sprites Ensembles de tuiles Effets sonores Objets et instances Séquences Pièces Dessin Mouvement et commandes Résumé Informations sur la configuration et la version Informations sur la version de GMS2 Guide d'installation Informations sur la licence Guide de mise à jour Notes de version SDK requis Préférences IDE Préférences de la plate-forme Le gestionnaire de périphériques Rapport d'erreurs Référence IDE Dans cette section, nous couvrons chaque partie du GameMaker Studio 2 IDE, expliquant en détail ce que chaque fenêtre, le bouton et le menu et comment il doit être utilisé. Notez que tout ce qui est abordé dans cette section ne vous sera pas disponible dès le début car cela dépendra du type de licence dont vous disposez pour le produit. Navigation IDE Entrée et navigation IDE Signets Windows récentes Les menus Raccourcis clavier Rédacteurs Sprites Images Ensembles de tuiles Courbes d'animation Des sons Les chemins Scripts Shaders Polices Délais Objets Séquences Pièces Extensions Remarques Paramètres de jeu Le Room Manager Fichiers inclus Groupes audio Groupes de textures Options de jeu Configurations Paramètres de ligne de commande Outils IDE supplémentaires Le débogueur Le micro serveur Web La fenêtre de l'inspecteur Packages d'actifs locaux Générateur d'images de projet Mélangeur sonore Travailleurs à distance Contrôle de la source Référence de script Cette section traite des différents langages de script disponibles pour la programmation dans GameMaker Studio 2. Le langage ou la méthode que vous utiliserez pour créer vos projets dépendra de vos compétences et de votre historique antérieur, et - puisque tout le monde est différent - GameMaker Studio 2 vise à être aussi adaptable que possible à vos différents besoins, en offrant deux options différentes pour vous pour créer des jeux. REMARQUE: ce ne sont pas des façons mutuellement exclusives de créer vos jeux, et vous pouvez mélanger en utilisant GML avec DnD™ comme vous le souhaitez, en fonction de vos compétences et de vos besoins avec l'un ou l'autre. Drag And Drop™ ( DnD™) Il s'agit du langage de script visuel de GameMaker Studio 2 qui utilise des blocs d' actions qui sont enchaînées pour créer la logique de vos jeux. Les sections suivantes expliquent comment utiliser ces actions: Présentation de Drag And Drop™ Référence Drag And Drop™ GameMaker Language ( GML ) Le GameMaker Language est un langage de script écrit qui utilise des fonctions, des variables et d'autres constructions de codage pour créer la logique de vos jeux. Les sections suivantes expliquent comment coder à l'aide de GML: GameMaker Language Référence du GameMaker Language Information additionnelle Nous avons également quelques pages supplémentaires contenant des informations sur certains aspects de la programmation et de l'utilisation du GameMaker Language: Meilleures pratiques lors de la programmation Le système de fichiers Opérateurs au niveau du bit Tables de types Vecteurs Guide d'utilisation des tampons Guide d'utilisation des particules Guide d'utilisation des Shaders Guide des primitives et de la construction de sommets E rror rapports Fonctions de compatibilité Scripts de compatibilité Fonctions obsolètes  Suivant: Introduction à GameMaker Studio 2 © Copyright YoYo Games Ltd. 2021 Tous droits réservés
+
+  
+  
+   
+  Bienvenue dans le manuel de l'utilisateur de GameMaker Studio 2! Ce document est divisé en trois parties dans le but de vous familiariser avec l'interface et le fonctionnement de base de GameMaker Studio 2 ainsi qu'avec la programmation générale, avant de passer à une utilisation plus avancée
+    et les fonctions disponibles via notre langage de script GML propriétaire GameMaker ou notre outil de script visuel Drag and Drop™.
+  Pour vous faciliter la tâche, nous avons créé un Guide de démarrage rapide très pratique. Même si vous êtes familier avec d'autres outils de création de jeux, nous vous recommandons de commencer par là pour avoir un aperçu du fonctionnement de GameMaker Studio 2. Vous trouverez GameMaker Studio
+    2 est facile et intuitif à utiliser et, quel que soit votre niveau de compétence, vous serez bientôt en mesure de créer les jeux dont vous avez toujours rêvé.
+  REMARQUE: En raison de la nature modulaire de GameMaker Studio 2, certains éléments ne sont pas inclus dans ce manuel de l'utilisateur, en particulier les aspects de la configuration et de la connexion des différents appareils pouvant être pris en charge. Pour obtenir des informations à jour
+    et des conseils de dépannage relatifs aux différentes plateformes cibles, veuillez consulter le Centre d'aide deYoYo Games.
+   
+  Pour commencer
+  Cette section est le premier arrêt obligatoire pour utiliser GameMaker Studio 2 et se familiariser avec le contenu de l'IDE et son fonctionnement. Vous constaterez que GameMaker Studio 2 est intuitif et simple à utiliser.
+    Vous constaterez que GameMaker Studio 2 est intuitif et simple d'utilisation et que, même si vous n'avez jamais utilisé d'outils de ce type auparavant, vous ne devriez pas avoir de problèmes pour démarrer et créer des jeux après avoir lu l'introduction et complété le Guide de démarrage rapide (ci-dessous). Une fois que vous aurez maîtrisé les
+    bases, vous pourrez ensuite passer à un examen plus approfondi des composants de GameMaker Studio 2 dans la section Référence IDE ci-dessous.
+  Introduction à GMS2
+  
+    
+      Introduction
+      La page d'accueil
+      Espaces de travail
+      Le navigateur d'actifs
+      Compiler
+      Débogage
+      La fenêtre de sortie
+      Le marché
+      Notre base de connaissances
+      Nos liens sociaux
+    
+     
+    
+    
+  
+  Guide de démarrage rapide
+  
+    
+      Créer un jeu à l'aide de GameMaker Studio
+      Qu'est-ce que la programmation ?
+      Sprites
+      Tilesets
+      Effets sonores
+      Objets et instances
+      Séquences
+      Chambres
+      Dessin
+      Mouvement et contrôles
+      Résumé
+    
+    
+    
+    
+  
+  Configuration et informations sur la version
+  
+    
+      Informations sur la version de GMS2
+      Guide d'installation
+      Informations sur les licences
+      Guide de mise à jour
+      Notes de mise à jour
+      SDK requis
+      Préférences de l'IDE
+      Préférences de la plate-forme
+      Le gestionnaire de périphériques
+      Rapport d'erreur
+    
+  
+   
+   
+  Référence IDE
+  Dans cette section, nous couvrons chaque partie de l'IDE de GameMaker Studio 2, en expliquant en détail ce que fait chaque fenêtre, bouton et menu et comment les utiliser. Notez que tout ce qui est abordé dans cette
+    dans cette section ne sera pas disponible dès le début car cela dépendra du type de licence dont vous disposez pour le produit.
+  Navigation IDE
+  
+    
+      Entrée et navigation IDE 
+      Signets
+       Fenêtresrécentes
+      Menus
+      Raccourcis clavier
+    
+    
+    
+    
+  
+  Rédacteurs en chef
+  
+    
+      Sprites
+      Images
+      Sets de carreaux
+      Courbes d'animation
+      Sons
+      Chemins d'accès
+      Scripts
+      Shaders
+      Polices de caractères
+      Chronologie
+      Objets
+      Séquences
+      Chambres
+      Extensions
+      Notes
+    
+    
+    
+    
+  
+  Paramètres du jeu
+  
+    
+      Le responsable de la salle
+      Fichiers inclus
+      Groupes audio
+      Groupes de textures
+      Options de jeu
+      Configurations
+      Paramètres de la ligne de commande
+    
+    
+    
+    
+  
+  Outils IDE supplémentaires
+  
+    
+      Le débogueur
+      Le serveur Micro Web
+      La fenêtre de l'inspecteur
+      Paquets d'actifs locaux
+      Générateur d'images de projet
+      Mixeur de son
+      Travailleurs à distance
+      Contrôle des sources
+    
+  
+   
+   
+  Référence pour les scripts
+  Cette section traite des différents langages de script à votre disposition pour programmer dans GameMaker Studio 2. Le langage ou la méthode que vous utiliserez pour créer vos projets dépendra de vos compétences et de vos antécédents.
+   GameMaker Studio 2 vise à s'adapter le mieux possible à vos différents besoins, en vous proposant deux options différentes pour créer des jeux.
+  REMARQUE: ces méthodes de création de jeux ne s'excluent pas mutuellement, et vous pouvez mélanger l'utilisation de GML et de DnD™comme vous le souhaitez, en fonction de vos compétences et de vos besoins dans les deux cas.
+  Drag And Drop™(DnD™)
+  
+    Il s'agit du langage de script visuel de GameMaker Studio 2 qui utilise des blocs d'actions qui sont enchaînés les uns aux autres pour créer la logique de vos jeux. Les sections suivantes expliquent comment utiliser ces actions :
+    
+      Aperçu deDrag And Drop™ 
+      RéférenceDrag And Drop™ 
+    
+     
+    
+    
+  
+  Langage GameMaker(GML)
+  
+    Le langage GameMaker est un langage de script écrit qui utilise des fonctions, des variables et d'autres constructions de codage pour créer la logique de vos jeux. Les sections suivantes expliquent comment coder en utilisant le GML:
+    
+      Aperçu dulangage GameMaker 
+      Référence dulangage GameMaker 
+    
+     
+    
+    
+  
+  Informations complémentaires
+  
+    Nous avons également quelques pages supplémentaires contenant des informations sur certains aspects de la programmation et de l'utilisation du langage GameMaker:
+    
+      Meilleures pratiques en matière de programmation
+      Le système de fichiers
+      Opérateurs binaires
+      Tableaux de type
+      Vecteurs
+      Guide d'utilisation des tampons
+      Guide d'utilisation des particules
+      Guide d'utilisation des shaders
+      Guide des primitives et de la construction de sommets
+      Error Reporting
+      Fonctions de compatibilité
+      Scripts de compatibilité
+      Fonctions obsolètes
+    
+  
+   
+   
+   
+  
+  
+    
+      
+        
+        Suivant : Introduction à GameMaker Studio 2
+      
+    
+    Copyright YoYo Games Ltd. 2021 Tous droits réservés
   
   
   

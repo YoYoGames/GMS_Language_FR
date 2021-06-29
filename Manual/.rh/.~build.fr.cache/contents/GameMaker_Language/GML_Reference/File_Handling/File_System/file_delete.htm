@@ -1,7 +1,45 @@
-file_delete Cette fonction supprimera le fichier spécifié du système. Il convient de noter que cette fonction supprimera uniquement les fichiers que GameMaker Studio 2 est capable de créer et d'analyser: les fichiers ini, les fichiers texte et les fichiers binaires, ou les fichiers créés pour stocker des ressources créées par le jeu telles que des sprites ou des surfaces. Cependant, il ne supprimera aucun autre fichier. La fonction retournera également true si le fichier a été supprimé avec succès, ou false dans toutes autres circonstances. ATTENTION! Cette fonction peut ne pas fonctionner comme prévu en raison du GameMaker Studio 2! Veuillez consulter la section sur les limites du système de fichiers pour plus d'informations. Syntaxe:file_delete(fname); Argument Description fname Le nom du fichier à supprimer. Retour:Boolean Exemple:if file_exists("level.txt")     {
-         file_delete("level.txt");
-         }
-   Cela vérifierait un fichier et s'il existe, il est supprimé.  Retour: Système de fichiers Suivant:file_rename © Copyright YoYo Games Ltd. 2021 Tous droits réservés
+
+  
+  fichier_supprimé
+  Cette fonction supprime le fichier spécifié du système. Il est à noter que cette fonction ne supprimera que les fichiers que GameMaker Studio 2 est capable de créer et d'analyser : fichiers ini, fichiers texte et fichiers binaires, ou les fichiers destinés à stocker les ressources créées par le jeu, comme les sprites ou les surfaces.
+    pour stocker les ressources créées par le jeu, comme les sprites ou les surfaces. En revanche, elle ne supprimera aucun autre fichier. La fonction renvoie également la valeur true si le fichier a été supprimé avec succès, ou false dans toutes les autres circonstances.
+  AVERTISSEMENT ! Il se peut que cette fonction ne fonctionne pas comme vous l'attendez, car GameMaker Studio 2 est en sandbox ! Veuillez consulter la section sur les limites du système de fichiers pour plus d'informations.
+   
+  Syntaxe :
+  file_delete(fname) ;
+  
+    
+      
+        Arguments
+        Description
+      
+      
+        fname
+        Le nom du fichier à supprimer.
+      
+    
+  
+   
+  Les retours :
+  Booléen
+   
+  Exemple :
+  if file_exists("level.txt") {
+     file_delete("level.txt") ;
+     }
+  
+  Cela permet de vérifier la présence d'un fichier et s'il existe, il est supprimé.
+   
+   
+   
+  
+    
+      
+        Retour : Système de fichiers
+        Suivant : file_rename
+      
+    
+    Copyright YoYo Games Ltd. 2021 Tous droits réservés
   
   
   

@@ -1,4 +1,46 @@
-layer_background_create Avec cette fonction, vous pouvez affecter une ressource de sprite à un calque à utiliser comme arrière-plan dans votre projet. Vous fournissez l'ID de couche (que vous obtenez lorsque vous créez la couche en utilisant layer_create() ) ou le nom de la couche (sous forme de chaîne - cela aura un impact sur les performances) et un index de sprite (qui serait le nom de l'image-objet comme indiqué dans le navigateur d'actifs), et il sera ajouté à la couche. La fonction renvoie la valeur d'ID unique de l'élément, qui peut ensuite être utilisée dans d'autres fonctions de calque pour les arrière-plans. Syntaxe:layer_background_create(layer_id, sprite) Argument Description layer_id La valeur d'ID unique du calque à cibler (ou le nom du calque sous forme de chaîne) sprite L'index de sprite à utiliser Retour:Background element ID (Real) Exemple:global.back_layer = layer_create(10000); global.back_trees = layer_background_create(global.back_layer, spr_Trees); Le code ci-dessus crée un nouveau calque, puis y ajoute un nouvel élément d'arrière-plan, définissant un sprite comme l'image d'arrière-plan utilisée.  Retour: Calques d'arrière-plan Suivant:layer_background_destroy © Copyright YoYo Games Ltd. 2021 Tous droits réservés
+
+  
+  couche_arrière-plan_créer
+  Cette fonction vous permet d'affecter une ressource sprite à un calque qui sera utilisé comme arrière-plan dans votre projet. Vous fournissez l'ID du calque (que vous obtenez lorsque vous créez le calque à l'aide de la fonction layer_create())
+    ou le nom du calque (sous la forme d'une chaîne de caractères - cela aura un impact sur les performances) et un index de sprite (qui serait le nom du sprite tel qu'il apparaît dans le navigateur d'actifs), et il sera ajouté au calque. La fonction renvoie la valeur d'identification unique de l'élément,
+    qui peut ensuite être utilisée dans d'autres fonctions de calque pour les arrière-plans.
+   
+  Syntaxe :
+  layer_background_create(layer_id, sprite)
+  
+    
+      
+        Arguments
+        Description
+      
+      
+        identifiant de la couche
+        La valeur d'identification unique de la couche à cibler (ou le nom de la couche sous forme de chaîne).
+      
+      
+        sprite
+        L'index du sprite à utiliser
+      
+    
+  
+   
+  Les retours :
+  Élément de base ID (réel)
+   
+  Exemple :
+  global.back_layer = layer_create(10000) ; global.back_trees = layer_background_create(global.back_layer, spr_Trees) ;
+  Le code ci-dessus crée un nouveau calque et lui ajoute un nouvel élément d'arrière-plan, en définissant un sprite comme l'image d'arrière-plan utilisée.
+   
+   
+   
+  
+    
+      
+        Retour : Calques d'arrière-plan
+        Suivant : layer_background_destroy
+      
+    
+    Copyright YoYo Games Ltd. 2021 Tous droits réservés
   
   
   

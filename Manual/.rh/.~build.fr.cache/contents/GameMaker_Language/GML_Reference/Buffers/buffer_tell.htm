@@ -1,4 +1,43 @@
-buffer_tell Lorsque vous lisez ou écrivez des données dans une mémoire tampon à l'aide du buffer_read() ou buffer_write() la position actuelle de «recherche» est avancée par les octets écrits ou lus, et avec cette fonction, vous pouvez obtenir la position actuelle de «recherche» pour une utilisation dans d'autres fonctions de tampon. Par exemple, si votre alignement de tampon est défini sur 4 octets et que vous écrivez une seule donnée d'une taille de 1 octet, effectuez un buffer_tell(), vous obtiendrez une valeur de retour de 1. Cependant, si vous écrivez un autre élément de données, également d'une taille de 1 octet, effectuez un buffer_tell(), vous obtiendrez une valeur de retour de 5 car l'alignement a "rempli" les données à cette position. Syntaxe:buffer_tell(buffer); Argument Description buffer L'index du tampon à utiliser. Retour:Real Exemple:var pos = buffer_tell(buff); buffer_seek(buff, buffer_seek_start, 0); val[0] = buffer_read(buff, buffer_S16); val[1] = buffer_read(buff, buffer_S16); val[2] = buffer_read(buff, buffer_S16); buffer_seek(buff, buffer_seek_start, pos); Le code ci-dessus stockera la position de recherche actuelle dans le tampon indexé dans la variable "buff" vers la variable locale "pos". La position de recherche de tampon sera alors définie au début du tampon, et trois éléments de données sont lus dans un tableau, avant de finalement réinitialiser la position de recherche de tampon à l'endroit où elle se trouvait auparavant.  Retour: Tampons Suivant:buffer_peek © Copyright YoYo Games Ltd. 2021 Tous droits réservés
+
+  
+  buffer_tell
+  Lorsque vous lisez ou écrivez des données dans un tampon à l'aide de la fonction buffer_read() ou buffer_write() la position de recherche actuelle est avancée par les octets écrits ou lus.
+    cette fonction vous permet d'obtenir la position de recherche actuelle pour l'utiliser dans d'autres fonctions de tampon. Par exemple, si l'alignement de votre tampon est fixé à 4 octets et que vous écrivez une seule donnée d'un octet, faites un buffer_tell(),
+    Cependant, si vous écrivez un autre morceau de données, également d'un octet, puis effectuez un buffer_tell(), vous obtiendrez une valeur de retour de 5 car l'alignement a "rembourré" les données à cette position.
+   
+  Syntaxe :
+  buffer_tell(buffer) ;
+  
+    
+      
+        Arguments
+        Description
+      
+      
+        tampon
+        L'index du tampon à utiliser.
+      
+    
+  
+   
+  Les retours :
+  Real
+   
+  Exemple :
+  var pos = buffer_tell(buff) ; buffer_seek(buff, buffer_seek_start, 0) ; val[0] = buffer_read(buff, buffer_S16) ; val[1] = buffer_read(buff, buffer_S16) ; val[2] = buffer_read(buff, buffer_S16) ; buffer_seek(buff, buffer_seek_start, pos) ;
+  Le code ci-dessus stocke la position de recherche actuelle dans le tampon indexé dans la variable "buff" dans la variable locale "pos". La position de recherche de la mémoire tampon sera ensuite placée au début de la mémoire tampon, et trois données seront lues dans un tableau, avant de remettre la position de recherche de la mémoire tampon à sa position précédente.
+    données sont lues dans un tableau, avant de réinitialiser la position de recherche du tampon à l'endroit où elle se trouvait précédemment.
+   
+   
+   
+  
+    
+      
+        Retour : Tampons
+        Suivant : buffer_peek
+      
+    
+    Copyright YoYo Games Ltd. 2021 Tous droits réservés
   
   
   

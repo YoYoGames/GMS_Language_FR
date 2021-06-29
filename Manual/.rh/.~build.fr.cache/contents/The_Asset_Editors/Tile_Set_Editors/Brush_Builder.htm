@@ -1,4 +1,90 @@
- Le générateur de pinceaux de jeu de tuiles Par défaut, lorsque vous «peignez» des tuiles sur un calque de carte de tuiles dans l'éditeur de pièce, vous sélectionnez une seule tuile et peignez avec. Cependant, les ensembles de tuiles sont presque toujours conçus pour avoir des sections qui s'emboîtent de différentes manières pour former des zones ou des éléments entiers. Par exemple, un jeu de tuiles RPG peut avoir des tuiles de caractéristiques de paysage qui peuvent être connectées pour créer des caractéristiques plus grandes ou plus petites - comme des arbres et des bâtiments - en fonction du nombre de tuiles utilisées. Désormais, placer plusieurs fonctionnalités comme celle-ci sur une couche de pièce vous obligerait à faire plusieurs allers-retours pour changer de mosaïque, ce qui n'est pas bon pour votre flux de travail. Pour résoudre ce problème, GameMaker Studio 2 vous permet de créer des pinceaux de mosaïque dans l'éditeur de jeu de mosaïques, disponible lorsque vous cliquez sur sur le bouton Brush Builder: Dans le générateur de pinceaux, vous avez le jeu de tuiles d'origine à gauche et une «toile» vierge à droite. Vous pouvez maintenant sélectionner n'importe quelle tuile à gauche et la peindre à droite pour créer des "pinceaux" personnalisés que vous pourrez ensuite utiliser dans l'éditeur de pièce. Notez que vous pouvez cliquer et maintenir le bouton gauche de la souris puis faites glisser sur l'ensemble de tuiles pour sélectionner plusieurs tuiles à peindre dans le canevas du pinceau et vous pouvez également maintenir / + pour ajouter des tuiles individuelles spécifiques ou maintenir + pour supprimer des tuiles spécifiques. L'image suivante montre nos fonctionnalités de paysage précédemment mentionnées à titre d'exemple de trois pinceaux personnalisés fabriqués à partir d'un seul jeu de tuiles: Sur la droite, vous pouvez voir trois fonctionnalités que nous avons créées (mises en évidence avec une boîte orange dans l'image). Remarquez comment nous avons laissé un espace d'une tuile entre chaque fonctionnalité - c'est parce que tout groupe de tuiles en contact sera traité comme un seul pinceau dans l'éditeur de pièce, nous laissons donc un espace d'une tuile pour montrer que chaque ensemble est un pinceau distinct que nous voulons créer. Lors de la création de vos pinceaux, vous peignez avec le bouton gauche de la souris et supprimer avec le bouton droit de la souris. Vous pouvez également zoomer sur la feuille de mosaïques ou le canevas du pinceau / et la molette de la souris lorsque la souris est sur l'une des fenêtres, ou vous pouvez vous déplacer en utilisant + ou le bouton central de la souris et en faisant glisser. Notez que vous pouvez également utiliser les outils de zoom dans la boîte à outils dans les fenêtres de l'éditeur pour modifier les niveaux de zoom de l'une ou l'autre fenêtre ainsi que pour basculer la visibilité et la couleur de la grille. En haut à droite, vous pouvez voir l'outil actuellement sélectionné et vous pouvez également définir la taille du pinceau avec lequel vous souhaitez peindre. La taille par défaut est 1, qui est une seule tuile, mais si vous la définissez sur des valeurs plus élevées, vous pouvez peindre (et effacer) avec un pinceau plus grand composé de la tuile sélectionnée répétée, comme indiqué dans l'image ci-dessous: La boîte à outils est l'endroit où vous pouvez sélectionner l'outil à utiliser pour de nombreuses tâches différentes dans l'éditeur de jeu de mosaïques, dont certaines dépendront si vous avez défini ou non quelque chose dans votre bibliothèque de mosaïques automatique. Un bref aperçu de chaque outil est donné ci-dessous (notez que lorsque vous avez sélectionné un calque de tuiles dans l'éditeur de pièce, cette boîte à outils s'affiche en haut de l'espace de travail de la pièce, avec des outils de dessin supplémentaires):  Crayon Ceci est l'outil crayon. Il utilise la tuile sélectionnée pour peindre dans la fenêtre Pinceaux avec le bouton gauche de la souris et vous pouvez effacer avec le bouton droit de la souris. La gomme Avec l'outil gomme, vous pouvez utiliser le bouton gauche de la souris pour effacer une vignette donnée dans la fenêtre Pinceaux. Essentiellement, tout cela fait est de définir l'index de tuile à 0, qui est la tuile "vide" réservée. Sélection Il s'agit de l'outil de sélection, qui peut être utilisé pour définir une zone de la fenêtre Pinceaux sur laquelle travailler. Vous pouvez cliquer sur le bouton gauche de la souris puis faites glisser la souris pour créer une zone rectangulaire, ou vous pouvez appuyer sur / + pour ajouter plusieurs sélections et + pour effacer une partie de la sélection. Pour effacer toute la sélection, vous pouvez appuyer sur. Lorsque vous avez sélectionné une zone d'une fenêtre Pinceaux, le reste des outils (Crayon, Retourner, Rotation, etc.) ne fonctionnera que dans la zone sélectionnée. Notez que vous pouvez également sélectionner des tuiles dans la fenêtre puis copier ( / + "C "), Couper ( / + "X ") et collez ( / + " V ") eux, qui basculera alors l'outil vers le Crayon et vous permettra de "peindre" avec eux. AutoTile Cliquez sur cet outil pour activer le style de peinture de mosaïque automatique. Lorsque cette option est active, vous pouvez sélectionner n'importe quelle tuile dans l'onglet Bibliothèques Autotile, puis la peindre dans la fenêtre Pinceaux et GameMaker Studio 2 changera automatiquement pour qu'elle corresponde aux tuiles environnantes, à condition que vous ayez correctement configuré l' onglet Mosaïque automatique. Notez que la sélection d'une mosaïque dans le jeu de mosaïques qui ne fait pas partie des bibliothèques de fichiers automatiques réinitialisera l'outil de dessin à l'outil Crayon standard. Retourner Cliquer sur l'outil Retourner avec le bouton gauche de la souris (ou en utilisant le raccourci clavier "X ") retournera la ou les mosaïques actuellement sélectionnées pour le dessin le long de l' axe horizontal, sans changer d'outil de dessin (si vous avez sélectionné un pinceau personnalisé pour le dessin, le pinceau entier se retournera). Si vous n'avez pas sélectionné de mosaïque pour le dessin, mais faites avoir un groupe de tuiles sélectionnées dans la fenêtre du pinceau, puis l'outil de retournement retournera les tuiles sélectionnées. Miroir Cliquer sur l'outil Miroir avec le bouton gauche de la souris (ou en utilisant le raccourci clavier " Y ") reflétera la ou les mosaïques actuellement sélectionnées pour le dessin le long de l' axe vertical, sans changer d'outil de dessin (si vous avez sélectionné un pinceau personnalisé pour le dessin, le pinceau entier se reflétera). Si aucune mosaïque n'est sélectionnée pour le dessin, mais ayez un groupe de tuiles sélectionné dans la fenêtre de pinceau, alors l'outil Miroir reflétera les tuiles sélectionnées. Tourner Cliquer sur l'outil Rotation avec le bouton gauche de la souris (ou en utilisant le raccourci clavier " Z ") fera pivoter la ou les mosaïques actuellement sélectionnées pour le dessin de 90 ° dans le sens des aiguilles d'une montre, sans changer d'outil de dessin (si vous avez sélectionné un pinceau personnalisé pour le dessin, le pinceau entier tournera). Si vous n'avez sélectionné aucune mosaïque pour le dessin, mais faites avoir un groupe de tuiles sélectionné dans la fenêtre du pinceau, puis l'outil Rotation fera pivoter les tuiles sélectionnées. Sous les outils, vous pouvez trouver deux sections différentes pour sélectionner n'importe quelle tuile automatique ou tuile animée qui a été créée à l'aide de l'image actuelle du jeu de tuiles. Un seul sprite utilisé pour un ensemble de tuiles peut contenir de très nombreuses images à cellule unique, et celles-ci peuvent être combinées dans l'éditeur d'animation ou d'autotile pour créer des pinceaux personnalisés qui apparaîtront dans ces sections et peuvent être utilisés conjointement avec des tuiles statiques régulières pour créer des pinceaux (notez qu'une tuile animée s'animera, que vous l'ayez sélectionnée dans la bibliothèque ou dans le jeu de tuiles de base). Une fois que vous avez configuré tous les pinceaux dont vous avez besoin, vous pouvez les utiliser pour peindre des tuiles sur n'importe quelle couche de carte de tuiles dans l' éditeur de pièce.  Retour: Ensembles de carreaux Suivant: Tuiles animées © Copyright YoYo Games Ltd. 2021 Tous droits réservés
+
+  
+  Le créateur de brosses de carrelage
+  Par défaut, lorsque vous "peignez" des tuiles sur une couche de carte de tuiles dans l'éditeur de pièce, vous sélectionnez une seule tuile et vous peignez avec celle-ci. Cependant, les ensembles de tuiles sont presque toujours conçus pour avoir des sections
+    qui s'assemblent de différentes manières pour former des zones ou des éléments entiers. Par exemple, un jeu de tuiles RPG peut comporter des tuiles de paysage qui peuvent être connectées pour créer des éléments plus ou moins grands, comme des arbres ou des bâtiments, en fonction du nombre de tuiles utilisées.
+    utilisées. Or, placer plusieurs éléments de ce type sur un calque de pièce vous obligerait à faire de nombreux allers-retours pour changer de tuile, ce qui n'est pas bon pour votre flux de travail. Pour résoudre ce problème, GameMaker Studio 2 vous permet de créer des brosses de tuiles dans
+    l'éditeur Tile Set, disponible lorsque vous cliquez sur  sur le bouton Brush Builder:
+  Dans le Créateur de pinceaux, vous avez le jeu de carreaux original à gauche et une "toile" vierge à droite. Vous pouvez maintenant sélectionner
+    n'importe quelle tuile à gauche et la peindre à droite pour créer des "brosses" personnalisées que vous pouvez ensuite utiliser dans l'éditeur de pièce. Notez que vous pouvez cliquer et maintenir enfoncé le bouton gauche de la souris  puis faire glisser sur le jeu de tuiles pour sélectionner plusieurs tuiles à peindre dans le canevas de brosse. Vous pouvez également maintenir enfoncé  /  +  pour ajouter des tuiles individuelles spécifiques ou maintenir enfoncé  +  pour supprimer des tuiles spécifiques.
+  L'image suivante montre les caractéristiques du paysage mentionné précédemment comme un exemple de trois brosses personnalisées réalisées à partir d'un seul jeu de tuiles :
+  Sur la droite, vous pouvez voir trois fonctionnalités que nous avons réalisées (mises en évidence par une boîte orange
+    dans l'image). Remarquez que nous avons laissé un espace d'une tuile entre chaque élément - c'est parce que tout groupe de tuiles se touchant sera traité comme une seule brosse dans l'éditeur de pièce, nous laissons donc un espace d'une tuile pour montrer que chaque ensemble est une brosse distincte que nous voulons créer.
+    brosse distincte que nous voulons créer. Pendant la création de vos brosses, vous peignez avec le bouton gauche de la souris  et supprimez avec le bouton droit de la souris . Vous pouvez également zoomer sur la feuille de tuiles ou le canevas de brosse en utilisant  /  et la molette de la souris  lorsque la souris
+    lorsque la souris se trouve sur l'une des fenêtres, ou vous pouvez effectuer un panoramique en utilisant  +  ou
+    le bouton central de la souris  et en faisant glisser la souris. Notez que vous pouvez également utiliser les outils de zoom de la boîte à outils dans les fenêtres de l'éditeur pour modifier les niveaux de zoom des deux fenêtres.
+    les niveaux de zoom de l'une ou l'autre fenêtre, ainsi que pour modifier la visibilité et la couleur de la grille.
+  En haut à droite, vous pouvez voir l'outil actuellement sélectionné, et vous pouvez également définir la taille de la brosse avec laquelle vous souhaitez peindre. La taille par défaut est de 1, ce qui correspond à une seule tuile, mais si vous la réglez sur des valeurs plus élevées, vous pouvez peindre (et effacer) avec une brosse plus grande composée de la tuile sélectionnée répétée.
+    brosse plus grande composée de la tuile sélectionnée répétée, comme le montre l'image ci-dessous :
+  La boîte à outils est l'endroit où vous pouvez sélectionner l'outil à utiliser pour de nombreuses tâches différentes dans l'éditeur de tuiles.
+    vous avez défini quelque chose dans votre bibliothèque de tuiles automatiques. Un bref aperçu de chaque outil est donné ci-dessous (notez que lorsque vous avez sélectionné une couche de tuiles dans l'éditeur de pièce, cette boîte à outils est affichée en haut de l'espace de travail de la pièce, avec d'autres outils de dessin).
+    ainsi que d'autres outils de dessin) :
+  
+    
+      
+        
+        Crayon
+        C'est l'outil crayon. Il utilise la tuile sélectionnée pour peindre dans la fenêtre des pinceaux avec le bouton gauche de la souris  et vous pouvez effacer avec le bouton droit de la souris .
+      
+      
+        
+        Gomme à effacer
+        Avec l'outil Gomme, vous pouvez utiliser le bouton gauche de la souris  pour effacer une tuile donnée dans la fenêtre Brosses. En fait, tout ce que cela fait est de mettre l'index de la tuile à 0, ce qui est
+          la tuile "vide" réservée.
+      
+      
+        
+        Sélection
+        Il s'agit de l'outil de sélection, qui peut être utilisé pour définir une zone de la fenêtre Brosses sur laquelle travailler. Vous pouvez cliquer sur le bouton gauche de la souris  et ensuite faire glisser la souris
+          pour créer une zone rectangulaire, ou vous pouvez appuyer sur  /  +  pour ajouter des sélections multiples et  +  pour effacer une partie de la sélection. Pour effacer toute la sélection, vous pouvez appuyer sur . Lorsque vous avez une zone de la fenêtre Brosses sélectionnée, le reste des outils (Crayon, Retournement, Rotation, etc...) ne fonctionnera que dans la zone sélectionnée. Notez que vous pouvez également sélectionner des carreaux dans la fenêtre puis copier (  / + "C" ), couper (  /  + "X" ) et coller
+          (  /  + "
+          V"), ce qui fera basculer l'outil sur le Crayon et vous permettra de "peindre" avec eux.
+      
+      
+        
+        AutoTile
+        En cliquant sur cet outil, vous activez le style de peinture Carrelage automatique. Lorsque cette option est activée, vous pouvez sélectionner n'importe quelle tuile dans l'onglet Bibliothèques de tuiles automatiques, puis la peindre dans la fenêtre Brosses . 
+          pour qu'elle corresponde aux tuiles environnantes, à condition que vous ayez correctement configuré l'onglet Autotile. Notez que la sélection d'une tuile du jeu de tuiles qui ne fait pas partie des bibliothèques de tuiles automatiques réinitialisera l'outil de dessin sur l'outil standard
+          Crayon.
+      
+      
+        
+        Flip
+        En cliquant sur l'outil Retourner avec le bouton gauche de la souris  (ou en utilisant le raccourci clavier "X"), vous retournerez la ou les tuiles actuellement
+          sélectionnés pour le dessin le long de l'axe horizontal , sans changer d'outil de dessin (si vous avez une brosse personnalisée sélectionnée pour le dessin, la brosse entière sera retournée). Si vous n'avez pas de tuile sélectionnée pour le dessin, mais que vous avez un groupe de tuiles sélectionnées dans la fenêtre de la brosse, alors la fonction de retournement de tuiles sera utilisée.
+          dans la fenêtre de la brosse, l'outil de retournement retournera les tuiles sélectionnées.
+      
+      
+        
+        Miroir
+        En cliquant sur l'outil Miroir avec le bouton gauche de la souris  (ou en utilisant le raccourci clavier " Y"), la ou les tuiles actuellement
+          sélectionnée(s) pour le dessin le long de l'axe vertical , sans changer d'outil de dessin (si vous avez une brosse personnalisée sélectionnée pour le dessin, la brosse entière se reflétera). Si vous n'avez pas de tuile sélectionnée pour le dessin, mais que vous avez un groupe de tuiles sélectionnées dans la fenêtre de la brosse, alors l'option Miroir sera activée.
+          dans la fenêtre de la brosse, l'outil Miroir reflétera les tuiles sélectionnées.
+      
+      
+        
+        Rotation
+        En cliquant sur l'outil Rotation avec le bouton gauche de la souris  (ou en utilisant le raccourci clavier " Z" ), vous ferez pivoter la ou les tuiles actuellement
+          sélectionnée(s) pour le dessin à 90° dans le sens des aiguilles d'une montre, sans changer d'outil de dessin (si vous avez une brosse personnalisée sélectionnée pour le dessin, la brosse entière tournera). Si aucune tuile n'est sélectionnée pour le dessin, mais qu'un groupe de tuiles est sélectionné dans la fenêtre de la brosse, l'outil Rotation sera utilisé.
+          brosse, l'outil Rotation fera pivoter les tuiles sélectionnées.
+      
+    
+  
+  En dessous des outils, vous trouverez deux sections différentes permettant de sélectionner les tuiles tuile automatique ou des tuilesanimées qui ont été créées en utilisant l'image du jeu de tuiles actuel.
+    Un sprite unique utilisé pour un jeu de tuiles peut contenir de très nombreuses images à cellule unique, qui peuvent être combinées dans l'éditeur d'animation ou de tuiles automatiques pour créer des brosses personnalisées qui apparaîtront dans ces sections et qui peuvent être utilisées en conjonction avec des tuiles statiques ordinaires pour créer des brosses (notez qu'une tuile animée s'animera indépendamment des tuiles statiques).
+    des tuiles statiques ordinaires pour créer des brosses (notez qu'une tuile animée s'animera indépendamment du fait que vous l'ayez sélectionnée dans la bibliothèque ou dans l'ensemble de tuiles de base).
+  Une fois que vous avez configuré tous les pinceaux dont vous avez besoin, vous pouvez les utiliser pour peindre des tuiles sur n'importe quelle couche de carte de tuiles dans l'éditeur de pièce.
+   
+   
+   
+  
+    
+      
+        Retour : Jeux de carreaux
+        Suivant : Carreaux animés
+      
+    
+    Copyright YoYo Games Ltd. 2021 Tous droits réservés
   
   
   

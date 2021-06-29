@@ -1,4 +1,34 @@
- Émetteurs de particules Les émetteurs de particules sont utilisés par GameMaker Studio 2 pour émettre des particules sur une zone de l'écran qui peut avoir différentes formes et distributions. Ils peuvent également créer un flux continu de particules ou éclater un certain nombre de particules en même temps, selon la manière dont les fonctions sont utilisées. Puisqu'un émetteur de particules est une ressource créée dynamiquement, vous devez le créer et stocker l'index renvoyé dans une variable pour référencer l'émetteur dans tous les appels de fonction ultérieurs, et il est très important que vous détruisez également l'émetteur lorsqu'il n'est plus nécessaire ou sinon, vous aurez une fuite de mémoire qui ralentira et finira par planter votre jeu. Il est également intéressant de noter que les émetteurs de particules vivront éternellement après leur création, même si l'indice n'est plus stocké. Ainsi, même si vous changez de pièce ou redémarrez le jeu, les systèmes et les particules resteront et seront visibles dans toutes les autres pièces.Vous devez donc vous assurer de les détruire une fois que vous n'en aurez plus besoin. Les fonctions suivantes sont disponibles pour régler les émetteurs et leur permettre de créer des particules. Notez que chacun d'eux obtient l'index du système de particules auquel il appartient comme premier argument. part_emitter_existspart_emitter_createpart_emitter_clearpart_emitter_regionpart_emitter_burstpart_emitter_streampart_emitter_destroypart_emitter_destroy_all Retour: Particules Suivant: Systèmes de particules © Copyright YoYo Games Ltd. 2021 Tous droits réservés
+
+  
+  Émetteurs de particules
+  Les émetteurs de particules sont utilisés par GameMaker Studio 2 pour émettre des particules sur une zone de l'écran, qui peuvent avoir différentes formes et distributions. Ils peuvent également créer un flux continu de particules
+    soit faire éclater un certain nombre de particules d'un seul coup, selon la façon dont les fonctions sont utilisées.
+  Puisqu'un émetteur de particules est une ressource créée dynamiquement, vous devez le créer et stocker l'index retourné dans une variable pour référencer l'émetteur dans tous les appels de fonction ultérieurs.
+    détruit l'émetteur lorsqu'il n'est plus nécessaire, sinon vous aurez une fuite de mémoire qui ralentira et finira par faire planter votre jeu. Il convient également de noter que les émetteurs de particules sont conservés pour toujours après leur création, même si l'indice n'est plus stocké. Ainsi, même si vous
+    changez de pièce ou redémarrez le jeu, les systèmes et les particules resteront, et seront visibles, dans toutes les pièces suivantes ; veillez donc à les détruire dès que vous n'en avez plus besoin.
+  Les fonctions suivantes sont disponibles pour paramétrer les émetteurs et leur permettre de créer des particules. Notez que chacune d'entre elles reçoit en premier argument l'index du système de particules auquel elle appartient.
+   
+  
+    partie_émetteur_existe
+    création d'un émetteur partiel
+    part_emitter_clear
+    région_émetteur_partiel
+    partie_emitter_burst
+    Part_emitter_stream
+    partie_émetteur_destruction
+    partie_émetteur_destroy_all
+  
+   
+   
+   
+  
+    
+      
+        Retour : Particules
+        Suivant : Systèmes de particules
+      
+    
+    Copyright YoYo Games Ltd. 2021 Tous droits réservés
   
   
   

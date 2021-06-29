@@ -1,15 +1,43 @@
-continue Le continue l'instruction a la syntaxe de base suivante:continue; S'il est utilisé à l'intérieur d'une instruction qui forme une boucle (for, repeat, while ou do / until ), il mettra immédiatement fin à l' itération en cours et reviendra au début de la boucle en commençant une nouvelle itération et en omettant tout code qui suit le continue dans la boucle. Il peut également être utilisé dans le with instruction, où il fera passer le code à l'instance suivante et s'exécutera à nouveau. Notez que si continue est utilisé en dehors de l'un de ces contextes, il donnera une erreur. Voici un exemple d'utilisation dans un for boucle:var _val = 0; for (var i = 0; i < 10; i += 1)     {
-         if (val_array[i] <= 0)         {         continue;         }     _val += val_array[i];     }
-     draw_text(32, 32, "Positive Values Total = " + string(_val)); Voici un exemple d'utilisation dans un while boucle:var file = file_text_open_read("Game_Data.txt"); var _num = 0; while (!file_text_eof(file))     {     var _s = file_text_readln(file);     if (_s == "")         {         continue;       }        str[num++] = _s;     } file_text_close(file);
-   Voici un exemple d'utilisation dans un do / until boucle:do     {
-         var _x = random(room_width);     var _y = random(room_height);     if (instance_position(_x, y, obj_Enemy)         {
-             continue;
-             }
-         instance_create_layer(_x, _y, "Instances", obj_Enemy);     }
-     until (instance_count(obj_Enemy) >= 10); Vous trouverez ci-dessous un exemple d'utilisation dans un repeat boucle:repeat(10)     {        var _x = random(room_width);     var _y = random(room_height);     if (instance_position(_x, y, obj_Enemy)         {
-             continue;
-             }
-         instance_create_layer(_x, _y, "Instances", obj_Enemy);     } Enfin, un exemple d'utilisation dans un with déclaration: with (obj_Enemy_Parent)     {     if (object_index == obj_Enemy_InDestructible)         {         continue;         }     hp -= 100;     if (hp <= 0)         {         instance_destroy();       }        } Retour: Caractéristiques linguistiques Suivant:exit © Copyright YoYo Games Ltd. 2021 Tous droits réservés
+
+  
+  continuer
+  L'instruction continue a la syntaxe de base suivante :
+  continuer ;
+  Si elle est utilisée à l'intérieur d'une instruction qui forme une boucle (pour, repeat, while ou do / until), elle met immédiatement fin à l'itération actuelle
+    actuelle et retournera au début de la boucle en commençant une nouvelle itération et en omettant tout le code qui vient après le continue dans la boucle. Il peut également
+    peut également être utilisé dans l'instruction avec où il fera en sorte que le code passe à l'instance suivante et s'exécute à nouveau. Notez que si continue est utilisé en dehors de l'un de ces contextes, une erreur sera générée.
+  Vous trouverez ci-dessous un exemple d'utilisation dans une boucle for:
+  var _val = 0 ; for (var i = 0 ; i < 10 ; i += 1) {
+     if (val_array[i] <= 0) { continue ; }  _val += val_array[i] ; }
+     draw_text(32, 32, "Total des valeurs positives = " + string(_val)) ;
+  Vous trouverez ci-dessous un exemple d'utilisation dans une boucle while:
+  var file = file_text_open_read("Game_Data.txt") ; var _num = 0 ; while (!file_text_eof(file)) { var _s = file_text_readln(file) ; if (_s == "") { continue ; }  str[num++] = _s ; }  file_text_close(file) ;
+  
+  Vous trouverez ci-dessous un exemple d'utilisation dans une boucle do / until:
+  do {
+     var _x = random(room_width) ; var _y = random(room_height) ; if (instance_position(_x, y, obj_Enemy) {
+     continue ;
+     }
+     instance_create_layer(_x, _y, "Instances", obj_Enemy) ; }
+     jusqu'à ce que (instance_count(obj_Enemy) >= 10) ;
+  Vous trouverez ci-dessous un exemple d'utilisation dans une boucle repeat:
+  repeat(10) {  var _x = random(room_width) ; var _y = random(room_height) ; if (instance_position(_x, y, obj_Enemy) {
+     continue ;
+     }
+     instance_create_layer(_x, _y, "Instances", obj_Enemy) ; }
+  Enfin, un exemple d'utilisation dans une déclaration with:
+  with (obj_Enemy_Parent) { if (object_index == obj_Enemy_InDestructible) { continue ; }  hp -= 100 ; if (hp <= 0) { instance_destroy() ; }  }
+   
+   
+   
+  
+    
+      
+        Retour : Caractéristiques de la langue
+        Suivant : sortie
+      
+    
+    Copyright YoYo Games Ltd. 2021 Tous droits réservés
   
   
   

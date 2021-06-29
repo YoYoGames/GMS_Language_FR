@@ -1,4 +1,151 @@
- Le gestionnaire de périphériques Le gestionnaire de périphériques est accessible en cliquant sur sur le bouton crayon dans la liste cible: Cliquez sur ce bouton pour ouvrir le Gestionnaire de périphériques où vous pouvez configurer différents périphériques pour les plates-formes cibles sur lesquelles vous souhaitez compiler et tester (notez que les plates-formes disponibles dépendront de la licence dont vous disposez et que toutes ne seront pas visibles). Vous trouverez ci-dessous des détails sur la configuration des appareils pour chacune des plates-formes cibles: Android Ici, vous pouvez cliquer sur le bouton Ajouter un nouveau périphérique pour ajouter un nouveau Android appareil à la liste manuellement ou vous pouvez cliquer sur le bouton de l' appareil Détecter pour avoir GameMaker Studio 2 détecte automatiquement tous les périphériques connectés via une connexion filaire. Vous pouvez également configurer un Android virtuel Android en cliquant sur le bouton Exécuter AVD. Cela ouvrira le Android où vous pouvez créer un nouvel AVD (voir ici pour plus d'informations). Une fois que vous en avez créé un, vous devez le lancer à partir du gestionnaire AVD, puis dans GameMaker Studio 2 cliquez sur le bouton Détecter l'appareil et il devrait être ajouté automatiquement à la liste des appareils: Une fois que vous avez ajouté un appareil (physique ou virtuel), vous pouvez alors vérifier la connexion à l'aide du bouton Tester la connexion ou le supprimer à nouveau de la liste en cliquant sur le bouton Supprimer l'appareil. HTML5 Le gestionnaire d'appareils HTML5 permet d'ajouter différents navigateurs à la liste d'appareils pour le ciblage lors de l'exécution. Pour commencer, vous devez cliquer sur le bouton Détecter les navigateurs, qui devrait créer des périphériques pour chacun des navigateurs installés sur votre machine. Si votre navigateur n'est pas répertorié, vous pouvez également cliquer sur le bouton Ajouter un nouveau navigateur, puis attribuer un nom à l'appareil et pointer GameMaker Studio 2 vers le chemin de l'exécutable du navigateur. Les champs supplémentaires disponibles peuvent être configurés pour aider à contrôler la façon dont le navigateur exécute vos projets, avec les options suivantes disponibles: Arguments de ligne de commande du navigateur: Ici, vous pouvez ajouter des arguments de ligne de commande à ajouter au chemin du navigateur. Vous pouvez en trouver une liste à partir des liens suivants vers les principaux navigateurs populaires: Chrome (Chrome) Firefox Internet Explorer Adresse du serveur Web: adresse du serveur Web à cibler (la valeur par défaut est 127.0.0.1). Vous devrez peut-être changer cela en fonction des spécifications de différentes API, par exemple, Facebook exigerait que ce soit défini sur http://localhost (puis mettez cela en liste blanche sur leur console d'application). Port du serveur Web: définissez le numéro de port du serveur Web (la valeur par défaut est 51264). IP de serveur Web / plages d'adresses IP CIDR autorisées: définissez le serveur Web, les noms d'hôte et les plages d'adresses IP CIDR autorisés selon vos besoins. iOS Avant de pouvoir configurer vos iOS, vous devez avoir configuré votre appareil Mac et testé sa connexion (voir ci-dessous pour plus de détails). Une fois que cela est fait, vous pouvez sélectionner le Mac que vous souhaitez cibler dans le menu déroulant en haut de la fenêtre, puis cliquer sur le bouton Détecter l'appareil pour que GameMaker Studio 2 trouve automatiquement tous iOS appareils iOS connectés, y compris les simulateurs. Une fois connecté, les détails de l'appareil seront affichés dans la liste de cette fenêtre, et vous pouvez modifier le nom de l'appareil pour le rendre plus convivial (ce changement n'affecte que la façon dont l'appareil est présenté dans Target Manager et rien d'autre). tvOS Avant de pouvoir configurer vos tvOS, vous devez avoir configuré votre appareil Mac et testé sa connexion (voir ci-dessous pour plus de détails). Une fois que cela est fait, vous pouvez sélectionner le Mac que vous souhaitez cibler dans le menu déroulant en haut de la fenêtre, puis cliquer sur le bouton Détecter l'appareil pour que GameMaker Studio 2 trouve automatiquement tous les tvOS connectés, y compris les simulateurs. Une fois connecté, les détails de l'appareil seront affichés dans la liste de cette fenêtre, et vous pouvez modifier le nom de l'appareil pour le rendre plus convivial (ce changement n'affecte que la façon dont l'appareil est présenté dans Target Manager et rien d'autre). macOS Pour ajouter un appareil Mac au gestionnaire, vous devez d'abord cliquer sur le bouton intitulé Ajouter un nouvel appareil qui ajoutera l'appareil et créera des champs vides que vous devrez remplir pour activer la connexion. Vous devez d'abord nommer le périphérique afin de pouvoir l'identifier dans la liste cible, puis donner le nom d'hôte (ou IP) du Mac. Vous devez ensuite donner le nom d'utilisateur de l'utilisateur auquel vous souhaitez vous connecter et le mot de passe qu'il a utilisé. Si vous le souhaitez, vous pouvez également modifier le dossier d'installation sur le Mac à l'endroit où vous préférez que GameMaker Studio 2 stocke les fichiers de construction pour vos projets. Lorsque tout cela est fait, vous pouvez cliquer sur le bouton Tester la connexion pour vous assurer que GameMaker Studio 2 peut communiquer avec le Mac. REMARQUE: Si vous développez pour iOS vous devez d'abord l'avoir fait et avoir établi une connexion fonctionnelle avec le Mac que vous souhaitez utiliser pour le développement. REMARQUE: vous devez avoir activé la connexion à distance sur le mac cible. Cela peut être fait en allant dans Préférences -> Partage et Activer la connexion à distance pour l'utilisateur que vous souhaitez pouvoir vous connecter. Ubuntu ( Linux ) Pour ajouter un Ubuntu ( Linux ) au gestionnaire, vous devez d'abord cliquer sur le bouton intitulé Ajouter un nouveau périphérique qui ajoutera le périphérique et créera des champs vides que vous devrez remplir pour activer la connexion. Vous devez d'abord nommer le périphérique afin de pouvoir l'identifier dans la liste cible, puis donner le nom d'hôte (ou IP) de la Ubuntu (ou VM). Vous devez ensuite donner le nom d'utilisateur de l'utilisateur auquel vous souhaitez vous connecter et le mot de passe qu'il a utilisé. Vous devez également fournir un dossier d'installation sur la Ubuntu que vous souhaitez utiliser pour installer vos projets. Lorsque tout cela est fait, vous pouvez cliquer sur le bouton Tester la connexion pour vous assurer que GameMaker Studio 2 peut communiquer avec la machine Ubuntu Notez que l'exécutable final créé par GameMaker dépendra de l'architecture de l'appareil ciblé, qui peut être x64 ou ARM. Par exemple, si vous connectez un Raspberry Pi 3 ou 4, l'exécutable créé sera un exécutable ARM 32 bits, et si vous connectez un Linux ce sera un exécutable 64 bits x64. Windows UWP Avant de pouvoir ajouter un appareil pour la Windows 10 UWP, vous devez avoir activé le mode développeur et configuré le portail d'appareils sur l'appareil. Si vous ne le faites pas, GameMaker Studio 2 ne pourra pas communiquer avec l'appareil ni créer correctement vos applications UWP. Le moyen le plus simple d'activer le mode développeur consiste simplement à taper « Mode développeur » dans Windows Search, puis à cliquer sur l' entrée «Paramètres » qui s'affichera. Cela ouvrira la fenêtre suivante: Vous devez sélectionner l' option Mode développeur (qui peut nécessiter que Windows télécharge et installe des packages supplémentaires), puis sélectionnez l'option en dessous, Activer le portail de l'appareil. Le portail de l'appareil permet à GameMaker Studio 2 de communiquer avec le Windows 10, et lorsqu'il est activé, vous devrez fournir un nom d' utilisateur et un mot de passe: Notez que le nom d'utilisateur et le mot de passe doivent être uniques au portail et ne doivent pas être ceux utilisés par votre compte Microsoft ou d'autres informations d'identification Windows Une fois que vous avez donné ces informations, cliquez sur le bouton intitulé Appliquer, puis fermez le gestionnaire de paramètres et revenez à GameMaker Studio 2. Pour plus d'informations sur le portail des appareils, veuillez consulter cet article Microsoft: Portail des appareils pour ordinateur de bureau. Vous pouvez maintenant ouvrir le Gestionnaire de périphériques dans GameMaker Studio 2 et configurer un ou plusieurs périphériques à utiliser: Pour ajouter un Windows 10 UWP au gestionnaire, vous devez d'abord cliquer sur le bouton intitulé Ajouter un nouvel appareil qui ajoutera l'appareil et créera des champs vides que vous devrez remplir pour activer la connexion. Vous devez d'abord nommer l'appareil afin de pouvoir l'identifier dans la liste cible, puis indiquer l' hôte - il s'agit de l'adresse IP de l' Windows 10 sur le réseau qui doit héberger le jeu et doit être suffixée par " :50443 "pour définir le numéro de port. Ensuite, ajoutez le nom d'utilisateur et le mot de passe que vous avez définis dans le portail de l'appareil (comme mentionné précédemment). Vous pouvez laisser le code PIN vide car il n'est pas requis pour UWP Windows 10 Desktop. Pour des détails de configuration plus spécifiques qui couvrent les différentes sorties UWP (bureau, XboxOne), veuillez consulter le helpdesk YYG: Configurer UWP. Toutes les différentes fenêtres de périphériques ont une option en bas pour Effacer les périphériques qui, lorsque vous cliquez dessus, supprimera tous les périphériques connectés de la liste. Une fois que vous avez configuré vos appareils, vous pouvez vous connecter à n'importe lequel d'entre eux à partir des options Target en haut de l' GameMaker Studio 2 et tester / créer votre jeu poussera le projet sur cet appareil:  Retour: Configuration et versions de GMS2 Suivant: Rapport d'erreurs © Copyright YoYo Games Ltd. 2021 Tous droits réservés
+
+  
+  Le gestionnaire de périphériques
+  On accède au gestionnaire de périphériques en cliquant sur  sur le bouton crayon  dans la liste des cibles:
+  En cliquant sur ce bouton, vous ouvrez le gestionnaire de périphériques où vous pouvez configurer différents périphériques pour les plates-formes cibles sur lesquelles vous souhaitez compiler et tester.
+    et tester (notez que les plates-formes disponibles dépendent de la licence que vous possédez et qu'elles ne sont pas toutes visibles). Vous trouverez ci-dessous des détails sur la configuration des dispositifs pour chacune des plates-formes cibles :
+  Android
+  
+    
+       Ici, vous pouvez cliquer sur le bouton
+     Ajouter un nouveau dispositif pour ajouter manuellement un nouveau dispositif Android à la liste, ou vous pouvez cliquer sur le bouton
+      bouton Détecter le périphérique pour que GameMaker Studio 2 détecte automatiquement tous les périphériques connectés via une connexion filaire. Vous pouvez également configurer un
+     appareil virtuelAndroid en cliquant sur le bouton marqué
+     Exécuter AVD. Le gestionnaire de dispositifs virtuels Android s'ouvre alors, et vous pouvez créer un nouveau dispositif virtuel Android (voir
+     ici pour plus d'informations). Une fois que vous en avez créé un, vous devez le lancer à partir du gestionnaire AVD, puis dans GameMaker Studio 2, cliquez sur le bouton Detect Device.
+     Detect Device et il devrait être ajouté automatiquement à la liste des appareils :
+     
+    
+       Une fois que vous avez ajouté un périphérique (physique ou virtuel),
+      vous pouvez alors vérifier la connexion à l'aide du bouton
+     Tester la connexion ou le retirer de la liste en cliquant sur le bouton
+       bouton  Supprimer le périphérique.
+    
+      
+  
+  HTML5
+  
+    
+       Le gestionnaire de périphériques HTML5 permet d'ajouter différents navigateurs à la liste des périphériques pour les cibler lors de l'exécution. Pour commencer, vous devez
+      cliquer sur le bouton
+     Détecter les navigateurs, ce qui devrait créer des périphériques pour chacun des navigateurs installés sur votre machine. Si votre navigateur ne figure pas dans la liste, vous pouvez également cliquer sur le bouton
+     Ajouter un nouveau navigateur, puis donner un nom à l'appareil et indiquer à GameMaker Studio 2 le chemin d'accès à l'exécutable du navigateur.
+    Les champs supplémentaires disponibles peuvent être configurés pour aider à contrôler la façon dont le navigateur exécute vos projets, avec les options suivantes disponibles :
+    
+      
+       Arguments de ligne de commande du navigateur: Vous pouvez ajouter ici tout argument de ligne de commande à ajouter au chemin du navigateur. Vous pouvez trouver une liste de ces arguments dans les liens suivants vers les principaux navigateurs populaires :
+        
+          
+            Chromium (Chrome)
+          
+            Firefox
+          
+            Internet Explorer
+        
+      
+      
+       Adresse du serveur Web: L'adresse du serveur Web à cibler
+        à cibler (par défaut, 127.0.0.1). Il se peut que vous deviez la modifier en fonction des spécifications des différentes API. Par exemple, Facebook exigerait que cette adresse soit définie sur
+        http://localhost (et l'avoir sur la liste blanche de la console de l'application).
+      
+       Port du serveur Web: Définissez le
+       numéro de port pour le serveur Web (51264 par défaut).
+      
+       IP des serveurs Web autorisés / Plages d'IP CIDR: Définissez les serveurs Web autorisés, les noms d'hôtes et les plages d'adresses IP CIDR selon vos besoins.
+    
+     
+  
+  iOS
+  
+    
+       Avant de pouvoir configurer vos appareils iOS, vous devez avoir configuré votre appareil Mac et testé sa connexion (voir ci-dessous).
+      votre appareil Mac et avoir testé sa connexion (voir ci-dessous pour plus de détails). Une fois cela fait, vous pouvez sélectionner le Mac que vous souhaitez cibler dans le menu déroulant en haut de la fenêtre, puis cliquer sur le bouton
+     Détecter le périphérique pour que GameMaker Studio 2 trouve automatiquement tous les appareils iOS connectés, y compris les simulateurs. Une fois connecté, les détails de l'appareil s'affichent dans la liste de cette fenêtre, et vous pouvez modifier le nom de l'appareil pour le rendre plus convivial (cette modification n'affecte que les simulateurs).
+      Vous pouvez modifier le nom de l'appareil pour le rendre plus convivial (cette modification n'affecte que la présentation de l'appareil dans le Target Manager et rien d'autre).
+    
+      
+  
+  tvOS
+  
+    
+       Avant de pouvoir configurer vos appareils tvOS, vous devez avoir
+      configuré votre appareil Mac et testé sa connexion (voir ci-dessous pour plus de détails). Une fois cela fait, vous pouvez sélectionner le Mac que vous souhaitez cibler dans le menu déroulant en haut de la fenêtre, puis cliquer sur le bouton
+     Détecter le périphérique pour que GameMaker Studio 2 trouve automatiquement tous les périphériques tvOS connectés, y compris les simulateurs. Une fois connecté, les détails de l'appareil s'affichent dans la liste de cette fenêtre, et vous pouvez modifier le nom de l'appareil pour le rendre plus convivial (cette modification n'affecte que les simulateurs).
+      Vous pouvez modifier le nom du périphérique pour le rendre plus convivial (cette modification n'affecte que la présentation du périphérique dans le Target Manager et rien d'autre).
+    
+      
+  
+  macOS
+  
+    
+       Pour ajouter un périphérique Mac au gestionnaire, vous devez d'abord cliquer
+      sur le bouton intitulé
+     Ajouter un nouveau périphérique qui ajoutera le périphérique et créera quelques champs vides que vous devrez remplir pour activer la connexion.
+     
+    Vous devez d'abord
+     nommer l'appareil pour pouvoir l'identifier dans la liste des cibles, puis donner le nom d'hôte (ou l'IP) du Mac.
+     nom d'hôte (ou IP) du Mac. Vous devez ensuite donner le
+     nom d'utilisateur de l'utilisateur auquel vous souhaitez vous lier, et le
+     mot de passe qu'il a utilisé. Si vous le souhaitez, vous pouvez également modifier le
+     Install Folder sur le Mac à l'endroit où vous préférez que GameMaker Studio 2 stocke les fichiers de construction de vos projets.
+    Lorsque tout cela est terminé, vous pouvez cliquer sur le bouton
+     Test Connection button pour vous assurer que GameMaker Studio 2 peut communiquer avec le Mac.
+    
+     REMARQUE: si vous développez pour iOS, vous devez d'abord effectuer cette opération et établir une connexion fonctionnelle avec le Mac que vous souhaitez utiliser pour le développement.
+     
+    
+     NOTE: Vous
+     devez avoir activé
+      la connexion à distance sur le mac cible. Cela peut être fait en allant dans
+     Préférences ->
+     Partage et
+     Activez la connexion à distance pour l'utilisateur auquel vous voulez permettre de se connecter.
+    
+  
+  Ubuntu(Linux)
+  
+    Pour ajouter un périphérique Ubuntu(Linux) au gestionnaire, vous devez d'abord cliquer sur le bouton intitulé Add New Device (Ajouter un nouveau périphérique ).
+      ajoutera le périphérique et créera quelques champs vides que vous devrez remplir pour activer la connexion.
+    Vous devez d'abord nommer le périphérique afin de pouvoir l'identifier dans la liste des cibles, puis donner le nom d'hôte (ou l'IP) de la machine Ubuntu (ou VM). Vous devez ensuite donner le nom d'utilisateur de l'utilisateur que
+      vous souhaitez lier, et le mot de passe qu'il a utilisé. Vous devez également indiquer un dossier d'installation sur la machine Ubuntu que vous souhaitez utiliser pour installer vos projets. Lorsque tout cela est terminé, vous pouvez cliquer
+      sur le bouton Tester la connexion pour vous assurer que GameMaker Studio 2 peut communiquer avec la machine Ubuntu.
+    Notez que l'exécutable final créé par GameMaker dépendra de l'architecture de l'appareil ciblé, qui peut être x64 ou ARM. Par exemple, si vous connectez un Raspberry Pi 3 ou 4,
+      l'exécutable créé sera un exécutable 32bit ARM, et si vous connectez un PC Linux, il sera un exécutable 64bit x64.
+     
+  
+  Windows UWP
+  
+    Avant de pouvoir ajouter un appareil pour la cible Windows 10 UWP, vous devez avoir activé le mode développeur et configuré le portail de périphériques sur l'appareil. Si vous ne le faites pas, GameMaker Studio 2 ne pourra pas communiquer avec l'appareil ni créer correctement vos applications UWP.
+      avec l'appareil et créer correctement vos applications UWP.
+    Le moyen le plus simple d'activer le mode Développeur est de taper " Mode Développeur " dans la recherche Windows, puis de cliquer sur l'entrée " Paramètres " qui s'affiche. La fenêtre suivante s'ouvre alors :
+    Vous devez sélectionner l'option Developer Mode (qui peut nécessiter le téléchargement et l'installation par Windows de certains paquets supplémentaires), puis sélectionner l'option située en dessous, Enable Device Portal.
+      télécharger et d'installer des paquets supplémentaires), puis sélectionnez l'option située en dessous, Enable Device Portal. Le portail de l'appareil est ce qui permettra à GameMaker Studio 2 de communiquer avec le PC Windows 10 et, une fois activé, vous devrez
+      d'indiquer un nom d'utilisateur et un mot de passe:
+    Notez que le nom d'utilisateur et le mot de passe doivent être uniques pour le portail et ne doivent pas être ceux utilisés par votre compte Microsoft
+      ou d'autres informations d'identification Windows. Une fois que vous avez fourni ces informations, cliquez sur le bouton intitulé Appliquer , puis fermez le gestionnaire de paramètres et retournez dans GameMaker Studio 2.
+    Pour plus d'informations sur le Device Portal, veuillez consulter cet article de Microsoft : Device Portal for Desktop.
+    Vous pouvez maintenant ouvrir le gestionnaire de périphériques dans GameMaker Studio 2 et configurer un ou plusieurs périphériques à utiliser :
+    Pour ajouter un périphérique compatible Windows 10 UWP au gestionnaire, vous devez d'abord cliquer sur le bouton intitulé Add New Device (Ajouter un nouveau périphérique ).
+      ajoutera le périphérique et créera quelques champs vides que vous devrez remplir pour activer la connexion.
+    Tout d'abord, vous devez nommer l'appareil afin de pouvoir l'identifier dans la liste des cibles, puis donner l'hôte - il s'agit de l'adresse IP de l'appareil Windows 10 sur le réseau qui doit héberger le jeu et doit être suffixé par " :50443" pour définir le numéro de port. Après cela, ajoutez le nom d'utilisateur et le mot de passe que vous avez configurés dans le portail des appareils (comme mentionné précédemment). Vous pouvez laisser le code PIN vide car il
+      n'est pas nécessaire pour le bureau UWP Windows 10.
+    Pour des détails de configuration plus spécifiques qui couvrent les différentes sorties UWP (Desktop, XboxOne), veuillez consulter le service d'assistance YYG : Configuration de l'UWP.
+     
+  
+   
+  Toutes les fenêtres des différents appareils ont une option en bas de page pour effacer les appareils qui, lorsqu'on clique dessus, supprime tous les appareils connectés de la liste.
+  Une fois que vous avez configuré vos appareils, vous pouvez vous connecter à n'importe lequel d'entre eux à partir des options de cible en haut de l'IDE GameMaker Studio 2 et le test/construction de votre jeu enverra le projet sur cet appareil :
+  
+   
+   
+  
+    
+      
+        Retour : Configuration et versions de GMS2
+        Suivant : Rapports d'erreurs
+      
+    
+    Copyright YoYo Games Ltd. 2021 Tous droits réservés
   
   
   

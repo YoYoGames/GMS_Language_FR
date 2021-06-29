@@ -1,4 +1,34 @@
-in_sequence Il s'agit d'une variable intégrée qui fait partie des variables d'instance créées pour chaque instance d'un objet dans votre jeu. Lorsqu'une instance fait partie d'une séquence, cette variable retournera true, et quand ce n'est pas le cas, il reviendra false. Il s'agit d'une variable en lecture seule et ne peut pas être définie. Syntaxe:in_sequence Retour:Boolean Exemple:if (!in_sequence)     {     instance_destroy()     } Le code ci-dessus vérifie le in_sequence variable, et si c'est false (l'instance ne fait pas partie d'une séquence) alors elle détruira l'instance.  Retour: Séquences Suivant:sequence_exists © Copyright YoYo Games Ltd. 2021 Tous droits réservés
+
+  
+  dans_séquence
+  Il s'agit d'une variable intégrée qui fait partie des variables d'instance créées pour chaque instance d'objet dans votre jeu. Si l'instance est contrôlée par une séquence,
+    cette variable renverra true, sinon elle renverra false. Cette variable est en lecture seule et ne peut être modifiée.
+  Notez que cette variable deviendra fausse après la fin de la séquence de contrôle, même si son élément de séquence existe toujours, et deviendra vraie si cet élément de séquence est joué à nouveau.
+  Vous pouvez utiliser cette variable dans vos objets contrôlés par le joueur (ou le CPU) pour vous assurer qu'ils ne sont déplacés par le code que lorsqu'ils ne sont pas dans une séquence. Cela peut s'avérer utile pour les cutscenes, lorsque vous avez besoin d'utiliser les mêmes instances dans une Séquence (en utilisant la variable
+    la fonction sequence_instance_override_object() ) et que vous devez vous assurer qu'elles ne peuvent pas être déplacées par leur code habituel lorsque la scène est active.
+   
+  Syntaxe :
+  dans_séquence
+   
+  Les retours :
+  Booléen
+   
+  Exemple :
+  if (!in_sequence) {
+     x += move_x ; y += move_y ; }
+  
+  Le code ci-dessus vérifie la variable in_sequence, et si elle vaut false (ce qui signifie que l'instance n'est pas contrôlée par une séquence), il ajoute move_x et move_y à la position de l'instance.
+    de l'instance, s'assurant qu'elle ne se déplace que lorsqu'elle n'est pas dans une séquence.
+   
+   
+  
+    
+      
+        Retour : Séquences
+        Suivant : sequence_exists
+      
+    
+    Copyright YoYo Games Ltd. 2021 Tous droits réservés
   
   
   

@@ -1,6 +1,47 @@
-gamepad_set_button_threshold Cette fonction peut être utilisée pour définir le paramètre de seuil actuel des touches analogiques pour un appareil donné. Le seuil par défaut pour tous les boutons analogiques est de 0,5, la plage allant de 0 à 1. Le seuil définit à quel point le bouton est considéré comme étant "enfoncé" pour les jeux qui nécessitent qu'ils agissent comme un bouton numérique. Notez que cette fonction affectera les états de vérification, enfoncé et relâché pour les boutons analogiques, mais n'affectera pas la valeur renvoyée par la fonctiongamepad_button_check(), qui renverra toujours la valeur brute du bouton. Syntaxe:gamepad_set_button_threshold(device, threshold); Argument Description device Quel «slot» de périphérique de manette de jeu vérifier. threshold La nouvelle valeur de seuil (de 0 à 1, 0,5 par défaut). Retour:N/A Exemple:if gamepad_get_button_threshold(0) != 0.5    {
-        gamepad_set_button_threshold(0, 0.5);    }
-   Le code ci-dessus vérifie le seuil du bouton analogique de la manette de jeu connectée à l'appareil "slot" 0 et si ce n'est pas la valeur par défaut de 0,5, il est réglé sur cette valeur.  Retour: Entrée de la manette de jeu Suivant: gamepad_set_axis_deadzone © Copyright YoYo Games Ltd. 2021 Tous droits réservés
+
+  
+  gamepad_set_button_threshold
+  Cette fonction peut être utilisée pour définir le seuil actuel des boutons analogiques pour un dispositif donné. Le seuil par défaut pour tous les boutons analogiques est de 0,5, avec une plage allant de 0 à 1.
+    comme étant "enfoncé" pour les jeux qui exigent qu'ils agissent comme un bouton numérique. Notez que cette fonction affectera les états "check", "pressed" et "released" pour les boutons analogiques, mais n' affectera pas la valeur renvoyée par la fonction gamepad_button_check()qui renvoie toujours la valeur brute du bouton.
+   
+  Syntaxe :
+  gamepad_set_button_threshold(device, threshold) ;
+  
+    
+      
+        Arguments
+        Description
+      
+      
+        dispositif
+        Quel "slot" de périphérique gamepad vérifier.
+      
+      
+        seuil
+        La nouvelle valeur du seuil (de 0 à 1, par défaut 0,5).
+      
+    
+  
+   
+  Les retours :
+  N/A
+   
+  Exemple :
+  if gamepad_get_button_threshold(0) !.= 0.5 {
+     gamepad_set_button_threshold(0, 0.5) ; }
+  
+  Le code ci-dessus vérifie le seuil du bouton analogique de la manette de jeu connectée au périphérique "slot" 0 et si ce n'est pas la valeur par défaut de 0,5, il est réglé sur cette valeur.
+   
+   
+   
+  
+    
+      
+        Retour : Entrée de la manette de jeu
+        Suivant :  gamepad_set_axis_deadzone 
+      
+    
+    Copyright YoYo Games Ltd. 2021 Tous droits réservés
   
   
   

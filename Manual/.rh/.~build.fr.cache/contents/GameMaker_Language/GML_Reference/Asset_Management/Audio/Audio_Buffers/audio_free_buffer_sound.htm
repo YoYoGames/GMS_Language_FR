@@ -1,4 +1,42 @@
-audio_free_buffer_sound Avec cette fonction, vous pouvez libérer la valeur d'index du pointeur associée à l'ID de son. Les sons libérés ne seront pas disponibles pour la lecture, et si plusieurs instances du son sont jouées, elles seront toutes arrêtées. Notez qu'avant de pouvoir supprimer le tampon lui-même, vous devez d'abord libérer tous les identifiants sonores qui lui sont associés. Syntaxe:audio_free_buffer_sound(index); Argument Description index L'indice du son tamponné à libérer. Retour:N/A Exemple:audio_free_buffer_sound(soundID); Le code ci-dessus libère le son tamponné indexé dans la variable "soundID".  Arrière: Tampons audio Suivant:audio_create_play_queue © Copyright YoYo Games Ltd. 2021 Tous droits réservés
+
+  
+  audio_free_buffer_sound
+  Cette fonction permet de libérer la valeur de l'index du pointeur associée à l'ID du son. Les sons libérés ne seront pas disponibles pour la lecture, et si plusieurs instances du son sont en cours de lecture, elles seront toutes arrêtées. Notez qu'avant de pouvoir supprimer
+    le tampon lui-même, vous devez d'abord libérer tous les ID de sons qui lui sont associés.
+   
+  Syntaxe :
+  audio_free_buffer_sound(index) ;
+  
+    
+      
+        Arguments
+        Description
+      
+      
+        indice
+        L'index du son mis en mémoire tampon à libérer.
+      
+    
+  
+   
+  Les retours :
+  N/A
+   
+  Exemple :
+  audio_free_buffer_sound(soundID) ;
+  Le code ci-dessus libère le son en mémoire tampon indexé dans la variable "soundID".
+   
+   
+   
+  
+    
+      
+        Retour : Tampons audio
+        Suivant : audio_create_play_queue
+         
+      
+    
+    Copyright YoYo Games Ltd. 2021 Tous droits réservés
   
   
   

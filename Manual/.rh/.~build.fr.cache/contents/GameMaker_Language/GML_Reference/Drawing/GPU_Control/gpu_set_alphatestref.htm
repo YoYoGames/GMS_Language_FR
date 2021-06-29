@@ -1,8 +1,49 @@
-gpu_set_alphatestref Cette fonction définira la valeur de référence pour le test alpha (lorsqu'elle a été activée à l'aide du gpu_set_alphatestenable() ). Il s'agit du seuil de "coupure" auquel les pixels alpha ne seront pas dessinés. Fondamentalement, si cette valeur est définie sur 0 et que l'interpolation linéaire est activée (soit dans les options de jeu, soit en utilisant gpu_set_texfilter() ), vous pouvez toujours obtenir des erreurs visuelles sur les bords des objets qui se chevauchent. En effet, vous pouvez avoir des zones presque complètement transparentes qui bloquent les éléments dessinés derrière elles, mais si vous définissez cette valeur de référence sur, par exemple, 254 (c'est-à-dire une en dessous du maximum), cela garantit que seuls 100% des pixels opaques seront dessinés.. Vous pouvez également désactiver l'interpolation de texture, ce qui vous permettrait normalement d'utiliser les valeurs par défaut sans problème et sans avoir besoin d'utiliser cette fonction du tout, mais cela dépend beaucoup de l'illustration source. REMARQUE: il s'agit d'une fonctionnalité de dessin avancée, donc si vous n'êtes pas sûr d'en avoir besoin ou non, ou si vous ne savez pas exactement ce qu'elle fait, vous feriez probablement mieux de ne pas l'utiliser car elle peut gravement corrompre la façon dont votre jeu est dessiné.. Syntaxe:gpu_set_alphatestref(val); Argument Description val Définit la valeur de référence pour le test alpha de 0 à 255 (la valeur par défaut est 0) Retour:N/A Exemple:if !gpu_get_alphatestenable()     {
-         gpu_set_alphatestenable(true);
-         gpu_set_alphatestref(128);
-         }
-   Le code ci-dessus vérifiera si le test alpha est activé et sinon, il activera le test alpha et définira le seuil de test sur 128 (seuls les pixels avec un alpha supérieur à 0,5 seront dessinés).  Retour: Contrôle GPU Suivant:gpu_set_texfilter © Copyright YoYo Games Ltd. 2021 Tous droits réservés
+
+  
+  gpu_set_alphatestref
+  Cette fonction va définir la valeur de référence pour le test alpha (lorsqu'il a été activé à l'aide de la fonction gpu_set_alphatestenable()). Il s'agit du seuil de "coupure" à partir duquel les pixels avec alpha
+    ne seront pas dessinés.
+  En fait, si cette valeur est fixée à 0 et que l'interpolation linéaire est activée (soit dans les options du jeu, soit en utilisant la fonction gpu_set_texfilter()), vous pouvez toujours obtenir des erreurs visuelles sur les bords des objets qui se
+    objets qui se chevauchent. En effet, vous pouvez avoir des zones presque entièrement transparentes qui bloquent les objets dessinés derrière elles, mais si vous définissez cette valeur de référence à, par exemple, 254 (c'est-à-dire une valeur inférieure au maximum), cela garantit que seuls les pixels 100 % opaques seront dessinés.
+    seront dessinés. Vous pouvez également désactiver l'interpolation de la texture, ce qui vous permet normalement d'utiliser les valeurs par défaut sans problème et sans avoir besoin d'utiliser cette fonction, mais cela dépend beaucoup de l'œuvre source.
+  REMARQUE: Il s'agit d'une fonction de dessin avancée, donc si vous n'êtes pas sûr d'en avoir besoin ou si vous ne savez pas exactement ce qu'elle fait, il est préférable de ne pas l'utiliser car elle peut sérieusement corrompre la façon dont votre jeu est dessiné.
+   
+  Syntaxe :
+  gpu_set_alphatestref(val) ;
+  
+    
+      
+        Arguments
+        Description
+      
+      
+        val
+        Définit la valeur de référence pour le test alpha de 0 à 255 (la valeur par défaut est 0)
+      
+    
+  
+   
+  Les retours :
+  N/A
+   
+  Exemple :
+  if !gpu_get_alphatestenable() {
+     gpu_set_alphatestenable(true) ;
+     gpu_set_alphatestref(128) ;
+     }
+  
+  Le code ci-dessus vérifie si le test d'alpha est activé et, si ce n'est pas le cas, il active le test d'alpha et fixe le seuil de test à 128 (seuls les pixels dont l'alpha est supérieur à 0,5 seront dessinés).
+   
+   
+   
+  
+    
+      
+        Retour : Contrôle du GPU
+        Suivant : gpu_set_texfilter
+      
+    
+    Copyright YoYo Games Ltd. 2021 Tous droits réservés
   
   
   

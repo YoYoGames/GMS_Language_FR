@@ -1,4 +1,95 @@
- L'éditeur de Shader Shaders sont un outil très puissant qui peut être utilisé pour manipuler les graphiques que votre jeu rend à l'écran, permettant des effets incroyablement rapides qui peuvent aller, par exemple, de l'ajout d'une teinte de couleur subtile à un sprite, jusqu'aux effets de distorsion en plein écran.. Mais qu'est-ce qu'un shader ? Un shader est essentiellement un programme en deux parties qui s'exécute directement sur la carte graphique elle-même, ce qui le rend très rapide car le GPU fait tout le travail et libère des cycles de processeur pour votre code de jeu. Le shader complet est composé d'un shader et d'un shader (également connu sous le nom de pixel shader ). Ces deux petits programmes fonctionnent ensemble afin de manipuler ce que la carte graphique rend à l'écran. Cela vous permet ensuite de manipuler en temps réel, la position, la couleur et les valeurs alpha qui sont réellement rendues sur le tampon d'affichage. Vertex Shader Le Vertex Shader est l' shader programmable dans le pipeline de rendu qui gère le traitement des sommets individuels (les points des triangles utilisés pour rendre n'importe quelle image), et lorsque vous effectuez le rendu d'une géométrie - comme un sprite ou une surface - GameMaker Studio 2 crée un flux de sommets - appelé Vertex Buffer - qui définit la géométrie de ces triangles. Un sprite par exemple aurait une géométrie de deux triangles (normalement appelés polygones ) rendus ensemble pour former un "quad". Ce flux de sommets du Vertex Buffer est alimenté en entrée du Vertex Shader, qui peut traiter les données des sommets de manière programmable. La Shader est utilisée par le GPU pour assembler des triangles, qui sont ensuite correctement coupés et sélectionnés vers le port de vue et la caméra de vue, puis envoyés au bloc rasterizer du GPU qui génère un nouveau flux de sortie, constitué par quelque chose appelé Fragments. Ce sont de minuscules structures de données, dont chacune est relative à un seul pixel qui apparaît à l'écran. Fragment Shader Le Fragment Shader est l' shader programmable dans le pipeline de rendu qui traite des «fragments» - les pixels interpolés utilisés pour texturer un polygone donné - et ils sont responsables de la sortie de la couleur de pixel finale de chaque pixel de triangle rendu. Fondamentalement, cela fonctionne comme ceci: le Fragment Shader reçoit en entrée tous les fragments (les pixels individuels du triangle en cours de rendu) qui ont été passés le long du pipeline par le Vertex Shader. Il peut ensuite traiter ces fragments pour changer la couleur et l'alpha du pixel de destination final qui sera dessiné à l'écran. Un aperçu complet du fonctionnement shaders et de la place qu'ils occupent dans le pipeline graphique n'entre pas dans le cadre de cela, mais vous pouvez trouver un guide bried ici: Guide d'utilisation des Shaders Et il y a un certain nombre d'articles sur le YoYo Games Tech qui entrent beaucoup plus en détail, auxquels vous pouvez accéder à partir des liens suivants: Shaders Partie 1 Shaders Partie 2 Shaders Partie 3 Shaders Partie 4 GameMaker Studio 2 prend en charge les langages de shader Langage Shader Plateforme cible GLSL ES Toutes les plateformes cibles GLSL Mac et Ubuntu ( Linux ) HLSL 11 Windows, UWP, XboxOne PSSL Playstation 4 Pour créer une shader, cliquez simplement avec le bouton droit de la souris dans le navigateur de ressources et sélectionnez Créer un Shader. Une fois que vous avez créé le shader base, vous pouvez ensuite utiliser le bouton droit de la souris menu sur la nouvelle ressource pour sélectionner le shader avant de continuer à éditer le code: L'éditeur de code lui-même est divisé en deux «programmes» - Vertex et Fragment - lorsque vous créez un nouveau shader, chacun étant disponible à partir des onglets en haut de l'éditeur. Les deux sont créés en même temps car vous ne pouvez pas créer un shader sans les deux parties. Même si vous ne souhaitez utiliser que le fragment shader vous devrez d'abord créer un vertex shader "pass through", c'est pourquoi, par défaut, tout nouveau shader cours de création aura un vertex et un fragment pass through shader déjà codés pour vous (dans la capture d'écran en haut de la page, vous pouvez voir que nous avons utilisé la vue du volet de l'éditeur de code pour montrer les deux côte à côte... utile lorsque vous travaillez sur les deux shader ensemble). Il est à noter que vous pouvez utiliser les shaders GLSL ES sur toutes les plates-formes cibles, mais pour qu'ils fonctionnent sur la plate-forme cible HTML5, vous devez avoir activé WebGL dans les options de jeu HTML5, sinon ils ne fonctionneront pas. Pour plus de détails sur shader fonctions de shader et comment elles peuvent être utilisées dans GameMaker Studio 2 veuillez consulter les pages suivantes: Fonctions Shader - La section de référence GML shaders. Shader Constantes - Les constantes intégrées à GameMaker Studio 2 qui peut être utilisé lors de l' écriture des shaders. Spécifications GLSL ES - Fichier PDF des Shader Language GameMaker Studio 2. Référence du langage HLSL - Les pages de référence Microsoft pour l'utilisation de HLSL.Présentation du langage PSSL - Présentation du langage PSSL au format présentation.  Retour: Les éditeurs d'actifs Suivant: Sons © Copyright YoYo Games Ltd. 2021 Tous droits réservés
+
+  
+  L'éditeur de shaders 
+  Lesshaders sont un outil très puissant qui peut être utilisé pour manipuler les graphiques rendus à l'écran par votre jeu.
+    qui peuvent aller, par exemple, de l'ajout d'une subtile nuance de couleur à un sprite jusqu'à des effets de distorsion en plein écran. Mais qu'est-ce qu'un shader?
+  Un shader est essentiellement un programme en deux parties qui s'exécute directement sur la carte graphique elle-même, ce qui le rend très rapide puisque le GPU fait tout le travail et libère des cycles CPU pour votre code de jeu. Le shader complet est composé d'un programme de vertex shader et d'un programme de fragment shader (également appelé "fragment shader").
+    un programme de fragment shader (également connu sous le nom de pixel shader). Ces deux petits programmes travaillent ensemble afin de manipuler ce que la carte graphique rend à l'écran. Cela vous permet ensuite de manipuler en temps réel la position, la couleur et les valeurs alpha
+    qui sont effectivement rendues sur le tampon d'affichage.
+  Vertex Shader
+  
+    Le Vertex Shader est l'étape programmable du pipeline de rendu qui gère le traitement des sommets individuels (les points des triangles utilisés pour rendre une image). Lorsque vous rendez une géométrie, comme un sprite ou une surface, GameMaker Studio 2 crée un flux de sommets (appelé Vertex Buffer) qui définit la géométrie de ces triangles.
+      - GameMaker Studio 2 crée un flux de sommets - appelé Vertex Buffer - qui définit la géométrie de ces triangles. Un sprite, par exemple, aura une géométrie de deux triangles (normalement appelés polygones) rendus ensemble pour former un "quad".
+      pour former un "quad". Ce flux de sommets provenant de la mémoire tampon est utilisé comme entrée pour le Vertex Shader, qui peut traiter les données de sommets de manière programmable. La sortie du Vertex Shader est utilisée par le GPU pour assembler des triangles,
+      qui sont ensuite correctement découpés et découpés pour le port de vue et la caméra de vue, puis envoyés au bloc rasterizer du GPU qui génère un nouveau flux de sortie, constitué de ce qu'on appelle des fragments. Ce sont de minuscules données
+      structures de données, chacune d'entre elles étant relative à un seul pixel apparaissant à l'écran.
+  
+  Fragment Shader
+  
+    Le Fragment Shader est l'étape programmable du pipeline de rendu qui traite les "fragments" - les pixels interpolés utilisés pour texturer un polygone donné - et il est responsable de la sortie de la couleur finale de chaque pixel du triangle rendu.
+      pixel du triangle rendu. Le Fragment Shader reçoit en entrée tous les fragments (les pixels individuels du triangle en cours de rendu) qui ont été transmis dans le pipeline par le Vertex Shader. Il peut alors
+      traiter ces fragments pour modifier la couleur et l'alpha du pixel de destination final qui sera dessiné à l'écran.
+  
+   
+  Un aperçu complet du fonctionnement des shaders et de la place qu'ils occupent dans le pipeline graphique n'entre pas dans le cadre de cet article, mais vous pouvez trouver un guide succinct ici :
+   
+  
+    Guide d'utilisation des shaders
+  
+   
+  Il existe un certain nombre d'articles sur le blog YoYo Games Tech qui donnent beaucoup plus de détails, que vous pouvez consulter à partir des liens suivants :
+   
+  
+    Shaders Partie 1
+    Shaders Partie 2
+    Shaders Partie 3
+    Shaders Partie 4
+  
+   
+  GameMaker Studio 2 prend en charge les langages de shaders suivants :
+   
+  
+    
+      
+        Langage deshaders 
+        Plate-forme cible
+      
+      
+        GLSL ES
+        Toutes les plateformes cibles
+      
+      
+        GLSL
+        Mac et Ubuntu(Linux)
+      
+      
+        HLSL 11
+        Windows, UWP, XboxOne
+      
+      
+        PSSL
+        Playstation 4
+      
+    
+  
+   
+  Pour créer une ressource de shader, il suffit de cliquer avec le bouton droit de la souris sur  dans l'Asset Browser et de sélectionner Create Shader. Une fois que vous avez créé
+    le shader de base, vous pouvez alors utiliser le menu droit de la souris  sur la nouvelle ressource pour sélectionner le type de shader avant de continuer à modifier le code :
+  L'éditeur de code lui-même est divisé en deux "programmes" - Vertex et Fragment - lorsque vous créez un nouveau shader, chacun d'eux étant accessible à partir d'onglets situés en haut de l'éditeur.
+    disponibles à partir des onglets en haut de l'éditeur. Les deux sont créés en même temps car vous ne pouvez pas créer un shader sans les deux parties. Même si vous souhaitez utiliser uniquement le fragment shader, vous devez d'abord créer un vertex shader "pass through".
+    C'est pourquoi par défaut, tout nouveau shader créé aura un vertex et un fragment pass through shader déjà codé pour vous (dans la capture d'écran en haut de la page, vous pouvez voir que nous avons utilisé l'éditeur de code pour montrer les deux côte à côte...).
+    les deux côte à côte... utile lorsque vous travaillez sur les deux programmes de shaders ensemble).
+  Il convient de noter que vous pouvez utiliser les shaders GLSL ES sur toutes les plates-formes cibles, mais pour qu'ils fonctionnent sur la plate-forme cible HTML5 , vous devez avoir activé WebGL dans les options de jeu HTML5.
+    ils ne fonctionneront pas.
+  Pour plus de détails sur les fonctions des shaders et la façon dont ils peuvent être utilisés dans GameMaker Studio 2, veuillez consulter les pages suivantes :
+  
+    Shader Functions - La section de référence GML pour les shaders.
+    Constantes deshaders - Les constantes intégrées à GameMaker Studio 2 qui peuvent être utilisées lors de l'écriture de shaders.
+    Spécifications GLSL ES - Fichier PDF des spécifications du langage de shaders Open GL ES que GameMaker Studio 2 utilise.
+    Référence du langage HLSL - Les pages de référence de Microsoft pour l'utilisation du langage HLSL.
+    Présentation du langage PSSL - Aperçu du langage PSSL sous forme de présentation.
+  
+   
+   
+   
+  
+    
+      
+        Retour : Les éditeurs d'actifs
+        Suivant : Sons
+      
+    
+    Copyright YoYo Games Ltd. 2021 Tous droits réservés
   
   
   

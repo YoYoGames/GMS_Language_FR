@@ -1,9 +1,53 @@
-for L'un des moyens les plus utilisés pour itérer plusieurs fois sur une instruction (ou des instructions) consiste à utiliser une for, qui a cette forme:for (<assignment>; <expression>; <operation>;)     {     <statement>;     <statement>;     ...     } Cela fonctionne comme suit - Tout d'abord, l'affectation est exécutée qui attribue une valeur à une variable, puis l' expression est évaluée et, si elle est true, les instructions entre accolades {} sont exécutées. Ensuite, l'opération est effectuée sur la variable affectée, puis l'expression est à nouveau évaluée. Cette boucle se poursuivra jusqu'à ce que l'expression soit jugée false. Maintenant, cela peut sembler compliqué quand il est écrit comme ça, mais vous devriez l'interpréter comme: La première affectation initialise la boucle for L'expression teste si la boucle doit être terminée La déclaration est exécutée L'opération est effectuée Revenez à l'étape 2 et exécutez à nouveau l'expression et continuez ou quittez la boucle Ceci est extrêmement utile pour effectuer des tâches répétitives qui impliqueraient plusieurs lignes de code de toute autre manière, et est couramment utilisé comme compteur pour évaluer des tableaux, dessiner des éléments, définir des valeurs incrémentielles, etc. L'exemple de code suivant illustre une utilisation typique pour ce type de déclaration:for (var i = 0; i < 10; i += 1)     {
-         draw_text(32, 32 + (i * 32), string(i) + ". "+ string(scr[i]));     }
-   Le code ci-dessus initialise un for loop, en commençant à 0 et en comptant jusqu'à (et y compris) 9, puis utilise la valeur de boucle de i pour dessiner les valeurs stockées dans un tableau en bas de l'écran. Notez comment la variable de boucle for i est utilisée non seulement pour parcourir le tableau, mais aussi pour dessiner un nombre et pour indiquer à GameMaker Studio 2 où dessiner les valeurs dans la pièce. Cette flexibilité est l'une des principales raisons for lesquelles les boucles for sont si importantes dans la programmation. Quand devriez-vous utiliser une boucle for Chaque fois que vous devez effectuer un nombre fixe d'itérations sur une ou plusieurs instructions tout en gardant une trace de l' itération en cours d'exécution et en utilisant cette valeur d'itération. REMARQUE: lorsque vous travaillez avec d'autres personnes, vous verrez plusieurs exemples des variables « i » et « j » utilisées pour la variable de compteur de boucle. Ce ne sont pas des noms de variables obligatoires et vous pouvez utiliser n'importe quoi comme " a " ou " foo " ou autre. L'utilisation de " i " et " j " est simplement une convention standard en programmation. Il est à noter que vous pouvez utiliser le spécial break et continue déclarations dans un for boucle aussi. Utilisant break quittera immédiatement la boucle et passera à tout code qui est dans l'événement ou la fonction après que la boucle aurait dû se terminer, par exemple:var _inst = noone; for (var i = 0; i < 10; i += 1)     {
-         _inst = instance_find(obj_Enemy_Parent, i);     if instance_exists(_inst)         {         if _inst.object_index == obj_Enemy_Melee             {             break;             }         }     }    target = _inst; Le code ci-dessus parcourt les 10 instances les plus proches de l'objet "parent" donné, et si une instance est trouvée, il vérifie l'ID d'objet d'instance, et s'il s'agit d'une instance de obj_Enemy_Melee puis la boucle se termine en utilisant break et la valeur d'ID attribuée à une variable (si aucune instance n'est trouvée, alors le mot-clé noone sera ajouté à la variable). Un exemple d'utilisation continue dans un for boucle serait:var _val = 0; for (var i = 0; i < 10; i += 1)     {
-         if (val_array[i] <= 0)         {         continue;         }     _val += val_array[i];     }
-     draw_text(32, 32, "Positive Values Total = " + string(_val)); Ce code vérifiera la valeur stockée dans chaque position de tableau d'un tableau 1D de 10 longueurs, et s'il y en a qui sont inférieurs ou égaux à 0, il sera continue la boucle, ce qui signifie que l'itération en cours se terminera, i sera incrémenté et la prochaine itération de boucle sera lancée. Si la valeur est supérieure à 0, elle est ajoutée à la variable locale _val, et une fois la boucle terminée, la valeur totale est dessinée à l'écran. Pour plus d'exemples de mots-clés de boucle, veuillez consulter les sections sur la repeat, while et do / until.  Retour: Caractéristiques linguistiques Suivant: switch © Copyright YoYo Games Ltd. 2021 Tous droits réservés
+
+  
+  pour
+  L'une des façons les plus utilisées pour itérer sur une ou plusieurs déclarations plusieurs fois est d'utiliser une boucle for, qui a cette forme :
+  for (<assignment> ; <expression> ; <operation> ;) { <statement> ; <statement> ;... }
+  Cela fonctionne de la manière suivante : on exécute d'abord l'affectation qui attribue une valeur à une variable, puis on évalue l'expression et, si elle est vraie, on exécute les instructions entre crochets{}.
+    sont exécutées. Ensuite, l'opération est exécutée sur la variable assignée, puis l'expression est évaluée à nouveau. Cette boucle se poursuit jusqu'à ce que l'expression soit fausse.
+  Maintenant, cela peut sembler compliqué quand c'est écrit comme ça, mais vous devez l'interpréter comme suit :
+  
+    La première affectation initialise la boucle for
+    L'expression teste si la boucle doit être terminée
+    La déclaration est effectuée
+    L'opération est effectuée
+    Retournez à l'étape 2 et réalisez à nouveau l'expression et continuez ou quittez la boucle.
+  
+  C'est extrêmement utile pour effectuer des tâches répétitives qui impliqueraient de multiples lignes de code d'une autre manière, et est couramment utilisé comme compteur pour évaluer des tableaux, dessiner des choses, définir des valeurs incrémentielles, etc... L'exemple de code suivant illustre
+    une utilisation typique de ce type d'instruction :
+  for (var i = 0 ; i < 10 ; i += 1) {
+     draw_text(32, 32 + (i * 32), string(i) + ". "+ string(scr[i])) ; }
+  
+  Le code ci-dessus initialise une boucle for, commençant à 0 et comptant jusqu'à (et y compris) 9, puis utilise la valeur de boucle de i pour dessiner à l'écran les valeurs stockées dans un tableau. Notez comment la variable de boucle for 
+   i est utilisée non seulement pour boucler le tableau, mais aussi pour dessiner un nombre et indiquer à GameMaker Studio 2 où dessiner les valeurs dans la pièce. Cette flexibilité est l'une des principales raisons pour lesquelles les boucles for sont si importantes en programmation.
+  Quand utiliser une boucle for? Chaque fois que vous devez effectuer un nombre fixe d'itérations sur une ou plusieurs instructions tout en gardant la trace de l'itération en cours d'exécution et en utilisant cette valeur d'itération.
+    en cours d'exécution et en utilisant cette valeur d'itération.
+  NOTE: Vous verrez de nombreux exemples, lorsque vous travaillerez avec d'autres personnes, où les variables " i "et" j " sont utilisées pour la variable du compteur de boucle. Ces noms de variables ne sont pas obligatoires et vous pouvez utiliser n'importe quoi
+    comme " a " ou " foo " ouautre. L'utilisation de " i "et" j " est simplement une convention standard en programmation.
+  Il convient de noter que vous pouvez également utiliser les instructions spéciales break et continue dans une boucle for. L'utilisation de break permet de sortir immédiatement de la boucle et de passer à tout code se trouvant dans l'événement ou la fonction après que la boucle ait dû se terminer, par exemple :
+  var _inst = noone ; for (var i = 0 ; i < 10 ; i += 1) {
+     _inst = instance_find(obj_Enemy_Parent, i) ; if instance_exists(_inst) { if _inst.object_index == obj_Enemy_Melee { break ; }  }  }  target = _inst ;
+  Le code ci-dessus boucle sur les 10 instances les plus proches de l'objet "parent" donné, et si une instance est trouvée, il vérifie l'ID de l'objet de l'instance, et si c'est une instance de obj_Enemy_Melee alors la boucle est terminée
+    en utilisant break et la valeur de l'ID assignée à une variable (si aucune instance n'est trouvée, alors le mot clé noone sera ajouté à la variable).
+  Voici un exemple d'utilisation de continue dans une boucle for:
+  var _val = 0 ; for (var i = 0 ; i < 10 ; i += 1) {
+     if (val_array[i] <= 0) { continue ; }  _val += val_array[i] ; }
+     draw_text(32, 32, "Total des valeurs positives = " + string(_val)) ;
+  Ce code va vérifier la valeur stockée dans chaque position d'un tableau 1D de 10 longueurs, et si l'une d'entre elles est inférieure ou égale à 0, il va continue la boucle, ce qui signifie que l'itération actuelle va se terminer,
+    i sera incrémenté, et l'itération suivante de la boucle sera lancée. Si la valeur est supérieure à 0, elle est ajoutée à la variable locale _val et, une fois la boucle terminée, la valeur totale est affichée à l'écran.
+    est affichée à l'écran.
+  Pour plus d'exemples de mots-clés de boucle, veuillez consulter les sections suivantes répéter, pendant que, et do / until.
+   
+   
+   
+  
+    
+      
+        Retour : Caractéristiques de la langue
+        Suivant : interrupteur
+      
+    
+    Copyright YoYo Games Ltd. 2021 Tous droits réservés
   
   
   

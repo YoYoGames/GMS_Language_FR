@@ -1,4 +1,48 @@
-part_system_draw_order Avec cette fonction, vous pouvez définir la manière dont les particules sont dessinées lorsqu'elles sont créées à l'écran. Le système par défaut utilise un ancien> nouveau look (la fonction est définie sur true ), où les anciennes particules sont dessinées à une profondeur plus élevée que les plus récentes et apparaissent ainsi "sous" les nouvelles particules, mais en définissant cette fonction sur false vous pouvez inverser cet ordre et faire dessiner les nouvelles particules plus haut et ainsi apparaître «sous» les plus anciennes. Les images ci-dessous illustrent cela, l'image de gauche étant la valeur par défaut de true et l'image de droite false: REMARQUE: lorsque les particules sont dessinées avec un mode de fusion additif, l'effet de cette fonction peut ne pas toujours être évident. Syntaxe:part_system_draw_order(ind, oldtonew); Argument Description ind L'indice du système de particules à changer. oldtonew Si les anciennes particules doivent être dessinées derrière les plus récentes (vrai) ou vice versa (faux). Retour:N/A Exemple:mysystem = part_system_create(); part_system_draw_order(mysystem, true); Cela créera un nouveau système de particules avec l'index "mysystem ", puis il définit les particules pour attirer des particules plus récentes sur les plus anciennes.  Retour: Systèmes de particules Suivant:part_particles_create © Copyright YoYo Games Ltd. 2021 Tous droits réservés
+
+  
+  ordre de tirage des pièces
+  Avec cette fonction, vous pouvez définir la façon dont les particules sont dessinées lorsqu'elles sont créées à l'écran. Le système par défaut utilise un look ancien > nouveau (la fonction est définie à true), où les anciennes particules sont dessinées à une profondeur plus élevée que les nouvelles et apparaissent donc "sous" les nouvelles particules.
+    Les anciennes particules sont dessinées à une profondeur plus élevée que les nouvelles et apparaissent donc "sous" les nouvelles particules, mais en définissant cette fonction à false vous pouvez inverser cet ordre et avoir les nouvelles particules dessinées plus haut et donc apparaître "sous" les anciennes. Les images ci-dessous illustrent cela,
+    avec l'image de gauche étant la valeur par défaut de true et l'image de droite étant false:
+   
+  NOTE: Lorsque les particules sont dessinées avec un mode de fusion additif, l'effet de cette fonction n'est pas toujours évident.
+   
+  Syntaxe :
+  part_system_draw_order(ind, oldtonew) ;
+  
+    
+      
+        Arguments
+        Description
+      
+      
+        ind
+        L'indice du système de particules à modifier.
+      
+      
+        oldtonew
+        Si les anciennes particules doivent être dessinées derrière les plus récentes (true) ou vice versa (false).
+      
+    
+  
+   
+  Les retours :
+  N/A
+   
+  Exemple :
+  mysystem = part_system_create() ; part_system_draw_order(mysystem, true) ;
+  Cela créera un nouveau système de particules avec l'index " mysystem", et ensuite, il définira les particules pour dessiner les nouvelles particules au dessus des anciennes.
+   
+   
+   
+  
+    
+      
+        Retour : Systèmes de particules
+        Suivant : part_particles_create
+      
+    
+    Copyright YoYo Games Ltd. 2021 Tous droits réservés
   
   
   

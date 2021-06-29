@@ -1,7 +1,30 @@
-room Cette variable contient l'index de la salle de la salle en cours d'exécution de votre jeu. Il ne s'agit pas d' une variable en lecture seule, mais changer cela ne changera pas la valeur d'index de la salle actuelle, mais modifiera plutôt la salle pour qu'elle corresponde à l'index sur lequel vous avez défini la variable. Des précautions doivent être prises lors de cette opération, car si l'index dans lequel vous modifiez la variable n'est pas valide, le jeu va générer une erreur et se fermer. En général, il est préférable d'utiliser room_goto() pour changer de chambre. Syntaxe:room; Retour:Real (unique index value) Exemple:if room_next(room) != -1     {
-         room_goto(room_next);
-         }
-   Le code ci-dessus vérifiera si la pièce suivante existe et si c'est le cas, elle y ira.  Retour: Chambres Suivant:room_speed © Copyright YoYo Games Ltd. 2021 Tous droits réservés
+
+  
+  chambre
+  Cette variable contient l'index de la salle actuelle dans laquelle votre jeu est en cours. Ce n' est pas une variable en lecture seule, cependant changer cette variable ne changera pas la valeur de l'index de la salle actuelle, mais changera plutôt la salle pour qu'elle corresponde à l'index que vous avez défini.
+    que vous avez défini pour la variable. Il convient d'être prudent car si l'indice que vous modifiez n'est pas valide, le jeu affichera une erreur et se fermera. En général, il est préférable d'utiliser room_goto()    pour changer de pièce.
+  Remarque: Les identifiants de salle ne sont pas basés sur leur ordre dans l'Asset Browser ou le Room Manager, et vous devez donc éviter de fournir directement une valeur numérique. Utilisez plutôt la constante de salle pour
+    l'actif que vous souhaitez référencer (qui est simplement son nom) ou récupérez-le par le biais d'une fonction.
+  Syntaxe :
+  chambre ;
+   
+  Les retours :
+  Real (valeur d'index unique)
+   
+  Exemple :
+  if (room == rm_level1) { audio_play_sound(snd_level1, 1, 1) ; }
+  Le code ci-dessus vérifiera si la pièce actuelle est le premier niveau, et dans ce cas, jouera la musique de ce niveau.
+   
+   
+   
+  
+    
+      
+        Retour : Pièces
+        Suivant : room_speed
+      
+    
+    Copyright YoYo Games Ltd. 2021 Tous droits réservés
   
   
   

@@ -1,4 +1,48 @@
- layer_ shader Avec cette fonction, vous pouvez affecter une shader à n'importe quel calque donné et le calque sera ensuite rendu en utilisant ce shader. Vous fournissez soit la valeur d'ID unique du calque, soit le nom du calque (sous forme de chaîne - cela aura un impact sur les performances), ainsi que l'ID du shader à utiliser. Le shader doit avoir été créé au préalable dans le navigateur de ressources et l' shader (le nom de la shader ) est ensuite passé à cette fonction. Si le calque attribué a des instances ajoutées, alors le shader sera appliqué à tous les événements de dessin que l'instance utilise - par exemple si l'instance a un événement Draw GUI Begin, alors le shader sera appliqué automatiquement. Le shader affectera également tous les autres éléments graphiques dessinés sur ce calque, comme les ressources de sprite ou les cartes de tuiles. Notez que la fonction n'est pas destinée à être appelée dans des événements de dessin ou d'étape, mais doit plutôt être appelée au début de la salle dans le code de création de salle ou dans l' événement Créer un événement / début de salle d'une instance. Syntaxe:layer_shader(layer_id, shader) Argument Description layer_id La valeur d'ID unique du calque à cibler (ou le nom du calque sous forme de chaîne) shader L' shader à attribuer au calque Retour:N/A Exemple:var lay_id = layer_get_id("Instances"); layer_shader(lay_id, shd_Sepia); Le code ci-dessus attribuera la shader "shd_Sepia" au calque donné pour tous les dessins.  Retour: Fonctions générales des calques Suivant:layer_get_script_begin © Copyright YoYo Games Ltd. 2021 Tous droits réservés
+
+  
+  layer_shader
+  Avec cette fonction, vous pouvez affecter une ressource de shaders à un calque donné et le calque sera alors rendu en utilisant ce shader. Vous fournissez soit la valeur d'identification unique de la couche, soit le nom de la couche (sous forme de chaîne - cela aura un impact sur les performances)
+    ainsi que l'ID du shader à utiliser. Le shader doit avoir été créé précédemment dans l'Asset Browser et l'index du shader (le nom de la ressource du shader ) est ensuite transmis à cette fonction. Si des instances ont été ajoutées à la couche attribuée, alors
+    le shader sera appliqué à tous les événements de dessin que l'instance utilise - par exemple, si l'instance a un événement Draw GUI Begin, le shader lui sera appliqué automatiquement. Le shader affectera également tout autre élément graphique dessiné sur cette couche, comme les sprites.
+    sur cette couche, comme les sprites ou les cartes de tuiles.
+  Notez que la fonction n'est pas censée être appelée dans des événements de dessin ou des événements d'étape, mais qu'elle ne doit être appelée qu'au début de la pièce dans le code de création de pièce ou dans l'événement de création / de début de pièce d'une instance.
+   
+  Syntaxe :
+  layer_shader(layer_id, shader)
+  
+    
+      
+        Arguments
+        Description
+      
+      
+        identifiant de la couche
+        La valeur d'identification unique de la couche à cibler (ou le nom de la couche sous forme de chaîne).
+      
+      
+        nuanceur
+        L'index du shader à affecter à la couche
+      
+    
+  
+   
+  Les retours :
+  N/A
+   
+  Exemple :
+  var lay_id = layer_get_id("Instances") ; layer_shader(lay_id, shd_Sepia) ;
+  Le code ci-dessus assignera la ressource shader "shd_Sepia" à la couche donnée pour tous les dessins.
+   
+   
+   
+  
+    
+      
+        Retour : Fonctions générales des couches
+        Suivant : layer_get_script_begin
+      
+    
+    Copyright YoYo Games Ltd. 2021 Tous droits réservés
   
   
   

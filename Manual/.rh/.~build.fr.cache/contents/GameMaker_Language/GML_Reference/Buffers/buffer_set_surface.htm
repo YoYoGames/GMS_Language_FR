@@ -1,4 +1,50 @@
-buffer_set_surface Avec cette fonction, vous pouvez écrire les informations d'un tampon sur une surface donnée. Le tampon en cours de lecture et la surface en cours d'écriture doivent avoir été créés précédemment, et vous pouvez fournir un décalage dans le tampon pour commencer la lecture. Notez que la lecture commencera toujours au début du tampon plus la valeur de décalage et non à la position de recherche actuelle plus la valeur de décalage. REMARQUE: cette fonction a changé depuis la mise à jour 2.3.1 de GameMaker Studio Les versions précédentes utilisaient la constante buffer_surface_copy, qui est désormais obsolète. Syntaxe:buffer_set_surface(buffer, surface, offset); Argument Description buffer L'index du tampon à utiliser. surface L'indice de la surface à utiliser. offset La valeur de décalage des données. Retour:N/A Exemple:buffer_set_surface(buff, application_surface, 0); Le code ci-dessus copiera toutes les données stockées dans le tampon indexé dans la variable "buff" vers la surface d'application sans décalage.  Retour: Tampons Suivant:buffer_resize © Copyright YoYo Games Ltd. 2021 Tous droits réservés
+
+  
+  tampon_set_surface
+  Cette fonction permet d'écrire les informations d'un tampon sur une surface donnée. La mémoire tampon à partir de laquelle la lecture est effectuée et la surface sur laquelle l'écriture est effectuée doivent toutes deux avoir été créées précédemment, et vous pouvez fournir un décalage dans la mémoire tampon pour commencer la lecture.
+    Notez que la lecture commencera toujours au début du tampon plus la valeur du décalage et non à la position de recherche actuelle plus la valeur du décalage.
+  REMARQUE: cette fonction a été modifiée à partir de la mise à jour 2.3.1 de GameMaker Studio. Les versions précédentes utilisaient la constante buffer_surface_copy, qui est désormais obsolète.
+   
+  Syntaxe :
+  buffer_set_surface(buffer, surface, offset) ;
+  
+    
+      
+        Arguments
+        Description
+      
+      
+        tampon
+        L'index du tampon à utiliser.
+      
+      
+        surface
+        L'indice de la surface à utiliser.
+      
+      
+        décalage
+        La valeur du décalage des données.
+      
+    
+  
+   
+  Les retours :
+  N/A
+   
+  Exemple :
+  buffer_set_surface(buff, application_surface, 0) ;
+  Le code ci-dessus copiera toutes les données stockées dans le tampon indexé dans la variable "buff" vers la surface de l'application sans décalage.
+   
+   
+   
+  
+    
+      
+        Retour : Tampons
+        Suivant : buffer_resize
+      
+    
+    Copyright YoYo Games Ltd. 2021 Tous droits réservés
   
   
   

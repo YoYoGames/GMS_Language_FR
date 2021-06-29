@@ -1,4 +1,41 @@
-string_height Cette fonction renverra la hauteur (en pixels) de la chaîne d'entrée, en tenant compte de la séparation de ligne et de tout saut de ligne que le texte peut avoir. Il est très pratique pour calculer les distances entre les éléments de texte en fonction de la plus haute des lettres qui composent la chaîne comme elle serait dessinée avec draw_text() en utilisant la police actuellement définie. Syntaxe:string_height(string); Argument Description string La chaîne dont la hauteur doit être mesurée. Retour:Real Exemple:var hh = string_height("ABCDEFGHIJKLMNOPQRSTUVWXYZ"); draw_text(32, 32, string(score)); draw_text(32, 32 + hh, string(lives); Le code ci-dessus obtiendra la hauteur de la chaîne donnée, puis dessinera deux lignes de texte, en utilisant la hauteur de la chaîne retournée comme séparateur.  Retour: Cordes Suivant:string_height_ext © Copyright YoYo Games Ltd. 2021 Tous droits réservés
+
+  
+  hauteur_chaîne
+  Cette fonction renvoie la hauteur (en pixels) de la chaîne de caractères d'entrée, en tenant compte de la séparation des lignes et des éventuels sauts de ligne du texte. Elle est très pratique pour calculer les distances entre les éléments de texte en se basant sur la plus grande des lettres qui composent la chaîne de caractères, telle qu'elle serait dessinée avec un logiciel de dessin.
+    qui composent la chaîne de caractères telle qu'elle serait dessinée avec draw_text() en utilisant la police actuellement définie.
+   
+  Syntaxe :
+  string_height(string) ;
+  
+    
+      
+        Arguments
+        Description
+      
+      
+        chaîne de caractères
+        La corde pour mesurer la hauteur de.
+      
+    
+  
+   
+  Les retours :
+  Real
+   
+  Exemple :
+  var hh = string_height("ABCDEFGHIJKLMNOPQRSTUVWXYZ") ; draw_text(32, 32, string(score)) ; draw_text(32, 32 + hh, string(lives) ;
+  Le code ci-dessus récupère la hauteur de la chaîne de caractères donnée et dessine ensuite deux lignes de texte, en utilisant la hauteur de la chaîne de caractères retournée comme séparateur.
+   
+   
+   
+  
+    
+      
+        Retour : Cordes
+        Suivant : string_height_ext
+      
+    
+    Copyright YoYo Games Ltd. 2021 Tous droits réservés
   
   
   

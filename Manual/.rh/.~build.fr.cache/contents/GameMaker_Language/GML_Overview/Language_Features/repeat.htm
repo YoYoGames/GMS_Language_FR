@@ -1,9 +1,42 @@
-repeat Le GameMaker Language a un certain nombre de façons dont vous pouvez effectuer des boucles, c'est-à-dire: faire itérer une ou plusieurs instructions sur elle-même un certain nombre de fois. Le plus simple d'entre eux est le repeat déclaration, qui a la forme:repeat (<expression>)     {     <statement>;     <statement>;     ...     } Avec repeat l' instruction donnée est répétée le nombre de fois indiqué par la valeur arrondie de l' expression. Par exemple, ce qui suit crée cinq balles à des positions aléatoires:repeat (5)     {
-         instance_create_layer(random(400), random(400), "Instances", obj_ball);     }
-   Cela peut être très utile pour éviter de taper plusieurs fois le même code, ou pour utiliser des tableaux, ou pour compter à travers un certain nombre d'opérations, etc. les entre accolades {}. Par exemple:var _x = 32; repeat (global.p_lives)     {     draw_sprite(spr_heart, 0, _x, 32);     _x += sprite_get_width(spr_heart);     } L'exemple ci - dessus reprend les déclarations contenues dans les accolades pour que soit le nombre d' itération de la variable globale « vie » a, et chaque itération dessine l'image - objet cardiaque au _x position, puis déplace la position le long d'un peu en fonction de la largeur du sprite cœur. Quand devriez-vous utiliser un repeat boucle? Chaque fois que vous souhaitez répéter une ou plusieurs instructions un nombre fixe de fois sans qu'il soit nécessaire de maintenir un nombre d'itérations. Il est à noter que vous pouvez utiliser le spécial break et continue instructions dans une boucle de répétition aussi. Utilisant break quittera immédiatement la boucle et passera à tout code qui est dans l'événement ou la fonction après que la boucle aurait dû se terminer, par exemple:var i = 0; var temp = 0; repeat (10)     {     temp += array[i];     if (temp > max_total)         {         break;         }     else         {         i += 1;         }     } Le code ci-dessus parcourt 10 valeurs de tableau et les ajoute à une variable locale. Si le total de la variable locale est supérieur à la valeur donnée pour max_total, la boucle se termine par break, sinon la boucle continuera. Un exemple d'utilisation continue dans un repeat boucle serait:repeat(10)     {        var _x = random(room_width);     var _y = random(room_height);     if (instance_position(_x, y, obj_Enemy)         {
-             continue;
-             }
-         instance_create_layer(_x, _y, "Instances", obj_Enemy);     } Ce code se répétera 10 fois, générant une position de pièce aléatoire puis vérifiant si une instance de l'objet obj_Enemy existe à cette position. Si tel est le cas, l'itération de la boucle actuelle se termine en utilisant continue et une nouvelle itération est lancée, et si ce n'est pas le cas, une instance de l'objet obj_Enemy est créé à la position aléatoire. Pour plus d'exemples de fonctions de boucle, veuillez consulter les sections sur while, do... until, et for.  Retour: Caractéristiques linguistiques Suivant:while © Copyright YoYo Games Ltd. 2021 Tous droits réservés
+
+  
+  répéter
+  Le langage GameMaker propose plusieurs façons d'effectuer des boucles, c'est-à-dire de faire itérer une ou plusieurs instructions sur elles-mêmes un certain nombre de fois. La plus simple d'entre elles est l'instruction repeat, qui a la forme suivante :
+  repeat (<expression>) { <statement> ; <statement> ;... }
+  Avec repeat, l'instruction donnée est répétée le nombre de fois indiqué par la valeur arrondie de l'expression. Pour
+    exemple, l'instruction suivante crée cinq boules à des positions aléatoires :
+  répéter (5) {
+     instance_create_layer(random(400), random(400), "Instances", obj_ball) ; }
+  
+  Cela peut être très utile pour éviter de taper le même code plusieurs fois, ou pour utiliser des tableaux, ou pour compter un certain nombre d'opérations etc... Vous n'êtes pas non plus limité à l'utilisation d'une seule instruction, et vous pouvez répéter plusieurs instructions en les entourant de crochets {}.
+    en les entourant de crochets {}. Par exemple :
+  var _x = 32 ; repeat (global.p_lives) { draw_sprite(spr_heart, 0, _x, 32) ; _x += sprite_get_width(spr_heart) ; }
+  L'exemple ci-dessus répète les instructions entre crochets pendant le nombre d'itérationsde la variable globale "lives", et chaque itération dessine le sprite du cœur à la position , puis déplace la position le long du bit en fonction de la largeur du sprite du cœur.
+    le sprite du cœur à la position _x, puis déplace la position d'un bit en fonction de la largeur du sprite du cœur.
+  Quand utiliser une boucle repeat? Chaque fois que vous souhaitez répéter une ou plusieurs instructions un nombre fixe de fois sans avoir besoin de tenir un compte des itérations.
+  Il convient de noter que vous pouvez utiliser les instructions spéciales break et continue à l'intérieur d'un fichier de type
+    répéter également. L'utilisation de break permet de sortir immédiatement de la boucle et de passer à tout code se trouvant dans l'événement ou la fonction après que la boucle ait dû se terminer, par ex :
+  var i = 0 ; var temp = 0 ; repeat (10) { temp += array[i] ; if (temp > max_total) { break ; }  else { i += 1 ; }  }
+  Le code ci-dessus boucle sur 10 valeurs de tableau et les ajoute à une variable locale. Si le total de la variable locale est supérieur à la valeur donnée pour max_total, alors la boucle est terminée en utilisant
+    break, sinon la boucle continue. 
+  Voici un exemple d'utilisation de continue dans une boucle repeat:
+  repeat(10) {  var _x = random(room_width) ; var _y = random(room_height) ; if (instance_position(_x, y, obj_Enemy) {
+     continue ;
+     }
+     instance_create_layer(_x, _y, "Instances", obj_Enemy) ; }
+  Ce code va se répéter 10 fois, générant une position aléatoire de la pièce puis vérifiant si une instance de l'objet obj_Enemy existe à cette position. Si c'est le cas, l'itération de la boucle actuelle est terminée à l'aide de continue et une nouvelle itération est lancée. Si ce n'est pas le cas, une instance de l'objet obj_Enemy est créée à la position aléatoire.
+  Pour d'autres exemples de fonctions de boucle, veuillez consulter les sections suivantes pendant que, faire... jusqu'à, et pour.
+   
+   
+   
+  
+    
+      
+        Retour : Caractéristiques de la langue
+        Suivant : while
+      
+    
+    Copyright YoYo Games Ltd. 2021 Tous droits réservés
   
   
   

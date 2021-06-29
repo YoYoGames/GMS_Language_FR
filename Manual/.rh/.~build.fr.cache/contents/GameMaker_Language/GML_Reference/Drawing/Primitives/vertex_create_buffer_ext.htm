@@ -1,4 +1,41 @@
-vertex_create_buffer_ext Comme pour la fonction vertex_create_buffer(), cette fonction créera un nouveau tampon de vertex. Il s'agit d'un tampon de croissance GameMaker Studio 2 qui est pré-formaté pour être utilisé lors de la création de primitives à utiliser avec des shaders. Vous pouvez spécifier une taille de départ initiale pour le tampon (en octets) et il renverra un "handle" (index) pour le tampon qui devrait ensuite être utilisé dans tous les appels ultérieurs au tampon. Syntaxe:vertex_create_buffer_ext(size); Argument Description size La taille initiale du tampon (en octets). Retour:Pointer Exemple:v_buff = vertex_create_buffer_ext(1024 * 1024); Le code ci-dessus créera un nouveau tampon de vertex, initialement de 1 Mo, et stockera son handle dans la variable "v_buff".  Retour: Primitives et formats de sommets Suivant:vertex_create_buffer_from_buffer © Copyright YoYo Games Ltd. 2021 Tous droits réservés
+
+  
+  création_de_tampon_de_vertueux
+  Comme avec la fonction vertex_create_buffer()cette fonction va créer un nouveau tampon de sommets. Il s'agit d'un tampon de croissance spécial créé par GameMaker Studio 2, préformaté pour être utilisé lors de la construction de primitives à utiliser avec les shaders.
+    construction de primitives à utiliser avec les shaders. Vous pouvez spécifier une taille initiale de départ pour le tampon (en octets) et cette fonction renverra un "handle" (index) pour le tampon qui devra être utilisé dans tous les appels ultérieurs au tampon.
+   
+  Syntaxe :
+  vertex_create_buffer_ext(size) ;
+  
+    
+      
+        Arguments
+        Description
+      
+      
+        taille
+        La taille initiale du tampon (en octets).
+      
+    
+  
+   
+  Les retours :
+  Pointeur
+   
+  Exemple :
+  v_buff = vertex_create_buffer_ext(1024 * 1024) ;
+  Le code ci-dessus crée un nouveau tampon de sommets, d'une taille initiale de 1 Mo, et stocke son identifiant dans la variable "v_buff".
+   
+   
+   
+  
+    
+      
+        Retour : Primitives et formats de sommets
+        Suivant : vertex_create_buffer_from_buffer
+      
+    
+    Copyright YoYo Games Ltd. 2021 Tous droits réservés
   
   
   

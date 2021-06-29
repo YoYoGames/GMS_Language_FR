@@ -1,4 +1,103 @@
-asset_get_tags Avec cette fonction, vous pouvez récupérer toutes les balises affectées à un actif à partir du navigateur d'actifs. Vous fournissez soit le nom de l'actif (sous forme de chaîne), soit son index d'actif, et la fonction renverra un tableau de balises pour cet actif. Si aucune balise n'est trouvée ou s'il y a une erreur (ie: la chaîne de nom donnée n'existe pas) alors le tableau retourné sera vide. Si vous fournissez une valeur d'index d'actif, vous devrez alors fournir l'argument de type d'actif facultatif (une constante), car les actifs de types différents peuvent avoir le même index, même s'ils ne peuvent pas avoir le même nom. Les types d'actifs disponibles sont répertoriés dans le tableau ci-dessous: Constant Description asset_object Le nom donné fait référence à un objet. asset_sprite Le nom donné fait référence à un sprite. asset_sound Le prénom fait référence à un son. asset_room Le prénom fait référence à unroom. asset_tiles Le nom donné fait référence à un jeu de tuiles. asset_path Le nom donné fait référence à un chemin. asset_script Le prénom fait référence à unscript. asset_font Le prénom fait référence à une police. asset_timeline Le prénom fait référence à une chronologie. asset_ shader Le prénom fait référence à un shader. asset_animationcurve Le nom donné fait référence à une courbe d'animation. asset_sequence Le prénom fait référence à une séquence. Syntaxe:asset_get_tags(name_or_index, [asset_type]); Argument Description name_or_index Le nom de l'actif (une chaîne) ou sa valeur d'index (un entier). [asset_type] OPTIONNEL! Type d'actif pour lequel obtenir les balises, utilisé uniquement lors de la fourniture d'un index pour le premier argument. Retour:Array Exemple:my_tags = asset_get_tags(object_get_name(object_index)); Le code ci-dessus récupérera toutes les balises affectées à l'objet à partir duquel l'instance exécutant le code a été créée.  Retour: Actifs et balises Suivant:asset_add_tags © Copyright YoYo Games Ltd. 2021 Tous droits réservés
+
+  
+  Balises de l'actif
+  Cette fonction vous permet de récupérer toutes les étiquettes affectées à un poste dans le navigateur de postes. Vous fournissez soit le nom du bien (sous forme de chaîne), soit son index, et la fonction renvoie un tableau de tags pour ce bien. Si aucune balise n'est trouvée ou s'il y a une erreur (par exemple, la chaîne de nom donnée n'existe pas), le tableau retourné sera vide. Si vous fournissez une valeur d'index de poste, vous devrez fournir l'argument optionnel de type de poste (une constante).
+    (une constante), car des biens de types différents peuvent avoir le même index, même s'ils ne peuvent pas avoir le même nom. Les types de biens disponibles sont répertoriés dans le tableau ci-dessous :
+   
+   
+  
+    
+      
+        Constant
+        Description
+      
+      
+        objet_actif
+        Le nom donné fait référence à un objet.
+      
+      
+        actif_sprite
+        Le nom donné fait référence à un sprite.
+      
+      
+        actif_son
+        Le prénom fait référence à un son.
+      
+      
+        salle des actifs
+        Le prénom fait référence à une pièce.
+      
+      
+        piliers_de_l'actif
+        Le nom donné fait référence à un ensemble de carreaux.
+      
+      
+        chemin_de_l'actif
+        Le nom donné fait référence à un chemin.
+      
+      
+        script_de_l'actif
+        Le nom donné fait référence à un script.
+      
+      
+        asset_font
+        Le nom donné fait référence à une police de caractères.
+      
+      
+        chronologie des actifs
+        Le prénom fait référence à une ligne de temps.
+      
+      
+        asset_shader
+        Le nom donné fait référence à un shader.
+      
+      
+        courbe d'animation de l'actif
+        Le nom donné fait référence à une courbe d'animation.
+      
+      
+        séquence_d'actifs
+        Le nom donné fait référence à une Séquence.
+      
+    
+  
+   
+  Syntaxe :
+  asset_get_tags(name_or_index, [asset_type]) ;
+  
+    
+      
+        Arguments
+        Description
+      
+      
+        nom_ou_index
+        Le nom du poste (une chaîne de caractères) ou sa valeur d'index (un nombre entier).
+      
+      
+        [type d'actif]
+        FACULTATIF ! Le type de bien pour lequel il faut obtenir les balises, utilisé uniquement lorsqu'un index est fourni pour le premier argument.
+      
+    
+  
+   
+  Les retours :
+  Array
+   
+  Exemple :
+  my_tags = asset_get_tags(object_get_name(object_index)) ;
+  Le code ci-dessus récupère toutes les balises attribuées à l'objet à partir duquel l'instance qui exécute le code a été créée.
+   
+   
+   
+  
+    
+      
+        Retour : Actifs et étiquettes
+        Suivant : asset_add_tags
+      
+    
+    Copyright YoYo Games Ltd. 2021 Tous droits réservés
   
   
   

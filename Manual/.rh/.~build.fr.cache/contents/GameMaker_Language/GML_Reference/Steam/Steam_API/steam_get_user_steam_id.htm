@@ -1,6 +1,31 @@
- steam _get_user_ steam _id Vous pouvez utiliser cette fonction pour renvoyer l' identifiant Steam de l'utilisateur actuellement connecté au client Steam Il s'agit d'une valeur unique de 64 bits qui peut être utilisée pour identifier des utilisateurs individuels et non leur nom d'utilisateur à l'écran (cela peut être trouvé à l'aide de la fonction steam_get_persona_name() ). Comme il s'agit d'un int64, vous devrez peut-être le convertir en tant que tel lors de son utilisation dans des fonctions ultérieures en utilisant le int64() fonction. Syntaxe:steam_get_user_steam_id(); Retour:Integer (int64) Exemple:if steam_initialised()     {
-         global.u_id = steam_get_user_steam_id();     }
-   Le code ci-dessus définira une variable globale sur l' Steam unique de l'utilisateur actuel si l' Steam est correctement initialisée.  Retour: API Steam générale Suivant: steam _get_persona_name © Copyright YoYo Games Ltd. 2021 Tous droits réservés
+
+  
+  steam_get_user_steam_id
+  Vous pouvez utiliser cette fonction pour retourner l'identifiant unique de l'utilisateur Steam actuellement connecté au client Steam. Il s'agit d'une valeur unique de 64 bits qui peut être utilisée pour identifier les utilisateurs individuels et non leur nom d'utilisateur à l'écran (qui peut être trouvé en utilisant la fonction
+    trouvé à l'aide de la fonction steam_get_persona_name()). Comme il s'agit d'un int64, vous devrez peut-être le convertir en tant que tel lorsque vous l'utiliserez dans les fonctions suivantes en utilisant la fonction int64()    fonction.
+   
+  Syntaxe :
+  steam_get_user_steam_id() ;
+   
+  Les retours :
+  Entier (int64)
+   
+  Exemple :
+  if steam_initialised() {
+     global.u_id = steam_get_user_steam_id() ; }
+  
+  Le code ci-dessus définira une variable globale pour l'ID Steam unique de l'utilisateur actuel si l'API client Steam est correctement initialisée.
+   
+   
+   
+  
+    
+      
+        Retour : API générale de la vapeur
+        Suivant : steam_get_persona_name
+      
+    
+    Copyright YoYo Games Ltd. 2021 Tous droits réservés
   
   
   

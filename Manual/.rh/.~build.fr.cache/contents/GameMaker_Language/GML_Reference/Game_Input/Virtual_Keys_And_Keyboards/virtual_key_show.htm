@@ -1,11 +1,54 @@
-virtual_key_show Une fois que vous avez créé votre clé virtuelle pour vos appareils, vous devrez peut-être déboguer et tester qu'elle est correctement positionnée et qu'elle fonctionne correctement. Pour cela, vous appelleriez cette fonction, en utilisant l'index de la clé virtuelle que vous voulez voir (précédemment créée et stockée en utilisant virtual_key_add() ) qui dessinera un rectangle coloré pour représenter la clé à l'écran. Une fois que vous êtes satisfait des choses, il est recommandé de créer et de placer votre propre graphique dans sa zone. REMARQUE: le rectangle dessiné sera affecté par les options de fusion, de couleur et d'alpha définies par les fonctions de dessin correspondantes. Syntaxevirtual_key_show(index); Argument Description index L'index de la clé virtuelle à afficher. Retour:N/A Exemple:if global.Debug    {
-        virtual_key_show(global.Left);
-        }
+
+
+
+
+  
+  clé_virtuelle_show
+  Une fois que vous avez créé votre clé virtuelle pour vos périphériques, vous pouvez avoir besoin de déboguer et de tester qu'elle est correctement positionnée et qu'elle fonctionne correctement. Pour cela, vous devez appeler cette fonction, en utilisant l'index de la clé virtuelle que vous souhaitez voir (précédemment
+    créée et stockée à l'aide de virtual_key_add()) qui dessinera un rectangle coloré pour représenter la touche à l'écran. Une fois que vous êtes satisfait de la situation, il est recommandé de créer et de placer votre propre graphique
+    dans cette zone.
+  REMARQUE : le rectangle dessiné sera affecté par les options de mélange, de couleur et d'alpha définies par les fonctions de dessin correspondantes.
+   
+  Syntaxe
+  virtual_key_show(index) ;
+  
+    
+      
+        Arguments
+        Description
+      
+      
+        indice
+        L'index de la clé virtuelle à afficher.
+      
+    
+  
+   
+  Les retours :
+  N/A
+   
+  Exemple :
+  if global.Debug {
+     virtual_key_show(global.Left) ;
+     }
      else
-        {
-        virtual_key_hide(global.Left);
-        }
-   Le code ci-dessus vérifie la variable globale "global.Debug" et si elle teste true, la clé virtuelle indexée dans la variable "global.Left" sera dessinée à l'écran, et si elle est fausse, la clé sera masquée.  Retour: Clés et claviers virtuels Suivant:virtual_key_hide © Copyright YoYo Games Ltd. 2021 Tous droits réservés
+     {
+     virtual_key_hide(global.Left) ;
+     }
+  
+  Le code ci-dessus vérifie la variable globale "global.Debug" et si elle est vraie, la touche virtuelle indexée dans la variable "global.Left" sera dessinée à l'écran, et si elle est fausse, la touche sera cachée.
+  
+   
+   
+   
+  
+    
+      
+        Retour : Touches et claviers virtuels
+        Suivant : virtual_key_hide
+      
+    
+    Copyright YoYo Games Ltd. 2021 Tous droits réservés
   
   
   

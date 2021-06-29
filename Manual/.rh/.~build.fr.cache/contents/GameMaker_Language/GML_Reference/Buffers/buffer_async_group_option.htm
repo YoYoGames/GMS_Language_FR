@@ -1,6 +1,55 @@
-buffer_async_group_option Avec cette fonction, vous pouvez définir certaines options spécifiques à la plate-forme pour le groupe de tampons en cours d'enregistrement. Les options disponibles sont les suivantes: " sous-titre " ou " slottitle " - La valeur de cette option serait une chaîne, qui sera montrée à l'utilisateur lors de la gestion de ses données de sauvegarde dans le système d'exploitation. Ceci n'est important que lors de la sauvegarde des données, pas lors du chargement à nouveau. " showdialog " - La valeur de cette option est un booléen true ou false. Si défini sur true, lorsque vous enregistrez ou chargez GameMaker Studio 2 affichera l'interface utilisateur du système, sinon il effectuera une sauvegarde / téléchargement rapide sans interface utilisateur affichée. Vous n'en avez normalement besoin que si vous prenez en charge plusieurs emplacements de sauvegarde pour permettre à l'utilisateur de choisir un emplacement, mais si vous ne prenez en charge qu'un seul emplacement par utilisateur, définissez-le sur false. " savepadindex " - Pour cette option, vous devez spécifier l' index de pad du lecteur qui enregistre ou charge et le système écrira et lira les données dans le dossier de sauvegarde de ce lecteur. " saveslotsize " - Cette option nécessite que vous spécifiiez la taille réelle en octets que vous souhaitez buffer_seek() et buffer_tell() pour l'obtenir, par exemple). Notez qu'il n'est pas obligatoire de fournir cette valeur car toutes les sauvegardes se voient attribuer au préalable un espace minimum, qui est normalement d'environ 10 Mo environ. IMPORTANT! Cette fonction n'est actuellement valable que pour les modules cibles XBox One Sur toutes les autres cibles, cela ne fera rien. Syntaxe:buffer_async_group_option(option, value); Argument Description option L'option à définir. value La valeur à définir (peut être une chaîne ou une valeur réelle, selon l'option). Retour: N / A Exemple:buffer_async_group_begin("save_folder_name"); buffer_async_group_option("showdialog", false); buffer_async_group_option("slottitle", "Catch The Haggis Save"); buffer_async_group_option("subtitle",
-    "All your haggis are saved here!"); save = buffer_save_async(buff, "Player_Save.sav", 0, 16384); buffer_async_group_end();
-   Le code ci-dessus démarre un groupe de tampons puis définit les options de groupe avant de définir 4 fichiers à enregistrer de manière asynchrone. La définition du groupe est alors terminée (à quel point la sauvegarde commencera).  Retour: Tampons Suivant:buffer_async_group_end © Copyright YoYo Games Ltd. 2021 Tous droits réservés
+
+  
+  option_groupe_asynchrone_tampon
+  Cette fonction permet de définir certaines options spécifiques à la plate-forme pour le groupe de tampons en cours de sauvegarde. Les options disponibles sont les suivantes :
+  
+    "Subtitle" ou"slottitle" -La valeur de cette option est une chaîne de caractères qui sera affichée à l'utilisateur lorsqu'il gérera ses données de sauvegarde dans l'OS. Ceci n'est important que lors de la sauvegarde des données, pas lors du rechargement.
+    "showdialog" - La valeur de cette option est un booléen true ou false. Si elle est définie sur true, GameMaker Studio 2 affichera l'interface utilisateur du système lors de la sauvegarde ou du chargement, sinon il effectuera un quicksave/quickload
+      sans afficher d'interface utilisateur. Normalement, vous n'avez besoin de cette option que si vous prenez en charge plusieurs emplacements de sauvegarde pour permettre à l'utilisateur de choisir un emplacement, mais si vous ne prenez en charge qu'un seul emplacement par utilisateur, définissez cette option sur false.
+    "savepadindex" - Pour cette option, vous devez spécifier l'index du pad du joueur qui sauvegarde ou charge et le système écrira et lira les données dans le dossier de sauvegarde de ce joueur.
+    " saveslotsize" - Cette option nécessite que vous spécifiiez la taille réelle en octets que vous souhaitez sauvegarder (afin que vous puissiez faire un buffer_seek() et buffer_tell() pour obtenir
+      cela, par exemple). Notez qu'il n'est pas obligatoire de fournir cette valeur car toutes les sauvegardes sont pré-assignées à un espace minimum, qui est normalement d'environ 10MB.
+  
+  IMPORTANT ! Cette fonction n'est actuellement valable que pour les modules cibles PSVita, PS4 et XBox One. Sur toutes les autres cibles, elle ne fera rien.
+   
+  Syntaxe :
+  buffer_async_group_option(option, valeur) ;
+  
+    
+      
+        Arguments
+        Description
+      
+      
+        option
+        L'option à définir.
+      
+      
+        valeur
+        La valeur à définir (peut être une chaîne ou un réel, selon l'option).
+      
+    
+  
+   
+  Les retours :
+  N/A
+   
+  Exemple :
+  buffer_async_group_begin("save_folder_name") ; buffer_async_group_option("showdialog", false) ; buffer_async_group_option("slottitle", "Catch The Haggis Save") ; buffer_async_group_option("subtitle",
+    "Tous vos haggis sont sauvegardés ici !") ; save = buffer_save_async(buff, "Player_Save.sav", 0, 16384) ; buffer_async_group_end() ;
+  
+  Le code ci-dessus démarre un groupe de tampons puis définit les options du groupe avant de définir 4 fichiers à sauvegarder de manière asynchrone. La définition du groupe est ensuite terminée (à ce moment-là, la sauvegarde commencera).
+   
+   
+   
+  
+    
+      
+        Retour : Tampons
+        Suivant : buffer_async_group_end
+      
+    
+    Copyright YoYo Games Ltd. 2021 Tous droits réservés
   
   
   

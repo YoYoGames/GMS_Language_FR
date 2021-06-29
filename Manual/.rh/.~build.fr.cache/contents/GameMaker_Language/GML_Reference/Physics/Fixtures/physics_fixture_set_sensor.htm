@@ -1,4 +1,48 @@
-physics_fixture_set_sensor Parfois, vous voudrez que votre jeu détecte et reconnaisse quand deux instances avec des appareils entrent en collision, mais ne réagit pas physiquement à la collision. Cela peut être fait en convertissant l'appareil en un capteur, ce qui signifie essentiellement qu'ils vont générer un événement de collision mais sans réponse physique afin que vous puissiez utiliser ces instances comme "déclencheurs" pour que d'autres événements se produisent dans la salle de jeux. N'importe quel appareil peut être marqué comme capteur, et cela ne fait aucune différence si l'instance à laquelle il est lié est statique ou en mouvement. REMARQUE: Un appareil de détection déclenchera l'événement de collision uniquement lorsque la collision se produit pour la première fois, ce qui signifie que vous n'obtenez pas un flux d'événements de collision car les deux corps continuent à se chevaucher (ce qui se produit traditionnellement). S'ils cessent de se chevaucher et se chevauchent par la suite, un autre événement de collision se déclenchera. Syntaxe:physics_fixture_set_sensor(fixture, state) Argument Description fixture l'index du luminaire state si un appareil est un capteur (vrai) ou non (faux) Retour:N/A Exemple:physics_fixture_set_sensor(fix_Cloud, 1); Le code ci-dessus transformera l'état du capteur de l'appareil indexé dans "fix_Cloud" sur true.  Retour: Fixtures Suivant:physics_fixture_set_kinematic © Copyright YoYo Games Ltd. 2021 Tous droits réservés
+
+  
+  physics_fixture_set_sensor
+  Parfois, vous voudrez que votre jeu détecte et reconnaisse la collision de deux instances avec des fixtures, mais sans avoir de réaction physique à la collision. Pour ce faire, vous pouvez convertir le dispositif en capteur, ce qui signifie qu'il générera un événement de collision, mais sans réaction physique.
+    générer un événement de collision, mais sans réaction physique, afin que vous puissiez utiliser ces instances comme "déclencheurs" d'autres événements dans la salle de jeu. N'importe quel dispositif peut être marqué comme un capteur, et il n'y a pas de différence si l'instance à laquelle il est lié est statique ou en mouvement.
+    est liée est statique ou en mouvement.
+  REMARQUE: une fixation de capteur déclenchera l'événement de collision uniquement lorsque la collision se produira pour la première fois, ce qui signifie que vous n'obtiendrez pas un flux d'événements de collision lorsque les deux corps continueront à se chevaucher (ce qui se produirait traditionnellement). S'ils
+    cessent de se chevaucher et se chevauchent à nouveau, un autre événement de collision sera déclenché.
+   
+  Syntaxe :
+  physics_fixture_set_sensor(fixture, state)
+  
+    
+      
+        Arguments
+        Description
+      
+      
+        L'appareil
+        l'indice du dispositif
+      
+      
+        état
+        si un luminaire est un capteur (true) ou non (false)
+      
+    
+  
+   
+  Les retours :
+  N/A
+   
+  Exemple :
+  physics_fixture_set_sensor(fix_Cloud, 1) ;
+  Le code ci-dessus va transformer l'état du capteur de l'appareil indexé dans "fix_Cloud" en vrai.
+   
+   
+   
+  
+    
+      
+        Retour : Fixtures
+        Suivant : physics_fixture_set_kinematic
+      
+    
+    Copyright YoYo Games Ltd. 2021 Tous droits réservés
   
   
   

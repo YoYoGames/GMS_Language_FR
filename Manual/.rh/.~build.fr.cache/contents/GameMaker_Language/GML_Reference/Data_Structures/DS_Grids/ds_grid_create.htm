@@ -1,4 +1,46 @@
-ds_grid_create Avec cette fonction, vous pouvez créer une nouvelle structure de données de grille DS de la largeur et de la hauteur de cellule spécifiées. Cette fonction renvoie un identifiant qui doit être utilisé dans toutes les autres fonctions qui traitent de cette grille DS. IMPORTANT! Lorsque vous créez une structure de données, la valeur d'index pour l'identifier est une valeur entière commençant à 0. Cela signifie que les structures de données de différents types peuvent avoir la même valeur d'index, donc en cas de doute, vous devriez utiliser la fonction ds_exists () avant y accéder. Notez également que les index sont réutilisés, de sorte qu'une valeur d'index de structure de données détruite peut être utilisée par une valeur nouvellement créée par la suite. Syntaxe:ds_grid_create(w, h); Argument Description w La largeur de la grille à créer. h La hauteur de la grille à créer. Retour:Real Exemple:mygrid = ds_grid_create(10, 10) Cela crée une grille de 10 cellules de haut et 10 cellules de large.  Retour: DS Grids Suivant:ds_grid_destroy © Copyright YoYo Games Ltd. 2021 Tous droits réservés
+
+  
+  ds_grid_create
+  Cette fonction vous permet de créer une nouvelle structure de données DS grid avec la largeur et la hauteur de cellule spécifiées. Cette fonction renvoie un id qui doit être utilisé dans toutes les autres fonctions qui traitent de cette grille DS.
+  IMPORTANT ! Lorsque vous créez une structure de données, la valeur de l'index pour l'identifier est une valeur entière commençant à 0. Cela signifie que des structures de données de différents types peuvent avoir la même valeur d'index, donc en cas de doute, vous devriez utiliser l'attribut
+    ds_exists() avant d'y accéder. Notez également que les indices sont réutilisés, donc une valeur d'indice de structure de données détruite peut être utilisée par une structure nouvellement créée par la suite.
+   
+  Syntaxe :
+  ds_grid_create(w, h) ;
+  
+    
+      
+        Arguments
+        Description
+      
+      
+        w
+        La largeur de la grille à créer.
+      
+      
+        h
+        La hauteur de la grille à créer.
+      
+    
+  
+   
+  Les retours :
+  Real
+   
+  Exemple :
+  mygrid = ds_grid_create(10, 10)
+  Cela crée une grille de 10 cellules de haut et de 10 cellules de large.
+   
+   
+   
+  
+    
+      
+        Retour : Grilles DS
+        Suivant : ds_grid_destroy
+      
+    
+    Copyright YoYo Games Ltd. 2021 Tous droits réservés
   
   
   

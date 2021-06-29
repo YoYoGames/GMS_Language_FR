@@ -1,11 +1,36 @@
-gpu_get_texfilter Avec cette fonction, vous pouvez vérifier si le filtrage de texture (interpolation linéaire) est activé (renvoie true ) ou non (retourne false ). Pour plus d'informations sur le filtrage des textures, consultez la fonction gpu_set_texfilter(). REMARQUE: sur la cible HTML5, cette fonction ne fonctionnera qu'avec WebGL activé. Syntaxe:gpu_get_texfilter(); Retour:Boolean Exemple:if gpu_get_texfilter()     {
-         gpu_set_texfilter(false);
-         }
+
+  
+  gpu_get_texfilter
+  Cette fonction permet de vérifier si le filtrage des textures (interpolation linéaire) est activé (renvoie true) ou non (renvoie false). Pour plus d'informations sur le filtrage des textures, voir la fonction gpu_set_texfilter().
+  REMARQUE: sur la cible HTML5, cette fonction ne fonctionnera que si WebGL est activé.
+   
+  Syntaxe :
+  gpu_get_texfilter() ;
+   
+  Les retours :
+  Booléen
+   
+  Exemple :
+  if gpu_get_texfilter() {
+     gpu_set_texfilter(false) ;
+     }
      else
-         {
-         gpu_set_texfilter(true);
-         }
-   Le code ci-dessus vérifie si le filtrage de texture est activé ou désactivé et le règle en conséquence.  Retour: Contrôle GPU Suivant:gpu_get_texfilter_ext © Copyright YoYo Games Ltd. 2021 Tous droits réservés
+     {
+     gpu_set_texfilter(true) ;
+     }
+  
+  Le code ci-dessus vérifie si le filtrage des textures est activé ou non et l'active en conséquence.
+   
+   
+   
+  
+    
+      
+        Retour : Contrôle du GPU
+        Suivant : gpu_get_texfilter_ext
+      
+    
+    Copyright YoYo Games Ltd. 2021 Tous droits réservés
   
   
   

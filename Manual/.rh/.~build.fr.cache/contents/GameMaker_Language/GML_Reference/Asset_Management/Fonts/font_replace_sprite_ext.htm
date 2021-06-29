@@ -1,4 +1,65 @@
-font_replace_sprite_ext Cette fonction remplacera une police de sprite que vous avez créée précédemment à l'aide de la fonction font_add_sprite_ext(). Il utilise une "bande de sprite", où chaque sous-image est un symbole ou une lettre individuelle, et les images sont mappées en lettres sur la base de l'argument "string_map" de la fonction. Cet argument est une chaîne que vous pouvez utiliser pour indiquer à GameMaker Studio 2 ordre des sous-images de la police de sprite et il les mappera automatiquement lors de l'écriture de texte. Ainsi, par exemple, si vous avez un string-map de "AaBbCcDdEeFfGgHh", votre police de sprite doit avoir les sous-images ordonnées de cette manière. Vous pouvez également définir l'espacement de la police pour qu'il soit proportionnel (true ) ou non (false ), où une police proportionnelle est espacée en fonction de la largeur réelle des lettres (la lettre «i» prend donc moins de place que la lettre «w», par exemple) tandis qu'une police non proportionnelle sera espacée en fonction du sous- largeur de l'image, comme une police à espacement fixe. Enfin, vous pouvez définir l'espace à laisser entre chaque lettre lors de l'écriture, et cela peut être n'importe quelle valeur entière, 0 étant sans espace (les lettres "toucheront" si elles sont proportionnelles). La fonction renvoie une valeur d'index qui doit être stockée dans une variable car elle sera nécessaire dans tous les autres codes faisant référence à cette police. Si la fonction échoue, elle échouera silencieusement sans remplacer la police de sprite donnée. REMARQUE: Cette fonction nécessite que vous ayez préalablement ajouté une police de sprite à l'aide de font_add_sprite (), car elle la remplacera et ne peut pas être utilisée sur les polices incluses dans les ressources du jeu. Syntaxe:font_replace_sprite_ext(font, spr, string_map, prop, sep); Argument Description font La police à remplacer. spr Le sprite sur lequel ajouter une police. string_map Chaîne à partir de laquelle l'ordre des sous-images des sprites est pris. prop Définir comme police proportionnelle ou non. sep L'espace à laisser entre chaque lettre. Retour:N/A Exemple:font_replace_sprite_ext(global.Font, spr_CalcFont, "0123456789+-*/=", true, 2); Le code ci-dessus remplacera un actif de police de sprite qui est indexé dans la variable "global.Font" par des images de sprite indexées dans la variable "spr_CalcFont".  Retour: Polices Suivant:font_delete © Copyright YoYo Games Ltd. 2021 Tous droits réservés
+
+  
+  font_replace_sprite_ext
+  Cette fonction remplacera une police sprite que vous avez créée précédemment à l'aide de la fonction font_add_sprite_ext(). Elle utilise une "bande de sprites", où chaque sous-image est un symbole ou une lettre individuelle,
+    et les images sont mises en correspondance avec les lettres en fonction de l'argument "string_map" de la fonction. Cet argument est une chaîne de caractères que vous pouvez utiliser pour indiquer à GameMaker Studio 2 l'ordre dans lequel les sous-images de la police sprite sont placées.
+    lors de l'écriture du texte. Ainsi, par exemple, si vous avez un mappage de chaîne de "AaBbCcDdEeFfGgHh", votre police sprite doit avoir les sous-images ordonnées de cette façon.
+  Vous pouvez également définir l'espacement de la police pour qu'elle soit proportionnelle(true) ou non(false), où une police proportionnelle est espacée sur la base de la largeur réelle des lettres (ainsi, la lettre "i" prend moins de place que la lettre "w",
+    par exemple), tandis qu'une police non proportionnelle sera espacée en fonction de la largeur de la sous-image, comme une police monospace. Enfin, vous pouvez définir l'espace à laisser entre chaque lettre lors de l'écriture, et il peut s'agir de n'importe quelle valeur entière, 0 correspondant à l'absence d'espace (les lettres se "toucheront" si elles sont proportionnelles).
+    lettres se "toucheront" si elles sont proportionnelles). La fonction renvoie une valeur d'index qui doit être stockée dans une variable car elle sera nécessaire dans tous les codes ultérieurs faisant référence à cette police.
+  Si la fonction échoue, elle échouera en silence sans remplacer la police de sprites donnée.
+  NOTE : Cette fonction nécessite que vous ayez préalablement ajouté une police sprite en utilisant la fonction font_add_sprite()car elle la remplacera et ne pourra pas être utilisée
+    sur les polices qui sont incluses dans les ressources du jeu.
+   
+  Syntaxe :
+  font_replace_sprite_ext(font, spr, string_map, prop, sep) ;
+  
+    
+      
+        Arguments
+        Description
+      
+      
+        police
+        La police à remplacer.
+      
+      
+        spr
+        Le sprite sur lequel ajouter une police.
+      
+      
+        carte_chaîne
+        Chaîne à partir de laquelle l'ordre de la sous-image du sprite est pris.
+      
+      
+        accessoire
+        Définir comme police proportionnelle ou non.
+      
+      
+        sep
+        L'espace à laisser entre chaque lettre.
+      
+    
+  
+   
+  Les retours :
+  N/A
+   
+  Exemple :
+   
+  font_replace_sprite_ext(global.Font, spr_CalcFont, "0123456789+-*/=", true, 2) ;
+  Le code ci-dessus remplacera une police sprite indexée dans la variable "global.Font" par des images sprites indexées dans la variable "spr_CalcFont".
+   
+   
+   
+  
+    
+      
+        Retour : Polices de caractères
+        Suivant : font_delete
+      
+    
+    Copyright YoYo Games Ltd. 2021 Tous droits réservés
   
   
   

@@ -1,4 +1,85 @@
- Types de particules Les particules sont les effets graphiques qui peuvent être créés par l'utilisation de systèmes de particules dans un jeu. Les particules que vous définissez à l'aide de ces fonctions peuvent être utilisées dans n'importe quel système que vous créez et la procédure normale serait de définir toutes vos particules une fois au début d'un jeu et de stocker leurs valeurs d'index dans des variables globales. Ces variables globales peuvent ensuite être utilisées pour éclater, émettre ou créer des particules à tout moment tout au long du jeu. Vous pouvez également créer, utiliser puis détruire des particules si nécessaire si la mémoire est un problème ou si vous souhaitez de nombreux types différents, mais uniquement à des points spécifiques de votre jeu. Quoi que vous choisissiez, les particules sont une ressource très polyvalente! Les particules doivent être créées et leur index stocké dans une variable afin que toutes les autres routines de particules puissent y accéder correctement. Les fonctions suivantes sont utilisées pour créer, vérifier, effacer et détruire les types de particules: part_type_existspart_type_createpart_type_destroypart_type_clear Une fois que vous avez créé votre type de particule, vous devez lui donner une forme. Cela peut être l'une des 14 formes intégrées qui sont des sprites de 64x64 pixels avec fusion alpha, ou vous pouvez utiliser vos propres sprites qui peuvent être animés, statiques ou utiliser des sous-images aléatoires. Les fonctions suivantes définissent la forme visuelle de base de chaque particule:part_type_shapepart_type_sprite L'image suivante montre les 14 types de particules intégrés parmi lesquels vous pouvez choisir: Une fois que vous avez choisi le sprite pour le type de particule (une forme par défaut ou la vôtre), vous pouvez indiquer sa taille et son échelle. La taille peut être spécifiée comme une plage et toutes les particules seront créées avec une taille choisie dans la plage donnée. L'échelle est la valeur «de base» de l'échelle des axes x et y de la particule avant l'ajout de toute variation de taille et les fonctions suivantes sont utilisées pour contrôler ces valeurs:part_type_sizepart_type_scale Les particules peuvent également avoir une orientation et un mouvement. Comme avec la plupart des fonctions de particules, la vitesse, la direction et l'orientation sont résolues comme une valeur aléatoire qui est sélectionnée dans une plage donnée et peut être définie avec les fonctions suivantes: part_type_speedpart_type_directionpart_type_gravitypart_type_orientation Une fois que vous avez trié le style et le mouvement de vos particules, vous pouvez définir leur couleur et leurs valeurs alpha, qui peuvent toutes deux être définies comme une valeur absolue pendant toute la durée de vie de la particule, ou comme une échelle de valeurs allant de l'un à l'autre progressivement. Notez qu'il existe également une fonction spéciale qui vous permet de définir le mélange des particules et de leur environnement, et cela peut être normal ou additif et donne des effets fantastiques - Les fonctions régissant la couleur, l'alpha et le mélange sont: part_type_colour_mixpart_type_colour_rgbpart_type_colour_hsvpart_type_colour1part_type_colour2part_type_colour3part_type_alpha1part_type_alpha2part_type_alpha3part_type_blend Les particules existent à l'écran pendant une durée limitée et c'est ce qu'on appelle leur «durée de vie». Les durées de vie des particules sont mesurées par étapes et (comme les fonctions précédentes), elles sont exprimées comme une plage de valeurs à partir de laquelle la particule recevra une durée de vie spécifique. Il existe également quelques fonctions intéressantes qui peuvent être utilisées pour faire en sorte que les particules génèrent d' autres particules, soit à chaque étape, soit lorsqu'elles «meurent» (c'est-à-dire: sont supprimées de l'écran), mais soyez très prudent avec ces fonctions car elles peuvent créer rapidement des milliers de particules et écrasez le jeu! Les fonctions qui définissent la durée de vie et l'émission de pas ou de mort sont les suivantes: part_type_lifepart_type_steppart_type_death Il convient de noter que la création de particules via le code peut souvent être un processus laborieux et chronophage en raison du grand nombre de paramètres qui peuvent être modifiés et ajustés. Pour cette raison, il est recommandé de rechercher et de mettre la main sur un certain type de concepteur de particules (ou d'en créer un vous-même!) Pour éliminer la corvée de la création de particules.  Retour: Particules Suivant: Émetteurs de particules © Copyright YoYo Games Ltd. 2021 Tous droits réservés
+
+  
+  Types de particules
+  Les particules sont les effets graphiques qui peuvent être créés par l'utilisation de systèmes de particules dans un jeu. Les particules que vous définissez à l'aide de ces fonctions peuvent être utilisées dans n'importe quel système que vous créez et la procédure normale serait de définir toutes vos particules
+    une fois au début du jeu et de stocker leurs valeurs d'index dans des variables globales. Ces variables globales peuvent ensuite être utilisées pour faire éclater, émettre ou créer des particules à tout moment au cours du jeu. Vous pouvez également créer, utiliser et détruire des particules selon les besoins.
+    si la mémoire est un problème ou si vous souhaitez de nombreux types différents mais seulement à des moments spécifiques de votre jeu. Quel que soit votre choix, les particules sont une ressource très polyvalente !
+  Les particules doivent être créées et leur indice doit être stocké dans une variable afin que toutes les autres routines de particules puissent y accéder correctement. Les fonctions suivantes sont utilisées pour créer, vérifier, effacer et détruire les types de particules :
+   
+  
+    partie_type_existe
+    type_de_partie_créer
+    partie_type_destroy
+    type_de_pièce
+  
+   
+  Une fois que vous avez créé votre type de particule, vous devez lui donner une forme. Il peut s'agir de l'une des 14 formes intégrées qui sont des sprites de 64x64 pixels avec un mélange alpha, ou vous pouvez utiliser vos propres sprites qui peuvent être animés, statiques ou utiliser des sous-images aléatoires.
+    des sous-images aléatoires. Les fonctions suivantes définissent la forme visuelle de base de chaque particule :
+   
+  
+    forme_type_partie
+    partie_type_sprite
+  
+   
+  L'image suivante montre les 14 types de particules intégrés parmi lesquels vous pouvez choisir :
+  Une fois que vous avez choisi le sprite pour le type de particule (une forme par défaut ou la vôtre), vous pouvez indiquer sa taille et son échelle.
+    propre), vous pouvez indiquer sa taille et son échelle. La taille peut être spécifiée comme une plage et toutes les particules seront créées avec une taille choisie dans la plage donnée. L'échelle est la valeur de "base" pour l'échelle des axes x et y de la particule avant que toute variation de taille ne soit ajoutée.
+    avant que les variations de taille ne soient ajoutées. Les fonctions suivantes sont utilisées pour contrôler ces valeurs :
+   
+  
+    taille_type_partie
+    partie_type_échelle
+  
+   
+  Les particules peuvent également avoir une orientation et un mouvement. Comme pour la plupart des fonctions de particules, la vitesse, la direction et l'orientation sont résolues comme une valeur aléatoire sélectionnée dans une plage donnée et peuvent être définies avec les fonctions suivantes :
+   
+  
+    vitesse_type_partie
+    direction_type_partie
+    partie_type_gravité
+    orientation_type_partie
+  
+   
+  Une fois que vous avez défini le style et le mouvement de vos particules, vous pouvez définir leur couleur et leur valeur alpha, qui peuvent toutes deux être définies comme une valeur absolue pendant toute la durée de vie de la particule, ou comme une échelle de valeurs allant de l'une à l'autre progressivement.
+    l'autre progressivement. Notez qu'il existe également une fonction spéciale qui vous permet de définir le mélange des particules et de leur environnement, qui peut être normal ou additif et donner des effets fantastiques.
+    et le mélange sont :
+   
+  
+    type_de_partie_mélange_de_couleurs
+    partie_type_couleur_rgb
+    partie_type_couleur_hsv
+    type_de_pièce_couleur1
+    partie_type_couleur2
+    type_partie_couleur3
+    partie_type_alpha1
+    partie_type_alpha2
+    partie_type_alpha3
+    type_partie_mélange
+  
+   
+  Les particules existent à l'écran pendant une durée limitée, appelée "durée de vie". La durée de vie des particules est mesurée par étapes et (comme pour les fonctions précédentes) elle est exprimée sous la forme d'une plage de valeurs à partir de laquelle la particule se verra attribuer une durée de vie spécifique.
+    une durée de vie spécifique. Il existe également quelques fonctions intéressantes qui peuvent être utilisées pour que les particules génèrent d'autres particules, soit à chaque étape, soit lorsqu'elles "meurent" (c'est-à-dire lorsqu'elles sont retirées de l'écran).
+    faites très attention avec ces fonctions car elles peuvent rapidement créer des milliers de particules et faire planter le jeu ! Les fonctions qui définissent la durée de vie et l'émission de pas ou de mort sont les suivantes :
+   
+  
+    partie_type_vie
+    type_de_part_step
+    partie_type_mort
+  
+   
+  Il convient de noter que la création de particules par code peut souvent être un processus laborieux et long en raison du grand nombre de paramètres qui peuvent être modifiés et ajustés. Pour cette raison, il est recommandé de chercher et de mettre la main sur un certain type de concepteur de particules (ou d'en créer un vous-même).
+    d'un certain type de concepteur de particules (ou d'en créer un vous-même !) pour éliminer la corvée de la création de particules.
+   
+   
+   
+  
+    
+      
+        Retour : Particules
+        Suivant : Emetteurs de particules
+      
+    
+    Copyright YoYo Games Ltd. 2021 Tous droits réservés
   
   
   

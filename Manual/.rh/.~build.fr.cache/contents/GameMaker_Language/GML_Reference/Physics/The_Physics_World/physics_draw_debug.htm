@@ -1,5 +1,32 @@
-physics_draw_debug Lors de la création d'un système physique dans GameMaker Studio 2, il est souvent important d'avoir une représentation visuelle de ce qui se passe réellement avec une instance. Ceci peut être réalisé en utilisant physics_draw_debug(), qui dessine un aperçu schématique des propriétés physiques associées à l'instance exécutant le code. Voici une image de son apparence: Il convient de noter que pour que cela fonctionne, il doit être dans l'événement de dessin de l'instance, et il sera dessiné en utilisant la couleur de dessin actuellement définie. Syntaxe:physics_draw_debug() Retour:N/A Exemple:draw_set_colour(c_red); physics_draw_debug();
-   Le code ci-dessus dessinera une représentation des propriétés physiques associées à cette instance en utilisant la couleur rouge.  Retour: Le monde de la physique Suivant:physics_pause_enable © Copyright YoYo Games Ltd. 2021 Tous droits réservés
+
+  
+  physics_draw_debug
+  Lorsque vous créez un système physique dans GameMaker Studio 2, il est souvent important d'avoir une représentation visuelle de ce qui se passe réellement avec une instance. Pour ce faire, vous pouvez utiliser physics_draw_debug(), qui dessine un schéma des propriétés physiques associées à l'instance exécutant le code.
+    des propriétés physiques associées à l'instance qui exécute le code. Voici une image de ce que cela donne :
+  Il convient de noter que pour que cela fonctionne, il faut que l'événement draw de l'instance
+    et il sera dessiné en utilisant la couleur de dessin actuellement définie.
+   
+  Syntaxe :
+  physics_draw_debug()
+   
+  Les retours :
+  N/A
+   
+  Exemple :
+  draw_set_colour(c_red) ; physics_draw_debug() ;
+  
+  Le code ci-dessus va dessiner une représentation des propriétés physiques associées à cette instance en utilisant la couleur rouge.
+   
+   
+   
+  
+    
+      
+        Retour : Le monde de la physique
+        Suivant : physics_pause_enable
+      
+    
+    Copyright YoYo Games Ltd. 2021 Tous droits réservés
   
   
   

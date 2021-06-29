@@ -1,4 +1,55 @@
-position_change Cette fonction vérifiera une position pour une collision avec toutes les instances au point donné, et s'il y en a une, elle changera toutes les instances en collision pour être des instances de l'objet choisi. Vous pouvez définir l'argument "perf" sur true qui forcera GameMaker Studio 2 à exécuter les événements Destroy et Clean Up de l'instance trouvée ainsi que l' événement Create de la nouvelle instance, ou false de ne réaliser aucun de ces événements. Veuillez noter que si vous choisissez de ne pas effectuer les événements Destroy, Clean Up et Create, toute instance créée qui utilise une variable normalement définie dans l'événement create plantera le jeu car cette variable n'existera plus. Syntaxe:position_change(x, y, obj, perf); Argument Description x Coordonnée x de l'endroit où modifier les instances en collision. y Coordonnée y de l'emplacement de modification des instances en collision. obj Le nouvel objet dans lequel l'objet appelant se transforme. perf Indique s'il faut exécuter l'événement Create de ce nouvel objet (true) ou non (false). Retour:N/A Exemple:position_change(200, 200, obj_Bird, true); Cela changera toutes les instances en collision au point (200 200) en une instance de "obj_Bird", exécutant l'événement Create de "obj_Bird" pour chacune d'elles dans le processus.  Retour: Collisions Suivant:position_destroy © Copyright YoYo Games Ltd. 2021 Tous droits réservés
+
+  
+  changement de position
+  Cette fonction vérifiera la présence d'une collision entre une position et toute instance au point donné, et s'il y en a une, elle changera toutes les instances en collision pour qu'elles soient des instances de l'objet choisi. Vous pouvez définir l'argument "perf" à
+   true, ce qui forcera GameMaker Studio 2 à exécuter les événements Destroy et Clean Up de l'instance trouvée, ainsi que l'événement Create de la nouvelle instance, ou false pour n'exécuter aucun de ces événements.
+    pour n'exécuter aucun de ces événements. Veuillez noter que si vous choisissez de ne pas exécuter les événements Destroy, Clean Up et Create, toute instance créée qui utilise une variable normalement définie dans l'événement create fera planter le jeu car cette variable n'existera plus.
+    n'existera plus.
+   
+  Syntaxe :
+  position_change(x, y, obj, perf) ;
+  
+    
+      
+        Arguments
+        Description
+      
+      
+        x
+        La coordonnée x de l'endroit où il faut changer les instances en collision.
+      
+      
+        y
+        La coordonnée y de l'endroit où il faut changer les instances en collision.
+      
+      
+        obj.
+        Le nouvel objet dans lequel l'objet appelant va se transformer.
+      
+      
+        perf
+        Si l'événement Create de ce nouvel objet doit être exécuté (true) ou non (false).
+      
+    
+  
+   
+  Les retours :
+  N/A
+   
+  Exemple :
+  position_change(200, 200, obj_Bird, true) ;
+  Cela transformera toutes les instances entrant en collision au point (200,200) en une instance de "obj_Bird", en exécutant l'événement Create de "obj_Bird" pour chacune d'entre elles.
+   
+   
+   
+  
+    
+      
+        Retour : Collisions
+        Suivant : position_destroy
+      
+    
+    Copyright YoYo Games Ltd. 2021 Tous droits réservés
   
   
   

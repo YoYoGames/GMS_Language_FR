@@ -1,4 +1,50 @@
- Déclarer une variable temporaire Cette action est utilisée pour déclarer et donner une valeur initiale à une variable temporaire (également appelée variable locale ), qui est une variable qui n'existe que pendant la durée de l'événement ou du script dans lequel elle a été déclarée. Les variables temporaires sont très utiles pour stocker des valeurs qui ne sont nécessaires que pour une seule opération et empêchent vos objets de devenir "encombrés" de variables qui ne peuvent être utilisées qu'une seule fois. Ils sont également très utiles pour décomposer des opérations complexes ou pour définir des valeurs dans d'autres instances lorsque vous modifiez la portée de l'action. Cela est dû au fait que les variables déclarées comme temporaires ne sont pas étendues à une instance particulière, mais plutôt à l'événement ou au script lui-même, donc si vous créez une variable temporaire puis modifiez la portée de l'action à l'aide de l' action Appliquer à..., vous pouvez toujours vérifiez la variable temporaire sans problèmes et sans changer sa portée d'action. Il convient de noter que lorsque nous parlons de «valeurs», nous ne parlons pas uniquement de valeurs numériques, car une variable peut être une chaîne, un pointeur, un ID de ressource ou tout autre élément qu'une fonction peut renvoyer ou utiliser, même une expression. Consultez la section sur les types de données pour plus d'informations. Notez que de nombreuses actions ont une case à cocher "Temp" qui vous permet de créer une nouvelle variable locale temporaire pour contenir la valeur de retour de l'action, et cette variable est accessible dans le script d'action ou l'événement comme vous le feriez pour toute autre variable par la suite. Notez également que les variables locales temporaires sont limitées au script ou à l'événement dans lequel elles sont créées, et peuvent donc être utilisées par d'autres instances du même bloc lors de l'utilisation de Appliquer à. Vous pouvez également ajouter des variables supplémentaires dans la même action en cliquant sur l'icône plus à côté de l'action, et en donnant un autre nom et une valeur de variable locale temporaire. Pour des informations plus avancées sur les variables, veuillez consulter la section Variables et portée des variables. Syntaxe de l'action: Arguments: Argument Description Name Le nom de la nouvelle variable à affecter ou le nom d'une variable existante à modifier. Value La valeur que la variable doit contenir. Exemple: Le code de bloc d'action ci-dessus crée deux variables temporaires, " _dir " et "_spd "et les définit sur des valeurs aléatoires. Il utilise ensuite ces valeurs pour définir l'instance se déplaçant dans une direction aléatoire à une vitesse aléatoire.  Retour: Actions courantes Suivant: Définir la variable globale © Copyright YoYo Games Ltd. 2021 Tous droits réservés
+
+  
+   Déclarer une variable temporaire
+  Cette action est utilisée pour déclarer et donner une valeur initiale à une variable temporaire (également appelée variable locale), qui est une variable qui n'existe que pour la durée de l'événement ou du script dans lequel elle a été déclarée. Les variables temporaires
+    sont très utiles pour stocker des valeurs qui ne sont nécessaires que pour une seule opération et empêchent vos objets d'être "encombrés" de variables qui ne peuvent être utilisées qu'une seule fois. Elles sont également très utiles pour décomposer des opérations complexes, ou pour
+    définir des valeurs dans d'autres instances lorsque vous modifiez la portée de l'action. En effet,lesvariables déclarées comme temporairesn'ont pas de portée surune instance particulière, mais sur l'événement ou le script lui-même, donc si vous créez une variable temporaire
+    et que vous modifiez ensuite la portée de l'action à l'aide de l'action Appliquer à..., vous pouvez toujours vérifier la variable temporaire sans problème et sans modifier sa portée d'action.
+  Il convient de noter que lorsque nous parlons de "valeurs", nous ne parlons pas uniquement de valeurs numériques, car une variable peut être une chaîne de caractères, un pointeur, un ID de ressource ou tout autre élément qu'une fonction peut retourner ou utiliser, même une expression. Voir la section sur les types de données pour plus d'informations.
+  Notez que de nombreuses actions ont une case à cocher "Temp" qui vous permet de créer une nouvelle variable locale temporaire pour contenir la valeur de retour de l'action, et cette variable peut être accédée dans le script de l'action ou de l'événement comme vous le feriez pour toute autre variable
+    par la suite. Notez également que les variables locales temporaires ont une portée limitée au script ou à l'événement dans lequel elles sont créées, et qu'elles peuvent donc être utilisées par d'autres instances dans le même bloc lorsque vous utilisez l'option "Appliquer à".
+  Vous pouvez également ajouter des variables supplémentaires dans la même action en cliquant sur l'icône plus  à côté de l'action, et en donnant à une autre variable locale temporaire
+    nom et la valeur. Pour des informations plus avancées sur les variables, veuillez consulter la section sur les variables et leur portée.
+   
+  Syntaxe de l'action :
+  
+  Arguments :
+  
+    
+      
+        Arguments
+        Description
+      
+      
+        Nom
+        Le nom de la nouvelle variable à assigner, ou le nom d'une variable existante à modifier.
+      
+      
+        Valeur
+        La valeur que la variable doit contenir.
+      
+    
+  
+   
+  Exemple :
+  Le code du bloc d'action ci-dessus crée deux variables temporaires, " _dir" et " ".
+    et "_spd" et leur attribue des valeurs aléatoires. Il utilise ensuite ces valeurs pour que l'instance se déplace dans une direction aléatoire à une vitesse aléatoire.
+   
+   
+   
+  
+    
+      
+        Retour : Actions communes
+        Suivant : Définir une variable globale
+      
+    
+    Copyright YoYo Games Ltd. 2021 Tous droits réservés
   
   
   

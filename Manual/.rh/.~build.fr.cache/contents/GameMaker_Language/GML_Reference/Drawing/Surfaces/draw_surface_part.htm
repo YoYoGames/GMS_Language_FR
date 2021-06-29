@@ -1,4 +1,66 @@
-draw_surface_part Avec cette fonction, vous pouvez dessiner une partie de n'importe quelle surface à une position donnée dans la pièce. Comme avec draw_surface() vous pouvez spécifier une surface, mais vous devez ensuite spécifier les coordonnées relatives dans la surface d'une zone à sélectionner pour le dessin. Cela signifie qu'une position gauche de 0 et une position supérieure de 0 serait le coin supérieur gauche de la surface et toutes les autres coordonnées devraient être prises à partir de cette position. REMARQUE: lorsque vous travaillez avec des surfaces, il est possible qu'elles cessent d'exister à tout moment car elles sont stockées dans la mémoire de texture. Vous devez TOUJOURS vérifier qu'une surface existe en utilisant surface_exists () avant de les référencer directement. Syntaxe:draw_surface_part(id, left, top, w, h, x, y); Argument Description id La valeur d'identifiant unique de la surface à dessiner. left La position gauche dans la surface de la pièce à dessiner. top La position supérieure dans la surface de la pièce à dessiner. w La largeur de la pièce à dessiner, à partir de la gauche. h La hauteur de la pièce à dessiner, à partir du haut. x La position x de l'endroit où dessiner la surface. y La position y de l'endroit où dessiner la surface. Retour:N/A Exemple:draw_surface_part(surf, 8, 8, 32, 32, x, y); Cela dessinera une zone de 32x32 8px par 8px à partir du coin supérieur gauche de la surface indexée en "surf", à la position des instances (x, y).  Retour: Surfaces Suivant:draw_surface_part_ext © Copyright YoYo Games Ltd. 2021 Tous droits réservés
+
+  
+  dessiner_partie_de_surface
+  Cette fonction vous permet de dessiner une partie de n'importe quelle surface à un endroit donné de la pièce. Comme avec draw_surface() vous pouvez spécifier une surface, mais vous devez ensuite spécifier les coordonnées relatives dans la surface d'une zone à sélectionner pour le dessin.
+    surface d'une zone à sélectionner pour le dessin. Cela signifie qu'une position gauche de 0 et une position supérieure de 0 correspondent au coin supérieur gauche de la surface et que toutes les autres coordonnées doivent être prises à partir de cette position.
+  NOTE: Lorsque vous travaillez avec des surfaces, il est possible qu'elles cessent d'exister à tout moment, car elles sont stockées dans la mémoire des textures. Vous devez TOUJOURS vérifier qu'une surface existe en utilisant surface_exists()    avant de les référencer directement.
+   
+  Syntaxe :
+  draw_surface_part(id, left, top, w, h, x, y) ;
+  
+    
+      
+        Arguments
+        Description
+      
+      
+        id
+        La valeur d'identification unique de la surface à dessiner.
+      
+      
+        gauche
+        La position gauche dans la surface de la pièce à dessiner.
+      
+      
+        top
+        La position supérieure dans la surface de la pièce à dessiner.
+      
+      
+        w
+        La largeur de la partie à dessiner, de gauche à droite.
+      
+      
+        h
+        La hauteur de la partie à dessiner, à partir du haut.
+      
+      
+        x
+        La position x de l'endroit où dessiner la surface.
+      
+      
+        y
+        La position y de l'endroit où dessiner la surface.
+      
+    
+  
+   
+  Les retours :
+  N/A
+   
+  Exemple :
+  draw_surface_part(surf, 8, 8, 32, 32, x, y) ;
+  Cela va dessiner une zone de 32x32 de 8px par 8px en haut et à gauche de la surface indexée dans "surf", à la position (x,y) des instances.
+   
+   
+   
+  
+    
+      
+        Retour : Surfaces
+        Suivant : draw_surface_part_ext
+      
+    
+    Copyright YoYo Games Ltd. 2021 Tous droits réservés
   
   
   

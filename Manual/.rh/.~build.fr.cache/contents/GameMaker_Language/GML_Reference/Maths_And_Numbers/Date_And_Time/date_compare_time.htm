@@ -1,4 +1,49 @@
-date_compare_time Avec cette fonction, vous pouvez vérifier deux dates et heures pour voir laquelle a le composant de temps plus tôt ou plus tard que l'autre. La fonction renvoie -1 si datetime1 est antérieure, 1 si datetime1 est postérieure et 0 si elles sont identiques, et elle ignore la date, donc littéralement quelle heure est la plus éloignée du jour donné. Syntaxe:date_compare_time(datetime1, datetime2); Argument Description datetime1 La première date / heure. datetime2 Date / heure à laquelle comparer le premier. Retour:Real Exemple:d = date_compare_time(date_create_datetime( 2011, 9, 15, 11, 4, 0 ), date_current_datetime()); Cela définirait "d" à la valeur correspondante en fonction de laquelle des heures était la plus ancienne. Fondamentalement, si l'heure actuelle est postérieure à 11h04, elle renvoie 1. Si elle est antérieure, -1. Si l'heure est 11:04, elle renverra 0.  Retour: Date et heure Suivant:date_valid_datetime © Copyright YoYo Games Ltd. 2021 Tous droits réservés
+
+
+
+
+
+  
+  date_compare_time
+  Avec cette fonction, vous pouvez vérifier deux dates et heures pour voir laquelle a une composante temporelle antérieure ou postérieure à l'autre. La fonction renvoie -1 si datetime1 est antérieure, 1 si datetime1 est postérieure et 0 si elles sont identiques, et elle ignore la date,
+    donc littéralement juste lequel des temps est plus loin dans son jour donné.
+   
+  Syntaxe :
+  date_compare_time(datetime1, datetime2) ;
+  
+    
+      
+        Arguments
+        Description
+      
+      
+        date1
+        La première date.
+      
+      
+        Datetime2
+        La date à laquelle il faut comparer la première.
+      
+    
+  
+   
+  Les retours :
+  Real
+   
+  Exemple :
+  d = date_compare_time(date_create_datetime( 2011, 9, 15, 11, 4, 0 ), date_current_datetime()) ;
+  Cela donne à "d" la valeur correspondante en fonction de l'heure la plus ancienne. En gros, si l'heure actuelle est postérieure à 11 h 04, elle renvoie 1. Si l'heure est antérieure, -1. Si l'heure est 11:04, elle renvoie 0.
+   
+   
+   
+  
+    
+      
+        Retour : Date et heure
+        Suivant : date_valid_datetime
+      
+    
+    Copyright YoYo Games Ltd. 2021 Tous droits réservés
   
   
   

@@ -1,6 +1,49 @@
-layer_sprite_exists Vous pouvez utiliser cette fonction pour vérifier et voir si un élément de sprite existe sur un calque donné. Vous fournissez l'ID de couche (que vous obtenez lorsque vous créez la couche en utilisant layer_create() ) ou le nom du calque (sous forme de chaîne - cela aura un impact sur les performances) et l'ID d'élément de sprite (que vous obtenez lorsque vous créez un élément de sprite en utilisant layer_sprite_create() ou lorsque vous utilisez la fonction layer_sprite_get_id() ) et la fonction retournera soit true si l'élément existe, ou false si ça ne fait pas. NOTE: Cette fonction fonctionne dans le cadre de la salle cible actuelle - par défaut la salle dans laquelle la fonction est appelée - qui peut être définie à l'aide de la fonction layer_set_target_room (). Syntaxe:layer_sprite_exists(layer_id, sprite_element_id) Argument Description layer_id La valeur d'ID unique du calque à cibler (ou le nom du calque sous forme de chaîne) sprite_element_id La valeur d'ID unique de l'élément de sprite à vérifier Retour:Boolean Exemple:var lay_id = layer_get_id("Asset_Trees"); if layer_sprite_exists(lay_id, global.TreesSprites)     {
-         layer_sprite_destroy(lay_id, global.TreesSprites);     }
-   Le code ci-dessus vérifie la couche "Asset_trees" pour voir si l'élément de sprite donné existe et si c'est le cas, alors il est détruit (mais pas la couche).  Retour: Couches de sprite Suivant:layer_sprite_create © Copyright YoYo Games Ltd. 2021 Tous droits réservés
+
+  
+  couche_sprite_existe
+  Vous pouvez utiliser cette fonction pour vérifier si un élément sprite existe sur un calque donné. Vous fournissez l'ID de la couche (que vous obtenez lorsque vous créez la couche à l'aide de la fonction layer_create()) ou le nom de la couche
+    (sous forme de chaîne - cela aura un impact sur les performances) et l'ID de l'élément sprite (que vous obtenez lorsque vous créez un élément sprite à l'aide de la commande layer_sprite_create() ou lorsque vous utilisez la fonction layer_sprite_get_id())
+    La fonction renvoie soit true si l'élément existe, soit false s'il n'existe pas.
+  REMARQUE: Cette fonction fonctionne dans le cadre de la pièce cible actuelle - par défaut, la pièce dans laquelle la fonction est appelée - qui peut être définie à l'aide de la fonction layer_set_target_room().
+   
+  Syntaxe :
+  layer_sprite_exists(layer_id, sprite_element_id)
+  
+    
+      
+        Arguments
+        Description
+      
+      
+        identifiant de la couche
+        La valeur d'identification unique de la couche à cibler (ou le nom de la couche sous forme de chaîne).
+      
+      
+        sprite_element_id
+        La valeur d'identification unique de l'élément du sprite à vérifier.
+      
+    
+  
+   
+  Les retours :
+  Booléen
+   
+  Exemple :
+  var lay_id = layer_get_id("Asset_Trees") ; if layer_sprite_exists(lay_id, global.TreesSprites) {
+     layer_sprite_destroy(lay_id, global.TreesSprites) ; }
+  
+  Le code ci-dessus vérifie le calque "Asset_trees" pour voir si l'élément sprite donné existe et si c'est le cas, alors il est détruit (mais pas le calque).
+   
+   
+   
+  
+    
+      
+        Retour : Couches de sprites
+        Suivant : layer_sprite_create
+      
+    
+    Copyright YoYo Games Ltd. 2021 Tous droits réservés
   
   
   

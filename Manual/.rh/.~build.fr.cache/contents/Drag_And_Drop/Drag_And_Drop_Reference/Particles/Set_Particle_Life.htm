@@ -1,4 +1,50 @@
- Définir la durée de vie des particules Cette action définira la durée de vie du type de particule donné. Vous spécifiez d'abord la valeur de l'ID du type de particule (qui est la valeur renvoyée lorsque vous avez créé la particule à l'aide de l' action Créer un type de particule ), puis vous pouvez définir la durée de vie minimale et maximale de la particule dans les images de jeu. Par exemple, si votre jeu a une image par seconde de 60, définir les deux valeurs de durée de vie ici à 60 signifiera que les particules dureront 1 seconde à l'écran avant de disparaître. Si vous utilisez deux valeurs différentes, chaque particule générée aura une durée de vie aléatoire définie dans le minimum et le maximum donnés. Notez que toutes les valeurs doivent être des entiers positifs. IMPORTANT! Définir des durées de vie très longues, puis émettre des centaines de particules, peut causer des problèmes sur les machines moins puissantes et sur les appareils mobiles. Faites attention lorsque vous définissez la durée de vie des particules pour maximiser l'effet visuel, mais minimisez le coût des performances, et n'utilisez que des particules à très longue durée de vie avec parcimonie. Syntaxe de l'action: Arguments: Argument Description Type ID La valeur d'ID du type global pour définir la durée de vie de Min Life La durée de vie minimale d'une particule (dans les cadres de jeu) Max Life La durée de vie maximale d'une particule (dans les cadres de jeu) Exemple: Le code de bloc d'action ci-dessus créera un nouveau type de particule et attribuera sa valeur d'identifiant unique à une variable globale. Il procède ensuite à la définition de toutes les propriétés du type de particule.  Retour: Actions de particules Suivant: Définir la vitesse des particules © Copyright YoYo Games Ltd. 2021 Tous droits réservés
+
+  
+   Définir la durée de vie des particules
+  Cette action va définir la durée de vie du type de particule donné. Vous spécifiez d'abord la valeur de l'ID du type de particule (qui est la valeur renvoyée lorsque vous avez créé la particule à l'aide de l'action Créer un type de particule ) et puis
+    vous pouvez définir la durée de vie minimale et maximale de la particule en images de jeu. Par exemple, si votre jeu a un nombre d'images par seconde de 60, si vous définissez les deux valeurs de durée de vie à 60, les particules dureront 1 seconde à l'écran avant de disparaître.
+    avant de disparaître. Si vous utilisez deux valeurs différentes, chaque particule générée aura une durée de vie aléatoire comprise entre le minimum et le maximum indiqués. Notez que toutes les valeurs doivent être des nombres entiers positifs.
+  IMPORTANT ! Le fait de définir des durées de vie très longues et d'émettre ensuite des centaines de particules peut causer des problèmes sur les machines moins puissantes et sur les appareils mobiles. Prenez soin de régler la durée de vie des particules de manière à maximiser l'effet visuel tout en minimisant le coût des performances.
+    performances, et n'utilisez les particules à très longue durée de vie qu'avec parcimonie.
+   
+  Syntaxe de l'action :
+  
+  Arguments :
+  
+    
+      
+        Arguments
+        Description
+      
+      
+        Type
+        La valeur ID du type global pour définir la durée de vie de
+      
+      
+        Min Life
+        La durée de vie minimale d'une particule (en frames de jeu)
+      
+      
+        Max Life
+        Durée de vie maximale d'une particule (en images de jeu)
+      
+    
+  
+   
+  Exemple :
+  Le code du bloc d'action ci-dessus créera un nouveau type de particule et affectera sa valeur d'identification unique à une variable globale.
+    unique à une variable globale. Il définit ensuite toutes les propriétés du type de particule.
+   
+   
+   
+  
+    
+      
+        Retour : Actions des particules
+        Suivant : Régler la vitesse des particules
+      
+    
+    Copyright YoYo Games Ltd. 2021 Tous droits réservés
   
   
   

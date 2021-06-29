@@ -1,4 +1,41 @@
-ds_queue_head Cette fonction ne lira que la première valeur de la file d'attente (celle qui est "en tête"). Il ne retirera pas la valeur de la file d'attente, ce qui signifie qu'elle pourra encore être lue à l'avenir par cette fonction ou le ds_queue_dequeue(). Si la file d'attente est vide, la fonction retournera la constante undefined, sinon il renverra la valeur réelle ou chaîne contenue dans la file d'attente. Syntaxe:ds_queue_head(id); Argument Description id L'identifiant de la structure de données à partir de laquelle lire. Retour:Data type value stored in the queue Exemple:num = ds_queue_head(control_queue); Le code ci-dessus lira la valeur de la file d'attente indexée dans la variable "control_queue" et stockera la valeur de retour dans la variable "num".  Retour: Files d'attente DS Suivant:ds_queue_tail © Copyright YoYo Games Ltd. 2021 Tous droits réservés
+
+  
+  ds_queue_head
+  Cette fonction ne lira que la première valeur de la file d'attente (celle qui est "en tête"). Elle ne déchargera pas la valeur de la file d'attente, ce qui signifie qu'elle pourra toujours être lue dans le futur par cette fonction ou par la fonction . ds_queue_dequeue().
+    Si la file d'attente est vide, la fonction renvoie la constante indéfinie, sinon elle renvoie la valeur réelle ou la chaîne de caractères contenue dans la file d'attente.
+   
+  Syntaxe :
+  ds_queue_head(id) ;
+  
+    
+      
+        Arguments
+        Description
+      
+      
+        id
+        L'identifiant de la structure de données à lire.
+      
+    
+  
+   
+  Les retours :
+  Valeur du type de données stockée dans la file d'attente
+   
+  Exemple :
+  num = ds_queue_head(control_queue) ;
+  Le code ci-dessus va lire la valeur de la file d'attente indexée dans la variable "control_queue" et stocker la valeur de retour dans la variable "num".
+   
+   
+   
+  
+    
+      
+        Retour : Files d'attente DS
+        Suivant : ds_queue_tail
+      
+    
+    Copyright YoYo Games Ltd. 2021 Tous droits réservés
   
   
   

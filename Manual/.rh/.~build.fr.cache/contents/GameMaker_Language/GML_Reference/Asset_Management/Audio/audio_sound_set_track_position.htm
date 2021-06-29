@@ -1,4 +1,48 @@
-audio_sound_set_track_position Cette fonction définit la position (en secondes) dans le fichier audio à partir de laquelle le son doit être lu. Le son peut être soit une seule instance d'un son (l'index des sons individuels en cours de lecture peut être stocké dans une variable lors de l'utilisation du audio_play_sound() ou audio_play_sound_at() fonctions) ou un atout solide. S'il s'agit d'un identifiant de son unique que vous utilisez, la position passera immédiatement à la nouvelle heure donnée, et s'il s'agit d'un actif du navigateur d'actifs, toutes les autres lectures du son donné commenceront à la nouvelle heure. La fonction ignorera toute valeur donnée qui est plus longue que la longueur du son donnée pour la valeur «index». Syntaxe:audio_sound_set_track_position(index, time); Argument Description index L'indice du son à changer. time Le temps (en secondes) pour définir le point de départ. Retour:N/A Exemple:var snd = audio_play_sound(snd_MainTrack, 0, false); audio_sound_set_track_position(snd, 32); Le code ci-dessus lit un son, puis utilise la valeur ID renvoyée pour définir la position de départ du son sur 32 secondes.  Retour: Audio Suivant:audio_sound_get_track_position © Copyright YoYo Games Ltd. 2021 Tous droits réservés
+
+  
+  audio_sound_set_track_position
+  Cette fonction permet de définir la position (en secondes) du son dans le fichier audio. Le son peut être une instance unique d'un son (l'index des sons individuels joués peut être stocké dans une variable lors de l'utilisation de la fonction 
+    audio_play_sound() ou audio_play_sound_at() ) ou un actif sonore. S'il s'agit d'un ID de son unique que vous utilisez, la position changera immédiatement
+      S'il s'agit d'un actif du navigateur d'actifs, toutes les lectures ultérieures du son en question commenceront au nouveau moment. La fonction ignorera toute valeur donnée qui est plus longue que la longueur du son donné pour la valeur "index".
+      valeur.
+   
+  Syntaxe :
+  audio_sound_set_track_position(index, time) ;
+  
+    
+      
+        Arguments
+        Description
+      
+      
+        indice
+        L'indice du son à modifier.
+      
+      
+        temps
+        Le temps (en secondes) sur lequel il faut régler le point de départ.
+      
+    
+  
+   
+  Les retours :
+  N/A
+   
+  Exemple :
+  var snd = audio_play_sound(snd_MainTrack, 0, false) ; audio_sound_set_track_position(snd, 32) ;
+  Le code ci-dessus joue un son et utilise ensuite la valeur ID retournée pour définir la position de départ du son à 32 secondes.
+   
+   
+   
+  
+    
+      
+        Retour : Audio
+        Suivant : audio_sound_get_track_position
+         
+      
+    
+    Copyright YoYo Games Ltd. 2021 Tous droits réservés
   
   
   

@@ -1,4 +1,47 @@
- Créer un tampon Cette action peut être utilisée pour allouer une partie de la mémoire comme tampon dans votre jeu, la fonction renvoyant la valeur d'identifiant de tampon unique qui doit être stockée dans une variable et utilisée pour tous les autres appels de fonction au tampon. Vous pouvez fournir une variable globale, une variable d'instance ou demander à l'action de créer une variable locale temporaire pour stocker l'ID de tampon. Notez que vous pouvez créer des tampons supplémentaires en cliquant sur l'icône plus à côté de l'action et en sélectionnant une autre variable pour contenir l'ID de tampon. REMARQUE: il est important que vous supprimiez de la mémoire toutes les ressources créées dynamiquement comme celle-ci lorsque vous n'en avez plus besoin pour éviter les fuites de mémoire.Par conséquent, lorsque vous avez terminé avec le tampon que vous avez créé, vous devez le libérer à nouveau à l'aide de l' action Supprimer le tampon (dans l' événement Autre - Nettoyage, par exemple). Ceci est particulièrement important à retenir lorsque vous utilisez une variable locale temporaire, car si vous ne supprimez pas à nouveau le tampon avant la fin de l'événement ou du script d'action, vous ne pourrez plus y accéder et vous pourrez avoir des problèmes plus tard. Syntaxe de l'action: Arguments: Argument Description Buffer L'index du tampon (stocké dans une variable) Value La valeur à ajouter à la liste Exemple: Le code de bloc d'action ci-dessus crée une variable globale, puis un tampon, affectant l'ID de tampon unique à la variable. Ce tampon contient deux données écrites.  Retour: Actions de tampon Suivant: Copy Buffer © Copyright YoYo Games Ltd. 2021 Tous droits réservés
+
+  
+   Créer un tampon
+  Cette action peut être utilisée pour allouer une partie de la mémoire en tant que tampon dans votre jeu. La fonction renvoie la valeur unique de l'identifiant du tampon qui doit être stockée dans une variable et utilisée pour tous les autres appels de fonction au tampon. Vous pouvez fournir
+    une variable globale, une variable d'instance ou demander à l'action de créer une variable locale temporaire pour stocker l'ID du tampon. Notez que vous pouvez créer des tampons supplémentaires en cliquant sur l'icône plus  à côté de
+    l'action, et en sélectionnant une autre variable pour contenir l'ID du tampon.
+  REMARQUE: il est important de supprimer de la mémoire toute ressource créée dynamiquement comme celle-ci lorsque vous n'en avez plus besoin afin d'éviter les fuites de mémoire. Ainsi, lorsque vous avez terminé avec le tampon que vous avez créé, vous devez le libérer à nouveau
+    en utilisant l'action Delete Buffer ( dans l'événement Other - Clean Up, par exemple). Il est particulièrement important de s'en souvenir lorsque vous utilisez une variable locale temporaire.
+    car si vous ne supprimez pas la mémoire tampon avant la fin de l'événement ou du script d'action, vous ne pourrez plus y accéder et vous risquez de rencontrer des problèmes par la suite.
+   
+  Syntaxe de l'action :
+  
+  Arguments :
+  
+    
+      
+        Arguments
+        Description
+      
+      
+        Tampon
+        L'index du tampon (stocké dans une variable)
+      
+      
+        Valeur
+        La valeur à ajouter dans la liste
+      
+    
+  
+   
+  Exemple :
+  Le code du bloc d'action ci-dessus crée une variable globale, puis un tampon, en affectant l'ID de tampon unique à la variable.
+    unique du tampon à la variable. Deux données sont ensuite écrites dans ce tampon.
+   
+   
+   
+  
+    
+      
+        Retour : Actions tampon
+        Suivant : Tampon de copie
+      
+    
+    Copyright YoYo Games Ltd. 2021 Tous droits réservés
   
   
   

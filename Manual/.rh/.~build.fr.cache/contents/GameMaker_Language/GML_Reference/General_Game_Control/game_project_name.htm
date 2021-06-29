@@ -1,6 +1,32 @@
-game_project_name Cette variable en lecture seule renvoie le nom d'affichage de votre jeu pour la plate-forme cible dans un format "sauvegarde facile" pour la plate-forme cible. Si le nom d'affichage contient des caractères non autorisés pour un nom de fichier, ils seront automatiquement remplacés par "_". Le nom d'affichage peut être défini dans les options de jeu. Notez que puisqu'il n'y a pas de restrictions sur les noms de fichiers pour HTML5, cette chaîne sera probablement la même que celle renvoyée par game_display_name. Syntaxe:game_project_name Retour:String Exemple:var file = game_project_name + ".ini"; ini_open(file);
-     ini_write_real("Scores", "Highscore", score); ini_close();
-   Le code ci-dessus obtient le nom du projet et l'utilise pour ouvrir (ou créer) un fichier ini qui est ensuite écrit.  Retour: Contrôle général du jeu Suivant:game_end © Copyright YoYo Games Ltd. 2021 Tous droits réservés
+
+  
+  nom_du_projet_de_jeu
+  Cette variable en lecture seule renvoie le nom d'affichage de votre jeu pour la plate-forme cible dans un format "convivial pour la sauvegarde" pour la plate-forme cible. Si le nom d'affichage contient des caractères non autorisés pour un nom de fichier, ils seront
+    seront automatiquement remplacés par "_". Le nom d'affichage peut être défini dans les options du jeu. Notez qu'étant donné qu'il n'y a pas de restrictions sur les noms de fichiers pour HTML5, cette chaîne sera probablement la même que celle renvoyée par la fonction
+    que celle renvoyée par nom_affichage_jeu.
+   
+  Syntaxe :
+  nom_du_projet_de_jeu
+   
+  Les retours :
+  Chaîne de caractères
+   
+  Exemple :
+  var file = game_project_name + ".ini" ; ini_open(file) ;
+     ini_write_real("Scores", "Highscore", score) ; ini_close() ;
+  
+  Le code ci-dessus récupère le nom du projet et l'utilise pour ouvrir (ou créer) un fichier ini qui est ensuite écrit.
+   
+   
+   
+  
+    
+      
+        Retour : Contrôle général du jeu
+        Suivant : game_end
+      
+    
+    Copyright YoYo Games Ltd. 2021 Tous droits réservés
   
   
   

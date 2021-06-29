@@ -1,4 +1,48 @@
- Définir la gravité des particules Cette action simulera l'effet de la gravité sur toutes les particules du type donné. Vous spécifiez d'abord la valeur de l'ID du type de particule (qui doit être identique à la valeur utilisée lorsque vous avez créé la particule à l'aide de l' action Créer un type de particule ), puis vous pouvez définir la force de gravité et la direction. La force est une valeur cumulative et sera ajoutée au vecteur de vitesse à chaque image de jeu, donc une gravité de 1 ajoutera un à la valeur de vitesse à chaque image de jeu, tandis que la valeur de direction est simplement la direction dans laquelle la gravité devrait "tirer" le particule. Notez que pour la force et la direction, vous pouvez utiliser des valeurs négatives et que la direction dans GameMaker Studio 2 est calculée avec 0 ° vers la droite, 90 ° vers le haut, 180 ° vers la gauche et 270 ° vers le bas. Syntaxe de l'action: Arguments: Argument Description Type ID La valeur ID du type de particule pour définir la gravité de Force La force de la gravité (en pixels par image de jeu) Direction La direction de la "traction" gravitationnelle Exemple: Le code de bloc d'action ci-dessus créera un nouveau type de particule et attribuera sa valeur d'identifiant unique à une variable globale. Il procède ensuite à la définition de toutes les propriétés du type de particule.  Retour: Actions de particules Suivant: Définir les particules secondaires © Copyright YoYo Games Ltd. 2021 Tous droits réservés
+
+  
+   Set Particle Gravity
+  Cette action va simuler l'effet de la gravité sur toutes les particules du type donné. Vous spécifiez d'abord la valeur de l'ID du type de particule (qui doit être la même que celle utilisée lorsque vous avez créé la particule à l'aide de l'action Créer un type de particule ), puis vous pouvez définir la force de gravité et la direction. La force est une valeur cumulative et sera ajoutée au vecteur vitesse à chaque image du jeu, donc une gravité de 1 ajoutera un à la valeur de la vitesse à chaque image du jeu, tandis que la valeur de la direction
+    est simplement la direction dans laquelle la gravité doit "tirer" la particule. Notez que pour la force et la direction, vous pouvez utiliser des valeurs négatives, et que la direction dans GameMaker Studio 2 est calculée avec 0° à droite, 90° en haut,
+    180° vers la gauche et 270° vers le bas.
+   
+  Syntaxe de l'action :
+  
+  Arguments :
+  
+    
+      
+        Arguments
+        Description
+      
+      
+        Type
+        La valeur de l'ID du type de particule dont la gravité doit être définie
+      
+      
+        Force
+        La force de la gravité (en pixels par image de jeu)
+      
+      
+        Direction
+        La direction de la "traction" de la gravité
+      
+    
+  
+   
+  Exemple :
+  Le code du bloc d'action ci-dessus créera un nouveau type de particule et affectera sa valeur d'identification unique à une variable globale.
+    unique à une variable globale. Il définit ensuite toutes les propriétés du type de particule.
+   
+   
+   
+  
+    
+      
+        Retour : Actions des particules
+        Suivant : Définir les particules secondaires
+      
+    
+    Copyright YoYo Games Ltd. 2021 Tous droits réservés
   
   
   

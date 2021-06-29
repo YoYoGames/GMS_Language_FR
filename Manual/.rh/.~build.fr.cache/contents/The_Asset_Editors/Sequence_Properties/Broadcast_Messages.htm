@@ -1,6 +1,46 @@
- Diffuser des messages Les séquences et les sprites peuvent générer ce que l'on appelle des messages de diffusion à tout moment sur leur longueur. Ces messages sont de simples chaînes qui sont ajoutées à des images spécifiques le long de la chronologie de l'animation, et lorsque ce point dans la chronologie est atteint, la chaîne sera diffusée à toutes les instances qui l'écoutent. Toute instance qui a un événement de message de diffusion (trouvé dans la catégorie d'événements "Autre ") recevra la chaîne de message lorsqu'elle est atteinte dans la chronologie, à quel point c'est à vous d'avoir un code qui l'analysera et réagira en conséquence. Notez également que les séquences peuvent également écouter les messages diffusés, mais cela nécessite que vous configuriez d'abord la méthode d'écoute à l'aide du code (voir la GML sur les événements et les moments de séquence pour plus d'informations). REMARQUE: la définition de l'image_index d'une instance directement sur une trame ne déclenchera aucun message de diffusion qui peut être présent sur cette trame de l'image-objet de l'objet. Pour ajouter un message de diffusion à la séquence ou à la chronologie du sprite, cliquez simplement sur le bouton bouton. Cela ouvrira une boîte de dialogue dans laquelle vous pourrez ajouter le message à diffuser: Une fois ajouté, le message sera affiché dans la Dope Sheet (ou dans la vue du cadre de sprite). Pour le modifier, vous devez cliquer sur le bouton droit de la souris sur l'icône de message pour ouvrir une liste de tous les messages qui chevauchent le cadre (il ne peut y avoir qu'un seul message sur un cadre, mais placer plusieurs messages sur des cadres consécutifs les fera se chevaucher visuellement, ce qui rendra plus difficile la sélection de celui que vous voulez et vous pouvez également avoir un message et un moment sur le même cadre), puis en sélectionner un dans cette liste ouvrira la boîte de dialogue de message où vous pourrez le modifier ou le supprimer. Lorsqu'un événement de message de diffusion est déclenché, une carte DS spéciale sera créée et stockée dans la variable intégrée event_data. Cet ID de variable est une variable de portée globale intégrée, mais ne contiendra que des données de carte DS dans l'événement qui l'a déclenché - dans ce cas l'événement de message de diffusion - et renverra -1 à tous les autres moments. Les clés que aura l'événement sont les suivantes: "event_type ": Pour un message diffusé, ce sera la chaîne"sequence event "pour un message envoyé depuis une séquence et"sprite event "pour un message envoyé par un sprite. "message ": Cette clé contient la chaîne de message qui a été reçue. "element_id ": Cette clé renvoie l'ID de l'élément (séquence / sprite / instance) sur un calque dans l'éditeur de salle. Vous pouvez ensuite utiliser cette valeur d'ID pour savoir quel type d'élément a généré le message à l'aide de la fonction layer_get_element_type() et d'utiliser les autres fonctions pertinentes pour le cibler, ou effectuer une action comme jouer un son, selon les besoins. Notez que l'événement de message de diffusion d'une instance recevra plusieurs chaînes pour chaque fois qu'un message de diffusion est envoyé. Vous n'avez pas besoin d'agir sur chacun d'eux et vous pouvez avoir différentes instances à l'écoute de différentes chaînes de diffusion. Cependant, vous pouvez avoir une instance qui écoute les messages qui peuvent être reçus en même temps. Lorsque cela se produit, l'événement sera déclenché plusieurs fois - une fois pour chaque chaîne de message. Voici un bref exemple de la façon dont cet événement peut être vérifié: if event_data[? "event_type"] == "sequence event" {
-     switch (event_data[? "message"])     {     case "hit":         audio_play_sound(snd_hit, 0, false);         break;     case "destroy":         sequence_destroy(event_data[? "element_id"]);            break;     } }
-   Retour: Séquences Suivant: Le canevas de séquence © Copyright YoYo Games Ltd. 2021 Tous droits réservés
+
+  
+  Messages de diffusion
+  Les séquences et les sprites peuvent générer ce qu'on appelle des messages de diffusion à n'importe quel endroit de leur longueur. Ces messages
+    messages sont de simples chaînes qui sont ajoutées à des images spécifiques le long de la ligne de temps de l'animation, et lorsque ce point de la ligne de temps est atteint, la chaîne est diffusée à toutes les instances qui l'écoutent. Toute instance disposant d'un événement de diffusion de messages (dans la catégorie d'événements " Other") recevra la chaîne de messages lorsqu'elle atteindra ce point de la ligne de temps, et c'est à vous de prévoir un code qui l'analysera et réagira en conséquence. Notez également que les séquences
+    peuvent également écouter les messages diffusés, mais cela nécessite de configurer la méthode d'écoute à l'aide de code (voir la section GML sur les événements et les moments des séquences pour plus d'informations).
+    plus d'informations).
+  REMARQUE : Le fait de définir l'image_index d'une instance directement sur une image ne déclenchera pas les messages de diffusion qui peuvent être présents sur cette image du sprite de l'objet.
+  Pour ajouter un message de diffusion à la chronologie de la séquence ou du sprite, il suffit de cliquer sur le bouton . Cela ouvrira un dialogue dans lequel vous pourrez ajouter le message
+    à diffuser :
+  
+  Une fois ajouté, le message s'affichera dans la Dope Sheet (ou dans la vue du cadre du sprite). Pour le modifier, vous devez cliquer avec le bouton droit de la souris  sur l'icône du message
+    pour ouvrir une liste de tous les messages qui chevauchent le cadre (il ne peut y avoir qu'un seul message par cadre, mais placer plusieurs messages sur des cadres consécutifs les fera se chevaucher visuellement, ce qui rendra plus difficile la sélection de celui que vous voulez).
+    un message et un moment sur le même cadre), puis sélectionnez-en un dans cette liste pour ouvrir la boîte de dialogue du message où vous pouvez le modifier ou le supprimer.
+    vous pouvez le modifier ou le supprimer.
+  Lorsqu'un événement Broadcast Message est déclenché, une carte DS spéciale est créée et stockée dans la variable intégrée event_data.
+    Cette variable ID est une variable intégrée de portée globale , mais elle ne contiendra des données de carte DS que dans l'événement qui l'a déclenchée - dans ce cas, l'événement Message de diffusion - et renverra -1 à tous les autres moments. Les clés de l'événement sont
+    comme suit :
+  
+    "event_type" : Pour un message diffusé, ce sera la chaîne "sequence event" pour un message envoyé depuis une séquence et "sprite event"
+      pour un message envoyé à partir d'un sprite.
+    "message" : Cette clé contient la chaîne de messages qui a été reçue.
+    "element_id" : Cette clé renvoie l'ID de l'élément (séquence/sprite/instance) sur une couche dans l'éditeur de salle. Vous pouvez ensuite utiliser cette valeur d'ID pour savoir quel type d'élément a généré le message à l'aide de la fonction
+      layer_get_element_type() et pour utiliser les autres fonctions pertinentes afin de le cibler, ou d'effectuer
+      une action comme jouer un son, selon les besoins.
+  
+  Notez que l'événement de message de diffusion d'une instance recevra plusieurs chaînes pour chacune des fois où un message de diffusion est envoyé. Vous n'avez pas besoin d'agir sur toutes ces chaînes et vous pouvez avoir différentes instances qui écoutent différentes chaînes de diffusion.
+    Cependant, vous pouvez avoir une instance qui écoute des messages qui peuvent être reçus en même temps. Dans ce cas, l'événement sera déclenché plusieurs fois - une fois pour chaque chaîne de messages.
+  Vous trouverez ci-dessous un bref exemple de la manière dont cet événement peut être vérifié :
+  si event_data[ ? "event_type"] == "sequence event" {
+     switch (event_data[ ? "message"]) { case "hit" : audio_play_sound(snd_hit, 0, false) ; break ; case "destroy" : sequence_destroy(event_data[ ? "element_id"]) ; break ; }  }
+  
+   
+   
+   
+  
+    
+      
+        Retour : Séquences
+        Suivant : Le canevas des séquences
+      
+    
+    Copyright YoYo Games Ltd. 2021 Tous droits réservés
   
   
   

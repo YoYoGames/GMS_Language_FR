@@ -1,4 +1,41 @@
-sprite_get_name Cette fonction renverra le nom sous forme de chaîne du sprite spécifié. Ce nom est celui qui a été spécifié pour le sprite dans l'arborescence des ressources de la GameMaker Studio 2. Veuillez noter qu'il ne s'agit que d' une chaîne et ne peut pas être utilisée pour référencer directement le sprite - pour cela, vous auriez besoin de l' index du sprite. Vous pouvez cependant utiliser cette chaîne pour obtenir l' index du sprite en utilisant la chaîne retournée avec la fonction asset_get_index(). Syntaxe:sprite_get_name(index); Argument Description index L'index du sprite pour lequel obtenir le nom. RetourString Exemple:str = sprite_get_name(sprite_index); Le code ci-dessus obtiendra le nom de l'index du sprite pour l'instance exécutant le code et stockera la valeur de retour dans la variable "str".  Retour: Informations sur les sprites Suivant:sprite_get_number © Copyright YoYo Games Ltd. 2021 Tous droits réservés
+
+  
+  sprite_get_name
+  Cette fonction renvoie le nom du sprite spécifié sous la forme d'une chaîne de caractères. Ce nom est celui qui a été spécifié pour le sprite dans l'arbre des ressources de la fenêtre principale de GameMaker Studio 2. Veuillez noter qu'il s'agit uniquement d'une chaîne de caractères
+    et ne peut pas être utilisée pour référencer le sprite directement - pour cela, vous aurez besoin de l'index du sprite. Vous pouvez toutefois utiliser cette chaîne pour obtenir l'index du sprite en utilisant la chaîne retournée avec la fonction asset_get_index().
+   
+  Syntaxe :
+  sprite_get_name(index) ;
+  
+    
+      
+        Arguments
+        Description
+      
+      
+        indice
+        L'index du sprite dont on veut obtenir le nom.
+      
+    
+  
+   
+  Renvoie à
+  Chaîne de caractères
+   
+  Exemple :
+  str = sprite_get_name(sprite_index) ;
+  Le code ci-dessus récupère le nom de l'index du sprite pour l'instance qui exécute le code et stocke la valeur de retour dans la variable "str".
+   
+   
+   
+  
+    
+      
+        Retour : Informations sur le Sprite
+        Suivant : sprite_get_number
+      
+    
+    Copyright YoYo Games Ltd. 2021 Tous droits réservés
   
   
   

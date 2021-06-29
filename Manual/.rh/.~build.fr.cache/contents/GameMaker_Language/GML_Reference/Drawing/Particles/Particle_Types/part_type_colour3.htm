@@ -1,4 +1,53 @@
-part_type_colour3 Cette fonction peut être utilisée pour définir un dégradé de trois couleurs pour chaque particule créée du type donné. La première couleur est celle avec laquelle toutes les particules commenceront, et la deuxième couleur est celle qui sera mélangée à la moitié de sa durée de vie et la troisième couleur est celle avec laquelle la particule se terminera. Un changement de dégradé en douceur se produira à travers les couleurs au cours de la durée de vie des particules d'une couleur à l'autre. Syntaxe:part_type_colour3( ind, colour1, colour2, colour3 ); Argument Description ind L'indice du type de particule à modifier. colour1 La couleur à laquelle la particule commencera. colour2 La couleur de la particule sera à mi-chemin de sa durée de vie. colour3 La couleur à laquelle la particule se terminera. Retour:N/A Exemple:part_type_colour3( part_Health, c_red, c_white, c_maroon); Le code ci-dessus fera que toutes les particules créées du type indexé dans la variable "part_Health" auront un mélange de couleur du rouge au blanc au marron au cours de leur durée de vie.  Retour: Types de particules Suivant:part_type_alpha1 © Copyright YoYo Games Ltd. 2021 Tous droits réservés
+
+  
+  type_partie_couleur3
+  Cette fonction peut être utilisée pour définir un gradient de trois couleurs pour chaque particule créée du type donné. La première couleur est celle avec laquelle toutes les particules commenceront, la deuxième couleur est celle qui sera mélangée à la moitié de sa durée de vie
+    et la troisième couleur est celle avec laquelle la particule se terminera. Un gradient de couleur se produira tout au long de la vie de la particule, d'une couleur à l'autre.
+   
+  Syntaxe :
+  partie_type_couleur3( ind, couleur1, couleur2, couleur3 ) ;
+  
+    
+      
+        Arguments
+        Description
+      
+      
+        ind
+        L'indice du type de particule à modifier.
+      
+      
+        couleur1
+        La couleur de départ de la particule.
+      
+      
+        couleur2
+        La couleur que la particule aura à la moitié de sa durée de vie.
+      
+      
+        couleur3
+        La couleur à laquelle la particule se terminera.
+      
+    
+  
+   
+  Les retours :
+  N/A
+   
+  Exemple :
+  part_type_colour3( part_Health, c_red, c_white, c_maroon) ;
+  Le code ci-dessus fera en sorte que toutes les particules créées du type indexé dans la variable "part_Health" aient un mélange de couleurs allant du rouge au blanc et au marron au cours de leur vie.
+   
+   
+   
+  
+    
+      
+        Retour : Types de particules
+        Suivant : part_type_alpha1
+      
+    
+    Copyright YoYo Games Ltd. 2021 Tous droits réservés
   
   
   

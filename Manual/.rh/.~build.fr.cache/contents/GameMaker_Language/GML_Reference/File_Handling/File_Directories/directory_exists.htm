@@ -1,6 +1,43 @@
-directory_exists Cette fonction retournera true si le répertoire indiqué existe ou false si ça ne fait pas. Le nom spécifié doit inclure le chemin complet, pas un chemin relatif et par défaut, vous ne pouvez accéder à aucun répertoire à partir du bundle de jeu car tous les jeux sont en bac à sable (voir la section sur le système de fichiers pour plus d'informations). Syntaxe:directory_exists(dname) Argument Description dname Le nom du répertoire à rechercher. Retour:Boolean Exemple:if directory_exists(working_directory + "Saves/")    {
-        file = file_find_first(working_directory + "Saves/*.doc", fa_readonly);    }
-   Cela vérifiera si le répertoire spécifié existe, puis, si c'est le cas, allez-y et retournez le premier "lecture seule "doc fichier trouvé.  Retour: Répertoires de fichiers Suivant:directory_create © Copyright YoYo Games Ltd. 2021 Tous droits réservés
+
+  
+  répertoire_existe
+  Cette fonction renvoie true si le répertoire indiqué existe ou false s'il n'existe pas. Le nom spécifié doit inclure le chemin d'accès complet, et non un chemin relatif. Par défaut, vous ne pouvez accéder à aucun répertoire en dehors du paquet de jeu
+    car tous les jeux sont protégés par une sandbox (voir la section sur le système de fichiers pour plus d'informations).
+   
+  Syntaxe :
+  directory_exists(dname)
+  
+    
+      
+        Arguments
+        Description
+      
+      
+        dname
+        Le nom du répertoire à rechercher.
+      
+    
+  
+   
+  Les retours :
+  Booléen
+   
+  Exemple :
+  if directory_exists(working_directory + "Saves/") {
+     file = file_find_first(working_directory + "Saves/*.doc", fa_readonly) ; }
+  
+  Elle vérifiera si le répertoire spécifié existe et, si c'est le cas, elle s'y rendra et renverra le premier fichier doc "en lecture seule" trouvé.
+   
+   
+   
+  
+    
+      
+        Retour : Répertoires de fichiers
+        Suivant : directory_create
+      
+    
+    Copyright YoYo Games Ltd. 2021 Tous droits réservés
   
   
   

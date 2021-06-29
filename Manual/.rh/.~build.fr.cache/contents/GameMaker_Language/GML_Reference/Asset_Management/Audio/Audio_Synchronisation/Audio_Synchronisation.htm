@@ -1,4 +1,34 @@
- Synchronisation audio Les fonctions de groupe de synchronisation audio vous permettent de jouer plusieurs sons qui commencent exactement au même moment et restent synchronisés (sur un niveau par échantillon). Cela vous permet (par exemple) d'ajouter diverses pistes pour une seule chanson, puis de fondre les sections d'entrée et de sortie sans avoir à vous soucier de savoir s'il y aura un délai entre elles. Notez que ces fonctions ne fonctionnent actuellement qu'avec de l' audio compressé, c'est-à-dire.*.ogg et *.mp3 fichiers de format. REMARQUE: cette fonctionnalité n'est pas disponible pour la plate-forme cible HTML5. Les fonctions suivantes existent pour gérer la synchronisation des pistes audio: audio_create_sync_groupaudio_play_in_sync_groupaudio_start_sync_groupaudio_stop_sync_groupaudio_pause_sync_groupaudio_resume_sync_groupaudio_sync_group_get_track_posaudio_destroy_sync_groupaudio_sync_group_debugaudio_sync_group_is_playing Retour: Audio Suivant: Émetteurs audio © Copyright YoYo Games Ltd. 2021 Tous droits réservés
+
+  
+  Synchronisation audio
+  Les fonctions de groupe de synchronisation audio vous permettent de jouer plusieurs sons qui commencent exactement au même moment et restent synchronisés (au niveau de chaque échantillon). Cela vous permet (par exemple) d'ajouter plusieurs pistes pour un seul morceau et d'insérer des sections en fondu sans avoir à vous préoccuper d'un éventuel retard entre elles.
+    sans avoir à vous préoccuper de savoir s'il y aura un retard entre elles. Notez que ces fonctions ne fonctionnent actuellement qu'avec des fichiers audio compressés, c'est-à-dire aux formats *.ogg et *.mp3.
+  REMARQUE: cette fonctionnalité n'est pas disponible pour la plateforme cible HTML5.
+  Les fonctions suivantes permettent de gérer la synchronisation des pistes audio :
+   
+  
+    audio_create_sync_group
+    audio_play_in_sync_group
+    audio_start_sync_group
+    audio_stop_sync_group
+    audio_pause_sync_group
+    audio_resume_sync_group
+    audio_sync_group_get_track_pos
+    audio_destroy_sync_group
+    audio_sync_group_debug
+    audio_sync_group_is_playing
+  
+   
+   
+   
+  
+    
+      
+        Retour : Audio
+        Suivant : Emetteurs audio
+      
+    
+    Copyright YoYo Games Ltd. 2021 Tous droits réservés
   
   
   

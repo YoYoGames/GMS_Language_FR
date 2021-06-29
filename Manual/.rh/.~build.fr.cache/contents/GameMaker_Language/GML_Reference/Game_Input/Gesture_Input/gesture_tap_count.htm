@@ -1,7 +1,49 @@
-gesture_tap_count Cette fonction est utilisée pour définir si le comptage des prises est activé ou désactivé. Lorsqu'il est réglé sur true le comptage des touches est activé et lorsqu'il est réglé sur false il est désactivé, bien que vous puissiez vérifier dans quel état il se trouve en utilisant la fonction gesture_get_tap_count(). Lorsqu'il est activé, chaque événement de tap aura une entrée supplémentaire de carte DS "tapcount" qui aura enregistré le nombre de taps, et lorsqu'il sera activé, cela signifie que tous les événements taps seront déclenchés, c'est-à-dire: deux taps déclencheront à la fois l'événement tap unique et l'événement de double tap, avec le compte de tap d'événement de tap unique étant 1 et le nombre de tap d'événement de double tap étant 2. La valeur de comptage de tap sera remise à 0 après le temps défini pour une détection de double tap (voir la fonction gesture_double_tap_time() ). Si le comptage des taps est désactivé, alors le tap initial ne sera pas enregistré tant que le temps du double tap n'est pas écoulé et qu'aucun deuxième tap n'a été détecté. Notez que cela est activé par défaut. Syntaxe:gesture_tap_count(enable); Argument Description enable Activer (défini sur true ) ou désactiver (régler sur false ) appuyez sur le comptage. Retour:N/A Exemple:if !gesture_get_tap_count()     {
-         getsure_tap_count(true);
-         }
-   Le code ci-dessus vérifie si le comptage des prises est activé et si ce n'est pas le cas, il est activé.  Retour: Entrée gestuelle Suivant:gesture_pinch_distance © Copyright YoYo Games Ltd. 2021 Tous droits réservés
+
+
+
+
+  
+  nombre de gestes
+  Cette fonction est utilisée pour définir l'activation ou la désactivation du comptage des robinets. Lorsqu'elle est définie sur true (vrai), le comptage des coups est activé, et lorsqu'elle est définie sur false (faux), il est désactivé, bien que vous puissiez vérifier dans quel état il se trouve à l'aide de la fonction gesture_get_tap_count().
+    Lorsqu'il est activé, chaque événement de tapotement aura une entrée supplémentaire "tapcount" dans la carte DS qui aura enregistré le nombre de tapotements, et lorsqu'il est activé, cela signifie que tous les événements de tapotement seront déclenchés, c'est-à-dire que deux tapotements déclencheront à la fois l'événement de tapotement simple et l'événement de tapotement double.
+    Deux tapotements déclenchent à la fois l'événement de tapotement simple et l'événement de tapotement double, le nombre de tapotements de l'événement de tapotement simple étant de 1 et celui de l'événement de tapotement double de 2. La valeur du compteur de coups de robinet sera remise à 0 après que le temps défini pour la détection d'un double coup de robinet se soit écoulé (voir la fonction gesture_double_tap_time()).
+    Si le comptage des tapotements est désactivé, le premier tapotement ne sera pas enregistré tant que le temps de double tapotement ne sera pas écoulé et qu'aucun deuxième tapotement n'aura été détecté. Notez que cette fonction est activée par défaut.
+   
+  Syntaxe :
+  gesture_tap_count(enable) ;
+  
+    
+      
+        Arguments
+        Description
+      
+      
+        activer
+        Active (à true) ou désactive (à false) le comptage des robinets.
+      
+    
+  
+   
+  Les retours :
+  N/A
+   
+  Exemple :
+  if !gesture_get_tap_count() {
+     getsure_tap_count(true) ;
+     }
+  
+  Le code ci-dessus vérifie si le comptage par tapotement est activé et s'il ne l'est pas, il est activé.
+   
+   
+   
+  
+    
+      
+        Retour : Saisie gestuelle
+        Suivant : geste_pincement_distance
+      
+    
+    Copyright YoYo Games Ltd. 2021 Tous droits réservés
   
   
   

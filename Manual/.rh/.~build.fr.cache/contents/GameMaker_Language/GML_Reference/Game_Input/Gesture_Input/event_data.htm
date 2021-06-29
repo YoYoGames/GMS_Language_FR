@@ -1,9 +1,35 @@
-event_data Cette variable a une portée globale et est utilisée pour contenir une carte DS lorsqu'elle est utilisée dans les événements de mouvement, et -1 à tous les autres moments. Le contenu réel de la carte DS dépendra du type d'événement de mouvement qui l'a déclenché. Reportez-vous donc aux sections individuelles pour ces événements. Syntaxe:event_data; Retour:Real (integer value) Exemple:isFlick = event_data[?"isflick"]; if (isFlick)     {
-         flickVelX = event_data[?"diffX"];     flickVelY = event_data[?"diffY"];     }
+
+  
+  données de l'événement
+  Cette variable a une portée globale et est utilisée pour contenir une carte DS lorsqu'elle est utilisée dans les événements gestuels, et -1 à tous les autres moments.
+    tous les autres moments. Le contenu réel de la carte DS dépendra du type d'événement gestuel qui l'a déclenché, alors reportez-vous aux sections individuelles pour ces événements.
+   
+  Syntaxe :
+  données de l'événement ;
+   
+  Les retours :
+  Réel (valeur entière)
+   
+  Exemple :
+  isFlick = event_data[ ? "isflick"] ; if (isFlick) {
+     flickVelX = event_data[ ? "diffX"] ; flickVelY = event_data[ ? "diffY"] ; }
      else
-         {
-         flickVelX = 0;     flickVelY = 0;     }
-   Le code ci-dessus est tiré de l' événement de mouvement de fin de glissement et vérifie si l'évent est un événement de "flick", et si c'est le cas, il extrait les données requises du event_data DS map et l'utilise pour définir certaines variables. Si un événement "flick" n'est pas détecté, les mêmes variables sont mises à 0.  Retour: Entrée gestuelle Suivant:gesture_get_drag_time © Copyright YoYo Games Ltd. 2021 Tous droits réservés
+     {
+     flickVelX = 0 ; flickVelY = 0 ; }
+  
+  Le code ci-dessus est extrait de l'événement Drag End gesture et vérifie si l'événement est un événement "flick". Si c'est le cas, il extrait les données requises de la carte DS event_data et les utilise pour définir certaines variables. Si un événement " flick
+    n'est pas détecté, les mêmes variables sont définies sur 0.
+   
+   
+   
+  
+    
+      
+        Retour : Saisie gestuelle
+        Suivant : gesture_get_drag_time
+      
+    
+    Copyright YoYo Games Ltd. 2021 Tous droits réservés
   
   
   

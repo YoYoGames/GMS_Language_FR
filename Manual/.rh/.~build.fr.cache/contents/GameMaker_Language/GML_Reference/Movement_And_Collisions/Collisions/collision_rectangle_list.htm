@@ -1,9 +1,85 @@
-collision_rectangle_list Cette fonction est la même que la collision_rectangle(), mais au lieu de détecter une seule instance en collision à la fois, il détectera plusieurs instances. Vous fournissez les positions x / y en haut à gauche et en bas à droite de la zone à vérifier avec l'objet à vérifier, et vous pouvez définir la vérification pour qu'elle soit précise (dans ce cas, toutes les instances vérifiées devront avoir une collision précise masks) et si la vérification doit inclure ou non l'instance appelante. Vous fournissez également une liste DS qui sera remplie avec l'unique id valeurs de toutes les instances de l'objet considérées comme en collision avec l'instance appelante, et vous avez la possibilité de classer la liste en fonction de la distance entre le centre de la zone rectangulaire et l'origine des instances trouvées en collision. La fonction renvoie le nombre d'instances trouvées, ou 0 si aucune n'est trouvée. Notez qu'au lieu d'un index d'objet, vous pouvez fournir le mot-clé instanceall, pour rechercher toutes les instances de la salle actuelle, qui peuvent inclure l'instance exécutant le code (en fonction de la notme argument). Syntaxe:collision_rectangle_list(x1, y1, x2, y2, obj, prec, notme, list, ordered); Argument Description x1 La coordonnée x du côté gauche du rectangle à vérifier. y1 Coordonnée y du côté supérieur du rectangle à vérifier. x2 La coordonnée x du côté droit du rectangle à vérifier. y2 La coordonnée y du côté inférieur du rectangle à vérifier. obj L'objet à vérifier par exemple les collisions. prec Si la vérification est basée sur des collisions précises (true, qui est plus lent) ou sa boîte englobante en général (false, plus rapide). notme Si l'instance appelante, le cas échéant, doit être exclue (true ) ou non (false ). list Liste DS à utiliser pour stocker les ID des instances en collision. ordered Si la liste doit être triée par distance (true ) ou non (false ). Retour:Integer (The number of instances found to be in collision) Exemple:var _list = ds_list_create(); var _num = collision_rectangle_list(x - 100, y - 100, x + 100, y + 100, obj_Enemy, false, true, _list, false); if _num > 0     {
-         for (var i = 0; i < _num; ++i;)         {
-             instance_destroy(_list[| i]);         }
-         }
-     ds_list_destroy(_list);
-   Le code ci-dessus vérifiera une zone rectangulaire de 100 pixels autour de la position de l'instance appelante pour les collisions avec les instances de "obj_Enemy". S'il y a des collisions, la liste pré-créée est bouclée et chaque instance qui était dans la collision est détruite.  Retour: Collisions Suivant:point_in_rectangle © Copyright YoYo Games Ltd. 2021 Tous droits réservés
+
+  
+  liste de rectangles de collision
+  Cette fonction est identique à la fonction collision_rectangle() mais au lieu de détecter une seule instance en collision à la fois, elle en détectera plusieurs. Vous fournissez les positions x/y du
+    Vous fournissez les positions x/y du haut à gauche et du bas à droite de la zone à vérifier ainsi que l'objet à vérifier, et vous pouvez définir que la vérification doit être précise (dans ce cas, toutes les instances vérifiées devront avoir des masques de collision précis ) et si la vérification doit inclure ou non l'instance appelante.
+    l'instance appelante ou non.
+  Vous fournissez également une liste de DS, de sorte que les id valeurs de toutes les instances qui entrent en collision avec l'instance appelante seront
+    seront ajoutées à la fin de la liste donnée. Vous pouvez effacer la liste avant d'appeler cette fonction afin qu'elle ne contienne que les résultats de cet appel de fonction. Vous avez également la possibilité d'ordonner les
+    instances en fonction de leur distance du centre de la zone rectangulaire à leur origine. La fonction renvoie le nombre d'instances trouvées, ou 0 si aucune n'est trouvée.
+  Notez qu'au lieu d'un index d'objet, vous pouvez fournir le mot-clé d'instance all, pour vérifier toutes les instances de la salle actuelle, qui peut inclure l'instance qui exécute le code (selon l'argument
+    le code (en fonction de l'argument notme ).
+   
+  Syntaxe :
+  collision_rectangle_list(x1, y1, x2, y2, obj, prec, notme, list, ordered) ;
+  
+    
+      
+        Arguments
+        Description
+      
+      
+        x1
+        La coordonnée x du côté gauche du rectangle à vérifier.
+      
+      
+        y1
+        La coordonnée y du côté supérieur du rectangle à vérifier.
+      
+      
+        x2
+        La coordonnée x du côté droit du rectangle à vérifier.
+      
+      
+        y2
+        La coordonnée y du côté inférieur du rectangle à vérifier.
+      
+      
+        obj.
+        L'objet à vérifier pour les collisions d'instance.
+      
+      
+        préc
+        Si la vérification est basée sur des collisions précises(vrai, ce qui est plus lent) ou sur sa boîte de délimitation en général(faux, plus rapide).
+      
+      
+        notme
+        Si l'instance appelante, si elle est pertinente, doit être exclue(true) ou non(false).
+      
+      
+        liste
+        La liste DS à utiliser pour stocker les ID des instances en collision.
+      
+      
+        commandé
+        Si la liste doit être ordonnée par distance(true) ou non(false).
+      
+    
+  
+   
+  Les retours :
+  Integer (Le nombre d'instances trouvées en collision)
+   
+  Exemple :
+  var _list = ds_list_create() ; var _num = collision_rectangle_list(x - 100, y - 100, x + 100, y + 100, obj_Enemy, false, true, _list, false) ; if _num > 0 {
+     for (var i = 0 ; i < _num ; ++i ;) {
+     instance_destroy(_list[| i]) ; }
+     }
+     ds_list_destroy(_list) ;
+  
+  Le code ci-dessus vérifie une zone rectangulaire de 100 pixels autour de la position de l'instance appelante pour détecter les collisions avec les instances de "obj_Enemy". S'il y a des collisions, alors la liste pré-créée est parcourue en boucle et chaque instance qui a été
+    dans la collision est détruite.
+   
+   
+   
+  
+    
+      
+        Retour : Collisions
+        Suivant : point_in_rectangle
+      
+    
+    Copyright YoYo Games Ltd. 2021 Tous droits réservés
   
   
   

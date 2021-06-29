@@ -1,4 +1,46 @@
-draw_getpixel_ext Avec cette fonction, vous pouvez obtenir la valeur abgr 32 bits complète de tout pixel dessiné vers la cible de rendu actuelle. Cela signifie que les résultats dépendront de l'événement dans lequel la fonction est appelée, ainsi que de la surface cible utilisée. REMARQUE: Cette fonction entraînera un énorme impact sur les performances et ne doit donc être utilisée que lorsque cela est absolument nécessaire. Syntaxe:draw_getpixel_ext(x, y); Argument Description x La coordonnée x du pixel à vérifier y La coordonnée y du pixel à vérifier Retour:Real Exemple:col = draw_getpixel_ext(mouse_x, mouse_y); alpha = (col >> 24) & 255; blue = (col >> 16) & 255; green = (col >> 8) & 255; red = col & 255; Le code ci-dessus obtiendra la valeur de couleur 32 bits à la position de la souris, puis la divisera en ses valeurs de composants, en les stockant dans des variables.  Dos: couleur et alpha Suivant:draw_get_colour © Copyright YoYo Games Ltd. 2021 Tous droits réservés
+
+  
+  draw_getpixel_ext
+  Avec cette fonction, vous pouvez obtenir la valeur complète abgr 32bit de n'importe quel pixel qui est dessiné sur la cible de rendu actuelle. Cela signifie que les résultats dépendront de l'événement dans lequel la fonction est appelée, et aussi de la surface cible utilisée.
+    utilisée.
+  REMARQUE: Cette fonction entraîne une baisse considérable des performances et ne doit donc être utilisée qu'en cas de nécessité absolue.
+   
+  Syntaxe :
+  draw_getpixel_ext(x, y) ;
+  
+    
+      
+        Arguments
+        Description
+      
+      
+        x
+        La coordonnée x du pixel à vérifier
+      
+      
+        y
+        La coordonnée y du pixel à vérifier
+      
+    
+  
+   
+  Les retours :
+  Real
+   
+  Exemple :
+  col = draw_getpixel_ext(mouse_x, mouse_y) ; alpha = (col >> 24) & 255 ; blue = (col >> 16) & 255 ; green = (col >> 8) & 255 ; red = col & 255 ;
+  Le code ci-dessus récupère la valeur de la couleur 32 bits à la position de la souris, puis la divise en ses valeurs composantes et les stocke dans des variables.
+   
+   
+   
+  
+    
+      
+        Dos : Couleur et alpha
+        Suivant : draw_get_colour
+      
+    
+    Copyright YoYo Games Ltd. 2021 Tous droits réservés
   
   
   

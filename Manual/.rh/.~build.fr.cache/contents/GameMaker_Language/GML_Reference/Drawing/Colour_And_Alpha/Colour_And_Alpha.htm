@@ -1,4 +1,161 @@
- Couleur et alpha GameMaker Studio 2 propose une sélection complète de fonctions permettant de manipuler la couleur et l'alpha de ce qui est dessiné à l'écran (pour mélanger des images à l'aide de modes de fusion spéciaux et d'autres fonctions spécifiques à PGU, consultez la section sur le contrôle GPU. En utilisant ces fonctions, vous pouvez séparer les couleurs. dans leurs composants, créez de nouvelles couleurs et manipulez l'alpha de dessin pour changer la façon dont les différents éléments de votre jeu sont dessinés ensemble. Outre ces fonctions, il existe également un certain nombre de constantes qui peuvent être utilisées comme couleurs de base dans ces (et d'autres) les fonctions: Constant Couleur Évaluer c_aqua 16776960 c_black 0 c_blue 16711680 c_dkgray 4210752 c_fuchsia 16711935 c_gray 8421504 c_green 32768 c_lime 65280 c_ltgray 12632256 c_maroon 128 c_navy 8388608 c_olive 32896 c_orange 4235519 c_purple 8388736 c_red 255 c_silver 12632256 c_teal 8421376 c_white 16777215 c_yellow 65535 Notez que vous pouvez également créer des couleurs à partir de leur valeur hexadécimale en utilisant au préalable le symbole "$", et ces valeurs peuvent également être utilisées dans les fonctions de couleur pour obtenir les teintes des composants ou pour mélanger, etc... La valeur hexadécimale de ces couleurs est fractionnée en trois parties au format Bleu / Vert / Rouge donc, par exemple, pour définir une couleur violette vous pouvez utiliser:col = $983c95 Où 98 est le composant bleu, 3c est le composant vert et 95 est le composant rouge. Les fonctions suivantes peuvent être utilisées pour obtenir les teintes des composants, la teinte composée, la saturation et la luminosité d'une couleur sélectionnée ainsi que l'alpha et d'autres propriétés: colour_get_bluecolour_get_greencolour_get_redcolour_get_huecolour_get_saturationcolour_get_valuedraw_getpixeldraw_getpixel_extdraw_get_colourdraw_get_alpha Ces fonctions peuvent être utilisées pour créer des couleurs à partir de valeurs d'entrée brutes pour les composants de couleur: make_colour_hsvmake_colour_rgbmerge_colour Les fonctions suivantes peuvent être utilisées pour définir les différentes options de dessin à l'écran, y compris l'alpha, la couleur et la fusion: draw_cleardraw_clear_alphadraw_set_alphadraw_set_colour Retour: Dessin Suivant: Contrôle GPU © Copyright YoYo Games Ltd. 2021 Tous droits réservés
+
+  
+  Couleur et alpha
+  GameMaker Studio 2 dispose d'une sélection complète de fonctions permettant de manipuler la couleur et l'alpha de ce qui est dessiné à l'écran (pour le mélange d'images à l'aide de modes de fusion spéciaux et d'autres fonctions spécifiques à l'unité de traitement graphique, consultez la section sur le contrôle GPU).
+    voir la section sur le contrôle GPU. Ces fonctions vous permettent de séparer les couleurs en leurs composants, de créer de nouvelles couleurs et de manipuler l'alpha du dessin pour modifier la façon dont les différents éléments de votre jeu sont dessinés ensemble.
+    pour modifier la façon dont les différents éléments de votre jeu sont dessinés ensemble. Outre ces fonctions, il existe également un certain nombre de constantes qui peuvent être utilisées comme couleurs de base dans ces fonctions (et d'autres) :
+   
+  
+    
+      
+        Constant
+        Couleur
+        Valeur
+      
+      
+        c_aqua
+         
+        16776960
+      
+      
+        c_noir
+         
+        0
+      
+      
+        c_bleu
+         
+        16711680
+      
+      
+        c_dkgray
+         
+        4210752
+      
+      
+        c_fuchsia
+         
+        16711935
+      
+      
+        c_gray
+         
+        8421504
+      
+      
+        c_green
+         
+        32768
+      
+      
+        c_lime
+         
+        65280
+      
+      
+        c_ltgray
+         
+        12632256
+      
+      
+        c_maroon
+         
+        128
+      
+      
+        c_navy
+         
+        8388608
+      
+      
+        c_olive
+         
+        32896
+      
+      
+        c_orange
+         
+        4235519
+      
+      
+        c_purple
+         
+        8388736
+      
+      
+        c_rouge
+         
+        255
+      
+      
+        c_silver
+         
+        12632256
+      
+      
+        c_teal
+         
+        8421376
+      
+      
+        c_white
+         
+        16777215
+      
+      
+        c_yellow
+         
+        65535
+      
+    
+  
+   
+  Notez que vous pouvez également créer des couleurs à partir de leur valeur hexadécimale en utilisant au préalable le symbole "$", et ces valeurs peuvent également être utilisées dans les fonctions de couleur pour obtenir les teintes des composants ou pour les mélanges, etc... La valeur hexadécimale de ces couleurs
+    est divisée en trois parties avec le format Bleu / Vert / Rouge. Ainsi, par exemple, pour définir une couleur violette, vous pouvez utiliser :
+  col = 983c95
+  Où 98 est la composante bleue, 3c est la composante verte et 95 est la composante rouge.
+  Les fonctions suivantes peuvent être utilisées pour obtenir les teintes composantes, la teinte composée, la saturation et la luminosité d'une couleur sélectionnée ainsi que l'alpha et d'autres propriétés :
+   
+  
+    couleur_get_bleu
+    couleur_get_green
+    couleur_get_rouge
+    couleur_get_hue
+    couleur_get_saturation
+    couleur_get_valeur
+    draw_getpixel
+    draw_getpixel_ext
+    draw_get_colour
+    draw_get_alpha
+  
+   
+  Ces fonctions peuvent être utilisées pour créer des couleurs à partir de valeurs d'entrée brutes pour les composantes de couleur :
+   
+  
+    make_colour_hsv
+    make_colour_rgb
+    fusionner_couleur
+  
+   
+  Les fonctions suivantes peuvent être utilisées pour définir les différentes options de dessin à l'écran, notamment l'alpha, la couleur et le mélange :
+   
+  
+    dessiner_clair
+    draw_clear_alpha
+    draw_set_alpha
+    draw_set_colour
+  
+   
+   
+   
+  
+    
+      
+        Retour : Dessin
+        Suivant : Contrôle du GPU
+      
+    
+    Copyright YoYo Games Ltd. 2021 Tous droits réservés
   
   
   

@@ -1,6 +1,49 @@
-gamepad_set_colour Cette fonction peut être utilisée pour définir la couleur des voyants dans un contrôleur PlayStation. Vous spécifiez l'emplacement de périphérique à définir, puis donnez une couleur, qui peut être l'une des constantes de couleur ou une valeur de couleur créée à l'aide des fonctions de couleur spécifiques ou d'une valeur HEX (comme $FFFFFFF ). Syntaxe:gamepad_set_colour(device, colour); Argument Description device Quel «slot» de périphérique de manette de jeu définir. colour La couleur à utiliser. Retour:N/A Exemple:if health < 10    {
-        gamepad_set_colour(0, c_red);    }
-   Le code ci-dessus définira les voyants du contrôleur PlayStation sur rouge si le health variable tombe en dessous de 10.  Retour: Entrée de la manette de jeu Suivant: gamepad_set_option © Copyright YoYo Games Ltd. 2021 Tous droits réservés
+
+
+
+
+  
+  gamepad_set_colour
+  Cette fonction peut être utilisée pour définir la couleur des LEDs dans un contrôleur PlayStation. Vous spécifiez l'emplacement du périphérique à définir, puis vous donnez une couleur, qui peut être l'une des constantes de couleur ou une valeur de couleur créée à l'aide des fonctions de couleur spécifiques ou une valeur HEX (comme $FFFFFFF).
+   
+  Syntaxe :
+  gamepad_set_colour(device, colour) ;
+  
+    
+      
+        Arguments
+        Description
+      
+      
+        dispositif
+        Quel est le "slot" du périphérique gamepad à définir.
+      
+      
+        couleur
+        La couleur à utiliser.
+      
+    
+  
+   
+  Les retours :
+  N/A
+   
+  Exemple :
+  si santé < 10 {
+     gamepad_set_colour(0, c_red) ; }
+  
+  Le code ci-dessus fera passer les voyants du contrôleur PlayStation au rouge si la variable de santé passe en dessous de 10.
+   
+   
+   
+  
+    
+      
+        Retour : Entrée de la manette de jeu
+        Suivant :  gamepad_set_option 
+      
+    
+    Copyright YoYo Games Ltd. 2021 Tous droits réservés
   
   
   

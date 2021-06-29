@@ -1,4 +1,46 @@
-room_assign Cette fonction copiera une pièce dans une autre, supprimant toutes les instances, tuiles, etc. de la pièce dans laquelle la copie est effectuée et les remplaçant complètement par le nouveau contenu de la pièce. Vous fournissez l'index vers pour la pièce à copier (soit comme défini dans le navigateur de ressources, soit comme renvoyé par la fonction room_add() ) ainsi que l'index de la salle source. Notez que l'appel de cette fonction sur un élément de salle créé dans le navigateur d'actifs modifiera définitivement le contenu de la salle, et même l'appel game_restart() ne ramènera pas la salle à son état d'origine (le seul fait de terminer le jeu et de l'ouvrir à nouveau recommencera avec la salle dans son état d'origine). Syntaxe:room_assign(ind, source); Argument Description ind L'index de la pièce à copier. source L'index de la pièce à copier. Retour:N/A Exemple:global.rm = room_add(); room_assign(global.rm, rm_Base); Le code ci-dessus ajoutera une nouvelle salle au jeu et y copiera ensuite le contenu de la salle indexée comme "rm_Base".  Retour: Chambres Suivant:room_instance_add © Copyright YoYo Games Ltd. 2021 Tous droits réservés
+
+  
+  chambre_assignation
+  Cette fonction copiera une room vers une autre, en supprimant toutes les instances, tuiles, etc... de la room vers laquelle elle est copiée et en les remplaçant complètement par le contenu de la nouvelle room. Vous fournissez l'index de la room à copier (tel que défini dans le navigateur d'actifs ou tel que renvoyé par la fonction de copie).
+    dans le navigateur d'actifs ou tel que renvoyé par la fonction room_add()) ainsi que l'index de la pièce source. Notez que l'appel de cette fonction sur un asset de salle créé dans le navigateur d'assets modifiera de façon permanente le contenu de la salle,
+    et même en appelant game_restart(), la pièce ne reviendra pas à son état d'origine (seule la fin du jeu et sa réouverture permettront de retrouver la pièce dans son état d'origine).
+   
+  Syntaxe :
+  room_assign(ind, source) ;
+  
+    
+      
+        Arguments
+        Description
+      
+      
+        ind
+        L'index de la pièce à copier.
+      
+      
+        source
+        L'index de la pièce à copier.
+      
+    
+  
+   
+  Les retours :
+  N/A
+   
+  Exemple :
+  global.rm = room_add() ; room_assign(global.rm, rm_Base) ;
+  Le code ci-dessus ajoutera une nouvelle pièce au jeu, puis y copiera le contenu de la pièce indexée comme "rm_Base".
+   
+   
+   
+  
+    
+      
+        Retour : Pièces
+        Suivant : room_instance_add
+      
+    
+    Copyright YoYo Games Ltd. 2021 Tous droits réservés
   
   
   

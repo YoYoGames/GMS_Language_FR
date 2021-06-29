@@ -1,4 +1,108 @@
-buffer_read Cette fonction peut être utilisée pour lire des données à partir d'un tampon créé précédemment. La valeur de retour dépendra du type de données que vous lisez, qui en lui-même est défini par les constantes suivantes: Constant Description buffer_u8 Un entier 8 bits non signé. Il s'agit d'une valeur positive comprise entre 0 et 255. buffer_s8 Un entier signé de 8 bits. Cela peut être une valeur positive ou négative de -128 à 127 (0 est classé comme positif). buffer_u16 Un entier 16 bits non signé. Il s'agit d'une valeur positive comprise entre 0 et 65 535. buffer_s16 Un entier 16 bits signé. Cela peut être une valeur positive ou négative de -32 768 à 32 767 (0 est considéré comme positif). buffer_u32 Un entier 32 bits non signé. Il s'agit d'une valeur positive comprise entre 0 et 4 294 967 295. buffer_s32 Un entier 32 bits signé. Cela peut être une valeur positive ou négative de -2 147 483 648 à 2 147 483 647 (0 est considéré comme positif). buffer_u64 Un entier 64 bits non signé. buffer_f16 Un flotteur 16 bits. Cela peut être une valeur positive ou négative dans la plage de +/- 65504. (Pas actuellement pris en charge!) buffer_f32 Un flotteur 32 bits. Cela peut être une valeur positive ou négative dans la plage de +/- 16777216. buffer_f64 Un flotteur 64 bits. buffer_bool Une valeur booléenne. Ne peut être que 1 ou 0 (true ou false ) buffer_string Une chaîne de n'importe quelle taille. buffer_text Une chaîne de n'importe quelle taille, sans le dernier caractère de fin nul. Si la fonction réussit, elle renverra une valeur du type donné, mais si elle échoue, cela provoquera une erreur du runner. REMARQUE: l'utilisation d'un type de données incorrect pour les données en cours de lecture entraînera le renvoi de valeurs erronées. Syntaxe:buffer_read(buffer, type) Argument Description buffer L'index de la mémoire tampon à partir de laquelle lire. type Le type de données à lire dans le tampon (voir la liste des constantes ci-dessus). Retour:Real/String Exemple:var cmd = buffer_read(buff, buffer_s16); Le code ci-dessus lit à partir du tampon avec l'ID stocké dans la variable "buff" une valeur 16 bits signée dans la variable locale "cmd".  Retour: Tampons Suivant:buffer_write © Copyright YoYo Games Ltd. 2021 Tous droits réservés
+
+  
+  buffer_read
+  Cette fonction peut être utilisée pour lire des données à partir d'un tampon préalablement créé. La valeur de retour dépendra du type de données que vous lisez, qui est lui-même défini par les constantes suivantes :
+   
+  
+    
+      
+        Constant
+        Description
+      
+      
+        tampon_u8
+        Un nombre entier non signé de 8 bits. Il s'agit d'une valeur positive comprise entre 0 et 255.
+      
+      
+        tampon_s8
+        Un nombre entier signé de 8 bits. Il peut s'agir d'une valeur positive ou négative comprise entre -128 et 127 (0 est considéré comme positif).
+      
+      
+        tampon_u16
+        Un nombre entier non signé de 16 bits. Il s'agit d'une valeur positive comprise entre 0 et 65 535.
+      
+      
+        tampon_s16
+        Un nombre entier signé de 16 bits. Il peut s'agir d'une valeur positive ou négative comprise entre -32 768 et 32 767 (0 est considéré comme positif).
+      
+      
+        tampon_u32
+        Un nombre entier non signé de 32 bits. Il s'agit d'une valeur positive comprise entre 0 et 4 294 967 295.
+      
+      
+        tampon_s32
+        Un nombre entier signé de 32 bits. Il peut s'agir d'une valeur positive ou négative comprise entre -2 147 483 648 et 2 147 483 647 (0 étant considéré comme positif).
+      
+      
+        tampon_u64
+        Un nombre entier non signé de 64 bits.
+      
+      
+        tampon_f16
+        Un flottant de 16 bits. Il peut s'agir d'une valeur positive ou négative comprise dans la plage de +/- 65504. (Non pris en charge actuellement !)
+      
+      
+        tampon_f32
+        Un flottant de 32 bits. Il peut s'agir d'une valeur positive ou négative comprise dans la plage de +/-16777216.
+      
+      
+        tampon_f64
+        Un flotteur 64 bits.
+      
+      
+        tampon_bool
+        Une valeur booléenne. Elle ne peut être que 1 ou 0(vrai ou faux).
+      
+      
+        chaîne_tampon
+        Une corde de n'importe quelle taille.
+      
+      
+        Texte tampon
+        Une chaîne de caractères de n'importe quelle taille, sans le caractère final nul.
+      
+    
+  
+   
+  Si la fonction réussit, elle renvoie une valeur du type donné, mais si elle échoue, elle provoque une erreur d'exécution.
+  REMARQUE: l'utilisation d'un type de données incorrect pour les données lues entraînera le renvoi de valeurs erronées.
+   
+  Syntaxe :
+  buffer_read(buffer, type)
+  
+    
+      
+        Arguments
+        Description
+      
+      
+        tampon
+        L'index du tampon à lire.
+      
+      
+        type
+        Le type de données qui doit être lu à partir du tampon (voir la liste des constantes ci-dessus).
+      
+    
+  
+   
+  Les retours :
+  Réel/Chaîne
+   
+  Exemple :
+  var cmd = buffer_read(buff, buffer_s16) ;
+  Le code ci-dessus lit à partir du tampon avec l'identifiant stocké dans la variable "buff" une valeur signée de 16 bits dans la variable locale "cmd".
+   
+   
+   
+  
+    
+      
+        Retour : Tampons
+        Suivant : buffer_write
+      
+    
+    Copyright YoYo Games Ltd. 2021 Tous droits réservés
   
   
   

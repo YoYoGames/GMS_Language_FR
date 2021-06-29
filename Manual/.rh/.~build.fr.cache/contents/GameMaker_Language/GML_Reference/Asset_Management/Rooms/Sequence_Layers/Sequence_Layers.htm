@@ -1,4 +1,58 @@
- Couches de séquence Dans cette section, nous avons les fonctions qui sont utilisées pour ajouter, supprimer et modifier le comportement des séquences dans une salle de jeu par rapport au calque sur lequel elles se trouvent. Il convient de noter que les séquences sont similaires aux objets, en ce que lorsqu'une séquence est créée sur un calque dans une pièce, elle est considérée comme une instance de l'objet séquence principal à partir du navigateur de ressources. Ainsi, lorsque vous ajoutez une séquence à un calque dans une pièce, vous créez une instance de l'objet de séquence de base, et cette instance de séquence est ajoutée en tant qu'élément dans un calque de pièce. L'instance de séquence est ce qui contrôle des choses comme la vitesse et la direction de lecture, et contiendra elle-même une autre structure de données de séquence qui contient les données de piste de séquence réelles. Ceci est important, car les fonctions répertoriées ci-dessous référenceront l' ID d'élément de séquence (l'ID de la séquence sur la couche ) ainsi que l' ID d'instance de séquence (l'ID réel de la séquence référencée par l'élément) et la séquence data struct (qui contient toutes les données de séquence). Vous trouverez ci-dessous une liste de toutes les fonctions qui peuvent être utilisées pour éditer des séquences qui ont été ajoutées à une couche d'actifs: layer_sequence_existslayer_sequence_createlayer_sequence_destroylayer_sequence_xlayer_sequence_ylayer_sequence_anglelayer_sequence_xscalelayer_sequence_yscalelayer_sequence_headposlayer_sequence_headdirlayer_sequence_pauselayer_sequence_playlayer_sequence_speedscalelayer_sequence_get_xlayer_sequence_get_ylayer_sequence_get_anglelayer_sequence_get_xscalelayer_sequence_get_yscalelayer_sequence_get_headposlayer_sequence_get_headdirlayer_sequence_get_speedscalelayer_sequence_get_lengthlayer_sequence_get_instancelayer_sequence_get_sequencelayer_sequence_is_pausedlayer_sequence_is_finished Des fonctions supplémentaires sont également disponibles pour gérer le contenu des séquences et pour définir les vôtres. Vous pouvez trouver une liste complète de ces fonctions dans la section suivante: Séquences  Retour: Chambres Suivant: Fonctions générales des calques © Copyright YoYo Games Ltd. 2021 Tous droits réservés
+
+  
+  Couches de séquences
+  Dans cette section, nous avons les fonctions qui sont utilisées pour ajouter, supprimer et modifier le comportement des séquences dans une salle de jeu en fonction de la couche sur laquelle elles se trouvent. Il convient de noter que
+    les séquences sont similaires aux objets, en ce sens que lorsqu'une séquence est créée sur une couche dans une salle, elle est considérée comme une instance de l'objet séquence principal du navigateur d'actifs. Ainsi ,
+    lorsque vous ajoutez une séquence à une couche dans une pièce, vous créez une instance de l'objet de séquence de base, et cette instance de séquence est ajoutée en tant qu'élément dans une couche de pièce. L'instance de séquence est ce qui contrôle des choses comme la lecture
+    et la direction de la lecture, et contient elle-même une autre structure de données de séquence qui contient les données de la piste de la séquence. Ceci est important, car les fonctions énumérées ci-dessous feront référence à l'ID de l'élément de séquence (l'ID
+    de la séquence sur la couche) ainsi que l'ID de l'instance de la séquence (l'ID réel de la séquence qui est référencée par l'élément) et la structure de données de la séquence (qui contient toutes les données de la séquence).
+    contient toutes les données de la séquence).
+  Vous trouverez ci-dessous une liste de toutes les fonctions qui peuvent être utilisées pour éditer des séquences qui ont été ajoutées à une couche d'actifs:
+   
+  
+    couche_séquence_existe
+    séquence_couche_créer
+    couche_séquence_destroy
+    séquence_couche_x
+    séquence_couche_y
+    angle_séquence_couche
+    séquence_couche_échelle_x
+    échelle_de_séquence_de_couche
+    couche_séquence_headpos
+    répertoire de tête de la séquence des couches
+    pause_séquence_couche
+    couche_séquence_play
+    échelle de vitesse de la séquence des couches
+    séquence_couche_get_x
+    séquence_couche_get_y
+    angle_de_séquence_de_couche
+    séquence_couche_get_xscale
+    séquence_couche_get_échelle
+    couche_séquence_get_headpos
+    couche_séquence_get_headdir
+    couche_séquence_get_speedscale
+    séquence_de_couche_get_length
+    couche_séquence_get_instance
+    séquence_de_couche_get_séquence
+    couche_séquence_est_pause
+    séquence_couche_est_finie
+  
+   
+  Des fonctions supplémentaires sont également disponibles pour traiter le contenu des séquences et pour définir les vôtres. Vous trouverez une liste complète de ces fonctions dans la section suivante :
+  
+    Séquences
+  
+   
+   
+   
+  
+    
+      
+        Retour : Pièces
+        Suivant : Fonctions générales de la couche
+      
+    
+    Copyright YoYo Games Ltd. 2021 Tous droits réservés
   
   
   

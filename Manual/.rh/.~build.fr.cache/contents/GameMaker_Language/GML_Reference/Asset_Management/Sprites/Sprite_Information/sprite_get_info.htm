@@ -1,0 +1,483 @@
+
+  
+  sprite_get_info
+  Cette fonction est utilisée pour récupérer des informations sur le sprite donné. Vous fournissez un index de sprite (qui peut être un actif ajouté via le navigateur d'actifs ou un sprite ajouté au moment de l'exécution) et la fonction renvoie une structure avec les variables suivantes :
+   
+  
+    
+      
+        Nom de la variable
+        Type de données
+        Description
+      
+      
+        largeur
+        réel
+        La largeur du sprite (en pixels)
+      
+      
+        hauteur
+        réel
+        Hauteur du sprite (en pixels)
+      
+      
+        xoffset
+        réel
+        Décalage ou origine en X du sprite (en pixels)
+      
+      
+        yoffset
+        réel
+        Décalage ou origine en Y du sprite (en pixels)
+      
+      
+        transparent
+        boolean
+        true si le sprite est marqué comme transparent, sinon false
+         (Ceci ne peut être spécifié qu'à travers sprite_add() ou des fonctions similaires, et sera fauxpour les sprites créés dans l'IDE).
+      
+      
+        lisse
+        boolean
+        true si le sprite est marqué comme lisse, sinon false
+          (Ceci ne peut être spécifié qu'à travers sprite_add() ou des fonctions similaires, et sera faux pour les sprites créés dans l'IDE)
+        
+      
+      
+        type
+        réel
+        Le type de sprite :
+         0 - Bitmap (sprites réguliers)
+         1 - SWF
+         2 - Épine
+      
+      
+        bbox_left
+        réel
+        Position du bord gauche de la boîte englobante (en pixels)
+      
+      
+        bbox_top
+        réel
+        Position du bord supérieur de la boîte englobante (en pixels)
+      
+      
+        bbox_right
+        réel
+        Position du bord droit de la boîte englobante (en pixels)
+      
+      
+        bbox_bottom
+        réel
+        Position du bord inférieur de la boîte englobante (en pixels)
+      
+      
+        nom
+        chaîne de caractères
+        Le nom du sprite
+      
+      
+        num_sous-images
+        réel
+        Le nombre de sous-images (ou de cadres) dans le sprite.
+      
+      
+        masque d'utilisation
+        boolean
+        vrai si ce sprite utilise un masque de collision, sinon faux
+      
+      
+        num_masks
+        réel
+        Le nombre de masques dans ce sprite (sera supérieur à 1 si le sprite utilise des masques par image).
+      
+      
+        nineslice
+        struct
+        La structure Nine Slice de ce sprite, ou indéfinie s'il n'a pas de données Nine Slice.
+      
+      
+        messages
+        tableau
+        Tableau des messages de diffusion pour ce sprite, où chaque message de diffusion est une structure contenant des informations sur le message (pour plus d'informations, voir "Données générales du sprite").
+      
+      
+        info_cadre
+        tableau
+        Tableau de trames pour ce sprite, où chaque trame est une structure contenant des informations sur son timing (plus d'informations sous "Données générales du sprite").
+      
+    
+  
+  Cette variable supplémentaire n'est disponible que pour les sprites Bitmap (ordinaires) :
+  
+    
+      
+        Nom de la variable
+        Type de données
+        Description
+      
+      
+        cadres
+        tableau
+        Tableau de cadres pour ce sprite, où chaque cadre est une structure contenant des informations sur sa texture (pour plus d'informations, voir "Données de sprite bitmap").
+      
+    
+  
+  Ces variables supplémentaires ne sont disponibles que pour les sprites Spine :
+  
+    
+      
+        Nom de la variable
+        Type de données
+        Description
+      
+      
+        num_atlas
+        réel
+        Le nombre de textures atlas utilisées
+      
+      
+        texture_atlas
+        tableau
+        Tableau des ID de texture utilisés pour l'atlas
+      
+      
+        prémultiplié
+        boolean
+        vrai si ce sprite est marqué comme prémultiplié, sinon faux
+      
+      
+        noms_d'animation
+        tableau
+        Tableau contenant les noms de chaque animation dans ce sprite
+      
+      
+        noms de peau
+        tableau
+        Tableau contenant les noms de chaque peau dans ce sprite
+      
+      
+        ossements
+        tableau
+        Tableau contenant des structures pour chaque os de ce sprite (pour plus d'informations, voir "Données du sprite de la colonne vertébrale")
+      
+      
+        Machines à sous
+        tableau
+        Tableau contenant des structures pour chaque emplacement de ce sprite (pour plus d'informations, voir "Données du sprite de la colonne vertébrale").
+      
+    
+  
+   
+  La fonction retournera undefined si le sprite donné n'existe pas. Notez également que les informations retournées dans cette structure doivent être considérées comme étant en lecture seule, car la modification de l'une de ces variables n'affectera pas le sprite.
+  Les sections ci-dessous contiennent des informations sur les tableaux et les structures inclus dans la structure retournée en fonction du type de sprite :
+  Données générales sur les sprites
+  
+    Cette section contient des informations sur les variables incluses dans la structure pour tous les types de sprites.
+    La variable messages est un tableau qui contient des informations sur les messages de diffusion qui existent dans le sprite donné. Chaque message de diffusion dans ce tableau est une structure contenant les variables suivantes :
+    
+      
+        
+          Nom de la variable
+          Type de données
+          Description
+        
+        
+          cadre
+          réel
+          Le timing de ce message de diffusion à partir du début de l'animation (en frames)
+        
+        
+          message
+          chaîne de caractères
+          La chaîne du message de diffusion
+        
+      
+    
+     
+    La variable frame_info est un tableau qui contient des informations sur le timing des images du sprite. Chaque image de ce tableau est une structure contenant les variables suivantes :
+    
+      
+        
+          Nom de la variable
+          Type de données
+          Description
+        
+        
+          cadre
+          réel
+          Le timing pour le début de cette trame (en trames)
+        
+        
+          image_index
+          réel
+          L'index de l'image de ce cadre
+        
+      
+    
+     
+  
+  Données Bitmap Sprite
+  
+    Cette section contient des informations sur les variables incluses dans la structure pour les sprites Bitmap (sprites qui ne sont pas de type Spine ou SWF).
+    La variable frames est un tableau qui contient des informations sur les textures des frames du sprite. Chaque cadre de ce tableau est une structure contenant les variables suivantes :
+    
+      
+        
+          Nom de la variable
+          Type de données
+          Description
+        
+        
+          x
+          réel
+          La position X de ce cadre sur sa page de texture (en pixels)
+        
+        
+          y
+          réel
+          La position Y de ce cadre sur sa page de texture (en pixels)
+        
+        
+          w
+          réel
+          La largeur logique de la trame (en pixels) utilisée en interne.
+        
+        
+          h
+          réel
+          La hauteur logique du cadre (en pixels) utilisée en interne.
+        
+        
+          texture
+          réel
+          L'ID de la page de texture pour ce cadre
+        
+        
+          largeur originale
+          réel
+          La largeur originale du cadre (en pixels)
+        
+        
+          hauteur_originale
+          réel
+          La hauteur originale du cadre (en pixels)
+        
+        
+          largeur de la récolte
+          réel
+          La largeur réelle du cadre sur la page de texture après le recadrage et la mise à l'échelle (puisque GMS2 recadre automatiquement l'espace vide autour d'une image et la met à l'échelle si elle ne tient pas).
+        
+        
+          hauteur de la récolte
+          réel
+          La hauteur réelle du cadre sur la page de la texture après recadrage et mise à l'échelle.
+        
+        
+          x_offset
+          réel
+          Le décalage X entre le bord gauche de l'image originale et le bord gauche de la section recadrée.
+        
+        
+          y_offset
+          réel
+          Le décalage Y entre le bord supérieur de l'image originale et le bord supérieur de la section recadrée.
+        
+      
+    
+     
+  
+  Données sur les sprites de la colonne vertébrale
+  
+    Cette section contient des informations sur les variables incluses dans la structure des sprites Spine.
+    La variable bones est un tableau qui contient des informations sur tous les os du sprite Spine donné. Chaque os de ce tableau est une structure contenant les variables suivantes :
+    
+      
+        
+          Nom de la variable
+          Type de données
+          Description
+        
+        
+          parent
+          chaîne de caractères
+          Le nom de l'os parent, ou indéfini si l'os n'a pas de parent.
+        
+        
+          nom
+          chaîne de caractères
+          Le nom de cet os
+        
+        
+          indice
+          réel
+          L'indice de cet os
+        
+        
+          longueur
+          réel
+          La longueur de cet os
+        
+        
+          x
+          réel
+          La position X de cet os
+        
+        
+          y
+          réel
+          La position Y de cet os
+        
+        
+          rotation
+          réel
+          La rotation de cet os
+        
+        
+          scale_x
+          réel
+          (interne à la colonne vertébrale) Valeur de l'échelle sur X
+        
+        
+          échelle_y
+          réel
+          (interne à la colonne vertébrale) Valeur de l'échelle sur Y
+        
+        
+          cisaillement_x
+          réel
+          (interne à la colonne vertébrale) Valeur de cisaillement sur X
+        
+        
+          cisaillement_y
+          réel
+          (interne à la colonne vertébrale) Valeur de cisaillement sur Y
+        
+        
+          mode de transformation
+          réel
+          (interne à la colonne vertébrale) Le mode de transformation
+        
+      
+    
+     NOTE: Veuillez consulter la documentation de Spine pour plus d'informations concernant les variables internes de Spine.
+    La variable slots est un tableau qui contient des informations sur tous les slots du sprite Spine donné. Chaque emplacement de ce tableau est une structure contenant les variables suivantes :
+    
+      
+        
+          Nom de la variable
+          Type de données
+          Description
+        
+        
+          nom
+          chaîne de caractères
+          Le nom de l'emplacement
+        
+        
+          indice
+          réel
+          L'indice de l'emplacement
+        
+        
+          os
+          chaîne de caractères
+          Le nom de l'os de l'emplacement, ou "( none)" s'il n'y a pas d'os pour cet emplacement.
+        
+        
+          pièce jointe
+          chaîne de caractères
+          Nom de la pièce jointe
+        
+        
+          rouge
+          réel
+          Composante rouge de la couleur du slot (0-1)
+        
+        
+          vert
+          réel
+          Composante verte de la couleur du slot (0-1)
+        
+        
+          bleu
+          réel
+          Composante bleue de la couleur du slot (0-1)
+        
+        
+          alpha
+          réel
+          Composante alpha de la couleur de l'emplacement (0-1)
+        
+        
+          blendMode
+          réel
+          (Internal to Spine) Mode de mélange pour la fente
+        
+        
+          dark_red*
+          réel
+          Composante rouge de la couleur foncée du slot (0-1)
+        
+        
+          dark_green*
+          réel
+          Composante verte de la couleur foncée du slot (0-1)
+        
+        
+          dark_blue*
+          réel
+          Composante bleue de la couleur foncée du slot (0-1)
+        
+        
+          dark_alpha*
+          chaîne de caractères
+          Composante alpha de la couleur foncée du slot (0-1)
+        
+      
+    
+     NOTE: Les variables de couleur foncée ne sont disponibles que si le slot a la fonction Tint Black activée.
+     
+  
+   
+   
+  Syntaxe :
+  sprite_get_info(index) ;
+  
+    
+      
+        Arguments
+        Description
+      
+      
+        indice
+        L'index du sprite pour lequel il faut obtenir les informations.
+      
+    
+  
+   
+  Renvoie à
+  Structure (ou indéfinie)
+   
+  Exemple :
+  var _info = sprite_get_info(sprite_index) ;
+     if (_info != undefined && _info.type == 0) {
+     var _messages = _info.messages ; var _messageCount = array_length(_messages) ;      for (var i = 0 ; i < _messageCount ; i ++) { var _message = _messages[i] ; show_debug_message("Message
+    at frame " + string(_message.frame) + " : " + _message.message) ; }  }
+  
+  Le code ci-dessus récupère la structure d'information du sprite de l'instance, puis vérifie qu'il n'est pas indéfini et que son type est 0 (ce qui signifie qu'il s'agit d'un sprite bitmap). Dans ce cas, elle récupère le tableau de messages de diffusion pour ce sprite et
+    puis exécute une boucle for pour imprimer chaque message de diffusion (avec son cadre) dans le journal de sortie.
+   
+   
+  
+    
+      
+        Retour : Informations sur le Sprite
+        Suivant : sprite_exists
+      
+    
+    Copyright YoYo Games Ltd. 2021 Tous droits réservés
+  
+  
+  
+

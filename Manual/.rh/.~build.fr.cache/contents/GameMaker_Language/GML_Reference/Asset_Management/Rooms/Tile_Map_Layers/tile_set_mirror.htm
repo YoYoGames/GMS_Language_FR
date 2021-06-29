@@ -1,5 +1,45 @@
-tile_set_mirror Cette fonction peut être utilisée pour définir un ensemble donné de données de tuile pour refléter la tuile ou non. Vous donnez les données de tuile, qui peuvent être récupérées à l'aide de la fonction tilemap_get(), puis définissez l'argument miroir sur soit true si vous voulez que la vignette soit mise en miroir, ou false si vous voulez que la vignette soit dans son état par défaut, sans miroir. La fonction renverra un ensemble de données de mosaïque modifié qui peut ensuite être appliqué à l'aide du tilemap_set() fonction. Syntaxe:tile_set_mirror(tiledata, mirror) Argument Description tiledata les données de tuile à définir mirror Mis à true pour refléter et false le laisser tel quel Retour:Real (tiledata) Exemple:var lay_id = layer_get_id("Tiles_sky"); var map_id = layer_tilemap_get_id(lay_id); var mx = tilemap_get_cell_x_at_pixel(map_id, mouse_x, mouse_y); var my = tilemap_get_cell_y_at_pixel(map_id, mouse_x, mouse_y); var data
-    = tilemap_get(map_id, mx, my); var bool = !tile_get_mirror(data); data = tile_set_mirror(data, bool); tilemap_set(map_id, data, mx, my); Le code ci-dessus obtient l'ID de carte de tuiles de la couche donnée, puis obtient la position des cellules x et y pour la tuile sous la souris. Cette position est ensuite utilisée pour obtenir les données de tuile qui sont mises en miroir, puis utilisées pour redéfinir la tuile.  Retour: Couches de carte de mosaïque Suivant:tile_set_rotate © Copyright YoYo Games Ltd. 2021 Tous droits réservés
+
+  
+  tuile_set_mirror
+  Cette fonction peut être utilisée pour définir un ensemble donné de données de tuiles pour refléter la tuile ou non. Vous donnez les données des tuiles, qui peuvent être récupérées en utilisant la fonction tilemap_get()puis définissez l'argument miroir à true si vous voulez que la tuile soit reflétée, ou false si vous voulez que la tuile soit dans son état par défaut, non reflété. La fonction renverra un ensemble de données de tuiles modifié qui peut ensuite être appliqué en utilisant la fonction tilemap_set()    fonction.
+   
+  Syntaxe :
+  tile_set_mirror(tiledata, mirror)
+  
+    
+      
+        Arguments
+        Description
+      
+      
+        données en mosaïque
+        les données de la tuile à définir
+      
+      
+        miroir
+        Définir à true pour le miroir et false pour le laisser tel quel.
+      
+    
+  
+   
+  Les retours :
+  Réel (tiledata)
+   
+  Exemple :
+  var lay_id = layer_get_id("Tiles_sky") ; var map_id = layer_tilemap_get_id(lay_id) ; var mx = tilemap_get_cell_x_at_pixel(map_id, mouse_x, mouse_y) ; var my = tilemap_get_cell_y_at_pixel(map_id, mouse_x, mouse_y) ; var data
+    = tilemap_get(map_id, mx, my) ; var bool = !tile_get_mirror(data) ; data = tile_set_mirror(data, bool) ; tilemap_set(map_id, data, mx, my) ;
+  Le code ci-dessus récupère l'ID de la carte des tuiles à partir de la couche donnée, puis obtient la position x et y de la cellule de la tuile sous la souris. Cette position est ensuite utilisée pour obtenir les données de la tuile, qui sont reflétées et ensuite utilisées pour définir à nouveau la tuile.
+   
+   
+   
+  
+    
+      
+        Retour : Carrelage des couches de la carte
+        Suivant : tile_set_rotate
+      
+    
+    Copyright YoYo Games Ltd. 2021 Tous droits réservés
   
   
   

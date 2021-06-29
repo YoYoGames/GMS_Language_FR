@@ -1,4 +1,45 @@
-get_integer Cela crée une fenêtre contextuelle affichant un message personnalisé, avec un bouton intitulé «Ok», et invite l'utilisateur à saisir une valeur entière. La fonction retournera l'entier tapé, ou la valeur par défaut si rien n'a été entré. REMARQUE: cette fonction est destinée au débogage uniquement sur les cibles Desktop, mais est déconseillée sur toutes les autres cibles. Syntaxe:get_integer(str, def); Argument Description str La chaîne à afficher dans le message contextuel. def La valeur par défaut dans la zone de texte. Retour:Real Exemple:global.level = get_integer("Level to test?", 1); Le code ci-dessus affichera un message invitant l'utilisateur à sélectionner un niveau pour le test. La valeur de retour sera stockée dans la variable globale "global.level".  Retour: Débogage Suivant:get_string © Copyright YoYo Games Ltd. 2021 Tous droits réservés
+
+  
+  get_integer
+  Cette fonction crée une fenêtre contextuelle affichant un message personnalisé, avec un bouton intitulé "Ok", et invite l'utilisateur à saisir une valeur entière. La fonction renvoie le nombre entier saisi, ou la valeur par défaut si rien n'a été saisi.
+  REMARQUE : Cette fonction est destinée à être utilisée pour le débogage uniquement sur les cibles Desktop, mais est dépréciée sur toutes les autres cibles.
+   
+  Syntaxe :
+  get_integer(str, def) ;
+  
+    
+      
+        Arguments
+        Description
+      
+      
+        str
+        La chaîne à afficher dans le message pop-up.
+      
+      
+        def
+        La valeur par défaut dans la zone de texte.
+      
+    
+  
+   
+  Les retours :
+  Real
+   
+  Exemple :
+  global.level = get_integer("Niveau à tester ?", 1) ;
+  Le code ci-dessus affichera un message invitant l'utilisateur à sélectionner un niveau à tester. La valeur de retour sera stockée dans la variable globale "global.level".
+   
+   
+   
+  
+    
+      
+        Retour : Débogage
+        Suivant : get_string
+      
+    
+    Copyright YoYo Games Ltd. 2021 Tous droits réservés
   
   
   

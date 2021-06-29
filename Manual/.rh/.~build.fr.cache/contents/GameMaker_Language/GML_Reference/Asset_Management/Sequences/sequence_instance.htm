@@ -1,0 +1,35 @@
+
+  
+  séquence_instance
+  Il s'agit d'une variable intégrée qui fait partie des variables d'instance créées pour chaque instance d'objet dans votre jeu. Si l'instance est contrôlée par une séquence,
+    cette variable contiendra la structure d'instance de la séquence qui contrôle l'instance, sinon elle sera indéfinie. Il s'agit d'une variable en lecture seule 
+    et ne peut être modifiée.
+  Notez que cette variable deviendra indéfinie après la fin de la séquence de contrôle, même si son élément de séquence existe toujours, et obtiendra à nouveau la structure si cet élément de séquence est rejoué.
+   
+  Syntaxe :
+  séquence_instance
+   
+  Les retours :
+  Booléen
+   
+  Exemple :
+  if (in_sequence) {
+     sequence_instance.speedScale = 2 ; }
+  
+  Le code ci-dessus vérifie la variable in_sequence et si elle est true (ce qui signifie que l'instance est contrôlée par une séquence), il modifiera l'échelle de vitesse de la séquence
+    séquence à 2.
+   
+   
+   
+  
+    
+      
+        Retour : Séquences
+        Suivant : sequence_exists
+      
+    
+    Copyright YoYo Games Ltd. 2021 Tous droits réservés
+  
+  
+  
+

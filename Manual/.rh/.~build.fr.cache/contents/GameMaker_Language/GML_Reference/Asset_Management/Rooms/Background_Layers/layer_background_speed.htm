@@ -1,4 +1,47 @@
-layer_background_speed Cette fonction peut être utilisée pour définir la vitesse d'un sprite animé qui a été affecté à un élément d'arrière-plan. Vous donnez l'ID d'élément d'arrière-plan (que vous obtenez lorsque vous créez un élément d'arrière-plan en utilisant layer_background_create() ou lorsque vous utilisez la fonction layer_background_get_id() ), puis définissez la vitesse de l'animation. Si l'EDI a défini la vitesse d'animation pour le sprite utilisée pour être calculée comme des images par image de jeu, alors la valeur de vitesse donnée est un multiplicateur, 1 étant la valeur par défaut, et le définir sur 0,5 entraînera la moitié de la vitesse d'animation, lors du réglage il à 2 le doublera. Cependant, si l'EDI a défini la vitesse d'animation pour le sprite utilisée pour être calculée en images par seconde, alors la valeur de vitesse donnée est une valeur littérale d'images par seconde, donc le définir sur 5, par exemple, mettra l'animation en boucle 5 images par seconde que le jeu s'exécute. Si l'élément d'arrière-plan n'a pas de sprite attaché ou si le sprite utilisé n'a pas de sous-images, cette fonction n'aura aucun effet. Syntaxe:layer_background_speed(background_element_id, speed); Argument Description background_element_id La valeur d'identifiant unique de l'élément d'arrière-plan à modifier speed Le multiplicateur de vitesse / valeur à utiliser pour l'élément Retour:N/A Exemple:var lay_id = layer_get_id("Background_water"); var back_id = layer_background_get_id(lay_id); layer_background_speed(back_id, 0.5); Le code ci-dessus obtiendra l'ID de la couche nommée "Background_water", puis l'utilisera pour obtenir l'ID de l'élément d'arrière-plan sur cette couche. Cet identifiant est ensuite utilisé pour modifier la vitesse d'image de l'élément.  Retour: Calques d'arrière-plan Suivant:layer_background_xscale © Copyright YoYo Games Ltd. 2021 Tous droits réservés
+
+  
+  layer_background_speed
+  Cette fonction peut être utilisée pour régler la vitesse d'un sprite animé qui a été assigné à un élément d'arrière-plan. Vous donnez l'ID de l'élément d'arrière-plan (que vous obtenez lorsque vous créez un élément d'arrière-plan à l'aide de la fonction layer_background_create()    ou lorsque vous utilisez la fonction layer_background_get_id()), puis vous définissez la vitesse de l'animation. Si l'IDE a défini la vitesse d'animation du sprite utilisé comme étant calculée en Frames Per Game Frame, alors
+    la valeur de la vitesse indiquée est un multiplicateur, 1 étant la valeur par défaut, et si vous la réglez sur 0,5, la vitesse d'animation sera réduite de moitié, tandis que si vous la réglez sur 2, elle sera doublée. Toutefois, si l'IDE a défini la vitesse d'animation du sprite utilisé pour qu'il soit calculé
+    en tant qu'images par seconde, la valeur de la vitesse indiquée est une valeur d'images par seconde littérale. Par conséquent, une valeur de 5, par exemple, fera en sorte que l'animation tourne en boucle de 5 images par seconde pendant l'exécution du jeu. Si l'élément d'arrière-plan n'a pas de sprite attaché ou si
+    le sprite utilisé ne comporte pas de sous-images, cette fonction n'aura aucun effet.
+   
+  Syntaxe :
+  layer_background_speed(background_element_id, speed) ;
+  
+    
+      
+        Arguments
+        Description
+      
+      
+        id_élément_fond
+        La valeur d'identification unique de l'élément d'arrière-plan à modifier.
+      
+      
+        vitesse
+        Le multiplicateur/valeur de vitesse à utiliser pour l'élément.
+      
+    
+  
+   
+  Les retours :
+  N/A
+   
+  Exemple :
+  var lay_id = layer_get_id("Background_water") ; var back_id = layer_background_get_id(lay_id) ; layer_background_speed(back_id, 0.5) ;
+  Le code ci-dessus récupère l'ID du calque nommé "Background_water" et l'utilise ensuite pour obtenir l'ID de l'élément d'arrière-plan sur ce calque. Cet ID est ensuite utilisé pour modifier la vitesse de l'image de l'élément.
+   
+   
+   
+  
+    
+      
+        Retour : Calques d'arrière-plan
+        Suivant : layer_background_xscale
+      
+    
+    Copyright YoYo Games Ltd. 2021 Tous droits réservés
   
   
   

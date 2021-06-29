@@ -1,4 +1,80 @@
- Entrée de périphérique Lorsque votre jeu cible les plates-formes qui permettent le multi-touch, vous devriez utiliser ces fonctions. Ils fonctionnent de la même manière qu'un PC fonctionnerait s'il avait plusieurs souris attachées et les constantes qui sont vérifiées sont les mêmes que celles utilisées pour les fonctions de souris standard: Constant Description mb_left Le bouton gauche de la souris mb_middle Le bouton central de la souris (cela peut ne pas être valable pour toutes les plates-formes cibles) mb_right Le bouton droit de la souris mb_none Pas de bouton de la souris mb_any N'importe lequel des boutons de la souris Les fonctions peuvent toutes prendre une valeur «tactile» qui correspond à une pression sur l'écran de l'appareil, cependant le nombre maximum de touches pouvant être détectées dépendra beaucoup de l'appareil et du système d'exploitation en cours d'exécution. Par exemple, certains Android bas de gamme peuvent ne détecter que 2 ou 3 touches en même temps, tandis qu'un appareil UWP peut en détecter jusqu'à 10. Notez également que sur les appareils à écran tactile, un double tap est renvoyé comme l'équivalent d'un événement du bouton droit de la souris. Ainsi, si vous devez détecter plusieurs tapotements en succession rapide, par exemple, vous devrez vérifier les deux mb_left et mb_right. Cette fonctionnalité peut être activée ou désactivée à l'aide de device_mouse_dbclick_enable(). Vous trouverez ci-dessous une liste de toutes les fonctions de contrôle spécifiques à l'appareil: device_mouse_check_buttondevice_mouse_check_button_presseddevice_mouse_check_button_releaseddevice_mouse_dbclick_enabledevice_mouse_xdevice_mouse_ydevice_mouse_raw_xdevice_mouse_raw_ydevice_mouse_x_to_guidevice_mouse_y_to_guidevice_is_keypad_opendevice_get_tilt_xdevice_get_tilt_ydevice_get_tilt_z Veuillez noter que sur les appareils mobiles ( Android, iOS et Windows Phone ), vous pouvez utiliser le bouton Retour à tout moment, car il est mappé sur le retour arrière du clavier qui est la constante du clavier GameMaker Studio 2 vk_backspace, vous pouvez donc vérifier cette clé et effectuer des actions sur ces appareils comme si le bouton de retour avait été utilisé. Notez également que la cible HTML5 n'acceptera correctement l'entrée que pour "périphérique 0" lors de l'utilisation de ces fonctions.  Retour: Entrée de jeu Suivant: Entrée gestuelle © Copyright YoYo Games Ltd. 2021 Tous droits réservés
+
+  
+  Entrée du dispositif
+  Lorsque votre jeu est destiné aux plates-formes qui permettent le multi-touch, vous devez utiliser ces fonctions. Elles fonctionnent de la même manière qu'un PC si plusieurs souris y étaient attachées et les constantes qui sont vérifiées sont les mêmes que celles qui sont
+    utilisées pour les fonctions de souris standard:
+   
+  
+    
+      
+        Constant
+        Description
+      
+      
+        mb_gauche
+        Le bouton gauche de la souris
+      
+      
+        mb_middle
+        Le bouton central de la souris (ceci peut ne pas être valable pour toutes les plateformes cibles)
+      
+      
+        mb_right
+        Le bouton droit de la souris
+      
+      
+        mb_side1*
+        Bouton latéral de la souris 1
+      
+      
+        mb_side2*
+        Bouton latéral de la souris 2
+      
+      
+        mb_any
+        L'un des boutons de la souris
+      
+      
+        mb_none
+        Pas de bouton de souris
+      
+    
+  
+   * NOTE: Les boutons mb_side1 et mb_side2 ne sont disponibles que sous Windows, macOS, Ubuntu et HTML5.
+  Les fonctions peuvent toutes prendre une valeur "touch" qui correspond à un toucher sur l'écran de l'appareil, mais le nombre maximum de touchers qui peuvent être détectés dépend beaucoup de l'appareil et du système d'exploitation utilisé. Par exemple, certains appareils Android
+    bas de gamme peuvent ne détecter que 2 ou 3 touchers en même temps, alors qu'un appareil UWP peut en détecter jusqu'à 10. Notez également que sur les appareils à écran tactile, une double pression est renvoyée comme l'équivalent d'un événement de bouton droit de la souris. Ainsi, si vous
+    devez détecter plusieurs tapotements en succession rapide, par exemple, vous devrez vérifier à la fois le mb_left et le mb_right. Cette fonctionnalité peut être activée ou désactivée à l'aide de la commande device_mouse_dbclick_enable().
+  Vous trouverez ci-dessous une liste de toutes les fonctions de contrôle spécifiques à l'appareil :
+   
+  
+    bouton de contrôle de la souris du périphérique
+    device_mouse_check_button_pressed
+    dispositif_mouse_check_button_released
+    dispositif_mouse_dbclick_enable
+    périphérique_souris_x
+    périphérique_souris_y
+    dispositif_mouse_raw_x
+    dispositif_mouse_raw_y
+    dispositif_mouse_x_to_gui
+    dispositif_mouse_y_to_gui
+    dispositif_est_clavier_ouvert
+    dispositif_get_tilt_x
+    dispositif_get_tilt_y
+    dispositif_get_tilt_z
+  
+   
+  Veuillez noter que sur les appareils mobiles(Android, iOS et Windows Phone), vous pouvez utiliser le bouton retour à tout moment, car il est mappé sur le retour arrière du clavier, qui est la constante de clavier vk_backspace de GameMaker Studio 2. Vous pouvez donc effectuer des vérifications pour cette touche et exécuter des actions sur ces appareils comme si le bouton retour avait été utilisé. Notez également que la cible HTML5 n'acceptera correctement les entrées que pour le "périphérique 0" lorsque vous utiliserez ces fonctions.
+   
+   
+   
+  
+    
+      
+        Retour : Entrée du jeu
+        Suivant : Saisie gestuelle
+      
+    
+    Copyright YoYo Games Ltd. 2021 Tous droits réservés
   
   
   

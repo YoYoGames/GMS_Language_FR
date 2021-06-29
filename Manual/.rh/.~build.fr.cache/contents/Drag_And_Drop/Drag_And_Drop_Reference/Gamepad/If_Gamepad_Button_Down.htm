@@ -1,4 +1,52 @@
- Si le bouton de la manette de jeu est enfoncé Avec cette action, vous pouvez interroger une manette de jeu pour voir si un bouton donné est actuellement maintenu enfoncé. L'action reviendra true chaque étape pendant laquelle le bouton est maintenu enfoncé, ou false sinon, bien que si vous cliquez sur le not modificateur vous pouvez alors vérifier si le bouton n'est pas maintenu, c'est à dire: l'action reviendra true alors qu'aucun bouton n'est enfoncé et false s'il y a. Si vous n'avez besoin de vérifier qu'un seul bouton, utilisez l'action Si le bouton de la manette de jeu est enfoncé. Si le bouton coché est un bouton analogique, il ne sera pas considéré comme maintenu enfoncé tant que la valeur du bouton n'aura pas dépassé le seuil défini à l'aide de l'action Définir le seuil du bouton de la manette de jeu. Notez que pour ajouter des actions dans le bloc "if", elles doivent être déposées sur le côté de l'action, comme indiqué dans l'image ci-dessous: Ces actions seront désormais exécutées si le "si" est évalué à true, tandis que toutes les actions déposées ailleurs seront exécutées après le bloc "if". Syntaxe de l'action: Arguments: Argument Description Gamepad L'index de la manette de jeu. Button Le nom du bouton à vérifier. Not Annuler le chèque (vrai devient faux et vice versa) Exemple: Le code de bloc d'action ci-dessus interroge l'état du bouton de la manette de jeu 0 à chaque étape et si un bouton est maintenu enfoncé, il vérifie le bouton initial enfoncé. Si le chèque est true lors de la pression initiale vers le bas, un son est joué, puis, pendant que le bouton est maintenu enfoncé, la vitesse d'instance est réglée sur 10. Si le bouton n'est pas maintenu enfoncé, une vérification est effectuée sur le relâchement du bouton pour réinitialiser la vitesse 0 à nouveau.  Retour: Actions de la manette de jeu Suivant: Si le bouton de la manette de jeu est relâché © Copyright YoYo Games Ltd. 2021 Tous droits réservés
+
+  
+   Si le bouton du Gamepad est enfoncé
+  Avec cette action, vous pouvez interroger un gamepad pour savoir si un bouton donné est actuellement maintenu enfoncé. L'action retournera vrai à chaque étape où le bouton est maintenu enfoncé, ou faux sinon, bien que si vous cliquez sur le modificateur not 
+    vous pouvez alors vérifier si le bouton n'est pas maintenu enfoncé, c'est-à-dire que l'action renverra vrai si aucun bouton n'est enfoncé et faux s'il l'est. Si vous n'avez besoin de vérifier qu'un seul bouton est enfoncé, utilisez l'action If Gamepad Button Pressed.
+  Si le bouton vérifié est un bouton analogique, il ne sera pas considéré comme maintenu enfoncé tant que la valeur du bouton n'aura pas dépassé le seuil défini à l'aide de l'action Set Gamepad Button Threshold.
+  Notez que pour ajouter des actions dans le bloc "if", elles doivent être déposées sur le côté de l'action, comme le montre l'image ci-dessous :
+  Ces actions seront maintenant exécutées si le "if" vaut true,
+    tandis que toute action déposée ailleurs sera exécutée après le bloc "if".
+   
+  Syntaxe de l'action :
+  
+  Arguments :
+  
+    
+      
+        Arguments
+        Description
+      
+      
+        Manette de jeu
+        L'index du gamepad.
+      
+      
+        Bouton
+        Le nom du bouton à vérifier.
+      
+      
+        Non
+        Négation de la vérification (vrai devient faux et vice versa)
+      
+    
+  
+   
+  Exemple :
+  Le code du bloc d'action ci-dessus interroge l'état des boutons du gamepad 0 à chaque étape et si un bouton est maintenu enfoncé, il vérifie la pression initiale sur le bouton.
+    un bouton est maintenu enfoncé, il vérifie l'appui initial sur le bouton. Si la vérification est vraie pour l'appui initial sur le bouton, un son est joué, puis, tant que le bouton est maintenu enfoncé, la vitesse de l'instance est fixée à 10. Si le bouton n'est pas maintenu enfoncé
+    le bouton n'est pas maintenu enfoncé, une vérification est effectuée au moment du relâchement du bouton pour remettre la vitesse à 0.
+   
+   
+   
+  
+    
+      
+        Retour : Actions de la manette de jeu
+        Suivant : Si le bouton du Gamepad est libéré
+      
+    
+    Copyright YoYo Games Ltd. 2021 Tous droits réservés
   
   
   

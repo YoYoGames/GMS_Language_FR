@@ -1,4 +1,54 @@
- Système de fichiers Il existe dans GameMaker Studio 2 un certain nombre de fonctions qui vous permettent de manipuler des fichiers de tous types de différentes manières: file_existsfile_deletefile_renamefile_copyfile_find_firstfile_find_nextfile_find_closefile_attributes Les fonctions suivantes peuvent être utilisées pour modifier les noms de fichiers: REMARQUE: ces fonctions ne fonctionnent pas sur les fichiers réels! Ils ne traitent que les chaînes liées aux différents éléments de chemin et doivent être utilisés en conjonction avec les autres fonctions de fichier. filename_namefilename_pathfilename_dirfilename_drivefilename_extfilename_change_ext Enfin, il existe des fonctions spéciales pour obtenir des noms de fichiers qui peuvent être utilisées pour charger et enregistrer des fichiers avec des filtres de type de fichier. Ces fonctions ouvriront une fenêtre d'explorateur et entraîneront une perte de concentration du jeu. Cela signifie que toute entrée dont le jeu dépend peut ne pas être correctement enregistrée, et en tant que tel, nous vous recommandons (si vous utilisez ces fonctions dans un événement de clavier) d'utiliser l' événement touche haut et non les événements enfoncés ou descendus. REMARQUE: ces fonctions sont uniquement disponibles pour Windows et macOS ATTENTION! Ces fonctions peuvent ne pas fonctionner comme prévu en raison du GameMaker Studio 2! Veuillez consulter la section sur le système de fichiers pour plus d'informations. get_open_filenameget_open_filename_extget_save_filenameget_save_filename_ext Retour: Gestion des fichiers Suivant: Fichiers Ini © Copyright YoYo Games Ltd. 2021 Tous droits réservés
+
+  
+  Système de fichiers
+  Il existe dans GameMaker Studio 2 un certain nombre de fonctions qui vous permettent de manipuler des fichiers de tous types de différentes manières :
+   
+  
+    fichier_existant
+    fichier_supprimé
+    renommer un fichier
+    fichier_copie
+    fichier_trouvé_premier
+    fichier_trouver_suivant
+    fichier_trouvé_fermé
+    Attributs du fichier
+  
+   
+  Les fonctions suivantes peuvent être utilisées pour modifier les noms de fichiers :
+  NOTE: Ces fonctions ne fonctionnent pas sur les fichiers réels ! Elles ne traitent que les chaînes liées aux différents éléments du chemin d'accès et doivent être utilisées conjointement avec les autres fonctions de fichier.
+   
+  
+    nom_de_fichier
+    chemin d'accès au nom de fichier
+    nom de fichier_répertoire
+    nom de fichier_drive
+    nom de fichier_ext
+    changement de nom de fichier_ext
+  
+   
+  Enfin, il existe quelques fonctions spéciales pour obtenir des noms de fichiers qui peuvent être utilisés pour charger et sauvegarder des fichiers avec des filtres de type fichier. Ces fonctions ouvrent une fenêtre de l'explorateur, ce qui fait que le jeu perd le focus. Cela signifie que toute entrée dont le
+    Cela signifie que toute entrée dont dépend le jeu peut ne pas être correctement enregistrée, et nous recommandons donc (si vous utilisez ces fonctions dans un événement clavier) d'utiliser l'événement de la touche vers le haut et non les événements enfoncé ou bas.
+  NOTE: Ces fonctions sont Windows et macOS uniquement.
+  AVERTISSEMENT ! Il se peut que ces fonctions ne fonctionnent pas comme vous le souhaitez, car GameMaker Studio 2 est en sandbox ! Veuillez consulter la section sur le système de fichiers pour
+    plus d'informations.
+   
+  
+    get_open_filename
+    get_open_filename_ext
+    get_save_filename
+    get_save_filename_ext
+  
+   
+   
+   
+  
+    
+      
+        Retour : Traitement des fichiers
+        Suivant : Fichiers Ini
+      
+    
+    Copyright YoYo Games Ltd. 2021 Tous droits réservés
   
   
   

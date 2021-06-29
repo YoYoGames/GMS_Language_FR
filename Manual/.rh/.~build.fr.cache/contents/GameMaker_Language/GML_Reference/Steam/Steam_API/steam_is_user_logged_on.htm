@@ -1,6 +1,31 @@
- steam _is_user_logged_on Cette fonction retournera true si le Steam a actuellement une connexion en direct aux serveurs Steam S'il revient false, cela signifie qu'il n'y a pas de connexion active en raison d'un problème de réseau sur la machine locale ou du Steam en panne ou occupé. Syntaxe:steam_is_user_logged_on(); Retour:String Exemple:if steam_is_user_logged_on()     {
-         global.user_id = steam_get_user_account_id();     }
-   Le code ci-dessus vérifiera si l'utilisateur est connecté au Steam et s'il stocke l'ID utilisateur dans une variable globale.  Retour: API Steam générale Suivant: steam _current_game_language © Copyright YoYo Games Ltd. 2021 Tous droits réservés
+
+  
+  steam_is_user_logged_on
+  Cette fonction renvoie true si le client Steam a actuellement une connexion active avec les serveurs Steam. Si elle renvoie false, cela signifie qu'il n'y a pas de connexion active en raison soit d'un problème de réseau sur la machine locale, soit du fait que le serveur Steam
+    est en panne ou occupé.
+   
+  Syntaxe :
+  steam_is_user_logged_on() ;
+   
+  Les retours :
+  Chaîne de caractères
+   
+  Exemple :
+  if steam_is_user_logged_on() {
+     global.user_id = steam_get_user_account_id() ; }
+  
+  Le code ci-dessus vérifie si l'utilisateur est connecté au serveur Steam et s'il enregistre l'ID de l'utilisateur dans une variable globale.
+   
+   
+   
+  
+    
+      
+        Retour : API générale de la vapeur
+        Suivant : steam_current_game_language
+      
+    
+    Copyright YoYo Games Ltd. 2021 Tous droits réservés
   
   
   

@@ -174,7 +174,7 @@
 <glossterm>opérateur</glossterm>
 <glossdef>Un opérateur est un terme utilisé pour désigner quelque chose qui peut manipuler différents opérandes. Dans l'expression A B - C, et - sont les opérateurs. Des exemples de différents opérateurs sont (addition), - (sous-trtaction), = (égal), != (non égal) et >= (supérieur ou égal à), mais il en existe bien d'autres.</glossdef></glossentry>
 <glossentry id="Default_parameter_key">
-<glossterm>touche de paramètre</glossterm>
+<glossterm>clé de paramétrage</glossterm>
 <glossdef>Une clé de paramètre (également appelée image-clé) est un point sur la ligne de temps dans la feuille de calcul où un changement de la valeur d'un paramètre est défini.</glossdef></glossentry>
 <glossentry id="Default_parameter_tracks">
 <glossterm>pistes de paramètres</glossterm>

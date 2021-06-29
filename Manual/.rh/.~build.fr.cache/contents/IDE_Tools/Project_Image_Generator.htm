@@ -1,4 +1,40 @@
- Générateur d'images de projet Le générateur d'images de projet est accessible à partir du menu Outils en haut de l' GameMaker Studio 2. Cet outil est conçu pour créer rapidement tous les différents écrans de démarrage, images promotionnelles et icônes nécessaires à toutes les différentes plates-formes cibles à partir d'un seul ensemble d'images. Vous fournissez l'image de base et l'icône de base, puis cliquez sur le bouton Générer, et vos options de jeu pour chaque plate-forme seront mises à jour avec les nouvelles images. Pour que cela fonctionne correctement, vous devez fournir un écran de démarrage haute résolution et une image d'icône haute résolution. Les tailles recommandées seraient: Écran de démarrage: au moins 1920x1080px, ou 1080x1920px pour le portrait, et créé en 24 bits *.png sans transparents. Icônes: au moins 1024x1024px (ce qui correspond à la taille de la plus grande icône requise), et créées au format 24 bits *.png qui peut avoir des transparents Une fois que vous avez fourni ces images, ils seront affichés dans l'aperçu de Windows et vous pouvez définir le type de « ajustement » à utiliser lors de leur application aux différentes plates - formes. Vous pouvez choisir parmi les éléments suivants: Conserver le rapport hauteur / largeur - cela redimensionnera l'image pour l'adapter en conservant le rapport hauteur / largeur et en ajoutant une couleur d'arrière-plan pour remplir les côtés si l'ajustement n'est pas 1: 1 Étirer pour s'adapter - cela étendra les images pour qu'elles s'adaptent à la taille complète de l'image / de l'icône. Recadrer pour ajuster - cela prendra l'image de base et l'adaptera au mieux le long de l'axe horizontal ou vertical, puis recadrera le reste. Par exemple, si vous avez une image 640x480 qui doit être utilisée comme écran de démarrage pour 480x800, l'image sera mise à l' échelle pour s'adapter à l'axe vertical (480 -> 800) et le reste de l'image sera rogné. De même, si vous avez une image 1080x1920 qui doit s'adapter à 800x800, l'image sera réduite pour s'adapter à l'axe horizontal et le reste rogné. Vous pouvez également définir la couleur d'arrière -plan des icônes et des images. Cette couleur sera utilisée pour "garnir" l'image lorsqu'elle sera mise à l'échelle avec le rapport hauteur / largeur. L'image suivante montre à quoi cela ressemblera une fois que tout a été configuré: Il ne vous reste plus qu'à cliquer sur Générer et GameMaker Studio 2 remplira tous les paramètres Image et Icône des Options de jeu avec des images pour chaque plate-forme. REMARQUE: l'exception à l'instruction ci-dessus concerne Android icônes adaptatives Android. Celles- ci ne seront pas générées à l' aide de cet outil en raison de la manière dont elles sont structurées. IMPORTANT! Bien que cet outil génère toutes les images dont vous avez besoin, cela ne signifie pas qu'il est parfait! Il essaiera de faire de son mieux pour que les images correspondent aux différentes tailles et résolutions pour chaque plate-forme, mais parfois cela peut ne pas ressembler à ce que vous voulez vraiment car il n'y a vraiment pas de solution «taille unique». Par conséquent, après avoir exécuté cet outil, nous vous recommandons de réviser toutes les images dans les options de jeu de chaque plate-forme et d'ajuster manuellement celles qui ne ressemblent pas exactement à ce que vous voulez.  Retour: Outils IDE supplémentaires Suivant: Sound Mixer © Copyright YoYo Games Ltd. 2021 Tous droits réservés
+
+  
+  Générateur d'images de projet
+  Le générateur d'images de projet est accessible à partir du menu Outils situé en haut de l'IDE GameMaker Studio 2.
+    en haut de l'IDE de GameMaker Studio 2. Cet outil est conçu pour créer rapidement, à partir d'un seul jeu d'images, tous les différents écrans d'accueil, images promotionnelles et icônes requis par les différentes plates-formes cibles. Vous fournissez l'image de base
+    et l'icône de base, puis cliquez sur le bouton Générer , et vos options de jeu pour chaque plate-forme seront mises à jour avec les nouvelles images.
+  Pour que cela fonctionne correctement, vous devez fournir un écran d'accueil en haute résolution et une image d'icône en haute résolution. Les tailles recommandées sont les suivantes :
+  
+    Splash Screen: au moins 1920x1080px, ou 1080x1920px pour le portrait, et créé en 24bit *.png sans transparences.
+    Icônes: au moins 1024x1024px (qui est la taille de la plus grande icône requise), et créées en 24bit *.png qui peut avoir des transparences.
+  
+  Une fois que vous aurez fourni ces images, elles seront affichées dans les  fenêtres de prévisualisation et vous pourrez alors définir le type d'ajustement à utiliser pour les appliquer aux différentes plateformes. Vous pouvez choisir parmi les options suivantes :
+  
+    Conserver le rapport d'aspect - cette option met l'image à l'échelle en conservant le rapport d'aspect et en ajoutant une couleur d'arrière-plan pour remplir les côtés si le rapport n'est pas de 1:1.
+    Étirer pour adapter - cette option permet d'étirer les images pour qu'elles s'adaptent à la taille de l'image/icône.
+    Crop To Fit (recadrer pour l'adapter) - cette fonction prend l'image de base et la fait s'adapter au mieux le long de l'axe horizontal ou vertical, puis recadre le reste. Par exemple, si vous avez une image de 640x480 qui doit être utilisée comme écran de démarrage pour un écran de 480x800,
+      l'image sera mise à l 'échelle pour s'adapter à l'axe vertical (480 -> 800) et le reste de l'image sera recadré. De même, si vous avez une image 1080x1920 qui doit être utilisée en 800x800, l'image sera réduite pour s'adapter à l'axe horizontal et le reste sera rogné.
+      et le reste de l'image sera rogné.
+  
+  Vous pouvez également définir la couleur de fond des icônes et des images. Cette couleur sera utilisée pour "rembourrer" l'image lorsqu'elle est mise à l'échelle avec le rapport d'aspect. L'image suivante montre comment cela se présente une fois que tout a été configuré :
+  Maintenant, tout ce que vous avez à faire est de cliquer sur Generate et GameMaker Studio 2 remplira tous les paramètres d'image et d'icône des options de jeu avec des images pour chaque plate-forme.
+   Icônes avec des images pour chaque plate-forme.
+  NOTE: L'exception à la déclaration ci-dessus concerne les icônes adaptativesAndroid. Celles-ci ne seront pas générées à l'aide de cet outil en raison de la manière dont elles sont structurées.
+  IMPORTANT ! Bien que cet outil génère toutes les images dont vous avez besoin, cela ne signifie pas qu'il soit parfait ! Il fera de son mieux pour adapter les images aux différentes tailles et résolutions de chaque plate-forme, mais il se peut parfois qu'elles ne ressemblent pas à ce que vous souhaitez, car il n'existe pas de solution unique.
+    Mais il se peut que l'image ne corresponde pas à vos attentes, car il n'existe pas de solution unique. Par conséquent, après avoir utilisé cet outil, nous vous recommandons de réviser toutes les images dans les options de jeu de chaque plateforme et de modifier manuellement celles qui ne sont pas exactement comme vous le souhaitez.
+    comme vous le souhaitez.
+   
+   
+   
+  
+    
+      
+        Retour : Outils IDE supplémentaires
+        Suivant : Mixeur de son
+      
+    
+    Copyright YoYo Games Ltd. 2021 Tous droits réservés
   
   
   

@@ -1,9 +1,53 @@
-skeleton_animation_set_ext Lorsque vous définissez un jeu d'animations pour votre image-objet d'animation squelettique, la piste 0 lui est affectée en interne. Cependant, vous pouvez attribuer d'autres ensembles à d'autres pistes (1 et plus) et ainsi faire jouer à votre sprite deux (ou plus) animations en même temps. Notez que le sprite doit avoir été conçu dans votre programme d'animation avec cela à l'esprit, de sorte que l'animation "de base" de la piste 0 n'a que des keyframes pour certains os, tandis que les pistes suivantes ont des keyframes pour les autres. Par exemple, si vous avez une animation "marche" et que ses keyframes n'affectent que les jambes du sprite, vous pouvez alors avoir un ensemble d'animations de tête et d'animations de bras que vous pouvez définir dans les pistes 1 et 2 respectivement, vous permettant d'avoir un mouvement de base et adaptez-le en temps réel pendant le jeu. Syntaxe:skeleton_animation_set_ext(animname, track); Argument Description animname Le nom (une chaîne) du jeu d'animations à utiliser. track La piste pour le jeu d'animation à utiliser. Retour:N/A Exemple:if mouse_check_button(mb_left)     {
-         skeleton_animation_set_ext("bodyfight", 1);     }
+
+  
+  squelette_animation_set_ext
+  Lorsque vous définissez un jeu d'animation pour votre sprite d'animation squelettique, la piste 0 lui est attribuée en interne. Cependant, vous pouvez affecter d'autres jeux à d'autres pistes (1 et plus) et ainsi faire jouer à votre sprite deux (ou plus) animations en même temps.
+    (ou plus) animations en même temps. Notez que le sprite doit avoir été conçu dans votre programme d'animation en gardant cela à l'esprit, de sorte que l'animation "de base" de la piste 0 n'ait des images-clés que pour certains os, tandis que les pistes suivantes ont des images-clés
+    pour les autres. Par exemple, si vous avez une animation de "marche" et que ses images clés n' affectent que les jambes du sprite, vous pouvez alors avoir un ensemble d'animations de tête et de bras que vous pouvez placer dans les pistes 1 et 2 respectivement, ce qui vous permet de disposer d'un mouvement de base et de l'adapter à vos besoins.
+    d'avoir un mouvement de base et de l'adapter en temps réel pendant le déroulement du jeu.
+   
+  Syntaxe :
+  skeleton_animation_set_ext(animname, track) ;
+  
+    
+      
+        Arguments
+        Description
+      
+      
+        nom de l'animateur
+        Le nom (une chaîne) du jeu d'animation à utiliser.
+      
+      
+        piste
+        La piste du jeu d'animation à utiliser.
+      
+    
+  
+   
+   
+  Les retours :
+  N/A
+   
+  Exemple :
+  if mouse_check_button(mb_left) {
+     skeleton_animation_set_ext("bodyfight", 1) ; }
      else
-         {
-         skeleton_animation_set_ext("bodywalk", 1);     }
-   Le code ci-dessus changera le jeu d'animation utilisé par la piste 1 en jeu "bodyfight" ou "bodywalk" réglé lorsque le bouton gauche de la souris est enfoncé.  Retour: Animation Suivant:skeleton_animation_get_duration © Copyright YoYo Games Ltd. 2021 Tous droits réservés
+     {
+     skeleton_animation_set_ext("bodywalk", 1) ; }
+  
+  Le code ci-dessus changera le jeu d'animation utilisé par la piste 1 en jeu "bodyfight" ou "bodywalk" lorsque le bouton gauche de la souris est pressé.
+   
+   
+   
+  
+    
+      
+        Retour : Animation
+        Suivant : skeleton_animation_get_duration
+      
+    
+    Copyright YoYo Games Ltd. 2021 Tous droits réservés
   
   
   

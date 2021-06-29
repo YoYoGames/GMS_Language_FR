@@ -1,4 +1,43 @@
-sha1_file En cryptographie, SHA-1 est une fonction de hachage cryptographique conçue par l' Agence nationale de sécurité des États-Unis et est utilisée dans plusieurs applications largement utilisées, Git où il est utilisé pour vérifier les modifications de fichiers, ainsi que les protocoles TLS et SSL, PGP, SSH, S / MIME et IPsec. Cette fonction prend un fichier d'entrée et renvoie un résumé de message de 160 bits au format ASCII unique à ce fichier pour être utilisé pour la vérification de l'intégrité à une date ultérieure. Syntaxe:sha1_file(filename) Argument Description filename Le fichier pour lequel générer le hachage sha1. Retour:String Exemple:hash = sha1_file(working_directory + "game_data.ini") Le code ci-dessus générera un hachage sha1 pour le fichier spécifié et stockera la valeur renvoyée dans la variable «hachage».  Retour: Encodage de fichiers Suivant:zip_unzip © Copyright YoYo Games Ltd. 2021 Tous droits réservés
+
+  
+  sha1_file
+  En cryptographie, SHA-1 est une fonction de hachage cryptographique conçue par l'Agence de sécurité nationale des États-Unis et est employée dans plusieurs applications largement utilisées : populaire Git où elle est utilisée pour vérifier les changements de fichiers, et les protocoles
+    TLS et SSL, PGP, SSH, S/MIME et IPsec. Cette fonction prend un fichier d'entrée et renvoie un condensé de message de 160 bits au format ASCII, unique à ce fichier, qui peut être utilisé ultérieurement pour vérifier son intégrité.
+  NOTE: SHA-1 n'est pas complètement sécurisé et peut être cassé. Voir cette page pour plus d'informations.
+   
+  Syntaxe :
+  sha1_file(nom du fichier)
+   
+  
+    
+      
+        Arguments
+        Description
+      
+      
+        nom de fichier
+        Le fichier pour lequel il faut générer le hachage sha1.
+      
+    
+  
+   
+  Les retours :
+  Chaîne de caractères
+   
+  Exemple :
+  hash = sha1_file(working_directory + "game_data.ini")
+  Le code ci-dessus va générer un hachage sha1 pour le fichier spécifié et stocker la valeur retournée dans la variable "hash".
+   
+   
+   
+  
+    
+      
+        Retour : Codage des fichiers
+        Suivant : zip_unzip
+      
+    
+    Copyright YoYo Games Ltd. 2021 Tous droits réservés
   
   
   

@@ -86,7 +86,7 @@
     
     if gamepad_id > -1 { var _h = gamepad_axis_value(gamepad_id, gp_axislh) ; var _v = gamepad_axis_value(gamepad_id, gp_axislv) ; x += _h * 4 ; y += _v * 4 ; }
     Ici, nous vérifions le mouvement horizontal ou vertical du stick gauche . Les fonctions d'axe renvoient une valeur entre -1 et 1, donc pour l'axe horizontal, -1 correspond à la gauche, 0 à l'immobilité et 1 à la droite, et pour l'axe vertical, c'est -1 pour le haut, 0 pour l'immobilité et 1 pour le bas.
-      pour le haut, 0 pour ne pas bouger et 1 pour le bas. Notez également que les valeurs sont comprises entre -1 et 1. Ainsi, par exemple, l'axe horizontal peut renvoyer une valeur de 0,5, ce qui signifie que le manche est à mi-chemin entre la position "repos" et la position complètement poussée
+      pour le haut, 0 pour ne pas bouger et 1 pour le bas. Notez également que les valeurs sont comprises entre -1 et 1. Ainsi, par exemple, l'axe horizontal peut renvoyer une valeur de 0,5, ce qui signifie que le manche est à mi-chemin entre la position de repos et la position complètement poussée vers la droite.
       vers la droite. Pour cette raison, nous multiplions ensuite la valeur par 4 (vous pouvez multiplier par n'importe quelle valeur, en fonction de la vitesse à laquelle vous souhaitez que l'instance se déplace) - cela signifie que la vitesse de l'instance variera en fonction de l'ampleur du mouvement effectué sur l'axe du stick.
       mouvement effectué sur l'axe du stick.
     Placez une instance de cet objet dans une pièce et appuyez sur le bouton Play .  puis déplacez-vous en utilisant le stick gauche de votre manette de jeu connectée.

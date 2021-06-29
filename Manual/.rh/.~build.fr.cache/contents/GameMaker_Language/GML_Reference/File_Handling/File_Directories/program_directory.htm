@@ -1,4 +1,30 @@
-program_directory Cela renverra le répertoire où l'exécutable du jeu est stocké. Cependant, cela peut ne pas toujours être utile, d'autant plus que certains périphériques exécutent l'exe à partir d'un fichier *.zip, donc cela retournerait le même, peu importe où le jeu est réellement exécuté. ATTENTION! Cette fonction peut ne pas fonctionner comme prévu en raison du GameMaker Studio 2! Veuillez consulter la section sur le système de fichiers pour plus d'informations. REMARQUE: Si vous désactivez le bac à sable, vous ne pourrez toujours pas écrire dans ce répertoire pour éviter tout problème éventuel de suppression des fichiers de jeu requis. Syntaxe:program_directory Retour:String Exemple:dir = program_directory; Cela stockera le répertoire où l'exécutable est stocké dans une variable.  Retour: Répertoires de fichiers Suivant:directory_exists © Copyright YoYo Games Ltd. 2021 Tous droits réservés
+
+  
+  répertoire du programme
+  Cela renverra le répertoire où l'exécutable du jeu est stocké. Cependant, cela n'est pas toujours utile, notamment parce que certains périphériques exécutent l'exe à partir d'un fichier *.zip. Cette option renvoie donc le même résultat, quel que soit l'endroit où le jeu est exécuté.
+  AVERTISSEMENT ! Il se peut que cette fonction ne fonctionne pas comme vous l'attendez, car GameMaker Studio 2 est en sandbox ! Veuillez consulter la section sur le système de fichiers pour plus d'informations.
+  REMARQUE: Si vous désactivez le bac à sable, vous ne pourrez toujours pas écrire dans ce répertoire afin d'éviter tout problème de suppression des fichiers de jeu nécessaires.
+   
+  Syntaxe :
+  répertoire du programme
+   
+  Les retours :
+  Chaîne de caractères
+   
+  Exemple :
+  dir = répertoire du programme ;
+  Le répertoire où est stocké l'exécutable sera ainsi stocké dans une variable.
+   
+   
+   
+  
+    
+      
+        Retour : Répertoires de fichiers
+        Suivant : directory_exists
+      
+    
+    Copyright YoYo Games Ltd. 2021 Tous droits réservés
   
   
   

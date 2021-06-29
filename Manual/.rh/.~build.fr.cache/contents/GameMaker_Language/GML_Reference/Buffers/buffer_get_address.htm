@@ -1,4 +1,47 @@
-buffer_get_address Avec cette fonction, vous pouvez obtenir le pointeur a vers l'adresse de tampon brute et alignée. Ceci est principalement destiné à être utilisé avec les extensions car vous pouvez leur transmettre cette valeur, ce qui leur permet d'accéder aux données de la mémoire tampon. Notez qu'il y a certaines choses que vous ne pouvez pas faire avec le tampon lors de l'accès à partir d'une extension: Vous ne pouvez pas libérer la mémoire. Vous ne pouvez pas redimensionner la mémoire. Vous ne pouvez pas ne pas écrire au-delà de l'adresse du tampon plus la taille du tampon (vous pouvez utiliser le buffer_get_size() fonction pour cela) ou vous obtiendrez une erreur hors limites. Syntaxe:buffer_get_address(buffer); Argument Description buffer L'index du tampon à utiliser. Retour:pointer Exemple:var b_address = buffer_get_address(buff_model); var b_end_address = b_address + buffer_get_size(buff_model); Le code ci-dessus obtiendra l'adresse mémoire du tampon indexé dans la variable "buff_model" puis obtiendra l'adresse mémoire pour la fin du tampon en utilisant le buffer_get_size() fonction, en stockant les deux valeurs dans des variables locales pour une utilisation ultérieure.  Retour: Tampons Suivant:buffer_get_size © Copyright YoYo Games Ltd. 2021 Tous droits réservés
+
+  
+  tampon_get_adresse
+  Avec cette fonction, vous pouvez obtenir un pointeur vers l'adresse brute et alignée du tampon. Cette fonction est principalement utilisée avec les extensions car vous pouvez leur transmettre cette valeur, leur permettant d'accéder aux données du tampon. Notez qu'il y a quelques choses
+    que vous ne pouvez pas faire avec le tampon lorsque vous y accédez depuis une extension :
+  
+    Vous ne pouvez pas libérer la mémoire.
+    Vous ne pouvez pas redimensionner la mémoire.
+    Vous ne pouvez pas écrire au-delà de l'adresse du tampon plus la taille du tampon (vous pouvez utiliser la fonction buffer_get_size() pour cela) ou vous obtiendrez une erreur hors limites.
+  
+   
+  Syntaxe :
+  buffer_get_address(buffer) ;
+  
+    
+      
+        Arguments
+        Description
+      
+      
+        tampon
+        L'index du tampon à utiliser.
+      
+    
+  
+   
+  Les retours :
+  pointeur
+   
+  Exemple :
+  var b_adresse = buffer_get_address(buff_model) ; var b_end_adresse = b_adresse + buffer_get_size(buff_model) ;
+  Le code ci-dessus obtiendra l'adresse mémoire du tampon indexé dans la variable "buff_model" et ensuite l'adresse mémoire de la fin du tampon en utilisant la fonction buffer_get_size (), en stockant les deux valeurs dans des variables locales pour une utilisation ultérieure.
+    pour une utilisation ultérieure.
+   
+   
+   
+  
+    
+      
+        Retour : Tampons
+        Suivant : buffer_get_size
+      
+    
+    Copyright YoYo Games Ltd. 2021 Tous droits réservés
   
   
   

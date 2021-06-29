@@ -1,7 +1,48 @@
-game_save Avec cette fonction, vous pouvez effectuer une sauvegarde de base du jeu dans un fichier donné. REMARQUE: Cette fonction est très limitée et est conçue pour que le débutant puisse mettre en place un système de sauvegarde et le faire fonctionner rapidement, mais les utilisateurs plus avancés peuvent préférer coder leur propre système en utilisant les fonctions de fichier, car le jeu ne sera pas sauvegardé. toutes les ressources dynamiques telles que les structures de données, les surfaces, les sprites ajoutés, etc. Syntaxe:game_save(filename); Argument Description filename Le nom du fichier dans lequel enregistrer le jeu. Retour:N/A Exemple:if keyboard_check_pressed(ord("S"))     {
-         global.Saved = true;     game_save("Save.dat");
-         }
-   Le code ci-dessus définira une variable globale sur true puis enregistre le jeu dans le fichier "Save.dat" lorsque la touche "S" est enfoncée.  Retour: Contrôle général du jeu Suivant:game_save_buffer © Copyright YoYo Games Ltd. 2021 Tous droits réservés
+
+  
+  sauvegarde du jeu
+  Il s'agit d'une ancienne fonction qui peut être utilisée pour sauvegarder l'état actuel du jeu et dont l'utilisation n'est plus recommandée. Utilisez plutôt les fonctions File pour créer un système de sauvegarde personnalisé dans lequel vous ne sauvegardez et ne chargez que des données de jeu spécifiques.
+    et charger des données de jeu spécifiques.
+  Cette fonction sauvegardera l'état du jeu tel qu'il est, mais pas les ressources dynamiques utilisées à ce moment-là, comme les structures de données, les surfaces, les ressources ajoutées au moment de l'exécution , etc. Si un tel fichier de sauvegarde est chargé, toutes les mises à jour du jeu qui ont été
+    Si un tel fichier de sauvegarde est chargé, les mises à jour du jeu effectuées après la sauvegarde ne seront pas visibles, car la version du jeu utilisée pour créer la sauvegarde sera restaurée.
+  Notez que les fichiers de sauvegarde créés à l'aide de cette fonction peuvent ne pas être pris en charge par les versions mises à jour. Runtime mises à jour. Il est donc essentiel de remplacer cette fonction par un nouveau système de sauvegarde pour garantir la compatibilité avec les futures mises à jour de GameMaker.
+    les futures mises à jour de GameMaker et, pour les raisons mentionnées ci-dessus, les mises à jour de votre propre jeu.
+   
+  Syntaxe :
+  game_save(nom du fichier) ;
+  
+    
+      
+        Arguments
+        Description
+      
+      
+        nom de fichier
+        Le nom du fichier dans lequel le jeu sera sauvegardé.
+      
+    
+  
+   
+  Les retours :
+  N/A
+   
+  Exemple :
+  if keyboard_check_pressed(ord("S")) {
+     global.Saved = true ; game_save("Save.dat") ;
+     }
+  
+  Le code ci-dessus définira une variable globale à true et sauvegardera le jeu dans le fichier "Save.dat" lorsque la touche "S" sera pressée.
+   
+   
+   
+  
+    
+      
+        Retour : Contrôle général du jeu
+        Suivant : game_save_buffer
+      
+    
+    Copyright YoYo Games Ltd. 2021 Tous droits réservés
   
   
   

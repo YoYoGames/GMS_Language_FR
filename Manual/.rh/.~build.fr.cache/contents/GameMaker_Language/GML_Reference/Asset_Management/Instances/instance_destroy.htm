@@ -1,6 +1,60 @@
-instance_destroy Vous appelez cette fonction chaque fois que vous souhaitez "détruire" une instance, en déclenchant normalement un événement de destruction et également un événement de nettoyage. Cela le supprimera de la salle jusqu'à ce que la salle soit redémarrée (sauf si la salle est persistante). L'appel de la fonction sans argument détruira simplement l'instance actuellement dans la portée et exécutant le code, mais vous pouvez fournir un argument "id" facultatif et cibler une instance spécifique en utilisant l'instance id value, ou vous pouvez cibler toutes les instances d'un objet particulier en utilisant un object_index. Par exemple:instance_destroy(other);      // destroy the "other" instance in a Collision Event instance_destroy(obj_Bullet); // destroy ALL instances of the object "obj_Bullet" Le deuxième indicateur facultatif vous permet de "désactiver" l'événement Destroy pour l'instance en cours de destruction. Par défaut, l'événement Destroy sera toujours exécuté, mais si vous définissez cet indicateur sur false alors vous pouvez faire en sorte que l'instance se détruise d'elle-même et ne pas exécuter cet événement. IMPORTANT! Cela ignorera l'événement Destroy, mais l'événement Clean Up sera toujours appelé. Il est à noter que lorsque vous détruisez une instance, son événement destroy est appelé immédiatement après le code ou l'action qui appelle la fonction destroy. De plus, bien que l'événement de destruction soit effectué, l'instance n'est pas immédiatement supprimée du jeu et elle continuera à exécuter le code contenu dans l'événement en cours. Ce n'est qu'à la fin de l'événement en cours qu'il sera retiré du jeu. Donc, si vous avez, par exemple, ce code:f hp <= 0 instance_destroy(); score += 10; La variable "score" sera incrémentée même si le instance_destroy a été appelée, et l'instance sera finalement supprimée de votre jeu à la fin de l'événement. Faites attention à cela, comme si vous aviez (par exemple) créé une ressource dynamique pour l'instance, comme une structure de données, puis détruisiez cette ressource dans l'événement de destruction, s'il y avait des références à celle-ci après la fonction ou l'action de destruction a été effectuée, vous obtiendrez une erreur "ressource inconnue", car l'événement de destruction l'a supprimée du jeu. Syntaxe:instance_destroy([id, execute_event_flag]); Argument Description id L'ID de l'instance ou object_index à détruire (facultatif, l'instance appelante par défaut) execute_event_flag Mis à true ou false pour exécuter l'événement destroy ou non (facultatif, la valeur par défaut est true ) Retour:N/A Exemple:if bbox_right < 0 || bbox_left > room_width || bbox_bottom < 0 || bbox_top > room_height     {
-         instance_destroy(id, false);     }
-   Le code ci-dessus détruira l'instance exécutant le code sans appeler l'événement Destroy si l'instance est en dehors des limites de la salle.  Retour: Instances Suivant:instance_exists © Copyright YoYo Games Ltd. 2021 Tous droits réservés
+
+  
+  instance_destroy
+  Vous appelez cette fonction chaque fois que vous souhaitez "détruire" une instance, en déclenchant normalement un événement Destroy et aussi un événement Clean Up .
+    Cela la supprimera de la room jusqu'à ce que celle-ci soit redémarrée (sauf si la room est persistante). L'appel de la fonction sans argument détruira simplement l'instance qui est actuellement dans le champ d'application et qui exécute le code, mais vous pouvez fournir un argument facultatif "id" et cibler une instance spécifique.
+    "id" facultatif et cibler une instance spécifique en utilisant la valeur de l'instance id, ou vous pouvez cibler toutes les instances d'un objet particulier en utilisant un argument . object_index.
+    Par exemple :
+  instance_destroy(other) ; // détruit l'instance "other" dans un événement de collision instance_destroy(obj_Bullet) ; // détruit TOUTES les instances de l'objet "obj_Bullet".
+  Le second drapeau optionnel vous permet de "désactiver" l'événement Destroy pour l'instance en cours de destruction. Par défaut, l'événement Destroy sera toujours exécuté, mais si vous mettez cet indicateur à false, vous pouvez faire en sorte que l'instance se détruise elle-même et ne pas exécuter cet événement.
+    l'instance se détruise elle-même et ne pas exécuter cet événement.
+  IMPORTANT ! L'événement Destroy sera ignoré, mais l'événement Clean Up sera quand même appelé.
+  Il convient de noter que lorsque vous détruisez une instance, son événement de destruction est appelé immédiatement après le code ou l'action qui appelle la fonction de destruction. De plus, bien que l'événement de destruction soit exécuté, l'instance n'est pas immédiatement retirée du jeu,
+    et elle continuera à exécuter le code contenu dans l'événement courant. Ce n'est que lorsque l'événement en cours est terminé qu'elle est retirée du jeu.
+  Donc, si vous avez, par exemple, ce code :
+  f hp <= 0 instance_destroy() ; score += 10 ;
+  La variable "score" sera incrémentée même si la  fonction instance_destroy a été appelée, et l'instance sera finalement retirée de votre jeu à la fin de l'événement. Faites attention à cela, car si vous avez (par exemple)
+    créé une ressource dynamique pour l'instance, comme une structure de données, puis détruit cette ressource dans l'événement de destruction, s'il y a des références à cette ressource après que la fonction ou l'action de destruction ait été exécutée, vous obtiendrez une erreur de type "ressource inconnue".
+    resource", car l'événement de destruction l'a supprimée du jeu.
+   
+  Syntaxe :
+  instance_destroy([id, execute_event_flag]) ;
+  
+    
+      
+        Arguments
+        Description
+      
+      
+        id
+        L'ID de l'instance ou l'object_index à détruire (facultatif, par défaut l'instance appelante)
+      
+      
+        execute_event_flag
+        Définir à true ou false pour exécuter l'événement de destruction ou non (facultatif, par défaut true)
+      
+    
+  
+   
+  Les retours :
+  N/A
+   
+  Exemple :
+  if bbox_right < 0 || bbox_left > room_width || bbox_bottom < 0 || bbox_top > room_height {
+     instance_destroy(id, false) ; }
+  
+  Le code ci-dessus détruira l'instance qui exécute le code sans appeler l'événement Destroy si l'instance est en dehors des limites de la pièce.
+   
+   
+   
+  
+    
+      
+        Retour : Instances
+        Suivant : instance_exists
+      
+    
+    Copyright YoYo Games Ltd. 2021 Tous droits réservés
   
   
   

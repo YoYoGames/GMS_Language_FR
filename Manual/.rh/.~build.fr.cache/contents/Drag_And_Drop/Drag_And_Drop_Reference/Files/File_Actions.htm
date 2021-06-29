@@ -1,4 +1,88 @@
- Bibliothèque d'actions de fichiers Les actions de fichier traitent de deux types de fichiers différents - les fichiers tampon et les fichiers Ini - et ont également certaines actions génériques sur les fichiers pour renommer ou copier des fichiers existants. Les fichiers tampons sont créés en sauvegardant les données d'un tampon que vous avez précédemment créé et ces données peuvent ensuite être chargées à nouveau dans un tampon à tout moment dans le futur. Vous pouvez trouver plus d'informations sur les buffers ici: Buffer Actions. Les fichiers Ini sont des fichiers petits et légers compatibles avec la plupart des plates-formes. Ils sont idéaux pour stocker de petites informations, comme les préférences d'interface, les meilleurs scores locaux, les données de niveau, etc. et sont très faciles à utiliser. Les fichiers Ini n'ont pas besoin d'avoir été créés auparavant pour utiliser ces actions, et vous pouvez lire à partir d'un fichier Ini inexistant et vous obtiendrez simplement un default valeur de retour (que vous spécifiez), cependant nous vous recommandons de créer au moins un fichier ini "de base" pour ouvrir et modifier avant d'utiliser les actions. Ce fichier ini de base peut être créé en appelant simplement l' action Ouvrir le fichier Ini suivie de Fermer le fichier Ini, car la fermeture du fichier l'écrira sur le disque, ou vous pouvez en inclure un dans les fichiers inclus du navigateur d'actifs. Si vous utilisez un fichier inclus dans Asset Browser comme votre Ini de base, vous devriez également lire la section du manuel sur le fonctionnement du système de fichiers. REMARQUE: pour les jeux avec des localisations, il est très important que les lettres accentuées puissent être lues à partir de fichiers externes. Cela signifie que vous devez d'abord créer le fichier ini au format UTF8, puis l'ajouter dans GameMaker Studio 2 tant que fichier inclus afin qu'il soit exporté lors de l'exécution du jeu et utilisé à la place du fichier ini au format ANSI par défaut créé par l'ini fonctionne lorsqu'aucun n'a été précédemment fourni. De cette façon, vous pouvez lire et écrire correctement avec tous les accents et les lettres non romaines conservés. Les actions suivantes existent pour travailler avec des fichiers: Charger le tamponEnregistrer le tamponRenommer le fichierCopier un fichierSupprimer le fichierOuvrir le fichier IniFermer le fichier IniÉcrire dans un fichier IniLire le fichier IniSi le fichier existe  Retour: Index Suivant: Actions de type de données © Copyright YoYo Games Ltd. 2021 Tous droits réservés
+
+  
+  Fichiers Bibliothèque d'action
+  
+  Les actions sur les fichiers traitent de deux types de fichiers différents - les fichiers tampons et les fichiers Ini - et comportent également certaines actions génériques permettant de renommer ou de copier des fichiers existants.
+  Lesfichiers tampons sont créés en sauvegardant les données d'un tampon que vous avez précédemment créé et ces données peuvent ensuite être rechargées dans un tampon à tout moment dans le futur. Vous pouvez trouver plus d'informations sur les tampons ici : Actions sur les tampons.
+  Lesfichiers Ini sont des fichiers petits et légers, compatibles avec la plupart des plateformes. Ils sont idéaux pour stocker de petits éléments d'information, comme les préférences d'interface, les meilleurs scores locaux, les données de niveau etc... et sont très faciles à utiliser. Les fichiers Ini n'ont pas
+    n'ont pas besoin d'avoir été créés auparavant pour utiliser ces actions, et vous pouvez lire à partir d'un fichier Ini inexistant et vous obtiendrez simplement une valeur de retour par défaut (que vous spécifiez), cependant nous vous recommandons de créer au moins un fichier ini "de base" pour ouvrir et modifier les actions.
+    pour l'ouvrir et le modifier avant d'utiliser les actions. Ce fichier ini de base peut être créé en appelant simplement l'action Open Ini File suivie de l'action Close Ini File, puisque la fermeture du fichier l'écrira sur le disque.
+    Ce fichier ini de base peut être créé en appelant simplement l'action Ouvrir le fichier Ini suivie de l'action Fermer le fichier Ini, puisque la fermeture du fichier l'écrira sur le disque . Si vous utilisez un fichier inclus dans l'explorateur d'assets comme Ini de base, vous devez également lire
+    la section du manuel concernant le fonctionnement du système de fichiers.
+  REMARQUE: pour les jeux comportant des localisations, il est très important que les lettres accentuées puissent être lues à partir de fichiers externes. Cela signifie que vous devez d'abord créer le fichier ini au format UTF8, puis l'ajouter dans GameMaker Studio 2 en tant que fichier inclus.
+    afin qu'il soit exporté lors de l'exécution du jeu et utilisé à la place du fichier ini par défaut au format ANSI qui est créé par les fonctions ini lorsqu'aucun fichier n'a été fourni auparavant. De cette façon, vous pouvez lire et écrire correctement dans ce fichier en conservant tous les accents et les lettres non romaines.
+    sont conservés.
+  Les actions suivantes existent pour travailler avec les fichiers :
+   
+  
+    
+      
+        
+        Chargement de la mémoire tampon
+      
+      
+        
+        Sauvegarder le tampon
+      
+      
+        
+        Renommer un fichier
+      
+      
+        
+        Copier le fichier
+      
+      
+        
+        Supprimer le fichier
+      
+      
+        
+        Ouvrir un fichier Ini
+      
+      
+        
+        Fermer le fichier Ini
+      
+      
+        
+        Ecrire dans un fichier Ini
+      
+      
+        
+        Lire le fichier Ini
+      
+      
+        
+        Si le fichier existe
+      
+    
+  
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+  
+    
+      
+        Retour : Index
+        Suivant : Actions sur les types de données
+      
+    
+    Copyright YoYo Games Ltd. 2021 Tous droits réservés
   
   
   

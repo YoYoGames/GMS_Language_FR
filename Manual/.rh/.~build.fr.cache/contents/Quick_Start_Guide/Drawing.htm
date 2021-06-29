@@ -71,9 +71,9 @@
       un événement de création. Dans l'événement de création, ajoutez les éléments DnD™ou GML suivants :
     
     draw_angle = 0 ;
-    Nous allons utiliser cette variable pour faire tourner " spr_Two" dans le temps et le dessiner en superposition sur le sprite attribué à l'objet (" spr_One"). Pour ce faire, nous devons ajouter un Draw Event à l'objet.
+    Nous allons utiliser cette variable pour faire pivoter " spr_Two" dans le temps, et le dessiner en superposition sur le sprite attribué à l'objet (" spr_One"). Pour ce faire, nous devons ajouter un Draw Event à l'objet.
       l'objet. En faisant cela, nous indiquons à GameMaker Studio 2 que nous voulons prendre en charge ce que l'instance dessine, ce qui signifie que notre code inclura un appel à la fonction draw_self() fonction
-      ou Draw Self action. Cette action reproduit simplement ce que l'objet fait lorsqu'aucun Draw Event n'est présent et qu'il dessine par défaut le sprite assigné. Nous allons
+      ou Draw Self action. Cette action reproduit simplement ce que fait l'objet lorsqu'aucun Draw Event n'est présent et qu'il dessine par défaut le sprite attribué. Nous allons
       ensuite dessiner le deuxième sprite que nous voulons utiliser comme sprite de superposition qui tourne. Le DnD™et le GML ressemblent à ceci :
     
     draw_self() ; draw_angle = draw_angle + 0.5 ; draw_sprite_ext(spr_Two, 0, x, y, 1, 1, draw_angle, c_red, 1) ;
@@ -103,7 +103,7 @@
       sur la variable "nombre" que nous voulons dessiner. Cela s'explique par le fait que tout texte doit être composé de caractères, et non de valeurs, et que nous devons donc utiliser cette fonction/action pour convertir la valeur du nombre en caractères que nous souhaitons
       dessiner. Dans ce cas, nous prenons le nombre aléatoire que nous avons généré et le transformons en une "chaîne" de caractères qui peut être dessinée. Notez également que nous avons défini l'alignement du texte. Cela indique tout simplement à GameMaker Studio 2 où commencer à
       Dans ce cas, nous souhaitons que le texte soit centré sur l'axe des x.
-    Ajoutez un certain nombre d'instances de l'objet dans l'éditeur de pièce et appuyez ensuite sur le bouton Play  en haut de l'IDE. Vous devriez voir quelque chose comme ceci :
+    Ajoutez un certain nombre d'instances de l'objet dans l'éditeur de pièce, puis appuyez sur le bouton Play  en haut de l'IDE. Vous devriez voir quelque chose comme ceci :
     
     Dans tous les exemples jusqu'à présent, nous avons dessiné le sprite assigné à l'instance, mais cela ne doit pas toujours être le cas. Vous pouvez dessiner ce que vous voulez dans l'événement draw, quel que soit le sprite assigné. Pour illustrer ce point
       Pour illustrer ce point, nous allons modifier le code que nous avons actuellement en supprimant l'appel à draw_self() et en le remplaçant par une fonction permettant de dessiner une ellipse colorée, comme ceci :

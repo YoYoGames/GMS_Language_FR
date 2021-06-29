@@ -1,4 +1,45 @@
- Détruire l'émetteur de particules Cette action va "détruire" l'émetteur de particules donné, c'est-à-dire: libérer la mémoire utilisée par l'émetteur de particules. Vous fournissez l'ID du système de particules auquel l'émetteur appartient (tel que renvoyé par l'action Créer un système de particules ), puis l'ID réel de l'émetteur (tel que renvoyé par l'action Créer un émetteur de particules ). Cette action doit être appelée chaque fois que vous n'avez plus besoin d'un émetteur de particules dans votre jeu, ou chaque fois que vous souhaitez recréer l'émetteur de particules (par exemple, juste avant d'appeler un redémarrage du jeu ). Notez que si le système de particules auquel l'émetteur a été affecté n'a pas été marqué comme Persistant, vous n'avez pas besoin d'appeler cette action, car l'émetteur sera automatiquement nettoyé du côté de la pièce avec le système de particules. Syntaxe de l'action: Arguments: Argument Description System La valeur ID du système qui contient l'émetteur Emitter La valeur ID de l'émetteur à détruire Exemple: Le code de bloc d'action ci-dessus vérifiera une variable d'instance et si elle est supérieure à 100, il détruira l'émetteur affecté à l'instance, puis passera à la pièce suivante.  Retour: Actions de particules Suivant: Émettre des particules © Copyright YoYo Games Ltd. 2021 Tous droits réservés
+
+  
+   Détruire l'émetteur de particules
+  Cette action va "détruire" l'émetteur de particules donné, c'est-à-dire libérer la mémoire utilisée par l'émetteur de particules. Vous fournissez l'ID du système de particules auquel l'émetteur appartient (tel que retourné par l'action Create Particle System)
+    et ensuite l'ID de l'émetteur réel (tel que retourné par l'action Create Particle Emitter). Cette action doit être appelée chaque fois que vous n'avez plus besoin d'un émetteur de particules dans votre jeu, ou chaque fois que vous souhaitez recréer l'émetteur de particules (par exemple, dans le cas d'un jeu d'action).
+    l'émetteur de particules (par exemple, juste avant d'appeler un Game Restart). Notez que si le système de particules auquel l'emitter a été assigné n'a pas été marqué comme persistant, vous n'avez pas besoin d'appeler cette action,
+    car l'emitter sera automatiquement nettoyé à la fin de la pièce en même temps que le système de particules.
+   
+  Syntaxe de l'action :
+  
+  Arguments :
+  
+    
+      
+        Arguments
+        Description
+      
+      
+        Système
+        La valeur d'identification du système qui contient l'émetteur.
+      
+      
+        Émetteur
+        La valeur ID de l'émetteur à détruire
+      
+    
+  
+   
+  Exemple :
+  Le code du bloc d'action ci-dessus va vérifier une variable d'instance et
+    si elle est supérieure à 100, il détruira l'émetteur assigné à l'instance et passera ensuite à la pièce suivante.
+   
+   
+   
+  
+    
+      
+        Retour : Actions des particules
+        Suivant : Émettre des particules
+      
+    
+    Copyright YoYo Games Ltd. 2021 Tous droits réservés
   
   
   

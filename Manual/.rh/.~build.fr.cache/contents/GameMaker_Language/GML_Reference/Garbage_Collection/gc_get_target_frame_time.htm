@@ -1,6 +1,32 @@
- gc_get_target_frame_time Avec cette fonction, vous pouvez récupérer la valeur actuelle de l'image cible pour le garbage collector. La valeur renvoyée est en microsecondes (où 1 000 000 microsecondes équivaut à une seconde) et le temps de trame cible par défaut est de 100 microsecondes. Si vous souhaitez modifier cette valeur, vous devez utiliser la fonctiongc_target_frame_time(). Syntaxe:gc_get_target_frame_time(time); Retour:Real Exemple:if (gc_get_target_frame_time() != 50)     {
-         gc_target_frame_time(50);     }
-   Le code ci-dessus vérifie la cible de temps de trame actuelle pour le garbage collector et si ce n'est pas 50 microsecondes, il est défini sur cette valeur.  Retour: Ramassage des ordures Suivant:gc_get_stats © Copyright YoYo Games Ltd. 2021 Tous droits réservés
+
+  
+  gc_get_target_frame_time
+  Avec cette fonction, vous pouvez récupérer la valeur actuelle de la trame cible pour le ramasseur d'ordures. La valeur renvoyée est exprimée en microsecondes. (où 1 000 000 microsecondes est égal à une seconde) et le temps de trame cible par défaut est de 100 microsecondes. Si vous souhaitez modifier cette valeur, vous devez utiliser la fonction gc_target_frame_time().
+    
+  
+   
+  Syntaxe :
+  gc_get_target_frame_time(time) ;
+   
+  Les retours :
+  Real
+   
+  Exemple :
+  if (gc_get_target_frame_time() != 50) {
+     gc_target_frame_time(50) ; }
+  
+  Le code ci-dessus vérifie la cible temporelle actuelle du ramasseur d'ordures et si elle n'est pas de 50 microsecondes, elle est fixée à cette valeur.
+   
+   
+   
+  
+    
+      
+        Retour : Collecte des ordures
+        Suivant : gc_get_stats
+      
+    
+    Copyright YoYo Games Ltd. 2021 Tous droits réservés
   
   
   

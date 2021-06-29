@@ -1,6 +1,44 @@
-layer_background_get_index Cette fonction peut être utilisée pour obtenir la valeur d'index d'image actuelle de l'élément d'arrière-plan. Vous donnez l'ID d'élément d'arrière-plan (que vous obtenez lorsque vous créez un élément d'arrière-plan en utilisant layer_background_create() ou lorsque vous utilisez la fonction layer_background_get_id() ), et la fonction retournera une valeur réelle qui représente l'index d'image affiché pour le sprite. La fonction retournera -1 si l'élément d'arrière-plan n'existe pas ou si l'élément n'a pas de sprite valide qui lui est affecté. Syntaxe:layer_background_get_index(background_element_id); Argument Description background_element_id La valeur d'identifiant unique de l'élément d'arrière-plan à partir duquel obtenir les informations Retour:Real (the current sprite image index or -1) Exemple:var lay_id = layer_get_id("Background_sky"); var back_id = layer_background_get_id(lay_id); if layer_background_get_index(back_id) < 4     {
-         layer_background_index(back_id, 4);     }
-   Le code ci-dessus obtiendra l'ID de la couche nommée "Background_sky", puis l'utilisera pour obtenir l'ID de l'élément d'arrière-plan sur cette couche. Cet ID est ensuite utilisé pour vérifier si l'index d'image de l'élément est inférieur à 4, et si tel est le cas, il est défini sur 4.  Retour: Calques d'arrière-plan Suivant:layer_background_get_speed © Copyright YoYo Games Ltd. 2021 Tous droits réservés
+
+  
+  layer_background_get_index
+  Cette fonction peut être utilisée pour obtenir la valeur actuelle de l'index de l'image de l'élément d'arrière-plan. Vous donnez l'ID de l'élément d'arrière-plan (que vous obtenez lorsque vous créez un élément d'arrière-plan à l'aide de la fonction layer_background_create()    ou lorsque vous utilisez la fonction layer_background_get_id()), et la fonction renverra une valeur réelle qui représente l'index de l'image affichée pour le sprite. La fonction renvoie -1 si l'élément
+    l'élément d'arrière-plan n'existe pas ou si un sprite valide n'est pas assigné à l'élément.
+   
+  Syntaxe :
+  layer_background_get_index(background_element_id) ;
+  
+    
+      
+        Arguments
+        Description
+      
+      
+        id_élément_fond
+        La valeur d'identification unique de l'élément d'arrière-plan à partir duquel les informations doivent être obtenues.
+      
+    
+  
+   
+  Les retours :
+  Réel (l'index de l'image du sprite actuel ou -1)
+   
+  Exemple :
+  var lay_id = layer_get_id("Background_sky") ; var back_id = layer_background_get_id(lay_id) ; if layer_background_get_index(back_id) < 4 {
+     layer_background_index(back_id, 4) ; }
+  
+  Le code ci-dessus récupère l'ID du calque nommé "Background_sky" et l'utilise pour obtenir l'ID de l'élément d'arrière-plan sur ce calque. Cet ID est ensuite utilisé pour vérifier si l'index de l'image de l'élément est inférieur à 4, et si c'est le cas, il est mis à 4.
+    est fixé à 4.
+   
+   
+   
+  
+    
+      
+        Retour : Calques d'arrière-plan
+        Suivant : layer_background_get_speed
+      
+    
+    Copyright YoYo Games Ltd. 2021 Tous droits réservés
   
   
   

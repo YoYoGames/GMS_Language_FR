@@ -1,10 +1,85 @@
-gamepad_set_option Cette fonction peut être utilisée pour définir l'une des options de manette de jeu disponibles. Vous fournissez le "slot" de la manette de jeu pour activer l'option, ainsi que la chaîne d'options à définir et la valeur à utiliser. La chaîne d'option disponible dépendra de la plate-forme sur laquelle le projet est exécuté, comme indiqué ci-dessous: Option Plate-forme Description Évaluer "allow_rotation" tvOS Définissez si la télécommande Siri sera verrouillée en rotation (c'est-à-dire qu'elle ne peut être utilisée que verticalement) ou non. Une fois déverrouillé (une valeur de true ) la rotation de la commande changera l'entrée, de telle sorte qu'une rotation de 90 ° vers la gauche fera revenir le côté "droit" du pavé tactile "vers le haut", etc. de sorte que toutes les entrées soient relatives à l'orientation du dispositif. Lorsqu'il est verrouillé (une valeur de false ), alors l'entrée ne sera pas modifiée par rapport à la position du contrôleur et sera toujours traitée comme si le contrôleur était en position verticale. Booléen "dpad_absolute" tvOS Définissez si le pavé tactile Siri Remote accepte une entrée absolue ou une entrée relative. En mode absolu (une valeur de true ) le centre du pavé tactile est considéré comme la position (0,0) - c'est-à-dire: là où le stick analogique est au repos ou où se trouverait le centre du pavé tactile - et le mouvement autour de cette position générera une entrée. Lorsqu'il est défini sur relatif (une valeur de false alors la position (0,0) sera considérée comme étant l'endroit où le contact initial sur le pad est effectué et toutes les entrées seront générées à partir de cette position, pas du centre du pad. Booléen Syntaxe:gamepad_set_option(device, option_name, value); Argument Description device Quel «slot» de périphérique de manette de jeu définir. option_name Le nom de l'option à définir (une chaîne, voir le tableau ci-dessus) value La valeur à laquelle définir l'option (peut être booléen, réel, entier ou chaîne - voir le tableau ci-dessus) Retour:N/A Exemple:for(var i = 0; i < 12; ++i;)     {
-         if gamepad_is_connected(i) && gamepad_get_description(i) == "tvOS Siri Remote"         {
-             if gamepad_get_option(i, "allow_rotation") == false             {
-                 gamepad_set_option(i, "allow_rotation", true);             }
-             }
-         }
-   Le code ci-dessus parcourt tous les emplacements de manette de jeu et vérifie la présence de «Siri Remote» sur la plate-forme tvOS Si un est détecté, il règle alors la télécommande pour permettre la rotation d'entrée.  Retour: Entrée de la manette de jeu Suivant: gamepad_axis_count © Copyright YoYo Games Ltd. 2021 Tous droits réservés
+
+
+
+
+  
+  option gamepad_set
+  Cette fonction peut être utilisée pour définir n'importe laquelle des options de gamepad disponibles. Vous devez fournir le "slot" du gamepad sur lequel vous souhaitez définir l'option, ainsi que la chaîne d'option à définir et la valeur à utiliser. La chaîne d'option disponible dépendra de la plateforme sur laquelle
+    plateforme sur laquelle le projet est exécuté, comme indiqué ci-dessous :
+   
+  
+    
+      
+        Option
+        Plate-forme
+        Description
+        Valeur
+      
+      
+        "allow_rotation"
+        tvOS
+        Définissez si la télécommande Siri sera verrouillée en rotation (c'est-à-dire qu'elle ne peut être utilisée que verticalement) ou non. Lorsqu'elle est déverrouillée (valeur true), la rotation de la commande modifiera l'entrée, de sorte qu'une rotation de 90º vers la gauche fera revenir le côté "droit" du pavé tactile vers le haut, etc.
+          Ainsi, une rotation de 90º vers la gauche fera revenir le côté "droit" du pavé tactile vers le "haut", etc... de sorte que toutes les entrées seront relatives à l'orientation de l'appareil. Lorsqu'il est verrouillé (valeur false), l'entrée ne sera pas modifiée par rapport à la position du contrôleur.
+          et sera toujours traitée comme si le contrôleur était en position verticale.
+        Booléen
+      
+      
+        "dpad_absolu"
+        tvOS
+        Définit si le pavé tactile de la télécommande Siri accepte une entrée absolue ou une entrée relative. En mode absolu (une valeur de true), le centre du pavé tactile est considéré comme la position (0,0) - c'est-à-dire où le stick analogique est au repos ou où le centre du dpad serait - et le mouvement autour de cette position générera une entrée.
+          du dpad - et le mouvement autour de cette position génère une entrée. Lorsqu'elle est définie comme relative (valeur false), la position (0,0) sera considérée comme étant celle où le toucher initial du pad est effectué et toutes les entrées seront générées à partir de cette position, et non pas à partir de la position du pad.
+          toutes les entrées seront générées à partir de cette position, et non du centre du pad.
+        Booléen
+      
+    
+  
+   
+  Syntaxe :
+  gamepad_set_option(device, option_name, value) ;
+  
+    
+      
+        Arguments
+        Description
+      
+      
+        dispositif
+        Quel est le "slot" du périphérique gamepad à définir.
+      
+      
+        nom_de_l'option
+        Le nom de l'option à définir (une chaîne, voir le tableau ci-dessus)
+      
+      
+        valeur
+        La valeur à définir pour l'option (peut être un booléen, un réel, un entier ou une chaîne de caractères - voir le tableau ci-dessus).
+      
+    
+  
+   
+  Les retours :
+  N/A
+   
+  Exemple :
+  for(var i = 0 ; i < 12 ; ++i ;) {
+     if gamepad_is_connected(i) && gamepad_get_description(i) == " tvOS SiriRemote " {
+     if gamepad_get_option(i, "allow_rotation") == false {
+     gamepad_set_option(i, "allow_rotation", true) ; }
+     }
+     }
+  
+  Le code ci-dessus passe en revue tous les emplacements de manettes de jeu et vérifie la présence de la "télécommande Siri" sur la plate-forme tvOS . S'il en détecte une, il configure alors la télécommande pour permettre la rotation des entrées.
+   
+   
+   
+  
+    
+      
+        Retour : Entrée de la manette de jeu
+        Suivant :  gamepad_axis_count 
+      
+    
+    Copyright YoYo Games Ltd. 2021 Tous droits réservés
   
   
   

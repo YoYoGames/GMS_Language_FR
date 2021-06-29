@@ -1,4 +1,37 @@
-game_end Avec cette fonction, vous pouvez terminer le jeu (et l' événement de fin de jeu sera déclenché). Cela ne se produira pas instantanément, mais plutôt à la fin de l'étape en cours, donc tout code que vous avez dans la même étape après que cette fonction a été appelée sera toujours exécuté. Veuillez noter que cette fonction a les restrictions suivantes: Sur Android appareils Android, appeler game_end() poussera l'application en arrière-plan, mais ne fermera pas l'application. Cela doit être fait par l'utilisateur. Sur iOS cela ne fera rien et échouera silencieusement. Sur UWP, XBoxOne, PS4 et Nintendo Switch il peut planter le jeu (ou au moins échouer silencieusement) et ne doit donc pas être utilisé. Sur HTML5, cela mettra fin au jeu, mais laissera l'utilisateur regarder un canevas vierge sur la page Web, et en tant que tel, il n'est pas recommandé de l'utiliser sur cette plate-forme cible. Sous Windows, Linux et Mac, la fonction termine simplement le jeu et ferme la fenêtre de jeu (un événement de fin de jeu sera déclenché). Syntaxe:game_end(); Retour:N/A Exemple:if keyboard_check_pressed(vk_escape) game_end(); Cela mettrait fin au jeu si le joueur appuie sur la touche «échapper».  Retour: Contrôle général du jeu Suivant:game_restart © Copyright YoYo Games Ltd. 2021 Tous droits réservés
+
+  
+  fin de la partie
+  Avec cette fonction, vous pouvez mettre fin au jeu (et l'événement de fin de jeu sera déclenché). Cela ne se produira pas instantanément, mais plutôt à la fin de l'étape actuelle.
+    que vous avez dans la même étape après l'appel de cette fonction sera toujours exécuté. Veuillez noter que cette fonction a les restrictions suivantes :
+  
+    Sur les appareils Android, l'appel à game_end() fera passer l'application en arrière-plan, mais ne la fermera pas. Cela doit être fait par l'utilisateur.
+    Sur iOS, il ne fera rien et échouera en silence.
+    Sur toutes les consoles (y compris l'UWP lorsqu'il est exécuté sur une Xbox), cela peut faire planter le jeu ou, au mieux, échouer silencieusement, et cela peut aussi être un échec de soumission, donc cette fonction ne doit pas être utilisée.
+    Sur HTML5, il mettra fin à la partie, mais laissera l'utilisateur face à une toile blanche sur la page web, et il n'est donc pas recommandé de l'utiliser sur cette plate-forme cible.
+    Sous Windows (y compris UWP sur un PC), Linux et macOS, la fonction met simplement fin au jeu et ferme la fenêtre de jeu (l'événement de fin de jeu sera également déclenché).
+    
+  
+   
+  Syntaxe :
+  game_end() ;
+   
+  Les retours :
+  N/A
+   
+  Exemple :
+  si keyboard_check_pressed(vk_escape) game_end() ;
+  Cela mettrait fin au jeu si le joueur appuyait sur la touche "Echap".
+   
+   
+   
+  
+    
+      
+        Retour : Contrôle général du jeu
+        Suivant : game_restart
+      
+    
+    Copyright YoYo Games Ltd. 2021 Tous droits réservés
   
   
   

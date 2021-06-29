@@ -1,4 +1,49 @@
-sprite_set_cache_size_ext Lors de la fusion d'images, HTML5 ne peut pas le faire de manière dynamique de la même manière qu'un exécutable pourrait être exécuté. Par conséquent, GameMaker Studio 2 doit temporairement enregistrer une copie mélangée de l'image et la charger. Cette fonction définit le nombre de copies mélangées du sprite donné pouvant être mises en cache avant que les anciennes ne soient écrasées. La valeur par défaut est 4. Ceci est appliqué à une seule sous-image donnée du sprite. Syntaxe:sprite_set_cache_size_ext(ind, index, max); Argument Description ind L'index de l'image-objet pour modifier la taille du cache. index La sous-image de ind pour modifier la taille du cache. max Le nombre maximal de copies mises en cache de l'image-objet pouvant être stockées. RetourN/A Exemple:sprite_set_cache_size_ext(sprite0, 0, 2); Cela définira le cache de sprite de la première sous-image de sprite0 à 2 copies.  Retour: Manipulation des sprites Suivant:sprite_save © Copyright YoYo Games Ltd. 2021 Tous droits réservés
+
+  
+  sprite_set_cache_size_ext
+  Lorsqu'il effectue le mélange d'images, HTML5 ne peut pas le faire de manière dynamique de la même manière qu'un exécutable. GameMaker Studio 2 doit donc enregistrer temporairement une copie mélangée de l'image et la charger. Cette fonction définit le nombre de copies mélangées
+    du sprite donné peuvent être mises en cache avant que les anciennes ne soient écrasées. La valeur par défaut est 4. Ceci est appliqué à une seule sous-image donnée du sprite.
+   
+  Syntaxe :
+  sprite_set_cache_size_ext(ind, index, max) ;
+  
+    
+      
+        Arguments
+        Description
+      
+      
+        ind
+        L'index du sprite dont la taille du cache doit être modifiée.
+      
+      
+        indice
+        La sous-image de ind pour changer la taille du cache.
+      
+      
+        max
+        Le nombre maximum de copies en cache du sprite qui peuvent être stockées.
+      
+    
+  
+   
+  Renvoie à
+  N/A
+   
+  Exemple :
+  sprite_set_cache_size_ext(sprite0, 0, 2) ;
+  Le cache du sprite de la première sous-image du sprite0 sera ainsi réglé sur 2 copies.
+   
+   
+   
+  
+    
+      
+        Retour : Manipulation des sprites
+        Suivant : sprite_save
+      
+    
+    Copyright YoYo Games Ltd. 2021 Tous droits réservés
   
   
   

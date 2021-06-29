@@ -1,6 +1,44 @@
-ds_queue_dequeue Cette fonction retirera la valeur de tête de la file d'attente DS, la supprimera de la file d'attente et retournera la valeur à stocker dans une variable. Si la file d'attente est vide, la fonction retournera la constante undefined, sinon il renverra la valeur réelle ou chaîne contenue dans la file d'attente. Syntaxe:ds_queue_dequeue(id); Argument Description id L'identifiant de la file d'attente à partir de laquelle retirer la file d'attente. Retour:Data type value stored in the queue or undefined Exemple:if !ds_queue_empty(move_queue)     {
-         var xx = ds_queue_dequeue(move_queue);     var yy = ds_queue_dequeue(move_queue);     move_towards_point(xx, yy, 4);     }
-   Le code ci-dessus vérifie la file d'attente DS indexée dans la variable "move_queue" pour voir si elle est vide, et si ce n'est pas le cas, il retire ensuite les deux valeurs de la tête de la file d'attente et les utilise pour définir une direction de déplacement.  Retour: Files d'attente DS Suivant:ds_queue_enqueue © Copyright YoYo Games Ltd. 2021 Tous droits réservés
+
+  
+  ds_queue_dequeue
+  Cette fonction déchargera la valeur de tête de la file d'attente DS, la supprimant de la file d'attente et renvoyant la valeur à stocker dans une variable. Si la file d'attente est vide, la fonction renvoie la constante
+   indéfinie, sinon elle renverra la valeur réelle ou la chaîne de caractères contenue dans la file.
+   
+  Syntaxe :
+  ds_queue_dequeue(id) ;
+  
+    
+      
+        Arguments
+        Description
+      
+      
+        id
+        L'identifiant de la file d'attente à décharger.
+      
+    
+  
+   
+   
+  Les retours :
+  Valeur du type de données stockée dans la file d'attente ou indéfinie
+   
+  Exemple :
+  if !ds_queue_empty(move_queue) {
+     var xx = ds_queue_dequeue(move_queue) ; var yy = ds_queue_dequeue(move_queue) ; move_towards_point(xx, yy, 4) ; }
+  
+  Le code ci-dessus vérifie la file d'attente DS indexée dans la variable "move_queue" pour voir si elle est vide, et si elle ne l'est pas, il met en file d'attente les deux valeurs de la tête de la file et les utilise pour définir une direction pour le mouvement.
+   
+   
+   
+  
+    
+      
+        Retour : Files d'attente DS
+        Suivant : ds_queue_enqueue
+      
+    
+    Copyright YoYo Games Ltd. 2021 Tous droits réservés
   
   
   

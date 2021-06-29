@@ -1,4 +1,74 @@
- La gestion des fichiers À un moment donné, lors de la création de votre jeu, il sera nécessaire de stocker des informations en externe et de pouvoir récupérer ces informations. Par exemple, vous souhaiterez peut-être stocker des informations de connexion, des scores élevés, ou peut-être la progression du joueur à travers vos niveaux. Quelle que soit la raison, vous aurez besoin de savoir comment utiliser les différentes fonctions de fichiers disponibles lorsque vous travaillez avec GameMaker Studio 2. Il est très important de réaliser que GameMaker Studio 2 est sandbox par défaut, ce qui signifie qu'il ya un certain nombre de limites et les complications mineures lors de l' utilisation des fonctions du système de fichiers qui sont disponibles, et il convient de noter aussi que le système de fichiers fonctionnera un peu différemment en fonction de la plate-forme que vous ciblez. Pour plus d'informations, veuillez consulter la section suivante: Le système de fichiers Vous pouvez désactiver le sandbox sur les cibles du bureau ( Windows, macOS et Ubuntu ( Linux )) à partir des options de jeu pour la plate-forme choisie, ce qui signifie que vous pouvez ensuite enregistrer et charger de n'importe où, dans les limites des autorisations du système d'exploitation. Steam vous a accordé la permission d'utiliser leur API dédiée avec votre jeu, vous constaterez qu'un nouvel ensemble de fonctions de fichiers est également disponible. Celles-ci sont expliquées dans la section API Steam de ce manuel. Enfin, vous devez également noter qu'il existe des différences distinctes entre certaines plates-formes cibles qui seraient prises en compte lors de l'utilisation des fonctions de fichiers. Ceux-ci sont: iOS: sur iOS, si vous chargez un fichier inclus à partir d'un dossier, c'est-à-dire: avec un chemin quelque chose comme "Backgrounds/background1.png ", vous n'avez PAS besoin d'inclure le dossier dans le chemin et il suffit de fournir le nom du fichier. Sur toutes les autres plates-formes, vous devez fournir le (s) dossier (s) dans le cadre du chemin d'accès au fichier. macOS et Ubuntu ( Linux ): sur macOS et Ubuntu, les noms de fichiers et les chemins sont sensibles à la casse sur ces plates-formes, et donc pour éviter tout problème potentiel, GameMaker Studio 2 fera automatiquement en sorte que tous les noms / chemins utilisent par défaut des minuscules. HTML5: sur HTML5, l'enregistrement et le chargement vers et depuis le stockage local fonctionneront comme expliqué dans les différentes pages de fonction, cependant si vous chargez un fichier depuis un serveur, vous ne devez utiliser que la fonction buffer_load_async() car le chargement synchrone est obsolète sur la plupart des navigateurs et sera finalement obsolète. Notez également que vous ne pouvez pas créer ou détruire des répertoires dans le stockage local du navigateur. Vous trouverez des informations sur les différentes fonctions de fichier dans les pages suivantes: Système de fichiers Fichiers Ini Fichiers texte Fichiers binaires Répertoires de fichiers GameMaker Studio 2 comprend également un certain nombre de fonctions d' encodage et de hachage de fichiers et de données, que vous pouvez trouver ici: Encodage et hachage Notez également que certaines fonctions de base de fichiers pour la sauvegarde de jeux sont disponibles dans les pages suivantes (sachez que ces fonctions sont conçues pour que les débutants puissent mettre en place un système de sauvegarde de base le plus rapidement possible, mais pour les projets plus complexes, vous devez créer votre propre système de sauvegarde en utilisant les fonctions répertoriées dans les sections ci-dessus): game_loadgame_load_buffergame_savegame_save_buffer Enfin, vous pouvez trouver des fonctions de tampon plus avancées qui peuvent être utilisées pour charger et enregistrer des données sur les pages suivantes: buffer_savebuffer_save_extbuffer_save_asyncbuffer_loadbuffer_load_extbuffer_load_asyncbuffer_load_partialbuffer_async_group_beginbuffer_async_group_optionbuffer_async_group_end Retour: Référence GML Suivant: Tampons © Copyright YoYo Games Ltd. 2021 Tous droits réservés
+
+  
+  Traitement des fichiers
+  À un moment donné, lors de la création de votre jeu, il sera nécessaire de stocker des informations en externe et de pouvoir les récupérer. Par exemple, vous souhaiterez peut-être stocker des informations de connexion, ou des scores élevés, ou encore la progression du joueur dans vos niveaux.
+    niveaux. Quelle que soit la raison, vous devrez savoir comment utiliser les différentes fonctions de fichiers qui sont à votre disposition lorsque vous travaillez avec GameMaker Studio 2.
+  Il est très important de savoir que GameMaker Studio 2 est une Sandbox par défaut, ce qui signifie qu'il existe un certain nombre de limites et de complications mineures lors de l'utilisation des fonctions du système de fichiers disponibles.
+    Il convient également de noter que le système de fichiers fonctionnera de manière légèrement différente selon la plate-forme que vous ciblez. Pour plus d'informations à ce sujet, veuillez consulter la section suivante :
+  
+    Le système de fichiers
+  
+  Vous pouvez désactiver le sandboxing sur les cibles de bureau(Windows, macOS et Ubuntu(Linux)) à partir des options de jeu de la plate-forme choisie, ce qui signifie que vous pouvez alors sauvegarder et charger à partir de n'importe où, dans les limites des autorisations du système d'exploitation.
+  Si Steam vous a autorisé à utiliser son API dédiée avec votre jeu, vous découvrirez qu'un nouvel ensemble de fonctions de fichiers est également à votre disposition. Celles-ci sont expliquées dans la section APISteam de ce manuel.
+    manuel.
+  Enfin, vous devez également noter qu'il existe des différences distinctes entre certaines plates-formes cibles qui seront prises en compte lors de l'utilisation des fonctions de fichiers. Ces différences sont les suivantes :
+  
+    iOS: Sur iOS, si vous chargez un fichier inclus à partir d'un dossier, c'est-à-dire avec un chemin d'accès tel que "Backgrounds/background1.png ", vous n'avez PAS besoin d'inclure le dossier dans le chemin d'accès et il suffit de fournir le nom du fichier.
+      suffit. Sur toutes les autres plateformes, vous devez fournir le(s) dossier(s) dans le chemin d'accès au fichier.
+    macOS et Ubuntu (Linux): Sur macOS et Ubuntu, les noms de fichiers et les chemins d'accès sont sensibles à la casse sur ces plates-formes. Pour éviter tout problème potentiel, GameMaker Studio 2 utilise automatiquement les minuscules par défaut pour tous les noms et chemins d'accès.
+    HTML5: En HTML5, l'enregistrement et le chargement depuis et vers le stockage local fonctionneront comme expliqué dans les différentes pages de fonctions. Cependant, si vous chargez un fichier depuis un serveur, vous devez uniquement utiliser la fonction buffer_load_async() car le chargement synchrone a été déprécié sur la plupart des navigateurs et sera éventuellement obsolète. Notez également que vous ne pouvez pas créer ou détruire des répertoires dans le stockage local du navigateur.
+  
+  Vous trouverez des informations sur les différentes fonctions des fichiers dans les pages suivantes :
+   
+  
+    Système de fichiers
+    Fichiers Ini
+    Fichiers texte
+    Fichiers binaires
+    Répertoires de fichiers
+  
+   
+  GameMaker Studio 2 comprend également un certain nombre de fonctions permettant de coder et de hacher des fichiers et des données, que vous pouvez trouver ici :
+   
+  
+    Codage et hachage
+  
+   
+  Notez également qu'il existe quelques fonctions de base pour sauvegarder des jeux à partir des pages suivantes (soyez conscient que ces fonctions sont conçues pour les débutants afin de mettre en place un système de sauvegarde de base aussi rapidement que possible, mais pour des projets plus complexes,
+    vous devriez créer votre propre système de sauvegarde en utilisant les fonctions listées dans les sections ci-dessus) :
+   
+  
+    chargement du jeu
+    tampon de chargement de jeu
+    sauvegarde du jeu
+    tampon_sauvegarde_jeu
+  
+   
+  Enfin, vous trouverez des fonctions de tampon plus avancées pouvant être utilisées pour le chargement et la sauvegarde des données dans les pages suivantes :
+   
+  
+    Sauvegarde de la mémoire tampon
+    tampon_save_ext
+    buffer_save_async
+    Chargement de la mémoire tampon
+    buffer_load_ext
+    buffer_load_async
+    Chargement partiel de la mémoire tampon
+    tampon_async_groupe_début
+    option_groupe_asynchrone_tampon
+    buffer_async_group_end
+  
+   
+   
+   
+  
+    
+      
+        Retour : RéférenceGML
+        Suivant : Tampons
+      
+    
+    Copyright YoYo Games Ltd. 2021 Tous droits réservés
   
   
   

@@ -1,4 +1,46 @@
- Obtenir les données de mosaïque dans la cellule Avec cette action, vous pouvez obtenir les données de tuile pour une cellule de tuile sur une couche de carte de tuile. Les données de mosaïque sont simplement une valeur qui reflète l'index de la mosaïque avec les valeurs de retournement, de miroir et de rotation, ainsi que tous les masques de mosaïque personnalisés que vous avez utilisés. Avec cette action, vous fournissez d'abord la couche à cibler en utilisant le nom de la couche (une chaîne) tel que défini dans l'éditeur de salle, puis la colonne et la ligne de la couche de carte de tuiles pour lesquelles obtenir les données de tuile. La "cellule" est la zone sur la grille de la carte de tuiles qui contient la tuile dont tu veux obtenir les données, donc si vos tuiles sont 16x16, par exemple, et la pièce est de 1024x768, la tuile-map aura 64 colonnes et 48 lignes. REMARQUE: le calque sélectionné doit avoir été défini comme un calque de mosaïque dans l'éditeur de salle, sinon vous risquez d'obtenir des erreurs. La valeur retournée sera alors stockée dans la variable cible qui peut avoir été créée précédemment ou peut être une nouvelle temporaire (si vous cochez la case "Temp"). Pour plus d'informations sur les données de mosaïque, veuillez consulter la GML sur les fonctions de mappage de mosaïques. Syntaxe de l'action: Arguments: Argument Description Layer La couche à partir de laquelle obtenir la tuile Column La colonne (de gauche à droite) de la cellule Exemple: Le code de bloc d'action ci-dessus parcourt chaque cellule de tuile de la pièce, récupère les données de tuile pour la cellule, les met en miroir, puis définit à nouveau la cellule.  Retour: Actions de tuile Suivant: Définir la transformation des données de tuile © Copyright YoYo Games Ltd. 2021 Tous droits réservés
+
+  
+   Obtenir les données de la tuile dans la cellule
+  Avec cette action, vous pouvez obtenir les données de tuile pour une cellule de tuile sur une couche de carte de tuile. Les données de la tuile sont simplement une valeur qui reflète l'index de la tuile ainsi que les valeurs d'inversion, de miroir et de rotation,
+    ainsi que tout masque de tuile personnalisé que vous avez utilisé. Avec cette action, vous fournissez d'abord le calque à cibler en utilisant le nom du calque (une chaîne) tel que défini dans l'éditeur de pièce, puis la colonne et la ligne du calque de carte de tuiles pour lequel vous souhaitez obtenir les données de tuiles
+    pour. La "cellule" est la zone de la grille de la carte des tuiles qui contient la tuile dont vous voulez obtenir les données, donc si vos tuiles sont 16x16, par exemple, et que la pièce est 1024x768, la carte des tuiles aura 64 colonnes et 48 lignes.
+  REMARQUE: La couche sélectionnée doit avoir été définie comme une couche de carte de tuile dans l'éditeur de pièce, sinon vous pouvez obtenir des erreurs.
+  La valeur retournée sera alors stockée dans la variable cible qui peut avoir été créée précédemment ou être une nouvelle variable temporaire (si vous cochez la case "Temp"). Pour plus d'informations sur les données de tuiles, veuillez consulter la section GML sur les fonctions de carte de tuiles.
+   
+  Syntaxe de l'action :
+  
+  Arguments :
+  
+    
+      
+        Arguments
+        Description
+      
+      
+        Couche
+        La couche à partir de laquelle obtenir la tuile
+      
+      
+        Colonne
+        La colonne (de gauche à droite) de la cellule
+      
+    
+  
+   
+  Exemple :
+  Le code du bloc d'action ci-dessus passe en boucle par chaque cellule de tuile dans la pièce, récupère les données de tuile pour la cellule, fait un miroir, puis définit à nouveau la cellule.
+    les données de tuiles de la cellule, les met en miroir, puis remet la cellule en place.
+   
+   
+   
+  
+    
+      
+        Retour : Actions sur les tuiles
+        Suivant : Transformer les données des tuiles
+      
+    
+    Copyright YoYo Games Ltd. 2021 Tous droits réservés
   
   
   

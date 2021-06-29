@@ -1,8 +1,35 @@
-current_weekday Cette variable en lecture seule renverra le jour de la semaine comme valeur, où dimanche est 0 et samedi est 6. Syntaxe:current_weekday; Retour:Real Exemple:var day; switch(current_weekday)
-         {
-         case 0: day = "Sunday"; break;     case 1: day = "Monday"; break;     case 2: day = "Tuesday"; break;     case 3: day = "Wednesday"; break;     case 4: day = "Thursday";
-    break;     case 5: day = "Friday"; break;     case 6: day = "Saturday"; break;     }
-     draw_text(32, 32, "Today is " + day +"."); Le code ci-dessus utilise le current_weekday value pour définir une variable avec le jour correct dans le texte, puis dessine celle-ci pour que l'utilisateur puisse la voir.  Retour: Date et heure Suivant:current_month © Copyright YoYo Games Ltd. 2021 Tous droits réservés
+
+
+
+
+  
+  jour de la semaine en cours
+  Cette variable en lecture seule renvoie le jour de la semaine sous forme de valeur, où le dimanche est égal à 0 et le samedi à 6.
+   
+  Syntaxe :
+  jour de la semaine en cours ;
+   
+  Les retours :
+  Real
+   
+  Exemple :
+  var day ; switch(current_weekday)
+     {
+     cas 0 : jour = "dimanche" ; pause ; cas 1 : jour = "lundi" ; pause ; cas 2 : jour = "mardi" ; pause ; cas 3 : jour = "mercredi" ; pause ; cas 4 : jour = "jeudi" ;
+    pause ; cas 5 : jour = "vendredi" ; pause ; cas 6 : jour = "samedi" ; pause ; }
+     draw_text(32, 32, "Today is " + day +".") ;
+  Le code ci-dessus utilise la valeur current_weekday pour définir une variable avec le jour correct en texte, puis l'affiche pour que l'utilisateur puisse le voir.
+   
+   
+   
+  
+    
+      
+        Retour : Date et heure
+        Suivant : current_month
+      
+    
+    Copyright YoYo Games Ltd. 2021 Tous droits réservés
   
   
   

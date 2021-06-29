@@ -1,5 +1,44 @@
-instance_activate_layer Avec cette fonction, vous pouvez activer un calque qui a été précédemment désactivé. Vous devez fournir l' ID de couche, qui peut être soit le nom de la couche tel qu'écrit dans l'éditeur de code (sous forme de chaîne), soit la valeur réelle de l'ID de couche renvoyée par le layer_create() et toutes les instances désactivées sur ce calque seront à nouveau activées. Notez que si vous avez désactivé un calque qui a des instances persistantes, vous devrez réactiver le calque à nouveau avec cette fonction avant de changer de pièce, sinon les instances persistantes ne seront pas reportées et seront supprimées. Notez également que l'activation n'est pas instantanée et qu'une instance ainsi activée ne sera considérée comme active qu'à la fin de l'événement au cours duquel la fonction a été appelée. Syntaxe:instance_activate_layer(layer_id); Argument Description layer_id La chaîne d'ID de couche (ou la valeur) à utiliser Retour:N/A Exemple:instance_activate_all(); var _vx = camera_get_view_x(view_camera[0]); var _vy = camera_get_view_y(view_camera[0]); instance_deactivate_region(view_xview[0] - 64, view_yview - 64, _vx + 128, _vy + 128, false, false); instance_activate_layer("Player_Layer");
-   Le code ci-dessus active toutes les instances dans la salle puis désactive celles qui sont en dehors des limites de la vue caméra actuelle, à l'exception des instances sur la couche "Player_Layer" qui sont réactivées à nouveau à la fin.  Retour: Désactivation d'instances Suivant:instance_deactivate_all © Copyright YoYo Games Ltd. 2021 Tous droits réservés
+
+  
+  instance_activate_layer
+  Cette fonction vous permet d'activer une couche qui a été désactivée précédemment. Vous devez fournir l'ID de la couche, qui peut être soit le nom de la couche tel qu'il est écrit dans l'éditeur de code (sous forme de chaîne), soit la valeur réelle de l'ID de la couche telle qu'elle est renvoyée par la fonction
+    par l'application layer_create() et toutes les instances désactivées sur cette couche seront à nouveau activées. Notez que si vous avez désactivé une couche qui a des instances persistantes, vous devrez réactiver la couche à nouveau.
+    vous devrez réactiver la couche à nouveau avec cette fonction avant de changer de salle, sinon les instances persistantes ne seront pas reportées et seront rejetées. Notez également que l'activation n'est pas instantanée, et qu'une instance qui a été activée de cette manière ne sera pas considérée comme une instance persistante.
+    de cette manière ne sera pas considérée comme active avant la fin de l'événement dans lequel la fonction a été appelée.
+   
+  Syntaxe :
+  instance_activate_layer(layer_id) ;
+  
+    
+      
+        Arguments
+        Description
+      
+      
+        identifiant de la couche
+        La chaîne (ou la valeur) d'identification de la couche à utiliser.
+      
+    
+  
+   
+  Les retours :
+  N/A
+   
+  Exemple :
+  instance_activate_all() ; var _vx = camera_get_view_x(view_camera[0]) ; var _vy = camera_get_view_y(view_camera[0]) ; instance_deactivate_region(view_xview[0] - 64, view_yview - 64, _vx + 128, _vy + 128, false, false) ; instance_activate_layer("Player_Layer") ;
+  
+  Le code ci-dessus active toutes les instances dans la pièce et désactive celles qui se trouvent en dehors des limites de la vue actuelle de la caméra, à l'exception des instances du calque "Player_Layer" qui sont réactivées à la fin.
+   
+   
+   
+  
+    
+      
+        Retour : Désactiver les instances
+        Suivant : instance_deactivate_all
+      
+    
+    Copyright YoYo Games Ltd. 2021 Tous droits réservés
   
   
   

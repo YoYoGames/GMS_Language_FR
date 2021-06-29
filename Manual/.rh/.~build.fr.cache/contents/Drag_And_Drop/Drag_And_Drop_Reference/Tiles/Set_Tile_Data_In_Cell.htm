@@ -1,4 +1,54 @@
- Définir les données de mosaïque dans la cellule Avec cette action, vous pouvez définir les données de mosaïque pour une cellule de mosaïque sur une couche de carte de mosaïque. Les données de mosaïque sont simplement une valeur qui reflète l'index de la mosaïque avec les valeurs de retournement, de miroir et de rotation, ainsi que tous les masques de mosaïque personnalisés que vous avez utilisés. Avec cette action, vous fournissez d'abord la couche à cibler en utilisant le nom de la couche (une chaîne) tel que défini dans l'éditeur de salle, puis la colonne et la ligne sur la couche de carte de tuiles pour lesquelles définir les données de tuile. La "cellule" est la zone de la grille de mosaïques qui contient la mosaïque pour laquelle vous souhaitez définir les données. Par conséquent, si vos mosaïques mesurent 16 x 16, par exemple, et que la pièce fait 1024 x 768, la carte des mosaïques aura 64 colonnes et 48 lignes. REMARQUE: le calque sélectionné doit avoir été défini comme un calque de mosaïque dans l'éditeur de salle, sinon vous risquez d'obtenir des erreurs. Le dernier argument de l'action est les données de tuile elles-mêmes. Vous devez normalement récupérer les données de mosaïque pour la cellule de mappage de mosaïques à l'aide de l'action Obtenir les données de mosaïque dans la cellule, puis les manipuler à l'aide de l'action Définir la transformation des données de mosaïque avant de la redéfinir avec cette action. Pour plus d'informations sur les données de mosaïque, veuillez consulter la GML sur les fonctions de mappage de mosaïques. Syntaxe de l'action: Arguments: Argument Description Layer La couche avec la carte de tuiles à cibler Columns La position de la colonne de cellule le long de l'axe horizontal pour définir les données de mosaïque pour Row La position de la ligne de cellule le long de l'axe vertical pour définir les données de tuile Data Les données de mosaïque à utiliser pour définir la cellule Exemple: Le code de bloc d'action ci-dessus parcourt chaque cellule de tuile de la pièce, récupère les données de tuile pour la cellule, les met en miroir, puis définit à nouveau la cellule.  Retour: Actions de tuile Suivant: Obtenir les données de mosaïque dans la cellule © Copyright YoYo Games Ltd. 2021 Tous droits réservés
+
+  
+   Définir les données de la tuile dans la cellule
+  Cette action vous permet de définir les données de tuile pour une cellule de tuile sur une couche de carte de tuile. Les données de la tuile sont simplement une valeur qui reflète l'index de la tuile ainsi que les valeurs d'inversion, de miroir et de rotation,
+    ainsi que tout masque de tuile personnalisé que vous avez utilisé. Avec cette action, vous fournissez d'abord le calque à cibler en utilisant le nom du calque (une chaîne) tel que défini dans l'éditeur de pièce, puis la colonne et la ligne sur le calque de carte de tuiles pour définir les données de tuile
+    pour. La "cellule" est la zone de la grille de la carte des tuiles qui contient la tuile pour laquelle vous voulez définir les données, donc si vos tuiles sont 16x16, par exemple, et que la pièce est 1024x768, la carte des tuiles aura 64 colonnes et 48 lignes.
+  REMARQUE: La couche sélectionnée doit avoir été définie comme une couche de carte de tuile dans l'éditeur de pièce, sinon vous pouvez obtenir des erreurs.
+  Le dernier argument de l'action est la donnée de tuile elle-même. Normalement, vous devriez récupérer les données de tuiles pour la cellule de carte de tuiles en utilisant l'action Obtenir les données de tuiles dans la cellule, puis les manipuler en utilisant l'action Transformer les données de tuiles avant de les définir à nouveau avec cette action. Pour plus d'informations sur les données de tuiles, veuillez consulter la section GML sur les fonctions de carte de tuiles.
+   
+  Syntaxe de l'action :
+  
+  Arguments :
+  
+    
+      
+        Arguments
+        Description
+      
+      
+        Couche
+        La couche avec la carte des tuiles à cibler
+      
+      
+        Colonnes
+        La position de la colonne de la cellule le long de l'axe horizontal pour définir les données de la tuile.
+      
+      
+        Rangée
+        La position de la rangée de cellules le long de l'axe vertical pour définir les données de la tuile.
+      
+      
+        Données
+        Les données de la tuile à utiliser pour définir la cellule
+      
+    
+  
+   
+  Exemple :
+  Le code du bloc d'action ci-dessus boucle sur chaque cellule de tuile de la pièce, récupère les données de tuile de la cellule, les met en miroir, puis remet la cellule en place.
+    les données de tuiles de la cellule, les met en miroir, puis remet la cellule en place.
+   
+   
+   
+  
+    
+      
+        Retour : Actions sur les tuiles
+        Suivant : Obtenir les données de la tuile dans la cellule
+      
+    
+    Copyright YoYo Games Ltd. 2021 Tous droits réservés
   
   
   

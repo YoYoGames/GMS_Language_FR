@@ -1,4 +1,54 @@
- Formulaires de base GameMaker Studio 2 a toute une collection de fonctions disponibles pour dessiner différentes formes et formes. Ces fonctions ne doivent être utilisées que dans l'événement draw d'une instance (vous pouvez les utiliser ailleurs mais vous ne verrez rien!) Et créer des effets purement graphiques, ce qui signifie qu'elles ne génèrent pas d'événements de collision car ceux-ci ne peuvent être faits que à travers le sprite ou le masque de collision qui a été affecté à une instance. Toutes ces fonctions sont affectées par la couleur de dessin actuelle, l'alpha et le mode de fusion (voir la section Couleur ). IMPORTANT! Les lignes, les points et les formes sont toujours dessinés à 1: 1 avec la résolution d'écran, quel que soit l'événement dans lequel ils sont dessinés. IMPORTANT! Ces fonctions briseront le lot de sommets et augmenteront le nombre de permutations de texture dans votre jeu, donc avoir plusieurs appels à l'un d'entre eux dans un seul cadre de dessin peut entraîner des problèmes de performance. Les fonctions de dessin suivantes existent pour dessiner des formes de base. Notez que ces fonctions sont lentes à appeler et fournies uniquement comme outils de dessin de base: draw_arrowdraw_circledraw_circle_colourdraw_ellipsedraw_ellipse_colourdraw_linedraw_line_colourdraw_line_widthdraw_line_width_colourdraw_pointdraw_point_colourdraw_rectangledraw_rectangle_colourdraw_roundrectdraw_roundrect_colourdraw_roundrect_extdraw_roundrect_colour_extdraw_triangledraw_triangle_colour Les fonctions suivantes sont également incluses dans GameMaker Studio 2 pour définir la précision du dessin et dessiner des éléments très spécifiques: draw_set_circle_precisiondraw_buttondraw_healthbardraw_path Retour: Dessin Suivant: Sprites et tuiles © Copyright YoYo Games Ltd. 2021 Tous droits réservés
+
+  
+  Formes de base
+  GameMaker Studio 2 dispose de toute une série de fonctions permettant de dessiner différentes formes. Ces fonctions ne doivent être utilisées que dans l'événement draw d'une instance (vous pouvez les utiliser ailleurs mais vous ne verrez rien !
+    ailleurs mais vous ne verrez rien !) et créent des effets purement graphiques, ce qui signifie qu'elles ne génèrent pas d'événements de collision car ceux-ci ne peuvent être réalisés qu'à travers le sprite ou le masque de collision qui a été assigné à une instance. Toutes ces fonctions
+    sont affectées par la couleur de dessin, l'alpha et le mode de fusion actuels (voir la section sur la couleur).
+  IMPORTANT ! Les lignes, points et formes sont toujours dessinés à 1:1 avec la résolution de l'écran, quel que soit l'événement dans lequel ils sont dessinés.
+  IMPORTANT ! Ces fonctions vont casser le vertex batching et augmenter le nombre de changements de texture dans votre jeu, donc avoir plusieurs appels à l'une d'entre elles dans une seule image de dessin peut conduire à des problèmes de performance.
+  Les fonctions de dessin suivantes permettent de dessiner des formes de base. Notez que ces fonctions sont lentes à appeler et ne sont fournies que comme outils de dessin de base :
+   
+  
+    dessiner_flèche
+    dessiner_cercle
+    dessiner_cercle_couleur
+    dessiner_ellipse
+    dessiner_ellipse_couleur
+    dessiner_ligne
+    dessiner_ligne_couleur
+    largeur de ligne
+    largeur_de_ligne_couleur
+    dessiner_point
+    dessiner_point_couleur
+    dessiner_rectangle
+    dessiner_rectangle_couleur
+    dessiner_roundrect
+    dessiner_arrondi_couleur
+    draw_roundrect_ext
+    draw_roundrect_colour_ext
+    dessiner_triangle
+    dessiner_triangle_couleur
+  
+   
+  Les fonctions suivantes sont également incluses dans GameMaker Studio 2 pour définir la précision du dessin et dessiner certaines choses très spécifiques :
+   
+  
+    draw_set_circle_precision
+    bouton de dessin
+    dessiner_barre de santé
+    dessiner_chemin
+  
+   
+   
+   
+  
+    
+      
+        Retour : Dessin
+        Suivant : Sprites et tuiles
+      
+    
+    Copyright YoYo Games Ltd. 2021 Tous droits réservés
   
   
   

@@ -1,13 +1,48 @@
-while Le GameMaker Language vous permet d'effectuer des boucles de plusieurs manières, l'une des plus importantes étant la while boucle. Cette fonction de boucle a la forme:while (<expression>)     {     <statement>;     <statement>;     ...     } Ici, vous avez une instruction qui est répétée encore et encore en fonction des résultats de l'évaluation d'une expression, c'est-à-dire: avec un while boucle, tant que l'expression évalue à true, l'instruction (qui peut également être un bloc de code de plusieurs instructions avec des accolades {} ) est exécuté. Vous trouverez ci-dessous un exemple d'une manière typique d'utiliser "while":while (place_meeting(x, y, obj_Wall))     {
-         x -= 1;     }
-   Le code ci - dessus vérifie pour une collision entre l'instance d'appel et une instance « mur », et il exécutera de multiples itérations s tandis que l' un est en cours - déplacer l'instance gauche par un pixel - jusqu'à ce que l'instance ne soit plus en cas de collision. Quand devriez-vous utiliser un while boucle? Il doit être utilisé chaque fois que vous souhaitez répéter une ou plusieurs déclarations, mais que vous ne savez pas - ou ne vous souciez pas - du nombre de fois qu'il doit répéter, en gardant à l'esprit que si l'évaluation initiale est false, les instructions peuvent même ne pas être exécutées. Veuillez noter que vous devez être très prudent avec votre while boucles! Vous pouvez facilement faire des boucles infinies, auquel cas votre jeu se bloque et ne réagit plus à aucune entrée de l'utilisateur et doit être fermé de force. Par exemple:while (!place_free(x, y))     {
-         x = random(room_width);     y = random(room_height);     }
-   Maintenant, le code ci-dessus peut fonctionner correctement, mais il peut également provoquer une boucle infinie si l'instance est incapable de trouver une position vide vers laquelle se déplacer, ce qui entraînera le blocage du jeu. Si vous vous trouvez dans une position où ce genre de chose est une possibilité, alors vous devez soit utiliser un autre type de boucle non bloquant, soit utiliser une variable supplémentaire check dans l'expression (vous pouvez utiliser plusieurs expressions avec le and(&& ), or(|| ) et xor(^^ ) Opérateur s pour le contrôle):var _check = 0; while ((!place_free(x, y)) && (_check < 100))     {
-         x = random(room_width);     y = random(room_height);     _check += 1;     }
-     if _check >= 100     {     // code failed, so deal with it     } Vous pouvez également utiliser le break pour sortir de la boucle, par exemple, le code suivant générera 100 nombres aléatoires puis continuera, même si le while l'évaluation sera toujours true:var i = 0; while (true)     {
-         x[i] = random(room_width);     y[i] = random(room_height);     if ((i++) >= 100)         {         break;         }     }
-   Vous pouvez également utiliser lecontinue déclaration dans un while boucle. L'utilisation de ceci mettra fin à l'itération de la boucle actuelle et redémarrera la boucle sur une nouvelle itération, par exemple:var file = file_text_open_read("Game_Data.txt"); var _num = 0; while (!file_text_eof(file))     {     var _s = file_text_readln(file);     if (_s == "")         {         continue;       }        str[num++] = _s;     } file_text_close(file);
-   Ce code ci-dessus ouvrira un fichier et en lira une ligne à chaque itération de boucle jusqu'à ce que la fin du contenu du fichier soit atteinte. Si la ligne en cours de lecture est une chaîne vide, l'itération de la boucle en cours se termine à l'aide du continue et une nouvelle itération sera lancée, sinon la chaîne est ajoutée dans un tableau et la position du tableau est incrémentée. Pour plus d'exemples de fonctions de boucle, veuillez consulter les sections sur repeat, do... until, et for.  Retour: Caractéristiques linguistiques Suivant:do / until © Copyright YoYo Games Ltd. 2021 Tous droits réservés
+
+  
+  tandis que
+  Le langage GameMaker permet d'effectuer des boucles de plusieurs façons, l'une des plus importantes étant la boucle while. Cette fonction de boucle a la forme :
+  while (<expression>) { <statement> ; <statement> ;... }
+  Il s'agit d'une instruction qui est itérée encore et encore en fonction des résultats de l'évaluation d'une expression.
+    une boucle while, tant que l'expression est évaluée à true, l'instruction (qui peut également être un bloc de code composé de plusieurs instructions entre crochets {}) est exécutée. Vous trouverez ci-dessous
+    un exemple d'utilisation typique de "while" :
+  while (place_meeting(x, y, obj_Wall)) {
+     x -= 1 ; }
+  
+  Le code ci-dessus vérifie la présence d'une collision entre l'instance appelante et une instance de "mur". 
+    l'instance vers la gauche d'un pixel, jusqu'à ce que l'instance ne soit plus en collision.
+  Quand faut-il utiliser une boucle while? Elle doit être utilisée chaque fois que vous voulez répéter une ou plusieurs instructions, sans savoir - ou sans vous soucier - du nombre de répétitions.
+    l'évaluation initiale est false, il se peut que les instructions ne soient même pas exécutées.
+  Veuillez noter que vous devez être très prudent avec vos boucles while! Vous pouvez facilement faire des boucles infinies, auquel cas votre jeu se bloquera et ne réagira plus à aucune entrée utilisateur et devra être fermé de force. Par exemple :
+  while (!place_free(x, y)) {
+     x = random(room_width) ; y = random(room_height) ; }
+  
+  Maintenant, le code ci-dessus peut fonctionner correctement, mais il peut aussi causer une boucle infinie si l'instance est incapable de trouver une position vide où se déplacer, et cela fera que le jeu se bloquera. Si vous vous trouvez dans une position où ce genre de chose est possible,
+    alors vous devriez soit utiliser un autre type de boucle non-bloquante, soit utiliser une vérification de variable supplémentaire dans l'expression (vous pouvez utiliser plusieurs expressions avec le and (&&),
+    or (||) et xor (^^)pour la vérification) :
+  var _check = 0 ; while ((!place_free(x, y)) && (_check < 100)) {
+     x = random(room_width) ; y = random(room_height) ; _check += 1 ; }
+     if _check >= 100 { // le code a échoué, il faut donc faire avec }
+  Vous pouvez également utiliser l'instruction break pour sortir de la boucle. Par exemple, le code suivant va générer 100 nombres aléatoires puis continuer, même si l'évaluation while sera toujours true:
+  var i = 0 ; while (true) {
+     x[i] = random(room_width) ; y[i] = random(room_height) ; if ((i++) >= 100) { break ; }  }
+  
+  Vous pouvez également utiliser l'instruction continue dans une boucle while. Cette instruction permet de mettre fin à l'itération de la boucle en cours et de relancer la boucle à une nouvelle itération, par exemple :
+  var file = file_text_open_read("Game_Data.txt") ; var _num = 0 ; while (!file_text_eof(file)) { var _s = file_text_readln(file) ; if (_s == "") { continue ; }  str[num++] = _s ; }  file_text_close(file) ;
+  
+  Le code ci-dessus ouvre un fichier et en lit une ligne à chaque itération de la boucle jusqu'à ce que la fin du contenu du fichier soit atteinte. Si la ligne lue est une chaîne vide, l'itération de la boucle en cours est terminée à l'aide de l'instruction continue et une nouvelle itération est lancée, sinon la chaîne est ajoutée dans un tableau et la position du tableau est incrémentée.
+  Pour d'autres exemples de fonctions de boucle, veuillez consulter les sections suivantes répéter, faire... jusqu'à, et pour.
+   
+   
+   
+  
+    
+      
+        Retour : Caractéristiques de la langue
+        Suivant : do / until
+      
+    
+    Copyright YoYo Games Ltd. 2021 Tous droits réservés
   
   
   

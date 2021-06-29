@@ -1,6 +1,47 @@
-file_rename Cette fonction renomme le fichier spécifié avec le nom spécifié. La fonction retournera true si le fichier a été renommé avec succès, ou false dans toutes autres circonstances. ATTENTION! Cette fonction peut ne pas fonctionner comme prévu en raison du GameMaker Studio 2! Veuillez consulter la section sur le système de fichiers pour plus d'informations. Syntaxe:file_rename(oldname, newname); Argument Description oldname Le nom du fichier à modifier. newname Le nouveau nom à donner au fichier. Retour:Boolean Exemple:if file_exists("level1.txt")     {
-         file_rename("level1.txt", "level.txt");     }
-   Cela vérifierait un fichier et s'il existe, il est renommé.  Retour: Système de fichiers Suivant:file_copy © Copyright YoYo Games Ltd. 2021 Tous droits réservés
+
+  
+  renommer un fichier
+  Cette fonction renomme le fichier spécifié avec le nom spécifié. La fonction renverra vrai si le fichier a été renommé avec succès, ou faux dans toutes les autres circonstances.
+  AVERTISSEMENT ! Il se peut que cette fonction ne fonctionne pas comme vous l'attendez, car GameMaker Studio 2 est en sandbox ! Veuillez consulter la section sur le système de fichiers pour plus d'informations.
+   
+  Syntaxe :
+  file_rename(oldname, newname) ;
+  
+    
+      
+        Arguments
+        Description
+      
+      
+        ancien nom
+        Le nom du fichier à modifier.
+      
+      
+        nouveau nom
+        Le nouveau nom à donner au fichier.
+      
+    
+  
+   
+  Les retours :
+  Booléen
+   
+  Exemple :
+  if file_exists("level1.txt") {
+     file_rename("level1.txt", "level.txt") ; }
+  
+  Cela permet de vérifier l'existence d'un fichier et s'il existe, il est renommé.
+   
+   
+   
+  
+    
+      
+        Retour : Système de fichiers
+        Suivant : file_copy
+      
+    
+    Copyright YoYo Games Ltd. 2021 Tous droits réservés
   
   
   

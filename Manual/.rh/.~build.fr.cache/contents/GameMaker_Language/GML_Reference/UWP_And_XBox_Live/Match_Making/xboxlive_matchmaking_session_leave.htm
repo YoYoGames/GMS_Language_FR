@@ -1,4 +1,41 @@
-xboxlive_matchmaking_session_leave Cette fonction oblige l'utilisateur qui a créé ou trouvé la session spécifiée à la quitter. Vous pouvez obtenir le pointeur d'ID de session à partir du async_load Carte DS renvoyée dans l' événement social asynchrone lorsque vous avez créé ou trouvé une session (voir xboxlive_matchmaking_create() pour plus de détails). Syntaxe:xboxlive_matchmaking_session_leave(session_id); Argument Description session_id Le pointeur de l'identifiant de session de la session à quitter. Retour:N/A Exemple:if gamepad_button_check_pressed(0, gp_start)     {     xboxlive_matchmaking_session_leave(global.SessionID);     } Le code ci-dessus vérifie une pression sur le bouton de la manette de jeu et si un est détecté, l'utilisateur se déconnecte de la session de matchmaking donnée.  Retour: Match Making Suivant:xboxlive_matchmaking_send_invites © Copyright YoYo Games Ltd. 2021 Tous droits réservés
+
+  
+  xboxlive_matchmaking_session_leave
+  Cette fonction fait en sorte que l'utilisateur qui a créé ou trouvé la session spécifiée la quitte. Vous pouvez obtenir le pointeur d'ID de session à partir de la carte async_load carte DS qui est
+    renvoyée dans l'événement social asynchrone lorsque vous avez créé ou trouvé une session (cf. xboxlive_matchmaking_create()    pour plus de détails).
+   
+  Syntaxe :
+  xboxlive_matchmaking_session_leave(session_id) ;
+  
+    
+      
+        Arguments
+        Description
+      
+      
+        identifiant de la session
+        Le pointeur d'ID de session de la session à quitter.
+      
+    
+  
+   
+  Les retours :
+  N/A
+   
+  Exemple :
+  if gamepad_button_check_pressed(0, gp_start) { xboxlive_matchmaking_session_leave(global.SessionID) ; }
+  Le code ci-dessus vérifie s'il y a eu une pression sur un bouton de la manette de jeu et si c'est le cas, l'utilisateur sera déconnecté de la session de matchmaking donnée.
+   
+   
+   
+  
+    
+      
+        Retour : Match Making
+        Suivant : xboxlive_matchmaking_send_invites
+      
+    
+    Copyright YoYo Games Ltd. 2021 Tous droits réservés
   
   
   

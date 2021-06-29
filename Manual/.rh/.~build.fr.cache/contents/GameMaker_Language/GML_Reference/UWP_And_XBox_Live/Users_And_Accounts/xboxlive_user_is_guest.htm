@@ -1,9 +1,45 @@
-xboxlive_user_is_guest Cette fonction retournera true si le pointeur d'ID utilisateur donné est un utilisateur invité et false s'ils ne le sont pas. Vous pouvez obtenir un pointeur d'ID utilisateur avec la fonction xboxlive_get_user(). Syntaxe:xboxlive_user_is_guest(user_id); Argument Description user_id Le pointeur d'ID de l'utilisateur à vérifier. Retour:Boolean Exemple:if xboxlive_user_is_guest(user_id[0])     {
-         global.user_name[0] = "GUEST";     }
+
+  
+  xboxlive_user_is_guest
+  Cette fonction retournera vrai si le pointeur d'ID d'utilisateur donné est un utilisateur invité et faux s'il ne l'est pas. Vous pouvez obtenir un pointeur d'ID utilisateur avec la fonction xboxlive_get_user().
+   
+  Syntaxe :
+  xboxlive_user_is_guest(user_id) ;
+  
+    
+      
+        Arguments
+        Description
+      
+      
+        nom d'utilisateur
+        Le pointeur d'identification de l'utilisateur à vérifier.
+      
+    
+  
+   
+  Les retours :
+  Booléen
+   
+  Exemple :
+  if xboxlive_user_is_guest(user_id[0]) {
+     global.user_name[0] = "GUEST" ; }
      else
-         {
-         global.user_name[0] = xboxlive_gamedisplayname_for_user(user_id[0]);     }
-   Ce qui précède stocke le pointeur d'ID utilisateur d'activation dans une variable globale.  Retour: Utilisateurs et comptes Suivant:xboxlive_user_is_active © Copyright YoYo Games Ltd. 2021 Tous droits réservés
+     {
+     global.user_name[0] = xboxlive_gamedisplayname_for_user(user_id[0]) ; }
+  
+  L'exemple ci-dessus stocke le pointeur d'identification de l'utilisateur en cours d'activation dans une variable globale.
+   
+   
+   
+  
+    
+      
+        Retour : Utilisateurs et comptes
+        Suivant : xboxlive_user_is_active
+      
+    
+    Copyright YoYo Games Ltd. 2021 Tous droits réservés
   
   
   

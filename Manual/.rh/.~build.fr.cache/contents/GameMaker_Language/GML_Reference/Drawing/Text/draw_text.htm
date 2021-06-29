@@ -1,4 +1,51 @@
-draw_text Avec cette fonction, vous pouvez dessiner n'importe quelle chaîne à n'importe quelle position dans la pièce (pour dessiner des nombres réels, vous devez utiliser le string () fonction pour les convertir en texte). Pour combiner des chaînes, vous pouvez utiliser + (voir l'exemple ci-dessous) et vous pouvez également utiliser \ n dans une chaîne pour ajouter un saut de ligne afin qu'il soit dessiné sur plusieurs lignes (pour savoir comment formater correctement une chaîne et quels caractères d'échappement vous pouvez utilisation, veuillez voir ici ). La couleur du texte et l'alpha sont régis par l'alpha de base actuel et les valeurs de couleur définies par draw_set_alpha () et draw_set_colour (). REMARQUE: la position réelle du texte sera influencée par les valeurs d'alignement définies par draw_set_halign () et draw_set_valign (). Syntaxe:draw_text(x, y, string); Argument Description x La coordonnée x de la chaîne dessinée. y La coordonnée y de la chaîne dessinée. string La chaîne à dessiner. Retour:N/A Exemple:draw_text(x, y, "Hello, " + global.Name + "!\nI hope you are well!"); Le code ci-dessus dessinera une chaîne à la position x / y de l'instance, qui utilisera la chaîne stockée dans la variable globale "Nom" et la divisera sur deux lignes.  Retour: Texte Suivant:draw_text_ext © Copyright YoYo Games Ltd. 2021 Tous droits réservés
+
+  
+  dessiner_texte
+  Avec cette fonction, vous pouvez dessiner n'importe quelle chaîne de caractères à n'importe quelle position dans la pièce (pour dessiner des nombres réels, vous devez utiliser la fonction chaîne de caractères() pour les convertir en texte). Pour combiner des chaînes de caractères, vous pouvez
+    utiliser + (voir l'exemple ci-dessous) et vous pouvez également utiliser \n à l'intérieur d'une chaîne pour ajouter un saut de ligne afin qu'elle soit dessinée sur plusieurs lignes (pour savoir comment formater correctement une chaîne et quels caractères d'échappement vous pouvez utiliser, veuillez consulter ici).
+    La couleur du texte et l'alpha sont régis par les valeurs de base actuelles de l'alpha et de la couleur, définies par les commandes draw_set_alpha() et draw_set_colour().
+  REMARQUE: La position réelle du texte sera influencée par les valeurs d'alignement définies par les options draw_set_halign() et draw_set_valign().
+   
+  Syntaxe :
+  draw_text(x, y, string) ;
+  
+    
+      
+        Arguments
+        Description
+      
+      
+        x
+        La coordonnée x de la chaîne dessinée.
+      
+      
+        y
+        La coordonnée y de la chaîne dessinée.
+      
+      
+        chaîne de caractères
+        La ficelle à tirer.
+      
+    
+  
+   
+  Les retours :
+  N/A
+   
+  Exemple :
+  draw_text(x, y, "Bonjour, " + global.Name + "!\NJ'espère que vous allez bien !") ;
+  Le code ci-dessus dessine une chaîne à la position x/y de l'instance, qui utilise la chaîne stockée dans la variable globale "Name" et la répartit sur deux lignes.
+   
+   
+   
+  
+    
+      
+        Retour : Texte
+        Suivant : draw_text_ext
+      
+    
+    Copyright YoYo Games Ltd. 2021 Tous droits réservés
   
   
   

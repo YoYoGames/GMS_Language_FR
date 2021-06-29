@@ -1,6 +1,48 @@
-xboxlive_show_profile_card_for_user Avec cette fonction, vous pouvez demander à la XBox d'afficher la carte de profil pour le pointeur de l'ID utilisateur cible. La fonction nécessite à la fois le pointeur d'ID utilisateur pour l'utilisateur qui demande les informations ainsi que le pointeur d'ID utilisateur de l'utilisateur à cibler et à obtenir la carte de profil. Syntaxe:xboxlive_show_profile_card_for_user(requesting_user_id, target_user_id); Argument Description requesting_user_id L'ID utilisateur (un pointeur) de l'utilisateur demandeur target_user_id L'ID utilisateur (un pointeur) de l'utilisateur pour obtenir la carte de profil de Retour:N/A Exemple:if (gamepad(0, gp_start))     {
-         xboxlive_show_profile_card_for_user(user[0], user[1]);     }
-   Le code ci-dessus vérifie si un bouton de la manette de jeu est pressé et s'il en détecte un, il affiche la carte de profil de l'utilisateur donné.  Retour: Utilisateurs et comptes Suivant:xboxlive_reputation_for_user © Copyright YoYo Games Ltd. 2021 Tous droits réservés
+
+  
+  xboxlive_show_profile_card_for_user
+  Avec cette fonction, vous pouvez demander que la XBox affiche la carte de profil pour le pointeur d'ID utilisateur cible. La fonction requiert à la fois le pointeur d'identification de l'utilisateur qui demande l'information et le pointeur d'identification de l'utilisateur qui doit être ciblé et dont on veut obtenir la carte de profil.
+    à cibler et à obtenir la carte de profil de.
+   
+  Syntaxe :
+  xboxlive_show_profile_card_for_user(requesting_user_id, target_user_id) ;
+  
+    
+      
+        Arguments
+        Description
+      
+      
+        demandeur_identifiant
+        L'ID utilisateur (un pointeur) de l'utilisateur demandeur.
+      
+      
+        Identifiant de l'utilisateur cible
+        L'ID utilisateur (un pointeur) de l'utilisateur dont on veut obtenir la fiche de profil.
+      
+    
+  
+   
+   
+  Les retours :
+  N/A
+   
+  Exemple :
+  if (gamepad(0, gp_start)) {
+     xboxlive_show_profile_card_for_user(user[0], user[1]) ; }
+  
+  Le code ci-dessus vérifie si un bouton de la manette de jeu a été pressé et, si c'est le cas, il affiche la carte de profil de l'utilisateur en question.
+   
+   
+   
+  
+    
+      
+        Retour : Utilisateurs et comptes
+        Suivant : xboxlive_reputation_pour_utilisateur
+      
+    
+    Copyright YoYo Games Ltd. 2021 Tous droits réservés
   
   
   

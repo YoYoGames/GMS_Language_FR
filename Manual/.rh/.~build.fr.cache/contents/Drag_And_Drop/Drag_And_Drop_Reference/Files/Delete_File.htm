@@ -1,4 +1,40 @@
- Supprimer le fichier Avec cette action, vous pouvez supprimer un fichier qui a été créé précédemment. Vous fournissez le nom de fichier (sous forme de chaîne) du fichier à supprimer. Notez que vous ne pouvez supprimer aucun fichier inclus dans l'offre groupée du jeu, uniquement ceux qui ont été créés à l'aide des actions Close Ini ou Save Buffer (voir la section sur le système de fichiers pour plus d'informations). Syntaxe de l'action: Arguments: Argument Description Filename Le nom (sous forme de chaîne) du fichier à supprimer Exemple: Le code de bloc d'action ci-dessus vérifiera si le fichier "checkpoint.sav" existe, et s'il le fait alors vérifie si le fichier "checkpoint_OLD.sav" existe. Si ce fichier existe également, il est supprimé, puis le fichier d'origine "checkpoint.sav" est renommé "checkpoint_OLD.sav". Enfin, un tampon est enregistré sous "checkpoint.sav" (essentiellement, nous sauvegardons un fichier tampon enregistré à chaque fois que nous le sauvegardons, de sorte qu'il y ait toujours une sauvegarde "actuelle" et un "ancien" fichier de sauvegarde).  Retour: Actions sur les fichiers Suivant: Ouvrez le fichier Ini © Copyright YoYo Games Ltd. 2021 Tous droits réservés
+
+  
+   Supprimer le fichier
+  Cette action vous permet de supprimer un fichier qui a été créé précédemment. Vous devez fournir le nom de fichier (sous forme de chaîne) du fichier à supprimer. Notez que vous ne pouvez pas supprimer les fichiers qui sont inclus dans le paquet de jeu, seulement ceux qui ont été créés
+    à l'aide des actions Fermer l'interface ou Enregistrer le tampon (voir la section sur le système de fichiers pour plus d'informations).
+   
+  Syntaxe de l'action :
+  
+  Arguments :
+  
+    
+      
+        Arguments
+        Description
+      
+      
+        Nom de fichier
+        Le nom (sous forme de chaîne) du fichier à supprimer.
+      
+    
+  
+   
+  Exemple :
+  Le code du bloc d'action ci-dessus vérifie si le fichier "checkpoint.sav" existe, et si c'est le cas, il vérifie ensuite si le fichier "checkpoint_OLD.sav" existe.
+    il existe, il vérifie ensuite si le fichier "checkpoint_OLD.sav" existe. Si ce fichier existe également, il est supprimé, et le fichier original "checkpoint.sav" est renommé en "checkpoint_OLD.sav". Enfin, un tampon
+    est sauvegardé en tant que "checkpoint.sav" (essentiellement, nous sauvegardons un fichier tampon à chaque fois que nous le sauvegardons, de sorte qu'il y a toujours un fichier de sauvegarde "actuel" et un fichier de sauvegarde "ancien").
+   
+   
+   
+  
+    
+      
+        Retour : Actions sur les fichiers
+        Suivant : Ouvrir un fichier Ini
+      
+    
+    Copyright YoYo Games Ltd. 2021 Tous droits réservés
   
   
   

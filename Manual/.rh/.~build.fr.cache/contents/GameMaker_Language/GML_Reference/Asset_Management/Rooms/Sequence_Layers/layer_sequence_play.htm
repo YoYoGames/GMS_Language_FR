@@ -1,17 +1,57 @@
-layer_sequence_play Avec cette fonction, vous pouvez démarrer la lecture de la séquence donnée. Vous fournissez l'ID d'élément de séquence renvoyé par layer_sequence_create() ou par l'une des fonctions d'élément de couche et la fonction jouera la séquence, que vous pouvez ensuite mettre en pause si nécessaire en utilisant la fonction layer_sequence_pause(). IMPORTANT! Si votre séquence contient des instances, ces instances ne doivent pas changer leurimage_xscale /image_yscale / image_angle /x /y variables car elles seront écrasées lorsque la séquence sera mise à jour à chaque étape après le début de la lecture. Syntaxe:layer_sequence_play(sequence_element_id) Argument Description sequence_element_id La valeur d'ID unique de l'élément de séquence à cibler Retour:N/A Exemple:if keyboard_check_pressed(ord("P"))     {
-         global.Pause = !global.Pause;     var a = layer_get_all_elements(layer);     for (var i = 0; i < array_length(a); i++;)         {
-             if layer_get_element_type(a[i]) == layerelementtype_sequence             {
-                 if global.Pause                 {
-                     layer_sequence_pause(a[i]);
-                     }
-                 else
-                     {
-                     layer_sequence_play(a[i]);
-                     }
-                 }
-             }
-         }
-   Le code ci-dessus vérifie si le jeu a été mis en pause ou non lorsqu'une touche est enfoncée. Si le jeu est mis en pause, il parcourt tous les éléments de la séquence sur le calque actuel (le calque de l'instance appelante) et met en pause leur lecture, et si le jeu n'est pas mis en pause, la boucle recommencera sa lecture.  Retour: Couches de séquence Suivant:layer_sequence_speedscale © Copyright YoYo Games Ltd. 2021 Tous droits réservés
+
+  
+  couche_séquence_play
+  Cette fonction permet de lancer la lecture de la séquence donnée. Vous fournissez l'ID de l'élément de séquence tel que renvoyé par layer_sequence_create() ou par l'une des fonctions d'élément de couche et la fonction lira la séquence, que vous pourrez ensuite interrompre si nécessaire à l'aide de la fonction layer_sequence_pause().
+  IMPORTANT ! Si votre séquence contient des instances, celles-ci ne doivent pas changer leur image_xscale / image_yscale /.
+    image_angle x / y car elles seront écrasées lorsque la séquence mettra à jour chaque pas après le début de la lecture.
+      met à jour chaque étape après avoir commencé à être jouée.
+   
+  Syntaxe :
+  layer_sequence_play(sequence_element_id)
+  
+    
+      
+        Arguments
+        Description
+      
+      
+        id_élément_de_séquence
+        La valeur d'identification unique de l'élément de séquence à cibler.
+      
+    
+  
+   
+  Les retours :
+  N/A
+   
+  Exemple :
+  if keyboard_check_pressed(ord("P")) {
+     global.Pause = !global.Pause ; var a = layer_get_all_elements(layer) ; for (var i = 0 ; i < array_length(a) ; i++ ;)  {
+     si layer_get_element_type(a[i]) == layerelementtype_sequence {
+     if global.Pause {
+     layer_sequence_pause(a[i]) ;
+     }
+     else
+     {
+     layer_sequence_play(a[i]) ;
+     }
+     }
+     }
+     }
+  
+  Le code ci-dessus vérifie si le jeu a été mis en pause ou non lorsqu'une touche est enfoncée. Si le jeu est en pause, il passe en boucle tous les éléments de la séquence sur le calque actuel (le calque de l'instance appelante) et met leur lecture en pause.
+    Si le jeu n'est pas en pause, la boucle recommence leur lecture.
+   
+   
+   
+  
+    
+      
+        Retour : Couches de séquences
+        Suivant : layer_sequence_speedscale
+      
+    
+    Copyright YoYo Games Ltd. 2021 Tous droits réservés
   
   
   

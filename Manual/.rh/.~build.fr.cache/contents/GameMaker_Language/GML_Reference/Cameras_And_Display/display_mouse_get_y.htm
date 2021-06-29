@@ -1,4 +1,29 @@
-display_mouse_get_y Cette fonction renverra la position y de la souris dans l' écran. Il est à noter que cette fonction ne fonctionne correctement que lorsqu'elle est utilisée sur la cible Windows Il peut également être utilisé pour HTML5, mais ne renverra qu'une valeur relative au 0,0 du canevas lui-même, et ne renverra aucune valeur tant que la souris est en dehors du canevas. Pour les autres appareils, il renverra 0 et vous devez utiliser le device_mouse_raw_x() et device_mouse_raw_y() fonctionne à la place. Syntaxe:display_mouse_get_y(); Retour:Real Exemple:my_y = display_mouse_get_y(); Cela définirait my_y sur la coordonnée y de la souris par rapport à l'affichage. Caméras et affichage Retour: Suivant:display_mouse_set © Copyright YoYo Games Ltd. 2021 Tous droits réservés
+
+  
+  afficher_souris_get_y
+  Cette fonction renvoie la position y de la souris dans l'écran. Il convient de noter que cette fonction ne fonctionne correctement que lorsqu'elle est utilisée sur la cible Windows. Elle peut également être utilisée pour HTML5, mais elle ne renverra qu'une valeur relative à la position 0,0
+    du canevas lui-même, et ne renverra aucune valeur lorsque la souris se trouve à l'extérieur du canevas. Pour les autres périphériques, elle renverra 0, et vous devrez utiliser les fonctions dispositif_mouse_raw_x()    et device_mouse_raw_y() à la place.
+   
+  Syntaxe :
+  display_mouse_get_y() ;
+   
+  Les retours :
+  Real
+   
+  Exemple :
+  my_y = display_mouse_get_y() ;
+  Ceci définit my_y comme la coordonnée y de la souris par rapport à l'écran.
+   
+   
+   
+  
+    
+      Caméras et écrans
+        Retour : 
+        Suivant : display_mouse_set
+      
+    
+    Copyright YoYo Games Ltd. 2021 Tous droits réservés
   
   
   

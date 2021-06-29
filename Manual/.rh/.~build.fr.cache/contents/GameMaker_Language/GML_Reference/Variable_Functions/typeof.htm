@@ -1,5 +1,111 @@
-typeof Cette fonction renvoie le type de données de toute variable donnée sous forme de chaîne. Les valeurs de retour possibles sont répertoriées dans le tableau ci-dessous: Chaîne de caractères Description number La variable contient un nombre réel (à virgule flottante) - cela peut inclure NaN et infinity string La variable contient une chaîne array La variable fait référence à un tableau bool La variable contient un booléen (true /false ) int32 La variable contient un entier 32 bits int64 La variable contient un entier de 64 bits ptr La variable contient un pointeur undefined La variable n'est pas définie null La variable contient une valeur nulle (cela ne devrait pas être vu normalement) vec3 La variable contient un vecteur de 3 valeurs vec4 La variable contient un vecteur de 4 valeurs method La variable contient une référence de fonction struct La variable contient une référence struct unknown La valeur est inconnue. Cela ne devrait jamais être vu et signifie que quelque chose s'est mal passé au niveau le plus élémentaire, comme un écrasement de mémoire Veuillez noter qu'il existe des cas où cette fonction peut ne pas renvoyer la valeur correcte pour une méthode. Considérez les deux définitions de fonction suivantes:a = function()     {     // something     }
-     function b()     {     // Something     } Techniquement, ces deux méthodes sont considérées comme des méthodes car elles lient une fonction à une variable de portée d'instance, mais en appelant typeof() en fonction b renverra "number" et non "method", en l'appelant a retournera "méthode". Cela est dû au fait que les méthodes créées comme celle pour b se voient attribuer des indices de script (qui sont des valeurs entières), car c'est ainsi que le compilateur reconnaît les fonctions de script, même si la fonction n'a pas été définie dans un script. Syntaxe:typeof(variable); Argument Description variable La variable pour obtenir le type de données. Retour:String (see table, above) Exemple:var _str = typeof(global.ExtensionInput); show_debug_message(" global.ExtensionInput is a " + _str); Le code ci-dessus récupère le type de données détenu par la variable globale donnée et renvoie la chaîne à une variable locale qui est ensuite utilisée pour envoyer un message à la console.  Retour: Fonctions variables Suivant:bool © Copyright YoYo Games Ltd. 2021 Tous droits réservés
+
+  
+  typeof
+  Cette fonction renvoie le type de données d'une variable donnée sous forme de chaîne. Les valeurs de retour possibles sont énumérées dans le tableau ci-dessous :
+  
+    
+      
+        Chaîne de caractères
+        Description
+      
+      
+        numéro
+        La variable contient un nombre réel (à virgule flottante) - cela peut inclure NaN et l'infini.
+      
+      
+        chaîne de caractères
+        La variable contient une chaîne de caractères
+      
+      
+        tableau
+        La variable fait référence à un tableau
+      
+      
+        bool
+        La variable contient un booléen(vrai / faux).
+      
+      
+        int32
+        La variable contient un entier de 32 bits
+      
+      
+        int64
+        La variable contient un entier de 64 bits
+      
+      
+        ptr
+        La variable contient un pointeur
+      
+      
+        indéfini
+        La variable est indéfinie
+      
+      
+        null
+        La variable contient une valeur nulle (cela ne devrait pas être vu normalement).
+      
+      
+        vec3
+        La variable contient un vecteur de 3 valeurs
+      
+      
+        vec4
+        La variable contient un vecteur de 4 valeurs
+      
+      
+        méthode
+        La variable contient une référence de fonction
+      
+      
+        struct
+        La variable contient une référence de structure
+      
+      
+        inconnu
+        La valeur est inconnue. Ce message ne devrait jamais être vu et signifie que quelque chose a mal tourné au niveau le plus basique, comme un écrasement de la mémoire.
+      
+    
+  
+   
+  Veuillez noter qu'il existe des cas où cette fonction peut ne pas retourner la valeur correcte pour une méthode. Considérons les deux définitions de fonction suivantes :
+  a = fonction() { // quelque chose } 
+     function b() { // quelque chose }
+  Techniquement, ils sont tous deux considérés comme des méthodes puisqu'ils lient une fonction à une variable de portée d'instance. Cependant, l'appel de typeof() sur la fonction b renverra "nombre" et non " méthode", 
+    alors que l'appeler sur a retournera "méthode". Cela est dû au fait que les méthodes créées comme celle de b se voient attribuer des indices de script (qui sont des valeurs entières), puisque c'est la manière dont le compilateur reconnaît les scripts.
+    manière dont le compilateur reconnaît les fonctions de script, même si la fonction n'a pas été définie dans un script.
+   
+  Syntaxe :
+  typeof(variable) ;
+  
+    
+      
+        Arguments
+        Description
+      
+      
+        variable
+        La variable dont on veut obtenir le type de données.
+      
+    
+  
+   
+  Les retours :
+  String (voir tableau, ci-dessus)
+   
+  Exemple :
+  var _str = typeof(global.ExtensionInput) ; show_debug_message(" global.ExtensionInput est un " + _str) ;
+  Le code ci-dessus récupère le type de données détenu par la variable globale donnée et renvoie la chaîne de caractères à une variable locale qui est ensuite utilisée pour afficher un message sur la console.
+   
+   
+   
+  
+    
+      
+        Retour : Fonctions variables
+        Suivant : bool
+      
+    
+    Copyright YoYo Games Ltd. 2021 Tous droits réservés
   
   
   

@@ -1,4 +1,51 @@
-skeleton_animation_mix Vous pouvez facilement changer d'ensembles d'animations en utilisant le skeleton_animation_set() fonction, mais cela peut provoquer un saut ou un bégaiement lorsqu'une animation est échangée contre une autre. Pour éviter cela, vous pouvez définir la valeur de mixage entre deux jeux d'animations et le sprite interpolera entre eux. normalement, vous voudrez le faire dans l'événement Créer de l'instance avec l'animation squelettique car il ne doit être défini qu'une seule fois, et GameMaker Studio 2 interpolera toutes les modifications ultérieures apportées à l'image-objet en utilisant les jeux d'animations de cette instance. Notez que la valeur de durée est de 0 à 1, où une valeur de 0,5 aurait une interpolation «moitié-moitié» d'un ensemble à l'autre. Syntaxe:skeleton_animation_mix(animfrom, animto, duration); Argument Description animfrom Le nom (une chaîne) du premier jeu d'animations à partir duquel interpoler. animto Le nom (une chaîne) de la deuxième animation définie pour l'interpolation. duration La durée de l'interpolation (de 0 à 1) Retour:N/A Exemple:skeleton_animation_set("walk"); skeleton_animation_mix("walk", "jump", 0.2); skeleton_animation_mix("jump", "walk", 0.4); Le code ci-dessus irait dans l'événement de création d'une instance avec un sprite d'animation squelettique et définit la durée du mix d'animation pour l'interpolation entre les deux ensembles d'animations "marche" et "saut".  Retour: Animation Suivant:skeleton_animation_list © Copyright YoYo Games Ltd. 2021 Tous droits réservés
+
+  
+  mélange_animation_squelette
+  Vous pouvez facilement changer de jeu d'animations en utilisant la fonction skeleton_animation_set() mais cela peut provoquer un saut ou un bégaiement lorsqu'une animation est remplacée par une autre. Pour éviter cela, vous pouvez définir la valeur de mixage
+    entre deux jeux d'animations et le sprite interpolera entre les deux. Normalement, il est préférable d'effectuer cette opération dans l'événement Create de l'instance avec l'animation squelettique, car elle ne doit être définie qu'une seule fois, et GameMaker Studio 2 interpolera tous les changements ultérieurs du sprite en utilisant l'animation.
+    changements ultérieurs du sprite en utilisant les jeux d'animation de cette instance. Notez que la valeur de la durée est comprise entre 0 et 1, alors qu'une valeur de 0,5 entraînerait une interpolation "moitié-moitié" d'un jeu à l'autre.
+   
+  Syntaxe :
+  skeleton_animation_mix(animfrom, animto, duration) ;
+  
+    
+      
+        Arguments
+        Description
+      
+      
+        animfrom
+        Le nom (une chaîne) du premier jeu d'animation à interpoler.
+      
+      
+        animto
+        Le nom (une chaîne) du deuxième jeu d'animation à interpoler.
+      
+      
+        durée
+        La durée de l'interpolation (de 0 à 1)
+      
+    
+  
+   
+   
+  Les retours :
+  N/A
+   
+  Exemple :
+  skeleton_animation_set("walk") ; skeleton_animation_mix("walk", "jump", 0.2) ; skeleton_animation_mix("jump", "walk", 0.4) ;
+  Le code ci-dessus s'insère dans l'événement de création d'une instance avec un sprite d'animation squelettique et définit la durée du mélange d'animations pour interpoler entre les deux animations "marche" et "saut".
+   
+   
+   
+  
+    
+      
+        Retour : Animation
+        Suivant : skeleton_animation_list
+      
+    
+    Copyright YoYo Games Ltd. 2021 Tous droits réservés
   
   
   

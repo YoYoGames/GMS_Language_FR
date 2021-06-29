@@ -1,6 +1,48 @@
-skeleton_animation_set_frame Cette fonction définira l'animation affectée à la piste donnée sur l'image que vous fournissez. L'index d'image doit être une valeur réelle entre 0 et le nombre d'images pour l'animation (que vous pouvez obtenir en utilisant la fonction skeleton_animation_get_frames ). Si vous fournissez une valeur en dehors de cette plage, l'animation sera mise en boucle pour compenser la différence, par exemple si l'animation comporte 5 images et que vous définissez l'image sur 8, l'image réelle affichée sera 3. Syntaxe:skeleton_animation_set_frame(track, index); Argument Description track La piste d'animation pour définir l'image. index Le nouvel index de l'image d'animation. Retour:N/A Exemple:if global.pause     {
-         skeleton_animation_set_frame(0, -image_speed);     }
-   Le code ci-dessus définira l'index d'image de l'animation de la piste 0 sur la vitesse d'image négative lorsque la variable globale "pause" est true (mise en pause essentiellement de l'animation).  Retour: Animation Suivant:skeleton_skin_get © Copyright YoYo Games Ltd. 2021 Tous droits réservés
+
+  
+  animation_squelette_set_frame
+  Cette fonction va définir l'animation assignée à la piste donnée à l'image que vous fournissez. L'indice de trame doit être une valeur réelle comprise entre 0 et le nombre de trames de l'animation (que vous pouvez obtenir en utilisant la fonction animation_squelette_get_frames).
+    Si vous fournissez une valeur en dehors de cette plage, l'animation sera mise en boucle pour compenser la différence, par exemple si l'animation a 5 images et que vous définissez l'image à 8, l'image réelle affichée sera 3.
+   
+  Syntaxe :
+  skeleton_animation_set_frame(piste, index) ;
+  
+    
+      
+        Arguments
+        Description
+      
+      
+        piste
+        La piste d'animation pour laquelle il faut définir le cadre.
+      
+      
+        indice
+        Le nouvel index pour le cadre d'animation.
+      
+    
+  
+   
+   
+  Les retours :
+  N/A
+   
+  Exemple :
+  if global.pause {
+     skeleton_animation_set_frame(0, -image_speed) ; }
+  
+  Le code ci-dessus définira l'indice de l'image pour l'animation dans la piste 0 à la vitesse négative de l'image lorsque la variable globale "pause" est vraie (essentiellement en mettant l'animation en pause).
+   
+   
+   
+  
+    
+      
+        Retour : Animation
+        Suivant : skeleton_skin_get
+      
+    
+    Copyright YoYo Games Ltd. 2021 Tous droits réservés
   
   
   

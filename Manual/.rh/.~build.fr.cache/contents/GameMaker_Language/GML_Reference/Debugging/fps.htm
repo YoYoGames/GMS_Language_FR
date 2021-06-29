@@ -1,6 +1,31 @@
-fps Dans GameMaker Studio 2, deux méthodes principales peuvent être utilisées pour déterminer la vitesse à laquelle votre jeu s'exécute. Le game speed (comme spécifié dans les options de jeu) et le fps (images par seconde). Ces valeurs sont souvent confuses, mais en gros, l'une est le nombre d'étapes de jeu que GameMaker Studio 2 est censé terminer en une seconde, tandis que l'autre (le fps) est le nombre d'étapes du processeur que GameMaker Studio 2 est en train de terminer dans un seconde jusqu'à une valeur maximale de la vitesse de la pièce elle-même. Pour obtenir le vrai fps, c'est à dire. le nombre réel d'étapes de processeur par étape de jeu, utilisez le fps_real variable. Cette variable en lecture seule renvoie le fps actuel sous forme de valeur entière. Veuillez noter que la fonction ne sera mise à jour qu'une seule fois à chaque étape de votre jeu et peut donc sembler "sauter" d'une valeur à une autre, mais c'est tout à fait normal. Syntaxe:fps Retour:Real Exemple:if debug_mode    {
-        draw_text(32, 32, "FPS = " + string(fps));    }
-   Le code ci-dessus vérifiera si le jeu est en mode débogage et si tel est le cas, il affichera les images par seconde actuelles à l'écran.  Retour: Débogage Suivant:fps_real © Copyright YoYo Games Ltd. 2021 Tous droits réservés
+
+  
+  fps
+  Dans GameMaker Studio 2, il existe deux façons principales d'indiquer la vitesse d'exécution de votre jeu. Le site vitesse du jeu (comme spécifié dans les Options du jeu) et le fps (images par seconde). Ces valeurs sont souvent confondues, mais l'une correspond au nombre d'étapes du jeu que GameMaker Studio 2 est censé effectuer en une seconde, tandis que l'autre (la fps) correspond au nombre d'étapes du CPU que GameMaker Studio 2 effectue réellement en une seconde , jusqu'à une valeur maximale correspondant à la vitesse de la pièce elle-même. Pour obtenir le véritable fps, c'est-à-dire le nombre réel de pas de processeur par pas de jeu, utilisez la variable fps_real variable.
+  Cette variable en lecture seule renvoie le fps actuel sous la forme d'une valeur entière. Veuillez noter que la fonction ne sera mise à jour qu'une fois par étape de votre jeu et peut donc sembler "sauter" d'une valeur à l'autre, mais c'est tout à fait normal.
+   
+  Syntaxe :
+  fps
+   
+  Les retours :
+  Real
+   
+  Exemple :
+  if debug_mode {
+     draw_text(32, 32, "FPS = " + string(fps)) ; }
+  
+  Le code ci-dessus vérifiera si le jeu est en mode débogage et si c'est le cas, il affichera les fps actuels à l'écran.
+   
+   
+   
+  
+    
+      
+        Retour : Débogage
+        Suivant : fps_real
+      
+    
+    Copyright YoYo Games Ltd. 2021 Tous droits réservés
   
   
   

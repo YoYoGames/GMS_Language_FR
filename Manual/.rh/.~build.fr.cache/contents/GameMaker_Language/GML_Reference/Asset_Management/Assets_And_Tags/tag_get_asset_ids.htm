@@ -1,4 +1,104 @@
-tag_get_asset_ids Avec cette fonction, vous pouvez obtenir tous les actifs d'un type donné auxquels les balises données leur sont attribuées. Vous fournissez soit une seule balise (sous forme de chaîne), soit un tableau, où chaque élément du tableau est une balise (sous forme de chaîne), ainsi que le type d'actif à vérifier. le type d'actif doit être l'une des constantes suivantes: Constant Description asset_object Le nom donné fait référence à un objet. asset_sprite Le nom donné fait référence à un sprite. asset_sound Le prénom fait référence à un son. asset_room Le prénom fait référence à unroom. asset_tiles Le nom donné fait référence à un jeu de tuiles. asset_path Le nom donné fait référence à un chemin. asset_script Le prénom fait référence à unscript. asset_font Le prénom fait référence à une police. asset_timeline Le prénom fait référence à une chronologie. asset_ shader Le prénom fait référence à un shader. asset_animationcurve Le nom donné fait référence à une courbe d'animation. asset_sequence Le prénom fait référence à une séquence. La fonction renverra un tableau, où chaque élément du tableau sera une valeur d'index d'actif unique. S'il n'y a pas d'actifs du type qui ont la ou les balises données, un tableau vide sera renvoyé. Syntaxe:tag_get_asset_ids(tags, asset_type); Argument Description tags Une seule chaîne d'étiquettes d'inventaire ou un tableau avec diverses étiquettes d'inventaire. asset_type Une constante de type d'actif (répertoriée ci-dessus) Retour:Array Exemple:var _paths = tag_get_asset_ids("enemy", asset_path); var _num = irandom(array_length(_paths) - 1); path_start(_paths[_num], 1, path_action_reverse, false); Le code ci-dessus utilise la balise «ennemi» pour trouver tous les éléments de chemin avec cette balise, avant d'en choisir un au hasard et de l'attribuer à l'instance exécutant le code.  Retour: Actifs et balises Suivant:tag_get_assets © Copyright YoYo Games Ltd. 2021 Tous droits réservés
+
+  
+  tag_get_asset_ids
+  Avec cette fonction, vous pouvez obtenir tous les biens d'un type donné auxquels sont attribuées les balises données. Vous fournissez soit une seule balise (sous forme de chaîne), soit un tableau, où chaque élément du tableau est une balise (sous forme de chaîne), ainsi que le type de bien à vérifier.
+    Le type de bien doit être l'une des constantes suivantes :
+   
+  
+    
+      
+        Constant
+        Description
+      
+      
+        objet_actif
+        Le nom donné fait référence à un objet.
+      
+      
+        actif_sprite
+        Le nom donné fait référence à un sprite.
+      
+      
+        actif_son
+        Le prénom fait référence à un son.
+      
+      
+        salle des actifs
+        Le prénom fait référence à une pièce.
+      
+      
+        piliers_de_l'actif
+        Le nom donné fait référence à un ensemble de carreaux.
+      
+      
+        chemin_de_l'actif
+        Le nom donné fait référence à un chemin.
+      
+      
+        script_de_l'actif
+        Le nom donné fait référence à un script.
+      
+      
+        asset_font
+        Le nom donné fait référence à une police de caractères.
+      
+      
+        chronologie des actifs
+        Le prénom fait référence à une ligne de temps.
+      
+      
+        asset_shader
+        Le prénom fait référence à un shader.
+      
+      
+        courbe d'animation de l'actif
+        Le nom donné fait référence à une courbe d'animation.
+      
+      
+        séquence_d'actifs
+        Le nom donné fait référence à une Séquence.
+      
+    
+  
+   
+  La fonction renvoie un tableau, où chaque élément du tableau est une valeur d'index de bien unique. S'il n'y a pas de biens du type ayant la ou les étiquettes données, un tableau vide sera renvoyé.
+   
+  Syntaxe :
+  tag_get_asset_ids(tags, asset_type) ;
+  
+    
+      
+        Arguments
+        Description
+      
+      
+        tags
+        Une seule chaîne de tags d'actifs ou un tableau avec plusieurs tags d'actifs.
+      
+      
+        type d'actif
+        Une constante de type d'actif (liste ci-dessus)
+      
+    
+  
+   
+  Les retours :
+  Array
+   
+  Exemple :
+  var _paths = tag_get_asset_ids("enemy", asset_path) ; var _num = irandom(array_length(_paths) - 1) ; path_start(_paths[_num], 1, path_action_reverse, false) ;
+  Le code ci-dessus utilise la balise "enemy" pour trouver toutes les ressources de chemin avec cette balise, avant d'en choisir une au hasard et de l'attribuer à l'instance qui exécute le code.
+   
+   
+   
+  
+    
+      
+        Retour : Actifs et étiquettes
+        Suivant : tag_get_assets
+      
+    
+    Copyright YoYo Games Ltd. 2021 Tous droits réservés
   
   
   

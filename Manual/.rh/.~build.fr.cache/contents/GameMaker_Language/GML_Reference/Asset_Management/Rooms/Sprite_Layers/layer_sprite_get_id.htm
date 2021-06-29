@@ -1,4 +1,49 @@
-layer_sprite_get_id Cette fonction peut être utilisée pour récupérer la valeur d'ID unique de l'élément sprite sur un calque. Vous fournissez l'ID de couche (que vous obtenez lorsque vous créez la couche en utilisant layer_create() ou lorsque vous utilisez le nom du calque avec layer_get_id() ) et le nom de l'actif tel que défini dans les propriétés de l'actif IDE. La fonction retournera la valeur d'ID associée à cet élément de sprite sur le calque. Notez que cette fonction est spécialement conçue pour être utilisée avec des sprites qui ont été ajoutés dans l'EDI sur une couche d'actifs, comme si vous ajoutiez un sprite à un calque via du code à l'aide de la fonction layer_sprite_create(), puis il renverra l'ID unique de l'élément sprite ajouté (et le nouvel élément n'aura pas de nom). Syntaxe:layer_sprite_get_id(layer_id, asset_name) Argument Description layer_id La valeur d'ID unique du calque à cibler asset_name Le nom unique de l'actif sur le calque tel que défini dans l'éditeur de pièce Retour:Sprite element ID value (Real) Exemple:var lay_id = layer_get_id("Assets_trees"); var back_id = layer_sprite_get_id(lay_id, "gfc_Trees"); layer_sprite_change(back_id, spr_Trees_Winter); Le code ci-dessus obtiendra l'ID de couche pour la couche nommée "Assets_trees" et l'utilisera ensuite pour obtenir l'ID de l'élément de sprite "gfc_Trees" sur cette couche. Cet identifiant est ensuite utilisé pour changer l'élément sprite.  Retour: Couches de sprite Suivant:layer_sprite_exists © Copyright YoYo Games Ltd. 2021 Tous droits réservés
+
+  
+  layer_sprite_get_id
+  Cette fonction peut être utilisée pour récupérer la valeur d'identification unique d'un élément sprite sur un calque. Vous fournissez l'ID du calque (que vous obtenez lorsque vous créez le calque à l'aide de la fonction couche_créer() ou lorsque
+    vous utilisez le nom de la couche avec couche_get_id()) et le nom de l'élément sprite tel que défini dans l'éditeur de salle. La fonction renverra la valeur de l'ID associée à cet élément sprite
+    sur le calque.
+  Notez que cette fonction est spécifiquement conçue pour être utilisée avec des sprites qui ont été ajoutés dans l'IDE sur une couche d'actifs, et si vous avez ajouté un sprite à une couche par le biais du code en utilisant la fonction layer_sprite_create(),
+    Si vous avez ajouté un sprite à une couche par le biais d'un code utilisant la fonction , alors l'ID renvoyé par cette fonction doit être utilisé pour toute référence future (car cet élément sprite n'aura pas de nom à transmettre à cette fonction).
+  Si la couche spécifiée n'existe pas, ou si l'élément de sprite donné est introuvable, la fonction renvoie -1.
+   
+  Syntaxe :
+  layer_sprite_get_id(layer_id, sprite_element_name)
+  
+    
+      
+        Arguments
+        Description
+      
+      
+        identifiant de la couche
+        La valeur d'identification unique de la couche à cibler
+      
+      
+        nom_de_l'élément_spirituel
+        Le nom unique de l'élément sprite sur le calque, tel que défini dans l'éditeur de salle.
+      
+    
+  
+   
+  Les retours :
+  Valeur de l'ID de l'élément Sprite (Real)
+   
+  Exemple :
+  var lay_id = layer_get_id("Assets_trees") ; var back_id = layer_sprite_get_id(lay_id, "graphic_254367CB") ; layer_sprite_change(back_id, spr_Trees_Winter) ;
+  Le code ci-dessus obtiendra l'ID du calque nommé "Assets_trees", puis l'utilisera pour récupérer l'ID de l'élément sprite "graphic_254367CB" sur ce calque. L'ID de l'élément sprite récupéré est ensuite utilisé pour modifier le sprite de l'élément.
+    sprite de l'élément.
+   
+   
+  
+    
+      
+        Retour : Couches de sprites
+        Suivant : layer_sprite_exists
+      
+    
+    Copyright YoYo Games Ltd. 2021 Tous droits réservés
   
   
   

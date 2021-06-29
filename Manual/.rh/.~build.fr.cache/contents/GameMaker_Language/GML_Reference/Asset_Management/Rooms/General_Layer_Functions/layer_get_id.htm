@@ -1,4 +1,43 @@
-layer_get_id Cette fonction peut être utilisée pour obtenir la valeur d'identifiant unique pour une couche donnée. Dans l'EDI, toutes les couches ont un nom et un type, et pour pouvoir les éditer ou les changer via le code, vous devez donner la valeur de l' ID de couche. Cette fonction est utilisée pour récupérer cet ID en utilisant le nom (une chaîne) de la couche (tel qu'écrit dans l'EDI). Si vous créez une nouvelle couche via du code à l'aide de la fonction layer_create() alors cette fonction renverra la valeur d'ID unique à la place (les couches créées dynamiquement n'obtiennent pas de noms). Notez que si vous donnez le nom d'un calque qui n'existe pas dans la pièce actuelle, vous obtiendrez une erreur et le projet plantera. Syntaxe:layer_get_id(layer_name) Argument Description layer_name Le nom du calque (une chaîne) Retour:Layer ID Value (Real), or -1 if the layer specified doesn't exist Exemple:var near = instance_nearest(x, y, obj_Tree); var layer_id = layer_get_id("Instances Front"); layer_add_instance(layer_id, near); Le code ci-dessus obtiendra d'abord l'index de l'instance la plus proche de la position x / y donnée et le stockera dans une variable locale. Il obtient ensuite l'ID de couche d'instance unique pour la couche nommée "Instances Front" et déplace l'instance trouvée sur cette couche.  Retour: Fonctions générales des calques Suivant:layer_get_depth © Copyright YoYo Games Ltd. 2021 Tous droits réservés
+
+  
+  couche_get_id
+  Cette fonction peut être utilisée pour obtenir la valeur d'identification unique d'une couche donnée. Dans l'IDE, toutes les couches ont un nom et un type, et pour pouvoir les éditer ou les modifier par le code, vous devez donner la valeur de l'ID de la couche. Cette fonction est utilisée pour récupérer
+    cet ID en utilisant le nom (une chaîne) de la couche (tel qu'écrit dans l'IDE). Si vous créez une nouvelle couche par le code en utilisant la fonction layer_create() alors cette fonction renverra la valeur unique de l'ID à la place.
+    (les couches créées dynamiquement n'ont pas de nom). Notez que si vous donnez le nom d'une couche qui n'existe pas dans la pièce actuelle, vous obtiendrez une erreur et le projet se plantera.
+   
+  Syntaxe :
+  layer_get_id(nom_de_couche)
+  
+    
+      
+        Arguments
+        Description
+      
+      
+        nom_de_couche
+        Le nom de la couche (une chaîne de caractères)
+      
+    
+  
+   
+  Les retours :
+  Valeur de l'ID de la couche (réel), ou -1 si la couche spécifiée n'existe pas.
+   
+  Exemple :
+  var near = instance_nearest(x, y, obj_Tree) ; var layer_id = layer_get_id("Instances Front") ; layer_add_instance(layer_id, near) ;
+  Le code ci-dessus va d'abord obtenir l'index de l'instance la plus proche de la position x/y donnée et le stocker dans une variable locale. Il obtient ensuite l'ID unique de la couche d'instance pour la couche nommée "Instances Front", et déplace l'instance trouvée sur cette couche.
+    cette couche.
+   
+   
+   
+  
+    
+      
+        Retour : Fonctions générales des couches
+        Suivant : layer_get_depth
+      
+    
+    Copyright YoYo Games Ltd. 2021 Tous droits réservés
   
   
   

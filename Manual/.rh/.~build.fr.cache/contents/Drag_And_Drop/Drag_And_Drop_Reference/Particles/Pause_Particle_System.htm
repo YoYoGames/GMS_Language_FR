@@ -1,4 +1,46 @@
- Système de particules de pause Cette action mettra en pause le système de particules donné. Vous fournissez la valeur d'ID unique pour le système à mettre en pause, telle qu'elle est renvoyée lorsque vous avez créé le système avec l'action Créer un système de particules. Un système de particules en pause attirera toujours les particules qui ont été générées, mais elles ne mettront plus à jour leur couleur, leur position ou leur alpha, et elles ne termineront pas leur durée de vie et disparaîtront jusqu'à ce que vous réactiviez le système. Notez que cela ne met pas en pause les émetteurs qui diffusent des particules, ni n'arrêtera l'éclatement d'un émetteur de particules - les émetteurs créeront toujours des particules lorsqu'ils seront appelés, mais lorsque le système sera mis en pause, les particules ne feront rien et seront dessinées exactement là où elles sont créées jusqu'à ce que vous réinitialisez l'état de pause ou appelez Update Particle System. Syntaxe de l'action: Arguments: Argument Description System La valeur d'ID unique du système à mettre en pause Exemple: Le code de bloc d'action ci-dessus vérifiera une variable globale et si elle retourne true alors le système de particules donné sera mis en pause, sinon il ne le sera pas.  Retour: Actions de particules Suivant: Mettre à jour le système de particules © Copyright YoYo Games Ltd. 2021 Tous droits réservés
+
+  
+   Système de particules Pause
+  Cette action mettra en pause le système de particules donné. Vous fournissez la valeur d'identification unique du système à mettre en pause, telle qu'elle est retournée lorsque vous avez créé le système avec l'action Créer un système de particules. Un système de particules en pause
+    dessinera toujours les particules qui ont été créées, mais elles ne mettront plus à jour leur couleur, leur position ou leur alpha, et elles ne termineront pas leur vie et disparaîtront jusqu'à ce que vous repreniez le système. Vous pouvez choisir de mettre en pause ou de reprendre le système en utilisant l'option
+    l'option "État".
+  Notez que cela ne met pas en pause les émetteurs qui diffusent des particules, et n'arrête pas non plus un émetteur qui émet des particules - les émetteurs continueront à créer des particules lorsqu'ils seront appelés, mais lorsque le système est en pause, les particules ne feront rien et seront dessinées exactement là où elles ont été créées jusqu'à ce que vous réinitialisiez l'état de pause ou appeliez Update Particle System.
+    où elles ont été créées jusqu'à ce que vous réinitialisiez l'état de pause ou que vous appeliez Update Particle System.
+   
+  Syntaxe de l'action :
+  
+  Arguments :
+  
+    
+      
+        Arguments
+        Description
+      
+      
+        Système
+        La valeur d'identification unique du système à mettre en pause.
+      
+      
+        État
+        Permet de mettre en pause ou de reprendre le système de particules
+      
+    
+  
+   
+  Exemple :
+  Le code du bloc d'action ci-dessus vérifiera une variable globale et s'il retourne
+   vrai, alors le système de particules donné sera mis en pause, sinon il sera repris.
+   
+   
+   
+  
+    
+      
+        Retour : Actions des particules
+        Suivant : Mise à jour du système de particules
+      
+    
+    Copyright YoYo Games Ltd. 2021 Tous droits réservés
   
   
   

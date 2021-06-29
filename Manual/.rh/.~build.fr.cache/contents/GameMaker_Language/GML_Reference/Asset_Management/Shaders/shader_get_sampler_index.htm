@@ -1,6 +1,48 @@
- shader _get_sampler_index Comme vous ne pouvez pas modifier la valeur d'un échantillonneur de shader shader lui-même, vous devez le définir avant d'appeler le shader aide de l'une des fonctions de jeu uniforme disponibles. Cependant, pour pouvoir faire cela, vous devez d'abord appeler cette fonction pour obtenir le "handle" de l' shader que vous voudrez définir. REMARQUE: Bien qu'un shader soit composé de deux programmes discrets (sommet et fragment), cette fonction ne différenciera pas les deux et renverra la poignée de l' shader de l'un ou l'autre. Syntaxe:shader_get_sampler_index(shader, uniform); Argument Description shader L'index du shader à utiliser. uniform L' shader pour obtenir la poignée de (une chaîne). Retour:Real Exemple:glassshader_bgsampler = shader_get_sampler_index(GlassShader, "s_BackgroundSampler") spr = sprite_get_texture(sprite_index, 0); shader_set(GlassShader);
-     texture_set_stage(glassshader_bgsampler, spr); shader_reset();
-   Le code ci-dessus obtiendra le handle de l'échantillonneur dans le shader indexé comme "Glass Shader ", puis définira cette shader sur la texture de sprite donnée.  Retour: Shaders Suivant: shader _set © Copyright YoYo Games Ltd. 2021 Tous droits réservés
+
+  
+  shader_get_sampler_index
+  Étant donné que vous ne pouvez pas modifier la valeur d'un échantillonneur d'ombrage dans l'ombrage lui-même, vous devez la définir avant d'appeler l'ombrage à l'aide de l'une des fonctions d 'uniformisation disponibles. Cependant, pour pouvoir le faire, vous
+    devez d'abord appeler cette fonction pour obtenir le "handle" de l'échantillonneur de shader que vous souhaitez définir.
+  NOTE: Bien qu'un shader soit composé de deux programmes discrets (vertex et fragment) cette fonction ne fera pas la différence entre les deux et retournera le handle de l'échantillon du shader de l'un ou l'autre.
+   
+  Syntaxe :
+  shader_get_sampler_index(shader, uniform) ;
+  
+    
+      
+        Arguments
+        Description
+      
+      
+        nuanceur
+        L'index du shader à utiliser.
+      
+      
+        uniforme
+        L'échantillonneur de shaders dont il faut récupérer le handle (une chaîne).
+      
+    
+  
+   
+  Les retours :
+  Real
+   
+  Exemple :
+  glassshader_bgsampler = shader_get_sampler_index(GlassShader, "s_BackgroundSampler") spr = sprite_get_texture(sprite_index, 0) ; shader_set (GlassShader) ;
+     texture_set_stage(glassshader_bgsampler, spr) ; shader_reset() ;
+  
+  Le code ci-dessus récupère l'identifiant de l'échantillonneur dans le shader indexé en tant que "GlassShader", puis définit la constante du shader sur la texture du sprite donnée.
+   
+   
+   
+  
+    
+      
+        Retour : Shaders
+        Suivant : shader_set
+      
+    
+    Copyright YoYo Games Ltd. 2021 Tous droits réservés
   
   
   

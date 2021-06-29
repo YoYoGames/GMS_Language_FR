@@ -1,4 +1,61 @@
- Le profileur Le débogueur vous permet de parcourir votre code et de trouver tout problème avec la base de code, mais vous devez parfois vérifier des détails plus subtils afin d'optimiser correctement vos jeux. L' option Profil vous aide à faire exactement cela en vous donnant un aperçu des performances, en indiquant le temps nécessaire pour appeler des fonctions, des scripts et même le temps qu'il a fallu à un événement spécifique pour se terminer. Outre la fenêtre principale affichant tous les différents événements, scripts et fonctions appelés, vous disposez également des options suivantes pour utiliser le Profiler: Activer désactiver C'est le bouton pour activer ou désactiver le Profiler. Lorsqu'il est activé, le profileur démarre et vous commencez à voir les événements, les scripts et les fonctions répertoriés dans la fenêtre principale avec différentes valeurs de données pour chacun d'eux. La façon dont ces données sont affichées dépendra de l' affichage de l'heure et du mode d' affichage (tous deux expliqués plus en détail ci-dessous). Affichage de l'heure Cette case à cocher vous permet de basculer entre le temps moyen et le temps absolu du profileur. Lorsqu'elle n'est pas cochée, les valeurs affichées dans la fenêtre principale seront le nombre total d'appels effectués à la fonction, le script ou l'événement et le temps total pris (les temps sont en microsecondes ) au cours du profil. Cependant, si vous activez cette option, ces colonnes affichent le temps moyen nécessaire par étape pour chaque fonction, script ou événement, et le nombre moyen de fois qu'il a été appelé. Mode d'affichage Ce menu vous permet de choisir le mode d'affichage, qui peut être de haut en bas ou de bas en haut. La sélection du mode de vue de haut en bas affichera le profil de haut en bas (plus ou moins identique à la hiérarchie de la pile d'appels) afin d'afficher l'événement, puis le script et toutes les fonctions utilisées. Notez que vous pouvez double-cliquer  sur l'une des entrées pour l'ouvrir dans la fenêtre de débogage Source si vous en avez une. Si vous voyez un icône à côté d'un nom, puis il y a d'autres appels de script ou de fonction dans cette section, et en cliquant sur le élargira l'arborescence pour les afficher. La sélection du mode de vue de bas en haut affichera les choses de bas en haut afin que vous puissiez voir toutes les fonctions et les appels de script individuellement. Lors de l'utilisation de ce mode d'affichage, cliquez sur le développera la fonction ou le script pour montrer ce qui l'a réellement appelé. Afficher la cible La vue cible vous permet de choisir entre l'affichage du GML du projet (données d'événement et de code), les processus du moteur d'arrière-plan ou les deux. Si vous choisissez " GML ", vous obtiendrez les événements, les fonctions et les scripts appelés à chaque étape tandis que la vue "Moteur" affichera uniquement les appels de moteur requis par le projet, vous permettant de voir les goulots d'étranglement dans la manière dont votre projet gère les choses. Si vous sélectionnez "Les deux", les deux ensembles de données seront affichés, mais notez que lorsqu'ils sont combinés avec la vue "Bottom Up", les différents appels de script et de fonction seront imbriqués dans les appels du moteur et vous devrez cliquer sur le bouton pour les développer pour les voir. Les données de profil sont affichées dans quatre colonnes, et en cliquant sur l'une d'elles, les données seront triées en fonction des critères de colonne. Nom: il s'agit du nom de l'événement, du script ou de la fonction appelé, et peut avoir un à côté de lui pour indiquer d'autres appels vers lui ou depuis celui-ci (selon le mode d'affichage que vous avez sélectionné). Vous pouvez double-cliquer sur l'un des noms pour qu'il ouvre le bloc de code ou le script dans la fenêtre Source. Cliquez sur le haut de cette colonne pour trier les noms par ordre alphabétique. Temps: Cela affichera soit le temps total qu'une fonction (ou un script ou un événement) a pris pendant le profilage, soit le temps moyen qu'il a pris à chaque étape pour être appelé (en fonction de l' option d'affichage du temps sélectionnée) et il est affiché dans microsecondes. Appels: Ici, vous pouvez voir soit le nombre total d'appels à l'événement, la fonction ou le script donné, soit le nombre moyen d'appels à celui-ci en une seule étape (encore une fois, en fonction de l' option d'affichage de l'heure sélectionnée). Étape%: la valeur indiquée ici est le pourcentage global d'une étape unique que l'appel a effectué.  Retour: Le débogueur Suivant: Montres © Copyright YoYo Games Ltd. 2021 Tous droits réservés
+
+  
+  Le Profiler
+  Le débogueur vous permet de parcourir votre code et de détecter tout problème dans la base de code, mais vous avez parfois besoin de vérifier des détails plus subtils afin d'optimiser correctement vos jeux. L'option Profil vous aide à le faire en vous donnant un aperçu des performances.
+    une vue d'ensemble des performances, en indiquant le temps nécessaire pour appeler les fonctions, les scripts et même le temps nécessaire à l'exécution d'un événement spécifique.
+  En dehors de la fenêtre principale qui montre tous les différents événements, scripts et fonctions appelés, vous disposez également des options suivantes pour utiliser le
+    Profiler :
+  Activer / désactiver
+  
+    Il s'agit du bouton permettant d'activer ou de désactiver le profileur. Lorsqu'il est activé, le profileur démarre et vous commencerez à voir les événements, les scripts et les fonctions être listés dans la fenêtre principale avec différentes valeurs de données pour chacun d'entre eux. La façon dont ces données sont affichées
+      dépendra de l'affichage du temps et du mode d'affichage (tous deux expliqués plus en détail ci-dessous).
+    
+  
+  Affichage de l'heure
+  
+    Cette case à cocher vous permet de basculer entre le temps moyen et le temps absolu pour le profileur. Lorsqu'elle n'est pas cochée, les valeurs affichées dans la fenêtre principale seront le nombre total d'appels faits à la fonction, au script ou à l'événement et le temps total pris (les temps sont en microsecondes) au cours du profil.
+      fonction, script ou événement et le temps total pris (les temps sont en microsecondes) au cours du profil. Toutefois, si vous l'activez, ces colonnes indiquent le temps moyen pris par étape pour chaque fonction,
+      script ou événement, et le nombre moyen de fois qu'il a été appelé.
+    
+  
+  Mode d'affichage
+  
+    Ce menu vous permet de choisir le mode d'affichage, qui peut être soit Top Down, soit Bottom Up.
+    En sélectionnant le mode d'affichage Top Down, le profil sera affiché de haut en bas (plus ou moins de la même manière que la hiérarchie de la pile d'appels), c'est-à-dire qu'il montrera l'événement, puis le script et enfin toutes les fonctions utilisées. Notez que vous pouvez double-cliquer  sur n'importe laquelle des entrées pour l'ouvrir dans la fenêtre de débogage de la source si vous en avez une.
+      si vous en avez une. Si vous voyez une icône  à côté d'un nom, cela signifie qu'il y a d'autres appels de script ou de fonction dans cette section.
+      Si vous voyez une icône  à côté d'un nom, cela signifie qu'il y a d'autres appels de script ou de fonction dans cette section.
+    En sélectionnant le mode d'affichage ascendant, les choses s'affichent de bas en haut, de sorte que vous pouvez voir toutes les fonctions et tous les appels de script individuellement. Dans ce mode d'affichage, si vous cliquez sur le site , la fonction ou le script sera développé pour montrer ce qui l'a appelé.
+    
+  
+  Voir la cible
+  
+    La cible d'affichage vous permet de choisir entre l'affichage du GML du projet (événements et données de code), les processus du moteur en arrière-plan ou les deux. Si vous choisissez " GML ", vous obtiendrez les événements, fonctions et scripts appelés à chaque étape.
+      à chaque étape, tandis que la vue "Moteur" ne montrera que les appels au moteur requis par le projet, ce qui vous permettra de voir les éventuels goulets d'étranglement dans la façon dont votre projet gère les choses. Si vous sélectionnez "Both", alors les deux ensembles de données seront
+      Si vous sélectionnez "Both", les deux ensembles de données seront affichés, mais notez que lorsque vous les combinez avec la vue "Bottom Up", les différents appels de scripts et de fonctions seront imbriqués dans les appels de moteur et vous devrez cliquer sur  pour les développer afin de les voir.
+    
+  
+   Les données du profil sont présentées dans quatre colonnes. En cliquant sur l'une d'entre elles, les données sont triées selon les critères de la colonne.
+  
+  
+    Nom: Il s'agit du nom de l'événement, du script ou de la fonction appelé(e). Il peut être accompagné d'un  pour indiquer d'autres appels à cet événement ou à cette fonction (selon le mode d'affichage sélectionné).
+      (selon le mode d'affichage que vous avez sélectionné). Vous pouvez double-cliquer sur  sur n'importe lequel de ces noms pour ouvrir le bloc de code ou le script dans la fenêtre Source.
+      ou le script dans la fenêtre Source. En cliquant sur le haut de cette colonne, les noms seront classés par ordre alphabétique.
+    Temps: Ceci montrera soit le temps total qu'une fonction (ou un script ou un événement) a pris pendant le profilage, soit le temps moyen qu'il a fallu à chaque étape pour être appelée (selon l'option d'affichage du temps sélectionnée) et il est affiché en microsecondes.
+    Appels: Ici, vous pouvez voir soit le nombre total d'appels à l'événement, la fonction ou le script donné, soit le nombre moyen d'appels à celui-ci dans une seule étape (encore une fois, selon l'option d'affichage du temps 
+      sélectionnée).
+    Step%: La valeur indiquée ici est le pourcentage global d'une étape unique que l'appel a pris.
+  
+   
+   
+   
+  
+    
+      
+        Retour : Le débogueur
+        Suivant : Montres
+      
+    
+    Copyright YoYo Games Ltd. 2021 Tous droits réservés
   
   
   

@@ -1,7 +1,44 @@
-is_struct Cette fonction peut être utilisée pour vérifier et voir si une variable contient une structure (elle retournera true ) ou non (auquel cas il retournera false ). Syntaxe:is_struct(n); Argument Description n La variable à vérifier. Retour:Boolean Exemple:if is_struct(a)     {
-         delete(a);
-         }
-   Le code ci-dessus vérifie une variable pour voir s'il s'agit d'une structure et si la fonction retourne true, la structure est supprimée.  Retour: Fonctions variables Suivant:is_method © Copyright YoYo Games Ltd. 2021 Tous droits réservés
+
+  
+  is_struct
+  Cette fonction vérifie si la valeur fournie est une structure. Elle retourne true si c'est le cas, sinon elle retourne false.
+  Notez que les variables de méthodes renvoient également true, et les instances d'objets false.
+   
+  Syntaxe :
+  is_struct(val) ;
+  
+    
+      
+        Arguments
+        Description
+      
+      
+        val
+        La valeur à vérifier.
+      
+    
+  
+   
+  Les retours :
+  Booléen
+   
+  Exemple :
+  if is_struct(a) {
+     delete(a) ;
+     }
+  
+  Le code ci-dessus vérifie une variable pour voir si c'est un struct, et si la fonction renvoie vrai, le struct est supprimé.
+   
+   
+   
+  
+    
+      
+        Retour : Fonctions variables
+        Suivant : is_method
+      
+    
+    Copyright YoYo Games Ltd. 2021 Tous droits réservés
   
   
   

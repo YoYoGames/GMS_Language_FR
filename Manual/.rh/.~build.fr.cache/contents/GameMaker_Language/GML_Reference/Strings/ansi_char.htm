@@ -1,4 +1,40 @@
-ansi_char Cette fonction renvoie une chaîne contenant le caractère avec la valeur BYTE brute définie. Cela ne sera pas, et ne devrait pas, être affiché, mais il sera correctement enregistré sur le disque pour une utilisation dans le codage. Syntaxe:ansi_char(val); Argument Description val La valeur d'octet brut. Retour:String (Single character) Exemple:var str1 = ansi_char($EF); var str2 = ansi_char($BB); var str3 = ansi_char($BF); file_text_write_string(global.saveFile, str1 + str2 + str3); Le code ci-dessus crée une chaîne à partir de données d'octets brutes et l'écrit dans un fichier (précédemment ouvert).  Retour: Cordes Suivant:chr © Copyright YoYo Games Ltd. 2021 Tous droits réservés
+
+  
+  ansi_char
+  Cette fonction renvoie une chaîne de caractères contenant le caractère avec la valeur BYTE brute définie. Cette chaîne ne sera pas, et ne devrait pas, être affichée, mais elle sera enregistrée correctement sur le disque pour être utilisée dans l'encodage.
+   
+  Syntaxe :
+  ansi_char(val) ;
+  
+    
+      
+        Arguments
+        Description
+      
+      
+        val
+        La valeur brute de l'octet.
+      
+    
+  
+   
+  Les retours :
+  Chaîne de caractères (caractère unique)
+   
+  Exemple :
+  var str1 = ansi_char($EF) ; var str2 = ansi_char($BB) ; var str3 = ansi_char($BF) ; file_text_write_string(global.saveFile, str1 + str2 + str3) ;
+  Le code ci-dessus crée une chaîne de caractères à partir de données brutes d'octets et l'écrit dans un fichier (préalablement ouvert).
+   
+   
+   
+  
+    
+      
+        Retour : Cordes
+        Suivant : chr
+      
+    
+    Copyright YoYo Games Ltd. 2021 Tous droits réservés
   
   
   

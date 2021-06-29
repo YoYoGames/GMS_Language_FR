@@ -1,5 +1,34 @@
-random_get_seed Pour générer un nombre aléatoire, GameMaker Studio 2 commence par un numéro de départ aléatoire. Avec cette fonction, vous pouvez récupérer cette graine, qui peut ensuite être stockée pour reproduire une série spécifique d'événements aléatoires. Par exemple, supposons que vous ayez un jeu généré de manière procédurale, mais que vous souhaitiez que le joueur puisse revenir aux zones précédemment découvertes. Eh bien, au début de chaque zone, vous pouvez stocker la graine aléatoire avec cette fonction et donc chaque fois que vous devez y retourner, vous pouvez utiliser random_set_seed() pour définir la graine à ce qu'elle était auparavant et forcer ainsi GameMaker Studio 2 à reproduire le même ensemble de fonctions «aléatoires» qu'il utilisait précédemment. Syntaxe:random_get_seed(); Retour:Real Exemple:ini_open("Save.ini") ini_write_real("Levels", string(level), random_get_seed()); ini_close();
-   Le code ci-dessus obtiendra la graine aléatoire et la stockera dans un fichier ini.  Retour: Fonctions numériques Suivant:randomise © Copyright YoYo Games Ltd. 2021 Tous droits réservés
+
+
+
+
+
+  
+  random_get_seed
+  Pour générer un nombre aléatoire, GameMaker Studio 2 démarre avec un nombre de départ aléatoire. Cette fonction vous permet de récupérer cette graine, qui peut ensuite être stockée pour reproduire une série spécifique d'événements aléatoires. Par exemple, supposons que vous ayez un jeu généré de façon
+    mais que vous voulez que le joueur puisse retourner dans des zones précédemment découvertes. Au début de chaque zone, vous pouvez stocker la graine aléatoire avec cette fonction et ainsi, chaque fois que vous devez y retourner, vous pouvez utiliser la fonction random_set_seed()    pour remettre la graine à ce qu'elle était auparavant et ainsi forcer GameMaker Studio 2 à reproduire le même ensemble de fonctions "aléatoires" qu'il utilisait précédemment.
+   
+  Syntaxe :
+  random_get_seed() ;
+   
+  Les retours :
+  Real
+   
+  Exemple :
+  ini_open("Save.ini") ini_write_real("Levels", string(level), random_get_seed()) ; ini_close() ;
+  
+  Le code ci-dessus va obtenir la graine aléatoire et la stocker dans un fichier ini.
+   
+   
+   
+  
+    
+      
+        Retour : Fonctions des chiffres
+        Suivant : randomiser
+      
+    
+    Copyright YoYo Games Ltd. 2021 Tous droits réservés
   
   
   

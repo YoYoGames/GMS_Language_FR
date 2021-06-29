@@ -1,7 +1,67 @@
-gpu_set_cullmode Cette fonction peut être utilisée pour définir le mode de sélection de la face arrière. Un polygone (primitif) a un recto et un verso. On dit que le côté avant est le côté où les sommets sont définis dans le sens anti-horaire. Normalement, les deux côtés sont dessinés, mais si vous créez une forme fermée (comme une pyramide), c'est un gaspillage de puissance de traitement car l'arrière du triangle ne peut jamais être vu. C'est dans ces cas que vous pouvez activer l'élimination de la face arrière, car cela économise environ la moitié du temps de dessin, bien que cela signifie que vous avez la tâche de définir vos polygones de la manière correcte pour éviter les problèmes. La valeur du mode de sélection utilisée doit être l'une des constantes suivantes (la valeur par défaut est cull_noculling ): Constant Description cull_noculling Aucun abattage ne sera effectué cull_clockwise Tous les triangles dans le sens des aiguilles d'une montre seront éliminés cull_counterclockwise Tous les triangles dans le sens anti-horaire seront éliminés Syntaxe:gpu_set_cullmode(cullmode); Argument Description cullmode Le mode de sélection à utiliser (voir liste ci-dessus) Retour:N/A Exemple:if gpu_get_cullmode() != cull_clockwise     {
-         gpu_set_cullmode(cull_clockwise);
-         }
-   Le code ci-dessus obtient le mode de sélection actuel et si ce n'est pas le cas cull_clockwise il est réglé sur cette constante.  Retour: Contrôle GPU Suivant:gpu_set_blendmode © Copyright YoYo Games Ltd. 2021 Tous droits réservés
+
+  
+  gpu_set_cullmode
+  Cette fonction permet de définir le mode d'élimination de la face arrière. Un polygone (primitif) a une face avant et une face arrière. Le côté avant est dit être le côté où les sommets sont définis dans le sens inverse des aiguilles d'une montre. Normalement, les deux côtés
+    sont dessinés, mais si vous créez une forme fermée (comme une pyramide), c'est un gaspillage de puissance de traitement car l'arrière du triangle ne sera jamais vu. C'est dans ces cas que vous pouvez activer l'élimination des faces arrières, car cela permet d'économiser environ la moitié du temps de dessin.
+    le temps de dessin, bien que cela signifie que vous devez définir vos polygones de la bonne manière pour éviter les problèmes.
+  La valeur du mode d'abattage utilisée doit être l'une des constantes suivantes (la valeur par défaut est cull_noculling) :
+   
+  
+    
+      
+        Constant
+        Description
+      
+      
+        abattage_nécessaire
+        Aucun abattage ne sera effectué
+      
+      
+        cull_clockwise
+        Tous les triangles dans le sens des aiguilles d'une montre seront éliminés
+      
+      
+        cull_counterclockwise
+        Tous les triangles dans le sens inverse des aiguilles d'une montre seront éliminés.
+      
+    
+  
+   
+  Syntaxe :
+  gpu_set_cullmode(cullmode) ;
+  
+    
+      
+        Arguments
+        Description
+      
+      
+        cullmode
+        Le mode d'abattage à utiliser (voir liste ci-dessus)
+      
+    
+  
+   
+  Les retours :
+  N/A
+   
+  Exemple :
+  if gpu_get_cullmode() != cull_clockwise {
+     gpu_set_cullmode(cull_clockwise) ;
+     }
+  
+  Le code ci-dessus récupère le mode d'élimination actuel et s'il n'est pas cull_clockwise, il est défini comme cette constante.
+   
+   
+   
+  
+    
+      
+        Retour : Contrôle du GPU
+        Suivant : gpu_set_blendmode
+      
+    
+    Copyright YoYo Games Ltd. 2021 Tous droits réservés
   
   
   

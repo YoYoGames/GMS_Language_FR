@@ -1,4 +1,33 @@
-image_blend Cette variable contrôle la "teinte" du sprite d'instance et la valeur par défaut est -1 (mais peut aussi être c_white ). Toute autre valeur (y compris les constantes de couleur internes comme c_red, ou c_aqua ) mélangera la couleur spécifiée avec le sprite d'origine. Veuillez noter que pour que les modifications apportées à cette variable soient visibles, l'instance doit avoir soit aucun événement de dessin (et donc GameMaker Studio 2 dessine par défaut le sprite), soit être dessinée à l'aide de l'une des fonctions de dessin étendues comme draw_self() ou draw_sprite_ext(). Veuillez noter que vous devriez essayer de limiter le mélange sur la plate-forme HTML5 (sauf si vous utilisez WebGL), car chaque sprite mélangé doit être mis en cache séparément et ainsi avoir de nombreux sprites mélangés peut affecter les performances (vous pouvez également définir la taille du cache à l'aide de la fonction sprite_set_cache_size() ). Syntaxe:image_blend; Retour:Real (single precision floating point value) Exemple:image_blend = make_colour_hsv(255, 255, random(255)); Le code ci-dessus définira l'image_blend du sprite défini pour l'instance sur une couleur aléatoire.  Retour: Variables d'instance de sprite Suivant:image_index © Copyright YoYo Games Ltd. 2021 Tous droits réservés
+
+  
+  mélange d'images
+  Cette variable contrôle la "teinte" du sprite d'instance. La valeur par défaut est -1 (mais peut aussi être c_white). Toute autre valeur (y compris les constantes de couleur internes comme c_red, ou c_aqua) mélangera la couleur spécifiée avec le sprite original.
+    couleur spécifiée avec le sprite original. Veuillez noter que pour que les modifications apportées à cette variable soient visibles, l'instance ne doit pas avoir d'événement de dessin ( GameMaker Studio 2 dessinera donc le sprite par défaut) ou doit être dessinée à l'aide de l'une des fonctions de dessin étendues telles que
+    comme draw_self() ou draw_sprite_ext().
+  
+  Veuillez noter que vous devez essayer de limiter les mélanges sur la plate-forme HTML5 (à moins d'utiliser WebGL), car chaque sprite mélangé doit être mis en cache séparément et le fait de disposer de nombreux sprites mélangés peut nuire aux performances (vous pouvez également définir la taille du cache à l'aide de la fonction
+    la fonction sprite_set_cache_size()).
+   
+  Syntaxe :
+  image_blend ;
+   
+  Les retours :
+  Réel (valeur à virgule flottante de simple précision)
+   
+  Exemple :
+  image_blend = make_colour_hsv(255, 255, random(255)) ;
+  Le code ci-dessus définira l'image_blend du sprite défini pour l'instance à une couleur aléatoire.
+   
+   
+   
+  
+    
+      
+        Retour : Variables d'instance de sprite
+        Suivant : image_index
+      
+    
+    Copyright YoYo Games Ltd. 2021 Tous droits réservés
   
   
   

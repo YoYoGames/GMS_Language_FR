@@ -1,17 +1,73 @@
- steam _download_scores Cette fonction permet de récupérer une plage séquentielle d'entrées de classement par classement. Le start_idx et end_idx Les paramètres contrôlent la plage de rangs demandée, par exemple, vous pouvez afficher le top 10 d'un classement pour votre jeu en définissant la valeur de début sur 1 et la valeur de fin sur 10. Le nom du classement est une chaîne qui a été définie lorsque vous avez créé le classement en utilisant la fonction steam_create_leaderboard(), et la fonction renverra une valeur qui peut ensuite être utilisée pour identifier le rappel dans l' événement Steam Async, ou elle renverra -1 en cas d'échec. Notez que lors du téléchargement d'un classement, la touche "entrées" du async_load la carte peut avoir une clé "data" supplémentaire si des données de tampon supplémentaires ont été téléchargées avec le score (voir steam_upload_score_buffer() ). Ce tampon de données sera encodé en Base 64 et vous devrez donc utiliser la fonction buffer_base64_decode() sur le tampon avant de lire les données. Syntaxe:steam_download_scores(lb_name, start_idx, end_idx); Argument Description lb_name Le nom du classement à partir duquel vous téléchargez les scores (une chaîne). start_idx La position de départ dans le classement. end_idx La position finale dans le classement. Retour:Real Exemple étendu: Dans cet exemple étendu, nous demanderons le classement des dix premiers pour le classement donné et analyserons ses résultats dans l' événement Steam Async. pour commencer, nous devons demander les scores avec le code suivant:score_get = steam_download_scores("Game Scores", 1, 10); Cela enverra une demande au Steam pour les scores du classement "Game Scores", en stockant l' identifiant asynchrone de la demande dans la variable "score_get". cela sera ensuite géré dans l' événement Steam Async de la manière suivante:var async_id = ds_map_find_value(async_load, "id"); if async_id == score_get     {
-         var entries = ds_map_find_value(async_load, "entries");     var map = json_decode(entries);     if ds_map_exists(map, "default")         {
-             ds_map_destroy(map);
-             exit;
-             }
-         else
-             {
-             var list = ds_map_find_value(map, "entries");         var len = ds_list_size(list);         var entry;         for(var i = 0; i < len; i++;)             {
-                 entry = ds_list_find_value(list, i );             steam_name[i] = ds_map_find_value(entry, "name");             steam_score[i] = ds_map_find_value(entry, "score");             steam_rank[i] = ds_map_find_value(entry,
-    "rank");             }
-             }
-         ds_map_destroy(map)
-         }
-   Ce que nous faisons ici, c’est d’abord vérifier la clé «id» du spécial async_load Carte DS. Si cette valeur est la même que la valeur de la fonction de rappel d'origine (stockée dans la variable "score_get"), nous continuons alors à traiter les données. La première chose que nous faisons est d'analyser le async_load ds_map pour la clé «entrées» qui contiendra un objet JSON contenant les données du classement. Cet objet JSON est ensuite décodé (voir json_decode() ) comme une autre carte DS, et ce nouvel identifiant de carte est stocké dans la variable "map". Cette carte est vérifiée pour la clé "par défaut" et si cela est trouvé, la carte est détruite et l'événement est quitté. Si aucune clé "par défaut" n'est trouvée, le code analysera alors la carte pour extraire les informations nécessaires sur le classement, en extrayant d'abord une liste DS à partir de la clé "entrées" de la carte DS, puis en parcourant chaque entrée du list pour obtenir une autre carte DS avec le nom, le score et le rang de chaque entrée. Ces valeurs sont ensuite stockées dans des tableaux. Une fois la boucle terminée, la carte JSON DS est détruite (ce qui à son tour détruit toutes les cartes et listes internes). Il n'est pas nécessaire de détruire le async_load Carte DS car elle est gérée pour vous par GameMaker Studio 2.  Retour: Classements Suivant: steam _download_scores_around_user © Copyright YoYo Games Ltd. 2021 Tous droits réservés
+
+  
+  scores de téléchargement de la vapeur
+  Cette fonction est utilisée pour récupérer une plage séquentielle d'entrées de classement par rang de classement. Les paramètres start_idx et end_idx contrôlent la plage de rangs demandée. Par exemple, vous pouvez afficher les 10 premiers sur un tableau de classement pour votre jeu en définissant la valeur de départ à 1 et la valeur finale à 10.
+    votre jeu en définissant la valeur de début à 1 et la valeur de fin à 10. Le nom du classement est une chaîne de caractères définie lorsque vous avez créé le classement à l'aide de la fonction steam_create_leaderboard(),
+    La fonction renvoie une valeur qui peut ensuite être utilisée pour identifier le rappel dans l'événement asynchroneSteam, ou renvoie -1 si elle a échoué. Notez que lors du
+    téléchargement d'un leaderboard, la clé "entries" de la carte async_load de la carte peut avoir une clé "data" supplémentaire si des données supplémentaires ont été
+    téléchargées en même temps que le score (voir steam_upload_score_buffer()). Ce tampon de données sera codé en Base 64 et vous devrez donc utiliser la fonction buffer_base64_decode()    sur le tampon avant de lire les données.
+   
+  Syntaxe :
+  steam_download_scores(lb_name, start_idx, end_idx) ;
+  
+    
+      
+        Arguments
+        Description
+      
+      
+        lb_name
+        Le nom du classement à partir duquel vous téléchargez les scores (une chaîne).
+      
+      
+        start_idx
+        La position de départ dans le classement.
+      
+      
+        end_idx
+        La position finale dans le classement.
+      
+    
+  
+   
+  Les retours :
+  Real
+   
+  Exemple étendu :
+  Dans cet exemple étendu, nous allons demander le classement des dix premiers pour le leaderboard donné et analyser ses résultats dans l'événement asynchroneSteam. Pour commencer, nous devons demander les scores avec le code suivant :
+  score_get = steam_download_scores("Game Scores", 1, 10) ;
+  Ceci enverra une requête au serveur Steam pour les scores du tableau de classement "Game Scores", en stockant l'identifiant asynchrone de la requête dans la variable "score_get". Ceci sera ensuite traité dans l'événement asynchrone Steam de la manière suivante:
+  var async_id = ds_map_find_value(async_load, "id") ; if async_id == score_get {
+     var entries = ds_map_find_value(async_load, "entries") ; var map = json_decode(entries) ; if ds_map_exists(map, "default") {
+     ds_map_destroy(map) ;
+     exit ;
+     }
+     else
+     {
+     var list = ds_map_find_value(map, "entries") ; var len = ds_list_size(list) ; var entry ; for(var i = 0 ; i < len ; i++ ;) {
+     entry = ds_list_find_value(list, i ) ; steam_name[i] = ds_map_find_value(entry, "name") ; steam_score [i]= ds_map_find_value(entry, "score") ; steam_rank[i] = ds_map_find_value(entry,
+    "rank") ; }
+     }
+     ds_map_destroy(map)
+     }
+  
+  Ce que nous faisons ici est d'abord de vérifier la clé "id" de la carte spéciale async_load DS. Si cette valeur est la même que celle de la fonction de rappel originale (stockée dans la variable "score_get"), nous continuons alors à traiter les
+    données. La première chose que nous faisons est d'analyser la carte async_load ds_map pour la clé "entries" qui contient un objet JSON contenant les données du classement. Cet objet JSON est ensuite décodé (voir json_decode())
+    comme une autre carte DS, et ce nouvel identifiant de carte est stocké dans la variable "map".
+  Cette carte est vérifiée pour la clé "default" et si elle est trouvée, la carte est détruite et l'événement est quitté. Si aucune clé "default" n'est trouvée, le code va alors analyser la carte pour extraire les informations nécessaires sur le classement,
+    en extrayant d'abord une liste de DS à partir de la clé "entries" de la carte DS, puis en parcourant en boucle chaque entrée de la liste pour obtenir une autre carte DS avec le nom, le score et le rang de chaque entrée. Ces valeurs sont ensuite stockées dans des tableaux.
+  Une fois la boucle terminée, la carte DS JSON est détruite (ce qui a pour effet de détruire toutes les cartes et listes internes). Il n'est pas nécessaire de détruire la carte DS async_load, car GameMaker Studio 2 s'en charge pour vous.
+   
+   
+   
+  
+    
+      
+        Retour : Tableaux de classement
+        Suivant : steam_download_scores_around_user
+      
+    
+    Copyright YoYo Games Ltd. 2021 Tous droits réservés
   
   
   

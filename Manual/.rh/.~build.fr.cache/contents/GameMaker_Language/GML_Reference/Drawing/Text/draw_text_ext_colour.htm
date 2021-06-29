@@ -1,4 +1,80 @@
-draw_text_ext_colour Cette fonction est une combinaison de la base draw_text () fonction avec le draw_text_ext () et draw_text_colour () fonctions, vous permettant de définir des couleurs de dégradé pour le texte ainsi que l'interligne et la largeur maximale par ligne tous ensemble. REMARQUE: la fusion de dégradé n'est pas disponible pour la cible HTML5 sauf si WebGL est activé, bien que vous puissiez toujours définir les couleurs de fusion et il fusionnera la police avec la première couleur donnée. Cependant, tout mélange de cette manière crée une police en double qui est ensuite stockée dans le cache et utilisée si nécessaire, ce qui est loin d'être optimal et si vous utilisez plusieurs changements de couleur, cela ralentira les performances de vos jeux. Vous pouvez définir la taille du cache de polices pour essayer de limiter cela si nécessaire en utilisant la fonction font_set_cache_size (). Syntaxe:draw_text_ext_colour(x, y, string, sep, w, c1, c2, c3, c4, alpha); Argument Description x La coordonnée x de la chaîne dessinée. y La coordonnée y de la chaîne dessinée. string La chaîne à dessiner. sep La distance en pixels entre les lignes de texte. w La largeur maximale en pixels de la chaîne avant un saut de ligne. c1 La couleur du coin supérieur gauche du texte dessiné. c2 La couleur du coin supérieur droit du texte dessiné. c3 La couleur du coin inférieur droit du texte dessiné. c4 La couleur du coin inférieur gauche du texte dessiné. alpha L'alpha du texte. Retour:N/A Exemple:draw_text_ext_colour(200, 200, keyboard_string, 5, 300, c_blue, c_blue, c_navy, c_navy, 1); Le code ci-dessus dessinera le texte que l'utilisateur tape sur le clavier, le divisant en nouvelles lignes chaque fois que la longueur de la chaîne pour cette ligne dépasse 300 pixels. le code maintiendra également une séparation de 5 pixels entre les lignes si cela se produit. Chaque ligne du texte sera colorée en utilisant un dégradé de bleu, avec du bleu clair en haut et du bleu foncé en bas.  Retour: Texte Suivant:draw_text_ext_transformed © Copyright YoYo Games Ltd. 2021 Tous droits réservés
+
+  
+  dessiner_text_ext_color
+  Cette fonction est une combinaison de la fonction de base dessiner_texte() de base avec les fonctions draw_text_ext() et draw_text_colour()    vous permettant de définir des couleurs de gradient pour le texte ainsi que l'espacement des lignes et la largeur maximale par ligne.
+  REMARQUE : le mélange par gradient n'est pas disponible pour la cible HTML5, sauf si WebGL est activé, mais vous pouvez toujours définir les couleurs de mélange et la police sera mélangée avec la première couleur donnée. Cependant, tous les mélanges de cette manière créent une police dupliquée qui est ensuite stockée dans le cache.
+    qui est ensuite stockée dans le cache et utilisée au besoin, ce qui est loin d'être optimal et si vous utilisez plusieurs changements de couleur, cela ralentira les performances de votre jeu. Vous pouvez définir la taille du cache des polices pour essayer de limiter ce phénomène si nécessaire.
+    en utilisant la fonction font_set_cache_size().
+   
+  Syntaxe :
+  draw_text_ext_colour(x, y, string, sep, w, c1, c2, c3, c4, alpha) ;
+  
+    
+      
+        Arguments
+        Description
+      
+      
+        x
+        La coordonnée x de la chaîne dessinée.
+      
+      
+        y
+        La coordonnée y de la chaîne dessinée.
+      
+      
+        chaîne de caractères
+        La ficelle à tirer.
+      
+      
+        sep
+        La distance en pixels entre les lignes de texte.
+      
+      
+        w
+        La largeur maximale en pixels de la chaîne avant un saut de ligne.
+      
+      
+        c1
+        La couleur de la partie supérieure gauche du texte dessiné.
+      
+      
+        c2
+        La couleur de la partie supérieure droite du texte dessiné.
+      
+      
+        c3
+        La couleur de la partie inférieure droite du texte dessiné.
+      
+      
+        c4
+        La couleur de la partie inférieure gauche du texte dessiné.
+      
+      
+        alpha
+        L'alpha du texte.
+      
+    
+  
+   
+  Les retours :
+  N/A
+   
+  Exemple :
+  draw_text_ext_colour(200, 200, keyboard_string, 5, 300, c_blue, c_blue, c_navy, c_navy, 1) ;
+  Le code ci-dessus dessine le texte que l'utilisateur tape au clavier, en le divisant sur de nouvelles lignes chaque fois que la longueur de la chaîne de cette ligne dépasse 300 pixels. Le code maintient également une séparation de 5 pixels entre les lignes si cela se produit.
+    Chaque ligne de texte sera colorée à l'aide d'un dégradé de bleu, avec du bleu clair en haut et du bleu foncé en bas.
+   
+   
+   
+  
+    
+      
+        Retour : Texte
+        Suivant : draw_text_ext_transformed
+      
+    
+    Copyright YoYo Games Ltd. 2021 Tous droits réservés
   
   
   

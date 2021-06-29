@@ -1,4 +1,48 @@
- Si la clé est libérée Cette action vérifie lorsqu'une touche du clavier a été relâchée. Il reviendra true sur l'étape de jeu unique (image) sur laquelle la touche est relâchée et false à tous les autres moments. Si vous activez le not modificateur, cette action sera inversée, et vérifier si la touche n'a pas été relâchée, en retournant false sur l'étape de jeu (cadre) sur laquelle il a été libéré et true à tous les autres moments. Notez que pour ajouter des actions dans le bloc "if", elles doivent être déposées sur le côté de l'action, comme indiqué dans l'image ci-dessous: Ces actions seront désormais exécutées si le "si" est évalué à true, tandis que toutes les actions déposées ailleurs seront exécutées après le bloc "if". Syntaxe de l'action: Arguments: Argument Description Key Le nom de la clé à vérifier. Not Annuler le chèque (vrai devient faux et vice versa) Exemple: Le code de bloc d'action ci-dessus interroge l'état du clavier à chaque étape et si une touche est maintenue enfoncée, il vérifie la touche initiale enfoncée. Si le chèque est true lors de la pression initiale vers le bas, un son est joué, puis, tandis que la touche est maintenue enfoncée, le mélange de sprite passe au rouge. Si la touche n'est pas maintenue enfoncée, une vérification est effectuée sur le relâchement de la touche pour réinitialiser la couleur de fusion au blanc.  Retour: Actions de la souris et du clavier Suivant: Afficher le clavier virtuel © Copyright YoYo Games Ltd. 2021 Tous droits réservés
+
+  
+   Si la clé est relâchée
+  Cette action vérifie si une touche du clavier a été relâchée. Elle retournera vrai sur le seul pas de jeu (frame) où la touche est relâchée et faux à tous les autres moments. Si vous activez le modificateur not, cette action sera
+    inversée, et vérifiera si la touche n'a pas été relâchée, en retournant false sur le pas de jeu (frame) où elle a été relâchée et true à tous les autres moments.
+  Notez que pour ajouter des actions dans le bloc "if", elles doivent être déposées sur le côté de l'action, comme le montre l'image ci-dessous :
+  Ces actions seront maintenant exécutées si le "if" vaut true,
+    tandis que toute action déposée ailleurs sera exécutée après le bloc "if".
+   
+  Syntaxe de l'action :
+  
+  Arguments :
+   
+  
+    
+      
+        Arguments
+        Description
+      
+      
+        Clé
+        Le nom de la clé à vérifier.
+      
+      
+        Non
+        Négation de la vérification (vrai devient faux et vice versa)
+      
+    
+  
+   
+  Exemple :
+  Le code du bloc d'action ci-dessus interroge l'état du clavier à chaque étape et
+    si une touche est maintenue enfoncée, il vérifie l'appui initial sur la touche. Si la vérification est vraie lors de l'appui initial sur la touche, un son est joué, puis, tant que la touche est maintenue enfoncée, le mélange du sprite passe au rouge. Si la touche n'est pas maintenue
+    la touche n'est pas maintenue enfoncée, une vérification est effectuée au moment du relâchement de la touche pour réinitialiser la couleur de mélange en blanc.
+   
+   
+   
+  
+    
+      
+        Retour : Actions de la souris et du clavier
+        Suivant : Afficher le clavier virtuel
+      
+    
+    Copyright YoYo Games Ltd. 2021 Tous droits réservés
   
   
   

@@ -1,4 +1,30 @@
-file_find_next Cette fonction renvoie le nom du fichier suivant qui satisfait le masque précédemment donné et les attributs (définis par file_find_first() ). Si aucun fichier de ce type n'existe, la chaîne vide est renvoyée. ATTENTION! Cette fonction peut ne pas fonctionner comme prévu en raison du GameMaker Studio 2! Veuillez consulter la section sur le système de fichiers pour plus d'informations. REMARQUE: Cette fonction fonctionne sur toutes les plates-formes cibles C ++ ( Windows, Mac, iOS, Android et WinPhone), MAIS les indicateurs de filtre ne fonctionnent que sous Windows. Syntaxe:file_find_next(); Retour:String Exemple:file = file_find_next(); Cela renverra le fichier suivant qui correspond aux attributs précédemment donnés.  Retour: Système de fichiers Suivant:file_find_close © Copyright YoYo Games Ltd. 2021 Tous droits réservés
+
+  
+  fichier_trouver_suivant
+  Cette fonction renvoie le nom du prochain fichier qui satisfait au masque donné précédemment et aux attributs (définis par file_find_first()). Si un tel fichier n'existe pas, la chaîne vide est retournée.
+  AVERTISSEMENT ! Il se peut que cette fonction ne fonctionne pas comme vous l'attendez, car GameMaker Studio 2 est en sandbox ! Veuillez consulter la section sur le système de fichiers pour plus d'informations.
+  REMARQUE: Cette fonction fonctionne sur toutes les plateformes cibles C++(Windows, Mac, iOS, Android et WinPhone), MAIS les drapeaux de filtrage ne fonctionnent que sur Windows.
+   
+  Syntaxe :
+  file_find_next() ;
+   
+  Les retours :
+  Chaîne de caractères
+   
+  Exemple :
+  file = file_find_next() ;
+  Cela renverra le prochain fichier qui correspond aux attributs donnés précédemment.
+   
+   
+   
+  
+    
+      
+        Retour : Système de fichiers
+        Suivant : file_find_close
+      
+    
+    Copyright YoYo Games Ltd. 2021 Tous droits réservés
   
   
   

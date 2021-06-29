@@ -1,6 +1,45 @@
-ds_map_clear Cette fonction effacera la carte DS (créée précédemment) de toutes les paires clé / valeur, mais elle ne supprimera pas la carte DS elle-même de la mémoire. Pour cela, vous devez utiliser la fonction ds_map_destroy(). Notez que l'effacement d'une carte dé-référencera toutes les structures de données stockées dans la carte donnant une fuite de mémoire, vous devrez donc la parcourir et détruire tous les éléments de la structure de données manuellement avant d'effacer la carte pour éviter cela. Le seul moment où cela n'est pas nécessaire est lorsque vous avez marqué des éléments de la carte comme une liste DS ou comme une autre carte DS, auquel cas ces éléments seront détruits (non effacés!) Et leur mémoire nettoyée automatiquement lorsque la carte parent est effacé. Syntaxe:ds_map_clear(id); Argument Description id L'identifiant de la structure de données à effacer. Retour:N/A Exemple:if global.new_game    {
-        ds_map_clear(inventory);
-        } La fonction ci-dessus vérifiera une variable globale pour voir si elle est vraie et, si c'est le cas, alors la carte DS indexée dans la variable d'instance "inventaire" sera effacée de toutes les paires clé / valeur (mais elle n'est pas détruite).  Retour: DS Maps Suivant:ds_map_copy © Copyright YoYo Games Ltd. 2021 Tous droits réservés
+
+  
+  ds_map_clear
+  Cette fonction effacera la carte DS (précédemment créée) de toutes les paires clé/valeur, mais elle ne supprimera pas la carte DS elle-même de la mémoire. Pour cela, vous devez utiliser la fonction ds_map_destroy(). Notez que l'effacement
+    une carte déréférencera toutes les structures de données stockées dans la carte, ce qui entraînera une fuite de mémoire. Vous devrez donc passer en revue la carte et détruire manuellement tous les éléments de la structure de données avant d'effacer la carte pour éviter cela. La seule fois où cela n'est pas nécessaire est lorsque
+    vous avez marqué des éléments de la carte comme étant une liste DS ou une autre carte DS, auquel cas ces éléments seront détruits (pas effacés !) et leur mémoire nettoyée automatiquement lorsque la carte parent est effacée.
+    carte parent est effacée.
+   
+  Syntaxe :
+  ds_map_clear(id) ;
+  
+    
+      
+        Arguments
+        Description
+      
+      
+        id
+        L'identifiant de la structure de données à effacer.
+      
+    
+  
+   
+  Les retours :
+  N/A
+   
+  Exemple :
+  if global.new_game {
+     ds_map_clear(inventory) ;
+     }
+  La fonction ci-dessus vérifie une variable globale pour voir si elle est vraie et, si c'est le cas, la carte DS indexée dans la variable d'instance "inventaire" sera vidée de toutes les paires clé/valeur (mais elle ne sera pas détruite ).
+   
+   
+   
+  
+    
+      
+        Retour : Cartes DS
+        Suivant : ds_map_copy
+      
+    
+    Copyright YoYo Games Ltd. 2021 Tous droits réservés
   
   
   

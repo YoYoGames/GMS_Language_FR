@@ -1,4 +1,41 @@
-tilemap_get_height En utilisant cette fonction, vous pouvez récupérer la hauteur (en cellules) de l'élément de carte de tuiles. Vous donnez l'ID d'élément de carte de tuiles (que vous obtenez lorsque vous créez un élément de carte de tuiles à l'aide de layer_tilemap_create() ou lorsque vous utilisez la fonction layer_tilemap_get_id() ), et la fonction retournera la hauteur (nombre de cellules de large). Syntaxe:tilemap_get_height(tilemap_element_id); Argument Description tilemap_element_id La valeur d'ID unique de l'élément de carte de tuiles pour obtenir la hauteur de Retour:Integer Exemple:var lay_id = layer_get_id("espadrilles"); var map_id = layer_tilemap_get_id(lay_id); var _w = tilemap_get_width(map_id); var _h = tilemap_get_height(map_id); total_tiles = (_w * _h); Le code ci-dessus utilise l'ID de mappe de tuiles récupéré pour obtenir la largeur et la hauteur de la tuile de la mappe de tuiles, puis utilise ces valeurs pour définir une variable d'instance.  Retour: Couches de carte de mosaïque Suivant:tilemap_get_x © Copyright YoYo Games Ltd. 2021 Tous droits réservés
+
+  
+  tilemap_get_height
+  Cette fonction vous permet de récupérer la hauteur (en cellules) de l'élément de carte de tuiles. Vous donnez l'ID de l'élément de carte de tuiles (que vous obtenez lorsque vous créez un élément de carte de tuiles à l'aide de la commande layer_tilemap_create() ou lorsque
+    vous utilisez la fonction layer_tilemap_get_id()), et la fonction renvoie la hauteur (nombre de cellules de largeur).
+   
+  Syntaxe :
+  tilemap_get_height(tilemap_element_id) ;
+  
+    
+      
+        Arguments
+        Description
+      
+      
+        tilemap_element_id
+        La valeur d'identification unique de l'élément de la carte des tuiles dont on veut obtenir la hauteur.
+      
+    
+  
+   
+  Les retours :
+  Entier
+   
+  Exemple :
+  var lay_id = layer_get_id("espadrilles") ; var map_id = layer_tilemap_get_id(lay_id) ; var _w = tilemap_get_width(map_id) ; var _h = tilemap_get_height(map_id) ; total_tiles = (_w * _h) ;
+  Le code ci-dessus utilise l'ID de la carte des tuiles récupérée pour obtenir la largeur et la hauteur de la carte des tuiles, puis utilise ces valeurs pour définir une variable d'instance.
+   
+   
+   
+  
+    
+      
+        Retour : Carrelage des couches de la carte
+        Suivant : tilemap_get_x
+      
+    
+    Copyright YoYo Games Ltd. 2021 Tous droits réservés
   
   
   

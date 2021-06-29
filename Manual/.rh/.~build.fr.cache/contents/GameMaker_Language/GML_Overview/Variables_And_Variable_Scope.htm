@@ -1,8 +1,66 @@
- Variables et portée variable Comme tout langage de programmation, GML utilise des variables comme unité de base pour la plupart des opérations de programmation. Les variables sont utilisées pour stocker des informations dans la mémoire des périphériques pour une utilisation ultérieure (ou instantanée), et elles reçoivent un nom afin que vous puissiez y faire référence dans les fonctions d' runtime et de script. Une variable dans GML peut stocker de nombreux types de données différents, comme un nombre réel (par exemple: 100, 2.456575, -56 etc...), une chaîne (par exemple: "Hello world!"), Un entier (par exemple: 1, 556, -7) ou un booléen (true ou false ), ainsi que d'autres choses:var _num = 126.4545; var _str = "Hello World"; new_num = _num * 100; global.my_string = _str + " I said"; Vous pouvez également utiliser des variables pour contenir les valeurs renvoyées par les fonctions, par exemple:var _id = instance_nearest(x, y, obj_Tree); root = sqrt(1000); global.str = string_upper("Hello World"); Ainsi, une variable est quelque chose que nous pouvons nommer et utiliser pour stocker une valeur pour une utilisation ultérieure dans une ou plusieurs opérations. Un bon exemple "réel" d'une variable est pi 𝜋... c'est une variable que tout le monde connaît et elle détient la valeur 3.14159265 (etc...). Pourquoi l'avons-nous dans notre langue? Eh bien, il est beaucoup plus facile de dire à quelqu'un "pi" que "trois virgule un quatre un cinq neuf deux six cinq"! Nommer des choses comme cela rend la vie beaucoup plus simple et il a également signifie que si la valeur de cette variable ne changera jamais, on n'a pas de changer le nombre partout comme le nom de la variable est toujours le même. Lors de la formation de variables dans GML il doit avoir un nom qui commence par une lettre ou le symbole de soulignement "_" et ne peut contenir que des lettres, des chiffres et le symbole de soulignement "_" avec une longueur maximale de 64 symboles. Ainsi, les variables valides sont des choses comme fish, foo_bar, num1, ou _str, tandis que les variables invalides seraient 6fish, foo bar, ou *num. Maintenant, dans de nombreux langages de programmation, vous devez créer une "affectation" de variable avant de pouvoir l'utiliser. Cela signifie essentiellement que vous indiquez à l'ordinateur le nom que vous souhaitez utiliser pour la variable et lui attribuez une valeur initiale. La variable se voit alors attribuer une place en mémoire pour stocker la valeur ou y effectuer des opérations. L'affectation d'une variable prend la forme de:<variable> = <expression>; Une expression peut être une valeur simple mais peut aussi être plus compliquée, donc, plutôt que d'attribuer une valeur à une variable, on peut également ajouter une valeur à la valeur actuelle de la variable en utilisant +=, par exemple:a = 100;   // Assigning a simple value b = 200; c = 300; a += b;    // Assigning with operation a = b + c; // Assigning with expression REMARQUE: le GameMaker Language accepte également ":= "pour les devoirs, bien que ce ne soit généralement pas la manière la plus courante de le faire:<variable> := <expression>; De même, vous pouvez soustraire en utilisant -=, multipliez en utilisant *=, divisez en utilisant /=, ou utilisez des opérateurs au niveau du bit en utilisant |=, &=, ou ^=. Vous pouvez également en ajouter ou en soustraire une à une valeur en utilisant ++, --. Pour plus d'informations, consultez la section sur les expressions et les opérateurs. Notez que vous ne pouvez pas effectuer les opérations suivantes (ni aucune variante):a = b = c = 4; Et à la place, cela devrait être fait comme:a = 4; b = 4; c = 4; Les affectations de variables présentées ci-dessus sont toutes des variables d'instance, mais il existe en fait trois autres catégories de variables principales lorsque vous programmez avec GameMaker Studio 2 et chacune a sa propre portée (qui peut être considérée comme sa zone d'opération ou sa portée). Les différents types de variables et leur portée sont tous décrits dans les pages suivantes: Variables locales Variables d'instance Variables globales Constantes Le GameMaker Language a également plusieurs variables intégrées différentes qui peuvent avoir l'une des portées mentionnées ci-dessus (sauf locale ). Ces variables sont spéciales car elles sont incluses par défaut dans le cadre des objets et des salles dans le monde du jeu. Certaines variables globales intégrées sont répertoriées dans la section mentionnée ci-dessus, et les différentes parties du manuel pour les sprites, les salles, les objets, etc... décrivent également les variables intégrées disponibles dans chaque cas. Des exemples de telles variables d'instance intégrées seraient:sprite_index
+
+  
+  Variables et portée des variables
+  Comme tout langage de programmation GML utilise des variables comme unité de base pour la plupart des opérations de programmation. Les variables sont utilisées pour stocker des informations dans la mémoire du périphérique en vue d'une utilisation ultérieure (ou immédiate), et un nom leur est attribué afin de pouvoir y faire référence dans les fonctions d'exécution et de script.
+    dans les fonctions d'exécution et de script. Une variable dans GML peut stocker de nombreuses valeurs différentes types de donnéescomme un nombre réel (ex : 100, 2.456575, -56 etc...), une chaîne de caractères (ex : "Hello world !"), un nombre entier (ex : 1, 556, etc...), un nombre de bits (ex : 1, 556, etc...).
+    (ex : 1, 556, -7), ou un booléen(vrai ou faux), ainsi que d'autres choses :
+  var _num = 126.4545 ; var _str = "Hello World" ; new_num = _num * 100 ; global.my_string = _str + " J'ai dit" ;
+  Vous pouvez également utiliser des variables pour contenir les valeurs renvoyées par les fonctions, par exemple :
+  var _id = instance_nearest(x, y, obj_Tree) ; root = sqrt(1000) ; global.str = string_upper("Hello World") ;
+  Donc, une variable est quelque chose que nous pouvons nommer et utiliser pour stocker une valeur pour une utilisation ultérieure dans une ou plusieurs opérations. Un excellent exemple de variable dans le "monde réel" est pi 𝜋 ... c 'est  une variable que tout le monde connaît et qui contient la valeur 3,14159265 (etc...).
+    Pourquoi l'avons-nous dans notre langue ? Eh bien, il est beaucoup plus facile de dire à quelqu'un "pi" que "trois point un quatre un cinq neuf deux six cinq" ! Nommer les choses de cette façon rend la vie beaucoup plus simple et cela signifie également que si la valeur de cette variable change, nous n'aurons pas à nous soucier de l'avenir.
+    de cette variable, nous n'avons pas besoin de changer le nombre partout puisque le nom de la variable reste le même.
+  Lorsque l'on forme des variables dans GML elles doivent avoir un nom qui commence par une lettre ou le symbole de soulignement "_" et ne peuvent contenir que des lettres, des chiffres et le symbole de soulignement "_", avec une longueur maximale de 64 symboles. Ainsi, les variables valides
+    sont des choses comme fish, foo_bar, num1, ou _str, alors que les variables invalides seraient 6fish, foo bar, ou *num.
+  Dans de nombreux langages de programmation, vous devez créer une "affectation" de variable avant de pouvoir l'utiliser. Cela signifie essentiellement que vous indiquez à l'ordinateur le nom que vous souhaitez utiliser pour la variable et que vous lui attribuez une valeur initiale. La variable est
+    La variable reçoit alors un emplacement en mémoire pour stocker la valeur ou effectuer des opérations sur elle. L'affectation d'une variable se présente sous la forme suivante :
+  <variable> = <expression> ;
+  Une expression peut être une simple valeur mais peut aussi être plus compliquée. Ainsi, plutôt que d'attribuer une valeur à une variable, on peut aussi ajouter une valeur à la valeur actuelle de la variable en utilisant +=, par exemple :
+  a = 100 ; // Attribution d'une valeur simple b = 200 ; c = 300 ; a += b ; // Attribution avec opération a = b + c ; // Attribution avec expression
+  REMARQUE: le langage GameMaker accepte également ":=" pour les affectations, bien que ce ne soit pas la façon la plus courante de procéder :
+  <variable> := <expression> ;
+  De même, vous pouvez soustraire à l'aide de -=, multiplier à l'aide de *=, diviser à l'aide de /=, ou utiliser des opérateurs binaires à l'aide de |=,
+    &= , ou ^=. Vous pouvez également ajouter ou soustraire un à une valeur en utilisant ++, --. Pour plus d'informations, voir
+    la section sur les expressions et les opérateurs.
+  Notez que vous ne pouvez pas faire ce qui suit (ou toute autre variante) :
+  a = b = c = 4 ;
+  Et à la place, il faut faire comme :
+  a = 4 ; b = 4 ; c = 4 ;
+  Les affectations de variables présentées ci-dessus sont toutes des variables d'instance , mais il existe en fait trois autres catégories principales de variables lorsque vous programmez avec GameMaker Studio 2 . 
+    comme sa zone d'opération ou sa portée). Les différents types de variables et leur portée sont décrits dans les pages suivantes :
+  
+    Variables locales
+    Variables d'instance
+    Variables globales
+    Constantes
+  
+  Le langage GameMaker dispose également de plusieurs variables intégrées différentes qui peuvent avoir n'importe quelle portée mentionnée ci-dessus (sauf locale). Ces variables sont spéciales car elles sont incluses par défaut dans les objets et les pièces de l'univers du jeu.
+    monde. Certaines variables globales intégrées sont listées dans la section mentionnée ci-dessus, et les différentes parties du manuel pour les sprites, les pièces, les objets, etc... décrivent également les variables intégrées disponibles dans chaque cas. Des exemples de ces variables d'instance intégrées
+    d'instance intégrées seraient :
+  index_spirit
     path_scale
-    speed Et des exemples de variables globales intégrées seraient:view_xport
+    vitesse
+  Et des exemples de variables globales intégrées seraient :
+  vue_exportation
     GM_version
-    room La plupart des variables intégrées peuvent être modifiées et définies comme d'autres variables, et certaines peuvent même être des tableaux, mais vous n'avez pas à les définir pour les créer comme vous le feriez pour une variable régulière car elles seront déjà initialisées à une valeur par défaut. Enfin, il existe un certain nombre de fonctions dédiées à la définition, à l'obtention ou à la vérification des variables d'une manière ou d'une autre, disponibles à partir de la page suivante: Fonctions variables  Retour: Présentation de GML Suivant: Tableaux © Copyright YoYo Games Ltd. 2021 Tous droits réservés
+    salle
+  La plupart des variables intégrées peuvent être modifiées et définies comme les autres variables, et certaines peuvent même être des tableaux, mais vous n'avez pas besoin de les définir pour les créer comme vous le feriez avec une variable ordinaire, car elles sont déjà initialisées à une valeur par défaut.
+    valeur par défaut.
+  Enfin, il existe un certain nombre de fonctions dédiées au réglage, à l'obtention ou à la vérification des variables d'une manière ou d'une autre, disponibles à partir de la page suivante :
+  
+    Fonctions variables
+  
+   
+   
+   
+  
+    
+      
+        Retour : Aperçu duGML
+        Suivant : Tableaux
+      
+    
+    Copyright YoYo Games Ltd. 2021 Tous droits réservés
   
   
   

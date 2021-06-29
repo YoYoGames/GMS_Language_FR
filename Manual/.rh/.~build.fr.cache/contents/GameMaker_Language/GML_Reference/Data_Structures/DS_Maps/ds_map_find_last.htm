@@ -1,6 +1,45 @@
-ds_map_find_last Cette fonction renvoie la dernière clé stockée dans la carte DS. Ce n'est pas la dernière clé dans l'ordre dans lequel vous les avez ajoutées! Les cartes DS ne sont pas stockées sous une forme linéaire, pour cela utilisent des listes DS, il suffit donc de trouver la dernière clé stockée par l'ordinateur. Cela peut être utile si vous devez parcourir la carte DS à la recherche de quelque chose, mais cela doit être évité si possible car cela peut être lent. Syntaxe:ds_map_find_last(id); Argument Description id L'identifiant de la carte à utiliser. Retour:Real or String Exemple:var size = ds_map_size(inventory); var key = ds_map_find_last(inventory); for (var i = size; i > 0; i--;)     {
-         if (key != "gold")         {         key = ds_map_find_previous(inventory, key);         }     else break;     }
-   Le code ci-dessus crée des variables temporaires, puis obtient la taille de la carte DS et trouve la dernière clé stockée par l'ordinateur dans la carte. Il utilise ensuite un for boucle pour parcourir la carte DS à la recherche de la valeur clé "or". S'il le trouve, il brise la boucle.  Retour: DS Maps Suivant:ds_map_find_next © Copyright YoYo Games Ltd. 2021 Tous droits réservés
+
+  
+  ds_map_find_last
+  Cette fonction renvoie la dernière clé stockée dans la carte DS. Il ne s'agit pas de la dernière clé dans l'ordre où vous les avez ajoutées ! Les cartes DS ne sont pas stockées sous une forme linéaire.
+    Les cartes DS ne sont pas stockées sous une forme linéaire, pour cela utilisez des listes DS, donc tout ce que fait cette fonction est de trouver la dernière clé telle que stockée par l'ordinateur. Cela peut être utile si vous devez itérer dans la carte DS à la recherche de quelque chose, mais il faut l'éviter si possible car cela peut être lent.
+  Notez que cette fonction retournera undefined si la carte DS donnée est vide.
+   
+  Syntaxe :
+  ds_map_find_last(id) ;
+  
+    
+      
+        Arguments
+        Description
+      
+      
+        id
+        L'identifiant de la carte à utiliser.
+      
+    
+  
+   
+  Les retours :
+  Réel, chaîne de caractères ou indéfini
+   
+  Exemple :
+  var size = ds_map_size(inventory) ; var key = ds_map_find_last(inventory) ; for (var i = size ; i > 0 ; i-- ;) {
+     if (key != "gold") { key = ds_map_find_previous(inventory, key) ; }  else break ; }
+  
+  Le code ci-dessus crée quelques variables temporaires, puis obtient la taille de la carte DS et trouve la dernière clé stockée par l'ordinateur dans la carte. Il utilise ensuite une boucle for pour parcourir la carte DS à la recherche de la valeur clé "gold".
+    S'il la trouve, il interrompt la boucle.
+   
+   
+   
+  
+    
+      
+        Retour : Cartes DS
+        Suivant : ds_map_find_next
+      
+    
+    Copyright YoYo Games Ltd. 2021 Tous droits réservés
   
   
   

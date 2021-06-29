@@ -1,8 +1,56 @@
-get_integer_async Cette fonction ouvre une fenêtre et affiche un message ainsi qu'un espace pour que l'utilisateur saisisse une valeur (qui contiendra la valeur par défaut fournie pour commencer). Il s'agit d'une fonction asynchrone et, en tant que telle, GameMaker Studio 2 ne bloque pas le périphérique sur lequel il est exécuté en attendant une réponse, mais continue plutôt à exécuter les événements normalement. Une fois que l'utilisateur a tapé sa chaîne et appuyé sur le bouton "OK", un événement de dialogue asynchrone est déclenché qui, pour la durée de cet événement uniquement, aura une carte DS stockée dans la variable async_load. Cette carte contiendra les trois clés, "id ", "status ", et "value "."id "est la valeur renvoyée par la fonction lors de son appel, le" statut "sera soit true pour le bouton "OK" enfoncé, ou false si le message a été annulé (le cas échéant, car toutes les plates-formes cibles n'autorisent pas l'annulation des messages). Pour terminer "value "retournera l'entier saisi par l'utilisateur sous forme de chaîne (une chaîne vide" "sera renvoyée si aucune entrée n'a été donnée). Syntaxe:get_integer_async(string, default); Argument Description String Le message à afficher dans la boîte de dialogue. default La valeur par défaut. Retour:Real Exemple étendu: L' événement de pression gauche de la souris (par exemple) de l'objet qui affiche le message aurait le code suivant:msg = get_integer_async("How old are you?", 0); Ce qui précède affichera un message demandant à l'utilisateur de saisir une chaîne et d'appuyer sur "OK". L'identifiant de la fonction est stocké dans la variable "msg" et sera utilisé dans l'événement Dialogues asynchrones comme indiqué ci-dessous:var i_d = ds_map_find_value(async_load, "id"); if i_d == msg     {
-         if ds_map_find_value(async_load, "status")         {
-             global.Age = ds_map_find_value(async_load, "value");         }
-         }
-   Le code ci-dessus vérifie le "id "clé du retour DS Map par rapport à la valeur stockée dans la variable "msg". S'ils sont identiques, il vérifie alors si "OK" a été appuyé (plutôt que la fenêtre étant fermée / annulée) et si elle revient true il définit ensuite une variable globale à partir de l'entier renvoyé.  Retour: Dialogue Suivant:show_message_async © Copyright YoYo Games Ltd. 2021 Tous droits réservés
+
+  
+  get_integer_async
+  Cette fonction ouvre une fenêtre et affiche un message ainsi qu'un espace pour que l'utilisateur puisse saisir une valeur (qui contiendra la valeur par défaut fournie pour commencer). Il s'agit d'une fonction asynchrone, et en tant que telle, GameMaker Studio 2 ne bloque pas le périphérique sur lequel elle est exécutée pendant qu'elle attend le chargement du message.
+    le périphérique sur lequel elle est exécutée en attendant une réponse, mais continue à exécuter les événements normalement. Une fois que l'utilisateur a tapé sa chaîne de caractères et appuyé sur le bouton "OK", un événement asynchrone est déclenché. Dialogue    est déclenché et, pendant la durée de cet événement uniquement, une carte DS est stockée dans la variable async_load.
+  Cette carte contiendra les trois clés, " id "," status " et "value ". " id " est lavaleur renvoyéepar la fonction lorsqu'elle est appelée, le " status " sera soit vrai si le bouton " Okay " a été pressé, soit faux si le message a été annulé (le cas échéant, car toutes les plateformes cibles ne permettent pas d'annuler les messages). Enfin, "value" renverra l'entier que l'utilisateur a entré sous forme de chaîne (une chaîne vide "...").
+    sous la forme d'une chaîne (une chaîne vide "" sera renvoyée si aucune entrée n'a été donnée).
+  NOTE : Cette fonction est  réservée à un usage de débogage et de testet ne doit pas être utilisée dans les jeux publiés. Dans ce cas, vous devez créer une interface utilisateur personnalisée pour recevoir les entrées des joueurs, de manière à avoir un contrôle total sur l'apparence et le comportement des boîtes de dialogue.
+   
+  Syntaxe :
+  get_integer_async(string, default) ;
+  
+    
+      
+        Arguments
+        Description
+      
+      
+        Chaîne de caractères
+        Le message à afficher dans la boîte de dialogue.
+      
+      
+        par défaut
+        La valeur par défaut.
+      
+    
+  
+   
+  Les retours :
+  Real
+   
+  Exemple étendu :
+  L'événement de pression de la souris gauche (par exemple) de l'objet qui affiche le message aurait le code suivant :
+  msg = get_integer_async("Quel âge as-tu ?", 0) ;
+  L'exemple ci-dessus affiche un message demandant à l'utilisateur de saisir une chaîne de caractères et d'appuyer sur "Okay". L'identifiant de la fonction est stocké dans la variable "msg" et sera utilisé dans l'événement asynchrone Dialogs, comme indiqué ci-dessous :
+  var i_d = ds_map_find_value(async_load, "id") ; if i_d == msg {
+     if ds_map_find_value(async_load, "status") {
+     global.Age = ds_map_find_value(async_load, "value") ; }
+     }
+  
+  Le code ci-dessus vérifie laclé" id " de la carte DS retournée par rapport à la valeur stockée dans la variable " msg ". S'il s'agit de la même chose, il vérifie ensuite si l'on a appuyé sur "Okay" (plutôt que de fermer/annuler la fenêtre).
+    la fenêtre a été fermée/annulée) et s'il retourne vrai, il définit alors une variable globale à partir de l'entier retourné.
+   
+   
+   
+  
+    
+      
+        Retour : Dialogue
+        Suivant : show_message_async
+      
+    
+    Copyright YoYo Games Ltd. 2021 Tous droits réservés
   
   
   

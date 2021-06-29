@@ -1,4 +1,48 @@
-object_set_solid Avec cette fonction, vous pouvez marquer un objet spécifique comme étant solide ou non (pour plus d'informations sur le drapeau "solide", voir la section sur l' éditeur d'objets ). Cela signifie que toutes les instances de cet objet créées après la modification du solide seront créées avec ce nouvel état, tandis que les instances qui se trouvent déjà dans la pièce peuvent ne pas être affectées. Veuillez noter qu'il ne s'agit pas d'une fonction d'instance! Vous pouvez définir l'indicateur solide des instances individuelles à l'aide de la solid variable et donc dix instances, toutes marquées comme solides même si l'objet en question a l'indicateur défini sur false dans l'EDI, et même si vous changez l'indicateur solide de l'objet sur true à l'aide de cette fonction, toutes les instances qui se trouvent actuellement dans la pièce restera tel quel, et seules les instances créées après l'appel de la fonction commenceront par un solide marqué comme vrai. Syntaxe:object_set_solid( index, solid ); Argument Description index L'index de l'objet à modifier. solid La nouvelle solidité de l'objet (vrai = solide, faux = non solide). Retour:N/A Exemple:if !object_get_solid(obj_Block)     {     object_set_solid(obj_Block, true);     } Le code ci-dessus vérifie l'indicateur solide de l'objet "obj_Block" et s'il est faux, il est modifié pour être marqué comme vrai.  Retour: Objets Suivant:object_set_sprite © Copyright YoYo Games Ltd. 2021 Tous droits réservés
+
+  
+  objet_set_solid
+  Cette fonction vous permet de marquer un objet spécifique comme étant solide ou non (pour plus d'informations sur le drapeau "solide", voir la section sur l'éditeur d'objets ). Cela signifie que toutes les instances
+    de cet objet qui sont créées après que solid ait été modifié seront créées avec ce nouvel état, alors que les instances qui sont déjà dans la pièce peuvent ne pas être affectées.
+  Veuillez noter qu'il ne s'agit pas d'une fonction d'instance ! Vous pouvez définir l'indicateur solid des instances individuelles à l'aide de la variable solide et ainsi avoir dix instances qui sont toutes marquées comme solides même si
+    l'objet en question a le flag défini sur false dans l'IDE, et même si vous changez le flag solid de l'objet en true en utilisant cette fonction, toutes les instances qui sont actuellement dans la room resteront telles qu'elles étaient, et seules les instances créées après l'appel de la fonction
+    la fonction commenceront avec l'indicateur solid à true.
+   
+  Syntaxe :
+  objet_set_solid( index, solid ) ;
+  
+    
+      
+        Arguments
+        Description
+      
+      
+        indice
+        L'indice de l'objet à modifier.
+      
+      
+        solide
+        La nouvelle solidité de l'objet (true=solid, false=not solid).
+      
+    
+  
+   
+  Les retours :
+  N/A
+   
+  Exemple :
+  if !object_get_solid(obj_Block) { object_set_solid(obj_Block, true) ; }
+  Le code ci-dessus vérifie l'indicateur de solidité de l'objet "obj_Block" et s'il est faux, il est changé en indicateur de solidité.
+   
+   
+   
+  
+    
+      
+        Retour : Objets
+        Suivant : object_set_sprite
+      
+    
+    Copyright YoYo Games Ltd. 2021 Tous droits réservés
   
   
   

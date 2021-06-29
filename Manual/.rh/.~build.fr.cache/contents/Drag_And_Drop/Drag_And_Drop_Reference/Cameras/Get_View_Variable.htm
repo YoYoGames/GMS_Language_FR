@@ -1,4 +1,84 @@
- Obtenir la variable de vue Cette action vous permet d'obtenir la valeur de certaines variables intégrées liées à un port de vue donné. Vous sélectionnez la variable de port de vue à récupérer, puis donnez le port de vue à la cible (de 0 à 7) et enfin la variable cible pour contenir la valeur renvoyée (cela peut être marqué comme étant une variable locale temporaire). Le port de vue est la zone de l'écran qui sera utilisée pour dessiner une vue de caméra donnée (comme configuré dans l'éditeur de salle), et les différentes variables que vous pouvez obtenir de cette manière sont décrites dans le tableau ci-dessous: Variable DescriptionCamera La valeur renvoyée sera la valeur d'ID unique de la caméra à assigner au port (voir ici pour plus d'informations).Visibility Cela renverra une valeur de true ou false où true est que le port de vue est visible (c'est-à-dire qu'il est dessiné sur l'écran), et false ce qui signifie que rien n'est dessiné.View Port X Coordinate Il s'agit de la position X du port de vue dans la fenêtre de jeu.View Port Y Coordinate Il s'agit de la position Y du port de vue dans la fenêtre de jeu.View Port Width Il s'agit de la largeur (en pixels) du port de vue.View Port Height Il s'agit de la hauteur (en pixels) du port de vue.View Port Surface ID Cela renverra la valeur d'ID unique pour la surface affectée au port de vue ou -1 si aucune surface n'a été affectée. Syntaxe de l'action: Arguments: Argument Description Variable La variable de vue intégrée pour obtenir View Le port de vue à cibler (de 0 à 7) Target La variable cible contenant la valeur renvoyée (peut être marquée comme une variable locale temporaire) Exemple: Le code de bloc d'action ci-dessus obtient l'ID de caméra actuel attribué au port d'affichage [0], puis vérifie s'il est identique à celui stocké dans une variable globale. Si ce n'est pas le cas, la caméra est réglée sur la nouvelle.  Retour: Actions de la caméra Suivant: Définir la variable de vue © Copyright YoYo Games Ltd. 2021 Tous droits réservés
+
+  
+   Obtenir une variable de vue
+  Cette action vous permet d'obtenir la valeur de certaines variables intégrées liées à un port de vue donné. Vous sélectionnez la variable du port de vue à récupérer, puis vous donnez le port de vue à cibler (de 0 à 7) et enfin la variable cible qui doit contenir la valeur retournée (celle-ci peut être marquée comme étant une variable locale temporaire).
+    (celle-ci peut être signalée comme étant une variable locale temporaire). Le port d'affichage est la zone de l'écran qui sera utilisée pour dessiner une vue de caméra donnée (telle que définie dans l'éditeur de salle), et les différentes variables que vous êtes en mesure d'obtenir de cette façon
+    sont décrites dans le tableau ci-dessous :
+  
+    
+      
+        Variable
+        Description
+      
+      
+        Camera
+        La valeur renvoyée sera la valeur d'identification unique de la caméra à affecter au port (voir ici pour plus d'informations).
+      
+      
+        Visibility
+        Ceci retournera une valeur de true ou false où true signifie que le port de vue est visible (c'est-à-dire qu'il est dessiné à l'écran), et false signifie que rien n'est dessiné.
+      
+      
+        View Port X Coordinate
+        Il s'agit de la position X du port de vue dans la fenêtre du jeu.
+      
+      
+        View Port Y Coordinate
+        Il s'agit de la position Y du port de vue dans la fenêtre du jeu.
+      
+      
+        View Port Width
+        Il s'agit de la largeur (en pixels) du port d'affichage.
+      
+      
+        View Port Height
+        Il s'agit de la hauteur (en pixels) du port d'affichage.
+      
+      
+        View Port Surface ID
+        Cela renvoie la valeur d'identification unique de la surface attribuée au port de vue ou -1 si aucune surface n'a été attribuée.
+      
+    
+  
+   
+  Syntaxe de l'action :
+  
+  Arguments :
+  
+    
+      
+        Arguments
+        Description
+      
+      
+        Variable
+        La variable d'affichage intégrée pour obtenir
+      
+      
+        Voir
+        Le port de vue à cibler (de 0 à 7)
+      
+      
+        Cible
+        La variable cible qui contient la valeur retournée (peut être marquée comme une variable locale temporaire).
+      
+    
+  
+   
+  Exemple :
+  Le code du bloc d'action ci-dessus récupère l'ID de la caméra actuelle affectée au port de vue [0].
+    port [0] et vérifie ensuite s'il est identique à celui stocké dans une variable globale. Si ce n'est pas le cas, la caméra est réglée sur le nouveau numéro.
+   
+   
+   
+  
+    
+      
+        Retour : Actions de l'appareil photo
+        Suivant : Définir la variable d'affichage
+      
+    
+    Copyright YoYo Games Ltd. 2021 Tous droits réservés
   
   
   

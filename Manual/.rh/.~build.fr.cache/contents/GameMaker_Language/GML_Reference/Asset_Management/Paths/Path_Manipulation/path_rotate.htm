@@ -1,4 +1,51 @@
-path_rotate Vous pouvez utiliser cette fonction pour faire pivoter un chemin donné autour de son centre. N'oubliez pas que dans GameMaker Studio 2 (sauf si vous utilisez la physique), les angles sont calculés dans le sens inverse des aiguilles d'une montre, donc une rotation du chemin de 90 degrés ferait pivoter le chemin vers la gauche. Cette fonction modifie la ressource de chemin réelle et affectera ainsi de manière permanente la façon dont le chemin est utilisé par toutes les instances du jeu à partir du moment où la fonction est utilisée jusqu'à la fin du jeu. Si ce n'est pas ce dont vous avez besoin, vous devez utiliser une fonction telle que path_duplicate() pour créer d'abord une copie du chemin, puis appelez cette fonction sur l'actif dupliqué (n'oubliez pas d'appeler path_delete() sur l'actif lorsqu'il n'est plus nécessaire). REMARQUE: une fois qu'un chemin a été attribué à une instance à l'aide dupath_start() fonction, vous pouvez utiliser la path_orientation variable pour modifier également la rotation de la trajectoire. Syntaxe:path_rotate(index, angle); Argument Description index L'index du chemin à retourner. angle L'angle des degrés de rotation. Retour:N/A Exemple:path_rotate(pth_Patrol, 90); Cela ferait pivoter les 90 degrés dans le sens inverse des aiguilles d'une montre.  Retour: Manipulation de chemin Suivant:path_rescale © Copyright YoYo Games Ltd. 2021 Tous droits réservés
+
+  
+  chemin_rotation
+  Vous pouvez utiliser cette fonction pour faire pivoter une trajectoire donnée autour de son centre. N'oubliez pas que dans GameMaker Studio 2 (à moins que vous n'utilisiez la physique), les angles sont calculés dans le sens inverse des aiguilles d'une montre.
+    tournerait la trajectoire vers la gauche. Cette fonction modifie la ressource réelle du chemin, et affectera donc de façon permanente la façon dont le chemin est utilisé par toutes les instances du jeu à partir du moment où la fonction est utilisée jusqu'à la fin du jeu.
+    le jeu. Si ce n'est pas ce dont vous avez besoin, vous devriez utiliser une fonction comme path_duplicate() pour créer d'abord une copie du chemin, puis appeler cette fonction sur l'actif dupliqué (n'oubliez pas d'appeler sur l'actif).
+    oubliez pas d'appeler path_delete() sur le poste lorsqu'il n'est plus nécessaire).
+  
+  REMARQUE: Une fois qu'un chemin a été attribué à une instance à l'aide de la fonction path_start() vous pouvez utiliser la variable path_orientation 
+    pour modifier également la rotation du chemin.
+   
+  Syntaxe :
+  path_rotate(index, angle) ;
+  
+    
+      
+        Arguments
+        Description
+      
+      
+        indice
+        L'index du chemin à retourner.
+      
+      
+        angle
+        L'angle de rotation en degrés.
+      
+    
+  
+   
+  Les retours :
+  N/A
+   
+  Exemple :
+  path_rotate(pth_Patrol, 90) ;
+  Cela ferait tourner la donnée de 90 degrés dans le sens inverse des aiguilles d'une montre.
+   
+   
+   
+  
+    
+      
+        Retour : Manipulation des chemins
+        Suivant : path_rescale
+         
+      
+    
+    Copyright YoYo Games Ltd. 2021 Tous droits réservés
   
   
   

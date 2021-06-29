@@ -1,4 +1,30 @@
-image_angle Cette valeur définit l'angle (rotation) de l'image-objet et est mesurée en degrés, la droite étant 0 °, le haut étant 90 °, la gauche 180 ° et le bas 270 °. Définissez cette variable sur 0 pour réinitialiser le sprite à dessiner comme cela a été défini dans l'éditeur de sprite. Veuillez noter que pour que les modifications apportées à cette variable soient visibles, l'instance doit avoir soit aucun événement de dessin (et donc GameMaker Studio 2 dessine par défaut le sprite), soit être dessinée à l'aide de l'une des fonctions de dessin étendues comme draw_self() ou draw_sprite_ext(). Syntaxe:image_angle; Retour:Real (single precision floating point value) Exemple:image_angle = point_direction(x, y, mouse_x, mouse_y); Le code ci-dessus fera pivoter le sprite de l'instance pour toujours pointer vers la position de la souris.  Retour: Variables d'instance de sprite Suivant:image_blend © Copyright YoYo Games Ltd. 2021 Tous droits réservés
+
+  
+  angle_image
+  Cette valeur définit l'angle (rotation) du sprite et est mesurée en degrés, avec la droite étant 0º, le haut étant 90º, la gauche étant 180º et le bas étant 270º. Mettez cette variable à 0 pour que le sprite soit dessiné tel qu'il a été défini dans l'éditeur de sprites. Veuillez consulter
+    notez que pour que les modifications de cette variable soient visibles, l'instance ne doit pas avoir d'événement de dessin ( GameMaker Studio 2 dessinera donc le sprite par défaut) ou doit être dessinée à l'aide de l'une des fonctions de dessin étendues telles que draw_self() ou
+    draw_sprite_ext().
+   
+  Syntaxe :
+  Image_angle ;
+   
+  Les retours :
+  Réel (valeur à virgule flottante de précision simple)
+   
+  Exemple :
+  image_angle = point_direction(x, y, mouse_x, mouse_y) ;
+  Le code ci-dessus fera pivoter le sprite de l'instance pour qu'il pointe toujours vers la position de la souris.
+   
+   
+   
+  
+    
+      
+        Retour : Variables d'instance de sprite
+        Suivant : image_blend
+      
+    
+    Copyright YoYo Games Ltd. 2021 Tous droits réservés
   
   
   

@@ -1,4 +1,82 @@
- Présentation de Drag And Drop™ Drag and Drop™ ( DnD™) est un outil de script visuel qui peut être utilisé pour créer vos jeux sans avoir à taper de code. DnD pas dire que vous ne programmez pas de code lorsque vous utilisez DnD™, comme vous l'êtes, mais seulement que votre code est créé et présenté de manière visuelle en utilisant des «blocs» d' actions plutôt que du texte. Les actions sont simples expression s ou déclaration s qui peut être « enchaîné » ensemble pour avoir une instance d'un objet de faire quelque chose quand il est placé dans une pièce. Par exemple, vous pouvez avoir une action dans un événement Créer pour déplacer une instance dans une direction aléatoire, et une autre action dans un événement de collision pour la faire rebondir sur les objets avec lesquels elle entre en collision (pour plus d'informations sur les différents événements disponibles et comment ils travailler ensemble, voir la section sur les événements d'objets ). L'image ci-dessus montre un objet typique ouvert sur un espace de travail à modifier. Il a une fenêtre "Evénement" et une fenêtre "Code" enchaînée à lui, et dans la fenêtre de code vous pouvez voir où nous avons construit notre DnD™. Regardons de plus près cette fenêtre et voyons les options qui s'offrent à nous: Vous trouverez ci-dessous plus d'informations sur chacune des sections présentées: Onglets d'événement Lorsque vous ajoutez un événement à votre objet, un nouvel onglet s'ouvre dans la fenêtre de code pour afficher le contenu de cet événement. Vous pouvez ajouter plusieurs événements et ouvrir plusieurs onglets en même temps, en basculant entre eux et en les modifiant à votre guise. Vous pouvez également fermer les onglets à tout moment pour réduire l'encombrement (sélectionner à nouveau l'événement dans l'objet les rouvrira), et vous pouvez cliquer sur et faites glisser l'onglet hors de la fenêtre dans sa propre fenêtre de code, auquel cas la fermeture de l'objet ou la fenêtre de code ne fermera pas la nouvelle fenêtre. Les onglets peuvent également être déplacés vers la gauche ou la droite pour être réorganisés. Aperçu de l'action Au fur et à mesure que vous ajoutez des blocs d'action à votre événement, ils apparaîtront sous forme de «raccourci» sous la forme d'un aperçu en anglais simple de ce qui se passe. L'ordre de vue d'ensemble est l'ordre dans lequel chacun des blocs d'action sera exécuté pour cet événement, et vous pouvez cliquer sur n'importe quel élément de la liste pour que la vue du bloc d'action effectue un zoom sur cette position pour l'édition. Espace de travail du bloc d'action Cette zone de l'espace de travail est l'endroit où vous faites glisser des actions de la boîte à outils pour créer votre DnD™. Cliquez sur sur une action et faites-la glisser dans cette zone pour l'ajouter à la liste des actions et la modifier. La plupart des actions ont différents arguments de (paramètres) que vous pouvez définir, et la plupart des mots - clés, aussi prendre les variables d'instance, ou même GML fonctions - par exemple, vous pouvez appeler l' ordre action et utiliser la GML fonction random(val) pour définir une direction aléatoire. Lorsque vous ajoutez des blocs d'action à votre code, ils seront visuellement «enchaînés» pour indiquer l'ordre dans lequel les différentes actions se produiront, bien que la façon dont cette chaîne est créée dépendra du bloc initial qui a été utilisé. Par exemple, un bloc If Variable aura deux chaînes - une pour les blocs à appeler si la condition vérifiée est true et puis le bloc suivant après cela. Pour plus d'informations sur la construction de blocs d'action dans le code, consultez les sections liées ci-dessous. Dans l'espace de travail Bloc d'action, vous pouvez maintenir le bouton central de la souris enfoncé pour vous déplacer et la molette de la souris pour faire défiler la liste d'actions vers le haut ou vers le bas. Si vous détenez tout en déplaçant la molette de la souris, la vue défilera vers la gauche / droite, et si vous maintenez / et déplacez la molette de la souris, la vue effectuera un zoom avant et arrière, vous permettant de voir plus de l'espace de travail avec les actions. Vous pouvez cliquer sur n'importe quelle action de la liste d'actions sur la gauche pour se concentrer sur cette action, en réinitialisant le zoom et la position. Notez également que vous pouvez redimensionner les blocs d'action en déplaçant la souris vers les bords du bloc puis - lorsque le curseur change - en le faisant glisser dans la direction souhaitée. Vous pouvez également faire un clic droit n'importe où dans l' DnD™ pour afficher le menu RMB, qui est expliqué en détail ici. Boîte à outils La boîte à outils est l'endroit où toutes les DnD™ sont stockées, avec différentes sections contenant des collections (bibliothèques) d'actions similaires ou liées. Chaque collection d'actions est liée à un thème spécifique ou à un objectif commun et il vous suffit de cliquer et faites glisser l'action requise de la boîte à outils dans l'espace de travail du bloc d'actions pour l'ajouter à l'événement en cours. Pour simplifier les choses - car il y a beaucoup d'actions - vous pouvez utiliser la barre "Rechercher" en haut pour rechercher une action spécifique ou pour filtrer les actions visibles (tapez "dessiner" par exemple pour obtenir toutes les actions de dessin), et vous pouvez également cliquer sur et faites glisser les icônes de n'importe quelle bibliothèque dans votre dossier Favoris pour conserver ensemble les actions couramment utilisées. Ceci est particulièrement utile s'il y a certaines choses que vous ferez encore et encore. Le dossier des favoris peut être effacé en cliquant sur la petite icône "corbeille". Pour une liste complète des actions disponibles, ainsi que les arguments qu'elles prennent et comment elles peuvent être chaînées, veuillez consulter la section Référence de Drag And Drop Vous pouvez utiliser le bouton droit de la souris sur n'importe quelle action de la boîte à outils pour ouvrir le menu suivant: Ici, vous avez les options suivantes: Utiliser < action >: Cela ajoutera l'action qui était sous la souris lorsque le bouton droit de la souris a été cliqué sur l'espace de travail de l'événement en cours. Créer / Supprimer un favori: Cela ajoutera ou supprimera l'action à la bibliothèque Favoris en haut de la boîte à outils. Cette bibliothèque est l'endroit où vous pouvez créer un groupe personnalisé d'actions que vous utilisez régulièrement, ce qui réduit le temps nécessaire pour les rechercher dans leurs bibliothèques réelles. Effacer les favoris: cette option supprimera toutes les actions de la bibliothèque des favoris. Effacer récemment utilisé: cette option supprimera toutes les actions de la bibliothèque récemment utilisée. Réduire tout: Cette option réduit toutes les DnD™ afin que seuls les titres des bibliothèques soient visibles, et non les nœuds d'action. Chaque bibliothèque peut être agrandie à nouveau en cliquant dessus. Les pages suivantes expliquent un peu plus en détail comment construire du code de bloc d'action, ainsi que comment définir la portée des actions pour affecter différentes choses au sein de votre projet et d'autres détails importants: Construire un code de bloc d'action Application d'actions à d'autres instances Scripts de bloc d'action Modification du DnD™ en code Options du menu du bouton droit de la souris  Retour: Index Suivant: Référence Drag and Drop © Copyright YoYo Games Ltd. 2021 Tous droits réservés
+
+  
+  Aperçu deDrag And Drop™ 
+  Drag and Drop™(DnD™) est un outil de script visuel qui peut être utilisé pour créer vos jeux sans réellement taper de code. Cela ne veut pas dire que vous ne programmez pas de code lorsque vous utilisez DnD™, carvous le faites, mais que votre code est créé et présenté de manière visuelle en utilisant des "blocs" d'actions plutôt que du texte.
+    d'une manière visuelle en utilisant des "blocs" d'actions plutôt que du texte. Les actions sont de simplesexpressions oudéclarations qui peuvent être " enchaînées " pour qu'une instance d'un objet fasse quelque chose lorsqu'elle est placée dans une pièce. Par exemple, vous pouvez avoir une action dans un événement de création pour déplacer une instance dans une direction aléatoire.
+    une instance dans une direction aléatoire, et une autre action dans un événement de collision pour la faire rebondir sur les objets avec lesquels elle entre en collision (pour plus d'informations sur les différents événements disponibles et leur fonctionnement conjoint, consultez la section sur les événements d'objets).
+   Événements d'objets).
+  L'image ci-dessus montre un objet typique ouvert sur un espace de travail à
+    être édité. Il a une fenêtre "Événement" et une fenêtre "Code" enchaînées, et dans la fenêtre de code vous pouvez voir où nous avons construit notre DnD™. Regardons d'un peu plus près cette fenêtre et voyons quelles options sont à notre disposition :
+  Vous trouverez ci-dessous de plus amples informations sur chacune des sections présentées :
+  Onglets d'événements
+  
+    Lorsque vous ajoutez un événement à votre objet, un nouvel onglet est ouvert dans la fenêtre de code pour afficher le contenu de cet événement. Vous pouvez ajouter plusieurs événements et avoir plusieurs onglets ouverts en même temps, passer de l'un à l'autre et les modifier comme vous le souhaitez.
+      comme vous le souhaitez. Vous pouvez également fermer les onglets à tout moment pour réduire l'encombrement (en sélectionnant à nouveau l'événement dans l'objet, vous les rouvrirez), et vous pouvez cliquer sur  et faire glisser l'onglet hors de la fenêtre dans sa propre fenêtre de code, auquel cas la fermeture de l'objet ou de la fenêtre de code ne fermera pas la nouvelle fenêtre. Les onglets peuvent également être déplacés vers la gauche ou la droite pour être réorganisés.
+     
+  
+  Aperçu de l'action
+  
+    Au fur et à mesure que vous ajoutez des blocs d'action à votre événement, ils apparaissent sous une forme "abrégée" sous la forme d'un aperçu en anglais simple de ce qui se passe. L'ordre de l'aperçu est l'ordre dans lequel chacun des blocs d'action sera exécuté pour cet événement.
+       sur n'importe quel élément de la liste pour que la vue du bloc d'action s'agrandisse jusqu'à cette position et puisse être modifiée.
+     
+  
+  Espace de travail du bloc d'action
+  
+    Cette zone d'espace de travail est l'endroit où vous faites glisser les actions de la boîte à outils pour créer votre code DnD™. Cliquez sur  sur une action et faites-la glisser dans cette
+      zone pour l'ajouter à la liste des actions et la modifier. La plupart des actions ont diversarguments (paramètres) que vous pouvez définir, et la plupart prendront également des mots-clés,
+     variables d'instance, ou même des fonctionsGML - par exemple, vous pouvez appeler l'action Set Direction et utiliser la fonction GML random(val) pour
+      définir une direction aléatoire.
+    Lorsque vous ajoutez des blocs d'action à votre code, ils sont visuellement "enchaînés" les uns aux autres pour indiquer l'ordre dans lequel les différentes actions vont se produire, bien que la façon dont cette chaîne est créée dépende du bloc initial qui a été utilisé. Par exemple
+      un bloc If Variable aura deux chaînes - une vers les blocs qui seront appelés si la condition vérifiée est true et ensuite le bloc suivant.
+      après. Pour plus d'informations sur la construction de blocs d'action dans le code, consultez les sections liées ci-dessous.
+    Dans l'espace de travail du bloc d'action, vous pouvez maintenir enfoncé le bouton central de la souris  pour effectuer un panoramique et utiliser la molette de la souris  pour faire défiler la liste des actions vers le haut ou vers le bas. Si vous maintenez le bouton  enfoncé tout en déplaçant la molette de la souris, la vue défile vers la gauche/droite, et si vous maintenez la touche
+      maintenez la touche  /  enfoncée et déplacez la molette de la souris
+      la vue s'agrandit et se réduit, ce qui vous permet de voir une plus grande partie de l'espace de travail avec les actions. Vous pouvez cliquer sur  sur n'importe quelle action de la liste d'actions à gauche pour vous concentrer sur celle-ci.
+      Vous pouvez cliquer sur n'importe quelle action de la liste d'actions sur la gauche pour vous concentrer sur cette action, et réinitialiser le zoom et la position. Notez également que vous pouvez redimensionner les blocs d'action en déplaçant la souris vers les bords du bloc, puis - lorsque le curseur change - en la faisant glisser dans la direction souhaitée.
+    Vous pouvez également faire un clic droit  n'importe où dans l'espace de travail DnD™pour faire apparaître le menu RMB, qui est expliqué en détail ici.
+     
+  
+  Boîte à outils
+  
+    La boîte à outils est l'endroit où sont stockées toutes les actions DnD™, les différentes sections contenant des collections (bibliothèques) d'actions similaires ou apparentées. Chaque collection d'actions est liée à un thème spécifique ou à un objectif commun et
+      il vous suffit de cliquer sur  et de faire glisser l'action requise de la boîte à outils vers l'espace de travail du bloc d'action pour l'ajouter à l'événement en cours. Pour simplifier les choses
+      Pour simplifier les choses - car il y a beaucoup d'actions - vous pouvez utiliser la barre "Recherche" en haut pour rechercher une action spécifique ou pour filtrer les actions visibles (tapez "dessiner" par exemple pour obtenir toutes les actions de dessin), et vous pouvez également cliquer sur
+       et faire glisser les icônes de n'importe quelle bibliothèque vers votre dossier de favoris pour regrouper les actions les plus utilisées. Cette fonction est particulièrement utile
+      si vous avez l'habitude de faire certaines choses à plusieurs reprises. Le dossier des favoris peut être vidé en cliquant sur la petite icône "poubelle".
+    Pour une liste complète des actions disponibles, ainsi que des arguments qu'elles prennent et de la façon dont elles peuvent être enchaînées, veuillez consulter la section Référence duglisser-déposer.
+    Vous pouvez utiliser le bouton droit de la souris  sur n'importe quelle action de la boîte à outils pour ouvrir le menu suivant :
+    
+    Vous disposez ici des options suivantes :
+    
+      Utiliser<action> : Ceci ajoutera l'action qui était sous la souris lorsque le bouton droit de la souris a été cliqué à l'espace de travail de l'événement actuel.
+      Créer / Supprimer un favori: Cela ajoutera ou supprimera l'action dans la bibliothèque des favoris située en haut de la boîte à outils. Cette bibliothèque vous permet de créer un groupe personnalisé d'actions que vous utilisez régulièrement, réduisant ainsi le temps nécessaire pour les rechercher dans leurs bibliothèques respectives.
+        d'actions que vous utilisez régulièrement, réduisant ainsi le temps nécessaire pour les rechercher dans leurs bibliothèques respectives.
+      Effacer les favoris: cette option permet de supprimer toutes les actions de la bibliothèque des favoris.
+      Effacer les actions récemment utilisées: En sélectionnant cette option, vous supprimez toutes les actions de la bibliothèque "Utilisé récemment".
+      Réduire tout: Cette option permet de réduire toutes les bibliothèques DnD™afin que seuls les titres des bibliothèques soient visibles, et non les nœuds d'action. Chaque bibliothèque peut être à nouveau développée en cliquant dessus.
+    
+     
+  
+   
+  Les pages suivantes expliquent un peu plus en détail comment construire le code du bloc d'action, comment définir la portée des actions pour qu'elles affectent différents éléments de votre projet et d'autres détails importants :
+  
+    Construction du code du bloc d'action
+    Appliquer des actions à d'autres instances
+    Scripts de blocs d'action
+    Changer DnD™en code
+    Options du menu du bouton droit de la souris
+  
+   
+   
+   
+  
+    
+      
+        Retour : Index
+        Suivant : Référence deglisser-déposer™ 
+      
+    
+    Copyright YoYo Games Ltd. 2021 Tous droits réservés
   
   
   

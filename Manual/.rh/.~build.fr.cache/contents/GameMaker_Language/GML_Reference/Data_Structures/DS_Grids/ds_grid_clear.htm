@@ -1,4 +1,45 @@
-ds_grid_clear Cette fonction peut être utilisée pour effacer une grille DS donnée à une valeur spécifique. Toutes les cellules de la grille contiendront alors cette valeur, qui peut être un nombre réel ou une chaîne. L'image ci-dessous illustre comment cela fonctionne: Syntaxe:ds_grid_clear(index, val); Argument Description index Cet index de la grille à effacer. val La nouvelle valeur de toutes les cellules de la grille. Retour:N/A Exemple:ds_grid_resize(global.Grid, room_width / 32, room_height / 32); ds_grid_clear(global.Grid, -1) Le code ci-dessus redimensionnera la grille DS indexée dans la variable globale "Grid", puis l'effacera afin que chaque cellule contienne la valeur -1.  Retour: DS Grids Suivant:ds_grid_set © Copyright YoYo Games Ltd. 2021 Tous droits réservés
+
+  
+  ds_grid_clear
+  Cette fonction peut être utilisée pour effacer une grille DS donnée à une valeur spécifique. Toutes les cellules de la grille contiendront alors cette valeur, qui peut être un nombre réel ou une chaîne de caractères. L'image ci-dessous illustre le fonctionnement de cette fonction :
+  
+   
+  Syntaxe :
+  ds_grid_clear(index, val) ;
+  
+    
+      
+        Arguments
+        Description
+      
+      
+        indice
+        Cet indice de la grille à effacer.
+      
+      
+        val
+        La nouvelle valeur pour toutes les cellules de la grille.
+      
+    
+  
+   
+  Les retours :
+  N/A
+   
+  Exemple :
+  ds_grid_resize(global.Grid, room_width / 32, room_height / 32) ; ds_grid_clear(global.Grid, -1)
+  Le code ci-dessus va redimensionner la grille DS indexée dans la variable globale "Grid" puis la vider afin que chaque cellule prenne la valeur -1.
+   
+   
+   
+  
+    
+      
+        Retour : Grilles DS
+        Suivant : ds_grid_set
+      
+    
+    Copyright YoYo Games Ltd. 2021 Tous droits réservés
   
   
   

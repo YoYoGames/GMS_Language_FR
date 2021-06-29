@@ -1,7 +1,49 @@
-layer_sequence_exists Avec cette fonction, vous pouvez vérifier si un élément de séquence existe sur le calque donné. Vous fournissez l'ID de couche qui peut être une chaîne du nom de couche - tel que défini dans l'éditeur de pièce - ou l'ID de couche unique - tel que renvoyé par la fonction layer_get_id(), ainsi que l'ID d'élément de séquence - tel que renvoyé par layer_sequence_create() ou par l'une des fonctions d'élément de couche - et il retournera true si l'élément donné existe ou false autrement. Syntaxe:layer_sequence_exists(layer_id, sequence_element_id) Argument Description layer_ID L'ID unique ou le nom de la couche à vérifier sequence_element_id La valeur d'ID unique de l'élément de séquence à cibler Retour:Boolean Exemple:if !layer_sequence_exists("Background", my_seq)     {
-         my_seq = layer_sequence_create("Background", 0, 0, seq_AnimatedBackground);     layer_sequence_pause(my_seq);
-         }
-   Le code ci-dessus vérifie si l'élément de séquence donné existe, et si ce n'est pas le cas, il crée une nouvelle séquence sur la couche donnée, puis la met en pause.  Retour: Couches de séquence Suivant:layer_sequence_create © Copyright YoYo Games Ltd. 2021 Tous droits réservés
+
+  
+  couche_séquence_existe
+  Avec cette fonction, vous pouvez vérifier si un élément de séquence existe sur la couche donnée. Vous fournissez l'ID de la couche qui peut être une chaîne de caractères du nom de la couche - tel que défini dans l'éditeur de salle - ou l'ID unique de la couche - tel que retourné par la fonction layer_get_id(),
+    ainsi que l'ID de l'élément de séquence - tel que retourné par layer_sequence_create() ou par une des fonctions de l'élément de couche - et il retournera
+   vrai si l'élément donné existe ou faux sinon.
+   
+  Syntaxe :
+  layer_sequence_exists(layer_id, sequence_element_id)
+  
+    
+      
+        Arguments
+        Description
+      
+      
+        ID_couche
+        L'ID ou le nom unique de la couche à vérifier
+      
+      
+        id_élément_de_séquence
+        La valeur d'identification unique de l'élément de séquence à cibler.
+      
+    
+  
+   
+  Les retours :
+  Booléen
+   
+  Exemple :
+  if !layer_sequence_exists("Background", my_seq) {
+     my_seq = layer_sequence_create("Background", 0, 0, seq_AnimatedBackground) ; layer_sequence_pause(my_seq) ;
+     }
+  
+  Le code ci-dessus vérifie si l'élément de séquence donné existe, et s'il n'existe pas, il crée une nouvelle séquence sur la couche donnée puis la met en pause.
+   
+   
+   
+  
+    
+      
+        Retour : Couches de séquences
+        Suivant : layer_sequence_create
+      
+    
+    Copyright YoYo Games Ltd. 2021 Tous droits réservés
   
   
   

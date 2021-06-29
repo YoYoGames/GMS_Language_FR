@@ -1,17 +1,47 @@
-argument Cette variable contient un tableau qui est utilisé avec la variable en lecture seuleargument_count dans les fonctions ou méthodes de script. Chaque position de tableau contient une valeur d'entrée pour la fonction et est spécifiquement destinée à être utilisée avec des fonctions d'argument variable. Notez qu'il existe également une série de variables de portée globale indépendantes qui peuvent également être utilisées dans des fonctions définies par l'utilisateur pour référencer les différents arguments d'entrée: argument0, argument1, argument2, etc... jusqu'à argument15. REMARQUE: Cela n'est plus strictement nécessaire et est fourni pour le support hérité plus que toute autre chose. Toutes les fonctions définies par l'utilisateur accepteront des arguments variables, et tout argument passé dans une fonction qui ne fait pas partie des entrées nommées sera initialisé à undefined par défaut, ce qui peut être vérifié à l'aide de la fonction is_undefined (). Syntaxe:argument[n] argument1
+
+  
+  argument
+  Cette variable contient un tableau qui est utilisé avec la variable en lecture seule argument_count dans les fonctions ou méthodes de script. 
+    Chaque position du tableau contient une valeur d'entrée pour la fonction et est spécifiquement utilisée pour les fonctions à arguments variables .
+  Notez qu'il existe également une série de variables indépendantes de portée globale qui peuvent également être utilisées dans les fonctions définies par l'utilisateur pour référencer les différents arguments d'entrée : argument0, argument1, argument2,
+    etc... jusqu'à .argument15
+  
+  NOTE: Ceci n'est plus strictement requis et est fourni pour le support de l'héritage plus qu'autre chose. Toutes les fonctions définies par l'utilisateur accepteront des arguments variables, et tout argument passé dans une fonction qui ne fait pas partie de la fonction nommée
+    sera initialisé à undefined par défaut, ce qui peut être vérifié en utilisant la fonction is_undefined().
+   
+  Syntaxe :
+  argument[n] argument1
      argument2
      ...
      argument15
-   Retour:Value (can be of any data type supplied to the function) Exemple:function my_array() {
-     var i, arg; for (i = 0; i < 5; i += 1;)    {
-        if argument_count > i       {
-           arg[i] = argument[i]       }
-        else
-           {
-           arg[i] = -1;       }
-        }
+  
+   
+  Les retours :
+  Valeur (peut être de n'importe quel type de données fournies à la fonction)
+   
+  Exemple :
+  function my_array() {
+     var i, arg ; for (i = 0 ; i < 5 ; i += 1 ;) {
+     if argument_count > i {
+     arg[i] = argument[i] }
+     else
+     {
+     arg[i] = -1 ; }
      }
-   Le code ci-dessus utilise le argument_count variable avec le argument array pour initialiser des variables, et est un exemple de la façon d'autoriser une fonction définie par l'utilisateur à accepter un nombre variable d'arguments.  Retour: Variables globales Suivant:argument_count © Copyright YoYo Games Ltd. 2021 Tous droits réservés
+     }
+  
+  Le code ci-dessus utilise la variable argument_count ainsi que le tableau argument pour initialiser les variables, et constitue un exemple de la façon dont on peut permettre à une fonction définie par l'utilisateur d'accepter un nombre variable d'arguments.
+   
+   
+   
+  
+    
+      
+        Retour : Variables globales
+        Suivant : argument_count
+      
+    
+    Copyright YoYo Games Ltd. 2021 Tous droits réservés
   
   
   

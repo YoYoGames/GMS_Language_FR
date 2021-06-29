@@ -1,4 +1,42 @@
-timeline_get_name Cette fonction peut être utilisée pour obtenir le nom d'une ligne de temps sous forme de chaîne. si la chronologie a été créée dynamiquement à l'aide du timeline_add() fonction, le nom retourné aura le format "__newtimeline N " où " N " est le numéro de la ligne de temps (à partir de 0). Veuillez noter qu'il ne s'agit que d' une chaîne et ne peut pas être utilisée pour référencer directement la chronologie - pour cela, vous auriez besoin de l' index de la chronologie. Vous pouvez cependant utiliser cette chaîne pour obtenir l' index de la chronologie à l'aide de la chaîne renvoyée avec la fonction asset_get_index(). Syntaxe:timeline_get_name(ind); Argument Description ind L'index de la chronologie dont le nom doit être vérifié. Retour:String Exemple:var _str = timeline_get_name(timeline_index); show_debug_message("Current timeline = " + _str); Le code ci-dessus récupère le nom de la chronologie actuellement attribuée et le transmet à la console.  Retour: Chronologies Suivant:timeline_add © Copyright YoYo Games Ltd. 2021 Tous droits réservés
+
+  
+  timeline_get_name
+  Cette fonction peut être utilisée pour obtenir le nom d'une ligne de temps sous forme de chaîne de caractères. Si la ligne de temps a été créée dynamiquement à l'aide de la fonction timeline_add() le nom renvoyé aura le format
+    format "__newtimelineN" où "N" est lenuméro de la ligne de temps (en partant de 0). Veuillez noter qu'il s'agit uniquement d'une chaîne de caractères et qu'elle ne peut pas être utilisée pour faire référence à la ligne de temps directement - pour cela, vous aurez besoin de l'index de la ligne de temps.
+    pour cela vous auriez besoin de l'index de la ligne de temps. Vous pouvez, cependant, utiliser cette chaîne pour obtenir l'indice de la ligne de temps en utilisant la chaîne retournée avec la fonction asset_get_index().
+   
+  Syntaxe :
+  timeline_get_name(ind) ;
+  
+    
+      
+        Arguments
+        Description
+      
+      
+        ind
+        L'index de la ligne temporelle dont il faut vérifier le nom.
+      
+    
+  
+   
+  Les retours :
+  Chaîne de caractères
+   
+  Exemple :
+  var _str = timeline_get_name(timeline_index) ; show_debug_message("Current timeline = " + _str) ;
+  Le code ci-dessus obtient le nom de la ligne de temps actuellement assignée et l'affiche dans la console.
+   
+   
+   
+  
+    
+      
+        Retour : Lignes du temps
+        Suivant : timeline_add
+      
+    
+    Copyright YoYo Games Ltd. 2021 Tous droits réservés
   
   
   

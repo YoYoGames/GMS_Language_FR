@@ -1,4 +1,72 @@
- Grilles DS Une grille DS est essentiellement un type de tableau à 2 dimensions. Vous définissez la grille en définissant sa largeur et sa hauteur entières, qui définissent ensuite le nombre total de "cellules" dans la grille (la largeur et la hauteur multipliées) et ces cellules sont ensuite utilisées pour contenir différentes valeurs de données (nombres réels ou chaînes). Ce type de structure vous permet de définir et de récupérer la valeur des cellules de la grille en donnant les index x et y de celle-ci (qui commence par 0 pour les axes x et y et monte jusqu'à la largeur - 1 et la hauteur -1). Mais vous pouvez également définir la valeur dans des régions de grille spécifiques, ajouter des valeurs uniques et récupérer la somme, le maximum, le minimum et la valeur moyenne sur une région donnée, faisant de cette structure de données la plus polyvalente de toutes celles dont vous disposez. Lors de l'accès aux structures de données de grille DS, vous devez toujours essayer d'utiliser des valeurs entières pour la position de la cellule, et tous les indices non entiers seront GameMaker Studio 2 si vous ne le faites pas. Si ce n'est pas ce dont vous avez besoin, vous devrez faire l'arrondi vous-même avant de passer l'index que vous souhaitez vérifier. REMARQUE: comme pour toutes les ressources dynamiques, les structures de données occupent de la mémoire et doivent donc toujours être détruites lorsqu'elles ne sont plus nécessaires pour éviter les fuites de mémoire qui ralentiront et finiront par planter votre jeu. NOTE: si vous avez besoin de vérifier si une structure de données existe, vous pouvez utiliser la fonction ds_exists (). Outre les fonctions spécifiques répertoriées ci-dessous, vous pouvez tous utiliser une expression (appelée accesseur ) pour ajouter ou modifier le contenu de votre grille DS. Cet accesseur ressemble à un tableau 2D avec la syntaxe suivante:grid_index[# xpos, ypos] Vous pouvez trouver plus d'informations, ainsi que des exemples, à partir de la GML Overview sur Accessors. Les fonctions suivantes existent qui traitent des grilles DS. ds_grid_createds_grid_destroyds_grid_widthds_grid_heightds_grid_resizeds_grid_cleards_grid_setds_grid_set_diskds_grid_set_grid_regionds_grid_set_regionds_grid_shuffleds_grid_sortds_grid_getds_grid_get_maxds_grid_get_meands_grid_get_minds_grid_get_sumds_grid_get_disk_maxds_grid_get_disk_meands_grid_get_disk_minds_grid_get_disk_sumds_grid_addds_grid_add_regionds_grid_add_diskds_grid_add_grid_regionds_grid_multiplyds_grid_multiply_diskds_grid_multiply_regionds_grid_multiply_grid_regionds_grid_value_existsds_grid_value_disk_existsds_grid_value_xds_grid_value_yds_grid_value_disk_xds_grid_value_disk_yds_grid_copyds_grid_readds_grid_write Retour: Structures de données Suivant: Listes DS © Copyright YoYo Games Ltd. 2021 Tous droits réservés
+
+  
+  Grilles DS
+  Une grille DS est essentiellement un type de tableau à deux dimensions. Vous définissez la grille en fixant sa largeur et sa hauteur, qui déterminent ensuite le nombre total de "cellules" dans la grille (largeur et hauteur multipliées).
+    (la largeur et la hauteur multipliées) et ces cellules sont ensuite utilisées pour contenir différentes valeurs de données (nombres réels ou chaînes de caractères).
+  Ce type de structure permet de définir et de récupérer la valeur des cellules de la grille en donnant les indices x et
+    y de celle-ci (qui commence à 0 pour les axes x et y et va jusqu'à la largeur - 1 et la hauteur -1). Mais vous pouvez également définir la valeur dans des régions spécifiques de la grille, ajouter des valeurs individuelles et récupérer la somme, le maximum, le minimum et la valeur moyenne sur une région donnée.
+    une région donnée, ce qui fait de cette structure de données la plus polyvalente de toutes celles dont vous disposez.
+  Lorsque vous accédez aux structures de données de la grille DS, vous devez toujours essayer d'utiliser des valeurs entières pour la position des cellules. Si vous ne le faites pas, tous les indices non entiers seront ignorés par GameMaker Studio 2. Si ce n'est pas ce que vous souhaitez, vous devrez alors
+    effectuer vous-même l'arrondi avant de transmettre l'indice que vous souhaitez vérifier.
+  REMARQUE : comme toutes les ressources dynamiques, les structures de données occupent de la mémoire et doivent donc toujours être détruites lorsqu'elles ne sont plus nécessaires afin d'éviter les fuites de mémoire qui ralentiront et finiront par faire planter votre jeu.
+  NOTE : si vous avez besoin de vérifier si une structure de données existe, vous pouvez utiliser la fonction ds_exists() fonction.
+  En dehors des fonctions spécifiques listées ci-dessous, vous pouvez toutes utiliser une expression (appelée accesseur) pour ajouter ou modifier le contenu de votre grille DS. Cet accesseur ressemble à un tableau 2D
+    avec la syntaxe suivante :
+  grid_index[# xpos, ypos]
+  Vous trouverez de plus amples informations, ainsi que des exemples, sur la page de présentation du GML sur les accesseurs.
+  Il existe les fonctions suivantes qui traitent des grilles DS.
+   
+  
+    ds_grid_create
+    ds_grid_destroy
+    ds_grid_width
+    ds_grid_height
+    ds_grid_resize
+    ds_grid_clear
+    ds_grid_set
+    ds_grid_set_disk
+    ds_grid_set_grid_region
+    ds_grid_set_region
+    ds_grid_shuffle
+    ds_grid_sort
+    ds_grid_get
+    ds_grid_get_max
+    ds_grid_get_mean
+    ds_grid_get_min
+    ds_grid_get_sum
+    ds_grid_get_disk_max
+    ds_grid_get_disk_mean
+    ds_grid_get_disk_min
+    ds_grid_get_disk_sum
+    ds_grid_add
+    ds_grid_add_region
+    ds_grid_add_disk
+    ds_grid_add_grid_region
+    ds_grid_multiply
+    ds_grid_multiply_disk
+    ds_grid_multiply_region
+    ds_grid_multiply_grid_region
+    ds_grid_value_exists
+    ds_grid_value_disk_exists
+    ds_grid_value_x
+    ds_grid_value_y
+    ds_grille_valeur_disque_x
+    ds_grille_valeur_disque_y
+    ds_grid_copy
+    ds_grid_read
+    ds_grid_write
+  
+   
+   
+   
+  
+    
+      
+        Retour : Structures de données
+        Suivant : Listes de DS
+      
+    
+    Copyright YoYo Games Ltd. 2021 Tous droits réservés
   
   
   

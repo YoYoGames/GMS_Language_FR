@@ -1,4 +1,41 @@
-external_free Cette fonction libère la mémoire associée au dll ou dylib avec le prénom. Cela devrait être fait chaque fois que le fichier en question n'est plus nécessaire dans le jeu, normalement (par exemple) dans un événement de fin de partie. Syntaxe:external_free(id); Argument Description id Le nom du dll ou dylib que tu veux libérer Retour:N/A Exemple:external_free("MyDLL.dll"); L'exemple de code ci-dessus libérera la mémoire associée à la dll donnée.  Retour: OS et compilateur Suivant: scheduler_resolution_get © Copyright YoYo Games Ltd. 2021 Tous droits réservés
+
+  
+  externe_libre
+  Cette fonction libère la mémoire associée à la dll ou à la dylib portant le nom donné. Cela doit être fait lorsque le fichier en question n'est plus nécessaire dans le jeu, normalement (par exemple) dans un événement de fin de partie.
+   
+  Syntaxe :
+  external_free(id) ;
+  
+    
+      
+        Arguments
+        Description
+      
+      
+        id
+        Le nom de la dll ou de la dylib que vous voulez libérer.
+      
+    
+  
+   
+   
+  Les retours :
+  N/A
+   
+  Exemple :
+  external_free("MyDLL.dll") ;
+  L'exemple de code ci-dessus libérera la mémoire associée à la dll donnée.
+   
+   
+   
+  
+    
+      
+        Retour : Système d'exploitation et compilateur
+        Suivant : scheduler_resolution_get
+      
+    
+    Copyright YoYo Games Ltd. 2021 Tous droits réservés
   
   
   

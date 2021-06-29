@@ -1,4 +1,57 @@
- Listes DS Une liste DS est une structure de données qui stocke les informations de manière séquentielle au fur et à mesure de leur ajout (un peu comme un tableau ). Les listes DS sont des structures de données très flexibles qui vous permettent d'ajouter des valeurs à la fin ou de les insérer quelque part au milieu de la liste, ainsi que de vous donner la possibilité de mélanger l'ordre (pour randomiser les valeurs) ou de les trier par ordre croissant ou ordre décroissant. Lorsque vous accédez aux structures de données de liste DS, vous devez toujours essayer d'utiliser des valeurs entières pour la position de la liste, et tous les indices non entiers seront GameMaker Studio 2 si vous ne le faites pas. Si ce n'est pas ce dont vous avez besoin, vous devrez faire l'arrondi vous-même avant de passer l'index que vous souhaitez vérifier. REMARQUE: comme pour toutes les ressources dynamiques, les structures de données occupent de la mémoire et doivent donc toujours être détruites lorsqu'elles ne sont plus nécessaires pour éviter les fuites de mémoire qui ralentiront et finiront par planter votre jeu. NOTE: si vous avez besoin de vérifier si une structure de données existe, vous pouvez utiliser la fonction ds_exists (). Outre les fonctions spécifiques répertoriées ci-dessous, vous pouvez tous utiliser une expression (appelée accesseur ) pour ajouter ou modifier le contenu de votre liste DS. Cet accesseur ressemble à un tableau 1D avec la syntaxe suivante:list_index[| index] Vous pouvez trouver plus d'informations, ainsi que des exemples, à partir de la GML Overview sur Accessors. Les fonctions suivantes existent qui traitent des listes DS. ds_list_createds_list_destroyds_list_cleards_list_emptyds_list_sizeds_list_addds_list_setds_list_deleteds_list_find_indexds_list_find_valueds_list_insertds_list_replaceds_list_shuffleds_list_sortds_list_copyds_list_readds_list_write Les listes Ds peuvent être utilisées pour contenir des cartes DS et d'autres listes DS aussi, et nous avons donc des fonctions spéciales qui sont utilisées pour "marquer" ou "marquer" des positions dans la liste comme contenant ces structures de données. En général, cela n'est pas obligatoire, mais cela présente l'avantage de collecter automatiquement (détruire) les structures de données marquées lorsque la liste parente est détruite, et il est également nécessaire lorsqu'il est utilisé en conjonction avec le json_encode() fonction afin que la liste et ses données soient correctement codées. Les fonctions pour cela sont: ds_list_mark_as_listds_list_mark_as_mapds_list_is_listds_list_is_map Retour: Structures de données Suivant: DS Maps © Copyright YoYo Games Ltd. 2021 Tous droits réservés
+
+  
+  Listes de DS
+  Une liste DS est une structure de données qui stocke des informations de manière séquentielle au fur et à mesure qu'elles sont ajoutées (un peu comme un tableau). Les listes DS sont des structures de données très flexibles qui vous permettent d'ajouter des valeurs à la fin ou de les insérer au milieu de la liste.
+    Les listes DS sont des structures de données très souples qui vous permettent d'ajouter des valeurs à la fin ou de les insérer au milieu de la liste, et qui vous donnent la possibilité de mélanger l'ordre (pour rendre les valeurs aléatoires) ou de les trier dans un ordre croissant ou décroissant.
+  Lorsque vous accédez aux structures de données de la liste DS, vous devez toujours essayer d'utiliser des valeurs entières pour la position de la liste. Si vous ne le faites pas, tous les indices non entiers seront ignorés par GameMaker Studio 2. Si ce n'est pas ce que vous souhaitez, vous devrez alors
+    effectuer vous-même l'arrondi avant de transmettre l'indice que vous souhaitez vérifier.
+  REMARQUE: comme toutes les ressources dynamiques, les structures de données occupent de la mémoire et doivent donc toujours être détruites lorsqu'elles ne sont plus nécessaires afin d'éviter les fuites de mémoire qui ralentiront et finiront par faire planter votre jeu.
+  NOTE: si vous devez vérifier si une structure de données existe, vous pouvez utiliser la fonction ds_exists() fonction.
+  En dehors des fonctions spécifiques énumérées ci-dessous, vous pouvez toutes utiliser une expression (appelée un accesseur) pour ajouter ou modifier le contenu de votre liste DS. Cet accesseur ressemble à un tableau 1D avec la syntaxe suivante :
+  list_index [| index]
+  Vous trouverez de plus amples informations, ainsi que des exemples, sur la page de présentation du GML sur les accesseurs.
+  Les fonctions suivantes traitent des listes DS.
+   
+  
+    ds_list_create
+    ds_list_destroy
+    ds_list_clear
+    ds_list_empty
+    ds_list_size
+    ds_list_add
+    ds_list_set
+    ds_list_delete
+    ds_list_find_index
+    ds_list_find_value
+    ds_list_insert
+    ds_list_replace
+    ds_list_shuffle
+    ds_list_sort
+    ds_list_copy
+    ds_list_read
+    ds_list_write
+  
+   
+  Les listes de Ds peuvent être utilisées pour contenir des cartes de DS et d'autres listes de DS également, et nous avons donc quelques fonctions spéciales qui sont utilisées pour "signaler" ou "marquer" des positions dans la liste comme contenant ces structures de données. Sur
+    ce n'est généralement pas nécessaire, mais cela présente l'avantage de collecter (détruire) automatiquement les structures de données marquées lorsque la liste parente est détruite, et c'est également nécessaire lorsqu'il est utilisé conjointement avec la fonction json_encode()    afin que la liste et ses données soient correctement codées. Les fonctions pour cela sont :
+   
+  
+    ds_list_mark_as_list
+    ds_list_mark_as_map
+    ds_list_is_list
+    ds_list_is_map
+  
+   
+   
+   
+  
+    
+      
+        Retour : Structures de données
+        Suivant : Cartes DS
+      
+    
+    Copyright YoYo Games Ltd. 2021 Tous droits réservés
   
   
   

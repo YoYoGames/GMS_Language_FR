@@ -1,0 +1,163 @@
+
+  
+  font_get_info
+  Cette fonction est utilisée pour récupérer des informations sur une police donnée. Vous fournissez un index de police (qui peut être une ressource ajoutée via le navigateur de ressources ou une police ajoutée au moment de l'exécution) et la fonction renvoie une structure avec les variables suivantes :
+   
+  
+    
+      
+        Nom de la variable
+        Type de données
+        Description
+      
+      
+        ascenderOffset
+        réel
+        Le décalage maximum de la ligne de base au sommet de la police (en pixels)
+      
+      
+        taille
+        réel
+        La taille approximative de la police (en pixels)
+      
+      
+        spriteIndex
+        actif (réel)
+        L'index du sprite pour la police si elle a été créée à partir d'un sprite, sinon -1.
+      
+      
+        texture
+        actif (réel)
+        -1 si la police a été créée à partir d'un sprite, sinon l'ID de la texture de la police.
+      
+      
+        nom
+        chaîne de caractères
+        Le nom de la police
+      
+      
+        en gras
+        boolean
+        true si la police est en gras, sinon false (voir NOTE ci-dessous)
+      
+      
+        italique
+        boolean
+        true si la police est italique, sinon false (voir NOTE ci-dessous)
+      
+      
+        glyphes
+        struct
+        Une structure contenant des informations pour chaque glyphe de la police (plus d'informations sont données ci-dessous).
+      
+    
+  
+  REMARQUE: Les variables en gras etitalique ne reflètent que les paramètres de l'utilisateur pour la police, elles peuvent donc ne pas être exactes pour les polices qui sont en gras ou en italique par défaut.
+  Si la police fournie n'existe pas, la fonction renvoie undefined .
+  Notez également que la modification des valeurs de l'une de ces variables, ou de toute autre variable contenue dans la structure des glyphes, ne changera pas la façon dont la police est rendue, ces informations doivent donc être considérées comme étant en lecture seule.
+  Structure des glyphes
+  La variable glyphs de la structure retournée sera une structure à part entière, contenant des informations pour chaque glyphe inclus dans la police. Chaque variable de cette structure sera le nom de caractère d'un glyphe, qui contiendra une structure contenant des informations
+    pour ce glyphe. Vous pouvez imaginer ces structures imbriquées dans le format suivant (en partant de la structure principale) :
+  { glyphes : { A : {}, B : {}, C : {}, // ...autres glyphes }, // ...autres informations sur la police }
+  
+  Vous pouvez utiliser le nom du caractère d'un glyphe pour récupérer ses informations dans la structure, comme dans le code suivant :
+  var _font_info = font_get_info(Font1) ;
+     var _info_A = _font_info.glyphs[$ "A"] ; // $ est un accesseur de structure
+     show_debug_message(_info_A) ;
+  
+  Le code ci-dessus récupère la structure de glyphe pour le caractère "A" et l'imprime dans le journal de sortie. Vous pouvez également remplacer la chaîne ("A" ) par une variable contenant une chaîne, ce qui vous permettra d'obtenir des informations pour n'importe quel glyphe par le biais de cette variable au moment de l'exécution.
+    cette variable au moment de l'exécution.
+  La structure retournée pour un glyphe contiendra les variables suivantes :
+  REMARQUE: En HTML5, la structure des glyphes sera vide pour toutes les polices de fichier chargées (telles que *.ttf ou *.otf) car le moteur d'exécution ne disposera pas d'informations sur ces glyphes.
+  
+    
+      
+        Nom de la variable
+        Type de données
+        Description
+      
+      
+        char
+        réel
+        Si la police a été créée à partir d'un sprite, il s'agira de l'index de l'image du glyphe de ce sprite, sinon ce sera son numéro de caractère Unicode.
+          
+         Remarque: Toutes les variables inférieures à cette valeur ne seront pas présentes dans la structure si la police a été créée à partir d'un sprite.
+      
+      
+        x
+        réel
+        La position X du glyphe sur la page de texture (en texels)
+      
+      
+        y
+        réel
+        La position Y du glyphe sur la page de texture (en texels)
+      
+      
+        w
+        réel
+        La largeur du glyphe sur la page de texture (en texels)
+      
+      
+        h
+        réel
+        La hauteur du glyphe sur la page de texture (en texels)
+      
+      
+        équipe
+        réel
+        Le nombre de pixels à décaler vers la droite lors du passage au caractère suivant (peut être négatif pour un décalage vers la gauche).
+      
+      
+        décalage
+        réel
+        Le nombre de pixels pour décaler horizontalement le rendu de ce glyphe (peut être positif ou négatif).
+      
+      
+        crénage
+        tableau
+        Un tableau d'entiers contenant des informations de crénage par paires (ou groupes de 2). Le premier entier d'une paire est la valeur Unicode pour un caractère, et le second entier est le montant à ajouter à la valeur de décalage de ce caractère (peut être positif ou négatif) s'il est précédé par le caractère de ce glyphe.
+          négative) s'il est précédé par le caractère de ce glyphe.
+      
+    
+  
+  REMARQUE: pour les polices de fichiers chargées au moment de l'exécution, les valeurs x et y d'un glyphe peuvent être de -1 s'il n'a pas encore été rendu, car il n'aura pas de position sur la page de texture utilisée pour la mise en cache.
+   
+  Syntaxe :
+  font_get_info(police) ;
+  
+    
+      
+        Arguments
+        Description
+      
+      
+        police
+        La police pour laquelle les informations doivent être récupérées.
+      
+    
+  
+   
+  Les retours :
+  Structure (ou indéfinie)
+   
+  Exemple :
+  var _info = font_get_info(my_font) ;
+     if (_info != undefined && _info.bold) {
+     image_xscale *= 2 ; image_yscale *= 2 ; }
+  
+  Ce code récupère les informations relatives à la police stockée dans la variable my_font. Si la valeur retournée n'est pas indéfinie et que la police donnée est en gras, l'échelle de l'instance est doublée.
+   
+   
+  
+    
+      
+        Retour : Polices de caractères
+        Suivant : font_exists
+      
+    
+    Copyright YoYo Games Ltd. 2021 Tous droits réservés
+  
+  
+  
+

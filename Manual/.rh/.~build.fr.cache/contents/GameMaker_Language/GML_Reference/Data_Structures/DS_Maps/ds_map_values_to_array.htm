@@ -1,10 +1,54 @@
-ds_map_values_to_array Avec cette fonction, vous pouvez récupérer toutes les valeurs qu'une carte DS contient pour chaque clé de la carte. Vous fournissez l'ID de carte DS à partir duquel obtenir les clés (tel que renvoyé pards_map_create() ) et la fonction renverra un tableau où chaque entrée du tableau est une valeur de la carte DS (par exemple, si la carte a 10 clés, alors un tableau de 10 entrées sera renvoyé avec chaque entrée correspondant à une valeur pour un clé). La fonction a un deuxième argument facultatif dans lequel vous pouvez fournir un tableau que vous avez créé, auquel cas les données de valeur de clé de mappage seront ajoutées à toutes les données existantes dans le tableau. Notez que la fonction modifiera directement le tableau fourni, mais retournera également une référence à celui-ci (ou une référence à un nouveau tableau si aucun n'est fourni). Syntaxe:ds_map_values_to_array(id, [array]) Argument Description id L'identifiant de la carte à utiliser. [array] OPTIONNEL! Tableau auquel ajouter les valeurs de mappage DS. Retour:Array Exemple:var _values = ds_map_values_to_array(lvl_score);
-var _total = 0;
-for (var i = 0; i < array_lengh(values); ++i;)
-    {
-    _total += _values[i];
-    }
-draw_text(32, 32, "Total score for all levels = " + string(_total")); Ce qui précède récupère toutes les valeurs d'une carte DS pour chaque clé de la carte et les stocke dans une variable locale sous forme de tableau. Il parcourt ensuite le tableau et ajoute chacune des valeurs à une variable locale qui est ensuite utilisée pour afficher le total de toutes les valeurs.  Retour: DS Maps Suivant:ds_map_set © Copyright YoYo Games Ltd. 2021 Tous droits réservés
+
+  
+  ds_map_values_to_array
+  Cette fonction permet de récupérer toutes les valeurs contenues dans une carte DS pour chaque clé de la carte. Vous fournissez l'ID de la carte DS pour récupérer les clés (comme retourné par ds_map_create()) et la fonction
+    renvoie un tableau dont chaque entrée correspond à une valeur de la carte DS (par exemple, si la carte comporte 10 clés, un tableau de 10 entrées sera renvoyé, chaque entrée correspondant à une valeur de clé).
+    à une valeur pour une clé). La fonction dispose d'un deuxième argument facultatif où vous pouvez fournir un tableau que vous avez créé, auquel cas les données de la valeur de la clé de la carte seront ajoutées à toute donnée existante dans le tableau. Notez que la fonction modifiera
+    le tableau fourni directement, mais renvoie également une référence à celui-ci (ou une référence à un nouveau tableau si aucun n'est fourni).
+   
+  Syntaxe :
+  ds_map_values_to_array(id, [array])
+  
+    
+      
+        Arguments
+        Description
+      
+      
+        id
+        L'identifiant de la carte à utiliser.
+      
+      
+        [tableau]
+        FACULTATIF ! Le tableau auquel ajouter les valeurs de la carte DS.
+      
+    
+  
+   
+  Les retours :
+  Array
+   
+  Exemple :
+  var _values = ds_map_values_to_array(lvl_score) ;
+var _total = 0 ;
+for (var i = 0 ; i < array_lengh(values) ; ++i ;)
+    {
+    _total += _valeurs[i] ;
+    }
+draw_text(32, 32, "Score total pour tous les niveaux = " + string(_total")) ;
+  L'exemple ci-dessus récupère toutes les valeurs d'une carte DS pour chaque clé de la carte et les stocke dans une variable locale sous forme de tableau. Elle boucle ensuite dans le tableau et ajoute chacune des valeurs à une variable locale qui est ensuite utilisée pour afficher le total de toutes les valeurs.
+    valeurs.
+   
+   
+   
+  
+    
+      
+        Retour : Cartes DS
+        Suivant : ds_map_set
+      
+    
+    Copyright YoYo Games Ltd. 2021 Tous droits réservés
   
   
   

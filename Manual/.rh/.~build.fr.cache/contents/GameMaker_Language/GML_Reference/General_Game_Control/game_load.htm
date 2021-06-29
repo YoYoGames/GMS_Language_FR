@@ -1,6 +1,43 @@
-game_load Avec cette fonction, vous pouvez charger un jeu qui a été sauvegardé précédemment (en utilisant game_save() ). Syntaxe:game_load(filename); Argument Description filename Le nom du fichier à charger. Retour:N/A Exemple:if keyboard_check_pressed(ord("L"))     {
-         if global.Save game_load("Save.dat");     }
-   Le code ci-dessus chargera une partie précédemment sauvegardée si la variable globale est true lorsque le joueur appuie sur la touche "L".  Retour: Contrôle général du jeu Suivant:game_load_buffer © Copyright YoYo Games Ltd. 2021 Tous droits réservés
+
+  
+  chargement du jeu
+  Avec cette fonction, vous pouvez charger un jeu qui a été précédemment sauvegardé à l'aide de la fonction game_save(). Notez que cela rétablira la version du jeu qui a été utilisée pour créer la sauvegarde, donc toute mise à jour faite après celle-ci ne sera pas
+    visibles. Pour plus d'informations, lisez la page sur game_save().
+   
+  Syntaxe :
+  game_load(nom du fichier) ;
+  
+    
+      
+        Arguments
+        Description
+      
+      
+        nom de fichier
+        Le nom du fichier à charger.
+      
+    
+  
+   
+  Les retours :
+  N/A
+   
+  Exemple :
+  if keyboard_check_pressed(ord("L")) {
+     if global.Save game_load("Save.dat") ; }
+  
+  Le code ci-dessus chargera une partie précédemment sauvegardée si la variable globale est vraie lorsque le joueur appuie sur la touche "L".
+   
+   
+   
+  
+    
+      
+        Retour : Contrôle général du jeu
+        Suivant : game_load_buffer
+      
+    
+    Copyright YoYo Games Ltd. 2021 Tous droits réservés
   
   
   

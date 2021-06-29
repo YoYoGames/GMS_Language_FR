@@ -1,4 +1,68 @@
- Définir l'orientation des particules Cette action est utilisée pour définir l'orientation des particules - l'angle auquel les images de particules seront dessinées - qui peut être statique ou définie pour augmenter / diminuer au fil du temps. Vous fournissez la valeur d'ID unique pour le type pour définir la taille de (telle que renvoyée lorsque vous avez créé le type avec l'action Créer un type de particule ), puis donnez une plage d'orientations de départ initiales, puis le montant de l'augmentation et enfin le "wiggle". L'orientation à laquelle une particule est créée est calculée de telle sorte que 0 est à droite, 90 est en haut, 180 est à gauche et 270 est en bas, donc un réglage minimum de 0 et un réglage maximum de 360 émettront des particules où chacun sera tourné par un quantité aléatoire autour de 360 ° (notez que cela n'affecte pas la direction des particules). L'option d'augmenter l'orientation d'une particule vous permet de saisir une valeur qui sera ajoutée à l'angle d'orientation de base à chaque image de jeu de la durée de vie de la particule. Donc, si vous définissez cette valeur sur, par exemple, 0,1 ajoutera 0,1 à l'angle de l'image à chaque image de jeu. Notez que vous pouvez également utiliser des valeurs négatives ici pour faire tourner la particule dans la direction opposée, donc des valeurs positives feront tourner la particule dans le sens anti-horaire et la rotation négative dans le sens horaire. Notez que le décrément d' orientation minimum accepté est -0,01 et l' incrément minimum est 0,01. Vous pouvez également définir l'option «wiggle» pour l'orientation des particules. Il s'agit d'une valeur qui sera générée aléatoirement entre 0 et la valeur que vous donnez, puis ajoutée ou soustraite à l'angle d'image des particules à chaque étape de la durée de vie des particules, provoquant une fluctuation de l'image dessinée dans sa rotation. De toute évidence, les valeurs plus élevées sont plus prononcées que les plus petites, et cette valeur peut même être négative, la plage maximale étant comprise entre -20 et 20. Enfin, vous pouvez choisir d'avoir l'orientation relative ou non à la direction des particules. Cela signifie que même si la particule a une direction (et une vitesse) définie, l'image de la particule sera orientée en fonction de ce vecteur. Gardez à l'esprit que si vous avez réglé la vitesse de la particule pour réduire et qu'elle atteint 0 pendant la durée de vie de la particule, le manque de vitesse définit la direction sur la valeur par défaut de 0 ° et donc une orientation relative fera «sauter» l'image de la particule. à un angle d'orientation différent. Syntaxe de l'action: Arguments: Argument Description Type La valeur d'ID unique du type de particule pour définir l'orientation de Min L'orientation minimale du type de particule (de -360 à +360, par défaut 0) Max L'orientation maximale du type de particule (de -360 à +360, 360 par défaut) Increment La valeur à ajouter à l'orientation du type de particule à chaque image de jeu (peut être négative, minimum +/- 0,01) Wiggle La valeur maximale à ajouter ou à soustraire au hasard de l'orientation des particules par étape (+/- 20). Relative To Direction Indique s'il faut définir l'angle de l'image des particules par rapport à la direction du mouvement de la particule (activé) ou non (désactivé). Exemple: Le code de bloc d'action ci-dessus créera un nouveau type de particule et attribuera sa valeur d'identifiant unique à une variable globale. Il procède ensuite à la définition de toutes les propriétés du type de particule.  Retour: Actions de particules Suivant: Définir la gravité des particules © Copyright YoYo Games Ltd. 2021 Tous droits réservés
+
+  
+   Définir l'orientation des particules
+  Cette action est utilisée pour définir l'orientation des particules - l'angle selon lequel les images des particules seront dessinées - qui peut être statique ou définie pour augmenter / diminuer dans le temps. Vous fournissez la valeur d'identification unique du type dont vous voulez définir la taille (telle que retournée lorsque
+    vous avez créé le type avec l'action Créer un type de particule), puis donnez une gamme d'orientations initiales de départ, puis la quantité d'augmentation et enfin le "wiggle". L'orientation à laquelle une particule est créée
+    L'orientation d'une particule est calculée de telle sorte que 0 est à droite, 90 est en haut, 180 est à gauche et 270 est en bas, donc un paramètre minimum de 0 et un paramètre maximum de 360 émettra des particules où chacune sera tournée d'une quantité aléatoire autour de 360° (notez que cela n' affecte pas la direction de la particule).
+  L'option d'augmentation de l'orientation d'une particule vous permet de saisir une valeur qui sera ajoutée à l'angle d'orientation de base à chaque image de jeu de la durée de vie de la particule. Ainsi, en définissant cette valeur à, par exemple, 0,1, vous ajouterez 0,1 à l'angle de l'image à chaque image de jeu.
+    image à chaque image de jeu. Notez que vous pouvez utiliser des valeurs négatives ici aussi pour faire tourner la particule dans la direction opposée, donc des valeurs positives feront tourner la particule dans le sens inverse des aiguilles d'une montre, et des valeurs négatives dans le sens des aiguilles d'une montre. Notez que le décrément minimum d'orientation
+    minimale acceptée est de -0,01 et l'incrémentation minimale est de 0,01.
+  Vous pouvez également définir l'option "wiggle" pour l'orientation de la particule. Il s'agit d'une valeur qui sera générée aléatoirement entre 0 et la valeur que vous donnez, puis ajoutée ou soustraite à l'angle de l'image de la particule à chaque étape de la vie de la particule,
+    ce qui fait que l'image dessinée fluctue dans sa rotation. Évidemment, les grandes valeurs sont plus prononcées que les petites, et cette valeur peut même être négative, la plage maximale étant comprise entre -20 et 20.
+  Enfin, vous pouvez choisir que l'orientation soit relative ou non à la direction de la particule. Cela signifie que si la particule a une direction (et une vitesse) définie, l'image de la particule sera orientée en fonction de ce vecteur. Gardez à l'esprit que si
+    vous avez défini la vitesse de la particule pour la réduire et qu'elle atteint 0 pendant la durée de vie de la particule, le manque de vitesse définit la direction à la valeur par défaut de 0° et donc une orientation relative fera "sauter" l'image de la particule à un angle d'orientation différent.
+    angle d'orientation.
+   
+  Syntaxe de l'action :
+  
+  Arguments :
+  
+    
+      
+        Arguments
+        Description
+      
+      
+        Type
+        La valeur d'identification unique du type de particule dont l'orientation doit être définie
+      
+      
+        Angle minimum
+        L'orientation minimale pour le type de particule (de -360 à +360, par défaut 0)
+      
+      
+        Angle maximal
+        L'orientation maximale pour le type de particule (de -360 à +360, par défaut 360)
+      
+      
+        Augmenter
+        La valeur à ajouter à l'orientation du type de particule à chaque image de jeu (peut être négative, minimum +/-0.01).
+      
+      
+        Wiggle
+        La valeur maximale à ajouter ou à soustraire aléatoirement de l'orientation des particules par étape (+/-20).
+      
+      
+        Par rapport à la direction
+        Indique si l'angle de l'image de la particule doit être défini par rapport à la direction du mouvement de la particule (activé) ou non (désactivé).
+      
+    
+  
+   
+  Exemple :
+  Le code du bloc d'action ci-dessus créera un nouveau type de particule et affectera sa valeur d'identification unique à une variable globale.
+    unique à une variable globale. Il définit ensuite toutes les propriétés du type de particule.
+   
+   
+   
+  
+    
+      
+        Retour : Actions des particules
+        Suivant : Régler la gravité des particules
+      
+    
+    Copyright YoYo Games Ltd. 2021 Tous droits réservés
   
   
   

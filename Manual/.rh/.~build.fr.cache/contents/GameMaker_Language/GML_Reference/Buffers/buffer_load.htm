@@ -1,4 +1,46 @@
-buffer_load Cette fonction permet de charger un tampon précédemment sauvegardé à l'aide du buffer_save() fonctions, ainsi que tous les fichiers inclus ou les fichiers chargés en externe. Il renverra un nouvel ID de tampon qui est créé par la fonction comme un tampon de «croissance» (voir ici ) avec un alignement d'octet de 1. Cet ID doit être stocké dans une variable et utilisé dans tous les autres appels de fonction à ce tampon. Si le chargement échoue pour une raison quelconque, la fonction retournera -1 et un message sera affiché dans la fenêtre de sortie du compilateur indiquant que le chargement a échoué. Notez que sur HTML5, tous les tampons chargés à partir du stockage local seront décodés à l'aide de base64 (puisqu'ils sont enregistrés en tant que chaînes en base64), cependant, l'utilisation de cette fonction sur les fichiers inclus ou sur des fichiers externes n'utilisera pas le décodage base64, ce qui devrait convenir dans la plupart des cas. REMARQUE: il est important que vous supprimiez de la mémoire toutes les ressources créées dynamiquement comme celle-ci lorsque vous n'en avez plus besoin pour éviter les fuites de mémoire.Par conséquent, lorsque vous avez terminé avec le tampon que vous avez créé, vous devez le libérer à nouveau en utilisant buffer_delete(). Syntaxe:buffer_load(filename); Argument Description filename Le nom du fichier à partir duquel charger. Retour:real Exemple:player_buffer = buffer_load("Player_Save.sav"); Le code ci-dessus chargera un tampon précédemment enregistré en mémoire, créant un nouveau tampon. L'index de ce nouveau buffer est stocké dans la variable "player_buffer".  Retour: Tampons Suivant: buffer_load_ext © Copyright YoYo Games Ltd. 2021 Tous droits réservés
+
+  
+  Chargement de la mémoire tampon
+  Cette fonction est utilisée pour charger un tampon qui a été précédemment sauvegardé à l'aide des fonctions buffer_save() fonctions, ainsi que tous les fichiers inclus ou les fichiers
+    chargés en externe. Elle renvoie l'ID du nouveau tampon qui est créé par la fonction comme un tampon "grow" (voir ici) avec un alignement d'octets de 1. Cet ID doit être stocké dans une variable et utilisé dans tous les appels de fonction ultérieurs à ce tampon.
+    appels de fonction ultérieurs à ce tampon. Si le chargement échoue pour une raison quelconque, la fonction renverra -1 et un message sera affiché dans la fenêtre de sortie du compilateur indiquant que le chargement a échoué.
+  Notez que sur HTML5, tous les tampons chargés depuis le stockage local seront décodés en utilisant base64 (puisqu'ils sont enregistrés en tant que chaînes base64). Cependant, l'utilisation de cette fonction sur les fichiers inclus ou sur tout fichier externe n'utilisera pas le décodage base64, ce qui devrait convenir
+    dans la plupart des cas.
+  REMARQUE: il est important de supprimer de la mémoire toute ressource créée dynamiquement comme celle-ci lorsque vous n'en avez plus besoin afin d'éviter les fuites de mémoire. Ainsi, lorsque vous avez fini d'utiliser le tampon que vous avez créé, vous devez le libérer à nouveau.
+    en utilisant buffer_delete().
+   
+  Syntaxe :
+  buffer_load(nom du fichier) ;
+  
+    
+      
+        Arguments
+        Description
+      
+      
+        nom de fichier
+        Le nom du fichier à charger.
+      
+    
+  
+   
+  Les retours :
+  réel
+   
+  Exemple :
+  player_buffer = buffer_load("Player_Save.sav") ;
+  Le code ci-dessus va charger en mémoire un tampon précédemment enregistré, créant ainsi un nouveau tampon. L'index de ce nouveau tampon est stocké dans la variable "player_buffer".
+   
+   
+   
+  
+    
+      
+        Retour : Tampons
+        Suivant : buffer_load_ext
+      
+    
+    Copyright YoYo Games Ltd. 2021 Tous droits réservés
   
   
   

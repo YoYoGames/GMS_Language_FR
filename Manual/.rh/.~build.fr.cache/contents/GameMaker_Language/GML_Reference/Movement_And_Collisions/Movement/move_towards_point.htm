@@ -1,6 +1,53 @@
-move_towards_point Cette fonction indique simplement à l'instance exécutant le code de se déplacer vers un point de consigne à une vitesse définie. Gardez à l'esprit que c'est à vous de lui dire quoi faire une fois qu'il y sera, car il ne s'arrêtera pas tout seul. Cela signifie que vous pouvez obtenir une instance "vibrante" lorsqu'elle se déplace (par exemple) de 3 pixels vers l'avant, dépasse la position cible x / y de 2, puis recule de 3 pixels, dépassant le point cible de un et ainsi de suite.. Il existe un certain nombre de façons d'éviter cela, par exemple en utilisant distance_to_point() pour voir à quelle distance de l'emplacement spécifié se trouve l'instance avant de se déplacer. REMARQUE: cette fonction définit la vitesse de l'instance, donc même si vous arrêtez d'utiliser ce code, l'instance continuera à se déplacer dans la direction précédente, il est donc nécessaire de définir lavitesse de l'instance sur 0 si vous souhaitez qu'elle s'arrête. Consultez l'exemple de code ci-dessous. Syntaxe:move_towards_point( x, y, sp ); Argument Description x La position x du point vers lequel se déplacer. y La position y du point vers lequel se déplacer. sp Vitesse de déplacement en pixels par pas. Retour:N/A Exemple:if point_distance(x, y, target.x, target.y) > 5     {
-         move_towards_point(target.x, target.y, 5);     }
-     else speed = 0; Le code ci-dessus déplacera l'instance vers la position de l'instance indexée dans la variable "cible" à une vitesse de 5 pixels par étape. Une fois qu'il atteint cette position, la vitesse est réglée sur 0.  Retour: Mouvement Suivant:move_bounce_all © Copyright YoYo Games Ltd. 2021 Tous droits réservés
+
+  
+  déplacement vers un point
+  Cette fonction indique simplement à l'instance qui exécute le code de se déplacer vers un point donné à une vitesse donnée. Gardez à l'esprit que c'est à vous de lui dire ce qu'elle doit faire une fois arrivée à destination, car elle ne s'arrêtera pas d'elle-même. Cela signifie que vous pouvez obtenir une instance "vibrante"...
+    qui se déplace (par exemple) de 3 pixels vers l'avant, dépasse la position cible x/y de 2, puis recule à nouveau de 3 pixels, dépasse la position cible de 1 et ainsi de suite... Il y a plusieurs façons d'éviter ce phénomène, par exemple en utilisant
+    distance_vers_point() pour voir à quelle distance de la position spécifiée l'instance se trouve avant de se déplacer.
+  NOTE: cette fonction définit la vitesse de l'instance, donc même si vous arrêtez d'utiliser ce code, l'instance continuera à se déplacer dans la direction précédente, il est donc nécessaire de mettre l'instance vitesse    à 0 si vous souhaitez qu'elle s'arrête. Voir l'exemple de code ci-dessous.
+   
+  Syntaxe :
+  move_towards_point( x, y, sp ) ;
+  
+    
+      
+        Arguments
+        Description
+      
+      
+        x
+        La position x du point vers lequel il faut se déplacer.
+      
+      
+        y
+        La position y du point vers lequel il faut se déplacer.
+      
+      
+        sp
+        La vitesse de déplacement en pixels par pas.
+      
+    
+  
+   
+  Les retours :
+  N/A
+   
+  Exemple :
+  if point_distance(x, y, target.x, target.y) > 5 {
+     move_towards_point(target.x, target.y, 5) ; }
+     else vitesse = 0 ;
+  Le code ci-dessus va déplacer l'instance vers la position de l'instance indexée dans la variable "target" à une vitesse de 5 pixels par pas. Une fois cette position atteinte, la vitesse est remise à 0.
+   
+   
+   
+  
+    
+      
+        Retour : Mouvement
+        Suivant : move_bounce_all
+      
+    
+    Copyright YoYo Games Ltd. 2021 Tous droits réservés
   
   
   

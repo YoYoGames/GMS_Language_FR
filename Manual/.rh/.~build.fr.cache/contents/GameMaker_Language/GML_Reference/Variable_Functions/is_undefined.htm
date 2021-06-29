@@ -1,6 +1,45 @@
-is_undefined Cette fonction renvoie si une variable donnée est définie ou non. Dans certains cas, vous souhaitez vérifier et voir quel type de données contient une variable dans GameMaker Studio 2 et c'est à ce moment que vous utiliserez cette fonction. Il retourne true ou false selon que la valeur est définie ou non. REMARQUE: cette fonction ne peut pas être utilisée pour vérifier l'existence d'une variable. Utilisez à la place variable_instance_exists () ou variable_global_exists (). Syntaxe:is_undefined(n); Argument Description n L'argument à vérifier. Retour:Boolean Exemple:var val = ds_map_find_value(map, 13); if is_undefined(val)     {
-         show_debug_message("Map entry does not exist!");     }
-   Le code ci-dessus vérifie la variable "val" pour voir si elle n'est pas définie ou non et affiche un message de débogage si c'est le cas.  Retour: Fonctions variables Suivant:is_nan © Copyright YoYo Games Ltd. 2021 Tous droits réservés
+
+  
+  est_indéfini
+  Cette fonction renvoie si une variable donnée est définie ou non. Dans certains cas, vous souhaitez vérifier le type de données d'une variable dans GameMaker Studio 2 et c'est dans ce cas que vous utilisez cette fonction. Elle renvoie true ou false selon
+    selon que la valeur est définie ou non.
+  NOTE: Cette fonction ne peut pas être utilisée pour vérifier l'existence d'une variable. Utilisez variable_instance_exists() ou 
+    variable_global_exists() à la place.
+   
+  Syntaxe :
+  est_undefined(n) ;
+  
+    
+      
+        Arguments
+        Description
+      
+      
+        n
+        L'argument à vérifier.
+      
+    
+  
+   
+  Les retours :
+  Booléen
+   
+  Exemple :
+  var = ds_map_find_value(map, 13) ; if is_undefined(val) {
+     show_debug_message("L'entrée de la carte n'existe pas !") ; }
+  
+  Le code ci-dessus vérifie la variable "val" pour voir si elle est indéfinie ou non et affiche un message de débogage si c'est le cas.
+   
+   
+   
+  
+    
+      
+        Retour : Fonctions variables
+        Suivant : is_nan
+      
+    
+    Copyright YoYo Games Ltd. 2021 Tous droits réservés
   
   
   

@@ -1,9 +1,45 @@
-texture_is_ready Cette fonction peut être utilisée pour vérifier si une page de texture spécifique a été décompressée et est prête à être utilisée, ou si un groupe de pages de texture a été décompressé et est prêt à être utilisé. Vous fournissez l' ID de page de texture unique (tel que renvoyé par le texturegroup_* fonctions) ou la chaîne d'ID du groupe de textures (tel que défini dans l'éditeur de groupe de textures), et la fonction retournera true s'ils ont été déballés, ou false autrement. Syntaxe:texture_is_ready(tex_id); Argument Description tex_id L'ID de page de texture (un entier) ou un ID de groupe de texture (une chaîne) Retour:Boolean Exemple:var _tex_array = texturegroup_get_textures( "MainMenu"); for (var i = 0; i < array_length(_tex_array); ++i;)     {
-         if !texture_is_ready(_tex_array[i])         {
-             texture_prefetch(_tex_array[i]);
-             }
-         }
-   Le code ci-dessus récupérera les identifiants de page de texture pour le groupe de texture "MainMenu", puis vérifiera s'ils sont décompressés, et s'ils ne le sont pas, ils sont pré-lus dans la VRAM.  Retour: Textures Suivant:texturegroup_get_textures © Copyright YoYo Games Ltd. 2021 Tous droits réservés
+
+  
+  texture_est_prête
+  Cette fonction peut être utilisée pour vérifier si une page de texture spécifique a été décompressée et est prête à être utilisée, ou si un groupe de pages de texture a été décompressé et est prêt à être utilisé. Vous fournissez l'ID unique de la page de texture (tel que renvoyé par les fonctions texturegroup_* ) ou la chaîne d'ID du groupe de texture (tel que défini dans l'éditeur de groupe de texture), et la fonction renverra true si elles ont été décompressées, ou false sinon.
+   
+  Syntaxe :
+  texture_is_ready(tex_id) ;
+  
+    
+      
+        Arguments
+        Description
+      
+      
+        tex_id
+        L'ID de la page de texture (un nombre entier) ou l'ID d'un groupe de texture (une chaîne de caractères).
+      
+    
+  
+   
+  Les retours :
+  Booléen
+   
+  Exemple :
+  var _tex_array = texturegroup_get_textures( "MainMenu") ; for (var i = 0 ; i < array_length(_tex_array) ; ++i ;)  {
+     if !texture_is_ready(_tex_array[i]) {
+     texture_prefetch(_tex_array[i]) ;
+     }
+     }
+  
+  Le code ci-dessus récupère les ID des pages de texture pour le groupe de texture "MainMenu", puis vérifie s'ils sont déballés, et s'ils ne le sont pas, ils sont préchargés dans la VRAM.
+   
+   
+   
+  
+    
+      
+        Retour : Textures
+        Suivant : texturegroup_get_textures
+      
+    
+    Copyright YoYo Games Ltd. 2021 Tous droits réservés
   
   
   

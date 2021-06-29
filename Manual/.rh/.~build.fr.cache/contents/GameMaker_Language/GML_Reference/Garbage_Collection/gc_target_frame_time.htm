@@ -1,6 +1,47 @@
- gc_target_frame_time Avec cette fonction, vous pouvez indiquer au ramasse-miettes qu'il ne doit pas viser à ne pas passer plus que le temps spécifié à exécuter chaque image. La fonction prend une valeur de temps spécifiée en microsecondes (où 1 000 000 microsecondes équivaut à une seconde) et le temps de trame cible par défaut est de 100 microsecondes. Veuillez noter qu'il s'agit simplement d'une valeur cible, car certaines opérations doivent encore s'exécuter complètement dans une seule image et peuvent parfois prendre plus de temps que le temps cible. Notez également que l' augmentation de la durée cible rendra le ramasse-miettes plus réactif aux changements rapides d'utilisation de la mémoire et entraînera la libération de la mémoire plus rapidement, bien qu'en pratique cela ne soit probablement pas nécessaire dans la plupart des cas. Notez également que la définition de la durée de l'image cible sur 0 n'entraînera pas l'arrêt complet du collecteur - il effectuera toujours un travail minimal à chaque image. Pour désactiver complètement le collecteur, utilisez le gc_enable() fonction. Syntaxe:gc_target_frame_time(time); Argument Description time L'heure cible - en microsecondes - pendant laquelle le garbage collector doit fonctionner à chaque image Retour:N/A (undefined) Exemple:if (gc_get_target_frame_time() != 50)     {
-         gc_target_frame_time(50);     }
-   Le code ci-dessus vérifie la cible de temps de trame actuelle pour le garbage collector et si ce n'est pas 50 microsecondes, il est défini sur cette valeur.  Retour: Ramassage des ordures Suivant: gc_get_target_frame_time © Copyright YoYo Games Ltd. 2021 Tous droits réservés
+
+  
+  gc_target_frame_time
+  Cette fonction permet d'indiquer au ramasseur de déchets qu'il ne doit pas dépasser le temps spécifié pour l'exécution de chaque trame. La fonction prend une valeur de temps spécifiée en microsecondes (où 1 000 000 microsecondes est égal à une seconde) et le temps cible par défaut est de 100 microsecondes.
+  
+  Veuillez noter qu'il s'agit simplement d'une car certaines opérations doivent toujours être exécutées en une seule fois et peuvent parfois prendre plus de temps que le tempscible. Notez également que l'augmentation de la durée cible rendra le ramasseur de déchets plus réactif aux changements rapides de l'utilisation de la mémoire et entraînera une libération plus rapide de la mémoire, bien qu'en pratique cela ne soit pas nécessaire dans la plupart des cas. Notez également que le fait de définir la durée cible de la trame à 0 n'entraînera pas l'arrêt complet du collecteur - il effectuera toujours une quantité minimale de travail à chaque trame. Pour désactiver complètement le collecteur, utilisez la fonction gc_enable().
+
+    
+  
+   
+  Syntaxe :
+  gc_target_frame_time(time) ;
+  
+    
+      
+        Arguments
+        Description
+      
+      
+        temps
+        Le temps cible - en microsecondes - pendant lequel le ramasseur de déchets doit travailler à chaque trame.
+      
+    
+  
+   
+  Les retours :
+  N/A (non défini)
+   
+  Exemple :
+  if (gc_get_target_frame_time() != 50) {
+     gc_target_frame_time(50) ; }
+  
+  Le code ci-dessus vérifie la cible temporelle actuelle du ramasseur d'ordures et si elle n'est pas de 50 microsecondes, elle est fixée à cette valeur.
+   
+   
+   
+  
+    
+      
+        Retour : Collecte des ordures
+        Suivant : gc_get_target_frame_time
+      
+    
+    Copyright YoYo Games Ltd. 2021 Tous droits réservés
   
   
   
